@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,36 +6,37 @@
 #ifndef WINRT_Windows_Globalization_Collation_H
 #define WINRT_Windows_Globalization_Collation_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Globalization.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Globalization.Collation.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Globalization_Collation_ICharacterGrouping<D>::First() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_Collation_ICharacterGrouping<D>::First() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Collation::ICharacterGrouping)->get_First(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Collation_ICharacterGrouping<D>::Label() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_Collation_ICharacterGrouping<D>::Label() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Collation::ICharacterGrouping)->get_Label(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Collation_ICharacterGroupings<D>::Lookup(param::hstring const& text) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_Collation_ICharacterGroupings<D>::Lookup(param::hstring const& text) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Collation::ICharacterGroupings)->Lookup(*(void**)(&text), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Collation_ICharacterGroupingsFactory<D>::Create(param::hstring const& language) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Collation::CharacterGroupings) consume_Windows_Globalization_Collation_ICharacterGroupingsFactory<D>::Create(param::hstring const& language) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Collation::ICharacterGroupingsFactory)->Create(*(void**)(&language), &result));
         return Windows::Globalization::Collation::CharacterGroupings{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::Collation::ICharacterGrouping> : produce_base<D, Windows::Globalization::Collation::ICharacterGrouping>
     {
@@ -56,6 +57,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::Collation::ICharacterGroupings> : produce_base<D, Windows::Globalization::Collation::ICharacterGroupings>
     {
@@ -68,6 +71,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::Collation::ICharacterGroupingsFactory> : produce_base<D, Windows::Globalization::Collation::ICharacterGroupingsFactory>
     {
@@ -80,24 +85,27 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Globalization::Collation
+WINRT_EXPORT namespace winrt::Windows::Globalization::Collation
 {
     inline CharacterGroupings::CharacterGroupings() :
-        CharacterGroupings(impl::call_factory<CharacterGroupings>([](auto&& f) { return f.template ActivateInstance<CharacterGroupings>(); }))
+        CharacterGroupings(impl::call_factory_cast<CharacterGroupings(*)(Windows::Foundation::IActivationFactory const&), CharacterGroupings>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<CharacterGroupings>(); }))
     {
     }
     inline CharacterGroupings::CharacterGroupings(param::hstring const& language) :
-        CharacterGroupings(impl::call_factory<CharacterGroupings, Windows::Globalization::Collation::ICharacterGroupingsFactory>([&](auto&& f) { return f.Create(language); }))
+        CharacterGroupings(impl::call_factory<CharacterGroupings, ICharacterGroupingsFactory>([&](ICharacterGroupingsFactory const& f) { return f.Create(language); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Globalization::Collation::ICharacterGrouping> : winrt::impl::hash_base<winrt::Windows::Globalization::Collation::ICharacterGrouping> {};
-    template<> struct hash<winrt::Windows::Globalization::Collation::ICharacterGroupings> : winrt::impl::hash_base<winrt::Windows::Globalization::Collation::ICharacterGroupings> {};
-    template<> struct hash<winrt::Windows::Globalization::Collation::ICharacterGroupingsFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::Collation::ICharacterGroupingsFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::Collation::CharacterGrouping> : winrt::impl::hash_base<winrt::Windows::Globalization::Collation::CharacterGrouping> {};
-    template<> struct hash<winrt::Windows::Globalization::Collation::CharacterGroupings> : winrt::impl::hash_base<winrt::Windows::Globalization::Collation::CharacterGroupings> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Globalization::Collation::ICharacterGrouping> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Collation::ICharacterGroupings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Collation::ICharacterGroupingsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Collation::CharacterGrouping> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Collation::CharacterGroupings> : winrt::impl::hash_base {};
+#endif
 }
 #endif

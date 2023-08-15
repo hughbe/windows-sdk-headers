@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Management_Policies_H
 #define WINRT_Windows_Management_Policies_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Management.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
@@ -14,75 +14,75 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Management.Policies.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::Area() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Policies_INamedPolicyData<D>::Area() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->get_Area(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Policies_INamedPolicyData<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Policies::NamedPolicyKind) consume_Windows_Management_Policies_INamedPolicyData<D>::Kind() const
     {
-        Windows::Management::Policies::NamedPolicyKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->get_Kind(put_abi(value)));
+        Windows::Management::Policies::NamedPolicyKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::IsManaged() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Policies_INamedPolicyData<D>::IsManaged() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->get_IsManaged(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::IsUserPolicy() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Policies_INamedPolicyData<D>::IsUserPolicy() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->get_IsUserPolicy(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_Management_Policies_INamedPolicyData<D>::User() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->get_User(&value));
         return Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::GetBoolean() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Policies_INamedPolicyData<D>::GetBoolean() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->GetBoolean(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::GetBinary() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Management_Policies_INamedPolicyData<D>::GetBinary() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->GetBinary(&result));
         return Windows::Storage::Streams::IBuffer{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::GetInt32() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Management_Policies_INamedPolicyData<D>::GetInt32() const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->GetInt32(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::GetInt64() const
+    template <typename D> WINRT_IMPL_AUTO(int64_t) consume_Windows_Management_Policies_INamedPolicyData<D>::GetInt64() const
     {
-        int64_t result;
+        int64_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->GetInt64(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::GetString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Policies_INamedPolicyData<D>::GetString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->GetString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::Changed(Windows::Foundation::TypedEventHandler<Windows::Management::Policies::NamedPolicyData, Windows::Foundation::IInspectable> const& changedHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Management_Policies_INamedPolicyData<D>::Changed(Windows::Foundation::TypedEventHandler<Windows::Management::Policies::NamedPolicyData, Windows::Foundation::IInspectable> const& changedHandler) const
     {
-        winrt::event_token cookie;
+        winrt::event_token cookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->add_Changed(*(void**)(&changedHandler), put_abi(cookie)));
         return cookie;
     }
@@ -90,22 +90,23 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Changed_revoker>(this, Changed(changedHandler));
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyData<D>::Changed(winrt::event_token const& cookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Policies_INamedPolicyData<D>::Changed(winrt::event_token const& cookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyData)->remove_Changed(impl::bind_in(cookie)));
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyStatics<D>::GetPolicyFromPath(param::hstring const& area, param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Policies::NamedPolicyData) consume_Windows_Management_Policies_INamedPolicyStatics<D>::GetPolicyFromPath(param::hstring const& area, param::hstring const& name) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyStatics)->GetPolicyFromPath(*(void**)(&area), *(void**)(&name), &result));
         return Windows::Management::Policies::NamedPolicyData{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_Policies_INamedPolicyStatics<D>::GetPolicyFromPathForUser(Windows::System::User const& user, param::hstring const& area, param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Policies::NamedPolicyData) consume_Windows_Management_Policies_INamedPolicyStatics<D>::GetPolicyFromPathForUser(Windows::System::User const& user, param::hstring const& area, param::hstring const& name) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Policies::INamedPolicyStatics)->GetPolicyFromPathForUser(*(void**)(&user), *(void**)(&area), *(void**)(&name), &result));
         return Windows::Management::Policies::NamedPolicyData{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Management::Policies::INamedPolicyData> : produce_base<D, Windows::Management::Policies::INamedPolicyData>
     {
@@ -206,6 +207,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Management::Policies::INamedPolicyStatics> : produce_base<D, Windows::Management::Policies::INamedPolicyStatics>
     {
@@ -226,23 +229,26 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Management::Policies
+WINRT_EXPORT namespace winrt::Windows::Management::Policies
 {
     inline auto NamedPolicy::GetPolicyFromPath(param::hstring const& area, param::hstring const& name)
     {
-        return impl::call_factory<NamedPolicy, Windows::Management::Policies::INamedPolicyStatics>([&](auto&& f) { return f.GetPolicyFromPath(area, name); });
+        return impl::call_factory<NamedPolicy, INamedPolicyStatics>([&](INamedPolicyStatics const& f) { return f.GetPolicyFromPath(area, name); });
     }
     inline auto NamedPolicy::GetPolicyFromPathForUser(Windows::System::User const& user, param::hstring const& area, param::hstring const& name)
     {
-        return impl::call_factory<NamedPolicy, Windows::Management::Policies::INamedPolicyStatics>([&](auto&& f) { return f.GetPolicyFromPathForUser(user, area, name); });
+        return impl::call_factory<NamedPolicy, INamedPolicyStatics>([&](INamedPolicyStatics const& f) { return f.GetPolicyFromPathForUser(user, area, name); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Management::Policies::INamedPolicyData> : winrt::impl::hash_base<winrt::Windows::Management::Policies::INamedPolicyData> {};
-    template<> struct hash<winrt::Windows::Management::Policies::INamedPolicyStatics> : winrt::impl::hash_base<winrt::Windows::Management::Policies::INamedPolicyStatics> {};
-    template<> struct hash<winrt::Windows::Management::Policies::NamedPolicy> : winrt::impl::hash_base<winrt::Windows::Management::Policies::NamedPolicy> {};
-    template<> struct hash<winrt::Windows::Management::Policies::NamedPolicyData> : winrt::impl::hash_base<winrt::Windows::Management::Policies::NamedPolicyData> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Management::Policies::INamedPolicyData> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Policies::INamedPolicyStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Policies::NamedPolicy> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Policies::NamedPolicyData> : winrt::impl::hash_base {};
+#endif
 }
 #endif

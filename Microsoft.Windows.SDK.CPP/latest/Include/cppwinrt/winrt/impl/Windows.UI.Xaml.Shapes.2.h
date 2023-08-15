@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.UI.Composition.1.h"
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Shapes.1.h"
-namespace winrt::Windows::UI::Xaml::Shapes
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Shapes
 {
     struct __declspec(empty_bases) Ellipse : Windows::UI::Xaml::Shapes::IEllipse,
         impl::base<Ellipse, Windows::UI::Xaml::Shapes::Shape, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,

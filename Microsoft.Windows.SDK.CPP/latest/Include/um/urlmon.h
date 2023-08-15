@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -828,25 +836,31 @@ EXTERN_C const IID IID_IPersistMoniker;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPersistMoniker * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPersistMoniker * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPersistMoniker * This);
         
+        DECLSPEC_XFGVIRT(IPersistMoniker, GetClassID)
         HRESULT ( STDMETHODCALLTYPE *GetClassID )( 
             __RPC__in IPersistMoniker * This,
             /* [out] */ __RPC__out CLSID *pClassID);
         
+        DECLSPEC_XFGVIRT(IPersistMoniker, IsDirty)
         HRESULT ( STDMETHODCALLTYPE *IsDirty )( 
             __RPC__in IPersistMoniker * This);
         
+        DECLSPEC_XFGVIRT(IPersistMoniker, Load)
         HRESULT ( STDMETHODCALLTYPE *Load )( 
             __RPC__in IPersistMoniker * This,
             /* [in] */ BOOL fFullyAvailable,
@@ -854,17 +868,20 @@ EXTERN_C const IID IID_IPersistMoniker;
             /* [in] */ __RPC__in_opt LPBC pibc,
             /* [in] */ DWORD grfMode);
         
+        DECLSPEC_XFGVIRT(IPersistMoniker, Save)
         HRESULT ( STDMETHODCALLTYPE *Save )( 
             __RPC__in IPersistMoniker * This,
             /* [in] */ __RPC__in_opt IMoniker *pimkName,
             /* [in] */ __RPC__in_opt LPBC pbc,
             /* [in] */ BOOL fRemember);
         
+        DECLSPEC_XFGVIRT(IPersistMoniker, SaveCompleted)
         HRESULT ( STDMETHODCALLTYPE *SaveCompleted )( 
             __RPC__in IPersistMoniker * This,
             /* [in] */ __RPC__in_opt IMoniker *pimkName,
             /* [in] */ __RPC__in_opt LPBC pibc);
         
+        DECLSPEC_XFGVIRT(IPersistMoniker, GetCurMoniker)
         HRESULT ( STDMETHODCALLTYPE *GetCurMoniker )( 
             __RPC__in IPersistMoniker * This,
             /* [out] */ __RPC__deref_out_opt IMoniker **ppimkName);
@@ -972,18 +989,22 @@ EXTERN_C const IID IID_IMonikerProp;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IMonikerProp * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IMonikerProp * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IMonikerProp * This);
         
+        DECLSPEC_XFGVIRT(IMonikerProp, PutProperty)
         HRESULT ( STDMETHODCALLTYPE *PutProperty )( 
             __RPC__in IMonikerProp * This,
             /* [in] */ MONIKERPROPERTY mkp,
@@ -1068,18 +1089,22 @@ EXTERN_C const IID IID_IBindProtocol;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IBindProtocol * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IBindProtocol * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IBindProtocol * This);
         
+        DECLSPEC_XFGVIRT(IBindProtocol, CreateBinding)
         HRESULT ( STDMETHODCALLTYPE *CreateBinding )( 
             IBindProtocol * This,
             /* [in] */ LPCWSTR szUrl,
@@ -1179,35 +1204,44 @@ EXTERN_C const IID IID_IBinding;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBinding * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBinding * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBinding * This);
         
+        DECLSPEC_XFGVIRT(IBinding, Abort)
         HRESULT ( STDMETHODCALLTYPE *Abort )( 
             __RPC__in IBinding * This);
         
+        DECLSPEC_XFGVIRT(IBinding, Suspend)
         HRESULT ( STDMETHODCALLTYPE *Suspend )( 
             __RPC__in IBinding * This);
         
+        DECLSPEC_XFGVIRT(IBinding, Resume)
         HRESULT ( STDMETHODCALLTYPE *Resume )( 
             __RPC__in IBinding * This);
         
+        DECLSPEC_XFGVIRT(IBinding, SetPriority)
         HRESULT ( STDMETHODCALLTYPE *SetPriority )( 
             __RPC__in IBinding * This,
             /* [in] */ LONG nPriority);
         
+        DECLSPEC_XFGVIRT(IBinding, GetPriority)
         HRESULT ( STDMETHODCALLTYPE *GetPriority )( 
             __RPC__in IBinding * This,
             /* [out] */ __RPC__out LONG *pnPriority);
         
+        DECLSPEC_XFGVIRT(IBinding, GetBindResult)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetBindResult )( 
             IBinding * This,
             /* [out] */ CLSID *pclsidProtocol,
@@ -1591,31 +1625,38 @@ EXTERN_C const IID IID_IBindStatusCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBindStatusCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBindStatusCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBindStatusCallback * This);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnStartBinding)
         HRESULT ( STDMETHODCALLTYPE *OnStartBinding )( 
             __RPC__in IBindStatusCallback * This,
             /* [in] */ DWORD dwReserved,
             /* [in] */ __RPC__in_opt IBinding *pib);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, GetPriority)
         HRESULT ( STDMETHODCALLTYPE *GetPriority )( 
             __RPC__in IBindStatusCallback * This,
             /* [out] */ __RPC__out LONG *pnPriority);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnLowResource)
         HRESULT ( STDMETHODCALLTYPE *OnLowResource )( 
             __RPC__in IBindStatusCallback * This,
             /* [in] */ DWORD reserved);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnProgress)
         HRESULT ( STDMETHODCALLTYPE *OnProgress )( 
             __RPC__in IBindStatusCallback * This,
             /* [in] */ ULONG ulProgress,
@@ -1623,16 +1664,19 @@ EXTERN_C const IID IID_IBindStatusCallback;
             /* [in] */ ULONG ulStatusCode,
             /* [unique][in] */ __RPC__in_opt LPCWSTR szStatusText);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnStopBinding)
         HRESULT ( STDMETHODCALLTYPE *OnStopBinding )( 
             __RPC__in IBindStatusCallback * This,
             /* [in] */ HRESULT hresult,
             /* [unique][in] */ __RPC__in_opt LPCWSTR szError);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, GetBindInfo)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetBindInfo )( 
             IBindStatusCallback * This,
             /* [out] */ DWORD *grfBINDF,
             /* [unique][out][in] */ BINDINFO *pbindinfo);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnDataAvailable)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *OnDataAvailable )( 
             IBindStatusCallback * This,
             /* [in] */ DWORD grfBSCF,
@@ -1640,6 +1684,7 @@ EXTERN_C const IID IID_IBindStatusCallback;
             /* [in] */ FORMATETC *pformatetc,
             /* [in] */ STGMEDIUM *pstgmed);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnObjectAvailable)
         HRESULT ( STDMETHODCALLTYPE *OnObjectAvailable )( 
             __RPC__in IBindStatusCallback * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1815,31 +1860,38 @@ EXTERN_C const IID IID_IBindStatusCallbackEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBindStatusCallbackEx * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBindStatusCallbackEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBindStatusCallbackEx * This);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnStartBinding)
         HRESULT ( STDMETHODCALLTYPE *OnStartBinding )( 
             __RPC__in IBindStatusCallbackEx * This,
             /* [in] */ DWORD dwReserved,
             /* [in] */ __RPC__in_opt IBinding *pib);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, GetPriority)
         HRESULT ( STDMETHODCALLTYPE *GetPriority )( 
             __RPC__in IBindStatusCallbackEx * This,
             /* [out] */ __RPC__out LONG *pnPriority);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnLowResource)
         HRESULT ( STDMETHODCALLTYPE *OnLowResource )( 
             __RPC__in IBindStatusCallbackEx * This,
             /* [in] */ DWORD reserved);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnProgress)
         HRESULT ( STDMETHODCALLTYPE *OnProgress )( 
             __RPC__in IBindStatusCallbackEx * This,
             /* [in] */ ULONG ulProgress,
@@ -1847,16 +1899,19 @@ EXTERN_C const IID IID_IBindStatusCallbackEx;
             /* [in] */ ULONG ulStatusCode,
             /* [unique][in] */ __RPC__in_opt LPCWSTR szStatusText);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnStopBinding)
         HRESULT ( STDMETHODCALLTYPE *OnStopBinding )( 
             __RPC__in IBindStatusCallbackEx * This,
             /* [in] */ HRESULT hresult,
             /* [unique][in] */ __RPC__in_opt LPCWSTR szError);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, GetBindInfo)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetBindInfo )( 
             IBindStatusCallbackEx * This,
             /* [out] */ DWORD *grfBINDF,
             /* [unique][out][in] */ BINDINFO *pbindinfo);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnDataAvailable)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *OnDataAvailable )( 
             IBindStatusCallbackEx * This,
             /* [in] */ DWORD grfBSCF,
@@ -1864,11 +1919,13 @@ EXTERN_C const IID IID_IBindStatusCallbackEx;
             /* [in] */ FORMATETC *pformatetc,
             /* [in] */ STGMEDIUM *pstgmed);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallback, OnObjectAvailable)
         HRESULT ( STDMETHODCALLTYPE *OnObjectAvailable )( 
             __RPC__in IBindStatusCallbackEx * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][in] */ __RPC__in_opt IUnknown *punk);
         
+        DECLSPEC_XFGVIRT(IBindStatusCallbackEx, GetBindInfoEx)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetBindInfoEx )( 
             IBindStatusCallbackEx * This,
             /* [out] */ DWORD *grfBINDF,
@@ -1996,18 +2053,22 @@ EXTERN_C const IID IID_IAuthenticate;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAuthenticate * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAuthenticate * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAuthenticate * This);
         
+        DECLSPEC_XFGVIRT(IAuthenticate, Authenticate)
         HRESULT ( STDMETHODCALLTYPE *Authenticate )( 
             __RPC__in IAuthenticate * This,
             /* [out] */ __RPC__deref_out_opt HWND *phwnd,
@@ -2108,24 +2169,29 @@ EXTERN_C const IID IID_IAuthenticateEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAuthenticateEx * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAuthenticateEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAuthenticateEx * This);
         
+        DECLSPEC_XFGVIRT(IAuthenticate, Authenticate)
         HRESULT ( STDMETHODCALLTYPE *Authenticate )( 
             __RPC__in IAuthenticateEx * This,
             /* [out] */ __RPC__deref_out_opt HWND *phwnd,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pszUsername,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pszPassword);
         
+        DECLSPEC_XFGVIRT(IAuthenticateEx, AuthenticateEx)
         HRESULT ( STDMETHODCALLTYPE *AuthenticateEx )( 
             __RPC__in IAuthenticateEx * This,
             /* [out] */ __RPC__deref_out_opt HWND *phwnd,
@@ -2223,18 +2289,22 @@ EXTERN_C const IID IID_IHttpNegotiate;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IHttpNegotiate * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IHttpNegotiate * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IHttpNegotiate * This);
         
+        DECLSPEC_XFGVIRT(IHttpNegotiate, BeginningTransaction)
         HRESULT ( STDMETHODCALLTYPE *BeginningTransaction )( 
             __RPC__in IHttpNegotiate * This,
             /* [in] */ __RPC__in LPCWSTR szURL,
@@ -2242,6 +2312,7 @@ EXTERN_C const IID IID_IHttpNegotiate;
             /* [in] */ DWORD dwReserved,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pszAdditionalHeaders);
         
+        DECLSPEC_XFGVIRT(IHttpNegotiate, OnResponse)
         HRESULT ( STDMETHODCALLTYPE *OnResponse )( 
             __RPC__in IHttpNegotiate * This,
             /* [in] */ DWORD dwResponseCode,
@@ -2331,18 +2402,22 @@ EXTERN_C const IID IID_IHttpNegotiate2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IHttpNegotiate2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IHttpNegotiate2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IHttpNegotiate2 * This);
         
+        DECLSPEC_XFGVIRT(IHttpNegotiate, BeginningTransaction)
         HRESULT ( STDMETHODCALLTYPE *BeginningTransaction )( 
             __RPC__in IHttpNegotiate2 * This,
             /* [in] */ __RPC__in LPCWSTR szURL,
@@ -2350,6 +2425,7 @@ EXTERN_C const IID IID_IHttpNegotiate2;
             /* [in] */ DWORD dwReserved,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pszAdditionalHeaders);
         
+        DECLSPEC_XFGVIRT(IHttpNegotiate, OnResponse)
         HRESULT ( STDMETHODCALLTYPE *OnResponse )( 
             __RPC__in IHttpNegotiate2 * This,
             /* [in] */ DWORD dwResponseCode,
@@ -2357,6 +2433,7 @@ EXTERN_C const IID IID_IHttpNegotiate2;
             /* [unique][in] */ __RPC__in_opt LPCWSTR szRequestHeaders,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pszAdditionalRequestHeaders);
         
+        DECLSPEC_XFGVIRT(IHttpNegotiate2, GetRootSecurityId)
         HRESULT ( STDMETHODCALLTYPE *GetRootSecurityId )( 
             __RPC__in IHttpNegotiate2 * This,
             /* [size_is][out] */ __RPC__out_ecount_full(*pcbSecurityId) BYTE *pbSecurityId,
@@ -2448,18 +2525,22 @@ EXTERN_C const IID IID_IHttpNegotiate3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IHttpNegotiate3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IHttpNegotiate3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IHttpNegotiate3 * This);
         
+        DECLSPEC_XFGVIRT(IHttpNegotiate, BeginningTransaction)
         HRESULT ( STDMETHODCALLTYPE *BeginningTransaction )( 
             __RPC__in IHttpNegotiate3 * This,
             /* [in] */ __RPC__in LPCWSTR szURL,
@@ -2467,6 +2548,7 @@ EXTERN_C const IID IID_IHttpNegotiate3;
             /* [in] */ DWORD dwReserved,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pszAdditionalHeaders);
         
+        DECLSPEC_XFGVIRT(IHttpNegotiate, OnResponse)
         HRESULT ( STDMETHODCALLTYPE *OnResponse )( 
             __RPC__in IHttpNegotiate3 * This,
             /* [in] */ DWORD dwResponseCode,
@@ -2474,12 +2556,14 @@ EXTERN_C const IID IID_IHttpNegotiate3;
             /* [unique][in] */ __RPC__in_opt LPCWSTR szRequestHeaders,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pszAdditionalRequestHeaders);
         
+        DECLSPEC_XFGVIRT(IHttpNegotiate2, GetRootSecurityId)
         HRESULT ( STDMETHODCALLTYPE *GetRootSecurityId )( 
             __RPC__in IHttpNegotiate3 * This,
             /* [size_is][out] */ __RPC__out_ecount_full(*pcbSecurityId) BYTE *pbSecurityId,
             /* [out][in] */ __RPC__inout DWORD *pcbSecurityId,
             /* [in] */ DWORD_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IHttpNegotiate3, GetSerializedClientCertContext)
         HRESULT ( STDMETHODCALLTYPE *GetSerializedClientCertContext )( 
             __RPC__in IHttpNegotiate3 * This,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*pcbCert) BYTE **ppbCert,
@@ -2577,23 +2661,28 @@ EXTERN_C const IID IID_IWinInetFileStream;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWinInetFileStream * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWinInetFileStream * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWinInetFileStream * This);
         
+        DECLSPEC_XFGVIRT(IWinInetFileStream, SetHandleForUnlock)
         HRESULT ( STDMETHODCALLTYPE *SetHandleForUnlock )( 
             __RPC__in IWinInetFileStream * This,
             /* [in] */ DWORD_PTR hWinInetLockHandle,
             /* [in] */ DWORD_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IWinInetFileStream, SetDeleteFile)
         HRESULT ( STDMETHODCALLTYPE *SetDeleteFile )( 
             __RPC__in IWinInetFileStream * This,
             /* [in] */ DWORD_PTR dwReserved);
@@ -2679,18 +2768,22 @@ EXTERN_C const IID IID_IWindowForBindingUI;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWindowForBindingUI * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWindowForBindingUI * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWindowForBindingUI * This);
         
+        DECLSPEC_XFGVIRT(IWindowForBindingUI, GetWindow)
         HRESULT ( STDMETHODCALLTYPE *GetWindow )( 
             IWindowForBindingUI * This,
             /* [in] */ REFGUID rguidReason,
@@ -2791,23 +2884,28 @@ EXTERN_C const IID IID_ICodeInstall;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICodeInstall * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICodeInstall * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICodeInstall * This);
         
+        DECLSPEC_XFGVIRT(IWindowForBindingUI, GetWindow)
         HRESULT ( STDMETHODCALLTYPE *GetWindow )( 
             ICodeInstall * This,
             /* [in] */ REFGUID rguidReason,
             /* [out] */ HWND *phwnd);
         
+        DECLSPEC_XFGVIRT(ICodeInstall, OnCodeInstallProblem)
         HRESULT ( STDMETHODCALLTYPE *OnCodeInstallProblem )( 
             ICodeInstall * This,
             /* [in] */ ULONG ulStatusCode,
@@ -3017,121 +3115,149 @@ EXTERN_C const IID IID_IUri;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUri * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUri * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUri * This);
         
+        DECLSPEC_XFGVIRT(IUri, GetPropertyBSTR)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyBSTR )( 
             __RPC__in IUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrProperty,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, GetPropertyLength)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyLength )( 
             __RPC__in IUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__out DWORD *pcchProperty,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, GetPropertyDWORD)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyDWORD )( 
             __RPC__in IUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__out DWORD *pdwProperty,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, HasProperty)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *HasProperty )( 
             __RPC__in IUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__out BOOL *pfHasProperty);
         
+        DECLSPEC_XFGVIRT(IUri, GetAbsoluteUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetAbsoluteUri )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrAbsoluteUri);
         
+        DECLSPEC_XFGVIRT(IUri, GetAuthority)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetAuthority )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrAuthority);
         
+        DECLSPEC_XFGVIRT(IUri, GetDisplayUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetDisplayUri )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrDisplayString);
         
+        DECLSPEC_XFGVIRT(IUri, GetDomain)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetDomain )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrDomain);
         
+        DECLSPEC_XFGVIRT(IUri, GetExtension)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetExtension )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrExtension);
         
+        DECLSPEC_XFGVIRT(IUri, GetFragment)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetFragment )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrFragment);
         
+        DECLSPEC_XFGVIRT(IUri, GetHost)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetHost )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrHost);
         
+        DECLSPEC_XFGVIRT(IUri, GetPassword)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPassword )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrPassword);
         
+        DECLSPEC_XFGVIRT(IUri, GetPath)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPath )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrPath);
         
+        DECLSPEC_XFGVIRT(IUri, GetPathAndQuery)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPathAndQuery )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrPathAndQuery);
         
+        DECLSPEC_XFGVIRT(IUri, GetQuery)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetQuery )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrQuery);
         
+        DECLSPEC_XFGVIRT(IUri, GetRawUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetRawUri )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrRawUri);
         
+        DECLSPEC_XFGVIRT(IUri, GetSchemeName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetSchemeName )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrSchemeName);
         
+        DECLSPEC_XFGVIRT(IUri, GetUserInfo)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetUserInfo )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrUserInfo);
         
+        DECLSPEC_XFGVIRT(IUri, GetUserName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetUserName )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrUserName);
         
+        DECLSPEC_XFGVIRT(IUri, GetHostType)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetHostType )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__out DWORD *pdwHostType);
         
+        DECLSPEC_XFGVIRT(IUri, GetPort)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPort )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__out DWORD *pdwPort);
         
+        DECLSPEC_XFGVIRT(IUri, GetScheme)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetScheme )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__out DWORD *pdwScheme);
         
+        DECLSPEC_XFGVIRT(IUri, GetZone)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetZone )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__out DWORD *pdwZone);
         
+        DECLSPEC_XFGVIRT(IUri, GetProperties)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetProperties )( 
             __RPC__in IUri * This,
             /* [out] */ __RPC__out LPDWORD pdwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, IsEqual)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *IsEqual )( 
             __RPC__in IUri * This,
             /* [in] */ __RPC__in_opt IUri *pUri,
@@ -3379,18 +3505,22 @@ EXTERN_C const IID IID_IUriContainer;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUriContainer * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUriContainer * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUriContainer * This);
         
+        DECLSPEC_XFGVIRT(IUriContainer, GetIUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetIUri )( 
             IUriContainer * This,
             /* [out] */ IUri **ppIUri);
@@ -3572,18 +3702,22 @@ EXTERN_C const IID IID_IUriBuilder;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUriBuilder * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUriBuilder * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUriBuilder * This);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, CreateUriSimple)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *CreateUriSimple )( 
             IUriBuilder * This,
             /* [in] */ DWORD dwAllowEncodingPropertyMask,
@@ -3591,6 +3725,7 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_  IUri **ppIUri);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, CreateUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *CreateUri )( 
             IUriBuilder * This,
             /* [in] */ DWORD dwCreateFlags,
@@ -3599,6 +3734,7 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_  IUri **ppIUri);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, CreateUriWithFlags)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *CreateUriWithFlags )( 
             IUriBuilder * This,
             /* [in] */ DWORD dwCreateFlags,
@@ -3608,16 +3744,19 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_  IUri **ppIUri);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, GetIUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetIUri )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  IUri **ppIUri);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, SetIUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *SetIUri )( 
             IUriBuilder * This,
             /* [annotation][unique][in] */ 
             _In_opt_  IUri *pIUri);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, GetFragment)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetFragment )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
@@ -3625,6 +3764,7 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPCWSTR *ppwzFragment);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, GetHost)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetHost )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
@@ -3632,6 +3772,7 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPCWSTR *ppwzHost);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, GetPassword)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPassword )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
@@ -3639,6 +3780,7 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPCWSTR *ppwzPassword);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, GetPath)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPath )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
@@ -3646,6 +3788,7 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPCWSTR *ppwzPath);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, GetPort)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPort )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
@@ -3653,6 +3796,7 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Out_  DWORD *pdwPort);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, GetQuery)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetQuery )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
@@ -3660,6 +3804,7 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPCWSTR *ppwzQuery);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, GetSchemeName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetSchemeName )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
@@ -3667,6 +3812,7 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPCWSTR *ppwzSchemeName);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, GetUserName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetUserName )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
@@ -3674,50 +3820,60 @@ EXTERN_C const IID IID_IUriBuilder;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPCWSTR *ppwzUserName);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, SetFragment)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *SetFragment )( 
             IUriBuilder * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pwzNewValue);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, SetHost)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *SetHost )( 
             IUriBuilder * This,
             /* [annotation][in] */ 
             _In_  LPCWSTR pwzNewValue);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, SetPassword)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *SetPassword )( 
             IUriBuilder * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pwzNewValue);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, SetPath)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *SetPath )( 
             IUriBuilder * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pwzNewValue);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, SetPort)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *SetPort )( 
             IUriBuilder * This,
             /* [in] */ BOOL fHasPort,
             /* [in] */ DWORD dwNewValue);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, SetQuery)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *SetQuery )( 
             IUriBuilder * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pwzNewValue);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, SetSchemeName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *SetSchemeName )( 
             IUriBuilder * This,
             /* [annotation][in] */ 
             _In_  LPCWSTR pwzNewValue);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, SetUserName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *SetUserName )( 
             IUriBuilder * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pwzNewValue);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, RemoveProperties)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *RemoveProperties )( 
             IUriBuilder * This,
             /* [in] */ DWORD dwPropertyMask);
         
+        DECLSPEC_XFGVIRT(IUriBuilder, HasBeenModified)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *HasBeenModified )( 
             IUriBuilder * This,
             /* [annotation][out] */ 
@@ -3866,18 +4022,22 @@ EXTERN_C const IID IID_IUriBuilderFactory;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUriBuilderFactory * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUriBuilderFactory * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUriBuilderFactory * This);
         
+        DECLSPEC_XFGVIRT(IUriBuilderFactory, CreateIUriBuilder)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *CreateIUriBuilder )( 
             IUriBuilderFactory * This,
             /* [annotation][in] */ 
@@ -3887,6 +4047,7 @@ EXTERN_C const IID IID_IUriBuilderFactory;
             /* [annotation][out] */ 
             _Out_  IUriBuilder **ppIUriBuilder);
         
+        DECLSPEC_XFGVIRT(IUriBuilderFactory, CreateInitializedIUriBuilder)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *CreateInitializedIUriBuilder )( 
             IUriBuilderFactory * This,
             /* [annotation][in] */ 
@@ -3988,18 +4149,22 @@ EXTERN_C const IID IID_IWinInetInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWinInetInfo * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWinInetInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWinInetInfo * This);
         
+        DECLSPEC_XFGVIRT(IWinInetInfo, QueryOption)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *QueryOption )( 
             IWinInetInfo * This,
             /* [in] */ DWORD dwOption,
@@ -4098,23 +4263,28 @@ EXTERN_C const IID IID_IHttpSecurity;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IHttpSecurity * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IHttpSecurity * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IHttpSecurity * This);
         
+        DECLSPEC_XFGVIRT(IWindowForBindingUI, GetWindow)
         HRESULT ( STDMETHODCALLTYPE *GetWindow )( 
             IHttpSecurity * This,
             /* [in] */ REFGUID rguidReason,
             /* [out] */ HWND *phwnd);
         
+        DECLSPEC_XFGVIRT(IHttpSecurity, OnSecurityProblem)
         HRESULT ( STDMETHODCALLTYPE *OnSecurityProblem )( 
             IHttpSecurity * This,
             /* [in] */ DWORD dwProblem);
@@ -4204,24 +4374,29 @@ EXTERN_C const IID IID_IWinInetHttpInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWinInetHttpInfo * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWinInetHttpInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWinInetHttpInfo * This);
         
+        DECLSPEC_XFGVIRT(IWinInetInfo, QueryOption)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *QueryOption )( 
             IWinInetHttpInfo * This,
             /* [in] */ DWORD dwOption,
             /* [size_is][out][in] */ LPVOID pBuffer,
             /* [out][in] */ DWORD *pcbBuf);
         
+        DECLSPEC_XFGVIRT(IWinInetHttpInfo, QueryInfo)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *QueryInfo )( 
             IWinInetHttpInfo * This,
             /* [in] */ DWORD dwOption,
@@ -4330,18 +4505,22 @@ EXTERN_C const IID IID_IWinInetHttpTimeouts;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWinInetHttpTimeouts * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWinInetHttpTimeouts * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWinInetHttpTimeouts * This);
         
+        DECLSPEC_XFGVIRT(IWinInetHttpTimeouts, GetRequestTimeouts)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetRequestTimeouts )( 
             IWinInetHttpTimeouts * This,
             /* [annotation][out] */ 
@@ -4433,18 +4612,22 @@ EXTERN_C const IID IID_IWinInetCacheHints;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWinInetCacheHints * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWinInetCacheHints * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWinInetCacheHints * This);
         
+        DECLSPEC_XFGVIRT(IWinInetCacheHints, SetCacheExtension)
         HRESULT ( STDMETHODCALLTYPE *SetCacheExtension )( 
             IWinInetCacheHints * This,
             /* [in] */ LPCWSTR pwzExt,
@@ -4537,18 +4720,22 @@ EXTERN_C const IID IID_IWinInetCacheHints2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWinInetCacheHints2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWinInetCacheHints2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWinInetCacheHints2 * This);
         
+        DECLSPEC_XFGVIRT(IWinInetCacheHints, SetCacheExtension)
         HRESULT ( STDMETHODCALLTYPE *SetCacheExtension )( 
             IWinInetCacheHints2 * This,
             /* [in] */ LPCWSTR pwzExt,
@@ -4557,6 +4744,7 @@ EXTERN_C const IID IID_IWinInetCacheHints2;
             /* [out][in] */ DWORD *pdwWinInetError,
             /* [out][in] */ DWORD *pdwReserved);
         
+        DECLSPEC_XFGVIRT(IWinInetCacheHints2, SetCacheExtension2)
         HRESULT ( STDMETHODCALLTYPE *SetCacheExtension2 )( 
             IWinInetCacheHints2 * This,
             /* [in] */ LPCWSTR pwzExt,
@@ -4668,18 +4856,22 @@ EXTERN_C const IID IID_IBindHost;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBindHost * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBindHost * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBindHost * This);
         
+        DECLSPEC_XFGVIRT(IBindHost, CreateMoniker)
         HRESULT ( STDMETHODCALLTYPE *CreateMoniker )( 
             __RPC__in IBindHost * This,
             /* [in] */ __RPC__in LPOLESTR szName,
@@ -4687,6 +4879,7 @@ EXTERN_C const IID IID_IBindHost;
             /* [out] */ __RPC__deref_out_opt IMoniker **ppmk,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IBindHost, MonikerBindToStorage)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *MonikerBindToStorage )( 
             IBindHost * This,
             /* [in] */ IMoniker *pMk,
@@ -4695,6 +4888,7 @@ EXTERN_C const IID IID_IBindHost;
             /* [in] */ REFIID riid,
             /* [out] */ void **ppvObj);
         
+        DECLSPEC_XFGVIRT(IBindHost, MonikerBindToObject)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *MonikerBindToObject )( 
             IBindHost * This,
             /* [in] */ IMoniker *pMk,
@@ -4888,15 +5082,18 @@ EXTERN_C const IID IID_IInternet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternet * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternet * This);
         
@@ -5013,23 +5210,28 @@ EXTERN_C const IID IID_IInternetBindInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetBindInfo * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetBindInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetBindInfo * This);
         
+        DECLSPEC_XFGVIRT(IInternetBindInfo, GetBindInfo)
         HRESULT ( STDMETHODCALLTYPE *GetBindInfo )( 
             IInternetBindInfo * This,
             /* [out] */ DWORD *grfBINDF,
             /* [unique][out][in] */ BINDINFO *pbindinfo);
         
+        DECLSPEC_XFGVIRT(IInternetBindInfo, GetBindString)
         HRESULT ( STDMETHODCALLTYPE *GetBindString )( 
             IInternetBindInfo * This,
             /* [in] */ ULONG ulStringType,
@@ -5121,23 +5323,28 @@ EXTERN_C const IID IID_IInternetBindInfoEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetBindInfoEx * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetBindInfoEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetBindInfoEx * This);
         
+        DECLSPEC_XFGVIRT(IInternetBindInfo, GetBindInfo)
         HRESULT ( STDMETHODCALLTYPE *GetBindInfo )( 
             IInternetBindInfoEx * This,
             /* [out] */ DWORD *grfBINDF,
             /* [unique][out][in] */ BINDINFO *pbindinfo);
         
+        DECLSPEC_XFGVIRT(IInternetBindInfo, GetBindString)
         HRESULT ( STDMETHODCALLTYPE *GetBindString )( 
             IInternetBindInfoEx * This,
             /* [in] */ ULONG ulStringType,
@@ -5146,6 +5353,7 @@ EXTERN_C const IID IID_IInternetBindInfoEx;
             /* [in] */ ULONG cEl,
             /* [out][in] */ ULONG *pcElFetched);
         
+        DECLSPEC_XFGVIRT(IInternetBindInfoEx, GetBindInfoEx)
         HRESULT ( STDMETHODCALLTYPE *GetBindInfoEx )( 
             IInternetBindInfoEx * This,
             /* [out] */ DWORD *grfBINDF,
@@ -5290,18 +5498,22 @@ EXTERN_C const IID IID_IInternetProtocolRoot;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetProtocolRoot * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetProtocolRoot * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetProtocolRoot * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Start)
         HRESULT ( STDMETHODCALLTYPE *Start )( 
             IInternetProtocolRoot * This,
             /* [in] */ LPCWSTR szUrl,
@@ -5310,22 +5522,27 @@ EXTERN_C const IID IID_IInternetProtocolRoot;
             /* [in] */ DWORD grfPI,
             /* [in] */ HANDLE_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Continue)
         HRESULT ( STDMETHODCALLTYPE *Continue )( 
             IInternetProtocolRoot * This,
             /* [in] */ PROTOCOLDATA *pProtocolData);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Abort)
         HRESULT ( STDMETHODCALLTYPE *Abort )( 
             IInternetProtocolRoot * This,
             /* [in] */ HRESULT hrReason,
             /* [in] */ DWORD dwOptions);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Terminate)
         HRESULT ( STDMETHODCALLTYPE *Terminate )( 
             IInternetProtocolRoot * This,
             /* [in] */ DWORD dwOptions);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Suspend)
         HRESULT ( STDMETHODCALLTYPE *Suspend )( 
             IInternetProtocolRoot * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Resume)
         HRESULT ( STDMETHODCALLTYPE *Resume )( 
             IInternetProtocolRoot * This);
         
@@ -5433,18 +5650,22 @@ EXTERN_C const IID IID_IInternetProtocol;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetProtocol * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetProtocol * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetProtocol * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Start)
         HRESULT ( STDMETHODCALLTYPE *Start )( 
             IInternetProtocol * This,
             /* [in] */ LPCWSTR szUrl,
@@ -5453,41 +5674,50 @@ EXTERN_C const IID IID_IInternetProtocol;
             /* [in] */ DWORD grfPI,
             /* [in] */ HANDLE_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Continue)
         HRESULT ( STDMETHODCALLTYPE *Continue )( 
             IInternetProtocol * This,
             /* [in] */ PROTOCOLDATA *pProtocolData);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Abort)
         HRESULT ( STDMETHODCALLTYPE *Abort )( 
             IInternetProtocol * This,
             /* [in] */ HRESULT hrReason,
             /* [in] */ DWORD dwOptions);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Terminate)
         HRESULT ( STDMETHODCALLTYPE *Terminate )( 
             IInternetProtocol * This,
             /* [in] */ DWORD dwOptions);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Suspend)
         HRESULT ( STDMETHODCALLTYPE *Suspend )( 
             IInternetProtocol * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Resume)
         HRESULT ( STDMETHODCALLTYPE *Resume )( 
             IInternetProtocol * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocol, Read)
         HRESULT ( STDMETHODCALLTYPE *Read )( 
             IInternetProtocol * This,
             /* [length_is][size_is][out][in] */ void *pv,
             /* [in] */ ULONG cb,
             /* [out] */ ULONG *pcbRead);
         
+        DECLSPEC_XFGVIRT(IInternetProtocol, Seek)
         HRESULT ( STDMETHODCALLTYPE *Seek )( 
             IInternetProtocol * This,
             /* [in] */ LARGE_INTEGER dlibMove,
             /* [in] */ DWORD dwOrigin,
             /* [out] */ ULARGE_INTEGER *plibNewPosition);
         
+        DECLSPEC_XFGVIRT(IInternetProtocol, LockRequest)
         HRESULT ( STDMETHODCALLTYPE *LockRequest )( 
             IInternetProtocol * This,
             /* [in] */ DWORD dwOptions);
         
+        DECLSPEC_XFGVIRT(IInternetProtocol, UnlockRequest)
         HRESULT ( STDMETHODCALLTYPE *UnlockRequest )( 
             IInternetProtocol * This);
         
@@ -5599,18 +5829,22 @@ EXTERN_C const IID IID_IInternetProtocolEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetProtocolEx * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetProtocolEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetProtocolEx * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Start)
         HRESULT ( STDMETHODCALLTYPE *Start )( 
             IInternetProtocolEx * This,
             /* [in] */ LPCWSTR szUrl,
@@ -5619,44 +5853,54 @@ EXTERN_C const IID IID_IInternetProtocolEx;
             /* [in] */ DWORD grfPI,
             /* [in] */ HANDLE_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Continue)
         HRESULT ( STDMETHODCALLTYPE *Continue )( 
             IInternetProtocolEx * This,
             /* [in] */ PROTOCOLDATA *pProtocolData);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Abort)
         HRESULT ( STDMETHODCALLTYPE *Abort )( 
             IInternetProtocolEx * This,
             /* [in] */ HRESULT hrReason,
             /* [in] */ DWORD dwOptions);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Terminate)
         HRESULT ( STDMETHODCALLTYPE *Terminate )( 
             IInternetProtocolEx * This,
             /* [in] */ DWORD dwOptions);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Suspend)
         HRESULT ( STDMETHODCALLTYPE *Suspend )( 
             IInternetProtocolEx * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolRoot, Resume)
         HRESULT ( STDMETHODCALLTYPE *Resume )( 
             IInternetProtocolEx * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocol, Read)
         HRESULT ( STDMETHODCALLTYPE *Read )( 
             IInternetProtocolEx * This,
             /* [length_is][size_is][out][in] */ void *pv,
             /* [in] */ ULONG cb,
             /* [out] */ ULONG *pcbRead);
         
+        DECLSPEC_XFGVIRT(IInternetProtocol, Seek)
         HRESULT ( STDMETHODCALLTYPE *Seek )( 
             IInternetProtocolEx * This,
             /* [in] */ LARGE_INTEGER dlibMove,
             /* [in] */ DWORD dwOrigin,
             /* [out] */ ULARGE_INTEGER *plibNewPosition);
         
+        DECLSPEC_XFGVIRT(IInternetProtocol, LockRequest)
         HRESULT ( STDMETHODCALLTYPE *LockRequest )( 
             IInternetProtocolEx * This,
             /* [in] */ DWORD dwOptions);
         
+        DECLSPEC_XFGVIRT(IInternetProtocol, UnlockRequest)
         HRESULT ( STDMETHODCALLTYPE *UnlockRequest )( 
             IInternetProtocolEx * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolEx, StartEx)
         HRESULT ( STDMETHODCALLTYPE *StartEx )( 
             IInternetProtocolEx * This,
             /* [in] */ IUri *pUri,
@@ -5789,33 +6033,40 @@ EXTERN_C const IID IID_IInternetProtocolSink;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetProtocolSink * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetProtocolSink * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetProtocolSink * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolSink, Switch)
         HRESULT ( STDMETHODCALLTYPE *Switch )( 
             IInternetProtocolSink * This,
             /* [in] */ PROTOCOLDATA *pProtocolData);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolSink, ReportProgress)
         HRESULT ( STDMETHODCALLTYPE *ReportProgress )( 
             IInternetProtocolSink * This,
             /* [in] */ ULONG ulStatusCode,
             /* [in] */ LPCWSTR szStatusText);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolSink, ReportData)
         HRESULT ( STDMETHODCALLTYPE *ReportData )( 
             IInternetProtocolSink * This,
             /* [in] */ DWORD grfBSCF,
             /* [in] */ ULONG ulProgress,
             /* [in] */ ULONG ulProgressMax);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolSink, ReportResult)
         HRESULT ( STDMETHODCALLTYPE *ReportResult )( 
             IInternetProtocolSink * This,
             /* [in] */ HRESULT hrResult,
@@ -5912,25 +6163,31 @@ EXTERN_C const IID IID_IInternetProtocolSinkStackable;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetProtocolSinkStackable * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetProtocolSinkStackable * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetProtocolSinkStackable * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolSinkStackable, SwitchSink)
         HRESULT ( STDMETHODCALLTYPE *SwitchSink )( 
             IInternetProtocolSinkStackable * This,
             /* [in] */ IInternetProtocolSink *pOIProtSink);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolSinkStackable, CommitSwitch)
         HRESULT ( STDMETHODCALLTYPE *CommitSwitch )( 
             IInternetProtocolSinkStackable * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolSinkStackable, RollbackSwitch)
         HRESULT ( STDMETHODCALLTYPE *RollbackSwitch )( 
             IInternetProtocolSinkStackable * This);
         
@@ -6062,18 +6319,22 @@ EXTERN_C const IID IID_IInternetSession;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetSession * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetSession * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetSession * This);
         
+        DECLSPEC_XFGVIRT(IInternetSession, RegisterNameSpace)
         HRESULT ( STDMETHODCALLTYPE *RegisterNameSpace )( 
             IInternetSession * This,
             /* [in] */ IClassFactory *pCF,
@@ -6083,22 +6344,26 @@ EXTERN_C const IID IID_IInternetSession;
             /* [in] */ const LPCWSTR *ppwzPatterns,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSession, UnregisterNameSpace)
         HRESULT ( STDMETHODCALLTYPE *UnregisterNameSpace )( 
             IInternetSession * This,
             /* [in] */ IClassFactory *pCF,
             /* [in] */ LPCWSTR pszProtocol);
         
+        DECLSPEC_XFGVIRT(IInternetSession, RegisterMimeFilter)
         HRESULT ( STDMETHODCALLTYPE *RegisterMimeFilter )( 
             IInternetSession * This,
             /* [in] */ IClassFactory *pCF,
             /* [in] */ REFCLSID rclsid,
             /* [in] */ LPCWSTR pwzType);
         
+        DECLSPEC_XFGVIRT(IInternetSession, UnregisterMimeFilter)
         HRESULT ( STDMETHODCALLTYPE *UnregisterMimeFilter )( 
             IInternetSession * This,
             /* [in] */ IClassFactory *pCF,
             /* [in] */ LPCWSTR pwzType);
         
+        DECLSPEC_XFGVIRT(IInternetSession, CreateBinding)
         HRESULT ( STDMETHODCALLTYPE *CreateBinding )( 
             IInternetSession * This,
             /* [in] */ LPBC pBC,
@@ -6108,6 +6373,7 @@ EXTERN_C const IID IID_IInternetSession;
             /* [unique][out] */ IInternetProtocol **ppOInetProt,
             /* [in] */ DWORD dwOption);
         
+        DECLSPEC_XFGVIRT(IInternetSession, SetSessionOption)
         HRESULT ( STDMETHODCALLTYPE *SetSessionOption )( 
             IInternetSession * This,
             /* [in] */ DWORD dwOption,
@@ -6115,6 +6381,7 @@ EXTERN_C const IID IID_IInternetSession;
             /* [in] */ DWORD dwBufferLength,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSession, GetSessionOption)
         HRESULT ( STDMETHODCALLTYPE *GetSessionOption )( 
             IInternetSession * This,
             /* [in] */ DWORD dwOption,
@@ -6218,21 +6485,26 @@ EXTERN_C const IID IID_IInternetThreadSwitch;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetThreadSwitch * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetThreadSwitch * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetThreadSwitch * This);
         
+        DECLSPEC_XFGVIRT(IInternetThreadSwitch, Prepare)
         HRESULT ( STDMETHODCALLTYPE *Prepare )( 
             IInternetThreadSwitch * This);
         
+        DECLSPEC_XFGVIRT(IInternetThreadSwitch, Continue)
         HRESULT ( STDMETHODCALLTYPE *Continue )( 
             IInternetThreadSwitch * This);
         
@@ -6319,22 +6591,27 @@ EXTERN_C const IID IID_IInternetPriority;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetPriority * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetPriority * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetPriority * This);
         
+        DECLSPEC_XFGVIRT(IInternetPriority, SetPriority)
         HRESULT ( STDMETHODCALLTYPE *SetPriority )( 
             IInternetPriority * This,
             /* [in] */ LONG nPriority);
         
+        DECLSPEC_XFGVIRT(IInternetPriority, GetPriority)
         HRESULT ( STDMETHODCALLTYPE *GetPriority )( 
             IInternetPriority * This,
             /* [out] */ LONG *pnPriority);
@@ -6502,18 +6779,22 @@ EXTERN_C const IID IID_IInternetProtocolInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetProtocolInfo * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetProtocolInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetProtocolInfo * This);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolInfo, ParseUrl)
         HRESULT ( STDMETHODCALLTYPE *ParseUrl )( 
             IInternetProtocolInfo * This,
             /* [in] */ LPCWSTR pwzUrl,
@@ -6525,6 +6806,7 @@ EXTERN_C const IID IID_IInternetProtocolInfo;
             /* [out] */ DWORD *pcchResult,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolInfo, CombineUrl)
         HRESULT ( STDMETHODCALLTYPE *CombineUrl )( 
             IInternetProtocolInfo * This,
             /* [in] */ LPCWSTR pwzBaseUrl,
@@ -6536,12 +6818,14 @@ EXTERN_C const IID IID_IInternetProtocolInfo;
             /* [out] */ DWORD *pcchResult,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolInfo, CompareUrl)
         HRESULT ( STDMETHODCALLTYPE *CompareUrl )( 
             IInternetProtocolInfo * This,
             /* [in] */ LPCWSTR pwzUrl1,
             /* [in] */ LPCWSTR pwzUrl2,
             /* [in] */ DWORD dwCompareFlags);
         
+        DECLSPEC_XFGVIRT(IInternetProtocolInfo, QueryInfo)
         HRESULT ( STDMETHODCALLTYPE *QueryInfo )( 
             IInternetProtocolInfo * This,
             /* [in] */ LPCWSTR pwzUrl,
@@ -6928,22 +7212,27 @@ EXTERN_C const IID IID_IInternetSecurityMgrSite;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetSecurityMgrSite * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetSecurityMgrSite * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetSecurityMgrSite * This);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityMgrSite, GetWindow)
         HRESULT ( STDMETHODCALLTYPE *GetWindow )( 
             IInternetSecurityMgrSite * This,
             /* [out] */ HWND *phwnd);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityMgrSite, EnableModeless)
         HRESULT ( STDMETHODCALLTYPE *EnableModeless )( 
             IInternetSecurityMgrSite * This,
             /* [in] */ BOOL fEnable);
@@ -7159,32 +7448,39 @@ EXTERN_C const IID IID_IInternetSecurityManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInternetSecurityManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInternetSecurityManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInternetSecurityManager * This);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, SetSecuritySite)
         HRESULT ( STDMETHODCALLTYPE *SetSecuritySite )( 
             __RPC__in IInternetSecurityManager * This,
             /* [unique][in] */ __RPC__in_opt IInternetSecurityMgrSite *pSite);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, GetSecuritySite)
         HRESULT ( STDMETHODCALLTYPE *GetSecuritySite )( 
             __RPC__in IInternetSecurityManager * This,
             /* [out] */ __RPC__deref_out_opt IInternetSecurityMgrSite **ppSite);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, MapUrlToZone)
         HRESULT ( STDMETHODCALLTYPE *MapUrlToZone )( 
             __RPC__in IInternetSecurityManager * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
             /* [out] */ __RPC__out DWORD *pdwZone,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, GetSecurityId)
         HRESULT ( STDMETHODCALLTYPE *GetSecurityId )( 
             __RPC__in IInternetSecurityManager * This,
             /* [annotation][in] */ 
@@ -7196,6 +7492,7 @@ EXTERN_C const IID IID_IInternetSecurityManager;
             /* [annotation][in] */ 
             _In_  DWORD_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, ProcessUrlAction)
         HRESULT ( STDMETHODCALLTYPE *ProcessUrlAction )( 
             __RPC__in IInternetSecurityManager * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
@@ -7207,6 +7504,7 @@ EXTERN_C const IID IID_IInternetSecurityManager;
             /* [in] */ DWORD dwFlags,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, QueryCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *QueryCustomPolicy )( 
             __RPC__in IInternetSecurityManager * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
@@ -7217,12 +7515,14 @@ EXTERN_C const IID IID_IInternetSecurityManager;
             /* [in] */ DWORD cbContext,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, SetZoneMapping)
         HRESULT ( STDMETHODCALLTYPE *SetZoneMapping )( 
             __RPC__in IInternetSecurityManager * This,
             /* [in] */ DWORD dwZone,
             /* [in] */ __RPC__in LPCWSTR lpszPattern,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, GetZoneMappings)
         HRESULT ( STDMETHODCALLTYPE *GetZoneMappings )( 
             __RPC__in IInternetSecurityManager * This,
             /* [in] */ DWORD dwZone,
@@ -7340,32 +7640,39 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInternetSecurityManagerEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInternetSecurityManagerEx * This);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, SetSecuritySite)
         HRESULT ( STDMETHODCALLTYPE *SetSecuritySite )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [unique][in] */ __RPC__in_opt IInternetSecurityMgrSite *pSite);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, GetSecuritySite)
         HRESULT ( STDMETHODCALLTYPE *GetSecuritySite )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [out] */ __RPC__deref_out_opt IInternetSecurityMgrSite **ppSite);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, MapUrlToZone)
         HRESULT ( STDMETHODCALLTYPE *MapUrlToZone )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
             /* [out] */ __RPC__out DWORD *pdwZone,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, GetSecurityId)
         HRESULT ( STDMETHODCALLTYPE *GetSecurityId )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [annotation][in] */ 
@@ -7377,6 +7684,7 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx;
             /* [annotation][in] */ 
             _In_  DWORD_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, ProcessUrlAction)
         HRESULT ( STDMETHODCALLTYPE *ProcessUrlAction )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
@@ -7388,6 +7696,7 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx;
             /* [in] */ DWORD dwFlags,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, QueryCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *QueryCustomPolicy )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
@@ -7398,18 +7707,21 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx;
             /* [in] */ DWORD cbContext,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, SetZoneMapping)
         HRESULT ( STDMETHODCALLTYPE *SetZoneMapping )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [in] */ DWORD dwZone,
             /* [in] */ __RPC__in LPCWSTR lpszPattern,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, GetZoneMappings)
         HRESULT ( STDMETHODCALLTYPE *GetZoneMappings )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [in] */ DWORD dwZone,
             /* [out] */ __RPC__deref_out_opt IEnumString **ppenumString,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManagerEx, ProcessUrlActionEx)
         HRESULT ( STDMETHODCALLTYPE *ProcessUrlActionEx )( 
             __RPC__in IInternetSecurityManagerEx * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
@@ -7566,32 +7878,39 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInternetSecurityManagerEx2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInternetSecurityManagerEx2 * This);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, SetSecuritySite)
         HRESULT ( STDMETHODCALLTYPE *SetSecuritySite )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [unique][in] */ __RPC__in_opt IInternetSecurityMgrSite *pSite);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, GetSecuritySite)
         HRESULT ( STDMETHODCALLTYPE *GetSecuritySite )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [out] */ __RPC__deref_out_opt IInternetSecurityMgrSite **ppSite);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, MapUrlToZone)
         HRESULT ( STDMETHODCALLTYPE *MapUrlToZone )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
             /* [out] */ __RPC__out DWORD *pdwZone,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, GetSecurityId)
         HRESULT ( STDMETHODCALLTYPE *GetSecurityId )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [annotation][in] */ 
@@ -7603,6 +7922,7 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx2;
             /* [annotation][in] */ 
             _In_  DWORD_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, ProcessUrlAction)
         HRESULT ( STDMETHODCALLTYPE *ProcessUrlAction )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
@@ -7614,6 +7934,7 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx2;
             /* [in] */ DWORD dwFlags,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, QueryCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *QueryCustomPolicy )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
@@ -7624,18 +7945,21 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx2;
             /* [in] */ DWORD cbContext,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, SetZoneMapping)
         HRESULT ( STDMETHODCALLTYPE *SetZoneMapping )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [in] */ DWORD dwZone,
             /* [in] */ __RPC__in LPCWSTR lpszPattern,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManager, GetZoneMappings)
         HRESULT ( STDMETHODCALLTYPE *GetZoneMappings )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [in] */ DWORD dwZone,
             /* [out] */ __RPC__deref_out_opt IEnumString **ppenumString,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManagerEx, ProcessUrlActionEx)
         HRESULT ( STDMETHODCALLTYPE *ProcessUrlActionEx )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [in] */ __RPC__in LPCWSTR pwszUrl,
@@ -7648,6 +7972,7 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx2;
             /* [in] */ DWORD dwReserved,
             /* [out] */ __RPC__out DWORD *pdwOutFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManagerEx2, MapUrlToZoneEx2)
         HRESULT ( STDMETHODCALLTYPE *MapUrlToZoneEx2 )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [annotation][in] */ 
@@ -7659,6 +7984,7 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx2;
             /* [annotation][out] */ 
             _Out_opt_  DWORD *pdwOutFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManagerEx2, ProcessUrlActionEx2)
         HRESULT ( STDMETHODCALLTYPE *ProcessUrlActionEx2 )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [annotation][in] */ 
@@ -7672,6 +7998,7 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx2;
             /* [in] */ DWORD_PTR dwReserved,
             /* [out] */ __RPC__out DWORD *pdwOutFlags);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManagerEx2, GetSecurityIdEx2)
         HRESULT ( STDMETHODCALLTYPE *GetSecurityIdEx2 )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [annotation][in] */ 
@@ -7683,6 +8010,7 @@ EXTERN_C const IID IID_IInternetSecurityManagerEx2;
             /* [annotation][in] */ 
             _In_  DWORD_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetSecurityManagerEx2, QueryCustomPolicyEx2)
         HRESULT ( STDMETHODCALLTYPE *QueryCustomPolicyEx2 )( 
             __RPC__in IInternetSecurityManagerEx2 * This,
             /* [annotation][in] */ 
@@ -7812,26 +8140,32 @@ EXTERN_C const IID IID_IZoneIdentifier;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IZoneIdentifier * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IZoneIdentifier * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IZoneIdentifier * This);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier, GetId)
         HRESULT ( STDMETHODCALLTYPE *GetId )( 
             __RPC__in IZoneIdentifier * This,
             /* [out] */ __RPC__out DWORD *pdwZone);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier, SetId)
         HRESULT ( STDMETHODCALLTYPE *SetId )( 
             __RPC__in IZoneIdentifier * This,
             /* [in] */ DWORD dwZone);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier, Remove)
         HRESULT ( STDMETHODCALLTYPE *Remove )( 
             __RPC__in IZoneIdentifier * This);
         
@@ -7928,48 +8262,60 @@ EXTERN_C const IID IID_IZoneIdentifier2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IZoneIdentifier2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IZoneIdentifier2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IZoneIdentifier2 * This);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier, GetId)
         HRESULT ( STDMETHODCALLTYPE *GetId )( 
             __RPC__in IZoneIdentifier2 * This,
             /* [out] */ __RPC__out DWORD *pdwZone);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier, SetId)
         HRESULT ( STDMETHODCALLTYPE *SetId )( 
             __RPC__in IZoneIdentifier2 * This,
             /* [in] */ DWORD dwZone);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier, Remove)
         HRESULT ( STDMETHODCALLTYPE *Remove )( 
             __RPC__in IZoneIdentifier2 * This);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier2, GetLastWriterPackageFamilyName)
         HRESULT ( STDMETHODCALLTYPE *GetLastWriterPackageFamilyName )( 
             __RPC__in IZoneIdentifier2 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *packageFamilyName);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier2, SetLastWriterPackageFamilyName)
         HRESULT ( STDMETHODCALLTYPE *SetLastWriterPackageFamilyName )( 
             __RPC__in IZoneIdentifier2 * This,
             /* [in] */ __RPC__in LPCWSTR packageFamilyName);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier2, RemoveLastWriterPackageFamilyName)
         HRESULT ( STDMETHODCALLTYPE *RemoveLastWriterPackageFamilyName )( 
             __RPC__in IZoneIdentifier2 * This);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier2, GetAppZoneId)
         HRESULT ( STDMETHODCALLTYPE *GetAppZoneId )( 
             __RPC__in IZoneIdentifier2 * This,
             /* [out] */ __RPC__out DWORD *zone);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier2, SetAppZoneId)
         HRESULT ( STDMETHODCALLTYPE *SetAppZoneId )( 
             __RPC__in IZoneIdentifier2 * This,
             /* [in] */ DWORD zone);
         
+        DECLSPEC_XFGVIRT(IZoneIdentifier2, RemoveAppZoneId)
         HRESULT ( STDMETHODCALLTYPE *RemoveAppZoneId )( 
             __RPC__in IZoneIdentifier2 * This);
         
@@ -8103,18 +8449,22 @@ EXTERN_C const IID IID_IInternetHostSecurityManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetHostSecurityManager * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetHostSecurityManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetHostSecurityManager * This);
         
+        DECLSPEC_XFGVIRT(IInternetHostSecurityManager, GetSecurityId)
         HRESULT ( STDMETHODCALLTYPE *GetSecurityId )( 
             IInternetHostSecurityManager * This,
             /* [annotation][size_is][out] */ 
@@ -8123,6 +8473,7 @@ EXTERN_C const IID IID_IInternetHostSecurityManager;
             _Inout_ _Deref_in_range_(MAX_SIZE_SECURITY_ID, UINT_MAX) _Deref_out_range_(0, MAX_SIZE_SECURITY_ID)  DWORD *pcbSecurityId,
             /* [in] */ DWORD_PTR dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetHostSecurityManager, ProcessUrlAction)
         HRESULT ( STDMETHODCALLTYPE *ProcessUrlAction )( 
             IInternetHostSecurityManager * This,
             /* [in] */ DWORD dwAction,
@@ -8135,6 +8486,7 @@ EXTERN_C const IID IID_IInternetHostSecurityManager;
             /* [in] */ DWORD dwFlags,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetHostSecurityManager, QueryCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *QueryCustomPolicy )( 
             IInternetHostSecurityManager * This,
             /* [in] */ REFGUID guidKey,
@@ -8238,7 +8590,8 @@ EXTERN_C const IID IID_IInternetHostSecurityManager;
 #define URLACTION_SCRIPT_NAVIGATE                              0x0000140A
 #define URLACTION_PLUGGABLE_PROTOCOL_XHR                       0x0000140B
 #define URLACTION_ALLOW_VBSCRIPT_IE                            0x0000140C
-#define URLACTION_SCRIPT_CURR_MAX                              0x0000140C
+#define URLACTION_ALLOW_JSCRIPT_IE                             0x0000140D
+#define URLACTION_SCRIPT_CURR_MAX                              0x0000140D
 #define URLACTION_SCRIPT_MAX                                   0x000015ff
 
 #define URLACTION_HTML_MIN                                     0x00001600
@@ -8687,30 +9040,36 @@ EXTERN_C const IID IID_IInternetZoneManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetZoneManager * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetZoneManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetZoneManager * This);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetZoneAttributes )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwZone,
             /* [annotation][unique][out][in] */ 
             _Inout_  ZONEATTRIBUTES *pZoneAttributes);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, SetZoneAttributes)
         HRESULT ( STDMETHODCALLTYPE *SetZoneAttributes )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwZone,
             /* [annotation][in] */ 
             _In_  ZONEATTRIBUTES *pZoneAttributes);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *GetZoneCustomPolicy )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwZone,
@@ -8721,6 +9080,7 @@ EXTERN_C const IID IID_IInternetZoneManager;
             _Out_  DWORD *pcbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, SetZoneCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *SetZoneCustomPolicy )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwZone,
@@ -8730,6 +9090,7 @@ EXTERN_C const IID IID_IInternetZoneManager;
             /* [in] */ DWORD cbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneActionPolicy)
         HRESULT ( STDMETHODCALLTYPE *GetZoneActionPolicy )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwZone,
@@ -8739,6 +9100,7 @@ EXTERN_C const IID IID_IInternetZoneManager;
             /* [in] */ DWORD cbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, SetZoneActionPolicy)
         HRESULT ( STDMETHODCALLTYPE *SetZoneActionPolicy )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwZone,
@@ -8748,6 +9110,7 @@ EXTERN_C const IID IID_IInternetZoneManager;
             /* [in] */ DWORD cbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, PromptAction)
         HRESULT ( STDMETHODCALLTYPE *PromptAction )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwAction,
@@ -8756,6 +9119,7 @@ EXTERN_C const IID IID_IInternetZoneManager;
             /* [in] */ LPCWSTR pwszText,
             /* [in] */ DWORD dwPromptFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, LogAction)
         HRESULT ( STDMETHODCALLTYPE *LogAction )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwAction,
@@ -8763,22 +9127,26 @@ EXTERN_C const IID IID_IInternetZoneManager;
             /* [in] */ LPCWSTR pwszText,
             /* [in] */ DWORD dwLogFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, CreateZoneEnumerator)
         HRESULT ( STDMETHODCALLTYPE *CreateZoneEnumerator )( 
             IInternetZoneManager * This,
             /* [out] */ DWORD *pdwEnum,
             /* [out] */ DWORD *pdwCount,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneAt)
         HRESULT ( STDMETHODCALLTYPE *GetZoneAt )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwEnum,
             /* [in] */ DWORD dwIndex,
             /* [out] */ DWORD *pdwZone);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, DestroyZoneEnumerator)
         HRESULT ( STDMETHODCALLTYPE *DestroyZoneEnumerator )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwEnum);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, CopyTemplatePoliciesToZone)
         HRESULT ( STDMETHODCALLTYPE *CopyTemplatePoliciesToZone )( 
             IInternetZoneManager * This,
             /* [in] */ DWORD dwTemplate,
@@ -8917,30 +9285,36 @@ EXTERN_C const IID IID_IInternetZoneManagerEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetZoneManagerEx * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetZoneManagerEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetZoneManagerEx * This);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetZoneAttributes )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwZone,
             /* [annotation][unique][out][in] */ 
             _Inout_  ZONEATTRIBUTES *pZoneAttributes);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, SetZoneAttributes)
         HRESULT ( STDMETHODCALLTYPE *SetZoneAttributes )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwZone,
             /* [annotation][in] */ 
             _In_  ZONEATTRIBUTES *pZoneAttributes);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *GetZoneCustomPolicy )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwZone,
@@ -8951,6 +9325,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx;
             _Out_  DWORD *pcbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, SetZoneCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *SetZoneCustomPolicy )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwZone,
@@ -8960,6 +9335,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx;
             /* [in] */ DWORD cbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneActionPolicy)
         HRESULT ( STDMETHODCALLTYPE *GetZoneActionPolicy )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwZone,
@@ -8969,6 +9345,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx;
             /* [in] */ DWORD cbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, SetZoneActionPolicy)
         HRESULT ( STDMETHODCALLTYPE *SetZoneActionPolicy )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwZone,
@@ -8978,6 +9355,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx;
             /* [in] */ DWORD cbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, PromptAction)
         HRESULT ( STDMETHODCALLTYPE *PromptAction )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwAction,
@@ -8986,6 +9364,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx;
             /* [in] */ LPCWSTR pwszText,
             /* [in] */ DWORD dwPromptFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, LogAction)
         HRESULT ( STDMETHODCALLTYPE *LogAction )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwAction,
@@ -8993,28 +9372,33 @@ EXTERN_C const IID IID_IInternetZoneManagerEx;
             /* [in] */ LPCWSTR pwszText,
             /* [in] */ DWORD dwLogFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, CreateZoneEnumerator)
         HRESULT ( STDMETHODCALLTYPE *CreateZoneEnumerator )( 
             IInternetZoneManagerEx * This,
             /* [out] */ DWORD *pdwEnum,
             /* [out] */ DWORD *pdwCount,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneAt)
         HRESULT ( STDMETHODCALLTYPE *GetZoneAt )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwEnum,
             /* [in] */ DWORD dwIndex,
             /* [out] */ DWORD *pdwZone);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, DestroyZoneEnumerator)
         HRESULT ( STDMETHODCALLTYPE *DestroyZoneEnumerator )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwEnum);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, CopyTemplatePoliciesToZone)
         HRESULT ( STDMETHODCALLTYPE *CopyTemplatePoliciesToZone )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwTemplate,
             /* [in] */ DWORD dwZone,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManagerEx, GetZoneActionPolicyEx)
         HRESULT ( STDMETHODCALLTYPE *GetZoneActionPolicyEx )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwZone,
@@ -9025,6 +9409,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx;
             /* [in] */ URLZONEREG urlZoneReg,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManagerEx, SetZoneActionPolicyEx)
         HRESULT ( STDMETHODCALLTYPE *SetZoneActionPolicyEx )( 
             IInternetZoneManagerEx * This,
             /* [in] */ DWORD dwZone,
@@ -9173,30 +9558,36 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInternetZoneManagerEx2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInternetZoneManagerEx2 * This);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetZoneAttributes )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZone,
             /* [annotation][unique][out][in] */ 
             _Inout_  ZONEATTRIBUTES *pZoneAttributes);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, SetZoneAttributes)
         HRESULT ( STDMETHODCALLTYPE *SetZoneAttributes )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZone,
             /* [annotation][in] */ 
             _In_  ZONEATTRIBUTES *pZoneAttributes);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *GetZoneCustomPolicy )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZone,
@@ -9207,6 +9598,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             _Out_  DWORD *pcbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, SetZoneCustomPolicy)
         HRESULT ( STDMETHODCALLTYPE *SetZoneCustomPolicy )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZone,
@@ -9216,6 +9608,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             /* [in] */ DWORD cbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneActionPolicy)
         HRESULT ( STDMETHODCALLTYPE *GetZoneActionPolicy )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZone,
@@ -9225,6 +9618,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             /* [in] */ DWORD cbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, SetZoneActionPolicy)
         HRESULT ( STDMETHODCALLTYPE *SetZoneActionPolicy )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZone,
@@ -9234,6 +9628,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             /* [in] */ DWORD cbPolicy,
             /* [in] */ URLZONEREG urlZoneReg);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, PromptAction)
         HRESULT ( STDMETHODCALLTYPE *PromptAction )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwAction,
@@ -9242,6 +9637,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             /* [in] */ LPCWSTR pwszText,
             /* [in] */ DWORD dwPromptFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, LogAction)
         HRESULT ( STDMETHODCALLTYPE *LogAction )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwAction,
@@ -9249,28 +9645,33 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             /* [in] */ LPCWSTR pwszText,
             /* [in] */ DWORD dwLogFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, CreateZoneEnumerator)
         HRESULT ( STDMETHODCALLTYPE *CreateZoneEnumerator )( 
             IInternetZoneManagerEx2 * This,
             /* [out] */ DWORD *pdwEnum,
             /* [out] */ DWORD *pdwCount,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, GetZoneAt)
         HRESULT ( STDMETHODCALLTYPE *GetZoneAt )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwEnum,
             /* [in] */ DWORD dwIndex,
             /* [out] */ DWORD *pdwZone);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, DestroyZoneEnumerator)
         HRESULT ( STDMETHODCALLTYPE *DestroyZoneEnumerator )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwEnum);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManager, CopyTemplatePoliciesToZone)
         HRESULT ( STDMETHODCALLTYPE *CopyTemplatePoliciesToZone )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwTemplate,
             /* [in] */ DWORD dwZone,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManagerEx, GetZoneActionPolicyEx)
         HRESULT ( STDMETHODCALLTYPE *GetZoneActionPolicyEx )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZone,
@@ -9281,6 +9682,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             /* [in] */ URLZONEREG urlZoneReg,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManagerEx, SetZoneActionPolicyEx)
         HRESULT ( STDMETHODCALLTYPE *SetZoneActionPolicyEx )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZone,
@@ -9291,12 +9693,14 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             /* [in] */ URLZONEREG urlZoneReg,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManagerEx2, GetZoneAttributesEx)
         HRESULT ( STDMETHODCALLTYPE *GetZoneAttributesEx )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZone,
             /* [unique][out][in] */ ZONEATTRIBUTES *pZoneAttributes,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManagerEx2, GetZoneSecurityState)
         HRESULT ( STDMETHODCALLTYPE *GetZoneSecurityState )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ DWORD dwZoneIndex,
@@ -9304,6 +9708,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             /* [out][in] */ LPDWORD pdwState,
             /* [out][in] */ BOOL *pfPolicyEncountered);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManagerEx2, GetIESecurityState)
         HRESULT ( STDMETHODCALLTYPE *GetIESecurityState )( 
             IInternetZoneManagerEx2 * This,
             /* [in] */ BOOL fRespectPolicy,
@@ -9311,6 +9716,7 @@ EXTERN_C const IID IID_IInternetZoneManagerEx2;
             /* [out][in] */ BOOL *pfPolicyEncountered,
             /* [in] */ BOOL fNoCache);
         
+        DECLSPEC_XFGVIRT(IInternetZoneManagerEx2, FixUnsecureSettings)
         HRESULT ( STDMETHODCALLTYPE *FixUnsecureSettings )( 
             IInternetZoneManagerEx2 * This);
         
@@ -9505,36 +9911,43 @@ EXTERN_C const IID IID_ISoftDistExt;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ISoftDistExt * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISoftDistExt * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ISoftDistExt * This);
         
+        DECLSPEC_XFGVIRT(ISoftDistExt, ProcessSoftDist)
         HRESULT ( STDMETHODCALLTYPE *ProcessSoftDist )( 
             ISoftDistExt * This,
             /* [in] */ LPCWSTR szCDFURL,
             /* [in] */ IXMLElement *pSoftDistElement,
             /* [out][in] */ LPSOFTDISTINFO lpsdi);
         
+        DECLSPEC_XFGVIRT(ISoftDistExt, GetFirstCodeBase)
         HRESULT ( STDMETHODCALLTYPE *GetFirstCodeBase )( 
             ISoftDistExt * This,
             /* [annotation][in] */ 
             __RPC__in  LPWSTR *szCodeBase,
             /* [in] */ LPDWORD dwMaxSize);
         
+        DECLSPEC_XFGVIRT(ISoftDistExt, GetNextCodeBase)
         HRESULT ( STDMETHODCALLTYPE *GetNextCodeBase )( 
             ISoftDistExt * This,
             /* [annotation][in] */ 
             __RPC__in  LPWSTR *szCodeBase,
             /* [in] */ LPDWORD dwMaxSize);
         
+        DECLSPEC_XFGVIRT(ISoftDistExt, AsyncInstallDistributionUnit)
         HRESULT ( STDMETHODCALLTYPE *AsyncInstallDistributionUnit )( 
             ISoftDistExt * This,
             /* [in] */ IBindCtx *pbc,
@@ -9634,23 +10047,28 @@ EXTERN_C const IID IID_ICatalogFileInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICatalogFileInfo * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICatalogFileInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICatalogFileInfo * This);
         
+        DECLSPEC_XFGVIRT(ICatalogFileInfo, GetCatalogFile)
         HRESULT ( STDMETHODCALLTYPE *GetCatalogFile )( 
             ICatalogFileInfo * This,
             /* [annotation][out] */ 
             __RPC__out  LPSTR *ppszCatalogFile);
         
+        DECLSPEC_XFGVIRT(ICatalogFileInfo, GetJavaTrust)
         HRESULT ( STDMETHODCALLTYPE *GetJavaTrust )( 
             ICatalogFileInfo * This,
             /* [out] */ void **ppJavaTrust);
@@ -9757,18 +10175,22 @@ EXTERN_C const IID IID_IDataFilter;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDataFilter * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDataFilter * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDataFilter * This);
         
+        DECLSPEC_XFGVIRT(IDataFilter, DoEncode)
         HRESULT ( STDMETHODCALLTYPE *DoEncode )( 
             __RPC__in IDataFilter * This,
             /* [in] */ DWORD dwFlags,
@@ -9781,6 +10203,7 @@ EXTERN_C const IID IID_IDataFilter;
             /* [out] */ __RPC__out LONG *plOutBytesWritten,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IDataFilter, DoDecode)
         HRESULT ( STDMETHODCALLTYPE *DoDecode )( 
             __RPC__in IDataFilter * This,
             /* [in] */ DWORD dwFlags,
@@ -9793,6 +10216,7 @@ EXTERN_C const IID IID_IDataFilter;
             /* [out] */ __RPC__out LONG *plOutBytesWritten,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IDataFilter, SetEncodingLevel)
         HRESULT ( STDMETHODCALLTYPE *SetEncodingLevel )( 
             __RPC__in IDataFilter * This,
             /* [in] */ DWORD dwEncLevel);
@@ -9905,18 +10329,22 @@ EXTERN_C const IID IID_IEncodingFilterFactory;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IEncodingFilterFactory * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IEncodingFilterFactory * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IEncodingFilterFactory * This);
         
+        DECLSPEC_XFGVIRT(IEncodingFilterFactory, FindBestFilter)
         HRESULT ( STDMETHODCALLTYPE *FindBestFilter )( 
             IEncodingFilterFactory * This,
             /* [in] */ LPCWSTR pwzCodeIn,
@@ -9924,6 +10352,7 @@ EXTERN_C const IID IID_IEncodingFilterFactory;
             /* [in] */ DATAINFO info,
             /* [out] */ IDataFilter **ppDF);
         
+        DECLSPEC_XFGVIRT(IEncodingFilterFactory, GetDefaultFilter)
         HRESULT ( STDMETHODCALLTYPE *GetDefaultFilter )( 
             IEncodingFilterFactory * This,
             /* [in] */ LPCWSTR pwzCodeIn,
@@ -10042,18 +10471,22 @@ EXTERN_C const IID IID_IWrappedProtocol;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWrappedProtocol * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWrappedProtocol * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWrappedProtocol * This);
         
+        DECLSPEC_XFGVIRT(IWrappedProtocol, GetWrapperCode)
         HRESULT ( STDMETHODCALLTYPE *GetWrapperCode )( 
             IWrappedProtocol * This,
             /* [out] */ LONG *pnCode,
@@ -10145,18 +10578,22 @@ EXTERN_C const IID IID_IGetBindHandle;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IGetBindHandle * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IGetBindHandle * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IGetBindHandle * This);
         
+        DECLSPEC_XFGVIRT(IGetBindHandle, GetBindHandle)
         HRESULT ( STDMETHODCALLTYPE *GetBindHandle )( 
             IGetBindHandle * This,
             /* [in] */ BINDHANDLETYPES enumRequestedHandle,
@@ -10251,18 +10688,22 @@ EXTERN_C const IID IID_IBindCallbackRedirect;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IBindCallbackRedirect * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IBindCallbackRedirect * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IBindCallbackRedirect * This);
         
+        DECLSPEC_XFGVIRT(IBindCallbackRedirect, Redirect)
         HRESULT ( STDMETHODCALLTYPE *Redirect )( 
             IBindCallbackRedirect * This,
             /* [in] */ LPCWSTR lpcUrl,
@@ -10343,18 +10784,22 @@ EXTERN_C const IID IID_IBindHttpSecurity;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBindHttpSecurity * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBindHttpSecurity * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBindHttpSecurity * This);
         
+        DECLSPEC_XFGVIRT(IBindHttpSecurity, GetIgnoreCertMask)
         HRESULT ( STDMETHODCALLTYPE *GetIgnoreCertMask )( 
             __RPC__in IBindHttpSecurity * This,
             /* [ref][out] */ __RPC__out DWORD *pdwIgnoreCertMask);

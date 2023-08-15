@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,13 +6,14 @@
 #ifndef WINRT_Windows_UI_Xaml_Automation_Peers_2_H
 #define WINRT_Windows_UI_Xaml_Automation_Peers_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
+#include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Automation.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Automation.Provider.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.Primitives.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Automation.Peers.1.h"
-namespace winrt::Windows::UI::Xaml::Automation::Peers
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation::Peers
 {
     struct RawElementProviderRuntimeId
     {
@@ -33,7 +34,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         AppBarAutomationPeer(std::nullptr_t) noexcept {}
         AppBarAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IAppBarAutomationPeer(ptr, take_ownership_from_abi) {}
-        AppBarAutomationPeer(Windows::UI::Xaml::Controls::AppBar const& owner);
+        explicit AppBarAutomationPeer(Windows::UI::Xaml::Controls::AppBar const& owner);
     };
     struct __declspec(empty_bases) AppBarButtonAutomationPeer : Windows::UI::Xaml::Automation::Peers::IAppBarButtonAutomationPeer,
         impl::base<AppBarButtonAutomationPeer, Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer, Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -41,7 +42,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         AppBarButtonAutomationPeer(std::nullptr_t) noexcept {}
         AppBarButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IAppBarButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        AppBarButtonAutomationPeer(Windows::UI::Xaml::Controls::AppBarButton const& owner);
+        explicit AppBarButtonAutomationPeer(Windows::UI::Xaml::Controls::AppBarButton const& owner);
     };
     struct __declspec(empty_bases) AppBarToggleButtonAutomationPeer : Windows::UI::Xaml::Automation::Peers::IAppBarToggleButtonAutomationPeer,
         impl::base<AppBarToggleButtonAutomationPeer, Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer, Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -49,7 +50,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         AppBarToggleButtonAutomationPeer(std::nullptr_t) noexcept {}
         AppBarToggleButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IAppBarToggleButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        AppBarToggleButtonAutomationPeer(Windows::UI::Xaml::Controls::AppBarToggleButton const& owner);
+        explicit AppBarToggleButtonAutomationPeer(Windows::UI::Xaml::Controls::AppBarToggleButton const& owner);
     };
     struct __declspec(empty_bases) AutoSuggestBoxAutomationPeer : Windows::UI::Xaml::Automation::Peers::IAutoSuggestBoxAutomationPeer,
         impl::base<AutoSuggestBoxAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -57,7 +58,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         AutoSuggestBoxAutomationPeer(std::nullptr_t) noexcept {}
         AutoSuggestBoxAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IAutoSuggestBoxAutomationPeer(ptr, take_ownership_from_abi) {}
-        AutoSuggestBoxAutomationPeer(Windows::UI::Xaml::Controls::AutoSuggestBox const& owner);
+        explicit AutoSuggestBoxAutomationPeer(Windows::UI::Xaml::Controls::AutoSuggestBox const& owner);
     };
     struct __declspec(empty_bases) AutomationPeer : Windows::UI::Xaml::Automation::Peers::IAutomationPeer,
         impl::base<AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -75,7 +76,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         AutomationPeerAnnotation(std::nullptr_t) noexcept {}
         AutomationPeerAnnotation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IAutomationPeerAnnotation(ptr, take_ownership_from_abi) {}
         AutomationPeerAnnotation();
-        AutomationPeerAnnotation(Windows::UI::Xaml::Automation::AnnotationType const& type);
+        explicit AutomationPeerAnnotation(Windows::UI::Xaml::Automation::AnnotationType const& type);
         AutomationPeerAnnotation(Windows::UI::Xaml::Automation::AnnotationType const& type, Windows::UI::Xaml::Automation::Peers::AutomationPeer const& peer);
         [[nodiscard]] static auto TypeProperty();
         [[nodiscard]] static auto PeerProperty();
@@ -86,7 +87,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ButtonAutomationPeer(std::nullptr_t) noexcept {}
         ButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        ButtonAutomationPeer(Windows::UI::Xaml::Controls::Button const& owner);
+        explicit ButtonAutomationPeer(Windows::UI::Xaml::Controls::Button const& owner);
     };
     struct __declspec(empty_bases) ButtonBaseAutomationPeer : Windows::UI::Xaml::Automation::Peers::IButtonBaseAutomationPeer,
         impl::base<ButtonBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -101,7 +102,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         CalendarDatePickerAutomationPeer(std::nullptr_t) noexcept {}
         CalendarDatePickerAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ICalendarDatePickerAutomationPeer(ptr, take_ownership_from_abi) {}
-        CalendarDatePickerAutomationPeer(Windows::UI::Xaml::Controls::CalendarDatePicker const& owner);
+        explicit CalendarDatePickerAutomationPeer(Windows::UI::Xaml::Controls::CalendarDatePicker const& owner);
         using impl::consume_t<CalendarDatePickerAutomationPeer, Windows::UI::Xaml::Automation::Provider::IValueProvider>::SetValue;
         using impl::consume_t<CalendarDatePickerAutomationPeer, Windows::UI::Xaml::IDependencyObject>::SetValue;
     };
@@ -111,7 +112,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         CaptureElementAutomationPeer(std::nullptr_t) noexcept {}
         CaptureElementAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ICaptureElementAutomationPeer(ptr, take_ownership_from_abi) {}
-        CaptureElementAutomationPeer(Windows::UI::Xaml::Controls::CaptureElement const& owner);
+        explicit CaptureElementAutomationPeer(Windows::UI::Xaml::Controls::CaptureElement const& owner);
     };
     struct __declspec(empty_bases) CheckBoxAutomationPeer : Windows::UI::Xaml::Automation::Peers::ICheckBoxAutomationPeer,
         impl::base<CheckBoxAutomationPeer, Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer, Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -119,7 +120,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         CheckBoxAutomationPeer(std::nullptr_t) noexcept {}
         CheckBoxAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ICheckBoxAutomationPeer(ptr, take_ownership_from_abi) {}
-        CheckBoxAutomationPeer(Windows::UI::Xaml::Controls::CheckBox const& owner);
+        explicit CheckBoxAutomationPeer(Windows::UI::Xaml::Controls::CheckBox const& owner);
     };
     struct __declspec(empty_bases) ColorPickerSliderAutomationPeer : Windows::UI::Xaml::Automation::Peers::IColorPickerSliderAutomationPeer,
         impl::base<ColorPickerSliderAutomationPeer, Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer, Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -127,7 +128,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ColorPickerSliderAutomationPeer(std::nullptr_t) noexcept {}
         ColorPickerSliderAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IColorPickerSliderAutomationPeer(ptr, take_ownership_from_abi) {}
-        ColorPickerSliderAutomationPeer(Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider const& owner);
+        explicit ColorPickerSliderAutomationPeer(Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider const& owner);
         using impl::consume_t<ColorPickerSliderAutomationPeer, Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::SetValue;
         using impl::consume_t<ColorPickerSliderAutomationPeer, Windows::UI::Xaml::IDependencyObject>::SetValue;
     };
@@ -137,7 +138,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ColorSpectrumAutomationPeer(std::nullptr_t) noexcept {}
         ColorSpectrumAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IColorSpectrumAutomationPeer(ptr, take_ownership_from_abi) {}
-        ColorSpectrumAutomationPeer(Windows::UI::Xaml::Controls::Primitives::ColorSpectrum const& owner);
+        explicit ColorSpectrumAutomationPeer(Windows::UI::Xaml::Controls::Primitives::ColorSpectrum const& owner);
     };
     struct __declspec(empty_bases) ComboBoxAutomationPeer : Windows::UI::Xaml::Automation::Peers::IComboBoxAutomationPeer,
         impl::base<ComboBoxAutomationPeer, Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -145,7 +146,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ComboBoxAutomationPeer(std::nullptr_t) noexcept {}
         ComboBoxAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IComboBoxAutomationPeer(ptr, take_ownership_from_abi) {}
-        ComboBoxAutomationPeer(Windows::UI::Xaml::Controls::ComboBox const& owner);
+        explicit ComboBoxAutomationPeer(Windows::UI::Xaml::Controls::ComboBox const& owner);
         using impl::consume_t<ComboBoxAutomationPeer, Windows::UI::Xaml::Automation::Provider::IValueProvider>::SetValue;
         using impl::consume_t<ComboBoxAutomationPeer, Windows::UI::Xaml::IDependencyObject>::SetValue;
     };
@@ -155,7 +156,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ComboBoxItemAutomationPeer(std::nullptr_t) noexcept {}
         ComboBoxItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IComboBoxItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        ComboBoxItemAutomationPeer(Windows::UI::Xaml::Controls::ComboBoxItem const& owner);
+        explicit ComboBoxItemAutomationPeer(Windows::UI::Xaml::Controls::ComboBoxItem const& owner);
     };
     struct __declspec(empty_bases) ComboBoxItemDataAutomationPeer : Windows::UI::Xaml::Automation::Peers::IComboBoxItemDataAutomationPeer,
         impl::base<ComboBoxItemDataAutomationPeer, Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -171,7 +172,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         DatePickerAutomationPeer(std::nullptr_t) noexcept {}
         DatePickerAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IDatePickerAutomationPeer(ptr, take_ownership_from_abi) {}
-        DatePickerAutomationPeer(Windows::UI::Xaml::Controls::DatePicker const& owner);
+        explicit DatePickerAutomationPeer(Windows::UI::Xaml::Controls::DatePicker const& owner);
     };
     struct __declspec(empty_bases) DatePickerFlyoutPresenterAutomationPeer : Windows::UI::Xaml::Automation::Peers::IDatePickerFlyoutPresenterAutomationPeer,
         impl::base<DatePickerFlyoutPresenterAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -186,7 +187,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         FlipViewAutomationPeer(std::nullptr_t) noexcept {}
         FlipViewAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IFlipViewAutomationPeer(ptr, take_ownership_from_abi) {}
-        FlipViewAutomationPeer(Windows::UI::Xaml::Controls::FlipView const& owner);
+        explicit FlipViewAutomationPeer(Windows::UI::Xaml::Controls::FlipView const& owner);
     };
     struct __declspec(empty_bases) FlipViewItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IFlipViewItemAutomationPeer,
         impl::base<FlipViewItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -194,7 +195,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         FlipViewItemAutomationPeer(std::nullptr_t) noexcept {}
         FlipViewItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IFlipViewItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        FlipViewItemAutomationPeer(Windows::UI::Xaml::Controls::FlipViewItem const& owner);
+        explicit FlipViewItemAutomationPeer(Windows::UI::Xaml::Controls::FlipViewItem const& owner);
     };
     struct __declspec(empty_bases) FlipViewItemDataAutomationPeer : Windows::UI::Xaml::Automation::Peers::IFlipViewItemDataAutomationPeer,
         impl::base<FlipViewItemDataAutomationPeer, Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -210,7 +211,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         FlyoutPresenterAutomationPeer(std::nullptr_t) noexcept {}
         FlyoutPresenterAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IFlyoutPresenterAutomationPeer(ptr, take_ownership_from_abi) {}
-        FlyoutPresenterAutomationPeer(Windows::UI::Xaml::Controls::FlyoutPresenter const& owner);
+        explicit FlyoutPresenterAutomationPeer(Windows::UI::Xaml::Controls::FlyoutPresenter const& owner);
     };
     struct __declspec(empty_bases) FrameworkElementAutomationPeer : Windows::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer,
         impl::base<FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -218,7 +219,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         FrameworkElementAutomationPeer(std::nullptr_t) noexcept {}
         FrameworkElementAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer(ptr, take_ownership_from_abi) {}
-        FrameworkElementAutomationPeer(Windows::UI::Xaml::FrameworkElement const& owner);
+        explicit FrameworkElementAutomationPeer(Windows::UI::Xaml::FrameworkElement const& owner);
         static auto FromElement(Windows::UI::Xaml::UIElement const& element);
         static auto CreatePeerForElement(Windows::UI::Xaml::UIElement const& element);
     };
@@ -228,7 +229,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         GridViewAutomationPeer(std::nullptr_t) noexcept {}
         GridViewAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IGridViewAutomationPeer(ptr, take_ownership_from_abi) {}
-        GridViewAutomationPeer(Windows::UI::Xaml::Controls::GridView const& owner);
+        explicit GridViewAutomationPeer(Windows::UI::Xaml::Controls::GridView const& owner);
     };
     struct __declspec(empty_bases) GridViewHeaderItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IGridViewHeaderItemAutomationPeer,
         impl::base<GridViewHeaderItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -236,7 +237,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         GridViewHeaderItemAutomationPeer(std::nullptr_t) noexcept {}
         GridViewHeaderItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IGridViewHeaderItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        GridViewHeaderItemAutomationPeer(Windows::UI::Xaml::Controls::GridViewHeaderItem const& owner);
+        explicit GridViewHeaderItemAutomationPeer(Windows::UI::Xaml::Controls::GridViewHeaderItem const& owner);
     };
     struct __declspec(empty_bases) GridViewItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IGridViewItemAutomationPeer,
         impl::base<GridViewItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -244,7 +245,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         GridViewItemAutomationPeer(std::nullptr_t) noexcept {}
         GridViewItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IGridViewItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        GridViewItemAutomationPeer(Windows::UI::Xaml::Controls::GridViewItem const& owner);
+        explicit GridViewItemAutomationPeer(Windows::UI::Xaml::Controls::GridViewItem const& owner);
     };
     struct __declspec(empty_bases) GridViewItemDataAutomationPeer : Windows::UI::Xaml::Automation::Peers::IGridViewItemDataAutomationPeer,
         impl::base<GridViewItemDataAutomationPeer, Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -260,7 +261,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         GroupItemAutomationPeer(std::nullptr_t) noexcept {}
         GroupItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IGroupItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        GroupItemAutomationPeer(Windows::UI::Xaml::Controls::GroupItem const& owner);
+        explicit GroupItemAutomationPeer(Windows::UI::Xaml::Controls::GroupItem const& owner);
     };
     struct __declspec(empty_bases) HubAutomationPeer : Windows::UI::Xaml::Automation::Peers::IHubAutomationPeer,
         impl::base<HubAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -268,7 +269,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         HubAutomationPeer(std::nullptr_t) noexcept {}
         HubAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IHubAutomationPeer(ptr, take_ownership_from_abi) {}
-        HubAutomationPeer(Windows::UI::Xaml::Controls::Hub const& owner);
+        explicit HubAutomationPeer(Windows::UI::Xaml::Controls::Hub const& owner);
     };
     struct __declspec(empty_bases) HubSectionAutomationPeer : Windows::UI::Xaml::Automation::Peers::IHubSectionAutomationPeer,
         impl::base<HubSectionAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -276,7 +277,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         HubSectionAutomationPeer(std::nullptr_t) noexcept {}
         HubSectionAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IHubSectionAutomationPeer(ptr, take_ownership_from_abi) {}
-        HubSectionAutomationPeer(Windows::UI::Xaml::Controls::HubSection const& owner);
+        explicit HubSectionAutomationPeer(Windows::UI::Xaml::Controls::HubSection const& owner);
     };
     struct __declspec(empty_bases) HyperlinkButtonAutomationPeer : Windows::UI::Xaml::Automation::Peers::IHyperlinkButtonAutomationPeer,
         impl::base<HyperlinkButtonAutomationPeer, Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -284,7 +285,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         HyperlinkButtonAutomationPeer(std::nullptr_t) noexcept {}
         HyperlinkButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IHyperlinkButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        HyperlinkButtonAutomationPeer(Windows::UI::Xaml::Controls::HyperlinkButton const& owner);
+        explicit HyperlinkButtonAutomationPeer(Windows::UI::Xaml::Controls::HyperlinkButton const& owner);
     };
     struct __declspec(empty_bases) ImageAutomationPeer : Windows::UI::Xaml::Automation::Peers::IImageAutomationPeer,
         impl::base<ImageAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -292,7 +293,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ImageAutomationPeer(std::nullptr_t) noexcept {}
         ImageAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IImageAutomationPeer(ptr, take_ownership_from_abi) {}
-        ImageAutomationPeer(Windows::UI::Xaml::Controls::Image const& owner);
+        explicit ImageAutomationPeer(Windows::UI::Xaml::Controls::Image const& owner);
     };
     struct __declspec(empty_bases) InkToolbarAutomationPeer : Windows::UI::Xaml::Automation::Peers::IInkToolbarAutomationPeer,
         impl::base<InkToolbarAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -315,7 +316,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ItemsControlAutomationPeer(std::nullptr_t) noexcept {}
         ItemsControlAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IItemsControlAutomationPeer(ptr, take_ownership_from_abi) {}
-        ItemsControlAutomationPeer(Windows::UI::Xaml::Controls::ItemsControl const& owner);
+        explicit ItemsControlAutomationPeer(Windows::UI::Xaml::Controls::ItemsControl const& owner);
     };
     struct __declspec(empty_bases) ListBoxAutomationPeer : Windows::UI::Xaml::Automation::Peers::IListBoxAutomationPeer,
         impl::base<ListBoxAutomationPeer, Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -323,7 +324,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ListBoxAutomationPeer(std::nullptr_t) noexcept {}
         ListBoxAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IListBoxAutomationPeer(ptr, take_ownership_from_abi) {}
-        ListBoxAutomationPeer(Windows::UI::Xaml::Controls::ListBox const& owner);
+        explicit ListBoxAutomationPeer(Windows::UI::Xaml::Controls::ListBox const& owner);
     };
     struct __declspec(empty_bases) ListBoxItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IListBoxItemAutomationPeer,
         impl::base<ListBoxItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -331,7 +332,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ListBoxItemAutomationPeer(std::nullptr_t) noexcept {}
         ListBoxItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IListBoxItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        ListBoxItemAutomationPeer(Windows::UI::Xaml::Controls::ListBoxItem const& owner);
+        explicit ListBoxItemAutomationPeer(Windows::UI::Xaml::Controls::ListBoxItem const& owner);
     };
     struct __declspec(empty_bases) ListBoxItemDataAutomationPeer : Windows::UI::Xaml::Automation::Peers::IListBoxItemDataAutomationPeer,
         impl::base<ListBoxItemDataAutomationPeer, Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -354,7 +355,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ListViewAutomationPeer(std::nullptr_t) noexcept {}
         ListViewAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IListViewAutomationPeer(ptr, take_ownership_from_abi) {}
-        ListViewAutomationPeer(Windows::UI::Xaml::Controls::ListView const& owner);
+        explicit ListViewAutomationPeer(Windows::UI::Xaml::Controls::ListView const& owner);
     };
     struct __declspec(empty_bases) ListViewBaseAutomationPeer : Windows::UI::Xaml::Automation::Peers::IListViewBaseAutomationPeer,
         impl::base<ListViewBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -362,7 +363,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ListViewBaseAutomationPeer(std::nullptr_t) noexcept {}
         ListViewBaseAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IListViewBaseAutomationPeer(ptr, take_ownership_from_abi) {}
-        ListViewBaseAutomationPeer(Windows::UI::Xaml::Controls::ListViewBase const& owner);
+        explicit ListViewBaseAutomationPeer(Windows::UI::Xaml::Controls::ListViewBase const& owner);
     };
     struct __declspec(empty_bases) ListViewBaseHeaderItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IListViewBaseHeaderItemAutomationPeer,
         impl::base<ListViewBaseHeaderItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -377,7 +378,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ListViewHeaderItemAutomationPeer(std::nullptr_t) noexcept {}
         ListViewHeaderItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IListViewHeaderItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        ListViewHeaderItemAutomationPeer(Windows::UI::Xaml::Controls::ListViewHeaderItem const& owner);
+        explicit ListViewHeaderItemAutomationPeer(Windows::UI::Xaml::Controls::ListViewHeaderItem const& owner);
     };
     struct __declspec(empty_bases) ListViewItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IListViewItemAutomationPeer,
         impl::base<ListViewItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -385,7 +386,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ListViewItemAutomationPeer(std::nullptr_t) noexcept {}
         ListViewItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IListViewItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        ListViewItemAutomationPeer(Windows::UI::Xaml::Controls::ListViewItem const& owner);
+        explicit ListViewItemAutomationPeer(Windows::UI::Xaml::Controls::ListViewItem const& owner);
     };
     struct __declspec(empty_bases) ListViewItemDataAutomationPeer : Windows::UI::Xaml::Automation::Peers::IListViewItemDataAutomationPeer,
         impl::base<ListViewItemDataAutomationPeer, Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -429,7 +430,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         MediaElementAutomationPeer(std::nullptr_t) noexcept {}
         MediaElementAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IMediaElementAutomationPeer(ptr, take_ownership_from_abi) {}
-        MediaElementAutomationPeer(Windows::UI::Xaml::Controls::MediaElement const& owner);
+        explicit MediaElementAutomationPeer(Windows::UI::Xaml::Controls::MediaElement const& owner);
     };
     struct __declspec(empty_bases) MediaPlayerElementAutomationPeer : Windows::UI::Xaml::Automation::Peers::IMediaPlayerElementAutomationPeer,
         impl::base<MediaPlayerElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -437,7 +438,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         MediaPlayerElementAutomationPeer(std::nullptr_t) noexcept {}
         MediaPlayerElementAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IMediaPlayerElementAutomationPeer(ptr, take_ownership_from_abi) {}
-        MediaPlayerElementAutomationPeer(Windows::UI::Xaml::Controls::MediaPlayerElement const& owner);
+        explicit MediaPlayerElementAutomationPeer(Windows::UI::Xaml::Controls::MediaPlayerElement const& owner);
     };
     struct __declspec(empty_bases) MediaTransportControlsAutomationPeer : Windows::UI::Xaml::Automation::Peers::IMediaTransportControlsAutomationPeer,
         impl::base<MediaTransportControlsAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -445,7 +446,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         MediaTransportControlsAutomationPeer(std::nullptr_t) noexcept {}
         MediaTransportControlsAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IMediaTransportControlsAutomationPeer(ptr, take_ownership_from_abi) {}
-        MediaTransportControlsAutomationPeer(Windows::UI::Xaml::Controls::MediaTransportControls const& owner);
+        explicit MediaTransportControlsAutomationPeer(Windows::UI::Xaml::Controls::MediaTransportControls const& owner);
     };
     struct __declspec(empty_bases) MenuBarAutomationPeer : Windows::UI::Xaml::Automation::Peers::IMenuBarAutomationPeer,
         impl::base<MenuBarAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -453,7 +454,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         MenuBarAutomationPeer(std::nullptr_t) noexcept {}
         MenuBarAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IMenuBarAutomationPeer(ptr, take_ownership_from_abi) {}
-        MenuBarAutomationPeer(Windows::UI::Xaml::Controls::MenuBar const& owner);
+        explicit MenuBarAutomationPeer(Windows::UI::Xaml::Controls::MenuBar const& owner);
     };
     struct __declspec(empty_bases) MenuBarItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IMenuBarItemAutomationPeer,
         impl::base<MenuBarItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -461,7 +462,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         MenuBarItemAutomationPeer(std::nullptr_t) noexcept {}
         MenuBarItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IMenuBarItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        MenuBarItemAutomationPeer(Windows::UI::Xaml::Controls::MenuBarItem const& owner);
+        explicit MenuBarItemAutomationPeer(Windows::UI::Xaml::Controls::MenuBarItem const& owner);
     };
     struct __declspec(empty_bases) MenuFlyoutItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IMenuFlyoutItemAutomationPeer,
         impl::base<MenuFlyoutItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -469,7 +470,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         MenuFlyoutItemAutomationPeer(std::nullptr_t) noexcept {}
         MenuFlyoutItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IMenuFlyoutItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        MenuFlyoutItemAutomationPeer(Windows::UI::Xaml::Controls::MenuFlyoutItem const& owner);
+        explicit MenuFlyoutItemAutomationPeer(Windows::UI::Xaml::Controls::MenuFlyoutItem const& owner);
     };
     struct __declspec(empty_bases) MenuFlyoutPresenterAutomationPeer : Windows::UI::Xaml::Automation::Peers::IMenuFlyoutPresenterAutomationPeer,
         impl::base<MenuFlyoutPresenterAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -477,7 +478,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         MenuFlyoutPresenterAutomationPeer(std::nullptr_t) noexcept {}
         MenuFlyoutPresenterAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IMenuFlyoutPresenterAutomationPeer(ptr, take_ownership_from_abi) {}
-        MenuFlyoutPresenterAutomationPeer(Windows::UI::Xaml::Controls::MenuFlyoutPresenter const& owner);
+        explicit MenuFlyoutPresenterAutomationPeer(Windows::UI::Xaml::Controls::MenuFlyoutPresenter const& owner);
     };
     struct __declspec(empty_bases) NavigationViewItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::INavigationViewItemAutomationPeer,
         impl::base<NavigationViewItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -485,7 +486,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         NavigationViewItemAutomationPeer(std::nullptr_t) noexcept {}
         NavigationViewItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::INavigationViewItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        NavigationViewItemAutomationPeer(Windows::UI::Xaml::Controls::NavigationViewItem const& owner);
+        explicit NavigationViewItemAutomationPeer(Windows::UI::Xaml::Controls::NavigationViewItem const& owner);
     };
     struct __declspec(empty_bases) PasswordBoxAutomationPeer : Windows::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeer,
         impl::base<PasswordBoxAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -493,7 +494,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         PasswordBoxAutomationPeer(std::nullptr_t) noexcept {}
         PasswordBoxAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeer(ptr, take_ownership_from_abi) {}
-        PasswordBoxAutomationPeer(Windows::UI::Xaml::Controls::PasswordBox const& owner);
+        explicit PasswordBoxAutomationPeer(Windows::UI::Xaml::Controls::PasswordBox const& owner);
     };
     struct __declspec(empty_bases) PersonPictureAutomationPeer : Windows::UI::Xaml::Automation::Peers::IPersonPictureAutomationPeer,
         impl::base<PersonPictureAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -501,7 +502,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         PersonPictureAutomationPeer(std::nullptr_t) noexcept {}
         PersonPictureAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IPersonPictureAutomationPeer(ptr, take_ownership_from_abi) {}
-        PersonPictureAutomationPeer(Windows::UI::Xaml::Controls::PersonPicture const& owner);
+        explicit PersonPictureAutomationPeer(Windows::UI::Xaml::Controls::PersonPicture const& owner);
     };
     struct __declspec(empty_bases) PickerFlyoutPresenterAutomationPeer : Windows::UI::Xaml::Automation::Peers::IPickerFlyoutPresenterAutomationPeer,
         impl::base<PickerFlyoutPresenterAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -516,7 +517,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         PivotAutomationPeer(std::nullptr_t) noexcept {}
         PivotAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IPivotAutomationPeer(ptr, take_ownership_from_abi) {}
-        PivotAutomationPeer(Windows::UI::Xaml::Controls::Pivot const& owner);
+        explicit PivotAutomationPeer(Windows::UI::Xaml::Controls::Pivot const& owner);
     };
     struct __declspec(empty_bases) PivotItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IPivotItemAutomationPeer,
         impl::base<PivotItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -524,7 +525,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         PivotItemAutomationPeer(std::nullptr_t) noexcept {}
         PivotItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IPivotItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        PivotItemAutomationPeer(Windows::UI::Xaml::Controls::PivotItem const& owner);
+        explicit PivotItemAutomationPeer(Windows::UI::Xaml::Controls::PivotItem const& owner);
     };
     struct __declspec(empty_bases) PivotItemDataAutomationPeer : Windows::UI::Xaml::Automation::Peers::IPivotItemDataAutomationPeer,
         impl::base<PivotItemDataAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -540,7 +541,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ProgressBarAutomationPeer(std::nullptr_t) noexcept {}
         ProgressBarAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IProgressBarAutomationPeer(ptr, take_ownership_from_abi) {}
-        ProgressBarAutomationPeer(Windows::UI::Xaml::Controls::ProgressBar const& owner);
+        explicit ProgressBarAutomationPeer(Windows::UI::Xaml::Controls::ProgressBar const& owner);
         using impl::consume_t<ProgressBarAutomationPeer, Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::SetValue;
         using impl::consume_t<ProgressBarAutomationPeer, Windows::UI::Xaml::IDependencyObject>::SetValue;
     };
@@ -550,7 +551,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ProgressRingAutomationPeer(std::nullptr_t) noexcept {}
         ProgressRingAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IProgressRingAutomationPeer(ptr, take_ownership_from_abi) {}
-        ProgressRingAutomationPeer(Windows::UI::Xaml::Controls::ProgressRing const& owner);
+        explicit ProgressRingAutomationPeer(Windows::UI::Xaml::Controls::ProgressRing const& owner);
     };
     struct __declspec(empty_bases) RadioButtonAutomationPeer : Windows::UI::Xaml::Automation::Peers::IRadioButtonAutomationPeer,
         impl::base<RadioButtonAutomationPeer, Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer, Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -558,7 +559,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         RadioButtonAutomationPeer(std::nullptr_t) noexcept {}
         RadioButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IRadioButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        RadioButtonAutomationPeer(Windows::UI::Xaml::Controls::RadioButton const& owner);
+        explicit RadioButtonAutomationPeer(Windows::UI::Xaml::Controls::RadioButton const& owner);
     };
     struct __declspec(empty_bases) RangeBaseAutomationPeer : Windows::UI::Xaml::Automation::Peers::IRangeBaseAutomationPeer,
         impl::base<RangeBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -566,7 +567,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         RangeBaseAutomationPeer(std::nullptr_t) noexcept {}
         RangeBaseAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IRangeBaseAutomationPeer(ptr, take_ownership_from_abi) {}
-        RangeBaseAutomationPeer(Windows::UI::Xaml::Controls::Primitives::RangeBase const& owner);
+        explicit RangeBaseAutomationPeer(Windows::UI::Xaml::Controls::Primitives::RangeBase const& owner);
         using impl::consume_t<RangeBaseAutomationPeer, Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::SetValue;
         using impl::consume_t<RangeBaseAutomationPeer, Windows::UI::Xaml::IDependencyObject>::SetValue;
     };
@@ -576,7 +577,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         RatingControlAutomationPeer(std::nullptr_t) noexcept {}
         RatingControlAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IRatingControlAutomationPeer(ptr, take_ownership_from_abi) {}
-        RatingControlAutomationPeer(Windows::UI::Xaml::Controls::RatingControl const& owner);
+        explicit RatingControlAutomationPeer(Windows::UI::Xaml::Controls::RatingControl const& owner);
     };
     struct __declspec(empty_bases) RepeatButtonAutomationPeer : Windows::UI::Xaml::Automation::Peers::IRepeatButtonAutomationPeer,
         impl::base<RepeatButtonAutomationPeer, Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -584,7 +585,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         RepeatButtonAutomationPeer(std::nullptr_t) noexcept {}
         RepeatButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IRepeatButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        RepeatButtonAutomationPeer(Windows::UI::Xaml::Controls::Primitives::RepeatButton const& owner);
+        explicit RepeatButtonAutomationPeer(Windows::UI::Xaml::Controls::Primitives::RepeatButton const& owner);
     };
     struct __declspec(empty_bases) RichEditBoxAutomationPeer : Windows::UI::Xaml::Automation::Peers::IRichEditBoxAutomationPeer,
         impl::base<RichEditBoxAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -592,7 +593,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         RichEditBoxAutomationPeer(std::nullptr_t) noexcept {}
         RichEditBoxAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IRichEditBoxAutomationPeer(ptr, take_ownership_from_abi) {}
-        RichEditBoxAutomationPeer(Windows::UI::Xaml::Controls::RichEditBox const& owner);
+        explicit RichEditBoxAutomationPeer(Windows::UI::Xaml::Controls::RichEditBox const& owner);
     };
     struct __declspec(empty_bases) RichTextBlockAutomationPeer : Windows::UI::Xaml::Automation::Peers::IRichTextBlockAutomationPeer,
         impl::base<RichTextBlockAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -600,7 +601,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         RichTextBlockAutomationPeer(std::nullptr_t) noexcept {}
         RichTextBlockAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IRichTextBlockAutomationPeer(ptr, take_ownership_from_abi) {}
-        RichTextBlockAutomationPeer(Windows::UI::Xaml::Controls::RichTextBlock const& owner);
+        explicit RichTextBlockAutomationPeer(Windows::UI::Xaml::Controls::RichTextBlock const& owner);
     };
     struct __declspec(empty_bases) RichTextBlockOverflowAutomationPeer : Windows::UI::Xaml::Automation::Peers::IRichTextBlockOverflowAutomationPeer,
         impl::base<RichTextBlockOverflowAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -608,7 +609,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         RichTextBlockOverflowAutomationPeer(std::nullptr_t) noexcept {}
         RichTextBlockOverflowAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IRichTextBlockOverflowAutomationPeer(ptr, take_ownership_from_abi) {}
-        RichTextBlockOverflowAutomationPeer(Windows::UI::Xaml::Controls::RichTextBlockOverflow const& owner);
+        explicit RichTextBlockOverflowAutomationPeer(Windows::UI::Xaml::Controls::RichTextBlockOverflow const& owner);
     };
     struct __declspec(empty_bases) ScrollBarAutomationPeer : Windows::UI::Xaml::Automation::Peers::IScrollBarAutomationPeer,
         impl::base<ScrollBarAutomationPeer, Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -616,7 +617,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ScrollBarAutomationPeer(std::nullptr_t) noexcept {}
         ScrollBarAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IScrollBarAutomationPeer(ptr, take_ownership_from_abi) {}
-        ScrollBarAutomationPeer(Windows::UI::Xaml::Controls::Primitives::ScrollBar const& owner);
+        explicit ScrollBarAutomationPeer(Windows::UI::Xaml::Controls::Primitives::ScrollBar const& owner);
         using impl::consume_t<ScrollBarAutomationPeer, Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::SetValue;
         using impl::consume_t<ScrollBarAutomationPeer, Windows::UI::Xaml::IDependencyObject>::SetValue;
     };
@@ -626,7 +627,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ScrollViewerAutomationPeer(std::nullptr_t) noexcept {}
         ScrollViewerAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeer(ptr, take_ownership_from_abi) {}
-        ScrollViewerAutomationPeer(Windows::UI::Xaml::Controls::ScrollViewer const& owner);
+        explicit ScrollViewerAutomationPeer(Windows::UI::Xaml::Controls::ScrollViewer const& owner);
     };
     struct __declspec(empty_bases) SearchBoxAutomationPeer : Windows::UI::Xaml::Automation::Peers::ISearchBoxAutomationPeer,
         impl::base<SearchBoxAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -634,7 +635,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         SearchBoxAutomationPeer(std::nullptr_t) noexcept {}
         SearchBoxAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ISearchBoxAutomationPeer(ptr, take_ownership_from_abi) {}
-        SearchBoxAutomationPeer(Windows::UI::Xaml::Controls::SearchBox const& owner);
+        explicit SearchBoxAutomationPeer(Windows::UI::Xaml::Controls::SearchBox const& owner);
     };
     struct __declspec(empty_bases) SelectorAutomationPeer : Windows::UI::Xaml::Automation::Peers::ISelectorAutomationPeer,
         impl::base<SelectorAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -642,7 +643,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         SelectorAutomationPeer(std::nullptr_t) noexcept {}
         SelectorAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ISelectorAutomationPeer(ptr, take_ownership_from_abi) {}
-        SelectorAutomationPeer(Windows::UI::Xaml::Controls::Primitives::Selector const& owner);
+        explicit SelectorAutomationPeer(Windows::UI::Xaml::Controls::Primitives::Selector const& owner);
     };
     struct __declspec(empty_bases) SelectorItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::ISelectorItemAutomationPeer,
         impl::base<SelectorItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -658,7 +659,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         SemanticZoomAutomationPeer(std::nullptr_t) noexcept {}
         SemanticZoomAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ISemanticZoomAutomationPeer(ptr, take_ownership_from_abi) {}
-        SemanticZoomAutomationPeer(Windows::UI::Xaml::Controls::SemanticZoom const& owner);
+        explicit SemanticZoomAutomationPeer(Windows::UI::Xaml::Controls::SemanticZoom const& owner);
     };
     struct __declspec(empty_bases) SettingsFlyoutAutomationPeer : Windows::UI::Xaml::Automation::Peers::ISettingsFlyoutAutomationPeer,
         impl::base<SettingsFlyoutAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -666,7 +667,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         SettingsFlyoutAutomationPeer(std::nullptr_t) noexcept {}
         SettingsFlyoutAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ISettingsFlyoutAutomationPeer(ptr, take_ownership_from_abi) {}
-        SettingsFlyoutAutomationPeer(Windows::UI::Xaml::Controls::SettingsFlyout const& owner);
+        explicit SettingsFlyoutAutomationPeer(Windows::UI::Xaml::Controls::SettingsFlyout const& owner);
     };
     struct __declspec(empty_bases) SliderAutomationPeer : Windows::UI::Xaml::Automation::Peers::ISliderAutomationPeer,
         impl::base<SliderAutomationPeer, Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -674,7 +675,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         SliderAutomationPeer(std::nullptr_t) noexcept {}
         SliderAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ISliderAutomationPeer(ptr, take_ownership_from_abi) {}
-        SliderAutomationPeer(Windows::UI::Xaml::Controls::Slider const& owner);
+        explicit SliderAutomationPeer(Windows::UI::Xaml::Controls::Slider const& owner);
         using impl::consume_t<SliderAutomationPeer, Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::SetValue;
         using impl::consume_t<SliderAutomationPeer, Windows::UI::Xaml::IDependencyObject>::SetValue;
     };
@@ -684,7 +685,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         TextBlockAutomationPeer(std::nullptr_t) noexcept {}
         TextBlockAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ITextBlockAutomationPeer(ptr, take_ownership_from_abi) {}
-        TextBlockAutomationPeer(Windows::UI::Xaml::Controls::TextBlock const& owner);
+        explicit TextBlockAutomationPeer(Windows::UI::Xaml::Controls::TextBlock const& owner);
     };
     struct __declspec(empty_bases) TextBoxAutomationPeer : Windows::UI::Xaml::Automation::Peers::ITextBoxAutomationPeer,
         impl::base<TextBoxAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -692,7 +693,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         TextBoxAutomationPeer(std::nullptr_t) noexcept {}
         TextBoxAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ITextBoxAutomationPeer(ptr, take_ownership_from_abi) {}
-        TextBoxAutomationPeer(Windows::UI::Xaml::Controls::TextBox const& owner);
+        explicit TextBoxAutomationPeer(Windows::UI::Xaml::Controls::TextBox const& owner);
     };
     struct __declspec(empty_bases) ThumbAutomationPeer : Windows::UI::Xaml::Automation::Peers::IThumbAutomationPeer,
         impl::base<ThumbAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -700,7 +701,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ThumbAutomationPeer(std::nullptr_t) noexcept {}
         ThumbAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IThumbAutomationPeer(ptr, take_ownership_from_abi) {}
-        ThumbAutomationPeer(Windows::UI::Xaml::Controls::Primitives::Thumb const& owner);
+        explicit ThumbAutomationPeer(Windows::UI::Xaml::Controls::Primitives::Thumb const& owner);
     };
     struct __declspec(empty_bases) TimePickerAutomationPeer : Windows::UI::Xaml::Automation::Peers::ITimePickerAutomationPeer,
         impl::base<TimePickerAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -708,7 +709,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         TimePickerAutomationPeer(std::nullptr_t) noexcept {}
         TimePickerAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ITimePickerAutomationPeer(ptr, take_ownership_from_abi) {}
-        TimePickerAutomationPeer(Windows::UI::Xaml::Controls::TimePicker const& owner);
+        explicit TimePickerAutomationPeer(Windows::UI::Xaml::Controls::TimePicker const& owner);
     };
     struct __declspec(empty_bases) TimePickerFlyoutPresenterAutomationPeer : Windows::UI::Xaml::Automation::Peers::ITimePickerFlyoutPresenterAutomationPeer,
         impl::base<TimePickerFlyoutPresenterAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -723,7 +724,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ToggleButtonAutomationPeer(std::nullptr_t) noexcept {}
         ToggleButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IToggleButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        ToggleButtonAutomationPeer(Windows::UI::Xaml::Controls::Primitives::ToggleButton const& owner);
+        explicit ToggleButtonAutomationPeer(Windows::UI::Xaml::Controls::Primitives::ToggleButton const& owner);
     };
     struct __declspec(empty_bases) ToggleMenuFlyoutItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::IToggleMenuFlyoutItemAutomationPeer,
         impl::base<ToggleMenuFlyoutItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -731,7 +732,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ToggleMenuFlyoutItemAutomationPeer(std::nullptr_t) noexcept {}
         ToggleMenuFlyoutItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IToggleMenuFlyoutItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        ToggleMenuFlyoutItemAutomationPeer(Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem const& owner);
+        explicit ToggleMenuFlyoutItemAutomationPeer(Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem const& owner);
     };
     struct __declspec(empty_bases) ToggleSwitchAutomationPeer : Windows::UI::Xaml::Automation::Peers::IToggleSwitchAutomationPeer,
         impl::base<ToggleSwitchAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -739,7 +740,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         ToggleSwitchAutomationPeer(std::nullptr_t) noexcept {}
         ToggleSwitchAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::IToggleSwitchAutomationPeer(ptr, take_ownership_from_abi) {}
-        ToggleSwitchAutomationPeer(Windows::UI::Xaml::Controls::ToggleSwitch const& owner);
+        explicit ToggleSwitchAutomationPeer(Windows::UI::Xaml::Controls::ToggleSwitch const& owner);
     };
     struct __declspec(empty_bases) TreeViewItemAutomationPeer : Windows::UI::Xaml::Automation::Peers::ITreeViewItemAutomationPeer,
         impl::base<TreeViewItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -747,7 +748,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         TreeViewItemAutomationPeer(std::nullptr_t) noexcept {}
         TreeViewItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ITreeViewItemAutomationPeer(ptr, take_ownership_from_abi) {}
-        TreeViewItemAutomationPeer(Windows::UI::Xaml::Controls::TreeViewItem const& owner);
+        explicit TreeViewItemAutomationPeer(Windows::UI::Xaml::Controls::TreeViewItem const& owner);
     };
     struct __declspec(empty_bases) TreeViewListAutomationPeer : Windows::UI::Xaml::Automation::Peers::ITreeViewListAutomationPeer,
         impl::base<TreeViewListAutomationPeer, Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer, Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer, Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, Windows::UI::Xaml::Automation::Peers::AutomationPeer, Windows::UI::Xaml::DependencyObject>,
@@ -755,7 +756,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
     {
         TreeViewListAutomationPeer(std::nullptr_t) noexcept {}
         TreeViewListAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Peers::ITreeViewListAutomationPeer(ptr, take_ownership_from_abi) {}
-        TreeViewListAutomationPeer(Windows::UI::Xaml::Controls::TreeViewList const& owner);
+        explicit TreeViewListAutomationPeer(Windows::UI::Xaml::Controls::TreeViewList const& owner);
     };
     template <typename D>
     class IAutomationPeerOverridesT
@@ -764,33 +765,33 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAutomationPeerOverrides = winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides;
-        auto GetPatternCore(Windows::UI::Xaml::Automation::Peers::PatternInterface const& patternInterface) const;
-        auto GetAcceleratorKeyCore() const;
-        auto GetAccessKeyCore() const;
-        auto GetAutomationControlTypeCore() const;
-        auto GetAutomationIdCore() const;
-        auto GetBoundingRectangleCore() const;
-        auto GetChildrenCore() const;
-        auto GetClassNameCore() const;
-        auto GetClickablePointCore() const;
-        auto GetHelpTextCore() const;
-        auto GetItemStatusCore() const;
-        auto GetItemTypeCore() const;
-        auto GetLabeledByCore() const;
-        auto GetLocalizedControlTypeCore() const;
-        auto GetNameCore() const;
-        auto GetOrientationCore() const;
-        auto HasKeyboardFocusCore() const;
-        auto IsContentElementCore() const;
-        auto IsControlElementCore() const;
-        auto IsEnabledCore() const;
-        auto IsKeyboardFocusableCore() const;
-        auto IsOffscreenCore() const;
-        auto IsPasswordCore() const;
-        auto IsRequiredForFormCore() const;
-        auto SetFocusCore() const;
-        auto GetPeerFromPointCore(Windows::Foundation::Point const& point) const;
-        auto GetLiveSettingCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) GetPatternCore(Windows::UI::Xaml::Automation::Peers::PatternInterface const& patternInterface) const;
+        WINRT_IMPL_AUTO(hstring) GetAcceleratorKeyCore() const;
+        WINRT_IMPL_AUTO(hstring) GetAccessKeyCore() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationControlType) GetAutomationControlTypeCore() const;
+        WINRT_IMPL_AUTO(hstring) GetAutomationIdCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Rect) GetBoundingRectangleCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetChildrenCore() const;
+        WINRT_IMPL_AUTO(hstring) GetClassNameCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Point) GetClickablePointCore() const;
+        WINRT_IMPL_AUTO(hstring) GetHelpTextCore() const;
+        WINRT_IMPL_AUTO(hstring) GetItemStatusCore() const;
+        WINRT_IMPL_AUTO(hstring) GetItemTypeCore() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationPeer) GetLabeledByCore() const;
+        WINRT_IMPL_AUTO(hstring) GetLocalizedControlTypeCore() const;
+        WINRT_IMPL_AUTO(hstring) GetNameCore() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationOrientation) GetOrientationCore() const;
+        WINRT_IMPL_AUTO(bool) HasKeyboardFocusCore() const;
+        WINRT_IMPL_AUTO(bool) IsContentElementCore() const;
+        WINRT_IMPL_AUTO(bool) IsControlElementCore() const;
+        WINRT_IMPL_AUTO(bool) IsEnabledCore() const;
+        WINRT_IMPL_AUTO(bool) IsKeyboardFocusableCore() const;
+        WINRT_IMPL_AUTO(bool) IsOffscreenCore() const;
+        WINRT_IMPL_AUTO(bool) IsPasswordCore() const;
+        WINRT_IMPL_AUTO(bool) IsRequiredForFormCore() const;
+        WINRT_IMPL_AUTO(void) SetFocusCore() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationPeer) GetPeerFromPointCore(Windows::Foundation::Point const& point) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationLiveSetting) GetLiveSettingCore() const;
     };
     template <typename D>
     class IAutomationPeerOverrides2T
@@ -799,8 +800,8 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAutomationPeerOverrides2 = winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides2;
-        auto ShowContextMenuCore() const;
-        auto GetControlledPeersCore() const;
+        WINRT_IMPL_AUTO(void) ShowContextMenuCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetControlledPeersCore() const;
     };
     template <typename D>
     class IAutomationPeerOverrides3T
@@ -809,13 +810,13 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAutomationPeerOverrides3 = winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides3;
-        auto NavigateCore(Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection const& direction) const;
-        auto GetElementFromPointCore(Windows::Foundation::Point const& pointInWindowCoordinates) const;
-        auto GetFocusedElementCore() const;
-        auto GetAnnotationsCore() const;
-        auto GetPositionInSetCore() const;
-        auto GetSizeOfSetCore() const;
-        auto GetLevelCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) NavigateCore(Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection const& direction) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) GetElementFromPointCore(Windows::Foundation::Point const& pointInWindowCoordinates) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) GetFocusedElementCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation>) GetAnnotationsCore() const;
+        WINRT_IMPL_AUTO(int32_t) GetPositionInSetCore() const;
+        WINRT_IMPL_AUTO(int32_t) GetSizeOfSetCore() const;
+        WINRT_IMPL_AUTO(int32_t) GetLevelCore() const;
     };
     template <typename D>
     class IAutomationPeerOverrides4T
@@ -824,8 +825,8 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAutomationPeerOverrides4 = winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides4;
-        auto GetLandmarkTypeCore() const;
-        auto GetLocalizedLandmarkTypeCore() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationLandmarkType) GetLandmarkTypeCore() const;
+        WINRT_IMPL_AUTO(hstring) GetLocalizedLandmarkTypeCore() const;
     };
     template <typename D>
     class IAutomationPeerOverrides5T
@@ -834,12 +835,12 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAutomationPeerOverrides5 = winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides5;
-        auto IsPeripheralCore() const;
-        auto IsDataValidForFormCore() const;
-        auto GetFullDescriptionCore() const;
-        auto GetDescribedByCore() const;
-        auto GetFlowsToCore() const;
-        auto GetFlowsFromCore() const;
+        WINRT_IMPL_AUTO(bool) IsPeripheralCore() const;
+        WINRT_IMPL_AUTO(bool) IsDataValidForFormCore() const;
+        WINRT_IMPL_AUTO(hstring) GetFullDescriptionCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetDescribedByCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetFlowsToCore() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::Automation::Peers::AutomationPeer>) GetFlowsFromCore() const;
     };
     template <typename D>
     class IAutomationPeerOverrides6T
@@ -848,7 +849,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAutomationPeerOverrides6 = winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides6;
-        auto GetCultureCore() const;
+        WINRT_IMPL_AUTO(int32_t) GetCultureCore() const;
     };
     template <typename D>
     class IAutomationPeerOverrides8T
@@ -857,7 +858,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAutomationPeerOverrides8 = winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides8;
-        auto GetHeadingLevelCore() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationHeadingLevel) GetHeadingLevelCore() const;
     };
     template <typename D>
     class IAutomationPeerOverrides9T
@@ -866,7 +867,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAutomationPeerOverrides9 = winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides9;
-        auto IsDialogCore() const;
+        WINRT_IMPL_AUTO(bool) IsDialogCore() const;
     };
     template <typename D>
     class IItemsControlAutomationPeerOverrides2T
@@ -875,7 +876,7 @@ namespace winrt::Windows::UI::Xaml::Automation::Peers
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IItemsControlAutomationPeerOverrides2 = winrt::Windows::UI::Xaml::Automation::Peers::IItemsControlAutomationPeerOverrides2;
-        auto OnCreateItemAutomationPeer(Windows::Foundation::IInspectable const& item) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer) OnCreateItemAutomationPeer(Windows::Foundation::IInspectable const& item) const;
     };
 }
 #endif

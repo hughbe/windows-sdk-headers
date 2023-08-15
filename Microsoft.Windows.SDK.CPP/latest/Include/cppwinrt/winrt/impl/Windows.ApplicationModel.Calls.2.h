@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Calls.1.h"
-namespace winrt::Windows::ApplicationModel::Calls
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls
 {
     struct __declspec(empty_bases) CallAnswerEventArgs : Windows::ApplicationModel::Calls::ICallAnswerEventArgs
     {
@@ -101,7 +101,7 @@ namespace winrt::Windows::ApplicationModel::Calls
         static auto ShowPhoneCallUI(param::hstring const& phoneNumber, param::hstring const& displayName);
         static auto CallStateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using CallStateChanged_revoker = impl::factory_event_revoker<Windows::ApplicationModel::Calls::IPhoneCallManagerStatics2, &impl::abi_t<Windows::ApplicationModel::Calls::IPhoneCallManagerStatics2>::remove_CallStateChanged>;
-        static CallStateChanged_revoker CallStateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static CallStateChanged_revoker CallStateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto CallStateChanged(winrt::event_token const& token);
         [[nodiscard]] static auto IsCallActive();
         [[nodiscard]] static auto IsCallIncoming();

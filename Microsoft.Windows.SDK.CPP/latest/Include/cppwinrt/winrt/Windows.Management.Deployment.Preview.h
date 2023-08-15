@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,29 +6,30 @@
 #ifndef WINRT_Windows_Management_Deployment_Preview_H
 #define WINRT_Windows_Management_Deployment_Preview_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Management.Deployment.h"
 #include "winrt/impl/Windows.Management.Deployment.Preview.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Management_Deployment_Preview_IClassicAppManagerStatics<D>::FindInstalledApp(param::hstring const& appUninstallKey) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::Preview::InstalledClassicAppInfo) consume_Windows_Management_Deployment_Preview_IClassicAppManagerStatics<D>::FindInstalledApp(param::hstring const& appUninstallKey) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::Preview::IClassicAppManagerStatics)->FindInstalledApp(*(void**)(&appUninstallKey), &result));
         return Windows::Management::Deployment::Preview::InstalledClassicAppInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::Preview::IInstalledClassicAppInfo)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo<D>::DisplayVersion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo<D>::DisplayVersion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::Preview::IInstalledClassicAppInfo)->get_DisplayVersion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Management::Deployment::Preview::IClassicAppManagerStatics> : produce_base<D, Windows::Management::Deployment::Preview::IClassicAppManagerStatics>
     {
@@ -41,6 +42,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Management::Deployment::Preview::IInstalledClassicAppInfo> : produce_base<D, Windows::Management::Deployment::Preview::IInstalledClassicAppInfo>
     {
@@ -61,19 +64,22 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Management::Deployment::Preview
+WINRT_EXPORT namespace winrt::Windows::Management::Deployment::Preview
 {
     inline auto ClassicAppManager::FindInstalledApp(param::hstring const& appUninstallKey)
     {
-        return impl::call_factory<ClassicAppManager, Windows::Management::Deployment::Preview::IClassicAppManagerStatics>([&](auto&& f) { return f.FindInstalledApp(appUninstallKey); });
+        return impl::call_factory<ClassicAppManager, IClassicAppManagerStatics>([&](IClassicAppManagerStatics const& f) { return f.FindInstalledApp(appUninstallKey); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Management::Deployment::Preview::IClassicAppManagerStatics> : winrt::impl::hash_base<winrt::Windows::Management::Deployment::Preview::IClassicAppManagerStatics> {};
-    template<> struct hash<winrt::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo> : winrt::impl::hash_base<winrt::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo> {};
-    template<> struct hash<winrt::Windows::Management::Deployment::Preview::ClassicAppManager> : winrt::impl::hash_base<winrt::Windows::Management::Deployment::Preview::ClassicAppManager> {};
-    template<> struct hash<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo> : winrt::impl::hash_base<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Management::Deployment::Preview::IClassicAppManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::Preview::ClassicAppManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo> : winrt::impl::hash_base {};
+#endif
 }
 #endif

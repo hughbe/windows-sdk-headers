@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -326,18 +334,22 @@ EXTERN_C const IID IID_IRowsetNextRowset;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IRowsetNextRowset * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IRowsetNextRowset * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IRowsetNextRowset * This);
         
+        DECLSPEC_XFGVIRT(IRowsetNextRowset, GetNextRowset)
         HRESULT ( STDMETHODCALLTYPE *GetNextRowset )( 
             IRowsetNextRowset * This,
             /* [in] */ IUnknown *pUnkOuter,
@@ -426,18 +438,22 @@ EXTERN_C const IID IID_IRowsetNewRowAfter;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IRowsetNewRowAfter * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IRowsetNewRowAfter * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IRowsetNewRowAfter * This);
         
+        DECLSPEC_XFGVIRT(IRowsetNewRowAfter, SetNewDataAfter)
         HRESULT ( STDMETHODCALLTYPE *SetNewDataAfter )( 
             IRowsetNewRowAfter * This,
             /* [in] */ HCHAPTER hChapter,
@@ -531,24 +547,29 @@ EXTERN_C const IID IID_IRowsetWithParameters;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IRowsetWithParameters * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IRowsetWithParameters * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IRowsetWithParameters * This);
         
+        DECLSPEC_XFGVIRT(IRowsetWithParameters, GetParameterInfo)
         HRESULT ( STDMETHODCALLTYPE *GetParameterInfo )( 
             IRowsetWithParameters * This,
             /* [out][in] */ DB_UPARAMS *pcParams,
             /* [size_is][size_is][out] */ DBPARAMINFO **prgParamInfo,
             /* [out] */ OLECHAR **ppNamesBuffer);
         
+        DECLSPEC_XFGVIRT(IRowsetWithParameters, Requery)
         HRESULT ( STDMETHODCALLTYPE *Requery )( 
             IRowsetWithParameters * This,
             /* [in] */ DBPARAMS *pParams,
@@ -640,18 +661,22 @@ EXTERN_C const IID IID_IRowsetAsynch;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IRowsetAsynch * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IRowsetAsynch * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IRowsetAsynch * This);
         
+        DECLSPEC_XFGVIRT(IRowsetAsynch, RatioFinished)
         HRESULT ( STDMETHODCALLTYPE *RatioFinished )( 
             IRowsetAsynch * This,
             /* [out] */ DBCOUNTITEM *pulDenominator,
@@ -659,6 +684,7 @@ EXTERN_C const IID IID_IRowsetAsynch;
             /* [out] */ DBCOUNTITEM *pcRows,
             /* [out] */ BOOL *pfNewRows);
         
+        DECLSPEC_XFGVIRT(IRowsetAsynch, Stop)
         HRESULT ( STDMETHODCALLTYPE *Stop )( 
             IRowsetAsynch * This);
         
@@ -743,18 +769,22 @@ EXTERN_C const IID IID_IRowsetKeys;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IRowsetKeys * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IRowsetKeys * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IRowsetKeys * This);
         
+        DECLSPEC_XFGVIRT(IRowsetKeys, ListKeys)
         HRESULT ( STDMETHODCALLTYPE *ListKeys )( 
             IRowsetKeys * This,
             /* [out][in] */ DBORDINAL *pcColumns,
@@ -840,24 +870,30 @@ EXTERN_C const IID IID_IRowsetWatchAll;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IRowsetWatchAll * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IRowsetWatchAll * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IRowsetWatchAll * This);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchAll, Acknowledge)
         HRESULT ( STDMETHODCALLTYPE *Acknowledge )( 
             IRowsetWatchAll * This);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchAll, Start)
         HRESULT ( STDMETHODCALLTYPE *Start )( 
             IRowsetWatchAll * This);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchAll, StopWatching)
         HRESULT ( STDMETHODCALLTYPE *StopWatching )( 
             IRowsetWatchAll * This);
         
@@ -954,18 +990,22 @@ EXTERN_C const IID IID_IRowsetWatchNotify;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IRowsetWatchNotify * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IRowsetWatchNotify * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IRowsetWatchNotify * This);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchNotify, OnChange)
         HRESULT ( STDMETHODCALLTYPE *OnChange )( 
             IRowsetWatchNotify * This,
             /* [in] */ IRowset *pRowset,
@@ -1103,41 +1143,51 @@ EXTERN_C const IID IID_IRowsetWatchRegion;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IRowsetWatchRegion * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IRowsetWatchRegion * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IRowsetWatchRegion * This);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchAll, Acknowledge)
         HRESULT ( STDMETHODCALLTYPE *Acknowledge )( 
             IRowsetWatchRegion * This);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchAll, Start)
         HRESULT ( STDMETHODCALLTYPE *Start )( 
             IRowsetWatchRegion * This);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchAll, StopWatching)
         HRESULT ( STDMETHODCALLTYPE *StopWatching )( 
             IRowsetWatchRegion * This);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchRegion, CreateWatchRegion)
         HRESULT ( STDMETHODCALLTYPE *CreateWatchRegion )( 
             IRowsetWatchRegion * This,
             /* [in] */ DBWATCHMODE dwWatchMode,
             /* [out] */ HWATCHREGION *phRegion);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchRegion, ChangeWatchMode)
         HRESULT ( STDMETHODCALLTYPE *ChangeWatchMode )( 
             IRowsetWatchRegion * This,
             /* [in] */ HWATCHREGION hRegion,
             /* [in] */ DBWATCHMODE dwWatchMode);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchRegion, DeleteWatchRegion)
         HRESULT ( STDMETHODCALLTYPE *DeleteWatchRegion )( 
             IRowsetWatchRegion * This,
             /* [in] */ HWATCHREGION hRegion);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchRegion, GetWatchRegionInfo)
         HRESULT ( STDMETHODCALLTYPE *GetWatchRegionInfo )( 
             IRowsetWatchRegion * This,
             /* [in] */ HWATCHREGION hRegion,
@@ -1147,11 +1197,13 @@ EXTERN_C const IID IID_IRowsetWatchRegion;
             /* [size_is][size_is][out] */ BYTE **ppBookmark,
             /* [out] */ DBROWCOUNT *pcRows);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchRegion, Refresh)
         HRESULT ( STDMETHODCALLTYPE *Refresh )( 
             IRowsetWatchRegion * This,
             /* [out][in] */ DBCOUNTITEM *pcChangesObtained,
             /* [size_is][size_is][out] */ DBROWWATCHCHANGE **prgChanges);
         
+        DECLSPEC_XFGVIRT(IRowsetWatchRegion, ShrinkWatchRegion)
         HRESULT ( STDMETHODCALLTYPE *ShrinkWatchRegion )( 
             IRowsetWatchRegion * This,
             /* [in] */ HWATCHREGION hRegion,
@@ -1285,22 +1337,27 @@ EXTERN_C const IID IID_IRowsetCopyRows;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IRowsetCopyRows * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IRowsetCopyRows * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IRowsetCopyRows * This);
         
+        DECLSPEC_XFGVIRT(IRowsetCopyRows, CloseSource)
         HRESULT ( STDMETHODCALLTYPE *CloseSource )( 
             IRowsetCopyRows * This,
             /* [in] */ HSOURCE hSourceID);
         
+        DECLSPEC_XFGVIRT(IRowsetCopyRows, CopyByHROWS)
         HRESULT ( STDMETHODCALLTYPE *CopyByHROWS )( 
             IRowsetCopyRows * This,
             /* [in] */ HSOURCE hSourceID,
@@ -1309,6 +1366,7 @@ EXTERN_C const IID IID_IRowsetCopyRows;
             /* [size_is][in] */ const HROW rghRows[  ],
             /* [in] */ ULONG bFlags);
         
+        DECLSPEC_XFGVIRT(IRowsetCopyRows, CopyRows)
         HRESULT ( STDMETHODCALLTYPE *CopyRows )( 
             IRowsetCopyRows * This,
             /* [in] */ HSOURCE hSourceID,
@@ -1317,6 +1375,7 @@ EXTERN_C const IID IID_IRowsetCopyRows;
             /* [in] */ ULONG bFlags,
             /* [out] */ DBCOUNTITEM *pcRowsCopied);
         
+        DECLSPEC_XFGVIRT(IRowsetCopyRows, DefineSource)
         HRESULT ( STDMETHODCALLTYPE *DefineSource )( 
             IRowsetCopyRows * This,
             /* [in] */ const IRowset *pRowsetSource,
@@ -1423,18 +1482,22 @@ EXTERN_C const IID IID_IReadData;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IReadData * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IReadData * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IReadData * This);
         
+        DECLSPEC_XFGVIRT(IReadData, ReadData)
         HRESULT ( STDMETHODCALLTYPE *ReadData )( 
             IReadData * This,
             /* [in] */ HCHAPTER hChapter,
@@ -1448,6 +1511,7 @@ EXTERN_C const IID IID_IReadData;
             /* [out][in] */ DBLENGTH *pcbVariableTotal,
             /* [out][in] */ BYTE **ppVariableData);
         
+        DECLSPEC_XFGVIRT(IReadData, ReleaseChapter)
         HRESULT ( STDMETHODCALLTYPE *ReleaseChapter )( 
             IReadData * This,
             /* [in] */ HCHAPTER hChapter);
@@ -1615,48 +1679,57 @@ EXTERN_C const IID IID_ICommandCost;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICommandCost * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICommandCost * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICommandCost * This);
         
+        DECLSPEC_XFGVIRT(ICommandCost, GetAccumulatedCost)
         HRESULT ( STDMETHODCALLTYPE *GetAccumulatedCost )( 
             ICommandCost * This,
             /* [in] */ LPCOLESTR pwszRowsetName,
             /* [out][in] */ ULONG *pcCostLimits,
             /* [size_is][size_is][out] */ DBCOST **prgCostLimits);
         
+        DECLSPEC_XFGVIRT(ICommandCost, GetCostEstimate)
         HRESULT ( STDMETHODCALLTYPE *GetCostEstimate )( 
             ICommandCost * This,
             /* [in] */ LPCOLESTR pwszRowsetName,
             /* [out] */ ULONG *pcCostEstimates,
             /* [out] */ DBCOST *prgCostEstimates);
         
+        DECLSPEC_XFGVIRT(ICommandCost, GetCostGoals)
         HRESULT ( STDMETHODCALLTYPE *GetCostGoals )( 
             ICommandCost * This,
             /* [in] */ LPCOLESTR pwszRowsetName,
             /* [out] */ ULONG *pcCostGoals,
             /* [out] */ DBCOST *prgCostGoals);
         
+        DECLSPEC_XFGVIRT(ICommandCost, GetCostLimits)
         HRESULT ( STDMETHODCALLTYPE *GetCostLimits )( 
             ICommandCost * This,
             /* [in] */ LPCOLESTR pwszRowsetName,
             /* [out] */ ULONG *pcCostLimits,
             /* [out] */ DBCOST *prgCostLimits);
         
+        DECLSPEC_XFGVIRT(ICommandCost, SetCostGoals)
         HRESULT ( STDMETHODCALLTYPE *SetCostGoals )( 
             ICommandCost * This,
             /* [in] */ LPCOLESTR pwszRowsetName,
             /* [in] */ ULONG cCostGoals,
             /* [size_is][in] */ const DBCOST rgCostGoals[  ]);
         
+        DECLSPEC_XFGVIRT(ICommandCost, SetCostLimits)
         HRESULT ( STDMETHODCALLTYPE *SetCostLimits )( 
             ICommandCost * This,
             /* [in] */ LPCOLESTR pwszRowsetName,
@@ -1757,21 +1830,26 @@ EXTERN_C const IID IID_ICommandValidate;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICommandValidate * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICommandValidate * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICommandValidate * This);
         
+        DECLSPEC_XFGVIRT(ICommandValidate, ValidateCompletely)
         HRESULT ( STDMETHODCALLTYPE *ValidateCompletely )( 
             ICommandValidate * This);
         
+        DECLSPEC_XFGVIRT(ICommandValidate, ValidateSyntax)
         HRESULT ( STDMETHODCALLTYPE *ValidateSyntax )( 
             ICommandValidate * This);
         
@@ -1863,24 +1941,29 @@ EXTERN_C const IID IID_ITableRename;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ITableRename * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ITableRename * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ITableRename * This);
         
+        DECLSPEC_XFGVIRT(ITableRename, RenameColumn)
         HRESULT ( STDMETHODCALLTYPE *RenameColumn )( 
             ITableRename * This,
             /* [in] */ DBID *pTableId,
             /* [in] */ DBID *pOldColumnId,
             /* [in] */ DBID *pNewColumnId);
         
+        DECLSPEC_XFGVIRT(ITableRename, RenameTable)
         HRESULT ( STDMETHODCALLTYPE *RenameTable )( 
             ITableRename * This,
             /* [in] */ DBID *pOldTableId,
@@ -1974,24 +2057,29 @@ EXTERN_C const IID IID_IDBSchemaCommand;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDBSchemaCommand * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDBSchemaCommand * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDBSchemaCommand * This);
         
+        DECLSPEC_XFGVIRT(IDBSchemaCommand, GetCommand)
         HRESULT ( STDMETHODCALLTYPE *GetCommand )( 
             IDBSchemaCommand * This,
             /* [in] */ IUnknown *pUnkOuter,
             /* [in] */ REFGUID rguidSchema,
             /* [out] */ ICommand **ppCommand);
         
+        DECLSPEC_XFGVIRT(IDBSchemaCommand, GetSchemas)
         HRESULT ( STDMETHODCALLTYPE *GetSchemas )( 
             IDBSchemaCommand * This,
             /* [out][in] */ ULONG *pcSchemas,
@@ -2077,18 +2165,22 @@ EXTERN_C const IID IID_IProvideMoniker;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IProvideMoniker * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IProvideMoniker * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IProvideMoniker * This);
         
+        DECLSPEC_XFGVIRT(IProvideMoniker, GetMoniker)
         HRESULT ( STDMETHODCALLTYPE *GetMoniker )( 
             IProvideMoniker * This,
             /* [out] */ IMoniker **ppIMoniker);

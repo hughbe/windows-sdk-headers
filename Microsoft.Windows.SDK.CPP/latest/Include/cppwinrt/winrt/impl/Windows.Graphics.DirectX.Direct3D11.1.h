@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Graphics_DirectX_Direct3D11_1_H
 #include "winrt/impl/Windows.Foundation.0.h"
 #include "winrt/impl/Windows.Graphics.DirectX.Direct3D11.0.h"
-namespace winrt::Windows::Graphics::DirectX::Direct3D11
+WINRT_EXPORT namespace winrt::Windows::Graphics::DirectX::Direct3D11
 {
     struct __declspec(empty_bases) IDirect3DDevice :
         Windows::Foundation::IInspectable,

@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -242,42 +250,51 @@ EXTERN_C const IID IID_IMpeg2TableFilter;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IMpeg2TableFilter * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IMpeg2TableFilter * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IMpeg2TableFilter * This);
         
+        DECLSPEC_XFGVIRT(IMpeg2TableFilter, AddPID)
         HRESULT ( STDMETHODCALLTYPE *AddPID )( 
             __RPC__in IMpeg2TableFilter * This,
             PID p);
         
+        DECLSPEC_XFGVIRT(IMpeg2TableFilter, AddTable)
         HRESULT ( STDMETHODCALLTYPE *AddTable )( 
             __RPC__in IMpeg2TableFilter * This,
             PID p,
             TID t);
         
+        DECLSPEC_XFGVIRT(IMpeg2TableFilter, AddExtension)
         HRESULT ( STDMETHODCALLTYPE *AddExtension )( 
             __RPC__in IMpeg2TableFilter * This,
             PID p,
             TID t,
             TEID e);
         
+        DECLSPEC_XFGVIRT(IMpeg2TableFilter, RemovePID)
         HRESULT ( STDMETHODCALLTYPE *RemovePID )( 
             __RPC__in IMpeg2TableFilter * This,
             PID p);
         
+        DECLSPEC_XFGVIRT(IMpeg2TableFilter, RemoveTable)
         HRESULT ( STDMETHODCALLTYPE *RemoveTable )( 
             __RPC__in IMpeg2TableFilter * This,
             PID p,
             TID t);
         
+        DECLSPEC_XFGVIRT(IMpeg2TableFilter, RemoveExtension)
         HRESULT ( STDMETHODCALLTYPE *RemoveExtension )( 
             __RPC__in IMpeg2TableFilter * This,
             PID p,
@@ -410,18 +427,22 @@ EXTERN_C const IID IID_IMpeg2Data;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IMpeg2Data * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IMpeg2Data * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IMpeg2Data * This);
         
+        DECLSPEC_XFGVIRT(IMpeg2Data, GetSection)
         HRESULT ( STDMETHODCALLTYPE *GetSection )( 
             __RPC__in IMpeg2Data * This,
             /* [in] */ PID pid,
@@ -430,6 +451,7 @@ EXTERN_C const IID IID_IMpeg2Data;
             /* [in] */ DWORD dwTimeout,
             /* [out] */ __RPC__deref_out_opt ISectionList **ppSectionList);
         
+        DECLSPEC_XFGVIRT(IMpeg2Data, GetTable)
         HRESULT ( STDMETHODCALLTYPE *GetTable )( 
             __RPC__in IMpeg2Data * This,
             /* [in] */ PID pid,
@@ -438,6 +460,7 @@ EXTERN_C const IID IID_IMpeg2Data;
             /* [in] */ DWORD dwTimeout,
             /* [out] */ __RPC__deref_out_opt ISectionList **ppSectionList);
         
+        DECLSPEC_XFGVIRT(IMpeg2Data, GetStreamOfSections)
         HRESULT ( STDMETHODCALLTYPE *GetStreamOfSections )( 
             __RPC__in IMpeg2Data * This,
             /* [in] */ PID pid,
@@ -542,18 +565,22 @@ EXTERN_C const IID IID_ISectionList;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISectionList * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISectionList * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISectionList * This);
         
+        DECLSPEC_XFGVIRT(ISectionList, Initialize)
         HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             __RPC__in ISectionList * This,
             /* [in] */ MPEG_REQUEST_TYPE requestType,
@@ -565,27 +592,33 @@ EXTERN_C const IID IID_ISectionList;
             /* [in] */ DWORD timeout,
             /* [in] */ __RPC__in HANDLE hDoneEvent);
         
+        DECLSPEC_XFGVIRT(ISectionList, InitializeWithRawSections)
         HRESULT ( STDMETHODCALLTYPE *InitializeWithRawSections )( 
             __RPC__in ISectionList * This,
             /* [in] */ __RPC__in PMPEG_PACKET_LIST pmplSections);
         
+        DECLSPEC_XFGVIRT(ISectionList, CancelPendingRequest)
         HRESULT ( STDMETHODCALLTYPE *CancelPendingRequest )( 
             __RPC__in ISectionList * This);
         
+        DECLSPEC_XFGVIRT(ISectionList, GetNumberOfSections)
         HRESULT ( STDMETHODCALLTYPE *GetNumberOfSections )( 
             __RPC__in ISectionList * This,
             /* [out] */ __RPC__out WORD *pCount);
         
+        DECLSPEC_XFGVIRT(ISectionList, GetSectionData)
         HRESULT ( STDMETHODCALLTYPE *GetSectionData )( 
             __RPC__in ISectionList * This,
             /* [in] */ WORD sectionNumber,
             /* [out] */ __RPC__out DWORD *pdwRawPacketLength,
             /* [out] */ __RPC__deref_out_opt PSECTION *ppSection);
         
+        DECLSPEC_XFGVIRT(ISectionList, GetProgramIdentifier)
         HRESULT ( STDMETHODCALLTYPE *GetProgramIdentifier )( 
             __RPC__in ISectionList * This,
             __RPC__in PID *pPid);
         
+        DECLSPEC_XFGVIRT(ISectionList, GetTableIdentifier)
         HRESULT ( STDMETHODCALLTYPE *GetTableIdentifier )( 
             __RPC__in ISectionList * This,
             __RPC__in TID *pTableId);
@@ -681,18 +714,22 @@ EXTERN_C const IID IID_IMpeg2Stream;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IMpeg2Stream * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IMpeg2Stream * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IMpeg2Stream * This);
         
+        DECLSPEC_XFGVIRT(IMpeg2Stream, Initialize)
         HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             __RPC__in IMpeg2Stream * This,
             /* [in] */ MPEG_REQUEST_TYPE requestType,
@@ -703,6 +740,7 @@ EXTERN_C const IID IID_IMpeg2Stream;
             /* [in] */ __RPC__in PMPEG2_FILTER pFilter,
             /* [in] */ __RPC__in HANDLE hDataReadyEvent);
         
+        DECLSPEC_XFGVIRT(IMpeg2Stream, SupplyDataBuffer)
         HRESULT ( STDMETHODCALLTYPE *SupplyDataBuffer )( 
             __RPC__in IMpeg2Stream * This,
             /* [in] */ __RPC__in PMPEG_STREAM_BUFFER pStreamBuffer);

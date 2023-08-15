@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Data_Text_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Data.Text.1.h"
-namespace winrt::Windows::Data::Text
+WINRT_EXPORT namespace winrt::Windows::Data::Text
 {
     struct SelectableWordSegmentsTokenizingHandler : Windows::Foundation::IUnknown
     {
@@ -58,20 +58,20 @@ namespace winrt::Windows::Data::Text
     {
         SelectableWordsSegmenter(std::nullptr_t) noexcept {}
         SelectableWordsSegmenter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Data::Text::ISelectableWordsSegmenter(ptr, take_ownership_from_abi) {}
-        SelectableWordsSegmenter(param::hstring const& language);
+        explicit SelectableWordsSegmenter(param::hstring const& language);
     };
     struct __declspec(empty_bases) SemanticTextQuery : Windows::Data::Text::ISemanticTextQuery
     {
         SemanticTextQuery(std::nullptr_t) noexcept {}
         SemanticTextQuery(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Data::Text::ISemanticTextQuery(ptr, take_ownership_from_abi) {}
-        SemanticTextQuery(param::hstring const& aqsFilter);
+        explicit SemanticTextQuery(param::hstring const& aqsFilter);
         SemanticTextQuery(param::hstring const& aqsFilter, param::hstring const& filterLanguage);
     };
     struct __declspec(empty_bases) TextConversionGenerator : Windows::Data::Text::ITextConversionGenerator
     {
         TextConversionGenerator(std::nullptr_t) noexcept {}
         TextConversionGenerator(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Data::Text::ITextConversionGenerator(ptr, take_ownership_from_abi) {}
-        TextConversionGenerator(param::hstring const& languageTag);
+        explicit TextConversionGenerator(param::hstring const& languageTag);
     };
     struct __declspec(empty_bases) TextPhoneme : Windows::Data::Text::ITextPhoneme
     {
@@ -83,7 +83,7 @@ namespace winrt::Windows::Data::Text
     {
         TextPredictionGenerator(std::nullptr_t) noexcept {}
         TextPredictionGenerator(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Data::Text::ITextPredictionGenerator(ptr, take_ownership_from_abi) {}
-        TextPredictionGenerator(param::hstring const& languageTag);
+        explicit TextPredictionGenerator(param::hstring const& languageTag);
         using Windows::Data::Text::ITextPredictionGenerator::GetCandidatesAsync;
         using impl::consume_t<TextPredictionGenerator, Windows::Data::Text::ITextPredictionGenerator2>::GetCandidatesAsync;
     };
@@ -92,7 +92,7 @@ namespace winrt::Windows::Data::Text
     {
         TextReverseConversionGenerator(std::nullptr_t) noexcept {}
         TextReverseConversionGenerator(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Data::Text::ITextReverseConversionGenerator(ptr, take_ownership_from_abi) {}
-        TextReverseConversionGenerator(param::hstring const& languageTag);
+        explicit TextReverseConversionGenerator(param::hstring const& languageTag);
     };
     struct UnicodeCharacters
     {
@@ -124,7 +124,7 @@ namespace winrt::Windows::Data::Text
     {
         WordsSegmenter(std::nullptr_t) noexcept {}
         WordsSegmenter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Data::Text::IWordsSegmenter(ptr, take_ownership_from_abi) {}
-        WordsSegmenter(param::hstring const& language);
+        explicit WordsSegmenter(param::hstring const& language);
     };
 }
 #endif

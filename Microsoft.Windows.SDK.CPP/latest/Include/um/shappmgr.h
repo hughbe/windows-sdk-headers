@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -208,34 +216,42 @@ EXTERN_C const IID IID_IShellApp;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IShellApp * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IShellApp * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IShellApp * This);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetAppInfo )( 
             __RPC__in IShellApp * This,
             /* [out][in] */ __RPC__inout PAPPINFODATA pai);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetPossibleActions)
         HRESULT ( STDMETHODCALLTYPE *GetPossibleActions )( 
             __RPC__in IShellApp * This,
             /* [out] */ __RPC__out DWORD *pdwActions);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetSlowAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetSlowAppInfo )( 
             __RPC__in IShellApp * This,
             /* [out] */ __RPC__out PSLOWAPPINFO psaid);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetCachedSlowAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetCachedSlowAppInfo )( 
             __RPC__in IShellApp * This,
             /* [out] */ __RPC__out PSLOWAPPINFO psaid);
         
+        DECLSPEC_XFGVIRT(IShellApp, IsInstalled)
         HRESULT ( STDMETHODCALLTYPE *IsInstalled )( 
             __RPC__in IShellApp * This);
         
@@ -343,45 +359,56 @@ EXTERN_C const IID IID_IPublishedApp;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPublishedApp * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPublishedApp * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPublishedApp * This);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetAppInfo )( 
             __RPC__in IPublishedApp * This,
             /* [out][in] */ __RPC__inout PAPPINFODATA pai);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetPossibleActions)
         HRESULT ( STDMETHODCALLTYPE *GetPossibleActions )( 
             __RPC__in IPublishedApp * This,
             /* [out] */ __RPC__out DWORD *pdwActions);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetSlowAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetSlowAppInfo )( 
             __RPC__in IPublishedApp * This,
             /* [out] */ __RPC__out PSLOWAPPINFO psaid);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetCachedSlowAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetCachedSlowAppInfo )( 
             __RPC__in IPublishedApp * This,
             /* [out] */ __RPC__out PSLOWAPPINFO psaid);
         
+        DECLSPEC_XFGVIRT(IShellApp, IsInstalled)
         HRESULT ( STDMETHODCALLTYPE *IsInstalled )( 
             __RPC__in IPublishedApp * This);
         
+        DECLSPEC_XFGVIRT(IPublishedApp, Install)
         HRESULT ( STDMETHODCALLTYPE *Install )( 
             __RPC__in IPublishedApp * This,
             /* [unique][in] */ __RPC__in_opt LPSYSTEMTIME pstInstall);
         
+        DECLSPEC_XFGVIRT(IPublishedApp, GetPublishedAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetPublishedAppInfo )( 
             __RPC__in IPublishedApp * This,
             /* [out][in] */ __RPC__inout PPUBAPPINFO ppai);
         
+        DECLSPEC_XFGVIRT(IPublishedApp, Unschedule)
         HRESULT ( STDMETHODCALLTYPE *Unschedule )( 
             __RPC__in IPublishedApp * This);
         
@@ -472,48 +499,60 @@ EXTERN_C const IID IID_IPublishedApp2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPublishedApp2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPublishedApp2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPublishedApp2 * This);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetAppInfo )( 
             __RPC__in IPublishedApp2 * This,
             /* [out][in] */ __RPC__inout PAPPINFODATA pai);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetPossibleActions)
         HRESULT ( STDMETHODCALLTYPE *GetPossibleActions )( 
             __RPC__in IPublishedApp2 * This,
             /* [out] */ __RPC__out DWORD *pdwActions);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetSlowAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetSlowAppInfo )( 
             __RPC__in IPublishedApp2 * This,
             /* [out] */ __RPC__out PSLOWAPPINFO psaid);
         
+        DECLSPEC_XFGVIRT(IShellApp, GetCachedSlowAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetCachedSlowAppInfo )( 
             __RPC__in IPublishedApp2 * This,
             /* [out] */ __RPC__out PSLOWAPPINFO psaid);
         
+        DECLSPEC_XFGVIRT(IShellApp, IsInstalled)
         HRESULT ( STDMETHODCALLTYPE *IsInstalled )( 
             __RPC__in IPublishedApp2 * This);
         
+        DECLSPEC_XFGVIRT(IPublishedApp, Install)
         HRESULT ( STDMETHODCALLTYPE *Install )( 
             __RPC__in IPublishedApp2 * This,
             /* [unique][in] */ __RPC__in_opt LPSYSTEMTIME pstInstall);
         
+        DECLSPEC_XFGVIRT(IPublishedApp, GetPublishedAppInfo)
         HRESULT ( STDMETHODCALLTYPE *GetPublishedAppInfo )( 
             __RPC__in IPublishedApp2 * This,
             /* [out][in] */ __RPC__inout PPUBAPPINFO ppai);
         
+        DECLSPEC_XFGVIRT(IPublishedApp, Unschedule)
         HRESULT ( STDMETHODCALLTYPE *Unschedule )( 
             __RPC__in IPublishedApp2 * This);
         
+        DECLSPEC_XFGVIRT(IPublishedApp2, Install2)
         HRESULT ( STDMETHODCALLTYPE *Install2 )( 
             __RPC__in IPublishedApp2 * This,
             /* [unique][in] */ __RPC__in_opt LPSYSTEMTIME pstInstall,
@@ -611,22 +650,27 @@ EXTERN_C const IID IID_IEnumPublishedApps;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumPublishedApps * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumPublishedApps * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumPublishedApps * This);
         
+        DECLSPEC_XFGVIRT(IEnumPublishedApps, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumPublishedApps * This,
             /* [out] */ __RPC__deref_out_opt IPublishedApp **pia);
         
+        DECLSPEC_XFGVIRT(IEnumPublishedApps, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumPublishedApps * This);
         
@@ -707,30 +751,37 @@ EXTERN_C const IID IID_IAppPublisher;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAppPublisher * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAppPublisher * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAppPublisher * This);
         
+        DECLSPEC_XFGVIRT(IAppPublisher, GetNumberOfCategories)
         HRESULT ( STDMETHODCALLTYPE *GetNumberOfCategories )( 
             __RPC__in IAppPublisher * This,
             /* [out] */ __RPC__out DWORD *pdwCat);
         
+        DECLSPEC_XFGVIRT(IAppPublisher, GetCategories)
         HRESULT ( STDMETHODCALLTYPE *GetCategories )( 
             __RPC__in IAppPublisher * This,
             /* [out] */ __RPC__out APPCATEGORYINFOLIST *pAppCategoryList);
         
+        DECLSPEC_XFGVIRT(IAppPublisher, GetNumberOfApps)
         HRESULT ( STDMETHODCALLTYPE *GetNumberOfApps )( 
             __RPC__in IAppPublisher * This,
             /* [out] */ __RPC__out DWORD *pdwApps);
         
+        DECLSPEC_XFGVIRT(IAppPublisher, EnumApps)
         HRESULT ( STDMETHODCALLTYPE *EnumApps )( 
             __RPC__in IAppPublisher * This,
             /* [unique][in] */ __RPC__in_opt GUID *pAppCategoryId,

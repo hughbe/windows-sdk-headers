@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,18 +8,18 @@
 #include "winrt/impl/Windows.ApplicationModel.Activation.1.h"
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Gaming.UI.1.h"
-namespace winrt::Windows::Gaming::UI
+WINRT_EXPORT namespace winrt::Windows::Gaming::UI
 {
     struct GameBar
     {
         GameBar() = delete;
         static auto VisibilityChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using VisibilityChanged_revoker = impl::factory_event_revoker<Windows::Gaming::UI::IGameBarStatics, &impl::abi_t<Windows::Gaming::UI::IGameBarStatics>::remove_VisibilityChanged>;
-        static VisibilityChanged_revoker VisibilityChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static VisibilityChanged_revoker VisibilityChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto VisibilityChanged(winrt::event_token const& token);
         static auto IsInputRedirectedChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using IsInputRedirectedChanged_revoker = impl::factory_event_revoker<Windows::Gaming::UI::IGameBarStatics, &impl::abi_t<Windows::Gaming::UI::IGameBarStatics>::remove_IsInputRedirectedChanged>;
-        static IsInputRedirectedChanged_revoker IsInputRedirectedChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static IsInputRedirectedChanged_revoker IsInputRedirectedChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto IsInputRedirectedChanged(winrt::event_token const& token);
         [[nodiscard]] static auto Visible();
         [[nodiscard]] static auto IsInputRedirected();

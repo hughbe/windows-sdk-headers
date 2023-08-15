@@ -1,43 +1,46 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_UI_Core_0_H
 #define WINRT_Windows_UI_Core_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename T> struct EventHandler;
+    template <typename T> struct __declspec(empty_bases) EventHandler;
     struct EventRegistrationToken;
     struct IAsyncAction;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Point;
     struct Rect;
     struct Size;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     struct IPropertySet;
+    template <typename T> struct __declspec(empty_bases) IVector;
 }
-namespace winrt::Windows::System
+WINRT_EXPORT namespace winrt::Windows::System
 {
     struct DispatcherQueue;
     enum class VirtualKey : int32_t;
     enum class VirtualKeyModifiers : uint32_t;
 }
-namespace winrt::Windows::UI
+WINRT_EXPORT namespace winrt::Windows::UI
 {
     struct UIContext;
 }
-namespace winrt::Windows::UI::Input
+WINRT_EXPORT namespace winrt::Windows::UI::Input
 {
     struct PointerPoint;
 }
-namespace winrt::Windows::UI::Popups
+WINRT_EXPORT namespace winrt::Windows::UI::Popups
 {
+    struct IUICommand;
     struct UICommandInvokedHandler;
 }
-namespace winrt::Windows::UI::Core
+WINRT_EXPORT namespace winrt::Windows::UI::Core
 {
     enum class AppViewBackButtonVisibility : int32_t
     {
@@ -208,1034 +211,263 @@ namespace winrt::Windows::UI::Core
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::Core::IAcceleratorKeyEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IAcceleratorKeyEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IAutomationProviderRequestedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IBackRequestedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICharacterReceivedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreAcceleratorKeys>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreClosestInteractiveBoundsRequested>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreComponentFocusable>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreCursor>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreCursorFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreDispatcher>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreDispatcher2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreDispatcherWithTaskPriority>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreInputSourceBase>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreKeyboardInputSource>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreKeyboardInputSource2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICorePointerInputSource>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICorePointerInputSource2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICorePointerRedirector>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreTouchHitTesting>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindow>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindow2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindow3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindow4>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindow5>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowDialog>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowDialogFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowFlyout>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowFlyoutFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowPopupShowingEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowResizeManager>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowResizeManagerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowStatic>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ICoreWindowWithContext>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IIdleDispatchedHandlerArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IInitializeWithCoreWindow>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IInputEnabledEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IKeyEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IKeyEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IPointerEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ISystemNavigationManager>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ISystemNavigationManager2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ISystemNavigationManagerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::ITouchHitTestingEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IVisibilityChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IWindowActivatedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::IWindowSizeChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Core::AcceleratorKeyEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::AutomationProviderRequestedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::BackRequestedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CharacterReceivedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreAcceleratorKeys>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreComponentInputSource>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreCursor>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreDispatcher>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreIndependentInputSource>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreWindow>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreWindowDialog>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreWindowEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreWindowFlyout>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreWindowPopupShowingEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreWindowResizeManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::IdleDispatchedHandlerArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::InputEnabledEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::KeyEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::PointerEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::SystemNavigationManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::TouchHitTestingEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::VisibilityChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::WindowActivatedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::WindowSizeChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Core::AppViewBackButtonVisibility>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreAcceleratorKeyEventType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreCursorType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreDispatcherPriority>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreInputDeviceTypes>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreProcessEventsOption>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreProximityEvaluationScore>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreVirtualKeyStates>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreWindowActivationMode>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreWindowActivationState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CoreWindowFlowDirection>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Core::CorePhysicalKeyStatus>
-    {
-        using type = struct_category<uint32_t, uint32_t, bool, bool, bool, bool>;
-    };
-    template <> struct category<Windows::UI::Core::CoreProximityEvaluation>
-    {
-        using type = struct_category<int32_t, Windows::Foundation::Point>;
-    };
-    template <> struct category<Windows::UI::Core::DispatchedHandler>
-    {
-        using type = delegate_category;
-    };
-    template <> struct category<Windows::UI::Core::IdleDispatchedHandler>
-    {
-        using type = delegate_category;
-    };
-    template <> struct name<Windows::UI::Core::IAcceleratorKeyEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IAcceleratorKeyEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::IAcceleratorKeyEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IAcceleratorKeyEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Core::IAutomationProviderRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IAutomationProviderRequestedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::IBackRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IBackRequestedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::ICharacterReceivedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICharacterReceivedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreAcceleratorKeys>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreAcceleratorKeys" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreClosestInteractiveBoundsRequested>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreClosestInteractiveBoundsRequested" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreComponentFocusable>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreComponentFocusable" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreCursor>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreCursor" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreCursorFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreCursorFactory" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreDispatcher>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreDispatcher" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreDispatcher2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreDispatcher2" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreDispatcherWithTaskPriority>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreDispatcherWithTaskPriority" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreInputSourceBase>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreInputSourceBase" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreKeyboardInputSource>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreKeyboardInputSource" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreKeyboardInputSource2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreKeyboardInputSource2" };
-    };
-    template <> struct name<Windows::UI::Core::ICorePointerInputSource>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICorePointerInputSource" };
-    };
-    template <> struct name<Windows::UI::Core::ICorePointerInputSource2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICorePointerInputSource2" };
-    };
-    template <> struct name<Windows::UI::Core::ICorePointerRedirector>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICorePointerRedirector" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreTouchHitTesting>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreTouchHitTesting" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindow>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindow" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindow2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindow2" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindow3>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindow3" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindow4>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindow4" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindow5>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindow5" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowDialog>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowDialog" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowDialogFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowDialogFactory" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowFlyout>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowFlyout" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowFlyoutFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowFlyoutFactory" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowPopupShowingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowPopupShowingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowResizeManager>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowResizeManager" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowResizeManagerStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowResizeManagerStatics" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowStatic>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowStatic" };
-    };
-    template <> struct name<Windows::UI::Core::ICoreWindowWithContext>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ICoreWindowWithContext" };
-    };
-    template <> struct name<Windows::UI::Core::IIdleDispatchedHandlerArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IIdleDispatchedHandlerArgs" };
-    };
-    template <> struct name<Windows::UI::Core::IInitializeWithCoreWindow>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IInitializeWithCoreWindow" };
-    };
-    template <> struct name<Windows::UI::Core::IInputEnabledEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IInputEnabledEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::IKeyEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IKeyEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::IKeyEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IKeyEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Core::IPointerEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IPointerEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::ISystemNavigationManager>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ISystemNavigationManager" };
-    };
-    template <> struct name<Windows::UI::Core::ISystemNavigationManager2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ISystemNavigationManager2" };
-    };
-    template <> struct name<Windows::UI::Core::ISystemNavigationManagerStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ISystemNavigationManagerStatics" };
-    };
-    template <> struct name<Windows::UI::Core::ITouchHitTestingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ITouchHitTestingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::IVisibilityChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IVisibilityChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::IWindowActivatedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IWindowActivatedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::IWindowSizeChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IWindowSizeChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::AcceleratorKeyEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.AcceleratorKeyEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::AutomationProviderRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.AutomationProviderRequestedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::BackRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.BackRequestedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::CharacterReceivedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CharacterReceivedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::CoreAcceleratorKeys>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreAcceleratorKeys" };
-    };
-    template <> struct name<Windows::UI::Core::CoreComponentInputSource>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreComponentInputSource" };
-    };
-    template <> struct name<Windows::UI::Core::CoreCursor>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreCursor" };
-    };
-    template <> struct name<Windows::UI::Core::CoreDispatcher>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreDispatcher" };
-    };
-    template <> struct name<Windows::UI::Core::CoreIndependentInputSource>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreIndependentInputSource" };
-    };
-    template <> struct name<Windows::UI::Core::CoreWindow>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreWindow" };
-    };
-    template <> struct name<Windows::UI::Core::CoreWindowDialog>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreWindowDialog" };
-    };
-    template <> struct name<Windows::UI::Core::CoreWindowEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreWindowEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::CoreWindowFlyout>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreWindowFlyout" };
-    };
-    template <> struct name<Windows::UI::Core::CoreWindowPopupShowingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreWindowPopupShowingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::CoreWindowResizeManager>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreWindowResizeManager" };
-    };
-    template <> struct name<Windows::UI::Core::IdleDispatchedHandlerArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IdleDispatchedHandlerArgs" };
-    };
-    template <> struct name<Windows::UI::Core::InputEnabledEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.InputEnabledEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::KeyEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.KeyEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::PointerEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.PointerEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::SystemNavigationManager>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.SystemNavigationManager" };
-    };
-    template <> struct name<Windows::UI::Core::TouchHitTestingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.TouchHitTestingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::VisibilityChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.VisibilityChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::WindowActivatedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.WindowActivatedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::WindowSizeChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.WindowSizeChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Core::AppViewBackButtonVisibility>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.AppViewBackButtonVisibility" };
-    };
-    template <> struct name<Windows::UI::Core::CoreAcceleratorKeyEventType>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreAcceleratorKeyEventType" };
-    };
-    template <> struct name<Windows::UI::Core::CoreCursorType>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreCursorType" };
-    };
-    template <> struct name<Windows::UI::Core::CoreDispatcherPriority>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreDispatcherPriority" };
-    };
-    template <> struct name<Windows::UI::Core::CoreInputDeviceTypes>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreInputDeviceTypes" };
-    };
-    template <> struct name<Windows::UI::Core::CoreProcessEventsOption>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreProcessEventsOption" };
-    };
-    template <> struct name<Windows::UI::Core::CoreProximityEvaluationScore>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreProximityEvaluationScore" };
-    };
-    template <> struct name<Windows::UI::Core::CoreVirtualKeyStates>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreVirtualKeyStates" };
-    };
-    template <> struct name<Windows::UI::Core::CoreWindowActivationMode>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreWindowActivationMode" };
-    };
-    template <> struct name<Windows::UI::Core::CoreWindowActivationState>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreWindowActivationState" };
-    };
-    template <> struct name<Windows::UI::Core::CoreWindowFlowDirection>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreWindowFlowDirection" };
-    };
-    template <> struct name<Windows::UI::Core::CorePhysicalKeyStatus>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CorePhysicalKeyStatus" };
-    };
-    template <> struct name<Windows::UI::Core::CoreProximityEvaluation>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.CoreProximityEvaluation" };
-    };
-    template <> struct name<Windows::UI::Core::DispatchedHandler>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.DispatchedHandler" };
-    };
-    template <> struct name<Windows::UI::Core::IdleDispatchedHandler>
-    {
-        static constexpr auto & value{ L"Windows.UI.Core.IdleDispatchedHandler" };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IAcceleratorKeyEventArgs>
-    {
-        static constexpr guid value{ 0xFF1C4C4A,0x9287,0x470B,{ 0x83,0x6E,0x90,0x86,0xE3,0x12,0x6A,0xDE } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IAcceleratorKeyEventArgs2>
-    {
-        static constexpr guid value{ 0xD300A9F6,0x2F7E,0x4873,{ 0xA5,0x55,0x16,0x6E,0x59,0x6E,0xE1,0xC5 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IAutomationProviderRequestedEventArgs>
-    {
-        static constexpr guid value{ 0x961FF258,0x21BF,0x4B42,{ 0xA2,0x98,0xFA,0x47,0x9D,0x4C,0x52,0xE2 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IBackRequestedEventArgs>
-    {
-        static constexpr guid value{ 0xD603D28A,0xE411,0x4A4E,{ 0xBA,0x41,0x6A,0x32,0x7A,0x86,0x75,0xBC } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICharacterReceivedEventArgs>
-    {
-        static constexpr guid value{ 0xC584659F,0x99B2,0x4BCC,{ 0xBD,0x33,0x04,0xE6,0x3F,0x42,0x90,0x2E } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs>
-    {
-        static constexpr guid value{ 0x347C11D7,0xF6F8,0x40E3,{ 0xB2,0x9F,0xAE,0x50,0xD3,0xE8,0x64,0x86 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreAcceleratorKeys>
-    {
-        static constexpr guid value{ 0x9FFDF7F5,0xB8C9,0x4EF0,{ 0xB7,0xD2,0x1D,0xE6,0x26,0x56,0x1F,0xC8 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreClosestInteractiveBoundsRequested>
-    {
-        static constexpr guid value{ 0xF303043A,0xE8BF,0x4E8E,{ 0xAE,0x69,0xC9,0xDA,0xDD,0x57,0xA1,0x14 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreComponentFocusable>
-    {
-        static constexpr guid value{ 0x52F96FA3,0x8742,0x4411,{ 0xAE,0x69,0x79,0xA8,0x5F,0x29,0xAC,0x8B } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreCursor>
-    {
-        static constexpr guid value{ 0x96893ACF,0x111D,0x442C,{ 0x8A,0x77,0xB8,0x79,0x92,0xF8,0xE2,0xD6 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreCursorFactory>
-    {
-        static constexpr guid value{ 0xF6359621,0xA79D,0x4ED3,{ 0x8C,0x32,0xA9,0xEF,0x9D,0x6B,0x76,0xA4 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreDispatcher>
-    {
-        static constexpr guid value{ 0x60DB2FA8,0xB705,0x4FDE,{ 0xA7,0xD6,0xEB,0xBB,0x18,0x91,0xD3,0x9E } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreDispatcher2>
-    {
-        static constexpr guid value{ 0x6F5E63C7,0xE3AA,0x4EAE,{ 0xB0,0xE0,0xDC,0xF3,0x21,0xCA,0x4B,0x2F } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreDispatcherWithTaskPriority>
-    {
-        static constexpr guid value{ 0xBAFAECAD,0x484D,0x41BE,{ 0xBA,0x80,0x1D,0x58,0xC6,0x52,0x63,0xEA } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreInputSourceBase>
-    {
-        static constexpr guid value{ 0x9F488807,0x4580,0x4BE8,{ 0xBE,0x68,0x92,0xA9,0x31,0x17,0x13,0xBB } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreKeyboardInputSource>
-    {
-        static constexpr guid value{ 0x231C9088,0xE469,0x4DF1,{ 0xB2,0x08,0x6E,0x49,0x0D,0x71,0xCB,0x90 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreKeyboardInputSource2>
-    {
-        static constexpr guid value{ 0xFA24CB94,0xF963,0x47A5,{ 0x87,0x78,0x20,0x7C,0x48,0x2B,0x0A,0xFD } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICorePointerInputSource>
-    {
-        static constexpr guid value{ 0xBBF1BB18,0xE47A,0x48EB,{ 0x88,0x07,0xF8,0xF8,0xD3,0xEA,0x45,0x51 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICorePointerInputSource2>
-    {
-        static constexpr guid value{ 0xD703708A,0x4516,0x4786,{ 0xB1,0xE5,0x27,0x51,0xD5,0x63,0xF9,0x97 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICorePointerRedirector>
-    {
-        static constexpr guid value{ 0x8F9D0C94,0x5688,0x4B0C,{ 0xA9,0xF1,0xF9,0x31,0xF7,0xFA,0x3D,0xC3 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreTouchHitTesting>
-    {
-        static constexpr guid value{ 0xB1D8A289,0x3ACF,0x4124,{ 0x9F,0xA3,0xEA,0x8A,0xBA,0x35,0x3C,0x21 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindow>
-    {
-        static constexpr guid value{ 0x79B9D5F2,0x879E,0x4B89,{ 0xB7,0x98,0x79,0xE4,0x75,0x98,0x03,0x0C } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindow2>
-    {
-        static constexpr guid value{ 0x7C2B1B85,0x6917,0x4361,{ 0x9C,0x02,0x0D,0x9E,0x3A,0x42,0x0B,0x95 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindow3>
-    {
-        static constexpr guid value{ 0x32C20DD8,0xFAEF,0x4375,{ 0xA2,0xAB,0x32,0x64,0x0E,0x48,0x15,0xC7 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindow4>
-    {
-        static constexpr guid value{ 0x35CAF0D0,0x47F0,0x436C,{ 0xAF,0x97,0x0D,0xD8,0x8F,0x6F,0x5F,0x02 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindow5>
-    {
-        static constexpr guid value{ 0x4B4AE1E1,0x2E6D,0x4EAA,{ 0xBD,0xA1,0x1C,0x5C,0xC1,0xBE,0xE1,0x41 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowDialog>
-    {
-        static constexpr guid value{ 0xE7392CE0,0xC78D,0x427E,{ 0x8B,0x2C,0x01,0xFF,0x42,0x0C,0x69,0xD5 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowDialogFactory>
-    {
-        static constexpr guid value{ 0xCFB2A855,0x1C59,0x4B13,{ 0xB1,0xE5,0x16,0xE2,0x98,0x05,0xF7,0xC4 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowEventArgs>
-    {
-        static constexpr guid value{ 0x272B1EF3,0xC633,0x4DA5,{ 0xA2,0x6C,0xC6,0xD0,0xF5,0x6B,0x29,0xDA } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowFlyout>
-    {
-        static constexpr guid value{ 0xE89D854D,0x2050,0x40BB,{ 0xB3,0x44,0xF6,0xF3,0x55,0xEE,0xB3,0x14 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowFlyoutFactory>
-    {
-        static constexpr guid value{ 0xDEC4C6C4,0x93E8,0x4F7C,{ 0xBE,0x27,0xCE,0xFA,0xA1,0xAF,0x68,0xA7 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowPopupShowingEventArgs>
-    {
-        static constexpr guid value{ 0x26155FA2,0x5BA5,0x4EA4,{ 0xA3,0xB4,0x2D,0xC7,0xD6,0x3C,0x8E,0x26 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowResizeManager>
-    {
-        static constexpr guid value{ 0xB8F0B925,0xB350,0x48B3,{ 0xA1,0x98,0x5C,0x1A,0x84,0x70,0x02,0x43 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability>
-    {
-        static constexpr guid value{ 0xBB74F27B,0xA544,0x4301,{ 0x80,0xE6,0x0A,0xE0,0x33,0xEF,0x45,0x36 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowResizeManagerStatics>
-    {
-        static constexpr guid value{ 0xAE4A9045,0x6D70,0x49DB,{ 0x8E,0x68,0x46,0xFF,0xBD,0x17,0xD3,0x8D } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowStatic>
-    {
-        static constexpr guid value{ 0x4D239005,0x3C2A,0x41B1,{ 0x90,0x22,0x53,0x6B,0xB9,0xCF,0x93,0xB1 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ICoreWindowWithContext>
-    {
-        static constexpr guid value{ 0x9AC40241,0x3575,0x4C3B,{ 0xAF,0x66,0xE8,0xC5,0x29,0xD4,0xD0,0x6C } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IIdleDispatchedHandlerArgs>
-    {
-        static constexpr guid value{ 0x98BB6A24,0xDC1C,0x43CB,{ 0xB4,0xED,0xD1,0xC0,0xEB,0x23,0x91,0xF3 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IInitializeWithCoreWindow>
-    {
-        static constexpr guid value{ 0x188F20D6,0x9873,0x464A,{ 0xAC,0xE5,0x57,0xE0,0x10,0xF4,0x65,0xE6 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IInputEnabledEventArgs>
-    {
-        static constexpr guid value{ 0x80371D4F,0x2FD8,0x4C24,{ 0xAA,0x86,0x31,0x63,0xA8,0x7B,0x4E,0x5A } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IKeyEventArgs>
-    {
-        static constexpr guid value{ 0x5FF5E930,0x2544,0x4A17,{ 0xBD,0x78,0x1F,0x2F,0xDE,0xBB,0x10,0x6B } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IKeyEventArgs2>
-    {
-        static constexpr guid value{ 0x583ADD98,0x0790,0x4571,{ 0x9B,0x12,0x64,0x5E,0xF9,0xD7,0x9E,0x42 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IPointerEventArgs>
-    {
-        static constexpr guid value{ 0x920D9CB1,0xA5FC,0x4A21,{ 0x8C,0x09,0x49,0xDF,0xE6,0xFF,0xE2,0x5F } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ISystemNavigationManager>
-    {
-        static constexpr guid value{ 0x93023118,0xCF50,0x42A6,{ 0x97,0x06,0x69,0x10,0x7F,0xA1,0x22,0xE1 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ISystemNavigationManager2>
-    {
-        static constexpr guid value{ 0x8C510401,0x67BE,0x49AE,{ 0x95,0x09,0x67,0x1C,0x1E,0x54,0xA3,0x89 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ISystemNavigationManagerStatics>
-    {
-        static constexpr guid value{ 0xDC52B5CE,0xBEE0,0x4305,{ 0x8C,0x54,0x68,0x22,0x8E,0xD6,0x83,0xB5 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::ITouchHitTestingEventArgs>
-    {
-        static constexpr guid value{ 0x22F3B823,0x0B7C,0x424E,{ 0x9D,0xF7,0x33,0xD4,0xF9,0x62,0x93,0x1B } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IVisibilityChangedEventArgs>
-    {
-        static constexpr guid value{ 0xBF9918EA,0xD801,0x4564,{ 0xA4,0x95,0xB1,0xE8,0x4F,0x8A,0xD0,0x85 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IWindowActivatedEventArgs>
-    {
-        static constexpr guid value{ 0x179D65E7,0x4658,0x4CB6,{ 0xAA,0x13,0x41,0xD0,0x94,0xEA,0x25,0x5E } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IWindowSizeChangedEventArgs>
-    {
-        static constexpr guid value{ 0x5A200EC7,0x0426,0x47DC,{ 0xB8,0x6C,0x6F,0x47,0x59,0x15,0xE4,0x51 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::DispatchedHandler>
-    {
-        static constexpr guid value{ 0xD1F276C4,0x98D8,0x4636,{ 0xBF,0x49,0xEB,0x79,0x50,0x75,0x48,0xE9 } };
-    };
-    template <> struct guid_storage<Windows::UI::Core::IdleDispatchedHandler>
-    {
-        static constexpr guid value{ 0xA42B0C24,0x7F21,0x4ABC,{ 0x99,0xC1,0x8F,0x01,0x00,0x7F,0x08,0x80 } };
-    };
-    template <> struct default_interface<Windows::UI::Core::AcceleratorKeyEventArgs>
-    {
-        using type = Windows::UI::Core::IAcceleratorKeyEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::AutomationProviderRequestedEventArgs>
-    {
-        using type = Windows::UI::Core::IAutomationProviderRequestedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::BackRequestedEventArgs>
-    {
-        using type = Windows::UI::Core::IBackRequestedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::CharacterReceivedEventArgs>
-    {
-        using type = Windows::UI::Core::ICharacterReceivedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>
-    {
-        using type = Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreAcceleratorKeys>
-    {
-        using type = Windows::UI::Core::ICoreAcceleratorKeys;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreComponentInputSource>
-    {
-        using type = Windows::UI::Core::ICoreInputSourceBase;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreCursor>
-    {
-        using type = Windows::UI::Core::ICoreCursor;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreDispatcher>
-    {
-        using type = Windows::UI::Core::ICoreDispatcher;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreIndependentInputSource>
-    {
-        using type = Windows::UI::Core::ICoreInputSourceBase;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreWindow>
-    {
-        using type = Windows::UI::Core::ICoreWindow;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreWindowDialog>
-    {
-        using type = Windows::UI::Core::ICoreWindowDialog;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreWindowEventArgs>
-    {
-        using type = Windows::UI::Core::ICoreWindowEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreWindowFlyout>
-    {
-        using type = Windows::UI::Core::ICoreWindowFlyout;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreWindowPopupShowingEventArgs>
-    {
-        using type = Windows::UI::Core::ICoreWindowPopupShowingEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::CoreWindowResizeManager>
-    {
-        using type = Windows::UI::Core::ICoreWindowResizeManager;
-    };
-    template <> struct default_interface<Windows::UI::Core::IdleDispatchedHandlerArgs>
-    {
-        using type = Windows::UI::Core::IIdleDispatchedHandlerArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::InputEnabledEventArgs>
-    {
-        using type = Windows::UI::Core::IInputEnabledEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::KeyEventArgs>
-    {
-        using type = Windows::UI::Core::IKeyEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::PointerEventArgs>
-    {
-        using type = Windows::UI::Core::IPointerEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::SystemNavigationManager>
-    {
-        using type = Windows::UI::Core::ISystemNavigationManager;
-    };
-    template <> struct default_interface<Windows::UI::Core::TouchHitTestingEventArgs>
-    {
-        using type = Windows::UI::Core::ITouchHitTestingEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::VisibilityChangedEventArgs>
-    {
-        using type = Windows::UI::Core::IVisibilityChangedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::WindowActivatedEventArgs>
-    {
-        using type = Windows::UI::Core::IWindowActivatedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Core::WindowSizeChangedEventArgs>
-    {
-        using type = Windows::UI::Core::IWindowSizeChangedEventArgs;
-    };
+    template <> struct category<Windows::UI::Core::IAcceleratorKeyEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IAcceleratorKeyEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IAutomationProviderRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IBackRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICharacterReceivedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreAcceleratorKeys>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreClosestInteractiveBoundsRequested>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreComponentFocusable>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreCursor>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreCursorFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreDispatcher>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreDispatcher2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreDispatcherWithTaskPriority>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreInputSourceBase>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreKeyboardInputSource>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreKeyboardInputSource2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICorePointerInputSource>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICorePointerInputSource2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICorePointerRedirector>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreTouchHitTesting>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindow>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindow2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindow3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindow4>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindow5>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowDialog>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowDialogFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowFlyout>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowFlyoutFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowPopupShowingEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowResizeManager>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowResizeManagerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowStatic>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreWindowWithContext>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IIdleDispatchedHandlerArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IInitializeWithCoreWindow>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IInputEnabledEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IKeyEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IKeyEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IPointerEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ISystemNavigationManager>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ISystemNavigationManager2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ISystemNavigationManagerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ITouchHitTestingEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IVisibilityChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IWindowActivatedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::IWindowSizeChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::AcceleratorKeyEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::AutomationProviderRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::BackRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CharacterReceivedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreAcceleratorKeys>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreComponentInputSource>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreCursor>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreDispatcher>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreIndependentInputSource>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreWindow>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreWindowDialog>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreWindowEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreWindowFlyout>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreWindowPopupShowingEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreWindowResizeManager>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::IdleDispatchedHandlerArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::InputEnabledEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::KeyEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::PointerEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::SystemNavigationManager>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::TouchHitTestingEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::VisibilityChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::WindowActivatedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::WindowSizeChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::AppViewBackButtonVisibility>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreAcceleratorKeyEventType>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreCursorType>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreDispatcherPriority>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreInputDeviceTypes>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreProcessEventsOption>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreProximityEvaluationScore>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreVirtualKeyStates>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreWindowActivationMode>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreWindowActivationState>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreWindowFlowDirection>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CorePhysicalKeyStatus>{ using type = struct_category<uint32_t, uint32_t, bool, bool, bool, bool>; };
+    template <> struct category<Windows::UI::Core::CoreProximityEvaluation>{ using type = struct_category<int32_t, Windows::Foundation::Point>; };
+    template <> struct category<Windows::UI::Core::DispatchedHandler>{ using type = delegate_category; };
+    template <> struct category<Windows::UI::Core::IdleDispatchedHandler>{ using type = delegate_category; };
+    template <> inline constexpr auto& name_v<Windows::UI::Core::AcceleratorKeyEventArgs> = L"Windows.UI.Core.AcceleratorKeyEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::AutomationProviderRequestedEventArgs> = L"Windows.UI.Core.AutomationProviderRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::BackRequestedEventArgs> = L"Windows.UI.Core.BackRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CharacterReceivedEventArgs> = L"Windows.UI.Core.CharacterReceivedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs> = L"Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreAcceleratorKeys> = L"Windows.UI.Core.CoreAcceleratorKeys";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreComponentInputSource> = L"Windows.UI.Core.CoreComponentInputSource";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreCursor> = L"Windows.UI.Core.CoreCursor";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreDispatcher> = L"Windows.UI.Core.CoreDispatcher";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreIndependentInputSource> = L"Windows.UI.Core.CoreIndependentInputSource";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindow> = L"Windows.UI.Core.CoreWindow";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowDialog> = L"Windows.UI.Core.CoreWindowDialog";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowEventArgs> = L"Windows.UI.Core.CoreWindowEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowFlyout> = L"Windows.UI.Core.CoreWindowFlyout";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowPopupShowingEventArgs> = L"Windows.UI.Core.CoreWindowPopupShowingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowResizeManager> = L"Windows.UI.Core.CoreWindowResizeManager";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IdleDispatchedHandlerArgs> = L"Windows.UI.Core.IdleDispatchedHandlerArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::InputEnabledEventArgs> = L"Windows.UI.Core.InputEnabledEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::KeyEventArgs> = L"Windows.UI.Core.KeyEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::PointerEventArgs> = L"Windows.UI.Core.PointerEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::SystemNavigationManager> = L"Windows.UI.Core.SystemNavigationManager";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::TouchHitTestingEventArgs> = L"Windows.UI.Core.TouchHitTestingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::VisibilityChangedEventArgs> = L"Windows.UI.Core.VisibilityChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::WindowActivatedEventArgs> = L"Windows.UI.Core.WindowActivatedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::WindowSizeChangedEventArgs> = L"Windows.UI.Core.WindowSizeChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::AppViewBackButtonVisibility> = L"Windows.UI.Core.AppViewBackButtonVisibility";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreAcceleratorKeyEventType> = L"Windows.UI.Core.CoreAcceleratorKeyEventType";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreCursorType> = L"Windows.UI.Core.CoreCursorType";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreDispatcherPriority> = L"Windows.UI.Core.CoreDispatcherPriority";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreInputDeviceTypes> = L"Windows.UI.Core.CoreInputDeviceTypes";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreProcessEventsOption> = L"Windows.UI.Core.CoreProcessEventsOption";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreProximityEvaluationScore> = L"Windows.UI.Core.CoreProximityEvaluationScore";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreVirtualKeyStates> = L"Windows.UI.Core.CoreVirtualKeyStates";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowActivationMode> = L"Windows.UI.Core.CoreWindowActivationMode";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowActivationState> = L"Windows.UI.Core.CoreWindowActivationState";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowFlowDirection> = L"Windows.UI.Core.CoreWindowFlowDirection";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CorePhysicalKeyStatus> = L"Windows.UI.Core.CorePhysicalKeyStatus";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreProximityEvaluation> = L"Windows.UI.Core.CoreProximityEvaluation";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IAcceleratorKeyEventArgs> = L"Windows.UI.Core.IAcceleratorKeyEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IAcceleratorKeyEventArgs2> = L"Windows.UI.Core.IAcceleratorKeyEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IAutomationProviderRequestedEventArgs> = L"Windows.UI.Core.IAutomationProviderRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IBackRequestedEventArgs> = L"Windows.UI.Core.IBackRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICharacterReceivedEventArgs> = L"Windows.UI.Core.ICharacterReceivedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs> = L"Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreAcceleratorKeys> = L"Windows.UI.Core.ICoreAcceleratorKeys";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreClosestInteractiveBoundsRequested> = L"Windows.UI.Core.ICoreClosestInteractiveBoundsRequested";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreComponentFocusable> = L"Windows.UI.Core.ICoreComponentFocusable";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreCursor> = L"Windows.UI.Core.ICoreCursor";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreCursorFactory> = L"Windows.UI.Core.ICoreCursorFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreDispatcher> = L"Windows.UI.Core.ICoreDispatcher";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreDispatcher2> = L"Windows.UI.Core.ICoreDispatcher2";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreDispatcherWithTaskPriority> = L"Windows.UI.Core.ICoreDispatcherWithTaskPriority";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreInputSourceBase> = L"Windows.UI.Core.ICoreInputSourceBase";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreKeyboardInputSource> = L"Windows.UI.Core.ICoreKeyboardInputSource";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreKeyboardInputSource2> = L"Windows.UI.Core.ICoreKeyboardInputSource2";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICorePointerInputSource> = L"Windows.UI.Core.ICorePointerInputSource";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICorePointerInputSource2> = L"Windows.UI.Core.ICorePointerInputSource2";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICorePointerRedirector> = L"Windows.UI.Core.ICorePointerRedirector";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreTouchHitTesting> = L"Windows.UI.Core.ICoreTouchHitTesting";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindow> = L"Windows.UI.Core.ICoreWindow";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindow2> = L"Windows.UI.Core.ICoreWindow2";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindow3> = L"Windows.UI.Core.ICoreWindow3";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindow4> = L"Windows.UI.Core.ICoreWindow4";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindow5> = L"Windows.UI.Core.ICoreWindow5";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowDialog> = L"Windows.UI.Core.ICoreWindowDialog";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowDialogFactory> = L"Windows.UI.Core.ICoreWindowDialogFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowEventArgs> = L"Windows.UI.Core.ICoreWindowEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowFlyout> = L"Windows.UI.Core.ICoreWindowFlyout";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowFlyoutFactory> = L"Windows.UI.Core.ICoreWindowFlyoutFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowPopupShowingEventArgs> = L"Windows.UI.Core.ICoreWindowPopupShowingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowResizeManager> = L"Windows.UI.Core.ICoreWindowResizeManager";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability> = L"Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowResizeManagerStatics> = L"Windows.UI.Core.ICoreWindowResizeManagerStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowStatic> = L"Windows.UI.Core.ICoreWindowStatic";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreWindowWithContext> = L"Windows.UI.Core.ICoreWindowWithContext";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IIdleDispatchedHandlerArgs> = L"Windows.UI.Core.IIdleDispatchedHandlerArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IInitializeWithCoreWindow> = L"Windows.UI.Core.IInitializeWithCoreWindow";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IInputEnabledEventArgs> = L"Windows.UI.Core.IInputEnabledEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IKeyEventArgs> = L"Windows.UI.Core.IKeyEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IKeyEventArgs2> = L"Windows.UI.Core.IKeyEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IPointerEventArgs> = L"Windows.UI.Core.IPointerEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ISystemNavigationManager> = L"Windows.UI.Core.ISystemNavigationManager";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ISystemNavigationManager2> = L"Windows.UI.Core.ISystemNavigationManager2";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ISystemNavigationManagerStatics> = L"Windows.UI.Core.ISystemNavigationManagerStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ITouchHitTestingEventArgs> = L"Windows.UI.Core.ITouchHitTestingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IVisibilityChangedEventArgs> = L"Windows.UI.Core.IVisibilityChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IWindowActivatedEventArgs> = L"Windows.UI.Core.IWindowActivatedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IWindowSizeChangedEventArgs> = L"Windows.UI.Core.IWindowSizeChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::DispatchedHandler> = L"Windows.UI.Core.DispatchedHandler";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::IdleDispatchedHandler> = L"Windows.UI.Core.IdleDispatchedHandler";
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IAcceleratorKeyEventArgs>{ 0xFF1C4C4A,0x9287,0x470B,{ 0x83,0x6E,0x90,0x86,0xE3,0x12,0x6A,0xDE } }; // FF1C4C4A-9287-470B-836E-9086E3126ADE
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IAcceleratorKeyEventArgs2>{ 0xD300A9F6,0x2F7E,0x4873,{ 0xA5,0x55,0x16,0x6E,0x59,0x6E,0xE1,0xC5 } }; // D300A9F6-2F7E-4873-A555-166E596EE1C5
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IAutomationProviderRequestedEventArgs>{ 0x961FF258,0x21BF,0x4B42,{ 0xA2,0x98,0xFA,0x47,0x9D,0x4C,0x52,0xE2 } }; // 961FF258-21BF-4B42-A298-FA479D4C52E2
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IBackRequestedEventArgs>{ 0xD603D28A,0xE411,0x4A4E,{ 0xBA,0x41,0x6A,0x32,0x7A,0x86,0x75,0xBC } }; // D603D28A-E411-4A4E-BA41-6A327A8675BC
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICharacterReceivedEventArgs>{ 0xC584659F,0x99B2,0x4BCC,{ 0xBD,0x33,0x04,0xE6,0x3F,0x42,0x90,0x2E } }; // C584659F-99B2-4BCC-BD33-04E63F42902E
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs>{ 0x347C11D7,0xF6F8,0x40E3,{ 0xB2,0x9F,0xAE,0x50,0xD3,0xE8,0x64,0x86 } }; // 347C11D7-F6F8-40E3-B29F-AE50D3E86486
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreAcceleratorKeys>{ 0x9FFDF7F5,0xB8C9,0x4EF0,{ 0xB7,0xD2,0x1D,0xE6,0x26,0x56,0x1F,0xC8 } }; // 9FFDF7F5-B8C9-4EF0-B7D2-1DE626561FC8
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreClosestInteractiveBoundsRequested>{ 0xF303043A,0xE8BF,0x4E8E,{ 0xAE,0x69,0xC9,0xDA,0xDD,0x57,0xA1,0x14 } }; // F303043A-E8BF-4E8E-AE69-C9DADD57A114
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreComponentFocusable>{ 0x52F96FA3,0x8742,0x4411,{ 0xAE,0x69,0x79,0xA8,0x5F,0x29,0xAC,0x8B } }; // 52F96FA3-8742-4411-AE69-79A85F29AC8B
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreCursor>{ 0x96893ACF,0x111D,0x442C,{ 0x8A,0x77,0xB8,0x79,0x92,0xF8,0xE2,0xD6 } }; // 96893ACF-111D-442C-8A77-B87992F8E2D6
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreCursorFactory>{ 0xF6359621,0xA79D,0x4ED3,{ 0x8C,0x32,0xA9,0xEF,0x9D,0x6B,0x76,0xA4 } }; // F6359621-A79D-4ED3-8C32-A9EF9D6B76A4
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreDispatcher>{ 0x60DB2FA8,0xB705,0x4FDE,{ 0xA7,0xD6,0xEB,0xBB,0x18,0x91,0xD3,0x9E } }; // 60DB2FA8-B705-4FDE-A7D6-EBBB1891D39E
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreDispatcher2>{ 0x6F5E63C7,0xE3AA,0x4EAE,{ 0xB0,0xE0,0xDC,0xF3,0x21,0xCA,0x4B,0x2F } }; // 6F5E63C7-E3AA-4EAE-B0E0-DCF321CA4B2F
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreDispatcherWithTaskPriority>{ 0xBAFAECAD,0x484D,0x41BE,{ 0xBA,0x80,0x1D,0x58,0xC6,0x52,0x63,0xEA } }; // BAFAECAD-484D-41BE-BA80-1D58C65263EA
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreInputSourceBase>{ 0x9F488807,0x4580,0x4BE8,{ 0xBE,0x68,0x92,0xA9,0x31,0x17,0x13,0xBB } }; // 9F488807-4580-4BE8-BE68-92A9311713BB
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreKeyboardInputSource>{ 0x231C9088,0xE469,0x4DF1,{ 0xB2,0x08,0x6E,0x49,0x0D,0x71,0xCB,0x90 } }; // 231C9088-E469-4DF1-B208-6E490D71CB90
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreKeyboardInputSource2>{ 0xFA24CB94,0xF963,0x47A5,{ 0x87,0x78,0x20,0x7C,0x48,0x2B,0x0A,0xFD } }; // FA24CB94-F963-47A5-8778-207C482B0AFD
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICorePointerInputSource>{ 0xBBF1BB18,0xE47A,0x48EB,{ 0x88,0x07,0xF8,0xF8,0xD3,0xEA,0x45,0x51 } }; // BBF1BB18-E47A-48EB-8807-F8F8D3EA4551
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICorePointerInputSource2>{ 0xD703708A,0x4516,0x4786,{ 0xB1,0xE5,0x27,0x51,0xD5,0x63,0xF9,0x97 } }; // D703708A-4516-4786-B1E5-2751D563F997
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICorePointerRedirector>{ 0x8F9D0C94,0x5688,0x4B0C,{ 0xA9,0xF1,0xF9,0x31,0xF7,0xFA,0x3D,0xC3 } }; // 8F9D0C94-5688-4B0C-A9F1-F931F7FA3DC3
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreTouchHitTesting>{ 0xB1D8A289,0x3ACF,0x4124,{ 0x9F,0xA3,0xEA,0x8A,0xBA,0x35,0x3C,0x21 } }; // B1D8A289-3ACF-4124-9FA3-EA8ABA353C21
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindow>{ 0x79B9D5F2,0x879E,0x4B89,{ 0xB7,0x98,0x79,0xE4,0x75,0x98,0x03,0x0C } }; // 79B9D5F2-879E-4B89-B798-79E47598030C
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindow2>{ 0x7C2B1B85,0x6917,0x4361,{ 0x9C,0x02,0x0D,0x9E,0x3A,0x42,0x0B,0x95 } }; // 7C2B1B85-6917-4361-9C02-0D9E3A420B95
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindow3>{ 0x32C20DD8,0xFAEF,0x4375,{ 0xA2,0xAB,0x32,0x64,0x0E,0x48,0x15,0xC7 } }; // 32C20DD8-FAEF-4375-A2AB-32640E4815C7
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindow4>{ 0x35CAF0D0,0x47F0,0x436C,{ 0xAF,0x97,0x0D,0xD8,0x8F,0x6F,0x5F,0x02 } }; // 35CAF0D0-47F0-436C-AF97-0DD88F6F5F02
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindow5>{ 0x4B4AE1E1,0x2E6D,0x4EAA,{ 0xBD,0xA1,0x1C,0x5C,0xC1,0xBE,0xE1,0x41 } }; // 4B4AE1E1-2E6D-4EAA-BDA1-1C5CC1BEE141
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowDialog>{ 0xE7392CE0,0xC78D,0x427E,{ 0x8B,0x2C,0x01,0xFF,0x42,0x0C,0x69,0xD5 } }; // E7392CE0-C78D-427E-8B2C-01FF420C69D5
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowDialogFactory>{ 0xCFB2A855,0x1C59,0x4B13,{ 0xB1,0xE5,0x16,0xE2,0x98,0x05,0xF7,0xC4 } }; // CFB2A855-1C59-4B13-B1E5-16E29805F7C4
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowEventArgs>{ 0x272B1EF3,0xC633,0x4DA5,{ 0xA2,0x6C,0xC6,0xD0,0xF5,0x6B,0x29,0xDA } }; // 272B1EF3-C633-4DA5-A26C-C6D0F56B29DA
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowFlyout>{ 0xE89D854D,0x2050,0x40BB,{ 0xB3,0x44,0xF6,0xF3,0x55,0xEE,0xB3,0x14 } }; // E89D854D-2050-40BB-B344-F6F355EEB314
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowFlyoutFactory>{ 0xDEC4C6C4,0x93E8,0x4F7C,{ 0xBE,0x27,0xCE,0xFA,0xA1,0xAF,0x68,0xA7 } }; // DEC4C6C4-93E8-4F7C-BE27-CEFAA1AF68A7
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowPopupShowingEventArgs>{ 0x26155FA2,0x5BA5,0x4EA4,{ 0xA3,0xB4,0x2D,0xC7,0xD6,0x3C,0x8E,0x26 } }; // 26155FA2-5BA5-4EA4-A3B4-2DC7D63C8E26
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowResizeManager>{ 0xB8F0B925,0xB350,0x48B3,{ 0xA1,0x98,0x5C,0x1A,0x84,0x70,0x02,0x43 } }; // B8F0B925-B350-48B3-A198-5C1A84700243
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability>{ 0xBB74F27B,0xA544,0x4301,{ 0x80,0xE6,0x0A,0xE0,0x33,0xEF,0x45,0x36 } }; // BB74F27B-A544-4301-80E6-0AE033EF4536
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowResizeManagerStatics>{ 0xAE4A9045,0x6D70,0x49DB,{ 0x8E,0x68,0x46,0xFF,0xBD,0x17,0xD3,0x8D } }; // AE4A9045-6D70-49DB-8E68-46FFBD17D38D
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowStatic>{ 0x4D239005,0x3C2A,0x41B1,{ 0x90,0x22,0x53,0x6B,0xB9,0xCF,0x93,0xB1 } }; // 4D239005-3C2A-41B1-9022-536BB9CF93B1
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreWindowWithContext>{ 0x9AC40241,0x3575,0x4C3B,{ 0xAF,0x66,0xE8,0xC5,0x29,0xD4,0xD0,0x6C } }; // 9AC40241-3575-4C3B-AF66-E8C529D4D06C
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IIdleDispatchedHandlerArgs>{ 0x98BB6A24,0xDC1C,0x43CB,{ 0xB4,0xED,0xD1,0xC0,0xEB,0x23,0x91,0xF3 } }; // 98BB6A24-DC1C-43CB-B4ED-D1C0EB2391F3
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IInitializeWithCoreWindow>{ 0x188F20D6,0x9873,0x464A,{ 0xAC,0xE5,0x57,0xE0,0x10,0xF4,0x65,0xE6 } }; // 188F20D6-9873-464A-ACE5-57E010F465E6
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IInputEnabledEventArgs>{ 0x80371D4F,0x2FD8,0x4C24,{ 0xAA,0x86,0x31,0x63,0xA8,0x7B,0x4E,0x5A } }; // 80371D4F-2FD8-4C24-AA86-3163A87B4E5A
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IKeyEventArgs>{ 0x5FF5E930,0x2544,0x4A17,{ 0xBD,0x78,0x1F,0x2F,0xDE,0xBB,0x10,0x6B } }; // 5FF5E930-2544-4A17-BD78-1F2FDEBB106B
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IKeyEventArgs2>{ 0x583ADD98,0x0790,0x4571,{ 0x9B,0x12,0x64,0x5E,0xF9,0xD7,0x9E,0x42 } }; // 583ADD98-0790-4571-9B12-645EF9D79E42
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IPointerEventArgs>{ 0x920D9CB1,0xA5FC,0x4A21,{ 0x8C,0x09,0x49,0xDF,0xE6,0xFF,0xE2,0x5F } }; // 920D9CB1-A5FC-4A21-8C09-49DFE6FFE25F
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ISystemNavigationManager>{ 0x93023118,0xCF50,0x42A6,{ 0x97,0x06,0x69,0x10,0x7F,0xA1,0x22,0xE1 } }; // 93023118-CF50-42A6-9706-69107FA122E1
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ISystemNavigationManager2>{ 0x8C510401,0x67BE,0x49AE,{ 0x95,0x09,0x67,0x1C,0x1E,0x54,0xA3,0x89 } }; // 8C510401-67BE-49AE-9509-671C1E54A389
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ISystemNavigationManagerStatics>{ 0xDC52B5CE,0xBEE0,0x4305,{ 0x8C,0x54,0x68,0x22,0x8E,0xD6,0x83,0xB5 } }; // DC52B5CE-BEE0-4305-8C54-68228ED683B5
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ITouchHitTestingEventArgs>{ 0x22F3B823,0x0B7C,0x424E,{ 0x9D,0xF7,0x33,0xD4,0xF9,0x62,0x93,0x1B } }; // 22F3B823-0B7C-424E-9DF7-33D4F962931B
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IVisibilityChangedEventArgs>{ 0xBF9918EA,0xD801,0x4564,{ 0xA4,0x95,0xB1,0xE8,0x4F,0x8A,0xD0,0x85 } }; // BF9918EA-D801-4564-A495-B1E84F8AD085
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IWindowActivatedEventArgs>{ 0x179D65E7,0x4658,0x4CB6,{ 0xAA,0x13,0x41,0xD0,0x94,0xEA,0x25,0x5E } }; // 179D65E7-4658-4CB6-AA13-41D094EA255E
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IWindowSizeChangedEventArgs>{ 0x5A200EC7,0x0426,0x47DC,{ 0xB8,0x6C,0x6F,0x47,0x59,0x15,0xE4,0x51 } }; // 5A200EC7-0426-47DC-B86C-6F475915E451
+    template <> inline constexpr guid guid_v<Windows::UI::Core::DispatchedHandler>{ 0xD1F276C4,0x98D8,0x4636,{ 0xBF,0x49,0xEB,0x79,0x50,0x75,0x48,0xE9 } }; // D1F276C4-98D8-4636-BF49-EB79507548E9
+    template <> inline constexpr guid guid_v<Windows::UI::Core::IdleDispatchedHandler>{ 0xA42B0C24,0x7F21,0x4ABC,{ 0x99,0xC1,0x8F,0x01,0x00,0x7F,0x08,0x80 } }; // A42B0C24-7F21-4ABC-99C1-8F01007F0880
+    template <> struct default_interface<Windows::UI::Core::AcceleratorKeyEventArgs>{ using type = Windows::UI::Core::IAcceleratorKeyEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::AutomationProviderRequestedEventArgs>{ using type = Windows::UI::Core::IAutomationProviderRequestedEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::BackRequestedEventArgs>{ using type = Windows::UI::Core::IBackRequestedEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::CharacterReceivedEventArgs>{ using type = Windows::UI::Core::ICharacterReceivedEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>{ using type = Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::CoreAcceleratorKeys>{ using type = Windows::UI::Core::ICoreAcceleratorKeys; };
+    template <> struct default_interface<Windows::UI::Core::CoreComponentInputSource>{ using type = Windows::UI::Core::ICoreInputSourceBase; };
+    template <> struct default_interface<Windows::UI::Core::CoreCursor>{ using type = Windows::UI::Core::ICoreCursor; };
+    template <> struct default_interface<Windows::UI::Core::CoreDispatcher>{ using type = Windows::UI::Core::ICoreDispatcher; };
+    template <> struct default_interface<Windows::UI::Core::CoreIndependentInputSource>{ using type = Windows::UI::Core::ICoreInputSourceBase; };
+    template <> struct default_interface<Windows::UI::Core::CoreWindow>{ using type = Windows::UI::Core::ICoreWindow; };
+    template <> struct default_interface<Windows::UI::Core::CoreWindowDialog>{ using type = Windows::UI::Core::ICoreWindowDialog; };
+    template <> struct default_interface<Windows::UI::Core::CoreWindowEventArgs>{ using type = Windows::UI::Core::ICoreWindowEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::CoreWindowFlyout>{ using type = Windows::UI::Core::ICoreWindowFlyout; };
+    template <> struct default_interface<Windows::UI::Core::CoreWindowPopupShowingEventArgs>{ using type = Windows::UI::Core::ICoreWindowPopupShowingEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::CoreWindowResizeManager>{ using type = Windows::UI::Core::ICoreWindowResizeManager; };
+    template <> struct default_interface<Windows::UI::Core::IdleDispatchedHandlerArgs>{ using type = Windows::UI::Core::IIdleDispatchedHandlerArgs; };
+    template <> struct default_interface<Windows::UI::Core::InputEnabledEventArgs>{ using type = Windows::UI::Core::IInputEnabledEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::KeyEventArgs>{ using type = Windows::UI::Core::IKeyEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::PointerEventArgs>{ using type = Windows::UI::Core::IPointerEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::SystemNavigationManager>{ using type = Windows::UI::Core::ISystemNavigationManager; };
+    template <> struct default_interface<Windows::UI::Core::TouchHitTestingEventArgs>{ using type = Windows::UI::Core::ITouchHitTestingEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::VisibilityChangedEventArgs>{ using type = Windows::UI::Core::IVisibilityChangedEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::WindowActivatedEventArgs>{ using type = Windows::UI::Core::IWindowActivatedEventArgs; };
+    template <> struct default_interface<Windows::UI::Core::WindowSizeChangedEventArgs>{ using type = Windows::UI::Core::IWindowSizeChangedEventArgs; };
     template <> struct abi<Windows::UI::Core::IAcceleratorKeyEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -1759,9 +991,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IAcceleratorKeyEventArgs
     {
-        [[nodiscard]] auto EventType() const;
-        [[nodiscard]] auto VirtualKey() const;
-        [[nodiscard]] auto KeyStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreAcceleratorKeyEventType) EventType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::VirtualKey) VirtualKey() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CorePhysicalKeyStatus) KeyStatus() const;
     };
     template <> struct consume<Windows::UI::Core::IAcceleratorKeyEventArgs>
     {
@@ -1770,7 +1002,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IAcceleratorKeyEventArgs2
     {
-        [[nodiscard]] auto DeviceId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
     };
     template <> struct consume<Windows::UI::Core::IAcceleratorKeyEventArgs2>
     {
@@ -1779,8 +1011,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IAutomationProviderRequestedEventArgs
     {
-        [[nodiscard]] auto AutomationProvider() const;
-        auto AutomationProvider(Windows::Foundation::IInspectable const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) AutomationProvider() const;
+        WINRT_IMPL_AUTO(void) AutomationProvider(Windows::Foundation::IInspectable const& value) const;
     };
     template <> struct consume<Windows::UI::Core::IAutomationProviderRequestedEventArgs>
     {
@@ -1789,8 +1021,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IBackRequestedEventArgs
     {
-        [[nodiscard]] auto Handled() const;
-        auto Handled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
+        WINRT_IMPL_AUTO(void) Handled(bool value) const;
     };
     template <> struct consume<Windows::UI::Core::IBackRequestedEventArgs>
     {
@@ -1799,8 +1031,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICharacterReceivedEventArgs
     {
-        [[nodiscard]] auto KeyCode() const;
-        [[nodiscard]] auto KeyStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) KeyCode() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CorePhysicalKeyStatus) KeyStatus() const;
     };
     template <> struct consume<Windows::UI::Core::ICharacterReceivedEventArgs>
     {
@@ -1809,10 +1041,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IClosestInteractiveBoundsRequestedEventArgs
     {
-        [[nodiscard]] auto PointerPosition() const;
-        [[nodiscard]] auto SearchBounds() const;
-        [[nodiscard]] auto ClosestInteractiveBounds() const;
-        auto ClosestInteractiveBounds(Windows::Foundation::Rect const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) PointerPosition() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) SearchBounds() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) ClosestInteractiveBounds() const;
+        WINRT_IMPL_AUTO(void) ClosestInteractiveBounds(Windows::Foundation::Rect const& value) const;
     };
     template <> struct consume<Windows::UI::Core::IClosestInteractiveBoundsRequestedEventArgs>
     {
@@ -1821,10 +1053,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreAcceleratorKeys
     {
-        auto AcceleratorKeyActivated(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreDispatcher, Windows::UI::Core::AcceleratorKeyEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) AcceleratorKeyActivated(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreDispatcher, Windows::UI::Core::AcceleratorKeyEventArgs> const& handler) const;
         using AcceleratorKeyActivated_revoker = impl::event_revoker<Windows::UI::Core::ICoreAcceleratorKeys, &impl::abi_t<Windows::UI::Core::ICoreAcceleratorKeys>::remove_AcceleratorKeyActivated>;
-        AcceleratorKeyActivated_revoker AcceleratorKeyActivated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreDispatcher, Windows::UI::Core::AcceleratorKeyEventArgs> const& handler) const;
-        auto AcceleratorKeyActivated(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] AcceleratorKeyActivated_revoker AcceleratorKeyActivated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreDispatcher, Windows::UI::Core::AcceleratorKeyEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) AcceleratorKeyActivated(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICoreAcceleratorKeys>
     {
@@ -1833,10 +1065,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreClosestInteractiveBoundsRequested
     {
-        auto ClosestInteractiveBoundsRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreComponentInputSource, Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) ClosestInteractiveBoundsRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreComponentInputSource, Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs> const& handler) const;
         using ClosestInteractiveBoundsRequested_revoker = impl::event_revoker<Windows::UI::Core::ICoreClosestInteractiveBoundsRequested, &impl::abi_t<Windows::UI::Core::ICoreClosestInteractiveBoundsRequested>::remove_ClosestInteractiveBoundsRequested>;
-        ClosestInteractiveBoundsRequested_revoker ClosestInteractiveBoundsRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreComponentInputSource, Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs> const& handler) const;
-        auto ClosestInteractiveBoundsRequested(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] ClosestInteractiveBoundsRequested_revoker ClosestInteractiveBoundsRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreComponentInputSource, Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ClosestInteractiveBoundsRequested(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICoreClosestInteractiveBoundsRequested>
     {
@@ -1845,15 +1077,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreComponentFocusable
     {
-        [[nodiscard]] auto HasFocus() const;
-        auto GotFocus(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasFocus() const;
+        WINRT_IMPL_AUTO(winrt::event_token) GotFocus(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
         using GotFocus_revoker = impl::event_revoker<Windows::UI::Core::ICoreComponentFocusable, &impl::abi_t<Windows::UI::Core::ICoreComponentFocusable>::remove_GotFocus>;
-        GotFocus_revoker GotFocus(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
-        auto GotFocus(winrt::event_token const& cookie) const noexcept;
-        auto LostFocus(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
+        [[nodiscard]] GotFocus_revoker GotFocus(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) GotFocus(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) LostFocus(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
         using LostFocus_revoker = impl::event_revoker<Windows::UI::Core::ICoreComponentFocusable, &impl::abi_t<Windows::UI::Core::ICoreComponentFocusable>::remove_LostFocus>;
-        LostFocus_revoker LostFocus(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
-        auto LostFocus(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] LostFocus_revoker LostFocus(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) LostFocus(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICoreComponentFocusable>
     {
@@ -1862,8 +1094,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreCursor
     {
-        [[nodiscard]] auto Id() const;
-        [[nodiscard]] auto Type() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreCursorType) Type() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreCursor>
     {
@@ -1872,7 +1104,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreCursorFactory
     {
-        auto CreateCursor(Windows::UI::Core::CoreCursorType const& type, uint32_t id) const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreCursor) CreateCursor(Windows::UI::Core::CoreCursorType const& type, uint32_t id) const;
     };
     template <> struct consume<Windows::UI::Core::ICoreCursorFactory>
     {
@@ -1881,10 +1113,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreDispatcher
     {
-        [[nodiscard]] auto HasThreadAccess() const;
-        auto ProcessEvents(Windows::UI::Core::CoreProcessEventsOption const& options) const;
-        auto RunAsync(Windows::UI::Core::CoreDispatcherPriority const& priority, Windows::UI::Core::DispatchedHandler const& agileCallback) const;
-        auto RunIdleAsync(Windows::UI::Core::IdleDispatchedHandler const& agileCallback) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasThreadAccess() const;
+        WINRT_IMPL_AUTO(void) ProcessEvents(Windows::UI::Core::CoreProcessEventsOption const& options) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) RunAsync(Windows::UI::Core::CoreDispatcherPriority const& priority, Windows::UI::Core::DispatchedHandler const& agileCallback) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) RunIdleAsync(Windows::UI::Core::IdleDispatchedHandler const& agileCallback) const;
     };
     template <> struct consume<Windows::UI::Core::ICoreDispatcher>
     {
@@ -1893,8 +1125,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreDispatcher2
     {
-        auto TryRunAsync(Windows::UI::Core::CoreDispatcherPriority const& priority, Windows::UI::Core::DispatchedHandler const& agileCallback) const;
-        auto TryRunIdleAsync(Windows::UI::Core::IdleDispatchedHandler const& agileCallback) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) TryRunAsync(Windows::UI::Core::CoreDispatcherPriority const& priority, Windows::UI::Core::DispatchedHandler const& agileCallback) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) TryRunIdleAsync(Windows::UI::Core::IdleDispatchedHandler const& agileCallback) const;
     };
     template <> struct consume<Windows::UI::Core::ICoreDispatcher2>
     {
@@ -1903,11 +1135,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreDispatcherWithTaskPriority
     {
-        [[nodiscard]] auto CurrentPriority() const;
-        auto CurrentPriority(Windows::UI::Core::CoreDispatcherPriority const& value) const;
-        auto ShouldYield() const;
-        auto ShouldYield(Windows::UI::Core::CoreDispatcherPriority const& priority) const;
-        auto StopProcessEvents() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreDispatcherPriority) CurrentPriority() const;
+        WINRT_IMPL_AUTO(void) CurrentPriority(Windows::UI::Core::CoreDispatcherPriority const& value) const;
+        WINRT_IMPL_AUTO(bool) ShouldYield() const;
+        WINRT_IMPL_AUTO(bool) ShouldYield(Windows::UI::Core::CoreDispatcherPriority const& priority) const;
+        WINRT_IMPL_AUTO(void) StopProcessEvents() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreDispatcherWithTaskPriority>
     {
@@ -1916,13 +1148,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreInputSourceBase
     {
-        [[nodiscard]] auto Dispatcher() const;
-        [[nodiscard]] auto IsInputEnabled() const;
-        auto IsInputEnabled(bool value) const;
-        auto InputEnabled(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::InputEnabledEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreDispatcher) Dispatcher() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInputEnabled() const;
+        WINRT_IMPL_AUTO(void) IsInputEnabled(bool value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) InputEnabled(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::InputEnabledEventArgs> const& handler) const;
         using InputEnabled_revoker = impl::event_revoker<Windows::UI::Core::ICoreInputSourceBase, &impl::abi_t<Windows::UI::Core::ICoreInputSourceBase>::remove_InputEnabled>;
-        InputEnabled_revoker InputEnabled(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::InputEnabledEventArgs> const& handler) const;
-        auto InputEnabled(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] InputEnabled_revoker InputEnabled(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::InputEnabledEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) InputEnabled(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICoreInputSourceBase>
     {
@@ -1931,19 +1163,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreKeyboardInputSource
     {
-        auto GetCurrentKeyState(Windows::System::VirtualKey const& virtualKey) const;
-        auto CharacterReceived(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CharacterReceivedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreVirtualKeyStates) GetCurrentKeyState(Windows::System::VirtualKey const& virtualKey) const;
+        WINRT_IMPL_AUTO(winrt::event_token) CharacterReceived(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CharacterReceivedEventArgs> const& handler) const;
         using CharacterReceived_revoker = impl::event_revoker<Windows::UI::Core::ICoreKeyboardInputSource, &impl::abi_t<Windows::UI::Core::ICoreKeyboardInputSource>::remove_CharacterReceived>;
-        CharacterReceived_revoker CharacterReceived(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CharacterReceivedEventArgs> const& handler) const;
-        auto CharacterReceived(winrt::event_token const& cookie) const noexcept;
-        auto KeyDown(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        [[nodiscard]] CharacterReceived_revoker CharacterReceived(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::CharacterReceivedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) CharacterReceived(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) KeyDown(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::KeyEventArgs> const& handler) const;
         using KeyDown_revoker = impl::event_revoker<Windows::UI::Core::ICoreKeyboardInputSource, &impl::abi_t<Windows::UI::Core::ICoreKeyboardInputSource>::remove_KeyDown>;
-        KeyDown_revoker KeyDown(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::KeyEventArgs> const& handler) const;
-        auto KeyDown(winrt::event_token const& cookie) const noexcept;
-        auto KeyUp(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        [[nodiscard]] KeyDown_revoker KeyDown(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) KeyDown(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) KeyUp(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::KeyEventArgs> const& handler) const;
         using KeyUp_revoker = impl::event_revoker<Windows::UI::Core::ICoreKeyboardInputSource, &impl::abi_t<Windows::UI::Core::ICoreKeyboardInputSource>::remove_KeyUp>;
-        KeyUp_revoker KeyUp(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::KeyEventArgs> const& handler) const;
-        auto KeyUp(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] KeyUp_revoker KeyUp(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) KeyUp(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICoreKeyboardInputSource>
     {
@@ -1952,7 +1184,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreKeyboardInputSource2
     {
-        auto GetCurrentKeyEventDeviceId() const;
+        WINRT_IMPL_AUTO(hstring) GetCurrentKeyEventDeviceId() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreKeyboardInputSource2>
     {
@@ -1961,40 +1193,40 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICorePointerInputSource
     {
-        auto ReleasePointerCapture() const;
-        auto SetPointerCapture() const;
-        [[nodiscard]] auto HasCapture() const;
-        [[nodiscard]] auto PointerPosition() const;
-        [[nodiscard]] auto PointerCursor() const;
-        auto PointerCursor(Windows::UI::Core::CoreCursor const& value) const;
-        auto PointerCaptureLost(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ReleasePointerCapture() const;
+        WINRT_IMPL_AUTO(void) SetPointerCapture() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasCapture() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) PointerPosition() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreCursor) PointerCursor() const;
+        WINRT_IMPL_AUTO(void) PointerCursor(Windows::UI::Core::CoreCursor const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerCaptureLost(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerCaptureLost_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerInputSource, &impl::abi_t<Windows::UI::Core::ICorePointerInputSource>::remove_PointerCaptureLost>;
-        PointerCaptureLost_revoker PointerCaptureLost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerCaptureLost(winrt::event_token const& cookie) const noexcept;
-        auto PointerEntered(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerCaptureLost_revoker PointerCaptureLost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerCaptureLost(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerEntered(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerEntered_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerInputSource, &impl::abi_t<Windows::UI::Core::ICorePointerInputSource>::remove_PointerEntered>;
-        PointerEntered_revoker PointerEntered(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerEntered(winrt::event_token const& cookie) const noexcept;
-        auto PointerExited(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerEntered_revoker PointerEntered(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerEntered(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerExited(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerExited_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerInputSource, &impl::abi_t<Windows::UI::Core::ICorePointerInputSource>::remove_PointerExited>;
-        PointerExited_revoker PointerExited(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerExited(winrt::event_token const& cookie) const noexcept;
-        auto PointerMoved(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerExited_revoker PointerExited(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerExited(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerMoved(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerMoved_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerInputSource, &impl::abi_t<Windows::UI::Core::ICorePointerInputSource>::remove_PointerMoved>;
-        PointerMoved_revoker PointerMoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerMoved(winrt::event_token const& cookie) const noexcept;
-        auto PointerPressed(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerMoved_revoker PointerMoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerMoved(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerPressed(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerPressed_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerInputSource, &impl::abi_t<Windows::UI::Core::ICorePointerInputSource>::remove_PointerPressed>;
-        PointerPressed_revoker PointerPressed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerPressed(winrt::event_token const& cookie) const noexcept;
-        auto PointerReleased(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerPressed_revoker PointerPressed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerPressed(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerReleased(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerReleased_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerInputSource, &impl::abi_t<Windows::UI::Core::ICorePointerInputSource>::remove_PointerReleased>;
-        PointerReleased_revoker PointerReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerReleased(winrt::event_token const& cookie) const noexcept;
-        auto PointerWheelChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerReleased_revoker PointerReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerReleased(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerWheelChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerWheelChanged_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerInputSource, &impl::abi_t<Windows::UI::Core::ICorePointerInputSource>::remove_PointerWheelChanged>;
-        PointerWheelChanged_revoker PointerWheelChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerWheelChanged(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] PointerWheelChanged_revoker PointerWheelChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerWheelChanged(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICorePointerInputSource>
     {
@@ -2003,7 +1235,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICorePointerInputSource2
     {
-        [[nodiscard]] auto DispatcherQueue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::DispatcherQueue) DispatcherQueue() const;
     };
     template <> struct consume<Windows::UI::Core::ICorePointerInputSource2>
     {
@@ -2012,18 +1244,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICorePointerRedirector
     {
-        auto PointerRoutedAway(Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerRoutedAway(Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerRoutedAway_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerRedirector, &impl::abi_t<Windows::UI::Core::ICorePointerRedirector>::remove_PointerRoutedAway>;
-        PointerRoutedAway_revoker PointerRoutedAway(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerRoutedAway(winrt::event_token const& cookie) const noexcept;
-        auto PointerRoutedTo(Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerRoutedAway_revoker PointerRoutedAway(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerRoutedAway(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerRoutedTo(Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerRoutedTo_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerRedirector, &impl::abi_t<Windows::UI::Core::ICorePointerRedirector>::remove_PointerRoutedTo>;
-        PointerRoutedTo_revoker PointerRoutedTo(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerRoutedTo(winrt::event_token const& cookie) const noexcept;
-        auto PointerRoutedReleased(Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerRoutedTo_revoker PointerRoutedTo(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerRoutedTo(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerRoutedReleased(Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerRoutedReleased_revoker = impl::event_revoker<Windows::UI::Core::ICorePointerRedirector, &impl::abi_t<Windows::UI::Core::ICorePointerRedirector>::remove_PointerRoutedReleased>;
-        PointerRoutedReleased_revoker PointerRoutedReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerRoutedReleased(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] PointerRoutedReleased_revoker PointerRoutedReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerRoutedReleased(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICorePointerRedirector>
     {
@@ -2032,10 +1264,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreTouchHitTesting
     {
-        auto TouchHitTesting(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::TouchHitTestingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) TouchHitTesting(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::TouchHitTestingEventArgs> const& handler) const;
         using TouchHitTesting_revoker = impl::event_revoker<Windows::UI::Core::ICoreTouchHitTesting, &impl::abi_t<Windows::UI::Core::ICoreTouchHitTesting>::remove_TouchHitTesting>;
-        TouchHitTesting_revoker TouchHitTesting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::TouchHitTestingEventArgs> const& handler) const;
-        auto TouchHitTesting(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] TouchHitTesting_revoker TouchHitTesting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::UI::Core::TouchHitTestingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) TouchHitTesting(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICoreTouchHitTesting>
     {
@@ -2044,92 +1276,92 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindow
     {
-        [[nodiscard]] auto AutomationHostProvider() const;
-        [[nodiscard]] auto Bounds() const;
-        [[nodiscard]] auto CustomProperties() const;
-        [[nodiscard]] auto Dispatcher() const;
-        [[nodiscard]] auto FlowDirection() const;
-        auto FlowDirection(Windows::UI::Core::CoreWindowFlowDirection const& value) const;
-        [[nodiscard]] auto IsInputEnabled() const;
-        auto IsInputEnabled(bool value) const;
-        [[nodiscard]] auto PointerCursor() const;
-        auto PointerCursor(Windows::UI::Core::CoreCursor const& value) const;
-        [[nodiscard]] auto PointerPosition() const;
-        [[nodiscard]] auto Visible() const;
-        auto Activate() const;
-        auto Close() const;
-        auto GetAsyncKeyState(Windows::System::VirtualKey const& virtualKey) const;
-        auto GetKeyState(Windows::System::VirtualKey const& virtualKey) const;
-        auto ReleasePointerCapture() const;
-        auto SetPointerCapture() const;
-        auto Activated(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::WindowActivatedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) AutomationHostProvider() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) Bounds() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IPropertySet) CustomProperties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreDispatcher) Dispatcher() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreWindowFlowDirection) FlowDirection() const;
+        WINRT_IMPL_AUTO(void) FlowDirection(Windows::UI::Core::CoreWindowFlowDirection const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInputEnabled() const;
+        WINRT_IMPL_AUTO(void) IsInputEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreCursor) PointerCursor() const;
+        WINRT_IMPL_AUTO(void) PointerCursor(Windows::UI::Core::CoreCursor const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) PointerPosition() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Visible() const;
+        WINRT_IMPL_AUTO(void) Activate() const;
+        WINRT_IMPL_AUTO(void) Close() const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreVirtualKeyStates) GetAsyncKeyState(Windows::System::VirtualKey const& virtualKey) const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreVirtualKeyStates) GetKeyState(Windows::System::VirtualKey const& virtualKey) const;
+        WINRT_IMPL_AUTO(void) ReleasePointerCapture() const;
+        WINRT_IMPL_AUTO(void) SetPointerCapture() const;
+        WINRT_IMPL_AUTO(winrt::event_token) Activated(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::WindowActivatedEventArgs> const& handler) const;
         using Activated_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_Activated>;
-        Activated_revoker Activated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::WindowActivatedEventArgs> const& handler) const;
-        auto Activated(winrt::event_token const& cookie) const noexcept;
-        auto AutomationProviderRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::AutomationProviderRequestedEventArgs> const& handler) const;
+        [[nodiscard]] Activated_revoker Activated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::WindowActivatedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Activated(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) AutomationProviderRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::AutomationProviderRequestedEventArgs> const& handler) const;
         using AutomationProviderRequested_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_AutomationProviderRequested>;
-        AutomationProviderRequested_revoker AutomationProviderRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::AutomationProviderRequestedEventArgs> const& handler) const;
-        auto AutomationProviderRequested(winrt::event_token const& cookie) const noexcept;
-        auto CharacterReceived(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CharacterReceivedEventArgs> const& handler) const;
+        [[nodiscard]] AutomationProviderRequested_revoker AutomationProviderRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::AutomationProviderRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) AutomationProviderRequested(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) CharacterReceived(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CharacterReceivedEventArgs> const& handler) const;
         using CharacterReceived_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_CharacterReceived>;
-        CharacterReceived_revoker CharacterReceived(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CharacterReceivedEventArgs> const& handler) const;
-        auto CharacterReceived(winrt::event_token const& cookie) const noexcept;
-        auto Closed(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
+        [[nodiscard]] CharacterReceived_revoker CharacterReceived(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CharacterReceivedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) CharacterReceived(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Closed(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
         using Closed_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_Closed>;
-        Closed_revoker Closed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
-        auto Closed(winrt::event_token const& cookie) const noexcept;
-        auto InputEnabled(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::InputEnabledEventArgs> const& handler) const;
+        [[nodiscard]] Closed_revoker Closed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Closed(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) InputEnabled(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::InputEnabledEventArgs> const& handler) const;
         using InputEnabled_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_InputEnabled>;
-        InputEnabled_revoker InputEnabled(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::InputEnabledEventArgs> const& handler) const;
-        auto InputEnabled(winrt::event_token const& cookie) const noexcept;
-        auto KeyDown(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        [[nodiscard]] InputEnabled_revoker InputEnabled(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::InputEnabledEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) InputEnabled(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) KeyDown(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::KeyEventArgs> const& handler) const;
         using KeyDown_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_KeyDown>;
-        KeyDown_revoker KeyDown(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::KeyEventArgs> const& handler) const;
-        auto KeyDown(winrt::event_token const& cookie) const noexcept;
-        auto KeyUp(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        [[nodiscard]] KeyDown_revoker KeyDown(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) KeyDown(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) KeyUp(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::KeyEventArgs> const& handler) const;
         using KeyUp_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_KeyUp>;
-        KeyUp_revoker KeyUp(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::KeyEventArgs> const& handler) const;
-        auto KeyUp(winrt::event_token const& cookie) const noexcept;
-        auto PointerCaptureLost(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] KeyUp_revoker KeyUp(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) KeyUp(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerCaptureLost(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerCaptureLost_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_PointerCaptureLost>;
-        PointerCaptureLost_revoker PointerCaptureLost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerCaptureLost(winrt::event_token const& cookie) const noexcept;
-        auto PointerEntered(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerCaptureLost_revoker PointerCaptureLost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerCaptureLost(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerEntered(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerEntered_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_PointerEntered>;
-        PointerEntered_revoker PointerEntered(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerEntered(winrt::event_token const& cookie) const noexcept;
-        auto PointerExited(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerEntered_revoker PointerEntered(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerEntered(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerExited(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerExited_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_PointerExited>;
-        PointerExited_revoker PointerExited(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerExited(winrt::event_token const& cookie) const noexcept;
-        auto PointerMoved(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerExited_revoker PointerExited(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerExited(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerMoved(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerMoved_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_PointerMoved>;
-        PointerMoved_revoker PointerMoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerMoved(winrt::event_token const& cookie) const noexcept;
-        auto PointerPressed(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerMoved_revoker PointerMoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerMoved(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerPressed(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerPressed_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_PointerPressed>;
-        PointerPressed_revoker PointerPressed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerPressed(winrt::event_token const& cookie) const noexcept;
-        auto PointerReleased(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] PointerPressed_revoker PointerPressed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerPressed(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerReleased(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerReleased_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_PointerReleased>;
-        PointerReleased_revoker PointerReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerReleased(winrt::event_token const& cookie) const noexcept;
-        auto TouchHitTesting(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::TouchHitTestingEventArgs> const& handler) const;
+        [[nodiscard]] PointerReleased_revoker PointerReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerReleased(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) TouchHitTesting(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::TouchHitTestingEventArgs> const& handler) const;
         using TouchHitTesting_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_TouchHitTesting>;
-        TouchHitTesting_revoker TouchHitTesting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::TouchHitTestingEventArgs> const& handler) const;
-        auto TouchHitTesting(winrt::event_token const& cookie) const noexcept;
-        auto PointerWheelChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        [[nodiscard]] TouchHitTesting_revoker TouchHitTesting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::TouchHitTestingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) TouchHitTesting(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PointerWheelChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
         using PointerWheelChanged_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_PointerWheelChanged>;
-        PointerWheelChanged_revoker PointerWheelChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
-        auto PointerWheelChanged(winrt::event_token const& cookie) const noexcept;
-        auto SizeChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::WindowSizeChangedEventArgs> const& handler) const;
+        [[nodiscard]] PointerWheelChanged_revoker PointerWheelChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::PointerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) PointerWheelChanged(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) SizeChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::WindowSizeChangedEventArgs> const& handler) const;
         using SizeChanged_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_SizeChanged>;
-        SizeChanged_revoker SizeChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::WindowSizeChangedEventArgs> const& handler) const;
-        auto SizeChanged(winrt::event_token const& cookie) const noexcept;
-        auto VisibilityChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::VisibilityChangedEventArgs> const& handler) const;
+        [[nodiscard]] SizeChanged_revoker SizeChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::WindowSizeChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SizeChanged(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) VisibilityChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::VisibilityChangedEventArgs> const& handler) const;
         using VisibilityChanged_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow, &impl::abi_t<Windows::UI::Core::ICoreWindow>::remove_VisibilityChanged>;
-        VisibilityChanged_revoker VisibilityChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::VisibilityChangedEventArgs> const& handler) const;
-        auto VisibilityChanged(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] VisibilityChanged_revoker VisibilityChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::VisibilityChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) VisibilityChanged(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindow>
     {
@@ -2138,7 +1370,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindow2
     {
-        auto PointerPosition(Windows::Foundation::Point const& value) const;
+        WINRT_IMPL_AUTO(void) PointerPosition(Windows::Foundation::Point const& value) const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindow2>
     {
@@ -2147,11 +1379,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindow3
     {
-        auto ClosestInteractiveBoundsRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) ClosestInteractiveBoundsRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs> const& handler) const;
         using ClosestInteractiveBoundsRequested_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow3, &impl::abi_t<Windows::UI::Core::ICoreWindow3>::remove_ClosestInteractiveBoundsRequested>;
-        ClosestInteractiveBoundsRequested_revoker ClosestInteractiveBoundsRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs> const& handler) const;
-        auto ClosestInteractiveBoundsRequested(winrt::event_token const& cookie) const noexcept;
-        auto GetCurrentKeyEventDeviceId() const;
+        [[nodiscard]] ClosestInteractiveBoundsRequested_revoker ClosestInteractiveBoundsRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ClosestInteractiveBoundsRequested(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(hstring) GetCurrentKeyEventDeviceId() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindow3>
     {
@@ -2160,14 +1392,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindow4
     {
-        auto ResizeStarted(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) ResizeStarted(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::Foundation::IInspectable> const& handler) const;
         using ResizeStarted_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow4, &impl::abi_t<Windows::UI::Core::ICoreWindow4>::remove_ResizeStarted>;
-        ResizeStarted_revoker ResizeStarted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::Foundation::IInspectable> const& handler) const;
-        auto ResizeStarted(winrt::event_token const& cookie) const noexcept;
-        auto ResizeCompleted(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] ResizeStarted_revoker ResizeStarted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) ResizeStarted(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ResizeCompleted(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::Foundation::IInspectable> const& handler) const;
         using ResizeCompleted_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindow4, &impl::abi_t<Windows::UI::Core::ICoreWindow4>::remove_ResizeCompleted>;
-        ResizeCompleted_revoker ResizeCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::Foundation::IInspectable> const& handler) const;
-        auto ResizeCompleted(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] ResizeCompleted_revoker ResizeCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) ResizeCompleted(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindow4>
     {
@@ -2176,8 +1408,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindow5
     {
-        [[nodiscard]] auto DispatcherQueue() const;
-        [[nodiscard]] auto ActivationMode() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::DispatcherQueue) DispatcherQueue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreWindowActivationMode) ActivationMode() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindow5>
     {
@@ -2186,24 +1418,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowDialog
     {
-        auto Showing(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowPopupShowingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) Showing(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowPopupShowingEventArgs> const& handler) const;
         using Showing_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindowDialog, &impl::abi_t<Windows::UI::Core::ICoreWindowDialog>::remove_Showing>;
-        Showing_revoker Showing(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowPopupShowingEventArgs> const& handler) const;
-        auto Showing(winrt::event_token const& cookie) const noexcept;
-        [[nodiscard]] auto MaxSize() const;
-        [[nodiscard]] auto MinSize() const;
-        [[nodiscard]] auto Title() const;
-        auto Title(param::hstring const& value) const;
-        [[nodiscard]] auto IsInteractionDelayed() const;
-        auto IsInteractionDelayed(int32_t value) const;
-        [[nodiscard]] auto Commands() const;
-        [[nodiscard]] auto DefaultCommandIndex() const;
-        auto DefaultCommandIndex(uint32_t value) const;
-        [[nodiscard]] auto CancelCommandIndex() const;
-        auto CancelCommandIndex(uint32_t value) const;
-        [[nodiscard]] auto BackButtonCommand() const;
-        auto BackButtonCommand(Windows::UI::Popups::UICommandInvokedHandler const& value) const;
-        auto ShowAsync() const;
+        [[nodiscard]] Showing_revoker Showing(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowPopupShowingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Showing(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Size) MaxSize() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Size) MinSize() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
+        WINRT_IMPL_AUTO(void) Title(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) IsInteractionDelayed() const;
+        WINRT_IMPL_AUTO(void) IsInteractionDelayed(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Popups::IUICommand>) Commands() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) DefaultCommandIndex() const;
+        WINRT_IMPL_AUTO(void) DefaultCommandIndex(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CancelCommandIndex() const;
+        WINRT_IMPL_AUTO(void) CancelCommandIndex(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Popups::UICommandInvokedHandler) BackButtonCommand() const;
+        WINRT_IMPL_AUTO(void) BackButtonCommand(Windows::UI::Popups::UICommandInvokedHandler const& value) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::UI::Popups::IUICommand>) ShowAsync() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowDialog>
     {
@@ -2212,7 +1444,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowDialogFactory
     {
-        auto CreateWithTitle(param::hstring const& title) const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreWindowDialog) CreateWithTitle(param::hstring const& title) const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowDialogFactory>
     {
@@ -2221,8 +1453,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowEventArgs
     {
-        [[nodiscard]] auto Handled() const;
-        auto Handled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
+        WINRT_IMPL_AUTO(void) Handled(bool value) const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowEventArgs>
     {
@@ -2231,22 +1463,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowFlyout
     {
-        auto Showing(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowPopupShowingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) Showing(Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowPopupShowingEventArgs> const& handler) const;
         using Showing_revoker = impl::event_revoker<Windows::UI::Core::ICoreWindowFlyout, &impl::abi_t<Windows::UI::Core::ICoreWindowFlyout>::remove_Showing>;
-        Showing_revoker Showing(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowPopupShowingEventArgs> const& handler) const;
-        auto Showing(winrt::event_token const& cookie) const noexcept;
-        [[nodiscard]] auto MaxSize() const;
-        [[nodiscard]] auto MinSize() const;
-        [[nodiscard]] auto Title() const;
-        auto Title(param::hstring const& value) const;
-        [[nodiscard]] auto IsInteractionDelayed() const;
-        auto IsInteractionDelayed(int32_t value) const;
-        [[nodiscard]] auto Commands() const;
-        [[nodiscard]] auto DefaultCommandIndex() const;
-        auto DefaultCommandIndex(uint32_t value) const;
-        [[nodiscard]] auto BackButtonCommand() const;
-        auto BackButtonCommand(Windows::UI::Popups::UICommandInvokedHandler const& value) const;
-        auto ShowAsync() const;
+        [[nodiscard]] Showing_revoker Showing(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow, Windows::UI::Core::CoreWindowPopupShowingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Showing(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Size) MaxSize() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Size) MinSize() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
+        WINRT_IMPL_AUTO(void) Title(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) IsInteractionDelayed() const;
+        WINRT_IMPL_AUTO(void) IsInteractionDelayed(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Popups::IUICommand>) Commands() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) DefaultCommandIndex() const;
+        WINRT_IMPL_AUTO(void) DefaultCommandIndex(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Popups::UICommandInvokedHandler) BackButtonCommand() const;
+        WINRT_IMPL_AUTO(void) BackButtonCommand(Windows::UI::Popups::UICommandInvokedHandler const& value) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::UI::Popups::IUICommand>) ShowAsync() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowFlyout>
     {
@@ -2255,8 +1487,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowFlyoutFactory
     {
-        auto Create(Windows::Foundation::Point const& position) const;
-        auto CreateWithTitle(Windows::Foundation::Point const& position, param::hstring const& title) const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreWindowFlyout) Create(Windows::Foundation::Point const& position) const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreWindowFlyout) CreateWithTitle(Windows::Foundation::Point const& position, param::hstring const& title) const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowFlyoutFactory>
     {
@@ -2265,7 +1497,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowPopupShowingEventArgs
     {
-        auto SetDesiredSize(Windows::Foundation::Size const& value) const;
+        WINRT_IMPL_AUTO(void) SetDesiredSize(Windows::Foundation::Size const& value) const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowPopupShowingEventArgs>
     {
@@ -2274,7 +1506,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowResizeManager
     {
-        auto NotifyLayoutCompleted() const;
+        WINRT_IMPL_AUTO(void) NotifyLayoutCompleted() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowResizeManager>
     {
@@ -2283,8 +1515,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowResizeManagerLayoutCapability
     {
-        auto ShouldWaitForLayoutCompletion(bool value) const;
-        [[nodiscard]] auto ShouldWaitForLayoutCompletion() const;
+        WINRT_IMPL_AUTO(void) ShouldWaitForLayoutCompletion(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldWaitForLayoutCompletion() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowResizeManagerLayoutCapability>
     {
@@ -2293,7 +1525,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowResizeManagerStatics
     {
-        auto GetForCurrentView() const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreWindowResizeManager) GetForCurrentView() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowResizeManagerStatics>
     {
@@ -2302,7 +1534,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowStatic
     {
-        auto GetForCurrentThread() const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreWindow) GetForCurrentThread() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowStatic>
     {
@@ -2311,7 +1543,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ICoreWindowWithContext
     {
-        [[nodiscard]] auto UIContext() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::UIContext) UIContext() const;
     };
     template <> struct consume<Windows::UI::Core::ICoreWindowWithContext>
     {
@@ -2320,7 +1552,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IIdleDispatchedHandlerArgs
     {
-        [[nodiscard]] auto IsDispatcherIdle() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDispatcherIdle() const;
     };
     template <> struct consume<Windows::UI::Core::IIdleDispatchedHandlerArgs>
     {
@@ -2329,7 +1561,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IInitializeWithCoreWindow
     {
-        auto Initialize(Windows::UI::Core::CoreWindow const& window) const;
+        WINRT_IMPL_AUTO(void) Initialize(Windows::UI::Core::CoreWindow const& window) const;
     };
     template <> struct consume<Windows::UI::Core::IInitializeWithCoreWindow>
     {
@@ -2338,7 +1570,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IInputEnabledEventArgs
     {
-        [[nodiscard]] auto InputEnabled() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) InputEnabled() const;
     };
     template <> struct consume<Windows::UI::Core::IInputEnabledEventArgs>
     {
@@ -2347,8 +1579,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IKeyEventArgs
     {
-        [[nodiscard]] auto VirtualKey() const;
-        [[nodiscard]] auto KeyStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::VirtualKey) VirtualKey() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CorePhysicalKeyStatus) KeyStatus() const;
     };
     template <> struct consume<Windows::UI::Core::IKeyEventArgs>
     {
@@ -2357,7 +1589,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IKeyEventArgs2
     {
-        [[nodiscard]] auto DeviceId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
     };
     template <> struct consume<Windows::UI::Core::IKeyEventArgs2>
     {
@@ -2366,9 +1598,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IPointerEventArgs
     {
-        [[nodiscard]] auto CurrentPoint() const;
-        [[nodiscard]] auto KeyModifiers() const;
-        auto GetIntermediatePoints() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::PointerPoint) CurrentPoint() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::VirtualKeyModifiers) KeyModifiers() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Input::PointerPoint>) GetIntermediatePoints() const;
     };
     template <> struct consume<Windows::UI::Core::IPointerEventArgs>
     {
@@ -2377,10 +1609,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ISystemNavigationManager
     {
-        auto BackRequested(Windows::Foundation::EventHandler<Windows::UI::Core::BackRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) BackRequested(Windows::Foundation::EventHandler<Windows::UI::Core::BackRequestedEventArgs> const& handler) const;
         using BackRequested_revoker = impl::event_revoker<Windows::UI::Core::ISystemNavigationManager, &impl::abi_t<Windows::UI::Core::ISystemNavigationManager>::remove_BackRequested>;
-        BackRequested_revoker BackRequested(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Core::BackRequestedEventArgs> const& handler) const;
-        auto BackRequested(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] BackRequested_revoker BackRequested(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Core::BackRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) BackRequested(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Core::ISystemNavigationManager>
     {
@@ -2389,8 +1621,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ISystemNavigationManager2
     {
-        [[nodiscard]] auto AppViewBackButtonVisibility() const;
-        auto AppViewBackButtonVisibility(Windows::UI::Core::AppViewBackButtonVisibility const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::AppViewBackButtonVisibility) AppViewBackButtonVisibility() const;
+        WINRT_IMPL_AUTO(void) AppViewBackButtonVisibility(Windows::UI::Core::AppViewBackButtonVisibility const& value) const;
     };
     template <> struct consume<Windows::UI::Core::ISystemNavigationManager2>
     {
@@ -2399,7 +1631,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ISystemNavigationManagerStatics
     {
-        auto GetForCurrentView() const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::SystemNavigationManager) GetForCurrentView() const;
     };
     template <> struct consume<Windows::UI::Core::ISystemNavigationManagerStatics>
     {
@@ -2408,12 +1640,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_ITouchHitTestingEventArgs
     {
-        [[nodiscard]] auto ProximityEvaluation() const;
-        auto ProximityEvaluation(Windows::UI::Core::CoreProximityEvaluation const& value) const;
-        [[nodiscard]] auto Point() const;
-        [[nodiscard]] auto BoundingBox() const;
-        auto EvaluateProximity(Windows::Foundation::Rect const& controlBoundingBox) const;
-        auto EvaluateProximity(array_view<Windows::Foundation::Point const> controlVertices) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreProximityEvaluation) ProximityEvaluation() const;
+        WINRT_IMPL_AUTO(void) ProximityEvaluation(Windows::UI::Core::CoreProximityEvaluation const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Point() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) BoundingBox() const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreProximityEvaluation) EvaluateProximity(Windows::Foundation::Rect const& controlBoundingBox) const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreProximityEvaluation) EvaluateProximity(array_view<Windows::Foundation::Point const> controlVertices) const;
     };
     template <> struct consume<Windows::UI::Core::ITouchHitTestingEventArgs>
     {
@@ -2422,7 +1654,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IVisibilityChangedEventArgs
     {
-        [[nodiscard]] auto Visible() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Visible() const;
     };
     template <> struct consume<Windows::UI::Core::IVisibilityChangedEventArgs>
     {
@@ -2431,7 +1663,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IWindowActivatedEventArgs
     {
-        [[nodiscard]] auto WindowActivationState() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreWindowActivationState) WindowActivationState() const;
     };
     template <> struct consume<Windows::UI::Core::IWindowActivatedEventArgs>
     {
@@ -2440,7 +1672,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Core_IWindowSizeChangedEventArgs
     {
-        [[nodiscard]] auto Size() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Size) Size() const;
     };
     template <> struct consume<Windows::UI::Core::IWindowSizeChangedEventArgs>
     {

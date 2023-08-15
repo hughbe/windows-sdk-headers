@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -210,30 +218,37 @@ EXTERN_C const IID IID_ITargetFrame;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ITargetFrame * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ITargetFrame * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ITargetFrame * This);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, SetFrameName)
         HRESULT ( STDMETHODCALLTYPE *SetFrameName )( 
             __RPC__in ITargetFrame * This,
             /* [in] */ __RPC__in LPCWSTR pszFrameName);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, GetFrameName)
         HRESULT ( STDMETHODCALLTYPE *GetFrameName )( 
             __RPC__in ITargetFrame * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppszFrameName);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, GetParentFrame)
         HRESULT ( STDMETHODCALLTYPE *GetParentFrame )( 
             __RPC__in ITargetFrame * This,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppunkParent);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, FindFrame)
         HRESULT ( STDMETHODCALLTYPE *FindFrame )( 
             __RPC__in ITargetFrame * This,
             /* [in] */ __RPC__in LPCWSTR pszTargetName,
@@ -241,45 +256,55 @@ EXTERN_C const IID IID_ITargetFrame;
             /* [in] */ DWORD dwFlags,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppunkTargetFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, SetFrameSrc)
         HRESULT ( STDMETHODCALLTYPE *SetFrameSrc )( 
             __RPC__in ITargetFrame * This,
             /* [in] */ __RPC__in LPCWSTR pszFrameSrc);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, GetFrameSrc)
         HRESULT ( STDMETHODCALLTYPE *GetFrameSrc )( 
             __RPC__in ITargetFrame * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppszFrameSrc);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, GetFramesContainer)
         HRESULT ( STDMETHODCALLTYPE *GetFramesContainer )( 
             __RPC__in ITargetFrame * This,
             /* [out] */ __RPC__deref_out_opt IOleContainer **ppContainer);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, SetFrameOptions)
         HRESULT ( STDMETHODCALLTYPE *SetFrameOptions )( 
             __RPC__in ITargetFrame * This,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, GetFrameOptions)
         HRESULT ( STDMETHODCALLTYPE *GetFrameOptions )( 
             __RPC__in ITargetFrame * This,
             /* [out] */ __RPC__out DWORD *pdwFlags);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, SetFrameMargins)
         HRESULT ( STDMETHODCALLTYPE *SetFrameMargins )( 
             __RPC__in ITargetFrame * This,
             /* [in] */ DWORD dwWidth,
             /* [in] */ DWORD dwHeight);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, GetFrameMargins)
         HRESULT ( STDMETHODCALLTYPE *GetFrameMargins )( 
             __RPC__in ITargetFrame * This,
             /* [out] */ __RPC__out DWORD *pdwWidth,
             /* [out] */ __RPC__out DWORD *pdwHeight);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, RemoteNavigate)
         HRESULT ( STDMETHODCALLTYPE *RemoteNavigate )( 
             __RPC__in ITargetFrame * This,
             /* [in] */ ULONG cLength,
             /* [size_is][in] */ __RPC__in_ecount_full(cLength) ULONG *pulData);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, OnChildFrameActivate)
         HRESULT ( STDMETHODCALLTYPE *OnChildFrameActivate )( 
             __RPC__in ITargetFrame * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnkChildFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFrame, OnChildFrameDeactivate)
         HRESULT ( STDMETHODCALLTYPE *OnChildFrameDeactivate )( 
             __RPC__in ITargetFrame * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnkChildFrame);
@@ -389,18 +414,22 @@ EXTERN_C const IID IID_ITargetEmbedding;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ITargetEmbedding * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ITargetEmbedding * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ITargetEmbedding * This);
         
+        DECLSPEC_XFGVIRT(ITargetEmbedding, GetTargetFrame)
         HRESULT ( STDMETHODCALLTYPE *GetTargetFrame )( 
             __RPC__in ITargetEmbedding * This,
             /* [out] */ __RPC__deref_out_opt ITargetFrame **ppTargetFrame);
@@ -497,24 +526,29 @@ EXTERN_C const IID IID_ITargetFramePriv;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ITargetFramePriv * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ITargetFramePriv * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ITargetFramePriv * This);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, FindFrameDownwards)
         HRESULT ( STDMETHODCALLTYPE *FindFrameDownwards )( 
             __RPC__in ITargetFramePriv * This,
             /* [in] */ __RPC__in LPCWSTR pszTargetName,
             /* [in] */ DWORD dwFlags,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppunkTargetFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, FindFrameInContext)
         HRESULT ( STDMETHODCALLTYPE *FindFrameInContext )( 
             __RPC__in ITargetFramePriv * This,
             /* [in] */ __RPC__in LPCWSTR pszTargetName,
@@ -522,14 +556,17 @@ EXTERN_C const IID IID_ITargetFramePriv;
             /* [in] */ DWORD dwFlags,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppunkTargetFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, OnChildFrameActivate)
         HRESULT ( STDMETHODCALLTYPE *OnChildFrameActivate )( 
             __RPC__in ITargetFramePriv * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnkChildFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, OnChildFrameDeactivate)
         HRESULT ( STDMETHODCALLTYPE *OnChildFrameDeactivate )( 
             __RPC__in ITargetFramePriv * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnkChildFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, NavigateHack)
         HRESULT ( STDMETHODCALLTYPE *NavigateHack )( 
             __RPC__in ITargetFramePriv * This,
             /* [in] */ DWORD grfHLNF,
@@ -539,6 +576,7 @@ EXTERN_C const IID IID_ITargetFramePriv;
             /* [in] */ __RPC__in LPCWSTR pszUrl,
             /* [unique][in] */ __RPC__in_opt LPCWSTR pszLocation);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, FindBrowserByIndex)
         HRESULT ( STDMETHODCALLTYPE *FindBrowserByIndex )( 
             __RPC__in ITargetFramePriv * This,
             /* [in] */ DWORD dwID,
@@ -630,24 +668,29 @@ EXTERN_C const IID IID_ITargetFramePriv2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ITargetFramePriv2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ITargetFramePriv2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ITargetFramePriv2 * This);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, FindFrameDownwards)
         HRESULT ( STDMETHODCALLTYPE *FindFrameDownwards )( 
             __RPC__in ITargetFramePriv2 * This,
             /* [in] */ __RPC__in LPCWSTR pszTargetName,
             /* [in] */ DWORD dwFlags,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppunkTargetFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, FindFrameInContext)
         HRESULT ( STDMETHODCALLTYPE *FindFrameInContext )( 
             __RPC__in ITargetFramePriv2 * This,
             /* [in] */ __RPC__in LPCWSTR pszTargetName,
@@ -655,14 +698,17 @@ EXTERN_C const IID IID_ITargetFramePriv2;
             /* [in] */ DWORD dwFlags,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppunkTargetFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, OnChildFrameActivate)
         HRESULT ( STDMETHODCALLTYPE *OnChildFrameActivate )( 
             __RPC__in ITargetFramePriv2 * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnkChildFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, OnChildFrameDeactivate)
         HRESULT ( STDMETHODCALLTYPE *OnChildFrameDeactivate )( 
             __RPC__in ITargetFramePriv2 * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnkChildFrame);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, NavigateHack)
         HRESULT ( STDMETHODCALLTYPE *NavigateHack )( 
             __RPC__in ITargetFramePriv2 * This,
             /* [in] */ DWORD grfHLNF,
@@ -672,11 +718,13 @@ EXTERN_C const IID IID_ITargetFramePriv2;
             /* [in] */ __RPC__in LPCWSTR pszUrl,
             /* [unique][in] */ __RPC__in_opt LPCWSTR pszLocation);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv, FindBrowserByIndex)
         HRESULT ( STDMETHODCALLTYPE *FindBrowserByIndex )( 
             __RPC__in ITargetFramePriv2 * This,
             /* [in] */ DWORD dwID,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppunkBrowser);
         
+        DECLSPEC_XFGVIRT(ITargetFramePriv2, AggregatedNavigation2)
         HRESULT ( STDMETHODCALLTYPE *AggregatedNavigation2 )( 
             __RPC__in ITargetFramePriv2 * This,
             /* [in] */ DWORD grfHLNF,

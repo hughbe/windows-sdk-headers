@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,349 +6,350 @@
 #ifndef WINRT_Windows_UI_Input_Preview_Injection_H
 #define WINRT_Windows_UI_Input_Preview_Injection_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.Input.Preview.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Gaming.Input.2.h"
 #include "winrt/impl/Windows.UI.Input.Preview.Injection.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::Buttons() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Gaming::Input::GamepadButtons) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::Buttons() const
     {
-        Windows::Gaming::Input::GamepadButtons value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->get_Buttons(put_abi(value)));
+        Windows::Gaming::Input::GamepadButtons value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->get_Buttons(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::Buttons(Windows::Gaming::Input::GamepadButtons const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::Buttons(Windows::Gaming::Input::GamepadButtons const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->put_Buttons(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftThumbstickX() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftThumbstickX() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->get_LeftThumbstickX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftThumbstickX(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftThumbstickX(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->put_LeftThumbstickX(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftThumbstickY() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftThumbstickY() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->get_LeftThumbstickY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftThumbstickY(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftThumbstickY(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->put_LeftThumbstickY(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftTrigger() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftTrigger() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->get_LeftTrigger(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftTrigger(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::LeftTrigger(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->put_LeftTrigger(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightThumbstickX() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightThumbstickX() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->get_RightThumbstickX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightThumbstickX(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightThumbstickX(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->put_RightThumbstickX(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightThumbstickY() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightThumbstickY() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->get_RightThumbstickY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightThumbstickY(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightThumbstickY(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->put_RightThumbstickY(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightTrigger() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightTrigger() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->get_RightTrigger(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightTrigger(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo<D>::RightTrigger(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo)->put_RightTrigger(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfoFactory<D>::CreateInstance(Windows::Gaming::Input::GamepadReading const& reading) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo) consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfoFactory<D>::CreateInstance(Windows::Gaming::Input::GamepadReading const& reading) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory)->CreateInstanceFromGamepadReading(impl::bind_in(reading), &value));
         return Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::KeyOptions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions) consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::KeyOptions() const
     {
-        Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo)->get_KeyOptions(put_abi(value)));
+        Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo)->get_KeyOptions(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::KeyOptions(Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::KeyOptions(Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo)->put_KeyOptions(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::ScanCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::ScanCode() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo)->get_ScanCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::ScanCode(uint16_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::ScanCode(uint16_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo)->put_ScanCode(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::VirtualKey() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::VirtualKey() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo)->get_VirtualKey(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::VirtualKey(uint16_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo<D>::VirtualKey(uint16_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo)->put_VirtualKey(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::MouseOptions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::MouseOptions() const
     {
-        Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->get_MouseOptions(put_abi(value)));
+        Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->get_MouseOptions(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::MouseOptions(Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::MouseOptions(Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->put_MouseOptions(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::MouseData() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::MouseData() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->get_MouseData(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::MouseData(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::MouseData(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->put_MouseData(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::DeltaY() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::DeltaY() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->get_DeltaY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::DeltaY(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::DeltaY(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->put_DeltaY(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::DeltaX() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::DeltaX() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->get_DeltaX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::DeltaX(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::DeltaX(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->put_DeltaX(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::TimeOffsetInMilliseconds() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::TimeOffsetInMilliseconds() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->get_TimeOffsetInMilliseconds(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::TimeOffsetInMilliseconds(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo<D>::TimeOffsetInMilliseconds(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo)->put_TimeOffsetInMilliseconds(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PointerInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PointerInfo() const
     {
-        Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo value;
+        Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->get_PointerInfo(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PointerInfo(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PointerInfo(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->put_PointerInfo(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PenButtons() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputPenButtons) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PenButtons() const
     {
-        Windows::UI::Input::Preview::Injection::InjectedInputPenButtons value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->get_PenButtons(put_abi(value)));
+        Windows::UI::Input::Preview::Injection::InjectedInputPenButtons value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->get_PenButtons(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PenButtons(Windows::UI::Input::Preview::Injection::InjectedInputPenButtons const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PenButtons(Windows::UI::Input::Preview::Injection::InjectedInputPenButtons const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->put_PenButtons(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PenParameters() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputPenParameters) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PenParameters() const
     {
-        Windows::UI::Input::Preview::Injection::InjectedInputPenParameters value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->get_PenParameters(put_abi(value)));
+        Windows::UI::Input::Preview::Injection::InjectedInputPenParameters value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->get_PenParameters(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PenParameters(Windows::UI::Input::Preview::Injection::InjectedInputPenParameters const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::PenParameters(Windows::UI::Input::Preview::Injection::InjectedInputPenParameters const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->put_PenParameters(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::Pressure() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::Pressure() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->get_Pressure(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::Pressure(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::Pressure(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->put_Pressure(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::Rotation() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::Rotation() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->get_Rotation(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::Rotation(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::Rotation(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->put_Rotation(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::TiltX() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::TiltX() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->get_TiltX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::TiltX(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::TiltX(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->put_TiltX(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::TiltY() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::TiltY() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->get_TiltY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::TiltY(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo<D>::TiltY(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo)->put_TiltY(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Contact() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputRectangle) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Contact() const
     {
-        Windows::UI::Input::Preview::Injection::InjectedInputRectangle value;
+        Windows::UI::Input::Preview::Injection::InjectedInputRectangle value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->get_Contact(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Contact(Windows::UI::Input::Preview::Injection::InjectedInputRectangle const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Contact(Windows::UI::Input::Preview::Injection::InjectedInputRectangle const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->put_Contact(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Orientation() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Orientation() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->get_Orientation(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Orientation(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Orientation(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->put_Orientation(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::PointerInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::PointerInfo() const
     {
-        Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo value;
+        Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->get_PointerInfo(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::PointerInfo(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::PointerInfo(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->put_PointerInfo(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Pressure() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Pressure() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->get_Pressure(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Pressure(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::Pressure(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->put_Pressure(value));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::TouchParameters() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::TouchParameters() const
     {
-        Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->get_TouchParameters(put_abi(value)));
+        Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->get_TouchParameters(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::TouchParameters(Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo<D>::TouchParameters(Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo)->put_TouchParameters(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectKeyboardInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo> const& input) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectKeyboardInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo> const& input) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector)->InjectKeyboardInput(*(void**)(&input)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectMouseInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo> const& input) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectMouseInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo> const& input) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector)->InjectMouseInput(*(void**)(&input)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InitializeTouchInjection(Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode const& visualMode) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InitializeTouchInjection(Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode const& visualMode) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector)->InitializeTouchInjection(static_cast<int32_t>(visualMode)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectTouchInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo> const& input) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectTouchInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo> const& input) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector)->InjectTouchInput(*(void**)(&input)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::UninitializeTouchInjection() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::UninitializeTouchInjection() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector)->UninitializeTouchInjection());
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InitializePenInjection(Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode const& visualMode) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InitializePenInjection(Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode const& visualMode) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector)->InitializePenInjection(static_cast<int32_t>(visualMode)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectPenInput(Windows::UI::Input::Preview::Injection::InjectedInputPenInfo const& input) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectPenInput(Windows::UI::Input::Preview::Injection::InjectedInputPenInfo const& input) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector)->InjectPenInput(*(void**)(&input)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::UninitializePenInjection() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::UninitializePenInjection() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector)->UninitializePenInjection());
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectShortcut(Windows::UI::Input::Preview::Injection::InjectedInputShortcut const& shortcut) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector<D>::InjectShortcut(Windows::UI::Input::Preview::Injection::InjectedInputShortcut const& shortcut) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector)->InjectShortcut(static_cast<int32_t>(shortcut)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector2<D>::InitializeGamepadInjection() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector2<D>::InitializeGamepadInjection() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector2)->InitializeGamepadInjection());
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector2<D>::InjectGamepadInput(Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo const& input) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector2<D>::InjectGamepadInput(Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo const& input) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector2)->InjectGamepadInput(*(void**)(&input)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjector2<D>::UninitializeGamepadInjection() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Preview_Injection_IInputInjector2<D>::UninitializeGamepadInjection() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjector2)->UninitializeGamepadInjection());
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjectorStatics<D>::TryCreate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InputInjector) consume_Windows_UI_Input_Preview_Injection_IInputInjectorStatics<D>::TryCreate() const
     {
         void* instance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjectorStatics)->TryCreate(&instance));
         return Windows::UI::Input::Preview::Injection::InputInjector{ instance, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Preview_Injection_IInputInjectorStatics2<D>::TryCreateForAppBroadcastOnly() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InputInjector) consume_Windows_UI_Input_Preview_Injection_IInputInjectorStatics2<D>::TryCreateForAppBroadcastOnly() const
     {
         void* instance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Preview::Injection::IInputInjectorStatics2)->TryCreateForAppBroadcastOnly(&instance));
         return Windows::UI::Input::Preview::Injection::InputInjector{ instance, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo> : produce_base<D, Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo>
     {
@@ -451,6 +452,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory> : produce_base<D, Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory>
     {
@@ -463,6 +466,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo> : produce_base<D, Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo>
     {
@@ -509,6 +514,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo> : produce_base<D, Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo>
     {
@@ -583,6 +590,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo> : produce_base<D, Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo>
     {
@@ -686,6 +695,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo> : produce_base<D, Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo>
     {
@@ -762,6 +773,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInputInjector> : produce_base<D, Windows::UI::Input::Preview::Injection::IInputInjector>
     {
@@ -829,6 +842,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInputInjector2> : produce_base<D, Windows::UI::Input::Preview::Injection::IInputInjector2>
     {
@@ -854,6 +869,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInputInjectorStatics> : produce_base<D, Windows::UI::Input::Preview::Injection::IInputInjectorStatics>
     {
@@ -866,6 +883,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Preview::Injection::IInputInjectorStatics2> : produce_base<D, Windows::UI::Input::Preview::Injection::IInputInjectorStatics2>
     {
@@ -878,8 +897,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::UI::Input::Preview::Injection
+WINRT_EXPORT namespace winrt::Windows::UI::Input::Preview::Injection
 {
     constexpr auto operator|(InjectedInputKeyOptions const left, InjectedInputKeyOptions const right) noexcept
     {
@@ -1068,55 +1088,57 @@ namespace winrt::Windows::UI::Input::Preview::Injection
         return left;
     }
     inline InjectedInputGamepadInfo::InjectedInputGamepadInfo() :
-        InjectedInputGamepadInfo(impl::call_factory<InjectedInputGamepadInfo>([](auto&& f) { return f.template ActivateInstance<InjectedInputGamepadInfo>(); }))
+        InjectedInputGamepadInfo(impl::call_factory_cast<InjectedInputGamepadInfo(*)(Windows::Foundation::IActivationFactory const&), InjectedInputGamepadInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<InjectedInputGamepadInfo>(); }))
     {
     }
     inline InjectedInputGamepadInfo::InjectedInputGamepadInfo(Windows::Gaming::Input::GamepadReading const& reading) :
-        InjectedInputGamepadInfo(impl::call_factory<InjectedInputGamepadInfo, Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory>([&](auto&& f) { return f.CreateInstance(reading); }))
+        InjectedInputGamepadInfo(impl::call_factory<InjectedInputGamepadInfo, IInjectedInputGamepadInfoFactory>([&](IInjectedInputGamepadInfoFactory const& f) { return f.CreateInstance(reading); }))
     {
     }
     inline InjectedInputKeyboardInfo::InjectedInputKeyboardInfo() :
-        InjectedInputKeyboardInfo(impl::call_factory<InjectedInputKeyboardInfo>([](auto&& f) { return f.template ActivateInstance<InjectedInputKeyboardInfo>(); }))
+        InjectedInputKeyboardInfo(impl::call_factory_cast<InjectedInputKeyboardInfo(*)(Windows::Foundation::IActivationFactory const&), InjectedInputKeyboardInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<InjectedInputKeyboardInfo>(); }))
     {
     }
     inline InjectedInputMouseInfo::InjectedInputMouseInfo() :
-        InjectedInputMouseInfo(impl::call_factory<InjectedInputMouseInfo>([](auto&& f) { return f.template ActivateInstance<InjectedInputMouseInfo>(); }))
+        InjectedInputMouseInfo(impl::call_factory_cast<InjectedInputMouseInfo(*)(Windows::Foundation::IActivationFactory const&), InjectedInputMouseInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<InjectedInputMouseInfo>(); }))
     {
     }
     inline InjectedInputPenInfo::InjectedInputPenInfo() :
-        InjectedInputPenInfo(impl::call_factory<InjectedInputPenInfo>([](auto&& f) { return f.template ActivateInstance<InjectedInputPenInfo>(); }))
+        InjectedInputPenInfo(impl::call_factory_cast<InjectedInputPenInfo(*)(Windows::Foundation::IActivationFactory const&), InjectedInputPenInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<InjectedInputPenInfo>(); }))
     {
     }
     inline InjectedInputTouchInfo::InjectedInputTouchInfo() :
-        InjectedInputTouchInfo(impl::call_factory<InjectedInputTouchInfo>([](auto&& f) { return f.template ActivateInstance<InjectedInputTouchInfo>(); }))
+        InjectedInputTouchInfo(impl::call_factory_cast<InjectedInputTouchInfo(*)(Windows::Foundation::IActivationFactory const&), InjectedInputTouchInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<InjectedInputTouchInfo>(); }))
     {
     }
     inline auto InputInjector::TryCreate()
     {
-        return impl::call_factory<InputInjector, Windows::UI::Input::Preview::Injection::IInputInjectorStatics>([&](auto&& f) { return f.TryCreate(); });
+        return impl::call_factory_cast<Windows::UI::Input::Preview::Injection::InputInjector(*)(IInputInjectorStatics const&), InputInjector, IInputInjectorStatics>([](IInputInjectorStatics const& f) { return f.TryCreate(); });
     }
     inline auto InputInjector::TryCreateForAppBroadcastOnly()
     {
-        return impl::call_factory<InputInjector, Windows::UI::Input::Preview::Injection::IInputInjectorStatics2>([&](auto&& f) { return f.TryCreateForAppBroadcastOnly(); });
+        return impl::call_factory_cast<Windows::UI::Input::Preview::Injection::InputInjector(*)(IInputInjectorStatics2 const&), InputInjector, IInputInjectorStatics2>([](IInputInjectorStatics2 const& f) { return f.TryCreateForAppBroadcastOnly(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInputInjector> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInputInjector> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInputInjector2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInputInjector2> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInputInjectorStatics> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInputInjectorStatics> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInputInjectorStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::IInputInjectorStatics2> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo> {};
-    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InputInjector> : winrt::impl::hash_base<winrt::Windows::UI::Input::Preview::Injection::InputInjector> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInputInjector> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInputInjector2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInputInjectorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::IInputInjectorStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Preview::Injection::InputInjector> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -36,6 +36,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -582,18 +590,22 @@ EXTERN_C const IID IID_IUIAnimationManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationManager * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationManager * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, CreateAnimationVariable)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateAnimationVariable )( 
@@ -603,6 +615,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationVariable **variable);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, ScheduleTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *ScheduleTransition )( 
@@ -614,6 +627,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS timeNow);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, CreateStoryboard)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateStoryboard )( 
@@ -621,6 +635,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationStoryboard **storyboard);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, FinishAllStoryboards)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *FinishAllStoryboards )( 
@@ -628,11 +643,13 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS completionDeadline);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, AbandonAllStoryboards)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AbandonAllStoryboards )( 
             IUIAnimationManager * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, Update)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Update )( 
@@ -642,6 +659,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][defaultvalue][out] */ 
             _Out_opt_  UI_ANIMATION_UPDATE_RESULT *updateResult);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, GetVariableFromTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetVariableFromTag )( 
@@ -653,6 +671,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationVariable **variable);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, GetStoryboardFromTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetStoryboardFromTag )( 
@@ -664,6 +683,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationStoryboard **storyboard);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, GetStatus)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetStatus )( 
@@ -671,6 +691,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_MANAGER_STATUS *status);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, SetAnimationMode)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetAnimationMode )( 
@@ -678,16 +699,19 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_MODE mode);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, Pause)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Pause )( 
             IUIAnimationManager * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, Resume)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Resume )( 
             IUIAnimationManager * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, SetManagerEventHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetManagerEventHandler )( 
@@ -695,6 +719,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationManagerEventHandler *handler);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, SetCancelPriorityComparison)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetCancelPriorityComparison )( 
@@ -702,6 +727,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationPriorityComparison *comparison);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, SetTrimPriorityComparison)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetTrimPriorityComparison )( 
@@ -709,6 +735,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationPriorityComparison *comparison);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, SetCompressPriorityComparison)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetCompressPriorityComparison )( 
@@ -716,6 +743,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationPriorityComparison *comparison);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, SetConcludePriorityComparison)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetConcludePriorityComparison )( 
@@ -723,6 +751,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationPriorityComparison *comparison);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, SetDefaultLongestAcceptableDelay)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetDefaultLongestAcceptableDelay )( 
@@ -730,6 +759,7 @@ EXTERN_C const IID IID_IUIAnimationManager;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS delay);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager, Shutdown)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Shutdown )( 
@@ -954,18 +984,22 @@ EXTERN_C const IID IID_IUIAnimationVariable;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationVariable * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationVariable * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationVariable * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, GetValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetValue )( 
@@ -973,6 +1007,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][retval][out] */ 
             _Out_  DOUBLE *value);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, GetFinalValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetFinalValue )( 
@@ -980,6 +1015,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][retval][out] */ 
             _Out_  DOUBLE *finalValue);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, GetPreviousValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetPreviousValue )( 
@@ -987,6 +1023,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][retval][out] */ 
             _Out_  DOUBLE *previousValue);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, GetIntegerValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetIntegerValue )( 
@@ -994,6 +1031,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][retval][out] */ 
             _Out_  INT32 *value);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, GetFinalIntegerValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetFinalIntegerValue )( 
@@ -1001,6 +1039,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][retval][out] */ 
             _Out_  INT32 *finalValue);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, GetPreviousIntegerValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetPreviousIntegerValue )( 
@@ -1008,6 +1047,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][retval][out] */ 
             _Out_  INT32 *previousValue);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, GetCurrentStoryboard)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetCurrentStoryboard )( 
@@ -1015,6 +1055,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationStoryboard **storyboard);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, SetLowerBound)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetLowerBound )( 
@@ -1022,6 +1063,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][in] */ 
             _In_  DOUBLE bound);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, SetUpperBound)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetUpperBound )( 
@@ -1029,6 +1071,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][in] */ 
             _In_  DOUBLE bound);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, SetRoundingMode)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetRoundingMode )( 
@@ -1036,6 +1079,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_ROUNDING_MODE mode);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, SetTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetTag )( 
@@ -1045,6 +1089,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][in] */ 
             _In_  UINT32 id);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, GetTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetTag )( 
@@ -1054,6 +1099,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][out] */ 
             _Out_opt_  UINT32 *id);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, SetVariableChangeHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetVariableChangeHandler )( 
@@ -1061,6 +1107,7 @@ EXTERN_C const IID IID_IUIAnimationVariable;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationVariableChangeHandler *handler);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable, SetVariableIntegerChangeHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetVariableIntegerChangeHandler )( 
@@ -1338,18 +1385,22 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationStoryboard * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationStoryboard * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationStoryboard * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, AddTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddTransition )( 
@@ -1359,6 +1410,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][in] */ 
             _In_  IUIAnimationTransition *transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, AddKeyframeAtOffset)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddKeyframeAtOffset )( 
@@ -1370,6 +1422,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_KEYFRAME *keyframe);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, AddKeyframeAfterTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddKeyframeAfterTransition )( 
@@ -1379,6 +1432,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_KEYFRAME *keyframe);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, AddTransitionAtKeyframe)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddTransitionAtKeyframe )( 
@@ -1390,6 +1444,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_KEYFRAME startKeyframe);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, AddTransitionBetweenKeyframes)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddTransitionBetweenKeyframes )( 
@@ -1403,6 +1458,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_KEYFRAME endKeyframe);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, RepeatBetweenKeyframes)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *RepeatBetweenKeyframes )( 
@@ -1414,6 +1470,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][in] */ 
             _In_  INT32 repetitionCount);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, HoldVariable)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *HoldVariable )( 
@@ -1421,6 +1478,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][in] */ 
             _In_  IUIAnimationVariable *variable);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, SetLongestAcceptableDelay)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetLongestAcceptableDelay )( 
@@ -1428,6 +1486,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS delay);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, Schedule)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Schedule )( 
@@ -1437,11 +1496,13 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][defaultvalue][out] */ 
             _Out_opt_  UI_ANIMATION_SCHEDULING_RESULT *schedulingResult);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, Conclude)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Conclude )( 
             IUIAnimationStoryboard * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, Finish)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Finish )( 
@@ -1449,11 +1510,13 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS completionDeadline);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, Abandon)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Abandon )( 
             IUIAnimationStoryboard * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, SetTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetTag )( 
@@ -1463,6 +1526,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][in] */ 
             _In_  UINT32 id);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, GetTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetTag )( 
@@ -1472,6 +1536,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][out] */ 
             _Out_opt_  UINT32 *id);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, GetStatus)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetStatus )( 
@@ -1479,6 +1544,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_STORYBOARD_STATUS *status);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, GetElapsedTime)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetElapsedTime )( 
@@ -1486,6 +1552,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard;
             /* [annotation][out] */ 
             _Out_  UI_ANIMATION_SECONDS *elapsedTime);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard, SetStoryboardEventHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetStoryboardEventHandler )( 
@@ -1624,18 +1691,22 @@ EXTERN_C const IID IID_IUIAnimationTransition;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTransition * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTransition * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTransition * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition, SetInitialValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetInitialValue )( 
@@ -1643,6 +1714,7 @@ EXTERN_C const IID IID_IUIAnimationTransition;
             /* [annotation][in] */ 
             _In_  DOUBLE value);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition, SetInitialVelocity)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetInitialVelocity )( 
@@ -1650,11 +1722,13 @@ EXTERN_C const IID IID_IUIAnimationTransition;
             /* [annotation][in] */ 
             _In_  DOUBLE velocity);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition, IsDurationKnown)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *IsDurationKnown )( 
             IUIAnimationTransition * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition, GetDuration)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetDuration )( 
@@ -1740,18 +1814,22 @@ EXTERN_C const IID IID_IUIAnimationManagerEventHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationManagerEventHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationManagerEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationManagerEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManagerEventHandler, OnManagerStatusChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnManagerStatusChanged )( 
@@ -1834,18 +1912,22 @@ EXTERN_C const IID IID_IUIAnimationVariableChangeHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationVariableChangeHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationVariableChangeHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationVariableChangeHandler * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariableChangeHandler, OnValueChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnValueChanged )( 
@@ -1932,18 +2014,22 @@ EXTERN_C const IID IID_IUIAnimationVariableIntegerChangeHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationVariableIntegerChangeHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationVariableIntegerChangeHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationVariableIntegerChangeHandler * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariableIntegerChangeHandler, OnIntegerValueChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnIntegerValueChanged )( 
@@ -2034,18 +2120,22 @@ EXTERN_C const IID IID_IUIAnimationStoryboardEventHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationStoryboardEventHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationStoryboardEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationStoryboardEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboardEventHandler, OnStoryboardStatusChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnStoryboardStatusChanged )( 
@@ -2057,6 +2147,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboardEventHandler;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_STORYBOARD_STATUS previousStatus);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboardEventHandler, OnStoryboardUpdated)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnStoryboardUpdated )( 
@@ -2153,18 +2244,22 @@ EXTERN_C const IID IID_IUIAnimationPriorityComparison;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationPriorityComparison * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationPriorityComparison * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationPriorityComparison * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationPriorityComparison, HasPriority)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *HasPriority )( 
@@ -2382,18 +2477,22 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTransitionLibrary * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTransitionLibrary * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTransitionLibrary * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateInstantaneousTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateInstantaneousTransition )( 
@@ -2403,6 +2502,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateConstantTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateConstantTransition )( 
@@ -2412,6 +2512,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateDiscreteTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateDiscreteTransition )( 
@@ -2425,6 +2526,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateLinearTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateLinearTransition )( 
@@ -2436,6 +2538,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateLinearTransitionFromSpeed)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateLinearTransitionFromSpeed )( 
@@ -2447,6 +2550,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateSinusoidalTransitionFromVelocity)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateSinusoidalTransitionFromVelocity )( 
@@ -2458,6 +2562,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateSinusoidalTransitionFromRange)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateSinusoidalTransitionFromRange )( 
@@ -2475,6 +2580,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateAccelerateDecelerateTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateAccelerateDecelerateTransition )( 
@@ -2490,6 +2596,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateReversalTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateReversalTransition )( 
@@ -2499,6 +2606,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateCubicTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateCubicTransition )( 
@@ -2512,6 +2620,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateSmoothStopTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateSmoothStopTransition )( 
@@ -2523,6 +2632,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary, CreateParabolicTransitionFromAcceleration)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateParabolicTransitionFromAcceleration )( 
@@ -2701,18 +2811,22 @@ EXTERN_C const IID IID_IUIAnimationInterpolator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationInterpolator * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationInterpolator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationInterpolator * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator, SetInitialValueAndVelocity)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetInitialValueAndVelocity )( 
@@ -2722,6 +2836,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator;
             /* [annotation][in] */ 
             _In_  DOUBLE initialVelocity);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator, SetDuration)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetDuration )( 
@@ -2729,6 +2844,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS duration);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator, GetDuration)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetDuration )( 
@@ -2736,6 +2852,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_SECONDS *duration);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator, GetFinalValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetFinalValue )( 
@@ -2743,6 +2860,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator;
             /* [annotation][retval][out] */ 
             _Out_  DOUBLE *value);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator, InterpolateValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *InterpolateValue )( 
@@ -2752,6 +2870,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator;
             /* [annotation][retval][out] */ 
             _Out_  DOUBLE *value);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator, InterpolateVelocity)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *InterpolateVelocity )( 
@@ -2761,6 +2880,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator;
             /* [annotation][retval][out] */ 
             _Out_  DOUBLE *velocity);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator, GetDependencies)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetDependencies )( 
@@ -2859,18 +2979,22 @@ EXTERN_C const IID IID_IUIAnimationTransitionFactory;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTransitionFactory * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTransitionFactory * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTransitionFactory * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionFactory, CreateTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateTransition )( 
@@ -2994,18 +3118,22 @@ EXTERN_C const IID IID_IUIAnimationTimer;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTimer * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTimer * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTimer * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimer, SetTimerUpdateHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetTimerUpdateHandler )( 
@@ -3015,6 +3143,7 @@ EXTERN_C const IID IID_IUIAnimationTimer;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_IDLE_BEHAVIOR idleBehavior);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimer, SetTimerEventHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetTimerEventHandler )( 
@@ -3022,21 +3151,25 @@ EXTERN_C const IID IID_IUIAnimationTimer;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationTimerEventHandler *handler);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimer, Enable)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Enable )( 
             IUIAnimationTimer * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimer, Disable)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Disable )( 
             IUIAnimationTimer * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimer, IsEnabled)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *IsEnabled )( 
             IUIAnimationTimer * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimer, GetTime)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetTime )( 
@@ -3044,6 +3177,7 @@ EXTERN_C const IID IID_IUIAnimationTimer;
             /* [annotation][out] */ 
             _Out_  UI_ANIMATION_SECONDS *seconds);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimer, SetFrameRateThreshold)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetFrameRateThreshold )( 
@@ -3148,18 +3282,22 @@ EXTERN_C const IID IID_IUIAnimationTimerUpdateHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTimerUpdateHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTimerUpdateHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTimerUpdateHandler * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimerUpdateHandler, OnUpdate)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnUpdate )( 
@@ -3169,6 +3307,7 @@ EXTERN_C const IID IID_IUIAnimationTimerUpdateHandler;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_UPDATE_RESULT *result);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimerUpdateHandler, SetTimerClientEventHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetTimerClientEventHandler )( 
@@ -3176,6 +3315,7 @@ EXTERN_C const IID IID_IUIAnimationTimerUpdateHandler;
             /* [annotation][in] */ 
             _In_  IUIAnimationTimerClientEventHandler *handler);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimerUpdateHandler, ClearTimerClientEventHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *ClearTimerClientEventHandler )( 
@@ -3271,18 +3411,22 @@ EXTERN_C const IID IID_IUIAnimationTimerClientEventHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTimerClientEventHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTimerClientEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTimerClientEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimerClientEventHandler, OnTimerClientStatusChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnTimerClientStatusChanged )( 
@@ -3367,28 +3511,34 @@ EXTERN_C const IID IID_IUIAnimationTimerEventHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTimerEventHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTimerEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTimerEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimerEventHandler, OnPreUpdate)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnPreUpdate )( 
             IUIAnimationTimerEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimerEventHandler, OnPostUpdate)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnPostUpdate )( 
             IUIAnimationTimerEventHandler * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTimerEventHandler, OnRenderingTooSlow)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnRenderingTooSlow )( 
@@ -3613,18 +3763,22 @@ EXTERN_C const IID IID_IUIAnimationManager2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationManager2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationManager2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationManager2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, CreateAnimationVectorVariable)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateAnimationVectorVariable )( 
@@ -3636,6 +3790,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationVariable2 **variable);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, CreateAnimationVariable)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateAnimationVariable )( 
@@ -3645,6 +3800,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationVariable2 **variable);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, ScheduleTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *ScheduleTransition )( 
@@ -3656,6 +3812,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS timeNow);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, CreateStoryboard)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateStoryboard )( 
@@ -3663,6 +3820,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationStoryboard2 **storyboard);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, FinishAllStoryboards)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *FinishAllStoryboards )( 
@@ -3670,11 +3828,13 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS completionDeadline);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, AbandonAllStoryboards)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AbandonAllStoryboards )( 
             IUIAnimationManager2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, Update)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Update )( 
@@ -3684,6 +3844,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][defaultvalue][out] */ 
             _Out_opt_  UI_ANIMATION_UPDATE_RESULT *updateResult);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, GetVariableFromTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetVariableFromTag )( 
@@ -3695,6 +3856,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationVariable2 **variable);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, GetStoryboardFromTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetStoryboardFromTag )( 
@@ -3706,6 +3868,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationStoryboard2 **storyboard);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, EstimateNextEventTime)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *EstimateNextEventTime )( 
@@ -3713,6 +3876,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_SECONDS *seconds);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, GetStatus)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetStatus )( 
@@ -3720,6 +3884,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_MANAGER_STATUS *status);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, SetAnimationMode)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetAnimationMode )( 
@@ -3727,16 +3892,19 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_MODE mode);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, Pause)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Pause )( 
             IUIAnimationManager2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, Resume)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Resume )( 
             IUIAnimationManager2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, SetManagerEventHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetManagerEventHandler )( 
@@ -3746,6 +3914,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][defaultvalue][in] */ 
             _In_  BOOL fRegisterForNextAnimationEvent);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, SetCancelPriorityComparison)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetCancelPriorityComparison )( 
@@ -3753,6 +3922,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationPriorityComparison2 *comparison);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, SetTrimPriorityComparison)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetTrimPriorityComparison )( 
@@ -3760,6 +3930,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationPriorityComparison2 *comparison);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, SetCompressPriorityComparison)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetCompressPriorityComparison )( 
@@ -3767,6 +3938,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationPriorityComparison2 *comparison);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, SetConcludePriorityComparison)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetConcludePriorityComparison )( 
@@ -3774,6 +3946,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][unique][in] */ 
             _In_opt_  IUIAnimationPriorityComparison2 *comparison);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, SetDefaultLongestAcceptableDelay)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetDefaultLongestAcceptableDelay )( 
@@ -3781,6 +3954,7 @@ EXTERN_C const IID IID_IUIAnimationManager2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS delay);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManager2, Shutdown)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Shutdown )( 
@@ -4089,18 +4263,22 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationVariable2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationVariable2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationVariable2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetDimension)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetDimension )( 
@@ -4108,6 +4286,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][retval][out] */ 
             _Out_  UINT *dimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetValue )( 
@@ -4115,6 +4294,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][retval][out] */ 
             _Out_  DOUBLE *value);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetVectorValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetVectorValue )( 
@@ -4124,6 +4304,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetCurve)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetCurve )( 
@@ -4131,6 +4312,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  IDCompositionAnimation *animation);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetVectorCurve)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetVectorCurve )( 
@@ -4140,6 +4322,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetFinalValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetFinalValue )( 
@@ -4147,6 +4330,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][retval][out] */ 
             _Out_  DOUBLE *finalValue);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetFinalVectorValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetFinalVectorValue )( 
@@ -4156,6 +4340,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetPreviousValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetPreviousValue )( 
@@ -4163,6 +4348,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][retval][out] */ 
             _Out_  DOUBLE *previousValue);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetPreviousVectorValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetPreviousVectorValue )( 
@@ -4172,6 +4358,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetIntegerValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetIntegerValue )( 
@@ -4179,6 +4366,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][retval][out] */ 
             _Out_  INT32 *value);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetIntegerVectorValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetIntegerVectorValue )( 
@@ -4188,6 +4376,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetFinalIntegerValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetFinalIntegerValue )( 
@@ -4195,6 +4384,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][retval][out] */ 
             _Out_  INT32 *finalValue);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetFinalIntegerVectorValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetFinalIntegerVectorValue )( 
@@ -4204,6 +4394,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetPreviousIntegerValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetPreviousIntegerValue )( 
@@ -4211,6 +4402,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][retval][out] */ 
             _Out_  INT32 *previousValue);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetPreviousIntegerVectorValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetPreviousIntegerVectorValue )( 
@@ -4220,6 +4412,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetCurrentStoryboard)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetCurrentStoryboard )( 
@@ -4227,6 +4420,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationStoryboard2 **storyboard);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, SetLowerBound)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetLowerBound )( 
@@ -4234,6 +4428,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  DOUBLE bound);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, SetLowerBoundVector)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetLowerBoundVector )( 
@@ -4243,6 +4438,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, SetUpperBound)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetUpperBound )( 
@@ -4250,6 +4446,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  DOUBLE bound);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, SetUpperBoundVector)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetUpperBoundVector )( 
@@ -4259,6 +4456,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, SetRoundingMode)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetRoundingMode )( 
@@ -4266,6 +4464,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_ROUNDING_MODE mode);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, SetTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetTag )( 
@@ -4275,6 +4474,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][in] */ 
             _In_  UINT32 id);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, GetTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetTag )( 
@@ -4284,6 +4484,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][out] */ 
             _Out_opt_  UINT32 *id);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, SetVariableChangeHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetVariableChangeHandler )( 
@@ -4293,6 +4494,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][defaultvalue][in] */ 
             _In_  BOOL fRegisterForNextAnimationEvent);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, SetVariableIntegerChangeHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetVariableIntegerChangeHandler )( 
@@ -4302,6 +4504,7 @@ EXTERN_C const IID IID_IUIAnimationVariable2;
             /* [annotation][defaultvalue][in] */ 
             _In_  BOOL fRegisterForNextAnimationEvent);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariable2, SetVariableCurveChangeHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetVariableCurveChangeHandler )( 
@@ -4499,18 +4702,22 @@ EXTERN_C const IID IID_IUIAnimationTransition2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTransition2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTransition2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTransition2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition2, GetDimension)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetDimension )( 
@@ -4518,6 +4725,7 @@ EXTERN_C const IID IID_IUIAnimationTransition2;
             /* [annotation][retval][out] */ 
             _Out_  UINT *dimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition2, SetInitialValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetInitialValue )( 
@@ -4525,6 +4733,7 @@ EXTERN_C const IID IID_IUIAnimationTransition2;
             /* [annotation][in] */ 
             _In_  DOUBLE value);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition2, SetInitialVectorValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetInitialVectorValue )( 
@@ -4534,6 +4743,7 @@ EXTERN_C const IID IID_IUIAnimationTransition2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition2, SetInitialVelocity)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetInitialVelocity )( 
@@ -4541,6 +4751,7 @@ EXTERN_C const IID IID_IUIAnimationTransition2;
             /* [annotation][in] */ 
             _In_  DOUBLE velocity);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition2, SetInitialVectorVelocity)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetInitialVectorVelocity )( 
@@ -4550,11 +4761,13 @@ EXTERN_C const IID IID_IUIAnimationTransition2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition2, IsDurationKnown)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *IsDurationKnown )( 
             IUIAnimationTransition2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransition2, GetDuration)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetDuration )( 
@@ -4649,18 +4862,22 @@ EXTERN_C const IID IID_IUIAnimationManagerEventHandler2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationManagerEventHandler2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationManagerEventHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationManagerEventHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationManagerEventHandler2, OnManagerStatusChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnManagerStatusChanged )( 
@@ -4745,18 +4962,22 @@ EXTERN_C const IID IID_IUIAnimationVariableChangeHandler2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationVariableChangeHandler2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationVariableChangeHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationVariableChangeHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariableChangeHandler2, OnValueChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnValueChanged )( 
@@ -4847,18 +5068,22 @@ EXTERN_C const IID IID_IUIAnimationVariableIntegerChangeHandler2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationVariableIntegerChangeHandler2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationVariableIntegerChangeHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationVariableIntegerChangeHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariableIntegerChangeHandler2, OnIntegerValueChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnIntegerValueChanged )( 
@@ -4941,18 +5166,22 @@ EXTERN_C const IID IID_IUIAnimationVariableCurveChangeHandler2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationVariableCurveChangeHandler2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationVariableCurveChangeHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationVariableCurveChangeHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationVariableCurveChangeHandler2, OnCurveChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnCurveChanged )( 
@@ -5037,18 +5266,22 @@ EXTERN_C const IID IID_IUIAnimationStoryboardEventHandler2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationStoryboardEventHandler2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationStoryboardEventHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationStoryboardEventHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboardEventHandler2, OnStoryboardStatusChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnStoryboardStatusChanged )( 
@@ -5060,6 +5293,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboardEventHandler2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_STORYBOARD_STATUS previousStatus);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboardEventHandler2, OnStoryboardUpdated)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnStoryboardUpdated )( 
@@ -5153,18 +5387,22 @@ EXTERN_C const IID IID_IUIAnimationLoopIterationChangeHandler2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationLoopIterationChangeHandler2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationLoopIterationChangeHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationLoopIterationChangeHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationLoopIterationChangeHandler2, OnLoopIterationChanged)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *OnLoopIterationChanged )( 
@@ -5249,18 +5487,22 @@ EXTERN_C const IID IID_IUIAnimationPriorityComparison2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationPriorityComparison2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationPriorityComparison2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationPriorityComparison2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationPriorityComparison2, HasPriority)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *HasPriority )( 
@@ -5563,18 +5805,22 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTransitionLibrary2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTransitionLibrary2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTransitionLibrary2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateInstantaneousTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateInstantaneousTransition )( 
@@ -5584,6 +5830,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateInstantaneousVectorTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateInstantaneousVectorTransition )( 
@@ -5595,6 +5842,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateConstantTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateConstantTransition )( 
@@ -5604,6 +5852,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateDiscreteTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateDiscreteTransition )( 
@@ -5617,6 +5866,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateDiscreteVectorTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateDiscreteVectorTransition )( 
@@ -5632,6 +5882,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateLinearTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateLinearTransition )( 
@@ -5643,6 +5894,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateLinearVectorTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateLinearVectorTransition )( 
@@ -5656,6 +5908,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateLinearTransitionFromSpeed)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateLinearTransitionFromSpeed )( 
@@ -5667,6 +5920,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateLinearVectorTransitionFromSpeed)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateLinearVectorTransitionFromSpeed )( 
@@ -5680,6 +5934,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateSinusoidalTransitionFromVelocity)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateSinusoidalTransitionFromVelocity )( 
@@ -5691,6 +5946,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateSinusoidalTransitionFromRange)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateSinusoidalTransitionFromRange )( 
@@ -5708,6 +5964,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateAccelerateDecelerateTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateAccelerateDecelerateTransition )( 
@@ -5723,6 +5980,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateReversalTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateReversalTransition )( 
@@ -5732,6 +5990,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateCubicTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateCubicTransition )( 
@@ -5745,6 +6004,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateCubicVectorTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateCubicVectorTransition )( 
@@ -5760,6 +6020,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateSmoothStopTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateSmoothStopTransition )( 
@@ -5771,6 +6032,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateParabolicTransitionFromAcceleration)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateParabolicTransitionFromAcceleration )( 
@@ -5784,6 +6046,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][retval][out] */ 
             _Outptr_  IUIAnimationTransition2 **transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateCubicBezierLinearTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateCubicBezierLinearTransition )( 
@@ -5803,6 +6066,7 @@ EXTERN_C const IID IID_IUIAnimationTransitionLibrary2;
             /* [annotation][out] */ 
             _Outptr_  IUIAnimationTransition2 **ppTransition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionLibrary2, CreateCubicBezierLinearVectorTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateCubicBezierLinearVectorTransition )( 
@@ -5969,18 +6233,22 @@ EXTERN_C const IID IID_IUIAnimationPrimitiveInterpolation;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationPrimitiveInterpolation * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationPrimitiveInterpolation * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationPrimitiveInterpolation * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationPrimitiveInterpolation, AddCubic)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddCubic )( 
@@ -5998,6 +6266,7 @@ EXTERN_C const IID IID_IUIAnimationPrimitiveInterpolation;
             /* [annotation][in] */ 
             _In_  FLOAT cubicCoefficient);
         
+        DECLSPEC_XFGVIRT(IUIAnimationPrimitiveInterpolation, AddSinusoidal)
         HRESULT ( STDMETHODCALLTYPE *AddSinusoidal )( 
             IUIAnimationPrimitiveInterpolation * This,
             /* [annotation][in] */ 
@@ -6151,18 +6420,22 @@ EXTERN_C const IID IID_IUIAnimationInterpolator2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationInterpolator2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationInterpolator2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationInterpolator2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator2, GetDimension)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetDimension )( 
@@ -6170,6 +6443,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator2;
             /* [annotation][retval][out] */ 
             _Out_  UINT *dimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator2, SetInitialValueAndVelocity)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetInitialValueAndVelocity )( 
@@ -6181,6 +6455,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator2, SetDuration)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetDuration )( 
@@ -6188,6 +6463,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS duration);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator2, GetDuration)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetDuration )( 
@@ -6195,6 +6471,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator2;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_SECONDS *duration);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator2, GetFinalValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetFinalValue )( 
@@ -6204,6 +6481,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator2, InterpolateValue)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *InterpolateValue )( 
@@ -6215,6 +6493,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator2, InterpolateVelocity)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *InterpolateVelocity )( 
@@ -6226,6 +6505,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator2, GetPrimitiveInterpolation)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetPrimitiveInterpolation )( 
@@ -6235,6 +6515,7 @@ EXTERN_C const IID IID_IUIAnimationInterpolator2;
             /* [annotation][in] */ 
             _In_  UINT cDimension);
         
+        DECLSPEC_XFGVIRT(IUIAnimationInterpolator2, GetDependencies)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetDependencies )( 
@@ -6339,18 +6620,22 @@ EXTERN_C const IID IID_IUIAnimationTransitionFactory2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationTransitionFactory2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationTransitionFactory2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationTransitionFactory2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationTransitionFactory2, CreateTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *CreateTransition )( 
@@ -6565,18 +6850,22 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IUIAnimationStoryboard2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IUIAnimationStoryboard2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IUIAnimationStoryboard2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, AddTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddTransition )( 
@@ -6586,6 +6875,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][in] */ 
             _In_  IUIAnimationTransition2 *transition);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, AddKeyframeAtOffset)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddKeyframeAtOffset )( 
@@ -6597,6 +6887,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_KEYFRAME *keyframe);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, AddKeyframeAfterTransition)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddKeyframeAfterTransition )( 
@@ -6606,6 +6897,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_KEYFRAME *keyframe);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, AddTransitionAtKeyframe)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddTransitionAtKeyframe )( 
@@ -6617,6 +6909,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_KEYFRAME startKeyframe);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, AddTransitionBetweenKeyframes)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *AddTransitionBetweenKeyframes )( 
@@ -6630,6 +6923,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_KEYFRAME endKeyframe);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, RepeatBetweenKeyframes)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *RepeatBetweenKeyframes )( 
@@ -6649,6 +6943,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][defaultvalue][in] */ 
             _In_  BOOL fRegisterForNextAnimationEvent);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, HoldVariable)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *HoldVariable )( 
@@ -6656,6 +6951,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][in] */ 
             _In_  IUIAnimationVariable2 *variable);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, SetLongestAcceptableDelay)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetLongestAcceptableDelay )( 
@@ -6663,6 +6959,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS delay);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, SetSkipDuration)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetSkipDuration )( 
@@ -6670,6 +6967,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS secondsDuration);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, Schedule)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Schedule )( 
@@ -6679,11 +6977,13 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][defaultvalue][out] */ 
             _Out_opt_  UI_ANIMATION_SCHEDULING_RESULT *schedulingResult);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, Conclude)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Conclude )( 
             IUIAnimationStoryboard2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, Finish)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Finish )( 
@@ -6691,11 +6991,13 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][in] */ 
             _In_  UI_ANIMATION_SECONDS completionDeadline);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, Abandon)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *Abandon )( 
             IUIAnimationStoryboard2 * This);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, SetTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetTag )( 
@@ -6705,6 +7007,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][in] */ 
             _In_  UINT32 id);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, GetTag)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetTag )( 
@@ -6714,6 +7017,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][out] */ 
             _Out_opt_  UINT32 *id);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, GetStatus)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetStatus )( 
@@ -6721,6 +7025,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][retval][out] */ 
             _Out_  UI_ANIMATION_STORYBOARD_STATUS *status);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, GetElapsedTime)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *GetElapsedTime )( 
@@ -6728,6 +7033,7 @@ EXTERN_C const IID IID_IUIAnimationStoryboard2;
             /* [annotation][out] */ 
             _Out_  UI_ANIMATION_SECONDS *elapsedTime);
         
+        DECLSPEC_XFGVIRT(IUIAnimationStoryboard2, SetStoryboardEventHandler)
         /* [annotation] */ 
         _Check_return_
         HRESULT ( STDMETHODCALLTYPE *SetStoryboardEventHandler )( 

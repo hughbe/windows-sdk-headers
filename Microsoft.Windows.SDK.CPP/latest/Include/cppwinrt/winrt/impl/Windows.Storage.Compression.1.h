@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.0.h"
 #include "winrt/impl/Windows.Storage.Streams.0.h"
 #include "winrt/impl/Windows.Storage.Compression.0.h"
-namespace winrt::Windows::Storage::Compression
+WINRT_EXPORT namespace winrt::Windows::Storage::Compression
 {
     struct __declspec(empty_bases) ICompressor :
         Windows::Foundation::IInspectable,

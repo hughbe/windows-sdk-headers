@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Automation.Peers.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Automation.1.h"
-namespace winrt::Windows::UI::Xaml::Automation
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation
 {
     struct __declspec(empty_bases) AnnotationPatternIdentifiers : Windows::UI::Xaml::Automation::IAnnotationPatternIdentifiers
     {
@@ -27,7 +27,7 @@ namespace winrt::Windows::UI::Xaml::Automation
         AutomationAnnotation(std::nullptr_t) noexcept {}
         AutomationAnnotation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::IAutomationAnnotation(ptr, take_ownership_from_abi) {}
         AutomationAnnotation();
-        AutomationAnnotation(Windows::UI::Xaml::Automation::AnnotationType const& type);
+        explicit AutomationAnnotation(Windows::UI::Xaml::Automation::AnnotationType const& type);
         AutomationAnnotation(Windows::UI::Xaml::Automation::AnnotationType const& type, Windows::UI::Xaml::UIElement const& element);
         [[nodiscard]] static auto TypeProperty();
         [[nodiscard]] static auto ElementProperty();

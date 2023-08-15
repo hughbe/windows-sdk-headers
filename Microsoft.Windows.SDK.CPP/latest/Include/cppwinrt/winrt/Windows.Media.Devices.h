@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_Devices_H
 #define WINRT_Windows_Media_Devices_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -18,295 +18,301 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Media.Devices.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedPhotoCaptureSettings<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AdvancedPhotoMode) consume_Windows_Media_Devices_IAdvancedPhotoCaptureSettings<D>::Mode() const
     {
-        Windows::Media::Devices::AdvancedPhotoMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedPhotoCaptureSettings)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::AdvancedPhotoMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedPhotoCaptureSettings)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedPhotoCaptureSettings<D>::Mode(Windows::Media::Devices::AdvancedPhotoMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IAdvancedPhotoCaptureSettings<D>::Mode(Windows::Media::Devices::AdvancedPhotoMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedPhotoCaptureSettings)->put_Mode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedPhotoControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IAdvancedPhotoControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedPhotoControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedPhotoControl<D>::SupportedModes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::AdvancedPhotoMode>) consume_Windows_Media_Devices_IAdvancedPhotoControl<D>::SupportedModes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedPhotoControl)->get_SupportedModes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::AdvancedPhotoMode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedPhotoControl<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AdvancedPhotoMode) consume_Windows_Media_Devices_IAdvancedPhotoControl<D>::Mode() const
     {
-        Windows::Media::Devices::AdvancedPhotoMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedPhotoControl)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::AdvancedPhotoMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedPhotoControl)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedPhotoControl<D>::Configure(Windows::Media::Devices::AdvancedPhotoCaptureSettings const& settings) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IAdvancedPhotoControl<D>::Configure(Windows::Media::Devices::AdvancedPhotoCaptureSettings const& settings) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedPhotoControl)->Configure(*(void**)(&settings)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController<D>::SetDeviceProperty(param::hstring const& propertyId, Windows::Foundation::IInspectable const& propertyValue) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController<D>::SetDeviceProperty(param::hstring const& propertyId, Windows::Foundation::IInspectable const& propertyValue) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController)->SetDeviceProperty(*(void**)(&propertyId), *(void**)(&propertyValue)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController<D>::GetDeviceProperty(param::hstring const& propertyId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController<D>::GetDeviceProperty(param::hstring const& propertyId) const
     {
         void* propertyValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController)->GetDeviceProperty(*(void**)(&propertyId), &propertyValue));
         return Windows::Foundation::IInspectable{ propertyValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::LowLagPhotoSequence() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::LowLagPhotoSequenceControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::LowLagPhotoSequence() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_LowLagPhotoSequence(&value));
         return Windows::Media::Devices::LowLagPhotoSequenceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::LowLagPhoto() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::LowLagPhotoControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::LowLagPhoto() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_LowLagPhoto(&value));
         return Windows::Media::Devices::LowLagPhotoControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::SceneModeControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::SceneModeControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::SceneModeControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_SceneModeControl(&value));
         return Windows::Media::Devices::SceneModeControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::TorchControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::TorchControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::TorchControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_TorchControl(&value));
         return Windows::Media::Devices::TorchControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::FlashControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::FlashControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::FlashControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_FlashControl(&value));
         return Windows::Media::Devices::FlashControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::WhiteBalanceControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::WhiteBalanceControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::WhiteBalanceControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_WhiteBalanceControl(&value));
         return Windows::Media::Devices::WhiteBalanceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::ExposureControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::ExposureControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::ExposureControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_ExposureControl(&value));
         return Windows::Media::Devices::ExposureControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::FocusControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::FocusControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::FocusControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_FocusControl(&value));
         return Windows::Media::Devices::FocusControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::ExposureCompensationControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::ExposureCompensationControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::ExposureCompensationControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_ExposureCompensationControl(&value));
         return Windows::Media::Devices::ExposureCompensationControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::IsoSpeedControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::IsoSpeedControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::IsoSpeedControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_IsoSpeedControl(&value));
         return Windows::Media::Devices::IsoSpeedControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::RegionsOfInterestControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::RegionsOfInterestControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::RegionsOfInterestControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_RegionsOfInterestControl(&value));
         return Windows::Media::Devices::RegionsOfInterestControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::PrimaryUse() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::CaptureUse) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::PrimaryUse() const
     {
-        Windows::Media::Devices::CaptureUse value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_PrimaryUse(put_abi(value)));
+        Windows::Media::Devices::CaptureUse value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->get_PrimaryUse(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::PrimaryUse(Windows::Media::Devices::CaptureUse const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::PrimaryUse(Windows::Media::Devices::CaptureUse const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2)->put_PrimaryUse(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController3<D>::VariablePhotoSequenceController() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::VariablePhotoSequenceController) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController3<D>::VariablePhotoSequenceController() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3)->get_VariablePhotoSequenceController(&value));
         return Windows::Media::Devices::Core::VariablePhotoSequenceController{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController3<D>::PhotoConfirmationControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::PhotoConfirmationControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController3<D>::PhotoConfirmationControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3)->get_PhotoConfirmationControl(&value));
         return Windows::Media::Devices::PhotoConfirmationControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController3<D>::ZoomControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::ZoomControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController3<D>::ZoomControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3)->get_ZoomControl(&value));
         return Windows::Media::Devices::ZoomControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::ExposurePriorityVideoControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::ExposurePriorityVideoControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::ExposurePriorityVideoControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4)->get_ExposurePriorityVideoControl(&value));
         return Windows::Media::Devices::ExposurePriorityVideoControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::DesiredOptimization() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaCaptureOptimization) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::DesiredOptimization() const
     {
-        Windows::Media::Devices::MediaCaptureOptimization value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4)->get_DesiredOptimization(put_abi(value)));
+        Windows::Media::Devices::MediaCaptureOptimization value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4)->get_DesiredOptimization(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::DesiredOptimization(Windows::Media::Devices::MediaCaptureOptimization const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::DesiredOptimization(Windows::Media::Devices::MediaCaptureOptimization const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4)->put_DesiredOptimization(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::HdrVideoControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::HdrVideoControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::HdrVideoControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4)->get_HdrVideoControl(&value));
         return Windows::Media::Devices::HdrVideoControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::OpticalImageStabilizationControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::OpticalImageStabilizationControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::OpticalImageStabilizationControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4)->get_OpticalImageStabilizationControl(&value));
         return Windows::Media::Devices::OpticalImageStabilizationControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::AdvancedPhotoControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AdvancedPhotoControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController4<D>::AdvancedPhotoControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4)->get_AdvancedPhotoControl(&value));
         return Windows::Media::Devices::AdvancedPhotoControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::GetDevicePropertyById(param::hstring const& propertyId, Windows::Foundation::IReference<uint32_t> const& maxPropertyValueSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::GetDevicePropertyById(param::hstring const& propertyId, Windows::Foundation::IReference<uint32_t> const& maxPropertyValueSize) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5)->GetDevicePropertyById(*(void**)(&propertyId), *(void**)(&maxPropertyValueSize), &value));
         return Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::SetDevicePropertyById(param::hstring const& propertyId, Windows::Foundation::IInspectable const& propertyValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::SetDevicePropertyById(param::hstring const& propertyId, Windows::Foundation::IInspectable const& propertyValue) const
     {
-        Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5)->SetDevicePropertyById(*(void**)(&propertyId), *(void**)(&propertyValue), put_abi(value)));
+        Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5)->SetDevicePropertyById(*(void**)(&propertyId), *(void**)(&propertyValue), reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::GetDevicePropertyByExtendedId(array_view<uint8_t const> extendedPropertyId, Windows::Foundation::IReference<uint32_t> const& maxPropertyValueSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::GetDevicePropertyByExtendedId(array_view<uint8_t const> extendedPropertyId, Windows::Foundation::IReference<uint32_t> const& maxPropertyValueSize) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5)->GetDevicePropertyByExtendedId(extendedPropertyId.size(), get_abi(extendedPropertyId), *(void**)(&maxPropertyValueSize), &value));
         return Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::SetDevicePropertyByExtendedId(array_view<uint8_t const> extendedPropertyId, array_view<uint8_t const> propertyValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController5<D>::SetDevicePropertyByExtendedId(array_view<uint8_t const> extendedPropertyId, array_view<uint8_t const> propertyValue) const
     {
-        Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5)->SetDevicePropertyByExtendedId(extendedPropertyId.size(), get_abi(extendedPropertyId), propertyValue.size(), get_abi(propertyValue), put_abi(value)));
+        Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5)->SetDevicePropertyByExtendedId(extendedPropertyId.size(), get_abi(extendedPropertyId), propertyValue.size(), get_abi(propertyValue), reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController6<D>::VideoTemporalDenoisingControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::VideoTemporalDenoisingControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController6<D>::VideoTemporalDenoisingControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6)->get_VideoTemporalDenoisingControl(&value));
         return Windows::Media::Devices::VideoTemporalDenoisingControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController7<D>::InfraredTorchControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::InfraredTorchControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController7<D>::InfraredTorchControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7)->get_InfraredTorchControl(&value));
         return Windows::Media::Devices::InfraredTorchControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController8<D>::PanelBasedOptimizationControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::PanelBasedOptimizationControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController8<D>::PanelBasedOptimizationControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8)->get_PanelBasedOptimizationControl(&value));
         return Windows::Media::Devices::PanelBasedOptimizationControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceController<D>::Muted(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::DigitalWindowControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController9<D>::DigitalWindowControl() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9)->get_DigitalWindowControl(&value));
+        return Windows::Media::Devices::DigitalWindowControl{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IAudioDeviceController<D>::Muted(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceController)->put_Muted(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceController<D>::Muted() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IAudioDeviceController<D>::Muted() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceController)->get_Muted(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceController<D>::VolumePercent(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IAudioDeviceController<D>::VolumePercent(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceController)->put_VolumePercent(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceController<D>::VolumePercent() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IAudioDeviceController<D>::VolumePercent() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceController)->get_VolumePercent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModule<D>::ClassId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IAudioDeviceModule<D>::ClassId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModule)->get_ClassId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModule<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IAudioDeviceModule<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModule)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModule<D>::InstanceId() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IAudioDeviceModule<D>::InstanceId() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModule)->get_InstanceId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModule<D>::MajorVersion() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IAudioDeviceModule<D>::MajorVersion() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModule)->get_MajorVersion(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModule<D>::MinorVersion() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IAudioDeviceModule<D>::MinorVersion() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModule)->get_MinorVersion(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModule<D>::SendCommandAsync(Windows::Storage::Streams::IBuffer const& Command) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Devices::ModuleCommandResult>) consume_Windows_Media_Devices_IAudioDeviceModule<D>::SendCommandAsync(Windows::Storage::Streams::IBuffer const& Command) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModule)->SendCommandAsync(*(void**)(&Command), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Devices::ModuleCommandResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModuleNotificationEventArgs<D>::Module() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AudioDeviceModule) consume_Windows_Media_Devices_IAudioDeviceModuleNotificationEventArgs<D>::Module() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs)->get_Module(&value));
         return Windows::Media::Devices::AudioDeviceModule{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModuleNotificationEventArgs<D>::NotificationData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Media_Devices_IAudioDeviceModuleNotificationEventArgs<D>::NotificationData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs)->get_NotificationData(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::ModuleNotificationReceived(Windows::Foundation::TypedEventHandler<Windows::Media::Devices::AudioDeviceModulesManager, Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::ModuleNotificationReceived(Windows::Foundation::TypedEventHandler<Windows::Media::Devices::AudioDeviceModulesManager, Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModulesManager)->add_ModuleNotificationReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -314,57 +320,57 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ModuleNotificationReceived_revoker>(this, ModuleNotificationReceived(handler));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::ModuleNotificationReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::ModuleNotificationReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModulesManager)->remove_ModuleNotificationReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::FindAllById(param::hstring const& moduleId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::AudioDeviceModule>) consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::FindAllById(param::hstring const& moduleId) const
     {
         void* modules{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModulesManager)->FindAllById(*(void**)(&moduleId), &modules));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::AudioDeviceModule>{ modules, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::FindAll() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::AudioDeviceModule>) consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::FindAll() const
     {
         void* modules{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModulesManager)->FindAll(&modules));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::AudioDeviceModule>{ modules, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IAudioDeviceModulesManagerFactory<D>::Create(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AudioDeviceModulesManager) consume_Windows_Media_Devices_IAudioDeviceModulesManagerFactory<D>::Create(param::hstring const& deviceId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAudioDeviceModulesManagerFactory)->Create(*(void**)(&deviceId), &result));
         return Windows::Media::Devices::AudioDeviceModulesManager{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::IndicateNewIncomingCall(bool enableRinger, param::hstring const& callerId) const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Devices_ICallControl<D>::IndicateNewIncomingCall(bool enableRinger, param::hstring const& callerId) const
     {
-        uint64_t callToken;
+        uint64_t callToken{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->IndicateNewIncomingCall(enableRinger, *(void**)(&callerId), &callToken));
         return callToken;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::IndicateNewOutgoingCall() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Devices_ICallControl<D>::IndicateNewOutgoingCall() const
     {
-        uint64_t callToken;
+        uint64_t callToken{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->IndicateNewOutgoingCall(&callToken));
         return callToken;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::IndicateActiveCall(uint64_t callToken) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::IndicateActiveCall(uint64_t callToken) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->IndicateActiveCall(callToken));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::EndCall(uint64_t callToken) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::EndCall(uint64_t callToken) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->EndCall(callToken));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::HasRinger() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ICallControl<D>::HasRinger() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->get_HasRinger(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::AnswerRequested(Windows::Media::Devices::CallControlEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::AnswerRequested(Windows::Media::Devices::CallControlEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->add_AnswerRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -372,13 +378,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AnswerRequested_revoker>(this, AnswerRequested(handler));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::AnswerRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::AnswerRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->remove_AnswerRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::HangUpRequested(Windows::Media::Devices::CallControlEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::HangUpRequested(Windows::Media::Devices::CallControlEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->add_HangUpRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -386,13 +392,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, HangUpRequested_revoker>(this, HangUpRequested(handler));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::HangUpRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::HangUpRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->remove_HangUpRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::DialRequested(Windows::Media::Devices::DialRequestedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::DialRequested(Windows::Media::Devices::DialRequestedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->add_DialRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -400,13 +406,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DialRequested_revoker>(this, DialRequested(handler));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::DialRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::DialRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->remove_DialRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::RedialRequested(Windows::Media::Devices::RedialRequestedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::RedialRequested(Windows::Media::Devices::RedialRequestedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->add_RedialRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -414,13 +420,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RedialRequested_revoker>(this, RedialRequested(handler));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::RedialRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::RedialRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->remove_RedialRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::KeypadPressed(Windows::Media::Devices::KeypadPressedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::KeypadPressed(Windows::Media::Devices::KeypadPressedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->add_KeypadPressed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -428,13 +434,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, KeypadPressed_revoker>(this, KeypadPressed(handler));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::KeypadPressed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::KeypadPressed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->remove_KeypadPressed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::AudioTransferRequested(Windows::Media::Devices::CallControlEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::AudioTransferRequested(Windows::Media::Devices::CallControlEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->add_AudioTransferRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -442,797 +448,908 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AudioTransferRequested_revoker>(this, AudioTransferRequested(handler));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControl<D>::AudioTransferRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::AudioTransferRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControl)->remove_AudioTransferRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControlStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::CallControl) consume_Windows_Media_Devices_ICallControlStatics<D>::GetDefault() const
     {
         void* callControl{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControlStatics)->GetDefault(&callControl));
         return Windows::Media::Devices::CallControl{ callControl, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_ICallControlStatics<D>::FromId(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::CallControl) consume_Windows_Media_Devices_ICallControlStatics<D>::FromId(param::hstring const& deviceId) const
     {
         void* callControl{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControlStatics)->FromId(*(void**)(&deviceId), &callControl));
         return Windows::Media::Devices::CallControl{ callControl, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IDefaultAudioDeviceChangedEventArgs<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IDefaultAudioDeviceChangedEventArgs<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IDefaultAudioDeviceChangedEventArgs<D>::Role() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AudioDeviceRole) consume_Windows_Media_Devices_IDefaultAudioDeviceChangedEventArgs<D>::Role() const
     {
-        Windows::Media::Devices::AudioDeviceRole value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs)->get_Role(put_abi(value)));
+        Windows::Media::Devices::AudioDeviceRole value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs)->get_Role(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IDialRequestedEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IDialRequestedEventArgs<D>::Handled() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDialRequestedEventArgs)->Handled());
     }
-    template <typename D> auto consume_Windows_Media_Devices_IDialRequestedEventArgs<D>::Contact() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Media_Devices_IDialRequestedEventArgs<D>::Contact() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDialRequestedEventArgs)->get_Contact(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureCompensationControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IDigitalWindowBounds<D>::NormalizedOriginTop() const
     {
-        bool value;
+        double value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowBounds)->get_NormalizedOriginTop(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IDigitalWindowBounds<D>::NormalizedOriginTop(double value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowBounds)->put_NormalizedOriginTop(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IDigitalWindowBounds<D>::NormalizedOriginLeft() const
+    {
+        double value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowBounds)->get_NormalizedOriginLeft(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IDigitalWindowBounds<D>::NormalizedOriginLeft(double value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowBounds)->put_NormalizedOriginLeft(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IDigitalWindowBounds<D>::Scale() const
+    {
+        double value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowBounds)->get_Scale(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IDigitalWindowBounds<D>::Scale(double value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowBounds)->put_Scale(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Devices_IDigitalWindowCapability<D>::Width() const
+    {
+        int32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowCapability)->get_Width(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Devices_IDigitalWindowCapability<D>::Height() const
+    {
+        int32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowCapability)->get_Height(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IDigitalWindowCapability<D>::MinScaleValue() const
+    {
+        double value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowCapability)->get_MinScaleValue(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IDigitalWindowCapability<D>::MaxScaleValue() const
+    {
+        double value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowCapability)->get_MaxScaleValue(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IDigitalWindowCapability<D>::MinScaleValueWithoutUpsampling() const
+    {
+        double value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowCapability)->get_MinScaleValueWithoutUpsampling(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_Media_Devices_IDigitalWindowCapability<D>::NormalizedFieldOfViewLimit() const
+    {
+        Windows::Foundation::Rect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowCapability)->get_NormalizedFieldOfViewLimit(put_abi(value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IDigitalWindowControl<D>::IsSupported() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowControl)->get_IsSupported(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(com_array<Windows::Media::Devices::DigitalWindowMode>) consume_Windows_Media_Devices_IDigitalWindowControl<D>::SupportedModes() const
+    {
+        uint32_t value_impl_size{};
+        int32_t* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowControl)->get_SupportedModes(&value_impl_size, &value));
+        return com_array<Windows::Media::Devices::DigitalWindowMode>{ value, value_impl_size, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::DigitalWindowMode) consume_Windows_Media_Devices_IDigitalWindowControl<D>::CurrentMode() const
+    {
+        Windows::Media::Devices::DigitalWindowMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowControl)->get_CurrentMode(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::DigitalWindowBounds) consume_Windows_Media_Devices_IDigitalWindowControl<D>::GetBounds() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowControl)->GetBounds(&result));
+        return Windows::Media::Devices::DigitalWindowBounds{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IDigitalWindowControl<D>::Configure(Windows::Media::Devices::DigitalWindowMode const& digitalWindowMode) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowControl)->Configure(static_cast<int32_t>(digitalWindowMode)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IDigitalWindowControl<D>::Configure(Windows::Media::Devices::DigitalWindowMode const& digitalWindowMode, Windows::Media::Devices::DigitalWindowBounds const& digitalWindowBounds) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowControl)->ConfigureWithBounds(static_cast<int32_t>(digitalWindowMode), *(void**)(&digitalWindowBounds)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::DigitalWindowCapability>) consume_Windows_Media_Devices_IDigitalWindowControl<D>::SupportedCapabilities() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowControl)->get_SupportedCapabilities(&value));
+        return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::DigitalWindowCapability>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::DigitalWindowCapability) consume_Windows_Media_Devices_IDigitalWindowControl<D>::GetCapabilityForSize(int32_t width, int32_t height) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IDigitalWindowControl)->GetCapabilityForSize(width, height, &result));
+        return Windows::Media::Devices::DigitalWindowCapability{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IExposureCompensationControl<D>::Supported() const
+    {
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureCompensationControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureCompensationControl<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IExposureCompensationControl<D>::Min() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureCompensationControl)->get_Min(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureCompensationControl<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IExposureCompensationControl<D>::Max() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureCompensationControl)->get_Max(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureCompensationControl<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IExposureCompensationControl<D>::Step() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureCompensationControl)->get_Step(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureCompensationControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IExposureCompensationControl<D>::Value() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureCompensationControl)->get_Value(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureCompensationControl<D>::SetValueAsync(float value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IExposureCompensationControl<D>::SetValueAsync(float value) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureCompensationControl)->SetValueAsync(value, &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IExposureControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureControl<D>::Auto() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IExposureControl<D>::Auto() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureControl)->get_Auto(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureControl<D>::SetAutoAsync(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IExposureControl<D>::SetAutoAsync(bool value) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureControl)->SetAutoAsync(value, &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureControl<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Devices_IExposureControl<D>::Min() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureControl)->get_Min(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureControl<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Devices_IExposureControl<D>::Max() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureControl)->get_Max(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureControl<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Devices_IExposureControl<D>::Step() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureControl)->get_Step(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Devices_IExposureControl<D>::Value() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureControl)->get_Value(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposureControl<D>::SetValueAsync(Windows::Foundation::TimeSpan const& shutterDuration) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IExposureControl<D>::SetValueAsync(Windows::Foundation::TimeSpan const& shutterDuration) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposureControl)->SetValueAsync(impl::bind_in(shutterDuration), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposurePriorityVideoControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IExposurePriorityVideoControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposurePriorityVideoControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposurePriorityVideoControl<D>::Enabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IExposurePriorityVideoControl<D>::Enabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposurePriorityVideoControl)->get_Enabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IExposurePriorityVideoControl<D>::Enabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IExposurePriorityVideoControl<D>::Enabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IExposurePriorityVideoControl)->put_Enabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFlashControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::PowerSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFlashControl<D>::PowerSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->get_PowerSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::RedEyeReductionSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFlashControl<D>::RedEyeReductionSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->get_RedEyeReductionSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::Enabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFlashControl<D>::Enabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->get_Enabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::Enabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFlashControl<D>::Enabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->put_Enabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::Auto() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFlashControl<D>::Auto() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->get_Auto(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::Auto(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFlashControl<D>::Auto(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->put_Auto(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::RedEyeReduction() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFlashControl<D>::RedEyeReduction() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->get_RedEyeReduction(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::RedEyeReduction(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFlashControl<D>::RedEyeReduction(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->put_RedEyeReduction(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::PowerPercent() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IFlashControl<D>::PowerPercent() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->get_PowerPercent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl<D>::PowerPercent(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFlashControl<D>::PowerPercent(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl)->put_PowerPercent(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl2<D>::AssistantLightSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFlashControl2<D>::AssistantLightSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl2)->get_AssistantLightSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl2<D>::AssistantLightEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFlashControl2<D>::AssistantLightEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl2)->get_AssistantLightEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFlashControl2<D>::AssistantLightEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFlashControl2<D>::AssistantLightEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFlashControl2)->put_AssistantLightEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFocusControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::SupportedPresets() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::FocusPreset>) consume_Windows_Media_Devices_IFocusControl<D>::SupportedPresets() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->get_SupportedPresets(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::FocusPreset>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::Preset() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::FocusPreset) consume_Windows_Media_Devices_IFocusControl<D>::Preset() const
     {
-        Windows::Media::Devices::FocusPreset value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->get_Preset(put_abi(value)));
+        Windows::Media::Devices::FocusPreset value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->get_Preset(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::SetPresetAsync(Windows::Media::Devices::FocusPreset const& preset) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IFocusControl<D>::SetPresetAsync(Windows::Media::Devices::FocusPreset const& preset) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->SetPresetAsync(static_cast<int32_t>(preset), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::SetPresetAsync(Windows::Media::Devices::FocusPreset const& preset, bool completeBeforeFocus) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IFocusControl<D>::SetPresetAsync(Windows::Media::Devices::FocusPreset const& preset, bool completeBeforeFocus) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->SetPresetWithCompletionOptionAsync(static_cast<int32_t>(preset), completeBeforeFocus, &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IFocusControl<D>::Min() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->get_Min(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IFocusControl<D>::Max() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->get_Max(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IFocusControl<D>::Step() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->get_Step(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IFocusControl<D>::Value() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->get_Value(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::SetValueAsync(uint32_t focus) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IFocusControl<D>::SetValueAsync(uint32_t focus) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->SetValueAsync(focus, &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl<D>::FocusAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IFocusControl<D>::FocusAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl)->FocusAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::FocusChangedSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFocusControl2<D>::FocusChangedSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->get_FocusChangedSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::WaitForFocusSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFocusControl2<D>::WaitForFocusSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->get_WaitForFocusSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::SupportedFocusModes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::FocusMode>) consume_Windows_Media_Devices_IFocusControl2<D>::SupportedFocusModes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->get_SupportedFocusModes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::FocusMode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::SupportedFocusDistances() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::ManualFocusDistance>) consume_Windows_Media_Devices_IFocusControl2<D>::SupportedFocusDistances() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->get_SupportedFocusDistances(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::ManualFocusDistance>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::SupportedFocusRanges() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::AutoFocusRange>) consume_Windows_Media_Devices_IFocusControl2<D>::SupportedFocusRanges() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->get_SupportedFocusRanges(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::AutoFocusRange>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::FocusMode) consume_Windows_Media_Devices_IFocusControl2<D>::Mode() const
     {
-        Windows::Media::Devices::FocusMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::FocusMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::FocusState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaCaptureFocusState) consume_Windows_Media_Devices_IFocusControl2<D>::FocusState() const
     {
-        Windows::Media::Devices::MediaCaptureFocusState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->get_FocusState(put_abi(value)));
+        Windows::Media::Devices::MediaCaptureFocusState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->get_FocusState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::UnlockAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IFocusControl2<D>::UnlockAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->UnlockAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::LockAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IFocusControl2<D>::LockAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->LockAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusControl2<D>::Configure(Windows::Media::Devices::FocusSettings const& settings) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFocusControl2<D>::Configure(Windows::Media::Devices::FocusSettings const& settings) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusControl2)->Configure(*(void**)(&settings)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::FocusMode) consume_Windows_Media_Devices_IFocusSettings<D>::Mode() const
     {
-        Windows::Media::Devices::FocusMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::FocusMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::Mode(Windows::Media::Devices::FocusMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFocusSettings<D>::Mode(Windows::Media::Devices::FocusMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->put_Mode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::AutoFocusRange() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AutoFocusRange) consume_Windows_Media_Devices_IFocusSettings<D>::AutoFocusRange() const
     {
-        Windows::Media::Devices::AutoFocusRange value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->get_AutoFocusRange(put_abi(value)));
+        Windows::Media::Devices::AutoFocusRange value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->get_AutoFocusRange(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::AutoFocusRange(Windows::Media::Devices::AutoFocusRange const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFocusSettings<D>::AutoFocusRange(Windows::Media::Devices::AutoFocusRange const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->put_AutoFocusRange(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Devices_IFocusSettings<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->get_Value(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::Value(Windows::Foundation::IReference<uint32_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFocusSettings<D>::Value(Windows::Foundation::IReference<uint32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->put_Value(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::Distance() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Media::Devices::ManualFocusDistance>) consume_Windows_Media_Devices_IFocusSettings<D>::Distance() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->get_Distance(&value));
         return Windows::Foundation::IReference<Windows::Media::Devices::ManualFocusDistance>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::Distance(Windows::Foundation::IReference<Windows::Media::Devices::ManualFocusDistance> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFocusSettings<D>::Distance(Windows::Foundation::IReference<Windows::Media::Devices::ManualFocusDistance> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->put_Distance(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::WaitForFocus() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFocusSettings<D>::WaitForFocus() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->get_WaitForFocus(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::WaitForFocus(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFocusSettings<D>::WaitForFocus(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->put_WaitForFocus(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::DisableDriverFallback() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IFocusSettings<D>::DisableDriverFallback() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->get_DisableDriverFallback(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IFocusSettings<D>::DisableDriverFallback(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IFocusSettings<D>::DisableDriverFallback(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IFocusSettings)->put_DisableDriverFallback(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IHdrVideoControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IHdrVideoControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IHdrVideoControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IHdrVideoControl<D>::SupportedModes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::HdrVideoMode>) consume_Windows_Media_Devices_IHdrVideoControl<D>::SupportedModes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IHdrVideoControl)->get_SupportedModes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::HdrVideoMode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IHdrVideoControl<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::HdrVideoMode) consume_Windows_Media_Devices_IHdrVideoControl<D>::Mode() const
     {
-        Windows::Media::Devices::HdrVideoMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IHdrVideoControl)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::HdrVideoMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IHdrVideoControl)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IHdrVideoControl<D>::Mode(Windows::Media::Devices::HdrVideoMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IHdrVideoControl<D>::Mode(Windows::Media::Devices::HdrVideoMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IHdrVideoControl)->put_Mode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IInfraredTorchControl<D>::IsSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IInfraredTorchControl<D>::IsSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_IsSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IInfraredTorchControl<D>::SupportedModes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::InfraredTorchMode>) consume_Windows_Media_Devices_IInfraredTorchControl<D>::SupportedModes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_SupportedModes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::InfraredTorchMode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IInfraredTorchControl<D>::CurrentMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::InfraredTorchMode) consume_Windows_Media_Devices_IInfraredTorchControl<D>::CurrentMode() const
     {
-        Windows::Media::Devices::InfraredTorchMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_CurrentMode(put_abi(value)));
+        Windows::Media::Devices::InfraredTorchMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_CurrentMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IInfraredTorchControl<D>::CurrentMode(Windows::Media::Devices::InfraredTorchMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IInfraredTorchControl<D>::CurrentMode(Windows::Media::Devices::InfraredTorchMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->put_CurrentMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IInfraredTorchControl<D>::MinPower() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Devices_IInfraredTorchControl<D>::MinPower() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_MinPower(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IInfraredTorchControl<D>::MaxPower() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Devices_IInfraredTorchControl<D>::MaxPower() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_MaxPower(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IInfraredTorchControl<D>::PowerStep() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Devices_IInfraredTorchControl<D>::PowerStep() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_PowerStep(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IInfraredTorchControl<D>::Power() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Devices_IInfraredTorchControl<D>::Power() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->get_Power(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IInfraredTorchControl<D>::Power(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IInfraredTorchControl<D>::Power(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IInfraredTorchControl)->put_Power(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IIsoSpeedControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl<D>::SupportedPresets() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::IsoSpeedPreset>) consume_Windows_Media_Devices_IIsoSpeedControl<D>::SupportedPresets() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl)->get_SupportedPresets(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::IsoSpeedPreset>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl<D>::Preset() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::IsoSpeedPreset) consume_Windows_Media_Devices_IIsoSpeedControl<D>::Preset() const
     {
-        Windows::Media::Devices::IsoSpeedPreset value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl)->get_Preset(put_abi(value)));
+        Windows::Media::Devices::IsoSpeedPreset value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl)->get_Preset(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl<D>::SetPresetAsync(Windows::Media::Devices::IsoSpeedPreset const& preset) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IIsoSpeedControl<D>::SetPresetAsync(Windows::Media::Devices::IsoSpeedPreset const& preset) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl)->SetPresetAsync(static_cast<int32_t>(preset), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Min() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl2)->get_Min(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Max() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl2)->get_Max(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Step() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl2)->get_Step(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Value() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl2)->get_Value(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl2<D>::SetValueAsync(uint32_t isoSpeed) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IIsoSpeedControl2<D>::SetValueAsync(uint32_t isoSpeed) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl2)->SetValueAsync(isoSpeed, &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Auto() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IIsoSpeedControl2<D>::Auto() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl2)->get_Auto(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IIsoSpeedControl2<D>::SetAutoAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IIsoSpeedControl2<D>::SetAutoAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IIsoSpeedControl2)->SetAutoAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IKeypadPressedEventArgs<D>::TelephonyKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::TelephonyKey) consume_Windows_Media_Devices_IKeypadPressedEventArgs<D>::TelephonyKey() const
     {
-        Windows::Media::Devices::TelephonyKey telephonyKey;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IKeypadPressedEventArgs)->get_TelephonyKey(put_abi(telephonyKey)));
+        Windows::Media::Devices::TelephonyKey telephonyKey{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IKeypadPressedEventArgs)->get_TelephonyKey(reinterpret_cast<int32_t*>(&telephonyKey)));
         return telephonyKey;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoControl<D>::GetHighestConcurrentFrameRate(Windows::Media::MediaProperties::IMediaEncodingProperties const& captureProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaRatio) consume_Windows_Media_Devices_ILowLagPhotoControl<D>::GetHighestConcurrentFrameRate(Windows::Media::MediaProperties::IMediaEncodingProperties const& captureProperties) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->GetHighestConcurrentFrameRate(*(void**)(&captureProperties), &value));
         return Windows::Media::MediaProperties::MediaRatio{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoControl<D>::GetCurrentFrameRate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaRatio) consume_Windows_Media_Devices_ILowLagPhotoControl<D>::GetCurrentFrameRate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->GetCurrentFrameRate(&value));
         return Windows::Media::MediaProperties::MediaRatio{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoControl<D>::ThumbnailEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ILowLagPhotoControl<D>::ThumbnailEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->get_ThumbnailEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoControl<D>::ThumbnailEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ILowLagPhotoControl<D>::ThumbnailEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->put_ThumbnailEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoControl<D>::ThumbnailFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaThumbnailFormat) consume_Windows_Media_Devices_ILowLagPhotoControl<D>::ThumbnailFormat() const
     {
-        Windows::Media::MediaProperties::MediaThumbnailFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->get_ThumbnailFormat(put_abi(value)));
+        Windows::Media::MediaProperties::MediaThumbnailFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->get_ThumbnailFormat(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoControl<D>::ThumbnailFormat(Windows::Media::MediaProperties::MediaThumbnailFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ILowLagPhotoControl<D>::ThumbnailFormat(Windows::Media::MediaProperties::MediaThumbnailFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->put_ThumbnailFormat(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoControl<D>::DesiredThumbnailSize() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_ILowLagPhotoControl<D>::DesiredThumbnailSize() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->get_DesiredThumbnailSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoControl<D>::DesiredThumbnailSize(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ILowLagPhotoControl<D>::DesiredThumbnailSize(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->put_DesiredThumbnailSize(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoControl<D>::HardwareAcceleratedThumbnailSupported() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_ILowLagPhotoControl<D>::HardwareAcceleratedThumbnailSupported() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoControl)->get_HardwareAcceleratedThumbnailSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::MaxPastPhotos() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::MaxPastPhotos() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_MaxPastPhotos(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::MaxPhotosPerSecond() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::MaxPhotosPerSecond() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_MaxPhotosPerSecond(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::PastPhotoLimit() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::PastPhotoLimit() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_PastPhotoLimit(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::PastPhotoLimit(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::PastPhotoLimit(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->put_PastPhotoLimit(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::PhotosPerSecondLimit() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::PhotosPerSecondLimit() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_PhotosPerSecondLimit(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::PhotosPerSecondLimit(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::PhotosPerSecondLimit(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->put_PhotosPerSecondLimit(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::GetHighestConcurrentFrameRate(Windows::Media::MediaProperties::IMediaEncodingProperties const& captureProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaRatio) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::GetHighestConcurrentFrameRate(Windows::Media::MediaProperties::IMediaEncodingProperties const& captureProperties) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->GetHighestConcurrentFrameRate(*(void**)(&captureProperties), &value));
         return Windows::Media::MediaProperties::MediaRatio{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::GetCurrentFrameRate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaRatio) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::GetCurrentFrameRate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->GetCurrentFrameRate(&value));
         return Windows::Media::MediaProperties::MediaRatio{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::ThumbnailEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::ThumbnailEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_ThumbnailEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::ThumbnailEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::ThumbnailEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->put_ThumbnailEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::ThumbnailFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaThumbnailFormat) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::ThumbnailFormat() const
     {
-        Windows::Media::MediaProperties::MediaThumbnailFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_ThumbnailFormat(put_abi(value)));
+        Windows::Media::MediaProperties::MediaThumbnailFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_ThumbnailFormat(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::ThumbnailFormat(Windows::Media::MediaProperties::MediaThumbnailFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::ThumbnailFormat(Windows::Media::MediaProperties::MediaThumbnailFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->put_ThumbnailFormat(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::DesiredThumbnailSize() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::DesiredThumbnailSize() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_DesiredThumbnailSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::DesiredThumbnailSize(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::DesiredThumbnailSize(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->put_DesiredThumbnailSize(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::HardwareAcceleratedThumbnailSupported() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_ILowLagPhotoSequenceControl<D>::HardwareAcceleratedThumbnailSupported() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ILowLagPhotoSequenceControl)->get_HardwareAcceleratedThumbnailSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControl<D>::Capabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControlCapabilities) consume_Windows_Media_Devices_IMediaDeviceControl<D>::Capabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControl)->get_Capabilities(&value));
         return Windows::Media::Devices::MediaDeviceControlCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControl<D>::TryGetValue(double& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IMediaDeviceControl<D>::TryGetValue(double& value) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControl)->TryGetValue(&value, &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControl<D>::TrySetValue(double value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IMediaDeviceControl<D>::TrySetValue(double value) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControl)->TrySetValue(value, &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControl<D>::TryGetAuto(bool& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IMediaDeviceControl<D>::TryGetAuto(bool& value) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControl)->TryGetAuto(&value, &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControl<D>::TrySetAuto(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IMediaDeviceControl<D>::TrySetAuto(bool value) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControl)->TrySetAuto(value, &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControlCapabilities)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Min() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControlCapabilities)->get_Min(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Max() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControlCapabilities)->get_Max(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Step() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControlCapabilities)->get_Step(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Default() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::Default() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControlCapabilities)->get_Default(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::AutoModeSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IMediaDeviceControlCapabilities<D>::AutoModeSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceControlCapabilities)->get_AutoModeSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceController<D>::GetAvailableMediaStreamProperties(Windows::Media::Capture::MediaStreamType const& mediaStreamType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::MediaProperties::IMediaEncodingProperties>) consume_Windows_Media_Devices_IMediaDeviceController<D>::GetAvailableMediaStreamProperties(Windows::Media::Capture::MediaStreamType const& mediaStreamType) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceController)->GetAvailableMediaStreamProperties(static_cast<int32_t>(mediaStreamType), &value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::MediaProperties::IMediaEncodingProperties>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceController<D>::GetMediaStreamProperties(Windows::Media::Capture::MediaStreamType const& mediaStreamType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::IMediaEncodingProperties) consume_Windows_Media_Devices_IMediaDeviceController<D>::GetMediaStreamProperties(Windows::Media::Capture::MediaStreamType const& mediaStreamType) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceController)->GetMediaStreamProperties(static_cast<int32_t>(mediaStreamType), &value));
         return Windows::Media::MediaProperties::IMediaEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceController<D>::SetMediaStreamPropertiesAsync(Windows::Media::Capture::MediaStreamType const& mediaStreamType, Windows::Media::MediaProperties::IMediaEncodingProperties const& mediaEncodingProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IMediaDeviceController<D>::SetMediaStreamPropertiesAsync(Windows::Media::Capture::MediaStreamType const& mediaStreamType, Windows::Media::MediaProperties::IMediaEncodingProperties const& mediaEncodingProperties) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceController)->SetMediaStreamPropertiesAsync(static_cast<int32_t>(mediaStreamType), *(void**)(&mediaEncodingProperties), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetAudioCaptureSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetAudioCaptureSelector() const
     {
         void* selector{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceStatics)->GetAudioCaptureSelector(&selector));
         return hstring{ selector, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetAudioRenderSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetAudioRenderSelector() const
     {
         void* selector{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceStatics)->GetAudioRenderSelector(&selector));
         return hstring{ selector, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetVideoCaptureSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetVideoCaptureSelector() const
     {
         void* selector{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceStatics)->GetVideoCaptureSelector(&selector));
         return hstring{ selector, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetDefaultAudioCaptureId(Windows::Media::Devices::AudioDeviceRole const& role) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetDefaultAudioCaptureId(Windows::Media::Devices::AudioDeviceRole const& role) const
     {
         void* deviceId{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceStatics)->GetDefaultAudioCaptureId(static_cast<int32_t>(role), &deviceId));
         return hstring{ deviceId, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetDefaultAudioRenderId(Windows::Media::Devices::AudioDeviceRole const& role) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::GetDefaultAudioRenderId(Windows::Media::Devices::AudioDeviceRole const& role) const
     {
         void* deviceId{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceStatics)->GetDefaultAudioRenderId(static_cast<int32_t>(role), &deviceId));
         return hstring{ deviceId, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioCaptureDeviceChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioCaptureDeviceChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> const& handler) const
     {
-        winrt::event_token cookie;
+        winrt::event_token cookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceStatics)->add_DefaultAudioCaptureDeviceChanged(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
@@ -1240,13 +1357,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DefaultAudioCaptureDeviceChanged_revoker>(this, DefaultAudioCaptureDeviceChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioCaptureDeviceChanged(winrt::event_token const& cookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioCaptureDeviceChanged(winrt::event_token const& cookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceStatics)->remove_DefaultAudioCaptureDeviceChanged(impl::bind_in(cookie)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioRenderDeviceChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioRenderDeviceChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> const& handler) const
     {
-        winrt::event_token cookie;
+        winrt::event_token cookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceStatics)->add_DefaultAudioRenderDeviceChanged(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
@@ -1254,483 +1371,483 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DefaultAudioRenderDeviceChanged_revoker>(this, DefaultAudioRenderDeviceChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioRenderDeviceChanged(winrt::event_token const& cookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioRenderDeviceChanged(winrt::event_token const& cookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::IMediaDeviceStatics)->remove_DefaultAudioRenderDeviceChanged(impl::bind_in(cookie)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IModuleCommandResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::SendCommandStatus) consume_Windows_Media_Devices_IModuleCommandResult<D>::Status() const
     {
-        Windows::Media::Devices::SendCommandStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IModuleCommandResult)->get_Status(put_abi(value)));
+        Windows::Media::Devices::SendCommandStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IModuleCommandResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IModuleCommandResult<D>::Result() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Media_Devices_IModuleCommandResult<D>::Result() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IModuleCommandResult)->get_Result(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IOpticalImageStabilizationControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IOpticalImageStabilizationControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IOpticalImageStabilizationControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IOpticalImageStabilizationControl<D>::SupportedModes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::OpticalImageStabilizationMode>) consume_Windows_Media_Devices_IOpticalImageStabilizationControl<D>::SupportedModes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IOpticalImageStabilizationControl)->get_SupportedModes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::OpticalImageStabilizationMode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IOpticalImageStabilizationControl<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::OpticalImageStabilizationMode) consume_Windows_Media_Devices_IOpticalImageStabilizationControl<D>::Mode() const
     {
-        Windows::Media::Devices::OpticalImageStabilizationMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IOpticalImageStabilizationControl)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::OpticalImageStabilizationMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IOpticalImageStabilizationControl)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IOpticalImageStabilizationControl<D>::Mode(Windows::Media::Devices::OpticalImageStabilizationMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IOpticalImageStabilizationControl<D>::Mode(Windows::Media::Devices::OpticalImageStabilizationMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IOpticalImageStabilizationControl)->put_Mode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IPanelBasedOptimizationControl<D>::IsSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IPanelBasedOptimizationControl<D>::IsSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPanelBasedOptimizationControl)->get_IsSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IPanelBasedOptimizationControl<D>::Panel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Enumeration::Panel) consume_Windows_Media_Devices_IPanelBasedOptimizationControl<D>::Panel() const
     {
-        Windows::Devices::Enumeration::Panel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPanelBasedOptimizationControl)->get_Panel(put_abi(value)));
+        Windows::Devices::Enumeration::Panel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPanelBasedOptimizationControl)->get_Panel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IPanelBasedOptimizationControl<D>::Panel(Windows::Devices::Enumeration::Panel const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IPanelBasedOptimizationControl<D>::Panel(Windows::Devices::Enumeration::Panel const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPanelBasedOptimizationControl)->put_Panel(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::Supported() const
     {
-        bool pbSupported;
+        bool pbSupported{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPhotoConfirmationControl)->get_Supported(&pbSupported));
         return pbSupported;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::Enabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::Enabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPhotoConfirmationControl)->get_Enabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::Enabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::Enabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPhotoConfirmationControl)->put_Enabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::PixelFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaPixelFormat) consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::PixelFormat() const
     {
-        Windows::Media::MediaProperties::MediaPixelFormat format;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPhotoConfirmationControl)->get_PixelFormat(put_abi(format)));
+        Windows::Media::MediaProperties::MediaPixelFormat format{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPhotoConfirmationControl)->get_PixelFormat(reinterpret_cast<int32_t*>(&format)));
         return format;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::PixelFormat(Windows::Media::MediaProperties::MediaPixelFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IPhotoConfirmationControl<D>::PixelFormat(Windows::Media::MediaProperties::MediaPixelFormat const& format) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IPhotoConfirmationControl)->put_PixelFormat(static_cast<int32_t>(format)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRedialRequestedEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IRedialRequestedEventArgs<D>::Handled() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRedialRequestedEventArgs)->Handled());
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoFocusEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoFocusEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest)->get_AutoFocusEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoFocusEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoFocusEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest)->put_AutoFocusEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoWhiteBalanceEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoWhiteBalanceEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest)->get_AutoWhiteBalanceEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoWhiteBalanceEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoWhiteBalanceEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest)->put_AutoWhiteBalanceEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoExposureEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoExposureEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest)->get_AutoExposureEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoExposureEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IRegionOfInterest<D>::AutoExposureEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest)->put_AutoExposureEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest<D>::Bounds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_Media_Devices_IRegionOfInterest<D>::Bounds() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest)->get_Bounds(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest<D>::Bounds(Windows::Foundation::Rect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IRegionOfInterest<D>::Bounds(Windows::Foundation::Rect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest)->put_Bounds(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest2<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::RegionOfInterestType) consume_Windows_Media_Devices_IRegionOfInterest2<D>::Type() const
     {
-        Windows::Media::Devices::RegionOfInterestType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest2)->get_Type(put_abi(value)));
+        Windows::Media::Devices::RegionOfInterestType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest2)->get_Type(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest2<D>::Type(Windows::Media::Devices::RegionOfInterestType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IRegionOfInterest2<D>::Type(Windows::Media::Devices::RegionOfInterestType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest2)->put_Type(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest2<D>::BoundsNormalized() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IRegionOfInterest2<D>::BoundsNormalized() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest2)->get_BoundsNormalized(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest2<D>::BoundsNormalized(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IRegionOfInterest2<D>::BoundsNormalized(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest2)->put_BoundsNormalized(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest2<D>::Weight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IRegionOfInterest2<D>::Weight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest2)->get_Weight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionOfInterest2<D>::Weight(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IRegionOfInterest2<D>::Weight(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionOfInterest2)->put_Weight(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::MaxRegions() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::MaxRegions() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionsOfInterestControl)->get_MaxRegions(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::SetRegionsAsync(param::async_iterable<Windows::Media::Devices::RegionOfInterest> const& regions) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::SetRegionsAsync(param::async_iterable<Windows::Media::Devices::RegionOfInterest> const& regions) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionsOfInterestControl)->SetRegionsAsync(*(void**)(&regions), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::SetRegionsAsync(param::async_iterable<Windows::Media::Devices::RegionOfInterest> const& regions, bool lockValues) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::SetRegionsAsync(param::async_iterable<Windows::Media::Devices::RegionOfInterest> const& regions, bool lockValues) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionsOfInterestControl)->SetRegionsWithLockAsync(*(void**)(&regions), lockValues, &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::ClearRegionsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::ClearRegionsAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionsOfInterestControl)->ClearRegionsAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::AutoFocusSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::AutoFocusSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionsOfInterestControl)->get_AutoFocusSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::AutoWhiteBalanceSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::AutoWhiteBalanceSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionsOfInterestControl)->get_AutoWhiteBalanceSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::AutoExposureSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IRegionsOfInterestControl<D>::AutoExposureSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IRegionsOfInterestControl)->get_AutoExposureSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ISceneModeControl<D>::SupportedModes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::CaptureSceneMode>) consume_Windows_Media_Devices_ISceneModeControl<D>::SupportedModes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ISceneModeControl)->get_SupportedModes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::CaptureSceneMode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_ISceneModeControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::CaptureSceneMode) consume_Windows_Media_Devices_ISceneModeControl<D>::Value() const
     {
-        Windows::Media::Devices::CaptureSceneMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ISceneModeControl)->get_Value(put_abi(value)));
+        Windows::Media::Devices::CaptureSceneMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ISceneModeControl)->get_Value(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ISceneModeControl<D>::SetValueAsync(Windows::Media::Devices::CaptureSceneMode const& sceneMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_ISceneModeControl<D>::SetValueAsync(Windows::Media::Devices::CaptureSceneMode const& sceneMode) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ISceneModeControl)->SetValueAsync(static_cast<int32_t>(sceneMode), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_ITorchControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ITorchControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ITorchControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ITorchControl<D>::PowerSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ITorchControl<D>::PowerSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ITorchControl)->get_PowerSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ITorchControl<D>::Enabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ITorchControl<D>::Enabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ITorchControl)->get_Enabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ITorchControl<D>::Enabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ITorchControl<D>::Enabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ITorchControl)->put_Enabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_ITorchControl<D>::PowerPercent() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_ITorchControl<D>::PowerPercent() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ITorchControl)->get_PowerPercent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_ITorchControl<D>::PowerPercent(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ITorchControl<D>::PowerPercent(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ITorchControl)->put_PowerPercent(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::Brightness() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::Brightness() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_Brightness(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::Contrast() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::Contrast() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_Contrast(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::Hue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::Hue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_Hue(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::WhiteBalance() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::WhiteBalance() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_WhiteBalance(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::BacklightCompensation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::BacklightCompensation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_BacklightCompensation(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::Pan() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::Pan() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_Pan(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::Tilt() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::Tilt() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_Tilt(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::Zoom() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::Zoom() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_Zoom(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::Roll() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::Roll() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_Roll(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::Exposure() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::Exposure() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_Exposure(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::Focus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaDeviceControl) consume_Windows_Media_Devices_IVideoDeviceController<D>::Focus() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->get_Focus(&value));
         return Windows::Media::Devices::MediaDeviceControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::TrySetPowerlineFrequency(Windows::Media::Capture::PowerlineFrequency const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IVideoDeviceController<D>::TrySetPowerlineFrequency(Windows::Media::Capture::PowerlineFrequency const& value) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->TrySetPowerlineFrequency(static_cast<int32_t>(value), &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceController<D>::TryGetPowerlineFrequency(Windows::Media::Capture::PowerlineFrequency& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IVideoDeviceController<D>::TryGetPowerlineFrequency(Windows::Media::Capture::PowerlineFrequency& value) const
     {
-        bool succeeded;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->TryGetPowerlineFrequency(impl::bind_out(value), &succeeded));
+        bool succeeded{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceController)->TryGetPowerlineFrequency(reinterpret_cast<int32_t*>(&value), &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceControllerGetDevicePropertyResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyStatus) consume_Windows_Media_Devices_IVideoDeviceControllerGetDevicePropertyResult<D>::Status() const
     {
-        Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult)->get_Status(put_abi(value)));
+        Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoDeviceControllerGetDevicePropertyResult<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Media_Devices_IVideoDeviceControllerGetDevicePropertyResult<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult)->get_Value(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoTemporalDenoisingControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IVideoTemporalDenoisingControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoTemporalDenoisingControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoTemporalDenoisingControl<D>::SupportedModes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::VideoTemporalDenoisingMode>) consume_Windows_Media_Devices_IVideoTemporalDenoisingControl<D>::SupportedModes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoTemporalDenoisingControl)->get_SupportedModes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::VideoTemporalDenoisingMode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoTemporalDenoisingControl<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::VideoTemporalDenoisingMode) consume_Windows_Media_Devices_IVideoTemporalDenoisingControl<D>::Mode() const
     {
-        Windows::Media::Devices::VideoTemporalDenoisingMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoTemporalDenoisingControl)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::VideoTemporalDenoisingMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoTemporalDenoisingControl)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IVideoTemporalDenoisingControl<D>::Mode(Windows::Media::Devices::VideoTemporalDenoisingMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IVideoTemporalDenoisingControl<D>::Mode(Windows::Media::Devices::VideoTemporalDenoisingMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IVideoTemporalDenoisingControl)->put_Mode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IWhiteBalanceControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Preset() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::ColorTemperaturePreset) consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Preset() const
     {
-        Windows::Media::Devices::ColorTemperaturePreset value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IWhiteBalanceControl)->get_Preset(put_abi(value)));
+        Windows::Media::Devices::ColorTemperaturePreset value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IWhiteBalanceControl)->get_Preset(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IWhiteBalanceControl<D>::SetPresetAsync(Windows::Media::Devices::ColorTemperaturePreset const& preset) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IWhiteBalanceControl<D>::SetPresetAsync(Windows::Media::Devices::ColorTemperaturePreset const& preset) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IWhiteBalanceControl)->SetPresetAsync(static_cast<int32_t>(preset), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Min() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IWhiteBalanceControl)->get_Min(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Max() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IWhiteBalanceControl)->get_Max(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Step() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IWhiteBalanceControl)->get_Step(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_IWhiteBalanceControl<D>::Value() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IWhiteBalanceControl)->get_Value(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IWhiteBalanceControl<D>::SetValueAsync(uint32_t temperature) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Devices_IWhiteBalanceControl<D>::SetValueAsync(uint32_t temperature) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IWhiteBalanceControl)->SetValueAsync(temperature, &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomControl<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IZoomControl<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomControl<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IZoomControl<D>::Min() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl)->get_Min(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomControl<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IZoomControl<D>::Max() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl)->get_Max(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomControl<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IZoomControl<D>::Step() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl)->get_Step(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IZoomControl<D>::Value() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl)->get_Value(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomControl<D>::Value(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IZoomControl<D>::Value(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl)->put_Value(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomControl2<D>::SupportedModes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::ZoomTransitionMode>) consume_Windows_Media_Devices_IZoomControl2<D>::SupportedModes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl2)->get_SupportedModes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::ZoomTransitionMode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomControl2<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::ZoomTransitionMode) consume_Windows_Media_Devices_IZoomControl2<D>::Mode() const
     {
-        Windows::Media::Devices::ZoomTransitionMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl2)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::ZoomTransitionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl2)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomControl2<D>::Configure(Windows::Media::Devices::ZoomSettings const& settings) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IZoomControl2<D>::Configure(Windows::Media::Devices::ZoomSettings const& settings) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomControl2)->Configure(*(void**)(&settings)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomSettings<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::ZoomTransitionMode) consume_Windows_Media_Devices_IZoomSettings<D>::Mode() const
     {
-        Windows::Media::Devices::ZoomTransitionMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomSettings)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::ZoomTransitionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomSettings)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomSettings<D>::Mode(Windows::Media::Devices::ZoomTransitionMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IZoomSettings<D>::Mode(Windows::Media::Devices::ZoomTransitionMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomSettings)->put_Mode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomSettings<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_IZoomSettings<D>::Value() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomSettings)->get_Value(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_IZoomSettings<D>::Value(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IZoomSettings<D>::Value(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IZoomSettings)->put_Value(value));
     }
-    template <typename H> struct delegate<Windows::Media::Devices::CallControlEventHandler, H> : implements_delegate<Windows::Media::Devices::CallControlEventHandler, H>
+    template <typename H> struct delegate<Windows::Media::Devices::CallControlEventHandler, H> final : implements_delegate<Windows::Media::Devices::CallControlEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Media::Devices::CallControlEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -1741,7 +1858,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::Media::Devices::DialRequestedEventHandler, H> : implements_delegate<Windows::Media::Devices::DialRequestedEventHandler, H>
+    template <typename H> struct delegate<Windows::Media::Devices::DialRequestedEventHandler, H> final : implements_delegate<Windows::Media::Devices::DialRequestedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Media::Devices::DialRequestedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -1752,7 +1869,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::Media::Devices::KeypadPressedEventHandler, H> : implements_delegate<Windows::Media::Devices::KeypadPressedEventHandler, H>
+    template <typename H> struct delegate<Windows::Media::Devices::KeypadPressedEventHandler, H> final : implements_delegate<Windows::Media::Devices::KeypadPressedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Media::Devices::KeypadPressedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -1763,7 +1880,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::Media::Devices::RedialRequestedEventHandler, H> : implements_delegate<Windows::Media::Devices::RedialRequestedEventHandler, H>
+    template <typename H> struct delegate<Windows::Media::Devices::RedialRequestedEventHandler, H> final : implements_delegate<Windows::Media::Devices::RedialRequestedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Media::Devices::RedialRequestedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -1774,6 +1891,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedPhotoCaptureSettings> : produce_base<D, Windows::Media::Devices::IAdvancedPhotoCaptureSettings>
     {
@@ -1792,6 +1910,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedPhotoControl> : produce_base<D, Windows::Media::Devices::IAdvancedPhotoControl>
     {
@@ -1825,6 +1945,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController>
     {
@@ -1844,6 +1966,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2>
     {
@@ -1950,6 +2074,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3>
     {
@@ -1978,6 +2104,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4>
     {
@@ -2028,6 +2156,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5>
     {
@@ -2070,6 +2200,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6>
     {
@@ -2082,6 +2214,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7>
     {
@@ -2094,6 +2228,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8>
     {
@@ -2106,6 +2242,22 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9>
+    {
+        int32_t __stdcall get_DigitalWindowControl(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Media::Devices::DigitalWindowControl>(this->shim().DigitalWindowControl());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAudioDeviceController> : produce_base<D, Windows::Media::Devices::IAudioDeviceController>
     {
@@ -2138,6 +2290,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAudioDeviceModule> : produce_base<D, Windows::Media::Devices::IAudioDeviceModule>
     {
@@ -2187,6 +2341,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs> : produce_base<D, Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs>
     {
@@ -2207,6 +2363,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAudioDeviceModulesManager> : produce_base<D, Windows::Media::Devices::IAudioDeviceModulesManager>
     {
@@ -2241,6 +2399,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IAudioDeviceModulesManagerFactory> : produce_base<D, Windows::Media::Devices::IAudioDeviceModulesManagerFactory>
     {
@@ -2253,6 +2413,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::ICallControl> : produce_base<D, Windows::Media::Devices::ICallControl>
     {
@@ -2376,6 +2538,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::ICallControlStatics> : produce_base<D, Windows::Media::Devices::ICallControlStatics>
     {
@@ -2396,6 +2560,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs> : produce_base<D, Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>
     {
@@ -2415,6 +2580,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IDialRequestedEventArgs> : produce_base<D, Windows::Media::Devices::IDialRequestedEventArgs>
     {
@@ -2434,6 +2600,171 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Media::Devices::IDigitalWindowBounds> : produce_base<D, Windows::Media::Devices::IDigitalWindowBounds>
+    {
+        int32_t __stdcall get_NormalizedOriginTop(double* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<double>(this->shim().NormalizedOriginTop());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_NormalizedOriginTop(double value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NormalizedOriginTop(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_NormalizedOriginLeft(double* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<double>(this->shim().NormalizedOriginLeft());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_NormalizedOriginLeft(double value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NormalizedOriginLeft(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Scale(double* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<double>(this->shim().Scale());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Scale(double value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Scale(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Media::Devices::IDigitalWindowCapability> : produce_base<D, Windows::Media::Devices::IDigitalWindowCapability>
+    {
+        int32_t __stdcall get_Width(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<int32_t>(this->shim().Width());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Height(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<int32_t>(this->shim().Height());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MinScaleValue(double* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<double>(this->shim().MinScaleValue());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MaxScaleValue(double* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<double>(this->shim().MaxScaleValue());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MinScaleValueWithoutUpsampling(double* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<double>(this->shim().MinScaleValueWithoutUpsampling());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_NormalizedFieldOfViewLimit(Windows::Foundation::Rect* value) noexcept final try
+        {
+            zero_abi<Windows::Foundation::Rect>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Rect>(this->shim().NormalizedFieldOfViewLimit());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Media::Devices::IDigitalWindowControl> : produce_base<D, Windows::Media::Devices::IDigitalWindowControl>
+    {
+        int32_t __stdcall get_IsSupported(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SupportedModes(uint32_t* __valueSize, int32_t** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            std::tie(*__valueSize, *value) = detach_abi(this->shim().SupportedModes());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CurrentMode(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Media::Devices::DigitalWindowMode>(this->shim().CurrentMode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetBounds(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Media::Devices::DigitalWindowBounds>(this->shim().GetBounds());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Configure(int32_t digitalWindowMode) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Configure(*reinterpret_cast<Windows::Media::Devices::DigitalWindowMode const*>(&digitalWindowMode));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ConfigureWithBounds(int32_t digitalWindowMode, void* digitalWindowBounds) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Configure(*reinterpret_cast<Windows::Media::Devices::DigitalWindowMode const*>(&digitalWindowMode), *reinterpret_cast<Windows::Media::Devices::DigitalWindowBounds const*>(&digitalWindowBounds));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SupportedCapabilities(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::DigitalWindowCapability>>(this->shim().SupportedCapabilities());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetCapabilityForSize(int32_t width, int32_t height, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Media::Devices::DigitalWindowCapability>(this->shim().GetCapabilityForSize(width, height));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IExposureCompensationControl> : produce_base<D, Windows::Media::Devices::IExposureCompensationControl>
     {
@@ -2481,6 +2812,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IExposureControl> : produce_base<D, Windows::Media::Devices::IExposureControl>
     {
@@ -2547,6 +2880,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IExposurePriorityVideoControl> : produce_base<D, Windows::Media::Devices::IExposurePriorityVideoControl>
     {
@@ -2572,6 +2907,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IFlashControl> : produce_base<D, Windows::Media::Devices::IFlashControl>
     {
@@ -2653,6 +2990,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IFlashControl2> : produce_base<D, Windows::Media::Devices::IFlashControl2>
     {
@@ -2678,6 +3017,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IFocusControl> : produce_base<D, Windows::Media::Devices::IFocusControl>
     {
@@ -2764,6 +3105,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IFocusControl2> : produce_base<D, Windows::Media::Devices::IFocusControl2>
     {
@@ -2843,6 +3186,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IFocusSettings> : produce_base<D, Windows::Media::Devices::IFocusSettings>
     {
@@ -2933,6 +3278,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IHdrVideoControl> : produce_base<D, Windows::Media::Devices::IHdrVideoControl>
     {
@@ -2966,6 +3313,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IInfraredTorchControl> : produce_base<D, Windows::Media::Devices::IInfraredTorchControl>
     {
@@ -3034,6 +3383,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IIsoSpeedControl> : produce_base<D, Windows::Media::Devices::IIsoSpeedControl>
     {
@@ -3068,6 +3419,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IIsoSpeedControl2> : produce_base<D, Windows::Media::Devices::IIsoSpeedControl2>
     {
@@ -3123,6 +3476,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IKeypadPressedEventArgs> : produce_base<D, Windows::Media::Devices::IKeypadPressedEventArgs>
     {
@@ -3134,6 +3489,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::ILowLagPhotoControl> : produce_base<D, Windows::Media::Devices::ILowLagPhotoControl>
     {
@@ -3203,6 +3560,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::ILowLagPhotoSequenceControl> : produce_base<D, Windows::Media::Devices::ILowLagPhotoSequenceControl>
     {
@@ -3321,6 +3680,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IMediaDeviceControl> : produce_base<D, Windows::Media::Devices::IMediaDeviceControl>
     {
@@ -3361,6 +3722,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IMediaDeviceControlCapabilities> : produce_base<D, Windows::Media::Devices::IMediaDeviceControlCapabilities>
     {
@@ -3407,6 +3770,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Media::Devices::IMediaDeviceController> : produce_base<D, Windows::Media::Devices::IMediaDeviceController>
     {
@@ -3435,6 +3799,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IMediaDeviceStatics> : produce_base<D, Windows::Media::Devices::IMediaDeviceStatics>
     {
@@ -3507,6 +3872,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IModuleCommandResult> : produce_base<D, Windows::Media::Devices::IModuleCommandResult>
     {
@@ -3526,6 +3893,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IOpticalImageStabilizationControl> : produce_base<D, Windows::Media::Devices::IOpticalImageStabilizationControl>
     {
@@ -3559,6 +3928,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IPanelBasedOptimizationControl> : produce_base<D, Windows::Media::Devices::IPanelBasedOptimizationControl>
     {
@@ -3584,6 +3955,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IPhotoConfirmationControl> : produce_base<D, Windows::Media::Devices::IPhotoConfirmationControl>
     {
@@ -3623,6 +3996,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IRedialRequestedEventArgs> : produce_base<D, Windows::Media::Devices::IRedialRequestedEventArgs>
     {
@@ -3634,6 +4009,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IRegionOfInterest> : produce_base<D, Windows::Media::Devices::IRegionOfInterest>
     {
@@ -3695,6 +4072,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IRegionOfInterest2> : produce_base<D, Windows::Media::Devices::IRegionOfInterest2>
     {
@@ -3741,6 +4120,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IRegionsOfInterestControl> : produce_base<D, Windows::Media::Devices::IRegionsOfInterestControl>
     {
@@ -3797,6 +4178,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::ISceneModeControl> : produce_base<D, Windows::Media::Devices::ISceneModeControl>
     {
@@ -3824,6 +4207,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::ITorchControl> : produce_base<D, Windows::Media::Devices::ITorchControl>
     {
@@ -3870,6 +4255,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IVideoDeviceController> : produce_base<D, Windows::Media::Devices::IVideoDeviceController>
     {
@@ -3976,6 +4363,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult> : produce_base<D, Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult>
     {
@@ -3995,6 +4384,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IVideoTemporalDenoisingControl> : produce_base<D, Windows::Media::Devices::IVideoTemporalDenoisingControl>
     {
@@ -4028,6 +4419,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IWhiteBalanceControl> : produce_base<D, Windows::Media::Devices::IWhiteBalanceControl>
     {
@@ -4090,6 +4483,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IZoomControl> : produce_base<D, Windows::Media::Devices::IZoomControl>
     {
@@ -4136,6 +4531,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IZoomControl2> : produce_base<D, Windows::Media::Devices::IZoomControl2>
     {
@@ -4162,6 +4559,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::IZoomSettings> : produce_base<D, Windows::Media::Devices::IZoomSettings>
     {
@@ -4194,52 +4593,57 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Media::Devices
+WINRT_EXPORT namespace winrt::Windows::Media::Devices
 {
     inline AdvancedPhotoCaptureSettings::AdvancedPhotoCaptureSettings() :
-        AdvancedPhotoCaptureSettings(impl::call_factory<AdvancedPhotoCaptureSettings>([](auto&& f) { return f.template ActivateInstance<AdvancedPhotoCaptureSettings>(); }))
+        AdvancedPhotoCaptureSettings(impl::call_factory_cast<AdvancedPhotoCaptureSettings(*)(Windows::Foundation::IActivationFactory const&), AdvancedPhotoCaptureSettings>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<AdvancedPhotoCaptureSettings>(); }))
     {
     }
     inline AudioDeviceModulesManager::AudioDeviceModulesManager(param::hstring const& deviceId) :
-        AudioDeviceModulesManager(impl::call_factory<AudioDeviceModulesManager, Windows::Media::Devices::IAudioDeviceModulesManagerFactory>([&](auto&& f) { return f.Create(deviceId); }))
+        AudioDeviceModulesManager(impl::call_factory<AudioDeviceModulesManager, IAudioDeviceModulesManagerFactory>([&](IAudioDeviceModulesManagerFactory const& f) { return f.Create(deviceId); }))
     {
     }
     inline auto CallControl::GetDefault()
     {
-        return impl::call_factory<CallControl, Windows::Media::Devices::ICallControlStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::Media::Devices::CallControl(*)(ICallControlStatics const&), CallControl, ICallControlStatics>([](ICallControlStatics const& f) { return f.GetDefault(); });
     }
     inline auto CallControl::FromId(param::hstring const& deviceId)
     {
-        return impl::call_factory<CallControl, Windows::Media::Devices::ICallControlStatics>([&](auto&& f) { return f.FromId(deviceId); });
+        return impl::call_factory<CallControl, ICallControlStatics>([&](ICallControlStatics const& f) { return f.FromId(deviceId); });
+    }
+    inline DigitalWindowBounds::DigitalWindowBounds() :
+        DigitalWindowBounds(impl::call_factory_cast<DigitalWindowBounds(*)(Windows::Foundation::IActivationFactory const&), DigitalWindowBounds>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<DigitalWindowBounds>(); }))
+    {
     }
     inline FocusSettings::FocusSettings() :
-        FocusSettings(impl::call_factory<FocusSettings>([](auto&& f) { return f.template ActivateInstance<FocusSettings>(); }))
+        FocusSettings(impl::call_factory_cast<FocusSettings(*)(Windows::Foundation::IActivationFactory const&), FocusSettings>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<FocusSettings>(); }))
     {
     }
     inline auto MediaDevice::GetAudioCaptureSelector()
     {
-        return impl::call_factory<MediaDevice, Windows::Media::Devices::IMediaDeviceStatics>([&](auto&& f) { return f.GetAudioCaptureSelector(); });
+        return impl::call_factory_cast<hstring(*)(IMediaDeviceStatics const&), MediaDevice, IMediaDeviceStatics>([](IMediaDeviceStatics const& f) { return f.GetAudioCaptureSelector(); });
     }
     inline auto MediaDevice::GetAudioRenderSelector()
     {
-        return impl::call_factory<MediaDevice, Windows::Media::Devices::IMediaDeviceStatics>([&](auto&& f) { return f.GetAudioRenderSelector(); });
+        return impl::call_factory_cast<hstring(*)(IMediaDeviceStatics const&), MediaDevice, IMediaDeviceStatics>([](IMediaDeviceStatics const& f) { return f.GetAudioRenderSelector(); });
     }
     inline auto MediaDevice::GetVideoCaptureSelector()
     {
-        return impl::call_factory<MediaDevice, Windows::Media::Devices::IMediaDeviceStatics>([&](auto&& f) { return f.GetVideoCaptureSelector(); });
+        return impl::call_factory_cast<hstring(*)(IMediaDeviceStatics const&), MediaDevice, IMediaDeviceStatics>([](IMediaDeviceStatics const& f) { return f.GetVideoCaptureSelector(); });
     }
     inline auto MediaDevice::GetDefaultAudioCaptureId(Windows::Media::Devices::AudioDeviceRole const& role)
     {
-        return impl::call_factory<MediaDevice, Windows::Media::Devices::IMediaDeviceStatics>([&](auto&& f) { return f.GetDefaultAudioCaptureId(role); });
+        return impl::call_factory<MediaDevice, IMediaDeviceStatics>([&](IMediaDeviceStatics const& f) { return f.GetDefaultAudioCaptureId(role); });
     }
     inline auto MediaDevice::GetDefaultAudioRenderId(Windows::Media::Devices::AudioDeviceRole const& role)
     {
-        return impl::call_factory<MediaDevice, Windows::Media::Devices::IMediaDeviceStatics>([&](auto&& f) { return f.GetDefaultAudioRenderId(role); });
+        return impl::call_factory<MediaDevice, IMediaDeviceStatics>([&](IMediaDeviceStatics const& f) { return f.GetDefaultAudioRenderId(role); });
     }
     inline auto MediaDevice::DefaultAudioCaptureDeviceChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> const& handler)
     {
-        return impl::call_factory<MediaDevice, Windows::Media::Devices::IMediaDeviceStatics>([&](auto&& f) { return f.DefaultAudioCaptureDeviceChanged(handler); });
+        return impl::call_factory<MediaDevice, IMediaDeviceStatics>([&](IMediaDeviceStatics const& f) { return f.DefaultAudioCaptureDeviceChanged(handler); });
     }
     inline MediaDevice::DefaultAudioCaptureDeviceChanged_revoker MediaDevice::DefaultAudioCaptureDeviceChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> const& handler)
     {
@@ -4248,11 +4652,11 @@ namespace winrt::Windows::Media::Devices
     }
     inline auto MediaDevice::DefaultAudioCaptureDeviceChanged(winrt::event_token const& cookie)
     {
-        impl::call_factory<MediaDevice, Windows::Media::Devices::IMediaDeviceStatics>([&](auto&& f) { return f.DefaultAudioCaptureDeviceChanged(cookie); });
+        impl::call_factory<MediaDevice, IMediaDeviceStatics>([&](IMediaDeviceStatics const& f) { return f.DefaultAudioCaptureDeviceChanged(cookie); });
     }
     inline auto MediaDevice::DefaultAudioRenderDeviceChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> const& handler)
     {
-        return impl::call_factory<MediaDevice, Windows::Media::Devices::IMediaDeviceStatics>([&](auto&& f) { return f.DefaultAudioRenderDeviceChanged(handler); });
+        return impl::call_factory<MediaDevice, IMediaDeviceStatics>([&](IMediaDeviceStatics const& f) { return f.DefaultAudioRenderDeviceChanged(handler); });
     }
     inline MediaDevice::DefaultAudioRenderDeviceChanged_revoker MediaDevice::DefaultAudioRenderDeviceChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> const& handler)
     {
@@ -4261,14 +4665,14 @@ namespace winrt::Windows::Media::Devices
     }
     inline auto MediaDevice::DefaultAudioRenderDeviceChanged(winrt::event_token const& cookie)
     {
-        impl::call_factory<MediaDevice, Windows::Media::Devices::IMediaDeviceStatics>([&](auto&& f) { return f.DefaultAudioRenderDeviceChanged(cookie); });
+        impl::call_factory<MediaDevice, IMediaDeviceStatics>([&](IMediaDeviceStatics const& f) { return f.DefaultAudioRenderDeviceChanged(cookie); });
     }
     inline RegionOfInterest::RegionOfInterest() :
-        RegionOfInterest(impl::call_factory<RegionOfInterest>([](auto&& f) { return f.template ActivateInstance<RegionOfInterest>(); }))
+        RegionOfInterest(impl::call_factory_cast<RegionOfInterest(*)(Windows::Foundation::IActivationFactory const&), RegionOfInterest>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<RegionOfInterest>(); }))
     {
     }
     inline ZoomSettings::ZoomSettings() :
-        ZoomSettings(impl::call_factory<ZoomSettings>([](auto&& f) { return f.template ActivateInstance<ZoomSettings>(); }))
+        ZoomSettings(impl::call_factory_cast<ZoomSettings(*)(Windows::Foundation::IActivationFactory const&), ZoomSettings>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ZoomSettings>(); }))
     {
     }
     template <typename L> CallControlEventHandler::CallControlEventHandler(L handler) :
@@ -4370,100 +4774,109 @@ namespace winrt::Windows::Media::Devices
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedPhotoCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedPhotoCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedPhotoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedPhotoControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAudioDeviceController> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModule> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAudioDeviceModule> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModulesManager> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAudioDeviceModulesManager> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModulesManagerFactory> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IAudioDeviceModulesManagerFactory> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ICallControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ICallControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ICallControlStatics> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ICallControlStatics> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IDialRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IDialRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IExposureCompensationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IExposureCompensationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IExposureControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IExposureControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IExposurePriorityVideoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IExposurePriorityVideoControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IFlashControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IFlashControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IFlashControl2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IFlashControl2> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IFocusControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IFocusControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IFocusControl2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IFocusControl2> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IFocusSettings> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IFocusSettings> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IHdrVideoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IHdrVideoControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IInfraredTorchControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IInfraredTorchControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IIsoSpeedControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IIsoSpeedControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IIsoSpeedControl2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IIsoSpeedControl2> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IKeypadPressedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IKeypadPressedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ILowLagPhotoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ILowLagPhotoControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ILowLagPhotoSequenceControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ILowLagPhotoSequenceControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IMediaDeviceControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IMediaDeviceControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IMediaDeviceControlCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IMediaDeviceControlCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IMediaDeviceController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IMediaDeviceController> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IMediaDeviceStatics> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IMediaDeviceStatics> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IModuleCommandResult> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IModuleCommandResult> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IOpticalImageStabilizationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IOpticalImageStabilizationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IPanelBasedOptimizationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IPanelBasedOptimizationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IPhotoConfirmationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IPhotoConfirmationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IRedialRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IRedialRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IRegionOfInterest> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IRegionOfInterest> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IRegionOfInterest2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IRegionOfInterest2> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IRegionsOfInterestControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IRegionsOfInterestControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ISceneModeControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ISceneModeControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ITorchControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ITorchControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IVideoDeviceController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IVideoDeviceController> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IVideoTemporalDenoisingControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IVideoTemporalDenoisingControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IWhiteBalanceControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IWhiteBalanceControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IZoomControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IZoomControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IZoomControl2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IZoomControl2> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IZoomSettings> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IZoomSettings> {};
-    template<> struct hash<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Devices::AdvancedPhotoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::AdvancedPhotoControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::AudioDeviceController> {};
-    template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceModule> : winrt::impl::hash_base<winrt::Windows::Media::Devices::AudioDeviceModule> {};
-    template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceModulesManager> : winrt::impl::hash_base<winrt::Windows::Media::Devices::AudioDeviceModulesManager> {};
-    template<> struct hash<winrt::Windows::Media::Devices::CallControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::CallControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::DialRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::DialRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ExposureCompensationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ExposureCompensationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ExposureControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ExposureControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ExposurePriorityVideoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ExposurePriorityVideoControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::FlashControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::FlashControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::FocusControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::FocusControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::FocusSettings> : winrt::impl::hash_base<winrt::Windows::Media::Devices::FocusSettings> {};
-    template<> struct hash<winrt::Windows::Media::Devices::HdrVideoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::HdrVideoControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::InfraredTorchControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::InfraredTorchControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::IsoSpeedControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::IsoSpeedControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::KeypadPressedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::KeypadPressedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::LowLagPhotoControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::LowLagPhotoControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::MediaDevice> : winrt::impl::hash_base<winrt::Windows::Media::Devices::MediaDevice> {};
-    template<> struct hash<winrt::Windows::Media::Devices::MediaDeviceControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::MediaDeviceControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ModuleCommandResult> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ModuleCommandResult> {};
-    template<> struct hash<winrt::Windows::Media::Devices::OpticalImageStabilizationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::OpticalImageStabilizationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::PanelBasedOptimizationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::PanelBasedOptimizationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::PhotoConfirmationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::PhotoConfirmationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::RedialRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Devices::RedialRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Devices::RegionOfInterest> : winrt::impl::hash_base<winrt::Windows::Media::Devices::RegionOfInterest> {};
-    template<> struct hash<winrt::Windows::Media::Devices::RegionsOfInterestControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::RegionsOfInterestControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::SceneModeControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::SceneModeControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::TorchControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::TorchControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::VideoDeviceController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::VideoDeviceController> {};
-    template<> struct hash<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult> : winrt::impl::hash_base<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult> {};
-    template<> struct hash<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::WhiteBalanceControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::WhiteBalanceControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ZoomControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ZoomControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::ZoomSettings> : winrt::impl::hash_base<winrt::Windows::Media::Devices::ZoomSettings> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedPhotoCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedPhotoControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModule> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModulesManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModulesManagerFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ICallControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ICallControlStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IDialRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IDigitalWindowBounds> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IDigitalWindowCapability> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IDigitalWindowControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IExposureCompensationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IExposureControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IExposurePriorityVideoControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IFlashControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IFlashControl2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IFocusControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IFocusControl2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IFocusSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IHdrVideoControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IInfraredTorchControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IIsoSpeedControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IIsoSpeedControl2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IKeypadPressedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ILowLagPhotoControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ILowLagPhotoSequenceControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IMediaDeviceControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IMediaDeviceControlCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IMediaDeviceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IMediaDeviceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IModuleCommandResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IOpticalImageStabilizationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IPanelBasedOptimizationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IPhotoConfirmationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IRedialRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IRegionOfInterest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IRegionOfInterest2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IRegionsOfInterestControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ISceneModeControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ITorchControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IVideoDeviceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IVideoTemporalDenoisingControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IWhiteBalanceControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IZoomControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IZoomControl2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IZoomSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::AdvancedPhotoControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceModule> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceModulesManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::CallControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::DialRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::DigitalWindowBounds> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::DigitalWindowCapability> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::DigitalWindowControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ExposureCompensationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ExposureControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ExposurePriorityVideoControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::FlashControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::FocusControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::FocusSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::HdrVideoControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::InfraredTorchControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IsoSpeedControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::KeypadPressedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::LowLagPhotoControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::MediaDevice> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::MediaDeviceControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ModuleCommandResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::OpticalImageStabilizationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::PanelBasedOptimizationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::PhotoConfirmationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::RedialRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::RegionOfInterest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::RegionsOfInterestControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::SceneModeControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::TorchControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::VideoDeviceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::WhiteBalanceControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ZoomControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ZoomSettings> : winrt::impl::hash_base {};
+#endif
 }
 #endif

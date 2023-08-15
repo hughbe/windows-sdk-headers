@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Services.Store.1.h"
-namespace winrt::Windows::Services::Store
+WINRT_EXPORT namespace winrt::Windows::Services::Store
 {
     struct StorePackageUpdateStatus
     {
@@ -138,7 +138,7 @@ namespace winrt::Windows::Services::Store
         StorePurchaseProperties(std::nullptr_t) noexcept {}
         StorePurchaseProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Store::IStorePurchaseProperties(ptr, take_ownership_from_abi) {}
         StorePurchaseProperties();
-        StorePurchaseProperties(param::hstring const& name);
+        explicit StorePurchaseProperties(param::hstring const& name);
     };
     struct __declspec(empty_bases) StorePurchaseResult : Windows::Services::Store::IStorePurchaseResult
     {

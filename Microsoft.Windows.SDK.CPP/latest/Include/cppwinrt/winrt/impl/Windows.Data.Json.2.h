@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Data.Json.1.h"
-namespace winrt::Windows::Data::Json
+WINRT_EXPORT namespace winrt::Windows::Data::Json
 {
     struct __declspec(empty_bases) JsonArray : Windows::Data::Json::IJsonArray,
         impl::require<JsonArray, Windows::Foundation::Collections::IIterable<Windows::Data::Json::IJsonValue>, Windows::Foundation::Collections::IVector<Windows::Data::Json::IJsonValue>, Windows::Foundation::IStringable>

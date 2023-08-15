@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
@@ -348,6 +348,21 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController8_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface IAdvancedVideoCaptureDeviceController9;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9 ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
 namespace ABI {
@@ -482,6 +497,51 @@ namespace ABI {
 #define __x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs ABI::Windows::Media::Devices::IDialRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface IDigitalWindowBounds;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds ABI::Windows::Media::Devices::IDigitalWindowBounds
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface IDigitalWindowCapability;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability ABI::Windows::Media::Devices::IDigitalWindowCapability
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface IDigitalWindowControl;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl ABI::Windows::Media::Devices::IDigitalWindowControl
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIExposureCompensationControl_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIExposureCompensationControl_FWD_DEFINED__
@@ -1350,6 +1410,70 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Devices {
+                class DigitalWindowCapability;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+#ifndef DEF___FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_USE
+#define DEF___FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("d1780c06-073e-5075-99e2-e12649268c03"))
+IIterator<ABI::Windows::Media::Devices::DigitalWindowCapability*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Devices::DigitalWindowCapability*, ABI::Windows::Media::Devices::IDigitalWindowCapability*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Media.Devices.DigitalWindowCapability>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::Media::Devices::DigitalWindowCapability*> __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_t;
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+#ifndef DEF___FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_USE
+#define DEF___FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("a4f28d49-fb50-5c0d-ba48-6695e4612500"))
+IIterable<ABI::Windows::Media::Devices::DigitalWindowCapability*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Devices::DigitalWindowCapability*, ABI::Windows::Media::Devices::IDigitalWindowCapability*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Media.Devices.DigitalWindowCapability>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::Media::Devices::DigitalWindowCapability*> __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_t;
+#define __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
                 typedef enum FocusMode : int FocusMode;
             } /* Devices */
         } /* Media */
@@ -2163,6 +2287,33 @@ typedef IVectorView<enum ABI::Windows::Media::Devices::CaptureSceneMode> __FIVec
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+#ifndef DEF___FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_USE
+#define DEF___FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("18cb0c91-2753-542f-a33a-e4f9410f923b"))
+IVectorView<ABI::Windows::Media::Devices::DigitalWindowCapability*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Devices::DigitalWindowCapability*, ABI::Windows::Media::Devices::IDigitalWindowCapability*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Media.Devices.DigitalWindowCapability>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::Media::Devices::DigitalWindowCapability*> __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_t;
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIVectorView_1_Windows__CMedia__CDevices__CFocusMode_USE
@@ -2803,6 +2954,16 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Devices {
+                typedef enum DigitalWindowMode : int DigitalWindowMode;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
                 typedef enum MediaCaptureFocusState : int MediaCaptureFocusState;
             } /* Devices */
         } /* Media */
@@ -2904,6 +3065,26 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class DialRequestedEventArgs;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                class DigitalWindowBounds;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                class DigitalWindowControl;
             } /* Devices */
         } /* Media */
     } /* Windows */
@@ -3354,6 +3535,30 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Struct Windows.Media.Devices.DigitalWindowMode
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                enum DigitalWindowMode : int
+                {
+                    DigitalWindowMode_Off = 0,
+                    DigitalWindowMode_On = 1,
+                    DigitalWindowMode_Auto = 2,
+                };
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
 
 /*
  *
@@ -4397,6 +4602,42 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDe
 
 /*
  *
+ * Interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.VideoDeviceController
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController9[] = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                MIDL_INTERFACE("8bdca95d-0255-51bc-a10d-5a169ec1625a")
+                IAdvancedVideoCaptureDeviceController9 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_DigitalWindowControl(
+                        ABI::Windows::Media::Devices::IDigitalWindowControl** value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IAdvancedVideoCaptureDeviceController9 = _uuidof(IAdvancedVideoCaptureDeviceController9);
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
  * Interface Windows.Media.Devices.IAudioDeviceController
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -4823,6 +5064,169 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Interface Windows.Media.Devices.IDigitalWindowBounds
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.DigitalWindowBounds
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IDigitalWindowBounds[] = L"Windows.Media.Devices.IDigitalWindowBounds";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                MIDL_INTERFACE("dd4f21dd-d173-5c6b-8c25-bdd26d5122b1")
+                IDigitalWindowBounds : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_NormalizedOriginTop(
+                        DOUBLE* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE put_NormalizedOriginTop(
+                        DOUBLE value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_NormalizedOriginLeft(
+                        DOUBLE* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE put_NormalizedOriginLeft(
+                        DOUBLE value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_Scale(
+                        DOUBLE* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE put_Scale(
+                        DOUBLE value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IDigitalWindowBounds = _uuidof(IDigitalWindowBounds);
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
+ * Interface Windows.Media.Devices.IDigitalWindowCapability
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.DigitalWindowCapability
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IDigitalWindowCapability[] = L"Windows.Media.Devices.IDigitalWindowCapability";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                MIDL_INTERFACE("d78bad2c-f721-5244-a196-b56ccbec606c")
+                IDigitalWindowCapability : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_Width(
+                        INT32* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_Height(
+                        INT32* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_MinScaleValue(
+                        DOUBLE* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_MaxScaleValue(
+                        DOUBLE* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_MinScaleValueWithoutUpsampling(
+                        DOUBLE* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_NormalizedFieldOfViewLimit(
+                        ABI::Windows::Foundation::Rect* value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IDigitalWindowCapability = _uuidof(IDigitalWindowCapability);
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
+ * Interface Windows.Media.Devices.IDigitalWindowControl
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.DigitalWindowControl
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IDigitalWindowControl[] = L"Windows.Media.Devices.IDigitalWindowControl";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                MIDL_INTERFACE("23b69eff-65d2-53ea-8780-de582b48b544")
+                IDigitalWindowControl : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
+                        boolean* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_SupportedModes(
+                        UINT32* valueLength,
+                        ABI::Windows::Media::Devices::DigitalWindowMode** value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_CurrentMode(
+                        ABI::Windows::Media::Devices::DigitalWindowMode* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE GetBounds(
+                        ABI::Windows::Media::Devices::IDigitalWindowBounds** result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE Configure(
+                        ABI::Windows::Media::Devices::DigitalWindowMode digitalWindowMode
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE ConfigureWithBounds(
+                        ABI::Windows::Media::Devices::DigitalWindowMode digitalWindowMode,
+                        ABI::Windows::Media::Devices::IDigitalWindowBounds* digitalWindowBounds
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_SupportedCapabilities(
+                        __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability** value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE GetCapabilityForSize(
+                        INT32 width,
+                        INT32 height,
+                        ABI::Windows::Media::Devices::IDigitalWindowCapability** result
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IDigitalWindowControl = _uuidof(IDigitalWindowControl);
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
 
 /*
  *
@@ -6929,6 +7333,68 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.Media.Devices.DigitalWindowBounds
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via RoActivateInstance starting with version 12.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.IDigitalWindowBounds ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_DigitalWindowBounds_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_DigitalWindowBounds_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_DigitalWindowBounds[] = L"Windows.Media.Devices.DigitalWindowBounds";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
+ * Class Windows.Media.Devices.DigitalWindowCapability
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.IDigitalWindowCapability ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_DigitalWindowCapability_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_DigitalWindowCapability_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_DigitalWindowCapability[] = L"Windows.Media.Devices.DigitalWindowCapability";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
+ * Class Windows.Media.Devices.DigitalWindowControl
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.IDigitalWindowControl ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_DigitalWindowControl_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_DigitalWindowControl_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_DigitalWindowControl[] = L"Windows.Media.Devices.DigitalWindowControl";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
  * Class Windows.Media.Devices.ExposureCompensationControl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -7450,6 +7916,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8
+ *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
@@ -7658,6 +8125,12 @@ typedef interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceC
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController8_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9 __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController __x_ABI_CWindows_CMedia_CDevices_CIAudioDeviceController;
@@ -7711,6 +8184,24 @@ typedef interface __x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEv
 typedef interface __x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs __x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs;
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIExposureCompensationControl_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIExposureCompensationControl_FWD_DEFINED__
@@ -8642,6 +9133,151 @@ interface __FIIterable_1_Windows__CMedia__CDevices__CCaptureSceneMode
 
 #endif // ____FIIterable_1_Windows__CMedia__CDevices__CCaptureSceneMode_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability;
+
+typedef struct __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapabilityVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapabilityVtbl;
+
+interface __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapabilityVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability;
+
+typedef struct __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapabilityVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        __FIIterator_1_Windows__CMedia__CDevices__CDigitalWindowCapability** result);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapabilityVtbl;
+
+interface __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapabilityVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_Windows__CMedia__CDevices__CDigitalWindowCapability_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
 
 typedef enum __x_ABI_CWindows_CMedia_CDevices_CFocusMode __x_ABI_CWindows_CMedia_CDevices_CFocusMode;
 
@@ -10602,6 +11238,91 @@ interface __FIVectorView_1_Windows__CMedia__CDevices__CCaptureSceneMode
 #endif // ____FIVectorView_1_Windows__CMedia__CDevices__CCaptureSceneMode_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability;
+
+typedef struct __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapabilityVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        UINT32 index,
+        __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapabilityVtbl;
+
+interface __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapabilityVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CMedia__CDevices__CFocusMode_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_Windows__CMedia__CDevices__CFocusMode_INTERFACE_DEFINED__
@@ -11777,6 +12498,8 @@ typedef enum __x_ABI_CWindows_CMedia_CDevices_CCaptureUse __x_ABI_CWindows_CMedi
 
 typedef enum __x_ABI_CWindows_CMedia_CDevices_CColorTemperaturePreset __x_ABI_CWindows_CMedia_CDevices_CColorTemperaturePreset;
 
+typedef enum __x_ABI_CWindows_CMedia_CDevices_CDigitalWindowMode __x_ABI_CWindows_CMedia_CDevices_CDigitalWindowMode;
+
 typedef enum __x_ABI_CWindows_CMedia_CDevices_CMediaCaptureFocusState __x_ABI_CWindows_CMedia_CDevices_CMediaCaptureFocusState;
 
 typedef enum __x_ABI_CWindows_CMedia_CDevices_CMediaCaptureOptimization __x_ABI_CWindows_CMedia_CDevices_CMediaCaptureOptimization;
@@ -11920,6 +12643,22 @@ enum __x_ABI_CWindows_CMedia_CDevices_CColorTemperaturePreset
     ColorTemperaturePreset_Candlelight = 7,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Struct Windows.Media.Devices.DigitalWindowMode
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+enum __x_ABI_CWindows_CMedia_CDevices_CDigitalWindowMode
+{
+    DigitalWindowMode_Off = 0,
+    DigitalWindowMode_On = 1,
+    DigitalWindowMode_Auto = 2,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
 
 /*
  *
@@ -13281,6 +14020,75 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDe
 
 /*
  *
+ * Interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.VideoDeviceController
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController9[] = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9";
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_DigitalWindowControl)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9* This,
+        __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl** value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9Vtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_get_DigitalWindowControl(This, value) \
+    ((This)->lpVtbl->get_DigitalWindowControl(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController9_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
  * Interface Windows.Media.Devices.IAudioDeviceController
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -14067,6 +14875,302 @@ interface __x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDialRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Interface Windows.Media.Devices.IDigitalWindowBounds
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.DigitalWindowBounds
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IDigitalWindowBounds[] = L"Windows.Media.Devices.IDigitalWindowBounds";
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBoundsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_NormalizedOriginTop)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        DOUBLE* value);
+    HRESULT (STDMETHODCALLTYPE* put_NormalizedOriginTop)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* get_NormalizedOriginLeft)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        DOUBLE* value);
+    HRESULT (STDMETHODCALLTYPE* put_NormalizedOriginLeft)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* get_Scale)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        DOUBLE* value);
+    HRESULT (STDMETHODCALLTYPE* put_Scale)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* This,
+        DOUBLE value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBoundsVtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBoundsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_get_NormalizedOriginTop(This, value) \
+    ((This)->lpVtbl->get_NormalizedOriginTop(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_put_NormalizedOriginTop(This, value) \
+    ((This)->lpVtbl->put_NormalizedOriginTop(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_get_NormalizedOriginLeft(This, value) \
+    ((This)->lpVtbl->get_NormalizedOriginLeft(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_put_NormalizedOriginLeft(This, value) \
+    ((This)->lpVtbl->put_NormalizedOriginLeft(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_get_Scale(This, value) \
+    ((This)->lpVtbl->get_Scale(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_put_Scale(This, value) \
+    ((This)->lpVtbl->put_Scale(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
+ * Interface Windows.Media.Devices.IDigitalWindowCapability
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.DigitalWindowCapability
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IDigitalWindowCapability[] = L"Windows.Media.Devices.IDigitalWindowCapability";
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapabilityVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Width)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        INT32* value);
+    HRESULT (STDMETHODCALLTYPE* get_Height)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        INT32* value);
+    HRESULT (STDMETHODCALLTYPE* get_MinScaleValue)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        DOUBLE* value);
+    HRESULT (STDMETHODCALLTYPE* get_MaxScaleValue)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        DOUBLE* value);
+    HRESULT (STDMETHODCALLTYPE* get_MinScaleValueWithoutUpsampling)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        DOUBLE* value);
+    HRESULT (STDMETHODCALLTYPE* get_NormalizedFieldOfViewLimit)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability* This,
+        struct __x_ABI_CWindows_CFoundation_CRect* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapabilityVtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapabilityVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_get_Width(This, value) \
+    ((This)->lpVtbl->get_Width(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_get_Height(This, value) \
+    ((This)->lpVtbl->get_Height(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_get_MinScaleValue(This, value) \
+    ((This)->lpVtbl->get_MinScaleValue(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_get_MaxScaleValue(This, value) \
+    ((This)->lpVtbl->get_MaxScaleValue(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_get_MinScaleValueWithoutUpsampling(This, value) \
+    ((This)->lpVtbl->get_MinScaleValueWithoutUpsampling(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_get_NormalizedFieldOfViewLimit(This, value) \
+    ((This)->lpVtbl->get_NormalizedFieldOfViewLimit(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
+ * Interface Windows.Media.Devices.IDigitalWindowControl
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.DigitalWindowControl
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IDigitalWindowControl[] = L"Windows.Media.Devices.IDigitalWindowControl";
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControlVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsSupported)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* get_SupportedModes)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        UINT32* valueLength,
+        enum __x_ABI_CWindows_CMedia_CDevices_CDigitalWindowMode** value);
+    HRESULT (STDMETHODCALLTYPE* get_CurrentMode)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        enum __x_ABI_CWindows_CMedia_CDevices_CDigitalWindowMode* value);
+    HRESULT (STDMETHODCALLTYPE* GetBounds)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds** result);
+    HRESULT (STDMETHODCALLTYPE* Configure)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        enum __x_ABI_CWindows_CMedia_CDevices_CDigitalWindowMode digitalWindowMode);
+    HRESULT (STDMETHODCALLTYPE* ConfigureWithBounds)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        enum __x_ABI_CWindows_CMedia_CDevices_CDigitalWindowMode digitalWindowMode,
+        __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowBounds* digitalWindowBounds);
+    HRESULT (STDMETHODCALLTYPE* get_SupportedCapabilities)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        __FIVectorView_1_Windows__CMedia__CDevices__CDigitalWindowCapability** value);
+    HRESULT (STDMETHODCALLTYPE* GetCapabilityForSize)(__x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl* This,
+        INT32 width,
+        INT32 height,
+        __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowCapability** result);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControlVtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControlVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_get_IsSupported(This, value) \
+    ((This)->lpVtbl->get_IsSupported(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_get_SupportedModes(This, valueLength, value) \
+    ((This)->lpVtbl->get_SupportedModes(This, valueLength, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_get_CurrentMode(This, value) \
+    ((This)->lpVtbl->get_CurrentMode(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_GetBounds(This, result) \
+    ((This)->lpVtbl->GetBounds(This, result))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_Configure(This, digitalWindowMode) \
+    ((This)->lpVtbl->Configure(This, digitalWindowMode))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_ConfigureWithBounds(This, digitalWindowMode, digitalWindowBounds) \
+    ((This)->lpVtbl->ConfigureWithBounds(This, digitalWindowMode, digitalWindowBounds))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_get_SupportedCapabilities(This, value) \
+    ((This)->lpVtbl->get_SupportedCapabilities(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_GetCapabilityForSize(This, width, height, result) \
+    ((This)->lpVtbl->GetCapabilityForSize(This, width, height, result))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIDigitalWindowControl_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
 
 /*
  *
@@ -17743,6 +18847,68 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.Media.Devices.DigitalWindowBounds
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via RoActivateInstance starting with version 12.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.IDigitalWindowBounds ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_DigitalWindowBounds_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_DigitalWindowBounds_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_DigitalWindowBounds[] = L"Windows.Media.Devices.DigitalWindowBounds";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
+ * Class Windows.Media.Devices.DigitalWindowCapability
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.IDigitalWindowCapability ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_DigitalWindowCapability_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_DigitalWindowCapability_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_DigitalWindowCapability[] = L"Windows.Media.Devices.DigitalWindowCapability";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
+ * Class Windows.Media.Devices.DigitalWindowControl
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.IDigitalWindowControl ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_DigitalWindowControl_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_DigitalWindowControl_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_DigitalWindowControl[] = L"Windows.Media.Devices.DigitalWindowControl";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
  * Class Windows.Media.Devices.ExposureCompensationControl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -18264,6 +19430,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8
+ *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9
  *
  * Class Threading Model:  Multi Threaded Apartment
  *

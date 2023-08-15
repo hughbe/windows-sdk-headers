@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,63 +6,63 @@
 #ifndef WINRT_Windows_Devices_Pwm_Provider_H
 #define WINRT_Windows_Devices_Pwm_Provider_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.Pwm.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Devices.Pwm.Provider.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::PinCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::PinCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->get_PinCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::ActualFrequency() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::ActualFrequency() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->get_ActualFrequency(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::SetDesiredFrequency(double frequency) const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::SetDesiredFrequency(double frequency) const
     {
-        double result;
+        double result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->SetDesiredFrequency(frequency, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::MaxFrequency() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::MaxFrequency() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->get_MaxFrequency(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::MinFrequency() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::MinFrequency() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->get_MinFrequency(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::AcquirePin(int32_t pin) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::AcquirePin(int32_t pin) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->AcquirePin(pin));
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::ReleasePin(int32_t pin) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::ReleasePin(int32_t pin) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->ReleasePin(pin));
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::EnablePin(int32_t pin) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::EnablePin(int32_t pin) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->EnablePin(pin));
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::DisablePin(int32_t pin) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::DisablePin(int32_t pin) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->DisablePin(pin));
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::SetPulseParameters(int32_t pin, double dutyCycle, bool invertPolarity) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider<D>::SetPulseParameters(int32_t pin, double dutyCycle, bool invertPolarity) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmControllerProvider)->SetPulseParameters(pin, dutyCycle, invertPolarity));
     }
-    template <typename D> auto consume_Windows_Devices_Pwm_Provider_IPwmProvider<D>::GetControllers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Pwm::Provider::IPwmControllerProvider>) consume_Windows_Devices_Pwm_Provider_IPwmProvider<D>::GetControllers() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Pwm::Provider::IPwmProvider)->GetControllers(&result));
@@ -155,12 +155,14 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 }
-namespace winrt::Windows::Devices::Pwm::Provider
+WINRT_EXPORT namespace winrt::Windows::Devices::Pwm::Provider
 {
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider> : winrt::impl::hash_base<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider> {};
-    template<> struct hash<winrt::Windows::Devices::Pwm::Provider::IPwmProvider> : winrt::impl::hash_base<winrt::Windows::Devices::Pwm::Provider::IPwmProvider> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Pwm::Provider::IPwmProvider> : winrt::impl::hash_base {};
+#endif
 }
 #endif

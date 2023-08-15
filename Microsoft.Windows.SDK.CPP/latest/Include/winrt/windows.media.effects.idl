@@ -322,7 +322,9 @@ namespace Windows
                 EnvironmentalEffects     = 14,
                 SpeakerProtection        = 15,
                 SpeakerCompensation      = 16,
-                DynamicRangeCompression  = 17
+                DynamicRangeCompression  = 17,
+                [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+                FarFieldBeamForming      = 18
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

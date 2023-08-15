@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Devices.Gpio.Provider.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Devices.Gpio.1.h"
-namespace winrt::Windows::Devices::Gpio
+WINRT_EXPORT namespace winrt::Windows::Devices::Gpio
 {
     struct GpioChangeCount
     {
@@ -40,13 +40,13 @@ namespace winrt::Windows::Devices::Gpio
     {
         GpioChangeCounter(std::nullptr_t) noexcept {}
         GpioChangeCounter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioChangeCounter(ptr, take_ownership_from_abi) {}
-        GpioChangeCounter(Windows::Devices::Gpio::GpioPin const& pin);
+        explicit GpioChangeCounter(Windows::Devices::Gpio::GpioPin const& pin);
     };
     struct __declspec(empty_bases) GpioChangeReader : Windows::Devices::Gpio::IGpioChangeReader
     {
         GpioChangeReader(std::nullptr_t) noexcept {}
         GpioChangeReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioChangeReader(ptr, take_ownership_from_abi) {}
-        GpioChangeReader(Windows::Devices::Gpio::GpioPin const& pin);
+        explicit GpioChangeReader(Windows::Devices::Gpio::GpioPin const& pin);
         GpioChangeReader(Windows::Devices::Gpio::GpioPin const& pin, int32_t minCapacity);
     };
     struct __declspec(empty_bases) GpioController : Windows::Devices::Gpio::IGpioController

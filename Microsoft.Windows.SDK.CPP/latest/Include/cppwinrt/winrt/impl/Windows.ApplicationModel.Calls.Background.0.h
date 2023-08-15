@@ -1,14 +1,14 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_ApplicationModel_Calls_Background_0_H
 #define WINRT_Windows_ApplicationModel_Calls_Background_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
 }
-namespace winrt::Windows::ApplicationModel::Calls::Background
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls::Background
 {
     enum class PhoneCallBlockedReason : int32_t
     {
@@ -65,166 +65,46 @@ namespace winrt::Windows::ApplicationModel::Calls::Background
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneLineProperties>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneTriggerType>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.IPhoneCallBlockedTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.IPhoneCallOriginDataRequestTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneLineProperties>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneLineProperties" };
-    };
-    template <> struct name<Windows::ApplicationModel::Calls::Background::PhoneTriggerType>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Calls.Background.PhoneTriggerType" };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails>
-    {
-        static constexpr guid value{ 0xA4A690A2,0xE4C1,0x427F,{ 0x86,0x4E,0xE4,0x70,0x47,0x7D,0xDB,0x67 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails>
-    {
-        static constexpr guid value{ 0x6E9B5B3F,0xC54B,0x4E82,{ 0x4C,0xC9,0xE3,0x29,0xA4,0x18,0x45,0x92 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails>
-    {
-        static constexpr guid value{ 0xBAD30276,0x83B6,0x5732,{ 0x9C,0x38,0x0C,0x20,0x65,0x46,0x19,0x6A } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails>
-    {
-        static constexpr guid value{ 0xC6D321E7,0xD11D,0x40D8,{ 0xB2,0xB7,0xE4,0x0A,0x01,0xD6,0x62,0x49 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails>
-    {
-        static constexpr guid value{ 0x13A8C01B,0xB831,0x48D3,{ 0x8B,0xA9,0x8D,0x22,0xA6,0x58,0x0D,0xCF } };
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>
-    {
-        using type = Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>
-    {
-        using type = Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>
-    {
-        using type = Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>
-    {
-        using type = Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>
-    {
-        using type = Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails;
-    };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneLineProperties>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::Calls::Background::PhoneTriggerType>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason> = L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason> = L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind> = L"Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneLineProperties> = L"Windows.ApplicationModel.Calls.Background.PhoneLineProperties";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::PhoneTriggerType> = L"Windows.ApplicationModel.Calls.Background.PhoneTriggerType";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.IPhoneCallBlockedTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.IPhoneCallOriginDataRequestTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails> = L"Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTriggerDetails";
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails>{ 0xA4A690A2,0xE4C1,0x427F,{ 0x86,0x4E,0xE4,0x70,0x47,0x7D,0xDB,0x67 } }; // A4A690A2-E4C1-427F-864E-E470477DDB67
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails>{ 0x6E9B5B3F,0xC54B,0x4E82,{ 0x4C,0xC9,0xE3,0x29,0xA4,0x18,0x45,0x92 } }; // 6E9B5B3F-C54B-4E82-4CC9-E329A4184592
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails>{ 0xBAD30276,0x83B6,0x5732,{ 0x9C,0x38,0x0C,0x20,0x65,0x46,0x19,0x6A } }; // BAD30276-83B6-5732-9C38-0C206546196A
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails>{ 0xC6D321E7,0xD11D,0x40D8,{ 0xB2,0xB7,0xE4,0x0A,0x01,0xD6,0x62,0x49 } }; // C6D321E7-D11D-40D8-B2B7-E40A01D66249
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails>{ 0x13A8C01B,0xB831,0x48D3,{ 0x8B,0xA9,0x8D,0x22,0xA6,0x58,0x0D,0xCF } }; // 13A8C01B-B831-48D3-8BA9-8D22A6580DCF
+    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>{ using type = Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails; };
+    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>{ using type = Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails; };
+    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>{ using type = Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails; };
+    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>{ using type = Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails; };
+    template <> struct default_interface<Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>{ using type = Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails; };
     template <> struct abi<Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -275,9 +155,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneCallBlockedTriggerDetails
     {
-        [[nodiscard]] auto PhoneNumber() const;
-        [[nodiscard]] auto LineId() const;
-        [[nodiscard]] auto CallBlockedReason() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PhoneNumber() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Calls::Background::PhoneCallBlockedReason) CallBlockedReason() const;
     };
     template <> struct consume<Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails>
     {
@@ -286,8 +166,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneCallOriginDataRequestTriggerDetails
     {
-        [[nodiscard]] auto RequestId() const;
-        [[nodiscard]] auto PhoneNumber() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) RequestId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PhoneNumber() const;
     };
     template <> struct consume<Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails>
     {
@@ -296,12 +176,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneIncomingCallDismissedTriggerDetails
     {
-        [[nodiscard]] auto LineId() const;
-        [[nodiscard]] auto PhoneNumber() const;
-        [[nodiscard]] auto DisplayName() const;
-        [[nodiscard]] auto DismissalTime() const;
-        [[nodiscard]] auto TextReplyMessage() const;
-        [[nodiscard]] auto Reason() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PhoneNumber() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) DismissalTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) TextReplyMessage() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason) Reason() const;
     };
     template <> struct consume<Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails>
     {
@@ -310,9 +190,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneLineChangedTriggerDetails
     {
-        [[nodiscard]] auto LineId() const;
-        [[nodiscard]] auto ChangeType() const;
-        auto HasLinePropertyChanged(Windows::ApplicationModel::Calls::Background::PhoneLineProperties const& lineProperty) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Calls::Background::PhoneLineChangeKind) ChangeType() const;
+        WINRT_IMPL_AUTO(bool) HasLinePropertyChanged(Windows::ApplicationModel::Calls::Background::PhoneLineProperties const& lineProperty) const;
     };
     template <> struct consume<Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails>
     {
@@ -321,9 +201,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Calls_Background_IPhoneNewVoicemailMessageTriggerDetails
     {
-        [[nodiscard]] auto LineId() const;
-        [[nodiscard]] auto VoicemailCount() const;
-        [[nodiscard]] auto OperatorMessage() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) LineId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) VoicemailCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OperatorMessage() const;
     };
     template <> struct consume<Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails>
     {

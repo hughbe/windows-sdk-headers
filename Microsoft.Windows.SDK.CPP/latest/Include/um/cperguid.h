@@ -102,6 +102,11 @@ DEFINE_GUID(CMCI_NOTIFY_TYPE_GUID,
             0x919448b2, 0x3739, 0x4b7f, 0xa8, 0xf1,
             0xe0, 0x06, 0x28, 0x05, 0xc2, 0xa3);
 
+/* 990b31e9-541a-4db0-a42f-837d344f6923 */
+DEFINE_GUID(PCIE_DEVICE_ERROR_SUMMARY_NOTIFY_TYPE_GUID,
+            0x990b31e9, 0x541a, 0x4db0, 0xa4, 0x2f,
+            0x83, 0x7d, 0x34, 0x4f, 0x69, 0x23);
+
 //------------------------------------------- Standard Error Section type GUIDs
 
 /* 9876ccad-47b4-4bdb-b65e-16f193c4f3db */
@@ -158,6 +163,11 @@ DEFINE_GUID(PMEM_ERROR_SECTION_GUID,
 DEFINE_GUID(MU_TELEMETRY_SECTION_GUID,
             0x85183a8b, 0x9c41, 0x429c, 0x93, 0x9c,
             0x5c, 0x3c, 0x08, 0x7c, 0xa2, 0x80);
+
+/* c34832a1-02c3-4c52-a9f1-9f1d5d7723fc */
+DEFINE_GUID(RECOVERY_INFO_SECTION_GUID,
+            0xc34832a1, 0x02c3, 0x4c52, 0xa9, 0xf1,
+            0x9f, 0x1d, 0x5d, 0x77, 0x23, 0xfc);
 
 //-------------------------------------- Processor check information type GUIDs
 
@@ -260,6 +270,12 @@ DEFINE_GUID(WHEA_DPC_CAPABILITY_SECTION_GUID,
             0xec49534b,
             0x30e7, 0x4358,
             0x97, 0x2f, 0xec, 0xa6, 0x95, 0x8f, 0xae, 0x3b);
+
+/* e96eca99-53e2-4f52-9be7-d2dbe9508ed0 */
+DEFINE_GUID(PCIE_CORRECTABLE_ERROR_SUMMARY_SECTION_GUID,
+            0xe96eca99,
+            0x53e2, 0x4f52,
+            0x9b, 0xe7, 0xd2, 0xdb, 0xe9, 0x50, 0x8e, 0xd0);
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

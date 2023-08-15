@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,71 +6,72 @@
 #ifndef WINRT_Windows_Foundation_Metadata_H
 #define WINRT_Windows_Foundation_Metadata_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Foundation.h"
 #include "winrt/impl/Windows.Foundation.Metadata.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsTypePresent(param::hstring const& typeName) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsTypePresent(param::hstring const& typeName) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsTypePresent(*(void**)(&typeName), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsMethodPresent(*(void**)(&typeName), *(void**)(&methodName), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName, uint32_t inputParameterCount) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName, uint32_t inputParameterCount) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsMethodPresentWithArity(*(void**)(&typeName), *(void**)(&methodName), inputParameterCount, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsEventPresent(param::hstring const& typeName, param::hstring const& eventName) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsEventPresent(param::hstring const& typeName, param::hstring const& eventName) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsEventPresent(*(void**)(&typeName), *(void**)(&eventName), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsPropertyPresent(*(void**)(&typeName), *(void**)(&propertyName), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsReadOnlyPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsReadOnlyPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsReadOnlyPropertyPresent(*(void**)(&typeName), *(void**)(&propertyName), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsWriteablePropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsWriteablePropertyPresent(param::hstring const& typeName, param::hstring const& propertyName) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsWriteablePropertyPresent(*(void**)(&typeName), *(void**)(&propertyName), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsEnumNamedValuePresent(param::hstring const& enumTypeName, param::hstring const& valueName) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsEnumNamedValuePresent(param::hstring const& enumTypeName, param::hstring const& valueName) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsEnumNamedValuePresent(*(void**)(&enumTypeName), *(void**)(&valueName), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsApiContractPresentByMajor(*(void**)(&contractName), majorVersion, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion, uint16_t minorVersion) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Foundation_Metadata_IApiInformationStatics<D>::IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion, uint16_t minorVersion) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Foundation::Metadata::IApiInformationStatics)->IsApiContractPresentByMajorAndMinor(*(void**)(&contractName), majorVersion, minorVersion, &result));
         return result;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Foundation::Metadata::IApiInformationStatics> : produce_base<D, Windows::Foundation::Metadata::IApiInformationStatics>
     {
@@ -145,8 +146,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Foundation::Metadata
+WINRT_EXPORT namespace winrt::Windows::Foundation::Metadata
 {
     constexpr auto operator|(AttributeTargets const left, AttributeTargets const right) noexcept
     {
@@ -181,48 +183,50 @@ namespace winrt::Windows::Foundation::Metadata
     }
     inline auto ApiInformation::IsTypePresent(param::hstring const& typeName)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsTypePresent(typeName); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsTypePresent(typeName); });
     }
     inline auto ApiInformation::IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsMethodPresent(typeName, methodName); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsMethodPresent(typeName, methodName); });
     }
     inline auto ApiInformation::IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName, uint32_t inputParameterCount)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsMethodPresent(typeName, methodName, inputParameterCount); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsMethodPresent(typeName, methodName, inputParameterCount); });
     }
     inline auto ApiInformation::IsEventPresent(param::hstring const& typeName, param::hstring const& eventName)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsEventPresent(typeName, eventName); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsEventPresent(typeName, eventName); });
     }
     inline auto ApiInformation::IsPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsPropertyPresent(typeName, propertyName); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsPropertyPresent(typeName, propertyName); });
     }
     inline auto ApiInformation::IsReadOnlyPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsReadOnlyPropertyPresent(typeName, propertyName); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsReadOnlyPropertyPresent(typeName, propertyName); });
     }
     inline auto ApiInformation::IsWriteablePropertyPresent(param::hstring const& typeName, param::hstring const& propertyName)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsWriteablePropertyPresent(typeName, propertyName); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsWriteablePropertyPresent(typeName, propertyName); });
     }
     inline auto ApiInformation::IsEnumNamedValuePresent(param::hstring const& enumTypeName, param::hstring const& valueName)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsEnumNamedValuePresent(enumTypeName, valueName); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsEnumNamedValuePresent(enumTypeName, valueName); });
     }
     inline auto ApiInformation::IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsApiContractPresent(contractName, majorVersion); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsApiContractPresent(contractName, majorVersion); });
     }
     inline auto ApiInformation::IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion, uint16_t minorVersion)
     {
-        return impl::call_factory<ApiInformation, Windows::Foundation::Metadata::IApiInformationStatics>([&](auto&& f) { return f.IsApiContractPresent(contractName, majorVersion, minorVersion); });
+        return impl::call_factory<ApiInformation, IApiInformationStatics>([&](IApiInformationStatics const& f) { return f.IsApiContractPresent(contractName, majorVersion, minorVersion); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Foundation::Metadata::IApiInformationStatics> : winrt::impl::hash_base<winrt::Windows::Foundation::Metadata::IApiInformationStatics> {};
-    template<> struct hash<winrt::Windows::Foundation::Metadata::ApiInformation> : winrt::impl::hash_base<winrt::Windows::Foundation::Metadata::ApiInformation> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Foundation::Metadata::IApiInformationStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Foundation::Metadata::ApiInformation> : winrt::impl::hash_base {};
+#endif
 }
 #endif

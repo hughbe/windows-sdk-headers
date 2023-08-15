@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Accessibility_1_H
 #define WINRT_Windows_UI_Accessibility_1_H
 #include "winrt/impl/Windows.UI.Accessibility.0.h"
-namespace winrt::Windows::UI::Accessibility
+WINRT_EXPORT namespace winrt::Windows::UI::Accessibility
 {
     struct __declspec(empty_bases) IScreenReaderPositionChangedEventArgs :
         Windows::Foundation::IInspectable,

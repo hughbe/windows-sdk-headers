@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.System.Profile.1.h"
-namespace winrt::Windows::System::Profile
+WINRT_EXPORT namespace winrt::Windows::System::Profile
 {
     struct AnalyticsInfo
     {
@@ -19,7 +19,8 @@ namespace winrt::Windows::System::Profile
         [[nodiscard]] static auto DeviceForm();
         static auto GetSystemPropertiesAsync(param::async_iterable<hstring> const& attributeNames);
     };
-    struct __declspec(empty_bases) AnalyticsVersionInfo : Windows::System::Profile::IAnalyticsVersionInfo
+    struct __declspec(empty_bases) AnalyticsVersionInfo : Windows::System::Profile::IAnalyticsVersionInfo,
+        impl::require<AnalyticsVersionInfo, Windows::System::Profile::IAnalyticsVersionInfo2>
     {
         AnalyticsVersionInfo(std::nullptr_t) noexcept {}
         AnalyticsVersionInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::Profile::IAnalyticsVersionInfo(ptr, take_ownership_from_abi) {}
@@ -76,7 +77,7 @@ namespace winrt::Windows::System::Profile
         [[nodiscard]] static auto CollectionLevel();
         static auto CollectionLevelChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using CollectionLevelChanged_revoker = impl::factory_event_revoker<Windows::System::Profile::IPlatformDiagnosticsAndUsageDataSettingsStatics, &impl::abi_t<Windows::System::Profile::IPlatformDiagnosticsAndUsageDataSettingsStatics>::remove_CollectionLevelChanged>;
-        static CollectionLevelChanged_revoker CollectionLevelChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static CollectionLevelChanged_revoker CollectionLevelChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto CollectionLevelChanged(winrt::event_token const& token);
         static auto CanCollectDiagnostics(Windows::System::Profile::PlatformDataCollectionLevel const& level);
     };
@@ -109,7 +110,7 @@ namespace winrt::Windows::System::Profile
         [[nodiscard]] static auto OutOfBoxExperienceState();
         static auto OutOfBoxExperienceStateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using OutOfBoxExperienceStateChanged_revoker = impl::factory_event_revoker<Windows::System::Profile::ISystemSetupInfoStatics, &impl::abi_t<Windows::System::Profile::ISystemSetupInfoStatics>::remove_OutOfBoxExperienceStateChanged>;
-        static OutOfBoxExperienceStateChanged_revoker OutOfBoxExperienceStateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static OutOfBoxExperienceStateChanged_revoker OutOfBoxExperienceStateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto OutOfBoxExperienceStateChanged(winrt::event_token const& token);
     };
     struct __declspec(empty_bases) UnsupportedAppRequirement : Windows::System::Profile::IUnsupportedAppRequirement
@@ -126,7 +127,7 @@ namespace winrt::Windows::System::Profile
         [[nodiscard]] static auto IsDisableSupported();
         static auto PolicyChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using PolicyChanged_revoker = impl::factory_event_revoker<Windows::System::Profile::IWindowsIntegrityPolicyStatics, &impl::abi_t<Windows::System::Profile::IWindowsIntegrityPolicyStatics>::remove_PolicyChanged>;
-        static PolicyChanged_revoker PolicyChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static PolicyChanged_revoker PolicyChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto PolicyChanged(winrt::event_token const& token);
     };
 }

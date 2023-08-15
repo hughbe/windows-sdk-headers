@@ -33,30 +33,33 @@ Environment:
 #pragma warning(disable:4201)  // Disable compiler warning C4201: nameless struct/union
 
 //
-// Current DDK Version (Major):     Version 5
+// Current DDK Version (Major):     Version 6
 //
-// Changes from  Version 4 (requires GNSS Driver to compile with this version of the DDK header):
-//                                          - Added service indicator in GNSS_SUPL_VERSION interface
+// Changes in Version 6 (requires GNSS Driver to compile with this version of the DDK header):
+//                      - Support additional accuracy and higher precision data
 //
-// Changes from  Version 3 (requires GNSS Driver to compile with this version of the DDK header):
-//                                          - Added breadcrumbing interface
+// Changes in Version 5 (requires GNSS Driver to compile with this version of the DDK header):
+//                      - Added service indicator in GNSS_SUPL_VERSION interface
 //
-// Changes from  Version 2 (requires GNSS Driver to compile with this version of the DDK header):
-//                                          - Removed unused fields
-//                                          - Support for Galileo
-//                                          - Support for driver to get out-of-band data
+// Changes in Version 4 (requires GNSS Driver to compile with this version of the DDK header):
+//                      - Added breadcrumbing interface
 //
-// Changes from  Version 1 (requires GNSS Driver to compile with this version of the DDK header):
+// Changes in Version 3 (requires GNSS Driver to compile with this version of the DDK header):
+//                      - Removed unused fields
+//                      - Support for Galileo
+//                      - Support for driver to get out-of-band data
 //
-//                                          - Geofence Support
-//                                          - Support for Beidou
-//                                          - SUPL support enhancements (Multiple Root Certificates, Emergency Call Location Support)
+// Changes in Version 2 (requires GNSS Driver to compile with this version of the DDK header):
+//                      - Geofence Support
+//                      - Support for Beidou
+//                      - SUPL support enhancements (Multiple Root Certificates, Emergency Call Location Support)
 //
 //
 // Previous DDK Versions :          Version 1
 //                                  Version 2
 //                                  Version 3
 //                                  Version 4
+//                                  Version 5
 //
 
 //
@@ -68,6 +71,7 @@ Environment:
 #define GNSS_DRIVER_VERSION_3 3
 #define GNSS_DRIVER_VERSION_4 4
 #define GNSS_DRIVER_VERSION_5 5
+#define GNSS_DRIVER_VERSION_6 6
 
 //
 // Define GNSS IOCTL Codes
@@ -462,11 +466,31 @@ typedef struct
 
     double      Latitude ;
     double      Longitude ;
-    double      Altitude ;
+    double      Altitude ;          // Altitude with respect to mean sea level
     double      Speed ;
     double      Heading ;
 
 } GNSS_FIXDATA_BASIC, *PGNSS_FIXDATA_BASIC;
+
+//
+// Define data structure for basic fix data version 2
+// This data structure is added in GNSS_DRIVER_VERSION_6
+//
+
+typedef struct
+{
+    ULONG       Size ;
+    ULONG       Version ;
+
+    double      Latitude ;
+    double      Longitude ;
+    double      Altitude ;          // Altitude with respect to mean sea level
+    double      Speed ;
+    double      Heading ;
+
+    double      AltitudeEllipsoid ; // Altitude with respect to ellipsoid
+
+} GNSS_FIXDATA_BASIC_2, *PGNSS_FIXDATA_BASIC_2;
 
 //
 // Define data structure for accuracy-related fix data
@@ -481,20 +505,51 @@ typedef struct
     ULONG   HorizontalErrorMajorAxis ;
     ULONG   HorizontalErrorMinorAxis ;
     ULONG   HorizontalErrorAngle ;
-    ULONG   HeadingAccuracy ;                  // DO NOT USE: will be removed in a future version
-    ULONG   AltitudeAccuracy ;                 // DO NOT USE: will be removed in a future version
-    ULONG   SpeedAccuracy ;                    // DO NOT USE: will be removed in a future version
+    ULONG   HeadingAccuracy ;
+    ULONG   AltitudeAccuracy ;
+    ULONG   SpeedAccuracy ;
 
     ULONG   HorizontalConfidence ;
-    ULONG   HeadingConfidence ;                // DO NOT USE: will be removed in a future version
-    ULONG   AltitudeConfidence ;               // DO NOT USE: will be removed in a future version
-    ULONG   SpeedConfidence ;                  // DO NOT USE: will be removed in a future version
+    ULONG   HeadingConfidence ;
+    ULONG   AltitudeConfidence ;
+    ULONG   SpeedConfidence ;
 
-    float PositionDilutionOfPrecision;
-    float HorizontalDilutionOfPrecision;
-    float VerticalDilutionOfPrecision;
+    float   PositionDilutionOfPrecision ;
+    float   HorizontalDilutionOfPrecision ;
+    float   VerticalDilutionOfPrecision ;
 
 } GNSS_FIXDATA_ACCURACY, *PGNSS_FIXDATA_ACCURACY;
+
+//
+// Define data structure for accuracy-related fix data version 2
+// This data structure is added in GNSS_DRIVER_VERSION_6
+//
+
+typedef struct
+{
+    ULONG   Size ;
+    ULONG   Version ;
+
+    double  HorizontalAccuracy ;
+    double  HorizontalErrorMajorAxis ;
+    double  HorizontalErrorMinorAxis ;
+    double  HorizontalErrorAngle ;
+    double  HeadingAccuracy ;
+    double  AltitudeAccuracy ;
+    double  SpeedAccuracy ;
+
+    ULONG   HorizontalConfidence ;
+    ULONG   HeadingConfidence ;
+    ULONG   AltitudeConfidence ;
+    ULONG   SpeedConfidence ;
+
+    double  PositionDilutionOfPrecision ;
+    double  HorizontalDilutionOfPrecision ;
+    double  VerticalDilutionOfPrecision ;
+    double  GeometricDilutionOfPrecision ;
+    double  TimeDilutionOfPrecision ;
+
+} GNSS_FIXDATA_ACCURACY_2, *PGNSS_FIXDATA_ACCURACY_2;
 
 //
 // Define data structure for satellite information
@@ -547,6 +602,30 @@ typedef struct
     GNSS_FIXDATA_SATELLITE  SatelliteData ;
 
 } GNSS_FIXDATA, *PGNSS_FIXDATA;
+
+
+//
+// Define data structure for fix data version 2
+// This data structure is added in GNSS_DRIVER_VERSION_6
+//
+
+typedef struct
+{
+    ULONG                       Size ;
+    ULONG                       Version ;
+
+    ULONG                       FixSessionID ;
+    FILETIME                    FixTimeStamp ;
+    BOOL                        IsFinalFix ;
+    NTSTATUS                    FixStatus ;
+
+    ULONG                       FixLevelOfDetails ;
+
+    GNSS_FIXDATA_BASIC_2        BasicData ;
+    GNSS_FIXDATA_ACCURACY_2     AccuracyData ;
+    GNSS_FIXDATA_SATELLITE      SatelliteData ;
+
+} GNSS_FIXDATA_2, *PGNSS_FIXDATA_2;
 
 //
 // The configuration passed into the start of breadcrumbing via IOCTL_GNSS_START_BREADCRUMBING
@@ -783,6 +862,7 @@ typedef enum
     GNSS_Event_GeofencesTrackingStatus  = 0x000F,
     GNSS_Event_DriverRequest            = 0x0010,
     GNSS_Event_BreadcrumbAlertEvent     = 0x0011,
+    GNSS_Event_FixAvailable_2           = 0x0012, // Added in GNSS_DRIVER_VERSION_6
     GNSS_Event_Custom                   = 0x8000
 } GNSS_EVENT_TYPE ;
 
@@ -996,6 +1076,36 @@ typedef struct
 
 } GNSS_EVENT, *PGNSS_EVENT;
 
+//
+// Define data structure for GNSS events version 2
+// This data structure is added in GNSS_DRIVER_VERSION_6
+//
+
+typedef struct
+{
+    ULONG                           Size ;
+    ULONG                           Version ;
+
+    GNSS_EVENT_TYPE                 EventType ;
+    ULONG                           EventDataSize ;
+    BYTE                            Unused[512] ;
+
+    union
+    {
+        GNSS_FIXDATA                FixData ;
+        GNSS_FIXDATA_2              FixData2 ;
+        GNSS_AGNSS_REQUEST_PARAM    AgnssRequest ;
+        GNSS_NI_REQUEST_PARAM       NiRequest;
+        GNSS_ERRORINFO              ErrorInformation ;
+        GNSS_NMEA_DATA              NmeaData;
+        GNSS_GEOFENCE_ALERT_DATA    GeofenceAlertData ;
+        GNSS_BREADCRUMBING_ALERT_DATA       BreadcrumbAlertData;
+        GNSS_GEOFENCES_TRACKINGSTATUS_DATA  GeofencesTrackingStatus ;
+        GNSS_DRIVER_REQUEST_DATA            DriverRequestData;
+        BYTE                                CustomData[ANYSIZE_ARRAY] ;
+    } ;
+
+} GNSS_EVENT_2, *PGNSS_EVENT_2;
 
 //
 // Define data structure for AGNSS time injection

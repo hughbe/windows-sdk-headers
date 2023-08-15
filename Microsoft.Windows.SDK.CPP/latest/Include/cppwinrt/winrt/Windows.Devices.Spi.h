@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Spi_H
 #define WINRT_Windows_Devices_Spi_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Devices.Spi.Provider.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -14,156 +14,157 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.Spi.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiBusInfo<D>::ChipSelectLineCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Spi_ISpiBusInfo<D>::ChipSelectLineCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiBusInfo)->get_ChipSelectLineCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiBusInfo<D>::MinClockFrequency() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Spi_ISpiBusInfo<D>::MinClockFrequency() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiBusInfo)->get_MinClockFrequency(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiBusInfo<D>::MaxClockFrequency() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Spi_ISpiBusInfo<D>::MaxClockFrequency() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiBusInfo)->get_MaxClockFrequency(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiBusInfo<D>::SupportedDataBitLengths() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<int32_t>) consume_Windows_Devices_Spi_ISpiBusInfo<D>::SupportedDataBitLengths() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiBusInfo)->get_SupportedDataBitLengths(&value));
         return Windows::Foundation::Collections::IVectorView<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::ChipSelectLine() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::ChipSelectLine() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->get_ChipSelectLine(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::ChipSelectLine(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::ChipSelectLine(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->put_ChipSelectLine(value));
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Spi::SpiMode) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::Mode() const
     {
-        Windows::Devices::Spi::SpiMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->get_Mode(put_abi(value)));
+        Windows::Devices::Spi::SpiMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::Mode(Windows::Devices::Spi::SpiMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::Mode(Windows::Devices::Spi::SpiMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->put_Mode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::DataBitLength() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::DataBitLength() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->get_DataBitLength(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::DataBitLength(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::DataBitLength(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->put_DataBitLength(value));
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::ClockFrequency() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::ClockFrequency() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->get_ClockFrequency(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::ClockFrequency(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::ClockFrequency(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->put_ClockFrequency(value));
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::SharingMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Spi::SpiSharingMode) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::SharingMode() const
     {
-        Windows::Devices::Spi::SpiSharingMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->get_SharingMode(put_abi(value)));
+        Windows::Devices::Spi::SpiSharingMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->get_SharingMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::SharingMode(Windows::Devices::Spi::SpiSharingMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Spi_ISpiConnectionSettings<D>::SharingMode(Windows::Devices::Spi::SpiSharingMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettings)->put_SharingMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiConnectionSettingsFactory<D>::Create(int32_t chipSelectLine) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Spi::SpiConnectionSettings) consume_Windows_Devices_Spi_ISpiConnectionSettingsFactory<D>::Create(int32_t chipSelectLine) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiConnectionSettingsFactory)->Create(chipSelectLine, &value));
         return Windows::Devices::Spi::SpiConnectionSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiController<D>::GetDevice(Windows::Devices::Spi::SpiConnectionSettings const& settings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Spi::SpiDevice) consume_Windows_Devices_Spi_ISpiController<D>::GetDevice(Windows::Devices::Spi::SpiConnectionSettings const& settings) const
     {
         void* device{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiController)->GetDevice(*(void**)(&settings), &device));
         return Windows::Devices::Spi::SpiDevice{ device, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiControllerStatics<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Spi::SpiController>) consume_Windows_Devices_Spi_ISpiControllerStatics<D>::GetDefaultAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiControllerStatics)->GetDefaultAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Spi::SpiController>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiControllerStatics<D>::GetControllersAsync(Windows::Devices::Spi::Provider::ISpiProvider const& provider) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Spi::SpiController>>) consume_Windows_Devices_Spi_ISpiControllerStatics<D>::GetControllersAsync(Windows::Devices::Spi::Provider::ISpiProvider const& provider) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiControllerStatics)->GetControllersAsync(*(void**)(&provider), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Spi::SpiController>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDevice<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Spi_ISpiDevice<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDevice)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDevice<D>::ConnectionSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Spi::SpiConnectionSettings) consume_Windows_Devices_Spi_ISpiDevice<D>::ConnectionSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDevice)->get_ConnectionSettings(&value));
         return Windows::Devices::Spi::SpiConnectionSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDevice<D>::Write(array_view<uint8_t const> buffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Spi_ISpiDevice<D>::Write(array_view<uint8_t const> buffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDevice)->Write(buffer.size(), get_abi(buffer)));
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDevice<D>::Read(array_view<uint8_t> buffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Spi_ISpiDevice<D>::Read(array_view<uint8_t> buffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDevice)->Read(buffer.size(), put_abi(buffer)));
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDevice<D>::TransferSequential(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Spi_ISpiDevice<D>::TransferSequential(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDevice)->TransferSequential(writeBuffer.size(), get_abi(writeBuffer), readBuffer.size(), put_abi(readBuffer)));
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDevice<D>::TransferFullDuplex(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Spi_ISpiDevice<D>::TransferFullDuplex(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDevice)->TransferFullDuplex(writeBuffer.size(), get_abi(writeBuffer), readBuffer.size(), put_abi(readBuffer)));
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDeviceStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Spi_ISpiDeviceStatics<D>::GetDeviceSelector() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDeviceStatics)->GetDeviceSelector(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDeviceStatics<D>::GetDeviceSelector(param::hstring const& friendlyName) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Spi_ISpiDeviceStatics<D>::GetDeviceSelector(param::hstring const& friendlyName) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDeviceStatics)->GetDeviceSelectorFromFriendlyName(*(void**)(&friendlyName), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDeviceStatics<D>::GetBusInfo(param::hstring const& busId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Spi::SpiBusInfo) consume_Windows_Devices_Spi_ISpiDeviceStatics<D>::GetBusInfo(param::hstring const& busId) const
     {
         void* busInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDeviceStatics)->GetBusInfo(*(void**)(&busId), &busInfo));
         return Windows::Devices::Spi::SpiBusInfo{ busInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Spi_ISpiDeviceStatics<D>::FromIdAsync(param::hstring const& busId, Windows::Devices::Spi::SpiConnectionSettings const& settings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Spi::SpiDevice>) consume_Windows_Devices_Spi_ISpiDeviceStatics<D>::FromIdAsync(param::hstring const& busId, Windows::Devices::Spi::SpiConnectionSettings const& settings) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Spi::ISpiDeviceStatics)->FromIdAsync(*(void**)(&busId), *(void**)(&settings), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Spi::SpiDevice>{ operation, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Spi::ISpiBusInfo> : produce_base<D, Windows::Devices::Spi::ISpiBusInfo>
     {
@@ -197,6 +198,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Spi::ISpiConnectionSettings> : produce_base<D, Windows::Devices::Spi::ISpiConnectionSettings>
     {
@@ -271,6 +274,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Spi::ISpiConnectionSettingsFactory> : produce_base<D, Windows::Devices::Spi::ISpiConnectionSettingsFactory>
     {
@@ -283,6 +288,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Spi::ISpiController> : produce_base<D, Windows::Devices::Spi::ISpiController>
     {
@@ -295,6 +302,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Spi::ISpiControllerStatics> : produce_base<D, Windows::Devices::Spi::ISpiControllerStatics>
     {
@@ -315,6 +324,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Spi::ISpiDevice> : produce_base<D, Windows::Devices::Spi::ISpiDevice>
     {
@@ -363,6 +374,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Spi::ISpiDeviceStatics> : produce_base<D, Windows::Devices::Spi::ISpiDeviceStatics>
     {
@@ -400,49 +412,51 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 }
-namespace winrt::Windows::Devices::Spi
+WINRT_EXPORT namespace winrt::Windows::Devices::Spi
 {
     inline SpiConnectionSettings::SpiConnectionSettings(int32_t chipSelectLine) :
-        SpiConnectionSettings(impl::call_factory<SpiConnectionSettings, Windows::Devices::Spi::ISpiConnectionSettingsFactory>([&](auto&& f) { return f.Create(chipSelectLine); }))
+        SpiConnectionSettings(impl::call_factory<SpiConnectionSettings, ISpiConnectionSettingsFactory>([&](ISpiConnectionSettingsFactory const& f) { return f.Create(chipSelectLine); }))
     {
     }
     inline auto SpiController::GetDefaultAsync()
     {
-        return impl::call_factory<SpiController, Windows::Devices::Spi::ISpiControllerStatics>([&](auto&& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::Spi::SpiController>(*)(ISpiControllerStatics const&), SpiController, ISpiControllerStatics>([](ISpiControllerStatics const& f) { return f.GetDefaultAsync(); });
     }
     inline auto SpiController::GetControllersAsync(Windows::Devices::Spi::Provider::ISpiProvider const& provider)
     {
-        return impl::call_factory<SpiController, Windows::Devices::Spi::ISpiControllerStatics>([&](auto&& f) { return f.GetControllersAsync(provider); });
+        return impl::call_factory<SpiController, ISpiControllerStatics>([&](ISpiControllerStatics const& f) { return f.GetControllersAsync(provider); });
     }
     inline auto SpiDevice::GetDeviceSelector()
     {
-        return impl::call_factory<SpiDevice, Windows::Devices::Spi::ISpiDeviceStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(ISpiDeviceStatics const&), SpiDevice, ISpiDeviceStatics>([](ISpiDeviceStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto SpiDevice::GetDeviceSelector(param::hstring const& friendlyName)
     {
-        return impl::call_factory<SpiDevice, Windows::Devices::Spi::ISpiDeviceStatics>([&](auto&& f) { return f.GetDeviceSelector(friendlyName); });
+        return impl::call_factory<SpiDevice, ISpiDeviceStatics>([&](ISpiDeviceStatics const& f) { return f.GetDeviceSelector(friendlyName); });
     }
     inline auto SpiDevice::GetBusInfo(param::hstring const& busId)
     {
-        return impl::call_factory<SpiDevice, Windows::Devices::Spi::ISpiDeviceStatics>([&](auto&& f) { return f.GetBusInfo(busId); });
+        return impl::call_factory<SpiDevice, ISpiDeviceStatics>([&](ISpiDeviceStatics const& f) { return f.GetBusInfo(busId); });
     }
     inline auto SpiDevice::FromIdAsync(param::hstring const& busId, Windows::Devices::Spi::SpiConnectionSettings const& settings)
     {
-        return impl::call_factory<SpiDevice, Windows::Devices::Spi::ISpiDeviceStatics>([&](auto&& f) { return f.FromIdAsync(busId, settings); });
+        return impl::call_factory<SpiDevice, ISpiDeviceStatics>([&](ISpiDeviceStatics const& f) { return f.FromIdAsync(busId, settings); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Spi::ISpiBusInfo> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::ISpiBusInfo> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::ISpiConnectionSettings> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::ISpiConnectionSettings> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::ISpiConnectionSettingsFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::ISpiConnectionSettingsFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::ISpiController> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::ISpiController> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::ISpiControllerStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::ISpiControllerStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::ISpiDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::ISpiDevice> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::ISpiDeviceStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::ISpiDeviceStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::SpiBusInfo> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::SpiBusInfo> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::SpiConnectionSettings> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::SpiConnectionSettings> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::SpiController> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::SpiController> {};
-    template<> struct hash<winrt::Windows::Devices::Spi::SpiDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Spi::SpiDevice> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Spi::ISpiBusInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::ISpiConnectionSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::ISpiConnectionSettingsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::ISpiController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::ISpiControllerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::ISpiDevice> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::ISpiDeviceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::SpiBusInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::SpiConnectionSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::SpiController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Spi::SpiDevice> : winrt::impl::hash_base {};
+#endif
 }
 #endif

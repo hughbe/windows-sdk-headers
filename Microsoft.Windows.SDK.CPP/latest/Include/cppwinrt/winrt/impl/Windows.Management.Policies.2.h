@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Management_Policies_2_H
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Management.Policies.1.h"
-namespace winrt::Windows::Management::Policies
+WINRT_EXPORT namespace winrt::Windows::Management::Policies
 {
     struct NamedPolicy
     {

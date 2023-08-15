@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Web.Http.Filters.1.h"
-namespace winrt::Windows::Web::Http::Filters
+WINRT_EXPORT namespace winrt::Windows::Web::Http::Filters
 {
     struct __declspec(empty_bases) HttpBaseProtocolFilter : Windows::Web::Http::Filters::IHttpBaseProtocolFilter,
         impl::require<HttpBaseProtocolFilter, Windows::Web::Http::Filters::IHttpBaseProtocolFilter2, Windows::Web::Http::Filters::IHttpBaseProtocolFilter3, Windows::Web::Http::Filters::IHttpBaseProtocolFilter4, Windows::Web::Http::Filters::IHttpBaseProtocolFilter5, Windows::Foundation::IClosable, Windows::Web::Http::Filters::IHttpFilter>

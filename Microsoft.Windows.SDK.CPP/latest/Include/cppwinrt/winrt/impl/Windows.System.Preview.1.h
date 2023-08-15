@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_System_Preview_1_H
 #define WINRT_Windows_System_Preview_1_H
 #include "winrt/impl/Windows.System.Preview.0.h"
-namespace winrt::Windows::System::Preview
+WINRT_EXPORT namespace winrt::Windows::System::Preview
 {
     struct __declspec(empty_bases) ITwoPanelHingedDevicePosturePreview :
         Windows::Foundation::IInspectable,

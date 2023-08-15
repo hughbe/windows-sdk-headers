@@ -1,26 +1,31 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Graphics_Printing_0_H
 #define WINRT_Windows_Graphics_Printing_0_H
-namespace winrt::Windows::ApplicationModel::DataTransfer
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::DataTransfer
 {
     struct DataPackagePropertySet;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Rect;
     struct Size;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVector;
+}
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IRandomAccessStream;
 }
-namespace winrt::Windows::Graphics::Printing
+WINRT_EXPORT namespace winrt::Windows::Graphics::Printing
 {
     enum class PrintBinding : int32_t
     {
@@ -389,598 +394,154 @@ namespace winrt::Windows::Graphics::Printing
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Graphics::Printing::IPrintDocumentSource>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintManager>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintManagerStatic>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintManagerStatic2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintPageInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintPageRange>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintPageRangeFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintPageRangeOptions>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTask>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTask2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskCompletedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptions>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptions2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptionsCore>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskProgressingEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskRequest>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskRequestedDeferral>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskRequestedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IPrintTaskTargetDeviceSupport>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintPageInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintPageRange>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintPageRangeOptions>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTask>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskCompletedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskOptions>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskProgressingEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskRequest>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskRequestedDeferral>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskRequestedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::StandardPrintTaskOptions>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintBinding>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintBordering>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintCollation>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintColorMode>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintDuplex>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintHolePunch>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintMediaSize>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintMediaType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintOrientation>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintQuality>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintStaple>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskCompletion>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintPageDescription>
-    {
-        using type = struct_category<Windows::Foundation::Size, Windows::Foundation::Rect, uint32_t, uint32_t>;
-    };
-    template <> struct category<Windows::Graphics::Printing::PrintTaskSourceRequestedHandler>
-    {
-        using type = delegate_category;
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintDocumentSource>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintDocumentSource" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintManager>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintManager" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintManagerStatic>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintManagerStatic" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintManagerStatic2>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintManagerStatic2" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintPageInfo>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintPageInfo" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintPageRange>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintPageRange" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintPageRangeFactory>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintPageRangeFactory" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintPageRangeOptions>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintPageRangeOptions" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTask>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTask" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTask2>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTask2" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskCompletedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskCompletedEventArgs" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskOptions>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskOptions" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskOptions2>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskOptions2" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskOptionsCore>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskOptionsCore" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskProgressingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskProgressingEventArgs" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskRequest>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskRequest" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskRequestedDeferral>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskRequestedDeferral" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IPrintTaskTargetDeviceSupport>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic2>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2" };
-    };
-    template <> struct name<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic3>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintManager>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintManager" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintPageInfo>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintPageInfo" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintPageRange>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintPageRange" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintPageRangeOptions>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintPageRangeOptions" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTask>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTask" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskCompletedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskCompletedEventArgs" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskOptions>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskOptions" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskProgressingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskProgressingEventArgs" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskRequest>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskRequest" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskRequestedDeferral>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskRequestedDeferral" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral" };
-    };
-    template <> struct name<Windows::Graphics::Printing::StandardPrintTaskOptions>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.StandardPrintTaskOptions" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintBinding>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintBinding" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintBordering>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintBordering" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintCollation>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintCollation" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintColorMode>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintColorMode" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintDuplex>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintDuplex" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintHolePunch>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintHolePunch" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintMediaSize>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintMediaSize" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintMediaType>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintMediaType" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintOrientation>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintOrientation" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintQuality>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintQuality" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintStaple>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintStaple" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskCompletion>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskCompletion" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintPageDescription>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintPageDescription" };
-    };
-    template <> struct name<Windows::Graphics::Printing::PrintTaskSourceRequestedHandler>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.Printing.PrintTaskSourceRequestedHandler" };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintDocumentSource>
-    {
-        static constexpr guid value{ 0xDEDC0C30,0xF1EB,0x47DF,{ 0xAA,0xE6,0xED,0x54,0x27,0x51,0x1F,0x01 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintManager>
-    {
-        static constexpr guid value{ 0xFF2A9694,0x8C99,0x44FD,{ 0xAE,0x4A,0x19,0xD9,0xAA,0x9A,0x0F,0x0A } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintManagerStatic>
-    {
-        static constexpr guid value{ 0x58185DCD,0xE634,0x4654,{ 0x84,0xF0,0xE0,0x15,0x2A,0x82,0x17,0xAC } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintManagerStatic2>
-    {
-        static constexpr guid value{ 0x35A99955,0xE6AB,0x4139,{ 0x9A,0xBD,0xB8,0x6A,0x72,0x9B,0x35,0x98 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintPageInfo>
-    {
-        static constexpr guid value{ 0xDD4BE9C9,0xA6A1,0x4ADA,{ 0x93,0x0E,0xDA,0x87,0x2A,0x4F,0x23,0xD3 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintPageRange>
-    {
-        static constexpr guid value{ 0xF8A06C54,0x6E7C,0x51C5,{ 0x57,0xFD,0x06,0x60,0xC2,0xD7,0x15,0x13 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintPageRangeFactory>
-    {
-        static constexpr guid value{ 0x408FD45F,0xE047,0x5F85,{ 0x71,0x29,0xFB,0x08,0x5A,0x4F,0xAD,0x14 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintPageRangeOptions>
-    {
-        static constexpr guid value{ 0xCE6DB728,0x1357,0x46B2,{ 0xA9,0x23,0x79,0xF9,0x95,0xF4,0x48,0xFC } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTask>
-    {
-        static constexpr guid value{ 0x61D80247,0x6CF6,0x4FAD,{ 0x84,0xE2,0xA5,0xE8,0x2E,0x2D,0x4C,0xEB } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTask2>
-    {
-        static constexpr guid value{ 0x36234877,0x3E53,0x4D9D,{ 0x8F,0x5E,0x31,0x6A,0xC8,0xDE,0xDA,0xE1 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskCompletedEventArgs>
-    {
-        static constexpr guid value{ 0x5BCD34AF,0x24E9,0x4C10,{ 0x8D,0x07,0x14,0xC3,0x46,0xBA,0x3F,0xCE } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskOptions>
-    {
-        static constexpr guid value{ 0x5A0A66BB,0xD289,0x41BB,{ 0x96,0xDD,0x57,0xE2,0x83,0x38,0xAE,0x3F } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskOptions2>
-    {
-        static constexpr guid value{ 0xEB9B1606,0x9A36,0x4B59,{ 0x86,0x17,0xB2,0x17,0x84,0x92,0x62,0xE1 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskOptionsCore>
-    {
-        static constexpr guid value{ 0x1BDBB474,0x4ED1,0x41EB,{ 0xBE,0x3C,0x72,0xD1,0x8E,0xD6,0x73,0x37 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>
-    {
-        static constexpr guid value{ 0xC1B71832,0x9E93,0x4E55,{ 0x81,0x4B,0x33,0x26,0xA5,0x9E,0xFC,0xE1 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>
-    {
-        static constexpr guid value{ 0x62E69E23,0x9A1E,0x4336,{ 0xB7,0x4F,0x3C,0xC7,0xF4,0xCF,0xF7,0x09 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskProgressingEventArgs>
-    {
-        static constexpr guid value{ 0x810CD3CB,0xB410,0x4282,{ 0xA0,0x73,0x5A,0xC3,0x78,0x23,0x41,0x74 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskRequest>
-    {
-        static constexpr guid value{ 0x6FF61E2E,0x2722,0x4240,{ 0xA6,0x7C,0xF3,0x64,0x84,0x9A,0x17,0xF3 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskRequestedDeferral>
-    {
-        static constexpr guid value{ 0xCFEFB3F0,0xCE3E,0x42C7,{ 0x94,0x96,0x64,0x80,0x0C,0x62,0x2C,0x44 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskRequestedEventArgs>
-    {
-        static constexpr guid value{ 0xD0AFF924,0xA31B,0x454C,{ 0xA7,0xB6,0x5D,0x0C,0xC5,0x22,0xFC,0x16 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs>
-    {
-        static constexpr guid value{ 0xF9F067BE,0xF456,0x41F0,{ 0x9C,0x98,0x5C,0xE7,0x3E,0x85,0x14,0x10 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral>
-    {
-        static constexpr guid value{ 0x4A1560D1,0x6992,0x4D9D,{ 0x85,0x55,0x4C,0xA4,0x56,0x3F,0xB1,0x66 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IPrintTaskTargetDeviceSupport>
-    {
-        static constexpr guid value{ 0x295D70C0,0xC2CB,0x4B7D,{ 0xB0,0xEA,0x93,0x09,0x50,0x91,0xA2,0x20 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic>
-    {
-        static constexpr guid value{ 0xB4483D26,0x0DD0,0x4CD4,{ 0xBA,0xFF,0x93,0x0F,0xC7,0xD6,0xA5,0x74 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic2>
-    {
-        static constexpr guid value{ 0x3BE38BF4,0x7A44,0x4269,{ 0x9A,0x52,0x81,0x26,0x1E,0x28,0x9E,0xE9 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic3>
-    {
-        static constexpr guid value{ 0xBBF68E86,0x3858,0x41B3,{ 0xA7,0x99,0x55,0xDD,0x98,0x88,0xD4,0x75 } };
-    };
-    template <> struct guid_storage<Windows::Graphics::Printing::PrintTaskSourceRequestedHandler>
-    {
-        static constexpr guid value{ 0x6C109FA8,0x5CB6,0x4B3A,{ 0x86,0x63,0xF3,0x9C,0xB0,0x2D,0xC9,0xB4 } };
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintManager>
-    {
-        using type = Windows::Graphics::Printing::IPrintManager;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintPageInfo>
-    {
-        using type = Windows::Graphics::Printing::IPrintPageInfo;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintPageRange>
-    {
-        using type = Windows::Graphics::Printing::IPrintPageRange;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintPageRangeOptions>
-    {
-        using type = Windows::Graphics::Printing::IPrintPageRangeOptions;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintTask>
-    {
-        using type = Windows::Graphics::Printing::IPrintTask;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskCompletedEventArgs>
-    {
-        using type = Windows::Graphics::Printing::IPrintTaskCompletedEventArgs;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskOptions>
-    {
-        using type = Windows::Graphics::Printing::IPrintTaskOptionsCore;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskProgressingEventArgs>
-    {
-        using type = Windows::Graphics::Printing::IPrintTaskProgressingEventArgs;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskRequest>
-    {
-        using type = Windows::Graphics::Printing::IPrintTaskRequest;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskRequestedDeferral>
-    {
-        using type = Windows::Graphics::Printing::IPrintTaskRequestedDeferral;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskRequestedEventArgs>
-    {
-        using type = Windows::Graphics::Printing::IPrintTaskRequestedEventArgs;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>
-    {
-        using type = Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs;
-    };
-    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>
-    {
-        using type = Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral;
-    };
+    template <> struct category<Windows::Graphics::Printing::IPrintDocumentSource>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintManager>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintManagerStatic>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintManagerStatic2>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintPageInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintPageRange>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintPageRangeFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintPageRangeOptions>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTask>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTask2>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskCompletedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptions>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptions2>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptionsCore>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskProgressingEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskRequest>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskRequestedDeferral>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IPrintTaskTargetDeviceSupport>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic2>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic3>{ using type = interface_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintManager>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintPageInfo>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintPageRange>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintPageRangeOptions>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTask>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskCompletedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskOptions>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskProgressingEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskRequest>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskRequestedDeferral>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::StandardPrintTaskOptions>{ using type = class_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintBinding>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintBordering>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintCollation>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintColorMode>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintDuplex>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintHolePunch>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintMediaSize>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintMediaType>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintOrientation>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintQuality>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintStaple>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskCompletion>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::Printing::PrintPageDescription>{ using type = struct_category<Windows::Foundation::Size, Windows::Foundation::Rect, uint32_t, uint32_t>; };
+    template <> struct category<Windows::Graphics::Printing::PrintTaskSourceRequestedHandler>{ using type = delegate_category; };
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintManager> = L"Windows.Graphics.Printing.PrintManager";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintPageInfo> = L"Windows.Graphics.Printing.PrintPageInfo";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintPageRange> = L"Windows.Graphics.Printing.PrintPageRange";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintPageRangeOptions> = L"Windows.Graphics.Printing.PrintPageRangeOptions";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTask> = L"Windows.Graphics.Printing.PrintTask";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskCompletedEventArgs> = L"Windows.Graphics.Printing.PrintTaskCompletedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskOptions> = L"Windows.Graphics.Printing.PrintTaskOptions";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskProgressingEventArgs> = L"Windows.Graphics.Printing.PrintTaskProgressingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskRequest> = L"Windows.Graphics.Printing.PrintTaskRequest";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskRequestedDeferral> = L"Windows.Graphics.Printing.PrintTaskRequestedDeferral";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskRequestedEventArgs> = L"Windows.Graphics.Printing.PrintTaskRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskSourceRequestedArgs> = L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral> = L"Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::StandardPrintTaskOptions> = L"Windows.Graphics.Printing.StandardPrintTaskOptions";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintBinding> = L"Windows.Graphics.Printing.PrintBinding";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintBordering> = L"Windows.Graphics.Printing.PrintBordering";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintCollation> = L"Windows.Graphics.Printing.PrintCollation";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintColorMode> = L"Windows.Graphics.Printing.PrintColorMode";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintDuplex> = L"Windows.Graphics.Printing.PrintDuplex";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintHolePunch> = L"Windows.Graphics.Printing.PrintHolePunch";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintMediaSize> = L"Windows.Graphics.Printing.PrintMediaSize";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintMediaType> = L"Windows.Graphics.Printing.PrintMediaType";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintOrientation> = L"Windows.Graphics.Printing.PrintOrientation";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintQuality> = L"Windows.Graphics.Printing.PrintQuality";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintStaple> = L"Windows.Graphics.Printing.PrintStaple";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskCompletion> = L"Windows.Graphics.Printing.PrintTaskCompletion";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintPageDescription> = L"Windows.Graphics.Printing.PrintPageDescription";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintDocumentSource> = L"Windows.Graphics.Printing.IPrintDocumentSource";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintManager> = L"Windows.Graphics.Printing.IPrintManager";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintManagerStatic> = L"Windows.Graphics.Printing.IPrintManagerStatic";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintManagerStatic2> = L"Windows.Graphics.Printing.IPrintManagerStatic2";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintPageInfo> = L"Windows.Graphics.Printing.IPrintPageInfo";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintPageRange> = L"Windows.Graphics.Printing.IPrintPageRange";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintPageRangeFactory> = L"Windows.Graphics.Printing.IPrintPageRangeFactory";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintPageRangeOptions> = L"Windows.Graphics.Printing.IPrintPageRangeOptions";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTask> = L"Windows.Graphics.Printing.IPrintTask";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTask2> = L"Windows.Graphics.Printing.IPrintTask2";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskCompletedEventArgs> = L"Windows.Graphics.Printing.IPrintTaskCompletedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskOptions> = L"Windows.Graphics.Printing.IPrintTaskOptions";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskOptions2> = L"Windows.Graphics.Printing.IPrintTaskOptions2";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskOptionsCore> = L"Windows.Graphics.Printing.IPrintTaskOptionsCore";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties> = L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration> = L"Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskProgressingEventArgs> = L"Windows.Graphics.Printing.IPrintTaskProgressingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskRequest> = L"Windows.Graphics.Printing.IPrintTaskRequest";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskRequestedDeferral> = L"Windows.Graphics.Printing.IPrintTaskRequestedDeferral";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskRequestedEventArgs> = L"Windows.Graphics.Printing.IPrintTaskRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs> = L"Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral> = L"Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IPrintTaskTargetDeviceSupport> = L"Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic> = L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic2> = L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic3> = L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3";
+    template <> inline constexpr auto& name_v<Windows::Graphics::Printing::PrintTaskSourceRequestedHandler> = L"Windows.Graphics.Printing.PrintTaskSourceRequestedHandler";
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintDocumentSource>{ 0xDEDC0C30,0xF1EB,0x47DF,{ 0xAA,0xE6,0xED,0x54,0x27,0x51,0x1F,0x01 } }; // DEDC0C30-F1EB-47DF-AAE6-ED5427511F01
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintManager>{ 0xFF2A9694,0x8C99,0x44FD,{ 0xAE,0x4A,0x19,0xD9,0xAA,0x9A,0x0F,0x0A } }; // FF2A9694-8C99-44FD-AE4A-19D9AA9A0F0A
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintManagerStatic>{ 0x58185DCD,0xE634,0x4654,{ 0x84,0xF0,0xE0,0x15,0x2A,0x82,0x17,0xAC } }; // 58185DCD-E634-4654-84F0-E0152A8217AC
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintManagerStatic2>{ 0x35A99955,0xE6AB,0x4139,{ 0x9A,0xBD,0xB8,0x6A,0x72,0x9B,0x35,0x98 } }; // 35A99955-E6AB-4139-9ABD-B86A729B3598
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintPageInfo>{ 0xDD4BE9C9,0xA6A1,0x4ADA,{ 0x93,0x0E,0xDA,0x87,0x2A,0x4F,0x23,0xD3 } }; // DD4BE9C9-A6A1-4ADA-930E-DA872A4F23D3
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintPageRange>{ 0xF8A06C54,0x6E7C,0x51C5,{ 0x57,0xFD,0x06,0x60,0xC2,0xD7,0x15,0x13 } }; // F8A06C54-6E7C-51C5-57FD-0660C2D71513
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintPageRangeFactory>{ 0x408FD45F,0xE047,0x5F85,{ 0x71,0x29,0xFB,0x08,0x5A,0x4F,0xAD,0x14 } }; // 408FD45F-E047-5F85-7129-FB085A4FAD14
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintPageRangeOptions>{ 0xCE6DB728,0x1357,0x46B2,{ 0xA9,0x23,0x79,0xF9,0x95,0xF4,0x48,0xFC } }; // CE6DB728-1357-46B2-A923-79F995F448FC
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTask>{ 0x61D80247,0x6CF6,0x4FAD,{ 0x84,0xE2,0xA5,0xE8,0x2E,0x2D,0x4C,0xEB } }; // 61D80247-6CF6-4FAD-84E2-A5E82E2D4CEB
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTask2>{ 0x36234877,0x3E53,0x4D9D,{ 0x8F,0x5E,0x31,0x6A,0xC8,0xDE,0xDA,0xE1 } }; // 36234877-3E53-4D9D-8F5E-316AC8DEDAE1
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskCompletedEventArgs>{ 0x5BCD34AF,0x24E9,0x4C10,{ 0x8D,0x07,0x14,0xC3,0x46,0xBA,0x3F,0xCE } }; // 5BCD34AF-24E9-4C10-8D07-14C346BA3FCE
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskOptions>{ 0x5A0A66BB,0xD289,0x41BB,{ 0x96,0xDD,0x57,0xE2,0x83,0x38,0xAE,0x3F } }; // 5A0A66BB-D289-41BB-96DD-57E28338AE3F
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskOptions2>{ 0xEB9B1606,0x9A36,0x4B59,{ 0x86,0x17,0xB2,0x17,0x84,0x92,0x62,0xE1 } }; // EB9B1606-9A36-4B59-8617-B217849262E1
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskOptionsCore>{ 0x1BDBB474,0x4ED1,0x41EB,{ 0xBE,0x3C,0x72,0xD1,0x8E,0xD6,0x73,0x37 } }; // 1BDBB474-4ED1-41EB-BE3C-72D18ED67337
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>{ 0xC1B71832,0x9E93,0x4E55,{ 0x81,0x4B,0x33,0x26,0xA5,0x9E,0xFC,0xE1 } }; // C1B71832-9E93-4E55-814B-3326A59EFCE1
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>{ 0x62E69E23,0x9A1E,0x4336,{ 0xB7,0x4F,0x3C,0xC7,0xF4,0xCF,0xF7,0x09 } }; // 62E69E23-9A1E-4336-B74F-3CC7F4CFF709
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskProgressingEventArgs>{ 0x810CD3CB,0xB410,0x4282,{ 0xA0,0x73,0x5A,0xC3,0x78,0x23,0x41,0x74 } }; // 810CD3CB-B410-4282-A073-5AC378234174
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskRequest>{ 0x6FF61E2E,0x2722,0x4240,{ 0xA6,0x7C,0xF3,0x64,0x84,0x9A,0x17,0xF3 } }; // 6FF61E2E-2722-4240-A67C-F364849A17F3
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskRequestedDeferral>{ 0xCFEFB3F0,0xCE3E,0x42C7,{ 0x94,0x96,0x64,0x80,0x0C,0x62,0x2C,0x44 } }; // CFEFB3F0-CE3E-42C7-9496-64800C622C44
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskRequestedEventArgs>{ 0xD0AFF924,0xA31B,0x454C,{ 0xA7,0xB6,0x5D,0x0C,0xC5,0x22,0xFC,0x16 } }; // D0AFF924-A31B-454C-A7B6-5D0CC522FC16
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs>{ 0xF9F067BE,0xF456,0x41F0,{ 0x9C,0x98,0x5C,0xE7,0x3E,0x85,0x14,0x10 } }; // F9F067BE-F456-41F0-9C98-5CE73E851410
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral>{ 0x4A1560D1,0x6992,0x4D9D,{ 0x85,0x55,0x4C,0xA4,0x56,0x3F,0xB1,0x66 } }; // 4A1560D1-6992-4D9D-8555-4CA4563FB166
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IPrintTaskTargetDeviceSupport>{ 0x295D70C0,0xC2CB,0x4B7D,{ 0xB0,0xEA,0x93,0x09,0x50,0x91,0xA2,0x20 } }; // 295D70C0-C2CB-4B7D-B0EA-93095091A220
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic>{ 0xB4483D26,0x0DD0,0x4CD4,{ 0xBA,0xFF,0x93,0x0F,0xC7,0xD6,0xA5,0x74 } }; // B4483D26-0DD0-4CD4-BAFF-930FC7D6A574
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic2>{ 0x3BE38BF4,0x7A44,0x4269,{ 0x9A,0x52,0x81,0x26,0x1E,0x28,0x9E,0xE9 } }; // 3BE38BF4-7A44-4269-9A52-81261E289EE9
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic3>{ 0xBBF68E86,0x3858,0x41B3,{ 0xA7,0x99,0x55,0xDD,0x98,0x88,0xD4,0x75 } }; // BBF68E86-3858-41B3-A799-55DD9888D475
+    template <> inline constexpr guid guid_v<Windows::Graphics::Printing::PrintTaskSourceRequestedHandler>{ 0x6C109FA8,0x5CB6,0x4B3A,{ 0x86,0x63,0xF3,0x9C,0xB0,0x2D,0xC9,0xB4 } }; // 6C109FA8-5CB6-4B3A-8663-F39CB02DC9B4
+    template <> struct default_interface<Windows::Graphics::Printing::PrintManager>{ using type = Windows::Graphics::Printing::IPrintManager; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintPageInfo>{ using type = Windows::Graphics::Printing::IPrintPageInfo; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintPageRange>{ using type = Windows::Graphics::Printing::IPrintPageRange; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintPageRangeOptions>{ using type = Windows::Graphics::Printing::IPrintPageRangeOptions; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintTask>{ using type = Windows::Graphics::Printing::IPrintTask; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskCompletedEventArgs>{ using type = Windows::Graphics::Printing::IPrintTaskCompletedEventArgs; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskOptions>{ using type = Windows::Graphics::Printing::IPrintTaskOptionsCore; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskProgressingEventArgs>{ using type = Windows::Graphics::Printing::IPrintTaskProgressingEventArgs; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskRequest>{ using type = Windows::Graphics::Printing::IPrintTaskRequest; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskRequestedDeferral>{ using type = Windows::Graphics::Printing::IPrintTaskRequestedDeferral; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskRequestedEventArgs>{ using type = Windows::Graphics::Printing::IPrintTaskRequestedEventArgs; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>{ using type = Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs; };
+    template <> struct default_interface<Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>{ using type = Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral; };
     template <> struct abi<Windows::Graphics::Printing::IPrintDocumentSource>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -1254,10 +815,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintManager
     {
-        auto PrintTaskRequested(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintManager, Windows::Graphics::Printing::PrintTaskRequestedEventArgs> const& eventHandler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) PrintTaskRequested(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintManager, Windows::Graphics::Printing::PrintTaskRequestedEventArgs> const& eventHandler) const;
         using PrintTaskRequested_revoker = impl::event_revoker<Windows::Graphics::Printing::IPrintManager, &impl::abi_t<Windows::Graphics::Printing::IPrintManager>::remove_PrintTaskRequested>;
-        PrintTaskRequested_revoker PrintTaskRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintManager, Windows::Graphics::Printing::PrintTaskRequestedEventArgs> const& eventHandler) const;
-        auto PrintTaskRequested(winrt::event_token const& eventCookie) const noexcept;
+        [[nodiscard]] PrintTaskRequested_revoker PrintTaskRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintManager, Windows::Graphics::Printing::PrintTaskRequestedEventArgs> const& eventHandler) const;
+        WINRT_IMPL_AUTO(void) PrintTaskRequested(winrt::event_token const& eventCookie) const noexcept;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintManager>
     {
@@ -1266,8 +827,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintManagerStatic
     {
-        auto GetForCurrentView() const;
-        auto ShowPrintUIAsync() const;
+        WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintManager) GetForCurrentView() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) ShowPrintUIAsync() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintManagerStatic>
     {
@@ -1276,7 +837,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintManagerStatic2
     {
-        auto IsSupported() const;
+        WINRT_IMPL_AUTO(bool) IsSupported() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintManagerStatic2>
     {
@@ -1285,16 +846,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintPageInfo
     {
-        auto MediaSize(Windows::Graphics::Printing::PrintMediaSize const& value) const;
-        [[nodiscard]] auto MediaSize() const;
-        auto PageSize(Windows::Foundation::Size const& value) const;
-        [[nodiscard]] auto PageSize() const;
-        auto DpiX(uint32_t value) const;
-        [[nodiscard]] auto DpiX() const;
-        auto DpiY(uint32_t value) const;
-        [[nodiscard]] auto DpiY() const;
-        auto Orientation(Windows::Graphics::Printing::PrintOrientation const& value) const;
-        [[nodiscard]] auto Orientation() const;
+        WINRT_IMPL_AUTO(void) MediaSize(Windows::Graphics::Printing::PrintMediaSize const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintMediaSize) MediaSize() const;
+        WINRT_IMPL_AUTO(void) PageSize(Windows::Foundation::Size const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Size) PageSize() const;
+        WINRT_IMPL_AUTO(void) DpiX(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) DpiX() const;
+        WINRT_IMPL_AUTO(void) DpiY(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) DpiY() const;
+        WINRT_IMPL_AUTO(void) Orientation(Windows::Graphics::Printing::PrintOrientation const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintOrientation) Orientation() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintPageInfo>
     {
@@ -1303,8 +864,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintPageRange
     {
-        [[nodiscard]] auto FirstPageNumber() const;
-        [[nodiscard]] auto LastPageNumber() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) FirstPageNumber() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) LastPageNumber() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintPageRange>
     {
@@ -1313,8 +874,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintPageRangeFactory
     {
-        auto Create(int32_t firstPage, int32_t lastPage) const;
-        auto CreateWithSinglePage(int32_t page) const;
+        WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintPageRange) Create(int32_t firstPage, int32_t lastPage) const;
+        WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintPageRange) CreateWithSinglePage(int32_t page) const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintPageRangeFactory>
     {
@@ -1323,12 +884,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintPageRangeOptions
     {
-        auto AllowAllPages(bool value) const;
-        [[nodiscard]] auto AllowAllPages() const;
-        auto AllowCurrentPage(bool value) const;
-        [[nodiscard]] auto AllowCurrentPage() const;
-        auto AllowCustomSetOfPages(bool value) const;
-        [[nodiscard]] auto AllowCustomSetOfPages() const;
+        WINRT_IMPL_AUTO(void) AllowAllPages(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowAllPages() const;
+        WINRT_IMPL_AUTO(void) AllowCurrentPage(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowCurrentPage() const;
+        WINRT_IMPL_AUTO(void) AllowCustomSetOfPages(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowCustomSetOfPages() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintPageRangeOptions>
     {
@@ -1337,25 +898,25 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTask
     {
-        [[nodiscard]] auto Properties() const;
-        [[nodiscard]] auto Source() const;
-        [[nodiscard]] auto Options() const;
-        auto Previewing(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Foundation::IInspectable> const& eventHandler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DataPackagePropertySet) Properties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::IPrintDocumentSource) Source() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTaskOptions) Options() const;
+        WINRT_IMPL_AUTO(winrt::event_token) Previewing(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Foundation::IInspectable> const& eventHandler) const;
         using Previewing_revoker = impl::event_revoker<Windows::Graphics::Printing::IPrintTask, &impl::abi_t<Windows::Graphics::Printing::IPrintTask>::remove_Previewing>;
-        Previewing_revoker Previewing(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Foundation::IInspectable> const& eventHandler) const;
-        auto Previewing(winrt::event_token const& eventCookie) const noexcept;
-        auto Submitting(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Foundation::IInspectable> const& eventHandler) const;
+        [[nodiscard]] Previewing_revoker Previewing(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Foundation::IInspectable> const& eventHandler) const;
+        WINRT_IMPL_AUTO(void) Previewing(winrt::event_token const& eventCookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Submitting(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Foundation::IInspectable> const& eventHandler) const;
         using Submitting_revoker = impl::event_revoker<Windows::Graphics::Printing::IPrintTask, &impl::abi_t<Windows::Graphics::Printing::IPrintTask>::remove_Submitting>;
-        Submitting_revoker Submitting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Foundation::IInspectable> const& eventHandler) const;
-        auto Submitting(winrt::event_token const& eventCookie) const noexcept;
-        auto Progressing(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Graphics::Printing::PrintTaskProgressingEventArgs> const& eventHandler) const;
+        [[nodiscard]] Submitting_revoker Submitting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Foundation::IInspectable> const& eventHandler) const;
+        WINRT_IMPL_AUTO(void) Submitting(winrt::event_token const& eventCookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Progressing(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Graphics::Printing::PrintTaskProgressingEventArgs> const& eventHandler) const;
         using Progressing_revoker = impl::event_revoker<Windows::Graphics::Printing::IPrintTask, &impl::abi_t<Windows::Graphics::Printing::IPrintTask>::remove_Progressing>;
-        Progressing_revoker Progressing(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Graphics::Printing::PrintTaskProgressingEventArgs> const& eventHandler) const;
-        auto Progressing(winrt::event_token const& eventCookie) const noexcept;
-        auto Completed(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Graphics::Printing::PrintTaskCompletedEventArgs> const& eventHandler) const;
+        [[nodiscard]] Progressing_revoker Progressing(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Graphics::Printing::PrintTaskProgressingEventArgs> const& eventHandler) const;
+        WINRT_IMPL_AUTO(void) Progressing(winrt::event_token const& eventCookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Completed(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Graphics::Printing::PrintTaskCompletedEventArgs> const& eventHandler) const;
         using Completed_revoker = impl::event_revoker<Windows::Graphics::Printing::IPrintTask, &impl::abi_t<Windows::Graphics::Printing::IPrintTask>::remove_Completed>;
-        Completed_revoker Completed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Graphics::Printing::PrintTaskCompletedEventArgs> const& eventHandler) const;
-        auto Completed(winrt::event_token const& eventCookie) const noexcept;
+        [[nodiscard]] Completed_revoker Completed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::PrintTask, Windows::Graphics::Printing::PrintTaskCompletedEventArgs> const& eventHandler) const;
+        WINRT_IMPL_AUTO(void) Completed(winrt::event_token const& eventCookie) const noexcept;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTask>
     {
@@ -1364,8 +925,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTask2
     {
-        auto IsPreviewEnabled(bool value) const;
-        [[nodiscard]] auto IsPreviewEnabled() const;
+        WINRT_IMPL_AUTO(void) IsPreviewEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPreviewEnabled() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTask2>
     {
@@ -1374,7 +935,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskCompletedEventArgs
     {
-        [[nodiscard]] auto Completion() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTaskCompletion) Completion() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskCompletedEventArgs>
     {
@@ -1383,9 +944,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskOptions
     {
-        auto Bordering(Windows::Graphics::Printing::PrintBordering const& value) const;
-        [[nodiscard]] auto Bordering() const;
-        auto GetPagePrintTicket(Windows::Graphics::Printing::PrintPageInfo const& printPageInfo) const;
+        WINRT_IMPL_AUTO(void) Bordering(Windows::Graphics::Printing::PrintBordering const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintBordering) Bordering() const;
+        WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStream) GetPagePrintTicket(Windows::Graphics::Printing::PrintPageInfo const& printPageInfo) const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskOptions>
     {
@@ -1394,8 +955,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskOptions2
     {
-        [[nodiscard]] auto PageRangeOptions() const;
-        [[nodiscard]] auto CustomPageRanges() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintPageRangeOptions) PageRangeOptions() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Graphics::Printing::PrintPageRange>) CustomPageRanges() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskOptions2>
     {
@@ -1404,7 +965,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskOptionsCore
     {
-        auto GetPageDescription(uint32_t jobPageNumber) const;
+        WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintPageDescription) GetPageDescription(uint32_t jobPageNumber) const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskOptionsCore>
     {
@@ -1413,30 +974,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskOptionsCoreProperties
     {
-        auto MediaSize(Windows::Graphics::Printing::PrintMediaSize const& value) const;
-        [[nodiscard]] auto MediaSize() const;
-        auto MediaType(Windows::Graphics::Printing::PrintMediaType const& value) const;
-        [[nodiscard]] auto MediaType() const;
-        auto Orientation(Windows::Graphics::Printing::PrintOrientation const& value) const;
-        [[nodiscard]] auto Orientation() const;
-        auto PrintQuality(Windows::Graphics::Printing::PrintQuality const& value) const;
-        [[nodiscard]] auto PrintQuality() const;
-        auto ColorMode(Windows::Graphics::Printing::PrintColorMode const& value) const;
-        [[nodiscard]] auto ColorMode() const;
-        auto Duplex(Windows::Graphics::Printing::PrintDuplex const& value) const;
-        [[nodiscard]] auto Duplex() const;
-        auto Collation(Windows::Graphics::Printing::PrintCollation const& value) const;
-        [[nodiscard]] auto Collation() const;
-        auto Staple(Windows::Graphics::Printing::PrintStaple const& value) const;
-        [[nodiscard]] auto Staple() const;
-        auto HolePunch(Windows::Graphics::Printing::PrintHolePunch const& value) const;
-        [[nodiscard]] auto HolePunch() const;
-        auto Binding(Windows::Graphics::Printing::PrintBinding const& value) const;
-        [[nodiscard]] auto Binding() const;
-        [[nodiscard]] auto MinCopies() const;
-        [[nodiscard]] auto MaxCopies() const;
-        auto NumberOfCopies(uint32_t value) const;
-        [[nodiscard]] auto NumberOfCopies() const;
+        WINRT_IMPL_AUTO(void) MediaSize(Windows::Graphics::Printing::PrintMediaSize const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintMediaSize) MediaSize() const;
+        WINRT_IMPL_AUTO(void) MediaType(Windows::Graphics::Printing::PrintMediaType const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintMediaType) MediaType() const;
+        WINRT_IMPL_AUTO(void) Orientation(Windows::Graphics::Printing::PrintOrientation const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintOrientation) Orientation() const;
+        WINRT_IMPL_AUTO(void) PrintQuality(Windows::Graphics::Printing::PrintQuality const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintQuality) PrintQuality() const;
+        WINRT_IMPL_AUTO(void) ColorMode(Windows::Graphics::Printing::PrintColorMode const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintColorMode) ColorMode() const;
+        WINRT_IMPL_AUTO(void) Duplex(Windows::Graphics::Printing::PrintDuplex const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintDuplex) Duplex() const;
+        WINRT_IMPL_AUTO(void) Collation(Windows::Graphics::Printing::PrintCollation const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintCollation) Collation() const;
+        WINRT_IMPL_AUTO(void) Staple(Windows::Graphics::Printing::PrintStaple const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintStaple) Staple() const;
+        WINRT_IMPL_AUTO(void) HolePunch(Windows::Graphics::Printing::PrintHolePunch const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintHolePunch) HolePunch() const;
+        WINRT_IMPL_AUTO(void) Binding(Windows::Graphics::Printing::PrintBinding const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintBinding) Binding() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MinCopies() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxCopies() const;
+        WINRT_IMPL_AUTO(void) NumberOfCopies(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) NumberOfCopies() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>
     {
@@ -1445,7 +1006,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskOptionsCoreUIConfiguration
     {
-        [[nodiscard]] auto DisplayedOptions() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) DisplayedOptions() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>
     {
@@ -1454,7 +1015,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskProgressingEventArgs
     {
-        [[nodiscard]] auto DocumentPageCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) DocumentPageCount() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskProgressingEventArgs>
     {
@@ -1463,9 +1024,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskRequest
     {
-        [[nodiscard]] auto Deadline() const;
-        auto CreatePrintTask(param::hstring const& title, Windows::Graphics::Printing::PrintTaskSourceRequestedHandler const& handler) const;
-        auto GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) Deadline() const;
+        WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTask) CreatePrintTask(param::hstring const& title, Windows::Graphics::Printing::PrintTaskSourceRequestedHandler const& handler) const;
+        WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTaskRequestedDeferral) GetDeferral() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskRequest>
     {
@@ -1474,7 +1035,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskRequestedDeferral
     {
-        auto Complete() const;
+        WINRT_IMPL_AUTO(void) Complete() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskRequestedDeferral>
     {
@@ -1483,7 +1044,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskRequestedEventArgs
     {
-        [[nodiscard]] auto Request() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTaskRequest) Request() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskRequestedEventArgs>
     {
@@ -1492,9 +1053,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskSourceRequestedArgs
     {
-        [[nodiscard]] auto Deadline() const;
-        auto SetSource(Windows::Graphics::Printing::IPrintDocumentSource const& source) const;
-        auto GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) Deadline() const;
+        WINRT_IMPL_AUTO(void) SetSource(Windows::Graphics::Printing::IPrintDocumentSource const& source) const;
+        WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral) GetDeferral() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs>
     {
@@ -1503,7 +1064,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskSourceRequestedDeferral
     {
-        auto Complete() const;
+        WINRT_IMPL_AUTO(void) Complete() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral>
     {
@@ -1512,10 +1073,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IPrintTaskTargetDeviceSupport
     {
-        auto IsPrinterTargetEnabled(bool value) const;
-        [[nodiscard]] auto IsPrinterTargetEnabled() const;
-        auto Is3DManufacturingTargetEnabled(bool value) const;
-        [[nodiscard]] auto Is3DManufacturingTargetEnabled() const;
+        WINRT_IMPL_AUTO(void) IsPrinterTargetEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPrinterTargetEnabled() const;
+        WINRT_IMPL_AUTO(void) Is3DManufacturingTargetEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Is3DManufacturingTargetEnabled() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IPrintTaskTargetDeviceSupport>
     {
@@ -1524,19 +1085,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IStandardPrintTaskOptionsStatic
     {
-        [[nodiscard]] auto MediaSize() const;
-        [[nodiscard]] auto MediaType() const;
-        [[nodiscard]] auto Orientation() const;
-        [[nodiscard]] auto PrintQuality() const;
-        [[nodiscard]] auto ColorMode() const;
-        [[nodiscard]] auto Duplex() const;
-        [[nodiscard]] auto Collation() const;
-        [[nodiscard]] auto Staple() const;
-        [[nodiscard]] auto HolePunch() const;
-        [[nodiscard]] auto Binding() const;
-        [[nodiscard]] auto Copies() const;
-        [[nodiscard]] auto NUp() const;
-        [[nodiscard]] auto InputBin() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MediaSize() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MediaType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Orientation() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PrintQuality() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ColorMode() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Duplex() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Collation() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Staple() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HolePunch() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Binding() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Copies() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) NUp() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) InputBin() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic>
     {
@@ -1545,7 +1106,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IStandardPrintTaskOptionsStatic2
     {
-        [[nodiscard]] auto Bordering() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Bordering() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic2>
     {
@@ -1554,7 +1115,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Graphics_Printing_IStandardPrintTaskOptionsStatic3
     {
-        [[nodiscard]] auto CustomPageRanges() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CustomPageRanges() const;
     };
     template <> struct consume<Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic3>
     {

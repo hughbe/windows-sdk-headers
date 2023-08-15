@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -147,42 +155,51 @@ EXTERN_C const IID IID_ItsPubPlugin2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ItsPubPlugin2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ItsPubPlugin2 * This);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin, GetResourceList)
         HRESULT ( STDMETHODCALLTYPE *GetResourceList )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [in] */ __RPC__in LPCWSTR userID,
             /* [out] */ __RPC__out LONG *pceAppListSize,
             /* [out] */ __RPC__deref_out_opt pluginResource **resourceList);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin, GetResource)
         HRESULT ( STDMETHODCALLTYPE *GetResource )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [in] */ __RPC__in LPCWSTR alias,
             LONG flags,
             /* [out] */ __RPC__out pluginResource *resource);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin, GetCacheLastUpdateTime)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetCacheLastUpdateTime )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [out] */ __RPC__out unsigned long long *lastUpdateTime);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin, get_pluginName)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_pluginName )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin, get_pluginVersion)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_pluginVersion )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin, ResolveResource)
         HRESULT ( STDMETHODCALLTYPE *ResolveResource )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [out] */ __RPC__out DWORD *resourceType,
@@ -191,18 +208,21 @@ EXTERN_C const IID IID_ItsPubPlugin2;
             /* [string][in] */ __RPC__in_string wchar_t *userID,
             /* [string][in] */ __RPC__in_string wchar_t *alias);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin2, GetResource2List)
         HRESULT ( STDMETHODCALLTYPE *GetResource2List )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [in] */ __RPC__in LPCWSTR userID,
             /* [out] */ __RPC__out LONG *pceAppListSize,
             /* [out] */ __RPC__deref_out_opt pluginResource2 **resourceList);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin2, GetResource2)
         HRESULT ( STDMETHODCALLTYPE *GetResource2 )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [in] */ __RPC__in LPCWSTR alias,
             LONG flags,
             /* [out] */ __RPC__out pluginResource2 *resource);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin2, ResolvePersonalDesktop)
         HRESULT ( STDMETHODCALLTYPE *ResolvePersonalDesktop )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [string][in] */ __RPC__in_string const wchar_t *userId,
@@ -211,6 +231,7 @@ EXTERN_C const IID IID_ItsPubPlugin2;
             /* [out] */ __RPC__out TSPUB_PLUGIN_PD_ASSIGNMENT_TYPE *pPdAssignmentType,
             /* [string][out] */ __RPC__out_ecount_full_string(256) wchar_t endPointName[ 256 ]);
         
+        DECLSPEC_XFGVIRT(ItsPubPlugin2, DeletePersonalDesktopAssignment)
         HRESULT ( STDMETHODCALLTYPE *DeletePersonalDesktopAssignment )( 
             __RPC__in ItsPubPlugin2 * This,
             /* [string][in] */ __RPC__in_string const wchar_t *userId,

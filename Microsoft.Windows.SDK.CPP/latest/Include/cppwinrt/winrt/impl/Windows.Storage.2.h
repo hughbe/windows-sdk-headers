@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Storage.1.h"
-namespace winrt::Windows::Storage
+WINRT_EXPORT namespace winrt::Windows::Storage
 {
     struct ApplicationDataSetVersionHandler : Windows::Foundation::IUnknown
     {
@@ -43,7 +43,7 @@ namespace winrt::Windows::Storage
         static auto GetDefault();
     };
     struct __declspec(empty_bases) ApplicationData : Windows::Storage::IApplicationData,
-        impl::require<ApplicationData, Windows::Storage::IApplicationData2, Windows::Storage::IApplicationData3>
+        impl::require<ApplicationData, Windows::Storage::IApplicationData2, Windows::Storage::IApplicationData3, Windows::Foundation::IClosable>
     {
         ApplicationData(std::nullptr_t) noexcept {}
         ApplicationData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IApplicationData(ptr, take_ownership_from_abi) {}
@@ -56,7 +56,8 @@ namespace winrt::Windows::Storage
         ApplicationDataCompositeValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::Collections::IPropertySet(ptr, take_ownership_from_abi) {}
         ApplicationDataCompositeValue();
     };
-    struct __declspec(empty_bases) ApplicationDataContainer : Windows::Storage::IApplicationDataContainer
+    struct __declspec(empty_bases) ApplicationDataContainer : Windows::Storage::IApplicationDataContainer,
+        impl::require<ApplicationDataContainer, Windows::Foundation::IClosable>
     {
         ApplicationDataContainer(std::nullptr_t) noexcept {}
         ApplicationDataContainer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IApplicationDataContainer(ptr, take_ownership_from_abi) {}
@@ -197,15 +198,31 @@ namespace winrt::Windows::Storage
         StorageLibraryChange(std::nullptr_t) noexcept {}
         StorageLibraryChange(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryChange(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) StorageLibraryChangeReader : Windows::Storage::IStorageLibraryChangeReader
+    struct __declspec(empty_bases) StorageLibraryChangeReader : Windows::Storage::IStorageLibraryChangeReader,
+        impl::require<StorageLibraryChangeReader, Windows::Storage::IStorageLibraryChangeReader2>
     {
         StorageLibraryChangeReader(std::nullptr_t) noexcept {}
         StorageLibraryChangeReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryChangeReader(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) StorageLibraryChangeTracker : Windows::Storage::IStorageLibraryChangeTracker
+    struct __declspec(empty_bases) StorageLibraryChangeTracker : Windows::Storage::IStorageLibraryChangeTracker,
+        impl::require<StorageLibraryChangeTracker, Windows::Storage::IStorageLibraryChangeTracker2>
     {
         StorageLibraryChangeTracker(std::nullptr_t) noexcept {}
         StorageLibraryChangeTracker(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryChangeTracker(ptr, take_ownership_from_abi) {}
+        using Windows::Storage::IStorageLibraryChangeTracker::Enable;
+        using impl::consume_t<StorageLibraryChangeTracker, Windows::Storage::IStorageLibraryChangeTracker2>::Enable;
+    };
+    struct __declspec(empty_bases) StorageLibraryChangeTrackerOptions : Windows::Storage::IStorageLibraryChangeTrackerOptions
+    {
+        StorageLibraryChangeTrackerOptions(std::nullptr_t) noexcept {}
+        StorageLibraryChangeTrackerOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryChangeTrackerOptions(ptr, take_ownership_from_abi) {}
+        StorageLibraryChangeTrackerOptions();
+    };
+    struct __declspec(empty_bases) StorageLibraryLastChangeId : Windows::Storage::IStorageLibraryLastChangeId
+    {
+        StorageLibraryLastChangeId(std::nullptr_t) noexcept {}
+        StorageLibraryLastChangeId(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryLastChangeId(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto Unknown();
     };
     struct __declspec(empty_bases) StorageProvider : Windows::Storage::IStorageProvider,
         impl::require<StorageProvider, Windows::Storage::IStorageProvider2>

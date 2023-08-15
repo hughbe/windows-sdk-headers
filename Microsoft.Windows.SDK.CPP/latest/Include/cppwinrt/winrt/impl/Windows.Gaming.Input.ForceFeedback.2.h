@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,14 +6,14 @@
 #ifndef WINRT_Windows_Gaming_Input_ForceFeedback_2_H
 #define WINRT_Windows_Gaming_Input_ForceFeedback_2_H
 #include "winrt/impl/Windows.Gaming.Input.ForceFeedback.1.h"
-namespace winrt::Windows::Gaming::Input::ForceFeedback
+WINRT_EXPORT namespace winrt::Windows::Gaming::Input::ForceFeedback
 {
     struct __declspec(empty_bases) ConditionForceEffect : Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect,
         impl::require<ConditionForceEffect, Windows::Gaming::Input::ForceFeedback::IConditionForceEffect>
     {
         ConditionForceEffect(std::nullptr_t) noexcept {}
         ConditionForceEffect(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect(ptr, take_ownership_from_abi) {}
-        ConditionForceEffect(Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind const& effectKind);
+        explicit ConditionForceEffect(Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind const& effectKind);
     };
     struct __declspec(empty_bases) ConstantForceEffect : Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect,
         impl::require<ConstantForceEffect, Windows::Gaming::Input::ForceFeedback::IConstantForceEffect>
@@ -32,7 +32,7 @@ namespace winrt::Windows::Gaming::Input::ForceFeedback
     {
         PeriodicForceEffect(std::nullptr_t) noexcept {}
         PeriodicForceEffect(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect(ptr, take_ownership_from_abi) {}
-        PeriodicForceEffect(Windows::Gaming::Input::ForceFeedback::PeriodicForceEffectKind const& effectKind);
+        explicit PeriodicForceEffect(Windows::Gaming::Input::ForceFeedback::PeriodicForceEffectKind const& effectKind);
     };
     struct __declspec(empty_bases) RampForceEffect : Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect,
         impl::require<RampForceEffect, Windows::Gaming::Input::ForceFeedback::IRampForceEffect>

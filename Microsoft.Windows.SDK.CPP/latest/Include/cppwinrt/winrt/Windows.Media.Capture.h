@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_Capture_H
 #define WINRT_Windows_Media_Capture_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -29,45 +29,45 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Media.Capture.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedCapturedPhoto<D>::Frame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CapturedFrame) consume_Windows_Media_Capture_IAdvancedCapturedPhoto<D>::Frame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedCapturedPhoto)->get_Frame(&value));
         return Windows::Media::Capture::CapturedFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedCapturedPhoto<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AdvancedPhotoMode) consume_Windows_Media_Capture_IAdvancedCapturedPhoto<D>::Mode() const
     {
-        Windows::Media::Devices::AdvancedPhotoMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedCapturedPhoto)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::AdvancedPhotoMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedCapturedPhoto)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedCapturedPhoto<D>::Context() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Media_Capture_IAdvancedCapturedPhoto<D>::Context() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedCapturedPhoto)->get_Context(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedCapturedPhoto2<D>::FrameBoundsRelativeToReferencePhoto() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::Rect>) consume_Windows_Media_Capture_IAdvancedCapturedPhoto2<D>::FrameBoundsRelativeToReferencePhoto() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedCapturedPhoto2)->get_FrameBoundsRelativeToReferencePhoto(&value));
         return Windows::Foundation::IReference<Windows::Foundation::Rect>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::CaptureAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::AdvancedCapturedPhoto>) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::CaptureAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedPhotoCapture)->CaptureAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::AdvancedCapturedPhoto>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::CaptureAsync(Windows::Foundation::IInspectable const& context) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::AdvancedCapturedPhoto>) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::CaptureAsync(Windows::Foundation::IInspectable const& context) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedPhotoCapture)->CaptureWithContextAsync(*(void**)(&context), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::AdvancedCapturedPhoto>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::OptionalReferencePhotoCaptured(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AdvancedPhotoCapture, Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::OptionalReferencePhotoCaptured(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AdvancedPhotoCapture, Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedPhotoCapture)->add_OptionalReferencePhotoCaptured(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -75,13 +75,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, OptionalReferencePhotoCaptured_revoker>(this, OptionalReferencePhotoCaptured(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::OptionalReferencePhotoCaptured(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::OptionalReferencePhotoCaptured(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedPhotoCapture)->remove_OptionalReferencePhotoCaptured(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::AllPhotosCaptured(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AdvancedPhotoCapture, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::AllPhotosCaptured(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AdvancedPhotoCapture, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedPhotoCapture)->add_AllPhotosCaptured(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -89,75 +89,75 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AllPhotosCaptured_revoker>(this, AllPhotosCaptured(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::AllPhotosCaptured(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::AllPhotosCaptured(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedPhotoCapture)->remove_AllPhotosCaptured(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::FinishAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::FinishAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAdvancedPhotoCapture)->FinishAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::PlugInState(Windows::Media::Capture::AppBroadcastPlugInState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::PlugInState(Windows::Media::Capture::AppBroadcastPlugInState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->put_PlugInState(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::PlugInState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPlugInState) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::PlugInState() const
     {
-        Windows::Media::Capture::AppBroadcastPlugInState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->get_PlugInState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastPlugInState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->get_PlugInState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::SignInInfo(Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::SignInInfo(Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->put_SignInInfo(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::SignInInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::SignInInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->get_SignInInfo(&value));
         return Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::StreamInfo(Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::StreamInfo(Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->put_StreamInfo(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::StreamInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::StreamInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->get_StreamInfo(&value));
         return Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::AppId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::AppId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->get_AppId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::BroadcastTitle() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::BroadcastTitle() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->get_BroadcastTitle(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::ViewerCount(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::ViewerCount(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->put_ViewerCount(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::ViewerCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::ViewerCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->get_ViewerCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::TerminateBroadcast(Windows::Media::Capture::AppBroadcastTerminationReason const& reason, uint32_t providerSpecificReason) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::TerminateBroadcast(Windows::Media::Capture::AppBroadcastTerminationReason const& reason, uint32_t providerSpecificReason) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->TerminateBroadcast(static_cast<int32_t>(reason), providerSpecificReason));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::HeartbeatRequested(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundService, Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::HeartbeatRequested(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundService, Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->add_HeartbeatRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -165,43 +165,43 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, HeartbeatRequested_revoker>(this, HeartbeatRequested(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::HeartbeatRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::HeartbeatRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->remove_HeartbeatRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::TitleId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::TitleId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService)->get_TitleId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastTitle(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastTitle(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->put_BroadcastTitle(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->get_BroadcastLanguage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguage(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguage(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->put_BroadcastLanguage(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannel() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannel() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->get_BroadcastChannel(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannel(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannel(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->put_BroadcastChannel(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastTitleChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundService, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastTitleChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundService, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->add_BroadcastTitleChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -209,13 +209,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BroadcastTitleChanged_revoker>(this, BroadcastTitleChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastTitleChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastTitleChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->remove_BroadcastTitleChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguageChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundService, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguageChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundService, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->add_BroadcastLanguageChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -223,13 +223,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BroadcastLanguageChanged_revoker>(this, BroadcastLanguageChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguageChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguageChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->remove_BroadcastLanguageChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannelChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundService, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannelChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundService, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->add_BroadcastChannelChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -237,55 +237,55 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BroadcastChannelChanged_revoker>(this, BroadcastChannelChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannelChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannelChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundService2)->remove_BroadcastChannelChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::SignInState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastSignInState) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::SignInState() const
     {
-        Windows::Media::Capture::AppBroadcastSignInState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->get_SignInState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastSignInState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->get_SignInState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::OAuthRequestUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::OAuthRequestUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->put_OAuthRequestUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::OAuthRequestUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::OAuthRequestUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->get_OAuthRequestUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::OAuthCallbackUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::OAuthCallbackUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->put_OAuthCallbackUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::OAuthCallbackUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::OAuthCallbackUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->get_OAuthCallbackUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::AuthenticationResult() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::Web::WebAuthenticationResult) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::AuthenticationResult() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->get_AuthenticationResult(&value));
         return Windows::Security::Authentication::Web::WebAuthenticationResult{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::UserName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::UserName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->put_UserName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::UserName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::UserName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->get_UserName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::SignInStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo, Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::SignInStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo, Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->add_SignInStateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -293,13 +293,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SignInStateChanged_revoker>(this, SignInStateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::SignInStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::SignInStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->remove_SignInStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo2<D>::UserNameChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo2<D>::UserNameChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo2)->add_UserNameChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -307,55 +307,55 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, UserNameChanged_revoker>(this, UserNameChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo2<D>::UserNameChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo2<D>::UserNameChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo2)->remove_UserNameChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::StreamState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastStreamState) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::StreamState() const
     {
-        Windows::Media::Capture::AppBroadcastStreamState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->get_StreamState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastStreamState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->get_StreamState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::DesiredVideoEncodingBitrate(uint64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::DesiredVideoEncodingBitrate(uint64_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->put_DesiredVideoEncodingBitrate(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::DesiredVideoEncodingBitrate() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::DesiredVideoEncodingBitrate() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->get_DesiredVideoEncodingBitrate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::BandwidthTestBitrate(uint64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::BandwidthTestBitrate(uint64_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->put_BandwidthTestBitrate(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::BandwidthTestBitrate() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::BandwidthTestBitrate() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->get_BandwidthTestBitrate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::AudioCodec(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::AudioCodec(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->put_AudioCodec(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::AudioCodec() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::AudioCodec() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->get_AudioCodec(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::BroadcastStreamReader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastStreamReader) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::BroadcastStreamReader() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->get_BroadcastStreamReader(&value));
         return Windows::Media::Capture::AppBroadcastStreamReader{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::StreamStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::StreamStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->add_StreamStateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -363,13 +363,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StreamStateChanged_revoker>(this, StreamStateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::StreamStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::StreamStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->remove_StreamStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingResolutionChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingResolutionChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->add_VideoEncodingResolutionChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -377,13 +377,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, VideoEncodingResolutionChanged_revoker>(this, VideoEncodingResolutionChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingResolutionChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingResolutionChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->remove_VideoEncodingResolutionChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingBitrateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingBitrateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->add_VideoEncodingBitrateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -391,275 +391,275 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, VideoEncodingBitrateChanged_revoker>(this, VideoEncodingBitrateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingBitrateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingBitrateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->remove_VideoEncodingBitrateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo2<D>::ReportProblemWithStream() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo2<D>::ReportProblemWithStream() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo2)->ReportProblemWithStream());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastCameraCaptureStateChangedEventArgs<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastCameraCaptureState) consume_Windows_Media_Capture_IAppBroadcastCameraCaptureStateChangedEventArgs<D>::State() const
     {
-        Windows::Media::Capture::AppBroadcastCameraCaptureState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastCameraCaptureStateChangedEventArgs)->get_State(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastCameraCaptureState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastCameraCaptureStateChangedEventArgs)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastCameraCaptureStateChangedEventArgs<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastCameraCaptureStateChangedEventArgs<D>::ErrorCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastCameraCaptureStateChangedEventArgs)->get_ErrorCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsBroadcastEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsBroadcastEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_IsBroadcastEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsDisabledByPolicy() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsDisabledByPolicy() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_IsDisabledByPolicy(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsGpuConstrained() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsGpuConstrained() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_IsGpuConstrained(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::HasHardwareEncoder() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::HasHardwareEncoder() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_HasHardwareEncoder(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsAudioCaptureEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsAudioCaptureEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_IsAudioCaptureEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsAudioCaptureEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsAudioCaptureEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_IsAudioCaptureEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsMicrophoneCaptureEnabledByDefault(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsMicrophoneCaptureEnabledByDefault(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_IsMicrophoneCaptureEnabledByDefault(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsMicrophoneCaptureEnabledByDefault() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsMicrophoneCaptureEnabledByDefault() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_IsMicrophoneCaptureEnabledByDefault(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsEchoCancellationEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsEchoCancellationEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_IsEchoCancellationEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsEchoCancellationEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsEchoCancellationEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_IsEchoCancellationEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::SystemAudioGain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::SystemAudioGain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_SystemAudioGain(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::SystemAudioGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::SystemAudioGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_SystemAudioGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::MicrophoneGain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::MicrophoneGain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_MicrophoneGain(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::MicrophoneGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::MicrophoneGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_MicrophoneGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsCameraCaptureEnabledByDefault(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsCameraCaptureEnabledByDefault(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_IsCameraCaptureEnabledByDefault(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsCameraCaptureEnabledByDefault() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsCameraCaptureEnabledByDefault() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_IsCameraCaptureEnabledByDefault(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::SelectedCameraId(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::SelectedCameraId(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_SelectedCameraId(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::SelectedCameraId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::SelectedCameraId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_SelectedCameraId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::CameraOverlayLocation(Windows::Media::Capture::AppBroadcastCameraOverlayLocation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::CameraOverlayLocation(Windows::Media::Capture::AppBroadcastCameraOverlayLocation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_CameraOverlayLocation(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::CameraOverlayLocation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastCameraOverlayLocation) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::CameraOverlayLocation() const
     {
-        Windows::Media::Capture::AppBroadcastCameraOverlayLocation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_CameraOverlayLocation(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastCameraOverlayLocation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_CameraOverlayLocation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::CameraOverlaySize(Windows::Media::Capture::AppBroadcastCameraOverlaySize const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::CameraOverlaySize(Windows::Media::Capture::AppBroadcastCameraOverlaySize const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_CameraOverlaySize(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::CameraOverlaySize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastCameraOverlaySize) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::CameraOverlaySize() const
     {
-        Windows::Media::Capture::AppBroadcastCameraOverlaySize value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_CameraOverlaySize(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastCameraOverlaySize value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_CameraOverlaySize(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsCursorImageCaptureEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsCursorImageCaptureEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->put_IsCursorImageCaptureEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsCursorImageCaptureEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastGlobalSettings<D>::IsCursorImageCaptureEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastGlobalSettings)->get_IsCursorImageCaptureEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastHeartbeatRequestedEventArgs<D>::Handled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastHeartbeatRequestedEventArgs<D>::Handled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastHeartbeatRequestedEventArgs)->put_Handled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastHeartbeatRequestedEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastHeartbeatRequestedEventArgs<D>::Handled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastHeartbeatRequestedEventArgs)->get_Handled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastManagerStatics<D>::GetGlobalSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastGlobalSettings) consume_Windows_Media_Capture_IAppBroadcastManagerStatics<D>::GetGlobalSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastManagerStatics)->GetGlobalSettings(&value));
         return Windows::Media::Capture::AppBroadcastGlobalSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastManagerStatics<D>::ApplyGlobalSettings(Windows::Media::Capture::AppBroadcastGlobalSettings const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastManagerStatics<D>::ApplyGlobalSettings(Windows::Media::Capture::AppBroadcastGlobalSettings const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastManagerStatics)->ApplyGlobalSettings(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastManagerStatics<D>::GetProviderSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastProviderSettings) consume_Windows_Media_Capture_IAppBroadcastManagerStatics<D>::GetProviderSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastManagerStatics)->GetProviderSettings(&value));
         return Windows::Media::Capture::AppBroadcastProviderSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastManagerStatics<D>::ApplyProviderSettings(Windows::Media::Capture::AppBroadcastProviderSettings const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastManagerStatics<D>::ApplyProviderSettings(Windows::Media::Capture::AppBroadcastProviderSettings const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastManagerStatics)->ApplyProviderSettings(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastMicrophoneCaptureStateChangedEventArgs<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastMicrophoneCaptureState) consume_Windows_Media_Capture_IAppBroadcastMicrophoneCaptureStateChangedEventArgs<D>::State() const
     {
-        Windows::Media::Capture::AppBroadcastMicrophoneCaptureState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastMicrophoneCaptureStateChangedEventArgs)->get_State(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastMicrophoneCaptureState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastMicrophoneCaptureStateChangedEventArgs)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastMicrophoneCaptureStateChangedEventArgs<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastMicrophoneCaptureStateChangedEventArgs<D>::ErrorCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastMicrophoneCaptureStateChangedEventArgs)->get_ErrorCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugIn<D>::AppId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastPlugIn<D>::AppId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugIn)->get_AppId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugIn<D>::ProviderSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastProviderSettings) consume_Windows_Media_Capture_IAppBroadcastPlugIn<D>::ProviderSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugIn)->get_ProviderSettings(&value));
         return Windows::Media::Capture::AppBroadcastProviderSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugIn<D>::Logo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_Media_Capture_IAppBroadcastPlugIn<D>::Logo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugIn)->get_Logo(&value));
         return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugIn<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastPlugIn<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugIn)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugInManager<D>::IsBroadcastProviderAvailable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastPlugInManager<D>::IsBroadcastProviderAvailable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugInManager)->get_IsBroadcastProviderAvailable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugInManager<D>::PlugInList() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::AppBroadcastPlugIn>) consume_Windows_Media_Capture_IAppBroadcastPlugInManager<D>::PlugInList() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugInManager)->get_PlugInList(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::AppBroadcastPlugIn>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugInManager<D>::DefaultPlugIn() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPlugIn) consume_Windows_Media_Capture_IAppBroadcastPlugInManager<D>::DefaultPlugIn() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugInManager)->get_DefaultPlugIn(&value));
         return Windows::Media::Capture::AppBroadcastPlugIn{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugInManager<D>::DefaultPlugIn(Windows::Media::Capture::AppBroadcastPlugIn const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastPlugInManager<D>::DefaultPlugIn(Windows::Media::Capture::AppBroadcastPlugIn const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugInManager)->put_DefaultPlugIn(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugInManagerStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPlugInManager) consume_Windows_Media_Capture_IAppBroadcastPlugInManagerStatics<D>::GetDefault() const
     {
         void* ppInstance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugInManagerStatics)->GetDefault(&ppInstance));
         return Windows::Media::Capture::AppBroadcastPlugInManager{ ppInstance, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugInManagerStatics<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPlugInManager) consume_Windows_Media_Capture_IAppBroadcastPlugInManagerStatics<D>::GetForUser(Windows::System::User const& user) const
     {
         void* ppInstance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugInManagerStatics)->GetForUser(*(void**)(&user), &ppInstance));
         return Windows::Media::Capture::AppBroadcastPlugInManager{ ppInstance, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPlugInStateChangedEventArgs<D>::PlugInState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPlugInState) consume_Windows_Media_Capture_IAppBroadcastPlugInStateChangedEventArgs<D>::PlugInState() const
     {
-        Windows::Media::Capture::AppBroadcastPlugInState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugInStateChangedEventArgs)->get_PlugInState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastPlugInState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPlugInStateChangedEventArgs)->get_PlugInState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreview<D>::StopPreview() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastPreview<D>::StopPreview() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreview)->StopPreview());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPreviewState) consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewState() const
     {
-        Windows::Media::Capture::AppBroadcastPreviewState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreview)->get_PreviewState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastPreviewState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreview)->get_PreviewState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreview<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Capture_IAppBroadcastPreview<D>::ErrorCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreview)->get_ErrorCode(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastPreview, Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastPreview, Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreview)->add_PreviewStateChanged(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -667,67 +667,67 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PreviewStateChanged_revoker>(this, PreviewStateChanged(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreview)->remove_PreviewStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewStreamReader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPreviewStreamReader) consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewStreamReader() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreview)->get_PreviewStreamReader(&value));
         return Windows::Media::Capture::AppBroadcastPreviewStreamReader{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStateChangedEventArgs<D>::PreviewState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPreviewState) consume_Windows_Media_Capture_IAppBroadcastPreviewStateChangedEventArgs<D>::PreviewState() const
     {
-        Windows::Media::Capture::AppBroadcastPreviewState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStateChangedEventArgs)->get_PreviewState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastPreviewState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStateChangedEventArgs)->get_PreviewState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStateChangedEventArgs<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastPreviewStateChangedEventArgs<D>::ErrorCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStateChangedEventArgs)->get_ErrorCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->get_VideoWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->get_VideoHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoStride() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoStride() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->get_VideoStride(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoBitmapPixelFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapPixelFormat) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoBitmapPixelFormat() const
     {
-        Windows::Graphics::Imaging::BitmapPixelFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->get_VideoBitmapPixelFormat(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapPixelFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->get_VideoBitmapPixelFormat(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoBitmapAlphaMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapAlphaMode) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoBitmapAlphaMode() const
     {
-        Windows::Graphics::Imaging::BitmapAlphaMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->get_VideoBitmapAlphaMode(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapAlphaMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->get_VideoBitmapAlphaMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::TryGetNextVideoFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::TryGetNextVideoFrame() const
     {
         void* frame{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->TryGetNextVideoFrame(&frame));
         return Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame{ frame, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoFrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastPreviewStreamReader, Windows::Foundation::IInspectable> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoFrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastPreviewStreamReader, Windows::Foundation::IInspectable> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->add_VideoFrameArrived(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -735,333 +735,333 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, VideoFrameArrived_revoker>(this, VideoFrameArrived(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoFrameArrived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoFrameArrived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->remove_VideoFrameArrived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoFrame<D>::VideoHeader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoFrame<D>::VideoHeader() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamVideoFrame)->get_VideoHeader(&value));
         return Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoFrame<D>::VideoBuffer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoFrame<D>::VideoBuffer() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamVideoFrame)->get_VideoBuffer(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoHeader<D>::AbsoluteTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoHeader<D>::AbsoluteTimestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamVideoHeader)->get_AbsoluteTimestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoHeader<D>::RelativeTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoHeader<D>::RelativeTimestamp() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamVideoHeader)->get_RelativeTimestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoHeader<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoHeader<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamVideoHeader)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoHeader<D>::FrameId() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoHeader<D>::FrameId() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastPreviewStreamVideoHeader)->get_FrameId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::DefaultBroadcastTitle(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::DefaultBroadcastTitle(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->put_DefaultBroadcastTitle(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::DefaultBroadcastTitle() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::DefaultBroadcastTitle() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->get_DefaultBroadcastTitle(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::AudioEncodingBitrate(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::AudioEncodingBitrate(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->put_AudioEncodingBitrate(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::AudioEncodingBitrate() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::AudioEncodingBitrate() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->get_AudioEncodingBitrate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingBitrate(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingBitrate(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->put_CustomVideoEncodingBitrate(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingBitrate() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingBitrate() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->get_CustomVideoEncodingBitrate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingHeight(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingHeight(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->put_CustomVideoEncodingHeight(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->get_CustomVideoEncodingHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingWidth(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingWidth(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->put_CustomVideoEncodingWidth(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::CustomVideoEncodingWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->get_CustomVideoEncodingWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::VideoEncodingBitrateMode(Windows::Media::Capture::AppBroadcastVideoEncodingBitrateMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::VideoEncodingBitrateMode(Windows::Media::Capture::AppBroadcastVideoEncodingBitrateMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->put_VideoEncodingBitrateMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::VideoEncodingBitrateMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastVideoEncodingBitrateMode) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::VideoEncodingBitrateMode() const
     {
-        Windows::Media::Capture::AppBroadcastVideoEncodingBitrateMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->get_VideoEncodingBitrateMode(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastVideoEncodingBitrateMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->get_VideoEncodingBitrateMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::VideoEncodingResolutionMode(Windows::Media::Capture::AppBroadcastVideoEncodingResolutionMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::VideoEncodingResolutionMode(Windows::Media::Capture::AppBroadcastVideoEncodingResolutionMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->put_VideoEncodingResolutionMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::VideoEncodingResolutionMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastVideoEncodingResolutionMode) consume_Windows_Media_Capture_IAppBroadcastProviderSettings<D>::VideoEncodingResolutionMode() const
     {
-        Windows::Media::Capture::AppBroadcastVideoEncodingResolutionMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->get_VideoEncodingResolutionMode(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastVideoEncodingResolutionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastProviderSettings)->get_VideoEncodingResolutionMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::CaptureTargetType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastCaptureTargetType) consume_Windows_Media_Capture_IAppBroadcastServices<D>::CaptureTargetType() const
     {
-        Windows::Media::Capture::AppBroadcastCaptureTargetType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->get_CaptureTargetType(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastCaptureTargetType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->get_CaptureTargetType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::CaptureTargetType(Windows::Media::Capture::AppBroadcastCaptureTargetType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastServices<D>::CaptureTargetType(Windows::Media::Capture::AppBroadcastCaptureTargetType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->put_CaptureTargetType(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::BroadcastTitle() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastServices<D>::BroadcastTitle() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->get_BroadcastTitle(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::BroadcastTitle(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastServices<D>::BroadcastTitle(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->put_BroadcastTitle(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::BroadcastLanguage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastServices<D>::BroadcastLanguage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->get_BroadcastLanguage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::BroadcastLanguage(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastServices<D>::BroadcastLanguage(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->put_BroadcastLanguage(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::UserName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastServices<D>::UserName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->get_UserName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::CanCapture() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastServices<D>::CanCapture() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->get_CanCapture(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::EnterBroadcastModeAsync(Windows::Media::Capture::AppBroadcastPlugIn const& plugIn) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<uint32_t>) consume_Windows_Media_Capture_IAppBroadcastServices<D>::EnterBroadcastModeAsync(Windows::Media::Capture::AppBroadcastPlugIn const& plugIn) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->EnterBroadcastModeAsync(*(void**)(&plugIn), &operation));
         return Windows::Foundation::IAsyncOperation<uint32_t>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::ExitBroadcastMode(Windows::Media::Capture::AppBroadcastExitBroadcastModeReason const& reason) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastServices<D>::ExitBroadcastMode(Windows::Media::Capture::AppBroadcastExitBroadcastModeReason const& reason) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->ExitBroadcastMode(static_cast<int32_t>(reason)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::StartBroadcast() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastServices<D>::StartBroadcast() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->StartBroadcast());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::PauseBroadcast() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastServices<D>::PauseBroadcast() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->PauseBroadcast());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::ResumeBroadcast() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastServices<D>::ResumeBroadcast() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->ResumeBroadcast());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::StartPreview(Windows::Foundation::Size const& desiredSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPreview) consume_Windows_Media_Capture_IAppBroadcastServices<D>::StartPreview(Windows::Foundation::Size const& desiredSize) const
     {
         void* preview{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->StartPreview(impl::bind_in(desiredSize), &preview));
         return Windows::Media::Capture::AppBroadcastPreview{ preview, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastServices<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastState) consume_Windows_Media_Capture_IAppBroadcastServices<D>::State() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastServices)->get_State(&value));
         return Windows::Media::Capture::AppBroadcastState{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastSignInStateChangedEventArgs<D>::SignInState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastSignInState) consume_Windows_Media_Capture_IAppBroadcastSignInStateChangedEventArgs<D>::SignInState() const
     {
-        Windows::Media::Capture::AppBroadcastSignInState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastSignInStateChangedEventArgs)->get_SignInState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastSignInState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastSignInStateChangedEventArgs)->get_SignInState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastSignInStateChangedEventArgs<D>::Result() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastSignInResult) consume_Windows_Media_Capture_IAppBroadcastSignInStateChangedEventArgs<D>::Result() const
     {
-        Windows::Media::Capture::AppBroadcastSignInResult value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastSignInStateChangedEventArgs)->get_Result(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastSignInResult value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastSignInStateChangedEventArgs)->get_Result(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::IsCaptureTargetRunning() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastState<D>::IsCaptureTargetRunning() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_IsCaptureTargetRunning(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::ViewerCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastState<D>::ViewerCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_ViewerCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::ShouldCaptureMicrophone() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastState<D>::ShouldCaptureMicrophone() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_ShouldCaptureMicrophone(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::ShouldCaptureMicrophone(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::ShouldCaptureMicrophone(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->put_ShouldCaptureMicrophone(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::RestartMicrophoneCapture() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::RestartMicrophoneCapture() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->RestartMicrophoneCapture());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::ShouldCaptureCamera() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastState<D>::ShouldCaptureCamera() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_ShouldCaptureCamera(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::ShouldCaptureCamera(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::ShouldCaptureCamera(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->put_ShouldCaptureCamera(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::RestartCameraCapture() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::RestartCameraCapture() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->RestartCameraCapture());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::EncodedVideoSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Media_Capture_IAppBroadcastState<D>::EncodedVideoSize() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_EncodedVideoSize(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastMicrophoneCaptureState) consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureState() const
     {
-        Windows::Media::Capture::AppBroadcastMicrophoneCaptureState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_MicrophoneCaptureState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastMicrophoneCaptureState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_MicrophoneCaptureState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureError() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureError() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_MicrophoneCaptureError(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastCameraCaptureState) consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureState() const
     {
-        Windows::Media::Capture::AppBroadcastCameraCaptureState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_CameraCaptureState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastCameraCaptureState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_CameraCaptureState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureError() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureError() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_CameraCaptureError(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::StreamState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastStreamState) consume_Windows_Media_Capture_IAppBroadcastState<D>::StreamState() const
     {
-        Windows::Media::Capture::AppBroadcastStreamState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_StreamState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastStreamState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_StreamState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::PlugInState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastPlugInState) consume_Windows_Media_Capture_IAppBroadcastState<D>::PlugInState() const
     {
-        Windows::Media::Capture::AppBroadcastPlugInState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_PlugInState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastPlugInState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_PlugInState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::OAuthRequestUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Media_Capture_IAppBroadcastState<D>::OAuthRequestUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_OAuthRequestUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::OAuthCallbackUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Media_Capture_IAppBroadcastState<D>::OAuthCallbackUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_OAuthCallbackUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::AuthenticationResult() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::Web::WebAuthenticationResult) consume_Windows_Media_Capture_IAppBroadcastState<D>::AuthenticationResult() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_AuthenticationResult(&value));
         return Windows::Security::Authentication::Web::WebAuthenticationResult{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::AuthenticationResult(Windows::Security::Authentication::Web::WebAuthenticationResult const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::AuthenticationResult(Windows::Security::Authentication::Web::WebAuthenticationResult const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->put_AuthenticationResult(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::SignInState(Windows::Media::Capture::AppBroadcastSignInState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::SignInState(Windows::Media::Capture::AppBroadcastSignInState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->put_SignInState(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::SignInState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastSignInState) consume_Windows_Media_Capture_IAppBroadcastState<D>::SignInState() const
     {
-        Windows::Media::Capture::AppBroadcastSignInState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_SignInState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastSignInState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_SignInState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::TerminationReason() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastTerminationReason) consume_Windows_Media_Capture_IAppBroadcastState<D>::TerminationReason() const
     {
-        Windows::Media::Capture::AppBroadcastTerminationReason value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_TerminationReason(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastTerminationReason value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_TerminationReason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::TerminationReasonPlugInSpecific() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastState<D>::TerminationReasonPlugInSpecific() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->get_TerminationReasonPlugInSpecific(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::ViewerCountChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::ViewerCountChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->add_ViewerCountChanged(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -1069,13 +1069,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ViewerCountChanged_revoker>(this, ViewerCountChanged(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::ViewerCountChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::ViewerCountChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->remove_ViewerCountChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->add_MicrophoneCaptureStateChanged(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -1083,13 +1083,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MicrophoneCaptureStateChanged_revoker>(this, MicrophoneCaptureStateChanged(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->remove_MicrophoneCaptureStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->add_CameraCaptureStateChanged(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -1097,13 +1097,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CameraCaptureStateChanged_revoker>(this, CameraCaptureStateChanged(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->remove_CameraCaptureStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::PlugInStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::PlugInStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->add_PlugInStateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1111,13 +1111,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PlugInStateChanged_revoker>(this, PlugInStateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::PlugInStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::PlugInStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->remove_PlugInStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::StreamStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::StreamStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->add_StreamStateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1125,13 +1125,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StreamStateChanged_revoker>(this, StreamStateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::StreamStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::StreamStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->remove_StreamStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::CaptureTargetClosed(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Foundation::IInspectable> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::CaptureTargetClosed(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastState, Windows::Foundation::IInspectable> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->add_CaptureTargetClosed(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -1139,109 +1139,109 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CaptureTargetClosed_revoker>(this, CaptureTargetClosed(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastState<D>::CaptureTargetClosed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::CaptureTargetClosed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastState)->remove_CaptureTargetClosed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamAudioFrame<D>::AudioHeader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastStreamAudioHeader) consume_Windows_Media_Capture_IAppBroadcastStreamAudioFrame<D>::AudioHeader() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamAudioFrame)->get_AudioHeader(&value));
         return Windows::Media::Capture::AppBroadcastStreamAudioHeader{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamAudioFrame<D>::AudioBuffer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Media_Capture_IAppBroadcastStreamAudioFrame<D>::AudioBuffer() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamAudioFrame)->get_AudioBuffer(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::AbsoluteTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::AbsoluteTimestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamAudioHeader)->get_AbsoluteTimestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::RelativeTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::RelativeTimestamp() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamAudioHeader)->get_RelativeTimestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamAudioHeader)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::HasDiscontinuity() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::HasDiscontinuity() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamAudioHeader)->get_HasDiscontinuity(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::FrameId() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Capture_IAppBroadcastStreamAudioHeader<D>::FrameId() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamAudioHeader)->get_FrameId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioChannels() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioChannels() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->get_AudioChannels(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioSampleRate() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioSampleRate() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->get_AudioSampleRate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioAacSequence() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioAacSequence() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->get_AudioAacSequence(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioBitrate() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioBitrate() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->get_AudioBitrate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::TryGetNextAudioFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastStreamAudioFrame) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::TryGetNextAudioFrame() const
     {
         void* frame{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->TryGetNextAudioFrame(&frame));
         return Windows::Media::Capture::AppBroadcastStreamAudioFrame{ frame, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->get_VideoWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->get_VideoHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoBitrate() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoBitrate() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->get_VideoBitrate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::TryGetNextVideoFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastStreamVideoFrame) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::TryGetNextVideoFrame() const
     {
         void* frame{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->TryGetNextVideoFrame(&frame));
         return Windows::Media::Capture::AppBroadcastStreamVideoFrame{ frame, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioFrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastStreamReader, Windows::Foundation::IInspectable> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioFrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastStreamReader, Windows::Foundation::IInspectable> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->add_AudioFrameArrived(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -1249,13 +1249,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AudioFrameArrived_revoker>(this, AudioFrameArrived(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioFrameArrived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioFrameArrived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->remove_AudioFrameArrived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoFrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastStreamReader, Windows::Foundation::IInspectable> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoFrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppBroadcastStreamReader, Windows::Foundation::IInspectable> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->add_VideoFrameArrived(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -1263,91 +1263,91 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, VideoFrameArrived_revoker>(this, VideoFrameArrived(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoFrameArrived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoFrameArrived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamReader)->remove_VideoFrameArrived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamStateChangedEventArgs<D>::StreamState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastStreamState) consume_Windows_Media_Capture_IAppBroadcastStreamStateChangedEventArgs<D>::StreamState() const
     {
-        Windows::Media::Capture::AppBroadcastStreamState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamStateChangedEventArgs)->get_StreamState(put_abi(value)));
+        Windows::Media::Capture::AppBroadcastStreamState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamStateChangedEventArgs)->get_StreamState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamVideoFrame<D>::VideoHeader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastStreamVideoHeader) consume_Windows_Media_Capture_IAppBroadcastStreamVideoFrame<D>::VideoHeader() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamVideoFrame)->get_VideoHeader(&value));
         return Windows::Media::Capture::AppBroadcastStreamVideoHeader{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamVideoFrame<D>::VideoBuffer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Media_Capture_IAppBroadcastStreamVideoFrame<D>::VideoBuffer() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamVideoFrame)->get_VideoBuffer(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::AbsoluteTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::AbsoluteTimestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamVideoHeader)->get_AbsoluteTimestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::RelativeTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::RelativeTimestamp() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamVideoHeader)->get_RelativeTimestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamVideoHeader)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::IsKeyFrame() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::IsKeyFrame() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamVideoHeader)->get_IsKeyFrame(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::HasDiscontinuity() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::HasDiscontinuity() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamVideoHeader)->get_HasDiscontinuity(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::FrameId() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Capture_IAppBroadcastStreamVideoHeader<D>::FrameId() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastStreamVideoHeader)->get_FrameId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastTriggerDetails<D>::BackgroundService() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastBackgroundService) consume_Windows_Media_Capture_IAppBroadcastTriggerDetails<D>::BackgroundService() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastTriggerDetails)->get_BackgroundService(&value));
         return Windows::Media::Capture::AppBroadcastBackgroundService{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppBroadcastViewerCountChangedEventArgs<D>::ViewerCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppBroadcastViewerCountChangedEventArgs<D>::ViewerCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppBroadcastViewerCountChangedEventArgs)->get_ViewerCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCapture<D>::IsCapturingAudio() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCapture<D>::IsCapturingAudio() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCapture)->get_IsCapturingAudio(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCapture<D>::IsCapturingVideo() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCapture<D>::IsCapturingVideo() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCapture)->get_IsCapturingVideo(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCapture<D>::CapturingChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCapture, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCapture<D>::CapturingChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCapture, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCapture)->add_CapturingChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1355,233 +1355,233 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CapturingChanged_revoker>(this, CapturingChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCapture<D>::CapturingChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCapture<D>::CapturingChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCapture)->remove_CapturingChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleGameBarKey(Windows::System::VirtualKey const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleGameBarKey(Windows::System::VirtualKey const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_ToggleGameBarKey(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleGameBarKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKey) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleGameBarKey() const
     {
-        Windows::System::VirtualKey value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleGameBarKey(put_abi(value)));
+        Windows::System::VirtualKey value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleGameBarKey(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleGameBarKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleGameBarKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_ToggleGameBarKeyModifiers(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleGameBarKeyModifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKeyModifiers) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleGameBarKeyModifiers() const
     {
-        Windows::System::VirtualKeyModifiers value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleGameBarKeyModifiers(put_abi(value)));
+        Windows::System::VirtualKeyModifiers value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleGameBarKeyModifiers(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::SaveHistoricalVideoKey(Windows::System::VirtualKey const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::SaveHistoricalVideoKey(Windows::System::VirtualKey const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_SaveHistoricalVideoKey(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::SaveHistoricalVideoKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKey) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::SaveHistoricalVideoKey() const
     {
-        Windows::System::VirtualKey value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_SaveHistoricalVideoKey(put_abi(value)));
+        Windows::System::VirtualKey value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_SaveHistoricalVideoKey(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::SaveHistoricalVideoKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::SaveHistoricalVideoKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_SaveHistoricalVideoKeyModifiers(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::SaveHistoricalVideoKeyModifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKeyModifiers) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::SaveHistoricalVideoKeyModifiers() const
     {
-        Windows::System::VirtualKeyModifiers value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_SaveHistoricalVideoKeyModifiers(put_abi(value)));
+        Windows::System::VirtualKeyModifiers value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_SaveHistoricalVideoKeyModifiers(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingKey(Windows::System::VirtualKey const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingKey(Windows::System::VirtualKey const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_ToggleRecordingKey(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKey) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingKey() const
     {
-        Windows::System::VirtualKey value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleRecordingKey(put_abi(value)));
+        Windows::System::VirtualKey value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleRecordingKey(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_ToggleRecordingKeyModifiers(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingKeyModifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKeyModifiers) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingKeyModifiers() const
     {
-        Windows::System::VirtualKeyModifiers value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleRecordingKeyModifiers(put_abi(value)));
+        Windows::System::VirtualKeyModifiers value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleRecordingKeyModifiers(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::TakeScreenshotKey(Windows::System::VirtualKey const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::TakeScreenshotKey(Windows::System::VirtualKey const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_TakeScreenshotKey(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::TakeScreenshotKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKey) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::TakeScreenshotKey() const
     {
-        Windows::System::VirtualKey value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_TakeScreenshotKey(put_abi(value)));
+        Windows::System::VirtualKey value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_TakeScreenshotKey(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::TakeScreenshotKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::TakeScreenshotKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_TakeScreenshotKeyModifiers(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::TakeScreenshotKeyModifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKeyModifiers) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::TakeScreenshotKeyModifiers() const
     {
-        Windows::System::VirtualKeyModifiers value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_TakeScreenshotKeyModifiers(put_abi(value)));
+        Windows::System::VirtualKeyModifiers value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_TakeScreenshotKeyModifiers(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingIndicatorKey(Windows::System::VirtualKey const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingIndicatorKey(Windows::System::VirtualKey const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_ToggleRecordingIndicatorKey(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingIndicatorKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKey) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingIndicatorKey() const
     {
-        Windows::System::VirtualKey value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleRecordingIndicatorKey(put_abi(value)));
+        Windows::System::VirtualKey value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleRecordingIndicatorKey(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingIndicatorKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingIndicatorKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->put_ToggleRecordingIndicatorKeyModifiers(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingIndicatorKeyModifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKeyModifiers) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleRecordingIndicatorKeyModifiers() const
     {
-        Windows::System::VirtualKeyModifiers value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleRecordingIndicatorKeyModifiers(put_abi(value)));
+        Windows::System::VirtualKeyModifiers value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys)->get_ToggleRecordingIndicatorKeyModifiers(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys2<D>::ToggleMicrophoneCaptureKey(Windows::System::VirtualKey const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys2<D>::ToggleMicrophoneCaptureKey(Windows::System::VirtualKey const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2)->put_ToggleMicrophoneCaptureKey(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys2<D>::ToggleMicrophoneCaptureKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKey) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys2<D>::ToggleMicrophoneCaptureKey() const
     {
-        Windows::System::VirtualKey value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2)->get_ToggleMicrophoneCaptureKey(put_abi(value)));
+        Windows::System::VirtualKey value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2)->get_ToggleMicrophoneCaptureKey(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys2<D>::ToggleMicrophoneCaptureKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys2<D>::ToggleMicrophoneCaptureKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2)->put_ToggleMicrophoneCaptureKeyModifiers(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys2<D>::ToggleMicrophoneCaptureKeyModifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKeyModifiers) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys2<D>::ToggleMicrophoneCaptureKeyModifiers() const
     {
-        Windows::System::VirtualKeyModifiers value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2)->get_ToggleMicrophoneCaptureKeyModifiers(put_abi(value)));
+        Windows::System::VirtualKeyModifiers value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2)->get_ToggleMicrophoneCaptureKeyModifiers(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleCameraCaptureKey(Windows::System::VirtualKey const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleCameraCaptureKey(Windows::System::VirtualKey const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->put_ToggleCameraCaptureKey(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleCameraCaptureKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKey) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleCameraCaptureKey() const
     {
-        Windows::System::VirtualKey value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->get_ToggleCameraCaptureKey(put_abi(value)));
+        Windows::System::VirtualKey value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->get_ToggleCameraCaptureKey(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleCameraCaptureKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleCameraCaptureKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->put_ToggleCameraCaptureKeyModifiers(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleCameraCaptureKeyModifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKeyModifiers) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleCameraCaptureKeyModifiers() const
     {
-        Windows::System::VirtualKeyModifiers value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->get_ToggleCameraCaptureKeyModifiers(put_abi(value)));
+        Windows::System::VirtualKeyModifiers value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->get_ToggleCameraCaptureKeyModifiers(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleBroadcastKey(Windows::System::VirtualKey const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleBroadcastKey(Windows::System::VirtualKey const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->put_ToggleBroadcastKey(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleBroadcastKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKey) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleBroadcastKey() const
     {
-        Windows::System::VirtualKey value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->get_ToggleBroadcastKey(put_abi(value)));
+        Windows::System::VirtualKey value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->get_ToggleBroadcastKey(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleBroadcastKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleBroadcastKeyModifiers(Windows::System::VirtualKeyModifiers const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->put_ToggleBroadcastKeyModifiers(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleBroadcastKeyModifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKeyModifiers) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys3<D>::ToggleBroadcastKeyModifiers() const
     {
-        Windows::System::VirtualKeyModifiers value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->get_ToggleBroadcastKeyModifiers(put_abi(value)));
+        Windows::System::VirtualKeyModifiers value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3)->get_ToggleBroadcastKeyModifiers(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureDurationGeneratedEventArgs<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IAppCaptureDurationGeneratedEventArgs<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureDurationGeneratedEventArgs)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureFileGeneratedEventArgs<D>::File() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::StorageFile) consume_Windows_Media_Capture_IAppCaptureFileGeneratedEventArgs<D>::File() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureFileGeneratedEventArgs)->get_File(&value));
         return Windows::Storage::StorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureManagerStatics<D>::GetCurrentSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureSettings) consume_Windows_Media_Capture_IAppCaptureManagerStatics<D>::GetCurrentSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureManagerStatics)->GetCurrentSettings(&value));
         return Windows::Media::Capture::AppCaptureSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureManagerStatics<D>::ApplySettings(Windows::Media::Capture::AppCaptureSettings const& appCaptureSettings) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureManagerStatics<D>::ApplySettings(Windows::Media::Capture::AppCaptureSettings const& appCaptureSettings) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureManagerStatics)->ApplySettings(*(void**)(&appCaptureSettings)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::AddStringEvent(param::hstring const& name, param::hstring const& value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::AddStringEvent(param::hstring const& name, param::hstring const& value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->AddStringEvent(*(void**)(&name), *(void**)(&value), static_cast<int32_t>(priority)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::AddInt32Event(param::hstring const& name, int32_t value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::AddInt32Event(param::hstring const& name, int32_t value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->AddInt32Event(*(void**)(&name), value, static_cast<int32_t>(priority)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::AddDoubleEvent(param::hstring const& name, double value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::AddDoubleEvent(param::hstring const& name, double value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->AddDoubleEvent(*(void**)(&name), value, static_cast<int32_t>(priority)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StartStringState(param::hstring const& name, param::hstring const& value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StartStringState(param::hstring const& name, param::hstring const& value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->StartStringState(*(void**)(&name), *(void**)(&value), static_cast<int32_t>(priority)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StartInt32State(param::hstring const& name, int32_t value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StartInt32State(param::hstring const& name, int32_t value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->StartInt32State(*(void**)(&name), value, static_cast<int32_t>(priority)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StartDoubleState(param::hstring const& name, double value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StartDoubleState(param::hstring const& name, double value, Windows::Media::Capture::AppCaptureMetadataPriority const& priority) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->StartDoubleState(*(void**)(&name), value, static_cast<int32_t>(priority)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StopState(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StopState(param::hstring const& name) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->StopState(*(void**)(&name)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StopAllStates() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::StopAllStates() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->StopAllStates());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::RemainingStorageBytesAvailable() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::RemainingStorageBytesAvailable() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->get_RemainingStorageBytesAvailable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::MetadataPurged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureMetadataWriter, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::MetadataPurged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureMetadataWriter, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->add_MetadataPurged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1589,59 +1589,59 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MetadataPurged_revoker>(this, MetadataPurged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::MetadataPurged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::MetadataPurged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMetadataWriter)->remove_MetadataPurged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMicrophoneCaptureStateChangedEventArgs<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureMicrophoneCaptureState) consume_Windows_Media_Capture_IAppCaptureMicrophoneCaptureStateChangedEventArgs<D>::State() const
     {
-        Windows::Media::Capture::AppCaptureMicrophoneCaptureState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMicrophoneCaptureStateChangedEventArgs)->get_State(put_abi(value)));
+        Windows::Media::Capture::AppCaptureMicrophoneCaptureState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMicrophoneCaptureStateChangedEventArgs)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureMicrophoneCaptureStateChangedEventArgs<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppCaptureMicrophoneCaptureStateChangedEventArgs<D>::ErrorCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureMicrophoneCaptureStateChangedEventArgs)->get_ErrorCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::StopRecording() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::StopRecording() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->StopRecording());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureRecordingState) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::State() const
     {
-        Windows::Media::Capture::AppCaptureRecordingState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->get_State(put_abi(value)));
+        Windows::Media::Capture::AppCaptureRecordingState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::ErrorCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->get_ErrorCode(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::Duration() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->get_Duration(&value));
         return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::File() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::StorageFile) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::File() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->get_File(&value));
         return Windows::Storage::StorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::IsFileTruncated() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<bool>) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::IsFileTruncated() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->get_IsFileTruncated(&value));
         return Windows::Foundation::IReference<bool>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureRecordOperation, Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureRecordOperation, Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->add_StateChanged(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -1649,13 +1649,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::StateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->remove_StateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::DurationGenerated(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureRecordOperation, Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::DurationGenerated(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureRecordOperation, Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->add_DurationGenerated(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -1663,13 +1663,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DurationGenerated_revoker>(this, DurationGenerated(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::DurationGenerated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::DurationGenerated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->remove_DurationGenerated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::FileGenerated(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureRecordOperation, Windows::Media::Capture::AppCaptureFileGeneratedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::FileGenerated(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureRecordOperation, Windows::Media::Capture::AppCaptureFileGeneratedEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->add_FileGenerated(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -1677,353 +1677,353 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, FileGenerated_revoker>(this, FileGenerated(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::FileGenerated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::FileGenerated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordOperation)->remove_FileGenerated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordingStateChangedEventArgs<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureRecordingState) consume_Windows_Media_Capture_IAppCaptureRecordingStateChangedEventArgs<D>::State() const
     {
-        Windows::Media::Capture::AppCaptureRecordingState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordingStateChangedEventArgs)->get_State(put_abi(value)));
+        Windows::Media::Capture::AppCaptureRecordingState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordingStateChangedEventArgs)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureRecordingStateChangedEventArgs<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppCaptureRecordingStateChangedEventArgs<D>::ErrorCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureRecordingStateChangedEventArgs)->get_ErrorCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureServices<D>::Record() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureRecordOperation) consume_Windows_Media_Capture_IAppCaptureServices<D>::Record() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureServices)->Record(&operation));
         return Windows::Media::Capture::AppCaptureRecordOperation{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureServices<D>::RecordTimeSpan(Windows::Foundation::DateTime const& startTime, Windows::Foundation::TimeSpan const& duration) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureRecordOperation) consume_Windows_Media_Capture_IAppCaptureServices<D>::RecordTimeSpan(Windows::Foundation::DateTime const& startTime, Windows::Foundation::TimeSpan const& duration) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureServices)->RecordTimeSpan(impl::bind_in(startTime), impl::bind_in(duration), &operation));
         return Windows::Media::Capture::AppCaptureRecordOperation{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureServices<D>::CanCapture() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureServices<D>::CanCapture() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureServices)->get_CanCapture(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureServices<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureState) consume_Windows_Media_Capture_IAppCaptureServices<D>::State() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureServices)->get_State(&value));
         return Windows::Media::Capture::AppCaptureState{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::AppCaptureDestinationFolder(Windows::Storage::StorageFolder const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::AppCaptureDestinationFolder(Windows::Storage::StorageFolder const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_AppCaptureDestinationFolder(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::AppCaptureDestinationFolder() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::StorageFolder) consume_Windows_Media_Capture_IAppCaptureSettings<D>::AppCaptureDestinationFolder() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_AppCaptureDestinationFolder(&value));
         return Windows::Storage::StorageFolder{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::AudioEncodingBitrate(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::AudioEncodingBitrate(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_AudioEncodingBitrate(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::AudioEncodingBitrate() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppCaptureSettings<D>::AudioEncodingBitrate() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_AudioEncodingBitrate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsAudioCaptureEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsAudioCaptureEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_IsAudioCaptureEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsAudioCaptureEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsAudioCaptureEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_IsAudioCaptureEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingBitrate(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingBitrate(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_CustomVideoEncodingBitrate(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingBitrate() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingBitrate() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_CustomVideoEncodingBitrate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingHeight(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingHeight(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_CustomVideoEncodingHeight(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_CustomVideoEncodingHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingWidth(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingWidth(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_CustomVideoEncodingWidth(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppCaptureSettings<D>::CustomVideoEncodingWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_CustomVideoEncodingWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::HistoricalBufferLength(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::HistoricalBufferLength(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_HistoricalBufferLength(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::HistoricalBufferLength() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppCaptureSettings<D>::HistoricalBufferLength() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_HistoricalBufferLength(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::HistoricalBufferLengthUnit(Windows::Media::Capture::AppCaptureHistoricalBufferLengthUnit const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::HistoricalBufferLengthUnit(Windows::Media::Capture::AppCaptureHistoricalBufferLengthUnit const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_HistoricalBufferLengthUnit(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::HistoricalBufferLengthUnit() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureHistoricalBufferLengthUnit) consume_Windows_Media_Capture_IAppCaptureSettings<D>::HistoricalBufferLengthUnit() const
     {
-        Windows::Media::Capture::AppCaptureHistoricalBufferLengthUnit value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_HistoricalBufferLengthUnit(put_abi(value)));
+        Windows::Media::Capture::AppCaptureHistoricalBufferLengthUnit value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_HistoricalBufferLengthUnit(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_IsHistoricalCaptureEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_IsHistoricalCaptureEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureOnBatteryAllowed(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureOnBatteryAllowed(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_IsHistoricalCaptureOnBatteryAllowed(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureOnBatteryAllowed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureOnBatteryAllowed() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_IsHistoricalCaptureOnBatteryAllowed(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureOnWirelessDisplayAllowed(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureOnWirelessDisplayAllowed(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_IsHistoricalCaptureOnWirelessDisplayAllowed(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureOnWirelessDisplayAllowed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsHistoricalCaptureOnWirelessDisplayAllowed() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_IsHistoricalCaptureOnWirelessDisplayAllowed(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::MaximumRecordLength(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::MaximumRecordLength(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_MaximumRecordLength(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::MaximumRecordLength() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IAppCaptureSettings<D>::MaximumRecordLength() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_MaximumRecordLength(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::ScreenshotDestinationFolder(Windows::Storage::StorageFolder const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::ScreenshotDestinationFolder(Windows::Storage::StorageFolder const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_ScreenshotDestinationFolder(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::ScreenshotDestinationFolder() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::StorageFolder) consume_Windows_Media_Capture_IAppCaptureSettings<D>::ScreenshotDestinationFolder() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_ScreenshotDestinationFolder(&value));
         return Windows::Storage::StorageFolder{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::VideoEncodingBitrateMode(Windows::Media::Capture::AppCaptureVideoEncodingBitrateMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::VideoEncodingBitrateMode(Windows::Media::Capture::AppCaptureVideoEncodingBitrateMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_VideoEncodingBitrateMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::VideoEncodingBitrateMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureVideoEncodingBitrateMode) consume_Windows_Media_Capture_IAppCaptureSettings<D>::VideoEncodingBitrateMode() const
     {
-        Windows::Media::Capture::AppCaptureVideoEncodingBitrateMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_VideoEncodingBitrateMode(put_abi(value)));
+        Windows::Media::Capture::AppCaptureVideoEncodingBitrateMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_VideoEncodingBitrateMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::VideoEncodingResolutionMode(Windows::Media::Capture::AppCaptureVideoEncodingResolutionMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::VideoEncodingResolutionMode(Windows::Media::Capture::AppCaptureVideoEncodingResolutionMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_VideoEncodingResolutionMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::VideoEncodingResolutionMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureVideoEncodingResolutionMode) consume_Windows_Media_Capture_IAppCaptureSettings<D>::VideoEncodingResolutionMode() const
     {
-        Windows::Media::Capture::AppCaptureVideoEncodingResolutionMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_VideoEncodingResolutionMode(put_abi(value)));
+        Windows::Media::Capture::AppCaptureVideoEncodingResolutionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_VideoEncodingResolutionMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsAppCaptureEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsAppCaptureEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->put_IsAppCaptureEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsAppCaptureEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsAppCaptureEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_IsAppCaptureEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsCpuConstrained() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsCpuConstrained() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_IsCpuConstrained(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsDisabledByPolicy() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsDisabledByPolicy() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_IsDisabledByPolicy(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsMemoryConstrained() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings<D>::IsMemoryConstrained() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_IsMemoryConstrained(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings<D>::HasHardwareEncoder() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings<D>::HasHardwareEncoder() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings)->get_HasHardwareEncoder(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings2<D>::IsGpuConstrained() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings2<D>::IsGpuConstrained() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings2)->get_IsGpuConstrained(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings2<D>::AlternateShortcutKeys() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureAlternateShortcutKeys) consume_Windows_Media_Capture_IAppCaptureSettings2<D>::AlternateShortcutKeys() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings2)->get_AlternateShortcutKeys(&value));
         return Windows::Media::Capture::AppCaptureAlternateShortcutKeys{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings3<D>::IsMicrophoneCaptureEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings3<D>::IsMicrophoneCaptureEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings3)->put_IsMicrophoneCaptureEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings3<D>::IsMicrophoneCaptureEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings3<D>::IsMicrophoneCaptureEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings3)->get_IsMicrophoneCaptureEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings4<D>::IsMicrophoneCaptureEnabledByDefault(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings4<D>::IsMicrophoneCaptureEnabledByDefault(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings4)->put_IsMicrophoneCaptureEnabledByDefault(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings4<D>::IsMicrophoneCaptureEnabledByDefault() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings4<D>::IsMicrophoneCaptureEnabledByDefault() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings4)->get_IsMicrophoneCaptureEnabledByDefault(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings4<D>::SystemAudioGain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings4<D>::SystemAudioGain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings4)->put_SystemAudioGain(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings4<D>::SystemAudioGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Capture_IAppCaptureSettings4<D>::SystemAudioGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings4)->get_SystemAudioGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings4<D>::MicrophoneGain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings4<D>::MicrophoneGain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings4)->put_MicrophoneGain(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings4<D>::MicrophoneGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Capture_IAppCaptureSettings4<D>::MicrophoneGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings4)->get_MicrophoneGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings4<D>::VideoEncodingFrameRateMode(Windows::Media::Capture::AppCaptureVideoEncodingFrameRateMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings4<D>::VideoEncodingFrameRateMode(Windows::Media::Capture::AppCaptureVideoEncodingFrameRateMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings4)->put_VideoEncodingFrameRateMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings4<D>::VideoEncodingFrameRateMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureVideoEncodingFrameRateMode) consume_Windows_Media_Capture_IAppCaptureSettings4<D>::VideoEncodingFrameRateMode() const
     {
-        Windows::Media::Capture::AppCaptureVideoEncodingFrameRateMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings4)->get_VideoEncodingFrameRateMode(put_abi(value)));
+        Windows::Media::Capture::AppCaptureVideoEncodingFrameRateMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings4)->get_VideoEncodingFrameRateMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings5<D>::IsEchoCancellationEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings5<D>::IsEchoCancellationEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings5)->put_IsEchoCancellationEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings5<D>::IsEchoCancellationEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings5<D>::IsEchoCancellationEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings5)->get_IsEchoCancellationEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings5<D>::IsCursorImageCaptureEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureSettings5<D>::IsCursorImageCaptureEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings5)->put_IsCursorImageCaptureEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureSettings5<D>::IsCursorImageCaptureEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureSettings5<D>::IsCursorImageCaptureEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureSettings5)->get_IsCursorImageCaptureEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::IsTargetRunning() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureState<D>::IsTargetRunning() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->get_IsTargetRunning(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::IsHistoricalCaptureEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureState<D>::IsHistoricalCaptureEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->get_IsHistoricalCaptureEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::ShouldCaptureMicrophone() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IAppCaptureState<D>::ShouldCaptureMicrophone() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->get_ShouldCaptureMicrophone(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::ShouldCaptureMicrophone(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureState<D>::ShouldCaptureMicrophone(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->put_ShouldCaptureMicrophone(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::RestartMicrophoneCapture() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureState<D>::RestartMicrophoneCapture() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->RestartMicrophoneCapture());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::MicrophoneCaptureState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureMicrophoneCaptureState) consume_Windows_Media_Capture_IAppCaptureState<D>::MicrophoneCaptureState() const
     {
-        Windows::Media::Capture::AppCaptureMicrophoneCaptureState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->get_MicrophoneCaptureState(put_abi(value)));
+        Windows::Media::Capture::AppCaptureMicrophoneCaptureState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->get_MicrophoneCaptureState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::MicrophoneCaptureError() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IAppCaptureState<D>::MicrophoneCaptureError() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->get_MicrophoneCaptureError(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::MicrophoneCaptureStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureState, Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCaptureState<D>::MicrophoneCaptureStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureState, Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->add_MicrophoneCaptureStateChanged(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -2031,13 +2031,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MicrophoneCaptureStateChanged_revoker>(this, MicrophoneCaptureStateChanged(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::MicrophoneCaptureStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureState<D>::MicrophoneCaptureStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->remove_MicrophoneCaptureStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::CaptureTargetClosed(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureState, Windows::Foundation::IInspectable> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCaptureState<D>::CaptureTargetClosed(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::AppCaptureState, Windows::Foundation::IInspectable> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->add_CaptureTargetClosed(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -2045,301 +2045,301 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CaptureTargetClosed_revoker>(this, CaptureTargetClosed(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureState<D>::CaptureTargetClosed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureState<D>::CaptureTargetClosed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureState)->remove_CaptureTargetClosed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureStatics<D>::GetForCurrentView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCapture) consume_Windows_Media_Capture_IAppCaptureStatics<D>::GetForCurrentView() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureStatics)->GetForCurrentView(&value));
         return Windows::Media::Capture::AppCapture{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IAppCaptureStatics2<D>::SetAllowedAsync(bool allowed) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IAppCaptureStatics2<D>::SetAllowedAsync(bool allowed) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IAppCaptureStatics2)->SetAllowedAsync(allowed, &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUI<D>::PhotoSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings) consume_Windows_Media_Capture_ICameraCaptureUI<D>::PhotoSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUI)->get_PhotoSettings(&value));
         return Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUI<D>::VideoSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings) consume_Windows_Media_Capture_ICameraCaptureUI<D>::VideoSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUI)->get_VideoSettings(&value));
         return Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUI<D>::CaptureFileAsync(Windows::Media::Capture::CameraCaptureUIMode const& mode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>) consume_Windows_Media_Capture_ICameraCaptureUI<D>::CaptureFileAsync(Windows::Media::Capture::CameraCaptureUIMode const& mode) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUI)->CaptureFileAsync(static_cast<int32_t>(mode), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::Format() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CameraCaptureUIPhotoFormat) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::Format() const
     {
-        Windows::Media::Capture::CameraCaptureUIPhotoFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->get_Format(put_abi(value)));
+        Windows::Media::Capture::CameraCaptureUIPhotoFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->get_Format(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::Format(Windows::Media::Capture::CameraCaptureUIPhotoFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::Format(Windows::Media::Capture::CameraCaptureUIPhotoFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->put_Format(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::MaxResolution() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::MaxResolution() const
     {
-        Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->get_MaxResolution(put_abi(value)));
+        Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->get_MaxResolution(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::MaxResolution(Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::MaxResolution(Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->put_MaxResolution(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::CroppedSizeInPixels() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::CroppedSizeInPixels() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->get_CroppedSizeInPixels(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::CroppedSizeInPixels(Windows::Foundation::Size const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::CroppedSizeInPixels(Windows::Foundation::Size const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->put_CroppedSizeInPixels(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::CroppedAspectRatio() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::CroppedAspectRatio() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->get_CroppedAspectRatio(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::CroppedAspectRatio(Windows::Foundation::Size const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::CroppedAspectRatio(Windows::Foundation::Size const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->put_CroppedAspectRatio(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::AllowCropping() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::AllowCropping() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->get_AllowCropping(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::AllowCropping(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraCaptureUIPhotoCaptureSettings<D>::AllowCropping(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings)->put_AllowCropping(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::Format() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CameraCaptureUIVideoFormat) consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::Format() const
     {
-        Windows::Media::Capture::CameraCaptureUIVideoFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->get_Format(put_abi(value)));
+        Windows::Media::Capture::CameraCaptureUIVideoFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->get_Format(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::Format(Windows::Media::Capture::CameraCaptureUIVideoFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::Format(Windows::Media::Capture::CameraCaptureUIVideoFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->put_Format(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::MaxResolution() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CameraCaptureUIMaxVideoResolution) consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::MaxResolution() const
     {
-        Windows::Media::Capture::CameraCaptureUIMaxVideoResolution value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->get_MaxResolution(put_abi(value)));
+        Windows::Media::Capture::CameraCaptureUIMaxVideoResolution value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->get_MaxResolution(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::MaxResolution(Windows::Media::Capture::CameraCaptureUIMaxVideoResolution const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::MaxResolution(Windows::Media::Capture::CameraCaptureUIMaxVideoResolution const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->put_MaxResolution(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::MaxDurationInSeconds() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::MaxDurationInSeconds() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->get_MaxDurationInSeconds(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::MaxDurationInSeconds(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::MaxDurationInSeconds(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->put_MaxDurationInSeconds(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::AllowTrimming() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::AllowTrimming() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->get_AllowTrimming(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::AllowTrimming(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraCaptureUIVideoCaptureSettings<D>::AllowTrimming(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings)->put_AllowTrimming(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICameraOptionsUIStatics<D>::Show(Windows::Media::Capture::MediaCapture const& mediaCapture) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ICameraOptionsUIStatics<D>::Show(Windows::Media::Capture::MediaCapture const& mediaCapture) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICameraOptionsUIStatics)->Show(*(void**)(&mediaCapture)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrame<D>::Width() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_ICapturedFrame<D>::Width() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrame)->get_Width(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrame<D>::Height() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_ICapturedFrame<D>::Height() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrame)->get_Height(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrame2<D>::ControlValues() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CapturedFrameControlValues) consume_Windows_Media_Capture_ICapturedFrame2<D>::ControlValues() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrame2)->get_ControlValues(&value));
         return Windows::Media::Capture::CapturedFrameControlValues{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrame2<D>::BitmapProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapPropertySet) consume_Windows_Media_Capture_ICapturedFrame2<D>::BitmapProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrame2)->get_BitmapProperties(&value));
         return Windows::Graphics::Imaging::BitmapPropertySet{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::Exposure() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::Exposure() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues)->get_Exposure(&value));
         return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::ExposureCompensation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::ExposureCompensation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues)->get_ExposureCompensation(&value));
         return Windows::Foundation::IReference<float>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::IsoSpeed() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::IsoSpeed() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues)->get_IsoSpeed(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::Focus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::Focus() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues)->get_Focus(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::SceneMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Media::Devices::CaptureSceneMode>) consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::SceneMode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues)->get_SceneMode(&value));
         return Windows::Foundation::IReference<Windows::Media::Devices::CaptureSceneMode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::Flashed() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<bool>) consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::Flashed() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues)->get_Flashed(&value));
         return Windows::Foundation::IReference<bool>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::FlashPowerPercent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::FlashPowerPercent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues)->get_FlashPowerPercent(&value));
         return Windows::Foundation::IReference<float>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::WhiteBalance() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::WhiteBalance() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues)->get_WhiteBalance(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::ZoomFactor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) consume_Windows_Media_Capture_ICapturedFrameControlValues<D>::ZoomFactor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues)->get_ZoomFactor(&value));
         return Windows::Foundation::IReference<float>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::FocusState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Media::Devices::MediaCaptureFocusState>) consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::FocusState() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues2)->get_FocusState(&value));
         return Windows::Foundation::IReference<Windows::Media::Devices::MediaCaptureFocusState>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::IsoDigitalGain() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<double>) consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::IsoDigitalGain() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues2)->get_IsoDigitalGain(&value));
         return Windows::Foundation::IReference<double>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::IsoAnalogGain() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<double>) consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::IsoAnalogGain() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues2)->get_IsoAnalogGain(&value));
         return Windows::Foundation::IReference<double>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::SensorFrameRate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaRatio) consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::SensorFrameRate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues2)->get_SensorFrameRate(&value));
         return Windows::Media::MediaProperties::MediaRatio{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::WhiteBalanceGain() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Media::Capture::WhiteBalanceGain>) consume_Windows_Media_Capture_ICapturedFrameControlValues2<D>::WhiteBalanceGain() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameControlValues2)->get_WhiteBalanceGain(&value));
         return Windows::Foundation::IReference<Windows::Media::Capture::WhiteBalanceGain>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedFrameWithSoftwareBitmap<D>::SoftwareBitmap() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Media_Capture_ICapturedFrameWithSoftwareBitmap<D>::SoftwareBitmap() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedFrameWithSoftwareBitmap)->get_SoftwareBitmap(&value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedPhoto<D>::Frame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CapturedFrame) consume_Windows_Media_Capture_ICapturedPhoto<D>::Frame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedPhoto)->get_Frame(&value));
         return Windows::Media::Capture::CapturedFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ICapturedPhoto<D>::Thumbnail() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CapturedFrame) consume_Windows_Media_Capture_ICapturedPhoto<D>::Thumbnail() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ICapturedPhoto)->get_Thumbnail(&value));
         return Windows::Media::Capture::CapturedFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServices<D>::TargetCapturePolicy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::GameBarTargetCapturePolicy) consume_Windows_Media_Capture_IGameBarServices<D>::TargetCapturePolicy() const
     {
-        Windows::Media::Capture::GameBarTargetCapturePolicy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->get_TargetCapturePolicy(put_abi(value)));
+        Windows::Media::Capture::GameBarTargetCapturePolicy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->get_TargetCapturePolicy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServices<D>::EnableCapture() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IGameBarServices<D>::EnableCapture() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->EnableCapture());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServices<D>::DisableCapture() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IGameBarServices<D>::DisableCapture() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->DisableCapture());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServices<D>::TargetInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::GameBarServicesTargetInfo) consume_Windows_Media_Capture_IGameBarServices<D>::TargetInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->get_TargetInfo(&value));
         return Windows::Media::Capture::GameBarServicesTargetInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServices<D>::SessionId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IGameBarServices<D>::SessionId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->get_SessionId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServices<D>::AppBroadcastServices() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppBroadcastServices) consume_Windows_Media_Capture_IGameBarServices<D>::AppBroadcastServices() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->get_AppBroadcastServices(&value));
         return Windows::Media::Capture::AppBroadcastServices{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServices<D>::AppCaptureServices() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::AppCaptureServices) consume_Windows_Media_Capture_IGameBarServices<D>::AppCaptureServices() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->get_AppCaptureServices(&value));
         return Windows::Media::Capture::AppCaptureServices{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServices<D>::CommandReceived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::GameBarServices, Windows::Media::Capture::GameBarServicesCommandEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IGameBarServices<D>::CommandReceived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::GameBarServices, Windows::Media::Capture::GameBarServicesCommandEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->add_CommandReceived(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -2347,25 +2347,25 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CommandReceived_revoker>(this, CommandReceived(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServices<D>::CommandReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IGameBarServices<D>::CommandReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServices)->remove_CommandReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesCommandEventArgs<D>::Command() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::GameBarCommand) consume_Windows_Media_Capture_IGameBarServicesCommandEventArgs<D>::Command() const
     {
-        Windows::Media::Capture::GameBarCommand value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesCommandEventArgs)->get_Command(put_abi(value)));
+        Windows::Media::Capture::GameBarCommand value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesCommandEventArgs)->get_Command(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesCommandEventArgs<D>::Origin() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::GameBarCommandOrigin) consume_Windows_Media_Capture_IGameBarServicesCommandEventArgs<D>::Origin() const
     {
-        Windows::Media::Capture::GameBarCommandOrigin value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesCommandEventArgs)->get_Origin(put_abi(value)));
+        Windows::Media::Capture::GameBarCommandOrigin value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesCommandEventArgs)->get_Origin(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesManager<D>::GameBarServicesCreated(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::GameBarServicesManager, Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IGameBarServicesManager<D>::GameBarServicesCreated(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::GameBarServicesManager, Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs> const& value) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesManager)->add_GameBarServicesCreated(*(void**)(&value), put_abi(token)));
         return token;
     }
@@ -2373,121 +2373,121 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GameBarServicesCreated_revoker>(this, GameBarServicesCreated(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesManager<D>::GameBarServicesCreated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IGameBarServicesManager<D>::GameBarServicesCreated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesManager)->remove_GameBarServicesCreated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesManagerGameBarServicesCreatedEventArgs<D>::GameBarServices() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::GameBarServices) consume_Windows_Media_Capture_IGameBarServicesManagerGameBarServicesCreatedEventArgs<D>::GameBarServices() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesManagerGameBarServicesCreatedEventArgs)->get_GameBarServices(&value));
         return Windows::Media::Capture::GameBarServices{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesManagerStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::GameBarServicesManager) consume_Windows_Media_Capture_IGameBarServicesManagerStatics<D>::GetDefault() const
     {
         void* ppInstance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesManagerStatics)->GetDefault(&ppInstance));
         return Windows::Media::Capture::GameBarServicesManager{ ppInstance, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesTargetInfo<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IGameBarServicesTargetInfo<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesTargetInfo)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesTargetInfo<D>::AppId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IGameBarServicesTargetInfo<D>::AppId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesTargetInfo)->get_AppId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesTargetInfo<D>::TitleId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IGameBarServicesTargetInfo<D>::TitleId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesTargetInfo)->get_TitleId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IGameBarServicesTargetInfo<D>::DisplayMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::GameBarServicesDisplayMode) consume_Windows_Media_Capture_IGameBarServicesTargetInfo<D>::DisplayMode() const
     {
-        Windows::Media::Capture::GameBarServicesDisplayMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesTargetInfo)->get_DisplayMode(put_abi(value)));
+        Windows::Media::Capture::GameBarServicesDisplayMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IGameBarServicesTargetInfo)->get_DisplayMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagMediaRecording<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_ILowLagMediaRecording<D>::StartAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagMediaRecording)->StartAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagMediaRecording<D>::StopAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_ILowLagMediaRecording<D>::StopAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagMediaRecording)->StopAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagMediaRecording<D>::FinishAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_ILowLagMediaRecording<D>::FinishAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagMediaRecording)->FinishAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagMediaRecording2<D>::PauseAsync(Windows::Media::Devices::MediaCapturePauseBehavior const& behavior) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_ILowLagMediaRecording2<D>::PauseAsync(Windows::Media::Devices::MediaCapturePauseBehavior const& behavior) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagMediaRecording2)->PauseAsync(static_cast<int32_t>(behavior), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagMediaRecording2<D>::ResumeAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_ILowLagMediaRecording2<D>::ResumeAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagMediaRecording2)->ResumeAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagMediaRecording3<D>::PauseWithResultAsync(Windows::Media::Devices::MediaCapturePauseBehavior const& behavior) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::MediaCapturePauseResult>) consume_Windows_Media_Capture_ILowLagMediaRecording3<D>::PauseWithResultAsync(Windows::Media::Devices::MediaCapturePauseBehavior const& behavior) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagMediaRecording3)->PauseWithResultAsync(static_cast<int32_t>(behavior), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::MediaCapturePauseResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagMediaRecording3<D>::StopWithResultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::MediaCaptureStopResult>) consume_Windows_Media_Capture_ILowLagMediaRecording3<D>::StopWithResultAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagMediaRecording3)->StopWithResultAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::MediaCaptureStopResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagPhotoCapture<D>::CaptureAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::CapturedPhoto>) consume_Windows_Media_Capture_ILowLagPhotoCapture<D>::CaptureAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagPhotoCapture)->CaptureAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::CapturedPhoto>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagPhotoCapture<D>::FinishAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_ILowLagPhotoCapture<D>::FinishAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagPhotoCapture)->FinishAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::StartAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagPhotoSequenceCapture)->StartAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::StopAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::StopAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagPhotoSequenceCapture)->StopAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::FinishAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::FinishAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagPhotoSequenceCapture)->FinishAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::PhotoCaptured(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::LowLagPhotoSequenceCapture, Windows::Media::Capture::PhotoCapturedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::PhotoCaptured(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::LowLagPhotoSequenceCapture, Windows::Media::Capture::PhotoCapturedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagPhotoSequenceCapture)->add_PhotoCaptured(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2495,89 +2495,89 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PhotoCaptured_revoker>(this, PhotoCaptured(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::PhotoCaptured(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::PhotoCaptured(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::ILowLagPhotoSequenceCapture)->remove_PhotoCaptured(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::InitializeAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::InitializeAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->InitializeAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::InitializeAsync(Windows::Media::Capture::MediaCaptureInitializationSettings const& mediaCaptureInitializationSettings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::InitializeAsync(Windows::Media::Capture::MediaCaptureInitializationSettings const& mediaCaptureInitializationSettings) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->InitializeWithSettingsAsync(*(void**)(&mediaCaptureInitializationSettings), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::StartRecordToStorageFileAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Storage::IStorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::StartRecordToStorageFileAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Storage::IStorageFile const& file) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->StartRecordToStorageFileAsync(*(void**)(&encodingProfile), *(void**)(&file), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::StartRecordToStreamAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Storage::Streams::IRandomAccessStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::StartRecordToStreamAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Storage::Streams::IRandomAccessStream const& stream) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->StartRecordToStreamAsync(*(void**)(&encodingProfile), *(void**)(&stream), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::StartRecordToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Media::IMediaExtension const& customMediaSink) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::StartRecordToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Media::IMediaExtension const& customMediaSink) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->StartRecordToCustomSinkAsync(*(void**)(&encodingProfile), *(void**)(&customMediaSink), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::StartRecordToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, param::hstring const& customSinkActivationId, Windows::Foundation::Collections::IPropertySet const& customSinkSettings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::StartRecordToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, param::hstring const& customSinkActivationId, Windows::Foundation::Collections::IPropertySet const& customSinkSettings) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->StartRecordToCustomSinkIdAsync(*(void**)(&encodingProfile), *(void**)(&customSinkActivationId), *(void**)(&customSinkSettings), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::StopRecordAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::StopRecordAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->StopRecordAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::CapturePhotoToStorageFileAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type, Windows::Storage::IStorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::CapturePhotoToStorageFileAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type, Windows::Storage::IStorageFile const& file) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->CapturePhotoToStorageFileAsync(*(void**)(&type), *(void**)(&file), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::CapturePhotoToStreamAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type, Windows::Storage::Streams::IRandomAccessStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::CapturePhotoToStreamAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type, Windows::Storage::Streams::IRandomAccessStream const& stream) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->CapturePhotoToStreamAsync(*(void**)(&type), *(void**)(&stream), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::AddEffectAsync(Windows::Media::Capture::MediaStreamType const& mediaStreamType, param::hstring const& effectActivationID, Windows::Foundation::Collections::IPropertySet const& effectSettings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::AddEffectAsync(Windows::Media::Capture::MediaStreamType const& mediaStreamType, param::hstring const& effectActivationID, Windows::Foundation::Collections::IPropertySet const& effectSettings) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->AddEffectAsync(static_cast<int32_t>(mediaStreamType), *(void**)(&effectActivationID), *(void**)(&effectSettings), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::ClearEffectsAsync(Windows::Media::Capture::MediaStreamType const& mediaStreamType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::ClearEffectsAsync(Windows::Media::Capture::MediaStreamType const& mediaStreamType) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->ClearEffectsAsync(static_cast<int32_t>(mediaStreamType), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::SetEncoderProperty(Windows::Media::Capture::MediaStreamType const& mediaStreamType, winrt::guid const& propertyId, Windows::Foundation::IInspectable const& propertyValue) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture<D>::SetEncoderProperty(Windows::Media::Capture::MediaStreamType const& mediaStreamType, winrt::guid const& propertyId, Windows::Foundation::IInspectable const& propertyValue) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->SetEncoderProperty(static_cast<int32_t>(mediaStreamType), impl::bind_in(propertyId), *(void**)(&propertyValue)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::GetEncoderProperty(Windows::Media::Capture::MediaStreamType const& mediaStreamType, winrt::guid const& propertyId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Media_Capture_IMediaCapture<D>::GetEncoderProperty(Windows::Media::Capture::MediaStreamType const& mediaStreamType, winrt::guid const& propertyId) const
     {
         void* propertyValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->GetEncoderProperty(static_cast<int32_t>(mediaStreamType), impl::bind_in(propertyId), &propertyValue));
         return Windows::Foundation::IInspectable{ propertyValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::Failed(Windows::Media::Capture::MediaCaptureFailedEventHandler const& errorEventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCapture<D>::Failed(Windows::Media::Capture::MediaCaptureFailedEventHandler const& errorEventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->add_Failed(*(void**)(&errorEventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -2585,13 +2585,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Failed_revoker>(this, Failed(errorEventHandler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::Failed(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture<D>::Failed(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->remove_Failed(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::RecordLimitationExceeded(Windows::Media::Capture::RecordLimitationExceededEventHandler const& recordLimitationExceededEventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCapture<D>::RecordLimitationExceeded(Windows::Media::Capture::RecordLimitationExceededEventHandler const& recordLimitationExceededEventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->add_RecordLimitationExceeded(*(void**)(&recordLimitationExceededEventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -2599,109 +2599,109 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RecordLimitationExceeded_revoker>(this, RecordLimitationExceeded(recordLimitationExceededEventHandler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::RecordLimitationExceeded(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture<D>::RecordLimitationExceeded(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->remove_RecordLimitationExceeded(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::MediaCaptureSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureSettings) consume_Windows_Media_Capture_IMediaCapture<D>::MediaCaptureSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->get_MediaCaptureSettings(&value));
         return Windows::Media::Capture::MediaCaptureSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::AudioDeviceController() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AudioDeviceController) consume_Windows_Media_Capture_IMediaCapture<D>::AudioDeviceController() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->get_AudioDeviceController(&value));
         return Windows::Media::Devices::AudioDeviceController{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::VideoDeviceController() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::VideoDeviceController) consume_Windows_Media_Capture_IMediaCapture<D>::VideoDeviceController() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->get_VideoDeviceController(&value));
         return Windows::Media::Devices::VideoDeviceController{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::SetPreviewMirroring(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture<D>::SetPreviewMirroring(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->SetPreviewMirroring(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::GetPreviewMirroring() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IMediaCapture<D>::GetPreviewMirroring() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->GetPreviewMirroring(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::SetPreviewRotation(Windows::Media::Capture::VideoRotation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture<D>::SetPreviewRotation(Windows::Media::Capture::VideoRotation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->SetPreviewRotation(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::GetPreviewRotation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::VideoRotation) consume_Windows_Media_Capture_IMediaCapture<D>::GetPreviewRotation() const
     {
-        Windows::Media::Capture::VideoRotation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->GetPreviewRotation(put_abi(value)));
+        Windows::Media::Capture::VideoRotation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->GetPreviewRotation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::SetRecordRotation(Windows::Media::Capture::VideoRotation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture<D>::SetRecordRotation(Windows::Media::Capture::VideoRotation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->SetRecordRotation(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture<D>::GetRecordRotation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::VideoRotation) consume_Windows_Media_Capture_IMediaCapture<D>::GetRecordRotation() const
     {
-        Windows::Media::Capture::VideoRotation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->GetRecordRotation(put_abi(value)));
+        Windows::Media::Capture::VideoRotation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture)->GetRecordRotation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagRecordToStorageFileAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Storage::IStorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagMediaRecording>) consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagRecordToStorageFileAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Storage::IStorageFile const& file) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture2)->PrepareLowLagRecordToStorageFileAsync(*(void**)(&encodingProfile), *(void**)(&file), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagMediaRecording>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagRecordToStreamAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Storage::Streams::IRandomAccessStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagMediaRecording>) consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagRecordToStreamAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Storage::Streams::IRandomAccessStream const& stream) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture2)->PrepareLowLagRecordToStreamAsync(*(void**)(&encodingProfile), *(void**)(&stream), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagMediaRecording>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagRecordToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Media::IMediaExtension const& customMediaSink) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagMediaRecording>) consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagRecordToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Media::IMediaExtension const& customMediaSink) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture2)->PrepareLowLagRecordToCustomSinkAsync(*(void**)(&encodingProfile), *(void**)(&customMediaSink), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagMediaRecording>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagRecordToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, param::hstring const& customSinkActivationId, Windows::Foundation::Collections::IPropertySet const& customSinkSettings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagMediaRecording>) consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagRecordToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, param::hstring const& customSinkActivationId, Windows::Foundation::Collections::IPropertySet const& customSinkSettings) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture2)->PrepareLowLagRecordToCustomSinkIdAsync(*(void**)(&encodingProfile), *(void**)(&customSinkActivationId), *(void**)(&customSinkSettings), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagMediaRecording>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagPhotoCaptureAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagPhotoCapture>) consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagPhotoCaptureAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture2)->PrepareLowLagPhotoCaptureAsync(*(void**)(&type), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagPhotoCapture>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagPhotoSequenceCaptureAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagPhotoSequenceCapture>) consume_Windows_Media_Capture_IMediaCapture2<D>::PrepareLowLagPhotoSequenceCaptureAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture2)->PrepareLowLagPhotoSequenceCaptureAsync(*(void**)(&type), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::LowLagPhotoSequenceCapture>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture2<D>::SetEncodingPropertiesAsync(Windows::Media::Capture::MediaStreamType const& mediaStreamType, Windows::Media::MediaProperties::IMediaEncodingProperties const& mediaEncodingProperties, Windows::Media::MediaProperties::MediaPropertySet const& encoderProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture2<D>::SetEncodingPropertiesAsync(Windows::Media::Capture::MediaStreamType const& mediaStreamType, Windows::Media::MediaProperties::IMediaEncodingProperties const& mediaEncodingProperties, Windows::Media::MediaProperties::MediaPropertySet const& encoderProperties) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture2)->SetEncodingPropertiesAsync(static_cast<int32_t>(mediaStreamType), *(void**)(&mediaEncodingProperties), *(void**)(&encoderProperties), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture3<D>::PrepareVariablePhotoSequenceCaptureAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Core::VariablePhotoSequenceCapture>) consume_Windows_Media_Capture_IMediaCapture3<D>::PrepareVariablePhotoSequenceCaptureAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& type) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture3)->PrepareVariablePhotoSequenceCaptureAsync(*(void**)(&type), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Core::VariablePhotoSequenceCapture>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture3<D>::FocusChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Media::Capture::MediaCaptureFocusChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCapture3<D>::FocusChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Media::Capture::MediaCaptureFocusChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture3)->add_FocusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2709,13 +2709,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, FocusChanged_revoker>(this, FocusChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture3<D>::FocusChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture3<D>::FocusChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture3)->remove_FocusChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture3<D>::PhotoConfirmationCaptured(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Media::Capture::PhotoConfirmationCapturedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCapture3<D>::PhotoConfirmationCaptured(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Media::Capture::PhotoConfirmationCapturedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture3)->add_PhotoConfirmationCaptured(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2723,37 +2723,37 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PhotoConfirmationCaptured_revoker>(this, PhotoConfirmationCaptured(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture3<D>::PhotoConfirmationCaptured(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture3<D>::PhotoConfirmationCaptured(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture3)->remove_PhotoConfirmationCaptured(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::AddAudioEffectAsync(Windows::Media::Effects::IAudioEffectDefinition const& definition) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::IMediaExtension>) consume_Windows_Media_Capture_IMediaCapture4<D>::AddAudioEffectAsync(Windows::Media::Effects::IAudioEffectDefinition const& definition) const
     {
         void* op{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->AddAudioEffectAsync(*(void**)(&definition), &op));
         return Windows::Foundation::IAsyncOperation<Windows::Media::IMediaExtension>{ op, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::AddVideoEffectAsync(Windows::Media::Effects::IVideoEffectDefinition const& definition, Windows::Media::Capture::MediaStreamType const& mediaStreamType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::IMediaExtension>) consume_Windows_Media_Capture_IMediaCapture4<D>::AddVideoEffectAsync(Windows::Media::Effects::IVideoEffectDefinition const& definition, Windows::Media::Capture::MediaStreamType const& mediaStreamType) const
     {
         void* op{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->AddVideoEffectAsync(*(void**)(&definition), static_cast<int32_t>(mediaStreamType), &op));
         return Windows::Foundation::IAsyncOperation<Windows::Media::IMediaExtension>{ op, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::PauseRecordAsync(Windows::Media::Devices::MediaCapturePauseBehavior const& behavior) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture4<D>::PauseRecordAsync(Windows::Media::Devices::MediaCapturePauseBehavior const& behavior) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->PauseRecordAsync(static_cast<int32_t>(behavior), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::ResumeRecordAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture4<D>::ResumeRecordAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->ResumeRecordAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::CameraStreamStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCapture4<D>::CameraStreamStateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->add_CameraStreamStateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2761,31 +2761,31 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CameraStreamStateChanged_revoker>(this, CameraStreamStateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::CameraStreamStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture4<D>::CameraStreamStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->remove_CameraStreamStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::CameraStreamState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::CameraStreamState) consume_Windows_Media_Capture_IMediaCapture4<D>::CameraStreamState() const
     {
-        Windows::Media::Devices::CameraStreamState streamState;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->get_CameraStreamState(put_abi(streamState)));
+        Windows::Media::Devices::CameraStreamState streamState{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->get_CameraStreamState(reinterpret_cast<int32_t*>(&streamState)));
         return streamState;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::GetPreviewFrameAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::VideoFrame>) consume_Windows_Media_Capture_IMediaCapture4<D>::GetPreviewFrameAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->GetPreviewFrameAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::VideoFrame>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::GetPreviewFrameAsync(Windows::Media::VideoFrame const& destination) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::VideoFrame>) consume_Windows_Media_Capture_IMediaCapture4<D>::GetPreviewFrameAsync(Windows::Media::VideoFrame const& destination) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->GetPreviewFrameCopyAsync(*(void**)(&destination), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::VideoFrame>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::ThermalStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCapture4<D>::ThermalStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->add_ThermalStatusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2793,67 +2793,67 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ThermalStatusChanged_revoker>(this, ThermalStatusChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::ThermalStatusChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture4<D>::ThermalStatusChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->remove_ThermalStatusChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::ThermalStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureThermalStatus) consume_Windows_Media_Capture_IMediaCapture4<D>::ThermalStatus() const
     {
-        Windows::Media::Capture::MediaCaptureThermalStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->get_ThermalStatus(put_abi(value)));
+        Windows::Media::Capture::MediaCaptureThermalStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->get_ThermalStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture4<D>::PrepareAdvancedPhotoCaptureAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& encodingProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::AdvancedPhotoCapture>) consume_Windows_Media_Capture_IMediaCapture4<D>::PrepareAdvancedPhotoCaptureAsync(Windows::Media::MediaProperties::ImageEncodingProperties const& encodingProperties) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture4)->PrepareAdvancedPhotoCaptureAsync(*(void**)(&encodingProperties), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::AdvancedPhotoCapture>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture5<D>::RemoveEffectAsync(Windows::Media::IMediaExtension const& effect) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture5<D>::RemoveEffectAsync(Windows::Media::IMediaExtension const& effect) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture5)->RemoveEffectAsync(*(void**)(&effect), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture5<D>::PauseRecordWithResultAsync(Windows::Media::Devices::MediaCapturePauseBehavior const& behavior) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::MediaCapturePauseResult>) consume_Windows_Media_Capture_IMediaCapture5<D>::PauseRecordWithResultAsync(Windows::Media::Devices::MediaCapturePauseBehavior const& behavior) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture5)->PauseRecordWithResultAsync(static_cast<int32_t>(behavior), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::MediaCapturePauseResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture5<D>::StopRecordWithResultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::MediaCaptureStopResult>) consume_Windows_Media_Capture_IMediaCapture5<D>::StopRecordWithResultAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture5)->StopRecordWithResultAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::MediaCaptureStopResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture5<D>::FrameSources() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::Media::Capture::Frames::MediaFrameSource>) consume_Windows_Media_Capture_IMediaCapture5<D>::FrameSources() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture5)->get_FrameSources(&value));
         return Windows::Foundation::Collections::IMapView<hstring, Windows::Media::Capture::Frames::MediaFrameSource>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture5<D>::CreateFrameReaderAsync(Windows::Media::Capture::Frames::MediaFrameSource const& inputSource) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameReader>) consume_Windows_Media_Capture_IMediaCapture5<D>::CreateFrameReaderAsync(Windows::Media::Capture::Frames::MediaFrameSource const& inputSource) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture5)->CreateFrameReaderAsync(*(void**)(&inputSource), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameReader>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture5<D>::CreateFrameReaderAsync(Windows::Media::Capture::Frames::MediaFrameSource const& inputSource, param::hstring const& outputSubtype) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameReader>) consume_Windows_Media_Capture_IMediaCapture5<D>::CreateFrameReaderAsync(Windows::Media::Capture::Frames::MediaFrameSource const& inputSource, param::hstring const& outputSubtype) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture5)->CreateFrameReaderWithSubtypeAsync(*(void**)(&inputSource), *(void**)(&outputSubtype), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameReader>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture5<D>::CreateFrameReaderAsync(Windows::Media::Capture::Frames::MediaFrameSource const& inputSource, param::hstring const& outputSubtype, Windows::Graphics::Imaging::BitmapSize const& outputSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameReader>) consume_Windows_Media_Capture_IMediaCapture5<D>::CreateFrameReaderAsync(Windows::Media::Capture::Frames::MediaFrameSource const& inputSource, param::hstring const& outputSubtype, Windows::Graphics::Imaging::BitmapSize const& outputSize) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture5)->CreateFrameReaderWithSubtypeAndSizeAsync(*(void**)(&inputSource), *(void**)(&outputSubtype), impl::bind_in(outputSize), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameReader>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture6<D>::CaptureDeviceExclusiveControlStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCapture6<D>::CaptureDeviceExclusiveControlStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCapture, Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture6)->add_CaptureDeviceExclusiveControlStatusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2861,253 +2861,253 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CaptureDeviceExclusiveControlStatusChanged_revoker>(this, CaptureDeviceExclusiveControlStatusChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture6<D>::CaptureDeviceExclusiveControlStatusChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture6<D>::CaptureDeviceExclusiveControlStatusChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture6)->remove_CaptureDeviceExclusiveControlStatusChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture6<D>::CreateMultiSourceFrameReaderAsync(param::async_iterable<Windows::Media::Capture::Frames::MediaFrameSource> const& inputSources) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>) consume_Windows_Media_Capture_IMediaCapture6<D>::CreateMultiSourceFrameReaderAsync(param::async_iterable<Windows::Media::Capture::Frames::MediaFrameSource> const& inputSources) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture6)->CreateMultiSourceFrameReaderAsync(*(void**)(&inputSources), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapture7<D>::CreateRelativePanelWatcher(Windows::Media::Capture::StreamingCaptureMode const& captureMode, Windows::UI::WindowManagement::DisplayRegion const& displayRegion) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureRelativePanelWatcher) consume_Windows_Media_Capture_IMediaCapture7<D>::CreateRelativePanelWatcher(Windows::Media::Capture::StreamingCaptureMode const& captureMode, Windows::UI::WindowManagement::DisplayRegion const& displayRegion) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapture7)->CreateRelativePanelWatcher(static_cast<int32_t>(captureMode), *(void**)(&displayRegion), &result));
         return Windows::Media::Capture::MediaCaptureRelativePanelWatcher{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatus) consume_Windows_Media_Capture_IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs<D>::Status() const
     {
-        Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs)->get_Status(put_abi(value)));
+        Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureFailedEventArgs<D>::Message() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IMediaCaptureFailedEventArgs<D>::Message() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureFailedEventArgs)->get_Message(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureFailedEventArgs<D>::Code() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IMediaCaptureFailedEventArgs<D>::Code() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureFailedEventArgs)->get_Code(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureFocusChangedEventArgs<D>::FocusState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::MediaCaptureFocusState) consume_Windows_Media_Capture_IMediaCaptureFocusChangedEventArgs<D>::FocusState() const
     {
-        Windows::Media::Devices::MediaCaptureFocusState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureFocusChangedEventArgs)->get_FocusState(put_abi(value)));
+        Windows::Media::Devices::MediaCaptureFocusState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureFocusChangedEventArgs)->get_FocusState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::AudioDeviceId(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::AudioDeviceId(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->put_AudioDeviceId(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::AudioDeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::AudioDeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->get_AudioDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::VideoDeviceId(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::VideoDeviceId(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->put_VideoDeviceId(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::VideoDeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::VideoDeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->get_VideoDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::StreamingCaptureMode(Windows::Media::Capture::StreamingCaptureMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::StreamingCaptureMode(Windows::Media::Capture::StreamingCaptureMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->put_StreamingCaptureMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::StreamingCaptureMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::StreamingCaptureMode) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::StreamingCaptureMode() const
     {
-        Windows::Media::Capture::StreamingCaptureMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->get_StreamingCaptureMode(put_abi(value)));
+        Windows::Media::Capture::StreamingCaptureMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->get_StreamingCaptureMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::PhotoCaptureSource(Windows::Media::Capture::PhotoCaptureSource const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::PhotoCaptureSource(Windows::Media::Capture::PhotoCaptureSource const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->put_PhotoCaptureSource(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::PhotoCaptureSource() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::PhotoCaptureSource) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings<D>::PhotoCaptureSource() const
     {
-        Windows::Media::Capture::PhotoCaptureSource value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->get_PhotoCaptureSource(put_abi(value)));
+        Windows::Media::Capture::PhotoCaptureSource value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings)->get_PhotoCaptureSource(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings2<D>::MediaCategory(Windows::Media::Capture::MediaCategory const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings2<D>::MediaCategory(Windows::Media::Capture::MediaCategory const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings2)->put_MediaCategory(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings2<D>::MediaCategory() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCategory) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings2<D>::MediaCategory() const
     {
-        Windows::Media::Capture::MediaCategory value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings2)->get_MediaCategory(put_abi(value)));
+        Windows::Media::Capture::MediaCategory value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings2)->get_MediaCategory(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings2<D>::AudioProcessing(Windows::Media::AudioProcessing const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings2<D>::AudioProcessing(Windows::Media::AudioProcessing const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings2)->put_AudioProcessing(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings2<D>::AudioProcessing() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AudioProcessing) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings2<D>::AudioProcessing() const
     {
-        Windows::Media::AudioProcessing value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings2)->get_AudioProcessing(put_abi(value)));
+        Windows::Media::AudioProcessing value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings2)->get_AudioProcessing(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings3<D>::AudioSource(Windows::Media::Core::IMediaSource const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings3<D>::AudioSource(Windows::Media::Core::IMediaSource const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings3)->put_AudioSource(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings3<D>::AudioSource() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::IMediaSource) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings3<D>::AudioSource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings3)->get_AudioSource(&value));
         return Windows::Media::Core::IMediaSource{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings3<D>::VideoSource(Windows::Media::Core::IMediaSource const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings3<D>::VideoSource(Windows::Media::Core::IMediaSource const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings3)->put_VideoSource(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings3<D>::VideoSource() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::IMediaSource) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings3<D>::VideoSource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings3)->get_VideoSource(&value));
         return Windows::Media::Core::IMediaSource{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::VideoProfile() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureVideoProfile) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::VideoProfile() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings4)->get_VideoProfile(&value));
         return Windows::Media::Capture::MediaCaptureVideoProfile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::VideoProfile(Windows::Media::Capture::MediaCaptureVideoProfile const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::VideoProfile(Windows::Media::Capture::MediaCaptureVideoProfile const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings4)->put_VideoProfile(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::PreviewMediaDescription() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::PreviewMediaDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings4)->get_PreviewMediaDescription(&value));
         return Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::PreviewMediaDescription(Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::PreviewMediaDescription(Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings4)->put_PreviewMediaDescription(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::RecordMediaDescription() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::RecordMediaDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings4)->get_RecordMediaDescription(&value));
         return Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::RecordMediaDescription(Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::RecordMediaDescription(Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings4)->put_RecordMediaDescription(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::PhotoMediaDescription() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::PhotoMediaDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings4)->get_PhotoMediaDescription(&value));
         return Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::PhotoMediaDescription(Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings4<D>::PhotoMediaDescription(Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings4)->put_PhotoMediaDescription(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::SourceGroup() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameSourceGroup) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::SourceGroup() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings5)->get_SourceGroup(&value));
         return Windows::Media::Capture::Frames::MediaFrameSourceGroup{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::SourceGroup(Windows::Media::Capture::Frames::MediaFrameSourceGroup const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::SourceGroup(Windows::Media::Capture::Frames::MediaFrameSourceGroup const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings5)->put_SourceGroup(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::SharingMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureSharingMode) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::SharingMode() const
     {
-        Windows::Media::Capture::MediaCaptureSharingMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings5)->get_SharingMode(put_abi(value)));
+        Windows::Media::Capture::MediaCaptureSharingMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings5)->get_SharingMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::SharingMode(Windows::Media::Capture::MediaCaptureSharingMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::SharingMode(Windows::Media::Capture::MediaCaptureSharingMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings5)->put_SharingMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::MemoryPreference() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCaptureMemoryPreference) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::MemoryPreference() const
     {
-        Windows::Media::Capture::MediaCaptureMemoryPreference value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings5)->get_MemoryPreference(put_abi(value)));
+        Windows::Media::Capture::MediaCaptureMemoryPreference value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings5)->get_MemoryPreference(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::MemoryPreference(Windows::Media::Capture::MediaCaptureMemoryPreference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings5<D>::MemoryPreference(Windows::Media::Capture::MediaCaptureMemoryPreference const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings5)->put_MemoryPreference(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings6<D>::AlwaysPlaySystemShutterSound() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings6<D>::AlwaysPlaySystemShutterSound() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings6)->get_AlwaysPlaySystemShutterSound(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings6<D>::AlwaysPlaySystemShutterSound(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings6<D>::AlwaysPlaySystemShutterSound(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings6)->put_AlwaysPlaySystemShutterSound(value));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings7<D>::DeviceUriPasswordCredential() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings7<D>::DeviceUriPasswordCredential() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings7)->get_DeviceUriPasswordCredential(&value));
         return Windows::Security::Credentials::PasswordCredential{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings7<D>::DeviceUriPasswordCredential(Windows::Security::Credentials::PasswordCredential const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings7<D>::DeviceUriPasswordCredential(Windows::Security::Credentials::PasswordCredential const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings7)->put_DeviceUriPasswordCredential(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings7<D>::DeviceUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings7<D>::DeviceUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings7)->get_DeviceUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureInitializationSettings7<D>::DeviceUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureInitializationSettings7<D>::DeviceUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureInitializationSettings7)->put_DeviceUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapturePauseResult<D>::LastFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::VideoFrame) consume_Windows_Media_Capture_IMediaCapturePauseResult<D>::LastFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapturePauseResult)->get_LastFrame(&value));
         return Windows::Media::VideoFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCapturePauseResult<D>::RecordDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IMediaCapturePauseResult<D>::RecordDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCapturePauseResult)->get_RecordDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::RelativePanel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Enumeration::Panel) consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::RelativePanel() const
     {
-        Windows::Devices::Enumeration::Panel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureRelativePanelWatcher)->get_RelativePanel(put_abi(value)));
+        Windows::Devices::Enumeration::Panel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureRelativePanelWatcher)->get_RelativePanel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Changed(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCaptureRelativePanelWatcher, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Changed(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::MediaCaptureRelativePanelWatcher, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureRelativePanelWatcher)->add_Changed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3115,307 +3115,307 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Changed_revoker>(this, Changed(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Changed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Changed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureRelativePanelWatcher)->remove_Changed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Start() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureRelativePanelWatcher)->Start());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Stop() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Stop() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureRelativePanelWatcher)->Stop());
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings<D>::AudioDeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IMediaCaptureSettings<D>::AudioDeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings)->get_AudioDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings<D>::VideoDeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IMediaCaptureSettings<D>::VideoDeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings)->get_VideoDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings<D>::StreamingCaptureMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::StreamingCaptureMode) consume_Windows_Media_Capture_IMediaCaptureSettings<D>::StreamingCaptureMode() const
     {
-        Windows::Media::Capture::StreamingCaptureMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings)->get_StreamingCaptureMode(put_abi(value)));
+        Windows::Media::Capture::StreamingCaptureMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings)->get_StreamingCaptureMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings<D>::PhotoCaptureSource() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::PhotoCaptureSource) consume_Windows_Media_Capture_IMediaCaptureSettings<D>::PhotoCaptureSource() const
     {
-        Windows::Media::Capture::PhotoCaptureSource value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings)->get_PhotoCaptureSource(put_abi(value)));
+        Windows::Media::Capture::PhotoCaptureSource value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings)->get_PhotoCaptureSource(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings<D>::VideoDeviceCharacteristic() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::VideoDeviceCharacteristic) consume_Windows_Media_Capture_IMediaCaptureSettings<D>::VideoDeviceCharacteristic() const
     {
-        Windows::Media::Capture::VideoDeviceCharacteristic value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings)->get_VideoDeviceCharacteristic(put_abi(value)));
+        Windows::Media::Capture::VideoDeviceCharacteristic value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings)->get_VideoDeviceCharacteristic(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::ConcurrentRecordAndPhotoSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::ConcurrentRecordAndPhotoSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_ConcurrentRecordAndPhotoSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::ConcurrentRecordAndPhotoSequenceSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::ConcurrentRecordAndPhotoSequenceSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_ConcurrentRecordAndPhotoSequenceSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::CameraSoundRequiredForRegion() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::CameraSoundRequiredForRegion() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_CameraSoundRequiredForRegion(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::Horizontal35mmEquivalentFocalLength() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::Horizontal35mmEquivalentFocalLength() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_Horizontal35mmEquivalentFocalLength(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::PitchOffsetDegrees() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::PitchOffsetDegrees() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_PitchOffsetDegrees(&value));
         return Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::Vertical35mmEquivalentFocalLength() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::Vertical35mmEquivalentFocalLength() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_Vertical35mmEquivalentFocalLength(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::MediaCategory() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaCategory) consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::MediaCategory() const
     {
-        Windows::Media::Capture::MediaCategory value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_MediaCategory(put_abi(value)));
+        Windows::Media::Capture::MediaCategory value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_MediaCategory(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::AudioProcessing() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AudioProcessing) consume_Windows_Media_Capture_IMediaCaptureSettings2<D>::AudioProcessing() const
     {
-        Windows::Media::AudioProcessing value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_AudioProcessing(put_abi(value)));
+        Windows::Media::AudioProcessing value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings2)->get_AudioProcessing(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureSettings3<D>::Direct3D11Device() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice) consume_Windows_Media_Capture_IMediaCaptureSettings3<D>::Direct3D11Device() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureSettings3)->get_Direct3D11Device(&value));
         return Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureStatics<D>::IsVideoProfileSupported(param::hstring const& videoDeviceId) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IMediaCaptureStatics<D>::IsVideoProfileSupported(param::hstring const& videoDeviceId) const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureStatics)->IsVideoProfileSupported(*(void**)(&videoDeviceId), &value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureStatics<D>::FindAllVideoProfiles(param::hstring const& videoDeviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfile>) consume_Windows_Media_Capture_IMediaCaptureStatics<D>::FindAllVideoProfiles(param::hstring const& videoDeviceId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureStatics)->FindAllVideoProfiles(*(void**)(&videoDeviceId), &value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfile>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureStatics<D>::FindConcurrentProfiles(param::hstring const& videoDeviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfile>) consume_Windows_Media_Capture_IMediaCaptureStatics<D>::FindConcurrentProfiles(param::hstring const& videoDeviceId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureStatics)->FindConcurrentProfiles(*(void**)(&videoDeviceId), &value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfile>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureStatics<D>::FindKnownVideoProfiles(param::hstring const& videoDeviceId, Windows::Media::Capture::KnownVideoProfile const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfile>) consume_Windows_Media_Capture_IMediaCaptureStatics<D>::FindKnownVideoProfiles(param::hstring const& videoDeviceId, Windows::Media::Capture::KnownVideoProfile const& name) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureStatics)->FindKnownVideoProfiles(*(void**)(&videoDeviceId), static_cast<int32_t>(name), &value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfile>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureStopResult<D>::LastFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::VideoFrame) consume_Windows_Media_Capture_IMediaCaptureStopResult<D>::LastFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureStopResult)->get_LastFrame(&value));
         return Windows::Media::VideoFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureStopResult<D>::RecordDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IMediaCaptureStopResult<D>::RecordDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureStopResult)->get_RecordDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoPreview<D>::StartPreviewAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCaptureVideoPreview<D>::StartPreviewAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoPreview)->StartPreviewAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoPreview<D>::StartPreviewToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Media::IMediaExtension const& customMediaSink) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCaptureVideoPreview<D>::StartPreviewToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, Windows::Media::IMediaExtension const& customMediaSink) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoPreview)->StartPreviewToCustomSinkAsync(*(void**)(&encodingProfile), *(void**)(&customMediaSink), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoPreview<D>::StartPreviewToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, param::hstring const& customSinkActivationId, Windows::Foundation::Collections::IPropertySet const& customSinkSettings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCaptureVideoPreview<D>::StartPreviewToCustomSinkAsync(Windows::Media::MediaProperties::MediaEncodingProfile const& encodingProfile, param::hstring const& customSinkActivationId, Windows::Foundation::Collections::IPropertySet const& customSinkSettings) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoPreview)->StartPreviewToCustomSinkIdAsync(*(void**)(&encodingProfile), *(void**)(&customSinkActivationId), *(void**)(&customSinkSettings), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoPreview<D>::StopPreviewAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCaptureVideoPreview<D>::StopPreviewAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoPreview)->StopPreviewAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfile)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::VideoDeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::VideoDeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfile)->get_VideoDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::SupportedPreviewMediaDescription() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>) consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::SupportedPreviewMediaDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfile)->get_SupportedPreviewMediaDescription(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::SupportedRecordMediaDescription() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>) consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::SupportedRecordMediaDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfile)->get_SupportedRecordMediaDescription(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::SupportedPhotoMediaDescription() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>) consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::SupportedPhotoMediaDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfile)->get_SupportedPhotoMediaDescription(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::GetConcurrency() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfile>) consume_Windows_Media_Capture_IMediaCaptureVideoProfile<D>::GetConcurrency() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfile)->GetConcurrency(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfile>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfile2<D>::FrameSourceInfos() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::Frames::MediaFrameSourceInfo>) consume_Windows_Media_Capture_IMediaCaptureVideoProfile2<D>::FrameSourceInfos() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfile2)->get_FrameSourceInfos(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::Frames::MediaFrameSourceInfo>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfile2<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>) consume_Windows_Media_Capture_IMediaCaptureVideoProfile2<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfile2)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::Width() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::Width() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription)->get_Width(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::Height() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::Height() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription)->get_Height(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::FrameRate() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::FrameRate() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription)->get_FrameRate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::IsVariablePhotoSequenceSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::IsVariablePhotoSequenceSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription)->get_IsVariablePhotoSequenceSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::IsHdrVideoSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription<D>::IsHdrVideoSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription)->get_IsHdrVideoSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription2<D>::Subtype() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription2<D>::Subtype() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription2)->get_Subtype(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription2<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>) consume_Windows_Media_Capture_IMediaCaptureVideoProfileMediaDescription2<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription2)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IOptionalReferencePhotoCapturedEventArgs<D>::Frame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CapturedFrame) consume_Windows_Media_Capture_IOptionalReferencePhotoCapturedEventArgs<D>::Frame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IOptionalReferencePhotoCapturedEventArgs)->get_Frame(&value));
         return Windows::Media::Capture::CapturedFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IOptionalReferencePhotoCapturedEventArgs<D>::Context() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Media_Capture_IOptionalReferencePhotoCapturedEventArgs<D>::Context() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IOptionalReferencePhotoCapturedEventArgs)->get_Context(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IPhotoCapturedEventArgs<D>::Frame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CapturedFrame) consume_Windows_Media_Capture_IPhotoCapturedEventArgs<D>::Frame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IPhotoCapturedEventArgs)->get_Frame(&value));
         return Windows::Media::Capture::CapturedFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IPhotoCapturedEventArgs<D>::Thumbnail() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CapturedFrame) consume_Windows_Media_Capture_IPhotoCapturedEventArgs<D>::Thumbnail() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IPhotoCapturedEventArgs)->get_Thumbnail(&value));
         return Windows::Media::Capture::CapturedFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IPhotoCapturedEventArgs<D>::CaptureTimeOffset() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IPhotoCapturedEventArgs<D>::CaptureTimeOffset() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IPhotoCapturedEventArgs)->get_CaptureTimeOffset(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IPhotoConfirmationCapturedEventArgs<D>::Frame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CapturedFrame) consume_Windows_Media_Capture_IPhotoConfirmationCapturedEventArgs<D>::Frame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IPhotoConfirmationCapturedEventArgs)->get_Frame(&value));
         return Windows::Media::Capture::CapturedFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IPhotoConfirmationCapturedEventArgs<D>::CaptureTimeOffset() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_IPhotoConfirmationCapturedEventArgs<D>::CaptureTimeOffset() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IPhotoConfirmationCapturedEventArgs)->get_CaptureTimeOffset(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_IVideoStreamConfiguration<D>::InputProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::VideoEncodingProperties) consume_Windows_Media_Capture_IVideoStreamConfiguration<D>::InputProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IVideoStreamConfiguration)->get_InputProperties(&value));
         return Windows::Media::MediaProperties::VideoEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_IVideoStreamConfiguration<D>::OutputProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::VideoEncodingProperties) consume_Windows_Media_Capture_IVideoStreamConfiguration<D>::OutputProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::IVideoStreamConfiguration)->get_OutputProperties(&value));
         return Windows::Media::MediaProperties::VideoEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename H> struct delegate<Windows::Media::Capture::MediaCaptureFailedEventHandler, H> : implements_delegate<Windows::Media::Capture::MediaCaptureFailedEventHandler, H>
+    template <typename H> struct delegate<Windows::Media::Capture::MediaCaptureFailedEventHandler, H> final : implements_delegate<Windows::Media::Capture::MediaCaptureFailedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Media::Capture::MediaCaptureFailedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -3426,7 +3426,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::Media::Capture::RecordLimitationExceededEventHandler, H> : implements_delegate<Windows::Media::Capture::RecordLimitationExceededEventHandler, H>
+    template <typename H> struct delegate<Windows::Media::Capture::RecordLimitationExceededEventHandler, H> final : implements_delegate<Windows::Media::Capture::RecordLimitationExceededEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Media::Capture::RecordLimitationExceededEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -3437,6 +3437,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAdvancedCapturedPhoto> : produce_base<D, Windows::Media::Capture::IAdvancedCapturedPhoto>
     {
@@ -3464,6 +3465,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAdvancedCapturedPhoto2> : produce_base<D, Windows::Media::Capture::IAdvancedCapturedPhoto2>
     {
@@ -3476,6 +3479,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAdvancedPhotoCapture> : produce_base<D, Windows::Media::Capture::IAdvancedPhotoCapture>
     {
@@ -3532,6 +3537,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastBackgroundService> : produce_base<D, Windows::Media::Capture::IAppBroadcastBackgroundService>
     {
@@ -3639,6 +3646,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastBackgroundService2> : produce_base<D, Windows::Media::Capture::IAppBroadcastBackgroundService2>
     {
@@ -3722,6 +3731,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo> : produce_base<D, Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo>
     {
@@ -3800,6 +3811,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo2> : produce_base<D, Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo2>
     {
@@ -3818,6 +3831,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo> : produce_base<D, Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo>
     {
@@ -3922,6 +3937,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo2> : produce_base<D, Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo2>
     {
@@ -3933,6 +3950,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastCameraCaptureStateChangedEventArgs> : produce_base<D, Windows::Media::Capture::IAppBroadcastCameraCaptureStateChangedEventArgs>
     {
@@ -3951,6 +3970,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastGlobalSettings> : produce_base<D, Windows::Media::Capture::IAppBroadcastGlobalSettings>
     {
@@ -4124,6 +4145,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastHeartbeatRequestedEventArgs> : produce_base<D, Windows::Media::Capture::IAppBroadcastHeartbeatRequestedEventArgs>
     {
@@ -4142,6 +4165,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastManagerStatics> : produce_base<D, Windows::Media::Capture::IAppBroadcastManagerStatics>
     {
@@ -4176,6 +4201,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastMicrophoneCaptureStateChangedEventArgs> : produce_base<D, Windows::Media::Capture::IAppBroadcastMicrophoneCaptureStateChangedEventArgs>
     {
@@ -4194,6 +4221,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastPlugIn> : produce_base<D, Windows::Media::Capture::IAppBroadcastPlugIn>
     {
@@ -4230,6 +4259,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastPlugInManager> : produce_base<D, Windows::Media::Capture::IAppBroadcastPlugInManager>
     {
@@ -4264,6 +4295,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastPlugInManagerStatics> : produce_base<D, Windows::Media::Capture::IAppBroadcastPlugInManagerStatics>
     {
@@ -4284,6 +4317,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastPlugInStateChangedEventArgs> : produce_base<D, Windows::Media::Capture::IAppBroadcastPlugInStateChangedEventArgs>
     {
@@ -4295,6 +4330,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastPreview> : produce_base<D, Windows::Media::Capture::IAppBroadcastPreview>
     {
@@ -4343,6 +4380,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastPreviewStateChangedEventArgs> : produce_base<D, Windows::Media::Capture::IAppBroadcastPreviewStateChangedEventArgs>
     {
@@ -4361,6 +4400,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastPreviewStreamReader> : produce_base<D, Windows::Media::Capture::IAppBroadcastPreviewStreamReader>
     {
@@ -4422,6 +4463,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastPreviewStreamVideoFrame> : produce_base<D, Windows::Media::Capture::IAppBroadcastPreviewStreamVideoFrame>
     {
@@ -4442,6 +4485,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastPreviewStreamVideoHeader> : produce_base<D, Windows::Media::Capture::IAppBroadcastPreviewStreamVideoHeader>
     {
@@ -4477,6 +4522,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastProviderSettings> : produce_base<D, Windows::Media::Capture::IAppBroadcastProviderSettings>
     {
@@ -4580,6 +4627,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastServices> : produce_base<D, Windows::Media::Capture::IAppBroadcastServices>
     {
@@ -4695,6 +4744,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastSignInStateChangedEventArgs> : produce_base<D, Windows::Media::Capture::IAppBroadcastSignInStateChangedEventArgs>
     {
@@ -4713,6 +4764,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastState> : produce_base<D, Windows::Media::Capture::IAppBroadcastState>
     {
@@ -4966,6 +5019,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastStreamAudioFrame> : produce_base<D, Windows::Media::Capture::IAppBroadcastStreamAudioFrame>
     {
@@ -4986,6 +5041,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastStreamAudioHeader> : produce_base<D, Windows::Media::Capture::IAppBroadcastStreamAudioHeader>
     {
@@ -5028,6 +5085,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastStreamReader> : produce_base<D, Windows::Media::Capture::IAppBroadcastStreamReader>
     {
@@ -5126,6 +5185,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastStreamStateChangedEventArgs> : produce_base<D, Windows::Media::Capture::IAppBroadcastStreamStateChangedEventArgs>
     {
@@ -5137,6 +5198,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastStreamVideoFrame> : produce_base<D, Windows::Media::Capture::IAppBroadcastStreamVideoFrame>
     {
@@ -5157,6 +5220,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastStreamVideoHeader> : produce_base<D, Windows::Media::Capture::IAppBroadcastStreamVideoHeader>
     {
@@ -5206,6 +5271,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastTriggerDetails> : produce_base<D, Windows::Media::Capture::IAppBroadcastTriggerDetails>
     {
@@ -5218,6 +5285,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppBroadcastViewerCountChangedEventArgs> : produce_base<D, Windows::Media::Capture::IAppBroadcastViewerCountChangedEventArgs>
     {
@@ -5229,6 +5298,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCapture> : produce_base<D, Windows::Media::Capture::IAppCapture>
     {
@@ -5261,6 +5332,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureAlternateShortcutKeys> : produce_base<D, Windows::Media::Capture::IAppCaptureAlternateShortcutKeys>
     {
@@ -5405,6 +5478,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2> : produce_base<D, Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2>
     {
@@ -5437,6 +5512,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3> : produce_base<D, Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3>
     {
@@ -5497,6 +5574,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureDurationGeneratedEventArgs> : produce_base<D, Windows::Media::Capture::IAppCaptureDurationGeneratedEventArgs>
     {
@@ -5509,6 +5588,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureFileGeneratedEventArgs> : produce_base<D, Windows::Media::Capture::IAppCaptureFileGeneratedEventArgs>
     {
@@ -5521,6 +5602,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureManagerStatics> : produce_base<D, Windows::Media::Capture::IAppCaptureManagerStatics>
     {
@@ -5540,6 +5623,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureMetadataWriter> : produce_base<D, Windows::Media::Capture::IAppCaptureMetadataWriter>
     {
@@ -5621,6 +5706,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureMicrophoneCaptureStateChangedEventArgs> : produce_base<D, Windows::Media::Capture::IAppCaptureMicrophoneCaptureStateChangedEventArgs>
     {
@@ -5639,6 +5726,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureRecordOperation> : produce_base<D, Windows::Media::Capture::IAppCaptureRecordOperation>
     {
@@ -5731,6 +5820,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureRecordingStateChangedEventArgs> : produce_base<D, Windows::Media::Capture::IAppCaptureRecordingStateChangedEventArgs>
     {
@@ -5749,6 +5840,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureServices> : produce_base<D, Windows::Media::Capture::IAppCaptureServices>
     {
@@ -5784,6 +5877,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureSettings> : produce_base<D, Windows::Media::Capture::IAppCaptureSettings>
     {
@@ -6043,6 +6138,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureSettings2> : produce_base<D, Windows::Media::Capture::IAppCaptureSettings2>
     {
@@ -6062,6 +6159,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureSettings3> : produce_base<D, Windows::Media::Capture::IAppCaptureSettings3>
     {
@@ -6080,6 +6179,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureSettings4> : produce_base<D, Windows::Media::Capture::IAppCaptureSettings4>
     {
@@ -6140,6 +6241,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureSettings5> : produce_base<D, Windows::Media::Capture::IAppCaptureSettings5>
     {
@@ -6172,6 +6275,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureState> : produce_base<D, Windows::Media::Capture::IAppCaptureState>
     {
@@ -6253,6 +6358,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureStatics> : produce_base<D, Windows::Media::Capture::IAppCaptureStatics>
     {
@@ -6265,6 +6372,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IAppCaptureStatics2> : produce_base<D, Windows::Media::Capture::IAppCaptureStatics2>
     {
@@ -6277,6 +6386,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICameraCaptureUI> : produce_base<D, Windows::Media::Capture::ICameraCaptureUI>
     {
@@ -6305,6 +6416,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings> : produce_base<D, Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings>
     {
@@ -6381,6 +6494,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings> : produce_base<D, Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings>
     {
@@ -6441,6 +6556,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICameraOptionsUIStatics> : produce_base<D, Windows::Media::Capture::ICameraOptionsUIStatics>
     {
@@ -6452,6 +6569,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICapturedFrame> : produce_base<D, Windows::Media::Capture::ICapturedFrame>
     {
@@ -6470,6 +6589,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICapturedFrame2> : produce_base<D, Windows::Media::Capture::ICapturedFrame2>
     {
@@ -6490,6 +6611,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICapturedFrameControlValues> : produce_base<D, Windows::Media::Capture::ICapturedFrameControlValues>
     {
@@ -6566,6 +6689,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICapturedFrameControlValues2> : produce_base<D, Windows::Media::Capture::ICapturedFrameControlValues2>
     {
@@ -6610,6 +6735,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICapturedFrameWithSoftwareBitmap> : produce_base<D, Windows::Media::Capture::ICapturedFrameWithSoftwareBitmap>
     {
@@ -6622,6 +6749,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ICapturedPhoto> : produce_base<D, Windows::Media::Capture::ICapturedPhoto>
     {
@@ -6642,6 +6771,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IGameBarServices> : produce_base<D, Windows::Media::Capture::IGameBarServices>
     {
@@ -6713,6 +6844,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IGameBarServicesCommandEventArgs> : produce_base<D, Windows::Media::Capture::IGameBarServicesCommandEventArgs>
     {
@@ -6731,6 +6864,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IGameBarServicesManager> : produce_base<D, Windows::Media::Capture::IGameBarServicesManager>
     {
@@ -6749,6 +6884,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IGameBarServicesManagerGameBarServicesCreatedEventArgs> : produce_base<D, Windows::Media::Capture::IGameBarServicesManagerGameBarServicesCreatedEventArgs>
     {
@@ -6761,6 +6898,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IGameBarServicesManagerStatics> : produce_base<D, Windows::Media::Capture::IGameBarServicesManagerStatics>
     {
@@ -6773,6 +6912,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IGameBarServicesTargetInfo> : produce_base<D, Windows::Media::Capture::IGameBarServicesTargetInfo>
     {
@@ -6808,6 +6949,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ILowLagMediaRecording> : produce_base<D, Windows::Media::Capture::ILowLagMediaRecording>
     {
@@ -6836,6 +6979,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ILowLagMediaRecording2> : produce_base<D, Windows::Media::Capture::ILowLagMediaRecording2>
     {
@@ -6856,6 +7001,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ILowLagMediaRecording3> : produce_base<D, Windows::Media::Capture::ILowLagMediaRecording3>
     {
@@ -6876,6 +7023,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ILowLagPhotoCapture> : produce_base<D, Windows::Media::Capture::ILowLagPhotoCapture>
     {
@@ -6896,6 +7045,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::ILowLagPhotoSequenceCapture> : produce_base<D, Windows::Media::Capture::ILowLagPhotoSequenceCapture>
     {
@@ -6938,6 +7089,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCapture> : produce_base<D, Windows::Media::Capture::IMediaCapture>
     {
@@ -7139,6 +7292,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCapture2> : produce_base<D, Windows::Media::Capture::IMediaCapture2>
     {
@@ -7199,6 +7354,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCapture3> : produce_base<D, Windows::Media::Capture::IMediaCapture3>
     {
@@ -7239,6 +7396,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCapture4> : produce_base<D, Windows::Media::Capture::IMediaCapture4>
     {
@@ -7341,6 +7500,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCapture5> : produce_base<D, Windows::Media::Capture::IMediaCapture5>
     {
@@ -7401,6 +7562,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCapture6> : produce_base<D, Windows::Media::Capture::IMediaCapture6>
     {
@@ -7427,6 +7590,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCapture7> : produce_base<D, Windows::Media::Capture::IMediaCapture7>
     {
@@ -7439,6 +7604,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs> : produce_base<D, Windows::Media::Capture::IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs>
     {
@@ -7458,6 +7625,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureFailedEventArgs> : produce_base<D, Windows::Media::Capture::IMediaCaptureFailedEventArgs>
     {
@@ -7477,6 +7646,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureFocusChangedEventArgs> : produce_base<D, Windows::Media::Capture::IMediaCaptureFocusChangedEventArgs>
     {
@@ -7488,6 +7659,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureInitializationSettings> : produce_base<D, Windows::Media::Capture::IMediaCaptureInitializationSettings>
     {
@@ -7550,6 +7723,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureInitializationSettings2> : produce_base<D, Windows::Media::Capture::IMediaCaptureInitializationSettings2>
     {
@@ -7582,6 +7757,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureInitializationSettings3> : produce_base<D, Windows::Media::Capture::IMediaCaptureInitializationSettings3>
     {
@@ -7616,6 +7793,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureInitializationSettings4> : produce_base<D, Windows::Media::Capture::IMediaCaptureInitializationSettings4>
     {
@@ -7680,6 +7859,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureInitializationSettings5> : produce_base<D, Windows::Media::Capture::IMediaCaptureInitializationSettings5>
     {
@@ -7727,6 +7908,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureInitializationSettings6> : produce_base<D, Windows::Media::Capture::IMediaCaptureInitializationSettings6>
     {
@@ -7745,6 +7928,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureInitializationSettings7> : produce_base<D, Windows::Media::Capture::IMediaCaptureInitializationSettings7>
     {
@@ -7779,6 +7964,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCapturePauseResult> : produce_base<D, Windows::Media::Capture::IMediaCapturePauseResult>
     {
@@ -7799,6 +7986,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureRelativePanelWatcher> : produce_base<D, Windows::Media::Capture::IMediaCaptureRelativePanelWatcher>
     {
@@ -7838,6 +8027,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureSettings> : produce_base<D, Windows::Media::Capture::IMediaCaptureSettings>
     {
@@ -7879,6 +8070,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureSettings2> : produce_base<D, Windows::Media::Capture::IMediaCaptureSettings2>
     {
@@ -7942,6 +8135,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureSettings3> : produce_base<D, Windows::Media::Capture::IMediaCaptureSettings3>
     {
@@ -7954,6 +8149,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureStatics> : produce_base<D, Windows::Media::Capture::IMediaCaptureStatics>
     {
@@ -7989,6 +8186,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureStopResult> : produce_base<D, Windows::Media::Capture::IMediaCaptureStopResult>
     {
@@ -8009,6 +8208,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureVideoPreview> : produce_base<D, Windows::Media::Capture::IMediaCaptureVideoPreview>
     {
@@ -8045,6 +8246,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureVideoProfile> : produce_base<D, Windows::Media::Capture::IMediaCaptureVideoProfile>
     {
@@ -8097,6 +8300,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureVideoProfile2> : produce_base<D, Windows::Media::Capture::IMediaCaptureVideoProfile2>
     {
@@ -8117,6 +8322,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription> : produce_base<D, Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription>
     {
@@ -8156,6 +8363,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription2> : produce_base<D, Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription2>
     {
@@ -8176,6 +8385,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IOptionalReferencePhotoCapturedEventArgs> : produce_base<D, Windows::Media::Capture::IOptionalReferencePhotoCapturedEventArgs>
     {
@@ -8196,6 +8407,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IPhotoCapturedEventArgs> : produce_base<D, Windows::Media::Capture::IPhotoCapturedEventArgs>
     {
@@ -8224,6 +8437,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IPhotoConfirmationCapturedEventArgs> : produce_base<D, Windows::Media::Capture::IPhotoConfirmationCapturedEventArgs>
     {
@@ -8244,6 +8459,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::IVideoStreamConfiguration> : produce_base<D, Windows::Media::Capture::IVideoStreamConfiguration>
     {
@@ -8264,87 +8481,88 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Media::Capture
+WINRT_EXPORT namespace winrt::Windows::Media::Capture
 {
     inline auto AppBroadcastManager::GetGlobalSettings()
     {
-        return impl::call_factory<AppBroadcastManager, Windows::Media::Capture::IAppBroadcastManagerStatics>([&](auto&& f) { return f.GetGlobalSettings(); });
+        return impl::call_factory_cast<Windows::Media::Capture::AppBroadcastGlobalSettings(*)(IAppBroadcastManagerStatics const&), AppBroadcastManager, IAppBroadcastManagerStatics>([](IAppBroadcastManagerStatics const& f) { return f.GetGlobalSettings(); });
     }
     inline auto AppBroadcastManager::ApplyGlobalSettings(Windows::Media::Capture::AppBroadcastGlobalSettings const& value)
     {
-        impl::call_factory<AppBroadcastManager, Windows::Media::Capture::IAppBroadcastManagerStatics>([&](auto&& f) { return f.ApplyGlobalSettings(value); });
+        impl::call_factory<AppBroadcastManager, IAppBroadcastManagerStatics>([&](IAppBroadcastManagerStatics const& f) { return f.ApplyGlobalSettings(value); });
     }
     inline auto AppBroadcastManager::GetProviderSettings()
     {
-        return impl::call_factory<AppBroadcastManager, Windows::Media::Capture::IAppBroadcastManagerStatics>([&](auto&& f) { return f.GetProviderSettings(); });
+        return impl::call_factory_cast<Windows::Media::Capture::AppBroadcastProviderSettings(*)(IAppBroadcastManagerStatics const&), AppBroadcastManager, IAppBroadcastManagerStatics>([](IAppBroadcastManagerStatics const& f) { return f.GetProviderSettings(); });
     }
     inline auto AppBroadcastManager::ApplyProviderSettings(Windows::Media::Capture::AppBroadcastProviderSettings const& value)
     {
-        impl::call_factory<AppBroadcastManager, Windows::Media::Capture::IAppBroadcastManagerStatics>([&](auto&& f) { return f.ApplyProviderSettings(value); });
+        impl::call_factory<AppBroadcastManager, IAppBroadcastManagerStatics>([&](IAppBroadcastManagerStatics const& f) { return f.ApplyProviderSettings(value); });
     }
     inline auto AppBroadcastPlugInManager::GetDefault()
     {
-        return impl::call_factory<AppBroadcastPlugInManager, Windows::Media::Capture::IAppBroadcastPlugInManagerStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::Media::Capture::AppBroadcastPlugInManager(*)(IAppBroadcastPlugInManagerStatics const&), AppBroadcastPlugInManager, IAppBroadcastPlugInManagerStatics>([](IAppBroadcastPlugInManagerStatics const& f) { return f.GetDefault(); });
     }
     inline auto AppBroadcastPlugInManager::GetForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<AppBroadcastPlugInManager, Windows::Media::Capture::IAppBroadcastPlugInManagerStatics>([&](auto&& f) { return f.GetForUser(user); });
+        return impl::call_factory<AppBroadcastPlugInManager, IAppBroadcastPlugInManagerStatics>([&](IAppBroadcastPlugInManagerStatics const& f) { return f.GetForUser(user); });
     }
     inline auto AppCapture::GetForCurrentView()
     {
-        return impl::call_factory<AppCapture, Windows::Media::Capture::IAppCaptureStatics>([&](auto&& f) { return f.GetForCurrentView(); });
+        return impl::call_factory_cast<Windows::Media::Capture::AppCapture(*)(IAppCaptureStatics const&), AppCapture, IAppCaptureStatics>([](IAppCaptureStatics const& f) { return f.GetForCurrentView(); });
     }
     inline auto AppCapture::SetAllowedAsync(bool allowed)
     {
-        return impl::call_factory<AppCapture, Windows::Media::Capture::IAppCaptureStatics2>([&](auto&& f) { return f.SetAllowedAsync(allowed); });
+        return impl::call_factory<AppCapture, IAppCaptureStatics2>([&](IAppCaptureStatics2 const& f) { return f.SetAllowedAsync(allowed); });
     }
     inline auto AppCaptureManager::GetCurrentSettings()
     {
-        return impl::call_factory<AppCaptureManager, Windows::Media::Capture::IAppCaptureManagerStatics>([&](auto&& f) { return f.GetCurrentSettings(); });
+        return impl::call_factory_cast<Windows::Media::Capture::AppCaptureSettings(*)(IAppCaptureManagerStatics const&), AppCaptureManager, IAppCaptureManagerStatics>([](IAppCaptureManagerStatics const& f) { return f.GetCurrentSettings(); });
     }
     inline auto AppCaptureManager::ApplySettings(Windows::Media::Capture::AppCaptureSettings const& appCaptureSettings)
     {
-        impl::call_factory<AppCaptureManager, Windows::Media::Capture::IAppCaptureManagerStatics>([&](auto&& f) { return f.ApplySettings(appCaptureSettings); });
+        impl::call_factory<AppCaptureManager, IAppCaptureManagerStatics>([&](IAppCaptureManagerStatics const& f) { return f.ApplySettings(appCaptureSettings); });
     }
     inline AppCaptureMetadataWriter::AppCaptureMetadataWriter() :
-        AppCaptureMetadataWriter(impl::call_factory<AppCaptureMetadataWriter>([](auto&& f) { return f.template ActivateInstance<AppCaptureMetadataWriter>(); }))
+        AppCaptureMetadataWriter(impl::call_factory_cast<AppCaptureMetadataWriter(*)(Windows::Foundation::IActivationFactory const&), AppCaptureMetadataWriter>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<AppCaptureMetadataWriter>(); }))
     {
     }
     inline CameraCaptureUI::CameraCaptureUI() :
-        CameraCaptureUI(impl::call_factory<CameraCaptureUI>([](auto&& f) { return f.template ActivateInstance<CameraCaptureUI>(); }))
+        CameraCaptureUI(impl::call_factory_cast<CameraCaptureUI(*)(Windows::Foundation::IActivationFactory const&), CameraCaptureUI>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<CameraCaptureUI>(); }))
     {
     }
     inline auto CameraOptionsUI::Show(Windows::Media::Capture::MediaCapture const& mediaCapture)
     {
-        impl::call_factory<CameraOptionsUI, Windows::Media::Capture::ICameraOptionsUIStatics>([&](auto&& f) { return f.Show(mediaCapture); });
+        impl::call_factory<CameraOptionsUI, ICameraOptionsUIStatics>([&](ICameraOptionsUIStatics const& f) { return f.Show(mediaCapture); });
     }
     inline auto GameBarServicesManager::GetDefault()
     {
-        return impl::call_factory<GameBarServicesManager, Windows::Media::Capture::IGameBarServicesManagerStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::Media::Capture::GameBarServicesManager(*)(IGameBarServicesManagerStatics const&), GameBarServicesManager, IGameBarServicesManagerStatics>([](IGameBarServicesManagerStatics const& f) { return f.GetDefault(); });
     }
     inline MediaCapture::MediaCapture() :
-        MediaCapture(impl::call_factory<MediaCapture>([](auto&& f) { return f.template ActivateInstance<MediaCapture>(); }))
+        MediaCapture(impl::call_factory_cast<MediaCapture(*)(Windows::Foundation::IActivationFactory const&), MediaCapture>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<MediaCapture>(); }))
     {
     }
     inline auto MediaCapture::IsVideoProfileSupported(param::hstring const& videoDeviceId)
     {
-        return impl::call_factory<MediaCapture, Windows::Media::Capture::IMediaCaptureStatics>([&](auto&& f) { return f.IsVideoProfileSupported(videoDeviceId); });
+        return impl::call_factory<MediaCapture, IMediaCaptureStatics>([&](IMediaCaptureStatics const& f) { return f.IsVideoProfileSupported(videoDeviceId); });
     }
     inline auto MediaCapture::FindAllVideoProfiles(param::hstring const& videoDeviceId)
     {
-        return impl::call_factory<MediaCapture, Windows::Media::Capture::IMediaCaptureStatics>([&](auto&& f) { return f.FindAllVideoProfiles(videoDeviceId); });
+        return impl::call_factory<MediaCapture, IMediaCaptureStatics>([&](IMediaCaptureStatics const& f) { return f.FindAllVideoProfiles(videoDeviceId); });
     }
     inline auto MediaCapture::FindConcurrentProfiles(param::hstring const& videoDeviceId)
     {
-        return impl::call_factory<MediaCapture, Windows::Media::Capture::IMediaCaptureStatics>([&](auto&& f) { return f.FindConcurrentProfiles(videoDeviceId); });
+        return impl::call_factory<MediaCapture, IMediaCaptureStatics>([&](IMediaCaptureStatics const& f) { return f.FindConcurrentProfiles(videoDeviceId); });
     }
     inline auto MediaCapture::FindKnownVideoProfiles(param::hstring const& videoDeviceId, Windows::Media::Capture::KnownVideoProfile const& name)
     {
-        return impl::call_factory<MediaCapture, Windows::Media::Capture::IMediaCaptureStatics>([&](auto&& f) { return f.FindKnownVideoProfiles(videoDeviceId, name); });
+        return impl::call_factory<MediaCapture, IMediaCaptureStatics>([&](IMediaCaptureStatics const& f) { return f.FindKnownVideoProfiles(videoDeviceId, name); });
     }
     inline MediaCaptureInitializationSettings::MediaCaptureInitializationSettings() :
-        MediaCaptureInitializationSettings(impl::call_factory<MediaCaptureInitializationSettings>([](auto&& f) { return f.template ActivateInstance<MediaCaptureInitializationSettings>(); }))
+        MediaCaptureInitializationSettings(impl::call_factory_cast<MediaCaptureInitializationSettings(*)(Windows::Foundation::IActivationFactory const&), MediaCaptureInitializationSettings>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<MediaCaptureInitializationSettings>(); }))
     {
     }
     template <typename L> MediaCaptureFailedEventHandler::MediaCaptureFailedEventHandler(L handler) :
@@ -8398,186 +8616,188 @@ namespace winrt::Windows::Media::Capture
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Media::Capture::IAdvancedCapturedPhoto> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAdvancedCapturedPhoto> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAdvancedCapturedPhoto2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAdvancedCapturedPhoto2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAdvancedPhotoCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAdvancedPhotoCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundService> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastBackgroundService> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundService2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastBackgroundService2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastCameraCaptureStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastCameraCaptureStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastGlobalSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastGlobalSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastHeartbeatRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastHeartbeatRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastManagerStatics> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastManagerStatics> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastMicrophoneCaptureStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastMicrophoneCaptureStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPlugIn> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastPlugIn> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPlugInManager> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastPlugInManager> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPlugInManagerStatics> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastPlugInManagerStatics> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPlugInStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastPlugInStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreview> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastPreview> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreviewStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastPreviewStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamReader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamReader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamVideoFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamVideoFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamVideoHeader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamVideoHeader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastProviderSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastProviderSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastServices> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastServices> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastSignInStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastSignInStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastState> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastState> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamAudioFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastStreamAudioFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamAudioHeader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastStreamAudioHeader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamReader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastStreamReader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastStreamStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamVideoFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastStreamVideoFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamVideoHeader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastStreamVideoHeader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastTriggerDetails> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastTriggerDetails> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastViewerCountChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppBroadcastViewerCountChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureAlternateShortcutKeys> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureAlternateShortcutKeys> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureDurationGeneratedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureDurationGeneratedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureFileGeneratedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureFileGeneratedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureManagerStatics> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureManagerStatics> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureMetadataWriter> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureMetadataWriter> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureMicrophoneCaptureStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureMicrophoneCaptureStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureRecordOperation> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureRecordOperation> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureRecordingStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureRecordingStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureServices> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureServices> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureSettings2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings3> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureSettings3> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings4> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureSettings4> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings5> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureSettings5> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureState> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureState> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureStatics> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureStatics> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureStatics2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IAppCaptureStatics2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICameraCaptureUI> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICameraCaptureUI> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICameraOptionsUIStatics> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICameraOptionsUIStatics> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICapturedFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrame2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICapturedFrame2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrameControlValues> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICapturedFrameControlValues> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrameControlValues2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICapturedFrameControlValues2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrameWithSoftwareBitmap> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICapturedFrameWithSoftwareBitmap> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ICapturedPhoto> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ICapturedPhoto> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServices> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IGameBarServices> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesCommandEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IGameBarServicesCommandEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesManager> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IGameBarServicesManager> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesManagerGameBarServicesCreatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IGameBarServicesManagerGameBarServicesCreatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesManagerStatics> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IGameBarServicesManagerStatics> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesTargetInfo> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IGameBarServicesTargetInfo> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ILowLagMediaRecording> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ILowLagMediaRecording> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ILowLagMediaRecording2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ILowLagMediaRecording2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ILowLagMediaRecording3> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ILowLagMediaRecording3> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ILowLagPhotoCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ILowLagPhotoCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::ILowLagPhotoSequenceCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::ILowLagPhotoSequenceCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCapture2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture3> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCapture3> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture4> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCapture4> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture5> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCapture5> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture6> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCapture6> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture7> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCapture7> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureFailedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureFailedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureFocusChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureFocusChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings3> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings3> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings4> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings4> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings5> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings5> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings6> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings6> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings7> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings7> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapturePauseResult> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCapturePauseResult> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureRelativePanelWatcher> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureRelativePanelWatcher> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureSettings2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureSettings2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureSettings3> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureSettings3> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureStatics> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureStatics> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureStopResult> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureStopResult> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoPreview> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureVideoPreview> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoProfile> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureVideoProfile> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoProfile2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureVideoProfile2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IOptionalReferencePhotoCapturedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IOptionalReferencePhotoCapturedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IPhotoCapturedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IPhotoCapturedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IPhotoConfirmationCapturedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IPhotoConfirmationCapturedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::IVideoStreamConfiguration> : winrt::impl::hash_base<winrt::Windows::Media::Capture::IVideoStreamConfiguration> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AdvancedCapturedPhoto> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AdvancedCapturedPhoto> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AdvancedPhotoCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AdvancedPhotoCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastBackgroundService> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastBackgroundService> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastManager> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastManager> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPlugIn> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastPlugIn> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPlugInManager> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastPlugInManager> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreview> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastPreview> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastProviderSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastProviderSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastServices> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastServices> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastState> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastState> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamReader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastStreamReader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastTriggerDetails> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastTriggerDetails> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureManager> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureManager> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureMetadataWriter> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureMetadataWriter> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureRecordOperation> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureRecordOperation> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureServices> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureServices> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureState> : winrt::impl::hash_base<winrt::Windows::Media::Capture::AppCaptureState> {};
-    template<> struct hash<winrt::Windows::Media::Capture::CameraCaptureUI> : winrt::impl::hash_base<winrt::Windows::Media::Capture::CameraCaptureUI> {};
-    template<> struct hash<winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::CameraOptionsUI> : winrt::impl::hash_base<winrt::Windows::Media::Capture::CameraOptionsUI> {};
-    template<> struct hash<winrt::Windows::Media::Capture::CapturedFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::CapturedFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::CapturedFrameControlValues> : winrt::impl::hash_base<winrt::Windows::Media::Capture::CapturedFrameControlValues> {};
-    template<> struct hash<winrt::Windows::Media::Capture::CapturedPhoto> : winrt::impl::hash_base<winrt::Windows::Media::Capture::CapturedPhoto> {};
-    template<> struct hash<winrt::Windows::Media::Capture::GameBarServices> : winrt::impl::hash_base<winrt::Windows::Media::Capture::GameBarServices> {};
-    template<> struct hash<winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::GameBarServicesManager> : winrt::impl::hash_base<winrt::Windows::Media::Capture::GameBarServicesManager> {};
-    template<> struct hash<winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::GameBarServicesTargetInfo> : winrt::impl::hash_base<winrt::Windows::Media::Capture::GameBarServicesTargetInfo> {};
-    template<> struct hash<winrt::Windows::Media::Capture::LowLagMediaRecording> : winrt::impl::hash_base<winrt::Windows::Media::Capture::LowLagMediaRecording> {};
-    template<> struct hash<winrt::Windows::Media::Capture::LowLagPhotoCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::LowLagPhotoCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCapture> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCapture> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureInitializationSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCaptureInitializationSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCapturePauseResult> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCapturePauseResult> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureSettings> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCaptureSettings> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureStopResult> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCaptureStopResult> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureVideoProfile> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCaptureVideoProfile> {};
-    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription> : winrt::impl::hash_base<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription> {};
-    template<> struct hash<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::PhotoCapturedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::PhotoCapturedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::VideoStreamConfiguration> : winrt::impl::hash_base<winrt::Windows::Media::Capture::VideoStreamConfiguration> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Media::Capture::IAdvancedCapturedPhoto> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAdvancedCapturedPhoto2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAdvancedPhotoCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundService2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastCameraCaptureStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastGlobalSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastHeartbeatRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastMicrophoneCaptureStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPlugIn> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPlugInManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPlugInManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPlugInStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreview> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreviewStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamVideoFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamVideoHeader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastProviderSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastServices> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastSignInStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamAudioFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamAudioHeader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamVideoFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastStreamVideoHeader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppBroadcastViewerCountChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureAlternateShortcutKeys> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureAlternateShortcutKeys2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureAlternateShortcutKeys3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureDurationGeneratedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureFileGeneratedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureMetadataWriter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureMicrophoneCaptureStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureRecordOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureRecordingStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureServices> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureSettings5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IAppCaptureStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICameraCaptureUI> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICameraCaptureUIPhotoCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICameraCaptureUIVideoCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICameraOptionsUIStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrame2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrameControlValues> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrameControlValues2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICapturedFrameWithSoftwareBitmap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ICapturedPhoto> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServices> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesCommandEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesManagerGameBarServicesCreatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IGameBarServicesTargetInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ILowLagMediaRecording> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ILowLagMediaRecording2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ILowLagMediaRecording3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ILowLagPhotoCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::ILowLagPhotoSequenceCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture6> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapture7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureFailedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureFocusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings6> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureInitializationSettings7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCapturePauseResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureRelativePanelWatcher> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureSettings2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureSettings3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureStopResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoPreview> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoProfile> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoProfile2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IMediaCaptureVideoProfileMediaDescription2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IOptionalReferencePhotoCapturedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IPhotoCapturedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IPhotoConfirmationCapturedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::IVideoStreamConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AdvancedCapturedPhoto> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AdvancedPhotoCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastBackgroundService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPlugIn> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPlugInManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreview> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastProviderSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastServices> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureMetadataWriter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureRecordOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureServices> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::AppCaptureState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::CameraCaptureUI> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::CameraOptionsUI> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::CapturedFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::CapturedFrameControlValues> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::CapturedPhoto> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::GameBarServices> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::GameBarServicesManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::GameBarServicesTargetInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::LowLagMediaRecording> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::LowLagPhotoCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCapture> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureInitializationSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCapturePauseResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureStopResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureVideoProfile> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::PhotoCapturedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::VideoStreamConfiguration> : winrt::impl::hash_base {};
+#endif
 }
 #endif

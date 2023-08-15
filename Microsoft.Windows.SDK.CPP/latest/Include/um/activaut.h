@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -247,49 +255,61 @@ EXTERN_C const IID IID_IScriptNode;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IScriptNode * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IScriptNode * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IScriptNode * This);
         
+        DECLSPEC_XFGVIRT(IScriptNode, Alive)
         HRESULT ( STDMETHODCALLTYPE *Alive )( 
             __RPC__in IScriptNode * This);
         
+        DECLSPEC_XFGVIRT(IScriptNode, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IScriptNode * This);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetParent)
         HRESULT ( STDMETHODCALLTYPE *GetParent )( 
             __RPC__in IScriptNode * This,
             /* [out] */ __RPC__deref_out_opt IScriptNode **ppsnParent);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetIndexInParent)
         HRESULT ( STDMETHODCALLTYPE *GetIndexInParent )( 
             __RPC__in IScriptNode * This,
             /* [out] */ __RPC__out ULONG *pisn);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetCookie)
         HRESULT ( STDMETHODCALLTYPE *GetCookie )( 
             __RPC__in IScriptNode * This,
             /* [out] */ __RPC__out DWORD *pdwCookie);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetNumberOfChildren)
         HRESULT ( STDMETHODCALLTYPE *GetNumberOfChildren )( 
             __RPC__in IScriptNode * This,
             /* [out] */ __RPC__out ULONG *pcsn);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetChild)
         HRESULT ( STDMETHODCALLTYPE *GetChild )( 
             __RPC__in IScriptNode * This,
             /* [in] */ ULONG isn,
             /* [out] */ __RPC__deref_out_opt IScriptNode **ppsn);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetLanguage)
         HRESULT ( STDMETHODCALLTYPE *GetLanguage )( 
             __RPC__in IScriptNode * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptNode, CreateChildEntry)
         HRESULT ( STDMETHODCALLTYPE *CreateChildEntry )( 
             __RPC__in IScriptNode * This,
             /* [in] */ ULONG isn,
@@ -297,6 +317,7 @@ EXTERN_C const IID IID_IScriptNode;
             /* [in] */ __RPC__in LPCOLESTR pszDelimiter,
             /* [out] */ __RPC__deref_out_opt IScriptEntry **ppse);
         
+        DECLSPEC_XFGVIRT(IScriptNode, CreateChildHandler)
         HRESULT ( STDMETHODCALLTYPE *CreateChildHandler )( 
             __RPC__in IScriptNode * This,
             /* [in] */ __RPC__in LPCOLESTR pszDefaultName,
@@ -434,49 +455,61 @@ EXTERN_C const IID IID_IScriptEntry;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IScriptEntry * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IScriptEntry * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IScriptEntry * This);
         
+        DECLSPEC_XFGVIRT(IScriptNode, Alive)
         HRESULT ( STDMETHODCALLTYPE *Alive )( 
             __RPC__in IScriptEntry * This);
         
+        DECLSPEC_XFGVIRT(IScriptNode, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IScriptEntry * This);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetParent)
         HRESULT ( STDMETHODCALLTYPE *GetParent )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__deref_out_opt IScriptNode **ppsnParent);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetIndexInParent)
         HRESULT ( STDMETHODCALLTYPE *GetIndexInParent )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__out ULONG *pisn);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetCookie)
         HRESULT ( STDMETHODCALLTYPE *GetCookie )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__out DWORD *pdwCookie);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetNumberOfChildren)
         HRESULT ( STDMETHODCALLTYPE *GetNumberOfChildren )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__out ULONG *pcsn);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetChild)
         HRESULT ( STDMETHODCALLTYPE *GetChild )( 
             __RPC__in IScriptEntry * This,
             /* [in] */ ULONG isn,
             /* [out] */ __RPC__deref_out_opt IScriptNode **ppsn);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetLanguage)
         HRESULT ( STDMETHODCALLTYPE *GetLanguage )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptNode, CreateChildEntry)
         HRESULT ( STDMETHODCALLTYPE *CreateChildEntry )( 
             __RPC__in IScriptEntry * This,
             /* [in] */ ULONG isn,
@@ -484,6 +517,7 @@ EXTERN_C const IID IID_IScriptEntry;
             /* [in] */ __RPC__in LPCOLESTR pszDelimiter,
             /* [out] */ __RPC__deref_out_opt IScriptEntry **ppse);
         
+        DECLSPEC_XFGVIRT(IScriptNode, CreateChildHandler)
         HRESULT ( STDMETHODCALLTYPE *CreateChildHandler )( 
             __RPC__in IScriptEntry * This,
             /* [in] */ __RPC__in LPCOLESTR pszDefaultName,
@@ -497,48 +531,59 @@ EXTERN_C const IID IID_IScriptEntry;
             /* [in] */ DWORD dwCookie,
             /* [out] */ __RPC__deref_out_opt IScriptEntry **ppse);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetText)
         HRESULT ( STDMETHODCALLTYPE *GetText )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetText)
         HRESULT ( STDMETHODCALLTYPE *SetText )( 
             __RPC__in IScriptEntry * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetBody)
         HRESULT ( STDMETHODCALLTYPE *GetBody )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetBody)
         HRESULT ( STDMETHODCALLTYPE *SetBody )( 
             __RPC__in IScriptEntry * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetName)
         HRESULT ( STDMETHODCALLTYPE *GetName )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetName)
         HRESULT ( STDMETHODCALLTYPE *SetName )( 
             __RPC__in IScriptEntry * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetItemName)
         HRESULT ( STDMETHODCALLTYPE *GetItemName )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetItemName)
         HRESULT ( STDMETHODCALLTYPE *SetItemName )( 
             __RPC__in IScriptEntry * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetSignature)
         HRESULT ( STDMETHODCALLTYPE *GetSignature )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppti,
             /* [out] */ __RPC__out ULONG *piMethod);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetSignature)
         HRESULT ( STDMETHODCALLTYPE *SetSignature )( 
             __RPC__in IScriptEntry * This,
             /* [in] */ __RPC__in_opt ITypeInfo *pti,
             /* [in] */ ULONG iMethod);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetRange)
         HRESULT ( STDMETHODCALLTYPE *GetRange )( 
             __RPC__in IScriptEntry * This,
             /* [out] */ __RPC__out ULONG *pichMin,
@@ -684,49 +729,61 @@ EXTERN_C const IID IID_IScriptScriptlet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IScriptScriptlet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IScriptScriptlet * This);
         
+        DECLSPEC_XFGVIRT(IScriptNode, Alive)
         HRESULT ( STDMETHODCALLTYPE *Alive )( 
             __RPC__in IScriptScriptlet * This);
         
+        DECLSPEC_XFGVIRT(IScriptNode, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IScriptScriptlet * This);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetParent)
         HRESULT ( STDMETHODCALLTYPE *GetParent )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt IScriptNode **ppsnParent);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetIndexInParent)
         HRESULT ( STDMETHODCALLTYPE *GetIndexInParent )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__out ULONG *pisn);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetCookie)
         HRESULT ( STDMETHODCALLTYPE *GetCookie )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__out DWORD *pdwCookie);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetNumberOfChildren)
         HRESULT ( STDMETHODCALLTYPE *GetNumberOfChildren )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__out ULONG *pcsn);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetChild)
         HRESULT ( STDMETHODCALLTYPE *GetChild )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ ULONG isn,
             /* [out] */ __RPC__deref_out_opt IScriptNode **ppsn);
         
+        DECLSPEC_XFGVIRT(IScriptNode, GetLanguage)
         HRESULT ( STDMETHODCALLTYPE *GetLanguage )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptNode, CreateChildEntry)
         HRESULT ( STDMETHODCALLTYPE *CreateChildEntry )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ ULONG isn,
@@ -734,6 +791,7 @@ EXTERN_C const IID IID_IScriptScriptlet;
             /* [in] */ __RPC__in LPCOLESTR pszDelimiter,
             /* [out] */ __RPC__deref_out_opt IScriptEntry **ppse);
         
+        DECLSPEC_XFGVIRT(IScriptNode, CreateChildHandler)
         HRESULT ( STDMETHODCALLTYPE *CreateChildHandler )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in LPCOLESTR pszDefaultName,
@@ -747,73 +805,90 @@ EXTERN_C const IID IID_IScriptScriptlet;
             /* [in] */ DWORD dwCookie,
             /* [out] */ __RPC__deref_out_opt IScriptEntry **ppse);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetText)
         HRESULT ( STDMETHODCALLTYPE *GetText )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetText)
         HRESULT ( STDMETHODCALLTYPE *SetText )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetBody)
         HRESULT ( STDMETHODCALLTYPE *GetBody )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetBody)
         HRESULT ( STDMETHODCALLTYPE *SetBody )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetName)
         HRESULT ( STDMETHODCALLTYPE *GetName )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetName)
         HRESULT ( STDMETHODCALLTYPE *SetName )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetItemName)
         HRESULT ( STDMETHODCALLTYPE *GetItemName )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetItemName)
         HRESULT ( STDMETHODCALLTYPE *SetItemName )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetSignature)
         HRESULT ( STDMETHODCALLTYPE *GetSignature )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppti,
             /* [out] */ __RPC__out ULONG *piMethod);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, SetSignature)
         HRESULT ( STDMETHODCALLTYPE *SetSignature )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in_opt ITypeInfo *pti,
             /* [in] */ ULONG iMethod);
         
+        DECLSPEC_XFGVIRT(IScriptEntry, GetRange)
         HRESULT ( STDMETHODCALLTYPE *GetRange )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__out ULONG *pichMin,
             /* [out] */ __RPC__out ULONG *pcch);
         
+        DECLSPEC_XFGVIRT(IScriptScriptlet, GetSubItemName)
         HRESULT ( STDMETHODCALLTYPE *GetSubItemName )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptScriptlet, SetSubItemName)
         HRESULT ( STDMETHODCALLTYPE *SetSubItemName )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptScriptlet, GetEventName)
         HRESULT ( STDMETHODCALLTYPE *GetEventName )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptScriptlet, SetEventName)
         HRESULT ( STDMETHODCALLTYPE *SetEventName )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
         
+        DECLSPEC_XFGVIRT(IScriptScriptlet, GetSimpleEventName)
         HRESULT ( STDMETHODCALLTYPE *GetSimpleEventName )( 
             __RPC__in IScriptScriptlet * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstr);
         
+        DECLSPEC_XFGVIRT(IScriptScriptlet, SetSimpleEventName)
         HRESULT ( STDMETHODCALLTYPE *SetSimpleEventName )( 
             __RPC__in IScriptScriptlet * This,
             /* [in] */ __RPC__in LPCOLESTR psz);
@@ -1042,24 +1117,29 @@ EXTERN_C const IID IID_IActiveScriptAuthor;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IActiveScriptAuthor * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IActiveScriptAuthor * This);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, AddNamedItem)
         HRESULT ( STDMETHODCALLTYPE *AddNamedItem )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ __RPC__in LPCOLESTR pszName,
             /* [in] */ DWORD dwFlags,
             /* [in] */ __RPC__in_opt IDispatch *pdisp);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, AddScriptlet)
         HRESULT ( STDMETHODCALLTYPE *AddScriptlet )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ __RPC__in LPCOLESTR pszDefaultName,
@@ -1071,6 +1151,7 @@ EXTERN_C const IID IID_IActiveScriptAuthor;
             /* [in] */ DWORD dwCookie,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, ParseScriptText)
         HRESULT ( STDMETHODCALLTYPE *ParseScriptText )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ __RPC__in LPCOLESTR pszCode,
@@ -1079,6 +1160,7 @@ EXTERN_C const IID IID_IActiveScriptAuthor;
             /* [in] */ DWORD dwCookie,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, GetScriptTextAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetScriptTextAttributes )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [size_is][in] */ __RPC__in_ecount_full(cch) LPCOLESTR pszCode,
@@ -1087,6 +1169,7 @@ EXTERN_C const IID IID_IActiveScriptAuthor;
             /* [in] */ DWORD dwFlags,
             /* [size_is][out][in] */ __RPC__inout_ecount_full(cch) SOURCE_TEXT_ATTR *pattr);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, GetScriptletTextAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetScriptletTextAttributes )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [size_is][in] */ __RPC__in_ecount_full(cch) LPCOLESTR pszCode,
@@ -1095,14 +1178,17 @@ EXTERN_C const IID IID_IActiveScriptAuthor;
             /* [in] */ DWORD dwFlags,
             /* [size_is][out][in] */ __RPC__inout_ecount_full(cch) SOURCE_TEXT_ATTR *pattr);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, GetRoot)
         HRESULT ( STDMETHODCALLTYPE *GetRoot )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [out] */ __RPC__deref_out_opt IScriptNode **ppsp);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, GetLanguageFlags)
         HRESULT ( STDMETHODCALLTYPE *GetLanguageFlags )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [out] */ __RPC__out DWORD *pgrfasa);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, GetEventHandler)
         HRESULT ( STDMETHODCALLTYPE *GetEventHandler )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ __RPC__in_opt IDispatch *pdisp,
@@ -1111,10 +1197,12 @@ EXTERN_C const IID IID_IActiveScriptAuthor;
             /* [in] */ __RPC__in LPCOLESTR pszEvent,
             /* [out] */ __RPC__deref_out_opt IScriptEntry **ppse);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, RemoveNamedItem)
         HRESULT ( STDMETHODCALLTYPE *RemoveNamedItem )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ __RPC__in LPCOLESTR pszName);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, AddTypeLib)
         HRESULT ( STDMETHODCALLTYPE *AddTypeLib )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ __RPC__in REFGUID rguidTypeLib,
@@ -1122,17 +1210,20 @@ EXTERN_C const IID IID_IActiveScriptAuthor;
             /* [in] */ DWORD dwMinor,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, RemoveTypeLib)
         HRESULT ( STDMETHODCALLTYPE *RemoveTypeLib )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ __RPC__in REFGUID rguidTypeLib,
             /* [in] */ DWORD dwMajor,
             /* [in] */ DWORD dwMinor);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, GetChars)
         HRESULT ( STDMETHODCALLTYPE *GetChars )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ DWORD fRequestedList,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrChars);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, GetInfoFromContext)
         HRESULT ( STDMETHODCALLTYPE *GetInfoFromContext )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ __RPC__in LPCOLESTR pszCode,
@@ -1146,6 +1237,7 @@ EXTERN_C const IID IID_IActiveScriptAuthor;
             /* [out] */ __RPC__out LONG *piCurrentParameter,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppunk);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthor, IsCommitChar)
         HRESULT ( STDMETHODCALLTYPE *IsCommitChar )( 
             __RPC__in IActiveScriptAuthor * This,
             /* [in] */ OLECHAR ch,
@@ -1261,18 +1353,22 @@ EXTERN_C const IID IID_IActiveScriptAuthorProcedure;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IActiveScriptAuthorProcedure * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IActiveScriptAuthorProcedure * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IActiveScriptAuthorProcedure * This);
         
+        DECLSPEC_XFGVIRT(IActiveScriptAuthorProcedure, ParseProcedureText)
         HRESULT ( STDMETHODCALLTYPE *ParseProcedureText )( 
             __RPC__in IActiveScriptAuthorProcedure * This,
             /* [in] */ __RPC__in LPCOLESTR pszCode,

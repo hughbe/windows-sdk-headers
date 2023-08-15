@@ -59,6 +59,8 @@ struct DelegateTraits<NoCheck>
 
 #ifndef BUILD_WINDOWS
 extern __declspec(selectany) const DelegateCheckMode DefaultDelegateCheckMode = NoCheck;
+#else
+template<typename> extern const DelegateCheckMode DefaultDelegateCheckModeTrait;
 #endif
 
 // Enum to specify the behavior when firing event delegates
@@ -206,6 +208,113 @@ struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, 
     typedef TArg9 Arg9Type;
 };
 
+#ifdef _NOEXCEPT_TYPES_SUPPORTED
+template<typename TDelegateInterface>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(void) noexcept>
+{
+    static const int args = 0;
+};
+
+template<typename TDelegateInterface, typename TArg1>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1) noexcept>
+{
+    static const int args = 1;
+    typedef TArg1 Arg1Type;
+};
+
+template<typename TDelegateInterface, typename TArg1, typename TArg2>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2) noexcept>
+{
+    static const int args = 2;
+    typedef TArg1 Arg1Type;
+    typedef TArg2 Arg2Type;
+};
+
+template<typename TDelegateInterface, typename TArg1, typename TArg2, typename TArg3>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3) noexcept>
+{
+    static const int args = 3;
+    typedef TArg1 Arg1Type;
+    typedef TArg2 Arg2Type;
+    typedef TArg3 Arg3Type;
+};
+
+template<typename TDelegateInterface, typename TArg1, typename TArg2, typename TArg3, typename TArg4>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4) noexcept>
+{
+    static const int args = 4;
+    typedef TArg1 Arg1Type;
+    typedef TArg2 Arg2Type;
+    typedef TArg3 Arg3Type;
+    typedef TArg4 Arg4Type;
+};
+
+template<typename TDelegateInterface, typename TArg1, typename TArg2, typename TArg3, typename TArg4, typename TArg5>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5) noexcept>
+{
+    static const int args = 5;
+    typedef TArg1 Arg1Type;
+    typedef TArg2 Arg2Type;
+    typedef TArg3 Arg3Type;
+    typedef TArg4 Arg4Type;
+    typedef TArg5 Arg5Type;
+};
+
+template<typename TDelegateInterface, typename TArg1, typename TArg2, typename TArg3, typename TArg4, typename TArg5, typename TArg6>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6) noexcept>
+{
+    static const int args = 6;
+    typedef TArg1 Arg1Type;
+    typedef TArg2 Arg2Type;
+    typedef TArg3 Arg3Type;
+    typedef TArg4 Arg4Type;
+    typedef TArg5 Arg5Type;
+    typedef TArg6 Arg6Type;
+};
+
+template<typename TDelegateInterface, typename TArg1, typename TArg2, typename TArg3, typename TArg4, typename TArg5, typename TArg6, typename TArg7>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7) noexcept>
+{
+    static const int args = 7;
+    typedef TArg1 Arg1Type;
+    typedef TArg2 Arg2Type;
+    typedef TArg3 Arg3Type;
+    typedef TArg4 Arg4Type;
+    typedef TArg5 Arg5Type;
+    typedef TArg6 Arg6Type;
+    typedef TArg7 Arg7Type;
+};
+
+template<typename TDelegateInterface, typename TArg1, typename TArg2, typename TArg3, typename TArg4, typename TArg5, typename TArg6, typename TArg7, typename TArg8>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8) noexcept>
+{
+    static const int args = 8;
+    typedef TArg1 Arg1Type;
+    typedef TArg2 Arg2Type;
+    typedef TArg3 Arg3Type;
+    typedef TArg4 Arg4Type;
+    typedef TArg5 Arg5Type;
+    typedef TArg6 Arg6Type;
+    typedef TArg7 Arg7Type;
+    typedef TArg8 Arg8Type;
+};
+
+template<typename TDelegateInterface, typename TArg1, typename TArg2, typename TArg3, typename TArg4, typename TArg5, typename TArg6, typename TArg7, typename TArg8, typename TArg9>
+struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9) noexcept>
+{
+    static const int args = 9;
+    typedef TArg1 Arg1Type;
+    typedef TArg2 Arg2Type;
+    typedef TArg3 Arg3Type;
+    typedef TArg4 Arg4Type;
+    typedef TArg5 Arg5Type;
+    typedef TArg6 Arg6Type;
+    typedef TArg7 Arg7Type;
+    typedef TArg8 Arg8Type;
+    typedef TArg9 Arg9Type;
+};
+#endif
+
 // Traits factory extract appropriate ArgTraits type 
 // for delegate interface
 template<typename TDelegateInterface, bool isImplements = __is_base_of(ImplementsBase, TDelegateInterface)>
@@ -247,13 +356,46 @@ class DelegateArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArgs.
     };
 
 public:
+#ifndef BUILD_WINDOWS
     template<typename TDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckMode, typename TLambda>
+#else
+    template<typename TDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckModeTrait<TDelegateInterface>, typename TLambda>
+#endif
     static ComPtr<TImplements> Callback(TLambda&& callback) throw()
     {
         static_assert(__is_base_of(IUnknown, TDelegateInterface) && !__is_base_of(IInspectable, TDelegateInterface), "Delegates objects must be 'IUnknown' base and not 'IInspectable'");
         return Make<DelegateInvokeHelper<TDelegateInterface, TLambda, checkMode, TArgs...>>(Details::Forward<TLambda>(callback));
     }
 };
+
+#ifdef _NOEXCEPT_TYPES_SUPPORTED
+template<typename TDelegateInterface, typename ...TArgs>
+class DelegateArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArgs...) noexcept>
+{
+    template<typename TDelegateInterface, typename TCallback, DelegateCheckMode checkMode, typename... TArgs>
+    struct DelegateInvokeHelper WrlSealed : public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>, RemoveReference<TCallback>::Type
+    {
+        DelegateInvokeHelper(TCallback&& callback) throw() : RemoveReference<TCallback>::Type(Details::Forward<TCallback>(callback)) {}
+
+        HRESULT STDMETHODCALLTYPE Invoke(TArgs... args) throw() override
+        {
+            return DelegateTraits<checkMode>::CheckReturn((*this)(Details::Forward<TArgs>(args)...));
+        }
+    };
+
+public:
+#ifndef BUILD_WINDOWS
+    template<typename TDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckMode, typename TLambda>
+#else
+    template<typename TDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckModeTrait<TDelegateInterface>, typename TLambda>
+#endif
+    static ComPtr<TImplements> Callback(TLambda&& callback) throw()
+    {
+        static_assert(__is_base_of(IUnknown, TDelegateInterface) && !__is_base_of(IInspectable, TDelegateInterface), "Delegates objects must be 'IUnknown' base and not 'IInspectable'");
+        return Make<DelegateInvokeHelper<TDelegateInterface, TLambda, checkMode, TArgs...>>(Details::Forward<TLambda>(callback));
+    }
+};
+#endif
 
 // Traits factory extract appropriate ArgTraits type 
 // for delegate interface
@@ -274,7 +416,8 @@ struct DelegateArgTraitsHelper<TDelegateInterface, true> : DelegateArgTraitsHelp
 {
 };
 
-#if (NTDDI_VERSION >= NTDDI_WINBLUE)
+#pragma region Application Family or OneCore Family
+#if (NTDDI_VERSION >= NTDDI_WINBLUE) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 // If the input delegate is already agile this could return it directly instead of creating a wrapper.
 template<typename TDelegateInterface>
 HRESULT CreateAgileHelper(_In_ TDelegateInterface* delegateInterface, _COM_Outptr_ TDelegateInterface** wrapper)
@@ -302,7 +445,8 @@ HRESULT CreateAgileHelper(_In_ TDelegateInterface* delegateInterface, _COM_Outpt
     return S_OK;
 }
 
-#endif //(NTDDI_VERSION >= NTDDI_WINBLUE)
+#endif //(NTDDI_VERSION >= NTDDI_WINBLUE) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
 
 } // namespace Details
 
@@ -938,6 +1082,9 @@ private:
 
 #endif // __windows2Efoundation_h__
 
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 #if (NTDDI_VERSION >= NTDDI_WINBLUE)
 #if defined(BUILD_WINDOWS)
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<Microsoft::WRL::ReportUnhandledOnFirstErrorWithWin8Quirk>>
@@ -970,6 +1117,9 @@ public:
     }
 };
 #endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
 
 } } // namespace ::Microsoft::WRL
 

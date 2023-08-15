@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Lights_H
 #define WINRT_Windows_Devices_Lights_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Numerics.2.h"
@@ -16,51 +16,51 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.Lights.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Lights_ILamp<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Lights_ILamp<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::IsEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILamp<D>::IsEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->put_IsEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::BrightnessLevel() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Devices_Lights_ILamp<D>::BrightnessLevel() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->get_BrightnessLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::BrightnessLevel(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILamp<D>::BrightnessLevel(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->put_BrightnessLevel(value));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::IsColorSettable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Lights_ILamp<D>::IsColorSettable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->get_IsColorSettable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::Color() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Devices_Lights_ILamp<D>::Color() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->get_Color(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::Color(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILamp<D>::Color(Windows::UI::Color const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->put_Color(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::AvailabilityChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Lights::Lamp, Windows::Devices::Lights::LampAvailabilityChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Lights_ILamp<D>::AvailabilityChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Lights::Lamp, Windows::Devices::Lights::LampAvailabilityChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->add_AvailabilityChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -68,246 +68,247 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AvailabilityChanged_revoker>(this, AvailabilityChanged(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILamp<D>::AvailabilityChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILamp<D>::AvailabilityChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Lights::ILamp)->remove_AvailabilityChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Lights_ILampArray<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::HardwareVendorId() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Lights_ILampArray<D>::HardwareVendorId() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_HardwareVendorId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::HardwareProductId() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Lights_ILampArray<D>::HardwareProductId() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_HardwareProductId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::HardwareVersion() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Lights_ILampArray<D>::HardwareVersion() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_HardwareVersion(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::LampArrayKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::LampArrayKind) consume_Windows_Devices_Lights_ILampArray<D>::LampArrayKind() const
     {
-        Windows::Devices::Lights::LampArrayKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_LampArrayKind(put_abi(value)));
+        Windows::Devices::Lights::LampArrayKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_LampArrayKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::LampCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Lights_ILampArray<D>::LampCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_LampCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::MinUpdateInterval() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_ILampArray<D>::MinUpdateInterval() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_MinUpdateInterval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::BoundingBox() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Devices_Lights_ILampArray<D>::BoundingBox() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_BoundingBox(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Lights_ILampArray<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::IsEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILampArray<D>::IsEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->put_IsEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::BrightnessLevel() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Devices_Lights_ILampArray<D>::BrightnessLevel() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_BrightnessLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::BrightnessLevel(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILampArray<D>::BrightnessLevel(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->put_BrightnessLevel(value));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::IsConnected() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Lights_ILampArray<D>::IsConnected() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_IsConnected(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::SupportsVirtualKeys() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Lights_ILampArray<D>::SupportsVirtualKeys() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->get_SupportsVirtualKeys(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::GetLampInfo(int32_t lampIndex) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::LampInfo) consume_Windows_Devices_Lights_ILampArray<D>::GetLampInfo(int32_t lampIndex) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->GetLampInfo(lampIndex, &result));
         return Windows::Devices::Lights::LampInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::GetIndicesForKey(Windows::System::VirtualKey const& key) const
+    template <typename D> WINRT_IMPL_AUTO(com_array<int32_t>) consume_Windows_Devices_Lights_ILampArray<D>::GetIndicesForKey(Windows::System::VirtualKey const& key) const
     {
         uint32_t result_impl_size{};
         int32_t* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->GetIndicesForKey(static_cast<int32_t>(key), &result_impl_size, &result));
         return com_array<int32_t>{ result, result_impl_size, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::GetIndicesForPurposes(Windows::Devices::Lights::LampPurposes const& purposes) const
+    template <typename D> WINRT_IMPL_AUTO(com_array<int32_t>) consume_Windows_Devices_Lights_ILampArray<D>::GetIndicesForPurposes(Windows::Devices::Lights::LampPurposes const& purposes) const
     {
         uint32_t result_impl_size{};
         int32_t* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->GetIndicesForPurposes(static_cast<uint32_t>(purposes), &result_impl_size, &result));
         return com_array<int32_t>{ result, result_impl_size, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::SetColor(Windows::UI::Color const& desiredColor) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILampArray<D>::SetColor(Windows::UI::Color const& desiredColor) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->SetColor(impl::bind_in(desiredColor)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::SetColorForIndex(int32_t lampIndex, Windows::UI::Color const& desiredColor) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILampArray<D>::SetColorForIndex(int32_t lampIndex, Windows::UI::Color const& desiredColor) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->SetColorForIndex(lampIndex, impl::bind_in(desiredColor)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::SetSingleColorForIndices(Windows::UI::Color const& desiredColor, array_view<int32_t const> lampIndexes) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILampArray<D>::SetSingleColorForIndices(Windows::UI::Color const& desiredColor, array_view<int32_t const> lampIndexes) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->SetSingleColorForIndices(impl::bind_in(desiredColor), lampIndexes.size(), get_abi(lampIndexes)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::SetColorsForIndices(array_view<Windows::UI::Color const> desiredColors, array_view<int32_t const> lampIndexes) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILampArray<D>::SetColorsForIndices(array_view<Windows::UI::Color const> desiredColors, array_view<int32_t const> lampIndexes) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->SetColorsForIndices(desiredColors.size(), get_abi(desiredColors), lampIndexes.size(), get_abi(lampIndexes)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::SetColorsForKey(Windows::UI::Color const& desiredColor, Windows::System::VirtualKey const& key) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILampArray<D>::SetColorsForKey(Windows::UI::Color const& desiredColor, Windows::System::VirtualKey const& key) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->SetColorsForKey(impl::bind_in(desiredColor), static_cast<int32_t>(key)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::SetColorsForKeys(array_view<Windows::UI::Color const> desiredColors, array_view<Windows::System::VirtualKey const> keys) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILampArray<D>::SetColorsForKeys(array_view<Windows::UI::Color const> desiredColors, array_view<Windows::System::VirtualKey const> keys) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->SetColorsForKeys(desiredColors.size(), get_abi(desiredColors), keys.size(), get_abi(keys)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::SetColorsForPurposes(Windows::UI::Color const& desiredColor, Windows::Devices::Lights::LampPurposes const& purposes) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_ILampArray<D>::SetColorsForPurposes(Windows::UI::Color const& desiredColor, Windows::Devices::Lights::LampPurposes const& purposes) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->SetColorsForPurposes(impl::bind_in(desiredColor), static_cast<uint32_t>(purposes)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::SendMessageAsync(int32_t messageId, Windows::Storage::Streams::IBuffer const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_Lights_ILampArray<D>::SendMessageAsync(int32_t messageId, Windows::Storage::Streams::IBuffer const& message) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->SendMessageAsync(messageId, *(void**)(&message), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArray<D>::RequestMessageAsync(int32_t messageId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) consume_Windows_Devices_Lights_ILampArray<D>::RequestMessageAsync(int32_t messageId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArray)->RequestMessageAsync(messageId, &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArrayStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Lights_ILampArrayStatics<D>::GetDeviceSelector() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArrayStatics)->GetDeviceSelector(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampArrayStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::LampArray>) consume_Windows_Devices_Lights_ILampArrayStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampArrayStatics)->FromIdAsync(*(void**)(&deviceId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::LampArray>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampAvailabilityChangedEventArgs<D>::IsAvailable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Lights_ILampAvailabilityChangedEventArgs<D>::IsAvailable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampAvailabilityChangedEventArgs)->get_IsAvailable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::Index() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Lights_ILampInfo<D>::Index() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_Index(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::Purposes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::LampPurposes) consume_Windows_Devices_Lights_ILampInfo<D>::Purposes() const
     {
-        Windows::Devices::Lights::LampPurposes value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_Purposes(put_abi(value)));
+        Windows::Devices::Lights::LampPurposes value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_Purposes(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Devices_Lights_ILampInfo<D>::Position() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::RedLevelCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Lights_ILampInfo<D>::RedLevelCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_RedLevelCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::GreenLevelCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Lights_ILampInfo<D>::GreenLevelCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_GreenLevelCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::BlueLevelCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Lights_ILampInfo<D>::BlueLevelCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_BlueLevelCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::GainLevelCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Lights_ILampInfo<D>::GainLevelCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_GainLevelCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::FixedColor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_Devices_Lights_ILampInfo<D>::FixedColor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_FixedColor(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::GetNearestSupportedColor(Windows::UI::Color const& desiredColor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Devices_Lights_ILampInfo<D>::GetNearestSupportedColor(Windows::UI::Color const& desiredColor) const
     {
-        Windows::UI::Color result;
+        Windows::UI::Color result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->GetNearestSupportedColor(impl::bind_in(desiredColor), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampInfo<D>::UpdateLatency() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_ILampInfo<D>::UpdateLatency() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampInfo)->get_UpdateLatency(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Lights_ILampStatics<D>::GetDeviceSelector() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampStatics)->GetDeviceSelector(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::Lamp>) consume_Windows_Devices_Lights_ILampStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampStatics)->FromIdAsync(*(void**)(&deviceId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::Lamp>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_ILampStatics<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::Lamp>) consume_Windows_Devices_Lights_ILampStatics<D>::GetDefaultAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::ILampStatics)->GetDefaultAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::Lamp>{ operation, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::ILamp> : produce_base<D, Windows::Devices::Lights::ILamp>
     {
@@ -384,6 +385,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::ILampArray> : produce_base<D, Windows::Devices::Lights::ILampArray>
     {
@@ -578,6 +581,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::ILampArrayStatics> : produce_base<D, Windows::Devices::Lights::ILampArrayStatics>
     {
@@ -598,6 +603,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::ILampAvailabilityChangedEventArgs> : produce_base<D, Windows::Devices::Lights::ILampAvailabilityChangedEventArgs>
     {
@@ -609,6 +616,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::ILampInfo> : produce_base<D, Windows::Devices::Lights::ILampInfo>
     {
@@ -687,6 +696,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::ILampStatics> : produce_base<D, Windows::Devices::Lights::ILampStatics>
     {
@@ -715,8 +726,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Lights
+WINRT_EXPORT namespace winrt::Windows::Devices::Lights
 {
     constexpr auto operator|(LampPurposes const left, LampPurposes const right) noexcept
     {
@@ -751,36 +763,38 @@ namespace winrt::Windows::Devices::Lights
     }
     inline auto Lamp::GetDeviceSelector()
     {
-        return impl::call_factory<Lamp, Windows::Devices::Lights::ILampStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(ILampStatics const&), Lamp, ILampStatics>([](ILampStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto Lamp::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<Lamp, Windows::Devices::Lights::ILampStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<Lamp, ILampStatics>([&](ILampStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto Lamp::GetDefaultAsync()
     {
-        return impl::call_factory<Lamp, Windows::Devices::Lights::ILampStatics>([&](auto&& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::Lamp>(*)(ILampStatics const&), Lamp, ILampStatics>([](ILampStatics const& f) { return f.GetDefaultAsync(); });
     }
     inline auto LampArray::GetDeviceSelector()
     {
-        return impl::call_factory<LampArray, Windows::Devices::Lights::ILampArrayStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(ILampArrayStatics const&), LampArray, ILampArrayStatics>([](ILampArrayStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto LampArray::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<LampArray, Windows::Devices::Lights::ILampArrayStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<LampArray, ILampArrayStatics>([&](ILampArrayStatics const& f) { return f.FromIdAsync(deviceId); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Lights::ILamp> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::ILamp> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::ILampArray> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::ILampArray> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::ILampArrayStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::ILampArrayStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::ILampAvailabilityChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::ILampAvailabilityChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::ILampInfo> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::ILampInfo> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::ILampStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::ILampStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Lamp> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Lamp> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::LampArray> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::LampArray> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::LampInfo> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::LampInfo> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Lights::ILamp> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::ILampArray> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::ILampArrayStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::ILampAvailabilityChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::ILampInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::ILampStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Lamp> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::LampArray> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::LampInfo> : winrt::impl::hash_base {};
+#endif
 }
 #endif

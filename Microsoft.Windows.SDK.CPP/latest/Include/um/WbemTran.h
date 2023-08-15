@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -266,18 +274,22 @@ EXTERN_C const IID IID_IWbemTransport;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWbemTransport * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWbemTransport * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWbemTransport * This);
         
+        DECLSPEC_XFGVIRT(IWbemTransport, Initialize)
         HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             IWbemTransport * This);
         
@@ -366,30 +378,36 @@ EXTERN_C const IID IID_IWbemLevel1Login;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWbemLevel1Login * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWbemLevel1Login * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWbemLevel1Login * This);
         
+        DECLSPEC_XFGVIRT(IWbemLevel1Login, EstablishPosition)
         HRESULT ( STDMETHODCALLTYPE *EstablishPosition )( 
             __RPC__in IWbemLevel1Login * This,
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszLocaleList,
             /* [in] */ DWORD dwNumLocales,
             /* [out] */ __RPC__out DWORD *reserved);
         
+        DECLSPEC_XFGVIRT(IWbemLevel1Login, RequestChallenge)
         HRESULT ( STDMETHODCALLTYPE *RequestChallenge )( 
             __RPC__in IWbemLevel1Login * This,
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszNetworkResource,
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszUser,
             /* [out] */ __RPC__out WBEM_128BITS Nonce);
         
+        DECLSPEC_XFGVIRT(IWbemLevel1Login, WBEMLogin)
         HRESULT ( STDMETHODCALLTYPE *WBEMLogin )( 
             __RPC__in IWbemLevel1Login * This,
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszPreferredLocale,
@@ -398,6 +416,7 @@ EXTERN_C const IID IID_IWbemLevel1Login;
             /* [in] */ __RPC__in_opt IWbemContext *pCtx,
             /* [out] */ __RPC__deref_out_opt IWbemServices **ppNamespace);
         
+        DECLSPEC_XFGVIRT(IWbemLevel1Login, NTLMLogin)
         HRESULT ( STDMETHODCALLTYPE *NTLMLogin )( 
             __RPC__in IWbemLevel1Login * This,
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszNetworkResource,
@@ -484,18 +503,22 @@ EXTERN_C const IID IID_IWbemConnectorLogin;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWbemConnectorLogin * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWbemConnectorLogin * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWbemConnectorLogin * This);
         
+        DECLSPEC_XFGVIRT(IWbemConnectorLogin, ConnectorLogin)
         HRESULT ( STDMETHODCALLTYPE *ConnectorLogin )( 
             __RPC__in IWbemConnectorLogin * This,
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszNetworkResource,
@@ -576,18 +599,22 @@ EXTERN_C const IID IID_IWbemAddressResolution;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWbemAddressResolution * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWbemAddressResolution * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWbemAddressResolution * This);
         
+        DECLSPEC_XFGVIRT(IWbemAddressResolution, Resolve)
         HRESULT ( STDMETHODCALLTYPE *Resolve )( 
             IWbemAddressResolution * This,
             /* [annotation][in] */ 
@@ -697,18 +724,22 @@ EXTERN_C const IID IID_IWbemClientTransport;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWbemClientTransport * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWbemClientTransport * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWbemClientTransport * This);
         
+        DECLSPEC_XFGVIRT(IWbemClientTransport, ConnectServer)
         HRESULT ( STDMETHODCALLTYPE *ConnectServer )( 
             IWbemClientTransport * This,
             /* [in] */ BSTR strAddressType,
@@ -815,18 +846,22 @@ EXTERN_C const IID IID_IWbemClientConnectionTransport;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWbemClientConnectionTransport * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWbemClientConnectionTransport * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWbemClientConnectionTransport * This);
         
+        DECLSPEC_XFGVIRT(IWbemClientConnectionTransport, Open)
         HRESULT ( STDMETHODCALLTYPE *Open )( 
             IWbemClientConnectionTransport * This,
             /* [in] */ BSTR strAddressType,
@@ -842,6 +877,7 @@ EXTERN_C const IID IID_IWbemClientConnectionTransport;
             /* [iid_is][out] */ void **pInterface,
             /* [out] */ IWbemCallResult **pCallRes);
         
+        DECLSPEC_XFGVIRT(IWbemClientConnectionTransport, OpenAsync)
         HRESULT ( STDMETHODCALLTYPE *OpenAsync )( 
             IWbemClientConnectionTransport * This,
             /* [in] */ BSTR strAddressType,
@@ -856,6 +892,7 @@ EXTERN_C const IID IID_IWbemClientConnectionTransport;
             /* [in] */ REFIID riid,
             /* [in] */ IWbemObjectSink *pResponseHandler);
         
+        DECLSPEC_XFGVIRT(IWbemClientConnectionTransport, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             IWbemClientConnectionTransport * This,
             /* [in] */ long lFlags,
@@ -961,18 +998,22 @@ EXTERN_C const IID IID_IWbemConstructClassObject;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWbemConstructClassObject * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWbemConstructClassObject * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWbemConstructClassObject * This);
         
+        DECLSPEC_XFGVIRT(IWbemConstructClassObject, SetInheritanceChain)
         HRESULT ( STDMETHODCALLTYPE *SetInheritanceChain )( 
             IWbemConstructClassObject * This,
             /* [annotation][in] */ 
@@ -980,6 +1021,7 @@ EXTERN_C const IID IID_IWbemConstructClassObject;
             /* [annotation][string][size_is][in] */ 
             _In_reads_bytes_(lNumAntecedents)  LPWSTR *awszAntecedents);
         
+        DECLSPEC_XFGVIRT(IWbemConstructClassObject, SetPropertyOrigin)
         HRESULT ( STDMETHODCALLTYPE *SetPropertyOrigin )( 
             IWbemConstructClassObject * This,
             /* [annotation][string][in] */ 
@@ -987,6 +1029,7 @@ EXTERN_C const IID IID_IWbemConstructClassObject;
             /* [annotation][in] */ 
             _In_  long lOriginIndex);
         
+        DECLSPEC_XFGVIRT(IWbemConstructClassObject, SetMethodOrigin)
         HRESULT ( STDMETHODCALLTYPE *SetMethodOrigin )( 
             IWbemConstructClassObject * This,
             /* [annotation][string][in] */ 
@@ -994,6 +1037,7 @@ EXTERN_C const IID IID_IWbemConstructClassObject;
             /* [annotation][in] */ 
             _In_  long lOriginIndex);
         
+        DECLSPEC_XFGVIRT(IWbemConstructClassObject, SetServerNamespace)
         HRESULT ( STDMETHODCALLTYPE *SetServerNamespace )( 
             IWbemConstructClassObject * This,
             /* [annotation][string][in] */ 

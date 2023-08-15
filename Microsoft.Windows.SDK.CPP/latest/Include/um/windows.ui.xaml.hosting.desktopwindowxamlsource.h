@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -101,23 +109,28 @@ EXTERN_C const IID IID_IDesktopWindowXamlSourceNative;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDesktopWindowXamlSourceNative * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDesktopWindowXamlSourceNative * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDesktopWindowXamlSourceNative * This);
         
+        DECLSPEC_XFGVIRT(IDesktopWindowXamlSourceNative, AttachToWindow)
         HRESULT ( STDMETHODCALLTYPE *AttachToWindow )( 
             IDesktopWindowXamlSourceNative * This,
             /* [annotation][in] */ 
             _In_  HWND parentWnd);
         
+        DECLSPEC_XFGVIRT(IDesktopWindowXamlSourceNative, get_WindowHandle)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_WindowHandle )( 
             IDesktopWindowXamlSourceNative * This,
             /* [retval][out] */ HWND *hWnd);
@@ -201,27 +214,33 @@ EXTERN_C const IID IID_IDesktopWindowXamlSourceNative2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDesktopWindowXamlSourceNative2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDesktopWindowXamlSourceNative2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDesktopWindowXamlSourceNative2 * This);
         
+        DECLSPEC_XFGVIRT(IDesktopWindowXamlSourceNative, AttachToWindow)
         HRESULT ( STDMETHODCALLTYPE *AttachToWindow )( 
             IDesktopWindowXamlSourceNative2 * This,
             /* [annotation][in] */ 
             _In_  HWND parentWnd);
         
+        DECLSPEC_XFGVIRT(IDesktopWindowXamlSourceNative, get_WindowHandle)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_WindowHandle )( 
             IDesktopWindowXamlSourceNative2 * This,
             /* [retval][out] */ HWND *hWnd);
         
+        DECLSPEC_XFGVIRT(IDesktopWindowXamlSourceNative2, PreTranslateMessage)
         HRESULT ( STDMETHODCALLTYPE *PreTranslateMessage )( 
             IDesktopWindowXamlSourceNative2 * This,
             /* [annotation][in] */ 

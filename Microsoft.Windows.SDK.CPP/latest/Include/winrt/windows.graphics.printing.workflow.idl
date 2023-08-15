@@ -363,7 +363,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass PrintWorkflowConfiguration
                 {
                     [default] interface Windows.Graphics.Printing.Workflow.IPrintWorkflowConfiguration;

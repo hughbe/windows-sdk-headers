@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Media_Playlists_2_H
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.Media.Playlists.1.h"
-namespace winrt::Windows::Media::Playlists
+WINRT_EXPORT namespace winrt::Windows::Media::Playlists
 {
     struct __declspec(empty_bases) Playlist : Windows::Media::Playlists::IPlaylist
     {

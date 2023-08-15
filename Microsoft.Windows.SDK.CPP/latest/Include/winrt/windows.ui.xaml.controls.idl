@@ -1404,9 +1404,17 @@ namespace Windows
 
                 interface IHandwritingView;
 
+                interface IHandwritingView2;
+
+                interface IHandwritingViewCandidatesChangedEventArgs;
+
                 interface IHandwritingViewFactory;
 
                 interface IHandwritingViewStatics;
+
+                interface IHandwritingViewStatics2;
+
+                interface IHandwritingViewTextSubmittedEventArgs;
 
                 interface IHub;
 
@@ -2726,6 +2734,10 @@ namespace Windows
 
                 runtimeclass HandwritingView;
 
+                runtimeclass HandwritingViewCandidatesChangedEventArgs;
+
+                runtimeclass HandwritingViewTextSubmittedEventArgs;
+
                 runtimeclass Hub;
 
                 runtimeclass HubSection;
@@ -3276,6 +3288,10 @@ namespace Windows
                     interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.HandwritingView*, Windows.UI.Xaml.Controls.HandwritingPanelClosedEventArgs*>;
 
                     interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.HandwritingView*, Windows.UI.Xaml.Controls.HandwritingPanelOpenedEventArgs*>;
+
+                    interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.HandwritingView*, Windows.UI.Xaml.Controls.HandwritingViewCandidatesChangedEventArgs*>;
+
+                    interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.HandwritingView*, Windows.UI.Xaml.Controls.HandwritingViewTextSubmittedEventArgs*>;
 
                     interface Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.InkToolbar*, IInspectable*>;
 
@@ -7402,6 +7418,33 @@ namespace Windows
                     HRESULT TryOpen([out] [retval] boolean* result);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.HandwritingView)]
+                [uuid(4BCF991B-0DE1-5C9E-8970-37B9878FE171)]
+                interface IHandwritingView2 : IInspectable
+                {
+                    [propget] HRESULT IsSwitchToKeyboardEnabled([out] [retval] boolean* value);
+                    [propput] HRESULT IsSwitchToKeyboardEnabled([in] boolean value);
+                    [propget] HRESULT IsCommandBarOpen([out] [retval] boolean* value);
+                    [propput] HRESULT IsCommandBarOpen([in] boolean value);
+                    [propget] HRESULT InputDeviceTypes([out] [retval] Windows.UI.Core.CoreInputDeviceTypes* value);
+                    [propput] HRESULT InputDeviceTypes([in] Windows.UI.Core.CoreInputDeviceTypes value);
+                    [eventadd] HRESULT CandidatesChanged([in] Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.HandwritingView*, Windows.UI.Xaml.Controls.HandwritingViewCandidatesChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                    [eventremove] HRESULT CandidatesChanged([in] EventRegistrationToken token);
+                    [eventadd] HRESULT TextSubmitted([in] Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.HandwritingView*, Windows.UI.Xaml.Controls.HandwritingViewTextSubmittedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                    [eventremove] HRESULT TextSubmitted([in] EventRegistrationToken token);
+                    HRESULT GetCandidates([in] UINT32 candidatesSessionId, [out] [retval] Windows.Foundation.Collections.IVectorView<HSTRING>** result);
+                    HRESULT SelectCandidate([in] UINT32 candidatesSessionId, [in] UINT32 selectedCandidateIndex);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.HandwritingViewCandidatesChangedEventArgs)]
+                [uuid(6F5F63D8-56B1-56C5-A416-C19C16BF7884)]
+                interface IHandwritingViewCandidatesChangedEventArgs : IInspectable
+                {
+                    [propget] HRESULT CandidatesSessionId([out] [retval] UINT32* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [exclusiveto(Windows.UI.Xaml.Controls.HandwritingView)]
                 [uuid(E00C873F-0012-475C-890C-97AE308642DE)]
@@ -7419,6 +7462,22 @@ namespace Windows
                     [propget] HRESULT PlacementAlignmentProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT IsOpenProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT AreCandidatesEnabledProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.HandwritingView)]
+                [uuid(2CD052E4-D703-5183-A1BE-7E285DF978D9)]
+                interface IHandwritingViewStatics2 : IInspectable
+                {
+                    [propget] HRESULT IsSwitchToKeyboardEnabledProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT IsCommandBarOpenProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.HandwritingViewTextSubmittedEventArgs)]
+                [uuid(55AC0F47-F5E4-55DA-B8A3-D418B7564291)]
+                interface IHandwritingViewTextSubmittedEventArgs : IInspectable
+                {
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -15107,10 +15166,26 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Xaml.Controls.IHandwritingViewStatics, Windows.Foundation.UniversalApiContract, 6.0)]
+                [static(Windows.UI.Xaml.Controls.IHandwritingViewStatics2, Windows.Foundation.UniversalApiContract, 11.0)]
                 [threading(both)]
                 runtimeclass HandwritingView : Windows.UI.Xaml.Controls.Control
                 {
                     [default] interface Windows.UI.Xaml.Controls.IHandwritingView;
+                    [contract(Windows.Foundation.UniversalApiContract, 11.0)] interface Windows.UI.Xaml.Controls.IHandwritingView2;
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+                [marshaling_behavior(agile)]
+                runtimeclass HandwritingViewCandidatesChangedEventArgs
+                {
+                    [default] interface Windows.UI.Xaml.Controls.IHandwritingViewCandidatesChangedEventArgs;
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+                [marshaling_behavior(agile)]
+                runtimeclass HandwritingViewTextSubmittedEventArgs
+                {
+                    [default] interface Windows.UI.Xaml.Controls.IHandwritingViewTextSubmittedEventArgs;
                 }
 
                 [composable(Windows.UI.Xaml.Controls.IHubFactory, public, Windows.Foundation.UniversalApiContract, 1.0)]

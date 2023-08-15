@@ -1747,7 +1747,12 @@ Abstract:
 * Couldn't connect because there was a problem with device compliance.
 */
 
-#define RASBASEEND                                 (RASBASE+275)
+#define ERROR_PLUGIN_NOT_INSTALLED                 (RASBASE+276)
+/*
+* The app %1!ws! is required for this VPN connection. Please download it in the Microsoft Store or contact your IT administrators.
+*/
+
+#define RASBASEEND                                 (RASBASE+276)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

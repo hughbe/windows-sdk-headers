@@ -1,11 +1,11 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Services_Maps_Guidance_0_H
 #define WINRT_Windows_Services_Maps_Guidance_0_H
-namespace winrt::Windows::Devices::Geolocation
+WINRT_EXPORT namespace winrt::Windows::Devices::Geolocation
 {
     struct BasicGeoposition;
     struct GeoboundingBox;
@@ -13,20 +13,24 @@ namespace winrt::Windows::Devices::Geolocation
     struct Geopath;
     struct Geopoint;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Services::Maps
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+}
+WINRT_EXPORT namespace winrt::Windows::Services::Maps
 {
     struct MapRoute;
 }
-namespace winrt::Windows::UI
+WINRT_EXPORT namespace winrt::Windows::UI
 {
     struct Color;
 }
-namespace winrt::Windows::Services::Maps::Guidance
+WINRT_EXPORT namespace winrt::Windows::Services::Maps::Guidance
 {
     enum class GuidanceAudioMeasurementSystem : int32_t
     {
@@ -156,390 +160,102 @@ namespace winrt::Windows::Services::Maps::Guidance
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceLaneInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceManeuver>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceNavigator>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceNavigator2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRoadSegment>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRoadSegment2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRoadSignpost>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRoute>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRouteStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollectorStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceLaneInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceManeuver>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceNavigator>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceRoadSegment>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceRoadSignpost>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceRoute>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceAudioNotifications>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceLaneMarkers>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceManeuverKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Services::Maps::Guidance::GuidanceMode>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceLaneInfo>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceLaneInfo" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceManeuver>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceManeuver" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceNavigator>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceNavigator" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceNavigator2>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceNavigator2" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics2" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceReroutedEventArgs" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceRoadSegment>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceRoadSegment" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceRoadSegment2>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceRoadSegment2" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceRoadSignpost>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceRoadSignpost" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceRoute>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceRoute" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceRouteStatics>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceRouteStatics" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollectorStatics>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceTelemetryCollectorStatics" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceLaneInfo>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceLaneInfo" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceManeuver>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceManeuver" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceNavigator>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceNavigator" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceRoadSegment>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceRoadSegment" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceRoadSignpost>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceRoute>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceRoute" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceAudioNotifications>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceAudioNotifications" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceLaneMarkers>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceLaneMarkers" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceManeuverKind>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceManeuverKind" };
-    };
-    template <> struct name<Windows::Services::Maps::Guidance::GuidanceMode>
-    {
-        static constexpr auto & value{ L"Windows.Services.Maps.Guidance.GuidanceMode" };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs>
-    {
-        static constexpr guid value{ 0xCA2AA24A,0xC7C2,0x4D4C,{ 0x9D,0x7C,0x49,0x95,0x76,0xBC,0xED,0xDB } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceLaneInfo>
-    {
-        static constexpr guid value{ 0x8404D114,0x6581,0x43B7,{ 0xAC,0x15,0xC9,0x07,0x9B,0xF9,0x0D,0xF1 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceManeuver>
-    {
-        static constexpr guid value{ 0xFC09326C,0xECC9,0x4928,{ 0xA2,0xA1,0x72,0x32,0xB9,0x9B,0x94,0xA1 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate>
-    {
-        static constexpr guid value{ 0xB7ACB168,0x2912,0x4A99,{ 0xAF,0xF1,0x79,0x86,0x09,0xB9,0x81,0xFE } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceNavigator>
-    {
-        static constexpr guid value{ 0x08F17EF7,0x8E3F,0x4D9A,{ 0xBE,0x8A,0x10,0x8F,0x9A,0x01,0x2C,0x67 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceNavigator2>
-    {
-        static constexpr guid value{ 0x6CDC50D1,0x041C,0x4BF3,{ 0xB6,0x33,0xA1,0x01,0xFC,0x2F,0x6B,0x57 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics>
-    {
-        static constexpr guid value{ 0x00FD9513,0x4456,0x4E66,{ 0xA1,0x43,0x3A,0xDD,0x6B,0xE0,0x84,0x26 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics2>
-    {
-        static constexpr guid value{ 0x54C5C3E2,0x7784,0x4C85,{ 0x8C,0x95,0xD0,0xC6,0xEF,0xB4,0x39,0x65 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs>
-    {
-        static constexpr guid value{ 0x115D4008,0xD528,0x454E,{ 0xBB,0x94,0xA5,0x03,0x41,0xD2,0xC9,0xF1 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceRoadSegment>
-    {
-        static constexpr guid value{ 0xB32758A6,0xBE78,0x4C63,{ 0xAF,0xE7,0x6C,0x29,0x57,0x47,0x9B,0x3E } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceRoadSegment2>
-    {
-        static constexpr guid value{ 0x2474A61D,0x1723,0x49F1,{ 0x89,0x5B,0x47,0xA2,0xC4,0xAA,0x9C,0x55 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceRoadSignpost>
-    {
-        static constexpr guid value{ 0xF1A728B6,0xF77A,0x4742,{ 0x83,0x12,0x53,0x30,0x0F,0x98,0x45,0xF0 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceRoute>
-    {
-        static constexpr guid value{ 0x3A14545D,0x801A,0x40BD,{ 0xA2,0x86,0xAF,0xB2,0x01,0x0C,0xCE,0x6C } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceRouteStatics>
-    {
-        static constexpr guid value{ 0xF56D926A,0x55ED,0x49C1,{ 0xB0,0x9C,0x4B,0x82,0x23,0xB5,0x0D,0xB3 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector>
-    {
-        static constexpr guid value{ 0xDB1F8DA5,0xB878,0x4D92,{ 0x98,0xDD,0x34,0x7D,0x23,0xD3,0x82,0x62 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollectorStatics>
-    {
-        static constexpr guid value{ 0x36532047,0xF160,0x44FB,{ 0xB5,0x78,0x94,0x57,0x7C,0xA0,0x59,0x90 } };
-    };
-    template <> struct guid_storage<Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs>
-    {
-        static constexpr guid value{ 0xFDAC160B,0x9E8D,0x4DE3,{ 0xA9,0xFA,0xB0,0x63,0x21,0xD1,0x8D,0xB9 } };
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceLaneInfo>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceLaneInfo;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceManeuver>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceManeuver;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceNavigator>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceNavigator;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceRoadSegment>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceRoadSegment;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceRoadSignpost>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceRoadSignpost;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceRoute>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceRoute;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector;
-    };
-    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>
-    {
-        using type = Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs;
-    };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceLaneInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceManeuver>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceNavigator>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceNavigator2>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRoadSegment>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRoadSegment2>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRoadSignpost>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRoute>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceRouteStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollectorStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceLaneInfo>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceManeuver>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceNavigator>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceRoadSegment>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceRoadSignpost>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceRoute>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem>{ using type = enum_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind>{ using type = enum_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceAudioNotifications>{ using type = enum_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceLaneMarkers>{ using type = enum_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceManeuverKind>{ using type = enum_category; };
+    template <> struct category<Windows::Services::Maps::Guidance::GuidanceMode>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs> = L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceLaneInfo> = L"Windows.Services.Maps.Guidance.GuidanceLaneInfo";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceManeuver> = L"Windows.Services.Maps.Guidance.GuidanceManeuver";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate> = L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceNavigator> = L"Windows.Services.Maps.Guidance.GuidanceNavigator";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs> = L"Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceRoadSegment> = L"Windows.Services.Maps.Guidance.GuidanceRoadSegment";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceRoadSignpost> = L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceRoute> = L"Windows.Services.Maps.Guidance.GuidanceRoute";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceTelemetryCollector> = L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs> = L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem> = L"Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind> = L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceAudioNotifications> = L"Windows.Services.Maps.Guidance.GuidanceAudioNotifications";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceLaneMarkers> = L"Windows.Services.Maps.Guidance.GuidanceLaneMarkers";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceManeuverKind> = L"Windows.Services.Maps.Guidance.GuidanceManeuverKind";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::GuidanceMode> = L"Windows.Services.Maps.Guidance.GuidanceMode";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs> = L"Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceLaneInfo> = L"Windows.Services.Maps.Guidance.IGuidanceLaneInfo";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceManeuver> = L"Windows.Services.Maps.Guidance.IGuidanceManeuver";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate> = L"Windows.Services.Maps.Guidance.IGuidanceMapMatchedCoordinate";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceNavigator> = L"Windows.Services.Maps.Guidance.IGuidanceNavigator";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceNavigator2> = L"Windows.Services.Maps.Guidance.IGuidanceNavigator2";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics> = L"Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics2> = L"Windows.Services.Maps.Guidance.IGuidanceNavigatorStatics2";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs> = L"Windows.Services.Maps.Guidance.IGuidanceReroutedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceRoadSegment> = L"Windows.Services.Maps.Guidance.IGuidanceRoadSegment";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceRoadSegment2> = L"Windows.Services.Maps.Guidance.IGuidanceRoadSegment2";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceRoadSignpost> = L"Windows.Services.Maps.Guidance.IGuidanceRoadSignpost";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceRoute> = L"Windows.Services.Maps.Guidance.IGuidanceRoute";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceRouteStatics> = L"Windows.Services.Maps.Guidance.IGuidanceRouteStatics";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector> = L"Windows.Services.Maps.Guidance.IGuidanceTelemetryCollector";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollectorStatics> = L"Windows.Services.Maps.Guidance.IGuidanceTelemetryCollectorStatics";
+    template <> inline constexpr auto& name_v<Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs> = L"Windows.Services.Maps.Guidance.IGuidanceUpdatedEventArgs";
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs>{ 0xCA2AA24A,0xC7C2,0x4D4C,{ 0x9D,0x7C,0x49,0x95,0x76,0xBC,0xED,0xDB } }; // CA2AA24A-C7C2-4D4C-9D7C-499576BCEDDB
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceLaneInfo>{ 0x8404D114,0x6581,0x43B7,{ 0xAC,0x15,0xC9,0x07,0x9B,0xF9,0x0D,0xF1 } }; // 8404D114-6581-43B7-AC15-C9079BF90DF1
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceManeuver>{ 0xFC09326C,0xECC9,0x4928,{ 0xA2,0xA1,0x72,0x32,0xB9,0x9B,0x94,0xA1 } }; // FC09326C-ECC9-4928-A2A1-7232B99B94A1
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate>{ 0xB7ACB168,0x2912,0x4A99,{ 0xAF,0xF1,0x79,0x86,0x09,0xB9,0x81,0xFE } }; // B7ACB168-2912-4A99-AFF1-798609B981FE
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceNavigator>{ 0x08F17EF7,0x8E3F,0x4D9A,{ 0xBE,0x8A,0x10,0x8F,0x9A,0x01,0x2C,0x67 } }; // 08F17EF7-8E3F-4D9A-BE8A-108F9A012C67
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceNavigator2>{ 0x6CDC50D1,0x041C,0x4BF3,{ 0xB6,0x33,0xA1,0x01,0xFC,0x2F,0x6B,0x57 } }; // 6CDC50D1-041C-4BF3-B633-A101FC2F6B57
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics>{ 0x00FD9513,0x4456,0x4E66,{ 0xA1,0x43,0x3A,0xDD,0x6B,0xE0,0x84,0x26 } }; // 00FD9513-4456-4E66-A143-3ADD6BE08426
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics2>{ 0x54C5C3E2,0x7784,0x4C85,{ 0x8C,0x95,0xD0,0xC6,0xEF,0xB4,0x39,0x65 } }; // 54C5C3E2-7784-4C85-8C95-D0C6EFB43965
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs>{ 0x115D4008,0xD528,0x454E,{ 0xBB,0x94,0xA5,0x03,0x41,0xD2,0xC9,0xF1 } }; // 115D4008-D528-454E-BB94-A50341D2C9F1
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceRoadSegment>{ 0xB32758A6,0xBE78,0x4C63,{ 0xAF,0xE7,0x6C,0x29,0x57,0x47,0x9B,0x3E } }; // B32758A6-BE78-4C63-AFE7-6C2957479B3E
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceRoadSegment2>{ 0x2474A61D,0x1723,0x49F1,{ 0x89,0x5B,0x47,0xA2,0xC4,0xAA,0x9C,0x55 } }; // 2474A61D-1723-49F1-895B-47A2C4AA9C55
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceRoadSignpost>{ 0xF1A728B6,0xF77A,0x4742,{ 0x83,0x12,0x53,0x30,0x0F,0x98,0x45,0xF0 } }; // F1A728B6-F77A-4742-8312-53300F9845F0
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceRoute>{ 0x3A14545D,0x801A,0x40BD,{ 0xA2,0x86,0xAF,0xB2,0x01,0x0C,0xCE,0x6C } }; // 3A14545D-801A-40BD-A286-AFB2010CCE6C
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceRouteStatics>{ 0xF56D926A,0x55ED,0x49C1,{ 0xB0,0x9C,0x4B,0x82,0x23,0xB5,0x0D,0xB3 } }; // F56D926A-55ED-49C1-B09C-4B8223B50DB3
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector>{ 0xDB1F8DA5,0xB878,0x4D92,{ 0x98,0xDD,0x34,0x7D,0x23,0xD3,0x82,0x62 } }; // DB1F8DA5-B878-4D92-98DD-347D23D38262
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollectorStatics>{ 0x36532047,0xF160,0x44FB,{ 0xB5,0x78,0x94,0x57,0x7C,0xA0,0x59,0x90 } }; // 36532047-F160-44FB-B578-94577CA05990
+    template <> inline constexpr guid guid_v<Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs>{ 0xFDAC160B,0x9E8D,0x4DE3,{ 0xA9,0xFA,0xB0,0x63,0x21,0xD1,0x8D,0xB9 } }; // FDAC160B-9E8D-4DE3-A9FA-B06321D18DB9
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>{ using type = Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceLaneInfo>{ using type = Windows::Services::Maps::Guidance::IGuidanceLaneInfo; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceManeuver>{ using type = Windows::Services::Maps::Guidance::IGuidanceManeuver; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>{ using type = Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceNavigator>{ using type = Windows::Services::Maps::Guidance::IGuidanceNavigator; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>{ using type = Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceRoadSegment>{ using type = Windows::Services::Maps::Guidance::IGuidanceRoadSegment; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceRoadSignpost>{ using type = Windows::Services::Maps::Guidance::IGuidanceRoadSignpost; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceRoute>{ using type = Windows::Services::Maps::Guidance::IGuidanceRoute; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>{ using type = Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector; };
+    template <> struct default_interface<Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>{ using type = Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs; };
     template <> struct abi<Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -748,9 +464,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceAudioNotificationRequestedEventArgs
     {
-        [[nodiscard]] auto AudioNotification() const;
-        [[nodiscard]] auto AudioFilePaths() const;
-        [[nodiscard]] auto AudioText() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind) AudioNotification() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) AudioFilePaths() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AudioText() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceAudioNotificationRequestedEventArgs>
     {
@@ -759,8 +475,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceLaneInfo
     {
-        [[nodiscard]] auto LaneMarkers() const;
-        [[nodiscard]] auto IsOnRoute() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceLaneMarkers) LaneMarkers() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOnRoute() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceLaneInfo>
     {
@@ -769,18 +485,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceManeuver
     {
-        [[nodiscard]] auto StartLocation() const;
-        [[nodiscard]] auto DistanceFromRouteStart() const;
-        [[nodiscard]] auto DistanceFromPreviousManeuver() const;
-        [[nodiscard]] auto DepartureRoadName() const;
-        [[nodiscard]] auto NextRoadName() const;
-        [[nodiscard]] auto DepartureShortRoadName() const;
-        [[nodiscard]] auto NextShortRoadName() const;
-        [[nodiscard]] auto Kind() const;
-        [[nodiscard]] auto StartAngle() const;
-        [[nodiscard]] auto EndAngle() const;
-        [[nodiscard]] auto RoadSignpost() const;
-        [[nodiscard]] auto InstructionText() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geopoint) StartLocation() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) DistanceFromRouteStart() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) DistanceFromPreviousManeuver() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DepartureRoadName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) NextRoadName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DepartureShortRoadName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) NextShortRoadName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceManeuverKind) Kind() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) StartAngle() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) EndAngle() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceRoadSignpost) RoadSignpost() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) InstructionText() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceManeuver>
     {
@@ -789,11 +505,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceMapMatchedCoordinate
     {
-        [[nodiscard]] auto Location() const;
-        [[nodiscard]] auto CurrentHeading() const;
-        [[nodiscard]] auto CurrentSpeed() const;
-        [[nodiscard]] auto IsOnStreet() const;
-        [[nodiscard]] auto Road() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geopoint) Location() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) CurrentHeading() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) CurrentSpeed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOnStreet() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceRoadSegment) Road() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceMapMatchedCoordinate>
     {
@@ -802,48 +518,48 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceNavigator
     {
-        auto StartNavigating(Windows::Services::Maps::Guidance::GuidanceRoute const& route) const;
-        auto StartSimulating(Windows::Services::Maps::Guidance::GuidanceRoute const& route, int32_t speedInMetersPerSecond) const;
-        auto StartTracking() const;
-        auto Pause() const;
-        auto Resume() const;
-        auto Stop() const;
-        auto RepeatLastAudioNotification() const;
-        [[nodiscard]] auto AudioMeasurementSystem() const;
-        auto AudioMeasurementSystem(Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem const& value) const;
-        [[nodiscard]] auto AudioNotifications() const;
-        auto AudioNotifications(Windows::Services::Maps::Guidance::GuidanceAudioNotifications const& value) const;
-        auto GuidanceUpdated(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) StartNavigating(Windows::Services::Maps::Guidance::GuidanceRoute const& route) const;
+        WINRT_IMPL_AUTO(void) StartSimulating(Windows::Services::Maps::Guidance::GuidanceRoute const& route, int32_t speedInMetersPerSecond) const;
+        WINRT_IMPL_AUTO(void) StartTracking() const;
+        WINRT_IMPL_AUTO(void) Pause() const;
+        WINRT_IMPL_AUTO(void) Resume() const;
+        WINRT_IMPL_AUTO(void) Stop() const;
+        WINRT_IMPL_AUTO(void) RepeatLastAudioNotification() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem) AudioMeasurementSystem() const;
+        WINRT_IMPL_AUTO(void) AudioMeasurementSystem(Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceAudioNotifications) AudioNotifications() const;
+        WINRT_IMPL_AUTO(void) AudioNotifications(Windows::Services::Maps::Guidance::GuidanceAudioNotifications const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) GuidanceUpdated(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs> const& handler) const;
         using GuidanceUpdated_revoker = impl::event_revoker<Windows::Services::Maps::Guidance::IGuidanceNavigator, &impl::abi_t<Windows::Services::Maps::Guidance::IGuidanceNavigator>::remove_GuidanceUpdated>;
-        GuidanceUpdated_revoker GuidanceUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs> const& handler) const;
-        auto GuidanceUpdated(winrt::event_token const& token) const noexcept;
-        auto DestinationReached(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] GuidanceUpdated_revoker GuidanceUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) GuidanceUpdated(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) DestinationReached(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
         using DestinationReached_revoker = impl::event_revoker<Windows::Services::Maps::Guidance::IGuidanceNavigator, &impl::abi_t<Windows::Services::Maps::Guidance::IGuidanceNavigator>::remove_DestinationReached>;
-        DestinationReached_revoker DestinationReached(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
-        auto DestinationReached(winrt::event_token const& token) const noexcept;
-        auto Rerouting(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] DestinationReached_revoker DestinationReached(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) DestinationReached(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Rerouting(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
         using Rerouting_revoker = impl::event_revoker<Windows::Services::Maps::Guidance::IGuidanceNavigator, &impl::abi_t<Windows::Services::Maps::Guidance::IGuidanceNavigator>::remove_Rerouting>;
-        Rerouting_revoker Rerouting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
-        auto Rerouting(winrt::event_token const& token) const noexcept;
-        auto Rerouted(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs> const& handler) const;
+        [[nodiscard]] Rerouting_revoker Rerouting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) Rerouting(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Rerouted(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs> const& handler) const;
         using Rerouted_revoker = impl::event_revoker<Windows::Services::Maps::Guidance::IGuidanceNavigator, &impl::abi_t<Windows::Services::Maps::Guidance::IGuidanceNavigator>::remove_Rerouted>;
-        Rerouted_revoker Rerouted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs> const& handler) const;
-        auto Rerouted(winrt::event_token const& token) const noexcept;
-        auto RerouteFailed(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] Rerouted_revoker Rerouted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Rerouted(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) RerouteFailed(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
         using RerouteFailed_revoker = impl::event_revoker<Windows::Services::Maps::Guidance::IGuidanceNavigator, &impl::abi_t<Windows::Services::Maps::Guidance::IGuidanceNavigator>::remove_RerouteFailed>;
-        RerouteFailed_revoker RerouteFailed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
-        auto RerouteFailed(winrt::event_token const& token) const noexcept;
-        auto UserLocationLost(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] RerouteFailed_revoker RerouteFailed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) RerouteFailed(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) UserLocationLost(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
         using UserLocationLost_revoker = impl::event_revoker<Windows::Services::Maps::Guidance::IGuidanceNavigator, &impl::abi_t<Windows::Services::Maps::Guidance::IGuidanceNavigator>::remove_UserLocationLost>;
-        UserLocationLost_revoker UserLocationLost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
-        auto UserLocationLost(winrt::event_token const& token) const noexcept;
-        auto UserLocationRestored(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] UserLocationLost_revoker UserLocationLost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) UserLocationLost(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) UserLocationRestored(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
         using UserLocationRestored_revoker = impl::event_revoker<Windows::Services::Maps::Guidance::IGuidanceNavigator, &impl::abi_t<Windows::Services::Maps::Guidance::IGuidanceNavigator>::remove_UserLocationRestored>;
-        UserLocationRestored_revoker UserLocationRestored(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
-        auto UserLocationRestored(winrt::event_token const& token) const noexcept;
-        auto SetGuidanceVoice(int32_t voiceId, param::hstring const& voiceFolder) const;
-        auto UpdateUserLocation(Windows::Devices::Geolocation::Geocoordinate const& userLocation) const;
-        auto UpdateUserLocation(Windows::Devices::Geolocation::Geocoordinate const& userLocation, Windows::Devices::Geolocation::BasicGeoposition const& positionOverride) const;
+        [[nodiscard]] UserLocationRestored_revoker UserLocationRestored(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) UserLocationRestored(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(void) SetGuidanceVoice(int32_t voiceId, param::hstring const& voiceFolder) const;
+        WINRT_IMPL_AUTO(void) UpdateUserLocation(Windows::Devices::Geolocation::Geocoordinate const& userLocation) const;
+        WINRT_IMPL_AUTO(void) UpdateUserLocation(Windows::Devices::Geolocation::Geocoordinate const& userLocation, Windows::Devices::Geolocation::BasicGeoposition const& positionOverride) const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceNavigator>
     {
@@ -852,12 +568,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceNavigator2
     {
-        auto AudioNotificationRequested(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs> const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) AudioNotificationRequested(Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs> const& value) const;
         using AudioNotificationRequested_revoker = impl::event_revoker<Windows::Services::Maps::Guidance::IGuidanceNavigator2, &impl::abi_t<Windows::Services::Maps::Guidance::IGuidanceNavigator2>::remove_AudioNotificationRequested>;
-        AudioNotificationRequested_revoker AudioNotificationRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs> const& value) const;
-        auto AudioNotificationRequested(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto IsGuidanceAudioMuted() const;
-        auto IsGuidanceAudioMuted(bool value) const;
+        [[nodiscard]] AudioNotificationRequested_revoker AudioNotificationRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::Maps::Guidance::GuidanceNavigator, Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs> const& value) const;
+        WINRT_IMPL_AUTO(void) AudioNotificationRequested(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsGuidanceAudioMuted() const;
+        WINRT_IMPL_AUTO(void) IsGuidanceAudioMuted(bool value) const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceNavigator2>
     {
@@ -866,7 +582,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceNavigatorStatics
     {
-        auto GetCurrent() const;
+        WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceNavigator) GetCurrent() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics>
     {
@@ -875,7 +591,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceNavigatorStatics2
     {
-        [[nodiscard]] auto UseAppProvidedVoice() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) UseAppProvidedVoice() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceNavigatorStatics2>
     {
@@ -884,7 +600,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceReroutedEventArgs
     {
-        [[nodiscard]] auto Route() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceRoute) Route() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceReroutedEventArgs>
     {
@@ -893,15 +609,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceRoadSegment
     {
-        [[nodiscard]] auto RoadName() const;
-        [[nodiscard]] auto ShortRoadName() const;
-        [[nodiscard]] auto SpeedLimit() const;
-        [[nodiscard]] auto TravelTime() const;
-        [[nodiscard]] auto Path() const;
-        [[nodiscard]] auto Id() const;
-        [[nodiscard]] auto IsHighway() const;
-        [[nodiscard]] auto IsTunnel() const;
-        [[nodiscard]] auto IsTollRoad() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RoadName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ShortRoadName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) SpeedLimit() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) TravelTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geopath) Path() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsHighway() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTunnel() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTollRoad() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceRoadSegment>
     {
@@ -910,7 +626,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceRoadSegment2
     {
-        [[nodiscard]] auto IsScenic() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsScenic() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceRoadSegment2>
     {
@@ -919,11 +635,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceRoadSignpost
     {
-        [[nodiscard]] auto ExitNumber() const;
-        [[nodiscard]] auto Exit() const;
-        [[nodiscard]] auto BackgroundColor() const;
-        [[nodiscard]] auto ForegroundColor() const;
-        [[nodiscard]] auto ExitDirections() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ExitNumber() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Exit() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) BackgroundColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) ForegroundColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) ExitDirections() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceRoadSignpost>
     {
@@ -932,13 +648,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceRoute
     {
-        [[nodiscard]] auto Duration() const;
-        [[nodiscard]] auto Distance() const;
-        [[nodiscard]] auto Maneuvers() const;
-        [[nodiscard]] auto BoundingBox() const;
-        [[nodiscard]] auto Path() const;
-        [[nodiscard]] auto RoadSegments() const;
-        auto ConvertToMapRoute() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) Duration() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Distance() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::Guidance::GuidanceManeuver>) Maneuvers() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::GeoboundingBox) BoundingBox() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geopath) Path() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::Guidance::GuidanceRoadSegment>) RoadSegments() const;
+        WINRT_IMPL_AUTO(Windows::Services::Maps::MapRoute) ConvertToMapRoute() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceRoute>
     {
@@ -947,8 +663,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceRouteStatics
     {
-        auto CanCreateFromMapRoute(Windows::Services::Maps::MapRoute const& mapRoute) const;
-        auto TryCreateFromMapRoute(Windows::Services::Maps::MapRoute const& mapRoute) const;
+        WINRT_IMPL_AUTO(bool) CanCreateFromMapRoute(Windows::Services::Maps::MapRoute const& mapRoute) const;
+        WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceRoute) TryCreateFromMapRoute(Windows::Services::Maps::MapRoute const& mapRoute) const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceRouteStatics>
     {
@@ -957,13 +673,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceTelemetryCollector
     {
-        [[nodiscard]] auto Enabled() const;
-        auto Enabled(bool value) const;
-        auto ClearLocalData() const;
-        [[nodiscard]] auto SpeedTrigger() const;
-        auto SpeedTrigger(double value) const;
-        [[nodiscard]] auto UploadFrequency() const;
-        auto UploadFrequency(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Enabled() const;
+        WINRT_IMPL_AUTO(void) Enabled(bool value) const;
+        WINRT_IMPL_AUTO(void) ClearLocalData() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) SpeedTrigger() const;
+        WINRT_IMPL_AUTO(void) SpeedTrigger(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) UploadFrequency() const;
+        WINRT_IMPL_AUTO(void) UploadFrequency(int32_t value) const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollector>
     {
@@ -972,7 +688,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceTelemetryCollectorStatics
     {
-        auto GetCurrent() const;
+        WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceTelemetryCollector) GetCurrent() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceTelemetryCollectorStatics>
     {
@@ -981,20 +697,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Services_Maps_Guidance_IGuidanceUpdatedEventArgs
     {
-        [[nodiscard]] auto Mode() const;
-        [[nodiscard]] auto NextManeuver() const;
-        [[nodiscard]] auto NextManeuverDistance() const;
-        [[nodiscard]] auto AfterNextManeuver() const;
-        [[nodiscard]] auto AfterNextManeuverDistance() const;
-        [[nodiscard]] auto DistanceToDestination() const;
-        [[nodiscard]] auto ElapsedDistance() const;
-        [[nodiscard]] auto ElapsedTime() const;
-        [[nodiscard]] auto TimeToDestination() const;
-        [[nodiscard]] auto RoadName() const;
-        [[nodiscard]] auto Route() const;
-        [[nodiscard]] auto CurrentLocation() const;
-        [[nodiscard]] auto IsNewManeuver() const;
-        [[nodiscard]] auto LaneInfo() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceMode) Mode() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceManeuver) NextManeuver() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) NextManeuverDistance() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceManeuver) AfterNextManeuver() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) AfterNextManeuverDistance() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) DistanceToDestination() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ElapsedDistance() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) ElapsedTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) TimeToDestination() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RoadName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceRoute) Route() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate) CurrentLocation() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsNewManeuver() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::Guidance::GuidanceLaneInfo>) LaneInfo() const;
     };
     template <> struct consume<Windows::Services::Maps::Guidance::IGuidanceUpdatedEventArgs>
     {

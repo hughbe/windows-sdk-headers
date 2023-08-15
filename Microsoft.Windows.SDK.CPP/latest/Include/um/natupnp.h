@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -174,28 +182,34 @@ EXTERN_C const IID IID_IUPnPNAT;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUPnPNAT * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUPnPNAT * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUPnPNAT * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUPnPNAT * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUPnPNAT * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUPnPNAT * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -204,6 +218,7 @@ EXTERN_C const IID IID_IUPnPNAT;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUPnPNAT * This,
             /* [annotation][in] */ 
@@ -223,14 +238,17 @@ EXTERN_C const IID IID_IUPnPNAT;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUPnPNAT, get_StaticPortMappingCollection)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_StaticPortMappingCollection )( 
             __RPC__in IUPnPNAT * This,
             /* [retval][out] */ __RPC__deref_out_opt IStaticPortMappingCollection **ppSPMs);
         
+        DECLSPEC_XFGVIRT(IUPnPNAT, get_DynamicPortMappingCollection)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DynamicPortMappingCollection )( 
             __RPC__in IUPnPNAT * This,
             /* [retval][out] */ __RPC__deref_out_opt IDynamicPortMappingCollection **ppDPMs);
         
+        DECLSPEC_XFGVIRT(IUPnPNAT, get_NATEventManager)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_NATEventManager )( 
             __RPC__in IUPnPNAT * This,
             /* [retval][out] */ __RPC__deref_out_opt INATEventManager **ppNEM);
@@ -321,28 +339,34 @@ EXTERN_C const IID IID_INATEventManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in INATEventManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in INATEventManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in INATEventManager * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in INATEventManager * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in INATEventManager * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in INATEventManager * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -351,6 +375,7 @@ EXTERN_C const IID IID_INATEventManager;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             INATEventManager * This,
             /* [annotation][in] */ 
@@ -370,10 +395,12 @@ EXTERN_C const IID IID_INATEventManager;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(INATEventManager, put_ExternalIPAddressCallback)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ExternalIPAddressCallback )( 
             __RPC__in INATEventManager * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnk);
         
+        DECLSPEC_XFGVIRT(INATEventManager, put_NumberOfEntriesCallback)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_NumberOfEntriesCallback )( 
             __RPC__in INATEventManager * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnk);
@@ -458,18 +485,22 @@ EXTERN_C const IID IID_INATExternalIPAddressCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in INATExternalIPAddressCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in INATExternalIPAddressCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in INATExternalIPAddressCallback * This);
         
+        DECLSPEC_XFGVIRT(INATExternalIPAddressCallback, NewExternalIPAddress)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *NewExternalIPAddress )( 
             __RPC__in INATExternalIPAddressCallback * This,
             /* [in] */ __RPC__in BSTR bstrNewExternalIPAddress);
@@ -538,18 +569,22 @@ EXTERN_C const IID IID_INATNumberOfEntriesCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in INATNumberOfEntriesCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in INATNumberOfEntriesCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in INATNumberOfEntriesCallback * This);
         
+        DECLSPEC_XFGVIRT(INATNumberOfEntriesCallback, NewNumberOfEntries)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *NewNumberOfEntries )( 
             __RPC__in INATNumberOfEntriesCallback * This,
             /* [in] */ long lNewNumberOfEntries);
@@ -643,28 +678,34 @@ EXTERN_C const IID IID_IDynamicPortMappingCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDynamicPortMappingCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDynamicPortMappingCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDynamicPortMappingCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IDynamicPortMappingCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IDynamicPortMappingCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IDynamicPortMappingCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -673,6 +714,7 @@ EXTERN_C const IID IID_IDynamicPortMappingCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDynamicPortMappingCollection * This,
             /* [annotation][in] */ 
@@ -692,10 +734,12 @@ EXTERN_C const IID IID_IDynamicPortMappingCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMappingCollection, get__NewEnum)
         /* [restricted][hidden][helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in IDynamicPortMappingCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMappingCollection, get_Item)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in IDynamicPortMappingCollection * This,
             /* [in] */ __RPC__in BSTR bstrRemoteHost,
@@ -703,16 +747,19 @@ EXTERN_C const IID IID_IDynamicPortMappingCollection;
             /* [in] */ __RPC__in BSTR bstrProtocol,
             /* [retval][out] */ __RPC__deref_out_opt IDynamicPortMapping **ppDPM);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMappingCollection, get_Count)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in IDynamicPortMappingCollection * This,
             /* [retval][out] */ __RPC__out long *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMappingCollection, Remove)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Remove )( 
             __RPC__in IDynamicPortMappingCollection * This,
             /* [in] */ __RPC__in BSTR bstrRemoteHost,
             /* [in] */ long lExternalPort,
             /* [in] */ __RPC__in BSTR bstrProtocol);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMappingCollection, Add)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Add )( 
             __RPC__in IDynamicPortMappingCollection * This,
             /* [in] */ __RPC__in BSTR bstrRemoteHost,
@@ -854,28 +901,34 @@ EXTERN_C const IID IID_IDynamicPortMapping;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDynamicPortMapping * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDynamicPortMapping * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDynamicPortMapping * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IDynamicPortMapping * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IDynamicPortMapping * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IDynamicPortMapping * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -884,6 +937,7 @@ EXTERN_C const IID IID_IDynamicPortMapping;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDynamicPortMapping * This,
             /* [annotation][in] */ 
@@ -903,59 +957,73 @@ EXTERN_C const IID IID_IDynamicPortMapping;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, get_ExternalIPAddress)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExternalIPAddress )( 
             __RPC__in IDynamicPortMapping * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, get_RemoteHost)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_RemoteHost )( 
             __RPC__in IDynamicPortMapping * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, get_ExternalPort)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExternalPort )( 
             __RPC__in IDynamicPortMapping * This,
             /* [retval][out] */ __RPC__out long *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, get_Protocol)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Protocol )( 
             __RPC__in IDynamicPortMapping * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, get_InternalPort)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_InternalPort )( 
             __RPC__in IDynamicPortMapping * This,
             /* [retval][out] */ __RPC__out long *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, get_InternalClient)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_InternalClient )( 
             __RPC__in IDynamicPortMapping * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, get_Enabled)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
             __RPC__in IDynamicPortMapping * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, get_Description)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IDynamicPortMapping * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, get_LeaseDuration)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LeaseDuration )( 
             __RPC__in IDynamicPortMapping * This,
             /* [retval][out] */ __RPC__out long *pVal);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, RenewLease)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RenewLease )( 
             __RPC__in IDynamicPortMapping * This,
             /* [in] */ long lLeaseDurationDesired,
             /* [retval][out] */ __RPC__out long *pLeaseDurationReturned);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, EditInternalClient)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EditInternalClient )( 
             __RPC__in IDynamicPortMapping * This,
             /* [in] */ __RPC__in BSTR bstrInternalClient);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, Enable)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Enable )( 
             __RPC__in IDynamicPortMapping * This,
             /* [in] */ VARIANT_BOOL vb);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, EditDescription)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EditDescription )( 
             __RPC__in IDynamicPortMapping * This,
             /* [in] */ __RPC__in BSTR bstrDescription);
         
+        DECLSPEC_XFGVIRT(IDynamicPortMapping, EditInternalPort)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EditInternalPort )( 
             __RPC__in IDynamicPortMapping * This,
             /* [in] */ long lInternalPort);
@@ -1097,28 +1165,34 @@ EXTERN_C const IID IID_IStaticPortMappingCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IStaticPortMappingCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IStaticPortMappingCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IStaticPortMappingCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IStaticPortMappingCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IStaticPortMappingCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IStaticPortMappingCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1127,6 +1201,7 @@ EXTERN_C const IID IID_IStaticPortMappingCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IStaticPortMappingCollection * This,
             /* [annotation][in] */ 
@@ -1146,25 +1221,30 @@ EXTERN_C const IID IID_IStaticPortMappingCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IStaticPortMappingCollection, get__NewEnum)
         /* [restricted][hidden][helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in IStaticPortMappingCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **pVal);
         
+        DECLSPEC_XFGVIRT(IStaticPortMappingCollection, get_Item)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in IStaticPortMappingCollection * This,
             /* [in] */ long lExternalPort,
             /* [in] */ __RPC__in BSTR bstrProtocol,
             /* [retval][out] */ __RPC__deref_out_opt IStaticPortMapping **ppSPM);
         
+        DECLSPEC_XFGVIRT(IStaticPortMappingCollection, get_Count)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in IStaticPortMappingCollection * This,
             /* [retval][out] */ __RPC__out long *pVal);
         
+        DECLSPEC_XFGVIRT(IStaticPortMappingCollection, Remove)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Remove )( 
             __RPC__in IStaticPortMappingCollection * This,
             /* [in] */ long lExternalPort,
             /* [in] */ __RPC__in BSTR bstrProtocol);
         
+        DECLSPEC_XFGVIRT(IStaticPortMappingCollection, Add)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Add )( 
             __RPC__in IStaticPortMappingCollection * This,
             /* [in] */ long lExternalPort,
@@ -1294,28 +1374,34 @@ EXTERN_C const IID IID_IStaticPortMapping;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IStaticPortMapping * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IStaticPortMapping * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IStaticPortMapping * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IStaticPortMapping * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IStaticPortMapping * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IStaticPortMapping * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1324,6 +1410,7 @@ EXTERN_C const IID IID_IStaticPortMapping;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IStaticPortMapping * This,
             /* [annotation][in] */ 
@@ -1343,46 +1430,57 @@ EXTERN_C const IID IID_IStaticPortMapping;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, get_ExternalIPAddress)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExternalIPAddress )( 
             __RPC__in IStaticPortMapping * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, get_ExternalPort)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExternalPort )( 
             __RPC__in IStaticPortMapping * This,
             /* [retval][out] */ __RPC__out long *pVal);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, get_InternalPort)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_InternalPort )( 
             __RPC__in IStaticPortMapping * This,
             /* [retval][out] */ __RPC__out long *pVal);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, get_Protocol)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Protocol )( 
             __RPC__in IStaticPortMapping * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, get_InternalClient)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_InternalClient )( 
             __RPC__in IStaticPortMapping * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, get_Enabled)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
             __RPC__in IStaticPortMapping * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *pVal);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, get_Description)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IStaticPortMapping * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, EditInternalClient)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EditInternalClient )( 
             __RPC__in IStaticPortMapping * This,
             /* [in] */ __RPC__in BSTR bstrInternalClient);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, Enable)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Enable )( 
             __RPC__in IStaticPortMapping * This,
             /* [in] */ VARIANT_BOOL vb);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, EditDescription)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EditDescription )( 
             __RPC__in IStaticPortMapping * This,
             /* [in] */ __RPC__in BSTR bstrDescription);
         
+        DECLSPEC_XFGVIRT(IStaticPortMapping, EditInternalPort)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EditInternalPort )( 
             __RPC__in IStaticPortMapping * This,
             /* [in] */ long lInternalPort);

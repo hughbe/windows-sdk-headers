@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_UI_Input_Inking_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.UI.Input.Inking.1.h"
-namespace winrt::Windows::UI::Input::Inking
+WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
 {
     struct __declspec(empty_bases) InkDrawingAttributes : Windows::UI::Input::Inking::IInkDrawingAttributes,
         impl::require<InkDrawingAttributes, Windows::UI::Input::Inking::IInkDrawingAttributes2, Windows::UI::Input::Inking::IInkDrawingAttributes3, Windows::UI::Input::Inking::IInkDrawingAttributes4, Windows::UI::Input::Inking::IInkDrawingAttributes5>
@@ -62,14 +62,14 @@ namespace winrt::Windows::UI::Input::Inking
     {
         InkPresenterProtractor(std::nullptr_t) noexcept {}
         InkPresenterProtractor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Inking::IInkPresenterProtractor(ptr, take_ownership_from_abi) {}
-        InkPresenterProtractor(Windows::UI::Input::Inking::InkPresenter const& inkPresenter);
+        explicit InkPresenterProtractor(Windows::UI::Input::Inking::InkPresenter const& inkPresenter);
     };
     struct __declspec(empty_bases) InkPresenterRuler : Windows::UI::Input::Inking::IInkPresenterRuler,
         impl::require<InkPresenterRuler, Windows::UI::Input::Inking::IInkPresenterRuler2>
     {
         InkPresenterRuler(std::nullptr_t) noexcept {}
         InkPresenterRuler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Inking::IInkPresenterRuler(ptr, take_ownership_from_abi) {}
-        InkPresenterRuler(Windows::UI::Input::Inking::InkPresenter const& inkPresenter);
+        explicit InkPresenterRuler(Windows::UI::Input::Inking::InkPresenter const& inkPresenter);
     };
     struct __declspec(empty_bases) InkRecognitionResult : Windows::UI::Input::Inking::IInkRecognitionResult
     {
@@ -141,7 +141,8 @@ namespace winrt::Windows::UI::Input::Inking
         InkUnprocessedInput(std::nullptr_t) noexcept {}
         InkUnprocessedInput(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Inking::IInkUnprocessedInput(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PenAndInkSettings : Windows::UI::Input::Inking::IPenAndInkSettings
+    struct __declspec(empty_bases) PenAndInkSettings : Windows::UI::Input::Inking::IPenAndInkSettings,
+        impl::require<PenAndInkSettings, Windows::UI::Input::Inking::IPenAndInkSettings2>
     {
         PenAndInkSettings(std::nullptr_t) noexcept {}
         PenAndInkSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Inking::IPenAndInkSettings(ptr, take_ownership_from_abi) {}

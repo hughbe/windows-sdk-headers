@@ -106,14 +106,14 @@ typedef struct _WTS_SOCKADDR {
         } ipv6;               
     } u;
 #endif
-} WTS_SOCKADDR, *PWTS_SOCKADDR;
+} _WTS_SOCKADDR, WTS_SOCKADDR, *PWTS_SOCKADDR;
 
 typedef struct _WTS_SMALL_RECT {  
     SHORT Left;  
     SHORT Top;  
     SHORT Right;  
     SHORT Bottom;
-} WTS_SMALL_RECT, *PWTS_SMALL_RECT;
+} _WTS_SMALL_RECT, WTS_SMALL_RECT, *PWTS_SMALL_RECT;
 
 // =================================================================
 //  Service State Change
@@ -133,18 +133,18 @@ typedef enum {
 typedef struct _WTS_SERVICE_STATE {
     WTS_RCM_SERVICE_STATE   RcmServiceState;
     WTS_RCM_DRAIN_STATE     RcmDrainState;
-} WTS_SERVICE_STATE, *PWTS_SERVICE_STATE;
+} _WTS_SERVICE_STATE, WTS_SERVICE_STATE, *PWTS_SERVICE_STATE;
 
 typedef struct _WTS_SESSION_ID {
     GUID    SessionUniqueGuid;
     ULONG   SessionId;
-} WTS_SESSION_ID, *PWTS_SESSION_ID;
+} _WTS_SESSION_ID, WTS_SESSION_ID, *PWTS_SESSION_ID;
 
 typedef struct _WTS_USER_CREDENTIAL {
     WCHAR   UserName[ WTS_USERNAME_LENGTH + 1 ];
     WCHAR   Password[ WTS_PASSWORD_LENGTH + 1 ];
     WCHAR   Domain[ WTS_DOMAIN_LENGTH + 1 ];
-} WTS_USER_CREDENTIAL, *PWTS_USER_CREDENTIAL;
+} _WTS_USER_CREDENTIAL, WTS_USER_CREDENTIAL, *PWTS_USER_CREDENTIAL;
 
 
 /* -------------------------------------------------------------------
@@ -159,7 +159,7 @@ typedef struct _WTS_SYSTEMTIME {
     USHORT wMinute;
     USHORT wSecond;
     USHORT wMilliseconds;
-} WTS_SYSTEMTIME, *PWTS_SYSTEMTIME;
+} _WTS_SYSTEMTIME, WTS_SYSTEMTIME, *PWTS_SYSTEMTIME;
 
 typedef struct _WTS_TIME_ZONE_INFORMATION {
     LONG Bias;
@@ -169,7 +169,7 @@ typedef struct _WTS_TIME_ZONE_INFORMATION {
     WCHAR DaylightName[ 32 ];
     WTS_SYSTEMTIME DaylightDate;
     LONG DaylightBias;
-} WTS_TIME_ZONE_INFORMATION, *PWTS_TIME_ZONE_INFORMATION;
+} _WTS_TIME_ZONE_INFORMATION, WTS_TIME_ZONE_INFORMATION, *PWTS_TIME_ZONE_INFORMATION;
 
 typedef struct _WRDS_DYNAMIC_TIME_ZONE_INFORMATION {
     LONG Bias;
@@ -358,7 +358,7 @@ typedef struct _WTS_CLIENT_DATA {
 
     // Disable PNP redirection
     BOOLEAN fDisablePNP;
-} WTS_CLIENT_DATA, *PWTS_CLIENT_DATA;
+} _WTS_CLIENT_DATA, WTS_CLIENT_DATA, *PWTS_CLIENT_DATA;
 
 typedef struct _WTS_USER_DATA {
   
@@ -427,7 +427,7 @@ typedef struct _WTS_POLICY_DATA {
 typedef struct _WTS_PROTOCOL_CACHE {
     ULONG CacheReads;
     ULONG CacheHits;
-} WTS_PROTOCOL_CACHE, *PWTS_PROTOCOL_CACHE;
+} _WTS_PROTOCOL_CACHE, WTS_PROTOCOL_CACHE, *PWTS_PROTOCOL_CACHE;
 
 // Union of Protocol cache, TShare Cache and Reserved stats
 //
@@ -439,7 +439,7 @@ typedef [switch_type(DWORD)] union _WTS_CACHE_STATS_UN {
         ULONG TShareCacheStats;
     [case(3)]
         ULONG Reserved[ WTS_MAX_CACHE_RESERVED ];    // Protocol specific Reserved data
-} WTS_CACHE_STATS_UN, *PWTS_CACHE_STATS_UN;
+} _WTS_CACHE_STATS_UN, WTS_CACHE_STATS_UN, *PWTS_CACHE_STATS_UN;
 
 // Cache Statistics
 //
@@ -448,13 +448,13 @@ typedef struct _WTS_CACHE_STATS {
     [switch_is(Specific)] WTS_CACHE_STATS_UN Data;
     USHORT ProtocolType;        // Protocol Type
     USHORT Length;              // Length of Data
-} WTS_CACHE_STATS, *PWTS_CACHE_STATS;
+} _WTS_CACHE_STATS, WTS_CACHE_STATS, *PWTS_CACHE_STATS;
 #else
 typedef union _WTS_CACHE_STATS_UN {
     WTS_PROTOCOL_CACHE ProtocolCache[ WTS_MAX_PROTOCOL_CACHE ];  
     ULONG TShareCacheStats;
     ULONG Reserved[ WTS_MAX_CACHE_RESERVED ];    // Protocol specific Reserved data
-} WTS_CACHE_STATS_UN, *PWTS_CACHE_STATS_UN;
+} _WTS_CACHE_STATS_UN, WTS_CACHE_STATS_UN, *PWTS_CACHE_STATS_UN;
 
 // Cache Statistics
 //
@@ -463,7 +463,7 @@ typedef struct _WTS_CACHE_STATS {
     WTS_CACHE_STATS_UN Data;
     USHORT ProtocolType;        // Protocol Type
     USHORT Length;              // Length of Data
-} WTS_CACHE_STATS, *PWTS_CACHE_STATS;
+} _WTS_CACHE_STATS, WTS_CACHE_STATS, *PWTS_CACHE_STATS;
 #endif
 
 // Protocol Counters Data
@@ -487,7 +487,7 @@ typedef struct _WTS_PROTOCOL_COUNTERS {
     USHORT Length;              // Length of Reserved
     USHORT Specific;            // Specifies type of Reserved
     ULONG Reserved[ WTS_MAX_RESERVED ];        
-} WTS_PROTOCOL_COUNTERS, * PWTS_PROTOCOL_COUNTERS;
+} _WTS_PROTOCOL_COUNTERS, WTS_PROTOCOL_COUNTERS, * PWTS_PROTOCOL_COUNTERS;
 
 // Protocol Status
 //
@@ -498,13 +498,13 @@ typedef struct _WTS_PROTOCOL_STATUS {
     ULONG AsyncSignal;                  // MS_CTS_ON, MS_DSR_ON, etc...
     ULONG AsyncSignalMask;              // EV_CTS, EV_DSR, etc...
     LARGE_INTEGER  Counters[ WTS_MAX_COUNTERS ];      
-} WTS_PROTOCOL_STATUS, * PWTS_PROTOCOL_STATUS;
+} _WTS_PROTOCOL_STATUS, WTS_PROTOCOL_STATUS, * PWTS_PROTOCOL_STATUS;
 
 // Display IOCTL data
 typedef struct _WTS_DISPLAY_IOCTL {
     BYTE  pDisplayIOCtlData[ WTS_MAX_DISPLAY_IOCTL_DATA ];
     ULONG cbDisplayIOCtlData;
-} WTS_DISPLAY_IOCTL, * PWTS_DISPLAY_IOCTL;
+} _WTS_DISPLAY_IOCTL, WTS_DISPLAY_IOCTL, * PWTS_DISPLAY_IOCTL;
 
 /* -------------------------------------------------------------------
  * LogonUI Error Redirector Response
@@ -584,7 +584,7 @@ typedef struct __WTS_PROPERTY_VALUE
         GUID guidVal;               
     } u;
 #endif
-} WTS_PROPERTY_VALUE, *PWTS_PROPERTY_VALUE;
+} __WTS_PROPERTY_VALUE, WTS_PROPERTY_VALUE, *PWTS_PROPERTY_VALUE;
 
 #ifndef __midl
 
@@ -787,16 +787,50 @@ EXTERN_C const __declspec(selectany) GUID PROPERTY_DYNAMIC_TIME_ZONE_INFORMATION
 
 // ************** PROPERTY_GET_FAST_RECONNECT ******************
 // 
-// This is used to get whether fast reconnect should work or not based on the stack
+// This is used to get what type of fast reconnect (if any) should be used based on the stack
 // 
 // There are no inputs to this query.
 //
 // Output to this query - It passes 1 WTS_PROPERTY_VALUE structure. Protocol needs to set it to:
 //          pPropertyEntriesOut[0].Type = WTS_VALUE_TYPE_ULONG;
-//          pPropertyEntriesOut[0].u.strVal.pstrVal = (0 = Don't do fast reconnect, 1 = Do fast reconnect)
+//          pPropertyEntriesOut[0].u.ulVal = (0 = Don't do fast reconnect, 1 = Basic Fast Reconnect, 2 = Enhanced Fast reconnect)
 //
 EXTERN_C const _declspec(selectany) GUID PROPERTY_TYPE_GET_FAST_RECONNECT = /* 6212d757-0043-4862-99c3-9f3059ac2a3b*/
 { 0x6212d757, 0x0043, 0x4862,{ 0x99, 0xc3, 0x9f, 0x30, 0x59, 0xac, 0x2a, 0x3b } };
+
+
+// ************************************************************************
+
+// ************** PROPERTY_TYPE_GET_FAST_RECONNECT_USER_SID ******************
+// 
+// This is used to get the User SID that should be used to filter for sessions to fast reconnect to.
+// This is used only in the case of Enhanced Fast Reconnect
+// 
+// There are no inputs to this query.
+//
+// Output to this query - It passes 1 WTS_PROPERTY_VALUE structure. Protocol needs to set it to:
+//          pPropertyEntriesOut[0].Type = WTS_VALUE_TYPE_STRING;
+//          pPropertyEntriesOut[0].u.strVal.pstrVal = User SID to be used as filter
+//          pPropertyEntriesOut[0].u.strVal.size = Length of User SID
+//
+EXTERN_C const _declspec(selectany) GUID PROPERTY_TYPE_GET_FAST_RECONNECT_USER_SID = /* 197c427a-0135-4b6d-9c5e-e6579a0ab625*/
+{ 0x197c427a, 0x0135, 0x4b6d,{ 0x9c, 0x5e, 0xe6, 0x57, 0x9a, 0x0a, 0xb6, 0x25 } };
+
+
+// ************************************************************************
+
+// ************** PROPERTY_TYPE_ENABLE_UNIVERSAL_APPS_FOR_CUSTOM_SHELL ******************
+// 
+// This is used to get whether Universal Apps should be enabled or not for Custom shells based on the stack
+// 
+// There are no inputs to this query.
+//
+// Output to this query - It passes 1 WTS_PROPERTY_VALUE structure. Protocol needs to set it to:
+//          pPropertyEntriesOut[0].Type = WTS_VALUE_TYPE_ULONG;
+//          pPropertyEntriesOut[0].u.ulVal = (0 = Don't enable Universal Apps for Custom Shell, 1 = Enable Universal Apps for Custom Shell)
+//
+EXTERN_C const _declspec(selectany) GUID PROPERTY_TYPE_ENABLE_UNIVERSAL_APPS_FOR_CUSTOM_SHELL = /* ed2c3fda-338d-4d3f-81a3-e767310d908e*/
+{ 0xed2c3fda, 0x338d, 0x4d3f,{ 0x81, 0xa3, 0xe7, 0x67, 0x31, 0x0d, 0x90, 0x8e } };
 
 #endif
 
@@ -887,7 +921,7 @@ typedef struct _WTS_LICENSE_CAPABILITIES
     DWORD           cbClientName;
     BYTE            rgbClientName[WTS_LICENSE_CLIENT_NAME_BYTE_LENGTH];
 
-} WTS_LICENSE_CAPABILITIES, *PWTS_LICENSE_CAPABILITIES;
+} _WTS_LICENSE_CAPABILITIES, WTS_LICENSE_CAPABILITIES, *PWTS_LICENSE_CAPABILITIES;
 
 //
 //  Defining all above WTSxxx as WRDSxxx for use in IWRdsXXX

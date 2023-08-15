@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Foundation_Collections_2_H
 #define WINRT_Windows_Foundation_Collections_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename K, typename V>
     struct MapChangedEventHandler : Windows::Foundation::IUnknown

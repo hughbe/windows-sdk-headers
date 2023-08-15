@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Security_DataProtection_2_H
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Security.DataProtection.1.h"
-namespace winrt::Windows::Security::DataProtection
+WINRT_EXPORT namespace winrt::Windows::Security::DataProtection
 {
     struct __declspec(empty_bases) UserDataAvailabilityStateChangedEventArgs : Windows::Security::DataProtection::IUserDataAvailabilityStateChangedEventArgs
     {

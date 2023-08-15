@@ -1246,8 +1246,9 @@ StackWalk64(
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
-#define SYM_STKWALK_DEFAULT        0x00000000
-#define SYM_STKWALK_FORCE_FRAMEPTR 0x00000001
+#define SYM_STKWALK_DEFAULT         0x00000000
+#define SYM_STKWALK_FORCE_FRAMEPTR  0x00000001
+#define SYM_STKWALK_ZEROEXTEND_PTRS 0x00000002
 BOOL
 IMAGEAPI
 StackWalkEx(
@@ -1563,6 +1564,8 @@ enum SymTagEnum
 #define SYMFLAG_SYNTHETIC_ZEROBASE  0x00200000
 #define SYMFLAG_PUBLIC_CODE         0x00400000
 #define SYMFLAG_REGREL_ALIASINDIR   0x00800000
+#define SYMFLAG_FIXUP_ARM64X        0x01000000
+#define SYMFLAG_GLOBAL              0x02000000
 
 // this resets SymNext/Prev to the beginning
 // of the module passed in the address field
@@ -1848,6 +1851,7 @@ typedef struct _SOURCEFILEW {
 #define CBA_CHECK_ENGOPT_DISALLOW_NETWORK_PATHS 0x70000000
 #define CBA_CHECK_ARM_MACHINE_THUMB_TYPE_OVERRIDE 0x80000000
 #define CBA_XML_LOG                             0x90000000
+#define CBA_MAP_JIT_SYMBOL                      0xA0000000
 
 
 typedef struct _IMAGEHLP_CBA_READ_MEMORY {
@@ -1945,6 +1949,12 @@ typedef struct _IMAGEHLP_DUPLICATE_SYMBOL {
     DWORD            SelectedSymbol;         // symbol selected (-1 to start)
 } IMAGEHLP_DUPLICATE_SYMBOL, *PIMAGEHLP_DUPLICATE_SYMBOL;
 #endif
+
+typedef struct _IMAGEHLP_JIT_SYMBOL_MAP {
+    DWORD            SizeOfStruct;           // set to sizeof(IMAGEHLP_JIT_SYMBOL_MAP)
+    DWORD64          Address;                // address to map to JIT association with an image
+    DWORD64          BaseOfImage;            // base load address (0 == unmapped)
+} IMAGEHLP_JIT_SYMBOLMAP, *PIMAGEHLP_JIT_SYMBOLMAP;
 
 // If dbghelp ever needs to display graphical UI, it will use this as the parent window.
 
@@ -2060,6 +2070,8 @@ SymGetOmaps(
 typedef enum {
     SYMOPT_EX_DISABLEACCESSTIMEUPDATE, // Disable File Last Access Time on Symbols
     SYMOPT_EX_LASTVALIDDEBUGDIRECTORY, // For entries with multiple debug directories: prefer the last to the first
+    SYMOPT_EX_NOIMPLICITPATTERNSEARCH, // For SymEnum* APIs: never implicitly run a pattern search without explicit pattern characters
+    SYMOPT_EX_NEVERLOADSYMBOLS,        // Never try to load and parse symbols 
     SYMOPT_EX_MAX                      // Unused
 } IMAGEHLP_EXTENDED_OPTIONS;
 
@@ -4040,7 +4052,7 @@ typedef BOOL (WINAPI *PSYMBOLSERVERSETHTTPAUTHHEADER)(_In_ PCWSTR pszAuthHeader)
 #define SSRVACTION_XMLOUTPUT        7
 #define SSRVACTION_CHECKSUMSTATUS   8
 
-#endif WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
+#endif // WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 #pragma endregion
 
 #pragma region Application Family or OneCore Family or Games Family
@@ -4159,7 +4171,7 @@ typedef BOOL (WINAPI *PSYMBOLSERVERSETHTTPAUTHHEADER)(_In_ PCWSTR pszAuthHeader)
  #define PSYMBOLSERVERPINGPROC             PSYMBOLSERVERPINGPROCW
 
 #pragma endregion
-#endif WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
+#endif // WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS)
 
 
 // -----------------------------------------------------------------
@@ -4450,6 +4462,7 @@ RangeMapFree(
 #define IMAGEHLP_RMAP_BIG_ENDIAN                    0x00000002
 #define IMAGEHLP_RMAP_IGNORE_MISCOMPARE             0x00000004
 
+#define IMAGEHLP_RMAP_FIXUP_ARM64X                  0x10000000
 #define IMAGEHLP_RMAP_LOAD_RW_DATA_SECTIONS         0x20000000
 #define IMAGEHLP_RMAP_OMIT_SHARED_RW_DATA_SECTIONS  0x40000000
 #define IMAGEHLP_RMAP_FIXUP_IMAGEBASE               0x80000000

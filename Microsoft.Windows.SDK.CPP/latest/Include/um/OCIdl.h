@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -499,31 +507,38 @@ EXTERN_C const IID IID_IEnumConnections;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumConnections * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumConnections * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumConnections * This);
         
+        DECLSPEC_XFGVIRT(IEnumConnections, Next)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Next )( 
             IEnumConnections * This,
             /* [in] */ ULONG cConnections,
             /* [length_is][size_is][out] */ LPCONNECTDATA rgcd,
             /* [out] */ ULONG *pcFetched);
         
+        DECLSPEC_XFGVIRT(IEnumConnections, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumConnections * This,
             /* [in] */ ULONG cConnections);
         
+        DECLSPEC_XFGVIRT(IEnumConnections, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumConnections * This);
         
+        DECLSPEC_XFGVIRT(IEnumConnections, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumConnections * This,
             /* [out] */ __RPC__deref_out_opt IEnumConnections **ppEnum);
@@ -632,35 +647,43 @@ EXTERN_C const IID IID_IConnectionPoint;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IConnectionPoint * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IConnectionPoint * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IConnectionPoint * This);
         
+        DECLSPEC_XFGVIRT(IConnectionPoint, GetConnectionInterface)
         HRESULT ( STDMETHODCALLTYPE *GetConnectionInterface )( 
             __RPC__in IConnectionPoint * This,
             /* [out] */ __RPC__out IID *pIID);
         
+        DECLSPEC_XFGVIRT(IConnectionPoint, GetConnectionPointContainer)
         HRESULT ( STDMETHODCALLTYPE *GetConnectionPointContainer )( 
             __RPC__in IConnectionPoint * This,
             /* [out] */ __RPC__deref_out_opt IConnectionPointContainer **ppCPC);
         
+        DECLSPEC_XFGVIRT(IConnectionPoint, Advise)
         HRESULT ( STDMETHODCALLTYPE *Advise )( 
             __RPC__in IConnectionPoint * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnkSink,
             /* [out] */ __RPC__out DWORD *pdwCookie);
         
+        DECLSPEC_XFGVIRT(IConnectionPoint, Unadvise)
         HRESULT ( STDMETHODCALLTYPE *Unadvise )( 
             __RPC__in IConnectionPoint * This,
             /* [in] */ DWORD dwCookie);
         
+        DECLSPEC_XFGVIRT(IConnectionPoint, EnumConnections)
         HRESULT ( STDMETHODCALLTYPE *EnumConnections )( 
             __RPC__in IConnectionPoint * This,
             /* [out] */ __RPC__deref_out_opt IEnumConnections **ppEnum);
@@ -755,31 +778,38 @@ EXTERN_C const IID IID_IEnumConnectionPoints;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumConnectionPoints * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumConnectionPoints * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumConnectionPoints * This);
         
+        DECLSPEC_XFGVIRT(IEnumConnectionPoints, Next)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Next )( 
             IEnumConnectionPoints * This,
             /* [in] */ ULONG cConnections,
             /* [length_is][size_is][out] */ LPCONNECTIONPOINT *ppCP,
             /* [out] */ ULONG *pcFetched);
         
+        DECLSPEC_XFGVIRT(IEnumConnectionPoints, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumConnectionPoints * This,
             /* [in] */ ULONG cConnections);
         
+        DECLSPEC_XFGVIRT(IEnumConnectionPoints, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumConnectionPoints * This);
         
+        DECLSPEC_XFGVIRT(IEnumConnectionPoints, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumConnectionPoints * This,
             /* [out] */ __RPC__deref_out_opt IEnumConnectionPoints **ppEnum);
@@ -879,22 +909,27 @@ EXTERN_C const IID IID_IConnectionPointContainer;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IConnectionPointContainer * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IConnectionPointContainer * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IConnectionPointContainer * This);
         
+        DECLSPEC_XFGVIRT(IConnectionPointContainer, EnumConnectionPoints)
         HRESULT ( STDMETHODCALLTYPE *EnumConnectionPoints )( 
             __RPC__in IConnectionPointContainer * This,
             /* [out] */ __RPC__deref_out_opt IEnumConnectionPoints **ppEnum);
         
+        DECLSPEC_XFGVIRT(IConnectionPointContainer, FindConnectionPoint)
         HRESULT ( STDMETHODCALLTYPE *FindConnectionPoint )( 
             __RPC__in IConnectionPointContainer * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1006,18 +1041,22 @@ EXTERN_C const IID IID_IClassFactory2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IClassFactory2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IClassFactory2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IClassFactory2 * This);
         
+        DECLSPEC_XFGVIRT(IClassFactory, CreateInstance)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *CreateInstance )( 
             IClassFactory2 * This,
             /* [annotation][unique][in] */ 
@@ -1027,19 +1066,23 @@ EXTERN_C const IID IID_IClassFactory2;
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IClassFactory, LockServer)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *LockServer )( 
             IClassFactory2 * This,
             /* [in] */ BOOL fLock);
         
+        DECLSPEC_XFGVIRT(IClassFactory2, GetLicInfo)
         HRESULT ( STDMETHODCALLTYPE *GetLicInfo )( 
             __RPC__in IClassFactory2 * This,
             /* [out][in] */ __RPC__inout LICINFO *pLicInfo);
         
+        DECLSPEC_XFGVIRT(IClassFactory2, RequestLicKey)
         HRESULT ( STDMETHODCALLTYPE *RequestLicKey )( 
             __RPC__in IClassFactory2 * This,
             /* [in] */ DWORD dwReserved,
             /* [out] */ __RPC__deref_out_opt BSTR *pBstrKey);
         
+        DECLSPEC_XFGVIRT(IClassFactory2, CreateInstanceLic)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *CreateInstanceLic )( 
             IClassFactory2 * This,
             /* [annotation][in] */ 
@@ -1146,18 +1189,22 @@ EXTERN_C const IID IID_IProvideClassInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IProvideClassInfo * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IProvideClassInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IProvideClassInfo * This);
         
+        DECLSPEC_XFGVIRT(IProvideClassInfo, GetClassInfo)
         HRESULT ( STDMETHODCALLTYPE *GetClassInfo )( 
             __RPC__in IProvideClassInfo * This,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTI);
@@ -1235,22 +1282,27 @@ EXTERN_C const IID IID_IProvideClassInfo2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IProvideClassInfo2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IProvideClassInfo2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IProvideClassInfo2 * This);
         
+        DECLSPEC_XFGVIRT(IProvideClassInfo, GetClassInfo)
         HRESULT ( STDMETHODCALLTYPE *GetClassInfo )( 
             __RPC__in IProvideClassInfo2 * This,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTI);
         
+        DECLSPEC_XFGVIRT(IProvideClassInfo2, GetGUID)
         HRESULT ( STDMETHODCALLTYPE *GetGUID )( 
             __RPC__in IProvideClassInfo2 * This,
             /* [in] */ DWORD dwGuidKind,
@@ -1340,31 +1392,38 @@ EXTERN_C const IID IID_IProvideMultipleClassInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IProvideMultipleClassInfo * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IProvideMultipleClassInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IProvideMultipleClassInfo * This);
         
+        DECLSPEC_XFGVIRT(IProvideClassInfo, GetClassInfo)
         HRESULT ( STDMETHODCALLTYPE *GetClassInfo )( 
             __RPC__in IProvideMultipleClassInfo * This,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTI);
         
+        DECLSPEC_XFGVIRT(IProvideClassInfo2, GetGUID)
         HRESULT ( STDMETHODCALLTYPE *GetGUID )( 
             __RPC__in IProvideMultipleClassInfo * This,
             /* [in] */ DWORD dwGuidKind,
             /* [out] */ __RPC__out GUID *pGUID);
         
+        DECLSPEC_XFGVIRT(IProvideMultipleClassInfo, GetMultiTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetMultiTypeInfoCount )( 
             __RPC__in IProvideMultipleClassInfo * This,
             /* [out] */ __RPC__out ULONG *pcti);
         
+        DECLSPEC_XFGVIRT(IProvideMultipleClassInfo, GetInfoOfIndex)
         HRESULT ( STDMETHODCALLTYPE *GetInfoOfIndex )( 
             __RPC__in IProvideMultipleClassInfo * This,
             /* [in] */ ULONG iti,
@@ -1478,30 +1537,37 @@ EXTERN_C const IID IID_IOleControl;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOleControl * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOleControl * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOleControl * This);
         
+        DECLSPEC_XFGVIRT(IOleControl, GetControlInfo)
         HRESULT ( STDMETHODCALLTYPE *GetControlInfo )( 
             __RPC__in IOleControl * This,
             /* [out][in] */ __RPC__inout CONTROLINFO *pCI);
         
+        DECLSPEC_XFGVIRT(IOleControl, OnMnemonic)
         HRESULT ( STDMETHODCALLTYPE *OnMnemonic )( 
             __RPC__in IOleControl * This,
             /* [in] */ __RPC__in MSG *pMsg);
         
+        DECLSPEC_XFGVIRT(IOleControl, OnAmbientPropertyChange)
         HRESULT ( STDMETHODCALLTYPE *OnAmbientPropertyChange )( 
             __RPC__in IOleControl * This,
             /* [in] */ DISPID dispID);
         
+        DECLSPEC_XFGVIRT(IOleControl, FreezeEvents)
         HRESULT ( STDMETHODCALLTYPE *FreezeEvents )( 
             __RPC__in IOleControl * This,
             /* [in] */ BOOL bFreeze);
@@ -1618,44 +1684,54 @@ EXTERN_C const IID IID_IOleControlSite;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOleControlSite * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOleControlSite * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOleControlSite * This);
         
+        DECLSPEC_XFGVIRT(IOleControlSite, OnControlInfoChanged)
         HRESULT ( STDMETHODCALLTYPE *OnControlInfoChanged )( 
             __RPC__in IOleControlSite * This);
         
+        DECLSPEC_XFGVIRT(IOleControlSite, LockInPlaceActive)
         HRESULT ( STDMETHODCALLTYPE *LockInPlaceActive )( 
             __RPC__in IOleControlSite * This,
             /* [in] */ BOOL fLock);
         
+        DECLSPEC_XFGVIRT(IOleControlSite, GetExtendedControl)
         HRESULT ( STDMETHODCALLTYPE *GetExtendedControl )( 
             __RPC__in IOleControlSite * This,
             /* [out] */ __RPC__deref_out_opt IDispatch **ppDisp);
         
+        DECLSPEC_XFGVIRT(IOleControlSite, TransformCoords)
         HRESULT ( STDMETHODCALLTYPE *TransformCoords )( 
             __RPC__in IOleControlSite * This,
             /* [out][in] */ __RPC__inout POINTL *pPtlHimetric,
             /* [out][in] */ __RPC__inout POINTF *pPtfContainer,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IOleControlSite, TranslateAccelerator)
         HRESULT ( STDMETHODCALLTYPE *TranslateAccelerator )( 
             __RPC__in IOleControlSite * This,
             /* [in] */ __RPC__in MSG *pMsg,
             /* [in] */ DWORD grfModifiers);
         
+        DECLSPEC_XFGVIRT(IOleControlSite, OnFocus)
         HRESULT ( STDMETHODCALLTYPE *OnFocus )( 
             __RPC__in IOleControlSite * This,
             /* [in] */ BOOL fGotFocus);
         
+        DECLSPEC_XFGVIRT(IOleControlSite, ShowPropertyFrame)
         HRESULT ( STDMETHODCALLTYPE *ShowPropertyFrame )( 
             __RPC__in IOleControlSite * This);
         
@@ -1785,58 +1861,72 @@ EXTERN_C const IID IID_IPropertyPage;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPropertyPage * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPropertyPage * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPropertyPage * This);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, SetPageSite)
         HRESULT ( STDMETHODCALLTYPE *SetPageSite )( 
             __RPC__in IPropertyPage * This,
             /* [in] */ __RPC__in_opt IPropertyPageSite *pPageSite);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Activate)
         HRESULT ( STDMETHODCALLTYPE *Activate )( 
             __RPC__in IPropertyPage * This,
             /* [in] */ __RPC__in HWND hWndParent,
             /* [in] */ __RPC__in LPCRECT pRect,
             /* [in] */ BOOL bModal);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Deactivate)
         HRESULT ( STDMETHODCALLTYPE *Deactivate )( 
             __RPC__in IPropertyPage * This);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, GetPageInfo)
         HRESULT ( STDMETHODCALLTYPE *GetPageInfo )( 
             __RPC__in IPropertyPage * This,
             /* [out] */ __RPC__out PROPPAGEINFO *pPageInfo);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, SetObjects)
         HRESULT ( STDMETHODCALLTYPE *SetObjects )( 
             __RPC__in IPropertyPage * This,
             /* [in] */ ULONG cObjects,
             /* [size_is][in] */ __RPC__in_ecount_full(cObjects) IUnknown **ppUnk);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Show)
         HRESULT ( STDMETHODCALLTYPE *Show )( 
             __RPC__in IPropertyPage * This,
             /* [in] */ UINT nCmdShow);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Move)
         HRESULT ( STDMETHODCALLTYPE *Move )( 
             __RPC__in IPropertyPage * This,
             /* [in] */ __RPC__in LPCRECT pRect);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, IsPageDirty)
         HRESULT ( STDMETHODCALLTYPE *IsPageDirty )( 
             __RPC__in IPropertyPage * This);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Apply)
         HRESULT ( STDMETHODCALLTYPE *Apply )( 
             __RPC__in IPropertyPage * This);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Help)
         HRESULT ( STDMETHODCALLTYPE *Help )( 
             __RPC__in IPropertyPage * This,
             /* [in] */ __RPC__in LPCOLESTR pszHelpDir);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, TranslateAccelerator)
         HRESULT ( STDMETHODCALLTYPE *TranslateAccelerator )( 
             __RPC__in IPropertyPage * This,
             /* [in] */ __RPC__in MSG *pMsg);
@@ -1937,62 +2027,77 @@ EXTERN_C const IID IID_IPropertyPage2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPropertyPage2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPropertyPage2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPropertyPage2 * This);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, SetPageSite)
         HRESULT ( STDMETHODCALLTYPE *SetPageSite )( 
             __RPC__in IPropertyPage2 * This,
             /* [in] */ __RPC__in_opt IPropertyPageSite *pPageSite);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Activate)
         HRESULT ( STDMETHODCALLTYPE *Activate )( 
             __RPC__in IPropertyPage2 * This,
             /* [in] */ __RPC__in HWND hWndParent,
             /* [in] */ __RPC__in LPCRECT pRect,
             /* [in] */ BOOL bModal);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Deactivate)
         HRESULT ( STDMETHODCALLTYPE *Deactivate )( 
             __RPC__in IPropertyPage2 * This);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, GetPageInfo)
         HRESULT ( STDMETHODCALLTYPE *GetPageInfo )( 
             __RPC__in IPropertyPage2 * This,
             /* [out] */ __RPC__out PROPPAGEINFO *pPageInfo);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, SetObjects)
         HRESULT ( STDMETHODCALLTYPE *SetObjects )( 
             __RPC__in IPropertyPage2 * This,
             /* [in] */ ULONG cObjects,
             /* [size_is][in] */ __RPC__in_ecount_full(cObjects) IUnknown **ppUnk);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Show)
         HRESULT ( STDMETHODCALLTYPE *Show )( 
             __RPC__in IPropertyPage2 * This,
             /* [in] */ UINT nCmdShow);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Move)
         HRESULT ( STDMETHODCALLTYPE *Move )( 
             __RPC__in IPropertyPage2 * This,
             /* [in] */ __RPC__in LPCRECT pRect);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, IsPageDirty)
         HRESULT ( STDMETHODCALLTYPE *IsPageDirty )( 
             __RPC__in IPropertyPage2 * This);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Apply)
         HRESULT ( STDMETHODCALLTYPE *Apply )( 
             __RPC__in IPropertyPage2 * This);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, Help)
         HRESULT ( STDMETHODCALLTYPE *Help )( 
             __RPC__in IPropertyPage2 * This,
             /* [in] */ __RPC__in LPCOLESTR pszHelpDir);
         
+        DECLSPEC_XFGVIRT(IPropertyPage, TranslateAccelerator)
         HRESULT ( STDMETHODCALLTYPE *TranslateAccelerator )( 
             __RPC__in IPropertyPage2 * This,
             /* [in] */ __RPC__in MSG *pMsg);
         
+        DECLSPEC_XFGVIRT(IPropertyPage2, EditProperty)
         HRESULT ( STDMETHODCALLTYPE *EditProperty )( 
             __RPC__in IPropertyPage2 * This,
             /* [in] */ DISPID dispID);
@@ -2114,30 +2219,37 @@ EXTERN_C const IID IID_IPropertyPageSite;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPropertyPageSite * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPropertyPageSite * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPropertyPageSite * This);
         
+        DECLSPEC_XFGVIRT(IPropertyPageSite, OnStatusChange)
         HRESULT ( STDMETHODCALLTYPE *OnStatusChange )( 
             __RPC__in IPropertyPageSite * This,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IPropertyPageSite, GetLocaleID)
         HRESULT ( STDMETHODCALLTYPE *GetLocaleID )( 
             __RPC__in IPropertyPageSite * This,
             /* [out] */ __RPC__out LCID *pLocaleID);
         
+        DECLSPEC_XFGVIRT(IPropertyPageSite, GetPageContainer)
         HRESULT ( STDMETHODCALLTYPE *GetPageContainer )( 
             __RPC__in IPropertyPageSite * This,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppUnk);
         
+        DECLSPEC_XFGVIRT(IPropertyPageSite, TranslateAccelerator)
         HRESULT ( STDMETHODCALLTYPE *TranslateAccelerator )( 
             __RPC__in IPropertyPageSite * This,
             /* [in] */ __RPC__in MSG *pMsg);
@@ -2220,22 +2332,27 @@ EXTERN_C const IID IID_IPropertyNotifySink;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPropertyNotifySink * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPropertyNotifySink * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPropertyNotifySink * This);
         
+        DECLSPEC_XFGVIRT(IPropertyNotifySink, OnChanged)
         HRESULT ( STDMETHODCALLTYPE *OnChanged )( 
             __RPC__in IPropertyNotifySink * This,
             /* [in] */ DISPID dispID);
         
+        DECLSPEC_XFGVIRT(IPropertyNotifySink, OnRequestEdit)
         HRESULT ( STDMETHODCALLTYPE *OnRequestEdit )( 
             __RPC__in IPropertyNotifySink * This,
             /* [in] */ DISPID dispID);
@@ -2317,18 +2434,22 @@ EXTERN_C const IID IID_ISpecifyPropertyPages;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISpecifyPropertyPages * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISpecifyPropertyPages * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISpecifyPropertyPages * This);
         
+        DECLSPEC_XFGVIRT(ISpecifyPropertyPages, GetPages)
         HRESULT ( STDMETHODCALLTYPE *GetPages )( 
             __RPC__in ISpecifyPropertyPages * This,
             /* [out] */ __RPC__out CAUUID *pPages);
@@ -2412,40 +2533,49 @@ EXTERN_C const IID IID_IPersistMemory;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPersistMemory * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPersistMemory * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPersistMemory * This);
         
+        DECLSPEC_XFGVIRT(IPersist, GetClassID)
         HRESULT ( STDMETHODCALLTYPE *GetClassID )( 
             __RPC__in IPersistMemory * This,
             /* [out] */ __RPC__out CLSID *pClassID);
         
+        DECLSPEC_XFGVIRT(IPersistMemory, IsDirty)
         HRESULT ( STDMETHODCALLTYPE *IsDirty )( 
             __RPC__in IPersistMemory * This);
         
+        DECLSPEC_XFGVIRT(IPersistMemory, Load)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Load )( 
             IPersistMemory * This,
             /* [size_is][in] */ LPVOID pMem,
             /* [in] */ ULONG cbSize);
         
+        DECLSPEC_XFGVIRT(IPersistMemory, Save)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Save )( 
             IPersistMemory * This,
             /* [size_is][out] */ LPVOID pMem,
             /* [in] */ BOOL fClearDirty,
             /* [in] */ ULONG cbSize);
         
+        DECLSPEC_XFGVIRT(IPersistMemory, GetSizeMax)
         HRESULT ( STDMETHODCALLTYPE *GetSizeMax )( 
             __RPC__in IPersistMemory * This,
             /* [out] */ __RPC__out ULONG *pCbSize);
         
+        DECLSPEC_XFGVIRT(IPersistMemory, InitNew)
         HRESULT ( STDMETHODCALLTYPE *InitNew )( 
             __RPC__in IPersistMemory * This);
         
@@ -2569,38 +2699,47 @@ EXTERN_C const IID IID_IPersistStreamInit;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPersistStreamInit * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPersistStreamInit * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPersistStreamInit * This);
         
+        DECLSPEC_XFGVIRT(IPersist, GetClassID)
         HRESULT ( STDMETHODCALLTYPE *GetClassID )( 
             __RPC__in IPersistStreamInit * This,
             /* [out] */ __RPC__out CLSID *pClassID);
         
+        DECLSPEC_XFGVIRT(IPersistStreamInit, IsDirty)
         HRESULT ( STDMETHODCALLTYPE *IsDirty )( 
             __RPC__in IPersistStreamInit * This);
         
+        DECLSPEC_XFGVIRT(IPersistStreamInit, Load)
         HRESULT ( STDMETHODCALLTYPE *Load )( 
             __RPC__in IPersistStreamInit * This,
             /* [in] */ __RPC__in_opt LPSTREAM pStm);
         
+        DECLSPEC_XFGVIRT(IPersistStreamInit, Save)
         HRESULT ( STDMETHODCALLTYPE *Save )( 
             __RPC__in IPersistStreamInit * This,
             /* [in] */ __RPC__in_opt LPSTREAM pStm,
             /* [in] */ BOOL fClearDirty);
         
+        DECLSPEC_XFGVIRT(IPersistStreamInit, GetSizeMax)
         HRESULT ( STDMETHODCALLTYPE *GetSizeMax )( 
             __RPC__in IPersistStreamInit * This,
             /* [out] */ __RPC__out ULARGE_INTEGER *pCbSize);
         
+        DECLSPEC_XFGVIRT(IPersistStreamInit, InitNew)
         HRESULT ( STDMETHODCALLTYPE *InitNew )( 
             __RPC__in IPersistStreamInit * This);
         
@@ -2694,30 +2833,37 @@ EXTERN_C const IID IID_IPersistPropertyBag;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPersistPropertyBag * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPersistPropertyBag * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPersistPropertyBag * This);
         
+        DECLSPEC_XFGVIRT(IPersist, GetClassID)
         HRESULT ( STDMETHODCALLTYPE *GetClassID )( 
             __RPC__in IPersistPropertyBag * This,
             /* [out] */ __RPC__out CLSID *pClassID);
         
+        DECLSPEC_XFGVIRT(IPersistPropertyBag, InitNew)
         HRESULT ( STDMETHODCALLTYPE *InitNew )( 
             __RPC__in IPersistPropertyBag * This);
         
+        DECLSPEC_XFGVIRT(IPersistPropertyBag, Load)
         HRESULT ( STDMETHODCALLTYPE *Load )( 
             __RPC__in IPersistPropertyBag * This,
             /* [in] */ __RPC__in_opt IPropertyBag *pPropBag,
             /* [unique][in] */ __RPC__in_opt IErrorLog *pErrorLog);
         
+        DECLSPEC_XFGVIRT(IPersistPropertyBag, Save)
         HRESULT ( STDMETHODCALLTYPE *Save )( 
             __RPC__in IPersistPropertyBag * This,
             /* [in] */ __RPC__in_opt IPropertyBag *pPropBag,
@@ -2813,18 +2959,22 @@ EXTERN_C const IID IID_ISimpleFrameSite;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISimpleFrameSite * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISimpleFrameSite * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISimpleFrameSite * This);
         
+        DECLSPEC_XFGVIRT(ISimpleFrameSite, PreMessageFilter)
         HRESULT ( STDMETHODCALLTYPE *PreMessageFilter )( 
             __RPC__in ISimpleFrameSite * This,
             /* [in] */ __RPC__in HWND hWnd,
@@ -2834,6 +2984,7 @@ EXTERN_C const IID IID_ISimpleFrameSite;
             /* [out] */ __RPC__out LRESULT *plResult,
             /* [out] */ __RPC__out DWORD *pdwCookie);
         
+        DECLSPEC_XFGVIRT(ISimpleFrameSite, PostMessageFilter)
         HRESULT ( STDMETHODCALLTYPE *PostMessageFilter )( 
             __RPC__in ISimpleFrameSite * This,
             /* [in] */ __RPC__in HWND hWnd,
@@ -2990,111 +3141,138 @@ EXTERN_C const IID IID_IFont;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IFont * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IFont * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IFont * This);
         
+        DECLSPEC_XFGVIRT(IFont, get_Name)
         HRESULT ( STDMETHODCALLTYPE *get_Name )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pName);
         
+        DECLSPEC_XFGVIRT(IFont, put_Name)
         HRESULT ( STDMETHODCALLTYPE *put_Name )( 
             __RPC__in IFont * This,
             /* [in] */ __RPC__in BSTR name);
         
+        DECLSPEC_XFGVIRT(IFont, get_Size)
         HRESULT ( STDMETHODCALLTYPE *get_Size )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__out CY *pSize);
         
+        DECLSPEC_XFGVIRT(IFont, put_Size)
         HRESULT ( STDMETHODCALLTYPE *put_Size )( 
             __RPC__in IFont * This,
             /* [in] */ CY size);
         
+        DECLSPEC_XFGVIRT(IFont, get_Bold)
         HRESULT ( STDMETHODCALLTYPE *get_Bold )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__out BOOL *pBold);
         
+        DECLSPEC_XFGVIRT(IFont, put_Bold)
         HRESULT ( STDMETHODCALLTYPE *put_Bold )( 
             __RPC__in IFont * This,
             /* [in] */ BOOL bold);
         
+        DECLSPEC_XFGVIRT(IFont, get_Italic)
         HRESULT ( STDMETHODCALLTYPE *get_Italic )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__out BOOL *pItalic);
         
+        DECLSPEC_XFGVIRT(IFont, put_Italic)
         HRESULT ( STDMETHODCALLTYPE *put_Italic )( 
             __RPC__in IFont * This,
             /* [in] */ BOOL italic);
         
+        DECLSPEC_XFGVIRT(IFont, get_Underline)
         HRESULT ( STDMETHODCALLTYPE *get_Underline )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__out BOOL *pUnderline);
         
+        DECLSPEC_XFGVIRT(IFont, put_Underline)
         HRESULT ( STDMETHODCALLTYPE *put_Underline )( 
             __RPC__in IFont * This,
             /* [in] */ BOOL underline);
         
+        DECLSPEC_XFGVIRT(IFont, get_Strikethrough)
         HRESULT ( STDMETHODCALLTYPE *get_Strikethrough )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__out BOOL *pStrikethrough);
         
+        DECLSPEC_XFGVIRT(IFont, put_Strikethrough)
         HRESULT ( STDMETHODCALLTYPE *put_Strikethrough )( 
             __RPC__in IFont * This,
             /* [in] */ BOOL strikethrough);
         
+        DECLSPEC_XFGVIRT(IFont, get_Weight)
         HRESULT ( STDMETHODCALLTYPE *get_Weight )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__out SHORT *pWeight);
         
+        DECLSPEC_XFGVIRT(IFont, put_Weight)
         HRESULT ( STDMETHODCALLTYPE *put_Weight )( 
             __RPC__in IFont * This,
             /* [in] */ SHORT weight);
         
+        DECLSPEC_XFGVIRT(IFont, get_Charset)
         HRESULT ( STDMETHODCALLTYPE *get_Charset )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__out SHORT *pCharset);
         
+        DECLSPEC_XFGVIRT(IFont, put_Charset)
         HRESULT ( STDMETHODCALLTYPE *put_Charset )( 
             __RPC__in IFont * This,
             /* [in] */ SHORT charset);
         
+        DECLSPEC_XFGVIRT(IFont, get_hFont)
         HRESULT ( STDMETHODCALLTYPE *get_hFont )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__deref_out_opt HFONT *phFont);
         
+        DECLSPEC_XFGVIRT(IFont, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__deref_out_opt IFont **ppFont);
         
+        DECLSPEC_XFGVIRT(IFont, IsEqual)
         HRESULT ( STDMETHODCALLTYPE *IsEqual )( 
             __RPC__in IFont * This,
             /* [in] */ __RPC__in_opt IFont *pFontOther);
         
+        DECLSPEC_XFGVIRT(IFont, SetRatio)
         HRESULT ( STDMETHODCALLTYPE *SetRatio )( 
             __RPC__in IFont * This,
             /* [in] */ LONG cyLogical,
             /* [in] */ LONG cyHimetric);
         
+        DECLSPEC_XFGVIRT(IFont, QueryTextMetrics)
         HRESULT ( STDMETHODCALLTYPE *QueryTextMetrics )( 
             __RPC__in IFont * This,
             /* [out] */ __RPC__out TEXTMETRICOLE *pTM);
         
+        DECLSPEC_XFGVIRT(IFont, AddRefHfont)
         HRESULT ( STDMETHODCALLTYPE *AddRefHfont )( 
             __RPC__in IFont * This,
             /* [in] */ __RPC__in HFONT hFont);
         
+        DECLSPEC_XFGVIRT(IFont, ReleaseHfont)
         HRESULT ( STDMETHODCALLTYPE *ReleaseHfont )( 
             __RPC__in IFont * This,
             /* [in] */ __RPC__in HFONT hFont);
         
+        DECLSPEC_XFGVIRT(IFont, SetHdc)
         HRESULT ( STDMETHODCALLTYPE *SetHdc )( 
             __RPC__in IFont * This,
             /* [in] */ __RPC__in HDC hDC);
@@ -3302,38 +3480,47 @@ EXTERN_C const IID IID_IPicture;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPicture * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPicture * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPicture * This);
         
+        DECLSPEC_XFGVIRT(IPicture, get_Handle)
         HRESULT ( STDMETHODCALLTYPE *get_Handle )( 
             __RPC__in IPicture * This,
             /* [out] */ __RPC__out OLE_HANDLE *pHandle);
         
+        DECLSPEC_XFGVIRT(IPicture, get_hPal)
         HRESULT ( STDMETHODCALLTYPE *get_hPal )( 
             __RPC__in IPicture * This,
             /* [out] */ __RPC__out OLE_HANDLE *phPal);
         
+        DECLSPEC_XFGVIRT(IPicture, get_Type)
         HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IPicture * This,
             /* [out] */ __RPC__out SHORT *pType);
         
+        DECLSPEC_XFGVIRT(IPicture, get_Width)
         HRESULT ( STDMETHODCALLTYPE *get_Width )( 
             __RPC__in IPicture * This,
             /* [out] */ __RPC__out OLE_XSIZE_HIMETRIC *pWidth);
         
+        DECLSPEC_XFGVIRT(IPicture, get_Height)
         HRESULT ( STDMETHODCALLTYPE *get_Height )( 
             __RPC__in IPicture * This,
             /* [out] */ __RPC__out OLE_YSIZE_HIMETRIC *pHeight);
         
+        DECLSPEC_XFGVIRT(IPicture, Render)
         HRESULT ( STDMETHODCALLTYPE *Render )( 
             __RPC__in IPicture * This,
             /* [in] */ __RPC__in HDC hDC,
@@ -3347,37 +3534,45 @@ EXTERN_C const IID IID_IPicture;
             /* [in] */ OLE_YSIZE_HIMETRIC cySrc,
             /* [in] */ __RPC__in LPCRECT pRcWBounds);
         
+        DECLSPEC_XFGVIRT(IPicture, set_hPal)
         HRESULT ( STDMETHODCALLTYPE *set_hPal )( 
             __RPC__in IPicture * This,
             /* [in] */ OLE_HANDLE hPal);
         
+        DECLSPEC_XFGVIRT(IPicture, get_CurDC)
         HRESULT ( STDMETHODCALLTYPE *get_CurDC )( 
             __RPC__in IPicture * This,
             /* [out] */ __RPC__deref_out_opt HDC *phDC);
         
+        DECLSPEC_XFGVIRT(IPicture, SelectPicture)
         HRESULT ( STDMETHODCALLTYPE *SelectPicture )( 
             __RPC__in IPicture * This,
             /* [in] */ __RPC__in HDC hDCIn,
             /* [out] */ __RPC__deref_out_opt HDC *phDCOut,
             /* [out] */ __RPC__out OLE_HANDLE *phBmpOut);
         
+        DECLSPEC_XFGVIRT(IPicture, get_KeepOriginalFormat)
         HRESULT ( STDMETHODCALLTYPE *get_KeepOriginalFormat )( 
             __RPC__in IPicture * This,
             /* [out] */ __RPC__out BOOL *pKeep);
         
+        DECLSPEC_XFGVIRT(IPicture, put_KeepOriginalFormat)
         HRESULT ( STDMETHODCALLTYPE *put_KeepOriginalFormat )( 
             __RPC__in IPicture * This,
             /* [in] */ BOOL keep);
         
+        DECLSPEC_XFGVIRT(IPicture, PictureChanged)
         HRESULT ( STDMETHODCALLTYPE *PictureChanged )( 
             __RPC__in IPicture * This);
         
+        DECLSPEC_XFGVIRT(IPicture, SaveAsFile)
         HRESULT ( STDMETHODCALLTYPE *SaveAsFile )( 
             __RPC__in IPicture * This,
             /* [in] */ __RPC__in_opt LPSTREAM pStream,
             /* [in] */ BOOL fSaveMemCopy,
             /* [out] */ __RPC__out LONG *pCbSize);
         
+        DECLSPEC_XFGVIRT(IPicture, get_Attributes)
         HRESULT ( STDMETHODCALLTYPE *get_Attributes )( 
             __RPC__in IPicture * This,
             /* [out] */ __RPC__out DWORD *pDwAttr);
@@ -3540,38 +3735,47 @@ EXTERN_C const IID IID_IPicture2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPicture2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPicture2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPicture2 * This);
         
+        DECLSPEC_XFGVIRT(IPicture2, get_Handle)
         HRESULT ( STDMETHODCALLTYPE *get_Handle )( 
             __RPC__in IPicture2 * This,
             /* [out] */ __RPC__out HHANDLE *pHandle);
         
+        DECLSPEC_XFGVIRT(IPicture2, get_hPal)
         HRESULT ( STDMETHODCALLTYPE *get_hPal )( 
             __RPC__in IPicture2 * This,
             /* [out] */ __RPC__out HHANDLE *phPal);
         
+        DECLSPEC_XFGVIRT(IPicture2, get_Type)
         HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IPicture2 * This,
             /* [out] */ __RPC__out SHORT *pType);
         
+        DECLSPEC_XFGVIRT(IPicture2, get_Width)
         HRESULT ( STDMETHODCALLTYPE *get_Width )( 
             __RPC__in IPicture2 * This,
             /* [out] */ __RPC__out OLE_XSIZE_HIMETRIC *pWidth);
         
+        DECLSPEC_XFGVIRT(IPicture2, get_Height)
         HRESULT ( STDMETHODCALLTYPE *get_Height )( 
             __RPC__in IPicture2 * This,
             /* [out] */ __RPC__out OLE_YSIZE_HIMETRIC *pHeight);
         
+        DECLSPEC_XFGVIRT(IPicture2, Render)
         HRESULT ( STDMETHODCALLTYPE *Render )( 
             __RPC__in IPicture2 * This,
             /* [in] */ __RPC__in HDC hDC,
@@ -3585,37 +3789,45 @@ EXTERN_C const IID IID_IPicture2;
             /* [in] */ OLE_YSIZE_HIMETRIC cySrc,
             /* [in] */ __RPC__in LPCRECT pRcWBounds);
         
+        DECLSPEC_XFGVIRT(IPicture2, set_hPal)
         HRESULT ( STDMETHODCALLTYPE *set_hPal )( 
             __RPC__in IPicture2 * This,
             /* [in] */ HHANDLE hPal);
         
+        DECLSPEC_XFGVIRT(IPicture2, get_CurDC)
         HRESULT ( STDMETHODCALLTYPE *get_CurDC )( 
             __RPC__in IPicture2 * This,
             /* [out] */ __RPC__deref_out_opt HDC *phDC);
         
+        DECLSPEC_XFGVIRT(IPicture2, SelectPicture)
         HRESULT ( STDMETHODCALLTYPE *SelectPicture )( 
             __RPC__in IPicture2 * This,
             /* [in] */ __RPC__in HDC hDCIn,
             /* [out] */ __RPC__deref_out_opt HDC *phDCOut,
             /* [out] */ __RPC__out HHANDLE *phBmpOut);
         
+        DECLSPEC_XFGVIRT(IPicture2, get_KeepOriginalFormat)
         HRESULT ( STDMETHODCALLTYPE *get_KeepOriginalFormat )( 
             __RPC__in IPicture2 * This,
             /* [out] */ __RPC__out BOOL *pKeep);
         
+        DECLSPEC_XFGVIRT(IPicture2, put_KeepOriginalFormat)
         HRESULT ( STDMETHODCALLTYPE *put_KeepOriginalFormat )( 
             __RPC__in IPicture2 * This,
             /* [in] */ BOOL keep);
         
+        DECLSPEC_XFGVIRT(IPicture2, PictureChanged)
         HRESULT ( STDMETHODCALLTYPE *PictureChanged )( 
             __RPC__in IPicture2 * This);
         
+        DECLSPEC_XFGVIRT(IPicture2, SaveAsFile)
         HRESULT ( STDMETHODCALLTYPE *SaveAsFile )( 
             __RPC__in IPicture2 * This,
             /* [in] */ __RPC__in_opt LPSTREAM pStream,
             /* [in] */ BOOL fSaveMemCopy,
             /* [out] */ __RPC__out LONG *pCbSize);
         
+        DECLSPEC_XFGVIRT(IPicture2, get_Attributes)
         HRESULT ( STDMETHODCALLTYPE *get_Attributes )( 
             __RPC__in IPicture2 * This,
             /* [out] */ __RPC__out DWORD *pDwAttr);
@@ -3722,28 +3934,34 @@ EXTERN_C const IID IID_IFontEventsDisp;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IFontEventsDisp * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IFontEventsDisp * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IFontEventsDisp * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IFontEventsDisp * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IFontEventsDisp * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IFontEventsDisp * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -3752,6 +3970,7 @@ EXTERN_C const IID IID_IFontEventsDisp;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IFontEventsDisp * This,
             /* [annotation][in] */ 
@@ -3844,28 +4063,34 @@ EXTERN_C const IID IID_IFontDisp;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IFontDisp * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IFontDisp * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IFontDisp * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IFontDisp * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IFontDisp * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IFontDisp * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -3874,6 +4099,7 @@ EXTERN_C const IID IID_IFontDisp;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IFontDisp * This,
             /* [annotation][in] */ 
@@ -3966,28 +4192,34 @@ EXTERN_C const IID IID_IPictureDisp;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPictureDisp * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPictureDisp * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPictureDisp * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IPictureDisp * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IPictureDisp * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IPictureDisp * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -3996,6 +4228,7 @@ EXTERN_C const IID IID_IPictureDisp;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IPictureDisp * This,
             /* [annotation][in] */ 
@@ -4097,40 +4330,50 @@ EXTERN_C const IID IID_IOleInPlaceObjectWindowless;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOleInPlaceObjectWindowless * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOleInPlaceObjectWindowless * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOleInPlaceObjectWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleWindow, GetWindow)
         /* [input_sync] */ HRESULT ( STDMETHODCALLTYPE *GetWindow )( 
             __RPC__in IOleInPlaceObjectWindowless * This,
             /* [out] */ __RPC__deref_out_opt HWND *phwnd);
         
+        DECLSPEC_XFGVIRT(IOleWindow, ContextSensitiveHelp)
         HRESULT ( STDMETHODCALLTYPE *ContextSensitiveHelp )( 
             __RPC__in IOleInPlaceObjectWindowless * This,
             /* [in] */ BOOL fEnterMode);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceObject, InPlaceDeactivate)
         HRESULT ( STDMETHODCALLTYPE *InPlaceDeactivate )( 
             __RPC__in IOleInPlaceObjectWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceObject, UIDeactivate)
         HRESULT ( STDMETHODCALLTYPE *UIDeactivate )( 
             __RPC__in IOleInPlaceObjectWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceObject, SetObjectRects)
         /* [input_sync] */ HRESULT ( STDMETHODCALLTYPE *SetObjectRects )( 
             __RPC__in IOleInPlaceObjectWindowless * This,
             /* [in] */ __RPC__in LPCRECT lprcPosRect,
             /* [in] */ __RPC__in LPCRECT lprcClipRect);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceObject, ReactivateAndUndo)
         HRESULT ( STDMETHODCALLTYPE *ReactivateAndUndo )( 
             __RPC__in IOleInPlaceObjectWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceObjectWindowless, OnWindowMessage)
         HRESULT ( STDMETHODCALLTYPE *OnWindowMessage )( 
             __RPC__in IOleInPlaceObjectWindowless * This,
             /* [in] */ UINT msg,
@@ -4138,6 +4381,7 @@ EXTERN_C const IID IID_IOleInPlaceObjectWindowless;
             /* [in] */ LPARAM lParam,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceObjectWindowless, GetDropTarget)
         HRESULT ( STDMETHODCALLTYPE *GetDropTarget )( 
             __RPC__in IOleInPlaceObjectWindowless * This,
             /* [out] */ __RPC__deref_out_opt IDropTarget **ppDropTarget);
@@ -4243,35 +4487,44 @@ EXTERN_C const IID IID_IOleInPlaceSiteEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOleInPlaceSiteEx * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOleInPlaceSiteEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOleInPlaceSiteEx * This);
         
+        DECLSPEC_XFGVIRT(IOleWindow, GetWindow)
         /* [input_sync] */ HRESULT ( STDMETHODCALLTYPE *GetWindow )( 
             __RPC__in IOleInPlaceSiteEx * This,
             /* [out] */ __RPC__deref_out_opt HWND *phwnd);
         
+        DECLSPEC_XFGVIRT(IOleWindow, ContextSensitiveHelp)
         HRESULT ( STDMETHODCALLTYPE *ContextSensitiveHelp )( 
             __RPC__in IOleInPlaceSiteEx * This,
             /* [in] */ BOOL fEnterMode);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, CanInPlaceActivate)
         HRESULT ( STDMETHODCALLTYPE *CanInPlaceActivate )( 
             __RPC__in IOleInPlaceSiteEx * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnInPlaceActivate)
         HRESULT ( STDMETHODCALLTYPE *OnInPlaceActivate )( 
             __RPC__in IOleInPlaceSiteEx * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnUIActivate)
         HRESULT ( STDMETHODCALLTYPE *OnUIActivate )( 
             __RPC__in IOleInPlaceSiteEx * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, GetWindowContext)
         HRESULT ( STDMETHODCALLTYPE *GetWindowContext )( 
             __RPC__in IOleInPlaceSiteEx * This,
             /* [out] */ __RPC__deref_out_opt IOleInPlaceFrame **ppFrame,
@@ -4280,36 +4533,45 @@ EXTERN_C const IID IID_IOleInPlaceSiteEx;
             /* [out] */ __RPC__out LPRECT lprcClipRect,
             /* [out][in] */ __RPC__inout LPOLEINPLACEFRAMEINFO lpFrameInfo);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, Scroll)
         HRESULT ( STDMETHODCALLTYPE *Scroll )( 
             __RPC__in IOleInPlaceSiteEx * This,
             /* [in] */ SIZE scrollExtant);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnUIDeactivate)
         HRESULT ( STDMETHODCALLTYPE *OnUIDeactivate )( 
             __RPC__in IOleInPlaceSiteEx * This,
             /* [in] */ BOOL fUndoable);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnInPlaceDeactivate)
         HRESULT ( STDMETHODCALLTYPE *OnInPlaceDeactivate )( 
             __RPC__in IOleInPlaceSiteEx * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, DiscardUndoState)
         HRESULT ( STDMETHODCALLTYPE *DiscardUndoState )( 
             __RPC__in IOleInPlaceSiteEx * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, DeactivateAndUndo)
         HRESULT ( STDMETHODCALLTYPE *DeactivateAndUndo )( 
             __RPC__in IOleInPlaceSiteEx * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnPosRectChange)
         HRESULT ( STDMETHODCALLTYPE *OnPosRectChange )( 
             __RPC__in IOleInPlaceSiteEx * This,
             /* [in] */ __RPC__in LPCRECT lprcPosRect);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteEx, OnInPlaceActivateEx)
         HRESULT ( STDMETHODCALLTYPE *OnInPlaceActivateEx )( 
             __RPC__in IOleInPlaceSiteEx * This,
             /* [out] */ __RPC__out BOOL *pfNoRedraw,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteEx, OnInPlaceDeactivateEx)
         HRESULT ( STDMETHODCALLTYPE *OnInPlaceDeactivateEx )( 
             __RPC__in IOleInPlaceSiteEx * This,
             /* [in] */ BOOL fNoRedraw);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteEx, RequestUIActivate)
         HRESULT ( STDMETHODCALLTYPE *RequestUIActivate )( 
             __RPC__in IOleInPlaceSiteEx * This);
         
@@ -4476,35 +4738,44 @@ EXTERN_C const IID IID_IOleInPlaceSiteWindowless;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleWindow, GetWindow)
         /* [input_sync] */ HRESULT ( STDMETHODCALLTYPE *GetWindow )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [out] */ __RPC__deref_out_opt HWND *phwnd);
         
+        DECLSPEC_XFGVIRT(IOleWindow, ContextSensitiveHelp)
         HRESULT ( STDMETHODCALLTYPE *ContextSensitiveHelp )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ BOOL fEnterMode);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, CanInPlaceActivate)
         HRESULT ( STDMETHODCALLTYPE *CanInPlaceActivate )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnInPlaceActivate)
         HRESULT ( STDMETHODCALLTYPE *OnInPlaceActivate )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnUIActivate)
         HRESULT ( STDMETHODCALLTYPE *OnUIActivate )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, GetWindowContext)
         HRESULT ( STDMETHODCALLTYPE *GetWindowContext )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [out] */ __RPC__deref_out_opt IOleInPlaceFrame **ppFrame,
@@ -4513,76 +4784,95 @@ EXTERN_C const IID IID_IOleInPlaceSiteWindowless;
             /* [out] */ __RPC__out LPRECT lprcClipRect,
             /* [out][in] */ __RPC__inout LPOLEINPLACEFRAMEINFO lpFrameInfo);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, Scroll)
         HRESULT ( STDMETHODCALLTYPE *Scroll )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ SIZE scrollExtant);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnUIDeactivate)
         HRESULT ( STDMETHODCALLTYPE *OnUIDeactivate )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ BOOL fUndoable);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnInPlaceDeactivate)
         HRESULT ( STDMETHODCALLTYPE *OnInPlaceDeactivate )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, DiscardUndoState)
         HRESULT ( STDMETHODCALLTYPE *DiscardUndoState )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, DeactivateAndUndo)
         HRESULT ( STDMETHODCALLTYPE *DeactivateAndUndo )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSite, OnPosRectChange)
         HRESULT ( STDMETHODCALLTYPE *OnPosRectChange )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ __RPC__in LPCRECT lprcPosRect);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteEx, OnInPlaceActivateEx)
         HRESULT ( STDMETHODCALLTYPE *OnInPlaceActivateEx )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [out] */ __RPC__out BOOL *pfNoRedraw,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteEx, OnInPlaceDeactivateEx)
         HRESULT ( STDMETHODCALLTYPE *OnInPlaceDeactivateEx )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ BOOL fNoRedraw);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteEx, RequestUIActivate)
         HRESULT ( STDMETHODCALLTYPE *RequestUIActivate )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, CanWindowlessActivate)
         HRESULT ( STDMETHODCALLTYPE *CanWindowlessActivate )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, GetCapture)
         HRESULT ( STDMETHODCALLTYPE *GetCapture )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, SetCapture)
         HRESULT ( STDMETHODCALLTYPE *SetCapture )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ BOOL fCapture);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, GetFocus)
         HRESULT ( STDMETHODCALLTYPE *GetFocus )( 
             __RPC__in IOleInPlaceSiteWindowless * This);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, SetFocus)
         HRESULT ( STDMETHODCALLTYPE *SetFocus )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ BOOL fFocus);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, GetDC)
         HRESULT ( STDMETHODCALLTYPE *GetDC )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [unique][in] */ __RPC__in_opt LPCRECT pRect,
             /* [in] */ DWORD grfFlags,
             /* [out] */ __RPC__deref_out_opt HDC *phDC);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, ReleaseDC)
         HRESULT ( STDMETHODCALLTYPE *ReleaseDC )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ __RPC__in HDC hDC);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, InvalidateRect)
         HRESULT ( STDMETHODCALLTYPE *InvalidateRect )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [unique][in] */ __RPC__in_opt LPCRECT pRect,
             /* [in] */ BOOL fErase);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, InvalidateRgn)
         HRESULT ( STDMETHODCALLTYPE *InvalidateRgn )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ __RPC__in HRGN hRGN,
             /* [in] */ BOOL fErase);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, ScrollRect)
         HRESULT ( STDMETHODCALLTYPE *ScrollRect )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [in] */ INT dx,
@@ -4590,10 +4880,12 @@ EXTERN_C const IID IID_IOleInPlaceSiteWindowless;
             /* [in] */ __RPC__in LPCRECT pRectScroll,
             /* [in] */ __RPC__in LPCRECT pRectClip);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, AdjustRect)
         HRESULT ( STDMETHODCALLTYPE *AdjustRect )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [out][in] */ __RPC__inout LPRECT prc);
         
+        DECLSPEC_XFGVIRT(IOleInPlaceSiteWindowless, OnDefWindowMessage)
         HRESULT ( STDMETHODCALLTYPE *OnDefWindowMessage )( 
             __RPC__in IOleInPlaceSiteWindowless * This,
             /* [annotation][in] */ 
@@ -4830,18 +5122,22 @@ EXTERN_C const IID IID_IViewObjectEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IViewObjectEx * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IViewObjectEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IViewObjectEx * This);
         
+        DECLSPEC_XFGVIRT(IViewObject, Draw)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Draw )( 
             IViewObjectEx * This,
             /* [annotation][in] */ 
@@ -4866,6 +5162,7 @@ EXTERN_C const IID IID_IViewObjectEx;
             /* [annotation][in] */ 
             _In_  ULONG_PTR dwContinue);
         
+        DECLSPEC_XFGVIRT(IViewObject, GetColorSet)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetColorSet )( 
             IViewObjectEx * This,
             /* [annotation][in] */ 
@@ -4881,6 +5178,7 @@ EXTERN_C const IID IID_IViewObjectEx;
             /* [annotation][out] */ 
             _Outptr_  LOGPALETTE **ppColorSet);
         
+        DECLSPEC_XFGVIRT(IViewObject, Freeze)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Freeze )( 
             IViewObjectEx * This,
             /* [annotation][in] */ 
@@ -4892,16 +5190,19 @@ EXTERN_C const IID IID_IViewObjectEx;
             /* [annotation][out] */ 
             _Out_  DWORD *pdwFreeze);
         
+        DECLSPEC_XFGVIRT(IViewObject, Unfreeze)
         HRESULT ( STDMETHODCALLTYPE *Unfreeze )( 
             __RPC__in IViewObjectEx * This,
             /* [in] */ DWORD dwFreeze);
         
+        DECLSPEC_XFGVIRT(IViewObject, SetAdvise)
         HRESULT ( STDMETHODCALLTYPE *SetAdvise )( 
             __RPC__in IViewObjectEx * This,
             /* [in] */ DWORD aspects,
             /* [in] */ DWORD advf,
             /* [unique][in] */ __RPC__in_opt IAdviseSink *pAdvSink);
         
+        DECLSPEC_XFGVIRT(IViewObject, GetAdvise)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetAdvise )( 
             IViewObjectEx * This,
             /* [annotation][unique][out] */ 
@@ -4911,6 +5212,7 @@ EXTERN_C const IID IID_IViewObjectEx;
             /* [annotation][out] */ 
             _Outptr_  IAdviseSink **ppAdvSink);
         
+        DECLSPEC_XFGVIRT(IViewObject2, GetExtent)
         HRESULT ( STDMETHODCALLTYPE *GetExtent )( 
             __RPC__in IViewObjectEx * This,
             /* [in] */ DWORD dwDrawAspect,
@@ -4918,15 +5220,18 @@ EXTERN_C const IID IID_IViewObjectEx;
             /* [unique][in] */ __RPC__in_opt DVTARGETDEVICE *ptd,
             /* [out] */ __RPC__out LPSIZEL lpsizel);
         
+        DECLSPEC_XFGVIRT(IViewObjectEx, GetRect)
         HRESULT ( STDMETHODCALLTYPE *GetRect )( 
             __RPC__in IViewObjectEx * This,
             /* [in] */ DWORD dwAspect,
             /* [out] */ __RPC__out LPRECTL pRect);
         
+        DECLSPEC_XFGVIRT(IViewObjectEx, GetViewStatus)
         HRESULT ( STDMETHODCALLTYPE *GetViewStatus )( 
             __RPC__in IViewObjectEx * This,
             /* [out] */ __RPC__out DWORD *pdwStatus);
         
+        DECLSPEC_XFGVIRT(IViewObjectEx, QueryHitPoint)
         HRESULT ( STDMETHODCALLTYPE *QueryHitPoint )( 
             __RPC__in IViewObjectEx * This,
             /* [in] */ DWORD dwAspect,
@@ -4935,6 +5240,7 @@ EXTERN_C const IID IID_IViewObjectEx;
             /* [in] */ LONG lCloseHint,
             /* [out] */ __RPC__out DWORD *pHitResult);
         
+        DECLSPEC_XFGVIRT(IViewObjectEx, QueryHitRect)
         HRESULT ( STDMETHODCALLTYPE *QueryHitRect )( 
             __RPC__in IViewObjectEx * This,
             /* [in] */ DWORD dwAspect,
@@ -4943,6 +5249,7 @@ EXTERN_C const IID IID_IViewObjectEx;
             /* [in] */ LONG lCloseHint,
             /* [out] */ __RPC__out DWORD *pHitResult);
         
+        DECLSPEC_XFGVIRT(IViewObjectEx, GetNaturalExtent)
         HRESULT ( STDMETHODCALLTYPE *GetNaturalExtent )( 
             __RPC__in IViewObjectEx * This,
             /* [in] */ DWORD dwAspect,
@@ -5062,31 +5369,38 @@ EXTERN_C const IID IID_IOleUndoUnit;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOleUndoUnit * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOleUndoUnit * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOleUndoUnit * This);
         
+        DECLSPEC_XFGVIRT(IOleUndoUnit, Do)
         HRESULT ( STDMETHODCALLTYPE *Do )( 
             __RPC__in IOleUndoUnit * This,
             /* [in] */ __RPC__in_opt IOleUndoManager *pUndoManager);
         
+        DECLSPEC_XFGVIRT(IOleUndoUnit, GetDescription)
         HRESULT ( STDMETHODCALLTYPE *GetDescription )( 
             __RPC__in IOleUndoUnit * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pBstr);
         
+        DECLSPEC_XFGVIRT(IOleUndoUnit, GetUnitType)
         HRESULT ( STDMETHODCALLTYPE *GetUnitType )( 
             __RPC__in IOleUndoUnit * This,
             /* [out] */ __RPC__out CLSID *pClsid,
             /* [out] */ __RPC__out LONG *plID);
         
+        DECLSPEC_XFGVIRT(IOleUndoUnit, OnNextAdd)
         HRESULT ( STDMETHODCALLTYPE *OnNextAdd )( 
             __RPC__in IOleUndoUnit * This);
         
@@ -5178,51 +5492,63 @@ EXTERN_C const IID IID_IOleParentUndoUnit;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOleParentUndoUnit * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOleParentUndoUnit * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOleParentUndoUnit * This);
         
+        DECLSPEC_XFGVIRT(IOleUndoUnit, Do)
         HRESULT ( STDMETHODCALLTYPE *Do )( 
             __RPC__in IOleParentUndoUnit * This,
             /* [in] */ __RPC__in_opt IOleUndoManager *pUndoManager);
         
+        DECLSPEC_XFGVIRT(IOleUndoUnit, GetDescription)
         HRESULT ( STDMETHODCALLTYPE *GetDescription )( 
             __RPC__in IOleParentUndoUnit * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pBstr);
         
+        DECLSPEC_XFGVIRT(IOleUndoUnit, GetUnitType)
         HRESULT ( STDMETHODCALLTYPE *GetUnitType )( 
             __RPC__in IOleParentUndoUnit * This,
             /* [out] */ __RPC__out CLSID *pClsid,
             /* [out] */ __RPC__out LONG *plID);
         
+        DECLSPEC_XFGVIRT(IOleUndoUnit, OnNextAdd)
         HRESULT ( STDMETHODCALLTYPE *OnNextAdd )( 
             __RPC__in IOleParentUndoUnit * This);
         
+        DECLSPEC_XFGVIRT(IOleParentUndoUnit, Open)
         HRESULT ( STDMETHODCALLTYPE *Open )( 
             __RPC__in IOleParentUndoUnit * This,
             /* [in] */ __RPC__in_opt IOleParentUndoUnit *pPUU);
         
+        DECLSPEC_XFGVIRT(IOleParentUndoUnit, Close)
         HRESULT ( STDMETHODCALLTYPE *Close )( 
             __RPC__in IOleParentUndoUnit * This,
             /* [in] */ __RPC__in_opt IOleParentUndoUnit *pPUU,
             /* [in] */ BOOL fCommit);
         
+        DECLSPEC_XFGVIRT(IOleParentUndoUnit, Add)
         HRESULT ( STDMETHODCALLTYPE *Add )( 
             __RPC__in IOleParentUndoUnit * This,
             /* [in] */ __RPC__in_opt IOleUndoUnit *pUU);
         
+        DECLSPEC_XFGVIRT(IOleParentUndoUnit, FindUnit)
         HRESULT ( STDMETHODCALLTYPE *FindUnit )( 
             __RPC__in IOleParentUndoUnit * This,
             /* [in] */ __RPC__in_opt IOleUndoUnit *pUU);
         
+        DECLSPEC_XFGVIRT(IOleParentUndoUnit, GetParentState)
         HRESULT ( STDMETHODCALLTYPE *GetParentState )( 
             __RPC__in IOleParentUndoUnit * This,
             /* [out] */ __RPC__out DWORD *pdwState);
@@ -5328,31 +5654,38 @@ EXTERN_C const IID IID_IEnumOleUndoUnits;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumOleUndoUnits * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumOleUndoUnits * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumOleUndoUnits * This);
         
+        DECLSPEC_XFGVIRT(IEnumOleUndoUnits, Next)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Next )( 
             IEnumOleUndoUnits * This,
             /* [in] */ ULONG cElt,
             /* [length_is][size_is][out] */ IOleUndoUnit **rgElt,
             /* [out] */ ULONG *pcEltFetched);
         
+        DECLSPEC_XFGVIRT(IEnumOleUndoUnits, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumOleUndoUnits * This,
             /* [in] */ ULONG cElt);
         
+        DECLSPEC_XFGVIRT(IEnumOleUndoUnits, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumOleUndoUnits * This);
         
+        DECLSPEC_XFGVIRT(IEnumOleUndoUnits, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumOleUndoUnits * This,
             /* [out] */ __RPC__deref_out_opt IEnumOleUndoUnits **ppEnum);
@@ -5481,63 +5814,78 @@ EXTERN_C const IID IID_IOleUndoManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOleUndoManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOleUndoManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOleUndoManager * This);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, Open)
         HRESULT ( STDMETHODCALLTYPE *Open )( 
             __RPC__in IOleUndoManager * This,
             /* [in] */ __RPC__in_opt IOleParentUndoUnit *pPUU);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, Close)
         HRESULT ( STDMETHODCALLTYPE *Close )( 
             __RPC__in IOleUndoManager * This,
             /* [in] */ __RPC__in_opt IOleParentUndoUnit *pPUU,
             /* [in] */ BOOL fCommit);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, Add)
         HRESULT ( STDMETHODCALLTYPE *Add )( 
             __RPC__in IOleUndoManager * This,
             /* [in] */ __RPC__in_opt IOleUndoUnit *pUU);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, GetOpenParentState)
         HRESULT ( STDMETHODCALLTYPE *GetOpenParentState )( 
             __RPC__in IOleUndoManager * This,
             /* [out] */ __RPC__out DWORD *pdwState);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, DiscardFrom)
         HRESULT ( STDMETHODCALLTYPE *DiscardFrom )( 
             __RPC__in IOleUndoManager * This,
             /* [in] */ __RPC__in_opt IOleUndoUnit *pUU);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, UndoTo)
         HRESULT ( STDMETHODCALLTYPE *UndoTo )( 
             __RPC__in IOleUndoManager * This,
             /* [in] */ __RPC__in_opt IOleUndoUnit *pUU);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, RedoTo)
         HRESULT ( STDMETHODCALLTYPE *RedoTo )( 
             __RPC__in IOleUndoManager * This,
             /* [in] */ __RPC__in_opt IOleUndoUnit *pUU);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, EnumUndoable)
         HRESULT ( STDMETHODCALLTYPE *EnumUndoable )( 
             __RPC__in IOleUndoManager * This,
             /* [out] */ __RPC__deref_out_opt IEnumOleUndoUnits **ppEnum);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, EnumRedoable)
         HRESULT ( STDMETHODCALLTYPE *EnumRedoable )( 
             __RPC__in IOleUndoManager * This,
             /* [out] */ __RPC__deref_out_opt IEnumOleUndoUnits **ppEnum);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, GetLastUndoDescription)
         HRESULT ( STDMETHODCALLTYPE *GetLastUndoDescription )( 
             __RPC__in IOleUndoManager * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pBstr);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, GetLastRedoDescription)
         HRESULT ( STDMETHODCALLTYPE *GetLastRedoDescription )( 
             __RPC__in IOleUndoManager * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pBstr);
         
+        DECLSPEC_XFGVIRT(IOleUndoManager, Enable)
         HRESULT ( STDMETHODCALLTYPE *Enable )( 
             __RPC__in IOleUndoManager * This,
             /* [in] */ BOOL fEnable);
@@ -5662,22 +6010,27 @@ EXTERN_C const IID IID_IPointerInactive;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPointerInactive * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPointerInactive * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPointerInactive * This);
         
+        DECLSPEC_XFGVIRT(IPointerInactive, GetActivationPolicy)
         HRESULT ( STDMETHODCALLTYPE *GetActivationPolicy )( 
             __RPC__in IPointerInactive * This,
             /* [out] */ __RPC__out DWORD *pdwPolicy);
         
+        DECLSPEC_XFGVIRT(IPointerInactive, OnInactiveMouseMove)
         HRESULT ( STDMETHODCALLTYPE *OnInactiveMouseMove )( 
             __RPC__in IPointerInactive * This,
             /* [in] */ __RPC__in LPCRECT pRectBounds,
@@ -5685,6 +6038,7 @@ EXTERN_C const IID IID_IPointerInactive;
             /* [in] */ LONG y,
             /* [in] */ DWORD grfKeyState);
         
+        DECLSPEC_XFGVIRT(IPointerInactive, OnInactiveSetCursor)
         HRESULT ( STDMETHODCALLTYPE *OnInactiveSetCursor )( 
             __RPC__in IPointerInactive * This,
             /* [in] */ __RPC__in LPCRECT pRectBounds,
@@ -5769,22 +6123,27 @@ EXTERN_C const IID IID_IObjectWithSite;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IObjectWithSite * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IObjectWithSite * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IObjectWithSite * This);
         
+        DECLSPEC_XFGVIRT(IObjectWithSite, SetSite)
         HRESULT ( STDMETHODCALLTYPE *SetSite )( 
             __RPC__in IObjectWithSite * This,
             /* [in] */ __RPC__in_opt IUnknown *pUnkSite);
         
+        DECLSPEC_XFGVIRT(IObjectWithSite, GetSite)
         HRESULT ( STDMETHODCALLTYPE *GetSite )( 
             __RPC__in IObjectWithSite * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -5902,34 +6261,41 @@ EXTERN_C const IID IID_IPerPropertyBrowsing;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPerPropertyBrowsing * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPerPropertyBrowsing * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPerPropertyBrowsing * This);
         
+        DECLSPEC_XFGVIRT(IPerPropertyBrowsing, GetDisplayString)
         HRESULT ( STDMETHODCALLTYPE *GetDisplayString )( 
             __RPC__in IPerPropertyBrowsing * This,
             /* [in] */ DISPID dispID,
             /* [out] */ __RPC__deref_out_opt BSTR *pBstr);
         
+        DECLSPEC_XFGVIRT(IPerPropertyBrowsing, MapPropertyToPage)
         HRESULT ( STDMETHODCALLTYPE *MapPropertyToPage )( 
             __RPC__in IPerPropertyBrowsing * This,
             /* [in] */ DISPID dispID,
             /* [out] */ __RPC__out CLSID *pClsid);
         
+        DECLSPEC_XFGVIRT(IPerPropertyBrowsing, GetPredefinedStrings)
         HRESULT ( STDMETHODCALLTYPE *GetPredefinedStrings )( 
             __RPC__in IPerPropertyBrowsing * This,
             /* [in] */ DISPID dispID,
             /* [out] */ __RPC__out CALPOLESTR *pCaStringsOut,
             /* [out] */ __RPC__out CADWORD *pCaCookiesOut);
         
+        DECLSPEC_XFGVIRT(IPerPropertyBrowsing, GetPredefinedValue)
         HRESULT ( STDMETHODCALLTYPE *GetPredefinedValue )( 
             __RPC__in IPerPropertyBrowsing * This,
             /* [in] */ DISPID dispID,
@@ -6069,18 +6435,22 @@ EXTERN_C const IID IID_IPropertyBag2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPropertyBag2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPropertyBag2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPropertyBag2 * This);
         
+        DECLSPEC_XFGVIRT(IPropertyBag2, Read)
         HRESULT ( STDMETHODCALLTYPE *Read )( 
             __RPC__in IPropertyBag2 * This,
             /* [in] */ ULONG cProperties,
@@ -6089,16 +6459,19 @@ EXTERN_C const IID IID_IPropertyBag2;
             /* [size_is][out] */ __RPC__out_ecount_full(cProperties) VARIANT *pvarValue,
             /* [size_is][unique][out][in] */ __RPC__inout_ecount_full_opt(cProperties) HRESULT *phrError);
         
+        DECLSPEC_XFGVIRT(IPropertyBag2, Write)
         HRESULT ( STDMETHODCALLTYPE *Write )( 
             __RPC__in IPropertyBag2 * This,
             /* [in] */ ULONG cProperties,
             /* [size_is][in] */ __RPC__in_ecount_full(cProperties) PROPBAG2 *pPropBag,
             /* [size_is][in] */ __RPC__in_ecount_full(cProperties) VARIANT *pvarValue);
         
+        DECLSPEC_XFGVIRT(IPropertyBag2, CountProperties)
         HRESULT ( STDMETHODCALLTYPE *CountProperties )( 
             __RPC__in IPropertyBag2 * This,
             /* [out] */ __RPC__out ULONG *pcProperties);
         
+        DECLSPEC_XFGVIRT(IPropertyBag2, GetPropertyInfo)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyInfo )( 
             __RPC__in IPropertyBag2 * This,
             /* [in] */ ULONG iProperty,
@@ -6106,6 +6479,7 @@ EXTERN_C const IID IID_IPropertyBag2;
             /* [size_is][out] */ __RPC__out_ecount_full(cProperties) PROPBAG2 *pPropBag,
             /* [out] */ __RPC__out ULONG *pcProperties);
         
+        DECLSPEC_XFGVIRT(IPropertyBag2, LoadObject)
         HRESULT ( STDMETHODCALLTYPE *LoadObject )( 
             __RPC__in IPropertyBag2 * This,
             /* [in] */ __RPC__in LPCOLESTR pstrName,
@@ -6213,36 +6587,44 @@ EXTERN_C const IID IID_IPersistPropertyBag2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPersistPropertyBag2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPersistPropertyBag2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPersistPropertyBag2 * This);
         
+        DECLSPEC_XFGVIRT(IPersist, GetClassID)
         HRESULT ( STDMETHODCALLTYPE *GetClassID )( 
             __RPC__in IPersistPropertyBag2 * This,
             /* [out] */ __RPC__out CLSID *pClassID);
         
+        DECLSPEC_XFGVIRT(IPersistPropertyBag2, InitNew)
         HRESULT ( STDMETHODCALLTYPE *InitNew )( 
             __RPC__in IPersistPropertyBag2 * This);
         
+        DECLSPEC_XFGVIRT(IPersistPropertyBag2, Load)
         HRESULT ( STDMETHODCALLTYPE *Load )( 
             __RPC__in IPersistPropertyBag2 * This,
             /* [in] */ __RPC__in_opt IPropertyBag2 *pPropBag,
             /* [unique][in] */ __RPC__in_opt IErrorLog *pErrLog);
         
+        DECLSPEC_XFGVIRT(IPersistPropertyBag2, Save)
         HRESULT ( STDMETHODCALLTYPE *Save )( 
             __RPC__in IPersistPropertyBag2 * This,
             /* [in] */ __RPC__in_opt IPropertyBag2 *pPropBag,
             /* [in] */ BOOL fClearDirty,
             /* [in] */ BOOL fSaveAllProperties);
         
+        DECLSPEC_XFGVIRT(IPersistPropertyBag2, IsDirty)
         HRESULT ( STDMETHODCALLTYPE *IsDirty )( 
             __RPC__in IPersistPropertyBag2 * This);
         
@@ -6337,18 +6719,22 @@ EXTERN_C const IID IID_IAdviseSinkEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAdviseSinkEx * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAdviseSinkEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAdviseSinkEx * This);
         
+        DECLSPEC_XFGVIRT(IAdviseSink, OnDataChange)
         /* [local] */ void ( STDMETHODCALLTYPE *OnDataChange )( 
             IAdviseSinkEx * This,
             /* [annotation][unique][in] */ 
@@ -6356,22 +6742,27 @@ EXTERN_C const IID IID_IAdviseSinkEx;
             /* [annotation][unique][in] */ 
             _In_  STGMEDIUM *pStgmed);
         
+        DECLSPEC_XFGVIRT(IAdviseSink, OnViewChange)
         /* [local] */ void ( STDMETHODCALLTYPE *OnViewChange )( 
             IAdviseSinkEx * This,
             /* [in] */ DWORD dwAspect,
             /* [in] */ LONG lindex);
         
+        DECLSPEC_XFGVIRT(IAdviseSink, OnRename)
         /* [local] */ void ( STDMETHODCALLTYPE *OnRename )( 
             IAdviseSinkEx * This,
             /* [annotation][in] */ 
             _In_  IMoniker *pmk);
         
+        DECLSPEC_XFGVIRT(IAdviseSink, OnSave)
         /* [local] */ void ( STDMETHODCALLTYPE *OnSave )( 
             IAdviseSinkEx * This);
         
+        DECLSPEC_XFGVIRT(IAdviseSink, OnClose)
         /* [local] */ void ( STDMETHODCALLTYPE *OnClose )( 
             IAdviseSinkEx * This);
         
+        DECLSPEC_XFGVIRT(IAdviseSinkEx, OnViewStatusChange)
         /* [local] */ void ( STDMETHODCALLTYPE *OnViewStatusChange )( 
             IAdviseSinkEx * This,
             /* [in] */ DWORD dwViewStatus);
@@ -6534,27 +6925,33 @@ EXTERN_C const IID IID_IQuickActivate;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IQuickActivate * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IQuickActivate * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IQuickActivate * This);
         
+        DECLSPEC_XFGVIRT(IQuickActivate, QuickActivate)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *QuickActivate )( 
             IQuickActivate * This,
             /* [in] */ QACONTAINER *pQaContainer,
             /* [out][in] */ QACONTROL *pQaControl);
         
+        DECLSPEC_XFGVIRT(IQuickActivate, SetContentExtent)
         HRESULT ( STDMETHODCALLTYPE *SetContentExtent )( 
             __RPC__in IQuickActivate * This,
             /* [in] */ __RPC__in LPSIZEL pSizel);
         
+        DECLSPEC_XFGVIRT(IQuickActivate, GetContentExtent)
         HRESULT ( STDMETHODCALLTYPE *GetContentExtent )( 
             __RPC__in IQuickActivate * This,
             /* [out] */ __RPC__out LPSIZEL pSizel);

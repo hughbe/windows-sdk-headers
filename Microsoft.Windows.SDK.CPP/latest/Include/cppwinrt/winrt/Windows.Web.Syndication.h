@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Web_Syndication_H
 #define WINRT_Windows_Web_Syndication_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Web.h"
 #include "winrt/impl/Windows.Data.Xml.Dom.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -15,750 +15,751 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Web.Syndication.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationAttribute)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Name(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Name(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationAttribute)->put_Name(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Namespace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Namespace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationAttribute)->get_Namespace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Namespace(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Namespace(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationAttribute)->put_Namespace(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationAttribute)->get_Value(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Value(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationAttribute<D>::Value(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationAttribute)->put_Value(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationAttributeFactory<D>::CreateSyndicationAttribute(param::hstring const& attributeName, param::hstring const& attributeNamespace, param::hstring const& attributeValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationAttribute) consume_Windows_Web_Syndication_ISyndicationAttributeFactory<D>::CreateSyndicationAttribute(param::hstring const& attributeName, param::hstring const& attributeNamespace, param::hstring const& attributeValue) const
     {
         void* syndicationAttribute{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationAttributeFactory)->CreateSyndicationAttribute(*(void**)(&attributeName), *(void**)(&attributeNamespace), *(void**)(&attributeValue), &syndicationAttribute));
         return Windows::Web::Syndication::SyndicationAttribute{ syndicationAttribute, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationCategory<D>::Label() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationCategory<D>::Label() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationCategory)->get_Label(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationCategory<D>::Label(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationCategory<D>::Label(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationCategory)->put_Label(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationCategory<D>::Scheme() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationCategory<D>::Scheme() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationCategory)->get_Scheme(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationCategory<D>::Scheme(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationCategory<D>::Scheme(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationCategory)->put_Scheme(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationCategory<D>::Term() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationCategory<D>::Term() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationCategory)->get_Term(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationCategory<D>::Term(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationCategory<D>::Term(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationCategory)->put_Term(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationCategoryFactory<D>::CreateSyndicationCategory(param::hstring const& term) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationCategory) consume_Windows_Web_Syndication_ISyndicationCategoryFactory<D>::CreateSyndicationCategory(param::hstring const& term) const
     {
         void* category{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationCategoryFactory)->CreateSyndicationCategory(*(void**)(&term), &category));
         return Windows::Web::Syndication::SyndicationCategory{ category, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationCategoryFactory<D>::CreateSyndicationCategoryEx(param::hstring const& term, param::hstring const& scheme, param::hstring const& label) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationCategory) consume_Windows_Web_Syndication_ISyndicationCategoryFactory<D>::CreateSyndicationCategoryEx(param::hstring const& term, param::hstring const& scheme, param::hstring const& label) const
     {
         void* category{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationCategoryFactory)->CreateSyndicationCategoryEx(*(void**)(&term), *(void**)(&scheme), *(void**)(&label), &category));
         return Windows::Web::Syndication::SyndicationCategory{ category, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::ServerCredential() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) consume_Windows_Web_Syndication_ISyndicationClient<D>::ServerCredential() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->get_ServerCredential(&value));
         return Windows::Security::Credentials::PasswordCredential{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::ServerCredential(Windows::Security::Credentials::PasswordCredential const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationClient<D>::ServerCredential(Windows::Security::Credentials::PasswordCredential const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->put_ServerCredential(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::ProxyCredential() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) consume_Windows_Web_Syndication_ISyndicationClient<D>::ProxyCredential() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->get_ProxyCredential(&value));
         return Windows::Security::Credentials::PasswordCredential{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::ProxyCredential(Windows::Security::Credentials::PasswordCredential const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationClient<D>::ProxyCredential(Windows::Security::Credentials::PasswordCredential const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->put_ProxyCredential(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::MaxResponseBufferSize() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Web_Syndication_ISyndicationClient<D>::MaxResponseBufferSize() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->get_MaxResponseBufferSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::MaxResponseBufferSize(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationClient<D>::MaxResponseBufferSize(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->put_MaxResponseBufferSize(value));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::Timeout() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Web_Syndication_ISyndicationClient<D>::Timeout() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->get_Timeout(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::Timeout(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationClient<D>::Timeout(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->put_Timeout(value));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::BypassCacheOnRetrieve() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Syndication_ISyndicationClient<D>::BypassCacheOnRetrieve() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->get_BypassCacheOnRetrieve(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::BypassCacheOnRetrieve(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationClient<D>::BypassCacheOnRetrieve(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->put_BypassCacheOnRetrieve(value));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::SetRequestHeader(param::hstring const& name, param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationClient<D>::SetRequestHeader(param::hstring const& name, param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->SetRequestHeader(*(void**)(&name), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClient<D>::RetrieveFeedAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Syndication::SyndicationFeed, Windows::Web::Syndication::RetrievalProgress>) consume_Windows_Web_Syndication_ISyndicationClient<D>::RetrieveFeedAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClient)->RetrieveFeedAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Syndication::SyndicationFeed, Windows::Web::Syndication::RetrievalProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationClientFactory<D>::CreateSyndicationClient(Windows::Security::Credentials::PasswordCredential const& serverCredential) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationClient) consume_Windows_Web_Syndication_ISyndicationClientFactory<D>::CreateSyndicationClient(Windows::Security::Credentials::PasswordCredential const& serverCredential) const
     {
         void* syndicationClient{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationClientFactory)->CreateSyndicationClient(*(void**)(&serverCredential), &syndicationClient));
         return Windows::Web::Syndication::SyndicationClient{ syndicationClient, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationContent<D>::SourceUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationContent<D>::SourceUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationContent)->get_SourceUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationContent<D>::SourceUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationContent<D>::SourceUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationContent)->put_SourceUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationContentFactory<D>::CreateSyndicationContent(param::hstring const& text, Windows::Web::Syndication::SyndicationTextType const& type) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationContent) consume_Windows_Web_Syndication_ISyndicationContentFactory<D>::CreateSyndicationContent(param::hstring const& text, Windows::Web::Syndication::SyndicationTextType const& type) const
     {
         void* content{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationContentFactory)->CreateSyndicationContent(*(void**)(&text), static_cast<int32_t>(type), &content));
         return Windows::Web::Syndication::SyndicationContent{ content, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationContentFactory<D>::CreateSyndicationContentWithSourceUri(Windows::Foundation::Uri const& sourceUri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationContent) consume_Windows_Web_Syndication_ISyndicationContentFactory<D>::CreateSyndicationContentWithSourceUri(Windows::Foundation::Uri const& sourceUri) const
     {
         void* content{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationContentFactory)->CreateSyndicationContentWithSourceUri(*(void**)(&sourceUri), &content));
         return Windows::Web::Syndication::SyndicationContent{ content, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationErrorStatics<D>::GetStatus(int32_t hresult) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationErrorStatus) consume_Windows_Web_Syndication_ISyndicationErrorStatics<D>::GetStatus(int32_t hresult) const
     {
-        Windows::Web::Syndication::SyndicationErrorStatus status;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationErrorStatics)->GetStatus(hresult, put_abi(status)));
+        Windows::Web::Syndication::SyndicationErrorStatus status{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationErrorStatics)->GetStatus(hresult, reinterpret_cast<int32_t*>(&status)));
         return status;
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Authors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationPerson>) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Authors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Authors(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationPerson>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Categories() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationCategory>) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Categories() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Categories(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationCategory>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Contributors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationPerson>) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Contributors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Contributors(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationPerson>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Generator() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationGenerator) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Generator() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Generator(&value));
         return Windows::Web::Syndication::SyndicationGenerator{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Generator(Windows::Web::Syndication::SyndicationGenerator const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Generator(Windows::Web::Syndication::SyndicationGenerator const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->put_Generator(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::IconUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationFeed<D>::IconUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_IconUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::IconUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::IconUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->put_IconUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Id(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Id(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->put_Id(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Items() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationItem>) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Items() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Items(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationItem>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::LastUpdatedTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Web_Syndication_ISyndicationFeed<D>::LastUpdatedTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_LastUpdatedTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::LastUpdatedTime(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::LastUpdatedTime(Windows::Foundation::DateTime const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->put_LastUpdatedTime(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Links() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationLink>) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Links() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Links(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationLink>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::ImageUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationFeed<D>::ImageUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_ImageUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::ImageUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::ImageUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->put_ImageUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Rights() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::ISyndicationText) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Rights() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Rights(&value));
         return Windows::Web::Syndication::ISyndicationText{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Rights(Windows::Web::Syndication::ISyndicationText const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Rights(Windows::Web::Syndication::ISyndicationText const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->put_Rights(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Subtitle() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::ISyndicationText) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Subtitle() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Subtitle(&value));
         return Windows::Web::Syndication::ISyndicationText{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Subtitle(Windows::Web::Syndication::ISyndicationText const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Subtitle(Windows::Web::Syndication::ISyndicationText const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->put_Subtitle(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Title() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::ISyndicationText) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_Title(&value));
         return Windows::Web::Syndication::ISyndicationText{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Title(Windows::Web::Syndication::ISyndicationText const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Title(Windows::Web::Syndication::ISyndicationText const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->put_Title(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::FirstUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationFeed<D>::FirstUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_FirstUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::LastUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationFeed<D>::LastUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_LastUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::NextUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationFeed<D>::NextUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_NextUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::PreviousUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationFeed<D>::PreviousUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_PreviousUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::SourceFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationFormat) consume_Windows_Web_Syndication_ISyndicationFeed<D>::SourceFormat() const
     {
-        Windows::Web::Syndication::SyndicationFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_SourceFormat(put_abi(value)));
+        Windows::Web::Syndication::SyndicationFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->get_SourceFormat(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::Load(param::hstring const& feed) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::Load(param::hstring const& feed) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->Load(*(void**)(&feed)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeed<D>::LoadFromXml(Windows::Data::Xml::Dom::XmlDocument const& feedDocument) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationFeed<D>::LoadFromXml(Windows::Data::Xml::Dom::XmlDocument const& feedDocument) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeed)->LoadFromXml(*(void**)(&feedDocument)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationFeedFactory<D>::CreateSyndicationFeed(param::hstring const& title, param::hstring const& subtitle, Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationFeed) consume_Windows_Web_Syndication_ISyndicationFeedFactory<D>::CreateSyndicationFeed(param::hstring const& title, param::hstring const& subtitle, Windows::Foundation::Uri const& uri) const
     {
         void* feed{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationFeedFactory)->CreateSyndicationFeed(*(void**)(&title), *(void**)(&subtitle), *(void**)(&uri), &feed));
         return Windows::Web::Syndication::SyndicationFeed{ feed, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Text() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Text() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationGenerator)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Text(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Text(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationGenerator)->put_Text(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Uri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationGenerator)->get_Uri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Uri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Uri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationGenerator)->put_Uri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Version() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Version() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationGenerator)->get_Version(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Version(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationGenerator<D>::Version(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationGenerator)->put_Version(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationGeneratorFactory<D>::CreateSyndicationGenerator(param::hstring const& text) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationGenerator) consume_Windows_Web_Syndication_ISyndicationGeneratorFactory<D>::CreateSyndicationGenerator(param::hstring const& text) const
     {
         void* generator{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationGeneratorFactory)->CreateSyndicationGenerator(*(void**)(&text), &generator));
         return Windows::Web::Syndication::SyndicationGenerator{ generator, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Authors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationPerson>) consume_Windows_Web_Syndication_ISyndicationItem<D>::Authors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Authors(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationPerson>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Categories() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationCategory>) consume_Windows_Web_Syndication_ISyndicationItem<D>::Categories() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Categories(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationCategory>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Contributors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationPerson>) consume_Windows_Web_Syndication_ISyndicationItem<D>::Contributors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Contributors(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationPerson>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Content() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationContent) consume_Windows_Web_Syndication_ISyndicationItem<D>::Content() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Content(&value));
         return Windows::Web::Syndication::SyndicationContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Content(Windows::Web::Syndication::SyndicationContent const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::Content(Windows::Web::Syndication::SyndicationContent const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->put_Content(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationItem<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Id(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::Id(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->put_Id(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::LastUpdatedTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Web_Syndication_ISyndicationItem<D>::LastUpdatedTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_LastUpdatedTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::LastUpdatedTime(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::LastUpdatedTime(Windows::Foundation::DateTime const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->put_LastUpdatedTime(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Links() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationLink>) consume_Windows_Web_Syndication_ISyndicationItem<D>::Links() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Links(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationLink>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::PublishedDate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Web_Syndication_ISyndicationItem<D>::PublishedDate() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_PublishedDate(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::PublishedDate(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::PublishedDate(Windows::Foundation::DateTime const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->put_PublishedDate(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Rights() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::ISyndicationText) consume_Windows_Web_Syndication_ISyndicationItem<D>::Rights() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Rights(&value));
         return Windows::Web::Syndication::ISyndicationText{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Rights(Windows::Web::Syndication::ISyndicationText const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::Rights(Windows::Web::Syndication::ISyndicationText const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->put_Rights(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Source() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationFeed) consume_Windows_Web_Syndication_ISyndicationItem<D>::Source() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Source(&value));
         return Windows::Web::Syndication::SyndicationFeed{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Source(Windows::Web::Syndication::SyndicationFeed const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::Source(Windows::Web::Syndication::SyndicationFeed const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->put_Source(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Summary() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::ISyndicationText) consume_Windows_Web_Syndication_ISyndicationItem<D>::Summary() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Summary(&value));
         return Windows::Web::Syndication::ISyndicationText{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Summary(Windows::Web::Syndication::ISyndicationText const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::Summary(Windows::Web::Syndication::ISyndicationText const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->put_Summary(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Title() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::ISyndicationText) consume_Windows_Web_Syndication_ISyndicationItem<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_Title(&value));
         return Windows::Web::Syndication::ISyndicationText{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Title(Windows::Web::Syndication::ISyndicationText const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::Title(Windows::Web::Syndication::ISyndicationText const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->put_Title(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::CommentsUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationItem<D>::CommentsUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_CommentsUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::CommentsUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::CommentsUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->put_CommentsUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::EditUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationItem<D>::EditUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_EditUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::EditMediaUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationItem<D>::EditMediaUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_EditMediaUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::ETag() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationItem<D>::ETag() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_ETag(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::ItemUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationItem<D>::ItemUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->get_ItemUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::Load(param::hstring const& item) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::Load(param::hstring const& item) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->Load(*(void**)(&item)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItem<D>::LoadFromXml(Windows::Data::Xml::Dom::XmlDocument const& itemDocument) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationItem<D>::LoadFromXml(Windows::Data::Xml::Dom::XmlDocument const& itemDocument) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItem)->LoadFromXml(*(void**)(&itemDocument)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationItemFactory<D>::CreateSyndicationItem(param::hstring const& title, Windows::Web::Syndication::SyndicationContent const& content, Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationItem) consume_Windows_Web_Syndication_ISyndicationItemFactory<D>::CreateSyndicationItem(param::hstring const& title, Windows::Web::Syndication::SyndicationContent const& content, Windows::Foundation::Uri const& uri) const
     {
         void* item{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationItemFactory)->CreateSyndicationItem(*(void**)(&title), *(void**)(&content), *(void**)(&uri), &item));
         return Windows::Web::Syndication::SyndicationItem{ item, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::Length() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Web_Syndication_ISyndicationLink<D>::Length() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->get_Length(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::Length(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationLink<D>::Length(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->put_Length(value));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::MediaType() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationLink<D>::MediaType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->get_MediaType(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::MediaType(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationLink<D>::MediaType(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->put_MediaType(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::Relationship() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationLink<D>::Relationship() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->get_Relationship(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::Relationship(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationLink<D>::Relationship(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->put_Relationship(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::Title() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationLink<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::Title(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationLink<D>::Title(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->put_Title(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationLink<D>::Uri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->get_Uri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::Uri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationLink<D>::Uri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->put_Uri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::ResourceLanguage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationLink<D>::ResourceLanguage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->get_ResourceLanguage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLink<D>::ResourceLanguage(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationLink<D>::ResourceLanguage(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLink)->put_ResourceLanguage(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLinkFactory<D>::CreateSyndicationLink(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationLink) consume_Windows_Web_Syndication_ISyndicationLinkFactory<D>::CreateSyndicationLink(Windows::Foundation::Uri const& uri) const
     {
         void* link{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLinkFactory)->CreateSyndicationLink(*(void**)(&uri), &link));
         return Windows::Web::Syndication::SyndicationLink{ link, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationLinkFactory<D>::CreateSyndicationLinkEx(Windows::Foundation::Uri const& uri, param::hstring const& relationship, param::hstring const& title, param::hstring const& mediaType, uint32_t length) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationLink) consume_Windows_Web_Syndication_ISyndicationLinkFactory<D>::CreateSyndicationLinkEx(Windows::Foundation::Uri const& uri, param::hstring const& relationship, param::hstring const& title, param::hstring const& mediaType, uint32_t length) const
     {
         void* link{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationLinkFactory)->CreateSyndicationLinkEx(*(void**)(&uri), *(void**)(&relationship), *(void**)(&title), *(void**)(&mediaType), length, &link));
         return Windows::Web::Syndication::SyndicationLink{ link, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->get_NodeName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->put_NodeName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeNamespace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeNamespace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->get_NodeNamespace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeNamespace(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeNamespace(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->put_NodeNamespace(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeValue() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->get_NodeValue(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeValue(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationNode<D>::NodeValue(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->put_NodeValue(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::Language() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationNode<D>::Language() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->get_Language(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::Language(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationNode<D>::Language(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->put_Language(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::BaseUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationNode<D>::BaseUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->get_BaseUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::BaseUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationNode<D>::BaseUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->put_BaseUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::AttributeExtensions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationAttribute>) consume_Windows_Web_Syndication_ISyndicationNode<D>::AttributeExtensions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->get_AttributeExtensions(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::SyndicationAttribute>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::ElementExtensions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::Syndication::ISyndicationNode>) consume_Windows_Web_Syndication_ISyndicationNode<D>::ElementExtensions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->get_ElementExtensions(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::Syndication::ISyndicationNode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNode<D>::GetXmlDocument(Windows::Web::Syndication::SyndicationFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlDocument) consume_Windows_Web_Syndication_ISyndicationNode<D>::GetXmlDocument(Windows::Web::Syndication::SyndicationFormat const& format) const
     {
         void* xmlDocument{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNode)->GetXmlDocument(static_cast<int32_t>(format), &xmlDocument));
         return Windows::Data::Xml::Dom::XmlDocument{ xmlDocument, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationNodeFactory<D>::CreateSyndicationNode(param::hstring const& nodeName, param::hstring const& nodeNamespace, param::hstring const& nodeValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationNode) consume_Windows_Web_Syndication_ISyndicationNodeFactory<D>::CreateSyndicationNode(param::hstring const& nodeName, param::hstring const& nodeNamespace, param::hstring const& nodeValue) const
     {
         void* node{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationNodeFactory)->CreateSyndicationNode(*(void**)(&nodeName), *(void**)(&nodeNamespace), *(void**)(&nodeValue), &node));
         return Windows::Web::Syndication::SyndicationNode{ node, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationPerson<D>::Email() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationPerson<D>::Email() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationPerson)->get_Email(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationPerson<D>::Email(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationPerson<D>::Email(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationPerson)->put_Email(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationPerson<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationPerson<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationPerson)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationPerson<D>::Name(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationPerson<D>::Name(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationPerson)->put_Name(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationPerson<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Syndication_ISyndicationPerson<D>::Uri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationPerson)->get_Uri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationPerson<D>::Uri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationPerson<D>::Uri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationPerson)->put_Uri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationPersonFactory<D>::CreateSyndicationPerson(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationPerson) consume_Windows_Web_Syndication_ISyndicationPersonFactory<D>::CreateSyndicationPerson(param::hstring const& name) const
     {
         void* person{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationPersonFactory)->CreateSyndicationPerson(*(void**)(&name), &person));
         return Windows::Web::Syndication::SyndicationPerson{ person, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationPersonFactory<D>::CreateSyndicationPersonEx(param::hstring const& name, param::hstring const& email, Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationPerson) consume_Windows_Web_Syndication_ISyndicationPersonFactory<D>::CreateSyndicationPersonEx(param::hstring const& name, param::hstring const& email, Windows::Foundation::Uri const& uri) const
     {
         void* person{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationPersonFactory)->CreateSyndicationPersonEx(*(void**)(&name), *(void**)(&email), *(void**)(&uri), &person));
         return Windows::Web::Syndication::SyndicationPerson{ person, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationText<D>::Text() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationText<D>::Text() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationText)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationText<D>::Text(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationText<D>::Text(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationText)->put_Text(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationText<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Syndication_ISyndicationText<D>::Type() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationText)->get_Type(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationText<D>::Type(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationText<D>::Type(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationText)->put_Type(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationText<D>::Xml() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlDocument) consume_Windows_Web_Syndication_ISyndicationText<D>::Xml() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationText)->get_Xml(&value));
         return Windows::Data::Xml::Dom::XmlDocument{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationText<D>::Xml(Windows::Data::Xml::Dom::XmlDocument const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Syndication_ISyndicationText<D>::Xml(Windows::Data::Xml::Dom::XmlDocument const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationText)->put_Xml(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationTextFactory<D>::CreateSyndicationText(param::hstring const& text) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationText) consume_Windows_Web_Syndication_ISyndicationTextFactory<D>::CreateSyndicationText(param::hstring const& text) const
     {
         void* syndicationText{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationTextFactory)->CreateSyndicationText(*(void**)(&text), &syndicationText));
         return Windows::Web::Syndication::SyndicationText{ syndicationText, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Syndication_ISyndicationTextFactory<D>::CreateSyndicationTextEx(param::hstring const& text, Windows::Web::Syndication::SyndicationTextType const& type) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Syndication::SyndicationText) consume_Windows_Web_Syndication_ISyndicationTextFactory<D>::CreateSyndicationTextEx(param::hstring const& text, Windows::Web::Syndication::SyndicationTextType const& type) const
     {
         void* syndicationText{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Syndication::ISyndicationTextFactory)->CreateSyndicationTextEx(*(void**)(&text), static_cast<int32_t>(type), &syndicationText));
         return Windows::Web::Syndication::SyndicationText{ syndicationText, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationAttribute> : produce_base<D, Windows::Web::Syndication::ISyndicationAttribute>
     {
@@ -808,6 +809,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationAttributeFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationAttributeFactory>
     {
@@ -820,6 +823,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationCategory> : produce_base<D, Windows::Web::Syndication::ISyndicationCategory>
     {
@@ -869,6 +874,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationCategoryFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationCategoryFactory>
     {
@@ -889,6 +896,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationClient> : produce_base<D, Windows::Web::Syndication::ISyndicationClient>
     {
@@ -980,6 +988,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationClientFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationClientFactory>
     {
@@ -992,6 +1001,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationContent> : produce_base<D, Windows::Web::Syndication::ISyndicationContent>
     {
@@ -1011,6 +1022,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationContentFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationContentFactory>
     {
@@ -1031,6 +1044,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationErrorStatics> : produce_base<D, Windows::Web::Syndication::ISyndicationErrorStatics>
     {
@@ -1042,6 +1057,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationFeed> : produce_base<D, Windows::Web::Syndication::ISyndicationFeed>
     {
@@ -1259,6 +1276,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationFeedFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationFeedFactory>
     {
@@ -1271,6 +1290,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationGenerator> : produce_base<D, Windows::Web::Syndication::ISyndicationGenerator>
     {
@@ -1320,6 +1341,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationGeneratorFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationGeneratorFactory>
     {
@@ -1332,6 +1355,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationItem> : produce_base<D, Windows::Web::Syndication::ISyndicationItem>
     {
@@ -1549,6 +1574,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationItemFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationItemFactory>
     {
@@ -1561,6 +1588,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationLink> : produce_base<D, Windows::Web::Syndication::ISyndicationLink>
     {
@@ -1654,6 +1683,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationLinkFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationLinkFactory>
     {
@@ -1674,6 +1705,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationNode> : produce_base<D, Windows::Web::Syndication::ISyndicationNode>
     {
@@ -1777,6 +1809,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationNodeFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationNodeFactory>
     {
@@ -1789,6 +1822,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationPerson> : produce_base<D, Windows::Web::Syndication::ISyndicationPerson>
     {
@@ -1838,6 +1873,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationPersonFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationPersonFactory>
     {
@@ -1858,6 +1895,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationText> : produce_base<D, Windows::Web::Syndication::ISyndicationText>
     {
@@ -1907,6 +1945,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Syndication::ISyndicationTextFactory> : produce_base<D, Windows::Web::Syndication::ISyndicationTextFactory>
     {
@@ -1927,158 +1966,161 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Web::Syndication
+WINRT_EXPORT namespace winrt::Windows::Web::Syndication
 {
     inline SyndicationAttribute::SyndicationAttribute() :
-        SyndicationAttribute(impl::call_factory<SyndicationAttribute>([](auto&& f) { return f.template ActivateInstance<SyndicationAttribute>(); }))
+        SyndicationAttribute(impl::call_factory_cast<SyndicationAttribute(*)(Windows::Foundation::IActivationFactory const&), SyndicationAttribute>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationAttribute>(); }))
     {
     }
     inline SyndicationAttribute::SyndicationAttribute(param::hstring const& attributeName, param::hstring const& attributeNamespace, param::hstring const& attributeValue) :
-        SyndicationAttribute(impl::call_factory<SyndicationAttribute, Windows::Web::Syndication::ISyndicationAttributeFactory>([&](auto&& f) { return f.CreateSyndicationAttribute(attributeName, attributeNamespace, attributeValue); }))
+        SyndicationAttribute(impl::call_factory<SyndicationAttribute, ISyndicationAttributeFactory>([&](ISyndicationAttributeFactory const& f) { return f.CreateSyndicationAttribute(attributeName, attributeNamespace, attributeValue); }))
     {
     }
     inline SyndicationCategory::SyndicationCategory() :
-        SyndicationCategory(impl::call_factory<SyndicationCategory>([](auto&& f) { return f.template ActivateInstance<SyndicationCategory>(); }))
+        SyndicationCategory(impl::call_factory_cast<SyndicationCategory(*)(Windows::Foundation::IActivationFactory const&), SyndicationCategory>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationCategory>(); }))
     {
     }
     inline SyndicationCategory::SyndicationCategory(param::hstring const& term) :
-        SyndicationCategory(impl::call_factory<SyndicationCategory, Windows::Web::Syndication::ISyndicationCategoryFactory>([&](auto&& f) { return f.CreateSyndicationCategory(term); }))
+        SyndicationCategory(impl::call_factory<SyndicationCategory, ISyndicationCategoryFactory>([&](ISyndicationCategoryFactory const& f) { return f.CreateSyndicationCategory(term); }))
     {
     }
     inline SyndicationCategory::SyndicationCategory(param::hstring const& term, param::hstring const& scheme, param::hstring const& label) :
-        SyndicationCategory(impl::call_factory<SyndicationCategory, Windows::Web::Syndication::ISyndicationCategoryFactory>([&](auto&& f) { return f.CreateSyndicationCategoryEx(term, scheme, label); }))
+        SyndicationCategory(impl::call_factory<SyndicationCategory, ISyndicationCategoryFactory>([&](ISyndicationCategoryFactory const& f) { return f.CreateSyndicationCategoryEx(term, scheme, label); }))
     {
     }
     inline SyndicationClient::SyndicationClient() :
-        SyndicationClient(impl::call_factory<SyndicationClient>([](auto&& f) { return f.template ActivateInstance<SyndicationClient>(); }))
+        SyndicationClient(impl::call_factory_cast<SyndicationClient(*)(Windows::Foundation::IActivationFactory const&), SyndicationClient>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationClient>(); }))
     {
     }
     inline SyndicationClient::SyndicationClient(Windows::Security::Credentials::PasswordCredential const& serverCredential) :
-        SyndicationClient(impl::call_factory<SyndicationClient, Windows::Web::Syndication::ISyndicationClientFactory>([&](auto&& f) { return f.CreateSyndicationClient(serverCredential); }))
+        SyndicationClient(impl::call_factory<SyndicationClient, ISyndicationClientFactory>([&](ISyndicationClientFactory const& f) { return f.CreateSyndicationClient(serverCredential); }))
     {
     }
     inline SyndicationContent::SyndicationContent() :
-        SyndicationContent(impl::call_factory<SyndicationContent>([](auto&& f) { return f.template ActivateInstance<SyndicationContent>(); }))
+        SyndicationContent(impl::call_factory_cast<SyndicationContent(*)(Windows::Foundation::IActivationFactory const&), SyndicationContent>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationContent>(); }))
     {
     }
     inline SyndicationContent::SyndicationContent(param::hstring const& text, Windows::Web::Syndication::SyndicationTextType const& type) :
-        SyndicationContent(impl::call_factory<SyndicationContent, Windows::Web::Syndication::ISyndicationContentFactory>([&](auto&& f) { return f.CreateSyndicationContent(text, type); }))
+        SyndicationContent(impl::call_factory<SyndicationContent, ISyndicationContentFactory>([&](ISyndicationContentFactory const& f) { return f.CreateSyndicationContent(text, type); }))
     {
     }
     inline SyndicationContent::SyndicationContent(Windows::Foundation::Uri const& sourceUri) :
-        SyndicationContent(impl::call_factory<SyndicationContent, Windows::Web::Syndication::ISyndicationContentFactory>([&](auto&& f) { return f.CreateSyndicationContentWithSourceUri(sourceUri); }))
+        SyndicationContent(impl::call_factory<SyndicationContent, ISyndicationContentFactory>([&](ISyndicationContentFactory const& f) { return f.CreateSyndicationContentWithSourceUri(sourceUri); }))
     {
     }
     inline auto SyndicationError::GetStatus(int32_t hresult)
     {
-        return impl::call_factory<SyndicationError, Windows::Web::Syndication::ISyndicationErrorStatics>([&](auto&& f) { return f.GetStatus(hresult); });
+        return impl::call_factory<SyndicationError, ISyndicationErrorStatics>([&](ISyndicationErrorStatics const& f) { return f.GetStatus(hresult); });
     }
     inline SyndicationFeed::SyndicationFeed() :
-        SyndicationFeed(impl::call_factory<SyndicationFeed>([](auto&& f) { return f.template ActivateInstance<SyndicationFeed>(); }))
+        SyndicationFeed(impl::call_factory_cast<SyndicationFeed(*)(Windows::Foundation::IActivationFactory const&), SyndicationFeed>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationFeed>(); }))
     {
     }
     inline SyndicationFeed::SyndicationFeed(param::hstring const& title, param::hstring const& subtitle, Windows::Foundation::Uri const& uri) :
-        SyndicationFeed(impl::call_factory<SyndicationFeed, Windows::Web::Syndication::ISyndicationFeedFactory>([&](auto&& f) { return f.CreateSyndicationFeed(title, subtitle, uri); }))
+        SyndicationFeed(impl::call_factory<SyndicationFeed, ISyndicationFeedFactory>([&](ISyndicationFeedFactory const& f) { return f.CreateSyndicationFeed(title, subtitle, uri); }))
     {
     }
     inline SyndicationGenerator::SyndicationGenerator() :
-        SyndicationGenerator(impl::call_factory<SyndicationGenerator>([](auto&& f) { return f.template ActivateInstance<SyndicationGenerator>(); }))
+        SyndicationGenerator(impl::call_factory_cast<SyndicationGenerator(*)(Windows::Foundation::IActivationFactory const&), SyndicationGenerator>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationGenerator>(); }))
     {
     }
     inline SyndicationGenerator::SyndicationGenerator(param::hstring const& text) :
-        SyndicationGenerator(impl::call_factory<SyndicationGenerator, Windows::Web::Syndication::ISyndicationGeneratorFactory>([&](auto&& f) { return f.CreateSyndicationGenerator(text); }))
+        SyndicationGenerator(impl::call_factory<SyndicationGenerator, ISyndicationGeneratorFactory>([&](ISyndicationGeneratorFactory const& f) { return f.CreateSyndicationGenerator(text); }))
     {
     }
     inline SyndicationItem::SyndicationItem() :
-        SyndicationItem(impl::call_factory<SyndicationItem>([](auto&& f) { return f.template ActivateInstance<SyndicationItem>(); }))
+        SyndicationItem(impl::call_factory_cast<SyndicationItem(*)(Windows::Foundation::IActivationFactory const&), SyndicationItem>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationItem>(); }))
     {
     }
     inline SyndicationItem::SyndicationItem(param::hstring const& title, Windows::Web::Syndication::SyndicationContent const& content, Windows::Foundation::Uri const& uri) :
-        SyndicationItem(impl::call_factory<SyndicationItem, Windows::Web::Syndication::ISyndicationItemFactory>([&](auto&& f) { return f.CreateSyndicationItem(title, content, uri); }))
+        SyndicationItem(impl::call_factory<SyndicationItem, ISyndicationItemFactory>([&](ISyndicationItemFactory const& f) { return f.CreateSyndicationItem(title, content, uri); }))
     {
     }
     inline SyndicationLink::SyndicationLink() :
-        SyndicationLink(impl::call_factory<SyndicationLink>([](auto&& f) { return f.template ActivateInstance<SyndicationLink>(); }))
+        SyndicationLink(impl::call_factory_cast<SyndicationLink(*)(Windows::Foundation::IActivationFactory const&), SyndicationLink>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationLink>(); }))
     {
     }
     inline SyndicationLink::SyndicationLink(Windows::Foundation::Uri const& uri) :
-        SyndicationLink(impl::call_factory<SyndicationLink, Windows::Web::Syndication::ISyndicationLinkFactory>([&](auto&& f) { return f.CreateSyndicationLink(uri); }))
+        SyndicationLink(impl::call_factory<SyndicationLink, ISyndicationLinkFactory>([&](ISyndicationLinkFactory const& f) { return f.CreateSyndicationLink(uri); }))
     {
     }
     inline SyndicationLink::SyndicationLink(Windows::Foundation::Uri const& uri, param::hstring const& relationship, param::hstring const& title, param::hstring const& mediaType, uint32_t length) :
-        SyndicationLink(impl::call_factory<SyndicationLink, Windows::Web::Syndication::ISyndicationLinkFactory>([&](auto&& f) { return f.CreateSyndicationLinkEx(uri, relationship, title, mediaType, length); }))
+        SyndicationLink(impl::call_factory<SyndicationLink, ISyndicationLinkFactory>([&](ISyndicationLinkFactory const& f) { return f.CreateSyndicationLinkEx(uri, relationship, title, mediaType, length); }))
     {
     }
     inline SyndicationNode::SyndicationNode() :
-        SyndicationNode(impl::call_factory<SyndicationNode>([](auto&& f) { return f.template ActivateInstance<SyndicationNode>(); }))
+        SyndicationNode(impl::call_factory_cast<SyndicationNode(*)(Windows::Foundation::IActivationFactory const&), SyndicationNode>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationNode>(); }))
     {
     }
     inline SyndicationNode::SyndicationNode(param::hstring const& nodeName, param::hstring const& nodeNamespace, param::hstring const& nodeValue) :
-        SyndicationNode(impl::call_factory<SyndicationNode, Windows::Web::Syndication::ISyndicationNodeFactory>([&](auto&& f) { return f.CreateSyndicationNode(nodeName, nodeNamespace, nodeValue); }))
+        SyndicationNode(impl::call_factory<SyndicationNode, ISyndicationNodeFactory>([&](ISyndicationNodeFactory const& f) { return f.CreateSyndicationNode(nodeName, nodeNamespace, nodeValue); }))
     {
     }
     inline SyndicationPerson::SyndicationPerson() :
-        SyndicationPerson(impl::call_factory<SyndicationPerson>([](auto&& f) { return f.template ActivateInstance<SyndicationPerson>(); }))
+        SyndicationPerson(impl::call_factory_cast<SyndicationPerson(*)(Windows::Foundation::IActivationFactory const&), SyndicationPerson>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationPerson>(); }))
     {
     }
     inline SyndicationPerson::SyndicationPerson(param::hstring const& name) :
-        SyndicationPerson(impl::call_factory<SyndicationPerson, Windows::Web::Syndication::ISyndicationPersonFactory>([&](auto&& f) { return f.CreateSyndicationPerson(name); }))
+        SyndicationPerson(impl::call_factory<SyndicationPerson, ISyndicationPersonFactory>([&](ISyndicationPersonFactory const& f) { return f.CreateSyndicationPerson(name); }))
     {
     }
     inline SyndicationPerson::SyndicationPerson(param::hstring const& name, param::hstring const& email, Windows::Foundation::Uri const& uri) :
-        SyndicationPerson(impl::call_factory<SyndicationPerson, Windows::Web::Syndication::ISyndicationPersonFactory>([&](auto&& f) { return f.CreateSyndicationPersonEx(name, email, uri); }))
+        SyndicationPerson(impl::call_factory<SyndicationPerson, ISyndicationPersonFactory>([&](ISyndicationPersonFactory const& f) { return f.CreateSyndicationPersonEx(name, email, uri); }))
     {
     }
     inline SyndicationText::SyndicationText() :
-        SyndicationText(impl::call_factory<SyndicationText>([](auto&& f) { return f.template ActivateInstance<SyndicationText>(); }))
+        SyndicationText(impl::call_factory_cast<SyndicationText(*)(Windows::Foundation::IActivationFactory const&), SyndicationText>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SyndicationText>(); }))
     {
     }
     inline SyndicationText::SyndicationText(param::hstring const& text) :
-        SyndicationText(impl::call_factory<SyndicationText, Windows::Web::Syndication::ISyndicationTextFactory>([&](auto&& f) { return f.CreateSyndicationText(text); }))
+        SyndicationText(impl::call_factory<SyndicationText, ISyndicationTextFactory>([&](ISyndicationTextFactory const& f) { return f.CreateSyndicationText(text); }))
     {
     }
     inline SyndicationText::SyndicationText(param::hstring const& text, Windows::Web::Syndication::SyndicationTextType const& type) :
-        SyndicationText(impl::call_factory<SyndicationText, Windows::Web::Syndication::ISyndicationTextFactory>([&](auto&& f) { return f.CreateSyndicationTextEx(text, type); }))
+        SyndicationText(impl::call_factory<SyndicationText, ISyndicationTextFactory>([&](ISyndicationTextFactory const& f) { return f.CreateSyndicationTextEx(text, type); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationAttribute> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationAttribute> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationAttributeFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationAttributeFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationCategory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationCategory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationCategoryFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationCategoryFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationClient> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationClient> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationClientFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationClientFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationContent> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationContent> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationContentFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationContentFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationErrorStatics> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationErrorStatics> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationFeed> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationFeed> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationFeedFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationFeedFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationGenerator> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationGenerator> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationGeneratorFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationGeneratorFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationItem> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationItem> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationItemFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationItemFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationLink> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationLink> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationLinkFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationLinkFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationNode> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationNode> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationNodeFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationNodeFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationPerson> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationPerson> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationPersonFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationPersonFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationText> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationText> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationTextFactory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::ISyndicationTextFactory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationAttribute> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationAttribute> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationCategory> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationCategory> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationClient> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationClient> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationContent> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationContent> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationError> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationError> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationFeed> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationFeed> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationGenerator> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationGenerator> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationItem> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationItem> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationLink> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationLink> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationNode> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationNode> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationPerson> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationPerson> {};
-    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationText> : winrt::impl::hash_base<winrt::Windows::Web::Syndication::SyndicationText> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationAttribute> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationAttributeFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationCategory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationCategoryFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationClient> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationClientFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationContentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationErrorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationFeed> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationFeedFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationGenerator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationGeneratorFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationItemFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationLinkFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationNodeFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationPerson> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationPersonFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationText> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::ISyndicationTextFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationAttribute> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationCategory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationClient> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationError> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationFeed> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationGenerator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationPerson> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Syndication::SyndicationText> : winrt::impl::hash_base {};
+#endif
 }
 #endif

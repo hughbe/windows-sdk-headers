@@ -116,7 +116,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -180,6 +180,32 @@ namespace ABI {
 #define __x_ABI_CWindows_CApplicationModel_CIAppInfo2 ABI::Windows::ApplicationModel::IAppInfo2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfo3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CIAppInfo3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            interface IAppInfo3;
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo3 ABI::Windows::ApplicationModel::IAppInfo3
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfo4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CIAppInfo4_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            interface IAppInfo4;
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo4 ABI::Windows::ApplicationModel::IAppInfo4
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo4_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfoStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIAppInfoStatics_FWD_DEFINED__
@@ -2549,6 +2575,14 @@ namespace ABI {
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
+            typedef enum AppExecutionContext : int AppExecutionContext;
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
             typedef enum LimitedAccessFeatureStatus : int LimitedAccessFeatureStatus;
         } /* ApplicationModel */
     } /* Windows */
@@ -2673,6 +2707,28 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+/*
+ *
+ * Struct Windows.ApplicationModel.AppExecutionContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 11.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            enum AppExecutionContext : int
+            {
+                AppExecutionContext_Unknown = 0,
+                AppExecutionContext_Host = 1,
+                AppExecutionContext_Guest = 2,
+            };
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
 
 /*
  *
@@ -2959,9 +3015,80 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInfo2;
 
 /*
  *
+ * Interface Windows.ApplicationModel.IAppInfo3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 11.0
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CIAppInfo3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CIAppInfo3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_IAppInfo3[] = L"Windows.ApplicationModel.IAppInfo3";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            MIDL_INTERFACE("09a78e46-93a4-46de-9397-0843b57115ea")
+            IAppInfo3 : public IInspectable
+            {
+            public:
+                virtual HRESULT STDMETHODCALLTYPE get_ExecutionContext(
+                    ABI::Windows::ApplicationModel::AppExecutionContext* value
+                    ) = 0;
+            };
+
+            extern MIDL_CONST_ID IID& IID_IAppInfo3 = _uuidof(IAppInfo3);
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInfo3;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIAppInfo3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+
+/*
+ *
+ * Interface Windows.ApplicationModel.IAppInfo4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 11.0
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CIAppInfo4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CIAppInfo4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_IAppInfo4[] = L"Windows.ApplicationModel.IAppInfo4";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            MIDL_INTERFACE("2f34bdeb-1609-4554-9f33-12e1e803e0d4")
+            IAppInfo4 : public IInspectable
+            {
+            public:
+                virtual HRESULT STDMETHODCALLTYPE get_SupportedFileExtensions(
+                    UINT32* valueLength,
+                    HSTRING** value
+                    ) = 0;
+            };
+
+            extern MIDL_CONST_ID IID& IID_IAppInfo4 = _uuidof(IAppInfo4);
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInfo4;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIAppInfo4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+
+/*
+ *
  * Interface Windows.ApplicationModel.IAppInfoStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppInfo
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
@@ -4977,6 +5104,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.IAppInfo ** Default Interface **
  *    Windows.ApplicationModel.IAppInfo2
+ *    Windows.ApplicationModel.IAppInfo3
+ *    Windows.ApplicationModel.IAppInfo4
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5042,8 +5171,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5598,6 +5727,18 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CIAppInfo __x_ABI_CWindows_
 typedef interface __x_ABI_CWindows_CApplicationModel_CIAppInfo2 __x_ABI_CWindows_CApplicationModel_CIAppInfo2;
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfo3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CIAppInfo3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CIAppInfo3 __x_ABI_CWindows_CApplicationModel_CIAppInfo3;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfo4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CIAppInfo4_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CIAppInfo4 __x_ABI_CWindows_CApplicationModel_CIAppInfo4;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CIAppInfo4_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIAppInfoStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIAppInfoStatics_FWD_DEFINED__
@@ -9433,6 +9574,8 @@ typedef interface __x_ABI_CWindows_CSystem_CIUser __x_ABI_CWindows_CSystem_CIUse
 
 typedef enum __x_ABI_CWindows_CApplicationModel_CAddResourcePackageOptions __x_ABI_CWindows_CApplicationModel_CAddResourcePackageOptions;
 
+typedef enum __x_ABI_CWindows_CApplicationModel_CAppExecutionContext __x_ABI_CWindows_CApplicationModel_CAppExecutionContext;
+
 typedef enum __x_ABI_CWindows_CApplicationModel_CLimitedAccessFeatureStatus __x_ABI_CWindows_CApplicationModel_CLimitedAccessFeatureStatus;
 
 typedef enum __x_ABI_CWindows_CApplicationModel_CPackageContentGroupState __x_ABI_CWindows_CApplicationModel_CPackageContentGroupState;
@@ -9458,6 +9601,22 @@ enum __x_ABI_CWindows_CApplicationModel_CAddResourcePackageOptions
     AddResourcePackageOptions_ApplyUpdateIfAvailable = 0x2,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+/*
+ *
+ * Struct Windows.ApplicationModel.AppExecutionContext
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 11.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+enum __x_ABI_CWindows_CApplicationModel_CAppExecutionContext
+{
+    AppExecutionContext_Unknown = 0,
+    AppExecutionContext_Host = 1,
+    AppExecutionContext_Guest = 2,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
 
 /*
  *
@@ -9817,9 +9976,150 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInfo2;
 
 /*
  *
+ * Interface Windows.ApplicationModel.IAppInfo3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 11.0
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CIAppInfo3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CIAppInfo3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_IAppInfo3[] = L"Windows.ApplicationModel.IAppInfo3";
+typedef struct __x_ABI_CWindows_CApplicationModel_CIAppInfo3Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CIAppInfo3* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CIAppInfo3* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CIAppInfo3* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CIAppInfo3* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CIAppInfo3* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CIAppInfo3* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ExecutionContext)(__x_ABI_CWindows_CApplicationModel_CIAppInfo3* This,
+        enum __x_ABI_CWindows_CApplicationModel_CAppExecutionContext* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CApplicationModel_CIAppInfo3Vtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CIAppInfo3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CIAppInfo3Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo3_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo3_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo3_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo3_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo3_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo3_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo3_get_ExecutionContext(This, value) \
+    ((This)->lpVtbl->get_ExecutionContext(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInfo3;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIAppInfo3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+
+/*
+ *
+ * Interface Windows.ApplicationModel.IAppInfo4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 11.0
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CIAppInfo4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CIAppInfo4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_IAppInfo4[] = L"Windows.ApplicationModel.IAppInfo4";
+typedef struct __x_ABI_CWindows_CApplicationModel_CIAppInfo4Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CIAppInfo4* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CIAppInfo4* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CIAppInfo4* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CIAppInfo4* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CIAppInfo4* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CIAppInfo4* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_SupportedFileExtensions)(__x_ABI_CWindows_CApplicationModel_CIAppInfo4* This,
+        UINT32* valueLength,
+        HSTRING** value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CApplicationModel_CIAppInfo4Vtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CIAppInfo4
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CIAppInfo4Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo4_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo4_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo4_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo4_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo4_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo4_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CApplicationModel_CIAppInfo4_get_SupportedFileExtensions(This, valueLength, value) \
+    ((This)->lpVtbl->get_SupportedFileExtensions(This, valueLength, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIAppInfo4;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIAppInfo4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xb0000
+
+/*
+ *
  * Interface Windows.ApplicationModel.IAppInfoStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.AppInfo
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
@@ -13750,6 +14050,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.IAppInfo ** Default Interface **
  *    Windows.ApplicationModel.IAppInfo2
+ *    Windows.ApplicationModel.IAppInfo3
+ *    Windows.ApplicationModel.IAppInfo4
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -13815,8 +14117,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

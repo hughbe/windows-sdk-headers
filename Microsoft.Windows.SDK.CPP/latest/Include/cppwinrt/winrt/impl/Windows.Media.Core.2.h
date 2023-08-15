@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -20,7 +20,7 @@
 #include "winrt/impl/Windows.Storage.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Windows.Media.Core.1.h"
-namespace winrt::Windows::Media::Core
+WINRT_EXPORT namespace winrt::Windows::Media::Core
 {
     struct MseTimeRange
     {
@@ -97,7 +97,7 @@ namespace winrt::Windows::Media::Core
     {
         AudioStreamDescriptor(std::nullptr_t) noexcept {}
         AudioStreamDescriptor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::IAudioStreamDescriptor(ptr, take_ownership_from_abi) {}
-        AudioStreamDescriptor(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties);
+        explicit AudioStreamDescriptor(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties);
     };
     struct __declspec(empty_bases) AudioTrack : Windows::Media::Core::IMediaTrack,
         impl::require<AudioTrack, Windows::Media::Core::IAudioTrack>
@@ -288,7 +288,7 @@ namespace winrt::Windows::Media::Core
     {
         MediaSourceAppServiceConnection(std::nullptr_t) noexcept {}
         MediaSourceAppServiceConnection(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::IMediaSourceAppServiceConnection(ptr, take_ownership_from_abi) {}
-        MediaSourceAppServiceConnection(Windows::ApplicationModel::AppService::AppServiceConnection const& appServiceConnection);
+        explicit MediaSourceAppServiceConnection(Windows::ApplicationModel::AppService::AppServiceConnection const& appServiceConnection);
     };
     struct __declspec(empty_bases) MediaSourceError : Windows::Media::Core::IMediaSourceError
     {
@@ -329,7 +329,7 @@ namespace winrt::Windows::Media::Core
     {
         MediaStreamSource(std::nullptr_t) noexcept {}
         MediaStreamSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::IMediaStreamSource(ptr, take_ownership_from_abi) {}
-        MediaStreamSource(Windows::Media::Core::IMediaStreamDescriptor const& descriptor);
+        explicit MediaStreamSource(Windows::Media::Core::IMediaStreamDescriptor const& descriptor);
         MediaStreamSource(Windows::Media::Core::IMediaStreamDescriptor const& descriptor, Windows::Media::Core::IMediaStreamDescriptor const& descriptor2);
     };
     struct __declspec(empty_bases) MediaStreamSourceClosedEventArgs : Windows::Media::Core::IMediaStreamSourceClosedEventArgs
@@ -443,7 +443,7 @@ namespace winrt::Windows::Media::Core
     {
         TimedMetadataStreamDescriptor(std::nullptr_t) noexcept {}
         TimedMetadataStreamDescriptor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::IMediaStreamDescriptor(ptr, take_ownership_from_abi) {}
-        TimedMetadataStreamDescriptor(Windows::Media::MediaProperties::TimedMetadataEncodingProperties const& encodingProperties);
+        explicit TimedMetadataStreamDescriptor(Windows::Media::MediaProperties::TimedMetadataEncodingProperties const& encodingProperties);
     };
     struct __declspec(empty_bases) TimedMetadataTrack : Windows::Media::Core::ITimedMetadataTrack,
         impl::require<TimedMetadataTrack, Windows::Media::Core::ITimedMetadataTrack2>
@@ -462,6 +462,11 @@ namespace winrt::Windows::Media::Core
         TimedMetadataTrackFailedEventArgs(std::nullptr_t) noexcept {}
         TimedMetadataTrackFailedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::ITimedMetadataTrackFailedEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) TimedTextBouten : Windows::Media::Core::ITimedTextBouten
+    {
+        TimedTextBouten(std::nullptr_t) noexcept {}
+        TimedTextBouten(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::ITimedTextBouten(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) TimedTextCue : Windows::Media::Core::ITimedTextCue
     {
         TimedTextCue(std::nullptr_t) noexcept {}
@@ -479,6 +484,11 @@ namespace winrt::Windows::Media::Core
         TimedTextRegion(std::nullptr_t) noexcept {}
         TimedTextRegion(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::ITimedTextRegion(ptr, take_ownership_from_abi) {}
         TimedTextRegion();
+    };
+    struct __declspec(empty_bases) TimedTextRuby : Windows::Media::Core::ITimedTextRuby
+    {
+        TimedTextRuby(std::nullptr_t) noexcept {}
+        TimedTextRuby(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::ITimedTextRuby(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) TimedTextSource : Windows::Media::Core::ITimedTextSource
     {
@@ -499,7 +509,7 @@ namespace winrt::Windows::Media::Core
         TimedTextSourceResolveResultEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::ITimedTextSourceResolveResultEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) TimedTextStyle : Windows::Media::Core::ITimedTextStyle,
-        impl::require<TimedTextStyle, Windows::Media::Core::ITimedTextStyle2>
+        impl::require<TimedTextStyle, Windows::Media::Core::ITimedTextStyle2, Windows::Media::Core::ITimedTextStyle3>
     {
         TimedTextStyle(std::nullptr_t) noexcept {}
         TimedTextStyle(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::ITimedTextStyle(ptr, take_ownership_from_abi) {}
@@ -532,7 +542,7 @@ namespace winrt::Windows::Media::Core
     {
         VideoStreamDescriptor(std::nullptr_t) noexcept {}
         VideoStreamDescriptor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Core::IVideoStreamDescriptor(ptr, take_ownership_from_abi) {}
-        VideoStreamDescriptor(Windows::Media::MediaProperties::VideoEncodingProperties const& encodingProperties);
+        explicit VideoStreamDescriptor(Windows::Media::MediaProperties::VideoEncodingProperties const& encodingProperties);
     };
     struct __declspec(empty_bases) VideoTrack : Windows::Media::Core::IMediaTrack,
         impl::require<VideoTrack, Windows::Media::Core::IVideoTrack>

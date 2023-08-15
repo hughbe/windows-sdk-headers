@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -143,47 +151,57 @@ EXTERN_C const IID IID_IDirectDrawMediaStream;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDirectDrawMediaStream * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDirectDrawMediaStream * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDirectDrawMediaStream * This);
         
+        DECLSPEC_XFGVIRT(IMediaStream, GetMultiMediaStream)
         HRESULT ( STDMETHODCALLTYPE *GetMultiMediaStream )( 
             IDirectDrawMediaStream * This,
             /* [out] */ IMultiMediaStream **ppMultiMediaStream);
         
+        DECLSPEC_XFGVIRT(IMediaStream, GetInformation)
         HRESULT ( STDMETHODCALLTYPE *GetInformation )( 
             IDirectDrawMediaStream * This,
             /* [out] */ MSPID *pPurposeId,
             /* [out] */ STREAM_TYPE *pType);
         
+        DECLSPEC_XFGVIRT(IMediaStream, SetSameFormat)
         HRESULT ( STDMETHODCALLTYPE *SetSameFormat )( 
             IDirectDrawMediaStream * This,
             /* [in] */ IMediaStream *pStreamThatHasDesiredFormat,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IMediaStream, AllocateSample)
         HRESULT ( STDMETHODCALLTYPE *AllocateSample )( 
             IDirectDrawMediaStream * This,
             /* [in] */ DWORD dwFlags,
             /* [out] */ IStreamSample **ppSample);
         
+        DECLSPEC_XFGVIRT(IMediaStream, CreateSharedSample)
         HRESULT ( STDMETHODCALLTYPE *CreateSharedSample )( 
             IDirectDrawMediaStream * This,
             /* [in] */ IStreamSample *pExistingSample,
             /* [in] */ DWORD dwFlags,
             /* [out] */ IStreamSample **ppNewSample);
         
+        DECLSPEC_XFGVIRT(IMediaStream, SendEndOfStream)
         HRESULT ( STDMETHODCALLTYPE *SendEndOfStream )( 
             IDirectDrawMediaStream * This,
             DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IDirectDrawMediaStream, GetFormat)
         HRESULT ( STDMETHODCALLTYPE *GetFormat )( 
             IDirectDrawMediaStream * This,
             /* [out] */ DDSURFACEDESC *pDDSDCurrent,
@@ -191,19 +209,23 @@ EXTERN_C const IID IID_IDirectDrawMediaStream;
             /* [out] */ DDSURFACEDESC *pDDSDDesired,
             /* [out] */ DWORD *pdwFlags);
         
+        DECLSPEC_XFGVIRT(IDirectDrawMediaStream, SetFormat)
         HRESULT ( STDMETHODCALLTYPE *SetFormat )( 
             IDirectDrawMediaStream * This,
             /* [in] */ const DDSURFACEDESC *pDDSurfaceDesc,
             /* [in] */ IDirectDrawPalette *pDirectDrawPalette);
         
+        DECLSPEC_XFGVIRT(IDirectDrawMediaStream, GetDirectDraw)
         HRESULT ( STDMETHODCALLTYPE *GetDirectDraw )( 
             IDirectDrawMediaStream * This,
             /* [out] */ IDirectDraw **ppDirectDraw);
         
+        DECLSPEC_XFGVIRT(IDirectDrawMediaStream, SetDirectDraw)
         HRESULT ( STDMETHODCALLTYPE *SetDirectDraw )( 
             IDirectDrawMediaStream * This,
             /* [in] */ IDirectDraw *pDirectDraw);
         
+        DECLSPEC_XFGVIRT(IDirectDrawMediaStream, CreateSample)
         HRESULT ( STDMETHODCALLTYPE *CreateSample )( 
             IDirectDrawMediaStream * This,
             /* [in] */ IDirectDrawSurface *pSurface,
@@ -211,6 +233,7 @@ EXTERN_C const IID IID_IDirectDrawMediaStream;
             /* [in] */ DWORD dwFlags,
             /* [out] */ IDirectDrawStreamSample **ppSample);
         
+        DECLSPEC_XFGVIRT(IDirectDrawMediaStream, GetTimePerFrame)
         HRESULT ( STDMETHODCALLTYPE *GetTimePerFrame )( 
             IDirectDrawMediaStream * This,
             /* [out] */ STREAM_TIME *pFrameTime);
@@ -317,33 +340,40 @@ EXTERN_C const IID IID_IDirectDrawStreamSample;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDirectDrawStreamSample * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDirectDrawStreamSample * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDirectDrawStreamSample * This);
         
+        DECLSPEC_XFGVIRT(IStreamSample, GetMediaStream)
         HRESULT ( STDMETHODCALLTYPE *GetMediaStream )( 
             IDirectDrawStreamSample * This,
             /* [in] */ IMediaStream **ppMediaStream);
         
+        DECLSPEC_XFGVIRT(IStreamSample, GetSampleTimes)
         HRESULT ( STDMETHODCALLTYPE *GetSampleTimes )( 
             IDirectDrawStreamSample * This,
             /* [out] */ STREAM_TIME *pStartTime,
             /* [out] */ STREAM_TIME *pEndTime,
             /* [out] */ STREAM_TIME *pCurrentTime);
         
+        DECLSPEC_XFGVIRT(IStreamSample, SetSampleTimes)
         HRESULT ( STDMETHODCALLTYPE *SetSampleTimes )( 
             IDirectDrawStreamSample * This,
             /* [in] */ const STREAM_TIME *pStartTime,
             /* [in] */ const STREAM_TIME *pEndTime);
         
+        DECLSPEC_XFGVIRT(IStreamSample, Update)
         HRESULT ( STDMETHODCALLTYPE *Update )( 
             IDirectDrawStreamSample * This,
             /* [in] */ DWORD dwFlags,
@@ -351,16 +381,19 @@ EXTERN_C const IID IID_IDirectDrawStreamSample;
             /* [in] */ PAPCFUNC pfnAPC,
             /* [in] */ DWORD_PTR dwAPCData);
         
+        DECLSPEC_XFGVIRT(IStreamSample, CompletionStatus)
         HRESULT ( STDMETHODCALLTYPE *CompletionStatus )( 
             IDirectDrawStreamSample * This,
             /* [in] */ DWORD dwFlags,
             /* [in] */ DWORD dwMilliseconds);
         
+        DECLSPEC_XFGVIRT(IDirectDrawStreamSample, GetSurface)
         HRESULT ( STDMETHODCALLTYPE *GetSurface )( 
             IDirectDrawStreamSample * This,
             /* [out] */ IDirectDrawSurface **ppDirectDrawSurface,
             /* [out] */ RECT *pRect);
         
+        DECLSPEC_XFGVIRT(IDirectDrawStreamSample, SetRect)
         HRESULT ( STDMETHODCALLTYPE *SetRect )( 
             IDirectDrawStreamSample * This,
             /* [in] */ const RECT *pRect);

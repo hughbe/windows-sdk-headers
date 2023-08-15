@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_Preview_Notes_2_H
 #define WINRT_Windows_ApplicationModel_Preview_Notes_2_H
 #include "winrt/impl/Windows.ApplicationModel.Preview.Notes.1.h"
-namespace winrt::Windows::ApplicationModel::Preview::Notes
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Preview::Notes
 {
     struct __declspec(empty_bases) NotePlacementChangedPreviewEventArgs : Windows::ApplicationModel::Preview::Notes::INotePlacementChangedPreviewEventArgs
     {

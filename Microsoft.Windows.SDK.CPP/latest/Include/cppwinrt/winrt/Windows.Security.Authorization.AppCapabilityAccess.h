@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,40 +6,40 @@
 #ifndef WINRT_Windows_Security_Authorization_AppCapabilityAccess_H
 #define WINRT_Windows_Security_Authorization_AppCapabilityAccess_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.System.2.h"
 #include "winrt/impl/Windows.Security.Authorization.AppCapabilityAccess.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::CapabilityName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::CapabilityName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapability)->get_CapabilityName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::User() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapability)->get_User(&value));
         return Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::RequestAccessAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::RequestAccessAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapability)->RequestAccessAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::CheckAccess() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::CheckAccess() const
     {
-        Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapability)->CheckAccess(put_abi(result)));
+        Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapability)->CheckAccess(reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::AccessChanged(Windows::Foundation::TypedEventHandler<Windows::Security::Authorization::AppCapabilityAccess::AppCapability, Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::AccessChanged(Windows::Foundation::TypedEventHandler<Windows::Security::Authorization::AppCapabilityAccess::AppCapability, Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapability)->add_AccessChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -47,34 +47,35 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AccessChanged_revoker>(this, AccessChanged(handler));
     }
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::AccessChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability<D>::AccessChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapability)->remove_AccessChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics<D>::RequestAccessForCapabilitiesAsync(param::async_iterable<hstring> const& capabilityNames) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMapView<hstring, Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>>) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics<D>::RequestAccessForCapabilitiesAsync(param::async_iterable<hstring> const& capabilityNames) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics)->RequestAccessForCapabilitiesAsync(*(void**)(&capabilityNames), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMapView<hstring, Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics<D>::RequestAccessForCapabilitiesForUserAsync(Windows::System::User const& user, param::async_iterable<hstring> const& capabilityNames) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMapView<hstring, Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>>) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics<D>::RequestAccessForCapabilitiesForUserAsync(Windows::System::User const& user, param::async_iterable<hstring> const& capabilityNames) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics)->RequestAccessForCapabilitiesForUserAsync(*(void**)(&user), *(void**)(&capabilityNames), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMapView<hstring, Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics<D>::Create(param::hstring const& capabilityName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authorization::AppCapabilityAccess::AppCapability) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics<D>::Create(param::hstring const& capabilityName) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics)->Create(*(void**)(&capabilityName), &result));
         return Windows::Security::Authorization::AppCapabilityAccess::AppCapability{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics<D>::CreateWithProcessIdForUser(Windows::System::User const& user, param::hstring const& capabilityName, uint32_t pid) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authorization::AppCapabilityAccess::AppCapability) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics<D>::CreateWithProcessIdForUser(Windows::System::User const& user, param::hstring const& capabilityName, uint32_t pid) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics)->CreateWithProcessIdForUser(*(void**)(&user), *(void**)(&capabilityName), pid, &result));
         return Windows::Security::Authorization::AppCapabilityAccess::AppCapability{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authorization::AppCapabilityAccess::IAppCapability> : produce_base<D, Windows::Security::Authorization::AppCapabilityAccess::IAppCapability>
     {
@@ -124,10 +125,14 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityAccessChangedEventArgs> : produce_base<D, Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityAccessChangedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics> : produce_base<D, Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics>
     {
@@ -164,32 +169,35 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Security::Authorization::AppCapabilityAccess
+WINRT_EXPORT namespace winrt::Windows::Security::Authorization::AppCapabilityAccess
 {
     inline auto AppCapability::RequestAccessForCapabilitiesAsync(param::async_iterable<hstring> const& capabilityNames)
     {
-        return impl::call_factory<AppCapability, Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics>([&](auto&& f) { return f.RequestAccessForCapabilitiesAsync(capabilityNames); });
+        return impl::call_factory<AppCapability, IAppCapabilityStatics>([&](IAppCapabilityStatics const& f) { return f.RequestAccessForCapabilitiesAsync(capabilityNames); });
     }
     inline auto AppCapability::RequestAccessForCapabilitiesForUserAsync(Windows::System::User const& user, param::async_iterable<hstring> const& capabilityNames)
     {
-        return impl::call_factory<AppCapability, Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics>([&](auto&& f) { return f.RequestAccessForCapabilitiesForUserAsync(user, capabilityNames); });
+        return impl::call_factory<AppCapability, IAppCapabilityStatics>([&](IAppCapabilityStatics const& f) { return f.RequestAccessForCapabilitiesForUserAsync(user, capabilityNames); });
     }
     inline auto AppCapability::Create(param::hstring const& capabilityName)
     {
-        return impl::call_factory<AppCapability, Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics>([&](auto&& f) { return f.Create(capabilityName); });
+        return impl::call_factory<AppCapability, IAppCapabilityStatics>([&](IAppCapabilityStatics const& f) { return f.Create(capabilityName); });
     }
     inline auto AppCapability::CreateWithProcessIdForUser(Windows::System::User const& user, param::hstring const& capabilityName, uint32_t pid)
     {
-        return impl::call_factory<AppCapability, Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics>([&](auto&& f) { return f.CreateWithProcessIdForUser(user, capabilityName, pid); });
+        return impl::call_factory<AppCapability, IAppCapabilityStatics>([&](IAppCapabilityStatics const& f) { return f.CreateWithProcessIdForUser(user, capabilityName, pid); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability> : winrt::impl::hash_base<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability> {};
-    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityAccessChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityAccessChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics> : winrt::impl::hash_base<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics> {};
-    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability> : winrt::impl::hash_base<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability> {};
-    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityAccessChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs> : winrt::impl::hash_base {};
+#endif
 }
 #endif

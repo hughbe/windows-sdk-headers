@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_DataTransfer_ShareTarget_H
 #define WINRT_Windows_ApplicationModel_DataTransfer_ShareTarget_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.ApplicationModel.DataTransfer.h"
 #include "winrt/impl/Windows.ApplicationModel.Contacts.2.h"
 #include "winrt/impl/Windows.ApplicationModel.DataTransfer.2.h"
@@ -15,98 +15,99 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.DataTransfer.ShareTarget.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Title() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Title(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Title(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink)->put_Title(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Thumbnail() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::RandomAccessStreamReference) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Thumbnail() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink)->get_Thumbnail(&value));
         return Windows::Storage::Streams::RandomAccessStreamReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Thumbnail(Windows::Storage::Streams::RandomAccessStreamReference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Thumbnail(Windows::Storage::Streams::RandomAccessStreamReference const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink)->put_Thumbnail(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Id(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::Id(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink)->put_Id(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::SupportedDataFormats() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::SupportedDataFormats() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink)->get_SupportedDataFormats(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::SupportedFileTypes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IQuickLink<D>::SupportedFileTypes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink)->get_SupportedFileTypes(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::Data() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DataPackageView) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::Data() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation)->get_Data(&value));
         return Windows::ApplicationModel::DataTransfer::DataPackageView{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::QuickLinkId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::QuickLinkId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation)->get_QuickLinkId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::RemoveThisQuickLink() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::RemoveThisQuickLink() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation)->RemoveThisQuickLink());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportStarted() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportStarted() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation)->ReportStarted());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportDataRetrieved() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportDataRetrieved() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation)->ReportDataRetrieved());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportSubmittedBackgroundTask() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportSubmittedBackgroundTask() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation)->ReportSubmittedBackgroundTask());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportCompleted(Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink const& quicklink) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportCompleted(Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink const& quicklink) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation)->ReportCompletedWithQuickLink(*(void**)(&quicklink)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportCompleted() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportCompleted() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation)->ReportCompleted());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportError(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation<D>::ReportError(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation)->ReportError(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation2<D>::DismissUI() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation2<D>::DismissUI() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation2)->DismissUI());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation3<D>::Contacts() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::Contact>) consume_Windows_ApplicationModel_DataTransfer_ShareTarget_IShareOperation3<D>::Contacts() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation3)->get_Contacts(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::Contact>{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink> : produce_base<D, Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink>
     {
@@ -172,6 +173,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation> : produce_base<D, Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation>
     {
@@ -241,6 +244,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation2> : produce_base<D, Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation2>
     {
@@ -252,6 +257,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation3> : produce_base<D, Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation3>
     {
@@ -264,21 +271,24 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::ApplicationModel::DataTransfer::ShareTarget
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::DataTransfer::ShareTarget
 {
     inline QuickLink::QuickLink() :
-        QuickLink(impl::call_factory<QuickLink>([](auto&& f) { return f.template ActivateInstance<QuickLink>(); }))
+        QuickLink(impl::call_factory_cast<QuickLink(*)(Windows::Foundation::IActivationFactory const&), QuickLink>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<QuickLink>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IQuickLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation> : winrt::impl::hash_base {};
+#endif
 }
 #endif

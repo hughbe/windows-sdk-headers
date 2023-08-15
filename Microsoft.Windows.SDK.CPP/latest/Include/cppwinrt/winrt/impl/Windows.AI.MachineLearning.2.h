@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,7 +12,7 @@
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.AI.MachineLearning.1.h"
-namespace winrt::Windows::AI::MachineLearning
+WINRT_EXPORT namespace winrt::Windows::AI::MachineLearning
 {
     struct __declspec(empty_bases) ImageFeatureDescriptor : Windows::AI::MachineLearning::IImageFeatureDescriptor,
         impl::require<ImageFeatureDescriptor, Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>
@@ -46,13 +46,13 @@ namespace winrt::Windows::AI::MachineLearning
     {
         LearningModelBinding(std::nullptr_t) noexcept {}
         LearningModelBinding(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::ILearningModelBinding(ptr, take_ownership_from_abi) {}
-        LearningModelBinding(Windows::AI::MachineLearning::LearningModelSession const& session);
+        explicit LearningModelBinding(Windows::AI::MachineLearning::LearningModelSession const& session);
     };
     struct __declspec(empty_bases) LearningModelDevice : Windows::AI::MachineLearning::ILearningModelDevice
     {
         LearningModelDevice(std::nullptr_t) noexcept {}
         LearningModelDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::ILearningModelDevice(ptr, take_ownership_from_abi) {}
-        LearningModelDevice(Windows::AI::MachineLearning::LearningModelDeviceKind const& deviceKind);
+        explicit LearningModelDevice(Windows::AI::MachineLearning::LearningModelDeviceKind const& deviceKind);
         static auto CreateFromDirect3D11Device(Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice const& device);
     };
     struct __declspec(empty_bases) LearningModelEvaluationResult : Windows::AI::MachineLearning::ILearningModelEvaluationResult
@@ -65,12 +65,12 @@ namespace winrt::Windows::AI::MachineLearning
     {
         LearningModelSession(std::nullptr_t) noexcept {}
         LearningModelSession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::ILearningModelSession(ptr, take_ownership_from_abi) {}
-        LearningModelSession(Windows::AI::MachineLearning::LearningModel const& model);
+        explicit LearningModelSession(Windows::AI::MachineLearning::LearningModel const& model);
         LearningModelSession(Windows::AI::MachineLearning::LearningModel const& model, Windows::AI::MachineLearning::LearningModelDevice const& deviceToRunOn);
         LearningModelSession(Windows::AI::MachineLearning::LearningModel const& model, Windows::AI::MachineLearning::LearningModelDevice const& deviceToRunOn, Windows::AI::MachineLearning::LearningModelSessionOptions const& learningModelSessionOptions);
     };
     struct __declspec(empty_bases) LearningModelSessionOptions : Windows::AI::MachineLearning::ILearningModelSessionOptions,
-        impl::require<LearningModelSessionOptions, Windows::AI::MachineLearning::ILearningModelSessionOptions2>
+        impl::require<LearningModelSessionOptions, Windows::AI::MachineLearning::ILearningModelSessionOptions2, Windows::AI::MachineLearning::ILearningModelSessionOptions3>
     {
         LearningModelSessionOptions(std::nullptr_t) noexcept {}
         LearningModelSessionOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::ILearningModelSessionOptions(ptr, take_ownership_from_abi) {}

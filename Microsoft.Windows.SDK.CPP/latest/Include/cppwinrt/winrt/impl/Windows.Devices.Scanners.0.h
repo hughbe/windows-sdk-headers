@@ -1,29 +1,36 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_Scanners_0_H
 #define WINRT_Windows_Devices_Scanners_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
+    template <typename TResult, typename TProgress> struct __declspec(empty_bases) IAsyncOperationWithProgress;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Rect;
     struct Size;
 }
-namespace winrt::Windows::Graphics::Printing
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+}
+WINRT_EXPORT namespace winrt::Windows::Graphics::Printing
 {
     enum class PrintMediaSize : int32_t;
     enum class PrintOrientation : int32_t;
 }
-namespace winrt::Windows::Storage
+WINRT_EXPORT namespace winrt::Windows::Storage
 {
+    struct StorageFile;
     struct StorageFolder;
 }
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IRandomAccessStream;
 }
-namespace winrt::Windows::Devices::Scanners
+WINRT_EXPORT namespace winrt::Windows::Devices::Scanners
 {
     enum class ImageScannerAutoCroppingMode : int32_t
     {
@@ -72,202 +79,55 @@ namespace winrt::Windows::Devices::Scanners
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::Scanners::IImageScanner>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::IImageScannerFeederConfiguration>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::IImageScannerFormatConfiguration>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::IImageScannerPreviewResult>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::IImageScannerScanResult>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::IImageScannerSourceConfiguration>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::IImageScannerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScanner>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerAutoConfiguration>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerFeederConfiguration>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerPreviewResult>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerScanResult>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerAutoCroppingMode>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerColorMode>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerFormat>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerScanSource>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::Scanners::ImageScannerResolution>
-    {
-        using type = struct_category<float, float>;
-    };
-    template <> struct name<Windows::Devices::Scanners::IImageScanner>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.IImageScanner" };
-    };
-    template <> struct name<Windows::Devices::Scanners::IImageScannerFeederConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.IImageScannerFeederConfiguration" };
-    };
-    template <> struct name<Windows::Devices::Scanners::IImageScannerFormatConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.IImageScannerFormatConfiguration" };
-    };
-    template <> struct name<Windows::Devices::Scanners::IImageScannerPreviewResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.IImageScannerPreviewResult" };
-    };
-    template <> struct name<Windows::Devices::Scanners::IImageScannerScanResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.IImageScannerScanResult" };
-    };
-    template <> struct name<Windows::Devices::Scanners::IImageScannerSourceConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.IImageScannerSourceConfiguration" };
-    };
-    template <> struct name<Windows::Devices::Scanners::IImageScannerStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.IImageScannerStatics" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScanner>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScanner" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerAutoConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerAutoConfiguration" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerFeederConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerFeederConfiguration" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerPreviewResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerPreviewResult" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerScanResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerScanResult" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerAutoCroppingMode>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerAutoCroppingMode" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerColorMode>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerColorMode" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerFormat>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerFormat" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerScanSource>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerScanSource" };
-    };
-    template <> struct name<Windows::Devices::Scanners::ImageScannerResolution>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Scanners.ImageScannerResolution" };
-    };
-    template <> struct guid_storage<Windows::Devices::Scanners::IImageScanner>
-    {
-        static constexpr guid value{ 0x53A88F78,0x5298,0x48A0,{ 0x8D,0xA3,0x80,0x87,0x51,0x96,0x65,0xE0 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Scanners::IImageScannerFeederConfiguration>
-    {
-        static constexpr guid value{ 0x74BDACEE,0xFA97,0x4C17,{ 0x82,0x80,0x40,0xE3,0x9C,0x6D,0xCC,0x67 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Scanners::IImageScannerFormatConfiguration>
-    {
-        static constexpr guid value{ 0xAE275D11,0xDADF,0x4010,{ 0xBF,0x10,0xCC,0xA5,0xC8,0x3D,0xCB,0xB0 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Scanners::IImageScannerPreviewResult>
-    {
-        static constexpr guid value{ 0x08B7FE8E,0x8891,0x441D,{ 0xBE,0x9C,0x17,0x6F,0xA1,0x09,0xC8,0xBB } };
-    };
-    template <> struct guid_storage<Windows::Devices::Scanners::IImageScannerScanResult>
-    {
-        static constexpr guid value{ 0xC91624CD,0x9037,0x4E48,{ 0x84,0xC1,0xAC,0x09,0x75,0x07,0x6B,0xC5 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Scanners::IImageScannerSourceConfiguration>
-    {
-        static constexpr guid value{ 0xBFB50055,0x0B44,0x4C82,{ 0x9E,0x89,0x20,0x5F,0x9C,0x23,0x4E,0x59 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Scanners::IImageScannerStatics>
-    {
-        static constexpr guid value{ 0xBC57E70E,0xD804,0x4477,{ 0x9F,0xB5,0xB9,0x11,0xB5,0x47,0x38,0x97 } };
-    };
-    template <> struct default_interface<Windows::Devices::Scanners::ImageScanner>
-    {
-        using type = Windows::Devices::Scanners::IImageScanner;
-    };
-    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerAutoConfiguration>
-    {
-        using type = Windows::Devices::Scanners::IImageScannerFormatConfiguration;
-    };
-    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerFeederConfiguration>
-    {
-        using type = Windows::Devices::Scanners::IImageScannerFormatConfiguration;
-    };
-    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>
-    {
-        using type = Windows::Devices::Scanners::IImageScannerFormatConfiguration;
-    };
-    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerPreviewResult>
-    {
-        using type = Windows::Devices::Scanners::IImageScannerPreviewResult;
-    };
-    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerScanResult>
-    {
-        using type = Windows::Devices::Scanners::IImageScannerScanResult;
-    };
+    template <> struct category<Windows::Devices::Scanners::IImageScanner>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Scanners::IImageScannerFeederConfiguration>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Scanners::IImageScannerFormatConfiguration>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Scanners::IImageScannerPreviewResult>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Scanners::IImageScannerScanResult>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Scanners::IImageScannerSourceConfiguration>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Scanners::IImageScannerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScanner>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerAutoConfiguration>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerFeederConfiguration>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerPreviewResult>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerScanResult>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerAutoCroppingMode>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerColorMode>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerFormat>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerScanSource>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Scanners::ImageScannerResolution>{ using type = struct_category<float, float>; };
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScanner> = L"Windows.Devices.Scanners.ImageScanner";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerAutoConfiguration> = L"Windows.Devices.Scanners.ImageScannerAutoConfiguration";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerFeederConfiguration> = L"Windows.Devices.Scanners.ImageScannerFeederConfiguration";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerFlatbedConfiguration> = L"Windows.Devices.Scanners.ImageScannerFlatbedConfiguration";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerPreviewResult> = L"Windows.Devices.Scanners.ImageScannerPreviewResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerScanResult> = L"Windows.Devices.Scanners.ImageScannerScanResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerAutoCroppingMode> = L"Windows.Devices.Scanners.ImageScannerAutoCroppingMode";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerColorMode> = L"Windows.Devices.Scanners.ImageScannerColorMode";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerFormat> = L"Windows.Devices.Scanners.ImageScannerFormat";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerScanSource> = L"Windows.Devices.Scanners.ImageScannerScanSource";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::ImageScannerResolution> = L"Windows.Devices.Scanners.ImageScannerResolution";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::IImageScanner> = L"Windows.Devices.Scanners.IImageScanner";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::IImageScannerFeederConfiguration> = L"Windows.Devices.Scanners.IImageScannerFeederConfiguration";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::IImageScannerFormatConfiguration> = L"Windows.Devices.Scanners.IImageScannerFormatConfiguration";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::IImageScannerPreviewResult> = L"Windows.Devices.Scanners.IImageScannerPreviewResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::IImageScannerScanResult> = L"Windows.Devices.Scanners.IImageScannerScanResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::IImageScannerSourceConfiguration> = L"Windows.Devices.Scanners.IImageScannerSourceConfiguration";
+    template <> inline constexpr auto& name_v<Windows::Devices::Scanners::IImageScannerStatics> = L"Windows.Devices.Scanners.IImageScannerStatics";
+    template <> inline constexpr guid guid_v<Windows::Devices::Scanners::IImageScanner>{ 0x53A88F78,0x5298,0x48A0,{ 0x8D,0xA3,0x80,0x87,0x51,0x96,0x65,0xE0 } }; // 53A88F78-5298-48A0-8DA3-8087519665E0
+    template <> inline constexpr guid guid_v<Windows::Devices::Scanners::IImageScannerFeederConfiguration>{ 0x74BDACEE,0xFA97,0x4C17,{ 0x82,0x80,0x40,0xE3,0x9C,0x6D,0xCC,0x67 } }; // 74BDACEE-FA97-4C17-8280-40E39C6DCC67
+    template <> inline constexpr guid guid_v<Windows::Devices::Scanners::IImageScannerFormatConfiguration>{ 0xAE275D11,0xDADF,0x4010,{ 0xBF,0x10,0xCC,0xA5,0xC8,0x3D,0xCB,0xB0 } }; // AE275D11-DADF-4010-BF10-CCA5C83DCBB0
+    template <> inline constexpr guid guid_v<Windows::Devices::Scanners::IImageScannerPreviewResult>{ 0x08B7FE8E,0x8891,0x441D,{ 0xBE,0x9C,0x17,0x6F,0xA1,0x09,0xC8,0xBB } }; // 08B7FE8E-8891-441D-BE9C-176FA109C8BB
+    template <> inline constexpr guid guid_v<Windows::Devices::Scanners::IImageScannerScanResult>{ 0xC91624CD,0x9037,0x4E48,{ 0x84,0xC1,0xAC,0x09,0x75,0x07,0x6B,0xC5 } }; // C91624CD-9037-4E48-84C1-AC0975076BC5
+    template <> inline constexpr guid guid_v<Windows::Devices::Scanners::IImageScannerSourceConfiguration>{ 0xBFB50055,0x0B44,0x4C82,{ 0x9E,0x89,0x20,0x5F,0x9C,0x23,0x4E,0x59 } }; // BFB50055-0B44-4C82-9E89-205F9C234E59
+    template <> inline constexpr guid guid_v<Windows::Devices::Scanners::IImageScannerStatics>{ 0xBC57E70E,0xD804,0x4477,{ 0x9F,0xB5,0xB9,0x11,0xB5,0x47,0x38,0x97 } }; // BC57E70E-D804-4477-9FB5-B911B5473897
+    template <> struct default_interface<Windows::Devices::Scanners::ImageScanner>{ using type = Windows::Devices::Scanners::IImageScanner; };
+    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerAutoConfiguration>{ using type = Windows::Devices::Scanners::IImageScannerFormatConfiguration; };
+    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerFeederConfiguration>{ using type = Windows::Devices::Scanners::IImageScannerFormatConfiguration; };
+    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>{ using type = Windows::Devices::Scanners::IImageScannerFormatConfiguration; };
+    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerPreviewResult>{ using type = Windows::Devices::Scanners::IImageScannerPreviewResult; };
+    template <> struct default_interface<Windows::Devices::Scanners::ImageScannerScanResult>{ using type = Windows::Devices::Scanners::IImageScannerScanResult; };
     template <> struct abi<Windows::Devices::Scanners::IImageScanner>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -377,15 +237,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Scanners_IImageScanner
     {
-        [[nodiscard]] auto DeviceId() const;
-        [[nodiscard]] auto DefaultScanSource() const;
-        auto IsScanSourceSupported(Windows::Devices::Scanners::ImageScannerScanSource const& value) const;
-        [[nodiscard]] auto FlatbedConfiguration() const;
-        [[nodiscard]] auto FeederConfiguration() const;
-        [[nodiscard]] auto AutoConfiguration() const;
-        auto IsPreviewSupported(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource) const;
-        auto ScanPreviewToStreamAsync(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource, Windows::Storage::Streams::IRandomAccessStream const& targetStream) const;
-        auto ScanFilesToFolderAsync(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource, Windows::Storage::StorageFolder const& storageFolder) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerScanSource) DefaultScanSource() const;
+        WINRT_IMPL_AUTO(bool) IsScanSourceSupported(Windows::Devices::Scanners::ImageScannerScanSource const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFlatbedConfiguration) FlatbedConfiguration() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFeederConfiguration) FeederConfiguration() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerAutoConfiguration) AutoConfiguration() const;
+        WINRT_IMPL_AUTO(bool) IsPreviewSupported(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Scanners::ImageScannerPreviewResult>) ScanPreviewToStreamAsync(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource, Windows::Storage::Streams::IRandomAccessStream const& targetStream) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Devices::Scanners::ImageScannerScanResult, uint32_t>) ScanFilesToFolderAsync(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource, Windows::Storage::StorageFolder const& storageFolder) const;
     };
     template <> struct consume<Windows::Devices::Scanners::IImageScanner>
     {
@@ -394,23 +254,23 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration
     {
-        [[nodiscard]] auto CanAutoDetectPageSize() const;
-        [[nodiscard]] auto AutoDetectPageSize() const;
-        auto AutoDetectPageSize(bool value) const;
-        [[nodiscard]] auto PageSize() const;
-        auto PageSize(Windows::Graphics::Printing::PrintMediaSize const& value) const;
-        [[nodiscard]] auto PageOrientation() const;
-        auto PageOrientation(Windows::Graphics::Printing::PrintOrientation const& value) const;
-        [[nodiscard]] auto PageSizeDimensions() const;
-        auto IsPageSizeSupported(Windows::Graphics::Printing::PrintMediaSize const& pageSize, Windows::Graphics::Printing::PrintOrientation const& pageOrientation) const;
-        [[nodiscard]] auto MaxNumberOfPages() const;
-        auto MaxNumberOfPages(uint32_t value) const;
-        [[nodiscard]] auto CanScanDuplex() const;
-        [[nodiscard]] auto Duplex() const;
-        auto Duplex(bool value) const;
-        [[nodiscard]] auto CanScanAhead() const;
-        [[nodiscard]] auto ScanAhead() const;
-        auto ScanAhead(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanAutoDetectPageSize() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AutoDetectPageSize() const;
+        WINRT_IMPL_AUTO(void) AutoDetectPageSize(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintMediaSize) PageSize() const;
+        WINRT_IMPL_AUTO(void) PageSize(Windows::Graphics::Printing::PrintMediaSize const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintOrientation) PageOrientation() const;
+        WINRT_IMPL_AUTO(void) PageOrientation(Windows::Graphics::Printing::PrintOrientation const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Size) PageSizeDimensions() const;
+        WINRT_IMPL_AUTO(bool) IsPageSizeSupported(Windows::Graphics::Printing::PrintMediaSize const& pageSize, Windows::Graphics::Printing::PrintOrientation const& pageOrientation) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxNumberOfPages() const;
+        WINRT_IMPL_AUTO(void) MaxNumberOfPages(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanScanDuplex() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Duplex() const;
+        WINRT_IMPL_AUTO(void) Duplex(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanScanAhead() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) ScanAhead() const;
+        WINRT_IMPL_AUTO(void) ScanAhead(bool value) const;
     };
     template <> struct consume<Windows::Devices::Scanners::IImageScannerFeederConfiguration>
     {
@@ -419,10 +279,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Scanners_IImageScannerFormatConfiguration
     {
-        [[nodiscard]] auto DefaultFormat() const;
-        [[nodiscard]] auto Format() const;
-        auto Format(Windows::Devices::Scanners::ImageScannerFormat const& value) const;
-        auto IsFormatSupported(Windows::Devices::Scanners::ImageScannerFormat const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFormat) DefaultFormat() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFormat) Format() const;
+        WINRT_IMPL_AUTO(void) Format(Windows::Devices::Scanners::ImageScannerFormat const& value) const;
+        WINRT_IMPL_AUTO(bool) IsFormatSupported(Windows::Devices::Scanners::ImageScannerFormat const& value) const;
     };
     template <> struct consume<Windows::Devices::Scanners::IImageScannerFormatConfiguration>
     {
@@ -431,8 +291,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Scanners_IImageScannerPreviewResult
     {
-        [[nodiscard]] auto Succeeded() const;
-        [[nodiscard]] auto Format() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Succeeded() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFormat) Format() const;
     };
     template <> struct consume<Windows::Devices::Scanners::IImageScannerPreviewResult>
     {
@@ -441,7 +301,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Scanners_IImageScannerScanResult
     {
-        [[nodiscard]] auto ScannedFiles() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Storage::StorageFile>) ScannedFiles() const;
     };
     template <> struct consume<Windows::Devices::Scanners::IImageScannerScanResult>
     {
@@ -450,35 +310,35 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration
     {
-        [[nodiscard]] auto MinScanArea() const;
-        [[nodiscard]] auto MaxScanArea() const;
-        [[nodiscard]] auto SelectedScanRegion() const;
-        auto SelectedScanRegion(Windows::Foundation::Rect const& value) const;
-        [[nodiscard]] auto AutoCroppingMode() const;
-        auto AutoCroppingMode(Windows::Devices::Scanners::ImageScannerAutoCroppingMode const& value) const;
-        auto IsAutoCroppingModeSupported(Windows::Devices::Scanners::ImageScannerAutoCroppingMode const& value) const;
-        [[nodiscard]] auto MinResolution() const;
-        [[nodiscard]] auto MaxResolution() const;
-        [[nodiscard]] auto OpticalResolution() const;
-        [[nodiscard]] auto DesiredResolution() const;
-        auto DesiredResolution(Windows::Devices::Scanners::ImageScannerResolution const& value) const;
-        [[nodiscard]] auto ActualResolution() const;
-        [[nodiscard]] auto DefaultColorMode() const;
-        [[nodiscard]] auto ColorMode() const;
-        auto ColorMode(Windows::Devices::Scanners::ImageScannerColorMode const& value) const;
-        auto IsColorModeSupported(Windows::Devices::Scanners::ImageScannerColorMode const& value) const;
-        [[nodiscard]] auto MinBrightness() const;
-        [[nodiscard]] auto MaxBrightness() const;
-        [[nodiscard]] auto BrightnessStep() const;
-        [[nodiscard]] auto DefaultBrightness() const;
-        [[nodiscard]] auto Brightness() const;
-        auto Brightness(int32_t value) const;
-        [[nodiscard]] auto MinContrast() const;
-        [[nodiscard]] auto MaxContrast() const;
-        [[nodiscard]] auto ContrastStep() const;
-        [[nodiscard]] auto DefaultContrast() const;
-        [[nodiscard]] auto Contrast() const;
-        auto Contrast(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Size) MinScanArea() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Size) MaxScanArea() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) SelectedScanRegion() const;
+        WINRT_IMPL_AUTO(void) SelectedScanRegion(Windows::Foundation::Rect const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerAutoCroppingMode) AutoCroppingMode() const;
+        WINRT_IMPL_AUTO(void) AutoCroppingMode(Windows::Devices::Scanners::ImageScannerAutoCroppingMode const& value) const;
+        WINRT_IMPL_AUTO(bool) IsAutoCroppingModeSupported(Windows::Devices::Scanners::ImageScannerAutoCroppingMode const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) MinResolution() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) MaxResolution() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) OpticalResolution() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) DesiredResolution() const;
+        WINRT_IMPL_AUTO(void) DesiredResolution(Windows::Devices::Scanners::ImageScannerResolution const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) ActualResolution() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerColorMode) DefaultColorMode() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerColorMode) ColorMode() const;
+        WINRT_IMPL_AUTO(void) ColorMode(Windows::Devices::Scanners::ImageScannerColorMode const& value) const;
+        WINRT_IMPL_AUTO(bool) IsColorModeSupported(Windows::Devices::Scanners::ImageScannerColorMode const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MinBrightness() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxBrightness() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) BrightnessStep() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) DefaultBrightness() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Brightness() const;
+        WINRT_IMPL_AUTO(void) Brightness(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MinContrast() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxContrast() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContrastStep() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) DefaultContrast() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Contrast() const;
+        WINRT_IMPL_AUTO(void) Contrast(int32_t value) const;
     };
     template <> struct consume<Windows::Devices::Scanners::IImageScannerSourceConfiguration>
     {
@@ -487,8 +347,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Scanners_IImageScannerStatics
     {
-        auto FromIdAsync(param::hstring const& deviceId) const;
-        auto GetDeviceSelector() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Scanners::ImageScanner>) FromIdAsync(param::hstring const& deviceId) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
     };
     template <> struct consume<Windows::Devices::Scanners::IImageScannerStatics>
     {

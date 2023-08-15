@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -359,26 +367,32 @@ EXTERN_C const IID IID_IAdapterInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAdapterInfo * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAdapterInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAdapterInfo * This);
         
+        DECLSPEC_XFGVIRT(IAdapterInfo, GetAdapterIndex)
         HRESULT ( STDMETHODCALLTYPE *GetAdapterIndex )( 
             __RPC__in IAdapterInfo * This,
             /* [out] */ __RPC__out ULONG *pulIndex);
         
+        DECLSPEC_XFGVIRT(IAdapterInfo, GetAdapterType)
         HRESULT ( STDMETHODCALLTYPE *GetAdapterType )( 
             __RPC__in IAdapterInfo * This,
             /* [out] */ __RPC__out ALG_ADAPTER_TYPE *pAdapterType);
         
+        DECLSPEC_XFGVIRT(IAdapterInfo, GetAdapterAddresses)
         HRESULT ( STDMETHODCALLTYPE *GetAdapterAddresses )( 
             __RPC__in IAdapterInfo * This,
             /* [out] */ __RPC__out ULONG *pulAddressCount,
@@ -453,18 +467,22 @@ EXTERN_C const IID IID_IPendingProxyConnection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPendingProxyConnection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPendingProxyConnection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPendingProxyConnection * This);
         
+        DECLSPEC_XFGVIRT(IPendingProxyConnection, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPendingProxyConnection * This);
         
@@ -540,29 +558,36 @@ EXTERN_C const IID IID_IDataChannel;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDataChannel * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDataChannel * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDataChannel * This);
         
+        DECLSPEC_XFGVIRT(IDataChannel, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             IDataChannel * This);
         
+        DECLSPEC_XFGVIRT(IDataChannel, GetChannelProperties)
         HRESULT ( STDMETHODCALLTYPE *GetChannelProperties )( 
             IDataChannel * This,
             /* [out] */ ALG_DATA_CHANNEL_PROPERTIES **ppProperties);
         
+        DECLSPEC_XFGVIRT(IDataChannel, GetSessionCreationEventHandle)
         HRESULT ( STDMETHODCALLTYPE *GetSessionCreationEventHandle )( 
             IDataChannel * This,
             /* [out] */ HANDLE *pHandle);
         
+        DECLSPEC_XFGVIRT(IDataChannel, GetSessionDeletionEventHandle)
         HRESULT ( STDMETHODCALLTYPE *GetSessionDeletionEventHandle )( 
             IDataChannel * This,
             /* [out] */ HANDLE *pHandle);
@@ -642,21 +667,26 @@ EXTERN_C const IID IID_IPersistentDataChannel;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPersistentDataChannel * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPersistentDataChannel * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPersistentDataChannel * This);
         
+        DECLSPEC_XFGVIRT(IPersistentDataChannel, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPersistentDataChannel * This);
         
+        DECLSPEC_XFGVIRT(IPersistentDataChannel, GetChannelProperties)
         HRESULT ( STDMETHODCALLTYPE *GetChannelProperties )( 
             __RPC__in IPersistentDataChannel * This,
             /* [out] */ __RPC__deref_out_opt ALG_PERSISTENT_DATA_CHANNEL_PROPERTIES **ppProperties);
@@ -739,25 +769,31 @@ EXTERN_C const IID IID_IPrimaryControlChannel;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPrimaryControlChannel * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPrimaryControlChannel * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPrimaryControlChannel * This);
         
+        DECLSPEC_XFGVIRT(IPrimaryControlChannel, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPrimaryControlChannel * This);
         
+        DECLSPEC_XFGVIRT(IPrimaryControlChannel, GetChannelProperties)
         HRESULT ( STDMETHODCALLTYPE *GetChannelProperties )( 
             __RPC__in IPrimaryControlChannel * This,
             /* [out] */ __RPC__deref_out_opt ALG_PRIMARY_CHANNEL_PROPERTIES **ppProperties);
         
+        DECLSPEC_XFGVIRT(IPrimaryControlChannel, GetOriginalDestinationInformation)
         HRESULT ( STDMETHODCALLTYPE *GetOriginalDestinationInformation )( 
             __RPC__in IPrimaryControlChannel * This,
             /* [in] */ ULONG ulSourceAddress,
@@ -847,25 +883,31 @@ EXTERN_C const IID IID_ISecondaryControlChannel;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISecondaryControlChannel * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISecondaryControlChannel * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISecondaryControlChannel * This);
         
+        DECLSPEC_XFGVIRT(ISecondaryControlChannel, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in ISecondaryControlChannel * This);
         
+        DECLSPEC_XFGVIRT(ISecondaryControlChannel, GetChannelProperties)
         HRESULT ( STDMETHODCALLTYPE *GetChannelProperties )( 
             __RPC__in ISecondaryControlChannel * This,
             /* [out] */ __RPC__deref_out_opt ALG_SECONDARY_CHANNEL_PROPERTIES **ppProperties);
         
+        DECLSPEC_XFGVIRT(ISecondaryControlChannel, GetOriginalDestinationInformation)
         HRESULT ( STDMETHODCALLTYPE *GetOriginalDestinationInformation )( 
             __RPC__in ISecondaryControlChannel * This,
             /* [in] */ ULONG ulSourceAddress,
@@ -954,31 +996,38 @@ EXTERN_C const IID IID_IEnumAdapterInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumAdapterInfo * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumAdapterInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumAdapterInfo * This);
         
+        DECLSPEC_XFGVIRT(IEnumAdapterInfo, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumAdapterInfo * This,
             /* [in] */ ULONG celt,
             /* [length_is][size_is][out] */ __RPC__out_ecount_part(celt, *pCeltFetched) IAdapterInfo **rgAI,
             /* [out] */ __RPC__out ULONG *pCeltFetched);
         
+        DECLSPEC_XFGVIRT(IEnumAdapterInfo, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumAdapterInfo * This,
             /* [in] */ ULONG celt);
         
+        DECLSPEC_XFGVIRT(IEnumAdapterInfo, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumAdapterInfo * This);
         
+        DECLSPEC_XFGVIRT(IEnumAdapterInfo, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumAdapterInfo * This,
             /* [out] */ __RPC__deref_out_opt IEnumAdapterInfo **ppEnum);
@@ -1065,30 +1114,37 @@ EXTERN_C const IID IID_IAdapterNotificationSink;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAdapterNotificationSink * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAdapterNotificationSink * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAdapterNotificationSink * This);
         
+        DECLSPEC_XFGVIRT(IAdapterNotificationSink, AdapterAdded)
         HRESULT ( STDMETHODCALLTYPE *AdapterAdded )( 
             __RPC__in IAdapterNotificationSink * This,
             __RPC__in_opt IAdapterInfo *pAdapter);
         
+        DECLSPEC_XFGVIRT(IAdapterNotificationSink, AdapterRemoved)
         HRESULT ( STDMETHODCALLTYPE *AdapterRemoved )( 
             __RPC__in IAdapterNotificationSink * This,
             __RPC__in_opt IAdapterInfo *pAdapter);
         
+        DECLSPEC_XFGVIRT(IAdapterNotificationSink, AdapterModified)
         HRESULT ( STDMETHODCALLTYPE *AdapterModified )( 
             __RPC__in IAdapterNotificationSink * This,
             __RPC__in_opt IAdapterInfo *pAdapter);
         
+        DECLSPEC_XFGVIRT(IAdapterNotificationSink, AdapterUpdatePortMapping)
         HRESULT ( STDMETHODCALLTYPE *AdapterUpdatePortMapping )( 
             __RPC__in IAdapterNotificationSink * This,
             __RPC__in_opt IAdapterInfo *pAdapter);
@@ -1261,18 +1317,22 @@ EXTERN_C const IID IID_IApplicationGatewayServices;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IApplicationGatewayServices * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IApplicationGatewayServices * This);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, CreatePrimaryControlChannel)
         HRESULT ( STDMETHODCALLTYPE *CreatePrimaryControlChannel )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ ULONG uAdapterIndex,
@@ -1284,6 +1344,7 @@ EXTERN_C const IID IID_IApplicationGatewayServices;
             /* [in] */ USHORT usListenPort,
             /* [out] */ __RPC__deref_out_opt IPrimaryControlChannel **ppIControlChannel);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, CreateSecondaryControlChannel)
         HRESULT ( STDMETHODCALLTYPE *CreateSecondaryControlChannel )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ ALG_PROTOCOL eProtocol,
@@ -1299,12 +1360,14 @@ EXTERN_C const IID IID_IApplicationGatewayServices;
             /* [in] */ BOOL fPersistent,
             /* [out] */ __RPC__deref_out_opt ISecondaryControlChannel **ppControlChannel);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, GetBestSourceAddressForDestinationAddress)
         HRESULT ( STDMETHODCALLTYPE *GetBestSourceAddressForDestinationAddress )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ ULONG ulDstAddress,
             /* [in] */ BOOL fDemandDial,
             /* [out] */ __RPC__out ULONG *pulBestSrcAddress);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, PrepareProxyConnection)
         HRESULT ( STDMETHODCALLTYPE *PrepareProxyConnection )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ ALG_PROTOCOL eProtocol,
@@ -1315,6 +1378,7 @@ EXTERN_C const IID IID_IApplicationGatewayServices;
             /* [in] */ BOOL fNoTimeout,
             /* [out] */ __RPC__deref_out_opt IPendingProxyConnection **ppPendingConnection);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, PrepareSourceModifiedProxyConnection)
         HRESULT ( STDMETHODCALLTYPE *PrepareSourceModifiedProxyConnection )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ ALG_PROTOCOL eProtocol,
@@ -1326,6 +1390,7 @@ EXTERN_C const IID IID_IApplicationGatewayServices;
             /* [in] */ USHORT usNewSourcePort,
             /* [out] */ __RPC__deref_out_opt IPendingProxyConnection **ppPendingConnection);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, CreateDataChannel)
         HRESULT ( STDMETHODCALLTYPE *CreateDataChannel )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ ALG_PROTOCOL eProtocol,
@@ -1340,6 +1405,7 @@ EXTERN_C const IID IID_IApplicationGatewayServices;
             /* [in] */ BOOL fNoTimeout,
             /* [out] */ __RPC__deref_out_opt IDataChannel **ppDataChannel);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, CreatePersistentDataChannel)
         HRESULT ( STDMETHODCALLTYPE *CreatePersistentDataChannel )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ ALG_PROTOCOL eProtocol,
@@ -1352,29 +1418,35 @@ EXTERN_C const IID IID_IApplicationGatewayServices;
             /* [in] */ ALG_DIRECTION eDirection,
             /* [out] */ __RPC__deref_out_opt IPersistentDataChannel **ppIPersistentDataChannel);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, ReservePort)
         HRESULT ( STDMETHODCALLTYPE *ReservePort )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ USHORT usPortCount,
             /* [out] */ __RPC__out USHORT *pusReservedPort);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, ReleaseReservedPort)
         HRESULT ( STDMETHODCALLTYPE *ReleaseReservedPort )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ USHORT usReservedPortBase,
             /* [in] */ USHORT usPortCount);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, EnumerateAdapters)
         HRESULT ( STDMETHODCALLTYPE *EnumerateAdapters )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [out] */ __RPC__deref_out_opt IEnumAdapterInfo **ppIEnumAdapterInfo);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, StartAdapterNotifications)
         HRESULT ( STDMETHODCALLTYPE *StartAdapterNotifications )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ __RPC__in_opt IAdapterNotificationSink *pSink,
             /* [in] */ __RPC__in DWORD *pdwCookie);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, StopAdapterNotifications)
         HRESULT ( STDMETHODCALLTYPE *StopAdapterNotifications )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ DWORD dwCookieOfSink);
         
+        DECLSPEC_XFGVIRT(IApplicationGatewayServices, LookupAdapterPortMapping)
         HRESULT ( STDMETHODCALLTYPE *LookupAdapterPortMapping )( 
             __RPC__in IApplicationGatewayServices * This,
             /* [in] */ ULONG ulAdapterIndex,
@@ -1486,22 +1558,27 @@ EXTERN_C const IID IID_IApplicationGateway;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IApplicationGateway * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IApplicationGateway * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IApplicationGateway * This);
         
+        DECLSPEC_XFGVIRT(IApplicationGateway, Initialize)
         HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             __RPC__in IApplicationGateway * This,
             /* [in] */ __RPC__in_opt IApplicationGatewayServices *pAlgServices);
         
+        DECLSPEC_XFGVIRT(IApplicationGateway, Stop)
         HRESULT ( STDMETHODCALLTYPE *Stop )( 
             __RPC__in IApplicationGateway * This);
         

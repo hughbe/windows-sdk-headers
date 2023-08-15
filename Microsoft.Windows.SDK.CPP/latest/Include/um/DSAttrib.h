@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -105,18 +113,22 @@ EXTERN_C const IID IID_IAttributeSet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAttributeSet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAttributeSet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAttributeSet * This);
         
+        DECLSPEC_XFGVIRT(IAttributeSet, SetAttrib)
         HRESULT ( STDMETHODCALLTYPE *SetAttrib )( 
             __RPC__in IAttributeSet * This,
             /* [in] */ GUID guidAttribute,
@@ -198,22 +210,27 @@ EXTERN_C const IID IID_IAttributeGet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAttributeGet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAttributeGet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAttributeGet * This);
         
+        DECLSPEC_XFGVIRT(IAttributeGet, GetCount)
         HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             __RPC__in IAttributeGet * This,
             /* [out] */ __RPC__out LONG *plCount);
         
+        DECLSPEC_XFGVIRT(IAttributeGet, GetAttribIndexed)
         HRESULT ( STDMETHODCALLTYPE *GetAttribIndexed )( 
             __RPC__in IAttributeGet * This,
             /* [in] */ LONG lIndex,
@@ -221,6 +238,7 @@ EXTERN_C const IID IID_IAttributeGet;
             /* [out][in] */ __RPC__inout BYTE *pbAttribute,
             /* [out][in] */ __RPC__inout DWORD *pdwAttributeLength);
         
+        DECLSPEC_XFGVIRT(IAttributeGet, GetAttrib)
         HRESULT ( STDMETHODCALLTYPE *GetAttrib )( 
             __RPC__in IAttributeGet * This,
             /* [in] */ GUID guidAttribute,

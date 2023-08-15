@@ -4589,6 +4589,7 @@ typedef enum _KERB_PROTOCOL_MESSAGE_TYPE {
 #endif
 #if (_WIN32_WINNT >= 0x0A00)
     KerbRetrieveKeyTabMessage,
+    KerbRefreshPolicyMessage
 #endif
 } KERB_PROTOCOL_MESSAGE_TYPE, *PKERB_PROTOCOL_MESSAGE_TYPE;
 
@@ -4938,6 +4939,21 @@ typedef struct _KERB_RETRIEVE_KEY_TAB_RESPONSE
     ULONG                       KeyTabLength;
     PUCHAR                      KeyTab;
 } KERB_RETRIEVE_KEY_TAB_RESPONSE, *PKERB_RETRIEVE_KEY_TAB_RESPONSE;
+
+#define KERB_REFRESH_POLICY_KERBEROS 0x1
+#define KERB_REFRESH_POLICY_KDC 0x2
+
+typedef struct _KERB_REFRESH_POLICY_REQUEST
+{
+    KERB_PROTOCOL_MESSAGE_TYPE  MessageType;
+    ULONG                       Flags;
+} KERB_REFRESH_POLICY_REQUEST, *PKERB_REFRESH_POLICY_REQUEST;
+
+typedef struct _KERB_REFRESH_POLICY_RESPONSE
+{
+    KERB_PROTOCOL_MESSAGE_TYPE  MessageType;
+    ULONG                       Flags;
+} KERB_REFRESH_POLICY_RESPONSE, *PKERB_REFRESH_POLICY_RESPONSE;
 
 #endif
 

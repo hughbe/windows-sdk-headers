@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,106 +6,107 @@
 #ifndef WINRT_Windows_Networking_H
 #define WINRT_Windows_Networking_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Networking.Connectivity.2.h"
 #include "winrt/impl/Windows.Networking.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Networking_IEndpointPair<D>::LocalHostName() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::HostName) consume_Windows_Networking_IEndpointPair<D>::LocalHostName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IEndpointPair)->get_LocalHostName(&value));
         return Windows::Networking::HostName{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IEndpointPair<D>::LocalHostName(Windows::Networking::HostName const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_IEndpointPair<D>::LocalHostName(Windows::Networking::HostName const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IEndpointPair)->put_LocalHostName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_IEndpointPair<D>::LocalServiceName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_IEndpointPair<D>::LocalServiceName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IEndpointPair)->get_LocalServiceName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IEndpointPair<D>::LocalServiceName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_IEndpointPair<D>::LocalServiceName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IEndpointPair)->put_LocalServiceName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_IEndpointPair<D>::RemoteHostName() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::HostName) consume_Windows_Networking_IEndpointPair<D>::RemoteHostName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IEndpointPair)->get_RemoteHostName(&value));
         return Windows::Networking::HostName{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IEndpointPair<D>::RemoteHostName(Windows::Networking::HostName const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_IEndpointPair<D>::RemoteHostName(Windows::Networking::HostName const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IEndpointPair)->put_RemoteHostName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_IEndpointPair<D>::RemoteServiceName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_IEndpointPair<D>::RemoteServiceName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IEndpointPair)->get_RemoteServiceName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IEndpointPair<D>::RemoteServiceName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_IEndpointPair<D>::RemoteServiceName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IEndpointPair)->put_RemoteServiceName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_IEndpointPairFactory<D>::CreateEndpointPair(Windows::Networking::HostName const& localHostName, param::hstring const& localServiceName, Windows::Networking::HostName const& remoteHostName, param::hstring const& remoteServiceName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::EndpointPair) consume_Windows_Networking_IEndpointPairFactory<D>::CreateEndpointPair(Windows::Networking::HostName const& localHostName, param::hstring const& localServiceName, Windows::Networking::HostName const& remoteHostName, param::hstring const& remoteServiceName) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IEndpointPairFactory)->CreateEndpointPair(*(void**)(&localHostName), *(void**)(&localServiceName), *(void**)(&remoteHostName), *(void**)(&remoteServiceName), &value));
         return Windows::Networking::EndpointPair{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IHostName<D>::IPInformation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::Connectivity::IPInformation) consume_Windows_Networking_IHostName<D>::IPInformation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IHostName)->get_IPInformation(&value));
         return Windows::Networking::Connectivity::IPInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IHostName<D>::RawName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_IHostName<D>::RawName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IHostName)->get_RawName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IHostName<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_IHostName<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IHostName)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IHostName<D>::CanonicalName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_IHostName<D>::CanonicalName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IHostName)->get_CanonicalName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IHostName<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::HostNameType) consume_Windows_Networking_IHostName<D>::Type() const
     {
-        Windows::Networking::HostNameType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IHostName)->get_Type(put_abi(value)));
+        Windows::Networking::HostNameType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IHostName)->get_Type(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_IHostName<D>::IsEqual(Windows::Networking::HostName const& hostName) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_IHostName<D>::IsEqual(Windows::Networking::HostName const& hostName) const
     {
-        bool isEqual;
+        bool isEqual{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IHostName)->IsEqual(*(void**)(&hostName), &isEqual));
         return isEqual;
     }
-    template <typename D> auto consume_Windows_Networking_IHostNameFactory<D>::CreateHostName(param::hstring const& hostName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::HostName) consume_Windows_Networking_IHostNameFactory<D>::CreateHostName(param::hstring const& hostName) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IHostNameFactory)->CreateHostName(*(void**)(&hostName), &value));
         return Windows::Networking::HostName{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_IHostNameStatics<D>::Compare(param::hstring const& value1, param::hstring const& value2) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Networking_IHostNameStatics<D>::Compare(param::hstring const& value1, param::hstring const& value2) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::IHostNameStatics)->Compare(*(void**)(&value1), *(void**)(&value2), &result));
         return result;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::IEndpointPair> : produce_base<D, Windows::Networking::IEndpointPair>
     {
@@ -170,6 +171,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::IEndpointPairFactory> : produce_base<D, Windows::Networking::IEndpointPairFactory>
     {
@@ -182,6 +185,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::IHostName> : produce_base<D, Windows::Networking::IHostName>
     {
@@ -232,6 +237,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::IHostNameFactory> : produce_base<D, Windows::Networking::IHostNameFactory>
     {
@@ -244,6 +251,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::IHostNameStatics> : produce_base<D, Windows::Networking::IHostNameStatics>
     {
@@ -255,8 +264,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Networking
+WINRT_EXPORT namespace winrt::Windows::Networking
 {
     constexpr auto operator|(HostNameSortOptions const left, HostNameSortOptions const right) noexcept
     {
@@ -290,26 +300,28 @@ namespace winrt::Windows::Networking
         return left;
     }
     inline EndpointPair::EndpointPair(Windows::Networking::HostName const& localHostName, param::hstring const& localServiceName, Windows::Networking::HostName const& remoteHostName, param::hstring const& remoteServiceName) :
-        EndpointPair(impl::call_factory<EndpointPair, Windows::Networking::IEndpointPairFactory>([&](auto&& f) { return f.CreateEndpointPair(localHostName, localServiceName, remoteHostName, remoteServiceName); }))
+        EndpointPair(impl::call_factory<EndpointPair, IEndpointPairFactory>([&](IEndpointPairFactory const& f) { return f.CreateEndpointPair(localHostName, localServiceName, remoteHostName, remoteServiceName); }))
     {
     }
     inline HostName::HostName(param::hstring const& hostName) :
-        HostName(impl::call_factory<HostName, Windows::Networking::IHostNameFactory>([&](auto&& f) { return f.CreateHostName(hostName); }))
+        HostName(impl::call_factory<HostName, IHostNameFactory>([&](IHostNameFactory const& f) { return f.CreateHostName(hostName); }))
     {
     }
     inline auto HostName::Compare(param::hstring const& value1, param::hstring const& value2)
     {
-        return impl::call_factory<HostName, Windows::Networking::IHostNameStatics>([&](auto&& f) { return f.Compare(value1, value2); });
+        return impl::call_factory<HostName, IHostNameStatics>([&](IHostNameStatics const& f) { return f.Compare(value1, value2); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Networking::IEndpointPair> : winrt::impl::hash_base<winrt::Windows::Networking::IEndpointPair> {};
-    template<> struct hash<winrt::Windows::Networking::IEndpointPairFactory> : winrt::impl::hash_base<winrt::Windows::Networking::IEndpointPairFactory> {};
-    template<> struct hash<winrt::Windows::Networking::IHostName> : winrt::impl::hash_base<winrt::Windows::Networking::IHostName> {};
-    template<> struct hash<winrt::Windows::Networking::IHostNameFactory> : winrt::impl::hash_base<winrt::Windows::Networking::IHostNameFactory> {};
-    template<> struct hash<winrt::Windows::Networking::IHostNameStatics> : winrt::impl::hash_base<winrt::Windows::Networking::IHostNameStatics> {};
-    template<> struct hash<winrt::Windows::Networking::EndpointPair> : winrt::impl::hash_base<winrt::Windows::Networking::EndpointPair> {};
-    template<> struct hash<winrt::Windows::Networking::HostName> : winrt::impl::hash_base<winrt::Windows::Networking::HostName> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Networking::IEndpointPair> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::IEndpointPairFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::IHostName> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::IHostNameFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::IHostNameStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::EndpointPair> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::HostName> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -31,6 +31,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -265,7 +273,8 @@ enum _CREATE_VIRTUAL_DISK_FLAG
         CREATE_VIRTUAL_DISK_FLAG_PRESERVE_PARENT_CHANGE_TRACKING_STATE	= 0x20,
         CREATE_VIRTUAL_DISK_FLAG_VHD_SET_USE_ORIGINAL_BACKING_STORAGE	= 0x40,
         CREATE_VIRTUAL_DISK_FLAG_SPARSE_FILE	= 0x80,
-        CREATE_VIRTUAL_DISK_FLAG_PMEM_COMPATIBLE	= 0x100
+        CREATE_VIRTUAL_DISK_FLAG_PMEM_COMPATIBLE	= 0x100,
+        CREATE_VIRTUAL_DISK_FLAG_SUPPORT_COMPRESSED_VOLUMES	= 0x200
     } 	CREATE_VIRTUAL_DISK_FLAG;
 
 DWORD __stdcall CreateVirtualDisk( 
@@ -674,7 +683,8 @@ typedef struct _EXPAND_VIRTUAL_DISK_PARAMETERS *PEXPAND_VIRTUAL_DISK_PARAMETERS;
 typedef 
 enum _EXPAND_VIRTUAL_DISK_FLAG
     {
-        EXPAND_VIRTUAL_DISK_FLAG_NONE	= 0
+        EXPAND_VIRTUAL_DISK_FLAG_NONE	= 0,
+        EXPAND_VIRTUAL_DISK_FLAG_NOTIFY_CHANGE	= 0x1
     } 	EXPAND_VIRTUAL_DISK_FLAG;
 
 DWORD __stdcall ExpandVirtualDisk( 

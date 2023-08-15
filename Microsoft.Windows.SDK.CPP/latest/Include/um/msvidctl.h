@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -1048,28 +1056,34 @@ EXTERN_C const IID IID_IMSVidCtl;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IMSVidCtl * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1078,6 +1092,7 @@ EXTERN_C const IID IID_IMSVidCtl;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IMSVidCtl * This,
             /* [annotation][in] */ 
@@ -1097,170 +1112,213 @@ EXTERN_C const IID IID_IMSVidCtl;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_AutoSize)
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSize )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *pbool);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_AutoSize)
         /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_AutoSize )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ VARIANT_BOOL vbool);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_BackColor)
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BackColor )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__out OLE_COLOR *backcolor);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_BackColor)
         /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BackColor )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ OLE_COLOR backcolor);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_Enabled)
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Enabled )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *pbool);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_Enabled)
         /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Enabled )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ VARIANT_BOOL vbool);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_TabStop)
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_TabStop )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *pbool);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_TabStop)
         /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_TabStop )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ VARIANT_BOOL vbool);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_Window)
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Window )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__deref_out_opt HWND *phwnd);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, Refresh)
         /* [id] */ HRESULT ( STDMETHODCALLTYPE *Refresh )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_DisplaySize)
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DisplaySize )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__out DisplaySizeList *CurrentValue);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_DisplaySize)
         /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DisplaySize )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ DisplaySizeList NewValue);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_MaintainAspectRatio)
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MaintainAspectRatio )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *CurrentValue);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_MaintainAspectRatio)
         /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MaintainAspectRatio )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ VARIANT_BOOL NewValue);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_ColorKey)
         /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ColorKey )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__out OLE_COLOR *CurrentValue);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_ColorKey)
         /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ColorKey )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ OLE_COLOR NewValue);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_InputsAvailable)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_InputsAvailable )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in BSTR CategoryGuid,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidInputDevices **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_OutputsAvailable)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_OutputsAvailable )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in BSTR CategoryGuid,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidOutputDevices **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get__InputsAvailable)
         /* [helpstring][restricted][hidden][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__InputsAvailable )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in LPCGUID CategoryGuid,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidInputDevices **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get__OutputsAvailable)
         /* [helpstring][restricted][hidden][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get__OutputsAvailable )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in LPCGUID CategoryGuid,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidOutputDevices **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_VideoRenderersAvailable)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_VideoRenderersAvailable )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidVideoRendererDevices **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_AudioRenderersAvailable)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AudioRenderersAvailable )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidAudioRendererDevices **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_FeaturesAvailable)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FeaturesAvailable )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidFeatures **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_InputActive)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_InputActive )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidInputDevice **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_InputActive)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_InputActive )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in_opt IMSVidInputDevice *pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_OutputsActive)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_OutputsActive )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidOutputDevices **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_OutputsActive)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_OutputsActive )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in_opt IMSVidOutputDevices *pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_VideoRendererActive)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_VideoRendererActive )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidVideoRenderer **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_VideoRendererActive)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_VideoRendererActive )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in_opt IMSVidVideoRenderer *pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_AudioRendererActive)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AudioRendererActive )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidAudioRenderer **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_AudioRendererActive)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_AudioRendererActive )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in_opt IMSVidAudioRenderer *pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_FeaturesActive)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FeaturesActive )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__deref_out_opt IMSVidFeatures **pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, put_FeaturesActive)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_FeaturesActive )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in_opt IMSVidFeatures *pVal);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, get_State)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_State )( 
             __RPC__in IMSVidCtl * This,
             /* [retval][out] */ __RPC__out MSVidCtlStateList *lState);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, View)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *View )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in VARIANT *v);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, Build)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Build )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, Pause)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Pause )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, Run)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Run )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, Stop)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Stop )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, Decompose)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Decompose )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, DisableVideo)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *DisableVideo )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, DisableAudio)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *DisableAudio )( 
             __RPC__in IMSVidCtl * This);
         
+        DECLSPEC_XFGVIRT(IMSVidCtl, ViewNext)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ViewNext )( 
             __RPC__in IMSVidCtl * This,
             /* [in] */ __RPC__in VARIANT *v);
@@ -1474,28 +1532,34 @@ EXTERN_C const IID IID_IMSEventBinder;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IMSEventBinder * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IMSEventBinder * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IMSEventBinder * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IMSEventBinder * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IMSEventBinder * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IMSEventBinder * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1504,6 +1568,7 @@ EXTERN_C const IID IID_IMSEventBinder;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IMSEventBinder * This,
             /* [annotation][in] */ 
@@ -1523,6 +1588,7 @@ EXTERN_C const IID IID_IMSEventBinder;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IMSEventBinder, Bind)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Bind )( 
             __RPC__in IMSEventBinder * This,
             /* [in] */ __RPC__in_opt LPDISPATCH pEventObject,
@@ -1530,6 +1596,7 @@ EXTERN_C const IID IID_IMSEventBinder;
             /* [in] */ __RPC__in BSTR EventHandler,
             /* [retval][out] */ __RPC__out LONG *CancelID);
         
+        DECLSPEC_XFGVIRT(IMSEventBinder, Unbind)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Unbind )( 
             __RPC__in IMSEventBinder * This,
             /* [in] */ DWORD CancelCookie);
@@ -1621,28 +1688,34 @@ EXTERN_C const IID DIID__IMSVidCtlEvents;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in _IMSVidCtlEvents * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in _IMSVidCtlEvents * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in _IMSVidCtlEvents * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in _IMSVidCtlEvents * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in _IMSVidCtlEvents * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in _IMSVidCtlEvents * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1651,6 +1724,7 @@ EXTERN_C const IID DIID__IMSVidCtlEvents;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             _IMSVidCtlEvents * This,
             /* [annotation][in] */ 

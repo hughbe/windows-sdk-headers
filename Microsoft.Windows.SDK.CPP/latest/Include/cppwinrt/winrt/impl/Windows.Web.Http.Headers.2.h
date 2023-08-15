@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Globalization.1.h"
 #include "winrt/impl/Windows.Web.Http.1.h"
 #include "winrt/impl/Windows.Web.Http.Headers.1.h"
-namespace winrt::Windows::Web::Http::Headers
+WINRT_EXPORT namespace winrt::Windows::Web::Http::Headers
 {
     struct __declspec(empty_bases) HttpCacheDirectiveHeaderValueCollection : Windows::Web::Http::Headers::IHttpCacheDirectiveHeaderValueCollection,
         impl::require<HttpCacheDirectiveHeaderValueCollection, Windows::Foundation::Collections::IIterable<Windows::Web::Http::Headers::HttpNameValueHeaderValue>, Windows::Foundation::Collections::IVector<Windows::Web::Http::Headers::HttpNameValueHeaderValue>, Windows::Foundation::IStringable>
@@ -23,7 +23,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpChallengeHeaderValue(std::nullptr_t) noexcept {}
         HttpChallengeHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpChallengeHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpChallengeHeaderValue(param::hstring const& scheme);
+        explicit HttpChallengeHeaderValue(param::hstring const& scheme);
         HttpChallengeHeaderValue(param::hstring const& scheme, param::hstring const& token);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpChallengeHeaderValue& challengeHeaderValue);
@@ -39,7 +39,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpConnectionOptionHeaderValue(std::nullptr_t) noexcept {}
         HttpConnectionOptionHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpConnectionOptionHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpConnectionOptionHeaderValue(param::hstring const& token);
+        explicit HttpConnectionOptionHeaderValue(param::hstring const& token);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue& connectionOptionHeaderValue);
     };
@@ -54,7 +54,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpContentCodingHeaderValue(std::nullptr_t) noexcept {}
         HttpContentCodingHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpContentCodingHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpContentCodingHeaderValue(param::hstring const& contentCoding);
+        explicit HttpContentCodingHeaderValue(param::hstring const& contentCoding);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpContentCodingHeaderValue& contentCodingHeaderValue);
     };
@@ -69,7 +69,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpContentCodingWithQualityHeaderValue(std::nullptr_t) noexcept {}
         HttpContentCodingWithQualityHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpContentCodingWithQualityHeaderValue(param::hstring const& contentCoding);
+        explicit HttpContentCodingWithQualityHeaderValue(param::hstring const& contentCoding);
         HttpContentCodingWithQualityHeaderValue(param::hstring const& contentCoding, double quality);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue& contentCodingWithQualityHeaderValue);
@@ -85,7 +85,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpContentDispositionHeaderValue(std::nullptr_t) noexcept {}
         HttpContentDispositionHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpContentDispositionHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpContentDispositionHeaderValue(param::hstring const& dispositionType);
+        explicit HttpContentDispositionHeaderValue(param::hstring const& dispositionType);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpContentDispositionHeaderValue& contentDispositionHeaderValue);
     };
@@ -101,7 +101,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpContentRangeHeaderValue(std::nullptr_t) noexcept {}
         HttpContentRangeHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpContentRangeHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpContentRangeHeaderValue(uint64_t length);
+        explicit HttpContentRangeHeaderValue(uint64_t length);
         HttpContentRangeHeaderValue(uint64_t from, uint64_t to);
         HttpContentRangeHeaderValue(uint64_t from, uint64_t to, uint64_t length);
         static auto Parse(param::hstring const& input);
@@ -112,7 +112,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpCookiePairHeaderValue(std::nullptr_t) noexcept {}
         HttpCookiePairHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpCookiePairHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpCookiePairHeaderValue(param::hstring const& name);
+        explicit HttpCookiePairHeaderValue(param::hstring const& name);
         HttpCookiePairHeaderValue(param::hstring const& name, param::hstring const& value);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpCookiePairHeaderValue& cookiePairHeaderValue);
@@ -128,7 +128,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpCredentialsHeaderValue(std::nullptr_t) noexcept {}
         HttpCredentialsHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpCredentialsHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpCredentialsHeaderValue(param::hstring const& scheme);
+        explicit HttpCredentialsHeaderValue(param::hstring const& scheme);
         HttpCredentialsHeaderValue(param::hstring const& scheme, param::hstring const& token);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpCredentialsHeaderValue& credentialsHeaderValue);
@@ -146,7 +146,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpExpectationHeaderValue(std::nullptr_t) noexcept {}
         HttpExpectationHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpExpectationHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpExpectationHeaderValue(param::hstring const& name);
+        explicit HttpExpectationHeaderValue(param::hstring const& name);
         HttpExpectationHeaderValue(param::hstring const& name, param::hstring const& value);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpExpectationHeaderValue& expectationHeaderValue);
@@ -168,7 +168,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpLanguageRangeWithQualityHeaderValue(std::nullptr_t) noexcept {}
         HttpLanguageRangeWithQualityHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpLanguageRangeWithQualityHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpLanguageRangeWithQualityHeaderValue(param::hstring const& languageRange);
+        explicit HttpLanguageRangeWithQualityHeaderValue(param::hstring const& languageRange);
         HttpLanguageRangeWithQualityHeaderValue(param::hstring const& languageRange, double quality);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue& languageRangeWithQualityHeaderValue);
@@ -184,7 +184,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpMediaTypeHeaderValue(std::nullptr_t) noexcept {}
         HttpMediaTypeHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpMediaTypeHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpMediaTypeHeaderValue(param::hstring const& mediaType);
+        explicit HttpMediaTypeHeaderValue(param::hstring const& mediaType);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpMediaTypeHeaderValue& mediaTypeHeaderValue);
     };
@@ -193,7 +193,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpMediaTypeWithQualityHeaderValue(std::nullptr_t) noexcept {}
         HttpMediaTypeWithQualityHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpMediaTypeWithQualityHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpMediaTypeWithQualityHeaderValue(param::hstring const& mediaType);
+        explicit HttpMediaTypeWithQualityHeaderValue(param::hstring const& mediaType);
         HttpMediaTypeWithQualityHeaderValue(param::hstring const& mediaType, double quality);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue& mediaTypeWithQualityHeaderValue);
@@ -215,7 +215,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpNameValueHeaderValue(std::nullptr_t) noexcept {}
         HttpNameValueHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpNameValueHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpNameValueHeaderValue(param::hstring const& name);
+        explicit HttpNameValueHeaderValue(param::hstring const& name);
         HttpNameValueHeaderValue(param::hstring const& name, param::hstring const& value);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpNameValueHeaderValue& nameValueHeaderValue);
@@ -225,7 +225,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpProductHeaderValue(std::nullptr_t) noexcept {}
         HttpProductHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpProductHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpProductHeaderValue(param::hstring const& productName);
+        explicit HttpProductHeaderValue(param::hstring const& productName);
         HttpProductHeaderValue(param::hstring const& productName, param::hstring const& productVersion);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpProductHeaderValue& productHeaderValue);
@@ -235,7 +235,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpProductInfoHeaderValue(std::nullptr_t) noexcept {}
         HttpProductInfoHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpProductInfoHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpProductInfoHeaderValue(param::hstring const& productComment);
+        explicit HttpProductInfoHeaderValue(param::hstring const& productComment);
         HttpProductInfoHeaderValue(param::hstring const& productName, param::hstring const& productVersion);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpProductInfoHeaderValue& productInfoHeaderValue);
@@ -263,7 +263,7 @@ namespace winrt::Windows::Web::Http::Headers
     {
         HttpTransferCodingHeaderValue(std::nullptr_t) noexcept {}
         HttpTransferCodingHeaderValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue(ptr, take_ownership_from_abi) {}
-        HttpTransferCodingHeaderValue(param::hstring const& input);
+        explicit HttpTransferCodingHeaderValue(param::hstring const& input);
         static auto Parse(param::hstring const& input);
         static auto TryParse(param::hstring const& input, Windows::Web::Http::Headers::HttpTransferCodingHeaderValue& transferCodingHeaderValue);
     };

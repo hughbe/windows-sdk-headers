@@ -84,7 +84,6 @@ typedef struct
     LARGE_INTEGER nextEstimatedFrameTime;
 } DCOMPOSITION_FRAME_STATISTICS;
 
-
 //
 // Composition object specific access flags
 //

@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -290,18 +298,22 @@ EXTERN_C const IID IID_IHostDialogHelper;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IHostDialogHelper * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IHostDialogHelper * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IHostDialogHelper * This);
         
+        DECLSPEC_XFGVIRT(IHostDialogHelper, ShowHTMLDialog)
         HRESULT ( STDMETHODCALLTYPE *ShowHTMLDialog )( 
             IHostDialogHelper * This,
             HWND hwndParent,
@@ -523,18 +535,22 @@ EXTERN_C const IID IID_IDocHostUIHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDocHostUIHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDocHostUIHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDocHostUIHandler * This);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, ShowContextMenu)
         HRESULT ( STDMETHODCALLTYPE *ShowContextMenu )( 
             IDocHostUIHandler * This,
             /* [annotation][in] */ 
@@ -546,11 +562,13 @@ EXTERN_C const IID IID_IDocHostUIHandler;
             /* [annotation][in] */ 
             _In_  IDispatch *pdispReserved);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, GetHostInfo)
         HRESULT ( STDMETHODCALLTYPE *GetHostInfo )( 
             IDocHostUIHandler * This,
             /* [annotation][out][in] */ 
             _Inout_  DOCHOSTUIINFO *pInfo);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, ShowUI)
         HRESULT ( STDMETHODCALLTYPE *ShowUI )( 
             IDocHostUIHandler * This,
             /* [annotation][in] */ 
@@ -564,24 +582,30 @@ EXTERN_C const IID IID_IDocHostUIHandler;
             /* [annotation][in] */ 
             _In_  IOleInPlaceUIWindow *pDoc);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, HideUI)
         HRESULT ( STDMETHODCALLTYPE *HideUI )( 
             IDocHostUIHandler * This);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, UpdateUI)
         HRESULT ( STDMETHODCALLTYPE *UpdateUI )( 
             IDocHostUIHandler * This);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, EnableModeless)
         HRESULT ( STDMETHODCALLTYPE *EnableModeless )( 
             IDocHostUIHandler * This,
             /* [in] */ BOOL fEnable);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, OnDocWindowActivate)
         HRESULT ( STDMETHODCALLTYPE *OnDocWindowActivate )( 
             IDocHostUIHandler * This,
             /* [in] */ BOOL fActivate);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, OnFrameWindowActivate)
         HRESULT ( STDMETHODCALLTYPE *OnFrameWindowActivate )( 
             IDocHostUIHandler * This,
             /* [in] */ BOOL fActivate);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, ResizeBorder)
         HRESULT ( STDMETHODCALLTYPE *ResizeBorder )( 
             IDocHostUIHandler * This,
             /* [annotation][in] */ 
@@ -591,18 +615,21 @@ EXTERN_C const IID IID_IDocHostUIHandler;
             /* [annotation][in] */ 
             _In_  BOOL fRameWindow);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, TranslateAccelerator)
         HRESULT ( STDMETHODCALLTYPE *TranslateAccelerator )( 
             IDocHostUIHandler * This,
             /* [in] */ LPMSG lpMsg,
             /* [in] */ const GUID *pguidCmdGroup,
             /* [in] */ DWORD nCmdID);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, GetOptionKeyPath)
         HRESULT ( STDMETHODCALLTYPE *GetOptionKeyPath )( 
             IDocHostUIHandler * This,
             /* [annotation][out] */ 
             _Out_  LPOLESTR *pchKey,
             /* [in] */ DWORD dw);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, GetDropTarget)
         HRESULT ( STDMETHODCALLTYPE *GetDropTarget )( 
             IDocHostUIHandler * This,
             /* [annotation][in] */ 
@@ -610,11 +637,13 @@ EXTERN_C const IID IID_IDocHostUIHandler;
             /* [annotation][out] */ 
             _Outptr_  IDropTarget **ppDropTarget);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, GetExternal)
         HRESULT ( STDMETHODCALLTYPE *GetExternal )( 
             IDocHostUIHandler * This,
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  IDispatch **ppDispatch);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, TranslateUrl)
         HRESULT ( STDMETHODCALLTYPE *TranslateUrl )( 
             IDocHostUIHandler * This,
             /* [in] */ DWORD dwTranslate,
@@ -623,6 +652,7 @@ EXTERN_C const IID IID_IDocHostUIHandler;
             /* [annotation][out] */ 
             _Outptr_  LPWSTR *ppchURLOut);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, FilterDataObject)
         HRESULT ( STDMETHODCALLTYPE *FilterDataObject )( 
             IDocHostUIHandler * This,
             /* [annotation][in] */ 
@@ -738,18 +768,22 @@ EXTERN_C const IID IID_IDocHostUIHandler2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDocHostUIHandler2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDocHostUIHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDocHostUIHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, ShowContextMenu)
         HRESULT ( STDMETHODCALLTYPE *ShowContextMenu )( 
             IDocHostUIHandler2 * This,
             /* [annotation][in] */ 
@@ -761,11 +795,13 @@ EXTERN_C const IID IID_IDocHostUIHandler2;
             /* [annotation][in] */ 
             _In_  IDispatch *pdispReserved);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, GetHostInfo)
         HRESULT ( STDMETHODCALLTYPE *GetHostInfo )( 
             IDocHostUIHandler2 * This,
             /* [annotation][out][in] */ 
             _Inout_  DOCHOSTUIINFO *pInfo);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, ShowUI)
         HRESULT ( STDMETHODCALLTYPE *ShowUI )( 
             IDocHostUIHandler2 * This,
             /* [annotation][in] */ 
@@ -779,24 +815,30 @@ EXTERN_C const IID IID_IDocHostUIHandler2;
             /* [annotation][in] */ 
             _In_  IOleInPlaceUIWindow *pDoc);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, HideUI)
         HRESULT ( STDMETHODCALLTYPE *HideUI )( 
             IDocHostUIHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, UpdateUI)
         HRESULT ( STDMETHODCALLTYPE *UpdateUI )( 
             IDocHostUIHandler2 * This);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, EnableModeless)
         HRESULT ( STDMETHODCALLTYPE *EnableModeless )( 
             IDocHostUIHandler2 * This,
             /* [in] */ BOOL fEnable);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, OnDocWindowActivate)
         HRESULT ( STDMETHODCALLTYPE *OnDocWindowActivate )( 
             IDocHostUIHandler2 * This,
             /* [in] */ BOOL fActivate);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, OnFrameWindowActivate)
         HRESULT ( STDMETHODCALLTYPE *OnFrameWindowActivate )( 
             IDocHostUIHandler2 * This,
             /* [in] */ BOOL fActivate);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, ResizeBorder)
         HRESULT ( STDMETHODCALLTYPE *ResizeBorder )( 
             IDocHostUIHandler2 * This,
             /* [annotation][in] */ 
@@ -806,18 +848,21 @@ EXTERN_C const IID IID_IDocHostUIHandler2;
             /* [annotation][in] */ 
             _In_  BOOL fRameWindow);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, TranslateAccelerator)
         HRESULT ( STDMETHODCALLTYPE *TranslateAccelerator )( 
             IDocHostUIHandler2 * This,
             /* [in] */ LPMSG lpMsg,
             /* [in] */ const GUID *pguidCmdGroup,
             /* [in] */ DWORD nCmdID);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, GetOptionKeyPath)
         HRESULT ( STDMETHODCALLTYPE *GetOptionKeyPath )( 
             IDocHostUIHandler2 * This,
             /* [annotation][out] */ 
             _Out_  LPOLESTR *pchKey,
             /* [in] */ DWORD dw);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, GetDropTarget)
         HRESULT ( STDMETHODCALLTYPE *GetDropTarget )( 
             IDocHostUIHandler2 * This,
             /* [annotation][in] */ 
@@ -825,11 +870,13 @@ EXTERN_C const IID IID_IDocHostUIHandler2;
             /* [annotation][out] */ 
             _Outptr_  IDropTarget **ppDropTarget);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, GetExternal)
         HRESULT ( STDMETHODCALLTYPE *GetExternal )( 
             IDocHostUIHandler2 * This,
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  IDispatch **ppDispatch);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, TranslateUrl)
         HRESULT ( STDMETHODCALLTYPE *TranslateUrl )( 
             IDocHostUIHandler2 * This,
             /* [in] */ DWORD dwTranslate,
@@ -838,6 +885,7 @@ EXTERN_C const IID IID_IDocHostUIHandler2;
             /* [annotation][out] */ 
             _Outptr_  LPWSTR *ppchURLOut);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler, FilterDataObject)
         HRESULT ( STDMETHODCALLTYPE *FilterDataObject )( 
             IDocHostUIHandler2 * This,
             /* [annotation][in] */ 
@@ -845,6 +893,7 @@ EXTERN_C const IID IID_IDocHostUIHandler2;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  IDataObject **ppDORet);
         
+        DECLSPEC_XFGVIRT(IDocHostUIHandler2, GetOverrideKeyPath)
         HRESULT ( STDMETHODCALLTYPE *GetOverrideKeyPath )( 
             IDocHostUIHandler2 * This,
             /* [annotation][out] */ 
@@ -970,18 +1019,22 @@ EXTERN_C const IID IID_ICustomDoc;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICustomDoc * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICustomDoc * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICustomDoc * This);
         
+        DECLSPEC_XFGVIRT(ICustomDoc, SetUIHandler)
         HRESULT ( STDMETHODCALLTYPE *SetUIHandler )( 
             ICustomDoc * This,
             /* [in] */ IDocHostUIHandler *pUIHandler);
@@ -1068,18 +1121,22 @@ EXTERN_C const IID IID_IDocHostShowUI;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDocHostShowUI * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDocHostShowUI * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDocHostShowUI * This);
         
+        DECLSPEC_XFGVIRT(IDocHostShowUI, ShowMessage)
         HRESULT ( STDMETHODCALLTYPE *ShowMessage )( 
             IDocHostShowUI * This,
             /* [in] */ HWND hwnd,
@@ -1093,6 +1150,7 @@ EXTERN_C const IID IID_IDocHostShowUI;
             /* [in] */ DWORD dwHelpContext,
             /* [out] */ LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IDocHostShowUI, ShowHelp)
         HRESULT ( STDMETHODCALLTYPE *ShowHelp )( 
             IDocHostShowUI * This,
             /* [in] */ HWND hwnd,
@@ -1183,18 +1241,22 @@ EXTERN_C const IID IID_IClassFactoryEx;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IClassFactoryEx * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IClassFactoryEx * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IClassFactoryEx * This);
         
+        DECLSPEC_XFGVIRT(IClassFactory, CreateInstance)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *CreateInstance )( 
             IClassFactoryEx * This,
             /* [annotation][unique][in] */ 
@@ -1204,10 +1266,12 @@ EXTERN_C const IID IID_IClassFactoryEx;
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IClassFactory, LockServer)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *LockServer )( 
             IClassFactoryEx * This,
             /* [in] */ BOOL fLock);
         
+        DECLSPEC_XFGVIRT(IClassFactoryEx, CreateInstanceWithContext)
         HRESULT ( STDMETHODCALLTYPE *CreateInstanceWithContext )( 
             IClassFactoryEx * This,
             IUnknown *punkContext,
@@ -1299,33 +1363,40 @@ EXTERN_C const IID IID_IHTMLOMWindowServices;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IHTMLOMWindowServices * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IHTMLOMWindowServices * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IHTMLOMWindowServices * This);
         
+        DECLSPEC_XFGVIRT(IHTMLOMWindowServices, moveTo)
         HRESULT ( STDMETHODCALLTYPE *moveTo )( 
             __RPC__in IHTMLOMWindowServices * This,
             /* [in] */ LONG x,
             /* [in] */ LONG y);
         
+        DECLSPEC_XFGVIRT(IHTMLOMWindowServices, moveBy)
         HRESULT ( STDMETHODCALLTYPE *moveBy )( 
             __RPC__in IHTMLOMWindowServices * This,
             /* [in] */ LONG x,
             /* [in] */ LONG y);
         
+        DECLSPEC_XFGVIRT(IHTMLOMWindowServices, resizeTo)
         HRESULT ( STDMETHODCALLTYPE *resizeTo )( 
             __RPC__in IHTMLOMWindowServices * This,
             /* [in] */ LONG x,
             /* [in] */ LONG y);
         
+        DECLSPEC_XFGVIRT(IHTMLOMWindowServices, resizeBy)
         HRESULT ( STDMETHODCALLTYPE *resizeBy )( 
             __RPC__in IHTMLOMWindowServices * This,
             /* [in] */ LONG x,

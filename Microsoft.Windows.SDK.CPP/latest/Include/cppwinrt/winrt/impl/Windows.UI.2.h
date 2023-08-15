@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_2_H
 #define WINRT_Windows_UI_2_H
 #include "winrt/impl/Windows.UI.1.h"
-namespace winrt::Windows::UI
+WINRT_EXPORT namespace winrt::Windows::UI
 {
     struct Color
     {
@@ -20,6 +20,18 @@ namespace winrt::Windows::UI
         return left.A == right.A && left.R == right.R && left.G == right.G && left.B == right.B;
     }
     inline bool operator!=(Color const& left, Color const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct WindowId
+    {
+        uint64_t Value;
+    };
+    inline bool operator==(WindowId const& left, WindowId const& right) noexcept
+    {
+        return left.Value == right.Value;
+    }
+    inline bool operator!=(WindowId const& left, WindowId const& right) noexcept
     {
         return !(left == right);
     }

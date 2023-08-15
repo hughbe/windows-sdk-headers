@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -137,28 +145,34 @@ EXTERN_C const IID IID_IWMIExtension;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWMIExtension * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWMIExtension * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWMIExtension * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWMIExtension * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWMIExtension * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWMIExtension * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -167,6 +181,7 @@ EXTERN_C const IID IID_IWMIExtension;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWMIExtension * This,
             /* [annotation][in] */ 
@@ -186,14 +201,17 @@ EXTERN_C const IID IID_IWMIExtension;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IWMIExtension, get_WMIObjectPath)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WMIObjectPath )( 
             __RPC__in IWMIExtension * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *strWMIObjectPath);
         
+        DECLSPEC_XFGVIRT(IWMIExtension, GetWMIObject)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetWMIObject )( 
             __RPC__in IWMIExtension * This,
             /* [retval][out] */ __RPC__deref_out_opt ISWbemObject **objWMIObject);
         
+        DECLSPEC_XFGVIRT(IWMIExtension, GetWMIServices)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetWMIServices )( 
             __RPC__in IWMIExtension * This,
             /* [retval][out] */ __RPC__deref_out_opt ISWbemServices **objWMIServices);

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Graphics_2_H
 #define WINRT_Windows_Graphics_2_H
 #include "winrt/impl/Windows.Graphics.1.h"
-namespace winrt::Windows::Graphics
+WINRT_EXPORT namespace winrt::Windows::Graphics
 {
     struct DisplayAdapterId
     {
@@ -18,6 +18,18 @@ namespace winrt::Windows::Graphics
         return left.LowPart == right.LowPart && left.HighPart == right.HighPart;
     }
     inline bool operator!=(DisplayAdapterId const& left, DisplayAdapterId const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct DisplayId
+    {
+        uint64_t Value;
+    };
+    inline bool operator==(DisplayId const& left, DisplayId const& right) noexcept
+    {
+        return left.Value == right.Value;
+    }
+    inline bool operator!=(DisplayId const& left, DisplayId const& right) noexcept
     {
         return !(left == right);
     }

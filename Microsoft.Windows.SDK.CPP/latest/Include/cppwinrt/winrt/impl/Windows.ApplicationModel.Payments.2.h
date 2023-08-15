@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Payments.1.h"
-namespace winrt::Windows::ApplicationModel::Payments
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Payments
 {
     struct PaymentRequestChangedHandler : Windows::Foundation::IUnknown
     {
@@ -31,7 +31,7 @@ namespace winrt::Windows::ApplicationModel::Payments
     {
         PaymentCanMakePaymentResult(std::nullptr_t) noexcept {}
         PaymentCanMakePaymentResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResult(ptr, take_ownership_from_abi) {}
-        PaymentCanMakePaymentResult(Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus const& value);
+        explicit PaymentCanMakePaymentResult(Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus const& value);
     };
     struct __declspec(empty_bases) PaymentCurrencyAmount : Windows::ApplicationModel::Payments::IPaymentCurrencyAmount
     {
@@ -45,7 +45,7 @@ namespace winrt::Windows::ApplicationModel::Payments
         PaymentDetails(std::nullptr_t) noexcept {}
         PaymentDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Payments::IPaymentDetails(ptr, take_ownership_from_abi) {}
         PaymentDetails();
-        PaymentDetails(Windows::ApplicationModel::Payments::PaymentItem const& total);
+        explicit PaymentDetails(Windows::ApplicationModel::Payments::PaymentItem const& total);
         PaymentDetails(Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<Windows::ApplicationModel::Payments::PaymentItem> const& displayItems);
     };
     struct __declspec(empty_bases) PaymentDetailsModifier : Windows::ApplicationModel::Payments::IPaymentDetailsModifier
@@ -74,13 +74,13 @@ namespace winrt::Windows::ApplicationModel::Payments
         PaymentMerchantInfo(std::nullptr_t) noexcept {}
         PaymentMerchantInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Payments::IPaymentMerchantInfo(ptr, take_ownership_from_abi) {}
         PaymentMerchantInfo();
-        PaymentMerchantInfo(Windows::Foundation::Uri const& uri);
+        explicit PaymentMerchantInfo(Windows::Foundation::Uri const& uri);
     };
     struct __declspec(empty_bases) PaymentMethodData : Windows::ApplicationModel::Payments::IPaymentMethodData
     {
         PaymentMethodData(std::nullptr_t) noexcept {}
         PaymentMethodData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Payments::IPaymentMethodData(ptr, take_ownership_from_abi) {}
-        PaymentMethodData(param::iterable<hstring> const& supportedMethodIds);
+        explicit PaymentMethodData(param::iterable<hstring> const& supportedMethodIds);
         PaymentMethodData(param::iterable<hstring> const& supportedMethodIds, param::hstring const& jsonData);
     };
     struct __declspec(empty_bases) PaymentOptions : Windows::ApplicationModel::Payments::IPaymentOptions
@@ -108,7 +108,7 @@ namespace winrt::Windows::ApplicationModel::Payments
     {
         PaymentRequestChangedResult(std::nullptr_t) noexcept {}
         PaymentRequestChangedResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Payments::IPaymentRequestChangedResult(ptr, take_ownership_from_abi) {}
-        PaymentRequestChangedResult(bool changeAcceptedByMerchant);
+        explicit PaymentRequestChangedResult(bool changeAcceptedByMerchant);
         PaymentRequestChangedResult(bool changeAcceptedByMerchant, Windows::ApplicationModel::Payments::PaymentDetails const& updatedPaymentDetails);
     };
     struct __declspec(empty_bases) PaymentRequestSubmitResult : Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult
@@ -133,7 +133,7 @@ namespace winrt::Windows::ApplicationModel::Payments
     {
         PaymentToken(std::nullptr_t) noexcept {}
         PaymentToken(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Payments::IPaymentToken(ptr, take_ownership_from_abi) {}
-        PaymentToken(param::hstring const& paymentMethodId);
+        explicit PaymentToken(param::hstring const& paymentMethodId);
         PaymentToken(param::hstring const& paymentMethodId, param::hstring const& jsonDetails);
     };
 }

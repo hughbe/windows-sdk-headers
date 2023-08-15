@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_Devices_1_H
 #define WINRT_Windows_Media_Devices_1_H
 #include "winrt/impl/Windows.Media.Devices.0.h"
-namespace winrt::Windows::Media::Devices
+WINRT_EXPORT namespace winrt::Windows::Media::Devices
 {
     struct __declspec(empty_bases) IAdvancedPhotoCaptureSettings :
         Windows::Foundation::IInspectable,
@@ -78,6 +78,13 @@ namespace winrt::Windows::Media::Devices
         IAdvancedVideoCaptureDeviceController8(std::nullptr_t = nullptr) noexcept {}
         IAdvancedVideoCaptureDeviceController8(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IAdvancedVideoCaptureDeviceController9 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAdvancedVideoCaptureDeviceController9>
+    {
+        IAdvancedVideoCaptureDeviceController9(std::nullptr_t = nullptr) noexcept {}
+        IAdvancedVideoCaptureDeviceController9(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IAudioDeviceController :
         Windows::Foundation::IInspectable,
         impl::consume_t<IAudioDeviceController>,
@@ -141,6 +148,27 @@ namespace winrt::Windows::Media::Devices
     {
         IDialRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
         IDialRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IDigitalWindowBounds :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IDigitalWindowBounds>
+    {
+        IDigitalWindowBounds(std::nullptr_t = nullptr) noexcept {}
+        IDigitalWindowBounds(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IDigitalWindowCapability :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IDigitalWindowCapability>
+    {
+        IDigitalWindowCapability(std::nullptr_t = nullptr) noexcept {}
+        IDigitalWindowCapability(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IDigitalWindowControl :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IDigitalWindowControl>
+    {
+        IDigitalWindowControl(std::nullptr_t = nullptr) noexcept {}
+        IDigitalWindowControl(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IExposureCompensationControl :
         Windows::Foundation::IInspectable,

@@ -88,7 +88,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION)
-#define WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION 0x30000
+#define WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
@@ -96,7 +96,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
@@ -392,6 +392,21 @@ namespace ABI {
 #define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions2 ABI::Windows::AI::MachineLearning::ILearningModelSessionOptions2
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                interface ILearningModelSessionOptions3;
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3 ABI::Windows::AI::MachineLearning::ILearningModelSessionOptions3
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_FWD_DEFINED__
@@ -3507,6 +3522,43 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSess
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ILearningModelSessionOptions3
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 4.0
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.LearningModelSessionOptions
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x40000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ILearningModelSessionOptions3[] = L"Windows.AI.MachineLearning.ILearningModelSessionOptions3";
+namespace ABI {
+    namespace Windows {
+        namespace AI {
+            namespace MachineLearning {
+                MIDL_INTERFACE("58e15cee-d8c2-56fc-92e8-76d751081086")
+                ILearningModelSessionOptions3 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE OverrideNamedDimension(
+                        HSTRING name,
+                        UINT32 dimension
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_ILearningModelSessionOptions3 = _uuidof(ILearningModelSessionOptions3);
+            } /* MachineLearning */
+        } /* AI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x40000
+
+/*
+ *
  * Interface Windows.AI.MachineLearning.ILearningModelStatics
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -5600,8 +5652,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ILearningModelSession ** Default Interface **
@@ -5631,6 +5683,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ILearningModelSessionOptions ** Default Interface **
  *    Windows.AI.MachineLearning.ILearningModelSessionOptions2
+ *    Windows.AI.MachineLearning.ILearningModelSessionOptions3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5691,8 +5744,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorBoolean ** Default Interface **
@@ -5720,8 +5773,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorDouble ** Default Interface **
@@ -5914,8 +5967,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt8Bit ** Default Interface **
@@ -5943,8 +5996,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorString ** Default Interface **
@@ -6001,8 +6054,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt32Bit ** Default Interface **
@@ -6190,6 +6243,12 @@ typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOp
 typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions2 __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions2;
 
 #endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3 __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3;
+
+#endif // ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelStatics_FWD_DEFINED__
@@ -11595,6 +11654,76 @@ EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSess
 
 /*
  *
+ * Interface Windows.AI.MachineLearning.ILearningModelSessionOptions3
+ *
+ * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 4.0
+ *
+ * Interface is a part of the implementation of type Windows.AI.MachineLearning.LearningModelSessionOptions
+ *
+ */
+#if WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x40000
+#if !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_AI_MachineLearning_ILearningModelSessionOptions3[] = L"Windows.AI.MachineLearning.ILearningModelSessionOptions3";
+typedef struct __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* OverrideNamedDimension)(__x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3* This,
+        HSTRING name,
+        UINT32 dimension);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3Vtbl;
+
+interface __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_OverrideNamedDimension(This, name, dimension) \
+    ((This)->lpVtbl->OverrideNamedDimension(This, name, dimension))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3;
+#endif /* !defined(____x_ABI_CWindows_CAI_CMachineLearning_CILearningModelSessionOptions3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_AI_MACHINELEARNING_MACHINELEARNINGCONTRACT_VERSION >= 0x40000
+
+/*
+ *
  * Interface Windows.AI.MachineLearning.ILearningModelStatics
  *
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
@@ -15262,8 +15391,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Type can be activated via the Windows.AI.MachineLearning.ILearningModelSessionFactory2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ILearningModelSession ** Default Interface **
@@ -15293,6 +15422,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ILearningModelSessionOptions ** Default Interface **
  *    Windows.AI.MachineLearning.ILearningModelSessionOptions2
+ *    Windows.AI.MachineLearning.ILearningModelSessionOptions3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15353,8 +15483,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorBooleanStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorBoolean ** Default Interface **
@@ -15382,8 +15512,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorDoubleStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorDouble ** Default Interface **
@@ -15576,8 +15706,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorInt8BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorInt8Bit ** Default Interface **
@@ -15605,8 +15735,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorStringStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorString ** Default Interface **
@@ -15663,8 +15793,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.AI.MachineLearning.MachineLearningContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics2 interface starting with version 2.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
+ *   Static Methods exist on the Windows.AI.MachineLearning.ITensorUInt32BitStatics interface starting with version 1.0 of the Windows.AI.MachineLearning.MachineLearningContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.AI.MachineLearning.ITensorUInt32Bit ** Default Interface **

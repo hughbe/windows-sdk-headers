@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Services_TargetedContent_2_H
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Services.TargetedContent.1.h"
-namespace winrt::Windows::Services::TargetedContent
+WINRT_EXPORT namespace winrt::Windows::Services::TargetedContent
 {
     struct __declspec(empty_bases) TargetedContentAction : Windows::Services::TargetedContent::ITargetedContentAction
     {

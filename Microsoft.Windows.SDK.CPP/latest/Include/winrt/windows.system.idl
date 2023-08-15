@@ -351,6 +351,8 @@ namespace Windows
 
         interface IUserStatics;
 
+        interface IUserStatics2;
+
         interface IUserWatcher;
 
         runtimeclass AppActivationResult;
@@ -737,10 +739,12 @@ namespace Windows
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
         enum UserType
         {
-            LocalUser   = 0,
-            RemoteUser  = 1,
-            LocalGuest  = 2,
-            RemoteGuest = 3
+            LocalUser     = 0,
+            RemoteUser    = 1,
+            LocalGuest    = 2,
+            RemoteGuest   = 3,
+            [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+            SystemManaged = 4
         };
 
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -782,10 +786,14 @@ namespace Windows
             CapitalLock                  = 20,
             Kana                         = 21,
             Hangul                       = 21,
+            [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+            ImeOn                        = 22,
             Junja                        = 23,
             Final                        = 24,
             Hanja                        = 25,
             Kanji                        = 25,
+            [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+            ImeOff                       = 26,
             Escape                       = 27,
             Convert                      = 28,
             NonConvert                   = 29,
@@ -1735,9 +1743,17 @@ namespace Windows
         {
             HRESULT CreateWatcher([out] [retval] Windows.System.UserWatcher** result);
             [default_overload] [overload("FindAllAsync")] HRESULT FindAllAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User*>*>** operation);
-            [overload("FindAllAsync")] HRESULT FindAllAsyncByType([in] Windows.System.UserType type, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User*>*>** operation);
-            [overload("FindAllAsync")] HRESULT FindAllAsyncByTypeAndStatus([in] Windows.System.UserType type, [in] Windows.System.UserAuthenticationStatus status, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User*>*>** operation);
+            [deprecated("FindAllAsyncByType is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.", deprecate, Windows.Foundation.UniversalApiContract, 11.0)] [overload("FindAllAsync")] HRESULT FindAllAsyncByType([in] Windows.System.UserType type, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User*>*>** operation);
+            [deprecated("FindAllAsyncByTypeAndStatus is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.", deprecate, Windows.Foundation.UniversalApiContract, 11.0)] [overload("FindAllAsync")] HRESULT FindAllAsyncByTypeAndStatus([in] Windows.System.UserType type, [in] Windows.System.UserAuthenticationStatus status, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User*>*>** operation);
             HRESULT GetFromId([in] HSTRING nonRoamableId, [out] [retval] Windows.System.User** result);
+        }
+
+        [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+        [exclusiveto(Windows.System.User)]
+        [uuid(74A37E11-2EB5-4487-B0D5-2C6790E013E9)]
+        interface IUserStatics2 : IInspectable
+        {
+            HRESULT GetDefault([out] [retval] Windows.System.User** result);
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2088,6 +2104,7 @@ namespace Windows
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
         [marshaling_behavior(agile)]
         [static(Windows.System.IUserStatics, Windows.Foundation.UniversalApiContract, 1.0)]
+        [static(Windows.System.IUserStatics2, Windows.Foundation.UniversalApiContract, 11.0)]
         [threading(both)]
         runtimeclass User
         {

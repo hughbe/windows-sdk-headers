@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,2151 +6,2152 @@
 #ifndef WINRT_Windows_Globalization_H
 #define WINRT_Windows_Globalization_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.System.2.h"
 #include "winrt/impl/Windows.Globalization.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Globalization_IApplicationLanguagesStatics<D>::PrimaryLanguageOverride() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::PrimaryLanguageOverride() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics)->get_PrimaryLanguageOverride(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IApplicationLanguagesStatics<D>::PrimaryLanguageOverride(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::PrimaryLanguageOverride(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics)->put_PrimaryLanguageOverride(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Globalization_IApplicationLanguagesStatics<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::Languages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics)->get_Languages(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IApplicationLanguagesStatics<D>::ManifestLanguages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::ManifestLanguages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics)->get_ManifestLanguages(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IApplicationLanguagesStatics2<D>::GetLanguagesForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IApplicationLanguagesStatics2<D>::GetLanguagesForUser(Windows::System::User const& user) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics2)->GetLanguagesForUser(*(void**)(&user), &value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Clone() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendar<D>::Clone() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->Clone(&value));
         return Windows::Globalization::Calendar{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::SetToMin() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::SetToMin() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SetToMin());
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::SetToMax() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::SetToMax() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SetToMax());
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_ICalendar<D>::Languages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Languages(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumeralSystem() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::NumeralSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumeralSystem(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumeralSystem(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::NumeralSystem(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_NumeralSystem(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::GetCalendarSystem() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::GetCalendarSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->GetCalendarSystem(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::ChangeCalendarSystem(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::ChangeCalendarSystem(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->ChangeCalendarSystem(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::GetClock() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::GetClock() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->GetClock(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::ChangeClock(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::ChangeClock(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->ChangeClock(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::GetDateTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Globalization_ICalendar<D>::GetDateTime() const
     {
-        Windows::Foundation::DateTime result;
+        Windows::Foundation::DateTime result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->GetDateTime(put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::SetDateTime(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::SetDateTime(Windows::Foundation::DateTime const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SetDateTime(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::SetToNow() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::SetToNow() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SetToNow());
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::FirstEra() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstEra() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstEra(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::LastEra() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastEra() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastEra(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumberOfEras() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfEras() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfEras(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Era() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Era() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Era(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Era(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Era(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Era(value));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddEras(int32_t eras) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddEras(int32_t eras) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddEras(eras));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::EraAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::EraAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->EraAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::EraAsString(int32_t idealLength) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::EraAsString(int32_t idealLength) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->EraAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::FirstYearInThisEra() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstYearInThisEra() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstYearInThisEra(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::LastYearInThisEra() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastYearInThisEra() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastYearInThisEra(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumberOfYearsInThisEra() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfYearsInThisEra() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfYearsInThisEra(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Year() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Year() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Year(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Year(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Year(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Year(value));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddYears(int32_t years) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddYears(int32_t years) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddYears(years));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::YearAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::YearAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->YearAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::YearAsTruncatedString(int32_t remainingDigits) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::YearAsTruncatedString(int32_t remainingDigits) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->YearAsTruncatedString(remainingDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::YearAsPaddedString(int32_t minDigits) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::YearAsPaddedString(int32_t minDigits) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->YearAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::FirstMonthInThisYear() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstMonthInThisYear() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstMonthInThisYear(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::LastMonthInThisYear() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastMonthInThisYear() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastMonthInThisYear(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumberOfMonthsInThisYear() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfMonthsInThisYear() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfMonthsInThisYear(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Month() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Month() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Month(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Month(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Month(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Month(value));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddMonths(int32_t months) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddMonths(int32_t months) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddMonths(months));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::MonthAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::MonthAsString(int32_t idealLength) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsString(int32_t idealLength) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::MonthAsSoloString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsSoloString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsFullSoloString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::MonthAsSoloString(int32_t idealLength) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsSoloString(int32_t idealLength) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsSoloString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::MonthAsNumericString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsNumericString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsNumericString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::MonthAsPaddedNumericString(int32_t minDigits) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsPaddedNumericString(int32_t minDigits) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsPaddedNumericString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddWeeks(int32_t weeks) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddWeeks(int32_t weeks) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddWeeks(weeks));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::FirstDayInThisMonth() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstDayInThisMonth() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstDayInThisMonth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::LastDayInThisMonth() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastDayInThisMonth() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastDayInThisMonth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumberOfDaysInThisMonth() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfDaysInThisMonth() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfDaysInThisMonth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Day() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Day() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Day(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Day(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Day(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Day(value));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddDays(int32_t days) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddDays(int32_t days) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddDays(days));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::DayAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::DayAsPaddedString(int32_t minDigits) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayAsPaddedString(int32_t minDigits) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::DayOfWeek() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DayOfWeek) consume_Windows_Globalization_ICalendar<D>::DayOfWeek() const
     {
-        Windows::Globalization::DayOfWeek value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_DayOfWeek(put_abi(value)));
+        Windows::Globalization::DayOfWeek value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_DayOfWeek(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayOfWeekAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsString(int32_t idealLength) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsString(int32_t idealLength) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayOfWeekAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsSoloString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsSoloString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayOfWeekAsFullSoloString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsSoloString(int32_t idealLength) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsSoloString(int32_t idealLength) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayOfWeekAsSoloString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::FirstPeriodInThisDay() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstPeriodInThisDay() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstPeriodInThisDay(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::LastPeriodInThisDay() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastPeriodInThisDay() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastPeriodInThisDay(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumberOfPeriodsInThisDay() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfPeriodsInThisDay() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfPeriodsInThisDay(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Period() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Period() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Period(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Period(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Period(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Period(value));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddPeriods(int32_t periods) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddPeriods(int32_t periods) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddPeriods(periods));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::PeriodAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::PeriodAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->PeriodAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::PeriodAsString(int32_t idealLength) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::PeriodAsString(int32_t idealLength) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->PeriodAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::FirstHourInThisPeriod() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstHourInThisPeriod() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstHourInThisPeriod(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::LastHourInThisPeriod() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastHourInThisPeriod() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastHourInThisPeriod(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumberOfHoursInThisPeriod() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfHoursInThisPeriod() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfHoursInThisPeriod(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Hour() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Hour() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Hour(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Hour(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Hour(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Hour(value));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddHours(int32_t hours) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddHours(int32_t hours) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddHours(hours));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::HourAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::HourAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->HourAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::HourAsPaddedString(int32_t minDigits) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::HourAsPaddedString(int32_t minDigits) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->HourAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Minute() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Minute() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Minute(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Minute(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Minute(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Minute(value));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddMinutes(int32_t minutes) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddMinutes(int32_t minutes) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddMinutes(minutes));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::MinuteAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MinuteAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MinuteAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::MinuteAsPaddedString(int32_t minDigits) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MinuteAsPaddedString(int32_t minDigits) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MinuteAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Second() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Second() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Second(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Second(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Second(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Second(value));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddSeconds(int32_t seconds) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddSeconds(int32_t seconds) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddSeconds(seconds));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::SecondAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::SecondAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SecondAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::SecondAsPaddedString(int32_t minDigits) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::SecondAsPaddedString(int32_t minDigits) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SecondAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Nanosecond() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Nanosecond() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Nanosecond(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Nanosecond(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Nanosecond(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Nanosecond(value));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::AddNanoseconds(int32_t nanoseconds) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddNanoseconds(int32_t nanoseconds) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddNanoseconds(nanoseconds));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NanosecondAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::NanosecondAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->NanosecondAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NanosecondAsPaddedString(int32_t minDigits) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::NanosecondAsPaddedString(int32_t minDigits) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->NanosecondAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::Compare(Windows::Globalization::Calendar const& other) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Compare(Windows::Globalization::Calendar const& other) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->Compare(*(void**)(&other), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::CompareDateTime(Windows::Foundation::DateTime const& other) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::CompareDateTime(Windows::Foundation::DateTime const& other) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->CompareDateTime(impl::bind_in(other), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::CopyTo(Windows::Globalization::Calendar const& other) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::CopyTo(Windows::Globalization::Calendar const& other) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->CopyTo(*(void**)(&other)));
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::FirstMinuteInThisHour() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstMinuteInThisHour() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstMinuteInThisHour(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::LastMinuteInThisHour() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastMinuteInThisHour() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastMinuteInThisHour(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumberOfMinutesInThisHour() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfMinutesInThisHour() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfMinutesInThisHour(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::FirstSecondInThisMinute() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstSecondInThisMinute() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstSecondInThisMinute(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::LastSecondInThisMinute() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastSecondInThisMinute() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastSecondInThisMinute(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::NumberOfSecondsInThisMinute() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfSecondsInThisMinute() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfSecondsInThisMinute(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::ResolvedLanguage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::ResolvedLanguage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_ResolvedLanguage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendar<D>::IsDaylightSavingTime() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_ICalendar<D>::IsDaylightSavingTime() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_IsDaylightSavingTime(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarFactory<D>::CreateCalendarDefaultCalendarAndClock(param::iterable<hstring> const& languages) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendarFactory<D>::CreateCalendarDefaultCalendarAndClock(param::iterable<hstring> const& languages) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarFactory)->CreateCalendarDefaultCalendarAndClock(*(void**)(&languages), &result));
         return Windows::Globalization::Calendar{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarFactory<D>::CreateCalendar(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendarFactory<D>::CreateCalendar(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarFactory)->CreateCalendar(*(void**)(&languages), *(void**)(&calendar), *(void**)(&clock), &result));
         return Windows::Globalization::Calendar{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarFactory2<D>::CreateCalendarWithTimeZone(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock, param::hstring const& timeZoneId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendarFactory2<D>::CreateCalendarWithTimeZone(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock, param::hstring const& timeZoneId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarFactory2)->CreateCalendarWithTimeZone(*(void**)(&languages), *(void**)(&calendar), *(void**)(&clock), *(void**)(&timeZoneId), &result));
         return Windows::Globalization::Calendar{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Gregorian() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Gregorian() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Gregorian(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Hebrew() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Hebrew() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Hebrew(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Hijri() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Hijri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Hijri(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Japanese() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Japanese() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Japanese(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Julian() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Julian() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Julian(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Korean() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Korean() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Korean(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Taiwan() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Taiwan() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Taiwan(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Thai() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Thai() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Thai(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::UmAlQura() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::UmAlQura() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_UmAlQura(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics2<D>::Persian() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics2<D>::Persian() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics2)->get_Persian(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::ChineseLunar() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::ChineseLunar() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_ChineseLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::JapaneseLunar() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::JapaneseLunar() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_JapaneseLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::KoreanLunar() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::KoreanLunar() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_KoreanLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::TaiwanLunar() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::TaiwanLunar() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_TaiwanLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::VietnameseLunar() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::VietnameseLunar() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_VietnameseLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IClockIdentifiersStatics<D>::TwelveHour() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IClockIdentifiersStatics<D>::TwelveHour() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IClockIdentifiersStatics)->get_TwelveHour(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IClockIdentifiersStatics<D>::TwentyFourHour() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IClockIdentifiersStatics<D>::TwentyFourHour() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IClockIdentifiersStatics)->get_TwentyFourHour(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyAmount<D>::Amount() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyAmount<D>::Amount() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyAmount)->get_Amount(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyAmount<D>::Currency() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyAmount<D>::Currency() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyAmount)->get_Currency(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyAmountFactory<D>::Create(param::hstring const& amount, param::hstring const& currency) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::CurrencyAmount) consume_Windows_Globalization_ICurrencyAmountFactory<D>::Create(param::hstring const& amount, param::hstring const& currency) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyAmountFactory)->Create(*(void**)(&amount), *(void**)(&currency), &result));
         return Windows::Globalization::CurrencyAmount{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AED() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AED() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AED(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AFN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AFN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AFN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ALL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ALL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ALL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AMD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AMD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AMD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ANG() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ANG() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ANG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AOA() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AOA() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AOA(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ARS() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ARS() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ARS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AUD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AUD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AUD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AWG() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AWG() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AWG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AZN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AZN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AZN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BAM() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BAM() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BAM(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BBD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BBD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BBD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BDT() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BDT() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BDT(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BGN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BGN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BGN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BHD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BHD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BHD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BIF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BIF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BIF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BMD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BMD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BMD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BND() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BND() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BND(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BOB() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BOB() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BOB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BRL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BRL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BRL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BSD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BSD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BSD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BTN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BTN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BTN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BWP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BWP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BWP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BYR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BYR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BYR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BZD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BZD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BZD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CAD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CAD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CAD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CDF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CDF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CDF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CHF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CHF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CHF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CLP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CLP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CLP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CNY() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CNY() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CNY(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::COP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::COP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_COP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CRC() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CRC() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CRC(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CUP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CUP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CUP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CVE() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CVE() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CVE(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CZK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CZK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CZK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DJF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DJF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_DJF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DKK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DKK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_DKK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DOP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DOP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_DOP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DZD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DZD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_DZD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::EGP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::EGP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_EGP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ERN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ERN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ERN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ETB() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ETB() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ETB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::EUR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::EUR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_EUR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::FJD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::FJD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_FJD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::FKP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::FKP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_FKP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GBP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GBP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GBP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GEL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GEL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GEL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GHS() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GHS() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GHS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GIP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GIP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GIP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GMD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GMD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GMD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GNF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GNF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GNF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GTQ() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GTQ() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GTQ(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GYD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GYD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GYD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HKD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HKD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HKD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HNL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HNL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HNL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HRK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HRK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HRK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HTG() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HTG() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HTG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HUF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HUF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HUF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::IDR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::IDR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_IDR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ILS() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ILS() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ILS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::INR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::INR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_INR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::IQD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::IQD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_IQD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::IRR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::IRR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_IRR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ISK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ISK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ISK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::JMD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::JMD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_JMD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::JOD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::JOD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_JOD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::JPY() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::JPY() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_JPY(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KES() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KES() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KES(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KGS() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KGS() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KGS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KHR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KHR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KHR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KMF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KMF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KMF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KPW() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KPW() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KPW(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KRW() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KRW() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KRW(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KWD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KWD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KWD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KYD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KYD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KYD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KZT() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KZT() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KZT(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LAK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LAK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LAK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LBP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LBP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LBP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LKR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LKR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LKR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LRD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LRD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LRD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LSL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LSL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LSL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LTL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LTL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LTL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LVL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LVL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LVL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LYD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LYD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LYD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MAD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MAD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MAD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MDL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MDL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MDL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MGA() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MGA() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MGA(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MKD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MKD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MKD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MMK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MMK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MMK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MNT() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MNT() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MNT(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MOP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MOP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MOP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MRO() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MRO() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MRO(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MUR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MUR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MUR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MVR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MVR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MVR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MWK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MWK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MWK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MXN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MXN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MXN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MYR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MYR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MYR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MZN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MZN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MZN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NAD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NAD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NAD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NGN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NGN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NGN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NIO() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NIO() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NIO(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NOK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NOK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NOK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NPR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NPR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NPR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NZD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NZD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NZD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::OMR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::OMR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_OMR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PAB() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PAB() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PAB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PEN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PEN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PEN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PGK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PGK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PGK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PHP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PHP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PHP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PKR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PKR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PKR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PLN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PLN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PLN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PYG() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PYG() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PYG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::QAR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::QAR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_QAR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RON() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RON() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_RON(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RSD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RSD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_RSD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RUB() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RUB() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_RUB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RWF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RWF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_RWF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SAR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SAR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SAR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SBD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SBD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SBD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SCR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SCR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SCR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SDG() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SDG() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SDG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SEK() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SEK() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SEK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SGD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SGD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SGD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SHP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SHP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SHP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SLL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SLL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SLL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SOS() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SOS() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SOS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SRD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SRD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SRD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::STD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::STD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_STD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SYP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SYP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SYP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SZL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SZL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SZL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::THB() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::THB() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_THB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TJS() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TJS() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TJS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TMT() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TMT() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TMT(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TND() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TND() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TND(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TOP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TOP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TOP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TRY() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TRY() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TRY(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TTD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TTD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TTD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TWD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TWD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TWD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TZS() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TZS() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TZS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UAH() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UAH() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_UAH(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UGX() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UGX() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_UGX(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::USD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::USD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_USD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UYU() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UYU() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_UYU(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UZS() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UZS() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_UZS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::VEF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::VEF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_VEF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::VND() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::VND() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_VND(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::VUV() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::VUV() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_VUV(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::WST() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::WST() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_WST(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XAF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XAF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XAF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XCD() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XCD() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XCD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XOF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XOF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XOF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XPF() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XPF() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XPF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XXX() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XXX() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XXX(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::YER() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::YER() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_YER(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ZAR() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ZAR() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ZAR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ZMW() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ZMW() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ZMW(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ZWL() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ZWL() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ZWL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics2<D>::BYN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics2<D>::BYN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics2)->get_BYN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::MRU() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::MRU() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics3)->get_MRU(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::SSP() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::SSP() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics3)->get_SSP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::STN() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::STN() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics3)->get_STN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::VES() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::VES() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics3)->get_VES(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IGeographicRegion<D>::Code() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::Code() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_Code(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IGeographicRegion<D>::CodeTwoLetter() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::CodeTwoLetter() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_CodeTwoLetter(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IGeographicRegion<D>::CodeThreeLetter() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::CodeThreeLetter() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_CodeThreeLetter(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IGeographicRegion<D>::CodeThreeDigit() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::CodeThreeDigit() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_CodeThreeDigit(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IGeographicRegion<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IGeographicRegion<D>::NativeName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::NativeName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_NativeName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IGeographicRegion<D>::CurrenciesInUse() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IGeographicRegion<D>::CurrenciesInUse() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_CurrenciesInUse(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IGeographicRegionFactory<D>::CreateGeographicRegion(param::hstring const& geographicRegionCode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::GeographicRegion) consume_Windows_Globalization_IGeographicRegionFactory<D>::CreateGeographicRegion(param::hstring const& geographicRegionCode) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegionFactory)->CreateGeographicRegion(*(void**)(&geographicRegionCode), &result));
         return Windows::Globalization::GeographicRegion{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IGeographicRegionStatics<D>::IsSupported(param::hstring const& geographicRegionCode) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_IGeographicRegionStatics<D>::IsSupported(param::hstring const& geographicRegionCode) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegionStatics)->IsSupported(*(void**)(&geographicRegionCode), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_IJapanesePhoneme<D>::DisplayText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IJapanesePhoneme<D>::DisplayText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneme)->get_DisplayText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IJapanesePhoneme<D>::YomiText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IJapanesePhoneme<D>::YomiText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneme)->get_YomiText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IJapanesePhoneme<D>::IsPhraseStart() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_IJapanesePhoneme<D>::IsPhraseStart() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneme)->get_IsPhraseStart(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_IJapanesePhoneticAnalyzerStatics<D>::GetWords(param::hstring const& input) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>) consume_Windows_Globalization_IJapanesePhoneticAnalyzerStatics<D>::GetWords(param::hstring const& input) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneticAnalyzerStatics)->GetWords(*(void**)(&input), &result));
         return Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_IJapanesePhoneticAnalyzerStatics<D>::GetWords(param::hstring const& input, bool monoRuby) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>) consume_Windows_Globalization_IJapanesePhoneticAnalyzerStatics<D>::GetWords(param::hstring const& input, bool monoRuby) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneticAnalyzerStatics)->GetWordsWithMonoRubyOption(*(void**)(&input), monoRuby, &result));
         return Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguage<D>::LanguageTag() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage<D>::LanguageTag() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage)->get_LanguageTag(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguage<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguage<D>::NativeName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage<D>::NativeName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage)->get_NativeName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguage<D>::Script() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage<D>::Script() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage)->get_Script(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguage2<D>::LayoutDirection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::LanguageLayoutDirection) consume_Windows_Globalization_ILanguage2<D>::LayoutDirection() const
     {
-        Windows::Globalization::LanguageLayoutDirection value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage2)->get_LayoutDirection(put_abi(value)));
+        Windows::Globalization::LanguageLayoutDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage2)->get_LayoutDirection(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguage3<D>::AbbreviatedName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage3<D>::AbbreviatedName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage3)->get_AbbreviatedName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguageExtensionSubtags<D>::GetExtensionSubtags(param::hstring const& singleton) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_ILanguageExtensionSubtags<D>::GetExtensionSubtags(param::hstring const& singleton) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageExtensionSubtags)->GetExtensionSubtags(*(void**)(&singleton), &value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguageFactory<D>::CreateLanguage(param::hstring const& languageTag) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Language) consume_Windows_Globalization_ILanguageFactory<D>::CreateLanguage(param::hstring const& languageTag) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageFactory)->CreateLanguage(*(void**)(&languageTag), &result));
         return Windows::Globalization::Language{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguageStatics<D>::IsWellFormed(param::hstring const& languageTag) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_ILanguageStatics<D>::IsWellFormed(param::hstring const& languageTag) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageStatics)->IsWellFormed(*(void**)(&languageTag), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguageStatics<D>::CurrentInputMethodLanguageTag() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguageStatics<D>::CurrentInputMethodLanguageTag() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageStatics)->get_CurrentInputMethodLanguageTag(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguageStatics2<D>::TrySetInputMethodLanguageTag(param::hstring const& languageTag) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_ILanguageStatics2<D>::TrySetInputMethodLanguageTag(param::hstring const& languageTag) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageStatics2)->TrySetInputMethodLanguageTag(*(void**)(&languageTag), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_ILanguageStatics3<D>::GetMuiCompatibleLanguageListFromLanguageTags(param::iterable<hstring> const& languageTags) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Globalization_ILanguageStatics3<D>::GetMuiCompatibleLanguageListFromLanguageTags(param::iterable<hstring> const& languageTags) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageStatics3)->GetMuiCompatibleLanguageListFromLanguageTags(*(void**)(&languageTags), &result));
         return Windows::Foundation::Collections::IVector<hstring>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Arab() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Arab() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Arab(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::ArabExt() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::ArabExt() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_ArabExt(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Bali() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Bali() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Bali(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Beng() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Beng() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Beng(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Cham() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Cham() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Cham(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Deva() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Deva() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Deva(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::FullWide() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::FullWide() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_FullWide(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Gujr() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Gujr() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Gujr(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Guru() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Guru() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Guru(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::HaniDec() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::HaniDec() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_HaniDec(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Java() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Java() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Java(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Kali() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Kali() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Kali(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Khmr() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Khmr() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Khmr(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Knda() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Knda() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Knda(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Lana() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Lana() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Lana(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::LanaTham() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::LanaTham() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_LanaTham(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Laoo() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Laoo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Laoo(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Latn() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Latn() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Latn(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Lepc() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Lepc() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Lepc(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Limb() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Limb() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Limb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mlym() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mlym() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mlym(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mong() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mong() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mong(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mtei() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mtei() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mtei(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mymr() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mymr() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mymr(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::MymrShan() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::MymrShan() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_MymrShan(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Nkoo() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Nkoo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Nkoo(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Olck() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Olck() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Olck(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Orya() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Orya() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Orya(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Saur() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Saur() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Saur(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Sund() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Sund() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Sund(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Talu() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Talu() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Talu(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::TamlDec() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::TamlDec() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_TamlDec(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Telu() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Telu() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Telu(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Thai() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Thai() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Thai(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Tibt() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Tibt() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Tibt(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Vaii() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Vaii() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Vaii(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::Brah() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::Brah() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_Brah(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::Osma() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::Osma() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_Osma(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathBold() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathBold() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathBold(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathDbl() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathDbl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathDbl(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathSans() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathSans() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathSans(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathSanb() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathSanb() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathSanb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathMono() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathMono() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathMono(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthBold() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthBold() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthBold(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthDbl() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthDbl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthDbl(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthSans() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthSans() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthSans(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthSanb() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthSanb() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthSanb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthMono() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthMono() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthMono(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ITimeZoneOnCalendar<D>::GetTimeZone() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ITimeZoneOnCalendar<D>::GetTimeZone() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ITimeZoneOnCalendar)->GetTimeZone(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ITimeZoneOnCalendar<D>::ChangeTimeZone(param::hstring const& timeZoneId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ITimeZoneOnCalendar<D>::ChangeTimeZone(param::hstring const& timeZoneId) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ITimeZoneOnCalendar)->ChangeTimeZone(*(void**)(&timeZoneId)));
     }
-    template <typename D> auto consume_Windows_Globalization_ITimeZoneOnCalendar<D>::TimeZoneAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ITimeZoneOnCalendar<D>::TimeZoneAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ITimeZoneOnCalendar)->TimeZoneAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_ITimeZoneOnCalendar<D>::TimeZoneAsString(int32_t idealLength) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ITimeZoneOnCalendar<D>::TimeZoneAsString(int32_t idealLength) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ITimeZoneOnCalendar)->TimeZoneAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::IApplicationLanguagesStatics> : produce_base<D, Windows::Globalization::IApplicationLanguagesStatics>
     {
@@ -2186,6 +2187,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::IApplicationLanguagesStatics2> : produce_base<D, Windows::Globalization::IApplicationLanguagesStatics2>
     {
@@ -2198,6 +2201,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICalendar> : produce_base<D, Windows::Globalization::ICalendar>
     {
@@ -2922,6 +2927,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICalendarFactory> : produce_base<D, Windows::Globalization::ICalendarFactory>
     {
@@ -2942,6 +2949,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICalendarFactory2> : produce_base<D, Windows::Globalization::ICalendarFactory2>
     {
@@ -2954,6 +2963,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICalendarIdentifiersStatics> : produce_base<D, Windows::Globalization::ICalendarIdentifiersStatics>
     {
@@ -3030,6 +3041,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICalendarIdentifiersStatics2> : produce_base<D, Windows::Globalization::ICalendarIdentifiersStatics2>
     {
@@ -3042,6 +3055,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICalendarIdentifiersStatics3> : produce_base<D, Windows::Globalization::ICalendarIdentifiersStatics3>
     {
@@ -3086,6 +3101,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::IClockIdentifiersStatics> : produce_base<D, Windows::Globalization::IClockIdentifiersStatics>
     {
@@ -3106,6 +3123,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICurrencyAmount> : produce_base<D, Windows::Globalization::ICurrencyAmount>
     {
@@ -3126,6 +3145,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICurrencyAmountFactory> : produce_base<D, Windows::Globalization::ICurrencyAmountFactory>
     {
@@ -3138,6 +3159,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICurrencyIdentifiersStatics> : produce_base<D, Windows::Globalization::ICurrencyIdentifiersStatics>
     {
@@ -4398,6 +4421,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICurrencyIdentifiersStatics2> : produce_base<D, Windows::Globalization::ICurrencyIdentifiersStatics2>
     {
@@ -4410,6 +4435,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ICurrencyIdentifiersStatics3> : produce_base<D, Windows::Globalization::ICurrencyIdentifiersStatics3>
     {
@@ -4446,6 +4473,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::IGeographicRegion> : produce_base<D, Windows::Globalization::IGeographicRegion>
     {
@@ -4506,6 +4535,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::IGeographicRegionFactory> : produce_base<D, Windows::Globalization::IGeographicRegionFactory>
     {
@@ -4518,6 +4549,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::IGeographicRegionStatics> : produce_base<D, Windows::Globalization::IGeographicRegionStatics>
     {
@@ -4529,6 +4562,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::IJapanesePhoneme> : produce_base<D, Windows::Globalization::IJapanesePhoneme>
     {
@@ -4556,6 +4591,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::IJapanesePhoneticAnalyzerStatics> : produce_base<D, Windows::Globalization::IJapanesePhoneticAnalyzerStatics>
     {
@@ -4576,6 +4613,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ILanguage> : produce_base<D, Windows::Globalization::ILanguage>
     {
@@ -4612,6 +4651,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ILanguage2> : produce_base<D, Windows::Globalization::ILanguage2>
     {
@@ -4623,6 +4664,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ILanguage3> : produce_base<D, Windows::Globalization::ILanguage3>
     {
@@ -4635,6 +4678,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ILanguageExtensionSubtags> : produce_base<D, Windows::Globalization::ILanguageExtensionSubtags>
     {
@@ -4647,6 +4692,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ILanguageFactory> : produce_base<D, Windows::Globalization::ILanguageFactory>
     {
@@ -4659,6 +4706,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ILanguageStatics> : produce_base<D, Windows::Globalization::ILanguageStatics>
     {
@@ -4678,6 +4727,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ILanguageStatics2> : produce_base<D, Windows::Globalization::ILanguageStatics2>
     {
@@ -4689,6 +4740,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ILanguageStatics3> : produce_base<D, Windows::Globalization::ILanguageStatics3>
     {
@@ -4701,6 +4754,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::INumeralSystemIdentifiersStatics> : produce_base<D, Windows::Globalization::INumeralSystemIdentifiersStatics>
     {
@@ -4993,6 +5048,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::INumeralSystemIdentifiersStatics2> : produce_base<D, Windows::Globalization::INumeralSystemIdentifiersStatics2>
     {
@@ -5093,6 +5150,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::ITimeZoneOnCalendar> : produce_base<D, Windows::Globalization::ITimeZoneOnCalendar>
     {
@@ -5128,1040 +5187,1043 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Globalization
+WINRT_EXPORT namespace winrt::Windows::Globalization
 {
     inline auto ApplicationLanguages::PrimaryLanguageOverride()
     {
-        return impl::call_factory<ApplicationLanguages, Windows::Globalization::IApplicationLanguagesStatics>([&](auto&& f) { return f.PrimaryLanguageOverride(); });
+        return impl::call_factory_cast<hstring(*)(IApplicationLanguagesStatics const&), ApplicationLanguages, IApplicationLanguagesStatics>([](IApplicationLanguagesStatics const& f) { return f.PrimaryLanguageOverride(); });
     }
     inline auto ApplicationLanguages::PrimaryLanguageOverride(param::hstring const& value)
     {
-        impl::call_factory<ApplicationLanguages, Windows::Globalization::IApplicationLanguagesStatics>([&](auto&& f) { return f.PrimaryLanguageOverride(value); });
+        impl::call_factory<ApplicationLanguages, IApplicationLanguagesStatics>([&](IApplicationLanguagesStatics const& f) { return f.PrimaryLanguageOverride(value); });
     }
     inline auto ApplicationLanguages::Languages()
     {
-        return impl::call_factory<ApplicationLanguages, Windows::Globalization::IApplicationLanguagesStatics>([&](auto&& f) { return f.Languages(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IApplicationLanguagesStatics const&), ApplicationLanguages, IApplicationLanguagesStatics>([](IApplicationLanguagesStatics const& f) { return f.Languages(); });
     }
     inline auto ApplicationLanguages::ManifestLanguages()
     {
-        return impl::call_factory<ApplicationLanguages, Windows::Globalization::IApplicationLanguagesStatics>([&](auto&& f) { return f.ManifestLanguages(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IApplicationLanguagesStatics const&), ApplicationLanguages, IApplicationLanguagesStatics>([](IApplicationLanguagesStatics const& f) { return f.ManifestLanguages(); });
     }
     inline auto ApplicationLanguages::GetLanguagesForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<ApplicationLanguages, Windows::Globalization::IApplicationLanguagesStatics2>([&](auto&& f) { return f.GetLanguagesForUser(user); });
+        return impl::call_factory<ApplicationLanguages, IApplicationLanguagesStatics2>([&](IApplicationLanguagesStatics2 const& f) { return f.GetLanguagesForUser(user); });
     }
     inline Calendar::Calendar() :
-        Calendar(impl::call_factory<Calendar>([](auto&& f) { return f.template ActivateInstance<Calendar>(); }))
+        Calendar(impl::call_factory_cast<Calendar(*)(Windows::Foundation::IActivationFactory const&), Calendar>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Calendar>(); }))
     {
     }
     inline Calendar::Calendar(param::iterable<hstring> const& languages) :
-        Calendar(impl::call_factory<Calendar, Windows::Globalization::ICalendarFactory>([&](auto&& f) { return f.CreateCalendarDefaultCalendarAndClock(languages); }))
+        Calendar(impl::call_factory<Calendar, ICalendarFactory>([&](ICalendarFactory const& f) { return f.CreateCalendarDefaultCalendarAndClock(languages); }))
     {
     }
     inline Calendar::Calendar(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock) :
-        Calendar(impl::call_factory<Calendar, Windows::Globalization::ICalendarFactory>([&](auto&& f) { return f.CreateCalendar(languages, calendar, clock); }))
+        Calendar(impl::call_factory<Calendar, ICalendarFactory>([&](ICalendarFactory const& f) { return f.CreateCalendar(languages, calendar, clock); }))
     {
     }
     inline Calendar::Calendar(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock, param::hstring const& timeZoneId) :
-        Calendar(impl::call_factory<Calendar, Windows::Globalization::ICalendarFactory2>([&](auto&& f) { return f.CreateCalendarWithTimeZone(languages, calendar, clock, timeZoneId); }))
+        Calendar(impl::call_factory<Calendar, ICalendarFactory2>([&](ICalendarFactory2 const& f) { return f.CreateCalendarWithTimeZone(languages, calendar, clock, timeZoneId); }))
     {
     }
     inline auto CalendarIdentifiers::Gregorian()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics>([&](auto&& f) { return f.Gregorian(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics const&), CalendarIdentifiers, ICalendarIdentifiersStatics>([](ICalendarIdentifiersStatics const& f) { return f.Gregorian(); });
     }
     inline auto CalendarIdentifiers::Hebrew()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics>([&](auto&& f) { return f.Hebrew(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics const&), CalendarIdentifiers, ICalendarIdentifiersStatics>([](ICalendarIdentifiersStatics const& f) { return f.Hebrew(); });
     }
     inline auto CalendarIdentifiers::Hijri()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics>([&](auto&& f) { return f.Hijri(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics const&), CalendarIdentifiers, ICalendarIdentifiersStatics>([](ICalendarIdentifiersStatics const& f) { return f.Hijri(); });
     }
     inline auto CalendarIdentifiers::Japanese()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics>([&](auto&& f) { return f.Japanese(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics const&), CalendarIdentifiers, ICalendarIdentifiersStatics>([](ICalendarIdentifiersStatics const& f) { return f.Japanese(); });
     }
     inline auto CalendarIdentifiers::Julian()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics>([&](auto&& f) { return f.Julian(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics const&), CalendarIdentifiers, ICalendarIdentifiersStatics>([](ICalendarIdentifiersStatics const& f) { return f.Julian(); });
     }
     inline auto CalendarIdentifiers::Korean()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics>([&](auto&& f) { return f.Korean(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics const&), CalendarIdentifiers, ICalendarIdentifiersStatics>([](ICalendarIdentifiersStatics const& f) { return f.Korean(); });
     }
     inline auto CalendarIdentifiers::Taiwan()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics>([&](auto&& f) { return f.Taiwan(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics const&), CalendarIdentifiers, ICalendarIdentifiersStatics>([](ICalendarIdentifiersStatics const& f) { return f.Taiwan(); });
     }
     inline auto CalendarIdentifiers::Thai()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics>([&](auto&& f) { return f.Thai(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics const&), CalendarIdentifiers, ICalendarIdentifiersStatics>([](ICalendarIdentifiersStatics const& f) { return f.Thai(); });
     }
     inline auto CalendarIdentifiers::UmAlQura()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics>([&](auto&& f) { return f.UmAlQura(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics const&), CalendarIdentifiers, ICalendarIdentifiersStatics>([](ICalendarIdentifiersStatics const& f) { return f.UmAlQura(); });
     }
     inline auto CalendarIdentifiers::Persian()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics2>([&](auto&& f) { return f.Persian(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics2 const&), CalendarIdentifiers, ICalendarIdentifiersStatics2>([](ICalendarIdentifiersStatics2 const& f) { return f.Persian(); });
     }
     inline auto CalendarIdentifiers::ChineseLunar()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics3>([&](auto&& f) { return f.ChineseLunar(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics3 const&), CalendarIdentifiers, ICalendarIdentifiersStatics3>([](ICalendarIdentifiersStatics3 const& f) { return f.ChineseLunar(); });
     }
     inline auto CalendarIdentifiers::JapaneseLunar()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics3>([&](auto&& f) { return f.JapaneseLunar(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics3 const&), CalendarIdentifiers, ICalendarIdentifiersStatics3>([](ICalendarIdentifiersStatics3 const& f) { return f.JapaneseLunar(); });
     }
     inline auto CalendarIdentifiers::KoreanLunar()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics3>([&](auto&& f) { return f.KoreanLunar(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics3 const&), CalendarIdentifiers, ICalendarIdentifiersStatics3>([](ICalendarIdentifiersStatics3 const& f) { return f.KoreanLunar(); });
     }
     inline auto CalendarIdentifiers::TaiwanLunar()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics3>([&](auto&& f) { return f.TaiwanLunar(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics3 const&), CalendarIdentifiers, ICalendarIdentifiersStatics3>([](ICalendarIdentifiersStatics3 const& f) { return f.TaiwanLunar(); });
     }
     inline auto CalendarIdentifiers::VietnameseLunar()
     {
-        return impl::call_factory<CalendarIdentifiers, Windows::Globalization::ICalendarIdentifiersStatics3>([&](auto&& f) { return f.VietnameseLunar(); });
+        return impl::call_factory_cast<hstring(*)(ICalendarIdentifiersStatics3 const&), CalendarIdentifiers, ICalendarIdentifiersStatics3>([](ICalendarIdentifiersStatics3 const& f) { return f.VietnameseLunar(); });
     }
     inline auto ClockIdentifiers::TwelveHour()
     {
-        return impl::call_factory<ClockIdentifiers, Windows::Globalization::IClockIdentifiersStatics>([&](auto&& f) { return f.TwelveHour(); });
+        return impl::call_factory_cast<hstring(*)(IClockIdentifiersStatics const&), ClockIdentifiers, IClockIdentifiersStatics>([](IClockIdentifiersStatics const& f) { return f.TwelveHour(); });
     }
     inline auto ClockIdentifiers::TwentyFourHour()
     {
-        return impl::call_factory<ClockIdentifiers, Windows::Globalization::IClockIdentifiersStatics>([&](auto&& f) { return f.TwentyFourHour(); });
+        return impl::call_factory_cast<hstring(*)(IClockIdentifiersStatics const&), ClockIdentifiers, IClockIdentifiersStatics>([](IClockIdentifiersStatics const& f) { return f.TwentyFourHour(); });
     }
     inline CurrencyAmount::CurrencyAmount(param::hstring const& amount, param::hstring const& currency) :
-        CurrencyAmount(impl::call_factory<CurrencyAmount, Windows::Globalization::ICurrencyAmountFactory>([&](auto&& f) { return f.Create(amount, currency); }))
+        CurrencyAmount(impl::call_factory<CurrencyAmount, ICurrencyAmountFactory>([&](ICurrencyAmountFactory const& f) { return f.Create(amount, currency); }))
     {
     }
     inline auto CurrencyIdentifiers::AED()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.AED(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.AED(); });
     }
     inline auto CurrencyIdentifiers::AFN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.AFN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.AFN(); });
     }
     inline auto CurrencyIdentifiers::ALL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ALL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ALL(); });
     }
     inline auto CurrencyIdentifiers::AMD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.AMD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.AMD(); });
     }
     inline auto CurrencyIdentifiers::ANG()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ANG(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ANG(); });
     }
     inline auto CurrencyIdentifiers::AOA()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.AOA(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.AOA(); });
     }
     inline auto CurrencyIdentifiers::ARS()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ARS(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ARS(); });
     }
     inline auto CurrencyIdentifiers::AUD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.AUD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.AUD(); });
     }
     inline auto CurrencyIdentifiers::AWG()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.AWG(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.AWG(); });
     }
     inline auto CurrencyIdentifiers::AZN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.AZN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.AZN(); });
     }
     inline auto CurrencyIdentifiers::BAM()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BAM(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BAM(); });
     }
     inline auto CurrencyIdentifiers::BBD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BBD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BBD(); });
     }
     inline auto CurrencyIdentifiers::BDT()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BDT(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BDT(); });
     }
     inline auto CurrencyIdentifiers::BGN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BGN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BGN(); });
     }
     inline auto CurrencyIdentifiers::BHD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BHD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BHD(); });
     }
     inline auto CurrencyIdentifiers::BIF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BIF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BIF(); });
     }
     inline auto CurrencyIdentifiers::BMD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BMD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BMD(); });
     }
     inline auto CurrencyIdentifiers::BND()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BND(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BND(); });
     }
     inline auto CurrencyIdentifiers::BOB()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BOB(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BOB(); });
     }
     inline auto CurrencyIdentifiers::BRL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BRL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BRL(); });
     }
     inline auto CurrencyIdentifiers::BSD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BSD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BSD(); });
     }
     inline auto CurrencyIdentifiers::BTN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BTN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BTN(); });
     }
     inline auto CurrencyIdentifiers::BWP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BWP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BWP(); });
     }
     inline auto CurrencyIdentifiers::BYR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BYR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BYR(); });
     }
     inline auto CurrencyIdentifiers::BZD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.BZD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.BZD(); });
     }
     inline auto CurrencyIdentifiers::CAD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.CAD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.CAD(); });
     }
     inline auto CurrencyIdentifiers::CDF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.CDF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.CDF(); });
     }
     inline auto CurrencyIdentifiers::CHF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.CHF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.CHF(); });
     }
     inline auto CurrencyIdentifiers::CLP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.CLP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.CLP(); });
     }
     inline auto CurrencyIdentifiers::CNY()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.CNY(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.CNY(); });
     }
     inline auto CurrencyIdentifiers::COP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.COP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.COP(); });
     }
     inline auto CurrencyIdentifiers::CRC()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.CRC(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.CRC(); });
     }
     inline auto CurrencyIdentifiers::CUP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.CUP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.CUP(); });
     }
     inline auto CurrencyIdentifiers::CVE()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.CVE(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.CVE(); });
     }
     inline auto CurrencyIdentifiers::CZK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.CZK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.CZK(); });
     }
     inline auto CurrencyIdentifiers::DJF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.DJF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.DJF(); });
     }
     inline auto CurrencyIdentifiers::DKK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.DKK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.DKK(); });
     }
     inline auto CurrencyIdentifiers::DOP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.DOP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.DOP(); });
     }
     inline auto CurrencyIdentifiers::DZD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.DZD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.DZD(); });
     }
     inline auto CurrencyIdentifiers::EGP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.EGP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.EGP(); });
     }
     inline auto CurrencyIdentifiers::ERN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ERN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ERN(); });
     }
     inline auto CurrencyIdentifiers::ETB()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ETB(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ETB(); });
     }
     inline auto CurrencyIdentifiers::EUR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.EUR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.EUR(); });
     }
     inline auto CurrencyIdentifiers::FJD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.FJD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.FJD(); });
     }
     inline auto CurrencyIdentifiers::FKP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.FKP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.FKP(); });
     }
     inline auto CurrencyIdentifiers::GBP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.GBP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.GBP(); });
     }
     inline auto CurrencyIdentifiers::GEL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.GEL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.GEL(); });
     }
     inline auto CurrencyIdentifiers::GHS()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.GHS(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.GHS(); });
     }
     inline auto CurrencyIdentifiers::GIP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.GIP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.GIP(); });
     }
     inline auto CurrencyIdentifiers::GMD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.GMD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.GMD(); });
     }
     inline auto CurrencyIdentifiers::GNF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.GNF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.GNF(); });
     }
     inline auto CurrencyIdentifiers::GTQ()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.GTQ(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.GTQ(); });
     }
     inline auto CurrencyIdentifiers::GYD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.GYD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.GYD(); });
     }
     inline auto CurrencyIdentifiers::HKD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.HKD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.HKD(); });
     }
     inline auto CurrencyIdentifiers::HNL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.HNL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.HNL(); });
     }
     inline auto CurrencyIdentifiers::HRK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.HRK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.HRK(); });
     }
     inline auto CurrencyIdentifiers::HTG()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.HTG(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.HTG(); });
     }
     inline auto CurrencyIdentifiers::HUF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.HUF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.HUF(); });
     }
     inline auto CurrencyIdentifiers::IDR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.IDR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.IDR(); });
     }
     inline auto CurrencyIdentifiers::ILS()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ILS(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ILS(); });
     }
     inline auto CurrencyIdentifiers::INR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.INR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.INR(); });
     }
     inline auto CurrencyIdentifiers::IQD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.IQD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.IQD(); });
     }
     inline auto CurrencyIdentifiers::IRR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.IRR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.IRR(); });
     }
     inline auto CurrencyIdentifiers::ISK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ISK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ISK(); });
     }
     inline auto CurrencyIdentifiers::JMD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.JMD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.JMD(); });
     }
     inline auto CurrencyIdentifiers::JOD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.JOD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.JOD(); });
     }
     inline auto CurrencyIdentifiers::JPY()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.JPY(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.JPY(); });
     }
     inline auto CurrencyIdentifiers::KES()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.KES(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.KES(); });
     }
     inline auto CurrencyIdentifiers::KGS()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.KGS(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.KGS(); });
     }
     inline auto CurrencyIdentifiers::KHR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.KHR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.KHR(); });
     }
     inline auto CurrencyIdentifiers::KMF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.KMF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.KMF(); });
     }
     inline auto CurrencyIdentifiers::KPW()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.KPW(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.KPW(); });
     }
     inline auto CurrencyIdentifiers::KRW()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.KRW(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.KRW(); });
     }
     inline auto CurrencyIdentifiers::KWD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.KWD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.KWD(); });
     }
     inline auto CurrencyIdentifiers::KYD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.KYD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.KYD(); });
     }
     inline auto CurrencyIdentifiers::KZT()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.KZT(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.KZT(); });
     }
     inline auto CurrencyIdentifiers::LAK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.LAK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.LAK(); });
     }
     inline auto CurrencyIdentifiers::LBP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.LBP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.LBP(); });
     }
     inline auto CurrencyIdentifiers::LKR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.LKR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.LKR(); });
     }
     inline auto CurrencyIdentifiers::LRD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.LRD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.LRD(); });
     }
     inline auto CurrencyIdentifiers::LSL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.LSL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.LSL(); });
     }
     inline auto CurrencyIdentifiers::LTL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.LTL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.LTL(); });
     }
     inline auto CurrencyIdentifiers::LVL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.LVL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.LVL(); });
     }
     inline auto CurrencyIdentifiers::LYD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.LYD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.LYD(); });
     }
     inline auto CurrencyIdentifiers::MAD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MAD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MAD(); });
     }
     inline auto CurrencyIdentifiers::MDL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MDL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MDL(); });
     }
     inline auto CurrencyIdentifiers::MGA()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MGA(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MGA(); });
     }
     inline auto CurrencyIdentifiers::MKD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MKD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MKD(); });
     }
     inline auto CurrencyIdentifiers::MMK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MMK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MMK(); });
     }
     inline auto CurrencyIdentifiers::MNT()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MNT(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MNT(); });
     }
     inline auto CurrencyIdentifiers::MOP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MOP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MOP(); });
     }
     inline auto CurrencyIdentifiers::MRO()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MRO(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MRO(); });
     }
     inline auto CurrencyIdentifiers::MUR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MUR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MUR(); });
     }
     inline auto CurrencyIdentifiers::MVR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MVR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MVR(); });
     }
     inline auto CurrencyIdentifiers::MWK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MWK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MWK(); });
     }
     inline auto CurrencyIdentifiers::MXN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MXN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MXN(); });
     }
     inline auto CurrencyIdentifiers::MYR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MYR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MYR(); });
     }
     inline auto CurrencyIdentifiers::MZN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.MZN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.MZN(); });
     }
     inline auto CurrencyIdentifiers::NAD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.NAD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.NAD(); });
     }
     inline auto CurrencyIdentifiers::NGN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.NGN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.NGN(); });
     }
     inline auto CurrencyIdentifiers::NIO()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.NIO(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.NIO(); });
     }
     inline auto CurrencyIdentifiers::NOK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.NOK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.NOK(); });
     }
     inline auto CurrencyIdentifiers::NPR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.NPR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.NPR(); });
     }
     inline auto CurrencyIdentifiers::NZD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.NZD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.NZD(); });
     }
     inline auto CurrencyIdentifiers::OMR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.OMR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.OMR(); });
     }
     inline auto CurrencyIdentifiers::PAB()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.PAB(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.PAB(); });
     }
     inline auto CurrencyIdentifiers::PEN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.PEN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.PEN(); });
     }
     inline auto CurrencyIdentifiers::PGK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.PGK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.PGK(); });
     }
     inline auto CurrencyIdentifiers::PHP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.PHP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.PHP(); });
     }
     inline auto CurrencyIdentifiers::PKR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.PKR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.PKR(); });
     }
     inline auto CurrencyIdentifiers::PLN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.PLN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.PLN(); });
     }
     inline auto CurrencyIdentifiers::PYG()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.PYG(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.PYG(); });
     }
     inline auto CurrencyIdentifiers::QAR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.QAR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.QAR(); });
     }
     inline auto CurrencyIdentifiers::RON()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.RON(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.RON(); });
     }
     inline auto CurrencyIdentifiers::RSD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.RSD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.RSD(); });
     }
     inline auto CurrencyIdentifiers::RUB()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.RUB(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.RUB(); });
     }
     inline auto CurrencyIdentifiers::RWF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.RWF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.RWF(); });
     }
     inline auto CurrencyIdentifiers::SAR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SAR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SAR(); });
     }
     inline auto CurrencyIdentifiers::SBD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SBD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SBD(); });
     }
     inline auto CurrencyIdentifiers::SCR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SCR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SCR(); });
     }
     inline auto CurrencyIdentifiers::SDG()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SDG(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SDG(); });
     }
     inline auto CurrencyIdentifiers::SEK()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SEK(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SEK(); });
     }
     inline auto CurrencyIdentifiers::SGD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SGD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SGD(); });
     }
     inline auto CurrencyIdentifiers::SHP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SHP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SHP(); });
     }
     inline auto CurrencyIdentifiers::SLL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SLL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SLL(); });
     }
     inline auto CurrencyIdentifiers::SOS()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SOS(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SOS(); });
     }
     inline auto CurrencyIdentifiers::SRD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SRD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SRD(); });
     }
     inline auto CurrencyIdentifiers::STD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.STD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.STD(); });
     }
     inline auto CurrencyIdentifiers::SYP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SYP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SYP(); });
     }
     inline auto CurrencyIdentifiers::SZL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.SZL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.SZL(); });
     }
     inline auto CurrencyIdentifiers::THB()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.THB(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.THB(); });
     }
     inline auto CurrencyIdentifiers::TJS()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.TJS(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.TJS(); });
     }
     inline auto CurrencyIdentifiers::TMT()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.TMT(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.TMT(); });
     }
     inline auto CurrencyIdentifiers::TND()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.TND(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.TND(); });
     }
     inline auto CurrencyIdentifiers::TOP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.TOP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.TOP(); });
     }
     inline auto CurrencyIdentifiers::TRY()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.TRY(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.TRY(); });
     }
     inline auto CurrencyIdentifiers::TTD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.TTD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.TTD(); });
     }
     inline auto CurrencyIdentifiers::TWD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.TWD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.TWD(); });
     }
     inline auto CurrencyIdentifiers::TZS()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.TZS(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.TZS(); });
     }
     inline auto CurrencyIdentifiers::UAH()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.UAH(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.UAH(); });
     }
     inline auto CurrencyIdentifiers::UGX()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.UGX(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.UGX(); });
     }
     inline auto CurrencyIdentifiers::USD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.USD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.USD(); });
     }
     inline auto CurrencyIdentifiers::UYU()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.UYU(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.UYU(); });
     }
     inline auto CurrencyIdentifiers::UZS()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.UZS(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.UZS(); });
     }
     inline auto CurrencyIdentifiers::VEF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.VEF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.VEF(); });
     }
     inline auto CurrencyIdentifiers::VND()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.VND(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.VND(); });
     }
     inline auto CurrencyIdentifiers::VUV()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.VUV(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.VUV(); });
     }
     inline auto CurrencyIdentifiers::WST()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.WST(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.WST(); });
     }
     inline auto CurrencyIdentifiers::XAF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.XAF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.XAF(); });
     }
     inline auto CurrencyIdentifiers::XCD()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.XCD(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.XCD(); });
     }
     inline auto CurrencyIdentifiers::XOF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.XOF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.XOF(); });
     }
     inline auto CurrencyIdentifiers::XPF()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.XPF(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.XPF(); });
     }
     inline auto CurrencyIdentifiers::XXX()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.XXX(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.XXX(); });
     }
     inline auto CurrencyIdentifiers::YER()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.YER(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.YER(); });
     }
     inline auto CurrencyIdentifiers::ZAR()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ZAR(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ZAR(); });
     }
     inline auto CurrencyIdentifiers::ZMW()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ZMW(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ZMW(); });
     }
     inline auto CurrencyIdentifiers::ZWL()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics>([&](auto&& f) { return f.ZWL(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics>([](ICurrencyIdentifiersStatics const& f) { return f.ZWL(); });
     }
     inline auto CurrencyIdentifiers::BYN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics2>([&](auto&& f) { return f.BYN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics2 const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics2>([](ICurrencyIdentifiersStatics2 const& f) { return f.BYN(); });
     }
     inline auto CurrencyIdentifiers::MRU()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics3>([&](auto&& f) { return f.MRU(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics3 const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics3>([](ICurrencyIdentifiersStatics3 const& f) { return f.MRU(); });
     }
     inline auto CurrencyIdentifiers::SSP()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics3>([&](auto&& f) { return f.SSP(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics3 const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics3>([](ICurrencyIdentifiersStatics3 const& f) { return f.SSP(); });
     }
     inline auto CurrencyIdentifiers::STN()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics3>([&](auto&& f) { return f.STN(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics3 const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics3>([](ICurrencyIdentifiersStatics3 const& f) { return f.STN(); });
     }
     inline auto CurrencyIdentifiers::VES()
     {
-        return impl::call_factory<CurrencyIdentifiers, Windows::Globalization::ICurrencyIdentifiersStatics3>([&](auto&& f) { return f.VES(); });
+        return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics3 const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics3>([](ICurrencyIdentifiersStatics3 const& f) { return f.VES(); });
     }
     inline GeographicRegion::GeographicRegion() :
-        GeographicRegion(impl::call_factory<GeographicRegion>([](auto&& f) { return f.template ActivateInstance<GeographicRegion>(); }))
+        GeographicRegion(impl::call_factory_cast<GeographicRegion(*)(Windows::Foundation::IActivationFactory const&), GeographicRegion>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GeographicRegion>(); }))
     {
     }
     inline GeographicRegion::GeographicRegion(param::hstring const& geographicRegionCode) :
-        GeographicRegion(impl::call_factory<GeographicRegion, Windows::Globalization::IGeographicRegionFactory>([&](auto&& f) { return f.CreateGeographicRegion(geographicRegionCode); }))
+        GeographicRegion(impl::call_factory<GeographicRegion, IGeographicRegionFactory>([&](IGeographicRegionFactory const& f) { return f.CreateGeographicRegion(geographicRegionCode); }))
     {
     }
     inline auto GeographicRegion::IsSupported(param::hstring const& geographicRegionCode)
     {
-        return impl::call_factory<GeographicRegion, Windows::Globalization::IGeographicRegionStatics>([&](auto&& f) { return f.IsSupported(geographicRegionCode); });
+        return impl::call_factory<GeographicRegion, IGeographicRegionStatics>([&](IGeographicRegionStatics const& f) { return f.IsSupported(geographicRegionCode); });
     }
     inline auto JapanesePhoneticAnalyzer::GetWords(param::hstring const& input)
     {
-        return impl::call_factory<JapanesePhoneticAnalyzer, Windows::Globalization::IJapanesePhoneticAnalyzerStatics>([&](auto&& f) { return f.GetWords(input); });
+        return impl::call_factory<JapanesePhoneticAnalyzer, IJapanesePhoneticAnalyzerStatics>([&](IJapanesePhoneticAnalyzerStatics const& f) { return f.GetWords(input); });
     }
     inline auto JapanesePhoneticAnalyzer::GetWords(param::hstring const& input, bool monoRuby)
     {
-        return impl::call_factory<JapanesePhoneticAnalyzer, Windows::Globalization::IJapanesePhoneticAnalyzerStatics>([&](auto&& f) { return f.GetWords(input, monoRuby); });
+        return impl::call_factory<JapanesePhoneticAnalyzer, IJapanesePhoneticAnalyzerStatics>([&](IJapanesePhoneticAnalyzerStatics const& f) { return f.GetWords(input, monoRuby); });
     }
     inline Language::Language(param::hstring const& languageTag) :
-        Language(impl::call_factory<Language, Windows::Globalization::ILanguageFactory>([&](auto&& f) { return f.CreateLanguage(languageTag); }))
+        Language(impl::call_factory<Language, ILanguageFactory>([&](ILanguageFactory const& f) { return f.CreateLanguage(languageTag); }))
     {
     }
     inline auto Language::IsWellFormed(param::hstring const& languageTag)
     {
-        return impl::call_factory<Language, Windows::Globalization::ILanguageStatics>([&](auto&& f) { return f.IsWellFormed(languageTag); });
+        return impl::call_factory<Language, ILanguageStatics>([&](ILanguageStatics const& f) { return f.IsWellFormed(languageTag); });
     }
     inline auto Language::CurrentInputMethodLanguageTag()
     {
-        return impl::call_factory<Language, Windows::Globalization::ILanguageStatics>([&](auto&& f) { return f.CurrentInputMethodLanguageTag(); });
+        return impl::call_factory_cast<hstring(*)(ILanguageStatics const&), Language, ILanguageStatics>([](ILanguageStatics const& f) { return f.CurrentInputMethodLanguageTag(); });
     }
     inline auto Language::TrySetInputMethodLanguageTag(param::hstring const& languageTag)
     {
-        return impl::call_factory<Language, Windows::Globalization::ILanguageStatics2>([&](auto&& f) { return f.TrySetInputMethodLanguageTag(languageTag); });
+        return impl::call_factory<Language, ILanguageStatics2>([&](ILanguageStatics2 const& f) { return f.TrySetInputMethodLanguageTag(languageTag); });
     }
     inline auto Language::GetMuiCompatibleLanguageListFromLanguageTags(param::iterable<hstring> const& languageTags)
     {
-        return impl::call_factory<Language, Windows::Globalization::ILanguageStatics3>([&](auto&& f) { return f.GetMuiCompatibleLanguageListFromLanguageTags(languageTags); });
+        return impl::call_factory<Language, ILanguageStatics3>([&](ILanguageStatics3 const& f) { return f.GetMuiCompatibleLanguageListFromLanguageTags(languageTags); });
     }
     inline auto NumeralSystemIdentifiers::Arab()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Arab(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Arab(); });
     }
     inline auto NumeralSystemIdentifiers::ArabExt()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.ArabExt(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.ArabExt(); });
     }
     inline auto NumeralSystemIdentifiers::Bali()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Bali(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Bali(); });
     }
     inline auto NumeralSystemIdentifiers::Beng()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Beng(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Beng(); });
     }
     inline auto NumeralSystemIdentifiers::Cham()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Cham(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Cham(); });
     }
     inline auto NumeralSystemIdentifiers::Deva()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Deva(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Deva(); });
     }
     inline auto NumeralSystemIdentifiers::FullWide()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.FullWide(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.FullWide(); });
     }
     inline auto NumeralSystemIdentifiers::Gujr()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Gujr(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Gujr(); });
     }
     inline auto NumeralSystemIdentifiers::Guru()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Guru(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Guru(); });
     }
     inline auto NumeralSystemIdentifiers::HaniDec()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.HaniDec(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.HaniDec(); });
     }
     inline auto NumeralSystemIdentifiers::Java()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Java(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Java(); });
     }
     inline auto NumeralSystemIdentifiers::Kali()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Kali(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Kali(); });
     }
     inline auto NumeralSystemIdentifiers::Khmr()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Khmr(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Khmr(); });
     }
     inline auto NumeralSystemIdentifiers::Knda()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Knda(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Knda(); });
     }
     inline auto NumeralSystemIdentifiers::Lana()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Lana(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Lana(); });
     }
     inline auto NumeralSystemIdentifiers::LanaTham()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.LanaTham(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.LanaTham(); });
     }
     inline auto NumeralSystemIdentifiers::Laoo()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Laoo(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Laoo(); });
     }
     inline auto NumeralSystemIdentifiers::Latn()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Latn(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Latn(); });
     }
     inline auto NumeralSystemIdentifiers::Lepc()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Lepc(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Lepc(); });
     }
     inline auto NumeralSystemIdentifiers::Limb()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Limb(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Limb(); });
     }
     inline auto NumeralSystemIdentifiers::Mlym()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Mlym(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Mlym(); });
     }
     inline auto NumeralSystemIdentifiers::Mong()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Mong(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Mong(); });
     }
     inline auto NumeralSystemIdentifiers::Mtei()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Mtei(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Mtei(); });
     }
     inline auto NumeralSystemIdentifiers::Mymr()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Mymr(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Mymr(); });
     }
     inline auto NumeralSystemIdentifiers::MymrShan()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.MymrShan(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.MymrShan(); });
     }
     inline auto NumeralSystemIdentifiers::Nkoo()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Nkoo(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Nkoo(); });
     }
     inline auto NumeralSystemIdentifiers::Olck()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Olck(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Olck(); });
     }
     inline auto NumeralSystemIdentifiers::Orya()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Orya(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Orya(); });
     }
     inline auto NumeralSystemIdentifiers::Saur()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Saur(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Saur(); });
     }
     inline auto NumeralSystemIdentifiers::Sund()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Sund(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Sund(); });
     }
     inline auto NumeralSystemIdentifiers::Talu()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Talu(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Talu(); });
     }
     inline auto NumeralSystemIdentifiers::TamlDec()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.TamlDec(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.TamlDec(); });
     }
     inline auto NumeralSystemIdentifiers::Telu()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Telu(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Telu(); });
     }
     inline auto NumeralSystemIdentifiers::Thai()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Thai(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Thai(); });
     }
     inline auto NumeralSystemIdentifiers::Tibt()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Tibt(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Tibt(); });
     }
     inline auto NumeralSystemIdentifiers::Vaii()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics>([&](auto&& f) { return f.Vaii(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics>([](INumeralSystemIdentifiersStatics const& f) { return f.Vaii(); });
     }
     inline auto NumeralSystemIdentifiers::Brah()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.Brah(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.Brah(); });
     }
     inline auto NumeralSystemIdentifiers::Osma()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.Osma(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.Osma(); });
     }
     inline auto NumeralSystemIdentifiers::MathBold()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.MathBold(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.MathBold(); });
     }
     inline auto NumeralSystemIdentifiers::MathDbl()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.MathDbl(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.MathDbl(); });
     }
     inline auto NumeralSystemIdentifiers::MathSans()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.MathSans(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.MathSans(); });
     }
     inline auto NumeralSystemIdentifiers::MathSanb()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.MathSanb(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.MathSanb(); });
     }
     inline auto NumeralSystemIdentifiers::MathMono()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.MathMono(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.MathMono(); });
     }
     inline auto NumeralSystemIdentifiers::ZmthBold()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.ZmthBold(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.ZmthBold(); });
     }
     inline auto NumeralSystemIdentifiers::ZmthDbl()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.ZmthDbl(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.ZmthDbl(); });
     }
     inline auto NumeralSystemIdentifiers::ZmthSans()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.ZmthSans(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.ZmthSans(); });
     }
     inline auto NumeralSystemIdentifiers::ZmthSanb()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.ZmthSanb(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.ZmthSanb(); });
     }
     inline auto NumeralSystemIdentifiers::ZmthMono()
     {
-        return impl::call_factory<NumeralSystemIdentifiers, Windows::Globalization::INumeralSystemIdentifiersStatics2>([&](auto&& f) { return f.ZmthMono(); });
+        return impl::call_factory_cast<hstring(*)(INumeralSystemIdentifiersStatics2 const&), NumeralSystemIdentifiers, INumeralSystemIdentifiersStatics2>([](INumeralSystemIdentifiersStatics2 const& f) { return f.ZmthMono(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Globalization::IApplicationLanguagesStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::IApplicationLanguagesStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::IApplicationLanguagesStatics2> : winrt::impl::hash_base<winrt::Windows::Globalization::IApplicationLanguagesStatics2> {};
-    template<> struct hash<winrt::Windows::Globalization::ICalendar> : winrt::impl::hash_base<winrt::Windows::Globalization::ICalendar> {};
-    template<> struct hash<winrt::Windows::Globalization::ICalendarFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::ICalendarFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::ICalendarFactory2> : winrt::impl::hash_base<winrt::Windows::Globalization::ICalendarFactory2> {};
-    template<> struct hash<winrt::Windows::Globalization::ICalendarIdentifiersStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::ICalendarIdentifiersStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::ICalendarIdentifiersStatics2> : winrt::impl::hash_base<winrt::Windows::Globalization::ICalendarIdentifiersStatics2> {};
-    template<> struct hash<winrt::Windows::Globalization::ICalendarIdentifiersStatics3> : winrt::impl::hash_base<winrt::Windows::Globalization::ICalendarIdentifiersStatics3> {};
-    template<> struct hash<winrt::Windows::Globalization::IClockIdentifiersStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::IClockIdentifiersStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::ICurrencyAmount> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyAmount> {};
-    template<> struct hash<winrt::Windows::Globalization::ICurrencyAmountFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyAmountFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::ICurrencyIdentifiersStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyIdentifiersStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::ICurrencyIdentifiersStatics2> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyIdentifiersStatics2> {};
-    template<> struct hash<winrt::Windows::Globalization::ICurrencyIdentifiersStatics3> : winrt::impl::hash_base<winrt::Windows::Globalization::ICurrencyIdentifiersStatics3> {};
-    template<> struct hash<winrt::Windows::Globalization::IGeographicRegion> : winrt::impl::hash_base<winrt::Windows::Globalization::IGeographicRegion> {};
-    template<> struct hash<winrt::Windows::Globalization::IGeographicRegionFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::IGeographicRegionFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::IGeographicRegionStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::IGeographicRegionStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::IJapanesePhoneme> : winrt::impl::hash_base<winrt::Windows::Globalization::IJapanesePhoneme> {};
-    template<> struct hash<winrt::Windows::Globalization::IJapanesePhoneticAnalyzerStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::IJapanesePhoneticAnalyzerStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::ILanguage> : winrt::impl::hash_base<winrt::Windows::Globalization::ILanguage> {};
-    template<> struct hash<winrt::Windows::Globalization::ILanguage2> : winrt::impl::hash_base<winrt::Windows::Globalization::ILanguage2> {};
-    template<> struct hash<winrt::Windows::Globalization::ILanguage3> : winrt::impl::hash_base<winrt::Windows::Globalization::ILanguage3> {};
-    template<> struct hash<winrt::Windows::Globalization::ILanguageExtensionSubtags> : winrt::impl::hash_base<winrt::Windows::Globalization::ILanguageExtensionSubtags> {};
-    template<> struct hash<winrt::Windows::Globalization::ILanguageFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::ILanguageFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::ILanguageStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::ILanguageStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::ILanguageStatics2> : winrt::impl::hash_base<winrt::Windows::Globalization::ILanguageStatics2> {};
-    template<> struct hash<winrt::Windows::Globalization::ILanguageStatics3> : winrt::impl::hash_base<winrt::Windows::Globalization::ILanguageStatics3> {};
-    template<> struct hash<winrt::Windows::Globalization::INumeralSystemIdentifiersStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::INumeralSystemIdentifiersStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2> : winrt::impl::hash_base<winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2> {};
-    template<> struct hash<winrt::Windows::Globalization::ITimeZoneOnCalendar> : winrt::impl::hash_base<winrt::Windows::Globalization::ITimeZoneOnCalendar> {};
-    template<> struct hash<winrt::Windows::Globalization::ApplicationLanguages> : winrt::impl::hash_base<winrt::Windows::Globalization::ApplicationLanguages> {};
-    template<> struct hash<winrt::Windows::Globalization::Calendar> : winrt::impl::hash_base<winrt::Windows::Globalization::Calendar> {};
-    template<> struct hash<winrt::Windows::Globalization::CalendarIdentifiers> : winrt::impl::hash_base<winrt::Windows::Globalization::CalendarIdentifiers> {};
-    template<> struct hash<winrt::Windows::Globalization::ClockIdentifiers> : winrt::impl::hash_base<winrt::Windows::Globalization::ClockIdentifiers> {};
-    template<> struct hash<winrt::Windows::Globalization::CurrencyAmount> : winrt::impl::hash_base<winrt::Windows::Globalization::CurrencyAmount> {};
-    template<> struct hash<winrt::Windows::Globalization::CurrencyIdentifiers> : winrt::impl::hash_base<winrt::Windows::Globalization::CurrencyIdentifiers> {};
-    template<> struct hash<winrt::Windows::Globalization::GeographicRegion> : winrt::impl::hash_base<winrt::Windows::Globalization::GeographicRegion> {};
-    template<> struct hash<winrt::Windows::Globalization::JapanesePhoneme> : winrt::impl::hash_base<winrt::Windows::Globalization::JapanesePhoneme> {};
-    template<> struct hash<winrt::Windows::Globalization::JapanesePhoneticAnalyzer> : winrt::impl::hash_base<winrt::Windows::Globalization::JapanesePhoneticAnalyzer> {};
-    template<> struct hash<winrt::Windows::Globalization::Language> : winrt::impl::hash_base<winrt::Windows::Globalization::Language> {};
-    template<> struct hash<winrt::Windows::Globalization::NumeralSystemIdentifiers> : winrt::impl::hash_base<winrt::Windows::Globalization::NumeralSystemIdentifiers> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Globalization::IApplicationLanguagesStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::IApplicationLanguagesStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICalendar> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICalendarFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICalendarFactory2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICalendarIdentifiersStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICalendarIdentifiersStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICalendarIdentifiersStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::IClockIdentifiersStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICurrencyAmount> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICurrencyAmountFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICurrencyIdentifiersStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICurrencyIdentifiersStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ICurrencyIdentifiersStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::IGeographicRegion> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::IGeographicRegionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::IGeographicRegionStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::IJapanesePhoneme> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::IJapanesePhoneticAnalyzerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ILanguage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ILanguage2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ILanguage3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ILanguageExtensionSubtags> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ILanguageFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ILanguageStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ILanguageStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ILanguageStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::INumeralSystemIdentifiersStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ITimeZoneOnCalendar> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ApplicationLanguages> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Calendar> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::CalendarIdentifiers> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::ClockIdentifiers> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::CurrencyAmount> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::CurrencyIdentifiers> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::GeographicRegion> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::JapanesePhoneme> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::JapanesePhoneticAnalyzer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Language> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumeralSystemIdentifiers> : winrt::impl::hash_base {};
+#endif
 }
 #endif

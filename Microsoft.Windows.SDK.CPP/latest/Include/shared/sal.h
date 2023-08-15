@@ -2968,4 +2968,3 @@ __PRIMOP(int, _In_function_class_(__In_impl_ char*);)
 #endif // ]
 
 #include <concurrencysal.h>
-

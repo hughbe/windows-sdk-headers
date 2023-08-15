@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -167,41 +175,50 @@ EXTERN_C const IID IID_IContactManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IContactManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IContactManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IContactManager * This);
         
+        DECLSPEC_XFGVIRT(IContactManager, Initialize)
         HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             __RPC__in IContactManager * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszAppName,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszAppVersion);
         
+        DECLSPEC_XFGVIRT(IContactManager, Load)
         HRESULT ( STDMETHODCALLTYPE *Load )( 
             __RPC__in IContactManager * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszContactID,
             /* [out] */ __RPC__deref_out_opt IContact **ppContact);
         
+        DECLSPEC_XFGVIRT(IContactManager, MergeContactIDs)
         HRESULT ( STDMETHODCALLTYPE *MergeContactIDs )( 
             __RPC__in IContactManager * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszNewContactID,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszOldContactID);
         
+        DECLSPEC_XFGVIRT(IContactManager, GetMeContact)
         HRESULT ( STDMETHODCALLTYPE *GetMeContact )( 
             __RPC__in IContactManager * This,
             /* [out] */ __RPC__deref_out_opt IContact **ppMeContact);
         
+        DECLSPEC_XFGVIRT(IContactManager, SetMeContact)
         HRESULT ( STDMETHODCALLTYPE *SetMeContact )( 
             __RPC__in IContactManager * This,
             /* [in] */ __RPC__in_opt IContact *pMeContact);
         
+        DECLSPEC_XFGVIRT(IContactManager, GetContactCollection)
         HRESULT ( STDMETHODCALLTYPE *GetContactCollection )( 
             __RPC__in IContactManager * This,
             /* [out] */ __RPC__deref_out_opt IContactCollection **ppContactCollection);
@@ -289,24 +306,30 @@ EXTERN_C const IID IID_IContactCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IContactCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IContactCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IContactCollection * This);
         
+        DECLSPEC_XFGVIRT(IContactCollection, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IContactCollection * This);
         
+        DECLSPEC_XFGVIRT(IContactCollection, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IContactCollection * This);
         
+        DECLSPEC_XFGVIRT(IContactCollection, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             __RPC__in IContactCollection * This,
             /* [out] */ __RPC__deref_out_opt IContact **ppContact);
@@ -456,18 +479,22 @@ EXTERN_C const IID IID_IContactProperties;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IContactProperties * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IContactProperties * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IContactProperties * This);
         
+        DECLSPEC_XFGVIRT(IContactProperties, GetString)
         HRESULT ( STDMETHODCALLTYPE *GetString )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszPropertyName,
@@ -476,12 +503,14 @@ EXTERN_C const IID IID_IContactProperties;
             /* [in] */ DWORD cchValue,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwcchPropertyValueRequired);
         
+        DECLSPEC_XFGVIRT(IContactProperties, GetDate)
         HRESULT ( STDMETHODCALLTYPE *GetDate )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszPropertyName,
             DWORD dwFlags,
             /* [unique][out][in] */ __RPC__inout_opt FILETIME *pftDateTime);
         
+        DECLSPEC_XFGVIRT(IContactProperties, GetBinary)
         HRESULT ( STDMETHODCALLTYPE *GetBinary )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszPropertyName,
@@ -491,6 +520,7 @@ EXTERN_C const IID IID_IContactProperties;
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwcchContentTypeRequired,
             /* [out] */ __RPC__deref_out_opt IStream **ppStream);
         
+        DECLSPEC_XFGVIRT(IContactProperties, GetLabels)
         HRESULT ( STDMETHODCALLTYPE *GetLabels )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszArrayElementName,
@@ -499,18 +529,21 @@ EXTERN_C const IID IID_IContactProperties;
             /* [in] */ DWORD cchLabels,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwcchLabelsRequired);
         
+        DECLSPEC_XFGVIRT(IContactProperties, SetString)
         HRESULT ( STDMETHODCALLTYPE *SetString )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszPropertyName,
             DWORD dwFlags,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszValue);
         
+        DECLSPEC_XFGVIRT(IContactProperties, SetDate)
         HRESULT ( STDMETHODCALLTYPE *SetDate )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszPropertyName,
             DWORD dwFlags,
             /* [in] */ FILETIME ftDateTime);
         
+        DECLSPEC_XFGVIRT(IContactProperties, SetBinary)
         HRESULT ( STDMETHODCALLTYPE *SetBinary )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszPropertyName,
@@ -518,6 +551,7 @@ EXTERN_C const IID IID_IContactProperties;
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszContentType,
             /* [unique][in] */ __RPC__in_opt IStream *pStream);
         
+        DECLSPEC_XFGVIRT(IContactProperties, SetLabels)
         HRESULT ( STDMETHODCALLTYPE *SetLabels )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszArrayElementName,
@@ -525,6 +559,7 @@ EXTERN_C const IID IID_IContactProperties;
             /* [in] */ DWORD dwLabelCount,
             /* [unique][size_is][in] */ __RPC__in_ecount_full_opt(dwLabelCount) LPCWSTR ppszLabels[  ]);
         
+        DECLSPEC_XFGVIRT(IContactProperties, CreateArrayNode)
         HRESULT ( STDMETHODCALLTYPE *CreateArrayNode )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszArrayName,
@@ -534,21 +569,25 @@ EXTERN_C const IID IID_IContactProperties;
             DWORD cchNewArrayElementName,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwcchNewArrayElementNameRequired);
         
+        DECLSPEC_XFGVIRT(IContactProperties, DeleteProperty)
         HRESULT ( STDMETHODCALLTYPE *DeleteProperty )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszPropertyName,
             DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IContactProperties, DeleteArrayNode)
         HRESULT ( STDMETHODCALLTYPE *DeleteArrayNode )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszArrayElementName,
             DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IContactProperties, DeleteLabels)
         HRESULT ( STDMETHODCALLTYPE *DeleteLabels )( 
             __RPC__in IContactProperties * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR pszArrayElementName,
             DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IContactProperties, GetPropertyCollection)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyCollection )( 
             __RPC__in IContactProperties * This,
             /* [out] */ __RPC__deref_out_opt IContactPropertyCollection **ppPropertyCollection,
@@ -668,30 +707,36 @@ EXTERN_C const IID IID_IContact;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IContact * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IContact * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IContact * This);
         
+        DECLSPEC_XFGVIRT(IContact, GetContactID)
         HRESULT ( STDMETHODCALLTYPE *GetContactID )( 
             __RPC__in IContact * This,
             /* [size_is][string][out][in] */ __RPC__inout_ecount_full_string(cchContactID) LPWSTR pszContactID,
             /* [in] */ DWORD cchContactID,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwcchContactIDRequired);
         
+        DECLSPEC_XFGVIRT(IContact, GetPath)
         HRESULT ( STDMETHODCALLTYPE *GetPath )( 
             __RPC__in IContact * This,
             /* [size_is][string][out][in] */ __RPC__inout_ecount_full_string(cchPath) LPWSTR pszPath,
             /* [in] */ DWORD cchPath,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwcchPathRequired);
         
+        DECLSPEC_XFGVIRT(IContact, CommitChanges)
         HRESULT ( STDMETHODCALLTYPE *CommitChanges )( 
             __RPC__in IContact * This,
             /* [in] */ DWORD dwCommitFlags);
@@ -791,42 +836,52 @@ EXTERN_C const IID IID_IContactPropertyCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IContactPropertyCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IContactPropertyCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IContactPropertyCollection * This);
         
+        DECLSPEC_XFGVIRT(IContactPropertyCollection, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IContactPropertyCollection * This);
         
+        DECLSPEC_XFGVIRT(IContactPropertyCollection, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IContactPropertyCollection * This);
         
+        DECLSPEC_XFGVIRT(IContactPropertyCollection, GetPropertyName)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyName )( 
             __RPC__in IContactPropertyCollection * This,
             /* [unique][size_is][string][unique][out][in] */ __RPC__inout_ecount_full_opt_string(cchPropertyName) LPWSTR pszPropertyName,
             /* [in] */ DWORD cchPropertyName,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwcchPropertyNameRequired);
         
+        DECLSPEC_XFGVIRT(IContactPropertyCollection, GetPropertyType)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyType )( 
             __RPC__in IContactPropertyCollection * This,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwType);
         
+        DECLSPEC_XFGVIRT(IContactPropertyCollection, GetPropertyVersion)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyVersion )( 
             __RPC__in IContactPropertyCollection * This,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwVersion);
         
+        DECLSPEC_XFGVIRT(IContactPropertyCollection, GetPropertyModificationDate)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyModificationDate )( 
             __RPC__in IContactPropertyCollection * This,
             /* [unique][out][in] */ __RPC__inout_opt FILETIME *pftModificationDate);
         
+        DECLSPEC_XFGVIRT(IContactPropertyCollection, GetPropertyArrayElementID)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyArrayElementID )( 
             __RPC__in IContactPropertyCollection * This,
             /* [unique][size_is][string][unique][out][in] */ __RPC__inout_ecount_full_opt_string(cchArrayElementID) LPWSTR pszArrayElementID,

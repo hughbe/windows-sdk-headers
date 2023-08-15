@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Graphics_Display_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Graphics.Display.1.h"
-namespace winrt::Windows::Graphics::Display
+WINRT_EXPORT namespace winrt::Windows::Graphics::Display
 {
     struct DisplayPropertiesEventHandler : Windows::Foundation::IUnknown
     {
@@ -87,7 +87,7 @@ namespace winrt::Windows::Graphics::Display
         static auto AutoRotationPreferences(Windows::Graphics::Display::DisplayOrientations const& value);
         static auto DisplayContentsInvalidated(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler);
         using DisplayContentsInvalidated_revoker = impl::factory_event_revoker<Windows::Graphics::Display::IDisplayInformationStatics, &impl::abi_t<Windows::Graphics::Display::IDisplayInformationStatics>::remove_DisplayContentsInvalidated>;
-        static DisplayContentsInvalidated_revoker DisplayContentsInvalidated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static DisplayContentsInvalidated_revoker DisplayContentsInvalidated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler);
         static auto DisplayContentsInvalidated(winrt::event_token const& token);
     };
     struct DisplayProperties
@@ -99,28 +99,34 @@ namespace winrt::Windows::Graphics::Display
         static auto AutoRotationPreferences(Windows::Graphics::Display::DisplayOrientations const& value);
         static auto OrientationChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         using OrientationChanged_revoker = impl::factory_event_revoker<Windows::Graphics::Display::IDisplayPropertiesStatics, &impl::abi_t<Windows::Graphics::Display::IDisplayPropertiesStatics>::remove_OrientationChanged>;
-        static OrientationChanged_revoker OrientationChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
+        [[nodiscard]] static OrientationChanged_revoker OrientationChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         static auto OrientationChanged(winrt::event_token const& token);
         [[nodiscard]] static auto ResolutionScale();
         [[nodiscard]] static auto LogicalDpi();
         static auto LogicalDpiChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         using LogicalDpiChanged_revoker = impl::factory_event_revoker<Windows::Graphics::Display::IDisplayPropertiesStatics, &impl::abi_t<Windows::Graphics::Display::IDisplayPropertiesStatics>::remove_LogicalDpiChanged>;
-        static LogicalDpiChanged_revoker LogicalDpiChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
+        [[nodiscard]] static LogicalDpiChanged_revoker LogicalDpiChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         static auto LogicalDpiChanged(winrt::event_token const& token);
         [[nodiscard]] static auto StereoEnabled();
         static auto StereoEnabledChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         using StereoEnabledChanged_revoker = impl::factory_event_revoker<Windows::Graphics::Display::IDisplayPropertiesStatics, &impl::abi_t<Windows::Graphics::Display::IDisplayPropertiesStatics>::remove_StereoEnabledChanged>;
-        static StereoEnabledChanged_revoker StereoEnabledChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
+        [[nodiscard]] static StereoEnabledChanged_revoker StereoEnabledChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         static auto StereoEnabledChanged(winrt::event_token const& token);
         static auto GetColorProfileAsync();
         static auto ColorProfileChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         using ColorProfileChanged_revoker = impl::factory_event_revoker<Windows::Graphics::Display::IDisplayPropertiesStatics, &impl::abi_t<Windows::Graphics::Display::IDisplayPropertiesStatics>::remove_ColorProfileChanged>;
-        static ColorProfileChanged_revoker ColorProfileChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
+        [[nodiscard]] static ColorProfileChanged_revoker ColorProfileChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         static auto ColorProfileChanged(winrt::event_token const& token);
         static auto DisplayContentsInvalidated(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         using DisplayContentsInvalidated_revoker = impl::factory_event_revoker<Windows::Graphics::Display::IDisplayPropertiesStatics, &impl::abi_t<Windows::Graphics::Display::IDisplayPropertiesStatics>::remove_DisplayContentsInvalidated>;
-        static DisplayContentsInvalidated_revoker DisplayContentsInvalidated(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
+        [[nodiscard]] static DisplayContentsInvalidated_revoker DisplayContentsInvalidated(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler);
         static auto DisplayContentsInvalidated(winrt::event_token const& token);
+    };
+    struct __declspec(empty_bases) DisplayServices : Windows::Graphics::Display::IDisplayServices
+    {
+        DisplayServices(std::nullptr_t) noexcept {}
+        DisplayServices(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Display::IDisplayServices(ptr, take_ownership_from_abi) {}
+        static auto FindAll();
     };
 }
 #endif

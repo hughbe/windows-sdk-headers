@@ -138,7 +138,9 @@ namespace Windows
                     Handwriting = 2,
                     Emoji       = 3,
                     [contract(Windows.Foundation.UniversalApiContract, 10.0)]
-                    Symbols     = 4
+                    Symbols     = 4,
+                    [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+                    Clipboard   = 5
                 };
 
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)]

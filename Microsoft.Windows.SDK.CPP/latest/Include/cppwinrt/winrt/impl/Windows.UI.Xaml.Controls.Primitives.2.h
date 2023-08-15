@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.UI.Xaml.Data.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Input.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.Primitives.1.h"
-namespace winrt::Windows::UI::Xaml::Controls::Primitives
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
 {
     struct DragCompletedEventHandler : Windows::Foundation::IUnknown
     {
@@ -643,7 +643,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IFlyoutBaseOverrides = winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides;
-        auto CreatePresenter() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Control) CreatePresenter() const;
     };
     template <typename D>
     class IFlyoutBaseOverrides4T
@@ -652,7 +652,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IFlyoutBaseOverrides4 = winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4;
-        auto OnProcessKeyboardAccelerators(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnProcessKeyboardAccelerators(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
     };
     template <typename D>
     class IPickerFlyoutBaseOverridesT
@@ -661,8 +661,8 @@ namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IPickerFlyoutBaseOverrides = winrt::Windows::UI::Xaml::Controls::Primitives::IPickerFlyoutBaseOverrides;
-        auto OnConfirmed() const;
-        auto ShouldShowConfirmationButtons() const;
+        WINRT_IMPL_AUTO(void) OnConfirmed() const;
+        WINRT_IMPL_AUTO(bool) ShouldShowConfirmationButtons() const;
     };
     template <typename D>
     class IRangeBaseOverridesT
@@ -671,9 +671,9 @@ namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IRangeBaseOverrides = winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBaseOverrides;
-        auto OnMinimumChanged(double oldMinimum, double newMinimum) const;
-        auto OnMaximumChanged(double oldMaximum, double newMaximum) const;
-        auto OnValueChanged(double oldValue, double newValue) const;
+        WINRT_IMPL_AUTO(void) OnMinimumChanged(double oldMinimum, double newMinimum) const;
+        WINRT_IMPL_AUTO(void) OnMaximumChanged(double oldMaximum, double newMaximum) const;
+        WINRT_IMPL_AUTO(void) OnValueChanged(double oldValue, double newValue) const;
     };
     template <typename D>
     class IToggleButtonOverridesT
@@ -682,7 +682,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Primitives
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IToggleButtonOverrides = winrt::Windows::UI::Xaml::Controls::Primitives::IToggleButtonOverrides;
-        auto OnToggle() const;
+        WINRT_IMPL_AUTO(void) OnToggle() const;
     };
 }
 #endif

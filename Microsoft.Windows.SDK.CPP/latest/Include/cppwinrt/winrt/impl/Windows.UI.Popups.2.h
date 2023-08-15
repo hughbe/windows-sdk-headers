@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Popups_2_H
 #define WINRT_Windows_UI_Popups_2_H
 #include "winrt/impl/Windows.UI.Popups.1.h"
-namespace winrt::Windows::UI::Popups
+WINRT_EXPORT namespace winrt::Windows::UI::Popups
 {
     struct UICommandInvokedHandler : Windows::Foundation::IUnknown
     {
@@ -23,7 +23,7 @@ namespace winrt::Windows::UI::Popups
     {
         MessageDialog(std::nullptr_t) noexcept {}
         MessageDialog(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Popups::IMessageDialog(ptr, take_ownership_from_abi) {}
-        MessageDialog(param::hstring const& content);
+        explicit MessageDialog(param::hstring const& content);
         MessageDialog(param::hstring const& content, param::hstring const& title);
     };
     struct __declspec(empty_bases) PopupMenu : Windows::UI::Popups::IPopupMenu
@@ -37,7 +37,7 @@ namespace winrt::Windows::UI::Popups
         UICommand(std::nullptr_t) noexcept {}
         UICommand(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Popups::IUICommand(ptr, take_ownership_from_abi) {}
         UICommand();
-        UICommand(param::hstring const& label);
+        explicit UICommand(param::hstring const& label);
         UICommand(param::hstring const& label, Windows::UI::Popups::UICommandInvokedHandler const& action);
         UICommand(param::hstring const& label, Windows::UI::Popups::UICommandInvokedHandler const& action, Windows::Foundation::IInspectable const& commandId);
     };

@@ -263,6 +263,9 @@ inline HRESULT GetClassObject(_In_ ModuleBase *modulePtr, _In_opt_z_ const wchar
     return CLASS_E_CLASSNOTAVAILABLE;
 }
 
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 template<unsigned int flags>
 inline HRESULT GetActivationFactory(_In_ ModuleBase* modulePtr, _In_opt_z_ const wchar_t* serverName, _In_opt_ HSTRING activatibleClassId, _COM_Outptr_ IActivationFactory **ppFactory) throw()
 {
@@ -370,6 +373,9 @@ inline HRESULT RegisterWinRTObject(_In_opt_z_ const wchar_t*, _In_reads_(count) 
 
     return hr;
 }
+
+#endif //WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
 
 template<unsigned int comFlags>
 inline HRESULT RegisterCOMObject(_In_opt_z_ const wchar_t*, _In_reads_(count) IID* clsids, _In_reads_(count) IClassFactory** factories, _Inout_updates_(count) DWORD* cookies, unsigned int count) throw()
@@ -907,7 +913,10 @@ public:
             auto modulePtr = ::Microsoft::WRL::GetModuleBase();
             __WRL_ASSERT__(modulePtr != nullptr);
 
-            modulePtr->IncrementObjectCount();
+            if (modulePtr != nullptr)
+            {
+                modulePtr->IncrementObjectCount();
+            }
         }
 
         return refcount;
@@ -928,7 +937,10 @@ public:
                 auto modulePtr = ::Microsoft::WRL::GetModuleBase();
                 __WRL_ASSERT__(modulePtr != nullptr);
 
-                modulePtr->DecrementObjectCount();
+                if (modulePtr != nullptr)
+                {
+                    modulePtr->DecrementObjectCount();
+                }
             }
         }
         // Decrement object count when InProc and caching enabled
@@ -937,7 +949,10 @@ public:
             auto modulePtr = ::Microsoft::WRL::GetModuleBase();
             __WRL_ASSERT__(modulePtr != nullptr);
 
-            modulePtr->DecrementObjectCount();
+            if (modulePtr != nullptr)
+            {
+                modulePtr->DecrementObjectCount();
+            }
         }
 
         return refcount;
@@ -1063,7 +1078,10 @@ public:
             auto modulePtr = ::Microsoft::WRL::GetModuleBase();
             __WRL_ASSERT__(modulePtr != nullptr);
 
-            modulePtr->IncrementObjectCount();
+            if (modulePtr != nullptr)
+            {
+                modulePtr->IncrementObjectCount();
+            }
         }
 
         return refcount;
@@ -1078,9 +1096,9 @@ public:
             bool isCacheDisabled = (flags_ & DisableCaching) != 0;
             delete this;
 
-            if (isCacheDisabled && Details::ModuleBase::module_ != nullptr)
+            auto modulePtr = ::Microsoft::WRL::GetModuleBase();
+            if (isCacheDisabled && modulePtr != nullptr)
             {
-                auto modulePtr = ::Microsoft::WRL::GetModuleBase();
                 __WRL_ASSERT__(modulePtr != nullptr);
 
                 modulePtr->DecrementObjectCount();
@@ -1091,8 +1109,10 @@ public:
         {
             auto modulePtr = ::Microsoft::WRL::GetModuleBase();
             __WRL_ASSERT__(modulePtr != nullptr);
-
-            modulePtr->DecrementObjectCount();
+            if (modulePtr != nullptr)
+            {
+                modulePtr->DecrementObjectCount();
+            }
         }
 
         return refcount;
@@ -1272,7 +1292,7 @@ class SimpleSealedAgileActivationFactory WrlFinal : public SimpleAgileActivation
         runtimeClassName, \
         trustLevel, \
         &__objectFactory__##className##_##serverName,\
-        L#serverName}; \
+        L## #serverName}; \
     extern "C" __declspec(allocate(section)) __declspec(selectany) const ::Microsoft::WRL::Details::CreatorMap* const __minATLObjMap_##className##_##serverName = &__object_##className##_##serverName; \
     WrlCreatorMapIncludePragmaEx(className, serverName)
 
@@ -1444,7 +1464,7 @@ public:
 };
 
 template <typename StorageT, StorageInstance instance, typename discriminator>
-__declspec(selectany) typename StaticStorage<StorageT, instance, discriminator> StaticStorage<StorageT, instance, discriminator>::instance_ = {};
+__declspec(selectany) StaticStorage<StorageT, instance, discriminator> StaticStorage<StorageT, instance, discriminator>::instance_ = {};
 
 } // namespace Details
 
@@ -1470,7 +1490,7 @@ private:
             }
 
             const wchar_t* name = ((*entry)->activationId.getRuntimeName)();
-            (name);
+            (void)(name);
             // Make sure that runtime class name is not nullptr and it has no empty string
             __WRL_ASSERT__(name != nullptr && ::wcslen(name) != 0);
         }
@@ -1550,10 +1570,12 @@ public:
         return Create();
     }
 
-	HRESULT GetActivationFactory(_In_opt_ HSTRING activatibleClassId, _COM_Outptr_ IActivationFactory **ppIFactory, _In_opt_z_ const wchar_t* serverName = nullptr) throw()
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+    HRESULT GetActivationFactory(_In_opt_ HSTRING activatibleClassId, _COM_Outptr_ IActivationFactory **ppIFactory, _In_opt_z_ const wchar_t* serverName = nullptr) throw()
     {
         return Details::GetActivationFactory<InProc>(this, serverName, activatibleClassId, ppIFactory);
     }
+#endif
 
     HRESULT GetClassObject(REFCLSID clsid, REFIID riid, _Outptr_result_nullonfailure_ void **ppv, _In_opt_z_ const wchar_t* serverName = nullptr) throw()
     {
@@ -1635,10 +1657,12 @@ class Module<InProcDisableCaching, ModuleT> :
     public Module<InProc, ModuleT>
 {
 public:
-	HRESULT GetActivationFactory(_In_opt_ HSTRING activatibleClassId, _COM_Outptr_  IActivationFactory **ppIFactory, _In_opt_z_ const wchar_t* serverName = nullptr) throw()
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+    HRESULT GetActivationFactory(_In_opt_ HSTRING activatibleClassId, _COM_Outptr_  IActivationFactory **ppIFactory, _In_opt_z_ const wchar_t* serverName = nullptr) throw()
     {
         return Details::GetActivationFactory<InProcDisableCaching>(this, serverName, activatibleClassId, ppIFactory);
     }
+#endif
 
     HRESULT GetClassObject(REFCLSID clsid, REFIID riid, _Outptr_result_nullonfailure_ void **ppv, _In_opt_z_ const wchar_t* serverName = nullptr) throw()
     {
@@ -2028,11 +2052,12 @@ public:
     }
 #endif  // __WRL_WINRT_STRICT__
 
-#ifndef __WRL_CLASSIC_COM_STRICT__
+#if (!defined(__WRL_CLASSIC_COM_STRICT__)) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
     STDMETHOD(RegisterWinRTObject)(_In_opt_z_ const wchar_t* serverName, _In_reads_(count) _Deref_pre_z_ const wchar_t** activatableClassIds, _Inout_ RO_REGISTRATION_COOKIE* cookie, unsigned int count)
     {
         return Details::RegisterWinRTObject<OutOfProc>(serverName, activatableClassIds, cookie, count);
     }
+
 
     STDMETHOD(UnregisterWinRTObject)(_In_opt_z_ const wchar_t*, _In_ RO_REGISTRATION_COOKIE cookie)    
     {
@@ -2051,7 +2076,7 @@ public:
         __WRL_ASSERT__(false && "WinRT components found. Please make sure that that you either undefine __WRL_CLASSIC_COM_STRICT__ or remove WinRT components");
         return S_OK;
     }
-#endif // __WRL_CLASSIC_COM_STRICT__
+#endif // (!defined(__WRL_CLASSIC_COM_STRICT__)) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
     HRESULT RegisterObjects(_In_opt_z_ const wchar_t* serverName = nullptr) throw()
     {
@@ -2090,11 +2115,13 @@ class Module<OutOfProcDisableCaching, ModuleT> :
     public Module<OutOfProc, ModuleT>
 {
 public:
-	HRESULT GetActivationFactory(_In_opt_ HSTRING activatibleClassId, _COM_Outptr_  IActivationFactory **ppIFactory, _In_opt_z_ const wchar_t* serverName = nullptr) throw()
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+    HRESULT GetActivationFactory(_In_opt_ HSTRING activatibleClassId, _COM_Outptr_  IActivationFactory **ppIFactory, _In_opt_z_ const wchar_t* serverName = nullptr) throw()
     {
         // Those methods are called in context of InProc always
         return Details::GetActivationFactory<InProcDisableCaching>(this, serverName, activatibleClassId, ppIFactory);
     }
+#endif
 
     HRESULT GetClassObject(REFCLSID clsid, REFIID riid, _Outptr_result_nullonfailure_ void **ppv, _In_opt_z_ const wchar_t* serverName = nullptr) throw()
     {
@@ -2107,7 +2134,7 @@ public:
         return Details::RegisterObjects<OutOfProcDisableCaching>(this, serverName);
     }
 
-#ifndef __WRL_CLASSIC_COM_STRICT__
+#if (!defined(__WRL_CLASSIC_COM_STRICT__)) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
     STDMETHOD(RegisterWinRTObject)(_In_opt_z_ const wchar_t* serverName, _In_reads_(count) _Deref_pre_z_ const wchar_t** activatableClassIds, _Inout_updates_(count) RO_REGISTRATION_COOKIE* cookies, unsigned int count)
     {
         return Details::RegisterWinRTObject<OutOfProcDisableCaching>(serverName, activatableClassIds, cookies, count);

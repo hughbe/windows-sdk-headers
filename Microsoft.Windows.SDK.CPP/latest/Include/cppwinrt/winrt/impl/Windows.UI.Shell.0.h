@@ -1,23 +1,24 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_UI_Shell_0_H
 #define WINRT_Windows_UI_Shell_0_H
-namespace winrt::Windows::ApplicationModel::Core
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Core
 {
     struct AppListEntry;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Uri;
 }
-namespace winrt::Windows::UI::StartScreen
+WINRT_EXPORT namespace winrt::Windows::UI::StartScreen
 {
     struct SecondaryTile;
 }
-namespace winrt::Windows::UI::Shell
+WINRT_EXPORT namespace winrt::Windows::UI::Shell
 {
     enum class SecurityAppKind : int32_t
     {
@@ -47,134 +48,38 @@ namespace winrt::Windows::UI::Shell
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::Shell::IAdaptiveCard>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Shell::IAdaptiveCardBuilderStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Shell::ISecurityAppManager>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Shell::ITaskbarManager>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Shell::ITaskbarManager2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Shell::ITaskbarManagerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Shell::AdaptiveCardBuilder>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Shell::SecurityAppManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Shell::TaskbarManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Shell::SecurityAppKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Shell::SecurityAppState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Shell::SecurityAppSubstatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::UI::Shell::IAdaptiveCard>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.IAdaptiveCard" };
-    };
-    template <> struct name<Windows::UI::Shell::IAdaptiveCardBuilderStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.IAdaptiveCardBuilderStatics" };
-    };
-    template <> struct name<Windows::UI::Shell::ISecurityAppManager>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.ISecurityAppManager" };
-    };
-    template <> struct name<Windows::UI::Shell::ITaskbarManager>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.ITaskbarManager" };
-    };
-    template <> struct name<Windows::UI::Shell::ITaskbarManager2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.ITaskbarManager2" };
-    };
-    template <> struct name<Windows::UI::Shell::ITaskbarManagerStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.ITaskbarManagerStatics" };
-    };
-    template <> struct name<Windows::UI::Shell::AdaptiveCardBuilder>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.AdaptiveCardBuilder" };
-    };
-    template <> struct name<Windows::UI::Shell::SecurityAppManager>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.SecurityAppManager" };
-    };
-    template <> struct name<Windows::UI::Shell::TaskbarManager>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.TaskbarManager" };
-    };
-    template <> struct name<Windows::UI::Shell::SecurityAppKind>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.SecurityAppKind" };
-    };
-    template <> struct name<Windows::UI::Shell::SecurityAppState>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.SecurityAppState" };
-    };
-    template <> struct name<Windows::UI::Shell::SecurityAppSubstatus>
-    {
-        static constexpr auto & value{ L"Windows.UI.Shell.SecurityAppSubstatus" };
-    };
-    template <> struct guid_storage<Windows::UI::Shell::IAdaptiveCard>
-    {
-        static constexpr guid value{ 0x72D0568C,0xA274,0x41CD,{ 0x82,0xA8,0x98,0x9D,0x40,0xB9,0xB0,0x5E } };
-    };
-    template <> struct guid_storage<Windows::UI::Shell::IAdaptiveCardBuilderStatics>
-    {
-        static constexpr guid value{ 0x766D8F08,0xD3FE,0x4347,{ 0xA0,0xBC,0xB9,0xEA,0x9A,0x6D,0xC2,0x8E } };
-    };
-    template <> struct guid_storage<Windows::UI::Shell::ISecurityAppManager>
-    {
-        static constexpr guid value{ 0x96AC500C,0xAED4,0x561D,{ 0xBD,0xE8,0x95,0x35,0x20,0x34,0x3A,0x2D } };
-    };
-    template <> struct guid_storage<Windows::UI::Shell::ITaskbarManager>
-    {
-        static constexpr guid value{ 0x87490A19,0x1AD9,0x49F4,{ 0xB2,0xE8,0x86,0x73,0x8D,0xC5,0xAC,0x40 } };
-    };
-    template <> struct guid_storage<Windows::UI::Shell::ITaskbarManager2>
-    {
-        static constexpr guid value{ 0x79F0A06E,0x7B02,0x4911,{ 0x91,0x8C,0xDE,0xE0,0xBB,0xD2,0x0B,0xA4 } };
-    };
-    template <> struct guid_storage<Windows::UI::Shell::ITaskbarManagerStatics>
-    {
-        static constexpr guid value{ 0xDB32AB74,0xDE52,0x4FE6,{ 0xB7,0xB6,0x95,0xFF,0x9F,0x83,0x95,0xDF } };
-    };
-    template <> struct default_interface<Windows::UI::Shell::SecurityAppManager>
-    {
-        using type = Windows::UI::Shell::ISecurityAppManager;
-    };
-    template <> struct default_interface<Windows::UI::Shell::TaskbarManager>
-    {
-        using type = Windows::UI::Shell::ITaskbarManager;
-    };
+    template <> struct category<Windows::UI::Shell::IAdaptiveCard>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Shell::IAdaptiveCardBuilderStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Shell::ISecurityAppManager>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Shell::ITaskbarManager>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Shell::ITaskbarManager2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Shell::ITaskbarManagerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Shell::AdaptiveCardBuilder>{ using type = class_category; };
+    template <> struct category<Windows::UI::Shell::SecurityAppManager>{ using type = class_category; };
+    template <> struct category<Windows::UI::Shell::TaskbarManager>{ using type = class_category; };
+    template <> struct category<Windows::UI::Shell::SecurityAppKind>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Shell::SecurityAppState>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Shell::SecurityAppSubstatus>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::AdaptiveCardBuilder> = L"Windows.UI.Shell.AdaptiveCardBuilder";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::SecurityAppManager> = L"Windows.UI.Shell.SecurityAppManager";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::TaskbarManager> = L"Windows.UI.Shell.TaskbarManager";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::SecurityAppKind> = L"Windows.UI.Shell.SecurityAppKind";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::SecurityAppState> = L"Windows.UI.Shell.SecurityAppState";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::SecurityAppSubstatus> = L"Windows.UI.Shell.SecurityAppSubstatus";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::IAdaptiveCard> = L"Windows.UI.Shell.IAdaptiveCard";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::IAdaptiveCardBuilderStatics> = L"Windows.UI.Shell.IAdaptiveCardBuilderStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::ISecurityAppManager> = L"Windows.UI.Shell.ISecurityAppManager";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::ITaskbarManager> = L"Windows.UI.Shell.ITaskbarManager";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::ITaskbarManager2> = L"Windows.UI.Shell.ITaskbarManager2";
+    template <> inline constexpr auto& name_v<Windows::UI::Shell::ITaskbarManagerStatics> = L"Windows.UI.Shell.ITaskbarManagerStatics";
+    template <> inline constexpr guid guid_v<Windows::UI::Shell::IAdaptiveCard>{ 0x72D0568C,0xA274,0x41CD,{ 0x82,0xA8,0x98,0x9D,0x40,0xB9,0xB0,0x5E } }; // 72D0568C-A274-41CD-82A8-989D40B9B05E
+    template <> inline constexpr guid guid_v<Windows::UI::Shell::IAdaptiveCardBuilderStatics>{ 0x766D8F08,0xD3FE,0x4347,{ 0xA0,0xBC,0xB9,0xEA,0x9A,0x6D,0xC2,0x8E } }; // 766D8F08-D3FE-4347-A0BC-B9EA9A6DC28E
+    template <> inline constexpr guid guid_v<Windows::UI::Shell::ISecurityAppManager>{ 0x96AC500C,0xAED4,0x561D,{ 0xBD,0xE8,0x95,0x35,0x20,0x34,0x3A,0x2D } }; // 96AC500C-AED4-561D-BDE8-953520343A2D
+    template <> inline constexpr guid guid_v<Windows::UI::Shell::ITaskbarManager>{ 0x87490A19,0x1AD9,0x49F4,{ 0xB2,0xE8,0x86,0x73,0x8D,0xC5,0xAC,0x40 } }; // 87490A19-1AD9-49F4-B2E8-86738DC5AC40
+    template <> inline constexpr guid guid_v<Windows::UI::Shell::ITaskbarManager2>{ 0x79F0A06E,0x7B02,0x4911,{ 0x91,0x8C,0xDE,0xE0,0xBB,0xD2,0x0B,0xA4 } }; // 79F0A06E-7B02-4911-918C-DEE0BBD20BA4
+    template <> inline constexpr guid guid_v<Windows::UI::Shell::ITaskbarManagerStatics>{ 0xDB32AB74,0xDE52,0x4FE6,{ 0xB7,0xB6,0x95,0xFF,0x9F,0x83,0x95,0xDF } }; // DB32AB74-DE52-4FE6-B7B6-95FF9F8395DF
+    template <> struct default_interface<Windows::UI::Shell::SecurityAppManager>{ using type = Windows::UI::Shell::ISecurityAppManager; };
+    template <> struct default_interface<Windows::UI::Shell::TaskbarManager>{ using type = Windows::UI::Shell::ITaskbarManager; };
     template <> struct abi<Windows::UI::Shell::IAdaptiveCard>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -229,7 +134,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Shell_IAdaptiveCard
     {
-        auto ToJson() const;
+        WINRT_IMPL_AUTO(hstring) ToJson() const;
     };
     template <> struct consume<Windows::UI::Shell::IAdaptiveCard>
     {
@@ -238,7 +143,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Shell_IAdaptiveCardBuilderStatics
     {
-        auto CreateAdaptiveCardFromJson(param::hstring const& value) const;
+        WINRT_IMPL_AUTO(Windows::UI::Shell::IAdaptiveCard) CreateAdaptiveCardFromJson(param::hstring const& value) const;
     };
     template <> struct consume<Windows::UI::Shell::IAdaptiveCardBuilderStatics>
     {
@@ -247,9 +152,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Shell_ISecurityAppManager
     {
-        auto Register(Windows::UI::Shell::SecurityAppKind const& kind, param::hstring const& displayName, Windows::Foundation::Uri const& detailsUri, bool registerPerUser) const;
-        auto Unregister(Windows::UI::Shell::SecurityAppKind const& kind, winrt::guid const& guidRegistration) const;
-        auto UpdateState(Windows::UI::Shell::SecurityAppKind const& kind, winrt::guid const& guidRegistration, Windows::UI::Shell::SecurityAppState const& state, Windows::UI::Shell::SecurityAppSubstatus const& substatus, Windows::Foundation::Uri const& detailsUri) const;
+        WINRT_IMPL_AUTO(winrt::guid) Register(Windows::UI::Shell::SecurityAppKind const& kind, param::hstring const& displayName, Windows::Foundation::Uri const& detailsUri, bool registerPerUser) const;
+        WINRT_IMPL_AUTO(void) Unregister(Windows::UI::Shell::SecurityAppKind const& kind, winrt::guid const& guidRegistration) const;
+        WINRT_IMPL_AUTO(void) UpdateState(Windows::UI::Shell::SecurityAppKind const& kind, winrt::guid const& guidRegistration, Windows::UI::Shell::SecurityAppState const& state, Windows::UI::Shell::SecurityAppSubstatus const& substatus, Windows::Foundation::Uri const& detailsUri) const;
     };
     template <> struct consume<Windows::UI::Shell::ISecurityAppManager>
     {
@@ -258,12 +163,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Shell_ITaskbarManager
     {
-        [[nodiscard]] auto IsSupported() const;
-        [[nodiscard]] auto IsPinningAllowed() const;
-        auto IsCurrentAppPinnedAsync() const;
-        auto IsAppListEntryPinnedAsync(Windows::ApplicationModel::Core::AppListEntry const& appListEntry) const;
-        auto RequestPinCurrentAppAsync() const;
-        auto RequestPinAppListEntryAsync(Windows::ApplicationModel::Core::AppListEntry const& appListEntry) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSupported() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPinningAllowed() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) IsCurrentAppPinnedAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) IsAppListEntryPinnedAsync(Windows::ApplicationModel::Core::AppListEntry const& appListEntry) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) RequestPinCurrentAppAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) RequestPinAppListEntryAsync(Windows::ApplicationModel::Core::AppListEntry const& appListEntry) const;
     };
     template <> struct consume<Windows::UI::Shell::ITaskbarManager>
     {
@@ -272,9 +177,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Shell_ITaskbarManager2
     {
-        auto IsSecondaryTilePinnedAsync(param::hstring const& tileId) const;
-        auto RequestPinSecondaryTileAsync(Windows::UI::StartScreen::SecondaryTile const& secondaryTile) const;
-        auto TryUnpinSecondaryTileAsync(param::hstring const& tileId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) IsSecondaryTilePinnedAsync(param::hstring const& tileId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) RequestPinSecondaryTileAsync(Windows::UI::StartScreen::SecondaryTile const& secondaryTile) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) TryUnpinSecondaryTileAsync(param::hstring const& tileId) const;
     };
     template <> struct consume<Windows::UI::Shell::ITaskbarManager2>
     {
@@ -283,7 +188,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Shell_ITaskbarManagerStatics
     {
-        auto GetDefault() const;
+        WINRT_IMPL_AUTO(Windows::UI::Shell::TaskbarManager) GetDefault() const;
     };
     template <> struct consume<Windows::UI::Shell::ITaskbarManagerStatics>
     {

@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -186,23 +194,28 @@ EXTERN_C const IID IID_IAudioFormatEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IAudioFormatEnumerator * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IAudioFormatEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IAudioFormatEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IAudioFormatEnumerator, GetCount)
         HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             IAudioFormatEnumerator * This,
             /* [annotation][out] */ 
             _Out_  UINT32 *count);
         
+        DECLSPEC_XFGVIRT(IAudioFormatEnumerator, GetFormat)
         HRESULT ( STDMETHODCALLTYPE *GetFormat )( 
             IAudioFormatEnumerator * This,
             /* [annotation][in] */ 
@@ -292,18 +305,22 @@ EXTERN_C const IID IID_ISpatialAudioObjectBase;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ISpatialAudioObjectBase * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISpatialAudioObjectBase * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ISpatialAudioObjectBase * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectBase, GetBuffer)
         HRESULT ( STDMETHODCALLTYPE *GetBuffer )( 
             ISpatialAudioObjectBase * This,
             /* [annotation][size_is][size_is][out] */ 
@@ -311,16 +328,19 @@ EXTERN_C const IID IID_ISpatialAudioObjectBase;
             /* [annotation][out] */ 
             _Out_  UINT32 *bufferLength);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectBase, SetEndOfStream)
         HRESULT ( STDMETHODCALLTYPE *SetEndOfStream )( 
             ISpatialAudioObjectBase * This,
             /* [annotation][in] */ 
             _In_  UINT32 frameCount);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectBase, IsActive)
         HRESULT ( STDMETHODCALLTYPE *IsActive )( 
             ISpatialAudioObjectBase * This,
             /* [annotation][out] */ 
             _Out_  BOOL *isActive);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectBase, GetAudioObjectType)
         HRESULT ( STDMETHODCALLTYPE *GetAudioObjectType )( 
             ISpatialAudioObjectBase * This,
             /* [annotation][out] */ 
@@ -408,18 +428,22 @@ EXTERN_C const IID IID_ISpatialAudioObject;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ISpatialAudioObject * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISpatialAudioObject * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ISpatialAudioObject * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectBase, GetBuffer)
         HRESULT ( STDMETHODCALLTYPE *GetBuffer )( 
             ISpatialAudioObject * This,
             /* [annotation][size_is][size_is][out] */ 
@@ -427,21 +451,25 @@ EXTERN_C const IID IID_ISpatialAudioObject;
             /* [annotation][out] */ 
             _Out_  UINT32 *bufferLength);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectBase, SetEndOfStream)
         HRESULT ( STDMETHODCALLTYPE *SetEndOfStream )( 
             ISpatialAudioObject * This,
             /* [annotation][in] */ 
             _In_  UINT32 frameCount);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectBase, IsActive)
         HRESULT ( STDMETHODCALLTYPE *IsActive )( 
             ISpatialAudioObject * This,
             /* [annotation][out] */ 
             _Out_  BOOL *isActive);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectBase, GetAudioObjectType)
         HRESULT ( STDMETHODCALLTYPE *GetAudioObjectType )( 
             ISpatialAudioObject * This,
             /* [annotation][out] */ 
             _Out_  AudioObjectType *audioObjectType);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObject, SetPosition)
         HRESULT ( STDMETHODCALLTYPE *SetPosition )( 
             ISpatialAudioObject * This,
             /* [annotation][in] */ 
@@ -451,6 +479,7 @@ EXTERN_C const IID IID_ISpatialAudioObject;
             /* [annotation][in] */ 
             _In_  float z);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObject, SetVolume)
         HRESULT ( STDMETHODCALLTYPE *SetVolume )( 
             ISpatialAudioObject * This,
             /* [annotation][in] */ 
@@ -557,23 +586,28 @@ EXTERN_C const IID IID_ISpatialAudioObjectRenderStreamBase;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ISpatialAudioObjectRenderStreamBase * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISpatialAudioObjectRenderStreamBase * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ISpatialAudioObjectRenderStreamBase * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, GetAvailableDynamicObjectCount)
         HRESULT ( STDMETHODCALLTYPE *GetAvailableDynamicObjectCount )( 
             ISpatialAudioObjectRenderStreamBase * This,
             /* [annotation][out] */ 
             _Out_  UINT32 *value);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, GetService)
         HRESULT ( STDMETHODCALLTYPE *GetService )( 
             ISpatialAudioObjectRenderStreamBase * This,
             /* [annotation][in] */ 
@@ -581,15 +615,19 @@ EXTERN_C const IID IID_ISpatialAudioObjectRenderStreamBase;
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **service);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, Start)
         HRESULT ( STDMETHODCALLTYPE *Start )( 
             ISpatialAudioObjectRenderStreamBase * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, Stop)
         HRESULT ( STDMETHODCALLTYPE *Stop )( 
             ISpatialAudioObjectRenderStreamBase * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             ISpatialAudioObjectRenderStreamBase * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, BeginUpdatingAudioObjects)
         HRESULT ( STDMETHODCALLTYPE *BeginUpdatingAudioObjects )( 
             ISpatialAudioObjectRenderStreamBase * This,
             /* [annotation][out] */ 
@@ -597,6 +635,7 @@ EXTERN_C const IID IID_ISpatialAudioObjectRenderStreamBase;
             /* [annotation][out] */ 
             _Out_  UINT32 *frameCountPerBuffer);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, EndUpdatingAudioObjects)
         HRESULT ( STDMETHODCALLTYPE *EndUpdatingAudioObjects )( 
             ISpatialAudioObjectRenderStreamBase * This);
         
@@ -685,23 +724,28 @@ EXTERN_C const IID IID_ISpatialAudioObjectRenderStream;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ISpatialAudioObjectRenderStream * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISpatialAudioObjectRenderStream * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ISpatialAudioObjectRenderStream * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, GetAvailableDynamicObjectCount)
         HRESULT ( STDMETHODCALLTYPE *GetAvailableDynamicObjectCount )( 
             ISpatialAudioObjectRenderStream * This,
             /* [annotation][out] */ 
             _Out_  UINT32 *value);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, GetService)
         HRESULT ( STDMETHODCALLTYPE *GetService )( 
             ISpatialAudioObjectRenderStream * This,
             /* [annotation][in] */ 
@@ -709,15 +753,19 @@ EXTERN_C const IID IID_ISpatialAudioObjectRenderStream;
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **service);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, Start)
         HRESULT ( STDMETHODCALLTYPE *Start )( 
             ISpatialAudioObjectRenderStream * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, Stop)
         HRESULT ( STDMETHODCALLTYPE *Stop )( 
             ISpatialAudioObjectRenderStream * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             ISpatialAudioObjectRenderStream * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, BeginUpdatingAudioObjects)
         HRESULT ( STDMETHODCALLTYPE *BeginUpdatingAudioObjects )( 
             ISpatialAudioObjectRenderStream * This,
             /* [annotation][out] */ 
@@ -725,9 +773,11 @@ EXTERN_C const IID IID_ISpatialAudioObjectRenderStream;
             /* [annotation][out] */ 
             _Out_  UINT32 *frameCountPerBuffer);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamBase, EndUpdatingAudioObjects)
         HRESULT ( STDMETHODCALLTYPE *EndUpdatingAudioObjects )( 
             ISpatialAudioObjectRenderStream * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStream, ActivateSpatialAudioObject)
         HRESULT ( STDMETHODCALLTYPE *ActivateSpatialAudioObject )( 
             ISpatialAudioObjectRenderStream * This,
             /* [annotation][in] */ 
@@ -826,18 +876,22 @@ EXTERN_C const IID IID_ISpatialAudioObjectRenderStreamNotify;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ISpatialAudioObjectRenderStreamNotify * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISpatialAudioObjectRenderStreamNotify * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ISpatialAudioObjectRenderStreamNotify * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioObjectRenderStreamNotify, OnAvailableDynamicObjectCountChange)
         HRESULT ( STDMETHODCALLTYPE *OnAvailableDynamicObjectCountChange )( 
             ISpatialAudioObjectRenderStreamNotify * This,
             /* [annotation][in] */ 
@@ -954,18 +1008,22 @@ EXTERN_C const IID IID_ISpatialAudioClient;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ISpatialAudioClient * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISpatialAudioClient * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ISpatialAudioClient * This);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetStaticObjectPosition)
         HRESULT ( STDMETHODCALLTYPE *GetStaticObjectPosition )( 
             ISpatialAudioClient * This,
             /* [annotation][in] */ 
@@ -977,21 +1035,25 @@ EXTERN_C const IID IID_ISpatialAudioClient;
             /* [annotation][out] */ 
             _Out_  float *z);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetNativeStaticObjectTypeMask)
         HRESULT ( STDMETHODCALLTYPE *GetNativeStaticObjectTypeMask )( 
             ISpatialAudioClient * This,
             /* [annotation][out] */ 
             _Out_  AudioObjectType *mask);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetMaxDynamicObjectCount)
         HRESULT ( STDMETHODCALLTYPE *GetMaxDynamicObjectCount )( 
             ISpatialAudioClient * This,
             /* [annotation][out] */ 
             _Out_  UINT32 *value);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetSupportedAudioObjectFormatEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedAudioObjectFormatEnumerator )( 
             ISpatialAudioClient * This,
             /* [annotation][out] */ 
             _COM_Outptr_  IAudioFormatEnumerator **enumerator);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetMaxFrameCount)
         HRESULT ( STDMETHODCALLTYPE *GetMaxFrameCount )( 
             ISpatialAudioClient * This,
             /* [annotation][in] */ 
@@ -999,11 +1061,13 @@ EXTERN_C const IID IID_ISpatialAudioClient;
             /* [annotation][out] */ 
             _Out_  UINT32 *frameCountPerBuffer);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, IsAudioObjectFormatSupported)
         HRESULT ( STDMETHODCALLTYPE *IsAudioObjectFormatSupported )( 
             ISpatialAudioClient * This,
             /* [annotation][in] */ 
             _In_  const WAVEFORMATEX *objectFormat);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, IsSpatialAudioStreamAvailable)
         HRESULT ( STDMETHODCALLTYPE *IsSpatialAudioStreamAvailable )( 
             ISpatialAudioClient * This,
             /* [annotation][in] */ 
@@ -1011,6 +1075,7 @@ EXTERN_C const IID IID_ISpatialAudioClient;
             /* [annotation][in] */ 
             _In_opt_  const PROPVARIANT *auxiliaryInfo);
         
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, ActivateSpatialAudioStream)
         HRESULT ( STDMETHODCALLTYPE *ActivateSpatialAudioStream )( 
             ISpatialAudioClient * This,
             /* [annotation][in] */ 

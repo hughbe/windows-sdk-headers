@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Foundation_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Foundation.1.h"
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct AsyncActionCompletedHandler : Windows::Foundation::IUnknown
     {
@@ -129,7 +129,7 @@ namespace winrt::Windows::Foundation
     {
         Deferral(std::nullptr_t) noexcept {}
         Deferral(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IDeferral(ptr, take_ownership_from_abi) {}
-        Deferral(Windows::Foundation::DeferralCompletedHandler const& handler);
+        explicit Deferral(Windows::Foundation::DeferralCompletedHandler const& handler);
     };
     struct GuidHelper
     {
@@ -142,7 +142,7 @@ namespace winrt::Windows::Foundation
     {
         MemoryBuffer(std::nullptr_t) noexcept {}
         MemoryBuffer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IMemoryBuffer(ptr, take_ownership_from_abi) {}
-        MemoryBuffer(uint32_t capacity);
+        explicit MemoryBuffer(uint32_t capacity);
     };
     struct PropertyValue
     {
@@ -192,7 +192,7 @@ namespace winrt::Windows::Foundation
     {
         Uri(std::nullptr_t) noexcept {}
         Uri(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUriRuntimeClass(ptr, take_ownership_from_abi) {}
-        Uri(param::hstring const& uri);
+        explicit Uri(param::hstring const& uri);
         Uri(param::hstring const& baseUri, param::hstring const& relativeUri);
         static auto UnescapeComponent(param::hstring const& toUnescape);
         static auto EscapeComponent(param::hstring const& toEscape);
@@ -201,7 +201,7 @@ namespace winrt::Windows::Foundation
     {
         WwwFormUrlDecoder(std::nullptr_t) noexcept {}
         WwwFormUrlDecoder(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IWwwFormUrlDecoderRuntimeClass(ptr, take_ownership_from_abi) {}
-        WwwFormUrlDecoder(param::hstring const& query);
+        explicit WwwFormUrlDecoder(param::hstring const& query);
     };
     struct __declspec(empty_bases) WwwFormUrlDecoderEntry : Windows::Foundation::IWwwFormUrlDecoderEntry
     {

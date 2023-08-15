@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Windows.Web.Http.Filters.2.h"
 #include "winrt/impl/Windows.Web.Http.1.h"
-namespace winrt::Windows::Web::Http
+WINRT_EXPORT namespace winrt::Windows::Web::Http
 {
     struct HttpProgress
     {
@@ -34,7 +34,7 @@ namespace winrt::Windows::Web::Http
     {
         HttpBufferContent(std::nullptr_t) noexcept {}
         HttpBufferContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::IHttpContent(ptr, take_ownership_from_abi) {}
-        HttpBufferContent(Windows::Storage::Streams::IBuffer const& content);
+        explicit HttpBufferContent(Windows::Storage::Streams::IBuffer const& content);
         HttpBufferContent(Windows::Storage::Streams::IBuffer const& content, uint32_t offset, uint32_t count);
     };
     struct __declspec(empty_bases) HttpClient : Windows::Web::Http::IHttpClient,
@@ -43,7 +43,7 @@ namespace winrt::Windows::Web::Http
         HttpClient(std::nullptr_t) noexcept {}
         HttpClient(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::IHttpClient(ptr, take_ownership_from_abi) {}
         HttpClient();
-        HttpClient(Windows::Web::Http::Filters::IHttpFilter const& filter);
+        explicit HttpClient(Windows::Web::Http::Filters::IHttpFilter const& filter);
     };
     struct __declspec(empty_bases) HttpCookie : Windows::Web::Http::IHttpCookie,
         impl::require<HttpCookie, Windows::Foundation::IStringable>
@@ -67,7 +67,7 @@ namespace winrt::Windows::Web::Http
     {
         HttpFormUrlEncodedContent(std::nullptr_t) noexcept {}
         HttpFormUrlEncodedContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::IHttpContent(ptr, take_ownership_from_abi) {}
-        HttpFormUrlEncodedContent(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& content);
+        explicit HttpFormUrlEncodedContent(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& content);
     };
     struct __declspec(empty_bases) HttpGetBufferResult : Windows::Web::Http::IHttpGetBufferResult,
         impl::require<HttpGetBufferResult, Windows::Foundation::IClosable, Windows::Foundation::IStringable>
@@ -92,7 +92,7 @@ namespace winrt::Windows::Web::Http
     {
         HttpMethod(std::nullptr_t) noexcept {}
         HttpMethod(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::IHttpMethod(ptr, take_ownership_from_abi) {}
-        HttpMethod(param::hstring const& method);
+        explicit HttpMethod(param::hstring const& method);
         [[nodiscard]] static auto Delete();
         [[nodiscard]] static auto Get();
         [[nodiscard]] static auto Head();
@@ -107,7 +107,7 @@ namespace winrt::Windows::Web::Http
         HttpMultipartContent(std::nullptr_t) noexcept {}
         HttpMultipartContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::IHttpContent(ptr, take_ownership_from_abi) {}
         HttpMultipartContent();
-        HttpMultipartContent(param::hstring const& subtype);
+        explicit HttpMultipartContent(param::hstring const& subtype);
         HttpMultipartContent(param::hstring const& subtype, param::hstring const& boundary);
     };
     struct __declspec(empty_bases) HttpMultipartFormDataContent : Windows::Web::Http::IHttpContent,
@@ -116,7 +116,7 @@ namespace winrt::Windows::Web::Http
         HttpMultipartFormDataContent(std::nullptr_t) noexcept {}
         HttpMultipartFormDataContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::IHttpContent(ptr, take_ownership_from_abi) {}
         HttpMultipartFormDataContent();
-        HttpMultipartFormDataContent(param::hstring const& boundary);
+        explicit HttpMultipartFormDataContent(param::hstring const& boundary);
     };
     struct __declspec(empty_bases) HttpRequestMessage : Windows::Web::Http::IHttpRequestMessage,
         impl::require<HttpRequestMessage, Windows::Foundation::IClosable, Windows::Foundation::IStringable>
@@ -138,21 +138,21 @@ namespace winrt::Windows::Web::Http
         HttpResponseMessage(std::nullptr_t) noexcept {}
         HttpResponseMessage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::IHttpResponseMessage(ptr, take_ownership_from_abi) {}
         HttpResponseMessage();
-        HttpResponseMessage(Windows::Web::Http::HttpStatusCode const& statusCode);
+        explicit HttpResponseMessage(Windows::Web::Http::HttpStatusCode const& statusCode);
     };
     struct __declspec(empty_bases) HttpStreamContent : Windows::Web::Http::IHttpContent,
         impl::require<HttpStreamContent, Windows::Foundation::IStringable>
     {
         HttpStreamContent(std::nullptr_t) noexcept {}
         HttpStreamContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::IHttpContent(ptr, take_ownership_from_abi) {}
-        HttpStreamContent(Windows::Storage::Streams::IInputStream const& content);
+        explicit HttpStreamContent(Windows::Storage::Streams::IInputStream const& content);
     };
     struct __declspec(empty_bases) HttpStringContent : Windows::Web::Http::IHttpContent,
         impl::require<HttpStringContent, Windows::Foundation::IStringable>
     {
         HttpStringContent(std::nullptr_t) noexcept {}
         HttpStringContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Http::IHttpContent(ptr, take_ownership_from_abi) {}
-        HttpStringContent(param::hstring const& content);
+        explicit HttpStringContent(param::hstring const& content);
         HttpStringContent(param::hstring const& content, Windows::Storage::Streams::UnicodeEncoding const& encoding);
         HttpStringContent(param::hstring const& content, Windows::Storage::Streams::UnicodeEncoding const& encoding, param::hstring const& mediaType);
     };

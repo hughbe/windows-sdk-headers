@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Security_Credentials_H
 #define WINRT_Windows_Security_Credentials_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Security.Cryptography.Core.2.h"
@@ -15,288 +15,289 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Security.Credentials.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Security_Credentials_ICredentialFactory<D>::CreatePasswordCredential(param::hstring const& resource, param::hstring const& userName, param::hstring const& password) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) consume_Windows_Security_Credentials_ICredentialFactory<D>::CreatePasswordCredential(param::hstring const& resource, param::hstring const& userName, param::hstring const& password) const
     {
         void* credential{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::ICredentialFactory)->CreatePasswordCredential(*(void**)(&resource), *(void**)(&userName), *(void**)(&password), &credential));
         return Windows::Security::Credentials::PasswordCredential{ credential, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredential<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IKeyCredential<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredential)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredential<D>::RetrievePublicKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Credentials_IKeyCredential<D>::RetrievePublicKey() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredential)->RetrievePublicKeyWithDefaultBlobType(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredential<D>::RetrievePublicKey(Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& blobType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Credentials_IKeyCredential<D>::RetrievePublicKey(Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& blobType) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredential)->RetrievePublicKeyWithBlobType(static_cast<int32_t>(blobType), &value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredential<D>::RequestSignAsync(Windows::Storage::Streams::IBuffer const& data) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::KeyCredentialOperationResult>) consume_Windows_Security_Credentials_IKeyCredential<D>::RequestSignAsync(Windows::Storage::Streams::IBuffer const& data) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredential)->RequestSignAsync(*(void**)(&data), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::KeyCredentialOperationResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredential<D>::GetAttestationAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::KeyCredentialAttestationResult>) consume_Windows_Security_Credentials_IKeyCredential<D>::GetAttestationAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredential)->GetAttestationAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::KeyCredentialAttestationResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialAttestationResult<D>::CertificateChainBuffer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Credentials_IKeyCredentialAttestationResult<D>::CertificateChainBuffer() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialAttestationResult)->get_CertificateChainBuffer(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialAttestationResult<D>::AttestationBuffer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Credentials_IKeyCredentialAttestationResult<D>::AttestationBuffer() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialAttestationResult)->get_AttestationBuffer(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialAttestationResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::KeyCredentialAttestationStatus) consume_Windows_Security_Credentials_IKeyCredentialAttestationResult<D>::Status() const
     {
-        Windows::Security::Credentials::KeyCredentialAttestationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialAttestationResult)->get_Status(put_abi(value)));
+        Windows::Security::Credentials::KeyCredentialAttestationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialAttestationResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::IsSupportedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::IsSupportedAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialManagerStatics)->IsSupportedAsync(&value));
         return Windows::Foundation::IAsyncOperation<bool>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::RenewAttestationAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::RenewAttestationAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialManagerStatics)->RenewAttestationAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::RequestCreateAsync(param::hstring const& name, Windows::Security::Credentials::KeyCredentialCreationOption const& option) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::KeyCredentialRetrievalResult>) consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::RequestCreateAsync(param::hstring const& name, Windows::Security::Credentials::KeyCredentialCreationOption const& option) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialManagerStatics)->RequestCreateAsync(*(void**)(&name), static_cast<int32_t>(option), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::KeyCredentialRetrievalResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::OpenAsync(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::KeyCredentialRetrievalResult>) consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::OpenAsync(param::hstring const& name) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialManagerStatics)->OpenAsync(*(void**)(&name), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::KeyCredentialRetrievalResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::DeleteAsync(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Security_Credentials_IKeyCredentialManagerStatics<D>::DeleteAsync(param::hstring const& name) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialManagerStatics)->DeleteAsync(*(void**)(&name), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialOperationResult<D>::Result() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Credentials_IKeyCredentialOperationResult<D>::Result() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialOperationResult)->get_Result(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialOperationResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::KeyCredentialStatus) consume_Windows_Security_Credentials_IKeyCredentialOperationResult<D>::Status() const
     {
-        Windows::Security::Credentials::KeyCredentialStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialOperationResult)->get_Status(put_abi(value)));
+        Windows::Security::Credentials::KeyCredentialStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialOperationResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialRetrievalResult<D>::Credential() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::KeyCredential) consume_Windows_Security_Credentials_IKeyCredentialRetrievalResult<D>::Credential() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialRetrievalResult)->get_Credential(&value));
         return Windows::Security::Credentials::KeyCredential{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IKeyCredentialRetrievalResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::KeyCredentialStatus) consume_Windows_Security_Credentials_IKeyCredentialRetrievalResult<D>::Status() const
     {
-        Windows::Security::Credentials::KeyCredentialStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialRetrievalResult)->get_Status(put_abi(value)));
+        Windows::Security::Credentials::KeyCredentialStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IKeyCredentialRetrievalResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordCredential<D>::Resource() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IPasswordCredential<D>::Resource() const
     {
         void* resource{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordCredential)->get_Resource(&resource));
         return hstring{ resource, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordCredential<D>::Resource(param::hstring const& resource) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_IPasswordCredential<D>::Resource(param::hstring const& resource) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordCredential)->put_Resource(*(void**)(&resource)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordCredential<D>::UserName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IPasswordCredential<D>::UserName() const
     {
         void* userName{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordCredential)->get_UserName(&userName));
         return hstring{ userName, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordCredential<D>::UserName(param::hstring const& userName) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_IPasswordCredential<D>::UserName(param::hstring const& userName) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordCredential)->put_UserName(*(void**)(&userName)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordCredential<D>::Password() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IPasswordCredential<D>::Password() const
     {
         void* password{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordCredential)->get_Password(&password));
         return hstring{ password, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordCredential<D>::Password(param::hstring const& password) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_IPasswordCredential<D>::Password(param::hstring const& password) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordCredential)->put_Password(*(void**)(&password)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordCredential<D>::RetrievePassword() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_IPasswordCredential<D>::RetrievePassword() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordCredential)->RetrievePassword());
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordCredential<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IPropertySet) consume_Windows_Security_Credentials_IPasswordCredential<D>::Properties() const
     {
         void* props{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordCredential)->get_Properties(&props));
         return Windows::Foundation::Collections::IPropertySet{ props, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordVault<D>::Add(Windows::Security::Credentials::PasswordCredential const& credential) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_IPasswordVault<D>::Add(Windows::Security::Credentials::PasswordCredential const& credential) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordVault)->Add(*(void**)(&credential)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordVault<D>::Remove(Windows::Security::Credentials::PasswordCredential const& credential) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_IPasswordVault<D>::Remove(Windows::Security::Credentials::PasswordCredential const& credential) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordVault)->Remove(*(void**)(&credential)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordVault<D>::Retrieve(param::hstring const& resource, param::hstring const& userName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) consume_Windows_Security_Credentials_IPasswordVault<D>::Retrieve(param::hstring const& resource, param::hstring const& userName) const
     {
         void* credential{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordVault)->Retrieve(*(void**)(&resource), *(void**)(&userName), &credential));
         return Windows::Security::Credentials::PasswordCredential{ credential, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordVault<D>::FindAllByResource(param::hstring const& resource) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Credentials::PasswordCredential>) consume_Windows_Security_Credentials_IPasswordVault<D>::FindAllByResource(param::hstring const& resource) const
     {
         void* credentials{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordVault)->FindAllByResource(*(void**)(&resource), &credentials));
         return Windows::Foundation::Collections::IVectorView<Windows::Security::Credentials::PasswordCredential>{ credentials, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordVault<D>::FindAllByUserName(param::hstring const& userName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Credentials::PasswordCredential>) consume_Windows_Security_Credentials_IPasswordVault<D>::FindAllByUserName(param::hstring const& userName) const
     {
         void* credentials{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordVault)->FindAllByUserName(*(void**)(&userName), &credentials));
         return Windows::Foundation::Collections::IVectorView<Windows::Security::Credentials::PasswordCredential>{ credentials, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IPasswordVault<D>::RetrieveAll() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Credentials::PasswordCredential>) consume_Windows_Security_Credentials_IPasswordVault<D>::RetrieveAll() const
     {
         void* credentials{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IPasswordVault)->RetrieveAll(&credentials));
         return Windows::Foundation::Collections::IVectorView<Windows::Security::Credentials::PasswordCredential>{ credentials, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccount<D>::WebAccountProvider() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::WebAccountProvider) consume_Windows_Security_Credentials_IWebAccount<D>::WebAccountProvider() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccount)->get_WebAccountProvider(&value));
         return Windows::Security::Credentials::WebAccountProvider{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccount<D>::UserName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IWebAccount<D>::UserName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccount)->get_UserName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccount<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::WebAccountState) consume_Windows_Security_Credentials_IWebAccount<D>::State() const
     {
-        Windows::Security::Credentials::WebAccountState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccount)->get_State(put_abi(value)));
+        Windows::Security::Credentials::WebAccountState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccount)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccount2<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IWebAccount2<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccount2)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccount2<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, hstring>) consume_Windows_Security_Credentials_IWebAccount2<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccount2)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<hstring, hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccount2<D>::GetPictureAsync(Windows::Security::Credentials::WebAccountPictureSize const& desizedSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStream>) consume_Windows_Security_Credentials_IWebAccount2<D>::GetPictureAsync(Windows::Security::Credentials::WebAccountPictureSize const& desizedSize) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccount2)->GetPictureAsync(static_cast<int32_t>(desizedSize), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStream>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccount2<D>::SignOutAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Security_Credentials_IWebAccount2<D>::SignOutAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccount2)->SignOutAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccount2<D>::SignOutAsync(param::hstring const& clientId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Security_Credentials_IWebAccount2<D>::SignOutAsync(param::hstring const& clientId) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccount2)->SignOutWithClientIdAsync(*(void**)(&clientId), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccountFactory<D>::CreateWebAccount(Windows::Security::Credentials::WebAccountProvider const& webAccountProvider, param::hstring const& userName, Windows::Security::Credentials::WebAccountState const& state) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::WebAccount) consume_Windows_Security_Credentials_IWebAccountFactory<D>::CreateWebAccount(Windows::Security::Credentials::WebAccountProvider const& webAccountProvider, param::hstring const& userName, Windows::Security::Credentials::WebAccountState const& state) const
     {
         void* instance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccountFactory)->CreateWebAccount(*(void**)(&webAccountProvider), *(void**)(&userName), static_cast<int32_t>(state), &instance));
         return Windows::Security::Credentials::WebAccount{ instance, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccountProvider<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IWebAccountProvider<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccountProvider)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccountProvider<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IWebAccountProvider<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccountProvider)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccountProvider<D>::IconUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Security_Credentials_IWebAccountProvider<D>::IconUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccountProvider)->get_IconUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccountProvider2<D>::DisplayPurpose() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IWebAccountProvider2<D>::DisplayPurpose() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccountProvider2)->get_DisplayPurpose(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccountProvider2<D>::Authority() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_IWebAccountProvider2<D>::Authority() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccountProvider2)->get_Authority(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccountProvider3<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_Security_Credentials_IWebAccountProvider3<D>::User() const
     {
         void* user{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccountProvider3)->get_User(&user));
         return Windows::System::User{ user, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccountProvider4<D>::IsSystemProvider() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Credentials_IWebAccountProvider4<D>::IsSystemProvider() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccountProvider4)->get_IsSystemProvider(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_IWebAccountProviderFactory<D>::CreateWebAccountProvider(param::hstring const& id, param::hstring const& displayName, Windows::Foundation::Uri const& iconUri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::WebAccountProvider) consume_Windows_Security_Credentials_IWebAccountProviderFactory<D>::CreateWebAccountProvider(param::hstring const& id, param::hstring const& displayName, Windows::Foundation::Uri const& iconUri) const
     {
         void* instance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::IWebAccountProviderFactory)->CreateWebAccountProvider(*(void**)(&id), *(void**)(&displayName), *(void**)(&iconUri), &instance));
         return Windows::Security::Credentials::WebAccountProvider{ instance, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::ICredentialFactory> : produce_base<D, Windows::Security::Credentials::ICredentialFactory>
     {
@@ -309,6 +310,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IKeyCredential> : produce_base<D, Windows::Security::Credentials::IKeyCredential>
     {
@@ -353,6 +356,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IKeyCredentialAttestationResult> : produce_base<D, Windows::Security::Credentials::IKeyCredentialAttestationResult>
     {
@@ -380,6 +385,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IKeyCredentialManagerStatics> : produce_base<D, Windows::Security::Credentials::IKeyCredentialManagerStatics>
     {
@@ -424,6 +431,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IKeyCredentialOperationResult> : produce_base<D, Windows::Security::Credentials::IKeyCredentialOperationResult>
     {
@@ -443,6 +452,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IKeyCredentialRetrievalResult> : produce_base<D, Windows::Security::Credentials::IKeyCredentialRetrievalResult>
     {
@@ -462,6 +473,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IPasswordCredential> : produce_base<D, Windows::Security::Credentials::IPasswordCredential>
     {
@@ -526,6 +539,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IPasswordVault> : produce_base<D, Windows::Security::Credentials::IPasswordVault>
     {
@@ -576,6 +591,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IWebAccount> : produce_base<D, Windows::Security::Credentials::IWebAccount>
     {
@@ -603,6 +619,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IWebAccount2> : produce_base<D, Windows::Security::Credentials::IWebAccount2>
     {
@@ -647,6 +664,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IWebAccountFactory> : produce_base<D, Windows::Security::Credentials::IWebAccountFactory>
     {
@@ -659,6 +678,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IWebAccountProvider> : produce_base<D, Windows::Security::Credentials::IWebAccountProvider>
     {
@@ -687,6 +708,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IWebAccountProvider2> : produce_base<D, Windows::Security::Credentials::IWebAccountProvider2>
     {
@@ -707,6 +730,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IWebAccountProvider3> : produce_base<D, Windows::Security::Credentials::IWebAccountProvider3>
     {
@@ -719,6 +744,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IWebAccountProvider4> : produce_base<D, Windows::Security::Credentials::IWebAccountProvider4>
     {
@@ -730,6 +757,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::IWebAccountProviderFactory> : produce_base<D, Windows::Security::Credentials::IWebAccountProviderFactory>
     {
@@ -742,81 +771,84 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Security::Credentials
+WINRT_EXPORT namespace winrt::Windows::Security::Credentials
 {
     inline auto KeyCredentialManager::IsSupportedAsync()
     {
-        return impl::call_factory<KeyCredentialManager, Windows::Security::Credentials::IKeyCredentialManagerStatics>([&](auto&& f) { return f.IsSupportedAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<bool>(*)(IKeyCredentialManagerStatics const&), KeyCredentialManager, IKeyCredentialManagerStatics>([](IKeyCredentialManagerStatics const& f) { return f.IsSupportedAsync(); });
     }
     inline auto KeyCredentialManager::RenewAttestationAsync()
     {
-        return impl::call_factory<KeyCredentialManager, Windows::Security::Credentials::IKeyCredentialManagerStatics>([&](auto&& f) { return f.RenewAttestationAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncAction(*)(IKeyCredentialManagerStatics const&), KeyCredentialManager, IKeyCredentialManagerStatics>([](IKeyCredentialManagerStatics const& f) { return f.RenewAttestationAsync(); });
     }
     inline auto KeyCredentialManager::RequestCreateAsync(param::hstring const& name, Windows::Security::Credentials::KeyCredentialCreationOption const& option)
     {
-        return impl::call_factory<KeyCredentialManager, Windows::Security::Credentials::IKeyCredentialManagerStatics>([&](auto&& f) { return f.RequestCreateAsync(name, option); });
+        return impl::call_factory<KeyCredentialManager, IKeyCredentialManagerStatics>([&](IKeyCredentialManagerStatics const& f) { return f.RequestCreateAsync(name, option); });
     }
     inline auto KeyCredentialManager::OpenAsync(param::hstring const& name)
     {
-        return impl::call_factory<KeyCredentialManager, Windows::Security::Credentials::IKeyCredentialManagerStatics>([&](auto&& f) { return f.OpenAsync(name); });
+        return impl::call_factory<KeyCredentialManager, IKeyCredentialManagerStatics>([&](IKeyCredentialManagerStatics const& f) { return f.OpenAsync(name); });
     }
     inline auto KeyCredentialManager::DeleteAsync(param::hstring const& name)
     {
-        return impl::call_factory<KeyCredentialManager, Windows::Security::Credentials::IKeyCredentialManagerStatics>([&](auto&& f) { return f.DeleteAsync(name); });
+        return impl::call_factory<KeyCredentialManager, IKeyCredentialManagerStatics>([&](IKeyCredentialManagerStatics const& f) { return f.DeleteAsync(name); });
     }
     inline PasswordCredential::PasswordCredential() :
-        PasswordCredential(impl::call_factory<PasswordCredential>([](auto&& f) { return f.template ActivateInstance<PasswordCredential>(); }))
+        PasswordCredential(impl::call_factory_cast<PasswordCredential(*)(Windows::Foundation::IActivationFactory const&), PasswordCredential>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PasswordCredential>(); }))
     {
     }
     inline PasswordCredential::PasswordCredential(param::hstring const& resource, param::hstring const& userName, param::hstring const& password) :
-        PasswordCredential(impl::call_factory<PasswordCredential, Windows::Security::Credentials::ICredentialFactory>([&](auto&& f) { return f.CreatePasswordCredential(resource, userName, password); }))
+        PasswordCredential(impl::call_factory<PasswordCredential, ICredentialFactory>([&](ICredentialFactory const& f) { return f.CreatePasswordCredential(resource, userName, password); }))
     {
     }
     inline PasswordCredentialPropertyStore::PasswordCredentialPropertyStore() :
-        PasswordCredentialPropertyStore(impl::call_factory<PasswordCredentialPropertyStore>([](auto&& f) { return f.template ActivateInstance<PasswordCredentialPropertyStore>(); }))
+        PasswordCredentialPropertyStore(impl::call_factory_cast<PasswordCredentialPropertyStore(*)(Windows::Foundation::IActivationFactory const&), PasswordCredentialPropertyStore>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PasswordCredentialPropertyStore>(); }))
     {
     }
     inline PasswordVault::PasswordVault() :
-        PasswordVault(impl::call_factory<PasswordVault>([](auto&& f) { return f.template ActivateInstance<PasswordVault>(); }))
+        PasswordVault(impl::call_factory_cast<PasswordVault(*)(Windows::Foundation::IActivationFactory const&), PasswordVault>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PasswordVault>(); }))
     {
     }
     inline WebAccount::WebAccount(Windows::Security::Credentials::WebAccountProvider const& webAccountProvider, param::hstring const& userName, Windows::Security::Credentials::WebAccountState const& state) :
-        WebAccount(impl::call_factory<WebAccount, Windows::Security::Credentials::IWebAccountFactory>([&](auto&& f) { return f.CreateWebAccount(webAccountProvider, userName, state); }))
+        WebAccount(impl::call_factory<WebAccount, IWebAccountFactory>([&](IWebAccountFactory const& f) { return f.CreateWebAccount(webAccountProvider, userName, state); }))
     {
     }
     inline WebAccountProvider::WebAccountProvider(param::hstring const& id, param::hstring const& displayName, Windows::Foundation::Uri const& iconUri) :
-        WebAccountProvider(impl::call_factory<WebAccountProvider, Windows::Security::Credentials::IWebAccountProviderFactory>([&](auto&& f) { return f.CreateWebAccountProvider(id, displayName, iconUri); }))
+        WebAccountProvider(impl::call_factory<WebAccountProvider, IWebAccountProviderFactory>([&](IWebAccountProviderFactory const& f) { return f.CreateWebAccountProvider(id, displayName, iconUri); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Security::Credentials::ICredentialFactory> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::ICredentialFactory> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredential> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IKeyCredential> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredentialAttestationResult> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IKeyCredentialAttestationResult> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredentialManagerStatics> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IKeyCredentialManagerStatics> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredentialOperationResult> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IKeyCredentialOperationResult> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredentialRetrievalResult> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IKeyCredentialRetrievalResult> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IPasswordCredential> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IPasswordCredential> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IPasswordVault> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IPasswordVault> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccount> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IWebAccount> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccount2> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IWebAccount2> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountFactory> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IWebAccountFactory> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProvider> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IWebAccountProvider> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProvider2> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IWebAccountProvider2> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProvider3> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IWebAccountProvider3> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProvider4> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IWebAccountProvider4> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProviderFactory> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::IWebAccountProviderFactory> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredential> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::KeyCredential> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredentialManager> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::KeyCredentialManager> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredentialOperationResult> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::KeyCredentialOperationResult> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::PasswordCredential> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::PasswordCredential> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::PasswordVault> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::PasswordVault> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::WebAccount> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::WebAccount> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::WebAccountProvider> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::WebAccountProvider> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Security::Credentials::ICredentialFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredential> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredentialAttestationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredentialManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredentialOperationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IKeyCredentialRetrievalResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IPasswordCredential> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IPasswordVault> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccount> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccount2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProvider2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProvider3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProvider4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::IWebAccountProviderFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredential> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredentialManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredentialOperationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::PasswordCredential> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::PasswordVault> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::WebAccount> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::WebAccountProvider> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -2262,6 +2262,76 @@ DECLARE_INTERFACE_IID_(IDCompositionAffineTransform2DEffect, IDCompositionFilter
         ) PURE;
 };
 
+struct DCompositionInkTrailPoint
+{
+    float x;
+    float y;
+    float radius;
+};
+
+//+-----------------------------------------------------------------------------
+//
+//  Interface:
+//      IDCompositionDelegatedInkTrail
+//
+//  Synopsis:
+//      An IDCompositionDelegatedInkTrail interface represents low latency ink 
+//      that the system renders on behalf of the app.
+//
+//------------------------------------------------------------------------------
+#undef INTERFACE
+#define INTERFACE IDCompositionDelegatedInkTrail
+DECLARE_INTERFACE_IID_(IDCompositionDelegatedInkTrail, IUnknown, "C2448E9B-547D-4057-8CF5-8144EDE1C2DA")
+{
+    // Returns a generation id to be used when removing points later
+    STDMETHOD(AddTrailPoints)(THIS_
+        _In_reads_(inkPointsCount) const DCompositionInkTrailPoint* inkPoints,
+        UINT inkPointsCount,
+        _Out_ UINT* generationId
+        ) PURE;
+
+    // Returns a generation id to be used when removing points later
+    STDMETHOD(AddTrailPointsWithPrediction)(THIS_
+        _In_reads_(inkPointsCount) const DCompositionInkTrailPoint* inkPoints,
+        UINT inkPointsCount,
+        _In_reads_(predictedInkPointsCount) const DCompositionInkTrailPoint* predictedInkPoints,
+        UINT predictedInkPointsCount,
+        _Out_ UINT* generationId
+        ) PURE;
+
+    STDMETHOD(RemoveTrailPoints)(THIS_
+        UINT generationId
+        ) PURE;
+
+    STDMETHOD(StartNewTrail)(THIS_
+        const D2D1_COLOR_F& color
+        ) PURE;
+};
+
+//+-----------------------------------------------------------------------------
+//
+//  Interface:
+//      IDCompositionInkTrailDevice
+//
+//  Synopsis:
+//      An IDCompositionInkTrailDevice interface is the factory for
+//      creating DelegatedInkTrail objects
+//
+//------------------------------------------------------------------------------
+#undef INTERFACE
+#define INTERFACE IDCompositionInkTrailDevice
+DECLARE_INTERFACE_IID_(IDCompositionInkTrailDevice, IUnknown, "DF0C7CEC-CDEB-4D4A-B91C-721BF22F4E6C")
+{
+    STDMETHOD(CreateDelegatedInkTrail)(
+        _Out_ IDCompositionDelegatedInkTrail** inkTrail
+        ) PURE;
+
+    STDMETHOD(CreateDelegatedInkTrailForSwapChain)(
+        _In_ IUnknown* swapChain,
+        _Out_ IDCompositionDelegatedInkTrail** inkTrail
+        ) PURE;
+};
+
 #endif  // (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)
 
 #undef INTERFACE

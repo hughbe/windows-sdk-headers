@@ -1,11 +1,11 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_UI_0_H
 #define WINRT_Windows_UI_0_H
-namespace winrt::Windows::UI
+WINRT_EXPORT namespace winrt::Windows::UI
 {
     struct IColorHelper;
     struct IColorHelperStatics;
@@ -19,149 +19,47 @@ namespace winrt::Windows::UI
     struct UIContentRoot;
     struct UIContext;
     struct Color;
+    struct WindowId;
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::IColorHelper>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::IColorHelperStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::IColorHelperStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::IColors>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::IColorsStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::IUIContentRoot>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::IUIContext>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::ColorHelper>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Colors>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::UIContentRoot>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::UIContext>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Color>
-    {
-        using type = struct_category<uint8_t, uint8_t, uint8_t, uint8_t>;
-    };
-    template <> struct name<Windows::UI::IColorHelper>
-    {
-        static constexpr auto & value{ L"Windows.UI.IColorHelper" };
-    };
-    template <> struct name<Windows::UI::IColorHelperStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.IColorHelperStatics" };
-    };
-    template <> struct name<Windows::UI::IColorHelperStatics2>
-    {
-        static constexpr auto & value{ L"Windows.UI.IColorHelperStatics2" };
-    };
-    template <> struct name<Windows::UI::IColors>
-    {
-        static constexpr auto & value{ L"Windows.UI.IColors" };
-    };
-    template <> struct name<Windows::UI::IColorsStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.IColorsStatics" };
-    };
-    template <> struct name<Windows::UI::IUIContentRoot>
-    {
-        static constexpr auto & value{ L"Windows.UI.IUIContentRoot" };
-    };
-    template <> struct name<Windows::UI::IUIContext>
-    {
-        static constexpr auto & value{ L"Windows.UI.IUIContext" };
-    };
-    template <> struct name<Windows::UI::ColorHelper>
-    {
-        static constexpr auto & value{ L"Windows.UI.ColorHelper" };
-    };
-    template <> struct name<Windows::UI::Colors>
-    {
-        static constexpr auto & value{ L"Windows.UI.Colors" };
-    };
-    template <> struct name<Windows::UI::UIContentRoot>
-    {
-        static constexpr auto & value{ L"Windows.UI.UIContentRoot" };
-    };
-    template <> struct name<Windows::UI::UIContext>
-    {
-        static constexpr auto & value{ L"Windows.UI.UIContext" };
-    };
-    template <> struct name<Windows::UI::Color>
-    {
-        static constexpr auto & value{ L"Windows.UI.Color" };
-    };
-    template <> struct guid_storage<Windows::UI::IColorHelper>
-    {
-        static constexpr guid value{ 0x193CFBE7,0x65C7,0x4540,{ 0xAD,0x08,0x62,0x83,0xBA,0x76,0x87,0x9A } };
-    };
-    template <> struct guid_storage<Windows::UI::IColorHelperStatics>
-    {
-        static constexpr guid value{ 0x8504DBEA,0xFB6A,0x4144,{ 0xA6,0xC2,0x33,0x49,0x9C,0x92,0x84,0xF5 } };
-    };
-    template <> struct guid_storage<Windows::UI::IColorHelperStatics2>
-    {
-        static constexpr guid value{ 0x24D9AF02,0x6EB0,0x4B94,{ 0x85,0x5C,0xFC,0xF0,0x81,0x8D,0x9A,0x16 } };
-    };
-    template <> struct guid_storage<Windows::UI::IColors>
-    {
-        static constexpr guid value{ 0x9B8C9326,0x4CA6,0x4CE5,{ 0x89,0x94,0x9E,0xFF,0x65,0xCA,0xBD,0xCC } };
-    };
-    template <> struct guid_storage<Windows::UI::IColorsStatics>
-    {
-        static constexpr guid value{ 0xCFF52E04,0xCCA6,0x4614,{ 0xA1,0x7E,0x75,0x49,0x10,0xC8,0x4A,0x99 } };
-    };
-    template <> struct guid_storage<Windows::UI::IUIContentRoot>
-    {
-        static constexpr guid value{ 0x1DFCBAC6,0xB36B,0x5CB9,{ 0x9B,0xC5,0x2B,0x7A,0x0E,0xDD,0xC3,0x78 } };
-    };
-    template <> struct guid_storage<Windows::UI::IUIContext>
-    {
-        static constexpr guid value{ 0xBB5CFACD,0x5BD8,0x59D0,{ 0xA5,0x9E,0x1C,0x17,0xA4,0xD6,0xD2,0x43 } };
-    };
-    template <> struct default_interface<Windows::UI::ColorHelper>
-    {
-        using type = Windows::UI::IColorHelper;
-    };
-    template <> struct default_interface<Windows::UI::Colors>
-    {
-        using type = Windows::UI::IColors;
-    };
-    template <> struct default_interface<Windows::UI::UIContentRoot>
-    {
-        using type = Windows::UI::IUIContentRoot;
-    };
-    template <> struct default_interface<Windows::UI::UIContext>
-    {
-        using type = Windows::UI::IUIContext;
-    };
+    template <> struct category<Windows::UI::IColorHelper>{ using type = interface_category; };
+    template <> struct category<Windows::UI::IColorHelperStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::IColorHelperStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::IColors>{ using type = interface_category; };
+    template <> struct category<Windows::UI::IColorsStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::IUIContentRoot>{ using type = interface_category; };
+    template <> struct category<Windows::UI::IUIContext>{ using type = interface_category; };
+    template <> struct category<Windows::UI::ColorHelper>{ using type = class_category; };
+    template <> struct category<Windows::UI::Colors>{ using type = class_category; };
+    template <> struct category<Windows::UI::UIContentRoot>{ using type = class_category; };
+    template <> struct category<Windows::UI::UIContext>{ using type = class_category; };
+    template <> struct category<Windows::UI::Color>{ using type = struct_category<uint8_t, uint8_t, uint8_t, uint8_t>; };
+    template <> struct category<Windows::UI::WindowId>{ using type = struct_category<uint64_t>; };
+    template <> inline constexpr auto& name_v<Windows::UI::ColorHelper> = L"Windows.UI.ColorHelper";
+    template <> inline constexpr auto& name_v<Windows::UI::Colors> = L"Windows.UI.Colors";
+    template <> inline constexpr auto& name_v<Windows::UI::UIContentRoot> = L"Windows.UI.UIContentRoot";
+    template <> inline constexpr auto& name_v<Windows::UI::UIContext> = L"Windows.UI.UIContext";
+    template <> inline constexpr auto& name_v<Windows::UI::Color> = L"Windows.UI.Color";
+    template <> inline constexpr auto& name_v<Windows::UI::WindowId> = L"Windows.UI.WindowId";
+    template <> inline constexpr auto& name_v<Windows::UI::IColorHelper> = L"Windows.UI.IColorHelper";
+    template <> inline constexpr auto& name_v<Windows::UI::IColorHelperStatics> = L"Windows.UI.IColorHelperStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::IColorHelperStatics2> = L"Windows.UI.IColorHelperStatics2";
+    template <> inline constexpr auto& name_v<Windows::UI::IColors> = L"Windows.UI.IColors";
+    template <> inline constexpr auto& name_v<Windows::UI::IColorsStatics> = L"Windows.UI.IColorsStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::IUIContentRoot> = L"Windows.UI.IUIContentRoot";
+    template <> inline constexpr auto& name_v<Windows::UI::IUIContext> = L"Windows.UI.IUIContext";
+    template <> inline constexpr guid guid_v<Windows::UI::IColorHelper>{ 0x193CFBE7,0x65C7,0x4540,{ 0xAD,0x08,0x62,0x83,0xBA,0x76,0x87,0x9A } }; // 193CFBE7-65C7-4540-AD08-6283BA76879A
+    template <> inline constexpr guid guid_v<Windows::UI::IColorHelperStatics>{ 0x8504DBEA,0xFB6A,0x4144,{ 0xA6,0xC2,0x33,0x49,0x9C,0x92,0x84,0xF5 } }; // 8504DBEA-FB6A-4144-A6C2-33499C9284F5
+    template <> inline constexpr guid guid_v<Windows::UI::IColorHelperStatics2>{ 0x24D9AF02,0x6EB0,0x4B94,{ 0x85,0x5C,0xFC,0xF0,0x81,0x8D,0x9A,0x16 } }; // 24D9AF02-6EB0-4B94-855C-FCF0818D9A16
+    template <> inline constexpr guid guid_v<Windows::UI::IColors>{ 0x9B8C9326,0x4CA6,0x4CE5,{ 0x89,0x94,0x9E,0xFF,0x65,0xCA,0xBD,0xCC } }; // 9B8C9326-4CA6-4CE5-8994-9EFF65CABDCC
+    template <> inline constexpr guid guid_v<Windows::UI::IColorsStatics>{ 0xCFF52E04,0xCCA6,0x4614,{ 0xA1,0x7E,0x75,0x49,0x10,0xC8,0x4A,0x99 } }; // CFF52E04-CCA6-4614-A17E-754910C84A99
+    template <> inline constexpr guid guid_v<Windows::UI::IUIContentRoot>{ 0x1DFCBAC6,0xB36B,0x5CB9,{ 0x9B,0xC5,0x2B,0x7A,0x0E,0xDD,0xC3,0x78 } }; // 1DFCBAC6-B36B-5CB9-9BC5-2B7A0EDDC378
+    template <> inline constexpr guid guid_v<Windows::UI::IUIContext>{ 0xBB5CFACD,0x5BD8,0x59D0,{ 0xA5,0x9E,0x1C,0x17,0xA4,0xD6,0xD2,0x43 } }; // BB5CFACD-5BD8-59D0-A59E-1C17A4D6D243
+    template <> struct default_interface<Windows::UI::ColorHelper>{ using type = Windows::UI::IColorHelper; };
+    template <> struct default_interface<Windows::UI::Colors>{ using type = Windows::UI::IColors; };
+    template <> struct default_interface<Windows::UI::UIContentRoot>{ using type = Windows::UI::IUIContentRoot; };
+    template <> struct default_interface<Windows::UI::UIContext>{ using type = Windows::UI::IUIContext; };
     template <> struct abi<Windows::UI::IColorHelper>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -359,7 +257,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_IColorHelperStatics
     {
-        auto FromArgb(uint8_t a, uint8_t r, uint8_t g, uint8_t b) const;
+        WINRT_IMPL_AUTO(Windows::UI::Color) FromArgb(uint8_t a, uint8_t r, uint8_t g, uint8_t b) const;
     };
     template <> struct consume<Windows::UI::IColorHelperStatics>
     {
@@ -368,7 +266,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_IColorHelperStatics2
     {
-        auto ToDisplayName(Windows::UI::Color const& color) const;
+        WINRT_IMPL_AUTO(hstring) ToDisplayName(Windows::UI::Color const& color) const;
     };
     template <> struct consume<Windows::UI::IColorHelperStatics2>
     {
@@ -385,147 +283,147 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_IColorsStatics
     {
-        [[nodiscard]] auto AliceBlue() const;
-        [[nodiscard]] auto AntiqueWhite() const;
-        [[nodiscard]] auto Aqua() const;
-        [[nodiscard]] auto Aquamarine() const;
-        [[nodiscard]] auto Azure() const;
-        [[nodiscard]] auto Beige() const;
-        [[nodiscard]] auto Bisque() const;
-        [[nodiscard]] auto Black() const;
-        [[nodiscard]] auto BlanchedAlmond() const;
-        [[nodiscard]] auto Blue() const;
-        [[nodiscard]] auto BlueViolet() const;
-        [[nodiscard]] auto Brown() const;
-        [[nodiscard]] auto BurlyWood() const;
-        [[nodiscard]] auto CadetBlue() const;
-        [[nodiscard]] auto Chartreuse() const;
-        [[nodiscard]] auto Chocolate() const;
-        [[nodiscard]] auto Coral() const;
-        [[nodiscard]] auto CornflowerBlue() const;
-        [[nodiscard]] auto Cornsilk() const;
-        [[nodiscard]] auto Crimson() const;
-        [[nodiscard]] auto Cyan() const;
-        [[nodiscard]] auto DarkBlue() const;
-        [[nodiscard]] auto DarkCyan() const;
-        [[nodiscard]] auto DarkGoldenrod() const;
-        [[nodiscard]] auto DarkGray() const;
-        [[nodiscard]] auto DarkGreen() const;
-        [[nodiscard]] auto DarkKhaki() const;
-        [[nodiscard]] auto DarkMagenta() const;
-        [[nodiscard]] auto DarkOliveGreen() const;
-        [[nodiscard]] auto DarkOrange() const;
-        [[nodiscard]] auto DarkOrchid() const;
-        [[nodiscard]] auto DarkRed() const;
-        [[nodiscard]] auto DarkSalmon() const;
-        [[nodiscard]] auto DarkSeaGreen() const;
-        [[nodiscard]] auto DarkSlateBlue() const;
-        [[nodiscard]] auto DarkSlateGray() const;
-        [[nodiscard]] auto DarkTurquoise() const;
-        [[nodiscard]] auto DarkViolet() const;
-        [[nodiscard]] auto DeepPink() const;
-        [[nodiscard]] auto DeepSkyBlue() const;
-        [[nodiscard]] auto DimGray() const;
-        [[nodiscard]] auto DodgerBlue() const;
-        [[nodiscard]] auto Firebrick() const;
-        [[nodiscard]] auto FloralWhite() const;
-        [[nodiscard]] auto ForestGreen() const;
-        [[nodiscard]] auto Fuchsia() const;
-        [[nodiscard]] auto Gainsboro() const;
-        [[nodiscard]] auto GhostWhite() const;
-        [[nodiscard]] auto Gold() const;
-        [[nodiscard]] auto Goldenrod() const;
-        [[nodiscard]] auto Gray() const;
-        [[nodiscard]] auto Green() const;
-        [[nodiscard]] auto GreenYellow() const;
-        [[nodiscard]] auto Honeydew() const;
-        [[nodiscard]] auto HotPink() const;
-        [[nodiscard]] auto IndianRed() const;
-        [[nodiscard]] auto Indigo() const;
-        [[nodiscard]] auto Ivory() const;
-        [[nodiscard]] auto Khaki() const;
-        [[nodiscard]] auto Lavender() const;
-        [[nodiscard]] auto LavenderBlush() const;
-        [[nodiscard]] auto LawnGreen() const;
-        [[nodiscard]] auto LemonChiffon() const;
-        [[nodiscard]] auto LightBlue() const;
-        [[nodiscard]] auto LightCoral() const;
-        [[nodiscard]] auto LightCyan() const;
-        [[nodiscard]] auto LightGoldenrodYellow() const;
-        [[nodiscard]] auto LightGreen() const;
-        [[nodiscard]] auto LightGray() const;
-        [[nodiscard]] auto LightPink() const;
-        [[nodiscard]] auto LightSalmon() const;
-        [[nodiscard]] auto LightSeaGreen() const;
-        [[nodiscard]] auto LightSkyBlue() const;
-        [[nodiscard]] auto LightSlateGray() const;
-        [[nodiscard]] auto LightSteelBlue() const;
-        [[nodiscard]] auto LightYellow() const;
-        [[nodiscard]] auto Lime() const;
-        [[nodiscard]] auto LimeGreen() const;
-        [[nodiscard]] auto Linen() const;
-        [[nodiscard]] auto Magenta() const;
-        [[nodiscard]] auto Maroon() const;
-        [[nodiscard]] auto MediumAquamarine() const;
-        [[nodiscard]] auto MediumBlue() const;
-        [[nodiscard]] auto MediumOrchid() const;
-        [[nodiscard]] auto MediumPurple() const;
-        [[nodiscard]] auto MediumSeaGreen() const;
-        [[nodiscard]] auto MediumSlateBlue() const;
-        [[nodiscard]] auto MediumSpringGreen() const;
-        [[nodiscard]] auto MediumTurquoise() const;
-        [[nodiscard]] auto MediumVioletRed() const;
-        [[nodiscard]] auto MidnightBlue() const;
-        [[nodiscard]] auto MintCream() const;
-        [[nodiscard]] auto MistyRose() const;
-        [[nodiscard]] auto Moccasin() const;
-        [[nodiscard]] auto NavajoWhite() const;
-        [[nodiscard]] auto Navy() const;
-        [[nodiscard]] auto OldLace() const;
-        [[nodiscard]] auto Olive() const;
-        [[nodiscard]] auto OliveDrab() const;
-        [[nodiscard]] auto Orange() const;
-        [[nodiscard]] auto OrangeRed() const;
-        [[nodiscard]] auto Orchid() const;
-        [[nodiscard]] auto PaleGoldenrod() const;
-        [[nodiscard]] auto PaleGreen() const;
-        [[nodiscard]] auto PaleTurquoise() const;
-        [[nodiscard]] auto PaleVioletRed() const;
-        [[nodiscard]] auto PapayaWhip() const;
-        [[nodiscard]] auto PeachPuff() const;
-        [[nodiscard]] auto Peru() const;
-        [[nodiscard]] auto Pink() const;
-        [[nodiscard]] auto Plum() const;
-        [[nodiscard]] auto PowderBlue() const;
-        [[nodiscard]] auto Purple() const;
-        [[nodiscard]] auto Red() const;
-        [[nodiscard]] auto RosyBrown() const;
-        [[nodiscard]] auto RoyalBlue() const;
-        [[nodiscard]] auto SaddleBrown() const;
-        [[nodiscard]] auto Salmon() const;
-        [[nodiscard]] auto SandyBrown() const;
-        [[nodiscard]] auto SeaGreen() const;
-        [[nodiscard]] auto SeaShell() const;
-        [[nodiscard]] auto Sienna() const;
-        [[nodiscard]] auto Silver() const;
-        [[nodiscard]] auto SkyBlue() const;
-        [[nodiscard]] auto SlateBlue() const;
-        [[nodiscard]] auto SlateGray() const;
-        [[nodiscard]] auto Snow() const;
-        [[nodiscard]] auto SpringGreen() const;
-        [[nodiscard]] auto SteelBlue() const;
-        [[nodiscard]] auto Tan() const;
-        [[nodiscard]] auto Teal() const;
-        [[nodiscard]] auto Thistle() const;
-        [[nodiscard]] auto Tomato() const;
-        [[nodiscard]] auto Transparent() const;
-        [[nodiscard]] auto Turquoise() const;
-        [[nodiscard]] auto Violet() const;
-        [[nodiscard]] auto Wheat() const;
-        [[nodiscard]] auto White() const;
-        [[nodiscard]] auto WhiteSmoke() const;
-        [[nodiscard]] auto Yellow() const;
-        [[nodiscard]] auto YellowGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) AliceBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) AntiqueWhite() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Aqua() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Aquamarine() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Azure() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Beige() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Bisque() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Black() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) BlanchedAlmond() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Blue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) BlueViolet() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Brown() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) BurlyWood() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) CadetBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Chartreuse() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Chocolate() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Coral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) CornflowerBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Cornsilk() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Crimson() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Cyan() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkCyan() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkGoldenrod() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkGray() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkKhaki() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkMagenta() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkOliveGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkOrange() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkOrchid() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkRed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkSalmon() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkSeaGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkSlateBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkSlateGray() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkTurquoise() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DarkViolet() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DeepPink() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DeepSkyBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DimGray() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) DodgerBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Firebrick() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) FloralWhite() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) ForestGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Fuchsia() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Gainsboro() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) GhostWhite() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Gold() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Goldenrod() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Gray() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Green() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) GreenYellow() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Honeydew() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) HotPink() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) IndianRed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Indigo() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Ivory() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Khaki() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Lavender() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LavenderBlush() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LawnGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LemonChiffon() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightCoral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightCyan() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightGoldenrodYellow() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightGray() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightPink() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightSalmon() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightSeaGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightSkyBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightSlateGray() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightSteelBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LightYellow() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Lime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) LimeGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Linen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Magenta() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Maroon() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MediumAquamarine() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MediumBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MediumOrchid() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MediumPurple() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MediumSeaGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MediumSlateBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MediumSpringGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MediumTurquoise() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MediumVioletRed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MidnightBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MintCream() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) MistyRose() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Moccasin() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) NavajoWhite() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Navy() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) OldLace() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Olive() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) OliveDrab() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Orange() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) OrangeRed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Orchid() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) PaleGoldenrod() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) PaleGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) PaleTurquoise() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) PaleVioletRed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) PapayaWhip() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) PeachPuff() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Peru() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Pink() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Plum() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) PowderBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Purple() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Red() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) RosyBrown() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) RoyalBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) SaddleBrown() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Salmon() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) SandyBrown() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) SeaGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) SeaShell() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Sienna() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Silver() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) SkyBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) SlateBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) SlateGray() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Snow() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) SpringGreen() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) SteelBlue() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Tan() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Teal() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Thistle() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Tomato() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Transparent() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Turquoise() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Violet() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Wheat() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) White() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) WhiteSmoke() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) Yellow() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) YellowGreen() const;
     };
     template <> struct consume<Windows::UI::IColorsStatics>
     {
@@ -534,7 +432,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_IUIContentRoot
     {
-        [[nodiscard]] auto UIContext() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::UIContext) UIContext() const;
     };
     template <> struct consume<Windows::UI::IUIContentRoot>
     {
@@ -558,6 +456,14 @@ namespace winrt::impl
     template <> struct abi<Windows::UI::Color>
     {
         using type = struct_Windows_UI_Color;
+    };
+    struct struct_Windows_UI_WindowId
+    {
+        uint64_t Value;
+    };
+    template <> struct abi<Windows::UI::WindowId>
+    {
+        using type = struct_Windows_UI_WindowId;
     };
 }
 #endif

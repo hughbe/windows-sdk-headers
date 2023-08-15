@@ -1565,7 +1565,7 @@ namespace Windows
 
             [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
             [exclusiveto(Windows.ApplicationModel.Background.PhoneTrigger)]
-            [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+            [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
             [uuid(8DCFE99B-D4C5-49F1-B7D3-82E87A0E9DDE)]
             interface IPhoneTrigger : IInspectable
                 requires
@@ -1577,7 +1577,7 @@ namespace Windows
 
             [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
             [exclusiveto(Windows.ApplicationModel.Background.PhoneTrigger)]
-            [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+            [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
             [uuid(A0D93CDA-5FC1-48FB-A546-32262040157B)]
             interface IPhoneTriggerFactory : IInspectable
             {
@@ -1876,7 +1876,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
-            [marshaling_behavior(standard)]
+            [marshaling_behavior(agile)]
             [threading(mta)]
             runtimeclass BackgroundTaskDeferral
             {
@@ -2241,7 +2241,7 @@ namespace Windows
 
             [activatable(Windows.ApplicationModel.Background.IPhoneTriggerFactory, Windows.ApplicationModel.Calls.CallsPhoneContract, 1.0)]
             [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
-            [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+            [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass PhoneTrigger

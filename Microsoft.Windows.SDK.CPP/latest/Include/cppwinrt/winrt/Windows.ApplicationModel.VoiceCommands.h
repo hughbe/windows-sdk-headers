@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_VoiceCommands_H
 #define WINRT_Windows_ApplicationModel_VoiceCommands_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.ApplicationModel.AppService.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -17,269 +17,269 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.VoiceCommands.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommand<D>::CommandName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommand<D>::CommandName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommand)->get_CommandName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommand<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::Foundation::Collections::IVectorView<hstring>>) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommand<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommand)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<hstring, Windows::Foundation::Collections::IVectorView<hstring>>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommand<D>::SpeechRecognitionResult() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionResult) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommand<D>::SpeechRecognitionResult() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommand)->get_SpeechRecognitionResult(&value));
         return Windows::Media::SpeechRecognition::SpeechRecognitionResult{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandCompletedEventArgs<D>::Reason() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandCompletedEventArgs<D>::Reason() const
     {
-        Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandCompletedEventArgs)->get_Reason(put_abi(value)));
+        Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandCompletedEventArgs)->get_Reason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandConfirmationResult<D>::Confirmed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandConfirmationResult<D>::Confirmed() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandConfirmationResult)->get_Confirmed(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::Title() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::Title(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::Title(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->put_Title(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine1() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine1() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->get_TextLine1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine1(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine1(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->put_TextLine1(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine2() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine2() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->get_TextLine2(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine2(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine2(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->put_TextLine2(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine3() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine3() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->get_TextLine3(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine3(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::TextLine3(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->put_TextLine3(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::Image() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::IStorageFile) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::Image() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->get_Image(&value));
         return Windows::Storage::IStorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::Image(Windows::Storage::IStorageFile const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::Image(Windows::Storage::IStorageFile const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->put_Image(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::AppContext() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::AppContext() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->get_AppContext(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::AppContext(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::AppContext(Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->put_AppContext(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::AppLaunchArgument() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::AppLaunchArgument() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->get_AppLaunchArgument(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::AppLaunchArgument(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::AppLaunchArgument(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->put_AppLaunchArgument(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::ContentTileType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::ContentTileType() const
     {
-        Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->get_ContentTileType(put_abi(value)));
+        Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->get_ContentTileType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::ContentTileType(Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandContentTile<D>::ContentTileType(Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile)->put_ContentTileType(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinition<D>::Language() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinition<D>::Language() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition)->get_Language(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinition<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinition<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinition<D>::SetPhraseListAsync(param::hstring const& phraseListName, param::async_iterable<hstring> const& phraseList) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinition<D>::SetPhraseListAsync(param::hstring const& phraseListName, param::async_iterable<hstring> const& phraseList) const
     {
         void* updateAction{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition)->SetPhraseListAsync(*(void**)(&phraseListName), *(void**)(&phraseList), &updateAction));
         return Windows::Foundation::IAsyncAction{ updateAction, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinitionManagerStatics<D>::InstallCommandDefinitionsFromStorageFileAsync(Windows::Storage::StorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinitionManagerStatics<D>::InstallCommandDefinitionsFromStorageFileAsync(Windows::Storage::StorageFile const& file) const
     {
         void* installAction{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics)->InstallCommandDefinitionsFromStorageFileAsync(*(void**)(&file), &installAction));
         return Windows::Foundation::IAsyncAction{ installAction, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinitionManagerStatics<D>::InstalledCommandDefinitions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDefinitionManagerStatics<D>::InstalledCommandDefinitions() const
     {
         void* voiceCommandDefinitions{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics)->get_InstalledCommandDefinitions(&voiceCommandDefinitions));
         return Windows::Foundation::Collections::IMapView<hstring, Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>{ voiceCommandDefinitions, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDisambiguationResult<D>::SelectedItem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandDisambiguationResult<D>::SelectedItem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandDisambiguationResult)->get_SelectedItem(&value));
         return Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::Message() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::Message() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse)->get_Message(&value));
         return Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::Message(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::Message(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse)->put_Message(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::RepeatMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::RepeatMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse)->get_RepeatMessage(&value));
         return Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::RepeatMessage(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::RepeatMessage(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse)->put_RepeatMessage(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::AppLaunchArgument() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::AppLaunchArgument() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse)->get_AppLaunchArgument(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::AppLaunchArgument(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::AppLaunchArgument(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse)->put_AppLaunchArgument(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::VoiceCommandContentTiles() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponse<D>::VoiceCommandContentTiles() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse)->get_VoiceCommandContentTiles(&value));
         return Windows::Foundation::Collections::IVector<Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::MaxSupportedVoiceCommandContentTiles() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::MaxSupportedVoiceCommandContentTiles() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics)->get_MaxSupportedVoiceCommandContentTiles(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::CreateResponse(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& userMessage) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::CreateResponse(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& userMessage) const
     {
         void* response{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics)->CreateResponse(*(void**)(&userMessage), &response));
         return Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse{ response, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::CreateResponse(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& message, param::iterable<Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile> const& contentTiles) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::CreateResponse(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& message, param::iterable<Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile> const& contentTiles) const
     {
         void* response{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics)->CreateResponseWithTiles(*(void**)(&message), *(void**)(&contentTiles), &response));
         return Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse{ response, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::CreateResponseForPrompt(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& message, Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& repeatMessage) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::CreateResponseForPrompt(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& message, Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& repeatMessage) const
     {
         void* response{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics)->CreateResponseForPrompt(*(void**)(&message), *(void**)(&repeatMessage), &response));
         return Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse{ response, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::CreateResponseForPrompt(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& message, Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& repeatMessage, param::iterable<Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile> const& contentTiles) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandResponseStatics<D>::CreateResponseForPrompt(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& message, Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& repeatMessage, param::iterable<Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile> const& contentTiles) const
     {
         void* response{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics)->CreateResponseForPromptWithTiles(*(void**)(&message), *(void**)(&repeatMessage), *(void**)(&contentTiles), &response));
         return Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse{ response, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::GetVoiceCommandAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::VoiceCommands::VoiceCommand>) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::GetVoiceCommandAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->GetVoiceCommandAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::VoiceCommands::VoiceCommand>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::RequestConfirmationAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::RequestConfirmationAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->RequestConfirmationAsync(*(void**)(&response), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::RequestDisambiguationAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::RequestDisambiguationAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->RequestDisambiguationAsync(*(void**)(&response), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::ReportProgressAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::ReportProgressAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->ReportProgressAsync(*(void**)(&response), &action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::ReportSuccessAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::ReportSuccessAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->ReportSuccessAsync(*(void**)(&response), &action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::ReportFailureAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::ReportFailureAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->ReportFailureAsync(*(void**)(&response), &action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::RequestAppLaunchAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::RequestAppLaunchAsync(Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse const& response) const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->RequestAppLaunchAsync(*(void**)(&response), &action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::Language() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Language) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::Language() const
     {
         void* language{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->get_Language(&language));
         return Windows::Globalization::Language{ language, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::VoiceCommandCompleted(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection, Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::VoiceCommandCompleted(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection, Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->add_VoiceCommandCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -287,36 +287,37 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, VoiceCommandCompleted_revoker>(this, VoiceCommandCompleted(handler));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::VoiceCommandCompleted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnection<D>::VoiceCommandCompleted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection)->remove_VoiceCommandCompleted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnectionStatics<D>::FromAppServiceTriggerDetails(Windows::ApplicationModel::AppService::AppServiceTriggerDetails const& triggerDetails) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandServiceConnectionStatics<D>::FromAppServiceTriggerDetails(Windows::ApplicationModel::AppService::AppServiceTriggerDetails const& triggerDetails) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnectionStatics)->FromAppServiceTriggerDetails(*(void**)(&triggerDetails), &value));
         return Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandUserMessage<D>::DisplayMessage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandUserMessage<D>::DisplayMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage)->get_DisplayMessage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandUserMessage<D>::DisplayMessage(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandUserMessage<D>::DisplayMessage(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage)->put_DisplayMessage(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandUserMessage<D>::SpokenMessage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandUserMessage<D>::SpokenMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage)->get_SpokenMessage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandUserMessage<D>::SpokenMessage(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_VoiceCommands_IVoiceCommandUserMessage<D>::SpokenMessage(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage)->put_SpokenMessage(*(void**)(&value)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommand> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommand>
     {
@@ -345,6 +346,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandCompletedEventArgs> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandCompletedEventArgs>
     {
@@ -356,6 +359,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandConfirmationResult> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandConfirmationResult>
     {
@@ -367,6 +372,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile>
     {
@@ -490,6 +497,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition>
     {
@@ -518,6 +527,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics>
     {
@@ -538,6 +549,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandDisambiguationResult> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandDisambiguationResult>
     {
@@ -550,6 +563,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse>
     {
@@ -607,6 +622,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics>
     {
@@ -650,6 +667,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection>
     {
@@ -732,6 +751,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnectionStatics> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnectionStatics>
     {
@@ -744,6 +765,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage> : produce_base<D, Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage>
     {
@@ -778,73 +801,76 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::ApplicationModel::VoiceCommands
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::VoiceCommands
 {
     inline VoiceCommandContentTile::VoiceCommandContentTile() :
-        VoiceCommandContentTile(impl::call_factory<VoiceCommandContentTile>([](auto&& f) { return f.template ActivateInstance<VoiceCommandContentTile>(); }))
+        VoiceCommandContentTile(impl::call_factory_cast<VoiceCommandContentTile(*)(Windows::Foundation::IActivationFactory const&), VoiceCommandContentTile>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<VoiceCommandContentTile>(); }))
     {
     }
     inline auto VoiceCommandDefinitionManager::InstallCommandDefinitionsFromStorageFileAsync(Windows::Storage::StorageFile const& file)
     {
-        return impl::call_factory<VoiceCommandDefinitionManager, Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics>([&](auto&& f) { return f.InstallCommandDefinitionsFromStorageFileAsync(file); });
+        return impl::call_factory<VoiceCommandDefinitionManager, IVoiceCommandDefinitionManagerStatics>([&](IVoiceCommandDefinitionManagerStatics const& f) { return f.InstallCommandDefinitionsFromStorageFileAsync(file); });
     }
     inline auto VoiceCommandDefinitionManager::InstalledCommandDefinitions()
     {
-        return impl::call_factory<VoiceCommandDefinitionManager, Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics>([&](auto&& f) { return f.InstalledCommandDefinitions(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IMapView<hstring, Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>(*)(IVoiceCommandDefinitionManagerStatics const&), VoiceCommandDefinitionManager, IVoiceCommandDefinitionManagerStatics>([](IVoiceCommandDefinitionManagerStatics const& f) { return f.InstalledCommandDefinitions(); });
     }
     inline auto VoiceCommandResponse::MaxSupportedVoiceCommandContentTiles()
     {
-        return impl::call_factory<VoiceCommandResponse, Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics>([&](auto&& f) { return f.MaxSupportedVoiceCommandContentTiles(); });
+        return impl::call_factory_cast<uint32_t(*)(IVoiceCommandResponseStatics const&), VoiceCommandResponse, IVoiceCommandResponseStatics>([](IVoiceCommandResponseStatics const& f) { return f.MaxSupportedVoiceCommandContentTiles(); });
     }
     inline auto VoiceCommandResponse::CreateResponse(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& userMessage)
     {
-        return impl::call_factory<VoiceCommandResponse, Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics>([&](auto&& f) { return f.CreateResponse(userMessage); });
+        return impl::call_factory<VoiceCommandResponse, IVoiceCommandResponseStatics>([&](IVoiceCommandResponseStatics const& f) { return f.CreateResponse(userMessage); });
     }
     inline auto VoiceCommandResponse::CreateResponse(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& message, param::iterable<Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile> const& contentTiles)
     {
-        return impl::call_factory<VoiceCommandResponse, Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics>([&](auto&& f) { return f.CreateResponse(message, contentTiles); });
+        return impl::call_factory<VoiceCommandResponse, IVoiceCommandResponseStatics>([&](IVoiceCommandResponseStatics const& f) { return f.CreateResponse(message, contentTiles); });
     }
     inline auto VoiceCommandResponse::CreateResponseForPrompt(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& message, Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& repeatMessage)
     {
-        return impl::call_factory<VoiceCommandResponse, Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics>([&](auto&& f) { return f.CreateResponseForPrompt(message, repeatMessage); });
+        return impl::call_factory<VoiceCommandResponse, IVoiceCommandResponseStatics>([&](IVoiceCommandResponseStatics const& f) { return f.CreateResponseForPrompt(message, repeatMessage); });
     }
     inline auto VoiceCommandResponse::CreateResponseForPrompt(Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& message, Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage const& repeatMessage, param::iterable<Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile> const& contentTiles)
     {
-        return impl::call_factory<VoiceCommandResponse, Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics>([&](auto&& f) { return f.CreateResponseForPrompt(message, repeatMessage, contentTiles); });
+        return impl::call_factory<VoiceCommandResponse, IVoiceCommandResponseStatics>([&](IVoiceCommandResponseStatics const& f) { return f.CreateResponseForPrompt(message, repeatMessage, contentTiles); });
     }
     inline auto VoiceCommandServiceConnection::FromAppServiceTriggerDetails(Windows::ApplicationModel::AppService::AppServiceTriggerDetails const& triggerDetails)
     {
-        return impl::call_factory<VoiceCommandServiceConnection, Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnectionStatics>([&](auto&& f) { return f.FromAppServiceTriggerDetails(triggerDetails); });
+        return impl::call_factory<VoiceCommandServiceConnection, IVoiceCommandServiceConnectionStatics>([&](IVoiceCommandServiceConnectionStatics const& f) { return f.FromAppServiceTriggerDetails(triggerDetails); });
     }
     inline VoiceCommandUserMessage::VoiceCommandUserMessage() :
-        VoiceCommandUserMessage(impl::call_factory<VoiceCommandUserMessage>([](auto&& f) { return f.template ActivateInstance<VoiceCommandUserMessage>(); }))
+        VoiceCommandUserMessage(impl::call_factory_cast<VoiceCommandUserMessage(*)(Windows::Foundation::IActivationFactory const&), VoiceCommandUserMessage>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<VoiceCommandUserMessage>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommand> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommand> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandCompletedEventArgs> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandConfirmationResult> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandConfirmationResult> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDisambiguationResult> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDisambiguationResult> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnectionStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnectionStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommand> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandCompletedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandConfirmationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandContentTile> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDefinitionManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandDisambiguationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponse> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandResponseStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnectionStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandUserMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -30,11 +30,6 @@ typedef UINT64 GUEST_VIRTUAL_ADDRESS;
 typedef UINT64 GUEST_PHYSICAL_ADDRESS;
 
 //
-// Define verbose function pointer type
-//
-typedef void (*VM_SAVED_STATE_DUMP_VERBOSE_HANDLER)(LPCWSTR Message);
-
-//
 // Define paging modes
 //
 typedef enum PAGING_MODE
@@ -67,6 +62,20 @@ typedef enum VIRTUAL_PROCESSOR_ARCH
     Arch_x86,
     Arch_x64,
 } VIRTUAL_PROCESSOR_ARCH;
+
+
+//
+// Define Processor Vendor dump information.
+//
+
+typedef enum
+{
+    ProcessorVendor_Unknown,
+    ProcessorVendor_Amd,
+    ProcessorVendor_Intel,
+    ProcessorVendor_Hygon,
+
+} VIRTUAL_PROCESSOR_VENDOR;
 
 
 typedef enum REGISTER_ID_X86
@@ -313,6 +322,39 @@ typedef struct VIRTUAL_PROCESSOR_REGISTER
         REGISTER_ID_X64     RegisterId_x64;
     };
 } VIRTUAL_PROCESSOR_REGISTER;
+
+
+typedef struct _DOS_IMAGE_INFO
+{
+    LPCSTR PdbName;
+    GUEST_VIRTUAL_ADDRESS ImageBaseAddress;
+    DWORD ImageSize;
+} DOS_IMAGE_INFO, *PDOS_IMAGE_INFO;
+
+
+/// Function type for the guest symbol provider debug info callback.
+///
+/// \param InfoMessage  Supplies a debug info message.
+///
+typedef void (CALLBACK *GUEST_SYMBOLS_PROVIDER_DEBUG_INFO_CALLBACK)(_In_ LPCSTR InfoMessage);
+
+
+/// Function type for the dos image scan callback.
+///
+/// \param ImageInfo  Supplies a found valid DOS image in the virtual address space.
+///                   Do not assume the PdbName string's pointer will be valid after the callback has returned.
+///
+/// \return FALSE if the caller wants the scan to continue.
+///         TRUE if the caller has found an image it was looking for and wishes to stop the scan.
+///
+typedef BOOL (CALLBACK *FOUND_IMAGE_CALLBACK)(_In_ PVOID Context, _In_ PDOS_IMAGE_INFO ImageInfo);
+
+
+typedef struct _MODULE_INFO
+{
+    LPCSTR ProcessImageName;
+    DOS_IMAGE_INFO Image;
+} MODULE_INFO, *PMODULE_INFO;
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion

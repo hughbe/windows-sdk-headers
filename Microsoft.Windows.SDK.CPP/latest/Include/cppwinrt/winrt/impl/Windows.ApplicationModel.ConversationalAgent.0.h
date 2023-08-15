@@ -1,26 +1,31 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_ApplicationModel_ConversationalAgent_0_H
 #define WINRT_Windows_ApplicationModel_ConversationalAgent_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Media::Audio
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+}
+WINRT_EXPORT namespace winrt::Windows::Media::Audio
 {
     struct AudioDeviceInputNode;
     struct AudioGraph;
 }
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IInputStream;
 }
-namespace winrt::Windows::ApplicationModel::ConversationalAgent
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::ConversationalAgent
 {
     enum class ActivationSignalDetectionTrainingDataFormat : int32_t
     {
@@ -111,334 +116,88 @@ namespace winrt::Windows::ApplicationModel::ConversationalAgent
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManagerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorPowerState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangeKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManagerStatics>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionInterruptedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionStatics>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignalDetectedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorPowerState>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangeKind>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind" };
-    };
-    template <> struct name<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus" };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration>
-    {
-        static constexpr guid value{ 0x40D8BE16,0x5217,0x581C,{ 0x9A,0xB2,0xCE,0x9B,0x2F,0x2E,0x8E,0x00 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector>
-    {
-        static constexpr guid value{ 0xB5BF345F,0xA4D0,0x5B2B,{ 0x8E,0x65,0xB3,0xC5,0x5E,0xE7,0x56,0xFF } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager>
-    {
-        static constexpr guid value{ 0xDE94FBB0,0x597A,0x5DF8,{ 0x8C,0xFB,0x9D,0xBB,0x58,0x3B,0xA3,0xFF } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManagerStatics>
-    {
-        static constexpr guid value{ 0x36A8D283,0xFA0E,0x5693,{ 0x84,0x89,0x0F,0xB2,0xF0,0xAB,0x40,0xD3 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession>
-    {
-        static constexpr guid value{ 0xDAAAE09A,0xB7BA,0x57E5,{ 0xAD,0x13,0xDF,0x52,0x0F,0x9B,0x6F,0xA7 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs>
-    {
-        static constexpr guid value{ 0x9766591F,0xF63D,0x5D3E,{ 0x9B,0xF2,0xBD,0x07,0x60,0x55,0x26,0x86 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionStatics>
-    {
-        static constexpr guid value{ 0xA005166E,0xE954,0x576E,{ 0xBE,0x04,0x11,0xB8,0xED,0x10,0xF3,0x7B } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal>
-    {
-        static constexpr guid value{ 0x20ED25F7,0xB120,0x51F2,{ 0x86,0x03,0x26,0x5D,0x6A,0x47,0xF2,0x32 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs>
-    {
-        static constexpr guid value{ 0x4D57EB8F,0xF88A,0x599B,{ 0x91,0xD3,0xD6,0x04,0x87,0x67,0x08,0xBC } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs>
-    {
-        static constexpr guid value{ 0x1C2C6E3E,0x2785,0x59A7,{ 0x8E,0x71,0x38,0xAD,0xEE,0xF7,0x99,0x28 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs>
-    {
-        static constexpr guid value{ 0x5129C9FB,0x4BE8,0x5F14,{ 0xAF,0x2B,0x88,0xD6,0x2B,0x1B,0x44,0x62 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo>
-    {
-        static constexpr guid value{ 0xB5AFFEB0,0x40F0,0x5398,{ 0xB8,0x38,0x91,0x97,0x9C,0x2C,0x62,0x08 } };
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>
-    {
-        using type = Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo;
-    };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManagerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionStatics>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorPowerState>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangeKind>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration> = L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector> = L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager> = L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession> = L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs> = L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal> = L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs> = L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs> = L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs> = L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo> = L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat> = L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind> = L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorPowerState> = L"Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse> = L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState> = L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType> = L"Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangeKind> = L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus> = L"Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration> = L"Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector> = L"Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager> = L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManagerStatics> = L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession> = L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs> = L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionInterruptedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionStatics> = L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal> = L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs> = L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignalDetectedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs> = L"Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs> = L"Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo> = L"Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo";
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration>{ 0x40D8BE16,0x5217,0x581C,{ 0x9A,0xB2,0xCE,0x9B,0x2F,0x2E,0x8E,0x00 } }; // 40D8BE16-5217-581C-9AB2-CE9B2F2E8E00
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector>{ 0xB5BF345F,0xA4D0,0x5B2B,{ 0x8E,0x65,0xB3,0xC5,0x5E,0xE7,0x56,0xFF } }; // B5BF345F-A4D0-5B2B-8E65-B3C55EE756FF
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager>{ 0xDE94FBB0,0x597A,0x5DF8,{ 0x8C,0xFB,0x9D,0xBB,0x58,0x3B,0xA3,0xFF } }; // DE94FBB0-597A-5DF8-8CFB-9DBB583BA3FF
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManagerStatics>{ 0x36A8D283,0xFA0E,0x5693,{ 0x84,0x89,0x0F,0xB2,0xF0,0xAB,0x40,0xD3 } }; // 36A8D283-FA0E-5693-8489-0FB2F0AB40D3
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession>{ 0xDAAAE09A,0xB7BA,0x57E5,{ 0xAD,0x13,0xDF,0x52,0x0F,0x9B,0x6F,0xA7 } }; // DAAAE09A-B7BA-57E5-AD13-DF520F9B6FA7
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs>{ 0x9766591F,0xF63D,0x5D3E,{ 0x9B,0xF2,0xBD,0x07,0x60,0x55,0x26,0x86 } }; // 9766591F-F63D-5D3E-9BF2-BD0760552686
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionStatics>{ 0xA005166E,0xE954,0x576E,{ 0xBE,0x04,0x11,0xB8,0xED,0x10,0xF3,0x7B } }; // A005166E-E954-576E-BE04-11B8ED10F37B
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal>{ 0x20ED25F7,0xB120,0x51F2,{ 0x86,0x03,0x26,0x5D,0x6A,0x47,0xF2,0x32 } }; // 20ED25F7-B120-51F2-8603-265D6A47F232
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs>{ 0x4D57EB8F,0xF88A,0x599B,{ 0x91,0xD3,0xD6,0x04,0x87,0x67,0x08,0xBC } }; // 4D57EB8F-F88A-599B-91D3-D604876708BC
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs>{ 0x1C2C6E3E,0x2785,0x59A7,{ 0x8E,0x71,0x38,0xAD,0xEE,0xF7,0x99,0x28 } }; // 1C2C6E3E-2785-59A7-8E71-38ADEEF79928
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs>{ 0x5129C9FB,0x4BE8,0x5F14,{ 0xAF,0x2B,0x88,0xD6,0x2B,0x1B,0x44,0x62 } }; // 5129C9FB-4BE8-5F14-AF2B-88D62B1B4462
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo>{ 0xB5AFFEB0,0x40F0,0x5398,{ 0xB8,0x38,0x91,0x97,0x9C,0x2C,0x62,0x08 } }; // B5AFFEB0-40F0-5398-B838-91979C2C6208
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>{ using type = Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration; };
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>{ using type = Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector; };
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>{ using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager; };
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>{ using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession; };
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>{ using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs; };
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>{ using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal; };
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>{ using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs; };
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>{ using type = Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs; };
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>{ using type = Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs; };
+    template <> struct default_interface<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>{ using type = Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo; };
     template <> struct abi<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -613,32 +372,32 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetectionConfiguration
     {
-        [[nodiscard]] auto SignalId() const;
-        [[nodiscard]] auto ModelId() const;
-        [[nodiscard]] auto DisplayName() const;
-        [[nodiscard]] auto IsActive() const;
-        auto SetEnabled(bool value) const;
-        auto SetEnabledAsync(bool value) const;
-        [[nodiscard]] auto AvailabilityInfo() const;
-        auto AvailabilityChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration, Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SignalId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ModelId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
+        WINRT_IMPL_AUTO(void) SetEnabled(bool value) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) SetEnabledAsync(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo) AvailabilityInfo() const;
+        WINRT_IMPL_AUTO(winrt::event_token) AvailabilityChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration, Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs> const& handler) const;
         using AvailabilityChanged_revoker = impl::event_revoker<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration, &impl::abi_t<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration>::remove_AvailabilityChanged>;
-        AvailabilityChanged_revoker AvailabilityChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration, Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs> const& handler) const;
-        auto AvailabilityChanged(winrt::event_token const& token) const noexcept;
-        auto SetModelData(param::hstring const& dataType, Windows::Storage::Streams::IInputStream const& data) const;
-        auto SetModelDataAsync(param::hstring const& dataType, Windows::Storage::Streams::IInputStream const& data) const;
-        auto GetModelDataType() const;
-        auto GetModelDataTypeAsync() const;
-        auto GetModelData() const;
-        auto GetModelDataAsync() const;
-        auto ClearModelData() const;
-        auto ClearModelDataAsync() const;
-        [[nodiscard]] auto TrainingStepsCompleted() const;
-        [[nodiscard]] auto TrainingStepsRemaining() const;
-        [[nodiscard]] auto TrainingDataFormat() const;
-        auto ApplyTrainingData(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat const& trainingDataFormat, Windows::Storage::Streams::IInputStream const& trainingData) const;
-        auto ApplyTrainingDataAsync(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat const& trainingDataFormat, Windows::Storage::Streams::IInputStream const& trainingData) const;
-        auto ClearTrainingData() const;
-        auto ClearTrainingDataAsync() const;
+        [[nodiscard]] AvailabilityChanged_revoker AvailabilityChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration, Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) AvailabilityChanged(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(void) SetModelData(param::hstring const& dataType, Windows::Storage::Streams::IInputStream const& data) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) SetModelDataAsync(param::hstring const& dataType, Windows::Storage::Streams::IInputStream const& data) const;
+        WINRT_IMPL_AUTO(hstring) GetModelDataType() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetModelDataTypeAsync() const;
+        WINRT_IMPL_AUTO(Windows::Storage::Streams::IInputStream) GetModelData() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IInputStream>) GetModelDataAsync() const;
+        WINRT_IMPL_AUTO(void) ClearModelData() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ClearModelDataAsync() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TrainingStepsCompleted() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TrainingStepsRemaining() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat) TrainingDataFormat() const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus) ApplyTrainingData(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat const& trainingDataFormat, Windows::Storage::Streams::IInputStream const& trainingData) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus>) ApplyTrainingDataAsync(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat const& trainingDataFormat, Windows::Storage::Streams::IInputStream const& trainingData) const;
+        WINRT_IMPL_AUTO(void) ClearTrainingData() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ClearTrainingDataAsync() const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration>
     {
@@ -647,22 +406,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetector
     {
-        [[nodiscard]] auto ProviderId() const;
-        [[nodiscard]] auto Kind() const;
-        [[nodiscard]] auto CanCreateConfigurations() const;
-        [[nodiscard]] auto SupportedModelDataTypes() const;
-        [[nodiscard]] auto SupportedTrainingDataFormats() const;
-        [[nodiscard]] auto SupportedPowerStates() const;
-        auto GetSupportedModelIdsForSignalId(param::hstring const& signalId) const;
-        auto GetSupportedModelIdsForSignalIdAsync(param::hstring const& signalId) const;
-        auto CreateConfiguration(param::hstring const& signalId, param::hstring const& modelId, param::hstring const& displayName) const;
-        auto CreateConfigurationAsync(param::hstring const& signalId, param::hstring const& modelId, param::hstring const& displayName) const;
-        auto GetConfigurations() const;
-        auto GetConfigurationsAsync() const;
-        auto GetConfiguration(param::hstring const& signalId, param::hstring const& modelId) const;
-        auto GetConfigurationAsync(param::hstring const& signalId, param::hstring const& modelId) const;
-        auto RemoveConfiguration(param::hstring const& signalId, param::hstring const& modelId) const;
-        auto RemoveConfigurationAsync(param::hstring const& signalId, param::hstring const& modelId) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ProviderId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind) Kind() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanCreateConfigurations() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) SupportedModelDataTypes() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>) SupportedTrainingDataFormats() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorPowerState>) SupportedPowerStates() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) GetSupportedModelIdsForSignalId(param::hstring const& signalId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<hstring>>) GetSupportedModelIdsForSignalIdAsync(param::hstring const& signalId) const;
+        WINRT_IMPL_AUTO(void) CreateConfiguration(param::hstring const& signalId, param::hstring const& modelId, param::hstring const& displayName) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) CreateConfigurationAsync(param::hstring const& signalId, param::hstring const& modelId, param::hstring const& displayName) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>) GetConfigurations() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>>) GetConfigurationsAsync() const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration) GetConfiguration(param::hstring const& signalId, param::hstring const& modelId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>) GetConfigurationAsync(param::hstring const& signalId, param::hstring const& modelId) const;
+        WINRT_IMPL_AUTO(void) RemoveConfiguration(param::hstring const& signalId, param::hstring const& modelId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) RemoveConfigurationAsync(param::hstring const& signalId, param::hstring const& modelId) const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector>
     {
@@ -671,10 +430,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentDetectorManager
     {
-        auto GetAllActivationSignalDetectors() const;
-        auto GetAllActivationSignalDetectorsAsync() const;
-        auto GetActivationSignalDetectors(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind const& kind) const;
-        auto GetActivationSignalDetectorsAsync(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind const& kind) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>) GetAllActivationSignalDetectors() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>>) GetAllActivationSignalDetectorsAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>) GetActivationSignalDetectors(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind const& kind) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>>) GetActivationSignalDetectorsAsync(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind const& kind) const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager>
     {
@@ -683,7 +442,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentDetectorManagerStatics
     {
-        [[nodiscard]] auto Default() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager) Default() const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManagerStatics>
     {
@@ -692,46 +451,46 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSession
     {
-        auto SessionInterrupted(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) SessionInterrupted(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs> const& handler) const;
         using SessionInterrupted_revoker = impl::event_revoker<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession, &impl::abi_t<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession>::remove_SessionInterrupted>;
-        SessionInterrupted_revoker SessionInterrupted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs> const& handler) const;
-        auto SessionInterrupted(winrt::event_token const& token) const noexcept;
-        auto SignalDetected(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs> const& handler) const;
+        [[nodiscard]] SessionInterrupted_revoker SessionInterrupted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SessionInterrupted(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) SignalDetected(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs> const& handler) const;
         using SignalDetected_revoker = impl::event_revoker<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession, &impl::abi_t<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession>::remove_SignalDetected>;
-        SignalDetected_revoker SignalDetected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs> const& handler) const;
-        auto SignalDetected(winrt::event_token const& token) const noexcept;
-        auto SystemStateChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs> const& handler) const;
+        [[nodiscard]] SignalDetected_revoker SignalDetected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SignalDetected(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) SystemStateChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs> const& handler) const;
         using SystemStateChanged_revoker = impl::event_revoker<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession, &impl::abi_t<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession>::remove_SystemStateChanged>;
-        SystemStateChanged_revoker SystemStateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs> const& handler) const;
-        auto SystemStateChanged(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto AgentState() const;
-        [[nodiscard]] auto Signal() const;
-        [[nodiscard]] auto IsIndicatorLightAvailable() const;
-        [[nodiscard]] auto IsScreenAvailable() const;
-        [[nodiscard]] auto IsUserAuthenticated() const;
-        [[nodiscard]] auto IsVoiceActivationAvailable() const;
-        [[nodiscard]] auto IsInterruptible() const;
-        [[nodiscard]] auto IsInterrupted() const;
-        auto RequestInterruptibleAsync(bool interruptible) const;
-        auto RequestInterruptible(bool interruptible) const;
-        auto RequestAgentStateChangeAsync(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState const& state) const;
-        auto RequestAgentStateChange(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState const& state) const;
-        auto RequestForegroundActivationAsync() const;
-        auto RequestForegroundActivation() const;
-        auto GetAudioClientAsync() const;
-        auto GetAudioClient() const;
-        auto CreateAudioDeviceInputNodeAsync(Windows::Media::Audio::AudioGraph const& graph) const;
-        auto CreateAudioDeviceInputNode(Windows::Media::Audio::AudioGraph const& graph) const;
-        auto GetAudioCaptureDeviceIdAsync() const;
-        auto GetAudioCaptureDeviceId() const;
-        auto GetAudioRenderDeviceIdAsync() const;
-        auto GetAudioRenderDeviceId() const;
-        auto GetSignalModelIdAsync() const;
-        auto GetSignalModelId() const;
-        auto SetSignalModelIdAsync(uint32_t signalModelId) const;
-        auto SetSignalModelId(uint32_t signalModelId) const;
-        auto GetSupportedSignalModelIdsAsync() const;
-        auto GetSupportedSignalModelIds() const;
+        [[nodiscard]] SystemStateChanged_revoker SystemStateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession, Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SystemStateChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState) AgentState() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal) Signal() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsIndicatorLightAvailable() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsScreenAvailable() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsUserAuthenticated() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsVoiceActivationAvailable() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInterruptible() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInterrupted() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse>) RequestInterruptibleAsync(bool interruptible) const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse) RequestInterruptible(bool interruptible) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse>) RequestAgentStateChangeAsync(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState const& state) const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse) RequestAgentStateChange(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState const& state) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse>) RequestForegroundActivationAsync() const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse) RequestForegroundActivation() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::IInspectable>) GetAudioClientAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) GetAudioClient() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::AudioDeviceInputNode>) CreateAudioDeviceInputNodeAsync(Windows::Media::Audio::AudioGraph const& graph) const;
+        WINRT_IMPL_AUTO(Windows::Media::Audio::AudioDeviceInputNode) CreateAudioDeviceInputNode(Windows::Media::Audio::AudioGraph const& graph) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetAudioCaptureDeviceIdAsync() const;
+        WINRT_IMPL_AUTO(hstring) GetAudioCaptureDeviceId() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetAudioRenderDeviceIdAsync() const;
+        WINRT_IMPL_AUTO(hstring) GetAudioRenderDeviceId() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<uint32_t>) GetSignalModelIdAsync() const;
+        WINRT_IMPL_AUTO(uint32_t) GetSignalModelId() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) SetSignalModelIdAsync(uint32_t signalModelId) const;
+        WINRT_IMPL_AUTO(bool) SetSignalModelId(uint32_t signalModelId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<uint32_t>>) GetSupportedSignalModelIdsAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<uint32_t>) GetSupportedSignalModelIds() const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession>
     {
@@ -748,8 +507,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSessionStatics
     {
-        auto GetCurrentSessionAsync() const;
-        auto GetCurrentSessionSync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>) GetCurrentSessionAsync() const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession) GetCurrentSessionSync() const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionStatics>
     {
@@ -758,18 +517,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSignal
     {
-        [[nodiscard]] auto IsSignalVerificationRequired() const;
-        auto IsSignalVerificationRequired(bool value) const;
-        [[nodiscard]] auto SignalId() const;
-        auto SignalId(param::hstring const& value) const;
-        [[nodiscard]] auto SignalName() const;
-        auto SignalName(param::hstring const& value) const;
-        [[nodiscard]] auto SignalContext() const;
-        auto SignalContext(Windows::Foundation::IInspectable const& value) const;
-        [[nodiscard]] auto SignalStart() const;
-        auto SignalStart(Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] auto SignalEnd() const;
-        auto SignalEnd(Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSignalVerificationRequired() const;
+        WINRT_IMPL_AUTO(void) IsSignalVerificationRequired(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SignalId() const;
+        WINRT_IMPL_AUTO(void) SignalId(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SignalName() const;
+        WINRT_IMPL_AUTO(void) SignalName(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) SignalContext() const;
+        WINRT_IMPL_AUTO(void) SignalContext(Windows::Foundation::IInspectable const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) SignalStart() const;
+        WINRT_IMPL_AUTO(void) SignalStart(Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) SignalEnd() const;
+        WINRT_IMPL_AUTO(void) SignalEnd(Windows::Foundation::TimeSpan const& value) const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal>
     {
@@ -786,7 +545,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSystemStateChangedEventArgs
     {
-        [[nodiscard]] auto SystemStateChangeType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType) SystemStateChangeType() const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs>
     {
@@ -795,7 +554,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IDetectionConfigurationAvailabilityChangedEventArgs
     {
-        [[nodiscard]] auto Kind() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangeKind) Kind() const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs>
     {
@@ -804,10 +563,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ConversationalAgent_IDetectionConfigurationAvailabilityInfo
     {
-        [[nodiscard]] auto IsEnabled() const;
-        [[nodiscard]] auto HasSystemResourceAccess() const;
-        [[nodiscard]] auto HasPermission() const;
-        [[nodiscard]] auto HasLockScreenPermission() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasSystemResourceAccess() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasPermission() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasLockScreenPermission() const;
     };
     template <> struct consume<Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo>
     {

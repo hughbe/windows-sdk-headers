@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.UI.Composition.1.h"
 #include "winrt/impl/Windows.UI.Composition.Scenes.1.h"
-namespace winrt::Windows::UI::Composition::Scenes
+WINRT_EXPORT namespace winrt::Windows::UI::Composition::Scenes
 {
     struct __declspec(empty_bases) SceneBoundingBox : Windows::UI::Composition::Scenes::ISceneBoundingBox,
         impl::base<SceneBoundingBox, Windows::UI::Composition::Scenes::SceneObject, Windows::UI::Composition::CompositionObject>,
@@ -130,7 +130,7 @@ namespace winrt::Windows::UI::Composition::Scenes
     };
     struct __declspec(empty_bases) SceneVisual : Windows::UI::Composition::Scenes::ISceneVisual,
         impl::base<SceneVisual, Windows::UI::Composition::ContainerVisual, Windows::UI::Composition::Visual, Windows::UI::Composition::CompositionObject>,
-        impl::require<SceneVisual, Windows::UI::Composition::IContainerVisual, Windows::UI::Composition::IVisual, Windows::UI::Composition::IVisual2, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject>
+        impl::require<SceneVisual, Windows::UI::Composition::IContainerVisual, Windows::UI::Composition::IVisual, Windows::UI::Composition::IVisual2, Windows::UI::Composition::IVisual3, Windows::UI::Composition::IVisual4, Windows::UI::Composition::ICompositionObject, Windows::UI::Composition::ICompositionObject2, Windows::UI::Composition::ICompositionObject3, Windows::UI::Composition::ICompositionObject4, Windows::Foundation::IClosable, Windows::UI::Composition::IAnimationObject>
     {
         SceneVisual(std::nullptr_t) noexcept {}
         SceneVisual(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Composition::Scenes::ISceneVisual(ptr, take_ownership_from_abi) {}

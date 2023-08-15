@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Scanners_H
 #define WINRT_Windows_Devices_Scanners_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -16,364 +16,365 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.Scanners.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScanner<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Scanners_IImageScanner<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScanner<D>::DefaultScanSource() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerScanSource) consume_Windows_Devices_Scanners_IImageScanner<D>::DefaultScanSource() const
     {
-        Windows::Devices::Scanners::ImageScannerScanSource value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->get_DefaultScanSource(put_abi(value)));
+        Windows::Devices::Scanners::ImageScannerScanSource value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->get_DefaultScanSource(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScanner<D>::IsScanSourceSupported(Windows::Devices::Scanners::ImageScannerScanSource const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScanner<D>::IsScanSourceSupported(Windows::Devices::Scanners::ImageScannerScanSource const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->IsScanSourceSupported(static_cast<int32_t>(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScanner<D>::FlatbedConfiguration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFlatbedConfiguration) consume_Windows_Devices_Scanners_IImageScanner<D>::FlatbedConfiguration() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->get_FlatbedConfiguration(&value));
         return Windows::Devices::Scanners::ImageScannerFlatbedConfiguration{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScanner<D>::FeederConfiguration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFeederConfiguration) consume_Windows_Devices_Scanners_IImageScanner<D>::FeederConfiguration() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->get_FeederConfiguration(&value));
         return Windows::Devices::Scanners::ImageScannerFeederConfiguration{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScanner<D>::AutoConfiguration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerAutoConfiguration) consume_Windows_Devices_Scanners_IImageScanner<D>::AutoConfiguration() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->get_AutoConfiguration(&value));
         return Windows::Devices::Scanners::ImageScannerAutoConfiguration{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScanner<D>::IsPreviewSupported(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScanner<D>::IsPreviewSupported(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->IsPreviewSupported(static_cast<int32_t>(scanSource), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScanner<D>::ScanPreviewToStreamAsync(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource, Windows::Storage::Streams::IRandomAccessStream const& targetStream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Scanners::ImageScannerPreviewResult>) consume_Windows_Devices_Scanners_IImageScanner<D>::ScanPreviewToStreamAsync(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource, Windows::Storage::Streams::IRandomAccessStream const& targetStream) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->ScanPreviewToStreamAsync(static_cast<int32_t>(scanSource), *(void**)(&targetStream), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Scanners::ImageScannerPreviewResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScanner<D>::ScanFilesToFolderAsync(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource, Windows::Storage::StorageFolder const& storageFolder) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Devices::Scanners::ImageScannerScanResult, uint32_t>) consume_Windows_Devices_Scanners_IImageScanner<D>::ScanFilesToFolderAsync(Windows::Devices::Scanners::ImageScannerScanSource const& scanSource, Windows::Storage::StorageFolder const& storageFolder) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScanner)->ScanFilesToFolderAsync(static_cast<int32_t>(scanSource), *(void**)(&storageFolder), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Devices::Scanners::ImageScannerScanResult, uint32_t>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::CanAutoDetectPageSize() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::CanAutoDetectPageSize() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_CanAutoDetectPageSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::AutoDetectPageSize() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::AutoDetectPageSize() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_AutoDetectPageSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::AutoDetectPageSize(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::AutoDetectPageSize(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->put_AutoDetectPageSize(value));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintMediaSize) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageSize() const
     {
-        Windows::Graphics::Printing::PrintMediaSize value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_PageSize(put_abi(value)));
+        Windows::Graphics::Printing::PrintMediaSize value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_PageSize(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageSize(Windows::Graphics::Printing::PrintMediaSize const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageSize(Windows::Graphics::Printing::PrintMediaSize const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->put_PageSize(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageOrientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintOrientation) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageOrientation() const
     {
-        Windows::Graphics::Printing::PrintOrientation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_PageOrientation(put_abi(value)));
+        Windows::Graphics::Printing::PrintOrientation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_PageOrientation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageOrientation(Windows::Graphics::Printing::PrintOrientation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageOrientation(Windows::Graphics::Printing::PrintOrientation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->put_PageOrientation(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageSizeDimensions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::PageSizeDimensions() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_PageSizeDimensions(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::IsPageSizeSupported(Windows::Graphics::Printing::PrintMediaSize const& pageSize, Windows::Graphics::Printing::PrintOrientation const& pageOrientation) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::IsPageSizeSupported(Windows::Graphics::Printing::PrintMediaSize const& pageSize, Windows::Graphics::Printing::PrintOrientation const& pageOrientation) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->IsPageSizeSupported(static_cast<int32_t>(pageSize), static_cast<int32_t>(pageOrientation), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::MaxNumberOfPages() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::MaxNumberOfPages() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_MaxNumberOfPages(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::MaxNumberOfPages(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::MaxNumberOfPages(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->put_MaxNumberOfPages(value));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::CanScanDuplex() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::CanScanDuplex() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_CanScanDuplex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::Duplex() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::Duplex() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_Duplex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::Duplex(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::Duplex(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->put_Duplex(value));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::CanScanAhead() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::CanScanAhead() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_CanScanAhead(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::ScanAhead() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::ScanAhead() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->get_ScanAhead(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::ScanAhead(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerFeederConfiguration<D>::ScanAhead(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFeederConfiguration)->put_ScanAhead(value));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFormatConfiguration<D>::DefaultFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFormat) consume_Windows_Devices_Scanners_IImageScannerFormatConfiguration<D>::DefaultFormat() const
     {
-        Windows::Devices::Scanners::ImageScannerFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFormatConfiguration)->get_DefaultFormat(put_abi(value)));
+        Windows::Devices::Scanners::ImageScannerFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFormatConfiguration)->get_DefaultFormat(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFormatConfiguration<D>::Format() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFormat) consume_Windows_Devices_Scanners_IImageScannerFormatConfiguration<D>::Format() const
     {
-        Windows::Devices::Scanners::ImageScannerFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFormatConfiguration)->get_Format(put_abi(value)));
+        Windows::Devices::Scanners::ImageScannerFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFormatConfiguration)->get_Format(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFormatConfiguration<D>::Format(Windows::Devices::Scanners::ImageScannerFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerFormatConfiguration<D>::Format(Windows::Devices::Scanners::ImageScannerFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFormatConfiguration)->put_Format(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerFormatConfiguration<D>::IsFormatSupported(Windows::Devices::Scanners::ImageScannerFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerFormatConfiguration<D>::IsFormatSupported(Windows::Devices::Scanners::ImageScannerFormat const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerFormatConfiguration)->IsFormatSupported(static_cast<int32_t>(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerPreviewResult<D>::Succeeded() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerPreviewResult<D>::Succeeded() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerPreviewResult)->get_Succeeded(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerPreviewResult<D>::Format() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerFormat) consume_Windows_Devices_Scanners_IImageScannerPreviewResult<D>::Format() const
     {
-        Windows::Devices::Scanners::ImageScannerFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerPreviewResult)->get_Format(put_abi(value)));
+        Windows::Devices::Scanners::ImageScannerFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerPreviewResult)->get_Format(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerScanResult<D>::ScannedFiles() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Storage::StorageFile>) consume_Windows_Devices_Scanners_IImageScannerScanResult<D>::ScannedFiles() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerScanResult)->get_ScannedFiles(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Storage::StorageFile>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MinScanArea() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MinScanArea() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_MinScanArea(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MaxScanArea() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MaxScanArea() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_MaxScanArea(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::SelectedScanRegion() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::SelectedScanRegion() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_SelectedScanRegion(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::SelectedScanRegion(Windows::Foundation::Rect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::SelectedScanRegion(Windows::Foundation::Rect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->put_SelectedScanRegion(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::AutoCroppingMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerAutoCroppingMode) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::AutoCroppingMode() const
     {
-        Windows::Devices::Scanners::ImageScannerAutoCroppingMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_AutoCroppingMode(put_abi(value)));
+        Windows::Devices::Scanners::ImageScannerAutoCroppingMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_AutoCroppingMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::AutoCroppingMode(Windows::Devices::Scanners::ImageScannerAutoCroppingMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::AutoCroppingMode(Windows::Devices::Scanners::ImageScannerAutoCroppingMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->put_AutoCroppingMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::IsAutoCroppingModeSupported(Windows::Devices::Scanners::ImageScannerAutoCroppingMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::IsAutoCroppingModeSupported(Windows::Devices::Scanners::ImageScannerAutoCroppingMode const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->IsAutoCroppingModeSupported(static_cast<int32_t>(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MinResolution() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MinResolution() const
     {
-        Windows::Devices::Scanners::ImageScannerResolution value;
+        Windows::Devices::Scanners::ImageScannerResolution value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_MinResolution(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MaxResolution() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MaxResolution() const
     {
-        Windows::Devices::Scanners::ImageScannerResolution value;
+        Windows::Devices::Scanners::ImageScannerResolution value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_MaxResolution(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::OpticalResolution() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::OpticalResolution() const
     {
-        Windows::Devices::Scanners::ImageScannerResolution value;
+        Windows::Devices::Scanners::ImageScannerResolution value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_OpticalResolution(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DesiredResolution() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DesiredResolution() const
     {
-        Windows::Devices::Scanners::ImageScannerResolution value;
+        Windows::Devices::Scanners::ImageScannerResolution value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_DesiredResolution(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DesiredResolution(Windows::Devices::Scanners::ImageScannerResolution const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DesiredResolution(Windows::Devices::Scanners::ImageScannerResolution const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->put_DesiredResolution(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::ActualResolution() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerResolution) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::ActualResolution() const
     {
-        Windows::Devices::Scanners::ImageScannerResolution value;
+        Windows::Devices::Scanners::ImageScannerResolution value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_ActualResolution(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DefaultColorMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerColorMode) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DefaultColorMode() const
     {
-        Windows::Devices::Scanners::ImageScannerColorMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_DefaultColorMode(put_abi(value)));
+        Windows::Devices::Scanners::ImageScannerColorMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_DefaultColorMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::ColorMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Scanners::ImageScannerColorMode) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::ColorMode() const
     {
-        Windows::Devices::Scanners::ImageScannerColorMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_ColorMode(put_abi(value)));
+        Windows::Devices::Scanners::ImageScannerColorMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_ColorMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::ColorMode(Windows::Devices::Scanners::ImageScannerColorMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::ColorMode(Windows::Devices::Scanners::ImageScannerColorMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->put_ColorMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::IsColorModeSupported(Windows::Devices::Scanners::ImageScannerColorMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::IsColorModeSupported(Windows::Devices::Scanners::ImageScannerColorMode const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->IsColorModeSupported(static_cast<int32_t>(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MinBrightness() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MinBrightness() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_MinBrightness(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MaxBrightness() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MaxBrightness() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_MaxBrightness(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::BrightnessStep() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::BrightnessStep() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_BrightnessStep(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DefaultBrightness() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DefaultBrightness() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_DefaultBrightness(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::Brightness() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::Brightness() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_Brightness(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::Brightness(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::Brightness(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->put_Brightness(value));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MinContrast() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MinContrast() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_MinContrast(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MaxContrast() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::MaxContrast() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_MaxContrast(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::ContrastStep() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::ContrastStep() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_ContrastStep(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DefaultContrast() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::DefaultContrast() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_DefaultContrast(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::Contrast() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::Contrast() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->get_Contrast(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::Contrast(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Scanners_IImageScannerSourceConfiguration<D>::Contrast(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerSourceConfiguration)->put_Contrast(value));
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Scanners::ImageScanner>) consume_Windows_Devices_Scanners_IImageScannerStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerStatics)->FromIdAsync(*(void**)(&deviceId), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Scanners::ImageScanner>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Scanners_IImageScannerStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Scanners_IImageScannerStatics<D>::GetDeviceSelector() const
     {
         void* selector{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Scanners::IImageScannerStatics)->GetDeviceSelector(&selector));
         return hstring{ selector, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Scanners::IImageScanner> : produce_base<D, Windows::Devices::Scanners::IImageScanner>
     {
@@ -447,6 +448,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Scanners::IImageScannerFeederConfiguration> : produce_base<D, Windows::Devices::Scanners::IImageScannerFeederConfiguration>
     {
@@ -571,6 +574,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Scanners::IImageScannerFormatConfiguration> : produce_base<D, Windows::Devices::Scanners::IImageScannerFormatConfiguration>
     {
@@ -603,6 +607,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Scanners::IImageScannerPreviewResult> : produce_base<D, Windows::Devices::Scanners::IImageScannerPreviewResult>
     {
@@ -621,6 +626,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Scanners::IImageScannerScanResult> : produce_base<D, Windows::Devices::Scanners::IImageScannerScanResult>
     {
@@ -633,6 +640,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Scanners::IImageScannerSourceConfiguration> : produce_base<D, Windows::Devices::Scanners::IImageScannerSourceConfiguration>
     {
@@ -848,6 +856,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Scanners::IImageScannerStatics> : produce_base<D, Windows::Devices::Scanners::IImageScannerStatics>
     {
@@ -868,32 +877,35 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Scanners
+WINRT_EXPORT namespace winrt::Windows::Devices::Scanners
 {
     inline auto ImageScanner::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<ImageScanner, Windows::Devices::Scanners::IImageScannerStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<ImageScanner, IImageScannerStatics>([&](IImageScannerStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto ImageScanner::GetDeviceSelector()
     {
-        return impl::call_factory<ImageScanner, Windows::Devices::Scanners::IImageScannerStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(IImageScannerStatics const&), ImageScanner, IImageScannerStatics>([](IImageScannerStatics const& f) { return f.GetDeviceSelector(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScanner> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::IImageScanner> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerPreviewResult> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::IImageScannerPreviewResult> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerScanResult> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::IImageScannerScanResult> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::IImageScannerStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScanner> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::ImageScanner> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult> {};
-    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerScanResult> : winrt::impl::hash_base<winrt::Windows::Devices::Scanners::ImageScannerScanResult> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScanner> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerFeederConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerPreviewResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerScanResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::IImageScannerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScanner> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Scanners::ImageScannerScanResult> : winrt::impl::hash_base {};
+#endif
 }
 #endif

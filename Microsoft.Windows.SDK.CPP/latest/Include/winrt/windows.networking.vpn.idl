@@ -120,6 +120,8 @@ namespace Windows
 
             interface IVpnChannel4;
 
+            interface IVpnChannel5;
+
             interface IVpnChannelActivityEventArgs;
 
             interface IVpnChannelActivityStateChangedArgs;
@@ -583,6 +585,17 @@ namespace Windows
                 HRESULT StartReconnectingTransport([in] IInspectable* transport, [in] IInspectable* context);
                 HRESULT GetSlotTypeForTransportContext([in] IInspectable* context, [out] [retval] Windows.Networking.Sockets.ControlChannelTriggerStatus* slotType);
                 [propget] HRESULT CurrentRequestTransportContext([out] [retval] IInspectable** context);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+            [exclusiveto(Windows.Networking.Vpn.VpnChannel)]
+            [uuid(DE7A0992-8384-4FBC-882C-1FD23124CD3B)]
+            interface IVpnChannel5 : IInspectable
+            {
+                HRESULT AppendVpnReceivePacketBuffer([in] Windows.Networking.Vpn.VpnPacketBuffer* decapsulatedPacketBuffer);
+                HRESULT AppendVpnSendPacketBuffer([in] Windows.Networking.Vpn.VpnPacketBuffer* encapsulatedPacketBuffer);
+                HRESULT FlushVpnReceivePacketBuffers();
+                HRESULT FlushVpnSendPacketBuffers();
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1124,6 +1137,7 @@ namespace Windows
                 [default] interface Windows.Networking.Vpn.IVpnChannel;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Networking.Vpn.IVpnChannel2;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Networking.Vpn.IVpnChannel4;
+                [contract(Windows.Foundation.UniversalApiContract, 12.0)] interface Windows.Networking.Vpn.IVpnChannel5;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

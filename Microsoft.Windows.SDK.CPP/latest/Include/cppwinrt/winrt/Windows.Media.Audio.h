@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_Audio_H
 #define WINRT_Windows_Media_Audio_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -24,83 +24,83 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Media.Audio.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Media_Audio_IAudioDeviceInputNode<D>::Device() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DeviceInformation) consume_Windows_Media_Audio_IAudioDeviceInputNode<D>::Device() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioDeviceInputNode)->get_Device(&value));
         return Windows::Devices::Enumeration::DeviceInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioDeviceOutputNode<D>::Device() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DeviceInformation) consume_Windows_Media_Audio_IAudioDeviceOutputNode<D>::Device() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioDeviceOutputNode)->get_Device(&value));
         return Windows::Devices::Enumeration::DeviceInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::PlaybackSpeedFactor(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFileInputNode<D>::PlaybackSpeedFactor(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->put_PlaybackSpeedFactor(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::PlaybackSpeedFactor() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioFileInputNode<D>::PlaybackSpeedFactor() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->get_PlaybackSpeedFactor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Audio_IAudioFileInputNode<D>::Position() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::Seek(Windows::Foundation::TimeSpan const& position) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFileInputNode<D>::Seek(Windows::Foundation::TimeSpan const& position) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->Seek(impl::bind_in(position)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::StartTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Audio_IAudioFileInputNode<D>::StartTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->get_StartTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::StartTime(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFileInputNode<D>::StartTime(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->put_StartTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::EndTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Audio_IAudioFileInputNode<D>::EndTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->get_EndTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::EndTime(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFileInputNode<D>::EndTime(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->put_EndTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::LoopCount() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) consume_Windows_Media_Audio_IAudioFileInputNode<D>::LoopCount() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->get_LoopCount(&value));
         return Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::LoopCount(Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFileInputNode<D>::LoopCount(Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->put_LoopCount(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Audio_IAudioFileInputNode<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::SourceFile() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::StorageFile) consume_Windows_Media_Audio_IAudioFileInputNode<D>::SourceFile() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->get_SourceFile(&value));
         return Windows::Storage::StorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::FileCompleted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioFileInputNode, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioFileInputNode<D>::FileCompleted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioFileInputNode, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->add_FileCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -108,61 +108,61 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, FileCompleted_revoker>(this, FileCompleted(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::FileCompleted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFileInputNode<D>::FileCompleted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileInputNode)->remove_FileCompleted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileOutputNode<D>::File() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::IStorageFile) consume_Windows_Media_Audio_IAudioFileOutputNode<D>::File() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileOutputNode)->get_File(&value));
         return Windows::Storage::IStorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileOutputNode<D>::FileEncodingProfile() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaEncodingProfile) consume_Windows_Media_Audio_IAudioFileOutputNode<D>::FileEncodingProfile() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileOutputNode)->get_FileEncodingProfile(&value));
         return Windows::Media::MediaProperties::MediaEncodingProfile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFileOutputNode<D>::FinalizeAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Transcoding::TranscodeFailureReason>) consume_Windows_Media_Audio_IAudioFileOutputNode<D>::FinalizeAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFileOutputNode)->FinalizeAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Transcoding::TranscodeFailureReason>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameCompletedEventArgs<D>::Frame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AudioFrame) consume_Windows_Media_Audio_IAudioFrameCompletedEventArgs<D>::Frame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameCompletedEventArgs)->get_Frame(&value));
         return Windows::Media::AudioFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameInputNode<D>::PlaybackSpeedFactor(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::PlaybackSpeedFactor(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameInputNode)->put_PlaybackSpeedFactor(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameInputNode<D>::PlaybackSpeedFactor() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::PlaybackSpeedFactor() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameInputNode)->get_PlaybackSpeedFactor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameInputNode<D>::AddFrame(Windows::Media::AudioFrame const& frame) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::AddFrame(Windows::Media::AudioFrame const& frame) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameInputNode)->AddFrame(*(void**)(&frame)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameInputNode<D>::DiscardQueuedFrames() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::DiscardQueuedFrames() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameInputNode)->DiscardQueuedFrames());
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameInputNode<D>::QueuedSampleCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::QueuedSampleCount() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameInputNode)->get_QueuedSampleCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameInputNode<D>::AudioFrameCompleted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioFrameInputNode, Windows::Media::Audio::AudioFrameCompletedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::AudioFrameCompleted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioFrameInputNode, Windows::Media::Audio::AudioFrameCompletedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameInputNode)->add_AudioFrameCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -170,13 +170,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AudioFrameCompleted_revoker>(this, AudioFrameCompleted(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameInputNode<D>::AudioFrameCompleted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::AudioFrameCompleted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameInputNode)->remove_AudioFrameCompleted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameInputNode<D>::QuantumStarted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioFrameInputNode, Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::QuantumStarted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioFrameInputNode, Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameInputNode)->add_QuantumStarted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -184,109 +184,109 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, QuantumStarted_revoker>(this, QuantumStarted(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameInputNode<D>::QuantumStarted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::QuantumStarted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameInputNode)->remove_QuantumStarted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioFrameOutputNode<D>::GetFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AudioFrame) consume_Windows_Media_Audio_IAudioFrameOutputNode<D>::GetFrame() const
     {
         void* audioFrame{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioFrameOutputNode)->GetFrame(&audioFrame));
         return Windows::Media::AudioFrame{ audioFrame, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateFrameInputNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioFrameInputNode) consume_Windows_Media_Audio_IAudioGraph<D>::CreateFrameInputNode() const
     {
         void* frameInputNode{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateFrameInputNode(&frameInputNode));
         return Windows::Media::Audio::AudioFrameInputNode{ frameInputNode, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateFrameInputNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioFrameInputNode) consume_Windows_Media_Audio_IAudioGraph<D>::CreateFrameInputNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
     {
         void* frameInputNode{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateFrameInputNodeWithFormat(*(void**)(&encodingProperties), &frameInputNode));
         return Windows::Media::Audio::AudioFrameInputNode{ frameInputNode, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateDeviceInputNodeAsync(Windows::Media::Capture::MediaCategory const& category) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceInputNodeResult>) consume_Windows_Media_Audio_IAudioGraph<D>::CreateDeviceInputNodeAsync(Windows::Media::Capture::MediaCategory const& category) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateDeviceInputNodeAsync(static_cast<int32_t>(category), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceInputNodeResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateDeviceInputNodeAsync(Windows::Media::Capture::MediaCategory const& category, Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceInputNodeResult>) consume_Windows_Media_Audio_IAudioGraph<D>::CreateDeviceInputNodeAsync(Windows::Media::Capture::MediaCategory const& category, Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateDeviceInputNodeWithFormatAsync(static_cast<int32_t>(category), *(void**)(&encodingProperties), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceInputNodeResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateDeviceInputNodeAsync(Windows::Media::Capture::MediaCategory const& category, Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties, Windows::Devices::Enumeration::DeviceInformation const& device) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceInputNodeResult>) consume_Windows_Media_Audio_IAudioGraph<D>::CreateDeviceInputNodeAsync(Windows::Media::Capture::MediaCategory const& category, Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties, Windows::Devices::Enumeration::DeviceInformation const& device) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateDeviceInputNodeWithFormatOnDeviceAsync(static_cast<int32_t>(category), *(void**)(&encodingProperties), *(void**)(&device), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceInputNodeResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateFrameOutputNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioFrameOutputNode) consume_Windows_Media_Audio_IAudioGraph<D>::CreateFrameOutputNode() const
     {
         void* frameOutputNode{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateFrameOutputNode(&frameOutputNode));
         return Windows::Media::Audio::AudioFrameOutputNode{ frameOutputNode, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateFrameOutputNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioFrameOutputNode) consume_Windows_Media_Audio_IAudioGraph<D>::CreateFrameOutputNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
     {
         void* frameOutputNode{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateFrameOutputNodeWithFormat(*(void**)(&encodingProperties), &frameOutputNode));
         return Windows::Media::Audio::AudioFrameOutputNode{ frameOutputNode, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateDeviceOutputNodeAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceOutputNodeResult>) consume_Windows_Media_Audio_IAudioGraph<D>::CreateDeviceOutputNodeAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateDeviceOutputNodeAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceOutputNodeResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateFileInputNodeAsync(Windows::Storage::IStorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioFileInputNodeResult>) consume_Windows_Media_Audio_IAudioGraph<D>::CreateFileInputNodeAsync(Windows::Storage::IStorageFile const& file) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateFileInputNodeAsync(*(void**)(&file), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioFileInputNodeResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateFileOutputNodeAsync(Windows::Storage::IStorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioFileOutputNodeResult>) consume_Windows_Media_Audio_IAudioGraph<D>::CreateFileOutputNodeAsync(Windows::Storage::IStorageFile const& file) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateFileOutputNodeAsync(*(void**)(&file), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioFileOutputNodeResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateFileOutputNodeAsync(Windows::Storage::IStorageFile const& file, Windows::Media::MediaProperties::MediaEncodingProfile const& fileEncodingProfile) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioFileOutputNodeResult>) consume_Windows_Media_Audio_IAudioGraph<D>::CreateFileOutputNodeAsync(Windows::Storage::IStorageFile const& file, Windows::Media::MediaProperties::MediaEncodingProfile const& fileEncodingProfile) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateFileOutputNodeWithFileProfileAsync(*(void**)(&file), *(void**)(&fileEncodingProfile), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioFileOutputNodeResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateSubmixNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioSubmixNode) consume_Windows_Media_Audio_IAudioGraph<D>::CreateSubmixNode() const
     {
         void* submixNode{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateSubmixNode(&submixNode));
         return Windows::Media::Audio::AudioSubmixNode{ submixNode, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CreateSubmixNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioSubmixNode) consume_Windows_Media_Audio_IAudioGraph<D>::CreateSubmixNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
     {
         void* submixNode{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->CreateSubmixNodeWithFormat(*(void**)(&encodingProperties), &submixNode));
         return Windows::Media::Audio::AudioSubmixNode{ submixNode, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::Start() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraph<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->Start());
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::Stop() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraph<D>::Stop() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->Stop());
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::ResetAllNodes() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraph<D>::ResetAllNodes() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->ResetAllNodes());
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::QuantumStarted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioGraph, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioGraph<D>::QuantumStarted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioGraph, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->add_QuantumStarted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -294,13 +294,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, QuantumStarted_revoker>(this, QuantumStarted(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::QuantumStarted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraph<D>::QuantumStarted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->remove_QuantumStarted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::QuantumProcessed(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioGraph, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioGraph<D>::QuantumProcessed(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioGraph, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->add_QuantumProcessed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -308,13 +308,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, QuantumProcessed_revoker>(this, QuantumProcessed(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::QuantumProcessed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraph<D>::QuantumProcessed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->remove_QuantumProcessed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::UnrecoverableErrorOccurred(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioGraph, Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioGraph<D>::UnrecoverableErrorOccurred(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioGraph, Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->add_UnrecoverableErrorOccurred(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -322,539 +322,539 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, UnrecoverableErrorOccurred_revoker>(this, UnrecoverableErrorOccurred(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::UnrecoverableErrorOccurred(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraph<D>::UnrecoverableErrorOccurred(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->remove_UnrecoverableErrorOccurred(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::CompletedQuantumCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Audio_IAudioGraph<D>::CompletedQuantumCount() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->get_CompletedQuantumCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::EncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Audio_IAudioGraph<D>::EncodingProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->get_EncodingProperties(&value));
         return Windows::Media::MediaProperties::AudioEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::LatencyInSamples() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Audio_IAudioGraph<D>::LatencyInSamples() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->get_LatencyInSamples(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::PrimaryRenderDevice() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DeviceInformation) consume_Windows_Media_Audio_IAudioGraph<D>::PrimaryRenderDevice() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->get_PrimaryRenderDevice(&value));
         return Windows::Devices::Enumeration::DeviceInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::RenderDeviceAudioProcessing() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AudioProcessing) consume_Windows_Media_Audio_IAudioGraph<D>::RenderDeviceAudioProcessing() const
     {
-        Windows::Media::AudioProcessing value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->get_RenderDeviceAudioProcessing(put_abi(value)));
+        Windows::Media::AudioProcessing value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->get_RenderDeviceAudioProcessing(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph<D>::SamplesPerQuantum() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Audio_IAudioGraph<D>::SamplesPerQuantum() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph)->get_SamplesPerQuantum(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph2<D>::CreateFrameInputNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioFrameInputNode) consume_Windows_Media_Audio_IAudioGraph2<D>::CreateFrameInputNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
     {
         void* frameInputNode{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph2)->CreateFrameInputNodeWithFormatAndEmitter(*(void**)(&encodingProperties), *(void**)(&emitter), &frameInputNode));
         return Windows::Media::Audio::AudioFrameInputNode{ frameInputNode, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph2<D>::CreateDeviceInputNodeAsync(Windows::Media::Capture::MediaCategory const& category, Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties, Windows::Devices::Enumeration::DeviceInformation const& device, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceInputNodeResult>) consume_Windows_Media_Audio_IAudioGraph2<D>::CreateDeviceInputNodeAsync(Windows::Media::Capture::MediaCategory const& category, Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties, Windows::Devices::Enumeration::DeviceInformation const& device, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph2)->CreateDeviceInputNodeWithFormatAndEmitterOnDeviceAsync(static_cast<int32_t>(category), *(void**)(&encodingProperties), *(void**)(&device), *(void**)(&emitter), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioDeviceInputNodeResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph2<D>::CreateFileInputNodeAsync(Windows::Storage::IStorageFile const& file, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioFileInputNodeResult>) consume_Windows_Media_Audio_IAudioGraph2<D>::CreateFileInputNodeAsync(Windows::Storage::IStorageFile const& file, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph2)->CreateFileInputNodeWithEmitterAsync(*(void**)(&file), *(void**)(&emitter), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioFileInputNodeResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph2<D>::CreateSubmixNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioSubmixNode) consume_Windows_Media_Audio_IAudioGraph2<D>::CreateSubmixNode(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
     {
         void* submixNode{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph2)->CreateSubmixNodeWithFormatAndEmitter(*(void**)(&encodingProperties), *(void**)(&emitter), &submixNode));
         return Windows::Media::Audio::AudioSubmixNode{ submixNode, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph2<D>::CreateBatchUpdater() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioGraphBatchUpdater) consume_Windows_Media_Audio_IAudioGraph2<D>::CreateBatchUpdater() const
     {
         void* updater{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph2)->CreateBatchUpdater(&updater));
         return Windows::Media::Audio::AudioGraphBatchUpdater{ updater, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph3<D>::CreateMediaSourceAudioInputNodeAsync(Windows::Media::Core::MediaSource const& mediaSource) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult>) consume_Windows_Media_Audio_IAudioGraph3<D>::CreateMediaSourceAudioInputNodeAsync(Windows::Media::Core::MediaSource const& mediaSource) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph3)->CreateMediaSourceAudioInputNodeAsync(*(void**)(&mediaSource), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraph3<D>::CreateMediaSourceAudioInputNodeAsync(Windows::Media::Core::MediaSource const& mediaSource, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult>) consume_Windows_Media_Audio_IAudioGraph3<D>::CreateMediaSourceAudioInputNodeAsync(Windows::Media::Core::MediaSource const& mediaSource, Windows::Media::Audio::AudioNodeEmitter const& emitter) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraph3)->CreateMediaSourceAudioInputNodeWithEmitterAsync(*(void**)(&mediaSource), *(void**)(&emitter), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphConnection<D>::Destination() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::IAudioNode) consume_Windows_Media_Audio_IAudioGraphConnection<D>::Destination() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphConnection)->get_Destination(&value));
         return Windows::Media::Audio::IAudioNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphConnection<D>::Gain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraphConnection<D>::Gain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphConnection)->put_Gain(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphConnection<D>::Gain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioGraphConnection<D>::Gain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphConnection)->get_Gain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::EncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Audio_IAudioGraphSettings<D>::EncodingProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->get_EncodingProperties(&value));
         return Windows::Media::MediaProperties::AudioEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::EncodingProperties(Windows::Media::MediaProperties::AudioEncodingProperties const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraphSettings<D>::EncodingProperties(Windows::Media::MediaProperties::AudioEncodingProperties const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->put_EncodingProperties(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::PrimaryRenderDevice() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DeviceInformation) consume_Windows_Media_Audio_IAudioGraphSettings<D>::PrimaryRenderDevice() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->get_PrimaryRenderDevice(&value));
         return Windows::Devices::Enumeration::DeviceInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::PrimaryRenderDevice(Windows::Devices::Enumeration::DeviceInformation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraphSettings<D>::PrimaryRenderDevice(Windows::Devices::Enumeration::DeviceInformation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->put_PrimaryRenderDevice(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::QuantumSizeSelectionMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::QuantumSizeSelectionMode) consume_Windows_Media_Audio_IAudioGraphSettings<D>::QuantumSizeSelectionMode() const
     {
-        Windows::Media::Audio::QuantumSizeSelectionMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->get_QuantumSizeSelectionMode(put_abi(value)));
+        Windows::Media::Audio::QuantumSizeSelectionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->get_QuantumSizeSelectionMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::QuantumSizeSelectionMode(Windows::Media::Audio::QuantumSizeSelectionMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraphSettings<D>::QuantumSizeSelectionMode(Windows::Media::Audio::QuantumSizeSelectionMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->put_QuantumSizeSelectionMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::DesiredSamplesPerQuantum() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Audio_IAudioGraphSettings<D>::DesiredSamplesPerQuantum() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->get_DesiredSamplesPerQuantum(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::DesiredSamplesPerQuantum(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraphSettings<D>::DesiredSamplesPerQuantum(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->put_DesiredSamplesPerQuantum(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::AudioRenderCategory() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Render::AudioRenderCategory) consume_Windows_Media_Audio_IAudioGraphSettings<D>::AudioRenderCategory() const
     {
-        Windows::Media::Render::AudioRenderCategory value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->get_AudioRenderCategory(put_abi(value)));
+        Windows::Media::Render::AudioRenderCategory value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->get_AudioRenderCategory(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::AudioRenderCategory(Windows::Media::Render::AudioRenderCategory const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraphSettings<D>::AudioRenderCategory(Windows::Media::Render::AudioRenderCategory const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->put_AudioRenderCategory(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::DesiredRenderDeviceAudioProcessing() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AudioProcessing) consume_Windows_Media_Audio_IAudioGraphSettings<D>::DesiredRenderDeviceAudioProcessing() const
     {
-        Windows::Media::AudioProcessing value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->get_DesiredRenderDeviceAudioProcessing(put_abi(value)));
+        Windows::Media::AudioProcessing value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->get_DesiredRenderDeviceAudioProcessing(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings<D>::DesiredRenderDeviceAudioProcessing(Windows::Media::AudioProcessing const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraphSettings<D>::DesiredRenderDeviceAudioProcessing(Windows::Media::AudioProcessing const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings)->put_DesiredRenderDeviceAudioProcessing(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings2<D>::MaxPlaybackSpeedFactor(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraphSettings2<D>::MaxPlaybackSpeedFactor(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings2)->put_MaxPlaybackSpeedFactor(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettings2<D>::MaxPlaybackSpeedFactor() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioGraphSettings2<D>::MaxPlaybackSpeedFactor() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettings2)->get_MaxPlaybackSpeedFactor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphSettingsFactory<D>::Create(Windows::Media::Render::AudioRenderCategory const& audioRenderCategory) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioGraphSettings) consume_Windows_Media_Audio_IAudioGraphSettingsFactory<D>::Create(Windows::Media::Render::AudioRenderCategory const& audioRenderCategory) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphSettingsFactory)->Create(static_cast<int32_t>(audioRenderCategory), &value));
         return Windows::Media::Audio::AudioGraphSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphStatics<D>::CreateAsync(Windows::Media::Audio::AudioGraphSettings const& settings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioGraphResult>) consume_Windows_Media_Audio_IAudioGraphStatics<D>::CreateAsync(Windows::Media::Audio::AudioGraphSettings const& settings) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphStatics)->CreateAsync(*(void**)(&settings), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::CreateAudioGraphResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioGraphUnrecoverableErrorOccurredEventArgs<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioGraphUnrecoverableError) consume_Windows_Media_Audio_IAudioGraphUnrecoverableErrorOccurredEventArgs<D>::Error() const
     {
-        Windows::Media::Audio::AudioGraphUnrecoverableError value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs)->get_Error(put_abi(value)));
+        Windows::Media::Audio::AudioGraphUnrecoverableError value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs)->get_Error(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioInputNode<D>::OutgoingConnections() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Audio::AudioGraphConnection>) consume_Windows_Media_Audio_IAudioInputNode<D>::OutgoingConnections() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioInputNode)->get_OutgoingConnections(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Audio::AudioGraphConnection>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioInputNode<D>::AddOutgoingConnection(Windows::Media::Audio::IAudioNode const& destination) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioInputNode<D>::AddOutgoingConnection(Windows::Media::Audio::IAudioNode const& destination) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioInputNode)->AddOutgoingConnection(*(void**)(&destination)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioInputNode<D>::AddOutgoingConnection(Windows::Media::Audio::IAudioNode const& destination, double gain) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioInputNode<D>::AddOutgoingConnection(Windows::Media::Audio::IAudioNode const& destination, double gain) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioInputNode)->AddOutgoingConnectionWithGain(*(void**)(&destination), gain));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioInputNode<D>::RemoveOutgoingConnection(Windows::Media::Audio::IAudioNode const& destination) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioInputNode<D>::RemoveOutgoingConnection(Windows::Media::Audio::IAudioNode const& destination) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioInputNode)->RemoveOutgoingConnection(*(void**)(&destination)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioInputNode2<D>::Emitter() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitter) consume_Windows_Media_Audio_IAudioInputNode2<D>::Emitter() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioInputNode2)->get_Emitter(&value));
         return Windows::Media::Audio::AudioNodeEmitter{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::EffectDefinitions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Media::Effects::IAudioEffectDefinition>) consume_Windows_Media_Audio_IAudioNode<D>::EffectDefinitions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->get_EffectDefinitions(&value));
         return Windows::Foundation::Collections::IVector<Windows::Media::Effects::IAudioEffectDefinition>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::OutgoingGain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNode<D>::OutgoingGain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->put_OutgoingGain(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::OutgoingGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNode<D>::OutgoingGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->get_OutgoingGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::EncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Audio_IAudioNode<D>::EncodingProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->get_EncodingProperties(&value));
         return Windows::Media::MediaProperties::AudioEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::ConsumeInput() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Audio_IAudioNode<D>::ConsumeInput() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->get_ConsumeInput(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::ConsumeInput(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNode<D>::ConsumeInput(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->put_ConsumeInput(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::Start() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNode<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->Start());
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::Stop() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNode<D>::Stop() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->Stop());
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::Reset() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNode<D>::Reset() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->Reset());
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::DisableEffectsByDefinition(Windows::Media::Effects::IAudioEffectDefinition const& definition) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNode<D>::DisableEffectsByDefinition(Windows::Media::Effects::IAudioEffectDefinition const& definition) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->DisableEffectsByDefinition(*(void**)(&definition)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNode<D>::EnableEffectsByDefinition(Windows::Media::Effects::IAudioEffectDefinition const& definition) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNode<D>::EnableEffectsByDefinition(Windows::Media::Effects::IAudioEffectDefinition const& definition) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNode)->EnableEffectsByDefinition(*(void**)(&definition)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Position() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Position(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Position(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->put_Position(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Direction() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Direction() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->get_Direction(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Direction(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Direction(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->put_Direction(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Shape() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterShape) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Shape() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->get_Shape(&value));
         return Windows::Media::Audio::AudioNodeEmitterShape{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DecayModel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterDecayModel) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DecayModel() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->get_DecayModel(&value));
         return Windows::Media::Audio::AudioNodeEmitterDecayModel{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Gain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Gain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->get_Gain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Gain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::Gain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->put_Gain(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DistanceScale() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DistanceScale() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->get_DistanceScale(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DistanceScale(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DistanceScale(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->put_DistanceScale(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DopplerScale() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DopplerScale() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->get_DopplerScale(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DopplerScale(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DopplerScale(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->put_DopplerScale(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DopplerVelocity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DopplerVelocity() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->get_DopplerVelocity(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DopplerVelocity(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::DopplerVelocity(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->put_DopplerVelocity(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter<D>::IsDopplerDisabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Audio_IAudioNodeEmitter<D>::IsDopplerDisabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter)->get_IsDopplerDisabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter2<D>::SpatialAudioModel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::SpatialAudioModel) consume_Windows_Media_Audio_IAudioNodeEmitter2<D>::SpatialAudioModel() const
     {
-        Windows::Media::Audio::SpatialAudioModel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter2)->get_SpatialAudioModel(put_abi(value)));
+        Windows::Media::Audio::SpatialAudioModel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter2)->get_SpatialAudioModel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitter2<D>::SpatialAudioModel(Windows::Media::Audio::SpatialAudioModel const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeEmitter2<D>::SpatialAudioModel(Windows::Media::Audio::SpatialAudioModel const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitter2)->put_SpatialAudioModel(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterConeProperties<D>::InnerAngle() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitterConeProperties<D>::InnerAngle() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterConeProperties)->get_InnerAngle(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterConeProperties<D>::OuterAngle() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitterConeProperties<D>::OuterAngle() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterConeProperties)->get_OuterAngle(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterConeProperties<D>::OuterAngleGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitterConeProperties<D>::OuterAngleGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterConeProperties)->get_OuterAngleGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterDecayModel<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterDecayKind) consume_Windows_Media_Audio_IAudioNodeEmitterDecayModel<D>::Kind() const
     {
-        Windows::Media::Audio::AudioNodeEmitterDecayKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterDecayModel)->get_Kind(put_abi(value)));
+        Windows::Media::Audio::AudioNodeEmitterDecayKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterDecayModel)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterDecayModel<D>::MinGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitterDecayModel<D>::MinGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterDecayModel)->get_MinGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterDecayModel<D>::MaxGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitterDecayModel<D>::MaxGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterDecayModel)->get_MaxGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterDecayModel<D>::NaturalProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties) consume_Windows_Media_Audio_IAudioNodeEmitterDecayModel<D>::NaturalProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterDecayModel)->get_NaturalProperties(&value));
         return Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterDecayModelStatics<D>::CreateNatural(double minGain, double maxGain, double unityGainDistance, double cutoffDistance) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterDecayModel) consume_Windows_Media_Audio_IAudioNodeEmitterDecayModelStatics<D>::CreateNatural(double minGain, double maxGain, double unityGainDistance, double cutoffDistance) const
     {
         void* decayModel{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics)->CreateNatural(minGain, maxGain, unityGainDistance, cutoffDistance, &decayModel));
         return Windows::Media::Audio::AudioNodeEmitterDecayModel{ decayModel, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterDecayModelStatics<D>::CreateCustom(double minGain, double maxGain) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterDecayModel) consume_Windows_Media_Audio_IAudioNodeEmitterDecayModelStatics<D>::CreateCustom(double minGain, double maxGain) const
     {
         void* decayModel{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics)->CreateCustom(minGain, maxGain, &decayModel));
         return Windows::Media::Audio::AudioNodeEmitterDecayModel{ decayModel, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterFactory<D>::CreateAudioNodeEmitter(Windows::Media::Audio::AudioNodeEmitterShape const& shape, Windows::Media::Audio::AudioNodeEmitterDecayModel const& decayModel, Windows::Media::Audio::AudioNodeEmitterSettings const& settings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitter) consume_Windows_Media_Audio_IAudioNodeEmitterFactory<D>::CreateAudioNodeEmitter(Windows::Media::Audio::AudioNodeEmitterShape const& shape, Windows::Media::Audio::AudioNodeEmitterDecayModel const& decayModel, Windows::Media::Audio::AudioNodeEmitterSettings const& settings) const
     {
         void* emitter{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterFactory)->CreateAudioNodeEmitter(*(void**)(&shape), *(void**)(&decayModel), static_cast<uint32_t>(settings), &emitter));
         return Windows::Media::Audio::AudioNodeEmitter{ emitter, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterNaturalDecayModelProperties<D>::UnityGainDistance() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitterNaturalDecayModelProperties<D>::UnityGainDistance() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterNaturalDecayModelProperties)->get_UnityGainDistance(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterNaturalDecayModelProperties<D>::CutoffDistance() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeEmitterNaturalDecayModelProperties<D>::CutoffDistance() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterNaturalDecayModelProperties)->get_CutoffDistance(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterShape<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterShapeKind) consume_Windows_Media_Audio_IAudioNodeEmitterShape<D>::Kind() const
     {
-        Windows::Media::Audio::AudioNodeEmitterShapeKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterShape)->get_Kind(put_abi(value)));
+        Windows::Media::Audio::AudioNodeEmitterShapeKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterShape)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterShape<D>::ConeProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterConeProperties) consume_Windows_Media_Audio_IAudioNodeEmitterShape<D>::ConeProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterShape)->get_ConeProperties(&value));
         return Windows::Media::Audio::AudioNodeEmitterConeProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterShapeStatics<D>::CreateCone(double innerAngle, double outerAngle, double outerAngleGain) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterShape) consume_Windows_Media_Audio_IAudioNodeEmitterShapeStatics<D>::CreateCone(double innerAngle, double outerAngle, double outerAngleGain) const
     {
         void* shape{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterShapeStatics)->CreateCone(innerAngle, outerAngle, outerAngleGain, &shape));
         return Windows::Media::Audio::AudioNodeEmitterShape{ shape, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeEmitterShapeStatics<D>::CreateOmnidirectional() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeEmitterShape) consume_Windows_Media_Audio_IAudioNodeEmitterShapeStatics<D>::CreateOmnidirectional() const
     {
         void* shape{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeEmitterShapeStatics)->CreateOmnidirectional(&shape));
         return Windows::Media::Audio::AudioNodeEmitterShape{ shape, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeListener<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Media_Audio_IAudioNodeListener<D>::Position() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeListener)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeListener<D>::Position(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeListener<D>::Position(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeListener)->put_Position(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeListener<D>::Orientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::quaternion) consume_Windows_Media_Audio_IAudioNodeListener<D>::Orientation() const
     {
-        Windows::Foundation::Numerics::quaternion value;
+        Windows::Foundation::Numerics::quaternion value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeListener)->get_Orientation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeListener<D>::Orientation(Windows::Foundation::Numerics::quaternion const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeListener<D>::Orientation(Windows::Foundation::Numerics::quaternion const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeListener)->put_Orientation(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeListener<D>::SpeedOfSound() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IAudioNodeListener<D>::SpeedOfSound() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeListener)->get_SpeedOfSound(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeListener<D>::SpeedOfSound(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeListener<D>::SpeedOfSound(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeListener)->put_SpeedOfSound(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeListener<D>::DopplerVelocity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Media_Audio_IAudioNodeListener<D>::DopplerVelocity() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeListener)->get_DopplerVelocity(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeListener<D>::DopplerVelocity(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeListener<D>::DopplerVelocity(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeListener)->put_DopplerVelocity(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeWithListener<D>::Listener(Windows::Media::Audio::AudioNodeListener const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioNodeWithListener<D>::Listener(Windows::Media::Audio::AudioNodeListener const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeWithListener)->put_Listener(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioNodeWithListener<D>::Listener() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioNodeListener) consume_Windows_Media_Audio_IAudioNodeWithListener<D>::Listener() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioNodeWithListener)->get_Listener(&value));
         return Windows::Media::Audio::AudioNodeListener{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::Start() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnection)->Start());
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::StartAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnection)->StartAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnection)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioPlaybackConnectionState) consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::State() const
     {
-        Windows::Media::Audio::AudioPlaybackConnectionState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnection)->get_State(put_abi(value)));
+        Windows::Media::Audio::AudioPlaybackConnectionState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnection)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::Open() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioPlaybackConnectionOpenResult) consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::Open() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnection)->Open(&result));
         return Windows::Media::Audio::AudioPlaybackConnectionOpenResult{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::OpenAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::AudioPlaybackConnectionOpenResult>) consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::OpenAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnection)->OpenAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::AudioPlaybackConnectionOpenResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioPlaybackConnection, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioPlaybackConnection, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnection)->add_StateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -862,37 +862,37 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::StateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnection)->remove_StateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnectionOpenResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioPlaybackConnectionOpenResultStatus) consume_Windows_Media_Audio_IAudioPlaybackConnectionOpenResult<D>::Status() const
     {
-        Windows::Media::Audio::AudioPlaybackConnectionOpenResultStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnectionOpenResult)->get_Status(put_abi(value)));
+        Windows::Media::Audio::AudioPlaybackConnectionOpenResultStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnectionOpenResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnectionOpenResult<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Audio_IAudioPlaybackConnectionOpenResult<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnectionOpenResult)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnectionStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_IAudioPlaybackConnectionStatics<D>::GetDeviceSelector() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnectionStatics)->GetDeviceSelector(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioPlaybackConnectionStatics<D>::TryCreateFromId(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioPlaybackConnection) consume_Windows_Media_Audio_IAudioPlaybackConnectionStatics<D>::TryCreateFromId(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioPlaybackConnectionStatics)->TryCreateFromId(*(void**)(&id), &result));
         return Windows::Media::Audio::AudioPlaybackConnection{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitor<D>::SoundLevelChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioStateMonitor, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioStateMonitor<D>::SoundLevelChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::AudioStateMonitor, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitor)->add_SoundLevelChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -900,347 +900,347 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SoundLevelChanged_revoker>(this, SoundLevelChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitor<D>::SoundLevelChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioStateMonitor<D>::SoundLevelChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitor)->remove_SoundLevelChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitor<D>::SoundLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SoundLevel) consume_Windows_Media_Audio_IAudioStateMonitor<D>::SoundLevel() const
     {
-        Windows::Media::SoundLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitor)->get_SoundLevel(put_abi(value)));
+        Windows::Media::SoundLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitor)->get_SoundLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForRenderMonitoring() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioStateMonitor) consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForRenderMonitoring() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitorStatics)->CreateForRenderMonitoring(&result));
         return Windows::Media::Audio::AudioStateMonitor{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForRenderMonitoring(Windows::Media::Render::AudioRenderCategory const& category) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioStateMonitor) consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForRenderMonitoring(Windows::Media::Render::AudioRenderCategory const& category) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitorStatics)->CreateForRenderMonitoringWithCategory(static_cast<int32_t>(category), &result));
         return Windows::Media::Audio::AudioStateMonitor{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForRenderMonitoring(Windows::Media::Render::AudioRenderCategory const& category, Windows::Media::Devices::AudioDeviceRole const& role) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioStateMonitor) consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForRenderMonitoring(Windows::Media::Render::AudioRenderCategory const& category, Windows::Media::Devices::AudioDeviceRole const& role) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitorStatics)->CreateForRenderMonitoringWithCategoryAndDeviceRole(static_cast<int32_t>(category), static_cast<int32_t>(role), &result));
         return Windows::Media::Audio::AudioStateMonitor{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForRenderMonitoringWithCategoryAndDeviceId(Windows::Media::Render::AudioRenderCategory const& category, param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioStateMonitor) consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForRenderMonitoringWithCategoryAndDeviceId(Windows::Media::Render::AudioRenderCategory const& category, param::hstring const& deviceId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitorStatics)->CreateForRenderMonitoringWithCategoryAndDeviceId(static_cast<int32_t>(category), *(void**)(&deviceId), &result));
         return Windows::Media::Audio::AudioStateMonitor{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForCaptureMonitoring() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioStateMonitor) consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForCaptureMonitoring() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitorStatics)->CreateForCaptureMonitoring(&result));
         return Windows::Media::Audio::AudioStateMonitor{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForCaptureMonitoring(Windows::Media::Capture::MediaCategory const& category) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioStateMonitor) consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForCaptureMonitoring(Windows::Media::Capture::MediaCategory const& category) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitorStatics)->CreateForCaptureMonitoringWithCategory(static_cast<int32_t>(category), &result));
         return Windows::Media::Audio::AudioStateMonitor{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForCaptureMonitoring(Windows::Media::Capture::MediaCategory const& category, Windows::Media::Devices::AudioDeviceRole const& role) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioStateMonitor) consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForCaptureMonitoring(Windows::Media::Capture::MediaCategory const& category, Windows::Media::Devices::AudioDeviceRole const& role) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitorStatics)->CreateForCaptureMonitoringWithCategoryAndDeviceRole(static_cast<int32_t>(category), static_cast<int32_t>(role), &result));
         return Windows::Media::Audio::AudioStateMonitor{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForCaptureMonitoringWithCategoryAndDeviceId(Windows::Media::Capture::MediaCategory const& category, param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioStateMonitor) consume_Windows_Media_Audio_IAudioStateMonitorStatics<D>::CreateForCaptureMonitoringWithCategoryAndDeviceId(Windows::Media::Capture::MediaCategory const& category, param::hstring const& deviceId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IAudioStateMonitorStatics)->CreateForCaptureMonitoringWithCategoryAndDeviceId(static_cast<int32_t>(category), *(void**)(&deviceId), &result));
         return Windows::Media::Audio::AudioStateMonitor{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioDeviceInputNodeResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioDeviceNodeCreationStatus) consume_Windows_Media_Audio_ICreateAudioDeviceInputNodeResult<D>::Status() const
     {
-        Windows::Media::Audio::AudioDeviceNodeCreationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioDeviceInputNodeResult)->get_Status(put_abi(value)));
+        Windows::Media::Audio::AudioDeviceNodeCreationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioDeviceInputNodeResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioDeviceInputNodeResult<D>::DeviceInputNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioDeviceInputNode) consume_Windows_Media_Audio_ICreateAudioDeviceInputNodeResult<D>::DeviceInputNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioDeviceInputNodeResult)->get_DeviceInputNode(&value));
         return Windows::Media::Audio::AudioDeviceInputNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioDeviceInputNodeResult2<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Audio_ICreateAudioDeviceInputNodeResult2<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioDeviceInputNodeResult2)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioDeviceOutputNodeResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioDeviceNodeCreationStatus) consume_Windows_Media_Audio_ICreateAudioDeviceOutputNodeResult<D>::Status() const
     {
-        Windows::Media::Audio::AudioDeviceNodeCreationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult)->get_Status(put_abi(value)));
+        Windows::Media::Audio::AudioDeviceNodeCreationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioDeviceOutputNodeResult<D>::DeviceOutputNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioDeviceOutputNode) consume_Windows_Media_Audio_ICreateAudioDeviceOutputNodeResult<D>::DeviceOutputNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult)->get_DeviceOutputNode(&value));
         return Windows::Media::Audio::AudioDeviceOutputNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioDeviceOutputNodeResult2<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Audio_ICreateAudioDeviceOutputNodeResult2<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult2)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioFileInputNodeResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioFileNodeCreationStatus) consume_Windows_Media_Audio_ICreateAudioFileInputNodeResult<D>::Status() const
     {
-        Windows::Media::Audio::AudioFileNodeCreationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioFileInputNodeResult)->get_Status(put_abi(value)));
+        Windows::Media::Audio::AudioFileNodeCreationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioFileInputNodeResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioFileInputNodeResult<D>::FileInputNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioFileInputNode) consume_Windows_Media_Audio_ICreateAudioFileInputNodeResult<D>::FileInputNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioFileInputNodeResult)->get_FileInputNode(&value));
         return Windows::Media::Audio::AudioFileInputNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioFileInputNodeResult2<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Audio_ICreateAudioFileInputNodeResult2<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioFileInputNodeResult2)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioFileOutputNodeResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioFileNodeCreationStatus) consume_Windows_Media_Audio_ICreateAudioFileOutputNodeResult<D>::Status() const
     {
-        Windows::Media::Audio::AudioFileNodeCreationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioFileOutputNodeResult)->get_Status(put_abi(value)));
+        Windows::Media::Audio::AudioFileNodeCreationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioFileOutputNodeResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioFileOutputNodeResult<D>::FileOutputNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioFileOutputNode) consume_Windows_Media_Audio_ICreateAudioFileOutputNodeResult<D>::FileOutputNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioFileOutputNodeResult)->get_FileOutputNode(&value));
         return Windows::Media::Audio::AudioFileOutputNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioFileOutputNodeResult2<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Audio_ICreateAudioFileOutputNodeResult2<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioFileOutputNodeResult2)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioGraphResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioGraphCreationStatus) consume_Windows_Media_Audio_ICreateAudioGraphResult<D>::Status() const
     {
-        Windows::Media::Audio::AudioGraphCreationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioGraphResult)->get_Status(put_abi(value)));
+        Windows::Media::Audio::AudioGraphCreationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioGraphResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioGraphResult<D>::Graph() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::AudioGraph) consume_Windows_Media_Audio_ICreateAudioGraphResult<D>::Graph() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioGraphResult)->get_Graph(&value));
         return Windows::Media::Audio::AudioGraph{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateAudioGraphResult2<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Audio_ICreateAudioGraphResult2<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateAudioGraphResult2)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateMediaSourceAudioInputNodeResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::MediaSourceAudioInputNodeCreationStatus) consume_Windows_Media_Audio_ICreateMediaSourceAudioInputNodeResult<D>::Status() const
     {
-        Windows::Media::Audio::MediaSourceAudioInputNodeCreationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult)->get_Status(put_abi(value)));
+        Windows::Media::Audio::MediaSourceAudioInputNodeCreationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateMediaSourceAudioInputNodeResult<D>::Node() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::MediaSourceAudioInputNode) consume_Windows_Media_Audio_ICreateMediaSourceAudioInputNodeResult<D>::Node() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult)->get_Node(&value));
         return Windows::Media::Audio::MediaSourceAudioInputNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ICreateMediaSourceAudioInputNodeResult2<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Audio_ICreateMediaSourceAudioInputNodeResult2<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult2)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEchoEffectDefinition<D>::WetDryMix(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IEchoEffectDefinition<D>::WetDryMix(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEchoEffectDefinition)->put_WetDryMix(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEchoEffectDefinition<D>::WetDryMix() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IEchoEffectDefinition<D>::WetDryMix() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEchoEffectDefinition)->get_WetDryMix(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEchoEffectDefinition<D>::Feedback(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IEchoEffectDefinition<D>::Feedback(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEchoEffectDefinition)->put_Feedback(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEchoEffectDefinition<D>::Feedback() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IEchoEffectDefinition<D>::Feedback() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEchoEffectDefinition)->get_Feedback(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEchoEffectDefinition<D>::Delay(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IEchoEffectDefinition<D>::Delay(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEchoEffectDefinition)->put_Delay(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEchoEffectDefinition<D>::Delay() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IEchoEffectDefinition<D>::Delay() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEchoEffectDefinition)->get_Delay(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEchoEffectDefinitionFactory<D>::Create(Windows::Media::Audio::AudioGraph const& audioGraph) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::EchoEffectDefinition) consume_Windows_Media_Audio_IEchoEffectDefinitionFactory<D>::Create(Windows::Media::Audio::AudioGraph const& audioGraph) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEchoEffectDefinitionFactory)->Create(*(void**)(&audioGraph), &value));
         return Windows::Media::Audio::EchoEffectDefinition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEqualizerBand<D>::Bandwidth() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IEqualizerBand<D>::Bandwidth() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEqualizerBand)->get_Bandwidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEqualizerBand<D>::Bandwidth(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IEqualizerBand<D>::Bandwidth(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEqualizerBand)->put_Bandwidth(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEqualizerBand<D>::FrequencyCenter() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IEqualizerBand<D>::FrequencyCenter() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEqualizerBand)->get_FrequencyCenter(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEqualizerBand<D>::FrequencyCenter(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IEqualizerBand<D>::FrequencyCenter(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEqualizerBand)->put_FrequencyCenter(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEqualizerBand<D>::Gain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IEqualizerBand<D>::Gain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEqualizerBand)->get_Gain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEqualizerBand<D>::Gain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IEqualizerBand<D>::Gain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEqualizerBand)->put_Gain(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEqualizerEffectDefinition<D>::Bands() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Audio::EqualizerBand>) consume_Windows_Media_Audio_IEqualizerEffectDefinition<D>::Bands() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEqualizerEffectDefinition)->get_Bands(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Audio::EqualizerBand>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IEqualizerEffectDefinitionFactory<D>::Create(Windows::Media::Audio::AudioGraph const& audioGraph) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::EqualizerEffectDefinition) consume_Windows_Media_Audio_IEqualizerEffectDefinitionFactory<D>::Create(Windows::Media::Audio::AudioGraph const& audioGraph) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IEqualizerEffectDefinitionFactory)->Create(*(void**)(&audioGraph), &value));
         return Windows::Media::Audio::EqualizerEffectDefinition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IFrameInputNodeQuantumStartedEventArgs<D>::RequiredSamples() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Audio_IFrameInputNodeQuantumStartedEventArgs<D>::RequiredSamples() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs)->get_RequiredSamples(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ILimiterEffectDefinition<D>::Release(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_ILimiterEffectDefinition<D>::Release(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ILimiterEffectDefinition)->put_Release(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_ILimiterEffectDefinition<D>::Release() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Audio_ILimiterEffectDefinition<D>::Release() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ILimiterEffectDefinition)->get_Release(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ILimiterEffectDefinition<D>::Loudness(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_ILimiterEffectDefinition<D>::Loudness(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ILimiterEffectDefinition)->put_Loudness(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_ILimiterEffectDefinition<D>::Loudness() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Audio_ILimiterEffectDefinition<D>::Loudness() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ILimiterEffectDefinition)->get_Loudness(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ILimiterEffectDefinitionFactory<D>::Create(Windows::Media::Audio::AudioGraph const& audioGraph) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::LimiterEffectDefinition) consume_Windows_Media_Audio_ILimiterEffectDefinitionFactory<D>::Create(Windows::Media::Audio::AudioGraph const& audioGraph) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ILimiterEffectDefinitionFactory)->Create(*(void**)(&audioGraph), &value));
         return Windows::Media::Audio::LimiterEffectDefinition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::PlaybackSpeedFactor(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::PlaybackSpeedFactor(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->put_PlaybackSpeedFactor(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::PlaybackSpeedFactor() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::PlaybackSpeedFactor() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->get_PlaybackSpeedFactor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::Position() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::Seek(Windows::Foundation::TimeSpan const& position) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::Seek(Windows::Foundation::TimeSpan const& position) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->Seek(impl::bind_in(position)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::StartTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::StartTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->get_StartTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::StartTime(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::StartTime(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->put_StartTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::EndTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::EndTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->get_EndTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::EndTime(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::EndTime(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->put_EndTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::LoopCount() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::LoopCount() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->get_LoopCount(&value));
         return Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::LoopCount(Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::LoopCount(Windows::Foundation::IReference<int32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->put_LoopCount(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::MediaSource() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::MediaSource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->get_MediaSource(&value));
         return Windows::Media::Core::MediaSource{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::MediaSourceCompleted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::MediaSourceAudioInputNode, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::MediaSourceCompleted(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::MediaSourceAudioInputNode, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->add_MediaSourceCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1248,291 +1248,291 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MediaSourceCompleted_revoker>(this, MediaSourceCompleted(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::MediaSourceCompleted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::MediaSourceCompleted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::IMediaSourceAudioInputNode)->remove_MediaSourceCompleted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::WetDryMix(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::WetDryMix(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_WetDryMix(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::WetDryMix() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::WetDryMix() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_WetDryMix(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReflectionsDelay(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReflectionsDelay(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_ReflectionsDelay(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReflectionsDelay() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReflectionsDelay() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_ReflectionsDelay(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReverbDelay(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReverbDelay(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_ReverbDelay(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReverbDelay() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReverbDelay() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_ReverbDelay(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RearDelay(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RearDelay(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_RearDelay(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RearDelay() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RearDelay() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_RearDelay(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionLeft(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionLeft(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_PositionLeft(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionLeft() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionLeft() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_PositionLeft(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionRight(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionRight(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_PositionRight(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionRight() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionRight() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_PositionRight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionMatrixLeft(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionMatrixLeft(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_PositionMatrixLeft(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionMatrixLeft() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionMatrixLeft() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_PositionMatrixLeft(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionMatrixRight(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionMatrixRight(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_PositionMatrixRight(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionMatrixRight() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::PositionMatrixRight() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_PositionMatrixRight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::EarlyDiffusion(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::EarlyDiffusion(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_EarlyDiffusion(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::EarlyDiffusion() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::EarlyDiffusion() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_EarlyDiffusion(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LateDiffusion(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LateDiffusion(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_LateDiffusion(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LateDiffusion() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LateDiffusion() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_LateDiffusion(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LowEQGain(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LowEQGain(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_LowEQGain(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LowEQGain() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LowEQGain() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_LowEQGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LowEQCutoff(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LowEQCutoff(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_LowEQCutoff(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LowEQCutoff() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::LowEQCutoff() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_LowEQCutoff(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::HighEQGain(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::HighEQGain(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_HighEQGain(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::HighEQGain() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::HighEQGain() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_HighEQGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::HighEQCutoff(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::HighEQCutoff(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_HighEQCutoff(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::HighEQCutoff() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::HighEQCutoff() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_HighEQCutoff(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterFreq(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterFreq(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_RoomFilterFreq(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterFreq() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterFreq() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_RoomFilterFreq(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterMain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterMain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_RoomFilterMain(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterMain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterMain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_RoomFilterMain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterHF(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterHF(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_RoomFilterHF(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterHF() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomFilterHF() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_RoomFilterHF(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReflectionsGain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReflectionsGain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_ReflectionsGain(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReflectionsGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReflectionsGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_ReflectionsGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReverbGain(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReverbGain(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_ReverbGain(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReverbGain() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::ReverbGain() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_ReverbGain(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::DecayTime(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::DecayTime(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_DecayTime(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::DecayTime() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::DecayTime() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_DecayTime(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::Density(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::Density(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_Density(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::Density() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::Density() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_Density(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomSize(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomSize(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_RoomSize(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomSize() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::RoomSize() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_RoomSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::DisableLateField(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::DisableLateField(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->put_DisableLateField(value));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinition<D>::DisableLateField() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::DisableLateField() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinition)->get_DisableLateField(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IReverbEffectDefinitionFactory<D>::Create(Windows::Media::Audio::AudioGraph const& audioGraph) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::ReverbEffectDefinition) consume_Windows_Media_Audio_IReverbEffectDefinitionFactory<D>::Create(Windows::Media::Audio::AudioGraph const& audioGraph) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::IReverbEffectDefinitionFactory)->Create(*(void**)(&audioGraph), &value));
         return Windows::Media::Audio::ReverbEffectDefinition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISetDefaultSpatialAudioFormatResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::SetDefaultSpatialAudioFormatStatus) consume_Windows_Media_Audio_ISetDefaultSpatialAudioFormatResult<D>::Status() const
     {
-        Windows::Media::Audio::SetDefaultSpatialAudioFormatStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult)->get_Status(put_abi(value)));
+        Windows::Media::Audio::SetDefaultSpatialAudioFormatStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::IsSpatialAudioSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::IsSpatialAudioSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->get_IsSpatialAudioSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::IsSpatialAudioFormatSupported(param::hstring const& subtype) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::IsSpatialAudioFormatSupported(param::hstring const& subtype) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->IsSpatialAudioFormatSupported(*(void**)(&subtype), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::ActiveSpatialAudioFormat() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::ActiveSpatialAudioFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->get_ActiveSpatialAudioFormat(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::DefaultSpatialAudioFormat() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::DefaultSpatialAudioFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->get_DefaultSpatialAudioFormat(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::SetDefaultSpatialAudioFormatAsync(param::hstring const& subtype) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Audio::SetDefaultSpatialAudioFormatResult>) consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::SetDefaultSpatialAudioFormatAsync(param::hstring const& subtype) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->SetDefaultSpatialAudioFormatAsync(*(void**)(&subtype), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Audio::SetDefaultSpatialAudioFormatResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::ConfigurationChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::SpatialAudioDeviceConfiguration, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::ConfigurationChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Audio::SpatialAudioDeviceConfiguration, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->add_ConfigurationChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1540,80 +1540,87 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ConfigurationChanged_revoker>(this, ConfigurationChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::ConfigurationChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::ConfigurationChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->remove_ConfigurationChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioDeviceConfigurationStatics<D>::GetForDeviceId(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::SpatialAudioDeviceConfiguration) consume_Windows_Media_Audio_ISpatialAudioDeviceConfigurationStatics<D>::GetForDeviceId(param::hstring const& deviceId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioDeviceConfigurationStatics)->GetForDeviceId(*(void**)(&deviceId), &result));
         return Windows::Media::Audio::SpatialAudioDeviceConfiguration{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatConfiguration<D>::ReportLicenseChangedAsync(param::hstring const& subtype) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Audio_ISpatialAudioFormatConfiguration<D>::ReportLicenseChangedAsync(param::hstring const& subtype) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatConfiguration)->ReportLicenseChangedAsync(*(void**)(&subtype), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatConfiguration<D>::ReportConfigurationChangedAsync(param::hstring const& subtype) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Audio_ISpatialAudioFormatConfiguration<D>::ReportConfigurationChangedAsync(param::hstring const& subtype) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatConfiguration)->ReportConfigurationChangedAsync(*(void**)(&subtype), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatConfiguration<D>::MixedRealityExclusiveModePolicy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::MixedRealitySpatialAudioFormatPolicy) consume_Windows_Media_Audio_ISpatialAudioFormatConfiguration<D>::MixedRealityExclusiveModePolicy() const
     {
-        Windows::Media::Audio::MixedRealitySpatialAudioFormatPolicy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatConfiguration)->get_MixedRealityExclusiveModePolicy(put_abi(value)));
+        Windows::Media::Audio::MixedRealitySpatialAudioFormatPolicy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatConfiguration)->get_MixedRealityExclusiveModePolicy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatConfiguration<D>::MixedRealityExclusiveModePolicy(Windows::Media::Audio::MixedRealitySpatialAudioFormatPolicy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_ISpatialAudioFormatConfiguration<D>::MixedRealityExclusiveModePolicy(Windows::Media::Audio::MixedRealitySpatialAudioFormatPolicy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatConfiguration)->put_MixedRealityExclusiveModePolicy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatConfigurationStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Audio::SpatialAudioFormatConfiguration) consume_Windows_Media_Audio_ISpatialAudioFormatConfigurationStatics<D>::GetDefault() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatConfigurationStatics)->GetDefault(&result));
         return Windows::Media::Audio::SpatialAudioFormatConfiguration{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::WindowsSonic() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::WindowsSonic() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics)->get_WindowsSonic(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DolbyAtmosForHeadphones() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DolbyAtmosForHeadphones() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics)->get_DolbyAtmosForHeadphones(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DolbyAtmosForHomeTheater() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DolbyAtmosForHomeTheater() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics)->get_DolbyAtmosForHomeTheater(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DolbyAtmosForSpeakers() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DolbyAtmosForSpeakers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics)->get_DolbyAtmosForSpeakers(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DTSHeadphoneX() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DTSHeadphoneX() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics)->get_DTSHeadphoneX(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DTSXUltra() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics<D>::DTSXUltra() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics)->get_DTSXUltra(&value));
         return hstring{ value, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Audio_ISpatialAudioFormatSubtypeStatics2<D>::DTSXForHomeTheater() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics2)->get_DTSXForHomeTheater(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioDeviceInputNode> : produce_base<D, Windows::Media::Audio::IAudioDeviceInputNode>
     {
@@ -1626,6 +1633,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioDeviceOutputNode> : produce_base<D, Windows::Media::Audio::IAudioDeviceOutputNode>
     {
@@ -1638,6 +1647,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioFileInputNode> : produce_base<D, Windows::Media::Audio::IAudioFileInputNode>
     {
@@ -1746,6 +1757,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioFileOutputNode> : produce_base<D, Windows::Media::Audio::IAudioFileOutputNode>
     {
@@ -1774,6 +1787,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioFrameCompletedEventArgs> : produce_base<D, Windows::Media::Audio::IAudioFrameCompletedEventArgs>
     {
@@ -1786,6 +1801,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioFrameInputNode> : produce_base<D, Windows::Media::Audio::IAudioFrameInputNode>
     {
@@ -1853,6 +1870,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioFrameOutputNode> : produce_base<D, Windows::Media::Audio::IAudioFrameOutputNode>
     {
@@ -1865,6 +1884,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioGraph> : produce_base<D, Windows::Media::Audio::IAudioGraph>
     {
@@ -2080,6 +2101,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioGraph2> : produce_base<D, Windows::Media::Audio::IAudioGraph2>
     {
@@ -2124,6 +2147,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioGraph3> : produce_base<D, Windows::Media::Audio::IAudioGraph3>
     {
@@ -2144,6 +2169,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioGraphConnection> : produce_base<D, Windows::Media::Audio::IAudioGraphConnection>
     {
@@ -2170,6 +2197,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioGraphSettings> : produce_base<D, Windows::Media::Audio::IAudioGraphSettings>
     {
@@ -2260,6 +2289,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioGraphSettings2> : produce_base<D, Windows::Media::Audio::IAudioGraphSettings2>
     {
@@ -2278,6 +2309,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioGraphSettingsFactory> : produce_base<D, Windows::Media::Audio::IAudioGraphSettingsFactory>
     {
@@ -2290,6 +2323,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioGraphStatics> : produce_base<D, Windows::Media::Audio::IAudioGraphStatics>
     {
@@ -2302,6 +2337,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs> : produce_base<D, Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs>
     {
@@ -2313,6 +2350,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioInputNode> : produce_base<D, Windows::Media::Audio::IAudioInputNode>
     {
@@ -2441,6 +2479,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeEmitter> : produce_base<D, Windows::Media::Audio::IAudioNodeEmitter>
     {
@@ -2555,6 +2594,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeEmitter2> : produce_base<D, Windows::Media::Audio::IAudioNodeEmitter2>
     {
@@ -2573,6 +2614,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeEmitterConeProperties> : produce_base<D, Windows::Media::Audio::IAudioNodeEmitterConeProperties>
     {
@@ -2598,6 +2641,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeEmitterDecayModel> : produce_base<D, Windows::Media::Audio::IAudioNodeEmitterDecayModel>
     {
@@ -2631,6 +2676,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics> : produce_base<D, Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics>
     {
@@ -2651,6 +2698,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeEmitterFactory> : produce_base<D, Windows::Media::Audio::IAudioNodeEmitterFactory>
     {
@@ -2663,6 +2712,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeEmitterNaturalDecayModelProperties> : produce_base<D, Windows::Media::Audio::IAudioNodeEmitterNaturalDecayModelProperties>
     {
@@ -2681,6 +2732,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeEmitterShape> : produce_base<D, Windows::Media::Audio::IAudioNodeEmitterShape>
     {
@@ -2700,6 +2753,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeEmitterShapeStatics> : produce_base<D, Windows::Media::Audio::IAudioNodeEmitterShapeStatics>
     {
@@ -2720,6 +2775,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeListener> : produce_base<D, Windows::Media::Audio::IAudioNodeListener>
     {
@@ -2783,6 +2840,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioNodeWithListener> : produce_base<D, Windows::Media::Audio::IAudioNodeWithListener>
     {
@@ -2802,6 +2860,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioPlaybackConnection> : produce_base<D, Windows::Media::Audio::IAudioPlaybackConnection>
     {
@@ -2866,6 +2925,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioPlaybackConnectionOpenResult> : produce_base<D, Windows::Media::Audio::IAudioPlaybackConnectionOpenResult>
     {
@@ -2885,6 +2946,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioPlaybackConnectionStatics> : produce_base<D, Windows::Media::Audio::IAudioPlaybackConnectionStatics>
     {
@@ -2905,6 +2968,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioStateMonitor> : produce_base<D, Windows::Media::Audio::IAudioStateMonitor>
     {
@@ -2930,6 +2995,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IAudioStateMonitorStatics> : produce_base<D, Windows::Media::Audio::IAudioStateMonitorStatics>
     {
@@ -2998,6 +3065,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioDeviceInputNodeResult> : produce_base<D, Windows::Media::Audio::ICreateAudioDeviceInputNodeResult>
     {
@@ -3017,6 +3086,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioDeviceInputNodeResult2> : produce_base<D, Windows::Media::Audio::ICreateAudioDeviceInputNodeResult2>
     {
@@ -3029,6 +3100,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult> : produce_base<D, Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult>
     {
@@ -3048,6 +3121,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult2> : produce_base<D, Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult2>
     {
@@ -3060,6 +3135,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioFileInputNodeResult> : produce_base<D, Windows::Media::Audio::ICreateAudioFileInputNodeResult>
     {
@@ -3079,6 +3156,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioFileInputNodeResult2> : produce_base<D, Windows::Media::Audio::ICreateAudioFileInputNodeResult2>
     {
@@ -3091,6 +3170,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioFileOutputNodeResult> : produce_base<D, Windows::Media::Audio::ICreateAudioFileOutputNodeResult>
     {
@@ -3110,6 +3191,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioFileOutputNodeResult2> : produce_base<D, Windows::Media::Audio::ICreateAudioFileOutputNodeResult2>
     {
@@ -3122,6 +3205,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioGraphResult> : produce_base<D, Windows::Media::Audio::ICreateAudioGraphResult>
     {
@@ -3141,6 +3226,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateAudioGraphResult2> : produce_base<D, Windows::Media::Audio::ICreateAudioGraphResult2>
     {
@@ -3153,6 +3240,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult> : produce_base<D, Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult>
     {
@@ -3172,6 +3261,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult2> : produce_base<D, Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult2>
     {
@@ -3184,6 +3275,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IEchoEffectDefinition> : produce_base<D, Windows::Media::Audio::IEchoEffectDefinition>
     {
@@ -3230,6 +3323,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IEchoEffectDefinitionFactory> : produce_base<D, Windows::Media::Audio::IEchoEffectDefinitionFactory>
     {
@@ -3242,6 +3337,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IEqualizerBand> : produce_base<D, Windows::Media::Audio::IEqualizerBand>
     {
@@ -3288,6 +3385,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IEqualizerEffectDefinition> : produce_base<D, Windows::Media::Audio::IEqualizerEffectDefinition>
     {
@@ -3300,6 +3399,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IEqualizerEffectDefinitionFactory> : produce_base<D, Windows::Media::Audio::IEqualizerEffectDefinitionFactory>
     {
@@ -3312,6 +3413,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs> : produce_base<D, Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs>
     {
@@ -3323,6 +3426,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ILimiterEffectDefinition> : produce_base<D, Windows::Media::Audio::ILimiterEffectDefinition>
     {
@@ -3355,6 +3460,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ILimiterEffectDefinitionFactory> : produce_base<D, Windows::Media::Audio::ILimiterEffectDefinitionFactory>
     {
@@ -3367,6 +3474,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IMediaSourceAudioInputNode> : produce_base<D, Windows::Media::Audio::IMediaSourceAudioInputNode>
     {
@@ -3475,6 +3584,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IReverbEffectDefinition> : produce_base<D, Windows::Media::Audio::IReverbEffectDefinition>
     {
@@ -3801,6 +3912,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::IReverbEffectDefinitionFactory> : produce_base<D, Windows::Media::Audio::IReverbEffectDefinitionFactory>
     {
@@ -3813,6 +3926,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult> : produce_base<D, Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult>
     {
@@ -3824,6 +3939,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ISpatialAudioDeviceConfiguration> : produce_base<D, Windows::Media::Audio::ISpatialAudioDeviceConfiguration>
     {
@@ -3888,6 +4005,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ISpatialAudioDeviceConfigurationStatics> : produce_base<D, Windows::Media::Audio::ISpatialAudioDeviceConfigurationStatics>
     {
@@ -3900,6 +4019,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ISpatialAudioFormatConfiguration> : produce_base<D, Windows::Media::Audio::ISpatialAudioFormatConfiguration>
     {
@@ -3934,6 +4055,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ISpatialAudioFormatConfigurationStatics> : produce_base<D, Windows::Media::Audio::ISpatialAudioFormatConfigurationStatics>
     {
@@ -3946,6 +4069,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics> : produce_base<D, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics>
     {
@@ -3998,8 +4123,23 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics2> : produce_base<D, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics2>
+    {
+        int32_t __stdcall get_DTSXForHomeTheater(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().DTSXForHomeTheater());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
-namespace winrt::Windows::Media::Audio
+WINRT_EXPORT namespace winrt::Windows::Media::Audio
 {
     constexpr auto operator|(AudioNodeEmitterSettings const left, AudioNodeEmitterSettings const right) noexcept
     {
@@ -4034,233 +4174,240 @@ namespace winrt::Windows::Media::Audio
     }
     inline auto AudioGraph::CreateAsync(Windows::Media::Audio::AudioGraphSettings const& settings)
     {
-        return impl::call_factory<AudioGraph, Windows::Media::Audio::IAudioGraphStatics>([&](auto&& f) { return f.CreateAsync(settings); });
+        return impl::call_factory<AudioGraph, IAudioGraphStatics>([&](IAudioGraphStatics const& f) { return f.CreateAsync(settings); });
     }
     inline AudioGraphSettings::AudioGraphSettings(Windows::Media::Render::AudioRenderCategory const& audioRenderCategory) :
-        AudioGraphSettings(impl::call_factory<AudioGraphSettings, Windows::Media::Audio::IAudioGraphSettingsFactory>([&](auto&& f) { return f.Create(audioRenderCategory); }))
+        AudioGraphSettings(impl::call_factory<AudioGraphSettings, IAudioGraphSettingsFactory>([&](IAudioGraphSettingsFactory const& f) { return f.Create(audioRenderCategory); }))
     {
     }
     inline AudioNodeEmitter::AudioNodeEmitter() :
-        AudioNodeEmitter(impl::call_factory<AudioNodeEmitter>([](auto&& f) { return f.template ActivateInstance<AudioNodeEmitter>(); }))
+        AudioNodeEmitter(impl::call_factory_cast<AudioNodeEmitter(*)(Windows::Foundation::IActivationFactory const&), AudioNodeEmitter>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<AudioNodeEmitter>(); }))
     {
     }
     inline AudioNodeEmitter::AudioNodeEmitter(Windows::Media::Audio::AudioNodeEmitterShape const& shape, Windows::Media::Audio::AudioNodeEmitterDecayModel const& decayModel, Windows::Media::Audio::AudioNodeEmitterSettings const& settings) :
-        AudioNodeEmitter(impl::call_factory<AudioNodeEmitter, Windows::Media::Audio::IAudioNodeEmitterFactory>([&](auto&& f) { return f.CreateAudioNodeEmitter(shape, decayModel, settings); }))
+        AudioNodeEmitter(impl::call_factory<AudioNodeEmitter, IAudioNodeEmitterFactory>([&](IAudioNodeEmitterFactory const& f) { return f.CreateAudioNodeEmitter(shape, decayModel, settings); }))
     {
     }
     inline auto AudioNodeEmitterDecayModel::CreateNatural(double minGain, double maxGain, double unityGainDistance, double cutoffDistance)
     {
-        return impl::call_factory<AudioNodeEmitterDecayModel, Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics>([&](auto&& f) { return f.CreateNatural(minGain, maxGain, unityGainDistance, cutoffDistance); });
+        return impl::call_factory<AudioNodeEmitterDecayModel, IAudioNodeEmitterDecayModelStatics>([&](IAudioNodeEmitterDecayModelStatics const& f) { return f.CreateNatural(minGain, maxGain, unityGainDistance, cutoffDistance); });
     }
     inline auto AudioNodeEmitterDecayModel::CreateCustom(double minGain, double maxGain)
     {
-        return impl::call_factory<AudioNodeEmitterDecayModel, Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics>([&](auto&& f) { return f.CreateCustom(minGain, maxGain); });
+        return impl::call_factory<AudioNodeEmitterDecayModel, IAudioNodeEmitterDecayModelStatics>([&](IAudioNodeEmitterDecayModelStatics const& f) { return f.CreateCustom(minGain, maxGain); });
     }
     inline auto AudioNodeEmitterShape::CreateCone(double innerAngle, double outerAngle, double outerAngleGain)
     {
-        return impl::call_factory<AudioNodeEmitterShape, Windows::Media::Audio::IAudioNodeEmitterShapeStatics>([&](auto&& f) { return f.CreateCone(innerAngle, outerAngle, outerAngleGain); });
+        return impl::call_factory<AudioNodeEmitterShape, IAudioNodeEmitterShapeStatics>([&](IAudioNodeEmitterShapeStatics const& f) { return f.CreateCone(innerAngle, outerAngle, outerAngleGain); });
     }
     inline auto AudioNodeEmitterShape::CreateOmnidirectional()
     {
-        return impl::call_factory<AudioNodeEmitterShape, Windows::Media::Audio::IAudioNodeEmitterShapeStatics>([&](auto&& f) { return f.CreateOmnidirectional(); });
+        return impl::call_factory_cast<Windows::Media::Audio::AudioNodeEmitterShape(*)(IAudioNodeEmitterShapeStatics const&), AudioNodeEmitterShape, IAudioNodeEmitterShapeStatics>([](IAudioNodeEmitterShapeStatics const& f) { return f.CreateOmnidirectional(); });
     }
     inline AudioNodeListener::AudioNodeListener() :
-        AudioNodeListener(impl::call_factory<AudioNodeListener>([](auto&& f) { return f.template ActivateInstance<AudioNodeListener>(); }))
+        AudioNodeListener(impl::call_factory_cast<AudioNodeListener(*)(Windows::Foundation::IActivationFactory const&), AudioNodeListener>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<AudioNodeListener>(); }))
     {
     }
     inline auto AudioPlaybackConnection::GetDeviceSelector()
     {
-        return impl::call_factory<AudioPlaybackConnection, Windows::Media::Audio::IAudioPlaybackConnectionStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(IAudioPlaybackConnectionStatics const&), AudioPlaybackConnection, IAudioPlaybackConnectionStatics>([](IAudioPlaybackConnectionStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto AudioPlaybackConnection::TryCreateFromId(param::hstring const& id)
     {
-        return impl::call_factory<AudioPlaybackConnection, Windows::Media::Audio::IAudioPlaybackConnectionStatics>([&](auto&& f) { return f.TryCreateFromId(id); });
+        return impl::call_factory<AudioPlaybackConnection, IAudioPlaybackConnectionStatics>([&](IAudioPlaybackConnectionStatics const& f) { return f.TryCreateFromId(id); });
     }
     inline auto AudioStateMonitor::CreateForRenderMonitoring()
     {
-        return impl::call_factory<AudioStateMonitor, Windows::Media::Audio::IAudioStateMonitorStatics>([&](auto&& f) { return f.CreateForRenderMonitoring(); });
+        return impl::call_factory_cast<Windows::Media::Audio::AudioStateMonitor(*)(IAudioStateMonitorStatics const&), AudioStateMonitor, IAudioStateMonitorStatics>([](IAudioStateMonitorStatics const& f) { return f.CreateForRenderMonitoring(); });
     }
     inline auto AudioStateMonitor::CreateForRenderMonitoring(Windows::Media::Render::AudioRenderCategory const& category)
     {
-        return impl::call_factory<AudioStateMonitor, Windows::Media::Audio::IAudioStateMonitorStatics>([&](auto&& f) { return f.CreateForRenderMonitoring(category); });
+        return impl::call_factory<AudioStateMonitor, IAudioStateMonitorStatics>([&](IAudioStateMonitorStatics const& f) { return f.CreateForRenderMonitoring(category); });
     }
     inline auto AudioStateMonitor::CreateForRenderMonitoring(Windows::Media::Render::AudioRenderCategory const& category, Windows::Media::Devices::AudioDeviceRole const& role)
     {
-        return impl::call_factory<AudioStateMonitor, Windows::Media::Audio::IAudioStateMonitorStatics>([&](auto&& f) { return f.CreateForRenderMonitoring(category, role); });
+        return impl::call_factory<AudioStateMonitor, IAudioStateMonitorStatics>([&](IAudioStateMonitorStatics const& f) { return f.CreateForRenderMonitoring(category, role); });
     }
     inline auto AudioStateMonitor::CreateForRenderMonitoringWithCategoryAndDeviceId(Windows::Media::Render::AudioRenderCategory const& category, param::hstring const& deviceId)
     {
-        return impl::call_factory<AudioStateMonitor, Windows::Media::Audio::IAudioStateMonitorStatics>([&](auto&& f) { return f.CreateForRenderMonitoringWithCategoryAndDeviceId(category, deviceId); });
+        return impl::call_factory<AudioStateMonitor, IAudioStateMonitorStatics>([&](IAudioStateMonitorStatics const& f) { return f.CreateForRenderMonitoringWithCategoryAndDeviceId(category, deviceId); });
     }
     inline auto AudioStateMonitor::CreateForCaptureMonitoring()
     {
-        return impl::call_factory<AudioStateMonitor, Windows::Media::Audio::IAudioStateMonitorStatics>([&](auto&& f) { return f.CreateForCaptureMonitoring(); });
+        return impl::call_factory_cast<Windows::Media::Audio::AudioStateMonitor(*)(IAudioStateMonitorStatics const&), AudioStateMonitor, IAudioStateMonitorStatics>([](IAudioStateMonitorStatics const& f) { return f.CreateForCaptureMonitoring(); });
     }
     inline auto AudioStateMonitor::CreateForCaptureMonitoring(Windows::Media::Capture::MediaCategory const& category)
     {
-        return impl::call_factory<AudioStateMonitor, Windows::Media::Audio::IAudioStateMonitorStatics>([&](auto&& f) { return f.CreateForCaptureMonitoring(category); });
+        return impl::call_factory<AudioStateMonitor, IAudioStateMonitorStatics>([&](IAudioStateMonitorStatics const& f) { return f.CreateForCaptureMonitoring(category); });
     }
     inline auto AudioStateMonitor::CreateForCaptureMonitoring(Windows::Media::Capture::MediaCategory const& category, Windows::Media::Devices::AudioDeviceRole const& role)
     {
-        return impl::call_factory<AudioStateMonitor, Windows::Media::Audio::IAudioStateMonitorStatics>([&](auto&& f) { return f.CreateForCaptureMonitoring(category, role); });
+        return impl::call_factory<AudioStateMonitor, IAudioStateMonitorStatics>([&](IAudioStateMonitorStatics const& f) { return f.CreateForCaptureMonitoring(category, role); });
     }
     inline auto AudioStateMonitor::CreateForCaptureMonitoringWithCategoryAndDeviceId(Windows::Media::Capture::MediaCategory const& category, param::hstring const& deviceId)
     {
-        return impl::call_factory<AudioStateMonitor, Windows::Media::Audio::IAudioStateMonitorStatics>([&](auto&& f) { return f.CreateForCaptureMonitoringWithCategoryAndDeviceId(category, deviceId); });
+        return impl::call_factory<AudioStateMonitor, IAudioStateMonitorStatics>([&](IAudioStateMonitorStatics const& f) { return f.CreateForCaptureMonitoringWithCategoryAndDeviceId(category, deviceId); });
     }
     inline EchoEffectDefinition::EchoEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph) :
-        EchoEffectDefinition(impl::call_factory<EchoEffectDefinition, Windows::Media::Audio::IEchoEffectDefinitionFactory>([&](auto&& f) { return f.Create(audioGraph); }))
+        EchoEffectDefinition(impl::call_factory<EchoEffectDefinition, IEchoEffectDefinitionFactory>([&](IEchoEffectDefinitionFactory const& f) { return f.Create(audioGraph); }))
     {
     }
     inline EqualizerEffectDefinition::EqualizerEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph) :
-        EqualizerEffectDefinition(impl::call_factory<EqualizerEffectDefinition, Windows::Media::Audio::IEqualizerEffectDefinitionFactory>([&](auto&& f) { return f.Create(audioGraph); }))
+        EqualizerEffectDefinition(impl::call_factory<EqualizerEffectDefinition, IEqualizerEffectDefinitionFactory>([&](IEqualizerEffectDefinitionFactory const& f) { return f.Create(audioGraph); }))
     {
     }
     inline LimiterEffectDefinition::LimiterEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph) :
-        LimiterEffectDefinition(impl::call_factory<LimiterEffectDefinition, Windows::Media::Audio::ILimiterEffectDefinitionFactory>([&](auto&& f) { return f.Create(audioGraph); }))
+        LimiterEffectDefinition(impl::call_factory<LimiterEffectDefinition, ILimiterEffectDefinitionFactory>([&](ILimiterEffectDefinitionFactory const& f) { return f.Create(audioGraph); }))
     {
     }
     inline ReverbEffectDefinition::ReverbEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph) :
-        ReverbEffectDefinition(impl::call_factory<ReverbEffectDefinition, Windows::Media::Audio::IReverbEffectDefinitionFactory>([&](auto&& f) { return f.Create(audioGraph); }))
+        ReverbEffectDefinition(impl::call_factory<ReverbEffectDefinition, IReverbEffectDefinitionFactory>([&](IReverbEffectDefinitionFactory const& f) { return f.Create(audioGraph); }))
     {
     }
     inline auto SpatialAudioDeviceConfiguration::GetForDeviceId(param::hstring const& deviceId)
     {
-        return impl::call_factory<SpatialAudioDeviceConfiguration, Windows::Media::Audio::ISpatialAudioDeviceConfigurationStatics>([&](auto&& f) { return f.GetForDeviceId(deviceId); });
+        return impl::call_factory<SpatialAudioDeviceConfiguration, ISpatialAudioDeviceConfigurationStatics>([&](ISpatialAudioDeviceConfigurationStatics const& f) { return f.GetForDeviceId(deviceId); });
     }
     inline auto SpatialAudioFormatConfiguration::GetDefault()
     {
-        return impl::call_factory<SpatialAudioFormatConfiguration, Windows::Media::Audio::ISpatialAudioFormatConfigurationStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::Media::Audio::SpatialAudioFormatConfiguration(*)(ISpatialAudioFormatConfigurationStatics const&), SpatialAudioFormatConfiguration, ISpatialAudioFormatConfigurationStatics>([](ISpatialAudioFormatConfigurationStatics const& f) { return f.GetDefault(); });
     }
     inline auto SpatialAudioFormatSubtype::WindowsSonic()
     {
-        return impl::call_factory<SpatialAudioFormatSubtype, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics>([&](auto&& f) { return f.WindowsSonic(); });
+        return impl::call_factory_cast<hstring(*)(ISpatialAudioFormatSubtypeStatics const&), SpatialAudioFormatSubtype, ISpatialAudioFormatSubtypeStatics>([](ISpatialAudioFormatSubtypeStatics const& f) { return f.WindowsSonic(); });
     }
     inline auto SpatialAudioFormatSubtype::DolbyAtmosForHeadphones()
     {
-        return impl::call_factory<SpatialAudioFormatSubtype, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics>([&](auto&& f) { return f.DolbyAtmosForHeadphones(); });
+        return impl::call_factory_cast<hstring(*)(ISpatialAudioFormatSubtypeStatics const&), SpatialAudioFormatSubtype, ISpatialAudioFormatSubtypeStatics>([](ISpatialAudioFormatSubtypeStatics const& f) { return f.DolbyAtmosForHeadphones(); });
     }
     inline auto SpatialAudioFormatSubtype::DolbyAtmosForHomeTheater()
     {
-        return impl::call_factory<SpatialAudioFormatSubtype, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics>([&](auto&& f) { return f.DolbyAtmosForHomeTheater(); });
+        return impl::call_factory_cast<hstring(*)(ISpatialAudioFormatSubtypeStatics const&), SpatialAudioFormatSubtype, ISpatialAudioFormatSubtypeStatics>([](ISpatialAudioFormatSubtypeStatics const& f) { return f.DolbyAtmosForHomeTheater(); });
     }
     inline auto SpatialAudioFormatSubtype::DolbyAtmosForSpeakers()
     {
-        return impl::call_factory<SpatialAudioFormatSubtype, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics>([&](auto&& f) { return f.DolbyAtmosForSpeakers(); });
+        return impl::call_factory_cast<hstring(*)(ISpatialAudioFormatSubtypeStatics const&), SpatialAudioFormatSubtype, ISpatialAudioFormatSubtypeStatics>([](ISpatialAudioFormatSubtypeStatics const& f) { return f.DolbyAtmosForSpeakers(); });
     }
     inline auto SpatialAudioFormatSubtype::DTSHeadphoneX()
     {
-        return impl::call_factory<SpatialAudioFormatSubtype, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics>([&](auto&& f) { return f.DTSHeadphoneX(); });
+        return impl::call_factory_cast<hstring(*)(ISpatialAudioFormatSubtypeStatics const&), SpatialAudioFormatSubtype, ISpatialAudioFormatSubtypeStatics>([](ISpatialAudioFormatSubtypeStatics const& f) { return f.DTSHeadphoneX(); });
     }
     inline auto SpatialAudioFormatSubtype::DTSXUltra()
     {
-        return impl::call_factory<SpatialAudioFormatSubtype, Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics>([&](auto&& f) { return f.DTSXUltra(); });
+        return impl::call_factory_cast<hstring(*)(ISpatialAudioFormatSubtypeStatics const&), SpatialAudioFormatSubtype, ISpatialAudioFormatSubtypeStatics>([](ISpatialAudioFormatSubtypeStatics const& f) { return f.DTSXUltra(); });
+    }
+    inline auto SpatialAudioFormatSubtype::DTSXForHomeTheater()
+    {
+        return impl::call_factory_cast<hstring(*)(ISpatialAudioFormatSubtypeStatics2 const&), SpatialAudioFormatSubtype, ISpatialAudioFormatSubtypeStatics2>([](ISpatialAudioFormatSubtypeStatics2 const& f) { return f.DTSXForHomeTheater(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioDeviceInputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioDeviceInputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioDeviceOutputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioDeviceOutputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioFileInputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioFileInputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioFileOutputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioFileOutputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioFrameCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioFrameCompletedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioFrameInputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioFrameInputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioFrameOutputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioFrameOutputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraph> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioGraph> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraph2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioGraph2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraph3> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioGraph3> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphConnection> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioGraphConnection> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphSettings> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioGraphSettings> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphSettings2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioGraphSettings2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphSettingsFactory> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioGraphSettingsFactory> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphStatics> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioGraphStatics> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioInputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioInputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioInputNode2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioInputNode2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitter> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeEmitter> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitter2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeEmitter2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterConeProperties> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeEmitterConeProperties> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterDecayModel> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeEmitterDecayModel> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterFactory> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeEmitterFactory> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterNaturalDecayModelProperties> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeEmitterNaturalDecayModelProperties> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterShape> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeEmitterShape> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterShapeStatics> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeEmitterShapeStatics> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeListener> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeListener> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeWithListener> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioNodeWithListener> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioPlaybackConnection> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioPlaybackConnection> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioPlaybackConnectionOpenResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioPlaybackConnectionOpenResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioPlaybackConnectionStatics> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioPlaybackConnectionStatics> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioStateMonitor> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioStateMonitor> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IAudioStateMonitorStatics> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IAudioStateMonitorStatics> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioFileInputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioFileInputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioFileInputNodeResult2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioFileInputNodeResult2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioFileOutputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioFileOutputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioFileOutputNodeResult2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioFileOutputNodeResult2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioGraphResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioGraphResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioGraphResult2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateAudioGraphResult2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult2> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult2> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IEchoEffectDefinition> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IEchoEffectDefinition> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IEchoEffectDefinitionFactory> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IEchoEffectDefinitionFactory> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IEqualizerBand> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IEqualizerBand> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IEqualizerEffectDefinition> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IEqualizerEffectDefinition> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IEqualizerEffectDefinitionFactory> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IEqualizerEffectDefinitionFactory> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ILimiterEffectDefinition> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ILimiterEffectDefinition> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ILimiterEffectDefinitionFactory> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ILimiterEffectDefinitionFactory> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IMediaSourceAudioInputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IMediaSourceAudioInputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IReverbEffectDefinition> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IReverbEffectDefinition> {};
-    template<> struct hash<winrt::Windows::Media::Audio::IReverbEffectDefinitionFactory> : winrt::impl::hash_base<winrt::Windows::Media::Audio::IReverbEffectDefinitionFactory> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioDeviceConfiguration> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ISpatialAudioDeviceConfiguration> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioDeviceConfigurationStatics> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ISpatialAudioDeviceConfigurationStatics> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioFormatConfiguration> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ISpatialAudioFormatConfiguration> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioFormatConfigurationStatics> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ISpatialAudioFormatConfigurationStatics> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioDeviceInputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioDeviceInputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioDeviceOutputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioDeviceOutputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioFileInputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioFileInputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioFileOutputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioFileOutputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioFrameInputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioFrameInputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioFrameOutputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioFrameOutputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioGraph> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioGraph> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioGraphBatchUpdater> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioGraphBatchUpdater> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioGraphConnection> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioGraphConnection> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioGraphSettings> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioGraphSettings> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitter> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioNodeEmitter> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitterConeProperties> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioNodeEmitterConeProperties> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitterShape> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioNodeEmitterShape> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeListener> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioNodeListener> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioPlaybackConnection> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioPlaybackConnection> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioStateMonitor> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioStateMonitor> {};
-    template<> struct hash<winrt::Windows::Media::Audio::AudioSubmixNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::AudioSubmixNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioDeviceInputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::CreateAudioDeviceInputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioFileInputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::CreateAudioFileInputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioFileOutputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::CreateAudioFileOutputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioGraphResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::CreateAudioGraphResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::EchoEffectDefinition> : winrt::impl::hash_base<winrt::Windows::Media::Audio::EchoEffectDefinition> {};
-    template<> struct hash<winrt::Windows::Media::Audio::EqualizerBand> : winrt::impl::hash_base<winrt::Windows::Media::Audio::EqualizerBand> {};
-    template<> struct hash<winrt::Windows::Media::Audio::EqualizerEffectDefinition> : winrt::impl::hash_base<winrt::Windows::Media::Audio::EqualizerEffectDefinition> {};
-    template<> struct hash<winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Audio::LimiterEffectDefinition> : winrt::impl::hash_base<winrt::Windows::Media::Audio::LimiterEffectDefinition> {};
-    template<> struct hash<winrt::Windows::Media::Audio::MediaSourceAudioInputNode> : winrt::impl::hash_base<winrt::Windows::Media::Audio::MediaSourceAudioInputNode> {};
-    template<> struct hash<winrt::Windows::Media::Audio::ReverbEffectDefinition> : winrt::impl::hash_base<winrt::Windows::Media::Audio::ReverbEffectDefinition> {};
-    template<> struct hash<winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult> : winrt::impl::hash_base<winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult> {};
-    template<> struct hash<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration> : winrt::impl::hash_base<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration> {};
-    template<> struct hash<winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration> : winrt::impl::hash_base<winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration> {};
-    template<> struct hash<winrt::Windows::Media::Audio::SpatialAudioFormatSubtype> : winrt::impl::hash_base<winrt::Windows::Media::Audio::SpatialAudioFormatSubtype> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioDeviceInputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioDeviceOutputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioFileInputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioFileOutputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioFrameCompletedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioFrameInputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioFrameOutputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraph> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraph2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraph3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphConnection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphSettings2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphSettingsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioInputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioInputNode2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitter2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterConeProperties> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterDecayModel> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterNaturalDecayModelProperties> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterShape> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeEmitterShapeStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeListener> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioNodeWithListener> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioPlaybackConnection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioPlaybackConnectionOpenResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioPlaybackConnectionStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioStateMonitor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioStateMonitorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioDeviceInputNodeResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioDeviceOutputNodeResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioFileInputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioFileInputNodeResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioFileOutputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioFileOutputNodeResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioGraphResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateAudioGraphResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ICreateMediaSourceAudioInputNodeResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IEchoEffectDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IEchoEffectDefinitionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IEqualizerBand> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IEqualizerEffectDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IEqualizerEffectDefinitionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ILimiterEffectDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ILimiterEffectDefinitionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IMediaSourceAudioInputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IReverbEffectDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IReverbEffectDefinitionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioDeviceConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioDeviceConfigurationStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioFormatConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioFormatConfigurationStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioDeviceInputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioDeviceOutputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioFileInputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioFileOutputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioFrameInputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioFrameOutputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioGraph> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioGraphBatchUpdater> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioGraphConnection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioGraphSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitterConeProperties> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeEmitterShape> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioNodeListener> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioPlaybackConnection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioStateMonitor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioSubmixNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioDeviceInputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioFileInputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioFileOutputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::CreateAudioGraphResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::EchoEffectDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::EqualizerBand> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::EqualizerEffectDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::LimiterEffectDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::MediaSourceAudioInputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::ReverbEffectDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::SpatialAudioFormatSubtype> : winrt::impl::hash_base {};
+#endif
 }
 #endif

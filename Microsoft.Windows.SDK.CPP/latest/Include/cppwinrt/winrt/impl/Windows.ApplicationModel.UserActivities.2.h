@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,14 +10,14 @@
 #include "winrt/impl/Windows.Security.Credentials.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.ApplicationModel.UserActivities.1.h"
-namespace winrt::Windows::ApplicationModel::UserActivities
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserActivities
 {
     struct __declspec(empty_bases) UserActivity : Windows::ApplicationModel::UserActivities::IUserActivity,
         impl::require<UserActivity, Windows::ApplicationModel::UserActivities::IUserActivity2, Windows::ApplicationModel::UserActivities::IUserActivity3>
     {
         UserActivity(std::nullptr_t) noexcept {}
         UserActivity(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::UserActivities::IUserActivity(ptr, take_ownership_from_abi) {}
-        UserActivity(param::hstring const& activityId);
+        explicit UserActivity(param::hstring const& activityId);
         static auto TryParseFromJson(param::hstring const& json);
         static auto TryParseFromJsonArray(param::hstring const& json);
         static auto ToJsonArray(param::iterable<Windows::ApplicationModel::UserActivities::UserActivity> const& activities);
@@ -27,7 +27,7 @@ namespace winrt::Windows::ApplicationModel::UserActivities
         UserActivityAttribution(std::nullptr_t) noexcept {}
         UserActivityAttribution(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::UserActivities::IUserActivityAttribution(ptr, take_ownership_from_abi) {}
         UserActivityAttribution();
-        UserActivityAttribution(Windows::Foundation::Uri const& iconUri);
+        explicit UserActivityAttribution(Windows::Foundation::Uri const& iconUri);
     };
     struct __declspec(empty_bases) UserActivityChannel : Windows::ApplicationModel::UserActivities::IUserActivityChannel,
         impl::require<UserActivityChannel, Windows::ApplicationModel::UserActivities::IUserActivityChannel2>

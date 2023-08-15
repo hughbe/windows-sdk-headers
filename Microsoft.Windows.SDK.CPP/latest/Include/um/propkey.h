@@ -2946,6 +2946,14 @@ DEFINE_PROPERTYKEY(PKEY_StorageProviderFileChecksum, 0xB2F9B9D6, 0xFEC4, 0x4DD5,
 DEFINE_PROPERTYKEY(PKEY_StorageProviderFileFlags, 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B, 8);
 #define INIT_PKEY_StorageProviderFileFlags { { 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B }, 8 }
 
+//  Name:     System.StorageProviderFileHasConflict -- PKEY_StorageProviderFileHasConflict
+//  Type:     Boolean -- VT_BOOL
+//  FormatID: {B2F9B9D6-FEC4-4DD5-94D7-8957488C807B}, 9
+//
+//  There is a conflict with the version of the file in the cloud.
+DEFINE_PROPERTYKEY(PKEY_StorageProviderFileHasConflict, 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B, 9);
+#define INIT_PKEY_StorageProviderFileHasConflict { { 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B }, 9 }
+
 //  Name:     System.StorageProviderFileIdentifier -- PKEY_StorageProviderFileIdentifier
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: {B2F9B9D6-FEC4-4DD5-94D7-8957488C807B}, 3

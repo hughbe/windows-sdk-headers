@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Security.EnterpriseData.1.h"
-namespace winrt::Windows::Security::EnterpriseData
+WINRT_EXPORT namespace winrt::Windows::Security::EnterpriseData
 {
     struct __declspec(empty_bases) BufferProtectUnprotectResult : Windows::Security::EnterpriseData::IBufferProtectUnprotectResult
     {
@@ -67,7 +67,7 @@ namespace winrt::Windows::Security::EnterpriseData
     {
         FileUnprotectOptions(std::nullptr_t) noexcept {}
         FileUnprotectOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::EnterpriseData::IFileUnprotectOptions(ptr, take_ownership_from_abi) {}
-        FileUnprotectOptions(bool audit);
+        explicit FileUnprotectOptions(bool audit);
     };
     struct __declspec(empty_bases) ProtectedAccessResumedEventArgs : Windows::Security::EnterpriseData::IProtectedAccessResumedEventArgs
     {
@@ -120,15 +120,15 @@ namespace winrt::Windows::Security::EnterpriseData
         static auto GetForCurrentView();
         static auto ProtectedAccessSuspending(Windows::Foundation::EventHandler<Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs> const& handler);
         using ProtectedAccessSuspending_revoker = impl::factory_event_revoker<Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics, &impl::abi_t<Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics>::remove_ProtectedAccessSuspending>;
-        static ProtectedAccessSuspending_revoker ProtectedAccessSuspending(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs> const& handler);
+        [[nodiscard]] static ProtectedAccessSuspending_revoker ProtectedAccessSuspending(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs> const& handler);
         static auto ProtectedAccessSuspending(winrt::event_token const& token);
         static auto ProtectedAccessResumed(Windows::Foundation::EventHandler<Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs> const& handler);
         using ProtectedAccessResumed_revoker = impl::factory_event_revoker<Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics, &impl::abi_t<Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics>::remove_ProtectedAccessResumed>;
-        static ProtectedAccessResumed_revoker ProtectedAccessResumed(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs> const& handler);
+        [[nodiscard]] static ProtectedAccessResumed_revoker ProtectedAccessResumed(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs> const& handler);
         static auto ProtectedAccessResumed(winrt::event_token const& token);
         static auto ProtectedContentRevoked(Windows::Foundation::EventHandler<Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs> const& handler);
         using ProtectedContentRevoked_revoker = impl::factory_event_revoker<Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics, &impl::abi_t<Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics>::remove_ProtectedContentRevoked>;
-        static ProtectedContentRevoked_revoker ProtectedContentRevoked(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs> const& handler);
+        [[nodiscard]] static ProtectedContentRevoked_revoker ProtectedContentRevoked(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs> const& handler);
         static auto ProtectedContentRevoked(winrt::event_token const& token);
         static auto CheckAccess(param::hstring const& sourceIdentity, param::hstring const& targetIdentity);
         static auto RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity);
@@ -140,7 +140,7 @@ namespace winrt::Windows::Security::EnterpriseData
         static auto IsProtectionUnderLockRequired(param::hstring const& identity);
         static auto PolicyChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using PolicyChanged_revoker = impl::factory_event_revoker<Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics2, &impl::abi_t<Windows::Security::EnterpriseData::IProtectionPolicyManagerStatics2>::remove_PolicyChanged>;
-        static PolicyChanged_revoker PolicyChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static PolicyChanged_revoker PolicyChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto PolicyChanged(winrt::event_token const& token);
         [[nodiscard]] static auto IsProtectionEnabled();
         static auto RequestAccessAsync(param::hstring const& sourceIdentity, param::hstring const& targetIdentity, Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo const& auditInfo);

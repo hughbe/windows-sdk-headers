@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -650,22 +658,27 @@ EXTERN_C const IID IID_IETFilterConfig;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IETFilterConfig * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IETFilterConfig * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IETFilterConfig * This);
         
+        DECLSPEC_XFGVIRT(IETFilterConfig, InitLicense)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *InitLicense )( 
             __RPC__in IETFilterConfig * This,
             /* [in] */ int LicenseId);
         
+        DECLSPEC_XFGVIRT(IETFilterConfig, GetSecureChannelObject)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetSecureChannelObject )( 
             __RPC__in IETFilterConfig * This,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppUnkDRMSecureChannel);
@@ -737,18 +750,22 @@ EXTERN_C const IID IID_IDTFilterConfig;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDTFilterConfig * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDTFilterConfig * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDTFilterConfig * This);
         
+        DECLSPEC_XFGVIRT(IDTFilterConfig, GetSecureChannelObject)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetSecureChannelObject )( 
             __RPC__in IDTFilterConfig * This,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppUnkDRMSecureChannel);
@@ -820,22 +837,27 @@ EXTERN_C const IID IID_IXDSCodecConfig;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IXDSCodecConfig * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IXDSCodecConfig * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IXDSCodecConfig * This);
         
+        DECLSPEC_XFGVIRT(IXDSCodecConfig, GetSecureChannelObject)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetSecureChannelObject )( 
             __RPC__in IXDSCodecConfig * This,
             /* [out] */ __RPC__deref_out_opt IUnknown **ppUnkDRMSecureChannel);
         
+        DECLSPEC_XFGVIRT(IXDSCodecConfig, SetPauseBufferTime)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetPauseBufferTime )( 
             __RPC__in IXDSCodecConfig * This,
             /* [in] */ DWORD dwPauseBufferTime);
@@ -909,18 +931,22 @@ EXTERN_C const IID IID_IDTFilterLicenseRenewal;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDTFilterLicenseRenewal * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDTFilterLicenseRenewal * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDTFilterLicenseRenewal * This);
         
+        DECLSPEC_XFGVIRT(IDTFilterLicenseRenewal, GetLicenseRenewalData)
         HRESULT ( STDMETHODCALLTYPE *GetLicenseRenewalData )( 
             __RPC__in IDTFilterLicenseRenewal * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppwszFileName,
@@ -996,18 +1022,22 @@ EXTERN_C const IID IID_IPTFilterLicenseRenewal;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPTFilterLicenseRenewal * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPTFilterLicenseRenewal * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPTFilterLicenseRenewal * This);
         
+        DECLSPEC_XFGVIRT(IPTFilterLicenseRenewal, RenewLicenses)
         HRESULT ( STDMETHODCALLTYPE *RenewLicenses )( 
             __RPC__in IPTFilterLicenseRenewal * This,
             /* [in] */ __RPC__in WCHAR *wszFileName,
@@ -1015,6 +1045,7 @@ EXTERN_C const IID IID_IPTFilterLicenseRenewal;
             /* [in] */ DWORD dwCallersId,
             /* [in] */ BOOL bHighPriority);
         
+        DECLSPEC_XFGVIRT(IPTFilterLicenseRenewal, CancelLicenseRenewal)
         HRESULT ( STDMETHODCALLTYPE *CancelLicenseRenewal )( 
             __RPC__in IPTFilterLicenseRenewal * This);
         
@@ -1084,18 +1115,22 @@ EXTERN_C const IID IID_IMceBurnerControl;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IMceBurnerControl * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IMceBurnerControl * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IMceBurnerControl * This);
         
+        DECLSPEC_XFGVIRT(IMceBurnerControl, GetBurnerNoDecryption)
         HRESULT ( STDMETHODCALLTYPE *GetBurnerNoDecryption )( 
             __RPC__in IMceBurnerControl * This);
         
@@ -1187,36 +1222,44 @@ EXTERN_C const IID IID_IETFilter;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IETFilter * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IETFilter * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IETFilter * This);
         
+        DECLSPEC_XFGVIRT(IETFilter, get_EvalRatObjOK)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EvalRatObjOK )( 
             __RPC__in IETFilter * This,
             /* [retval][out] */ __RPC__out HRESULT *pHrCoCreateRetVal);
         
+        DECLSPEC_XFGVIRT(IETFilter, GetCurrRating)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCurrRating )( 
             __RPC__in IETFilter * This,
             /* [out] */ __RPC__out EnTvRat_System *pEnSystem,
             /* [out] */ __RPC__out EnTvRat_GenericLevel *pEnRating,
             /* [out] */ __RPC__out LONG *plbfEnAttr);
         
+        DECLSPEC_XFGVIRT(IETFilter, GetCurrLicenseExpDate)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCurrLicenseExpDate )( 
             __RPC__in IETFilter * This,
             /* [in] */ __RPC__in ProtType *protType,
             /* [out] */ __RPC__out long *lpDateTime);
         
+        DECLSPEC_XFGVIRT(IETFilter, GetLastErrorCode)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetLastErrorCode )( 
             __RPC__in IETFilter * This);
         
+        DECLSPEC_XFGVIRT(IETFilter, SetRecordingOn)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetRecordingOn )( 
             __RPC__in IETFilter * This,
             BOOL fRecState);
@@ -1292,28 +1335,34 @@ EXTERN_C const IID DIID_IETFilterEvents;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IETFilterEvents * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IETFilterEvents * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IETFilterEvents * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IETFilterEvents * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IETFilterEvents * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IETFilterEvents * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1322,6 +1371,7 @@ EXTERN_C const IID DIID_IETFilterEvents;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IETFilterEvents * This,
             /* [annotation][in] */ 
@@ -1447,52 +1497,63 @@ EXTERN_C const IID IID_IDTFilter;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDTFilter * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDTFilter * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDTFilter * This);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_EvalRatObjOK)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EvalRatObjOK )( 
             __RPC__in IDTFilter * This,
             /* [retval][out] */ __RPC__out HRESULT *pHrCoCreateRetVal);
         
+        DECLSPEC_XFGVIRT(IDTFilter, GetCurrRating)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCurrRating )( 
             __RPC__in IDTFilter * This,
             /* [out] */ __RPC__out EnTvRat_System *pEnSystem,
             /* [out] */ __RPC__out EnTvRat_GenericLevel *pEnRating,
             /* [out] */ __RPC__out LONG *plbfEnAttr);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_BlockedRatingAttributes)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockedRatingAttributes )( 
             __RPC__in IDTFilter * This,
             /* [in] */ EnTvRat_System enSystem,
             /* [in] */ EnTvRat_GenericLevel enLevel,
             /* [retval][out] */ __RPC__out LONG *plbfEnAttr);
         
+        DECLSPEC_XFGVIRT(IDTFilter, put_BlockedRatingAttributes)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockedRatingAttributes )( 
             __RPC__in IDTFilter * This,
             /* [in] */ EnTvRat_System enSystem,
             /* [in] */ EnTvRat_GenericLevel enLevel,
             /* [in] */ LONG lbfAttrs);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_BlockUnRated)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockUnRated )( 
             __RPC__in IDTFilter * This,
             /* [retval][out] */ __RPC__out BOOL *pfBlockUnRatedShows);
         
+        DECLSPEC_XFGVIRT(IDTFilter, put_BlockUnRated)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockUnRated )( 
             __RPC__in IDTFilter * This,
             /* [in] */ BOOL fBlockUnRatedShows);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_BlockUnRatedDelay)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockUnRatedDelay )( 
             __RPC__in IDTFilter * This,
             /* [retval][out] */ __RPC__out LONG *pmsecsDelayBeforeBlock);
         
+        DECLSPEC_XFGVIRT(IDTFilter, put_BlockUnRatedDelay)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockUnRatedDelay )( 
             __RPC__in IDTFilter * This,
             /* [in] */ LONG msecsDelayBeforeBlock);
@@ -1588,65 +1649,79 @@ EXTERN_C const IID IID_IDTFilter2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDTFilter2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDTFilter2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDTFilter2 * This);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_EvalRatObjOK)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EvalRatObjOK )( 
             __RPC__in IDTFilter2 * This,
             /* [retval][out] */ __RPC__out HRESULT *pHrCoCreateRetVal);
         
+        DECLSPEC_XFGVIRT(IDTFilter, GetCurrRating)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCurrRating )( 
             __RPC__in IDTFilter2 * This,
             /* [out] */ __RPC__out EnTvRat_System *pEnSystem,
             /* [out] */ __RPC__out EnTvRat_GenericLevel *pEnRating,
             /* [out] */ __RPC__out LONG *plbfEnAttr);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_BlockedRatingAttributes)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockedRatingAttributes )( 
             __RPC__in IDTFilter2 * This,
             /* [in] */ EnTvRat_System enSystem,
             /* [in] */ EnTvRat_GenericLevel enLevel,
             /* [retval][out] */ __RPC__out LONG *plbfEnAttr);
         
+        DECLSPEC_XFGVIRT(IDTFilter, put_BlockedRatingAttributes)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockedRatingAttributes )( 
             __RPC__in IDTFilter2 * This,
             /* [in] */ EnTvRat_System enSystem,
             /* [in] */ EnTvRat_GenericLevel enLevel,
             /* [in] */ LONG lbfAttrs);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_BlockUnRated)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockUnRated )( 
             __RPC__in IDTFilter2 * This,
             /* [retval][out] */ __RPC__out BOOL *pfBlockUnRatedShows);
         
+        DECLSPEC_XFGVIRT(IDTFilter, put_BlockUnRated)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockUnRated )( 
             __RPC__in IDTFilter2 * This,
             /* [in] */ BOOL fBlockUnRatedShows);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_BlockUnRatedDelay)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockUnRatedDelay )( 
             __RPC__in IDTFilter2 * This,
             /* [retval][out] */ __RPC__out LONG *pmsecsDelayBeforeBlock);
         
+        DECLSPEC_XFGVIRT(IDTFilter, put_BlockUnRatedDelay)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockUnRatedDelay )( 
             __RPC__in IDTFilter2 * This,
             /* [in] */ LONG msecsDelayBeforeBlock);
         
+        DECLSPEC_XFGVIRT(IDTFilter2, get_ChallengeUrl)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ChallengeUrl )( 
             __RPC__in IDTFilter2 * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrChallengeUrl);
         
+        DECLSPEC_XFGVIRT(IDTFilter2, GetCurrLicenseExpDate)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCurrLicenseExpDate )( 
             __RPC__in IDTFilter2 * This,
             /* [in] */ __RPC__in ProtType *protType,
             /* [out] */ __RPC__out long *lpDateTime);
         
+        DECLSPEC_XFGVIRT(IDTFilter2, GetLastErrorCode)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetLastErrorCode )( 
             __RPC__in IDTFilter2 * This);
         
@@ -1751,76 +1826,93 @@ EXTERN_C const IID IID_IDTFilter3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDTFilter3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDTFilter3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDTFilter3 * This);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_EvalRatObjOK)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_EvalRatObjOK )( 
             __RPC__in IDTFilter3 * This,
             /* [retval][out] */ __RPC__out HRESULT *pHrCoCreateRetVal);
         
+        DECLSPEC_XFGVIRT(IDTFilter, GetCurrRating)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCurrRating )( 
             __RPC__in IDTFilter3 * This,
             /* [out] */ __RPC__out EnTvRat_System *pEnSystem,
             /* [out] */ __RPC__out EnTvRat_GenericLevel *pEnRating,
             /* [out] */ __RPC__out LONG *plbfEnAttr);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_BlockedRatingAttributes)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockedRatingAttributes )( 
             __RPC__in IDTFilter3 * This,
             /* [in] */ EnTvRat_System enSystem,
             /* [in] */ EnTvRat_GenericLevel enLevel,
             /* [retval][out] */ __RPC__out LONG *plbfEnAttr);
         
+        DECLSPEC_XFGVIRT(IDTFilter, put_BlockedRatingAttributes)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockedRatingAttributes )( 
             __RPC__in IDTFilter3 * This,
             /* [in] */ EnTvRat_System enSystem,
             /* [in] */ EnTvRat_GenericLevel enLevel,
             /* [in] */ LONG lbfAttrs);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_BlockUnRated)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockUnRated )( 
             __RPC__in IDTFilter3 * This,
             /* [retval][out] */ __RPC__out BOOL *pfBlockUnRatedShows);
         
+        DECLSPEC_XFGVIRT(IDTFilter, put_BlockUnRated)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockUnRated )( 
             __RPC__in IDTFilter3 * This,
             /* [in] */ BOOL fBlockUnRatedShows);
         
+        DECLSPEC_XFGVIRT(IDTFilter, get_BlockUnRatedDelay)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockUnRatedDelay )( 
             __RPC__in IDTFilter3 * This,
             /* [retval][out] */ __RPC__out LONG *pmsecsDelayBeforeBlock);
         
+        DECLSPEC_XFGVIRT(IDTFilter, put_BlockUnRatedDelay)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockUnRatedDelay )( 
             __RPC__in IDTFilter3 * This,
             /* [in] */ LONG msecsDelayBeforeBlock);
         
+        DECLSPEC_XFGVIRT(IDTFilter2, get_ChallengeUrl)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ChallengeUrl )( 
             __RPC__in IDTFilter3 * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrChallengeUrl);
         
+        DECLSPEC_XFGVIRT(IDTFilter2, GetCurrLicenseExpDate)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCurrLicenseExpDate )( 
             __RPC__in IDTFilter3 * This,
             /* [in] */ __RPC__in ProtType *protType,
             /* [out] */ __RPC__out long *lpDateTime);
         
+        DECLSPEC_XFGVIRT(IDTFilter2, GetLastErrorCode)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetLastErrorCode )( 
             __RPC__in IDTFilter3 * This);
         
+        DECLSPEC_XFGVIRT(IDTFilter3, GetProtectionType)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetProtectionType )( 
             __RPC__in IDTFilter3 * This,
             /* [out] */ __RPC__out ProtType *pProtectionType);
         
+        DECLSPEC_XFGVIRT(IDTFilter3, LicenseHasExpirationDate)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *LicenseHasExpirationDate )( 
             __RPC__in IDTFilter3 * This,
             /* [out] */ __RPC__out BOOL *pfLicenseHasExpirationDate);
         
+        DECLSPEC_XFGVIRT(IDTFilter3, SetRights)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetRights )( 
             __RPC__in IDTFilter3 * This,
             /* [in] */ __RPC__in BSTR bstrRights);
@@ -1925,28 +2017,34 @@ EXTERN_C const IID DIID_IDTFilterEvents;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDTFilterEvents * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDTFilterEvents * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDTFilterEvents * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IDTFilterEvents * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IDTFilterEvents * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IDTFilterEvents * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1955,6 +2053,7 @@ EXTERN_C const IID DIID_IDTFilterEvents;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDTFilterEvents * This,
             /* [annotation][in] */ 
@@ -2081,30 +2180,37 @@ EXTERN_C const IID IID_IXDSCodec;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IXDSCodec * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IXDSCodec * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IXDSCodec * This);
         
+        DECLSPEC_XFGVIRT(IXDSCodec, get_XDSToRatObjOK)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_XDSToRatObjOK )( 
             __RPC__in IXDSCodec * This,
             /* [retval][out] */ __RPC__out HRESULT *pHrCoCreateRetVal);
         
+        DECLSPEC_XFGVIRT(IXDSCodec, put_CCSubstreamService)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_CCSubstreamService )( 
             __RPC__in IXDSCodec * This,
             /* [in] */ long SubstreamMask);
         
+        DECLSPEC_XFGVIRT(IXDSCodec, get_CCSubstreamService)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_CCSubstreamService )( 
             __RPC__in IXDSCodec * This,
             /* [retval][out] */ __RPC__out long *pSubstreamMask);
         
+        DECLSPEC_XFGVIRT(IXDSCodec, GetContentAdvisoryRating)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetContentAdvisoryRating )( 
             __RPC__in IXDSCodec * This,
             /* [out] */ __RPC__out PackedTvRating *pRat,
@@ -2113,6 +2219,7 @@ EXTERN_C const IID IID_IXDSCodec;
             /* [out] */ __RPC__out REFERENCE_TIME *pTimeStart,
             /* [out] */ __RPC__out REFERENCE_TIME *pTimeEnd);
         
+        DECLSPEC_XFGVIRT(IXDSCodec, GetXDSPacket)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetXDSPacket )( 
             __RPC__in IXDSCodec * This,
             /* [out] */ __RPC__out long *pXDSClassPkt,
@@ -2123,11 +2230,13 @@ EXTERN_C const IID IID_IXDSCodec;
             /* [out] */ __RPC__out REFERENCE_TIME *pTimeStart,
             /* [out] */ __RPC__out REFERENCE_TIME *pTimeEnd);
         
+        DECLSPEC_XFGVIRT(IXDSCodec, GetCurrLicenseExpDate)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCurrLicenseExpDate )( 
             __RPC__in IXDSCodec * This,
             /* [in] */ __RPC__in ProtType *protType,
             /* [out] */ __RPC__out long *lpDateTime);
         
+        DECLSPEC_XFGVIRT(IXDSCodec, GetLastErrorCode)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetLastErrorCode )( 
             __RPC__in IXDSCodec * This);
         
@@ -2208,28 +2317,34 @@ EXTERN_C const IID DIID_IXDSCodecEvents;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IXDSCodecEvents * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IXDSCodecEvents * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IXDSCodecEvents * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IXDSCodecEvents * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IXDSCodecEvents * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IXDSCodecEvents * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -2238,6 +2353,7 @@ EXTERN_C const IID DIID_IXDSCodecEvents;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXDSCodecEvents * This,
             /* [annotation][in] */ 

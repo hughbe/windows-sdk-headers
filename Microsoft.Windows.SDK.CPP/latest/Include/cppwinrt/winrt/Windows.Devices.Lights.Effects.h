@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Lights_Effects_H
 #define WINRT_Windows_Devices_Lights_Effects_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.Lights.h"
 #include "winrt/impl/Windows.Devices.Lights.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -16,45 +16,45 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.Lights.Effects.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::Duration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::StartDelay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::StartDelay() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->get_StartDelay(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::StartDelay(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::StartDelay(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->put_StartDelay(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::UpdateInterval() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::UpdateInterval() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->get_UpdateInterval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::UpdateInterval(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::UpdateInterval(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->put_UpdateInterval(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::SuggestedBitmapSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::SuggestedBitmapSize() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->get_SuggestedBitmapSize(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::BitmapRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Lights::Effects::LampArrayBitmapEffect, Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::BitmapRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Lights::Effects::LampArrayBitmapEffect, Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->add_BitmapRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -62,181 +62,181 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BitmapRequested_revoker>(this, BitmapRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::BitmapRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::BitmapRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->remove_BitmapRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArrayBitmapEffect) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapEffectFactory)->CreateInstance(*(void**)(&lampArray), lampIndexes.size(), get_abi(lampIndexes), &value));
         return Windows::Devices::Lights::Effects::LampArrayBitmapEffect{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapRequestedEventArgs<D>::SinceStarted() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapRequestedEventArgs<D>::SinceStarted() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapRequestedEventArgs)->get_SinceStarted(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBitmapRequestedEventArgs<D>::UpdateBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapRequestedEventArgs<D>::UpdateBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBitmapRequestedEventArgs)->UpdateBitmap(*(void**)(&bitmap)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::Color() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::Color() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->get_Color(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::Color(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::Color(Windows::UI::Color const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->put_Color(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::AttackDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::AttackDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->get_AttackDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::AttackDuration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::AttackDuration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->put_AttackDuration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::SustainDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::SustainDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->get_SustainDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::SustainDuration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::SustainDuration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->put_SustainDuration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::DecayDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::DecayDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->get_DecayDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::DecayDuration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::DecayDuration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->put_DecayDuration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::RepetitionDelay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::RepetitionDelay() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->get_RepetitionDelay(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::RepetitionDelay(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::RepetitionDelay(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->put_RepetitionDelay(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::StartDelay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::StartDelay() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->get_StartDelay(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::StartDelay(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::StartDelay(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->put_StartDelay(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::Occurrences() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::Occurrences() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->get_Occurrences(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::Occurrences(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::Occurrences(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->put_Occurrences(value));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::RepetitionMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArrayRepetitionMode) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::RepetitionMode() const
     {
-        Windows::Devices::Lights::Effects::LampArrayRepetitionMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->get_RepetitionMode(put_abi(value)));
+        Windows::Devices::Lights::Effects::LampArrayRepetitionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->get_RepetitionMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::RepetitionMode(Windows::Devices::Lights::Effects::LampArrayRepetitionMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffect<D>::RepetitionMode(Windows::Devices::Lights::Effects::LampArrayRepetitionMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffect)->put_RepetitionMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArrayBlinkEffect) consume_Windows_Devices_Lights_Effects_ILampArrayBlinkEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayBlinkEffectFactory)->CreateInstance(*(void**)(&lampArray), lampIndexes.size(), get_abi(lampIndexes), &value));
         return Windows::Devices::Lights::Effects::LampArrayBlinkEffect{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::Color() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::Color() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffect)->get_Color(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::Color(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::Color(Windows::UI::Color const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffect)->put_Color(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::RampDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::RampDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffect)->get_RampDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::RampDuration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::RampDuration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffect)->put_RampDuration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::StartDelay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::StartDelay() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffect)->get_StartDelay(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::StartDelay(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::StartDelay(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffect)->put_StartDelay(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::CompletionBehavior() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior) consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::CompletionBehavior() const
     {
-        Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffect)->get_CompletionBehavior(put_abi(value)));
+        Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffect)->get_CompletionBehavior(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::CompletionBehavior(Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffect<D>::CompletionBehavior(Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffect)->put_CompletionBehavior(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArrayColorRampEffect) consume_Windows_Devices_Lights_Effects_ILampArrayColorRampEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayColorRampEffectFactory)->CreateInstance(*(void**)(&lampArray), lampIndexes.size(), get_abi(lampIndexes), &value));
         return Windows::Devices::Lights::Effects::LampArrayColorRampEffect{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayCustomEffect)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::Duration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayCustomEffect)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::UpdateInterval() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::UpdateInterval() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayCustomEffect)->get_UpdateInterval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::UpdateInterval(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::UpdateInterval(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayCustomEffect)->put_UpdateInterval(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::UpdateRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Lights::Effects::LampArrayCustomEffect, Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::UpdateRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Lights::Effects::LampArrayCustomEffect, Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayCustomEffect)->add_UpdateRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -244,156 +244,157 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, UpdateRequested_revoker>(this, UpdateRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::UpdateRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::UpdateRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayCustomEffect)->remove_UpdateRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArrayCustomEffect) consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayCustomEffectFactory)->CreateInstance(*(void**)(&lampArray), lampIndexes.size(), get_abi(lampIndexes), &value));
         return Windows::Devices::Lights::Effects::LampArrayCustomEffect{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffect<D>::ZIndex() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Lights_Effects_ILampArrayEffect<D>::ZIndex() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffect)->get_ZIndex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffect<D>::ZIndex(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffect<D>::ZIndex(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffect)->put_ZIndex(value));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Append(Windows::Devices::Lights::Effects::ILampArrayEffect const& effect) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Append(Windows::Devices::Lights::Effects::ILampArrayEffect const& effect) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->Append(*(void**)(&effect)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::OverrideZIndex(int32_t zIndex) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::OverrideZIndex(int32_t zIndex) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->OverrideZIndex(zIndex));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Start() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->Start());
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Stop() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Stop() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->Stop());
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Pause() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Pause() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->Pause());
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::EffectStartMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArrayEffectStartMode) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::EffectStartMode() const
     {
-        Windows::Devices::Lights::Effects::LampArrayEffectStartMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->get_EffectStartMode(put_abi(value)));
+        Windows::Devices::Lights::Effects::LampArrayEffectStartMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->get_EffectStartMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::EffectStartMode(Windows::Devices::Lights::Effects::LampArrayEffectStartMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::EffectStartMode(Windows::Devices::Lights::Effects::LampArrayEffectStartMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->put_EffectStartMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Occurrences() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Occurrences() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->get_Occurrences(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Occurrences(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::Occurrences(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->put_Occurrences(value));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::RepetitionMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArrayRepetitionMode) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::RepetitionMode() const
     {
-        Windows::Devices::Lights::Effects::LampArrayRepetitionMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->get_RepetitionMode(put_abi(value)));
+        Windows::Devices::Lights::Effects::LampArrayRepetitionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->get_RepetitionMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::RepetitionMode(Windows::Devices::Lights::Effects::LampArrayRepetitionMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylist<D>::RepetitionMode(Windows::Devices::Lights::Effects::LampArrayRepetitionMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist)->put_RepetitionMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylistStatics<D>::StartAll(param::iterable<Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylistStatics<D>::StartAll(param::iterable<Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics)->StartAll(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylistStatics<D>::StopAll(param::iterable<Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylistStatics<D>::StopAll(param::iterable<Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics)->StopAll(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylistStatics<D>::PauseAll(param::iterable<Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayEffectPlaylistStatics<D>::PauseAll(param::iterable<Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics)->PauseAll(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::Color() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::Color() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffect)->get_Color(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::Color(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::Color(Windows::UI::Color const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffect)->put_Color(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffect)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::Duration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffect)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::StartDelay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::StartDelay() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffect)->get_StartDelay(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::StartDelay(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::StartDelay(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffect)->put_StartDelay(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::CompletionBehavior() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior) consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::CompletionBehavior() const
     {
-        Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffect)->get_CompletionBehavior(put_abi(value)));
+        Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffect)->get_CompletionBehavior(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::CompletionBehavior(Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArraySolidEffect<D>::CompletionBehavior(Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffect)->put_CompletionBehavior(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArraySolidEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Lights::Effects::LampArraySolidEffect) consume_Windows_Devices_Lights_Effects_ILampArraySolidEffectFactory<D>::CreateInstance(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArraySolidEffectFactory)->CreateInstance(*(void**)(&lampArray), lampIndexes.size(), get_abi(lampIndexes), &value));
         return Windows::Devices::Lights::Effects::LampArraySolidEffect{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SinceStarted() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SinceStarted() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs)->get_SinceStarted(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SetColor(Windows::UI::Color const& desiredColor) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SetColor(Windows::UI::Color const& desiredColor) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs)->SetColor(impl::bind_in(desiredColor)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SetColorForIndex(int32_t lampIndex, Windows::UI::Color const& desiredColor) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SetColorForIndex(int32_t lampIndex, Windows::UI::Color const& desiredColor) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs)->SetColorForIndex(lampIndex, impl::bind_in(desiredColor)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SetSingleColorForIndices(Windows::UI::Color const& desiredColor, array_view<int32_t const> lampIndexes) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SetSingleColorForIndices(Windows::UI::Color const& desiredColor, array_view<int32_t const> lampIndexes) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs)->SetSingleColorForIndices(impl::bind_in(desiredColor), lampIndexes.size(), get_abi(lampIndexes)));
     }
-    template <typename D> auto consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SetColorsForIndices(array_view<Windows::UI::Color const> desiredColors, array_view<int32_t const> lampIndexes) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayUpdateRequestedEventArgs<D>::SetColorsForIndices(array_view<Windows::UI::Color const> desiredColors, array_view<int32_t const> lampIndexes) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs)->SetColorsForIndices(desiredColors.size(), get_abi(desiredColors), lampIndexes.size(), get_abi(lampIndexes)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayBitmapEffect> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayBitmapEffect>
     {
@@ -465,6 +466,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayBitmapEffectFactory> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayBitmapEffectFactory>
     {
@@ -477,6 +480,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayBitmapRequestedEventArgs> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayBitmapRequestedEventArgs>
     {
@@ -496,6 +501,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayBlinkEffect> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayBlinkEffect>
     {
@@ -618,6 +625,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayBlinkEffectFactory> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayBlinkEffectFactory>
     {
@@ -630,6 +639,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayColorRampEffect> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayColorRampEffect>
     {
@@ -693,6 +704,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayColorRampEffectFactory> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayColorRampEffectFactory>
     {
@@ -705,6 +718,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayCustomEffect> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayCustomEffect>
     {
@@ -753,6 +768,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayCustomEffectFactory> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayCustomEffectFactory>
     {
@@ -765,6 +782,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayEffect> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayEffect>
     {
@@ -783,6 +801,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist>
     {
@@ -864,6 +883,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics>
     {
@@ -889,6 +910,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArraySolidEffect> : produce_base<D, Windows::Devices::Lights::Effects::ILampArraySolidEffect>
     {
@@ -952,6 +975,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArraySolidEffectFactory> : produce_base<D, Windows::Devices::Lights::Effects::ILampArraySolidEffectFactory>
     {
@@ -964,6 +989,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs> : produce_base<D, Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs>
     {
@@ -1004,70 +1031,73 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Lights::Effects
+WINRT_EXPORT namespace winrt::Windows::Devices::Lights::Effects
 {
     inline LampArrayBitmapEffect::LampArrayBitmapEffect(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) :
-        LampArrayBitmapEffect(impl::call_factory<LampArrayBitmapEffect, Windows::Devices::Lights::Effects::ILampArrayBitmapEffectFactory>([&](auto&& f) { return f.CreateInstance(lampArray, lampIndexes); }))
+        LampArrayBitmapEffect(impl::call_factory<LampArrayBitmapEffect, ILampArrayBitmapEffectFactory>([&](ILampArrayBitmapEffectFactory const& f) { return f.CreateInstance(lampArray, lampIndexes); }))
     {
     }
     inline LampArrayBlinkEffect::LampArrayBlinkEffect(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) :
-        LampArrayBlinkEffect(impl::call_factory<LampArrayBlinkEffect, Windows::Devices::Lights::Effects::ILampArrayBlinkEffectFactory>([&](auto&& f) { return f.CreateInstance(lampArray, lampIndexes); }))
+        LampArrayBlinkEffect(impl::call_factory<LampArrayBlinkEffect, ILampArrayBlinkEffectFactory>([&](ILampArrayBlinkEffectFactory const& f) { return f.CreateInstance(lampArray, lampIndexes); }))
     {
     }
     inline LampArrayColorRampEffect::LampArrayColorRampEffect(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) :
-        LampArrayColorRampEffect(impl::call_factory<LampArrayColorRampEffect, Windows::Devices::Lights::Effects::ILampArrayColorRampEffectFactory>([&](auto&& f) { return f.CreateInstance(lampArray, lampIndexes); }))
+        LampArrayColorRampEffect(impl::call_factory<LampArrayColorRampEffect, ILampArrayColorRampEffectFactory>([&](ILampArrayColorRampEffectFactory const& f) { return f.CreateInstance(lampArray, lampIndexes); }))
     {
     }
     inline LampArrayCustomEffect::LampArrayCustomEffect(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) :
-        LampArrayCustomEffect(impl::call_factory<LampArrayCustomEffect, Windows::Devices::Lights::Effects::ILampArrayCustomEffectFactory>([&](auto&& f) { return f.CreateInstance(lampArray, lampIndexes); }))
+        LampArrayCustomEffect(impl::call_factory<LampArrayCustomEffect, ILampArrayCustomEffectFactory>([&](ILampArrayCustomEffectFactory const& f) { return f.CreateInstance(lampArray, lampIndexes); }))
     {
     }
     inline LampArrayEffectPlaylist::LampArrayEffectPlaylist() :
-        LampArrayEffectPlaylist(impl::call_factory<LampArrayEffectPlaylist>([](auto&& f) { return f.template ActivateInstance<LampArrayEffectPlaylist>(); }))
+        LampArrayEffectPlaylist(impl::call_factory_cast<LampArrayEffectPlaylist(*)(Windows::Foundation::IActivationFactory const&), LampArrayEffectPlaylist>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<LampArrayEffectPlaylist>(); }))
     {
     }
     inline auto LampArrayEffectPlaylist::StartAll(param::iterable<Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> const& value)
     {
-        impl::call_factory<LampArrayEffectPlaylist, Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics>([&](auto&& f) { return f.StartAll(value); });
+        impl::call_factory<LampArrayEffectPlaylist, ILampArrayEffectPlaylistStatics>([&](ILampArrayEffectPlaylistStatics const& f) { return f.StartAll(value); });
     }
     inline auto LampArrayEffectPlaylist::StopAll(param::iterable<Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> const& value)
     {
-        impl::call_factory<LampArrayEffectPlaylist, Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics>([&](auto&& f) { return f.StopAll(value); });
+        impl::call_factory<LampArrayEffectPlaylist, ILampArrayEffectPlaylistStatics>([&](ILampArrayEffectPlaylistStatics const& f) { return f.StopAll(value); });
     }
     inline auto LampArrayEffectPlaylist::PauseAll(param::iterable<Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> const& value)
     {
-        impl::call_factory<LampArrayEffectPlaylist, Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics>([&](auto&& f) { return f.PauseAll(value); });
+        impl::call_factory<LampArrayEffectPlaylist, ILampArrayEffectPlaylistStatics>([&](ILampArrayEffectPlaylistStatics const& f) { return f.PauseAll(value); });
     }
     inline LampArraySolidEffect::LampArraySolidEffect(Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) :
-        LampArraySolidEffect(impl::call_factory<LampArraySolidEffect, Windows::Devices::Lights::Effects::ILampArraySolidEffectFactory>([&](auto&& f) { return f.CreateInstance(lampArray, lampIndexes); }))
+        LampArraySolidEffect(impl::call_factory<LampArraySolidEffect, ILampArraySolidEffectFactory>([&](ILampArraySolidEffectFactory const& f) { return f.CreateInstance(lampArray, lampIndexes); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapEffectFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapEffectFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBlinkEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayBlinkEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBlinkEffectFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayBlinkEffectFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayColorRampEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayColorRampEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayColorRampEffectFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayColorRampEffectFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayCustomEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayCustomEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayCustomEffectFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayCustomEffectFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArraySolidEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArraySolidEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArraySolidEffectFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArraySolidEffectFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect> {};
-    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapEffectFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBlinkEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayBlinkEffectFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayColorRampEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayColorRampEffectFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayCustomEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayCustomEffectFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylist> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayEffectPlaylistStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArraySolidEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArraySolidEffectFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::ILampArrayUpdateRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs> : winrt::impl::hash_base {};
+#endif
 }
 #endif

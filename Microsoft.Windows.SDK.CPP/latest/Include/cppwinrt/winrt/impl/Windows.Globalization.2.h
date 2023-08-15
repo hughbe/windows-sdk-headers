@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Globalization.1.h"
-namespace winrt::Windows::Globalization
+WINRT_EXPORT namespace winrt::Windows::Globalization
 {
     struct ApplicationLanguages
     {
@@ -25,7 +25,7 @@ namespace winrt::Windows::Globalization
         Calendar(std::nullptr_t) noexcept {}
         Calendar(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::ICalendar(ptr, take_ownership_from_abi) {}
         Calendar();
-        Calendar(param::iterable<hstring> const& languages);
+        explicit Calendar(param::iterable<hstring> const& languages);
         Calendar(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock);
         Calendar(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock, param::hstring const& timeZoneId);
     };
@@ -231,7 +231,7 @@ namespace winrt::Windows::Globalization
         GeographicRegion(std::nullptr_t) noexcept {}
         GeographicRegion(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::IGeographicRegion(ptr, take_ownership_from_abi) {}
         GeographicRegion();
-        GeographicRegion(param::hstring const& geographicRegionCode);
+        explicit GeographicRegion(param::hstring const& geographicRegionCode);
         static auto IsSupported(param::hstring const& geographicRegionCode);
     };
     struct __declspec(empty_bases) JapanesePhoneme : Windows::Globalization::IJapanesePhoneme
@@ -250,7 +250,7 @@ namespace winrt::Windows::Globalization
     {
         Language(std::nullptr_t) noexcept {}
         Language(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::ILanguage(ptr, take_ownership_from_abi) {}
-        Language(param::hstring const& languageTag);
+        explicit Language(param::hstring const& languageTag);
         static auto IsWellFormed(param::hstring const& languageTag);
         [[nodiscard]] static auto CurrentInputMethodLanguageTag();
         static auto TrySetInputMethodLanguageTag(param::hstring const& languageTag);

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,7 +14,7 @@
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.Maps.1.h"
-namespace winrt::Windows::UI::Xaml::Controls::Maps
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Maps
 {
     struct MapZoomLevelRange
     {
@@ -44,7 +44,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Maps
         HttpMapTileDataSource(std::nullptr_t) noexcept {}
         HttpMapTileDataSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Maps::IHttpMapTileDataSource(ptr, take_ownership_from_abi) {}
         HttpMapTileDataSource();
-        HttpMapTileDataSource(param::hstring const& uriFormatString);
+        explicit HttpMapTileDataSource(param::hstring const& uriFormatString);
     };
     struct __declspec(empty_bases) LocalMapTileDataSource : Windows::UI::Xaml::Controls::Maps::ILocalMapTileDataSource,
         impl::base<LocalMapTileDataSource, Windows::UI::Xaml::Controls::Maps::MapTileDataSource, Windows::UI::Xaml::DependencyObject>,
@@ -53,7 +53,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Maps
         LocalMapTileDataSource(std::nullptr_t) noexcept {}
         LocalMapTileDataSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Maps::ILocalMapTileDataSource(ptr, take_ownership_from_abi) {}
         LocalMapTileDataSource();
-        LocalMapTileDataSource(param::hstring const& uriFormatString);
+        explicit LocalMapTileDataSource(param::hstring const& uriFormatString);
     };
     struct __declspec(empty_bases) MapActualCameraChangedEventArgs : Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangedEventArgs,
         impl::require<MapActualCameraChangedEventArgs, Windows::UI::Xaml::Controls::Maps::IMapActualCameraChangedEventArgs2>
@@ -75,7 +75,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Maps
     {
         MapBillboard(std::nullptr_t) noexcept {}
         MapBillboard(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Maps::IMapBillboard(ptr, take_ownership_from_abi) {}
-        MapBillboard(Windows::UI::Xaml::Controls::Maps::MapCamera const& camera);
+        explicit MapBillboard(Windows::UI::Xaml::Controls::Maps::MapCamera const& camera);
         [[nodiscard]] static auto LocationProperty();
         [[nodiscard]] static auto NormalizedAnchorPointProperty();
         [[nodiscard]] static auto CollisionBehaviorDesiredProperty();
@@ -86,7 +86,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Maps
     {
         MapCamera(std::nullptr_t) noexcept {}
         MapCamera(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Maps::IMapCamera(ptr, take_ownership_from_abi) {}
-        MapCamera(Windows::Devices::Geolocation::Geopoint const& location);
+        explicit MapCamera(Windows::Devices::Geolocation::Geopoint const& location);
         MapCamera(Windows::Devices::Geolocation::Geopoint const& location, double headingInDegrees);
         MapCamera(Windows::Devices::Geolocation::Geopoint const& location, double headingInDegrees, double pitchInDegrees);
         MapCamera(Windows::Devices::Geolocation::Geopoint const& location, double headingInDegrees, double pitchInDegrees, double rollInDegrees, double fieldOfViewInDegrees);
@@ -185,7 +185,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Maps
     {
         MapControlDataHelper(std::nullptr_t) noexcept {}
         MapControlDataHelper(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Maps::IMapControlDataHelper(ptr, take_ownership_from_abi) {}
-        MapControlDataHelper(Windows::UI::Xaml::Controls::Maps::MapControl const& map);
+        explicit MapControlDataHelper(Windows::UI::Xaml::Controls::Maps::MapControl const& map);
         static auto CreateMapControl(bool rasterRenderMode);
     };
     struct __declspec(empty_bases) MapControlTransitFeatureClickEventArgs : Windows::UI::Xaml::Controls::Maps::IMapControlTransitFeatureClickEventArgs
@@ -390,7 +390,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Maps
     {
         MapRouteView(std::nullptr_t) noexcept {}
         MapRouteView(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Maps::IMapRouteView(ptr, take_ownership_from_abi) {}
-        MapRouteView(Windows::Services::Maps::MapRoute const& route);
+        explicit MapRouteView(Windows::Services::Maps::MapRoute const& route);
     };
     struct __declspec(empty_bases) MapScene : Windows::UI::Xaml::Controls::Maps::IMapScene,
         impl::base<MapScene, Windows::UI::Xaml::DependencyObject>,
@@ -540,7 +540,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Maps
         MapTileSource(std::nullptr_t) noexcept {}
         MapTileSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Maps::IMapTileSource(ptr, take_ownership_from_abi) {}
         MapTileSource();
-        MapTileSource(Windows::UI::Xaml::Controls::Maps::MapTileDataSource const& dataSource);
+        explicit MapTileSource(Windows::UI::Xaml::Controls::Maps::MapTileDataSource const& dataSource);
         MapTileSource(Windows::UI::Xaml::Controls::Maps::MapTileDataSource const& dataSource, Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange const& zoomLevelRange);
         MapTileSource(Windows::UI::Xaml::Controls::Maps::MapTileDataSource const& dataSource, Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange const& zoomLevelRange, Windows::Devices::Geolocation::GeoboundingBox const& bounds);
         MapTileSource(Windows::UI::Xaml::Controls::Maps::MapTileDataSource const& dataSource, Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange const& zoomLevelRange, Windows::Devices::Geolocation::GeoboundingBox const& bounds, int32_t tileSizeInPixels);
@@ -585,7 +585,7 @@ namespace winrt::Windows::UI::Xaml::Controls::Maps
     {
         StreetsideExperience(std::nullptr_t) noexcept {}
         StreetsideExperience(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Maps::IStreetsideExperience(ptr, take_ownership_from_abi) {}
-        StreetsideExperience(Windows::UI::Xaml::Controls::Maps::StreetsidePanorama const& panorama);
+        explicit StreetsideExperience(Windows::UI::Xaml::Controls::Maps::StreetsidePanorama const& panorama);
         StreetsideExperience(Windows::UI::Xaml::Controls::Maps::StreetsidePanorama const& panorama, double headingInDegrees, double pitchInDegrees, double fieldOfViewInDegrees);
     };
     struct __declspec(empty_bases) StreetsidePanorama : Windows::UI::Xaml::Controls::Maps::IStreetsidePanorama,

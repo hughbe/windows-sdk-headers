@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Networking.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Networking.Sockets.1.h"
-namespace winrt::Windows::Networking::Sockets
+WINRT_EXPORT namespace winrt::Windows::Networking::Sockets
 {
     struct BandwidthStatistics
     {
@@ -133,7 +133,7 @@ namespace winrt::Windows::Networking::Sockets
     {
         SocketActivityContext(std::nullptr_t) noexcept {}
         SocketActivityContext(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Sockets::ISocketActivityContext(ptr, take_ownership_from_abi) {}
-        SocketActivityContext(Windows::Storage::Streams::IBuffer const& data);
+        explicit SocketActivityContext(Windows::Storage::Streams::IBuffer const& data);
     };
     struct __declspec(empty_bases) SocketActivityInformation : Windows::Networking::Sockets::ISocketActivityInformation
     {

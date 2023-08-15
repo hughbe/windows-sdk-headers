@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,7 @@
 #include "winrt/impl/Windows.UI.Xaml.Interop.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Media.Animation.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Navigation.1.h"
-namespace winrt::Windows::UI::Xaml::Navigation
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
 {
     struct LoadCompletedEventHandler : Windows::Foundation::IUnknown
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Adc_H
 #define WINRT_Windows_Devices_Adc_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Devices.Adc.Provider.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -14,82 +14,83 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.Adc.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcChannel<D>::Controller() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Adc::AdcController) consume_Windows_Devices_Adc_IAdcChannel<D>::Controller() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcChannel)->get_Controller(&value));
         return Windows::Devices::Adc::AdcController{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcChannel<D>::ReadValue() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Adc_IAdcChannel<D>::ReadValue() const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcChannel)->ReadValue(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcChannel<D>::ReadRatio() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Devices_Adc_IAdcChannel<D>::ReadRatio() const
     {
-        double result;
+        double result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcChannel)->ReadRatio(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcController<D>::ChannelCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Adc_IAdcController<D>::ChannelCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcController)->get_ChannelCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcController<D>::ResolutionInBits() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Adc_IAdcController<D>::ResolutionInBits() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcController)->get_ResolutionInBits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcController<D>::MinValue() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Adc_IAdcController<D>::MinValue() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcController)->get_MinValue(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcController<D>::MaxValue() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Adc_IAdcController<D>::MaxValue() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcController)->get_MaxValue(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcController<D>::ChannelMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Adc::AdcChannelMode) consume_Windows_Devices_Adc_IAdcController<D>::ChannelMode() const
     {
-        Windows::Devices::Adc::AdcChannelMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcController)->get_ChannelMode(put_abi(value)));
+        Windows::Devices::Adc::AdcChannelMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcController)->get_ChannelMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcController<D>::ChannelMode(Windows::Devices::Adc::AdcChannelMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Adc_IAdcController<D>::ChannelMode(Windows::Devices::Adc::AdcChannelMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcController)->put_ChannelMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcController<D>::IsChannelModeSupported(Windows::Devices::Adc::AdcChannelMode const& channelMode) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Adc_IAdcController<D>::IsChannelModeSupported(Windows::Devices::Adc::AdcChannelMode const& channelMode) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcController)->IsChannelModeSupported(static_cast<int32_t>(channelMode), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcController<D>::OpenChannel(int32_t channelNumber) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Adc::AdcChannel) consume_Windows_Devices_Adc_IAdcController<D>::OpenChannel(int32_t channelNumber) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcController)->OpenChannel(channelNumber, &result));
         return Windows::Devices::Adc::AdcChannel{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcControllerStatics<D>::GetControllersAsync(Windows::Devices::Adc::Provider::IAdcProvider const& provider) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Adc::AdcController>>) consume_Windows_Devices_Adc_IAdcControllerStatics<D>::GetControllersAsync(Windows::Devices::Adc::Provider::IAdcProvider const& provider) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcControllerStatics)->GetControllersAsync(*(void**)(&provider), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Adc::AdcController>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Adc_IAdcControllerStatics2<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Adc::AdcController>) consume_Windows_Devices_Adc_IAdcControllerStatics2<D>::GetDefaultAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Adc::IAdcControllerStatics2)->GetDefaultAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Adc::AdcController>{ operation, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Adc::IAdcChannel> : produce_base<D, Windows::Devices::Adc::IAdcChannel>
     {
@@ -116,6 +117,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Adc::IAdcController> : produce_base<D, Windows::Devices::Adc::IAdcController>
     {
@@ -177,6 +180,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Adc::IAdcControllerStatics> : produce_base<D, Windows::Devices::Adc::IAdcControllerStatics>
     {
@@ -189,6 +194,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Adc::IAdcControllerStatics2> : produce_base<D, Windows::Devices::Adc::IAdcControllerStatics2>
     {
@@ -201,25 +208,28 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Adc
+WINRT_EXPORT namespace winrt::Windows::Devices::Adc
 {
     inline auto AdcController::GetControllersAsync(Windows::Devices::Adc::Provider::IAdcProvider const& provider)
     {
-        return impl::call_factory<AdcController, Windows::Devices::Adc::IAdcControllerStatics>([&](auto&& f) { return f.GetControllersAsync(provider); });
+        return impl::call_factory<AdcController, IAdcControllerStatics>([&](IAdcControllerStatics const& f) { return f.GetControllersAsync(provider); });
     }
     inline auto AdcController::GetDefaultAsync()
     {
-        return impl::call_factory<AdcController, Windows::Devices::Adc::IAdcControllerStatics2>([&](auto&& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::Adc::AdcController>(*)(IAdcControllerStatics2 const&), AdcController, IAdcControllerStatics2>([](IAdcControllerStatics2 const& f) { return f.GetDefaultAsync(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Adc::IAdcChannel> : winrt::impl::hash_base<winrt::Windows::Devices::Adc::IAdcChannel> {};
-    template<> struct hash<winrt::Windows::Devices::Adc::IAdcController> : winrt::impl::hash_base<winrt::Windows::Devices::Adc::IAdcController> {};
-    template<> struct hash<winrt::Windows::Devices::Adc::IAdcControllerStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Adc::IAdcControllerStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Adc::IAdcControllerStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::Adc::IAdcControllerStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::Adc::AdcChannel> : winrt::impl::hash_base<winrt::Windows::Devices::Adc::AdcChannel> {};
-    template<> struct hash<winrt::Windows::Devices::Adc::AdcController> : winrt::impl::hash_base<winrt::Windows::Devices::Adc::AdcController> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Adc::IAdcChannel> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Adc::IAdcController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Adc::IAdcControllerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Adc::IAdcControllerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Adc::AdcChannel> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Adc::AdcController> : winrt::impl::hash_base {};
+#endif
 }
 #endif

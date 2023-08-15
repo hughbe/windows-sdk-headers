@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,7 @@
 #include "winrt/impl/Windows.UI.Composition.1.h"
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Documents.1.h"
-namespace winrt::Windows::UI::Xaml::Documents
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Documents
 {
     struct TextRange
     {
@@ -409,7 +409,7 @@ namespace winrt::Windows::UI::Xaml::Documents
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using ITextElementOverrides = winrt::Windows::UI::Xaml::Documents::ITextElementOverrides;
-        auto OnDisconnectVisualChildren() const;
+        WINRT_IMPL_AUTO(void) OnDisconnectVisualChildren() const;
     };
 }
 #endif

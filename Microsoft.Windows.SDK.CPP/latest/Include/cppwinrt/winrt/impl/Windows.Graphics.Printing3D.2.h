@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Graphics_Printing3D_2_H
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Graphics.Printing3D.1.h"
-namespace winrt::Windows::Graphics::Printing3D
+WINRT_EXPORT namespace winrt::Windows::Graphics::Printing3D
 {
     struct Print3DTaskSourceRequestedHandler : Windows::Foundation::IUnknown
     {
@@ -90,7 +90,7 @@ namespace winrt::Windows::Graphics::Printing3D
     {
         Printing3DBaseMaterialGroup(std::nullptr_t) noexcept {}
         Printing3DBaseMaterialGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing3D::IPrinting3DBaseMaterialGroup(ptr, take_ownership_from_abi) {}
-        Printing3DBaseMaterialGroup(uint32_t MaterialGroupId);
+        explicit Printing3DBaseMaterialGroup(uint32_t MaterialGroupId);
     };
     struct __declspec(empty_bases) Printing3DColorMaterial : Windows::Graphics::Printing3D::IPrinting3DColorMaterial,
         impl::require<Printing3DColorMaterial, Windows::Graphics::Printing3D::IPrinting3DColorMaterial2>
@@ -103,7 +103,7 @@ namespace winrt::Windows::Graphics::Printing3D
     {
         Printing3DColorMaterialGroup(std::nullptr_t) noexcept {}
         Printing3DColorMaterialGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing3D::IPrinting3DColorMaterialGroup(ptr, take_ownership_from_abi) {}
-        Printing3DColorMaterialGroup(uint32_t MaterialGroupId);
+        explicit Printing3DColorMaterialGroup(uint32_t MaterialGroupId);
     };
     struct __declspec(empty_bases) Printing3DComponent : Windows::Graphics::Printing3D::IPrinting3DComponent
     {
@@ -128,7 +128,7 @@ namespace winrt::Windows::Graphics::Printing3D
     {
         Printing3DCompositeMaterialGroup(std::nullptr_t) noexcept {}
         Printing3DCompositeMaterialGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing3D::IPrinting3DCompositeMaterialGroup(ptr, take_ownership_from_abi) {}
-        Printing3DCompositeMaterialGroup(uint32_t MaterialGroupId);
+        explicit Printing3DCompositeMaterialGroup(uint32_t MaterialGroupId);
     };
     struct __declspec(empty_bases) Printing3DFaceReductionOptions : Windows::Graphics::Printing3D::IPrinting3DFaceReductionOptions
     {
@@ -176,7 +176,7 @@ namespace winrt::Windows::Graphics::Printing3D
     {
         Printing3DMultiplePropertyMaterialGroup(std::nullptr_t) noexcept {}
         Printing3DMultiplePropertyMaterialGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing3D::IPrinting3DMultiplePropertyMaterialGroup(ptr, take_ownership_from_abi) {}
-        Printing3DMultiplePropertyMaterialGroup(uint32_t MaterialGroupId);
+        explicit Printing3DMultiplePropertyMaterialGroup(uint32_t MaterialGroupId);
     };
     struct __declspec(empty_bases) Printing3DTexture2CoordMaterial : Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterial
     {
@@ -189,7 +189,7 @@ namespace winrt::Windows::Graphics::Printing3D
     {
         Printing3DTexture2CoordMaterialGroup(std::nullptr_t) noexcept {}
         Printing3DTexture2CoordMaterialGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterialGroup(ptr, take_ownership_from_abi) {}
-        Printing3DTexture2CoordMaterialGroup(uint32_t MaterialGroupId);
+        explicit Printing3DTexture2CoordMaterialGroup(uint32_t MaterialGroupId);
     };
     struct __declspec(empty_bases) Printing3DTextureResource : Windows::Graphics::Printing3D::IPrinting3DTextureResource
     {

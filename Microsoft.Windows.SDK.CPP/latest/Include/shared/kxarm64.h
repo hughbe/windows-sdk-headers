@@ -41,6 +41,28 @@
 
 #include "kxarm64unw.h"
 
+
+;
+; For assembly files that are built for both ARM64 and ARM64EC (discouraged
+; since the files might not have been ported to use X64 behavior in the ARM64EC
+; paths), use this macro to wrap all references to function names (ASM and C).
+;
+; For ARM64, this does nothing.
+;
+; For ARM64EC, this changes FuncName to |#FuncName|.
+;
+
+#ifndef A64NAME
+#define A64NAME_HASHLIT #
+#define A64NAME_HASH() A64NAME_HASHLIT
+#ifndef _M_ARM64EC
+#define A64NAME(FuncName) FuncName
+#else
+#define A64NAME_DECORATE(FuncName) A64NAME_HASH() ## FuncName
+#define A64NAME(FuncName) |A64NAME_DECORATE(FuncName)|  
+#endif /*_M_ARM64EC*/
+#endif /*A64NAME*/
+
         ;
         ; Global variables
         ;
@@ -61,13 +83,16 @@
         GBLS    __FuncXDataEpilog4Label
         GBLS    __FuncXDataEndLabel
         GBLS    __FuncEndLabel
+        GBLS    __FuncEntryThunkLabel
+        GBLS    __FuncExitThunkLabel
 
         ; other globals relating to the current function
+        GBLS    __FuncComDat
         GBLS    __FuncArea
-        GBLS    __FuncExceptionHandler
-        GBLS    __SectAlign
-        GBLS    __AlignStmt
-
+        GBLS    __FuncPDataArea
+        GBLS    __FuncXDataArea
+        GBLA    __FuncAlignment
+__FuncAlignment SETA 4
 
         ;
         ; Helper macro: generate the various labels we will use internally
@@ -77,7 +102,7 @@
         ;
 
         MACRO
-        __DeriveFunctionLabels $FuncName
+        __DeriveFunctionLabels $FuncName, $AreaName
 
 __FuncNameNoBars        SETS "$FuncName"
         IF ("$FuncName":LEFT:1 == "|") && ("$FuncName":RIGHT:1 == "|")
@@ -97,6 +122,18 @@ __FuncXDataEpilog2Label SETS "|$__FuncNameNoBars._xdata_epilog2|"
 __FuncXDataEpilog3Label SETS "|$__FuncNameNoBars._xdata_epilog3|"
 __FuncXDataEpilog4Label SETS "|$__FuncNameNoBars._xdata_epilog4|"
 __FuncXDataEndLabel     SETS "|$__FuncNameNoBars._xdata_end|"
+__FuncEntryThunkLabel   SETS "|$__FuncNameNoBars._entry_thunk|"
+__FuncArea              SETS "|.text|"
+__FuncPDataArea         SETS "|.pdata|"
+__FuncXDataArea         SETS "|.xdata|"
+        IF "$AreaName" != ""
+__FuncArea              SETS "$AreaName"
+        ENDIF
+        IF __FuncComDat != ""
+__FuncArea              SETS __FuncArea:CC:"{|$__FuncNameNoBars|}"
+__FuncPDataArea         SETS __FuncPDataArea:CC:"{$__FuncPDataLabel}"
+__FuncXDataArea         SETS __FuncXDataArea:CC:"{$__FuncXDataLabel}"
+        ENDIF
 
         MEND
 
@@ -134,6 +171,74 @@ $Name   PROC
 
 
         ;
+        ; Helper macro to set the AREA to the correct answer
+        ; for the current function, and configure the alignment.
+        ;
+
+        MACRO
+        __SetFunctionAreaAndAlign $Alignment
+
+        LCLS    AreaAlign
+        LCLS    AlignStmt
+
+        ;
+        ; "NOALIGN" is supported to just set the area
+        ;
+
+        IF "$Alignment" == "NOALIGN"
+        AREA    $__FuncArea
+
+        ;
+        ; COMDAT functions must set alignment in the AREA
+        ; statement
+        ;
+
+        ELIF __FuncComDat != ""
+
+AreaAlign SETS "4"
+        IF "$Alignment" != ""
+        IF $Alignment > 4
+AreaAlign SETS "$Alignment"
+        ENDIF
+        ENDIF
+
+        AREA    $__FuncArea,CODE,READONLY,ALIGN=$AreaAlign
+
+        ELSE
+
+AlignStmt SETS ""
+        IF "$Alignment" != ""
+AlignStmt SETS "ALIGN 0x":CC: :STR:(1 << $Alignment)
+        ENDIF
+
+        AREA    $__FuncArea,CODE,READONLY
+        $AlignStmt
+
+        ENDIF
+
+        MEND
+
+
+        ;
+        ; Helper macro to emit the special DWORD prior to the start of a
+        ; function which contains an offset to the ARM64EC entry thunk.
+        ; The entry thunk must have been previously defined or else this
+        ; macro is a no-op.
+        ;
+
+        MACRO
+        __AddEntryThunkPointer
+
+        IF :DEF:$__FuncEntryThunkLabel
+        ASSERT(__FuncComDat != "")
+        ALIGN   (1 << $__FuncAlignment),(1 << $__FuncAlignment) - 4
+        dcd     ($__FuncEntryThunkLabel - ({PC} + 4)) + 1
+        ENDIF
+
+        MEND
+
+
+        ;
         ; Declare that all following code/data is to be put in the .text segment
         ;
         ; N.B. The ALIGN attribute here specifies an exponent of base 2; not a
@@ -142,12 +247,7 @@ $Name   PROC
 
         MACRO
         TEXTAREA
-#if defined(_CONTROL_FLOW_GUARD)
         AREA    |.text|,ALIGN=4,CODE,READONLY
-#else
-        AREA    |.text|,ALIGN=2,CODE,READONLY
-#endif
-
         MEND
 
 
@@ -172,82 +272,227 @@ $Name   PROC
 
 
         ;
-        ; Macro for indicating the start of a nested function. Nested functions
-        ; imply a prolog, epilog, and unwind codes.
+        ; Set/reset the alignment for COMDAT functions that follow.
         ;
+        MACRO
+        SET_COMDAT_ALIGNMENT $Alignment
+
+__FuncAlignment SETA $Alignment
+        IF __FuncAlignment < 4
+__FuncAlignment SETA 4
+        ENDIF
+
+        MEND
+
 
         MACRO
-        NESTED_ENTRY $FuncName, $AreaName, $ExceptHandler, $Alignment
+        RESET_COMDAT_ALIGNMENT
 
-        ; compute the function's labels
-        __DeriveFunctionLabels $FuncName
-
-        ; determine the area we will put the function into
-__FuncArea   SETS    "|.text|"
-        IF "$AreaName" != ""
-__FuncArea   SETS    "$AreaName"
-        ENDIF
-
-
-        ; set up the exception handler itself
-__FuncExceptionHandler SETS ""
-        IF "$ExceptHandler" != ""
-__FuncExceptionHandler SETS    "|$ExceptHandler|"
-        ENDIF
-
-__AlignStmt   SETS  ""
-__SectAlign   SETS  ""
-
-#ifdef _CHPE_X86_ARM64_
-
-        ; For chpe targets, append a comdat name to the area name
-__FuncArea   SETS   __FuncArea:CC:"{|$__FuncNameNoBars|}"
-        ; Use the section alignment directive to achive alignment
-__SectAlign  SETS  ",ALIGN=4"
-
-        IF "$Alignment" != ""
-        IF $Alignment > 4
-__SectAlign   SETS   ",ALIGN=$Alignment"
-        ENDIF
-        ENDIF
-
-#else
-
-        ; for non-chpe targets, use a separate alignment directive
-        IF "$Alignment" != ""
-__AlignStmt  SETS "ALIGN 0x":CC: :STR:(1 << $Alignment)
-        ENDIF
-
-#endif
-
-#ifdef _CHPE_X86_ARM64_
-
-        AREA    $__FuncArea,CODE,READONLY$__SectAlign
-
-#else
-
-        ; switch to the specified area
-        AREA    $__FuncArea,CODE,READONLY
-
-#endif
-
-        $__AlignStmt
-
-        ; export the function name
-        __ExportProc $__FuncNameNoBars
-
-        ; flush any pending literal pool stuff
-        ROUT
-
-        ; reset the state of the unwind code tracking
-        __ResetUnwindState
+__FuncAlignment SETA 4
 
         MEND
 
 
         ;
+        ; Macro for indicating the start of a nested function. Nested functions
+        ; imply a prolog, epilog, and unwind codes. This macro presumes that
+        ; __DeriveFunctionLabels and __SetFunctionAreaAndAlign have already been
+        ; called as appropriate
+        ;
+
+        MACRO
+        NESTED_ENTRY $FuncName, $AreaName, $ExceptHandler, $Alignment
+
+__FuncComDat SETS ""
+        __DeriveFunctionLabels $FuncName,$AreaName
+        __SetFunctionAreaAndAlign $Alignment
+        ASSERT (!:DEF:$__FuncEntryThunkLabel)
+        __ResetUnwindState $ExceptHandler
+        __ExportProc $__FuncNameNoBars
+        ROUT
+
+        MEND
+
+
+        MACRO
+        NESTED_ENTRY_COMDAT $FuncName, $AreaName, $ExceptHandler, $Alignment
+
+        IF ("$Alignment" != "")
+        SET_COMDAT_ALIGNMENT $Alignment
+        ENDIF
+
+__FuncComDat SETS "COMDAT"
+        __DeriveFunctionLabels $FuncName,$AreaName
+        __SetFunctionAreaAndAlign $__FuncAlignment
+        __AddEntryThunkPointer
+        __ResetUnwindState $ExceptHandler
+        __ExportProc $__FuncNameNoBars
+        ROUT
+
+        MEND
+
+
+        ;
+        ; Generate an ARM64EC entry thunk for an upcoming function.
+        ; Note that only COMDAT functions are supported.
+        ;
+
+#if defined(_M_ARM64EC)
+        IMPORT __os_arm64x_dispatch_ret
+
+        MACRO
+        ARM64EC_ENTRY_THUNK $FuncName, $Parameters, $SaveQCount, $AreaName
+
+        LCLS    OriginalFunc
+        LCLS    OriginalArea
+        LCLA    Params
+        LCLA    QCount
+
+Params  SETA    $Parameters
+        IF "$SaveQCount" == ""
+QCount  SETA    10
+        ELSE
+QCount  SETA    (($SaveQCount + 1)/2)*2
+        ENDIF
+
+        EXPORT $FuncName
+
+        ; first derive labels for the original function
+        ; and set that as the target area
+__FuncComDat SETS "COMDAT"
+        __DeriveFunctionLabels $FuncName,$AreaName
+        __SetFunctionAreaAndAlign $__FuncAlignment
+OriginalFunc SETS __FuncStartLabel
+OriginalArea SETS __FuncArea
+
+        ; then derive labels for the thunk
+        __DeriveFunctionLabels $__FuncEntryThunkLabel,$AreaName
+__FuncArea SETS OriginalArea
+        __ResetUnwindState
+        __ExportProc $__FuncNameNoBars
+
+        PROLOG_SAVE_REG_PAIR fp, lr, #-16!
+
+        ; load parameters into x4-x8 as appropriate
+        ASSERT(Params <= 8)
+        IF (Params >= 6)
+        PROLOG_NOP ldp x5, x6, [sp, #48]
+        ELIF (Params >= 5)
+        PROLOG_NOP ldr x5, [sp, #48]
+        ENDIF
+        IF (Params >= 8)
+        PROLOG_NOP ldp x7, x8, [sp, #64]
+        ELIF (Params >= 7)
+        PROLOG_NOP ldr x7, [sp, #64]
+        ENDIF
+
+        ; optionally save XMMs
+        IF (QCount >= 10)
+        PROLOG_SAVE_REG_PAIR q6, q7, #-160!
+        PROLOG_SAVE_REG_PAIR q8, q9, #32
+        PROLOG_SAVE_REG_PAIR q10, q11, #64
+        PROLOG_SAVE_REG_PAIR q12, q13, #96
+        PROLOG_SAVE_REG_PAIR q14, q15, #128
+        ELIF (QCount >= 8)
+        PROLOG_SAVE_REG_PAIR q6, q7, #-128!
+        PROLOG_SAVE_REG_PAIR q8, q9, #32
+        PROLOG_SAVE_REG_PAIR q10, q11, #64
+        PROLOG_SAVE_REG_PAIR q12, q13, #96
+        ELIF (QCount >= 6)
+        PROLOG_SAVE_REG_PAIR q6, q7, #-96!
+        PROLOG_SAVE_REG_PAIR q8, q9, #32
+        PROLOG_SAVE_REG_PAIR q10, q11, #64
+        ELIF (QCount >= 4)
+        PROLOG_SAVE_REG_PAIR q6, q7, #-64!
+        PROLOG_SAVE_REG_PAIR q8, q9, #32
+        ELIF (QCount >= 2)
+        PROLOG_SAVE_REG_PAIR q6, q7, #-32!
+        ENDIF
+
+        ; call through and copy return result to x8
+        bl      $OriginalFunc
+        mov     x8,x0
+
+        ; optionally restore XMMs
+        IF (QCount >= 10)
+        EPILOG_RESTORE_REG_PAIR q14, q15, #128
+        EPILOG_RESTORE_REG_PAIR q12, q13, #96
+        EPILOG_RESTORE_REG_PAIR q10, q11, #64
+        EPILOG_RESTORE_REG_PAIR q8, q9, #32
+        EPILOG_RESTORE_REG_PAIR q6, q7, #160!
+        ELIF (QCount >= 8)
+        EPILOG_RESTORE_REG_PAIR q12, q13, #96
+        EPILOG_RESTORE_REG_PAIR q10, q11, #64
+        EPILOG_RESTORE_REG_PAIR q8, q9, #32
+        EPILOG_RESTORE_REG_PAIR q6, q7, #128!
+        ELIF (QCount >= 6)
+        EPILOG_RESTORE_REG_PAIR q10, q11, #64
+        EPILOG_RESTORE_REG_PAIR q8, q9, #32
+        EPILOG_RESTORE_REG_PAIR q6, q7, #96!
+        ELIF (QCount >= 4)
+        EPILOG_RESTORE_REG_PAIR q8, q9, #32
+        EPILOG_RESTORE_REG_PAIR q6, q7, #64!
+        ELIF (QCount >= 2)
+        EPILOG_RESTORE_REG_PAIR q6, q7, #32!
+        ENDIF
+
+        EPILOG_RESTORE_REG_PAIR fp, lr, #16!
+
+        EPILOG_NOP adrp    x16, __os_arm64x_dispatch_ret
+        EPILOG_NOP ldr     x16, [x16, __os_arm64x_dispatch_ret]
+        EPILOG_NOP br      x16
+
+        NESTED_END
+
+        MEND
+
+        MACRO
+        ARM64EC_CUSTOM_ENTRY_THUNK $FuncName, $AreaName
+
+        LCLS    OriginalFunc
+        LCLS    OriginalArea
+
+        EXPORT $FuncName
+
+        ; first derive labels for the original function
+        ; and set that as the target area
+__FuncComDat SETS "COMDAT"
+        __DeriveFunctionLabels $FuncName,$AreaName
+        __SetFunctionAreaAndAlign $__FuncAlignment
+OriginalFunc SETS __FuncStartLabel
+OriginalArea SETS __FuncArea
+
+        ; then derive labels for the thunk
+        __DeriveFunctionLabels $__FuncEntryThunkLabel,$AreaName
+__FuncArea SETS OriginalArea
+        __ResetUnwindState
+        __ExportProc $__FuncNameNoBars
+
+        MEND
+
+        MACRO
+        ARM64EC_CUSTOM_ENTRY_THUNK_END
+
+        EPILOG_NOP adrp    x16, __os_arm64x_dispatch_ret
+        EPILOG_NOP ldr     x16, [x16, __os_arm64x_dispatch_ret]
+        EPILOG_NOP br      x16
+
+        NESTED_END
+
+        MEND
+
+#else
+        MACRO
+        ARM64EC_ENTRY_THUNK $FuncName, $Parameters, $SaveQCount=10, $AreaName
+        MEND
+#endif
+
+
+        ;
         ; Macro for indicating the end of a nested function. We generate the
         ; .pdata and .xdata records here as necessary.
+        ;
+        ; Note that the $FuncName parameter is vestigial and not consumed.
         ;
 
         MACRO
@@ -260,21 +505,11 @@ $__FuncEndLabel
 
         ; generate .pdata
 
-#if defined(_CHPE_X86_ARM64_)
-
-        LCLS __FuncPDataArea
-
-__FuncPDataArea  SETS "|.pdata|{$__FuncPDataLabel}"
-
+        IF __FuncComDat != ""
         AREA    $__FuncPDataArea,ALIGN=2,READONLY,ASSOC=$__FuncArea
-
-$__FuncPDataLabel
-
-#else
-
-        AREA    |.pdata|,ALIGN=2,READONLY
-
-#endif
+        ELSE
+        AREA    $__FuncPDataArea,ALIGN=2,READONLY
+        ENDIF
 
         DCD     $__FuncStartLabel
         RELOC   2                                       ; make this relative to image base
@@ -286,7 +521,7 @@ $__FuncPDataLabel
         __EmitUnwindXData
 
         ; back to the original area
-        AREA    $__FuncArea,CODE,READONLY
+        __SetFunctionAreaAndAlign NOALIGN
 
         ; reset the labels
 __FuncStartLabel SETS    ""
@@ -307,6 +542,14 @@ __FuncEndLabel  SETS    ""
         MEND
 
 
+        MACRO
+        LEAF_ENTRY_COMDAT $FuncName, $AreaName, $Alignment
+
+        NESTED_ENTRY_COMDAT $FuncName, $AreaName, "", $Alignment
+
+        MEND
+
+
         ;
         ; Macro for indicating the end of a leaf function.
         ;
@@ -319,6 +562,12 @@ __FuncEndLabel  SETS    ""
         MEND
 
 
+#if defined(_CHPE_X86_ARM64_) || defined(ARM64_ASM_IN_COMDAT) || (defined(_M_ARM64EC) && defined (ARM64EC_ASM_IN_COMDAT))
+#define NESTED_ENTRY NESTED_ENTRY_COMDAT
+#define LEAF_ENTRY LEAF_ENTRY_COMDAT
+#endif
+
+
 #if !defined(_CHPE_X86_ARM64_)
 
         ;
@@ -329,16 +578,8 @@ __FuncEndLabel  SETS    ""
         LEAF_ENTRY_NO_PDATA $FuncName, $AreaName
 
         ; compute the function's labels
-        __DeriveFunctionLabels $FuncName
-
-        ; determine the area we will put the function into
-__FuncArea   SETS    "|.text|"
-        IF "$AreaName" != ""
-__FuncArea   SETS    "$AreaName"
-        ENDIF
-
-        ; switch to the specified area
-        AREA    $__FuncArea,CODE,READONLY
+        __DeriveFunctionLabels $FuncName,$AreaName
+        __SetFunctionAreaAndAlign
 
         ; export the function name
         __ExportProc $__FuncNameNoBars
@@ -479,13 +720,13 @@ __FuncEndLabel  SETS    ""
 
         ;
         ; Macro to align a Control Flow Guard valid call target.
+        ; Not necessary to use this before functions anymore as
+        ; it is the default for NESTED_ENTRY/LEAF_ENTRY macros.
         ;
 
         MACRO
         CFG_ALIGN
-#if defined(_CONTROL_FLOW_GUARD)
         ALIGN 16
-#endif
         MEND
 
 
@@ -785,4 +1026,123 @@ ValidLabel SETS "$ValidTarget"
         EPILOG_RESTORE_REG_PAIR x23, x24, #32
         EPILOG_RESTORE_REG_PAIR x21, x22, #16
         EPILOG_RESTORE_REG_PAIR x19, x20, #96!
+        MEND
+
+
+        ;
+        ; Macro to ensure that any eret is followed by barriers to
+        ; prevent speculation
+        ;
+        MACRO
+        ERET_FIX
+        eret
+        dsb sy
+        isb sy
+        MEND
+
+#define eret ERET_FIX
+
+
+        ;
+        ; Given the Address the EC code range bitmap to determine if it is EC or X64.
+        ;
+        ; Sets the Zero Flag for X64 targets, clear the Zero Flag for EC targets.
+        ;
+        ; T1 T2 are scratch registers provided by the caller.
+        ;
+
+        MACRO
+        EC_BITMAP_LOOKUP $xAddress, $xT1, $wT1, $xT2
+
+        ldr    $xT1, [x18, #TePeb]      ; PEB
+        lsr    $xT2, $xAddress, #15     ; each byte of bitmap indexes 8*4K = 2^15 byte span
+        ldr    $xT1, [$xT1, #PeEcCodeBitMap]
+        ldrb   $wT1, [$xT1, $xT2]       ; load the bitmap byte for the 8*4K span
+        ubfx   $xT2, $xAddress, #12, #3 ; index to the 4K page within the 8*4K span
+        lsr    $xT1, $xT1, $xT2
+        tst    $xT1, #1                 ; test the specific page
+
+        MEND
+
+        ;
+        ; Convert NZCV flags in the $Nzcv register into equivalent
+        ; AMD64 EFLAGS in the $Eflags register. The source register
+        ; is consumed as part of this operation.
+        ;
+
+        MACRO
+        CONVERT_NZCV_TO_EFLAGS $Eflags, $Nzcv
+
+        mov     $Eflags, #0x0202                ; start with IF=1 and hardcoded bit 1 set
+
+        lsr     $Nzcv, $Nzcv, #21               ; move SS (21) flag to bottom
+        bfi     $Eflags, $Nzcv, #8, #1          ; insert at bit 8 (T)
+        lsr     $Nzcv, $Nzcv, #7                ; move V (28) flag to bottom
+        bfi     $Eflags, $Nzcv, #11, #1         ; insert at bit 11 (O)
+        lsr     $Nzcv, $Nzcv, #1                ; move C (29) flag to bottom
+        bfi     $Eflags, $Nzcv, #0, #1          ; insert at bit 0 (C)
+        lsr     $Nzcv, $Nzcv, #1                ; move Z:N (30:31) flags to bottom
+        bfi     $Eflags, $Nzcv, #6, #2          ; insert at bits 6:7 (Z:S)
+
+        MEND
+
+        ;
+        ; Convert control and status flags in FPCR and FPSR formats
+        ; (in $Fpcr and $Fpsr registers) into a combined AMD64 MXCSR
+        ; register. The two source registers are consumed as part of
+        ; this operation.
+        ;
+
+        MACRO
+        CONVERT_FPCR_FPSR_TO_MXCSR $Mxcsr, $Fpcr, $Fpsr
+
+        ;
+        ; Status flags map 1:1, if set indicates an exception occured.
+        ;
+
+        and     $Mxcsr, $Fpsr, #1               ; MXCSR.IE[0] = FPSR.IOC[0]
+        lsr     $Fpsr, $Fpsr, #1                ; remove low bit
+        bfi     $Mxcsr, $Fpsr, #2, #4           ; MXCSR.ZE/OE/UE/PE[2:6] = FPSR.DZC/OFC/UFC/IXC[1:4]
+        lsr     $Fpsr, $Fpsr, #6                ; remove those bits and the next 2
+        bfi     $Mxcsr, $Fpsr, #1, #1           ; MXCSR.DE[1] = FPSR.IDC[7]
+
+        ;
+        ; Exception enable bit map 1:1, however on X64 set means mask (disable)
+        ; while on ARM64 set means enable the exception.  Thus the bit inversion.
+        ;
+
+        lsr     $Fpcr, $Fpcr, #8                ; skip low 8 bits
+        eor     $Fpcr, $Fpcr, #0xff             ; invert the masking bits
+        bfi     $Mxcsr, $Fpcr, #7, #1           ; MXCSR.IM[7] = ~FPCR.IOE[8]
+        lsr     $Fpcr, $Fpcr, #1                ; remove low bit
+        bfi     $Mxcsr, $Fpcr, #9, #4           ; MXCSR.ZM/OM/UM/PM[9:12] = ~FPCR.DZE/OFE/UFE/IXE[9:12]
+        lsr     $Fpcr, $Fpcr, #6                ; remove those bits and the next 2
+        bfi     $Mxcsr, $Fpcr, #8, #1           ; MXCSR.DM[8] = ~FPCR.IDE[15]
+
+        ;
+        ; Denormals Are Zeros has not direct mapping on ARM64, use the FZ16 bit
+        ; since half-precision floats do not exist in SSE.
+        ;
+
+        lsr     $Fpcr, $Fpcr, #4                ; move bit 19 down low
+        bfi     $Mxcsr, $Fpcr, #6, #1           ; MXCSR.DAZ[6] = FPCR.FZ[19]
+
+        ;
+        ; Rounding modes are the same on X64 and ARM64 except bit swapped in representation.
+        ; X64: 00=nearest 01=down 10=up 11=truncate
+        ; A64: 00=nearest 10=down 01=up 11=truncate
+        ;
+
+        lsr     $Fpcr, $Fpcr, #3                ; move bit 22 down low
+        bfi     $Mxcsr, $Fpcr, #14, #1          ; MXCSR.RC[13:14](upper) = FPCR.RMODE[22:23](lower)
+        lsr     $Fpcr, $Fpcr, #1                ; get upper bit of rmode in LSB
+        bfi     $Mxcsr, $Fpcr, #13, #1          ; MXCSR.RC[13:14](lower) = FPCR.RMODE[22:23](upper)
+
+        ;
+        ; Flush To Zero bit maps 1:1
+        ;
+
+        lsr     $Fpcr, $Fpcr, #1                ; shift bit 24 down low
+        bfi     $Mxcsr, $Fpcr, #15, #1          ; MXCSR.FZ = FPCR.FZ
+
         MEND

@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -117,42 +125,52 @@ EXTERN_C const IID IID_IUserDataPathsInterop;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUserDataPathsInterop * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUserDataPathsInterop * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUserDataPathsInterop * This);
         
+        DECLSPEC_XFGVIRT(IUserDataPathsInterop, get_AdminTools)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_AdminTools )( 
             __RPC__in IUserDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(IUserDataPathsInterop, get_CDBurning)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_CDBurning )( 
             __RPC__in IUserDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(IUserDataPathsInterop, get_NetworkShortcuts)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_NetworkShortcuts )( 
             __RPC__in IUserDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(IUserDataPathsInterop, get_Programs)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Programs )( 
             __RPC__in IUserDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(IUserDataPathsInterop, get_SendTo)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_SendTo )( 
             __RPC__in IUserDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(IUserDataPathsInterop, get_StartMenu)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_StartMenu )( 
             __RPC__in IUserDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(IUserDataPathsInterop, get_Startup)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Startup )( 
             __RPC__in IUserDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
@@ -290,86 +308,107 @@ EXTERN_C const IID IID_ISystemDataPathsInterop;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISystemDataPathsInterop * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISystemDataPathsInterop * This);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_CommonAdminTools)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_CommonAdminTools )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_CommonOemLinks)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_CommonOemLinks )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_CommonPrograms)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_CommonPrograms )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_CommonStartMenu)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_CommonStartMenu )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_CommonStartup)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_CommonStartup )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_CommonTemplates)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_CommonTemplates )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_LocalizedResources)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_LocalizedResources )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFiles)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFiles )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFilesCommon)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFilesCommon )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFilesCommonHost)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFilesCommonHost )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFilesCommonX64)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFilesCommonX64 )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFilesCommonX86)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFilesCommonX86 )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFilesCommonArm)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFilesCommonArm )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFilesHost)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFilesHost )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFilesX64)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFilesX64 )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFilesX86)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFilesX86 )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_ProgramFilesArm)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProgramFilesArm )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);
         
+        DECLSPEC_XFGVIRT(ISystemDataPathsInterop, get_Resource)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Resource )( 
             __RPC__in ISystemDataPathsInterop * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *value);

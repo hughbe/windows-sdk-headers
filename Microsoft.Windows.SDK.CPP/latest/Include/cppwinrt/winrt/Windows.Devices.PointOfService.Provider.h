@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_PointOfService_Provider_H
 #define WINRT_Windows_Devices_PointOfService_Provider_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.PointOfService.h"
 #include "winrt/impl/Windows.Devices.PointOfService.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -16,105 +16,105 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.PointOfService.Provider.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequest<D>::ReportCompletedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequest<D>::ReportCompletedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest)->ReportCompletedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequest<D>::ReportFailedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequest<D>::ReportFailedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest)->ReportFailedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequest2<D>::ReportFailedAsync(int32_t reason) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequest2<D>::ReportFailedAsync(int32_t reason) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest2)->ReportFailedWithFailedReasonAsync(reason, &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest2)->ReportFailedWithFailedReasonAndDescriptionAsync(reason, *(void**)(&failedReasonDescription), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequestEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequestEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequestEventArgs)->get_Request(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequestEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerDisableScannerRequestEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequestEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequest<D>::ReportCompletedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequest<D>::ReportCompletedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest)->ReportCompletedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequest<D>::ReportFailedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequest<D>::ReportFailedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest)->ReportFailedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequest2<D>::ReportFailedAsync(int32_t reason) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequest2<D>::ReportFailedAsync(int32_t reason) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest2)->ReportFailedWithFailedReasonAsync(reason, &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest2)->ReportFailedWithFailedReasonAndDescriptionAsync(reason, *(void**)(&failedReasonDescription), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequestEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequestEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs)->get_Request(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequestEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerEnableScannerRequestEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::StartAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader)->StartAsync(&operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::StopAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::StopAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader)->StopAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::TryAcquireLatestFrameAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame>) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::TryAcquireLatestFrameAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader)->TryAcquireLatestFrameAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::Connection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::Connection() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader)->get_Connection(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::FrameArrived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader, Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::FrameArrived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader, Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader)->add_FrameArrived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -122,173 +122,173 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, FrameArrived_revoker>(this, FrameArrived(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader)->remove_FrameArrived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReaderFrameArrivedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerFrameReaderFrameArrivedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReaderFrameArrivedEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest<D>::Symbology() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest<D>::Symbology() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest)->get_Symbology(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest<D>::ReportCompletedAsync(Windows::Devices::PointOfService::BarcodeSymbologyAttributes const& attributes) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest<D>::ReportCompletedAsync(Windows::Devices::PointOfService::BarcodeSymbologyAttributes const& attributes) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest)->ReportCompletedAsync(*(void**)(&attributes), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest<D>::ReportFailedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest<D>::ReportFailedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest)->ReportFailedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest2<D>::ReportFailedAsync(int32_t reason) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest2<D>::ReportFailedAsync(int32_t reason) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest2)->ReportFailedWithFailedReasonAsync(reason, &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest2)->ReportFailedWithFailedReasonAndDescriptionAsync(reason, *(void**)(&failedReasonDescription), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequestEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequestEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequestEventArgs)->get_Request(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequestEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerGetSymbologyAttributesRequestEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequestEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequest<D>::ReportCompletedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequest<D>::ReportCompletedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest)->ReportCompletedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequest<D>::ReportFailedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequest<D>::ReportFailedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest)->ReportFailedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequest2<D>::ReportFailedAsync(int32_t reason) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequest2<D>::ReportFailedAsync(int32_t reason) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest2)->ReportFailedWithFailedReasonAsync(reason, &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest2)->ReportFailedWithFailedReasonAndDescriptionAsync(reason, *(void**)(&failedReasonDescription), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequestEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequestEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequestEventArgs)->get_Request(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequestEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerHideVideoPreviewRequestEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequestEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::VideoDeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::VideoDeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->get_VideoDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SupportedSymbologies() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<uint32_t>) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SupportedSymbologies() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->get_SupportedSymbologies(&value));
         return Windows::Foundation::Collections::IVector<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::CompanyName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::CompanyName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->get_CompanyName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::CompanyName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::CompanyName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->put_CompanyName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Name(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Name(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->put_Name(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Version() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Version() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->get_Version(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Version(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Version(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->put_Version(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Start() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->Start());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::ReportScannedDataAsync(Windows::Devices::PointOfService::BarcodeScannerReport const& report) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::ReportScannedDataAsync(Windows::Devices::PointOfService::BarcodeScannerReport const& report) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->ReportScannedDataAsync(*(void**)(&report), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::ReportTriggerStateAsync(Windows::Devices::PointOfService::Provider::BarcodeScannerTriggerState const& state) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::ReportTriggerStateAsync(Windows::Devices::PointOfService::Provider::BarcodeScannerTriggerState const& state) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->ReportTriggerStateAsync(static_cast<int32_t>(state), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::ReportErrorAsync(Windows::Devices::PointOfService::UnifiedPosErrorData const& errorData) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::ReportErrorAsync(Windows::Devices::PointOfService::UnifiedPosErrorData const& errorData) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->ReportErrorAsync(*(void**)(&errorData), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::ReportErrorAsync(Windows::Devices::PointOfService::UnifiedPosErrorData const& errorData, bool isRetriable, Windows::Devices::PointOfService::BarcodeScannerReport const& scanReport) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::ReportErrorAsync(Windows::Devices::PointOfService::UnifiedPosErrorData const& errorData, bool isRetriable, Windows::Devices::PointOfService::BarcodeScannerReport const& scanReport) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->ReportErrorAsyncWithScanReport(*(void**)(&errorData), isRetriable, *(void**)(&scanReport), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::EnableScannerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::EnableScannerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->add_EnableScannerRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -296,13 +296,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, EnableScannerRequested_revoker>(this, EnableScannerRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::EnableScannerRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::EnableScannerRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->remove_EnableScannerRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::DisableScannerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::DisableScannerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->add_DisableScannerRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -310,13 +310,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DisableScannerRequested_revoker>(this, DisableScannerRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::DisableScannerRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::DisableScannerRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->remove_DisableScannerRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SetActiveSymbologiesRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SetActiveSymbologiesRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->add_SetActiveSymbologiesRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -324,13 +324,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SetActiveSymbologiesRequested_revoker>(this, SetActiveSymbologiesRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SetActiveSymbologiesRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SetActiveSymbologiesRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->remove_SetActiveSymbologiesRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::StartSoftwareTriggerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::StartSoftwareTriggerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->add_StartSoftwareTriggerRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -338,13 +338,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StartSoftwareTriggerRequested_revoker>(this, StartSoftwareTriggerRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::StartSoftwareTriggerRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::StartSoftwareTriggerRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->remove_StartSoftwareTriggerRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::StopSoftwareTriggerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::StopSoftwareTriggerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->add_StopSoftwareTriggerRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -352,13 +352,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StopSoftwareTriggerRequested_revoker>(this, StopSoftwareTriggerRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::StopSoftwareTriggerRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::StopSoftwareTriggerRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->remove_StopSoftwareTriggerRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::GetBarcodeSymbologyAttributesRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::GetBarcodeSymbologyAttributesRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->add_GetBarcodeSymbologyAttributesRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -366,13 +366,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GetBarcodeSymbologyAttributesRequested_revoker>(this, GetBarcodeSymbologyAttributesRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::GetBarcodeSymbologyAttributesRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::GetBarcodeSymbologyAttributesRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->remove_GetBarcodeSymbologyAttributesRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SetBarcodeSymbologyAttributesRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SetBarcodeSymbologyAttributesRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->add_SetBarcodeSymbologyAttributesRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -380,13 +380,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SetBarcodeSymbologyAttributesRequested_revoker>(this, SetBarcodeSymbologyAttributesRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SetBarcodeSymbologyAttributesRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::SetBarcodeSymbologyAttributesRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->remove_SetBarcodeSymbologyAttributesRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::HideVideoPreviewRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::HideVideoPreviewRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection, Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->add_HideVideoPreviewRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -394,256 +394,257 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, HideVideoPreviewRequested_revoker>(this, HideVideoPreviewRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::HideVideoPreviewRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection<D>::HideVideoPreviewRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection)->remove_HideVideoPreviewRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection2<D>::CreateFrameReaderAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection2<D>::CreateFrameReaderAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2)->CreateFrameReaderAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection2<D>::CreateFrameReaderAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& preferredFormat) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection2<D>::CreateFrameReaderAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& preferredFormat) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2)->CreateFrameReaderWithFormatAsync(static_cast<int32_t>(preferredFormat), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection2<D>::CreateFrameReaderAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& preferredFormat, Windows::Graphics::Imaging::BitmapSize const& preferredSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderConnection2<D>::CreateFrameReaderAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& preferredFormat, Windows::Graphics::Imaging::BitmapSize const& preferredSize) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2)->CreateFrameReaderWithFormatAndSizeAsync(static_cast<int32_t>(preferredFormat), impl::bind_in(preferredSize), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderTriggerDetails<D>::Connection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerProviderTriggerDetails<D>::Connection() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderTriggerDetails)->get_Connection(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest<D>::Symbologies() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<uint32_t>) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest<D>::Symbologies() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest)->get_Symbologies(&value));
         return Windows::Foundation::Collections::IVectorView<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest<D>::ReportCompletedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest<D>::ReportCompletedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest)->ReportCompletedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest<D>::ReportFailedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest<D>::ReportFailedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest)->ReportFailedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest2<D>::ReportFailedAsync(int32_t reason) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest2<D>::ReportFailedAsync(int32_t reason) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest2)->ReportFailedWithFailedReasonAsync(reason, &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest2)->ReportFailedWithFailedReasonAndDescriptionAsync(reason, *(void**)(&failedReasonDescription), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequestEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequestEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequestEventArgs)->get_Request(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequestEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetActiveSymbologiesRequestEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequestEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest<D>::Symbology() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest<D>::Symbology() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest)->get_Symbology(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest<D>::Attributes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::BarcodeSymbologyAttributes) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest<D>::Attributes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest)->get_Attributes(&value));
         return Windows::Devices::PointOfService::BarcodeSymbologyAttributes{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest<D>::ReportCompletedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest<D>::ReportCompletedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest)->ReportCompletedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest<D>::ReportFailedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest<D>::ReportFailedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest)->ReportFailedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest2<D>::ReportFailedAsync(int32_t reason) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest2<D>::ReportFailedAsync(int32_t reason) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest2)->ReportFailedWithFailedReasonAsync(reason, &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest2)->ReportFailedWithFailedReasonAndDescriptionAsync(reason, *(void**)(&failedReasonDescription), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequestEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequestEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequestEventArgs)->get_Request(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequestEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerSetSymbologyAttributesRequestEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequestEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequest<D>::ReportCompletedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequest<D>::ReportCompletedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest)->ReportCompletedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequest<D>::ReportFailedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequest<D>::ReportFailedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest)->ReportFailedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequest2<D>::ReportFailedAsync(int32_t reason) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequest2<D>::ReportFailedAsync(int32_t reason) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest2)->ReportFailedWithFailedReasonAsync(reason, &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest2)->ReportFailedWithFailedReasonAndDescriptionAsync(reason, *(void**)(&failedReasonDescription), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequestEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequestEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequestEventArgs)->get_Request(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequestEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStartSoftwareTriggerRequestEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequestEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequest<D>::ReportCompletedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequest<D>::ReportCompletedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest)->ReportCompletedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequest<D>::ReportFailedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequest<D>::ReportFailedAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest)->ReportFailedAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequest2<D>::ReportFailedAsync(int32_t reason) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequest2<D>::ReportFailedAsync(int32_t reason) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest2)->ReportFailedWithFailedReasonAsync(reason, &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequest2<D>::ReportFailedAsync(int32_t reason, param::hstring const& failedReasonDescription) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest2)->ReportFailedWithFailedReasonAndDescriptionAsync(reason, *(void**)(&failedReasonDescription), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequestEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequestEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequestEventArgs)->get_Request(&value));
         return Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequestEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerStopSoftwareTriggerRequestEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequestEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerVideoFrame<D>::Format() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapPixelFormat) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerVideoFrame<D>::Format() const
     {
-        Windows::Graphics::Imaging::BitmapPixelFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame)->get_Format(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapPixelFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame)->get_Format(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerVideoFrame<D>::Width() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerVideoFrame<D>::Width() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame)->get_Width(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerVideoFrame<D>::Height() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerVideoFrame<D>::Height() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame)->get_Height(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerVideoFrame<D>::PixelData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_PointOfService_Provider_IBarcodeScannerVideoFrame<D>::PixelData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame)->get_PixelData(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsCheckDigitValidationSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsCheckDigitValidationSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder)->get_IsCheckDigitValidationSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsCheckDigitValidationSupported(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsCheckDigitValidationSupported(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder)->put_IsCheckDigitValidationSupported(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsCheckDigitTransmissionSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsCheckDigitTransmissionSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder)->get_IsCheckDigitTransmissionSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsCheckDigitTransmissionSupported(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsCheckDigitTransmissionSupported(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder)->put_IsCheckDigitTransmissionSupported(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsDecodeLengthSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsDecodeLengthSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder)->get_IsDecodeLengthSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsDecodeLengthSupported(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::IsDecodeLengthSupported(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder)->put_IsDecodeLengthSupported(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::CreateAttributes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::BarcodeSymbologyAttributes) consume_Windows_Devices_PointOfService_Provider_IBarcodeSymbologyAttributesBuilder<D>::CreateAttributes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder)->CreateAttributes(&value));
         return Windows::Devices::PointOfService::BarcodeSymbologyAttributes{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest>
     {
@@ -664,6 +665,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest2> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest2>
     {
@@ -684,6 +687,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequestEventArgs> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequestEventArgs>
     {
@@ -704,6 +709,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest>
     {
@@ -724,6 +731,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest2> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest2>
     {
@@ -744,6 +753,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs>
     {
@@ -764,6 +775,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader>
     {
@@ -814,6 +827,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReaderFrameArrivedEventArgs> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReaderFrameArrivedEventArgs>
     {
@@ -826,6 +841,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest>
     {
@@ -853,6 +870,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest2> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest2>
     {
@@ -873,6 +892,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequestEventArgs> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequestEventArgs>
     {
@@ -893,6 +914,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest>
     {
@@ -913,6 +936,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest2> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest2>
     {
@@ -933,6 +958,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequestEventArgs> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequestEventArgs>
     {
@@ -953,6 +980,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection>
     {
@@ -1177,6 +1206,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2>
     {
@@ -1205,6 +1236,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderTriggerDetails> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderTriggerDetails>
     {
@@ -1217,6 +1250,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest>
     {
@@ -1245,6 +1280,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest2> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest2>
     {
@@ -1265,6 +1302,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequestEventArgs> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequestEventArgs>
     {
@@ -1285,6 +1324,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest>
     {
@@ -1320,6 +1361,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest2> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest2>
     {
@@ -1340,6 +1383,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequestEventArgs> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequestEventArgs>
     {
@@ -1360,6 +1405,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest>
     {
@@ -1380,6 +1427,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest2> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest2>
     {
@@ -1400,6 +1449,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequestEventArgs> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequestEventArgs>
     {
@@ -1420,6 +1471,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest>
     {
@@ -1440,6 +1493,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest2> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest2>
     {
@@ -1460,6 +1515,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequestEventArgs> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequestEventArgs>
     {
@@ -1480,6 +1537,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame>
     {
@@ -1513,6 +1572,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder> : produce_base<D, Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder>
     {
@@ -1567,68 +1628,71 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::PointOfService::Provider
+WINRT_EXPORT namespace winrt::Windows::Devices::PointOfService::Provider
 {
     inline BarcodeSymbologyAttributesBuilder::BarcodeSymbologyAttributesBuilder() :
-        BarcodeSymbologyAttributesBuilder(impl::call_factory<BarcodeSymbologyAttributesBuilder>([](auto&& f) { return f.template ActivateInstance<BarcodeSymbologyAttributesBuilder>(); }))
+        BarcodeSymbologyAttributesBuilder(impl::call_factory_cast<BarcodeSymbologyAttributesBuilder(*)(Windows::Foundation::IActivationFactory const&), BarcodeSymbologyAttributesBuilder>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<BarcodeSymbologyAttributesBuilder>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReaderFrameArrivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReaderFrameArrivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderTriggerDetails> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderTriggerDetails> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequest2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerDisableScannerRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequest2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerFrameReaderFrameArrivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequest2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerHideVideoPreviewRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderConnection2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerProviderTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequest2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetSymbologyAttributesRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequest2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStartSoftwareTriggerRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequest2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerStopSoftwareTriggerRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerVideoFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::IBarcodeSymbologyAttributesBuilder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder> : winrt::impl::hash_base {};
+#endif
 }
 #endif

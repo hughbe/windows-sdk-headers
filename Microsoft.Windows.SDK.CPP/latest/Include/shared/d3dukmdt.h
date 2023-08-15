@@ -47,6 +47,8 @@
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_5    0xA00B
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_6    0xB004
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_7    0xC004
+#define DXGKDDI_INTERFACE_VERSION_WDDM2_8    0xD001
+#define DXGKDDI_INTERFACE_VERSION_WDDM2_9    0xE003
 
 
 #define IS_OFFICIAL_DDI_INTERFACE_VERSION(version)                 \
@@ -65,11 +67,13 @@
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_4) ||   \
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_5) ||   \
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_6) ||   \
-             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_7)      \
+             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_7) ||   \
+             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_8) ||   \
+             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_9)      \
             )
 
 #if !defined(DXGKDDI_INTERFACE_VERSION)
-#define DXGKDDI_INTERFACE_VERSION           DXGKDDI_INTERFACE_VERSION_WDDM2_7
+#define DXGKDDI_INTERFACE_VERSION           DXGKDDI_INTERFACE_VERSION_WDDM2_9
 #endif // !defined(DXGKDDI_INTERFACE_VERSION)
 
 #define D3D_UMD_INTERFACE_VERSION_VISTA      0x000C
@@ -118,11 +122,17 @@
 #define D3D_UMD_INTERFACE_VERSION_WDDM2_7_2     0xC001
 #define D3D_UMD_INTERFACE_VERSION_WDDM2_7       D3D_UMD_INTERFACE_VERSION_WDDM2_7_2
 
+#define D3D_UMD_INTERFACE_VERSION_WDDM2_8_1     0xD000
+#define D3D_UMD_INTERFACE_VERSION_WDDM2_8       D3D_UMD_INTERFACE_VERSION_WDDM2_8_1
+
+#define D3D_UMD_INTERFACE_VERSION_WDDM2_9_1     0xE000
+#define D3D_UMD_INTERFACE_VERSION_WDDM2_9       D3D_UMD_INTERFACE_VERSION_WDDM2_9_1
+
 // Components which depend on D3D_UMD_INTERFACE_VERSION need to be updated, static assert validation present.
 // Search for D3D_UMD_INTERFACE_VERSION across all depots to ensure all dependencies are updated.
 
 #if !defined(D3D_UMD_INTERFACE_VERSION)
-#define D3D_UMD_INTERFACE_VERSION           D3D_UMD_INTERFACE_VERSION_WDDM2_7
+#define D3D_UMD_INTERFACE_VERSION           D3D_UMD_INTERFACE_VERSION_WDDM2_9
 #endif // !defined(D3D_UMD_INTERFACE_VERSION)
 
 //
@@ -1532,8 +1542,9 @@ typedef struct D3DDDI_UPDATEALLOCPROPERTY_FLAGS
     {
         struct
         {
-            UINT AccessedPhysically : 1;    // The new value for AccessedPhysically on an allocation
-            UINT Reserved : 31;
+            UINT AccessedPhysically :  1; // The new value for AccessedPhysically on an allocation
+            UINT Unmoveable         :  1; // Indicates an allocation cannot be moved while pinned in a memory segment
+            UINT Reserved           : 30;
         };
         UINT Value;
     };
@@ -1553,10 +1564,11 @@ typedef struct D3DDDI_UPDATEALLOCPROPERTY
     {
         struct
         {                
-            UINT SetAccessedPhysically : 1;     // [in] When set to 1, will set AccessedPhysically to new value
-            UINT SetSupportedSegmentSet : 1;    // [in] When set to 1, will set SupportedSegmentSet to new value
-            UINT SetPreferredSegment : 1;       // [in] When set to 1, will set PreferredSegment to new value
-            UINT Reserved : 29;
+            UINT SetAccessedPhysically  :  1; // [in] When set to 1, will set AccessedPhysically to new value
+            UINT SetSupportedSegmentSet :  1; // [in] When set to 1, will set SupportedSegmentSet to new value
+            UINT SetPreferredSegment    :  1; // [in] When set to 1, will set PreferredSegment to new value
+            UINT SetUnmoveable          :  1; // [in] When set to 1, will set Unmoveable to new value
+            UINT Reserved               : 28;
         };
         UINT PropertyMaskValue;
     };

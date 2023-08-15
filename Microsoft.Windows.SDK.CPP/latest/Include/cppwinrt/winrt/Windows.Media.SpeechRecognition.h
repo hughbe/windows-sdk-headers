@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_SpeechRecognition_H
 #define WINRT_Windows_Media_SpeechRecognition_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -15,65 +15,65 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Media.SpeechRecognition.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionCompletedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionCompletedEventArgs<D>::Status() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionCompletedEventArgs)->get_Status(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionCompletedEventArgs)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionResultGeneratedEventArgs<D>::Result() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionResult) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionResultGeneratedEventArgs<D>::Result() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionResultGeneratedEventArgs)->get_Result(&value));
         return Windows::Media::SpeechRecognition::SpeechRecognitionResult{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::AutoStopSilenceTimeout() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::AutoStopSilenceTimeout() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->get_AutoStopSilenceTimeout(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::AutoStopSilenceTimeout(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::AutoStopSilenceTimeout(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->put_AutoStopSilenceTimeout(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::StartAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->StartAsync(&value));
         return Windows::Foundation::IAsyncAction{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::StartAsync(Windows::Media::SpeechRecognition::SpeechContinuousRecognitionMode const& mode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::StartAsync(Windows::Media::SpeechRecognition::SpeechContinuousRecognitionMode const& mode) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->StartWithModeAsync(static_cast<int32_t>(mode), &value));
         return Windows::Foundation::IAsyncAction{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::StopAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::StopAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->StopAsync(&value));
         return Windows::Foundation::IAsyncAction{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::CancelAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::CancelAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->CancelAsync(&value));
         return Windows::Foundation::IAsyncAction{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::PauseAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::PauseAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->PauseAsync(&value));
         return Windows::Foundation::IAsyncAction{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::Resume() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::Resume() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->Resume());
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::Completed(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession, Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::Completed(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession, Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs> const& value) const
     {
-        winrt::event_token returnValue;
+        winrt::event_token returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->add_Completed(*(void**)(&value), put_abi(returnValue)));
         return returnValue;
     }
@@ -81,13 +81,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Completed_revoker>(this, Completed(value));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::Completed(winrt::event_token const& value) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::Completed(winrt::event_token const& value) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->remove_Completed(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::ResultGenerated(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession, Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::ResultGenerated(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession, Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs> const& value) const
     {
-        winrt::event_token returnValue;
+        winrt::event_token returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->add_ResultGenerated(*(void**)(&value), put_abi(returnValue)));
         return returnValue;
     }
@@ -95,241 +95,241 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ResultGenerated_revoker>(this, ResultGenerated(value));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::ResultGenerated(winrt::event_token const& value) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechContinuousRecognitionSession<D>::ResultGenerated(winrt::event_token const& value) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession)->remove_ResultGenerated(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionCompilationResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionCompilationResult<D>::Status() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult)->get_Status(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::IsEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::IsEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint)->put_IsEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Tag() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Tag() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint)->get_Tag(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Tag(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Tag(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint)->put_Tag(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionConstraintType) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Type() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognitionConstraintType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint)->get_Type(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognitionConstraintType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint)->get_Type(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Probability() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Probability() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint)->get_Probability(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint)->get_Probability(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Probability(Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionConstraint<D>::Probability(Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint)->put_Probability(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionGrammarFileConstraint<D>::GrammarFile() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::StorageFile) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionGrammarFileConstraint<D>::GrammarFile() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraint)->get_GrammarFile(&value));
         return Windows::Storage::StorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionGrammarFileConstraintFactory<D>::Create(Windows::Storage::StorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionGrammarFileConstraintFactory<D>::Create(Windows::Storage::StorageFile const& file) const
     {
         void* constraint{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory)->Create(*(void**)(&file), &constraint));
         return Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint{ constraint, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionGrammarFileConstraintFactory<D>::CreateWithTag(Windows::Storage::StorageFile const& file, param::hstring const& tag) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionGrammarFileConstraintFactory<D>::CreateWithTag(Windows::Storage::StorageFile const& file, param::hstring const& tag) const
     {
         void* constraint{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory)->CreateWithTag(*(void**)(&file), *(void**)(&tag), &constraint));
         return Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint{ constraint, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionHypothesis<D>::Text() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionHypothesis<D>::Text() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesis)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionHypothesisGeneratedEventArgs<D>::Hypothesis() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionHypothesisGeneratedEventArgs<D>::Hypothesis() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesisGeneratedEventArgs)->get_Hypothesis(&value));
         return Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionListConstraint<D>::Commands() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionListConstraint<D>::Commands() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraint)->get_Commands(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionListConstraintFactory<D>::Create(param::iterable<hstring> const& commands) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionListConstraintFactory<D>::Create(param::iterable<hstring> const& commands) const
     {
         void* constraint{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory)->Create(*(void**)(&commands), &constraint));
         return Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint{ constraint, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionListConstraintFactory<D>::CreateWithTag(param::iterable<hstring> const& commands, param::hstring const& tag) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionListConstraintFactory<D>::CreateWithTag(param::iterable<hstring> const& commands, param::hstring const& tag) const
     {
         void* constraint{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory)->CreateWithTag(*(void**)(&commands), *(void**)(&tag), &constraint));
         return Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint{ constraint, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionQualityDegradingEventArgs<D>::Problem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionQualityDegradingEventArgs<D>::Problem() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionQualityDegradingEventArgs)->get_Problem(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionQualityDegradingEventArgs)->get_Problem(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::Status() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->get_Status(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::Text() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::Text() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::Confidence() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionConfidence) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::Confidence() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognitionConfidence value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->get_Confidence(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognitionConfidence value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->get_Confidence(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::SemanticInterpretation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::SemanticInterpretation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->get_SemanticInterpretation(&value));
         return Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::GetAlternates(uint32_t maxAlternates) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::SpeechRecognition::SpeechRecognitionResult>) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::GetAlternates(uint32_t maxAlternates) const
     {
         void* alternates{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->GetAlternates(maxAlternates, &alternates));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::SpeechRecognition::SpeechRecognitionResult>{ alternates, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::Constraint() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::Constraint() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->get_Constraint(&value));
         return Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::RulePath() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::RulePath() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->get_RulePath(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::RawConfidence() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult<D>::RawConfidence() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult)->get_RawConfidence(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult2<D>::PhraseStartTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult2<D>::PhraseStartTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult2)->get_PhraseStartTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult2<D>::PhraseDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionResult2<D>::PhraseDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionResult2)->get_PhraseDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionSemanticInterpretation<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::Foundation::Collections::IVectorView<hstring>>) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionSemanticInterpretation<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionSemanticInterpretation)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<hstring, Windows::Foundation::Collections::IVectorView<hstring>>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionTopicConstraint<D>::Scenario() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionScenario) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionTopicConstraint<D>::Scenario() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognitionScenario value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraint)->get_Scenario(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognitionScenario value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraint)->get_Scenario(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionTopicConstraint<D>::TopicHint() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionTopicConstraint<D>::TopicHint() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraint)->get_TopicHint(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionTopicConstraintFactory<D>::Create(Windows::Media::SpeechRecognition::SpeechRecognitionScenario const& scenario, param::hstring const& topicHint) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionTopicConstraintFactory<D>::Create(Windows::Media::SpeechRecognition::SpeechRecognitionScenario const& scenario, param::hstring const& topicHint) const
     {
         void* constraint{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory)->Create(static_cast<int32_t>(scenario), *(void**)(&topicHint), &constraint));
         return Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint{ constraint, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognitionTopicConstraintFactory<D>::CreateWithTag(Windows::Media::SpeechRecognition::SpeechRecognitionScenario const& scenario, param::hstring const& topicHint, param::hstring const& tag) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint) consume_Windows_Media_SpeechRecognition_ISpeechRecognitionTopicConstraintFactory<D>::CreateWithTag(Windows::Media::SpeechRecognition::SpeechRecognitionScenario const& scenario, param::hstring const& topicHint, param::hstring const& tag) const
     {
         void* constraint{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory)->CreateWithTag(static_cast<int32_t>(scenario), *(void**)(&topicHint), *(void**)(&tag), &constraint));
         return Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint{ constraint, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::CurrentLanguage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Language) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::CurrentLanguage() const
     {
         void* language{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->get_CurrentLanguage(&language));
         return Windows::Globalization::Language{ language, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::Constraints() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::Constraints() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->get_Constraints(&value));
         return Windows::Foundation::Collections::IVector<Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::Timeouts() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::Timeouts() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->get_Timeouts(&value));
         return Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::UIOptions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::UIOptions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->get_UIOptions(&value));
         return Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::CompileConstraintsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::CompileConstraintsAsync() const
     {
         void* asyncOperation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->CompileConstraintsAsync(&asyncOperation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>{ asyncOperation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::RecognizeAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::SpeechRecognition::SpeechRecognitionResult>) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::RecognizeAsync() const
     {
         void* asyncOperation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->RecognizeAsync(&asyncOperation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::SpeechRecognition::SpeechRecognitionResult>{ asyncOperation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::RecognizeWithUIAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::SpeechRecognition::SpeechRecognitionResult>) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::RecognizeWithUIAsync() const
     {
         void* asyncOperation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->RecognizeWithUIAsync(&asyncOperation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::SpeechRecognition::SpeechRecognitionResult>{ asyncOperation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::RecognitionQualityDegrading(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechRecognizer, Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs> const& speechRecognitionQualityDegradingHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::RecognitionQualityDegrading(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechRecognizer, Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs> const& speechRecognitionQualityDegradingHandler) const
     {
-        winrt::event_token cookie;
+        winrt::event_token cookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->add_RecognitionQualityDegrading(*(void**)(&speechRecognitionQualityDegradingHandler), put_abi(cookie)));
         return cookie;
     }
@@ -337,13 +337,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RecognitionQualityDegrading_revoker>(this, RecognitionQualityDegrading(speechRecognitionQualityDegradingHandler));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::RecognitionQualityDegrading(winrt::event_token const& cookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::RecognitionQualityDegrading(winrt::event_token const& cookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->remove_RecognitionQualityDegrading(impl::bind_in(cookie)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechRecognizer, Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs> const& stateChangedHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechRecognizer, Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs> const& stateChangedHandler) const
     {
-        winrt::event_token cookie;
+        winrt::event_token cookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->add_StateChanged(*(void**)(&stateChangedHandler), put_abi(cookie)));
         return cookie;
     }
@@ -351,31 +351,31 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(stateChangedHandler));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::StateChanged(winrt::event_token const& cookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer<D>::StateChanged(winrt::event_token const& cookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer)->remove_StateChanged(impl::bind_in(cookie)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::ContinuousRecognitionSession() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::ContinuousRecognitionSession() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer2)->get_ContinuousRecognitionSession(&value));
         return Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognizerState) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::State() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognizerState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer2)->get_State(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognizerState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer2)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::StopRecognitionAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::StopRecognitionAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer2)->StopRecognitionAsync(&value));
         return Windows::Foundation::IAsyncAction{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::HypothesisGenerated(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechRecognizer, Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::HypothesisGenerated(Windows::Foundation::TypedEventHandler<Windows::Media::SpeechRecognition::SpeechRecognizer, Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs> const& value) const
     {
-        winrt::event_token returnValue;
+        winrt::event_token returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer2)->add_HypothesisGenerated(*(void**)(&value), put_abi(returnValue)));
         return returnValue;
     }
@@ -383,146 +383,147 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, HypothesisGenerated_revoker>(this, HypothesisGenerated(value));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::HypothesisGenerated(winrt::event_token const& value) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizer2<D>::HypothesisGenerated(winrt::event_token const& value) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizer2)->remove_HypothesisGenerated(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerFactory<D>::Create(Windows::Globalization::Language const& language) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognizer) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerFactory<D>::Create(Windows::Globalization::Language const& language) const
     {
         void* recognizer{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerFactory)->Create(*(void**)(&language), &recognizer));
         return Windows::Media::SpeechRecognition::SpeechRecognizer{ recognizer, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStateChangedEventArgs<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SpeechRecognition::SpeechRecognizerState) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStateChangedEventArgs<D>::State() const
     {
-        Windows::Media::SpeechRecognition::SpeechRecognizerState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerStateChangedEventArgs)->get_State(put_abi(value)));
+        Windows::Media::SpeechRecognition::SpeechRecognizerState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerStateChangedEventArgs)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStatics<D>::SystemSpeechLanguage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Language) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStatics<D>::SystemSpeechLanguage() const
     {
         void* language{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerStatics)->get_SystemSpeechLanguage(&language));
         return Windows::Globalization::Language{ language, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStatics<D>::SupportedTopicLanguages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Globalization::Language>) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStatics<D>::SupportedTopicLanguages() const
     {
         void* languages{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerStatics)->get_SupportedTopicLanguages(&languages));
         return Windows::Foundation::Collections::IVectorView<Windows::Globalization::Language>{ languages, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStatics<D>::SupportedGrammarLanguages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Globalization::Language>) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStatics<D>::SupportedGrammarLanguages() const
     {
         void* languages{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerStatics)->get_SupportedGrammarLanguages(&languages));
         return Windows::Foundation::Collections::IVectorView<Windows::Globalization::Language>{ languages, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStatics2<D>::TrySetSystemSpeechLanguageAsync(Windows::Globalization::Language const& speechLanguage) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerStatics2<D>::TrySetSystemSpeechLanguageAsync(Windows::Globalization::Language const& speechLanguage) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerStatics2)->TrySetSystemSpeechLanguageAsync(*(void**)(&speechLanguage), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::InitialSilenceTimeout() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::InitialSilenceTimeout() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts)->get_InitialSilenceTimeout(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::InitialSilenceTimeout(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::InitialSilenceTimeout(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts)->put_InitialSilenceTimeout(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::EndSilenceTimeout() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::EndSilenceTimeout() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts)->get_EndSilenceTimeout(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::EndSilenceTimeout(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::EndSilenceTimeout(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts)->put_EndSilenceTimeout(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::BabbleTimeout() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::BabbleTimeout() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts)->get_BabbleTimeout(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::BabbleTimeout(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerTimeouts<D>::BabbleTimeout(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts)->put_BabbleTimeout(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::ExampleText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::ExampleText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions)->get_ExampleText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::ExampleText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::ExampleText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions)->put_ExampleText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::AudiblePrompt() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::AudiblePrompt() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions)->get_AudiblePrompt(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::AudiblePrompt(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::AudiblePrompt(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions)->put_AudiblePrompt(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::IsReadBackEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::IsReadBackEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions)->get_IsReadBackEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::IsReadBackEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::IsReadBackEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions)->put_IsReadBackEnabled(value));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::ShowConfirmation() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::ShowConfirmation() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions)->get_ShowConfirmation(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::ShowConfirmation(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_SpeechRecognition_ISpeechRecognizerUIOptions<D>::ShowConfirmation(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions)->put_ShowConfirmation(value));
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_IVoiceCommandManager<D>::InstallCommandSetsFromStorageFileAsync(Windows::Storage::StorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_SpeechRecognition_IVoiceCommandManager<D>::InstallCommandSetsFromStorageFileAsync(Windows::Storage::StorageFile const& file) const
     {
         void* installAction{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::IVoiceCommandManager)->InstallCommandSetsFromStorageFileAsync(*(void**)(&file), &installAction));
         return Windows::Foundation::IAsyncAction{ installAction, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_IVoiceCommandManager<D>::InstalledCommandSets() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::Media::SpeechRecognition::VoiceCommandSet>) consume_Windows_Media_SpeechRecognition_IVoiceCommandManager<D>::InstalledCommandSets() const
     {
         void* voiceCommandSets{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::IVoiceCommandManager)->get_InstalledCommandSets(&voiceCommandSets));
         return Windows::Foundation::Collections::IMapView<hstring, Windows::Media::SpeechRecognition::VoiceCommandSet>{ voiceCommandSets, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_IVoiceCommandSet<D>::Language() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_SpeechRecognition_IVoiceCommandSet<D>::Language() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::IVoiceCommandSet)->get_Language(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_IVoiceCommandSet<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_SpeechRecognition_IVoiceCommandSet<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::IVoiceCommandSet)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_SpeechRecognition_IVoiceCommandSet<D>::SetPhraseListAsync(param::hstring const& phraseListName, param::async_iterable<hstring> const& phraseList) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_SpeechRecognition_IVoiceCommandSet<D>::SetPhraseListAsync(param::hstring const& phraseListName, param::async_iterable<hstring> const& phraseList) const
     {
         void* updateAction{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::SpeechRecognition::IVoiceCommandSet)->SetPhraseListAsync(*(void**)(&phraseListName), *(void**)(&phraseList), &updateAction));
         return Windows::Foundation::IAsyncAction{ updateAction, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionCompletedEventArgs> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionCompletedEventArgs>
     {
@@ -534,6 +535,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionResultGeneratedEventArgs> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionResultGeneratedEventArgs>
     {
@@ -546,6 +549,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession>
     {
@@ -640,6 +645,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult>
     {
@@ -651,6 +658,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>
     {
@@ -705,6 +713,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraint> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraint>
     {
@@ -717,6 +726,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory>
     {
@@ -737,6 +748,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesis> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesis>
     {
@@ -749,6 +762,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesisGeneratedEventArgs> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesisGeneratedEventArgs>
     {
@@ -761,6 +776,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraint> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraint>
     {
@@ -773,6 +790,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory>
     {
@@ -793,6 +812,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionQualityDegradingEventArgs> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionQualityDegradingEventArgs>
     {
@@ -804,6 +825,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionResult> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionResult>
     {
@@ -869,6 +892,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionResult2> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionResult2>
     {
@@ -889,6 +914,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionSemanticInterpretation> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionSemanticInterpretation>
     {
@@ -901,6 +928,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraint> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraint>
     {
@@ -920,6 +949,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory>
     {
@@ -940,10 +971,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognitionVoiceCommandDefinitionConstraint> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognitionVoiceCommandDefinitionConstraint>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognizer> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognizer>
     {
@@ -1032,6 +1067,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognizer2> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognizer2>
     {
@@ -1073,6 +1110,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognizerFactory> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognizerFactory>
     {
@@ -1085,6 +1124,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognizerStateChangedEventArgs> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognizerStateChangedEventArgs>
     {
@@ -1096,6 +1137,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognizerStatics> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognizerStatics>
     {
@@ -1124,6 +1167,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognizerStatics2> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognizerStatics2>
     {
@@ -1136,6 +1181,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts>
     {
@@ -1185,6 +1232,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions> : produce_base<D, Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions>
     {
@@ -1247,6 +1296,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::IVoiceCommandManager> : produce_base<D, Windows::Media::SpeechRecognition::IVoiceCommandManager>
     {
@@ -1267,6 +1318,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::SpeechRecognition::IVoiceCommandSet> : produce_base<D, Windows::Media::SpeechRecognition::IVoiceCommandSet>
     {
@@ -1295,114 +1348,117 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Media::SpeechRecognition
+WINRT_EXPORT namespace winrt::Windows::Media::SpeechRecognition
 {
     inline SpeechRecognitionGrammarFileConstraint::SpeechRecognitionGrammarFileConstraint(Windows::Storage::StorageFile const& file) :
-        SpeechRecognitionGrammarFileConstraint(impl::call_factory<SpeechRecognitionGrammarFileConstraint, Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory>([&](auto&& f) { return f.Create(file); }))
+        SpeechRecognitionGrammarFileConstraint(impl::call_factory<SpeechRecognitionGrammarFileConstraint, ISpeechRecognitionGrammarFileConstraintFactory>([&](ISpeechRecognitionGrammarFileConstraintFactory const& f) { return f.Create(file); }))
     {
     }
     inline SpeechRecognitionGrammarFileConstraint::SpeechRecognitionGrammarFileConstraint(Windows::Storage::StorageFile const& file, param::hstring const& tag) :
-        SpeechRecognitionGrammarFileConstraint(impl::call_factory<SpeechRecognitionGrammarFileConstraint, Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory>([&](auto&& f) { return f.CreateWithTag(file, tag); }))
+        SpeechRecognitionGrammarFileConstraint(impl::call_factory<SpeechRecognitionGrammarFileConstraint, ISpeechRecognitionGrammarFileConstraintFactory>([&](ISpeechRecognitionGrammarFileConstraintFactory const& f) { return f.CreateWithTag(file, tag); }))
     {
     }
     inline SpeechRecognitionListConstraint::SpeechRecognitionListConstraint(param::iterable<hstring> const& commands) :
-        SpeechRecognitionListConstraint(impl::call_factory<SpeechRecognitionListConstraint, Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory>([&](auto&& f) { return f.Create(commands); }))
+        SpeechRecognitionListConstraint(impl::call_factory<SpeechRecognitionListConstraint, ISpeechRecognitionListConstraintFactory>([&](ISpeechRecognitionListConstraintFactory const& f) { return f.Create(commands); }))
     {
     }
     inline SpeechRecognitionListConstraint::SpeechRecognitionListConstraint(param::iterable<hstring> const& commands, param::hstring const& tag) :
-        SpeechRecognitionListConstraint(impl::call_factory<SpeechRecognitionListConstraint, Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory>([&](auto&& f) { return f.CreateWithTag(commands, tag); }))
+        SpeechRecognitionListConstraint(impl::call_factory<SpeechRecognitionListConstraint, ISpeechRecognitionListConstraintFactory>([&](ISpeechRecognitionListConstraintFactory const& f) { return f.CreateWithTag(commands, tag); }))
     {
     }
     inline SpeechRecognitionTopicConstraint::SpeechRecognitionTopicConstraint(Windows::Media::SpeechRecognition::SpeechRecognitionScenario const& scenario, param::hstring const& topicHint) :
-        SpeechRecognitionTopicConstraint(impl::call_factory<SpeechRecognitionTopicConstraint, Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory>([&](auto&& f) { return f.Create(scenario, topicHint); }))
+        SpeechRecognitionTopicConstraint(impl::call_factory<SpeechRecognitionTopicConstraint, ISpeechRecognitionTopicConstraintFactory>([&](ISpeechRecognitionTopicConstraintFactory const& f) { return f.Create(scenario, topicHint); }))
     {
     }
     inline SpeechRecognitionTopicConstraint::SpeechRecognitionTopicConstraint(Windows::Media::SpeechRecognition::SpeechRecognitionScenario const& scenario, param::hstring const& topicHint, param::hstring const& tag) :
-        SpeechRecognitionTopicConstraint(impl::call_factory<SpeechRecognitionTopicConstraint, Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory>([&](auto&& f) { return f.CreateWithTag(scenario, topicHint, tag); }))
+        SpeechRecognitionTopicConstraint(impl::call_factory<SpeechRecognitionTopicConstraint, ISpeechRecognitionTopicConstraintFactory>([&](ISpeechRecognitionTopicConstraintFactory const& f) { return f.CreateWithTag(scenario, topicHint, tag); }))
     {
     }
     inline SpeechRecognizer::SpeechRecognizer() :
-        SpeechRecognizer(impl::call_factory<SpeechRecognizer>([](auto&& f) { return f.template ActivateInstance<SpeechRecognizer>(); }))
+        SpeechRecognizer(impl::call_factory_cast<SpeechRecognizer(*)(Windows::Foundation::IActivationFactory const&), SpeechRecognizer>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SpeechRecognizer>(); }))
     {
     }
     inline SpeechRecognizer::SpeechRecognizer(Windows::Globalization::Language const& language) :
-        SpeechRecognizer(impl::call_factory<SpeechRecognizer, Windows::Media::SpeechRecognition::ISpeechRecognizerFactory>([&](auto&& f) { return f.Create(language); }))
+        SpeechRecognizer(impl::call_factory<SpeechRecognizer, ISpeechRecognizerFactory>([&](ISpeechRecognizerFactory const& f) { return f.Create(language); }))
     {
     }
     inline auto SpeechRecognizer::SystemSpeechLanguage()
     {
-        return impl::call_factory<SpeechRecognizer, Windows::Media::SpeechRecognition::ISpeechRecognizerStatics>([&](auto&& f) { return f.SystemSpeechLanguage(); });
+        return impl::call_factory_cast<Windows::Globalization::Language(*)(ISpeechRecognizerStatics const&), SpeechRecognizer, ISpeechRecognizerStatics>([](ISpeechRecognizerStatics const& f) { return f.SystemSpeechLanguage(); });
     }
     inline auto SpeechRecognizer::SupportedTopicLanguages()
     {
-        return impl::call_factory<SpeechRecognizer, Windows::Media::SpeechRecognition::ISpeechRecognizerStatics>([&](auto&& f) { return f.SupportedTopicLanguages(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<Windows::Globalization::Language>(*)(ISpeechRecognizerStatics const&), SpeechRecognizer, ISpeechRecognizerStatics>([](ISpeechRecognizerStatics const& f) { return f.SupportedTopicLanguages(); });
     }
     inline auto SpeechRecognizer::SupportedGrammarLanguages()
     {
-        return impl::call_factory<SpeechRecognizer, Windows::Media::SpeechRecognition::ISpeechRecognizerStatics>([&](auto&& f) { return f.SupportedGrammarLanguages(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<Windows::Globalization::Language>(*)(ISpeechRecognizerStatics const&), SpeechRecognizer, ISpeechRecognizerStatics>([](ISpeechRecognizerStatics const& f) { return f.SupportedGrammarLanguages(); });
     }
     inline auto SpeechRecognizer::TrySetSystemSpeechLanguageAsync(Windows::Globalization::Language const& speechLanguage)
     {
-        return impl::call_factory<SpeechRecognizer, Windows::Media::SpeechRecognition::ISpeechRecognizerStatics2>([&](auto&& f) { return f.TrySetSystemSpeechLanguageAsync(speechLanguage); });
+        return impl::call_factory<SpeechRecognizer, ISpeechRecognizerStatics2>([&](ISpeechRecognizerStatics2 const& f) { return f.TrySetSystemSpeechLanguageAsync(speechLanguage); });
     }
     inline auto VoiceCommandManager::InstallCommandSetsFromStorageFileAsync(Windows::Storage::StorageFile const& file)
     {
-        return impl::call_factory<VoiceCommandManager, Windows::Media::SpeechRecognition::IVoiceCommandManager>([&](auto&& f) { return f.InstallCommandSetsFromStorageFileAsync(file); });
+        return impl::call_factory<VoiceCommandManager, IVoiceCommandManager>([&](IVoiceCommandManager const& f) { return f.InstallCommandSetsFromStorageFileAsync(file); });
     }
     inline auto VoiceCommandManager::InstalledCommandSets()
     {
-        return impl::call_factory<VoiceCommandManager, Windows::Media::SpeechRecognition::IVoiceCommandManager>([&](auto&& f) { return f.InstalledCommandSets(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IMapView<hstring, Windows::Media::SpeechRecognition::VoiceCommandSet>(*)(IVoiceCommandManager const&), VoiceCommandManager, IVoiceCommandManager>([](IVoiceCommandManager const& f) { return f.InstalledCommandSets(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionCompletedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionResultGeneratedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionResultGeneratedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraint> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraint> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesis> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesis> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesisGeneratedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesisGeneratedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraint> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraint> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionQualityDegradingEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionQualityDegradingEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionResult> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionResult> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionResult2> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionResult2> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionSemanticInterpretation> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionSemanticInterpretation> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraint> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraint> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionVoiceCommandDefinitionConstraint> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionVoiceCommandDefinitionConstraint> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer2> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer2> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerFactory> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerFactory> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerStatics> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerStatics> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerStatics2> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerStatics2> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::IVoiceCommandManager> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::IVoiceCommandManager> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::IVoiceCommandSet> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::IVoiceCommandSet> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager> {};
-    template<> struct hash<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet> : winrt::impl::hash_base<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionCompletedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionResultGeneratedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechContinuousRecognitionSession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionCompilationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesis> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionHypothesisGeneratedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionQualityDegradingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionSemanticInterpretation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionVoiceCommandDefinitionConstraint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizer2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerTimeouts> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerUIOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::IVoiceCommandManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::IVoiceCommandSet> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet> : winrt::impl::hash_base {};
+#endif
 }
 #endif

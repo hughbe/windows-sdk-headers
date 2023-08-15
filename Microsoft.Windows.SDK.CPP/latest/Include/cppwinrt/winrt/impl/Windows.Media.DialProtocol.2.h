@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Media_DialProtocol_2_H
 #include "winrt/impl/Windows.Devices.Enumeration.1.h"
 #include "winrt/impl/Windows.Media.DialProtocol.1.h"
-namespace winrt::Windows::Media::DialProtocol
+WINRT_EXPORT namespace winrt::Windows::Media::DialProtocol
 {
     struct __declspec(empty_bases) DialApp : Windows::Media::DialProtocol::IDialApp
     {

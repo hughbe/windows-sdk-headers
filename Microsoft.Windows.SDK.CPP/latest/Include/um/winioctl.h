@@ -52,6 +52,7 @@ DEFINE_GUID(GUID_DEVINTERFACE_CDCHANGER,              0x53f56312L, 0xb6bf, 0x11d
 DEFINE_GUID(GUID_DEVINTERFACE_STORAGEPORT,            0x2accfe60L, 0xc130, 0x11d2, 0xb0, 0x82, 0x00, 0xa0, 0xc9, 0x1e, 0xfb, 0x8b);
 DEFINE_GUID(GUID_DEVINTERFACE_VMLUN,                  0x6f416619L, 0x9f29, 0x42a5, 0xb2, 0x0b, 0x37, 0xe2, 0x19, 0xca, 0x02, 0xb0);
 DEFINE_GUID(GUID_DEVINTERFACE_SES,                    0x1790c9ecL, 0x47d5, 0x4df3, 0xb5, 0xaf, 0x9a, 0xdf, 0x3c, 0xf2, 0x3e, 0x48);
+DEFINE_GUID(GUID_DEVINTERFACE_ZNSDISK,                0xb87941c5L, 0xffdb, 0x43c7, 0xb6, 0xb1, 0x20, 0xb6, 0x32, 0xf0, 0xb1, 0x09);
 
 #define  WDI_STORAGE_PREDICT_FAILURE_DPS_GUID        {0xe9f2d03aL, 0x747c, 0x41c2, {0xbb, 0x9a, 0x02, 0xc6, 0x2b, 0x6d, 0x5f, 0xcb}};
 
@@ -261,6 +262,8 @@ DEFINE_DEVPROPKEY(DEVPKEY_Storage_Gpt_Name,           0x4d1ebee8, 0x803, 0x4774,
 #define FILE_DEVICE_HOLOGRAPHIC         0x0000005b
 #define FILE_DEVICE_SDFXHCI             0x0000005c
 #define FILE_DEVICE_UCMUCSI             0x0000005d
+#define FILE_DEVICE_PRM                 0x0000005e
+#define FILE_DEVICE_EVENT_COLLECTOR     0x0000005f
 
 //
 // Macro definition for defining IOCTL and FSCTL function control codes.  Note
@@ -416,11 +419,11 @@ extern "C" {
 
 #define IOCTL_STORAGE_PROTOCOL_COMMAND              CTL_CODE(IOCTL_STORAGE_BASE, 0x04F0, METHOD_BUFFERED, FILE_READ_ACCESS | FILE_WRITE_ACCESS)
 
+
+#define IOCTL_STORAGE_SET_PROPERTY                  CTL_CODE(IOCTL_STORAGE_BASE, 0x04FF, METHOD_BUFFERED, FILE_WRITE_ACCESS)
 #define IOCTL_STORAGE_QUERY_PROPERTY                CTL_CODE(IOCTL_STORAGE_BASE, 0x0500, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define IOCTL_STORAGE_MANAGE_DATA_SET_ATTRIBUTES    CTL_CODE(IOCTL_STORAGE_BASE, 0x0501, METHOD_BUFFERED, FILE_WRITE_ACCESS)
 #define IOCTL_STORAGE_GET_LB_PROVISIONING_MAP_RESOURCES  CTL_CODE(IOCTL_STORAGE_BASE, 0x0502, METHOD_BUFFERED, FILE_READ_ACCESS)
-
-#define IOCTL_STORAGE_SET_PROPERTY                  CTL_CODE(IOCTL_STORAGE_BASE, 0x0503, METHOD_BUFFERED, FILE_WRITE_ACCESS)
 
 //
 // IOCTLs 0x0503 to 0x0580 reserved for Enhanced Storage devices.
@@ -431,9 +434,9 @@ extern "C" {
 // deletion or recoverability of the data on the storage device after command completion. This IOCTL is limited
 // to data disks in regular Windows. In WinPE, this IOCTL is supported for both boot and data disks.
 //
-// Initial implementation requires no input and returns no output other than status. Callers should first
-// call FSCTL_LOCK_VOLUME before calling this ioctl to flush out cached data in upper layers. No waiting of
-// outstanding request completion is done before issuing the command to the device.
+// This IOCTL has an optional input and returns no output other than status. Callers should first call
+// FSCTL_LOCK_VOLUME before calling this ioctl to flush out cached data in upper layers. No waiting of outstanding
+// request completion is done before issuing the command to the device.
 //
 #define IOCTL_STORAGE_REINITIALIZE_MEDIA    CTL_CODE(IOCTL_STORAGE_BASE, 0x0590, METHOD_BUFFERED, FILE_WRITE_ACCESS)
 
@@ -1102,7 +1105,7 @@ typedef enum __WRAPPED__ _STORAGE_PROPERTY_ID {
     StorageDeviceProperty = 0,
     StorageAdapterProperty,
     StorageDeviceIdProperty,
-    StorageDeviceUniqueIdProperty,              // See storduid.h for details
+    StorageDeviceUniqueIdProperty,                  // See storduid.h for details
     StorageDeviceWriteCacheProperty,
     StorageMiniportProperty,
     StorageAccessAlignmentProperty,
@@ -1132,7 +1135,11 @@ typedef enum __WRAPPED__ _STORAGE_PROPERTY_ID {
     StorageDeviceZonedDeviceProperty,
     StorageDeviceUnsafeShutdownCount,
     StorageDeviceEnduranceProperty,
+    StorageDeviceLedStateProperty,
+    StorageDeviceSelfEncryptionProperty = 64,
+    StorageFruIdProperty,
 } STORAGE_PROPERTY_ID, *PSTORAGE_PROPERTY_ID;
+
 
 //
 // Query structure - additional parameters for specific queries can follow
@@ -1685,7 +1692,10 @@ typedef struct __WRAPPED__ _DEVICE_LB_PROVISIONING_DESCRIPTOR {
     BYTE  UnmapGranularityAlignmentValid : 1;
 
     __WRAPPED__
-    BYTE  Reserved0 : 2;
+    BYTE  GetFreeSpaceSupported : 1;        // Supports DeviceDsmAction_GetFreeSpace
+
+    __WRAPPED__
+    BYTE  MapSupported : 1;                 // Supports DeviceDsmAction_Map
 
     __WRAPPED__
     BYTE  Reserved1[7];
@@ -2229,9 +2239,40 @@ typedef enum _STORAGE_PROTOCOL_ATA_DATA_TYPE {
 
 typedef enum _STORAGE_PROTOCOL_UFS_DATA_TYPE {
     UfsDataTypeUnknown = 0,
-    UfsDataTypeQueryDescriptor, // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryDescriptor,         // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryAttribute,          // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryFlag,               // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryDmeAttribute,       // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryDmePeerAttribute,   // Retrieved by command - QUERY UPIU
     UfsDataTypeMax,
 } STORAGE_PROTOCOL_UFS_DATA_TYPE, *PSTORAGE_PROTOCOL_UFS_DATA_TYPE;
+
+//
+// Below definition is used to specify particular command fields when querying
+// NVMeDataTypeLogPage, and this definition maps to ProtocolDataRequestSubValue4
+// field in STORAGE_PROTOCOL_SPECIFIC_DATA.
+//
+#pragma warning(push)
+#pragma warning(disable:4201) // nameless struct/unions
+#pragma warning(disable:4214) // bit fields other than int to disable this around the struct
+
+typedef union _STORAGE_PROTOCOL_DATA_SUBVALUE_GET_LOG_PAGE {
+
+    struct {
+
+        DWORD RetainAsynEvent : 1;
+
+        DWORD LogSpecificField : 4;
+
+        DWORD Reserved : 27;
+
+    } DUMMYSTRUCTNAME;
+
+    DWORD AsUlong;
+
+} STORAGE_PROTOCOL_DATA_SUBVALUE_GET_LOG_PAGE, *PSTORAGE_PROTOCOL_DATA_SUBVALUE_GET_LOG_PAGE;
+
+#pragma warning(pop)
 
 //
 // Protocol Data should follow this data structure in the same buffer.
@@ -2253,7 +2294,8 @@ typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA {
     DWORD   ProtocolDataRequestSubValue2; // First additional data sub request value
 
     DWORD   ProtocolDataRequestSubValue3; // Second additional data sub request value
-    DWORD   Reserved;
+    DWORD   ProtocolDataRequestSubValue4; // Third additional data sub request value
+
 } STORAGE_PROTOCOL_SPECIFIC_DATA, *PSTORAGE_PROTOCOL_SPECIFIC_DATA;
 
 //
@@ -3037,6 +3079,60 @@ typedef struct _STORAGE_HW_ENDURANCE_DATA_DESCRIPTOR {
 
 #pragma warning(pop)
 
+//
+// Output buffer for StorageDeviceLedStateProperty.
+//
+typedef struct _STORAGE_DEVICE_LED_STATE_DESCRIPTOR {
+
+    DWORD Version;
+
+    DWORD Size;
+
+    DWORDLONG State;
+
+} STORAGE_DEVICE_LED_STATE_DESCRIPTOR, *PSTORAGE_DEVICE_LED_STATE_DESCRIPTOR;
+
+//
+// Output buffer for StorageDeviceSelfEncryptionProperty.
+//
+typedef struct _STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY {
+
+    DWORD Version;
+
+    DWORD Size;
+
+    BOOLEAN SupportsSelfEncryption;
+
+} STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY, *PSTORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY;
+
+//
+// Output buffer for StorageFruIdProperty.
+//
+typedef struct _STORAGE_FRU_ID_DESCRIPTOR {
+
+    //
+    // Sizeof(STORAGE_FRU_ID_DESCRIPTOR)
+    //
+
+    DWORD Version;
+
+    //
+    // Total size of the data.
+    // Should be >= sizeof(STORAGE_FRU_ID_DESCRIPTOR)
+    //
+
+    DWORD Size;
+
+    //
+    // The identifier is a variable length array of bytes.
+    //
+
+    DWORD IdentifierSize;
+    BYTE  Identifier[ANYSIZE_ARRAY];
+
+} STORAGE_FRU_ID_DESCRIPTOR, *PSTORAGE_FRU_ID_DESCRIPTOR;
+
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // IOCTL_STORAGE_MANAGE_DATA_SET_ATTRIBUTES
@@ -3721,6 +3817,8 @@ typedef struct _DEVICE_DATA_SET_SCRUB_EX_OUTPUT {
     //
 
     DEVICE_DSM_RANGE ParityExtent;
+
+    DWORDLONG BytesScrubbed;
 
 } DEVICE_DATA_SET_SCRUB_EX_OUTPUT, *PDEVICE_DATA_SET_SCRUB_EX_OUTPUT,
   DEVICE_DSM_SCRUB_OUTPUT2, *PDEVICE_DSM_SCRUB_OUTPUT2;
@@ -5247,6 +5345,12 @@ typedef enum _STORAGE_DIAGNOSTIC_TARGET_TYPE {
 } STORAGE_DIAGNOSTIC_TARGET_TYPE, *PSTORAGE_DIAGNOSTIC_TARGET_TYPE;
 
 //
+// Indicate the target of the request other than the device handle/object itself.
+// This is used in "Flags" field of data structures.
+//
+#define STORAGE_DIAGNOSTIC_FLAG_ADAPTER_REQUEST     0x00000001
+
+//
 // STORAGE_DIAGNOSTIC_REQUEST
 //
 
@@ -5259,8 +5363,8 @@ typedef struct _STORAGE_DIAGNOSTIC_REQUEST {
     // (In case adding variable-sized buffer in future.)
     DWORD Size;
 
-    // Reserved for future use.
-    DWORD Reserved;
+    // Request flag.
+    DWORD Flags;
 
     // Request target type. See definitions for STORAGE_DIAGNOSTIC_TARGET_TYPE.
     STORAGE_DIAGNOSTIC_TARGET_TYPE TargetType;
@@ -5386,7 +5490,9 @@ typedef struct _REMOVE_ELEMENT_AND_TRUNCATE_REQUEST {
 typedef enum _DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE {
     DeviceInternalStatusDataRequestTypeUndefined = 0,
     DeviceCurrentInternalStatusDataHeader,
-    DeviceCurrentInternalStatusData
+    DeviceCurrentInternalStatusData,
+    DeviceSavedInternalStatusDataHeader,
+    DeviceSavedInternalStatusData
 } DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE, *PDEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE;
 
 typedef enum _DEVICE_INTERNAL_STATUS_DATA_SET {
@@ -5430,6 +5536,55 @@ typedef struct _DEVICE_INTERNAL_STATUS_DATA {
     BYTE  StatusData[ANYSIZE_ARRAY];
 
 } DEVICE_INTERNAL_STATUS_DATA, *PDEVICE_INTERNAL_STATUS_DATA;
+
+//
+// IOCTL_STORAGE_REINITIALIZE_MEDIA
+//
+// Input Buffer :
+//      STORAGE_REINITIALIZE_MEDIA - Optional
+// Output Buffer :
+//      None
+//
+
+typedef enum _STORAGE_SANITIZE_METHOD {
+    StorageSanitizeMethodDefault = 0,
+    StorageSanitizeMethodBlockErase,
+    StorageSanitizeMethodCryptoErase
+} STORAGE_SANITIZE_METHOD, *PSTORAGE_SANITIZE_METHOD;
+
+#pragma warning(push)
+#pragma warning(disable:4214) // bit fields other than int to disable this around the struct
+
+typedef struct _STORAGE_REINITIALIZE_MEDIA {
+
+    DWORD Version;
+
+    DWORD Size;
+
+    DWORD TimeoutInSeconds;
+
+    //
+    // The SanitizeOption field is only applicable to NVMe devices.
+    //
+    struct {
+
+        //
+        // This field specifies the sanitize method defined in STORAGE_SANITIZE_METHOD enum.
+        //
+        DWORD SanitizeMethod : 4;
+
+        //
+        // This field specifies if unrestricted sanitize exit is allowed or not.
+        // By default unrestricted sanitize exit is allowed.
+        //
+        DWORD DisallowUnrestrictedSanitizeExit : 1;
+
+        DWORD Reserved : 27;
+    } SanitizeOption;
+
+} STORAGE_REINITIALIZE_MEDIA, *PSTORAGE_REINITIALIZE_MEDIA;
+
+#pragma warning(pop)
 
 
 #pragma warning(push)
@@ -6696,10 +6851,18 @@ typedef struct _STORAGE_ATTRIBUTE_MGMT {
 //
 // Persistent memory (SCM) bus device IOCTLs.
 //
-//
+
 #define IOCTL_SCM_BUS_GET_LOGICAL_DEVICES           CTL_CODE(IOCTL_SCMBUS_BASE, SCMBUS_FUNCTION(0x00), METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define IOCTL_SCM_BUS_GET_PHYSICAL_DEVICES          CTL_CODE(IOCTL_SCMBUS_BASE, SCMBUS_FUNCTION(0x01), METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define IOCTL_SCM_BUS_GET_REGIONS                   CTL_CODE(IOCTL_SCMBUS_BASE, SCMBUS_FUNCTION(0x02), METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define IOCTL_SCM_BUS_QUERY_PROPERTY                CTL_CODE(IOCTL_SCMBUS_BASE, SCMBUS_FUNCTION(0x03), METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define IOCTL_SCM_BUS_SET_PROPERTY                  CTL_CODE(IOCTL_SCMBUS_BASE, SCMBUS_FUNCTION(0x05), METHOD_BUFFERED, FILE_WRITE_ACCESS)
+
+//
+// This IOCTL does not require any input nor produce any output data.
+//
+#define IOCTL_SCM_BUS_RUNTIME_FW_ACTIVATE           CTL_CODE(IOCTL_SCMBUS_BASE, SCMBUS_FUNCTION(0x04), METHOD_BUFFERED, FILE_WRITE_ACCESS)
+
 
 //
 // Logical persistent memory device IOCTLs.
@@ -6716,6 +6879,7 @@ typedef struct _STORAGE_ATTRIBUTE_MGMT {
 #define IOCTL_SCM_PD_PASSTHROUGH                    CTL_CODE(IOCTL_SCMBUS_BASE, SCM_PHYSICAL_DEVICE_FUNCTION(0x03), METHOD_BUFFERED, FILE_READ_ACCESS | FILE_WRITE_ACCESS)
 #define IOCTL_SCM_PD_UPDATE_MANAGEMENT_STATUS       CTL_CODE(IOCTL_SCMBUS_BASE, SCM_PHYSICAL_DEVICE_FUNCTION(0x04), METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define IOCTL_SCM_PD_REINITIALIZE_MEDIA             CTL_CODE(IOCTL_SCMBUS_BASE, SCM_PHYSICAL_DEVICE_FUNCTION(0x05), METHOD_BUFFERED, FILE_WRITE_ACCESS)
+#define IOCTL_SCM_PD_SET_PROPERTY                   CTL_CODE(IOCTL_SCMBUS_BASE, SCM_PHYSICAL_DEVICE_FUNCTION(0x06), METHOD_BUFFERED, FILE_WRITE_ACCESS)
 
 
 //
@@ -6749,7 +6913,7 @@ typedef struct _SCM_PD_HEALTH_NOTIFICATION_DATA {
 #define SCM_MAX_SYMLINK_LEN_IN_CHARS 256
 
 typedef struct _SCM_LOGICAL_DEVICE_INSTANCE {
-    
+
     //
     // Sizeof() of this structure serves as the version.
     //
@@ -6773,7 +6937,7 @@ typedef struct _SCM_LOGICAL_DEVICE_INSTANCE {
 } SCM_LOGICAL_DEVICE_INSTANCE, *PSCM_LOGICAL_DEVICE_INSTANCE;
 
 typedef struct _SCM_LOGICAL_DEVICES {
-    
+
     //
     // Sizeof() of this structure serves as the version.
     //
@@ -6980,6 +7144,313 @@ typedef struct _SCM_REGIONS {
 
 } SCM_REGIONS, *PSCM_REGIONS;
 
+//
+// IOCTL_SCM_BUS_QUERY_PROPERTY
+//
+// Input Buffer:
+//      An SCM_BUS_PROPERTY_QUERY structure that describes the type of query
+//      being done, the property being queried, and any additional parameters
+//      the query requires.
+//
+//  Output Buffer:
+//      Contains a buffer to place the results of the query into. Since all
+//      property descriptors can be cast into an SCM_BUS_DESCRIPTOR_HEADER,
+//      the IOCTL can be called once with a small buffer then again using
+//      a buffer as large as the header reports is necessary.
+//
+
+
+//
+// Types of queries
+//
+
+typedef enum _SCM_BUS_QUERY_TYPE {
+    ScmBusQuery_Descriptor = 0, // Retrieves the descriptor
+    ScmBusQuery_IsSupported,    // Used to test whether the descriptor is supported
+
+    ScmBusQuery_Max
+} SCM_BUS_QUERY_TYPE, *PSCM_BUS_QUERY_TYPE;
+
+
+//
+// IOCTL_SCM_BUS_SET_PROPERTY
+//
+// Input Buffer:
+//      An SCM_BUS_PROPERTY_SET structure that describes the type of set
+//      being done, the property being set, and any additional parameters
+//      the set requires.
+//
+//  Output Buffer:
+//      Contains a buffer to place the results of the set into. Since all
+//      property descriptors can be cast into an SCM_BUS_DESCRIPTOR_HEADER,
+//      the IOCTL can be called once with a small buffer then again using
+//      a buffer as large as the header reports is necessary.
+//
+
+
+//
+// Types of sets
+//
+
+typedef enum _SCM_BUS_SET_TYPE {
+    ScmBusSet_Descriptor = 0, // Retrieves the descriptor
+    ScmBusSet_IsSupported,    // Used to test whether the descriptor is supported
+
+    ScmBusSet_Max
+} SCM_BUS_SET_TYPE, *PSCM_BUS_SET_TYPE;
+
+
+typedef enum _SCM_BUS_PROPERTY_ID {
+
+    //
+    // Runtime Firmware Activation Information.
+    //
+    ScmBusProperty_RuntimeFwActivationInfo = 0,
+
+    //
+    // Dedicated Memory Information.
+    //
+    ScmBusProperty_DedicatedMemoryInfo = 1,
+
+    //
+    // Activate/Deactivate the Dedicated Memory.
+    //
+    ScmBusProperty_DedicatedMemoryState = 2,
+
+    ScmBusProperty_Max
+} SCM_BUS_PROPERTY_ID, *PSCM_BUS_PROPERTY_ID;
+
+//
+// Query structure - additional parameters for specific queries can follow
+// the header
+//
+
+typedef struct _SCM_BUS_PROPERTY_QUERY {
+
+    //
+    // Sizeof() of this structure serves as the version.
+    //
+    DWORD Version;
+
+    //
+    // The size of this structure, including any additional
+    // parameters.
+    //
+    DWORD Size;
+
+    //
+    // ID of the property being retrieved.
+    //
+    SCM_BUS_PROPERTY_ID PropertyId;
+
+    //
+    // The type of query being performed.
+    //
+    SCM_BUS_QUERY_TYPE QueryType;
+
+    //
+    // Space for additional parameters if necessary.
+    //
+    BYTE  AdditionalParameters[ANYSIZE_ARRAY];
+
+} SCM_BUS_PROPERTY_QUERY, *PSCM_BUS_PROPERTY_QUERY;
+
+//
+// Output buffer for ScmBusProperty_RuntimeFwActivationInfo
+//
+
+//
+// ScmBus Firmware Activation State
+//
+typedef enum _SCM_BUS_FIRMWARE_ACTIVATION_STATE {
+    ScmBusFirmwareActivationState_Idle = 0,     // NVDIMM is Idle for firmware update
+    ScmBusFirmwareActivationState_Armed = 1,    // NVDIMM is armed to activate the staging firmware
+    ScmBusFirmwareActivationState_Busy = 2      // NVDIMM firmware activation is underway
+
+} SCM_BUS_FIRMWARE_ACTIVATION_STATE, *PSCM_BUS_FIRMWARE_ACTIVATION_STATE;
+
+typedef struct _SCM_BUS_RUNTIME_FW_ACTIVATION_INFO {
+
+    //
+    // Sizeof() of this structure serves as the version.
+    //
+    DWORD Version;
+
+    //
+    // Size of the data contained in this structure. If the output buffer is too small
+    // to contain the requested information, the Size field indicates the length of the
+    // output buffer the caller should provide in order to retrieve all the data.
+    //
+    DWORD Size;
+
+    //
+    // Indicates if runtime firmware activation is supported or not.
+    //
+    BOOLEAN RuntimeFwActivationSupported;
+
+    //
+    // Indicates the current Firmware activation state of the DIMMs.
+    // Note: If any one of the NVDIMMs is Armed, the state is Armed.
+    //
+    SCM_BUS_FIRMWARE_ACTIVATION_STATE FirmwareActivationState;
+
+    //
+    // Firmware activation capabilities.
+    //
+    struct {
+
+        //
+        // Live activation supported with platform firmware managed processor and I/O quiesce.
+        //
+        DWORD FwManagedIoQuiesceFwActivationSupported : 1;
+
+        //
+        // Live activation supported with OS managed I/O quiesce (device idle) and platform managed processor quiesce.
+        //
+        DWORD OsManagedIoQuiesceFwActivationSupported : 1;
+
+        //
+        // Warm reset-based activation supported.
+        //
+        DWORD WarmResetBasedFwActivationSupported : 1;
+
+        DWORD Reserved : 29;
+    } FirmwareActivationCapability;
+
+    //
+    // Estimated firmware activation time in micro seconds.
+    //
+    DWORDLONG EstimatedFirmwareActivationTimeInUSecs;
+
+    //
+    // Estimated processor quiesce time during firmware activation in micro seconds.
+    // 0 - no processor quiesce required.
+    //
+    DWORDLONG EstimatedProcessorAccessQuiesceTimeInUSecs;
+
+    //
+    // Estimated I/O access to host memory quiesce time during firmware activation in micro seconds.
+    // 0 - no I/O quiesce required.
+    //
+    DWORDLONG EstimatedIOAccessQuiesceTimeInUSecs;
+
+    //
+    // Platform firmware supported Max I/O access to memory quiesce time during firmware activation in micro seconds.
+    // 0 - Informaiton not available.
+    //
+    DWORDLONG PlatformSupportedMaxIOAccessQuiesceTimeInUSecs;
+
+} SCM_BUS_RUNTIME_FW_ACTIVATION_INFO, *PSCM_BUS_RUNTIME_FW_ACTIVATION_INFO;
+
+//
+// Output buffer for ScmBusProperty_DedicatedMemoryInfo
+//
+typedef struct _SCM_BUS_DEDICATED_MEMORY_DEVICE_INFO {
+
+    //
+    // The dedicated memory device GUID.
+    //
+    GUID DeviceGuid;
+
+    //
+    // The dedicated memory device number.
+    //
+    DWORD DeviceNumber;
+
+    struct {
+
+        //
+        // Indicates if the dedicated memory is created by registry settings.
+        //
+        DWORD ForcedByRegistry : 1;
+
+        //
+        // Indicates if the dedicated memory is initialized.
+        //
+        DWORD Initialized : 1;
+
+        DWORD Reserved : 30;
+    } Flags;
+
+    //
+    // The dedicated memory device size in bytes.
+    //
+    DWORDLONG DeviceSize;
+
+} SCM_BUS_DEDICATED_MEMORY_DEVICE_INFO, *PSCM_BUS_DEDICATED_MEMORY_DEVICE_INFO;
+
+typedef struct _SCM_BUS_DEDICATED_MEMORY_DEVICES_INFO {
+
+    //
+    // Sizeof() of this structure serves as the version.
+    //
+    DWORD Version;
+
+    //
+    // The total size of the data structure, including all the elements in the
+    // Devices array.
+    //
+    DWORD Size;
+
+    //
+    // The number of valid elements in the Devices array.
+    //
+    DWORD DeviceCount;
+
+    //
+    // Array of dedicated memory devices info.
+    //
+    SCM_BUS_DEDICATED_MEMORY_DEVICE_INFO Devices[ANYSIZE_ARRAY];
+
+} SCM_BUS_DEDICATED_MEMORY_DEVICES_INFO, *PSCM_BUS_DEDICATED_MEMORY_DEVICES_INFO;
+
+
+//
+// Set structure - additional parameters for specific sets can follow
+// the header
+//
+
+typedef struct _SCM_BUS_PROPERTY_SET {
+
+    //
+    // Sizeof() of this structure serves as the version.
+    //
+    DWORD Version;
+
+    //
+    // The size of this structure, including any additional
+    // parameters.
+    //
+    DWORD Size;
+
+    //
+    // ID of the property being set.
+    //
+    SCM_BUS_PROPERTY_ID PropertyId;
+
+    //
+    // The type of set being performed.
+    //
+    SCM_BUS_SET_TYPE SetType;
+
+    //
+    // Space for additional parameters if necessary.
+    //
+    BYTE  AdditionalParameters[ANYSIZE_ARRAY];
+
+} SCM_BUS_PROPERTY_SET, *PSCM_BUS_PROPERTY_SET;
+
+//
+// Input AdditionalParameters for ScmBusProperty_DedicatedMemoryState
+//
+
+typedef struct _SCM_BUS_DEDICATED_MEMORY_STATE {
+
+    //
+    // Dedicated Memory state (Deactivate - FALSE, Activate - TRUE).
+    //
+    BOOLEAN ActivateState;
+} SCM_BUS_DEDICATED_MEMORY_STATE, *PSCM_BUS_DEDICATED_MEMORY_STATE;
 
 
 //
@@ -7033,7 +7504,7 @@ typedef struct _SCM_LD_INTERLEAVE_SET_INFO {
     // The number of elements in the InterleaveSet array.
     //
     DWORD InterleaveSetSize;
-    
+
     //
     // Information about the physical devices that make up this interleave
     // set.
@@ -7070,44 +7541,89 @@ typedef struct _SCM_LD_INTERLEAVE_SET_INFO {
 typedef enum _SCM_PD_QUERY_TYPE {
     ScmPhysicalDeviceQuery_Descriptor = 0, // Retrieves the descriptor
     ScmPhysicalDeviceQuery_IsSupported, // Used to test whether the descriptor is supported
-    
+
     ScmPhysicalDeviceQuery_Max
 } SCM_PD_QUERY_TYPE, *PSCM_PD_QUERY_TYPE;
 
+
+//
+// IOCTL_SCM_PD_SET_PROPERTY
+//
+// Input Buffer:
+//      An SCM_PD_PROPERTY_SET structure that describes the type of set
+//      being done, the property being set, and any additional parameters
+//      the set requires.
+//
+//  Output Buffer:
+//      Contains a buffer to place the results of the set into. Since all
+//      property descriptors can be cast into an SCM_PD_DESCRIPTOR_HEADER,
+//      the IOCTL can be called once with a small buffer then again using
+//      a buffer as large as the header reports is necessary.
+//
+
+
+//
+// Types of sets
+//
+
+typedef enum _SCM_PD_SET_TYPE {
+    ScmPhysicalDeviceSet_Descriptor = 0, // Retrieves the descriptor
+    ScmPhysicalDeviceSet_IsSupported, // Used to test whether the descriptor is supported
+
+    ScmPhysicalDeviceSet_Max
+} SCM_PD_SET_TYPE, *PSCM_PD_SET_TYPE;
+
+
 typedef enum _SCM_PD_PROPERTY_ID {
-    
+
     //
     // General information about the device.
     //
     ScmPhysicalDeviceProperty_DeviceInfo = 0,
-    
+
     //
     // Information about the device's health.
     //
     ScmPhysicalDeviceProperty_ManagementStatus,
-    
+
     //
     // Firmware-related information.
     //
     ScmPhysicalDeviceProperty_FirmwareInfo,
-    
+
     //
     // Returns a string that identifies where the device is located
     // on the local system.
     //
     ScmPhysicalDeviceProperty_LocationString,
-    
+
     //
     // Returns a series of device-specific information, which give more detail
     // on the device's status.
     //
     ScmPhysicalDeviceProperty_DeviceSpecificInfo,
-    
+
     //
     // Returns a identifying handle of the physical device, which comes from
     // the NFIT table.
     //
     ScmPhysicalDeviceProperty_DeviceHandle,
+
+    //
+    // Returns a string that identifies the replacement unit housing
+    // the device on the local system.
+    //
+    ScmPhysicalDeviceProperty_FruIdString,
+
+    //
+    // Returns runtime firmware activation information.
+    //
+    ScmPhysicalDeviceProperty_RuntimeFwActivationInfo,
+
+    //
+    // Runtime firmware activation arm state.
+    //
+    ScmPhysicalDeviceProperty_RuntimeFwActivationArmState,
 
     ScmPhysicalDeviceProperty_Max
 } SCM_PD_PROPERTY_ID, *PSCM_PD_PROPERTY_ID;
@@ -7149,6 +7665,53 @@ typedef struct _SCM_PD_PROPERTY_QUERY {
 } SCM_PD_PROPERTY_QUERY, *PSCM_PD_PROPERTY_QUERY;
 
 //
+// Set structure - additional parameters for specific sets can follow
+// the header
+//
+
+typedef struct _SCM_PD_PROPERTY_SET {
+
+    //
+    // Sizeof() of this structure serves as the version.
+    //
+    DWORD Version;
+
+    //
+    // The size of this structure, including any additional
+    // parameters.
+    //
+    DWORD Size;
+
+    //
+    // ID of the property being retrieved.
+    //
+    SCM_PD_PROPERTY_ID PropertyId;
+
+    //
+    // The type of set being performed.
+    //
+    SCM_PD_SET_TYPE SetType;
+
+    //
+    // Space for additional parameters if necessary.
+    //
+    BYTE  AdditionalParameters[ANYSIZE_ARRAY];
+
+} SCM_PD_PROPERTY_SET, *PSCM_PD_PROPERTY_SET;
+
+//
+// Input AdditionalParameters for ScmPhysicalDeviceProperty_RuntimeFwActivationArmState
+//
+
+typedef struct _SCM_PD_RUNTIME_FW_ACTIVATION_ARM_STATE {
+
+    //
+    // Runtime firmware activation arm state (Disarm - FALSE, Arm - TRUE).
+    //
+    BOOLEAN ArmState;
+} SCM_PD_RUNTIME_FW_ACTIVATION_ARM_STATE, *PSCM_PD_RUNTIME_FW_ACTIVATION_ARM_STATE;
+
+//
 // Standard property descriptor header. All property pages should use this
 // as their first element or should contain these two elements
 //
@@ -7159,7 +7722,7 @@ typedef struct _SCM_PD_DESCRIPTOR_HEADER {
     // The sizeof() of the entire descriptor (not just the header).
     //
     DWORD Version;
-    
+
     //
     // The size of the entire descriptor (not just the header).
     //
@@ -7457,7 +8020,8 @@ typedef enum _SCM_PD_OPERATIONAL_STATUS_REASON {
     ScmPhysicalDeviceOpReason_MediaRemainingSpareBlock,
     ScmPhysicalDeviceOpReason_PerformanceDegradation,
     ScmPhysicalDeviceOpReason_ExcessiveTemperature,
-    
+    ScmPhysicalDeviceOpReason_InternalFailure,
+
     ScmPhysicalDeviceOpReason_Max
 } SCM_PD_OPERATIONAL_STATUS_REASON, *PSCM_PD_OPERATIONAL_STATUS_REASON;
 
@@ -7534,6 +8098,32 @@ typedef struct _SCM_PD_LOCATION_STRING {
     WCHAR Location[ANYSIZE_ARRAY];
 
 } SCM_PD_LOCATION_STRING, *PSCM_PD_LOCATION_STRING;
+
+//
+// Output buffer for ScmPhysicalDeviceQuery_Descriptor & ScmPhysicalDeviceProperty_FruIdString
+//
+typedef struct _SCM_PD_FRU_ID_STRING {
+
+    //
+    // Sizeof() of this structure serves as the version.
+    //
+    DWORD Version;
+
+    //
+    // The total size of the structure, including the buffer for the fru id string.
+    // If the output buffer is too small to contain the requested information,
+    // the Size field indicates the length of the output buffer the caller should provide
+    // in order to retrieve all the data.
+    //
+    DWORD Size;
+
+    //
+    // The string that represents the fru id of this physical device.
+    //
+    DWORD IdentifierSize;
+    BYTE  Identifier[ANYSIZE_ARRAY];
+
+} SCM_PD_FRU_ID_STRING, *PSCM_PD_FRU_ID_STRING;
 
 //
 // Firmware update IOCTLs.
@@ -7617,6 +8207,61 @@ typedef struct _SCM_PD_FIRMWARE_ACTIVATE {
     BYTE  Slot;
 
 } SCM_PD_FIRMWARE_ACTIVATE, *PSCM_PD_FIRMWARE_ACTIVATE;
+
+//
+// Output buffer for ScmPhysicalDeviceProperty_RuntimeFwActivationInfo
+//
+
+//
+// ScmBus Physical Device Last Firmware Activation Status
+//
+typedef enum _SCM_PD_LAST_FW_ACTIVATION_STATUS {
+    ScmPdLastFwActivationStatus_None = 0,                   // No Firmware Activation performed. Reset to None on boot
+    ScmPdLastFwActivationStatus_Success = 1,                // Success
+    ScmPdLastFwActivationStatus_FwNotFound = 2,             // No new staged firmware to activate
+    ScmPdLastFwActivationStatus_ColdRebootRequired = 3,     // NVDIMM Reset required to activate staged firmware
+    ScmPdLastFwActivaitonStatus_ActivationInProgress = 4,   // Media disabled during firmware activation
+    ScmPdLastFwActivaitonStatus_Retry = 5,                  // Activation aborted due to throttling. Retry recommended
+    ScmPdLastFwActivaitonStatus_FwUnsupported = 6,          // Staged firmware version does not meet activation requirements
+    ScmPdLastFwActivaitonStatus_UnknownError = 7            // Unclassified firmware activation error
+
+} SCM_PD_LAST_FW_ACTIVATION_STATUS, *PSCM_PD_LAST_FW_ACTIVATION_STATUS;
+
+//
+// ScmBus Physical Device Firmware Activation State
+//
+typedef enum _SCM_PD_FIRMWARE_ACTIVATION_STATE {
+    ScmPdFirmwareActivationState_Idle = 0,  // NVDIMM is Idle for firmware update
+    ScmPdFirmwareActivationState_Armed = 1, // NVDIMM is armed to activate the staging firmware
+    ScmPdFirmwareActivationState_Busy = 2   // NVDIMM firmware activation is underway
+
+} SCM_PD_FIRMWARE_ACTIVATION_STATE, *PSCM_PD_FIRMWARE_ACTIVATION_STATE;
+
+typedef struct _SCM_PD_RUNTIME_FW_ACTIVATION_INFO {
+
+    //
+    // Sizeof() of this structure serves as the version.
+    //
+    DWORD Version;
+
+    //
+    // Size of the data contained in this structure. If the output buffer is too small
+    // to contain the requested information, the Size field indicates the length of the
+    // output buffer the caller should provide in order to retrieve all the data.
+    //
+    DWORD Size;
+
+    //
+    // This provides the previous Firmware Activation status.
+    //
+    SCM_PD_LAST_FW_ACTIVATION_STATUS LastFirmwareActivationStatus;
+
+    //
+    // Indicates the current Firmware activation state of the DIMM.
+    //
+    SCM_PD_FIRMWARE_ACTIVATION_STATE FirmwareActivationState;
+
+} SCM_PD_RUNTIME_FW_ACTIVATION_INFO, *PSCM_PD_RUNTIME_FW_ACTIVATION_INFO;
 
 //
 // IOCTL_SCM_PD_PASSTHROUGH
@@ -10324,7 +10969,7 @@ typedef enum _CHANGER_DEVICE_PROBLEM_TYPE {
 #endif
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_TH2)
-#define FSCTL_QUERY_DIRECT_ACCESS_EXTENTS        CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 230, METHOD_NEITHER, FILE_ANY_ACCESS)
+#define FSCTL_QUERY_DIRECT_ACCESS_EXTENTS        CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 230, METHOD_NEITHER, FILE_ANY_ACCESS) // QUERY_DIRECT_ACCESS_EXTENTS
 #define FSCTL_NOTIFY_STORAGE_SPACE_ALLOCATION    CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 231, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define FSCTL_SSDI_STORAGE_REQUEST               CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 232, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #endif
@@ -10393,6 +11038,15 @@ typedef enum _CHANGER_DEVICE_PROBLEM_TYPE {
 #define FSCTL_ENABLE_PER_IO_FLAGS               CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 267, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #endif /* _WIN64 */
 #endif /* (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS5) */
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+#define FSCTL_QUERY_ASYNC_DUPLICATE_EXTENTS_STATUS  CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 268, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#endif
+#if (NTDDI_VERSION >= NTDDI_WIN10_MN)
+#define FSCTL_SMB_SHARE_FLUSH_AND_PURGE         CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 271, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#endif
+#if (NTDDI_VERSION >= NTDDI_WIN10_FE)
+#define FSCTL_REFS_STREAM_SNAPSHOT_MANAGEMENT   CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 272, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#endif
 //
 // AVIO IOCTLS.
 //
@@ -10487,7 +11141,6 @@ typedef struct {
 } NTFS_EXTENDED_VOLUME_DATA, *PNTFS_EXTENDED_VOLUME_DATA;
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_NT4 */
 
-
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 
 //
@@ -10523,7 +11176,6 @@ typedef struct {
 } REFS_VOLUME_DATA_BUFFER, *PREFS_VOLUME_DATA_BUFFER;
 
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN8 */
-
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_NT4)
 //
@@ -10673,7 +11325,6 @@ typedef struct {
 
 } MOVE_FILE_RECORD_DATA, *PMOVE_FILE_RECORD_DATA;
 
-
 #if defined(_WIN64)
 //
 //  32/64 Bit thunking support structure
@@ -10777,7 +11428,6 @@ typedef struct {
     WORD   MaxMajorVersion;
 
 } READ_FILE_USN_DATA, *PREAD_FILE_USN_DATA;
-
 
 //
 //==================== FSCTL_READ_USN_JOURNAL ======================
@@ -11001,7 +11651,6 @@ typedef struct {
 
 } USN_JOURNAL_DATA_V2, *PUSN_JOURNAL_DATA_V2;
 
-
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 typedef USN_JOURNAL_DATA_V1 USN_JOURNAL_DATA, *PUSN_JOURNAL_DATA;
 #else
@@ -11041,7 +11690,7 @@ typedef struct {
 #endif
 #pragma warning(disable:4201)       // unnamed struct
 
-typedef struct {
+typedef struct _MARK_HANDLE_INFO {
 
 #if (NTDDI_VERSION >= NTDDI_WIN8)
     union {
@@ -11053,7 +11702,7 @@ typedef struct {
 #endif /*NTDDI_VERSION >= NTDDI_WIN8 */
 
     HANDLE VolumeHandle;
-    DWORD HandleInfo;
+    DWORD HandleInfo;           //Flags
 
 } MARK_HANDLE_INFO, *PMARK_HANDLE_INFO;
 
@@ -11062,7 +11711,7 @@ typedef struct {
 //  32/64 Bit thunking support structure
 //
 
-typedef struct {
+typedef struct _MARK_HANDLE_INFO32 {
 
 #if (NTDDI_VERSION >= NTDDI_WIN8)
     union {
@@ -11073,7 +11722,7 @@ typedef struct {
     DWORD UsnSourceInfo;
 #endif /*NTDDI_VERSION >= NTDDI_WIN8 */
     UINT32 VolumeHandle;
-    DWORD HandleInfo;
+    DWORD HandleInfo;           //Flags
 
 } MARK_HANDLE_INFO32, *PMARK_HANDLE_INFO32;
 #endif
@@ -11113,33 +11762,32 @@ typedef struct {
                                      USN_SOURCE_REPLICATION_MANAGEMENT |        \
                                      USN_SOURCE_CLIENT_REPLICATION_MANAGEMENT)
 
-
 //
 //  Flags for the HandleInfo field above
 //
-//  Introduced in W2K
+//  Introduced in W2K:
 //  MARK_HANDLE_PROTECT_CLUSTERS - disallow any defragmenting (FSCTL_MOVE_FILE) until the
 //      the handle is closed
 //
-//  Introduced in Vista
+//  Introduced in Vista:
 //  MARK_HANDLE_TXF_SYSTEM_LOG - indicates that this stream is being used as the Txf
-//      log for an RM on the volume.  Must be called in the kernel using
-//      IRP_MN_KERNEL_CALL.
+//      log for an RM on the volume.  Must be called in the kernel using IRP_MN_KERNEL_CALL.
 //
-//  MARK_HANDLE_NOT_TXF_SYSTEM_LOG - indicates that this user is no longer using this
-//      object as a log file.
+//  MARK_HANDLE_NOT_TXF_SYSTEM_LOG - indicates that this component is no longer using this
+//      object as a TxF log file.
 //
-//  Introduced in Win7
+//  Introduced in Win7:
 //  MARK_HANDLE_REALTIME - only supported by the UDFS file system.  Marks the device
 //      to do realtime streaming of video
 //
 //  MARK_HANDLE_NOT_REALTIME - only supported by the UDFS file system.  Marks the device
-//      to do realtime streaming of video
+//      to no longer do realtime streaming of video
 //
 //  MARK_HANDLE_CLOUD_SYNC - this flag is deprecated and is no longer used
 //
 //  Introduced in Win8
-//  MARK_HANDLE_READ_COPY - indicates the data must be read from the specified copy.
+//  MARK_HANDLE_READ_COPY - indicates the data must be read from the specified copy
+//      of data.  Only supported for spaces redundent volumes.
 //
 //  MARK_HANDLE_NOT_READ_COPY - indicates the data is no longer to be read from a specific copy.
 //
@@ -11170,13 +11818,14 @@ typedef struct {
 //      If a write is seen the operation is failed with STATUS_MARKED_TO_DISALLOW_WRITES
 //
 //  Introduced in RS4 (win10)
-//  MARK_HANDLE_ENABLE_CPU_CACHE - Flag reserved for internal Microsoft use, it is
-//      only used on the
+//  MARK_HANDLE_ENABLE_CPU_CACHE - Flag reserved for internal Microsoft use
 //
 
 #define MARK_HANDLE_PROTECT_CLUSTERS                    (0x00000001)
+//#define ReservedForFutureUse                          (0x00000002)
 #define MARK_HANDLE_TXF_SYSTEM_LOG                      (0x00000004)
 #define MARK_HANDLE_NOT_TXF_SYSTEM_LOG                  (0x00000008)
+//#define ReservedForFutureUse                          (0x00000010)
 
 #endif /* NTDDI_VERSION >= NTDDI_WIN2K */
 
@@ -11184,8 +11833,7 @@ typedef struct {
 
 #define MARK_HANDLE_REALTIME                            (0x00000020)
 #define MARK_HANDLE_NOT_REALTIME                        (0x00000040)
-#define MARK_HANDLE_FILTER_METADATA                     (0x00000200)        // 8.1 and newer
-#define MARK_HANDLE_CLOUD_SYNC                          (0x00000800)
+#define MARK_HANDLE_CLOUD_SYNC                          (0x00000800)    //deprecated flag - do not use
 
 #endif /* NTDDI_VERSION >= NTDDI_WIN7 */
 
@@ -11193,9 +11841,15 @@ typedef struct {
 
 #define MARK_HANDLE_READ_COPY                           (0x00000080)
 #define MARK_HANDLE_NOT_READ_COPY                       (0x00000100)
-#define MARK_HANDLE_RETURN_PURGE_FAILURE                (0x00000400)        // 8.1 and newer
 
 #endif /*NTDDI_VERSION >= NTDDI_WIN8 */
+
+#if (NTDDI_VERSION >= NTDDI_WINBLUE) || (NTDDI_VERSION >= NTDDI_WIN7)       //Win7 check is for backward compatibility
+
+#define MARK_HANDLE_FILTER_METADATA                     (0x00000200)        // 8.1 and newer
+#define MARK_HANDLE_RETURN_PURGE_FAILURE                (0x00000400)        // 8.1 and newer
+
+#endif /*NTDDI_VERSION >= NTDDI_WINBLUE */
 
 #if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
 
@@ -11677,9 +12331,7 @@ typedef struct _FILE_SET_SPARSE_BUFFER {
     BOOLEAN SetSparse;
 } FILE_SET_SPARSE_BUFFER, *PFILE_SET_SPARSE_BUFFER;
 
-
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN2K */
-
 
 //
 //==================== FSCTL_SET_ZERO_DATA ======================
@@ -12155,7 +12807,6 @@ typedef struct _FILE_QUERY_ON_DISK_VOL_INFO_BUFFER {
 #define FILE_INITIATE_REPAIR_HINT1_INDEX_ENTRY_MISMATCH                                 (0x0000010000000000)
 #define FILE_INITIATE_REPAIR_HINT1_INVALID_ORPHAN_RECOVERY_NAME                         (0x0000020000000000)
 #define FILE_INITIATE_REPAIR_HINT1_MULTIPLE_FILE_NAME_ATTRIBUTES                        (0x0000040000000000)
-
 
 //
 //  We need to expose CLSN definition???????????????
@@ -12795,7 +13446,6 @@ typedef struct _TXFS_LIST_TRANSACTION_LOCKED_FILES_ENTRY {
     WCHAR FileName[1];
 } TXFS_LIST_TRANSACTION_LOCKED_FILES_ENTRY, *PTXFS_LIST_TRANSACTION_LOCKED_FILES_ENTRY;
 
-
 typedef struct _TXFS_LIST_TRANSACTION_LOCKED_FILES {
 
     //
@@ -12870,7 +13520,6 @@ typedef struct _TXFS_LIST_TRANSACTIONS {
 
     DWORDLONG BufferSizeRequired;
 } TXFS_LIST_TRANSACTIONS, *PTXFS_LIST_TRANSACTIONS;
-
 
 //
 //==================== FSCTL_TXFS_READ_BACKUP_INFORMATION ======================
@@ -13093,7 +13742,6 @@ typedef struct _TXFS_TRANSACTION_ACTIVE_INFO {
 
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_VISTA */
 
-
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
 
 //
@@ -13213,6 +13861,34 @@ typedef struct _FILE_FS_PERSISTENT_VOLUME_INFORMATION {
 #define PERSISTENT_VOLUME_STATE_REALLOCATE_ALL_DATA_WRITES          (0x00000200)
 
 #endif // #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_MN)
+
+//
+//  This indicates that AutoChk modified this volume and is cleared by AutoChk
+//  after it ensured that the volume is dismounted or the system is rebooted.
+//  This can be set or queried.
+//
+
+#define PERSISTENT_VOLUME_STATE_CHKDSK_RAN_ONCE                     (0x00000400)
+
+//
+//  This again indicates that AutoChk modified this volume but is cleared by
+//  NTFS on next mount.  So if this flag is set it means that the volume was
+//  modified by AutoChk while it's still mounted and the on-disk state and
+//  the in memory state could be different.  This can only be queried.
+//
+
+#define PERSISTENT_VOLUME_STATE_MODIFIED_BY_CHKDSK                  (0x00000800)
+
+//
+//  The volume was formatted as DAX.  The volume may not be mounted as DAX
+//  if the storage is not DAX capable.  This can only be queried.
+//
+
+#define PERSISTENT_VOLUME_STATE_DAX_FORMATTED                       (0x00001000)
+
+#endif // #if (NTDDI_VERSION >= NTDDI_WIN10_MN)
 
 //
 //==================== FSCTL_QUERY_FILE_SYSTEM_RECOGNITION ====================
@@ -13367,7 +14043,6 @@ typedef struct _STORAGE_QUERY_DEPENDENT_VOLUME_LEV2_ENTRY {
 #pragma warning(disable:4200) // zero length array
 #endif
 
-
 typedef struct _STORAGE_QUERY_DEPENDENT_VOLUME_RESPONSE {
     DWORD   ResponseLevel;
     DWORD   NumberEntries;
@@ -13396,7 +14071,6 @@ typedef struct _STORAGE_QUERY_DEPENDENT_VOLUME_RESPONSE {
 #define SD_GLOBAL_CHANGE_TYPE_MACHINE_SID   1
 #define SD_GLOBAL_CHANGE_TYPE_QUERY_STATS   (1 << 16)
 #define SD_GLOBAL_CHANGE_TYPE_ENUM_SDS      (2 << 16)
-
 
 //
 //  Operation specific structures for SD_GLOBAL_CHANGE_TYPE_MACHINE_SID
@@ -13868,6 +14542,7 @@ typedef enum _CSV_CONTROL_OP {
     CsvControlEnableCaching                      = 0x14,
     CsvControlStartForceDFO                      = 0x15,
     CsvControlStopForceDFO                       = 0x16,
+    CsvControlQueryMdsPathNoPause                = 0x17,
 } CSV_CONTROL_OP, *PCSV_CONTROL_OP;
 
 typedef struct _CSV_CONTROL_PARAM {
@@ -13949,7 +14624,6 @@ typedef struct _CSV_QUERY_FILE_REVISION_FILE_ID_128 {
     LONGLONG FileRevision[3];
 
 } CSV_QUERY_FILE_REVISION_FILE_ID_128, *PCSV_QUERY_FILE_REVISION_FILE_ID_128;
-
 
 //
 // Output for the CsvControlQueryMdsPath
@@ -14041,7 +14715,6 @@ typedef struct _CSV_QUERY_MDS_PATH_V2 {
 
 } CSV_QUERY_MDS_PATH_V2, *PCSV_QUERY_MDS_PATH_V2;
 
-
 //
 //====================== FSCTL_CSV_QUERY_VETO_FILE_DIRECT_IO =========================
 //
@@ -14060,7 +14733,6 @@ typedef struct _CSV_QUERY_VETO_FILE_DIRECT_IO_OUTPUT {
 
 #endif /* _WIN32_WINNT >= _WIN32_WINNT_WIN7 */
 
-
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS5)
 //
 // Storage Reserve common definitions
@@ -14077,7 +14749,6 @@ typedef enum _STORAGE_RESERVE_ID {
 
 } STORAGE_RESERVE_ID, *PSTORAGE_RESERVE_ID;
 #endif /* (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS5) */
-
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 
@@ -14681,7 +15352,6 @@ typedef struct _STREAM_LAYOUT_ENTRY {
 //
 #define STREAM_EXTENT_ENTRY_ALL_EXTENTS                                 (0x00000002)
 
-
 typedef struct _STREAM_EXTENT_ENTRY {
 
     //
@@ -14745,7 +15415,6 @@ typedef struct _FSCTL_SET_INTEGRITY_INFORMATION_BUFFER_EX {
 } FSCTL_SET_INTEGRITY_INFORMATION_BUFFER_EX, *PFSCTL_SET_INTEGRITY_INFORMATION_BUFFER_EX;
 #endif // #if (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)
 
-
 //
 //======================== FSCTL_OFFLOAD_READ ==============================
 //
@@ -14770,7 +15439,6 @@ typedef struct _FSCTL_OFFLOAD_READ_OUTPUT {
 
 #define OFFLOAD_READ_FLAG_ALL_ZERO_BEYOND_CURRENT_RANGE       (1)
 
-
 //
 //======================== FSCTL_OFFLOAD_WRITE =============================
 //
@@ -14791,7 +15459,6 @@ typedef struct _FSCTL_OFFLOAD_WRITE_OUTPUT {
     DWORD Flags;
     DWORDLONG LengthWritten;
 } FSCTL_OFFLOAD_WRITE_OUTPUT, *PFSCTL_OFFLOAD_WRITE_OUTPUT;
-
 
 //
 //======================== FSCTL_SET_PURGE_FAILURE_MODE ===========================
@@ -14919,7 +15586,6 @@ typedef struct _WRITE_USN_REASON_INPUT {
 //No Flags currently defined
 
 
-
 #endif /*_WIN32_WINNT >= _WIN32_WINNT_WIN8 */
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WINBLUE)
@@ -14950,7 +15616,6 @@ typedef struct _WRITE_USN_REASON_INPUT {
 #define FILE_STORAGE_TIER_FLAG_READ_CACHE         (0x00400000)
 #define FILE_STORAGE_TIER_FLAG_PARITY             (0x00800000)
 #define FILE_STORAGE_TIER_FLAG_SMR                (0x01000000)
-
 
 typedef enum _FILE_STORAGE_TIER_MEDIA_TYPE {
 
@@ -15033,7 +15698,6 @@ typedef struct _FILE_STORAGE_TIER {
 //
 
 typedef _Struct_size_bytes_(Size) struct _FSCTL_QUERY_STORAGE_CLASSES_OUTPUT {
-
 
     //
     // Size of this structure serves
@@ -15374,12 +16038,45 @@ typedef struct _DUPLICATE_EXTENTS_DATA_EX32 {
 
 #endif /* (NTDDI_VERSION >= NTDDI_WIN10_RS3) */
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+
+//
+//=============== FSCTL_QUERY_ASYNC_DUPLICATE_EXTENTS_STATUS ==================
+//
+
+typedef enum _DUPLICATE_EXTENTS_STATE {
+
+    FileSnapStateInactive = 0,
+    FileSnapStateSource,
+    FileSnapStateTarget,
+
+} DUPLICATE_EXTENTS_STATE, *PDUPLICATE_EXTENTS_STATE;
+
+typedef struct _ASYNC_DUPLICATE_EXTENTS_STATUS {
+
+    DWORD Version;
+
+    DUPLICATE_EXTENTS_STATE State;
+
+    DWORDLONG SourceFileOffset;
+    DWORDLONG TargetFileOffset;
+    DWORDLONG ByteCount;
+
+    DWORDLONG BytesDuplicated;
+
+} ASYNC_DUPLICATE_EXTENTS_STATUS, *PASYNC_DUPLICATE_EXTENTS_STATUS;
+
+#define ASYNC_DUPLICATE_EXTENTS_STATUS_V1   sizeof(ASYNC_DUPLICATE_EXTENTS_STATUS)
+
+#endif
+
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS2)
 
 //
 //==================== FSCTL_QUERY_REFS_SMR_VOLUME_INFO =======================
 //
 
+#define REFS_SMR_VOLUME_INFO_OUTPUT_VERSION_V0      0
 #define REFS_SMR_VOLUME_INFO_OUTPUT_VERSION_V1      1
 
 typedef enum _REFS_SMR_VOLUME_GC_STATE {
@@ -15405,7 +16102,13 @@ typedef struct _REFS_SMR_VOLUME_INFO_OUTPUT {
     REFS_SMR_VOLUME_GC_STATE VolumeGcState;
     DWORD    VolumeGcLastStatus;
 
-    DWORDLONG Unused[7];
+    //
+    //  Fields added in V1
+    //
+
+    DWORD CurrentGcBandFillPercentage;
+
+    DWORDLONG Unused[6];
 
 } REFS_SMR_VOLUME_INFO_OUTPUT, *PREFS_SMR_VOLUME_INFO_OUTPUT;
 
@@ -15601,7 +16304,6 @@ typedef struct _QUERY_BAD_RANGES_OUTPUT {
 
 } QUERY_BAD_RANGES_OUTPUT, *PQUERY_BAD_RANGES_OUTPUT;
 
-
 //
 //========= FSCTL_SET_DAX_ALLOC_ALIGNMENT_HINT =========
 //
@@ -15687,7 +16389,9 @@ typedef enum _VIRTUAL_STORAGE_BEHAVIOR_CODE {
 
     VirtualStorageBehaviorUndefined = 0,
     VirtualStorageBehaviorCacheWriteThrough = 1,
-    VirtualStorageBehaviorCacheWriteBack = 2
+    VirtualStorageBehaviorCacheWriteBack = 2,
+    VirtualStorageBehaviorStopIoProcessing = 3,
+    VirtualStorageBehaviorRestartIoProcessing = 4
 
 } VIRTUAL_STORAGE_BEHAVIOR_CODE, *PVIRTUAL_STORAGE_BEHAVIOR_CODE;
 
@@ -15859,7 +16563,6 @@ typedef struct _CONTAINER_VOLUME_STATE {
 
 #define CONTAINER_VOLUME_STATE_HOSTING_CONTAINER    (0x00000001)
 
-
 typedef struct _CONTAINER_ROOT_INFO_INPUT {
     DWORD Flags;
 } CONTAINER_ROOT_INFO_INPUT, *PCONTAINER_ROOT_INFO_INPUT;
@@ -15878,8 +16581,9 @@ typedef struct _CONTAINER_ROOT_INFO_OUTPUT {
 #define CONTAINER_ROOT_INFO_FLAG_BIND_TARGET_ROOT               (0x00000040)
 #define CONTAINER_ROOT_INFO_FLAG_BIND_EXCEPTION_ROOT            (0x00000080)
 #define CONTAINER_ROOT_INFO_FLAG_BIND_DO_NOT_MAP_NAME           (0x00000100)
+#define CONTAINER_ROOT_INFO_FLAG_UNION_LAYER_ROOT               (0x00000200)
 
-#define CONTAINER_ROOT_INFO_VALID_FLAGS                         (0x000001ff)
+#define CONTAINER_ROOT_INFO_VALID_FLAGS                         (0x000003ff)
 
 #endif
 
@@ -15932,6 +16636,7 @@ typedef struct _GET_FILTER_FILE_IDENTIFIER_OUTPUT {
 //
 //=============== END FileSystem FSCTL Structure Definitions ==================
 //
+    
 
 //
 // Some applications include both ntioapi_x.h and winioctl.h
@@ -15984,6 +16689,29 @@ typedef struct _NETWORK_APP_INSTANCE_EA {
 
 #endif //_NETWORK_APP_INSTANCE_EA_DEFINED
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_MN)
+
+//
+//=============== FSCTL_SMB_SHARE_FLUSH_AND_PURGE =================
+//
+
+#ifndef SMB_SHARE_FLUSH_AND_PURGE_INPUT_DESCRIPTORS_DEFINED
+#define SMB_SHARE_FLUSH_AND_PURGE_INPUT_DESCRIPTORS_DEFINED
+
+typedef struct _SMB_SHARE_FLUSH_AND_PURGE_INPUT {
+
+    WORD   Version;             // sizeof(SMB_SHARE_FLUSH_AND_PURGE)
+} SMB_SHARE_FLUSH_AND_PURGE_INPUT, *PSMB_SHARE_FLUSH_AND_PURGE_INPUT;
+typedef struct _SMB_SHARE_FLUSH_AND_PURGE_INPUT const *PCSMB_SHARE_FLUSH_AND_PURGE_INPUT;
+
+typedef struct _SMB_SHARE_FLUSH_AND_PURGE_OUTPUT {
+
+    DWORD cEntriesPurged;
+} SMB_SHARE_FLUSH_AND_PURGE_OUTPUT, *PSMB_SHARE_FLUSH_AND_PURGE_OUTPUT;
+typedef struct _SMB_SHARE_FLUSH_AND_PURGE_OUTPUT const *PCSMB_SHARE_FLUSH_AND_PURGE_OUTPUT;
+
+#endif // defined(SMB_SHARE_FLUSH_AND_PURGE_INPUT_DESCRIPTORS_DEFINED)
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_MN)
 
 #define IOCTL_VOLUME_BASE                       0x00000056 // 'V'
 

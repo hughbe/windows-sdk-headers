@@ -21,6 +21,7 @@ typedef enum _NET_PACKET_LAYER2_TYPE
     NetPacketLayer2TypeUnspecified,
     NetPacketLayer2TypeNull,
     NetPacketLayer2TypeEthernet,
+    NetPacketLayer2TypeIeee80211,
 } NET_PACKET_LAYER2_TYPE;
 
 typedef enum _NET_PACKET_LAYER3_TYPE

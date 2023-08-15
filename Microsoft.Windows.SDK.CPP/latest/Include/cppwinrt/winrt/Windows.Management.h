@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,146 +6,147 @@
 #ifndef WINRT_Windows_Management_H
 #define WINRT_Windows_Management_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Management.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Data() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_IMdmAlert<D>::Data() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->get_Data(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Data(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_IMdmAlert<D>::Data(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->put_Data(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Format() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::MdmAlertDataType) consume_Windows_Management_IMdmAlert<D>::Format() const
     {
-        Windows::Management::MdmAlertDataType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->get_Format(put_abi(value)));
+        Windows::Management::MdmAlertDataType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->get_Format(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Format(Windows::Management::MdmAlertDataType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_IMdmAlert<D>::Format(Windows::Management::MdmAlertDataType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->put_Format(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Mark() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::MdmAlertMark) consume_Windows_Management_IMdmAlert<D>::Mark() const
     {
-        Windows::Management::MdmAlertMark value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->get_Mark(put_abi(value)));
+        Windows::Management::MdmAlertMark value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->get_Mark(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Mark(Windows::Management::MdmAlertMark const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_IMdmAlert<D>::Mark(Windows::Management::MdmAlertMark const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->put_Mark(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Source() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_IMdmAlert<D>::Source() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->get_Source(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Source(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_IMdmAlert<D>::Source(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->put_Source(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Management_IMdmAlert<D>::Status() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->get_Status(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Target() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_IMdmAlert<D>::Target() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->get_Target(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Target(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_IMdmAlert<D>::Target(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->put_Target(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_IMdmAlert<D>::Type() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->get_Type(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmAlert<D>::Type(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_IMdmAlert<D>::Type(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmAlert)->put_Type(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Management_IMdmSession<D>::Alerts() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Management::MdmAlert>) consume_Windows_Management_IMdmSession<D>::Alerts() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSession)->get_Alerts(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Management::MdmAlert>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmSession<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Management_IMdmSession<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSession)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Management_IMdmSession<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_IMdmSession<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSession)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmSession<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::MdmSessionState) consume_Windows_Management_IMdmSession<D>::State() const
     {
-        Windows::Management::MdmSessionState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSession)->get_State(put_abi(value)));
+        Windows::Management::MdmSessionState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSession)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Management_IMdmSession<D>::AttachAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Management_IMdmSession<D>::AttachAsync() const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSession)->AttachAsync(&action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmSession<D>::Delete() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_IMdmSession<D>::Delete() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSession)->Delete());
     }
-    template <typename D> auto consume_Windows_Management_IMdmSession<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Management_IMdmSession<D>::StartAsync() const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSession)->StartAsync(&action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmSession<D>::StartAsync(param::async_iterable<Windows::Management::MdmAlert> const& alerts) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Management_IMdmSession<D>::StartAsync(param::async_iterable<Windows::Management::MdmAlert> const& alerts) const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSession)->StartWithAlertsAsync(*(void**)(&alerts), &action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmSessionManagerStatics<D>::SessionIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Management_IMdmSessionManagerStatics<D>::SessionIds() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSessionManagerStatics)->get_SessionIds(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmSessionManagerStatics<D>::TryCreateSession() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::MdmSession) consume_Windows_Management_IMdmSessionManagerStatics<D>::TryCreateSession() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSessionManagerStatics)->TryCreateSession(&result));
         return Windows::Management::MdmSession{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Management_IMdmSessionManagerStatics<D>::DeleteSessionById(param::hstring const& sessionId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_IMdmSessionManagerStatics<D>::DeleteSessionById(param::hstring const& sessionId) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSessionManagerStatics)->DeleteSessionById(*(void**)(&sessionId)));
     }
-    template <typename D> auto consume_Windows_Management_IMdmSessionManagerStatics<D>::GetSessionById(param::hstring const& sessionId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::MdmSession) consume_Windows_Management_IMdmSessionManagerStatics<D>::GetSessionById(param::hstring const& sessionId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::IMdmSessionManagerStatics)->GetSessionById(*(void**)(&sessionId), &result));
         return Windows::Management::MdmSession{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Management::IMdmAlert> : produce_base<D, Windows::Management::IMdmAlert>
     {
@@ -245,6 +246,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Management::IMdmSession> : produce_base<D, Windows::Management::IMdmSession>
     {
@@ -311,6 +314,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Management::IMdmSessionManagerStatics> : produce_base<D, Windows::Management::IMdmSessionManagerStatics>
     {
@@ -346,37 +351,40 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Management
+WINRT_EXPORT namespace winrt::Windows::Management
 {
     inline MdmAlert::MdmAlert() :
-        MdmAlert(impl::call_factory<MdmAlert>([](auto&& f) { return f.template ActivateInstance<MdmAlert>(); }))
+        MdmAlert(impl::call_factory_cast<MdmAlert(*)(Windows::Foundation::IActivationFactory const&), MdmAlert>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<MdmAlert>(); }))
     {
     }
     inline auto MdmSessionManager::SessionIds()
     {
-        return impl::call_factory<MdmSessionManager, Windows::Management::IMdmSessionManagerStatics>([&](auto&& f) { return f.SessionIds(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IMdmSessionManagerStatics const&), MdmSessionManager, IMdmSessionManagerStatics>([](IMdmSessionManagerStatics const& f) { return f.SessionIds(); });
     }
     inline auto MdmSessionManager::TryCreateSession()
     {
-        return impl::call_factory<MdmSessionManager, Windows::Management::IMdmSessionManagerStatics>([&](auto&& f) { return f.TryCreateSession(); });
+        return impl::call_factory_cast<Windows::Management::MdmSession(*)(IMdmSessionManagerStatics const&), MdmSessionManager, IMdmSessionManagerStatics>([](IMdmSessionManagerStatics const& f) { return f.TryCreateSession(); });
     }
     inline auto MdmSessionManager::DeleteSessionById(param::hstring const& sessionId)
     {
-        impl::call_factory<MdmSessionManager, Windows::Management::IMdmSessionManagerStatics>([&](auto&& f) { return f.DeleteSessionById(sessionId); });
+        impl::call_factory<MdmSessionManager, IMdmSessionManagerStatics>([&](IMdmSessionManagerStatics const& f) { return f.DeleteSessionById(sessionId); });
     }
     inline auto MdmSessionManager::GetSessionById(param::hstring const& sessionId)
     {
-        return impl::call_factory<MdmSessionManager, Windows::Management::IMdmSessionManagerStatics>([&](auto&& f) { return f.GetSessionById(sessionId); });
+        return impl::call_factory<MdmSessionManager, IMdmSessionManagerStatics>([&](IMdmSessionManagerStatics const& f) { return f.GetSessionById(sessionId); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Management::IMdmAlert> : winrt::impl::hash_base<winrt::Windows::Management::IMdmAlert> {};
-    template<> struct hash<winrt::Windows::Management::IMdmSession> : winrt::impl::hash_base<winrt::Windows::Management::IMdmSession> {};
-    template<> struct hash<winrt::Windows::Management::IMdmSessionManagerStatics> : winrt::impl::hash_base<winrt::Windows::Management::IMdmSessionManagerStatics> {};
-    template<> struct hash<winrt::Windows::Management::MdmAlert> : winrt::impl::hash_base<winrt::Windows::Management::MdmAlert> {};
-    template<> struct hash<winrt::Windows::Management::MdmSession> : winrt::impl::hash_base<winrt::Windows::Management::MdmSession> {};
-    template<> struct hash<winrt::Windows::Management::MdmSessionManager> : winrt::impl::hash_base<winrt::Windows::Management::MdmSessionManager> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Management::IMdmAlert> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::IMdmSession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::IMdmSessionManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::MdmAlert> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::MdmSession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::MdmSessionManager> : winrt::impl::hash_base {};
+#endif
 }
 #endif

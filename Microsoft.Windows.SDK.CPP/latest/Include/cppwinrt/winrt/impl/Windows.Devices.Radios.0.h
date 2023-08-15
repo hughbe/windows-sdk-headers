@@ -1,16 +1,21 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_Radios_0_H
 #define WINRT_Windows_Devices_Radios_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Devices::Radios
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+}
+WINRT_EXPORT namespace winrt::Windows::Devices::Radios
 {
     enum class RadioAccessStatus : int32_t
     {
@@ -40,66 +45,21 @@ namespace winrt::Windows::Devices::Radios
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::Radios::IRadio>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Radios::IRadioStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Radios::Radio>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Radios::RadioAccessStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::Radios::RadioKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::Radios::RadioState>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Devices::Radios::IRadio>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Radios.IRadio" };
-    };
-    template <> struct name<Windows::Devices::Radios::IRadioStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Radios.IRadioStatics" };
-    };
-    template <> struct name<Windows::Devices::Radios::Radio>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Radios.Radio" };
-    };
-    template <> struct name<Windows::Devices::Radios::RadioAccessStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Radios.RadioAccessStatus" };
-    };
-    template <> struct name<Windows::Devices::Radios::RadioKind>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Radios.RadioKind" };
-    };
-    template <> struct name<Windows::Devices::Radios::RadioState>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Radios.RadioState" };
-    };
-    template <> struct guid_storage<Windows::Devices::Radios::IRadio>
-    {
-        static constexpr guid value{ 0x252118DF,0xB33E,0x416A,{ 0x87,0x5F,0x1C,0xF3,0x8A,0xE2,0xD8,0x3E } };
-    };
-    template <> struct guid_storage<Windows::Devices::Radios::IRadioStatics>
-    {
-        static constexpr guid value{ 0x5FB6A12E,0x67CB,0x46AE,{ 0xAA,0xE9,0x65,0x91,0x9F,0x86,0xEF,0xF4 } };
-    };
-    template <> struct default_interface<Windows::Devices::Radios::Radio>
-    {
-        using type = Windows::Devices::Radios::IRadio;
-    };
+    template <> struct category<Windows::Devices::Radios::IRadio>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Radios::IRadioStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Radios::Radio>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Radios::RadioAccessStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Radios::RadioKind>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Radios::RadioState>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Devices::Radios::Radio> = L"Windows.Devices.Radios.Radio";
+    template <> inline constexpr auto& name_v<Windows::Devices::Radios::RadioAccessStatus> = L"Windows.Devices.Radios.RadioAccessStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::Radios::RadioKind> = L"Windows.Devices.Radios.RadioKind";
+    template <> inline constexpr auto& name_v<Windows::Devices::Radios::RadioState> = L"Windows.Devices.Radios.RadioState";
+    template <> inline constexpr auto& name_v<Windows::Devices::Radios::IRadio> = L"Windows.Devices.Radios.IRadio";
+    template <> inline constexpr auto& name_v<Windows::Devices::Radios::IRadioStatics> = L"Windows.Devices.Radios.IRadioStatics";
+    template <> inline constexpr guid guid_v<Windows::Devices::Radios::IRadio>{ 0x252118DF,0xB33E,0x416A,{ 0x87,0x5F,0x1C,0xF3,0x8A,0xE2,0xD8,0x3E } }; // 252118DF-B33E-416A-875F-1CF38AE2D83E
+    template <> inline constexpr guid guid_v<Windows::Devices::Radios::IRadioStatics>{ 0x5FB6A12E,0x67CB,0x46AE,{ 0xAA,0xE9,0x65,0x91,0x9F,0x86,0xEF,0xF4 } }; // 5FB6A12E-67CB-46AE-AAE9-65919F86EFF4
+    template <> struct default_interface<Windows::Devices::Radios::Radio>{ using type = Windows::Devices::Radios::IRadio; };
     template <> struct abi<Windows::Devices::Radios::IRadio>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -125,14 +85,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Radios_IRadio
     {
-        auto SetStateAsync(Windows::Devices::Radios::RadioState const& value) const;
-        auto StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Radios::Radio, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::RadioAccessStatus>) SetStateAsync(Windows::Devices::Radios::RadioState const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Radios::Radio, Windows::Foundation::IInspectable> const& handler) const;
         using StateChanged_revoker = impl::event_revoker<Windows::Devices::Radios::IRadio, &impl::abi_t<Windows::Devices::Radios::IRadio>::remove_StateChanged>;
-        StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Radios::Radio, Windows::Foundation::IInspectable> const& handler) const;
-        auto StateChanged(winrt::event_token const& eventCookie) const noexcept;
-        [[nodiscard]] auto State() const;
-        [[nodiscard]] auto Name() const;
-        [[nodiscard]] auto Kind() const;
+        [[nodiscard]] StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Radios::Radio, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) StateChanged(winrt::event_token const& eventCookie) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Radios::RadioState) State() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Radios::RadioKind) Kind() const;
     };
     template <> struct consume<Windows::Devices::Radios::IRadio>
     {
@@ -141,10 +101,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Radios_IRadioStatics
     {
-        auto GetRadiosAsync() const;
-        auto GetDeviceSelector() const;
-        auto FromIdAsync(param::hstring const& deviceId) const;
-        auto RequestAccessAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Radios::Radio>>) GetRadiosAsync() const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::Radio>) FromIdAsync(param::hstring const& deviceId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::RadioAccessStatus>) RequestAccessAsync() const;
     };
     template <> struct consume<Windows::Devices::Radios::IRadioStatics>
     {

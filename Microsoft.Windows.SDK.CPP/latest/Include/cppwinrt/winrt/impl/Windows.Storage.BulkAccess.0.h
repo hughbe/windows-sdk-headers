@@ -1,16 +1,21 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Storage_BulkAccess_0_H
 #define WINRT_Windows_Storage_BulkAccess_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Storage::FileProperties
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+}
+WINRT_EXPORT namespace winrt::Windows::Storage::FileProperties
 {
     struct BasicProperties;
     struct DocumentProperties;
@@ -21,11 +26,11 @@ namespace winrt::Windows::Storage::FileProperties
     enum class ThumbnailOptions : uint32_t;
     struct VideoProperties;
 }
-namespace winrt::Windows::Storage::Search
+WINRT_EXPORT namespace winrt::Windows::Storage::Search
 {
     struct IStorageQueryResultBase;
 }
-namespace winrt::Windows::Storage::BulkAccess
+WINRT_EXPORT namespace winrt::Windows::Storage::BulkAccess
 {
     struct IFileInformationFactory;
     struct IFileInformationFactoryFactory;
@@ -36,78 +41,24 @@ namespace winrt::Windows::Storage::BulkAccess
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Storage::BulkAccess::IFileInformationFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Storage::BulkAccess::IFileInformationFactoryFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Storage::BulkAccess::IStorageItemInformation>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Storage::BulkAccess::FileInformation>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Storage::BulkAccess::FileInformationFactory>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Storage::BulkAccess::FolderInformation>
-    {
-        using type = class_category;
-    };
-    template <> struct name<Windows::Storage::BulkAccess::IFileInformationFactory>
-    {
-        static constexpr auto & value{ L"Windows.Storage.BulkAccess.IFileInformationFactory" };
-    };
-    template <> struct name<Windows::Storage::BulkAccess::IFileInformationFactoryFactory>
-    {
-        static constexpr auto & value{ L"Windows.Storage.BulkAccess.IFileInformationFactoryFactory" };
-    };
-    template <> struct name<Windows::Storage::BulkAccess::IStorageItemInformation>
-    {
-        static constexpr auto & value{ L"Windows.Storage.BulkAccess.IStorageItemInformation" };
-    };
-    template <> struct name<Windows::Storage::BulkAccess::FileInformation>
-    {
-        static constexpr auto & value{ L"Windows.Storage.BulkAccess.FileInformation" };
-    };
-    template <> struct name<Windows::Storage::BulkAccess::FileInformationFactory>
-    {
-        static constexpr auto & value{ L"Windows.Storage.BulkAccess.FileInformationFactory" };
-    };
-    template <> struct name<Windows::Storage::BulkAccess::FolderInformation>
-    {
-        static constexpr auto & value{ L"Windows.Storage.BulkAccess.FolderInformation" };
-    };
-    template <> struct guid_storage<Windows::Storage::BulkAccess::IFileInformationFactory>
-    {
-        static constexpr guid value{ 0x401D88BE,0x960F,0x4D6D,{ 0xA7,0xD0,0x1A,0x38,0x61,0xE7,0x6C,0x83 } };
-    };
-    template <> struct guid_storage<Windows::Storage::BulkAccess::IFileInformationFactoryFactory>
-    {
-        static constexpr guid value{ 0x84EA0E7D,0xE4A2,0x4F00,{ 0x8A,0xFA,0xAF,0x5E,0x0F,0x82,0x6B,0xD5 } };
-    };
-    template <> struct guid_storage<Windows::Storage::BulkAccess::IStorageItemInformation>
-    {
-        static constexpr guid value{ 0x87A5CB8B,0x8972,0x4F40,{ 0x8D,0xE0,0xD8,0x6F,0xB1,0x79,0xD8,0xFA } };
-    };
-    template <> struct default_interface<Windows::Storage::BulkAccess::FileInformation>
-    {
-        using type = Windows::Storage::BulkAccess::IStorageItemInformation;
-    };
-    template <> struct default_interface<Windows::Storage::BulkAccess::FileInformationFactory>
-    {
-        using type = Windows::Storage::BulkAccess::IFileInformationFactory;
-    };
-    template <> struct default_interface<Windows::Storage::BulkAccess::FolderInformation>
-    {
-        using type = Windows::Storage::BulkAccess::IStorageItemInformation;
-    };
+    template <> struct category<Windows::Storage::BulkAccess::IFileInformationFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Storage::BulkAccess::IFileInformationFactoryFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Storage::BulkAccess::IStorageItemInformation>{ using type = interface_category; };
+    template <> struct category<Windows::Storage::BulkAccess::FileInformation>{ using type = class_category; };
+    template <> struct category<Windows::Storage::BulkAccess::FileInformationFactory>{ using type = class_category; };
+    template <> struct category<Windows::Storage::BulkAccess::FolderInformation>{ using type = class_category; };
+    template <> inline constexpr auto& name_v<Windows::Storage::BulkAccess::FileInformation> = L"Windows.Storage.BulkAccess.FileInformation";
+    template <> inline constexpr auto& name_v<Windows::Storage::BulkAccess::FileInformationFactory> = L"Windows.Storage.BulkAccess.FileInformationFactory";
+    template <> inline constexpr auto& name_v<Windows::Storage::BulkAccess::FolderInformation> = L"Windows.Storage.BulkAccess.FolderInformation";
+    template <> inline constexpr auto& name_v<Windows::Storage::BulkAccess::IFileInformationFactory> = L"Windows.Storage.BulkAccess.IFileInformationFactory";
+    template <> inline constexpr auto& name_v<Windows::Storage::BulkAccess::IFileInformationFactoryFactory> = L"Windows.Storage.BulkAccess.IFileInformationFactoryFactory";
+    template <> inline constexpr auto& name_v<Windows::Storage::BulkAccess::IStorageItemInformation> = L"Windows.Storage.BulkAccess.IStorageItemInformation";
+    template <> inline constexpr guid guid_v<Windows::Storage::BulkAccess::IFileInformationFactory>{ 0x401D88BE,0x960F,0x4D6D,{ 0xA7,0xD0,0x1A,0x38,0x61,0xE7,0x6C,0x83 } }; // 401D88BE-960F-4D6D-A7D0-1A3861E76C83
+    template <> inline constexpr guid guid_v<Windows::Storage::BulkAccess::IFileInformationFactoryFactory>{ 0x84EA0E7D,0xE4A2,0x4F00,{ 0x8A,0xFA,0xAF,0x5E,0x0F,0x82,0x6B,0xD5 } }; // 84EA0E7D-E4A2-4F00-8AFA-AF5E0F826BD5
+    template <> inline constexpr guid guid_v<Windows::Storage::BulkAccess::IStorageItemInformation>{ 0x87A5CB8B,0x8972,0x4F40,{ 0x8D,0xE0,0xD8,0x6F,0xB1,0x79,0xD8,0xFA } }; // 87A5CB8B-8972-4F40-8DE0-D86FB179D8FA
+    template <> struct default_interface<Windows::Storage::BulkAccess::FileInformation>{ using type = Windows::Storage::BulkAccess::IStorageItemInformation; };
+    template <> struct default_interface<Windows::Storage::BulkAccess::FileInformationFactory>{ using type = Windows::Storage::BulkAccess::IFileInformationFactory; };
+    template <> struct default_interface<Windows::Storage::BulkAccess::FolderInformation>{ using type = Windows::Storage::BulkAccess::IStorageItemInformation; };
     template <> struct abi<Windows::Storage::BulkAccess::IFileInformationFactory>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -152,15 +103,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_BulkAccess_IFileInformationFactory
     {
-        auto GetItemsAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
-        auto GetItemsAsync() const;
-        auto GetFilesAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
-        auto GetFilesAsync() const;
-        auto GetFoldersAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
-        auto GetFoldersAsync() const;
-        auto GetVirtualizedItemsVector() const;
-        auto GetVirtualizedFilesVector() const;
-        auto GetVirtualizedFoldersVector() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::BulkAccess::IStorageItemInformation>>) GetItemsAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::BulkAccess::IStorageItemInformation>>) GetItemsAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::BulkAccess::FileInformation>>) GetFilesAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::BulkAccess::FileInformation>>) GetFilesAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::BulkAccess::FolderInformation>>) GetFoldersAsync(uint32_t startIndex, uint32_t maxItemsToRetrieve) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Storage::BulkAccess::FolderInformation>>) GetFoldersAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) GetVirtualizedItemsVector() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) GetVirtualizedFilesVector() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) GetVirtualizedFoldersVector() const;
     };
     template <> struct consume<Windows::Storage::BulkAccess::IFileInformationFactory>
     {
@@ -169,10 +120,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_BulkAccess_IFileInformationFactoryFactory
     {
-        auto CreateWithMode(Windows::Storage::Search::IStorageQueryResultBase const& queryResult, Windows::Storage::FileProperties::ThumbnailMode const& mode) const;
-        auto CreateWithModeAndSize(Windows::Storage::Search::IStorageQueryResultBase const& queryResult, Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize) const;
-        auto CreateWithModeAndSizeAndOptions(Windows::Storage::Search::IStorageQueryResultBase const& queryResult, Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize, Windows::Storage::FileProperties::ThumbnailOptions const& thumbnailOptions) const;
-        auto CreateWithModeAndSizeAndOptionsAndFlags(Windows::Storage::Search::IStorageQueryResultBase const& queryResult, Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize, Windows::Storage::FileProperties::ThumbnailOptions const& thumbnailOptions, bool delayLoad) const;
+        WINRT_IMPL_AUTO(Windows::Storage::BulkAccess::FileInformationFactory) CreateWithMode(Windows::Storage::Search::IStorageQueryResultBase const& queryResult, Windows::Storage::FileProperties::ThumbnailMode const& mode) const;
+        WINRT_IMPL_AUTO(Windows::Storage::BulkAccess::FileInformationFactory) CreateWithModeAndSize(Windows::Storage::Search::IStorageQueryResultBase const& queryResult, Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize) const;
+        WINRT_IMPL_AUTO(Windows::Storage::BulkAccess::FileInformationFactory) CreateWithModeAndSizeAndOptions(Windows::Storage::Search::IStorageQueryResultBase const& queryResult, Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize, Windows::Storage::FileProperties::ThumbnailOptions const& thumbnailOptions) const;
+        WINRT_IMPL_AUTO(Windows::Storage::BulkAccess::FileInformationFactory) CreateWithModeAndSizeAndOptionsAndFlags(Windows::Storage::Search::IStorageQueryResultBase const& queryResult, Windows::Storage::FileProperties::ThumbnailMode const& mode, uint32_t requestedThumbnailSize, Windows::Storage::FileProperties::ThumbnailOptions const& thumbnailOptions, bool delayLoad) const;
     };
     template <> struct consume<Windows::Storage::BulkAccess::IFileInformationFactoryFactory>
     {
@@ -181,20 +132,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Storage_BulkAccess_IStorageItemInformation
     {
-        [[nodiscard]] auto MusicProperties() const;
-        [[nodiscard]] auto VideoProperties() const;
-        [[nodiscard]] auto ImageProperties() const;
-        [[nodiscard]] auto DocumentProperties() const;
-        [[nodiscard]] auto BasicProperties() const;
-        [[nodiscard]] auto Thumbnail() const;
-        auto ThumbnailUpdated(Windows::Foundation::TypedEventHandler<Windows::Storage::BulkAccess::IStorageItemInformation, Windows::Foundation::IInspectable> const& changedHandler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::FileProperties::MusicProperties) MusicProperties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::FileProperties::VideoProperties) VideoProperties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::FileProperties::ImageProperties) ImageProperties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::FileProperties::DocumentProperties) DocumentProperties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::FileProperties::BasicProperties) BasicProperties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::FileProperties::StorageItemThumbnail) Thumbnail() const;
+        WINRT_IMPL_AUTO(winrt::event_token) ThumbnailUpdated(Windows::Foundation::TypedEventHandler<Windows::Storage::BulkAccess::IStorageItemInformation, Windows::Foundation::IInspectable> const& changedHandler) const;
         using ThumbnailUpdated_revoker = impl::event_revoker<Windows::Storage::BulkAccess::IStorageItemInformation, &impl::abi_t<Windows::Storage::BulkAccess::IStorageItemInformation>::remove_ThumbnailUpdated>;
-        ThumbnailUpdated_revoker ThumbnailUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Storage::BulkAccess::IStorageItemInformation, Windows::Foundation::IInspectable> const& changedHandler) const;
-        auto ThumbnailUpdated(winrt::event_token const& eventCookie) const noexcept;
-        auto PropertiesUpdated(Windows::Foundation::TypedEventHandler<Windows::Storage::BulkAccess::IStorageItemInformation, Windows::Foundation::IInspectable> const& changedHandler) const;
+        [[nodiscard]] ThumbnailUpdated_revoker ThumbnailUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Storage::BulkAccess::IStorageItemInformation, Windows::Foundation::IInspectable> const& changedHandler) const;
+        WINRT_IMPL_AUTO(void) ThumbnailUpdated(winrt::event_token const& eventCookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) PropertiesUpdated(Windows::Foundation::TypedEventHandler<Windows::Storage::BulkAccess::IStorageItemInformation, Windows::Foundation::IInspectable> const& changedHandler) const;
         using PropertiesUpdated_revoker = impl::event_revoker<Windows::Storage::BulkAccess::IStorageItemInformation, &impl::abi_t<Windows::Storage::BulkAccess::IStorageItemInformation>::remove_PropertiesUpdated>;
-        PropertiesUpdated_revoker PropertiesUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Storage::BulkAccess::IStorageItemInformation, Windows::Foundation::IInspectable> const& changedHandler) const;
-        auto PropertiesUpdated(winrt::event_token const& eventCookie) const noexcept;
+        [[nodiscard]] PropertiesUpdated_revoker PropertiesUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Storage::BulkAccess::IStorageItemInformation, Windows::Foundation::IInspectable> const& changedHandler) const;
+        WINRT_IMPL_AUTO(void) PropertiesUpdated(winrt::event_token const& eventCookie) const noexcept;
     };
     template <> struct consume<Windows::Storage::BulkAccess::IStorageItemInformation>
     {

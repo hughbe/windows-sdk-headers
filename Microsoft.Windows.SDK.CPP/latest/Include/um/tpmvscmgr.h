@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -185,22 +193,27 @@ EXTERN_C const IID IID_ITpmVirtualSmartCardManagerStatusCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ITpmVirtualSmartCardManagerStatusCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ITpmVirtualSmartCardManagerStatusCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ITpmVirtualSmartCardManagerStatusCallback * This);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManagerStatusCallback, ReportProgress)
         HRESULT ( STDMETHODCALLTYPE *ReportProgress )( 
             __RPC__in ITpmVirtualSmartCardManagerStatusCallback * This,
             /* [in] */ TPMVSCMGR_STATUS Status);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManagerStatusCallback, ReportError)
         HRESULT ( STDMETHODCALLTYPE *ReportError )( 
             __RPC__in ITpmVirtualSmartCardManagerStatusCallback * This,
             /* [in] */ TPMVSCMGR_ERROR Error);
@@ -306,18 +319,22 @@ EXTERN_C const IID IID_ITpmVirtualSmartCardManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ITpmVirtualSmartCardManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ITpmVirtualSmartCardManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ITpmVirtualSmartCardManager * This);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManager, CreateVirtualSmartCard)
         HRESULT ( STDMETHODCALLTYPE *CreateVirtualSmartCard )( 
             __RPC__in ITpmVirtualSmartCardManager * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszFriendlyName,
@@ -335,6 +352,7 @@ EXTERN_C const IID IID_ITpmVirtualSmartCardManager;
             /* [string][out] */ __RPC__deref_out_opt_string LPWSTR *ppszInstanceId,
             /* [out] */ __RPC__out BOOL *pfNeedReboot);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManager, DestroyVirtualSmartCard)
         HRESULT ( STDMETHODCALLTYPE *DestroyVirtualSmartCard )( 
             __RPC__in ITpmVirtualSmartCardManager * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszInstanceId,
@@ -433,18 +451,22 @@ EXTERN_C const IID IID_ITpmVirtualSmartCardManager2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ITpmVirtualSmartCardManager2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ITpmVirtualSmartCardManager2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ITpmVirtualSmartCardManager2 * This);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManager, CreateVirtualSmartCard)
         HRESULT ( STDMETHODCALLTYPE *CreateVirtualSmartCard )( 
             __RPC__in ITpmVirtualSmartCardManager2 * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszFriendlyName,
@@ -462,12 +484,14 @@ EXTERN_C const IID IID_ITpmVirtualSmartCardManager2;
             /* [string][out] */ __RPC__deref_out_opt_string LPWSTR *ppszInstanceId,
             /* [out] */ __RPC__out BOOL *pfNeedReboot);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManager, DestroyVirtualSmartCard)
         HRESULT ( STDMETHODCALLTYPE *DestroyVirtualSmartCard )( 
             __RPC__in ITpmVirtualSmartCardManager2 * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszInstanceId,
             /* [unique][in] */ __RPC__in_opt ITpmVirtualSmartCardManagerStatusCallback *pStatusCallback,
             /* [out] */ __RPC__out BOOL *pfNeedReboot);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManager2, CreateVirtualSmartCardWithPinPolicy)
         HRESULT ( STDMETHODCALLTYPE *CreateVirtualSmartCardWithPinPolicy )( 
             __RPC__in ITpmVirtualSmartCardManager2 * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszFriendlyName,
@@ -583,18 +607,22 @@ EXTERN_C const IID IID_ITpmVirtualSmartCardManager3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ITpmVirtualSmartCardManager3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ITpmVirtualSmartCardManager3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ITpmVirtualSmartCardManager3 * This);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManager, CreateVirtualSmartCard)
         HRESULT ( STDMETHODCALLTYPE *CreateVirtualSmartCard )( 
             __RPC__in ITpmVirtualSmartCardManager3 * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszFriendlyName,
@@ -612,12 +640,14 @@ EXTERN_C const IID IID_ITpmVirtualSmartCardManager3;
             /* [string][out] */ __RPC__deref_out_opt_string LPWSTR *ppszInstanceId,
             /* [out] */ __RPC__out BOOL *pfNeedReboot);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManager, DestroyVirtualSmartCard)
         HRESULT ( STDMETHODCALLTYPE *DestroyVirtualSmartCard )( 
             __RPC__in ITpmVirtualSmartCardManager3 * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszInstanceId,
             /* [unique][in] */ __RPC__in_opt ITpmVirtualSmartCardManagerStatusCallback *pStatusCallback,
             /* [out] */ __RPC__out BOOL *pfNeedReboot);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManager2, CreateVirtualSmartCardWithPinPolicy)
         HRESULT ( STDMETHODCALLTYPE *CreateVirtualSmartCardWithPinPolicy )( 
             __RPC__in ITpmVirtualSmartCardManager3 * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszFriendlyName,
@@ -637,6 +667,7 @@ EXTERN_C const IID IID_ITpmVirtualSmartCardManager3;
             /* [string][out] */ __RPC__deref_out_opt_string LPWSTR *ppszInstanceId,
             /* [out] */ __RPC__out BOOL *pfNeedReboot);
         
+        DECLSPEC_XFGVIRT(ITpmVirtualSmartCardManager3, CreateVirtualSmartCardWithAttestation)
         HRESULT ( STDMETHODCALLTYPE *CreateVirtualSmartCardWithAttestation )( 
             __RPC__in ITpmVirtualSmartCardManager3 * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszFriendlyName,

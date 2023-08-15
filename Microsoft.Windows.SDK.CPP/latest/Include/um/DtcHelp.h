@@ -230,4 +230,4 @@ EXTERN_C
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#endif __DTCHELP_H__
+#endif // __DTCHELP_H__

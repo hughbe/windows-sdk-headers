@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Services_Maps_H
 #define WINRT_Windows_Services_Maps_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/impl/Windows.Devices.Geolocation.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -14,646 +14,647 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Services.Maps.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Services_Maps_IEnhancedWaypoint<D>::Point() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geopoint) consume_Windows_Services_Maps_IEnhancedWaypoint<D>::Point() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IEnhancedWaypoint)->get_Point(&value));
         return Windows::Devices::Geolocation::Geopoint{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IEnhancedWaypoint<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::WaypointKind) consume_Windows_Services_Maps_IEnhancedWaypoint<D>::Kind() const
     {
-        Windows::Services::Maps::WaypointKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IEnhancedWaypoint)->get_Kind(put_abi(value)));
+        Windows::Services::Maps::WaypointKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IEnhancedWaypoint)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IEnhancedWaypointFactory<D>::Create(Windows::Devices::Geolocation::Geopoint const& point, Windows::Services::Maps::WaypointKind const& kind) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::EnhancedWaypoint) consume_Windows_Services_Maps_IEnhancedWaypointFactory<D>::Create(Windows::Devices::Geolocation::Geopoint const& point, Windows::Services::Maps::WaypointKind const& kind) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IEnhancedWaypointFactory)->Create(*(void**)(&point), static_cast<int32_t>(kind), &value));
         return Windows::Services::Maps::EnhancedWaypoint{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IManeuverWarning<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::ManeuverWarningKind) consume_Windows_Services_Maps_IManeuverWarning<D>::Kind() const
     {
-        Windows::Services::Maps::ManeuverWarningKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IManeuverWarning)->get_Kind(put_abi(value)));
+        Windows::Services::Maps::ManeuverWarningKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IManeuverWarning)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IManeuverWarning<D>::Severity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::ManeuverWarningSeverity) consume_Windows_Services_Maps_IManeuverWarning<D>::Severity() const
     {
-        Windows::Services::Maps::ManeuverWarningSeverity value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IManeuverWarning)->get_Severity(put_abi(value)));
+        Windows::Services::Maps::ManeuverWarningSeverity value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IManeuverWarning)->get_Severity(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::BuildingName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::BuildingName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_BuildingName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::BuildingFloor() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::BuildingFloor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_BuildingFloor(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::BuildingRoom() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::BuildingRoom() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_BuildingRoom(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::BuildingWing() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::BuildingWing() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_BuildingWing(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::StreetNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::StreetNumber() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_StreetNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::Street() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::Street() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_Street(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::Neighborhood() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::Neighborhood() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_Neighborhood(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::District() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::District() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_District(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::Town() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::Town() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_Town(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::Region() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::Region() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_Region(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::RegionCode() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::RegionCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_RegionCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::Country() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::Country() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_Country(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::CountryCode() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::CountryCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_CountryCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::PostCode() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::PostCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_PostCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress<D>::Continent() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress<D>::Continent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress)->get_Continent(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapAddress2<D>::FormattedAddress() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapAddress2<D>::FormattedAddress() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapAddress2)->get_FormattedAddress(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocation<D>::Point() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geopoint) consume_Windows_Services_Maps_IMapLocation<D>::Point() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocation)->get_Point(&value));
         return Windows::Devices::Geolocation::Geopoint{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocation<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapLocation<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocation)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocation<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapLocation<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocation)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocation<D>::Address() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapAddress) consume_Windows_Services_Maps_IMapLocation<D>::Address() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocation)->get_Address(&value));
         return Windows::Services::Maps::MapAddress{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocationFinderResult<D>::Locations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::MapLocation>) consume_Windows_Services_Maps_IMapLocationFinderResult<D>::Locations() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocationFinderResult)->get_Locations(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::MapLocation>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocationFinderResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapLocationFinderStatus) consume_Windows_Services_Maps_IMapLocationFinderResult<D>::Status() const
     {
-        Windows::Services::Maps::MapLocationFinderStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocationFinderResult)->get_Status(put_abi(value)));
+        Windows::Services::Maps::MapLocationFinderStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocationFinderResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocationFinderStatics<D>::FindLocationsAtAsync(Windows::Devices::Geolocation::Geopoint const& queryPoint) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapLocationFinderResult>) consume_Windows_Services_Maps_IMapLocationFinderStatics<D>::FindLocationsAtAsync(Windows::Devices::Geolocation::Geopoint const& queryPoint) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocationFinderStatics)->FindLocationsAtAsync(*(void**)(&queryPoint), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapLocationFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocationFinderStatics<D>::FindLocationsAsync(param::hstring const& searchText, Windows::Devices::Geolocation::Geopoint const& referencePoint) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapLocationFinderResult>) consume_Windows_Services_Maps_IMapLocationFinderStatics<D>::FindLocationsAsync(param::hstring const& searchText, Windows::Devices::Geolocation::Geopoint const& referencePoint) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocationFinderStatics)->FindLocationsAsync(*(void**)(&searchText), *(void**)(&referencePoint), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapLocationFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocationFinderStatics<D>::FindLocationsAsync(param::hstring const& searchText, Windows::Devices::Geolocation::Geopoint const& referencePoint, uint32_t maxCount) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapLocationFinderResult>) consume_Windows_Services_Maps_IMapLocationFinderStatics<D>::FindLocationsAsync(param::hstring const& searchText, Windows::Devices::Geolocation::Geopoint const& referencePoint, uint32_t maxCount) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocationFinderStatics)->FindLocationsWithMaxCountAsync(*(void**)(&searchText), *(void**)(&referencePoint), maxCount, &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapLocationFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapLocationFinderStatics2<D>::FindLocationsAtAsync(Windows::Devices::Geolocation::Geopoint const& queryPoint, Windows::Services::Maps::MapLocationDesiredAccuracy const& accuracy) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapLocationFinderResult>) consume_Windows_Services_Maps_IMapLocationFinderStatics2<D>::FindLocationsAtAsync(Windows::Devices::Geolocation::Geopoint const& queryPoint, Windows::Services::Maps::MapLocationDesiredAccuracy const& accuracy) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapLocationFinderStatics2)->FindLocationsAtWithAccuracyAsync(*(void**)(&queryPoint), static_cast<int32_t>(accuracy), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapLocationFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapManagerStatics<D>::ShowDownloadedMapsUI() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IMapManagerStatics<D>::ShowDownloadedMapsUI() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapManagerStatics)->ShowDownloadedMapsUI());
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapManagerStatics<D>::ShowMapsUpdateUI() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IMapManagerStatics<D>::ShowMapsUpdateUI() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapManagerStatics)->ShowMapsUpdateUI());
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute<D>::BoundingBox() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::GeoboundingBox) consume_Windows_Services_Maps_IMapRoute<D>::BoundingBox() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute)->get_BoundingBox(&value));
         return Windows::Devices::Geolocation::GeoboundingBox{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute<D>::LengthInMeters() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Services_Maps_IMapRoute<D>::LengthInMeters() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute)->get_LengthInMeters(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute<D>::EstimatedDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Services_Maps_IMapRoute<D>::EstimatedDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute)->get_EstimatedDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute<D>::Path() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geopath) consume_Windows_Services_Maps_IMapRoute<D>::Path() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute)->get_Path(&value));
         return Windows::Devices::Geolocation::Geopath{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute<D>::Legs() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::MapRouteLeg>) consume_Windows_Services_Maps_IMapRoute<D>::Legs() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute)->get_Legs(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::MapRouteLeg>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute<D>::IsTrafficBased() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Services_Maps_IMapRoute<D>::IsTrafficBased() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute)->get_IsTrafficBased(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute2<D>::ViolatedRestrictions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapRouteRestrictions) consume_Windows_Services_Maps_IMapRoute2<D>::ViolatedRestrictions() const
     {
-        Windows::Services::Maps::MapRouteRestrictions value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute2)->get_ViolatedRestrictions(put_abi(value)));
+        Windows::Services::Maps::MapRouteRestrictions value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute2)->get_ViolatedRestrictions(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute2<D>::HasBlockedRoads() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Services_Maps_IMapRoute2<D>::HasBlockedRoads() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute2)->get_HasBlockedRoads(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute3<D>::DurationWithoutTraffic() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Services_Maps_IMapRoute3<D>::DurationWithoutTraffic() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute3)->get_DurationWithoutTraffic(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute3<D>::TrafficCongestion() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::TrafficCongestion) consume_Windows_Services_Maps_IMapRoute3<D>::TrafficCongestion() const
     {
-        Windows::Services::Maps::TrafficCongestion value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute3)->get_TrafficCongestion(put_abi(value)));
+        Windows::Services::Maps::TrafficCongestion value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute3)->get_TrafficCongestion(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRoute4<D>::IsScenic() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Services_Maps_IMapRoute4<D>::IsScenic() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRoute4)->get_IsScenic(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::MaxAlternateRouteCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::MaxAlternateRouteCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->get_MaxAlternateRouteCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::MaxAlternateRouteCount(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::MaxAlternateRouteCount(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->put_MaxAlternateRouteCount(value));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::InitialHeading() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<double>) consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::InitialHeading() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->get_InitialHeading(&value));
         return Windows::Foundation::IReference<double>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::InitialHeading(Windows::Foundation::IReference<double> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::InitialHeading(Windows::Foundation::IReference<double> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->put_InitialHeading(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::RouteOptimization() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapRouteOptimization) consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::RouteOptimization() const
     {
-        Windows::Services::Maps::MapRouteOptimization value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->get_RouteOptimization(put_abi(value)));
+        Windows::Services::Maps::MapRouteOptimization value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->get_RouteOptimization(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::RouteOptimization(Windows::Services::Maps::MapRouteOptimization const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::RouteOptimization(Windows::Services::Maps::MapRouteOptimization const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->put_RouteOptimization(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::RouteRestrictions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapRouteRestrictions) consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::RouteRestrictions() const
     {
-        Windows::Services::Maps::MapRouteRestrictions value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->get_RouteRestrictions(put_abi(value)));
+        Windows::Services::Maps::MapRouteRestrictions value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->get_RouteRestrictions(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::RouteRestrictions(Windows::Services::Maps::MapRouteRestrictions const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IMapRouteDrivingOptions<D>::RouteRestrictions(Windows::Services::Maps::MapRouteRestrictions const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions)->put_RouteRestrictions(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions2<D>::DepartureTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_Services_Maps_IMapRouteDrivingOptions2<D>::DepartureTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions2)->get_DepartureTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteDrivingOptions2<D>::DepartureTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IMapRouteDrivingOptions2<D>::DepartureTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteDrivingOptions2)->put_DepartureTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderResult<D>::Route() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapRoute) consume_Windows_Services_Maps_IMapRouteFinderResult<D>::Route() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderResult)->get_Route(&value));
         return Windows::Services::Maps::MapRoute{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapRouteFinderStatus) consume_Windows_Services_Maps_IMapRouteFinderResult<D>::Status() const
     {
-        Windows::Services::Maps::MapRouteFinderStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderResult)->get_Status(put_abi(value)));
+        Windows::Services::Maps::MapRouteFinderStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderResult2<D>::AlternateRoutes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::MapRoute>) consume_Windows_Services_Maps_IMapRouteFinderResult2<D>::AlternateRoutes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderResult2)->get_AlternateRoutes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::MapRoute>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetDrivingRouteAsync(*(void**)(&startPoint), *(void**)(&endPoint), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetDrivingRouteWithOptimizationAsync(*(void**)(&startPoint), *(void**)(&endPoint), static_cast<int32_t>(optimization), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetDrivingRouteWithOptimizationAndRestrictionsAsync(*(void**)(&startPoint), *(void**)(&endPoint), static_cast<int32_t>(optimization), static_cast<uint32_t>(restrictions), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetDrivingRouteWithOptimizationRestrictionsAndHeadingAsync(*(void**)(&startPoint), *(void**)(&endPoint), static_cast<int32_t>(optimization), static_cast<uint32_t>(restrictions), headingInDegrees, &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetDrivingRouteFromWaypointsAsync(*(void**)(&wayPoints), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetDrivingRouteFromWaypointsAndOptimizationAsync(*(void**)(&wayPoints), static_cast<int32_t>(optimization), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetDrivingRouteFromWaypointsOptimizationAndRestrictionsAsync(*(void**)(&wayPoints), static_cast<int32_t>(optimization), static_cast<uint32_t>(restrictions), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetDrivingRouteFromWaypointsOptimizationRestrictionsAndHeadingAsync(*(void**)(&wayPoints), static_cast<int32_t>(optimization), static_cast<uint32_t>(restrictions), headingInDegrees, &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetWalkingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetWalkingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetWalkingRouteAsync(*(void**)(&startPoint), *(void**)(&endPoint), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetWalkingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics<D>::GetWalkingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics)->GetWalkingRouteFromWaypointsAsync(*(void**)(&wayPoints), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics2<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteDrivingOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics2<D>::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteDrivingOptions const& options) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics2)->GetDrivingRouteWithOptionsAsync(*(void**)(&startPoint), *(void**)(&endPoint), *(void**)(&options), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics3<D>::GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<Windows::Services::Maps::EnhancedWaypoint> const& waypoints) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics3<D>::GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<Windows::Services::Maps::EnhancedWaypoint> const& waypoints) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics3)->GetDrivingRouteFromEnhancedWaypointsAsync(*(void**)(&waypoints), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteFinderStatics3<D>::GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<Windows::Services::Maps::EnhancedWaypoint> const& waypoints, Windows::Services::Maps::MapRouteDrivingOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>) consume_Windows_Services_Maps_IMapRouteFinderStatics3<D>::GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<Windows::Services::Maps::EnhancedWaypoint> const& waypoints, Windows::Services::Maps::MapRouteDrivingOptions const& options) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteFinderStatics3)->GetDrivingRouteFromEnhancedWaypointsWithOptionsAsync(*(void**)(&waypoints), *(void**)(&options), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Services::Maps::MapRouteFinderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteLeg<D>::BoundingBox() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::GeoboundingBox) consume_Windows_Services_Maps_IMapRouteLeg<D>::BoundingBox() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteLeg)->get_BoundingBox(&value));
         return Windows::Devices::Geolocation::GeoboundingBox{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteLeg<D>::Path() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geopath) consume_Windows_Services_Maps_IMapRouteLeg<D>::Path() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteLeg)->get_Path(&value));
         return Windows::Devices::Geolocation::Geopath{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteLeg<D>::LengthInMeters() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Services_Maps_IMapRouteLeg<D>::LengthInMeters() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteLeg)->get_LengthInMeters(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteLeg<D>::EstimatedDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Services_Maps_IMapRouteLeg<D>::EstimatedDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteLeg)->get_EstimatedDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteLeg<D>::Maneuvers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::MapRouteManeuver>) consume_Windows_Services_Maps_IMapRouteLeg<D>::Maneuvers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteLeg)->get_Maneuvers(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::MapRouteManeuver>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteLeg2<D>::DurationWithoutTraffic() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Services_Maps_IMapRouteLeg2<D>::DurationWithoutTraffic() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteLeg2)->get_DurationWithoutTraffic(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteLeg2<D>::TrafficCongestion() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::TrafficCongestion) consume_Windows_Services_Maps_IMapRouteLeg2<D>::TrafficCongestion() const
     {
-        Windows::Services::Maps::TrafficCongestion value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteLeg2)->get_TrafficCongestion(put_abi(value)));
+        Windows::Services::Maps::TrafficCongestion value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteLeg2)->get_TrafficCongestion(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver<D>::StartingPoint() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geopoint) consume_Windows_Services_Maps_IMapRouteManeuver<D>::StartingPoint() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver)->get_StartingPoint(&value));
         return Windows::Devices::Geolocation::Geopoint{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver<D>::LengthInMeters() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Services_Maps_IMapRouteManeuver<D>::LengthInMeters() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver)->get_LengthInMeters(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver<D>::InstructionText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapRouteManeuver<D>::InstructionText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver)->get_InstructionText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapRouteManeuverKind) consume_Windows_Services_Maps_IMapRouteManeuver<D>::Kind() const
     {
-        Windows::Services::Maps::MapRouteManeuverKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver)->get_Kind(put_abi(value)));
+        Windows::Services::Maps::MapRouteManeuverKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver<D>::ExitNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapRouteManeuver<D>::ExitNumber() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver)->get_ExitNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver<D>::ManeuverNotices() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapManeuverNotices) consume_Windows_Services_Maps_IMapRouteManeuver<D>::ManeuverNotices() const
     {
-        Windows::Services::Maps::MapManeuverNotices value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver)->get_ManeuverNotices(put_abi(value)));
+        Windows::Services::Maps::MapManeuverNotices value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver)->get_ManeuverNotices(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver2<D>::StartHeading() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Services_Maps_IMapRouteManeuver2<D>::StartHeading() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver2)->get_StartHeading(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver2<D>::EndHeading() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Services_Maps_IMapRouteManeuver2<D>::EndHeading() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver2)->get_EndHeading(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver2<D>::StreetName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapRouteManeuver2<D>::StreetName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver2)->get_StreetName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapRouteManeuver3<D>::Warnings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::ManeuverWarning>) consume_Windows_Services_Maps_IMapRouteManeuver3<D>::Warnings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapRouteManeuver3)->get_Warnings(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Services::Maps::ManeuverWarning>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapServiceStatics<D>::ServiceToken(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IMapServiceStatics<D>::ServiceToken(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapServiceStatics)->put_ServiceToken(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapServiceStatics<D>::ServiceToken() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapServiceStatics<D>::ServiceToken() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapServiceStatics)->get_ServiceToken(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapServiceStatics2<D>::WorldViewRegionCode() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapServiceStatics2<D>::WorldViewRegionCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapServiceStatics2)->get_WorldViewRegionCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapServiceStatics3<D>::DataAttributions() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IMapServiceStatics3<D>::DataAttributions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapServiceStatics3)->get_DataAttributions(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapServiceStatics4<D>::DataUsagePreference(Windows::Services::Maps::MapServiceDataUsagePreference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IMapServiceStatics4<D>::DataUsagePreference(Windows::Services::Maps::MapServiceDataUsagePreference const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapServiceStatics4)->put_DataUsagePreference(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IMapServiceStatics4<D>::DataUsagePreference() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::MapServiceDataUsagePreference) consume_Windows_Services_Maps_IMapServiceStatics4<D>::DataUsagePreference() const
     {
-        Windows::Services::Maps::MapServiceDataUsagePreference value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapServiceStatics4)->get_DataUsagePreference(put_abi(value)));
+        Windows::Services::Maps::MapServiceDataUsagePreference value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IMapServiceStatics4)->get_DataUsagePreference(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfo<D>::Show(Windows::Foundation::Rect const& selection) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IPlaceInfo<D>::Show(Windows::Foundation::Rect const& selection) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfo)->Show(impl::bind_in(selection)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfo<D>::Show(Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IPlaceInfo<D>::Show(Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfo)->ShowWithPreferredPlacement(impl::bind_in(selection), static_cast<int32_t>(preferredPlacement)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfo<D>::Identifier() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IPlaceInfo<D>::Identifier() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfo)->get_Identifier(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfo<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IPlaceInfo<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfo)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfo<D>::DisplayAddress() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IPlaceInfo<D>::DisplayAddress() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfo)->get_DisplayAddress(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfo<D>::Geoshape() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::IGeoshape) consume_Windows_Services_Maps_IPlaceInfo<D>::Geoshape() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfo)->get_Geoshape(&value));
         return Windows::Devices::Geolocation::IGeoshape{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoCreateOptions<D>::DisplayName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IPlaceInfoCreateOptions<D>::DisplayName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoCreateOptions)->put_DisplayName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoCreateOptions<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IPlaceInfoCreateOptions<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoCreateOptions)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoCreateOptions<D>::DisplayAddress(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_IPlaceInfoCreateOptions<D>::DisplayAddress(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoCreateOptions)->put_DisplayAddress(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoCreateOptions<D>::DisplayAddress() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_Maps_IPlaceInfoCreateOptions<D>::DisplayAddress() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoCreateOptions)->get_DisplayAddress(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoStatics<D>::Create(Windows::Devices::Geolocation::Geopoint const& referencePoint) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::PlaceInfo) consume_Windows_Services_Maps_IPlaceInfoStatics<D>::Create(Windows::Devices::Geolocation::Geopoint const& referencePoint) const
     {
         void* resultValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoStatics)->Create(*(void**)(&referencePoint), &resultValue));
         return Windows::Services::Maps::PlaceInfo{ resultValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoStatics<D>::Create(Windows::Devices::Geolocation::Geopoint const& referencePoint, Windows::Services::Maps::PlaceInfoCreateOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::PlaceInfo) consume_Windows_Services_Maps_IPlaceInfoStatics<D>::Create(Windows::Devices::Geolocation::Geopoint const& referencePoint, Windows::Services::Maps::PlaceInfoCreateOptions const& options) const
     {
         void* resultValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoStatics)->CreateWithGeopointAndOptions(*(void**)(&referencePoint), *(void**)(&options), &resultValue));
         return Windows::Services::Maps::PlaceInfo{ resultValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoStatics<D>::CreateFromIdentifier(param::hstring const& identifier) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::PlaceInfo) consume_Windows_Services_Maps_IPlaceInfoStatics<D>::CreateFromIdentifier(param::hstring const& identifier) const
     {
         void* resultValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoStatics)->CreateFromIdentifier(*(void**)(&identifier), &resultValue));
         return Windows::Services::Maps::PlaceInfo{ resultValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoStatics<D>::CreateFromIdentifier(param::hstring const& identifier, Windows::Devices::Geolocation::Geopoint const& defaultPoint, Windows::Services::Maps::PlaceInfoCreateOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::PlaceInfo) consume_Windows_Services_Maps_IPlaceInfoStatics<D>::CreateFromIdentifier(param::hstring const& identifier, Windows::Devices::Geolocation::Geopoint const& defaultPoint, Windows::Services::Maps::PlaceInfoCreateOptions const& options) const
     {
         void* resultValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoStatics)->CreateFromIdentifierWithOptions(*(void**)(&identifier), *(void**)(&defaultPoint), *(void**)(&options), &resultValue));
         return Windows::Services::Maps::PlaceInfo{ resultValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoStatics<D>::CreateFromMapLocation(Windows::Services::Maps::MapLocation const& location) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::PlaceInfo) consume_Windows_Services_Maps_IPlaceInfoStatics<D>::CreateFromMapLocation(Windows::Services::Maps::MapLocation const& location) const
     {
         void* resultValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoStatics)->CreateFromMapLocation(*(void**)(&location), &resultValue));
         return Windows::Services::Maps::PlaceInfo{ resultValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoStatics<D>::IsShowSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Services_Maps_IPlaceInfoStatics<D>::IsShowSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoStatics)->get_IsShowSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoStatics2<D>::CreateFromAddress(param::hstring const& displayAddress) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::PlaceInfo) consume_Windows_Services_Maps_IPlaceInfoStatics2<D>::CreateFromAddress(param::hstring const& displayAddress) const
     {
         void* resultValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoStatics2)->CreateFromAddress(*(void**)(&displayAddress), &resultValue));
         return Windows::Services::Maps::PlaceInfo{ resultValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Services_Maps_IPlaceInfoStatics2<D>::CreateFromAddress(param::hstring const& displayAddress, param::hstring const& displayName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Services::Maps::PlaceInfo) consume_Windows_Services_Maps_IPlaceInfoStatics2<D>::CreateFromAddress(param::hstring const& displayAddress, param::hstring const& displayName) const
     {
         void* resultValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Services::Maps::IPlaceInfoStatics2)->CreateFromAddressWithName(*(void**)(&displayAddress), *(void**)(&displayName), &resultValue));
         return Windows::Services::Maps::PlaceInfo{ resultValue, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IEnhancedWaypoint> : produce_base<D, Windows::Services::Maps::IEnhancedWaypoint>
     {
@@ -673,6 +674,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IEnhancedWaypointFactory> : produce_base<D, Windows::Services::Maps::IEnhancedWaypointFactory>
     {
@@ -685,6 +688,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IManeuverWarning> : produce_base<D, Windows::Services::Maps::IManeuverWarning>
     {
@@ -703,6 +708,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapAddress> : produce_base<D, Windows::Services::Maps::IMapAddress>
     {
@@ -827,6 +834,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapAddress2> : produce_base<D, Windows::Services::Maps::IMapAddress2>
     {
@@ -839,6 +848,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapLocation> : produce_base<D, Windows::Services::Maps::IMapLocation>
     {
@@ -875,6 +886,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapLocationFinderResult> : produce_base<D, Windows::Services::Maps::IMapLocationFinderResult>
     {
@@ -894,6 +907,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapLocationFinderStatics> : produce_base<D, Windows::Services::Maps::IMapLocationFinderStatics>
     {
@@ -922,6 +937,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapLocationFinderStatics2> : produce_base<D, Windows::Services::Maps::IMapLocationFinderStatics2>
     {
@@ -934,6 +951,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapManagerStatics> : produce_base<D, Windows::Services::Maps::IMapManagerStatics>
     {
@@ -952,6 +971,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRoute> : produce_base<D, Windows::Services::Maps::IMapRoute>
     {
@@ -1002,6 +1023,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRoute2> : produce_base<D, Windows::Services::Maps::IMapRoute2>
     {
@@ -1020,6 +1043,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRoute3> : produce_base<D, Windows::Services::Maps::IMapRoute3>
     {
@@ -1039,6 +1064,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRoute4> : produce_base<D, Windows::Services::Maps::IMapRoute4>
     {
@@ -1050,6 +1077,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteDrivingOptions> : produce_base<D, Windows::Services::Maps::IMapRouteDrivingOptions>
     {
@@ -1111,6 +1140,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteDrivingOptions2> : produce_base<D, Windows::Services::Maps::IMapRouteDrivingOptions2>
     {
@@ -1130,6 +1161,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteFinderResult> : produce_base<D, Windows::Services::Maps::IMapRouteFinderResult>
     {
@@ -1149,6 +1182,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteFinderResult2> : produce_base<D, Windows::Services::Maps::IMapRouteFinderResult2>
     {
@@ -1161,6 +1196,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteFinderStatics> : produce_base<D, Windows::Services::Maps::IMapRouteFinderStatics>
     {
@@ -1245,6 +1282,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteFinderStatics2> : produce_base<D, Windows::Services::Maps::IMapRouteFinderStatics2>
     {
@@ -1257,6 +1296,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteFinderStatics3> : produce_base<D, Windows::Services::Maps::IMapRouteFinderStatics3>
     {
@@ -1277,6 +1318,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteLeg> : produce_base<D, Windows::Services::Maps::IMapRouteLeg>
     {
@@ -1320,6 +1363,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteLeg2> : produce_base<D, Windows::Services::Maps::IMapRouteLeg2>
     {
@@ -1339,6 +1384,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteManeuver> : produce_base<D, Windows::Services::Maps::IMapRouteManeuver>
     {
@@ -1388,6 +1435,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteManeuver2> : produce_base<D, Windows::Services::Maps::IMapRouteManeuver2>
     {
@@ -1414,6 +1463,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapRouteManeuver3> : produce_base<D, Windows::Services::Maps::IMapRouteManeuver3>
     {
@@ -1426,6 +1477,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapServiceStatics> : produce_base<D, Windows::Services::Maps::IMapServiceStatics>
     {
@@ -1445,6 +1498,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapServiceStatics2> : produce_base<D, Windows::Services::Maps::IMapServiceStatics2>
     {
@@ -1457,6 +1512,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapServiceStatics3> : produce_base<D, Windows::Services::Maps::IMapServiceStatics3>
     {
@@ -1469,6 +1526,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IMapServiceStatics4> : produce_base<D, Windows::Services::Maps::IMapServiceStatics4>
     {
@@ -1487,6 +1546,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IPlaceInfo> : produce_base<D, Windows::Services::Maps::IPlaceInfo>
     {
@@ -1537,6 +1598,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IPlaceInfoCreateOptions> : produce_base<D, Windows::Services::Maps::IPlaceInfoCreateOptions>
     {
@@ -1571,6 +1634,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IPlaceInfoStatics> : produce_base<D, Windows::Services::Maps::IPlaceInfoStatics>
     {
@@ -1622,6 +1687,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Services::Maps::IPlaceInfoStatics2> : produce_base<D, Windows::Services::Maps::IPlaceInfoStatics2>
     {
@@ -1642,8 +1709,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Services::Maps
+WINRT_EXPORT namespace winrt::Windows::Services::Maps
 {
     constexpr auto operator|(MapManeuverNotices const left, MapManeuverNotices const right) noexcept
     {
@@ -1708,201 +1776,203 @@ namespace winrt::Windows::Services::Maps
         return left;
     }
     inline EnhancedWaypoint::EnhancedWaypoint(Windows::Devices::Geolocation::Geopoint const& point, Windows::Services::Maps::WaypointKind const& kind) :
-        EnhancedWaypoint(impl::call_factory<EnhancedWaypoint, Windows::Services::Maps::IEnhancedWaypointFactory>([&](auto&& f) { return f.Create(point, kind); }))
+        EnhancedWaypoint(impl::call_factory<EnhancedWaypoint, IEnhancedWaypointFactory>([&](IEnhancedWaypointFactory const& f) { return f.Create(point, kind); }))
     {
     }
     inline auto MapLocationFinder::FindLocationsAtAsync(Windows::Devices::Geolocation::Geopoint const& queryPoint)
     {
-        return impl::call_factory<MapLocationFinder, Windows::Services::Maps::IMapLocationFinderStatics>([&](auto&& f) { return f.FindLocationsAtAsync(queryPoint); });
+        return impl::call_factory<MapLocationFinder, IMapLocationFinderStatics>([&](IMapLocationFinderStatics const& f) { return f.FindLocationsAtAsync(queryPoint); });
     }
     inline auto MapLocationFinder::FindLocationsAsync(param::hstring const& searchText, Windows::Devices::Geolocation::Geopoint const& referencePoint)
     {
-        return impl::call_factory<MapLocationFinder, Windows::Services::Maps::IMapLocationFinderStatics>([&](auto&& f) { return f.FindLocationsAsync(searchText, referencePoint); });
+        return impl::call_factory<MapLocationFinder, IMapLocationFinderStatics>([&](IMapLocationFinderStatics const& f) { return f.FindLocationsAsync(searchText, referencePoint); });
     }
     inline auto MapLocationFinder::FindLocationsAsync(param::hstring const& searchText, Windows::Devices::Geolocation::Geopoint const& referencePoint, uint32_t maxCount)
     {
-        return impl::call_factory<MapLocationFinder, Windows::Services::Maps::IMapLocationFinderStatics>([&](auto&& f) { return f.FindLocationsAsync(searchText, referencePoint, maxCount); });
+        return impl::call_factory<MapLocationFinder, IMapLocationFinderStatics>([&](IMapLocationFinderStatics const& f) { return f.FindLocationsAsync(searchText, referencePoint, maxCount); });
     }
     inline auto MapLocationFinder::FindLocationsAtAsync(Windows::Devices::Geolocation::Geopoint const& queryPoint, Windows::Services::Maps::MapLocationDesiredAccuracy const& accuracy)
     {
-        return impl::call_factory<MapLocationFinder, Windows::Services::Maps::IMapLocationFinderStatics2>([&](auto&& f) { return f.FindLocationsAtAsync(queryPoint, accuracy); });
+        return impl::call_factory<MapLocationFinder, IMapLocationFinderStatics2>([&](IMapLocationFinderStatics2 const& f) { return f.FindLocationsAtAsync(queryPoint, accuracy); });
     }
     inline auto MapManager::ShowDownloadedMapsUI()
     {
-        impl::call_factory<MapManager, Windows::Services::Maps::IMapManagerStatics>([&](auto&& f) { return f.ShowDownloadedMapsUI(); });
+        impl::call_factory_cast<void(*)(IMapManagerStatics const&), MapManager, IMapManagerStatics>([](IMapManagerStatics const& f) { return f.ShowDownloadedMapsUI(); });
     }
     inline auto MapManager::ShowMapsUpdateUI()
     {
-        impl::call_factory<MapManager, Windows::Services::Maps::IMapManagerStatics>([&](auto&& f) { return f.ShowMapsUpdateUI(); });
+        impl::call_factory_cast<void(*)(IMapManagerStatics const&), MapManager, IMapManagerStatics>([](IMapManagerStatics const& f) { return f.ShowMapsUpdateUI(); });
     }
     inline MapRouteDrivingOptions::MapRouteDrivingOptions() :
-        MapRouteDrivingOptions(impl::call_factory<MapRouteDrivingOptions>([](auto&& f) { return f.template ActivateInstance<MapRouteDrivingOptions>(); }))
+        MapRouteDrivingOptions(impl::call_factory_cast<MapRouteDrivingOptions(*)(Windows::Foundation::IActivationFactory const&), MapRouteDrivingOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<MapRouteDrivingOptions>(); }))
     {
     }
     inline auto MapRouteFinder::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetDrivingRouteAsync(startPoint, endPoint); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetDrivingRouteAsync(startPoint, endPoint); });
     }
     inline auto MapRouteFinder::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetDrivingRouteAsync(startPoint, endPoint, optimization); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetDrivingRouteAsync(startPoint, endPoint, optimization); });
     }
     inline auto MapRouteFinder::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetDrivingRouteAsync(startPoint, endPoint, optimization, restrictions); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetDrivingRouteAsync(startPoint, endPoint, optimization, restrictions); });
     }
     inline auto MapRouteFinder::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetDrivingRouteAsync(startPoint, endPoint, optimization, restrictions, headingInDegrees); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetDrivingRouteAsync(startPoint, endPoint, optimization, restrictions, headingInDegrees); });
     }
     inline auto MapRouteFinder::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetDrivingRouteFromWaypointsAsync(wayPoints); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetDrivingRouteFromWaypointsAsync(wayPoints); });
     }
     inline auto MapRouteFinder::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization); });
     }
     inline auto MapRouteFinder::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization, restrictions); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization, restrictions); });
     }
     inline auto MapRouteFinder::GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization, restrictions, headingInDegrees); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetDrivingRouteFromWaypointsAsync(wayPoints, optimization, restrictions, headingInDegrees); });
     }
     inline auto MapRouteFinder::GetWalkingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetWalkingRouteAsync(startPoint, endPoint); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetWalkingRouteAsync(startPoint, endPoint); });
     }
     inline auto MapRouteFinder::GetWalkingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics>([&](auto&& f) { return f.GetWalkingRouteFromWaypointsAsync(wayPoints); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics>([&](IMapRouteFinderStatics const& f) { return f.GetWalkingRouteFromWaypointsAsync(wayPoints); });
     }
     inline auto MapRouteFinder::GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteDrivingOptions const& options)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics2>([&](auto&& f) { return f.GetDrivingRouteAsync(startPoint, endPoint, options); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics2>([&](IMapRouteFinderStatics2 const& f) { return f.GetDrivingRouteAsync(startPoint, endPoint, options); });
     }
     inline auto MapRouteFinder::GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<Windows::Services::Maps::EnhancedWaypoint> const& waypoints)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics3>([&](auto&& f) { return f.GetDrivingRouteFromEnhancedWaypointsAsync(waypoints); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics3>([&](IMapRouteFinderStatics3 const& f) { return f.GetDrivingRouteFromEnhancedWaypointsAsync(waypoints); });
     }
     inline auto MapRouteFinder::GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<Windows::Services::Maps::EnhancedWaypoint> const& waypoints, Windows::Services::Maps::MapRouteDrivingOptions const& options)
     {
-        return impl::call_factory<MapRouteFinder, Windows::Services::Maps::IMapRouteFinderStatics3>([&](auto&& f) { return f.GetDrivingRouteFromEnhancedWaypointsAsync(waypoints, options); });
+        return impl::call_factory<MapRouteFinder, IMapRouteFinderStatics3>([&](IMapRouteFinderStatics3 const& f) { return f.GetDrivingRouteFromEnhancedWaypointsAsync(waypoints, options); });
     }
     inline auto MapService::ServiceToken(param::hstring const& value)
     {
-        impl::call_factory<MapService, Windows::Services::Maps::IMapServiceStatics>([&](auto&& f) { return f.ServiceToken(value); });
+        impl::call_factory<MapService, IMapServiceStatics>([&](IMapServiceStatics const& f) { return f.ServiceToken(value); });
     }
     inline auto MapService::ServiceToken()
     {
-        return impl::call_factory<MapService, Windows::Services::Maps::IMapServiceStatics>([&](auto&& f) { return f.ServiceToken(); });
+        return impl::call_factory_cast<hstring(*)(IMapServiceStatics const&), MapService, IMapServiceStatics>([](IMapServiceStatics const& f) { return f.ServiceToken(); });
     }
     inline auto MapService::WorldViewRegionCode()
     {
-        return impl::call_factory<MapService, Windows::Services::Maps::IMapServiceStatics2>([&](auto&& f) { return f.WorldViewRegionCode(); });
+        return impl::call_factory_cast<hstring(*)(IMapServiceStatics2 const&), MapService, IMapServiceStatics2>([](IMapServiceStatics2 const& f) { return f.WorldViewRegionCode(); });
     }
     inline auto MapService::DataAttributions()
     {
-        return impl::call_factory<MapService, Windows::Services::Maps::IMapServiceStatics3>([&](auto&& f) { return f.DataAttributions(); });
+        return impl::call_factory_cast<hstring(*)(IMapServiceStatics3 const&), MapService, IMapServiceStatics3>([](IMapServiceStatics3 const& f) { return f.DataAttributions(); });
     }
     inline auto MapService::DataUsagePreference(Windows::Services::Maps::MapServiceDataUsagePreference const& value)
     {
-        impl::call_factory<MapService, Windows::Services::Maps::IMapServiceStatics4>([&](auto&& f) { return f.DataUsagePreference(value); });
+        impl::call_factory<MapService, IMapServiceStatics4>([&](IMapServiceStatics4 const& f) { return f.DataUsagePreference(value); });
     }
     inline auto MapService::DataUsagePreference()
     {
-        return impl::call_factory<MapService, Windows::Services::Maps::IMapServiceStatics4>([&](auto&& f) { return f.DataUsagePreference(); });
+        return impl::call_factory_cast<Windows::Services::Maps::MapServiceDataUsagePreference(*)(IMapServiceStatics4 const&), MapService, IMapServiceStatics4>([](IMapServiceStatics4 const& f) { return f.DataUsagePreference(); });
     }
     inline auto PlaceInfo::Create(Windows::Devices::Geolocation::Geopoint const& referencePoint)
     {
-        return impl::call_factory<PlaceInfo, Windows::Services::Maps::IPlaceInfoStatics>([&](auto&& f) { return f.Create(referencePoint); });
+        return impl::call_factory<PlaceInfo, IPlaceInfoStatics>([&](IPlaceInfoStatics const& f) { return f.Create(referencePoint); });
     }
     inline auto PlaceInfo::Create(Windows::Devices::Geolocation::Geopoint const& referencePoint, Windows::Services::Maps::PlaceInfoCreateOptions const& options)
     {
-        return impl::call_factory<PlaceInfo, Windows::Services::Maps::IPlaceInfoStatics>([&](auto&& f) { return f.Create(referencePoint, options); });
+        return impl::call_factory<PlaceInfo, IPlaceInfoStatics>([&](IPlaceInfoStatics const& f) { return f.Create(referencePoint, options); });
     }
     inline auto PlaceInfo::CreateFromIdentifier(param::hstring const& identifier)
     {
-        return impl::call_factory<PlaceInfo, Windows::Services::Maps::IPlaceInfoStatics>([&](auto&& f) { return f.CreateFromIdentifier(identifier); });
+        return impl::call_factory<PlaceInfo, IPlaceInfoStatics>([&](IPlaceInfoStatics const& f) { return f.CreateFromIdentifier(identifier); });
     }
     inline auto PlaceInfo::CreateFromIdentifier(param::hstring const& identifier, Windows::Devices::Geolocation::Geopoint const& defaultPoint, Windows::Services::Maps::PlaceInfoCreateOptions const& options)
     {
-        return impl::call_factory<PlaceInfo, Windows::Services::Maps::IPlaceInfoStatics>([&](auto&& f) { return f.CreateFromIdentifier(identifier, defaultPoint, options); });
+        return impl::call_factory<PlaceInfo, IPlaceInfoStatics>([&](IPlaceInfoStatics const& f) { return f.CreateFromIdentifier(identifier, defaultPoint, options); });
     }
     inline auto PlaceInfo::CreateFromMapLocation(Windows::Services::Maps::MapLocation const& location)
     {
-        return impl::call_factory<PlaceInfo, Windows::Services::Maps::IPlaceInfoStatics>([&](auto&& f) { return f.CreateFromMapLocation(location); });
+        return impl::call_factory<PlaceInfo, IPlaceInfoStatics>([&](IPlaceInfoStatics const& f) { return f.CreateFromMapLocation(location); });
     }
     inline auto PlaceInfo::IsShowSupported()
     {
-        return impl::call_factory<PlaceInfo, Windows::Services::Maps::IPlaceInfoStatics>([&](auto&& f) { return f.IsShowSupported(); });
+        return impl::call_factory_cast<bool(*)(IPlaceInfoStatics const&), PlaceInfo, IPlaceInfoStatics>([](IPlaceInfoStatics const& f) { return f.IsShowSupported(); });
     }
     inline auto PlaceInfo::CreateFromAddress(param::hstring const& displayAddress)
     {
-        return impl::call_factory<PlaceInfo, Windows::Services::Maps::IPlaceInfoStatics2>([&](auto&& f) { return f.CreateFromAddress(displayAddress); });
+        return impl::call_factory<PlaceInfo, IPlaceInfoStatics2>([&](IPlaceInfoStatics2 const& f) { return f.CreateFromAddress(displayAddress); });
     }
     inline auto PlaceInfo::CreateFromAddress(param::hstring const& displayAddress, param::hstring const& displayName)
     {
-        return impl::call_factory<PlaceInfo, Windows::Services::Maps::IPlaceInfoStatics2>([&](auto&& f) { return f.CreateFromAddress(displayAddress, displayName); });
+        return impl::call_factory<PlaceInfo, IPlaceInfoStatics2>([&](IPlaceInfoStatics2 const& f) { return f.CreateFromAddress(displayAddress, displayName); });
     }
     inline PlaceInfoCreateOptions::PlaceInfoCreateOptions() :
-        PlaceInfoCreateOptions(impl::call_factory<PlaceInfoCreateOptions>([](auto&& f) { return f.template ActivateInstance<PlaceInfoCreateOptions>(); }))
+        PlaceInfoCreateOptions(impl::call_factory_cast<PlaceInfoCreateOptions(*)(Windows::Foundation::IActivationFactory const&), PlaceInfoCreateOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PlaceInfoCreateOptions>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Services::Maps::IEnhancedWaypoint> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IEnhancedWaypoint> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IEnhancedWaypointFactory> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IEnhancedWaypointFactory> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IManeuverWarning> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IManeuverWarning> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapAddress> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapAddress> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapAddress2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapAddress2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapLocation> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapLocation> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapLocationFinderResult> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapLocationFinderResult> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapLocationFinderStatics> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapLocationFinderStatics> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapLocationFinderStatics2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapLocationFinderStatics2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapManagerStatics> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapManagerStatics> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRoute> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRoute> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRoute2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRoute2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRoute3> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRoute3> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRoute4> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRoute4> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteDrivingOptions> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteDrivingOptions> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteDrivingOptions2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteDrivingOptions2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderResult> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteFinderResult> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderResult2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteFinderResult2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderStatics> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteFinderStatics> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderStatics2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteFinderStatics2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderStatics3> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteFinderStatics3> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteLeg> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteLeg> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteLeg2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteLeg2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteManeuver> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteManeuver> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteManeuver2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteManeuver2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteManeuver3> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapRouteManeuver3> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapServiceStatics> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapServiceStatics> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapServiceStatics2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapServiceStatics2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapServiceStatics3> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapServiceStatics3> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IMapServiceStatics4> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IMapServiceStatics4> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IPlaceInfo> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IPlaceInfo> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IPlaceInfoCreateOptions> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IPlaceInfoCreateOptions> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IPlaceInfoStatics> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IPlaceInfoStatics> {};
-    template<> struct hash<winrt::Windows::Services::Maps::IPlaceInfoStatics2> : winrt::impl::hash_base<winrt::Windows::Services::Maps::IPlaceInfoStatics2> {};
-    template<> struct hash<winrt::Windows::Services::Maps::EnhancedWaypoint> : winrt::impl::hash_base<winrt::Windows::Services::Maps::EnhancedWaypoint> {};
-    template<> struct hash<winrt::Windows::Services::Maps::ManeuverWarning> : winrt::impl::hash_base<winrt::Windows::Services::Maps::ManeuverWarning> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapAddress> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapAddress> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapLocation> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapLocation> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapLocationFinder> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapLocationFinder> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapLocationFinderResult> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapLocationFinderResult> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapManager> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapManager> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapRoute> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapRoute> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapRouteDrivingOptions> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapRouteDrivingOptions> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapRouteFinder> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapRouteFinder> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapRouteFinderResult> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapRouteFinderResult> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapRouteLeg> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapRouteLeg> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapRouteManeuver> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapRouteManeuver> {};
-    template<> struct hash<winrt::Windows::Services::Maps::MapService> : winrt::impl::hash_base<winrt::Windows::Services::Maps::MapService> {};
-    template<> struct hash<winrt::Windows::Services::Maps::PlaceInfo> : winrt::impl::hash_base<winrt::Windows::Services::Maps::PlaceInfo> {};
-    template<> struct hash<winrt::Windows::Services::Maps::PlaceInfoCreateOptions> : winrt::impl::hash_base<winrt::Windows::Services::Maps::PlaceInfoCreateOptions> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Services::Maps::IEnhancedWaypoint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IEnhancedWaypointFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IManeuverWarning> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapAddress> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapAddress2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapLocation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapLocationFinderResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapLocationFinderStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapLocationFinderStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRoute> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRoute2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRoute3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRoute4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteDrivingOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteDrivingOptions2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteFinderStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteLeg> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteLeg2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteManeuver> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteManeuver2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapRouteManeuver3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapServiceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapServiceStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapServiceStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IMapServiceStatics4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IPlaceInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IPlaceInfoCreateOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IPlaceInfoStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::IPlaceInfoStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::EnhancedWaypoint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::ManeuverWarning> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapAddress> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapLocation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapLocationFinder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapLocationFinderResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapRoute> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapRouteDrivingOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapRouteFinder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapRouteFinderResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapRouteLeg> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapRouteManeuver> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::MapService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::PlaceInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Services::Maps::PlaceInfoCreateOptions> : winrt::impl::hash_base {};
+#endif
 }
 #endif

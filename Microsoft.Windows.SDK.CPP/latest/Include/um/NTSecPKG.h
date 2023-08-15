@@ -1719,6 +1719,10 @@ typedef NTSTATUS
     _Out_ BOOLEAN *IsFailureFatal
     );
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 NTSTATUS
 CredMarshalTargetInfo (
@@ -1734,6 +1738,10 @@ CredUnmarshalTargetInfo (
     _Outptr_opt_ PCREDENTIAL_TARGET_INFORMATIONW *RetTargetInfo,
     _Out_opt_ PULONG                                RetActualSize
     );
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 // Number of bytes consumed by the trailing size ULONG
 #define CRED_MARSHALED_TI_SIZE_SIZE 12

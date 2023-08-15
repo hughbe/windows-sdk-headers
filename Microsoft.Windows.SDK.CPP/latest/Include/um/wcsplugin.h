@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -36,6 +36,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -230,28 +238,34 @@ EXTERN_C const IID IID_IDeviceModelPlugIn;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDeviceModelPlugIn * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDeviceModelPlugIn * This);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, Initialize)
         HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [in] */ __RPC__in BSTR bstrXml,
             /* [in] */ UINT cNumModels,
             /* [in] */ UINT iModelPosition);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, GetNumChannels)
         HRESULT ( STDMETHODCALLTYPE *GetNumChannels )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [out] */ __RPC__out UINT *pNumChannels);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, DeviceToColorimetricColors)
         HRESULT ( STDMETHODCALLTYPE *DeviceToColorimetricColors )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [in] */ UINT cColors,
@@ -259,6 +273,7 @@ EXTERN_C const IID IID_IDeviceModelPlugIn;
             /* [size_is][in] */ __RPC__in_ecount_full(( cColors * cChannels ) ) const FLOAT *pDeviceValues,
             /* [size_is][out] */ __RPC__out_ecount_full(cColors) XYZColorF *pXYZColors);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, ColorimetricToDeviceColors)
         HRESULT ( STDMETHODCALLTYPE *ColorimetricToDeviceColors )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [in] */ UINT cColors,
@@ -266,6 +281,7 @@ EXTERN_C const IID IID_IDeviceModelPlugIn;
             /* [size_is][in] */ __RPC__in_ecount_full(cColors) const XYZColorF *pXYZColors,
             /* [size_is][out] */ __RPC__out_ecount_full(( cColors * cChannels ) ) FLOAT *pDeviceValues);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, ColorimetricToDeviceColorsWithBlack)
         HRESULT ( STDMETHODCALLTYPE *ColorimetricToDeviceColorsWithBlack )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [in] */ UINT cColors,
@@ -274,20 +290,24 @@ EXTERN_C const IID IID_IDeviceModelPlugIn;
             /* [size_is][in] */ __RPC__in_ecount_full(cColors) const BlackInformation *pBlackInformation,
             /* [size_is][out] */ __RPC__out_ecount_full(( cColors * cChannels ) ) FLOAT *pDeviceValues);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, SetTransformDeviceModelInfo)
         HRESULT ( STDMETHODCALLTYPE *SetTransformDeviceModelInfo )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [in] */ UINT iModelPosition,
             /* [in] */ __RPC__in_opt IDeviceModelPlugIn *pIDeviceModelOther);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, GetPrimarySamples)
         HRESULT ( STDMETHODCALLTYPE *GetPrimarySamples )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [out] */ __RPC__out PrimaryXYZColors *pPrimaryColor);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, GetGamutBoundaryMeshSize)
         HRESULT ( STDMETHODCALLTYPE *GetGamutBoundaryMeshSize )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [out] */ __RPC__out UINT *pNumVertices,
             /* [out] */ __RPC__out UINT *pNumTriangles);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, GetGamutBoundaryMesh)
         HRESULT ( STDMETHODCALLTYPE *GetGamutBoundaryMesh )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [in] */ UINT cChannels,
@@ -296,10 +316,12 @@ EXTERN_C const IID IID_IDeviceModelPlugIn;
             /* [size_is][out] */ __RPC__out_ecount_full(( cVertices * cChannels ) ) FLOAT *pVertices,
             /* [size_is][out] */ __RPC__out_ecount_full(cTriangles) GamutShellTriangle *pTriangles);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, GetNeutralAxisSize)
         HRESULT ( STDMETHODCALLTYPE *GetNeutralAxisSize )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [out] */ __RPC__out UINT *pcColors);
         
+        DECLSPEC_XFGVIRT(IDeviceModelPlugIn, GetNeutralAxis)
         HRESULT ( STDMETHODCALLTYPE *GetNeutralAxis )( 
             __RPC__in IDeviceModelPlugIn * This,
             /* [in] */ UINT cColors,
@@ -408,18 +430,22 @@ EXTERN_C const IID IID_IGamutMapModelPlugIn;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IGamutMapModelPlugIn * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IGamutMapModelPlugIn * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IGamutMapModelPlugIn * This);
         
+        DECLSPEC_XFGVIRT(IGamutMapModelPlugIn, Initialize)
         HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             __RPC__in IGamutMapModelPlugIn * This,
             /* [in] */ __RPC__in BSTR bstrXml,
@@ -428,6 +454,7 @@ EXTERN_C const IID IID_IGamutMapModelPlugIn;
             /* [in] */ __RPC__in GamutBoundaryDescription *pSrcGBD,
             /* [in] */ __RPC__in GamutBoundaryDescription *pDestGBD);
         
+        DECLSPEC_XFGVIRT(IGamutMapModelPlugIn, SourceToDestinationAppearanceColors)
         HRESULT ( STDMETHODCALLTYPE *SourceToDestinationAppearanceColors )( 
             __RPC__in IGamutMapModelPlugIn * This,
             /* [in] */ UINT cColors,

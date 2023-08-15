@@ -1,11 +1,11 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Graphics_DirectX_0_H
 #define WINRT_Windows_Graphics_DirectX_0_H
-namespace winrt::Windows::Graphics::DirectX
+WINRT_EXPORT namespace winrt::Windows::Graphics::DirectX
 {
     enum class DirectXAlphaMode : int32_t
     {
@@ -178,37 +178,13 @@ namespace winrt::Windows::Graphics::DirectX
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Graphics::DirectX::DirectXAlphaMode>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::DirectX::DirectXColorSpace>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::DirectX::DirectXPixelFormat>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Graphics::DirectX::DirectXPrimitiveTopology>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Graphics::DirectX::DirectXAlphaMode>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.DirectX.DirectXAlphaMode" };
-    };
-    template <> struct name<Windows::Graphics::DirectX::DirectXColorSpace>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.DirectX.DirectXColorSpace" };
-    };
-    template <> struct name<Windows::Graphics::DirectX::DirectXPixelFormat>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.DirectX.DirectXPixelFormat" };
-    };
-    template <> struct name<Windows::Graphics::DirectX::DirectXPrimitiveTopology>
-    {
-        static constexpr auto & value{ L"Windows.Graphics.DirectX.DirectXPrimitiveTopology" };
-    };
+    template <> struct category<Windows::Graphics::DirectX::DirectXAlphaMode>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::DirectX::DirectXColorSpace>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::DirectX::DirectXPixelFormat>{ using type = enum_category; };
+    template <> struct category<Windows::Graphics::DirectX::DirectXPrimitiveTopology>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Graphics::DirectX::DirectXAlphaMode> = L"Windows.Graphics.DirectX.DirectXAlphaMode";
+    template <> inline constexpr auto& name_v<Windows::Graphics::DirectX::DirectXColorSpace> = L"Windows.Graphics.DirectX.DirectXColorSpace";
+    template <> inline constexpr auto& name_v<Windows::Graphics::DirectX::DirectXPixelFormat> = L"Windows.Graphics.DirectX.DirectXPixelFormat";
+    template <> inline constexpr auto& name_v<Windows::Graphics::DirectX::DirectXPrimitiveTopology> = L"Windows.Graphics.DirectX.DirectXPrimitiveTopology";
 }
 #endif

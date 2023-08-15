@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Devices_SerialCommunication_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Devices.SerialCommunication.1.h"
-namespace winrt::Windows::Devices::SerialCommunication
+WINRT_EXPORT namespace winrt::Windows::Devices::SerialCommunication
 {
     struct __declspec(empty_bases) ErrorReceivedEventArgs : Windows::Devices::SerialCommunication::IErrorReceivedEventArgs
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_Control_1_H
 #define WINRT_Windows_Media_Control_1_H
 #include "winrt/impl/Windows.Media.Control.0.h"
-namespace winrt::Windows::Media::Control
+WINRT_EXPORT namespace winrt::Windows::Media::Control
 {
     struct __declspec(empty_bases) ICurrentSessionChangedEventArgs :
         Windows::Foundation::IInspectable,

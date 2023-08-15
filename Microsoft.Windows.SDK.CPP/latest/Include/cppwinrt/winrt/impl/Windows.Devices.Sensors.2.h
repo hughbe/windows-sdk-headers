@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Devices_Sensors_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Devices.Sensors.1.h"
-namespace winrt::Windows::Devices::Sensors
+WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
 {
     struct __declspec(empty_bases) Accelerometer : Windows::Devices::Sensors::IAccelerometer,
         impl::require<Accelerometer, Windows::Devices::Sensors::IAccelerometerDeviceId, Windows::Devices::Sensors::IAccelerometer2, Windows::Devices::Sensors::IAccelerometer3, Windows::Devices::Sensors::IAccelerometer4, Windows::Devices::Sensors::IAccelerometer5>
@@ -323,7 +323,7 @@ namespace winrt::Windows::Devices::Sensors
     {
         ProximitySensorDataThreshold(std::nullptr_t) noexcept {}
         ProximitySensorDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ISensorDataThreshold(ptr, take_ownership_from_abi) {}
-        ProximitySensorDataThreshold(Windows::Devices::Sensors::ProximitySensor const& sensor);
+        explicit ProximitySensorDataThreshold(Windows::Devices::Sensors::ProximitySensor const& sensor);
     };
     struct __declspec(empty_bases) ProximitySensorDisplayOnOffController : Windows::Foundation::IClosable
     {

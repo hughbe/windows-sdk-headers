@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Chat.1.h"
-namespace winrt::Windows::ApplicationModel::Chat
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Chat
 {
     struct __declspec(empty_bases) ChatCapabilities : Windows::ApplicationModel::Chat::IChatCapabilities
     {
@@ -215,7 +215,7 @@ namespace winrt::Windows::ApplicationModel::Chat
         static auto LeaveConversationAsync(Windows::ApplicationModel::Chat::ChatConversation const& conversation);
         static auto TransportListChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using TransportListChanged_revoker = impl::factory_event_revoker<Windows::ApplicationModel::Chat::IRcsManagerStatics2, &impl::abi_t<Windows::ApplicationModel::Chat::IRcsManagerStatics2>::remove_TransportListChanged>;
-        static TransportListChanged_revoker TransportListChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static TransportListChanged_revoker TransportListChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto TransportListChanged(winrt::event_token const& token);
     };
     struct __declspec(empty_bases) RcsServiceKindSupportedChangedEventArgs : Windows::ApplicationModel::Chat::IRcsServiceKindSupportedChangedEventArgs

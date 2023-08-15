@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Input_Inking_1_H
 #define WINRT_Windows_UI_Input_Inking_1_H
 #include "winrt/impl/Windows.UI.Input.Inking.0.h"
-namespace winrt::Windows::UI::Input::Inking
+WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
 {
     struct __declspec(empty_bases) IInkDrawingAttributes :
         Windows::Foundation::IInspectable,
@@ -321,6 +321,13 @@ namespace winrt::Windows::UI::Input::Inking
     {
         IPenAndInkSettings(std::nullptr_t = nullptr) noexcept {}
         IPenAndInkSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPenAndInkSettings2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPenAndInkSettings2>
+    {
+        IPenAndInkSettings2(std::nullptr_t = nullptr) noexcept {}
+        IPenAndInkSettings2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IPenAndInkSettingsStatics :
         Windows::Foundation::IInspectable,

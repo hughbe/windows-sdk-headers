@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -175,18 +183,22 @@ EXTERN_C const IID IID_IJsDebug;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IJsDebug * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IJsDebug * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IJsDebug * This);
         
+        DECLSPEC_XFGVIRT(IJsDebug, OpenVirtualProcess)
         HRESULT ( STDMETHODCALLTYPE *OpenVirtualProcess )( 
             IJsDebug * This,
             /* [in] */ DWORD processId,
@@ -272,23 +284,28 @@ EXTERN_C const IID IID_IJsDebugProcess;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IJsDebugProcess * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IJsDebugProcess * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IJsDebugProcess * This);
         
+        DECLSPEC_XFGVIRT(IJsDebugProcess, CreateStackWalker)
         HRESULT ( STDMETHODCALLTYPE *CreateStackWalker )( 
             IJsDebugProcess * This,
             /* [in] */ DWORD threadId,
             /* [out] */ IJsDebugStackWalker **ppStackWalker);
         
+        DECLSPEC_XFGVIRT(IJsDebugProcess, CreateBreakPoint)
         HRESULT ( STDMETHODCALLTYPE *CreateBreakPoint )( 
             IJsDebugProcess * This,
             /* [in] */ UINT64 documentId,
@@ -297,10 +314,12 @@ EXTERN_C const IID IID_IJsDebugProcess;
             /* [in] */ BOOL isEnabled,
             /* [out] */ IJsDebugBreakPoint **ppDebugBreakPoint);
         
+        DECLSPEC_XFGVIRT(IJsDebugProcess, PerformAsyncBreak)
         HRESULT ( STDMETHODCALLTYPE *PerformAsyncBreak )( 
             IJsDebugProcess * This,
             /* [in] */ DWORD threadId);
         
+        DECLSPEC_XFGVIRT(IJsDebugProcess, GetExternalStepAddress)
         HRESULT ( STDMETHODCALLTYPE *GetExternalStepAddress )( 
             IJsDebugProcess * This,
             /* [out] */ UINT64 *pCodeAddress);
@@ -378,18 +397,22 @@ EXTERN_C const IID IID_IJsDebugStackWalker;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IJsDebugStackWalker * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IJsDebugStackWalker * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IJsDebugStackWalker * This);
         
+        DECLSPEC_XFGVIRT(IJsDebugStackWalker, GetNext)
         HRESULT ( STDMETHODCALLTYPE *GetNext )( 
             IJsDebugStackWalker * This,
             /* [out] */ IJsDebugFrame **ppFrame);
@@ -483,47 +506,57 @@ EXTERN_C const IID IID_IJsDebugFrame;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IJsDebugFrame * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IJsDebugFrame * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IJsDebugFrame * This);
         
+        DECLSPEC_XFGVIRT(IJsDebugFrame, GetStackRange)
         HRESULT ( STDMETHODCALLTYPE *GetStackRange )( 
             IJsDebugFrame * This,
             /* [out] */ UINT64 *pStart,
             /* [out] */ UINT64 *pEnd);
         
+        DECLSPEC_XFGVIRT(IJsDebugFrame, GetName)
         HRESULT ( STDMETHODCALLTYPE *GetName )( 
             IJsDebugFrame * This,
             /* [out] */ BSTR *pName);
         
+        DECLSPEC_XFGVIRT(IJsDebugFrame, GetDocumentPositionWithId)
         HRESULT ( STDMETHODCALLTYPE *GetDocumentPositionWithId )( 
             IJsDebugFrame * This,
             /* [out] */ UINT64 *pDocumentId,
             /* [out] */ DWORD *pCharacterOffset,
             /* [out] */ DWORD *pStatementCharCount);
         
+        DECLSPEC_XFGVIRT(IJsDebugFrame, GetDocumentPositionWithName)
         HRESULT ( STDMETHODCALLTYPE *GetDocumentPositionWithName )( 
             IJsDebugFrame * This,
             /* [out] */ BSTR *pDocumentName,
             /* [out] */ DWORD *pLine,
             /* [out] */ DWORD *pColumn);
         
+        DECLSPEC_XFGVIRT(IJsDebugFrame, GetDebugProperty)
         HRESULT ( STDMETHODCALLTYPE *GetDebugProperty )( 
             IJsDebugFrame * This,
             /* [out] */ IJsDebugProperty **ppDebugProperty);
         
+        DECLSPEC_XFGVIRT(IJsDebugFrame, GetReturnAddress)
         HRESULT ( STDMETHODCALLTYPE *GetReturnAddress )( 
             IJsDebugFrame * This,
             /* [out] */ UINT64 *pReturnAddress);
         
+        DECLSPEC_XFGVIRT(IJsDebugFrame, Evaluate)
         HRESULT ( STDMETHODCALLTYPE *Evaluate )( 
             IJsDebugFrame * This,
             /* [in] */ LPCOLESTR pExpressionText,
@@ -655,23 +688,28 @@ EXTERN_C const IID IID_IJsDebugProperty;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IJsDebugProperty * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IJsDebugProperty * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IJsDebugProperty * This);
         
+        DECLSPEC_XFGVIRT(IJsDebugProperty, GetPropertyInfo)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyInfo )( 
             IJsDebugProperty * This,
             /* [in] */ UINT nRadix,
             /* [out] */ JsDebugPropertyInfo *pPropertyInfo);
         
+        DECLSPEC_XFGVIRT(IJsDebugProperty, GetMembers)
         HRESULT ( STDMETHODCALLTYPE *GetMembers )( 
             IJsDebugProperty * This,
             /* [in] */ JS_PROPERTY_MEMBERS members,
@@ -749,24 +787,29 @@ EXTERN_C const IID IID_IJsEnumDebugProperty;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IJsEnumDebugProperty * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IJsEnumDebugProperty * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IJsEnumDebugProperty * This);
         
+        DECLSPEC_XFGVIRT(IJsEnumDebugProperty, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             IJsEnumDebugProperty * This,
             /* [in] */ ULONG count,
             /* [length_is][size_is][out] */ IJsDebugProperty **ppDebugProperty,
             /* [out] */ ULONG *pActualCount);
         
+        DECLSPEC_XFGVIRT(IJsEnumDebugProperty, GetCount)
         HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             IJsEnumDebugProperty * This,
             /* [out] */ ULONG *pCount);
@@ -849,31 +892,39 @@ EXTERN_C const IID IID_IJsDebugBreakPoint;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IJsDebugBreakPoint * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IJsDebugBreakPoint * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IJsDebugBreakPoint * This);
         
+        DECLSPEC_XFGVIRT(IJsDebugBreakPoint, IsEnabled)
         HRESULT ( STDMETHODCALLTYPE *IsEnabled )( 
             IJsDebugBreakPoint * This,
             /* [out] */ BOOL *pIsEnabled);
         
+        DECLSPEC_XFGVIRT(IJsDebugBreakPoint, Enable)
         HRESULT ( STDMETHODCALLTYPE *Enable )( 
             IJsDebugBreakPoint * This);
         
+        DECLSPEC_XFGVIRT(IJsDebugBreakPoint, Disable)
         HRESULT ( STDMETHODCALLTYPE *Disable )( 
             IJsDebugBreakPoint * This);
         
+        DECLSPEC_XFGVIRT(IJsDebugBreakPoint, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             IJsDebugBreakPoint * This);
         
+        DECLSPEC_XFGVIRT(IJsDebugBreakPoint, GetDocumentPosition)
         HRESULT ( STDMETHODCALLTYPE *GetDocumentPosition )( 
             IJsDebugBreakPoint * This,
             /* [out] */ UINT64 *pDocumentId,
@@ -976,24 +1027,29 @@ EXTERN_C const IID IID_IEnumJsStackFrames;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IEnumJsStackFrames * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IEnumJsStackFrames * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IEnumJsStackFrames * This);
         
+        DECLSPEC_XFGVIRT(IEnumJsStackFrames, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             IEnumJsStackFrames * This,
             /* [in] */ ULONG cFrameCount,
             /* [length_is][size_is][out] */ JS_NATIVE_FRAME *pFrames,
             /* [out] */ ULONG *pcFetched);
         
+        DECLSPEC_XFGVIRT(IEnumJsStackFrames, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             IEnumJsStackFrames * This);
         
@@ -1125,18 +1181,22 @@ EXTERN_C const IID IID_IJsDebugDataTarget;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IJsDebugDataTarget * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IJsDebugDataTarget * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IJsDebugDataTarget * This);
         
+        DECLSPEC_XFGVIRT(IJsDebugDataTarget, ReadMemory)
         HRESULT ( STDMETHODCALLTYPE *ReadMemory )( 
             IJsDebugDataTarget * This,
             /* [in] */ UINT64 address,
@@ -1145,12 +1205,14 @@ EXTERN_C const IID IID_IJsDebugDataTarget;
             /* [in] */ DWORD size,
             /* [out] */ DWORD *pBytesRead);
         
+        DECLSPEC_XFGVIRT(IJsDebugDataTarget, WriteMemory)
         HRESULT ( STDMETHODCALLTYPE *WriteMemory )( 
             IJsDebugDataTarget * This,
             /* [in] */ UINT64 address,
             /* [size_is][in] */ const BYTE *pMemory,
             /* [in] */ DWORD size);
         
+        DECLSPEC_XFGVIRT(IJsDebugDataTarget, AllocateVirtualMemory)
         HRESULT ( STDMETHODCALLTYPE *AllocateVirtualMemory )( 
             IJsDebugDataTarget * This,
             /* [in] */ UINT64 address,
@@ -1159,23 +1221,27 @@ EXTERN_C const IID IID_IJsDebugDataTarget;
             /* [in] */ DWORD pageProtection,
             /* [out] */ UINT64 *pAllocatedAddress);
         
+        DECLSPEC_XFGVIRT(IJsDebugDataTarget, FreeVirtualMemory)
         HRESULT ( STDMETHODCALLTYPE *FreeVirtualMemory )( 
             IJsDebugDataTarget * This,
             /* [in] */ UINT64 address,
             /* [in] */ DWORD size,
             /* [in] */ DWORD freeType);
         
+        DECLSPEC_XFGVIRT(IJsDebugDataTarget, GetTlsValue)
         HRESULT ( STDMETHODCALLTYPE *GetTlsValue )( 
             IJsDebugDataTarget * This,
             /* [in] */ DWORD threadId,
             /* [in] */ UINT32 tlsIndex,
             /* [out] */ UINT64 *pValue);
         
+        DECLSPEC_XFGVIRT(IJsDebugDataTarget, ReadBSTR)
         HRESULT ( STDMETHODCALLTYPE *ReadBSTR )( 
             IJsDebugDataTarget * This,
             /* [in] */ UINT64 address,
             /* [out] */ BSTR *pString);
         
+        DECLSPEC_XFGVIRT(IJsDebugDataTarget, ReadNullTerminatedString)
         HRESULT ( STDMETHODCALLTYPE *ReadNullTerminatedString )( 
             IJsDebugDataTarget * This,
             /* [in] */ UINT64 address,
@@ -1183,11 +1249,13 @@ EXTERN_C const IID IID_IJsDebugDataTarget;
             /* [in] */ UINT32 maxCharacters,
             /* [out] */ BSTR *pString);
         
+        DECLSPEC_XFGVIRT(IJsDebugDataTarget, CreateStackFrameEnumerator)
         HRESULT ( STDMETHODCALLTYPE *CreateStackFrameEnumerator )( 
             IJsDebugDataTarget * This,
             /* [in] */ DWORD threadId,
             /* [out] */ IEnumJsStackFrames **ppEnumerator);
         
+        DECLSPEC_XFGVIRT(IJsDebugDataTarget, GetThreadContext)
         HRESULT ( STDMETHODCALLTYPE *GetThreadContext )( 
             IJsDebugDataTarget * This,
             /* [in] */ DWORD threadId,

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,123 +6,124 @@
 #ifndef WINRT_Windows_Graphics_Display_H
 #define WINRT_Windows_Graphics_Display_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Graphics.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
+#include "winrt/impl/Windows.Graphics.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Windows.Graphics.Display.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::CurrentAdvancedColorKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::AdvancedColorKind) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::CurrentAdvancedColorKind() const
     {
-        Windows::Graphics::Display::AdvancedColorKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_CurrentAdvancedColorKind(put_abi(value)));
+        Windows::Graphics::Display::AdvancedColorKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_CurrentAdvancedColorKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::RedPrimary() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::RedPrimary() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_RedPrimary(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::GreenPrimary() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::GreenPrimary() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_GreenPrimary(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::BluePrimary() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::BluePrimary() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_BluePrimary(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::WhitePoint() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::WhitePoint() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_WhitePoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::MaxLuminanceInNits() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::MaxLuminanceInNits() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_MaxLuminanceInNits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::MinLuminanceInNits() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::MinLuminanceInNits() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_MinLuminanceInNits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::MaxAverageFullFrameLuminanceInNits() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::MaxAverageFullFrameLuminanceInNits() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_MaxAverageFullFrameLuminanceInNits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::SdrWhiteLevelInNits() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::SdrWhiteLevelInNits() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->get_SdrWhiteLevelInNits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::IsHdrMetadataFormatCurrentlySupported(Windows::Graphics::Display::HdrMetadataFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::IsHdrMetadataFormatCurrentlySupported(Windows::Graphics::Display::HdrMetadataFormat const& format) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->IsHdrMetadataFormatCurrentlySupported(static_cast<int32_t>(format), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::IsAdvancedColorKindAvailable(Windows::Graphics::Display::AdvancedColorKind const& kind) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IAdvancedColorInfo<D>::IsAdvancedColorKindAvailable(Windows::Graphics::Display::AdvancedColorKind const& kind) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IAdvancedColorInfo)->IsAdvancedColorKindAvailable(static_cast<int32_t>(kind), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->get_IsSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsOverrideActive() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsOverrideActive() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->get_IsOverrideActive(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::BrightnessLevel() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Graphics_Display_IBrightnessOverride<D>::BrightnessLevel() const
     {
-        double level;
+        double level{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->get_BrightnessLevel(&level));
         return level;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::SetBrightnessLevel(double brightnessLevel, Windows::Graphics::Display::DisplayBrightnessOverrideOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IBrightnessOverride<D>::SetBrightnessLevel(double brightnessLevel, Windows::Graphics::Display::DisplayBrightnessOverrideOptions const& options) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->SetBrightnessLevel(brightnessLevel, static_cast<uint32_t>(options)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::SetBrightnessScenario(Windows::Graphics::Display::DisplayBrightnessScenario const& scenario, Windows::Graphics::Display::DisplayBrightnessOverrideOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IBrightnessOverride<D>::SetBrightnessScenario(Windows::Graphics::Display::DisplayBrightnessScenario const& scenario, Windows::Graphics::Display::DisplayBrightnessOverrideOptions const& options) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->SetBrightnessScenario(static_cast<int32_t>(scenario), static_cast<uint32_t>(options)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::GetLevelForScenario(Windows::Graphics::Display::DisplayBrightnessScenario const& scenario) const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Graphics_Display_IBrightnessOverride<D>::GetLevelForScenario(Windows::Graphics::Display::DisplayBrightnessScenario const& scenario) const
     {
-        double brightnessLevel;
+        double brightnessLevel{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->GetLevelForScenario(static_cast<int32_t>(scenario), &brightnessLevel));
         return brightnessLevel;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::StartOverride() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IBrightnessOverride<D>::StartOverride() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->StartOverride());
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::StopOverride() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IBrightnessOverride<D>::StopOverride() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->StopOverride());
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsSupportedChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::BrightnessOverride, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsSupportedChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::BrightnessOverride, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->add_IsSupportedChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -130,13 +131,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, IsSupportedChanged_revoker>(this, IsSupportedChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsSupportedChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsSupportedChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->remove_IsSupportedChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsOverrideActiveChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::BrightnessOverride, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsOverrideActiveChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::BrightnessOverride, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->add_IsOverrideActiveChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -144,13 +145,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, IsOverrideActiveChanged_revoker>(this, IsOverrideActiveChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsOverrideActiveChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IBrightnessOverride<D>::IsOverrideActiveChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->remove_IsOverrideActiveChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::BrightnessLevelChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::BrightnessOverride, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IBrightnessOverride<D>::BrightnessLevelChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::BrightnessOverride, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->add_BrightnessLevelChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -158,119 +159,119 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BrightnessLevelChanged_revoker>(this, BrightnessLevelChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverride<D>::BrightnessLevelChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IBrightnessOverride<D>::BrightnessLevelChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverride)->remove_BrightnessLevelChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverrideSettings<D>::DesiredLevel() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Graphics_Display_IBrightnessOverrideSettings<D>::DesiredLevel() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverrideSettings)->get_DesiredLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverrideSettings<D>::DesiredNits() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Graphics_Display_IBrightnessOverrideSettings<D>::DesiredNits() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverrideSettings)->get_DesiredNits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverrideSettingsStatics<D>::CreateFromLevel(double level) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::BrightnessOverrideSettings) consume_Windows_Graphics_Display_IBrightnessOverrideSettingsStatics<D>::CreateFromLevel(double level) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverrideSettingsStatics)->CreateFromLevel(level, &result));
         return Windows::Graphics::Display::BrightnessOverrideSettings{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverrideSettingsStatics<D>::CreateFromNits(float nits) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::BrightnessOverrideSettings) consume_Windows_Graphics_Display_IBrightnessOverrideSettingsStatics<D>::CreateFromNits(float nits) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverrideSettingsStatics)->CreateFromNits(nits, &result));
         return Windows::Graphics::Display::BrightnessOverrideSettings{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverrideSettingsStatics<D>::CreateFromDisplayBrightnessOverrideScenario(Windows::Graphics::Display::DisplayBrightnessOverrideScenario const& overrideScenario) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::BrightnessOverrideSettings) consume_Windows_Graphics_Display_IBrightnessOverrideSettingsStatics<D>::CreateFromDisplayBrightnessOverrideScenario(Windows::Graphics::Display::DisplayBrightnessOverrideScenario const& overrideScenario) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverrideSettingsStatics)->CreateFromDisplayBrightnessOverrideScenario(static_cast<int32_t>(overrideScenario), &result));
         return Windows::Graphics::Display::BrightnessOverrideSettings{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverrideStatics<D>::GetDefaultForSystem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::BrightnessOverride) consume_Windows_Graphics_Display_IBrightnessOverrideStatics<D>::GetDefaultForSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverrideStatics)->GetDefaultForSystem(&value));
         return Windows::Graphics::Display::BrightnessOverride{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverrideStatics<D>::GetForCurrentView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::BrightnessOverride) consume_Windows_Graphics_Display_IBrightnessOverrideStatics<D>::GetForCurrentView() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverrideStatics)->GetForCurrentView(&value));
         return Windows::Graphics::Display::BrightnessOverride{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IBrightnessOverrideStatics<D>::SaveForSystemAsync(Windows::Graphics::Display::BrightnessOverride const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Graphics_Display_IBrightnessOverrideStatics<D>::SaveForSystemAsync(Windows::Graphics::Display::BrightnessOverride const& value) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IBrightnessOverrideStatics)->SaveForSystemAsync(*(void**)(&value), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IColorOverrideSettings<D>::DesiredDisplayColorOverrideScenario() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayColorOverrideScenario) consume_Windows_Graphics_Display_IColorOverrideSettings<D>::DesiredDisplayColorOverrideScenario() const
     {
-        Windows::Graphics::Display::DisplayColorOverrideScenario value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IColorOverrideSettings)->get_DesiredDisplayColorOverrideScenario(put_abi(value)));
+        Windows::Graphics::Display::DisplayColorOverrideScenario value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IColorOverrideSettings)->get_DesiredDisplayColorOverrideScenario(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IColorOverrideSettingsStatics<D>::CreateFromDisplayColorOverrideScenario(Windows::Graphics::Display::DisplayColorOverrideScenario const& overrideScenario) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::ColorOverrideSettings) consume_Windows_Graphics_Display_IColorOverrideSettingsStatics<D>::CreateFromDisplayColorOverrideScenario(Windows::Graphics::Display::DisplayColorOverrideScenario const& overrideScenario) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IColorOverrideSettingsStatics)->CreateFromDisplayColorOverrideScenario(static_cast<int32_t>(overrideScenario), &result));
         return Windows::Graphics::Display::ColorOverrideSettings{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::ColorOverrideSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::ColorOverrideSettings) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::ColorOverrideSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->get_ColorOverrideSettings(&value));
         return Windows::Graphics::Display::ColorOverrideSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::ColorOverrideSettings(Windows::Graphics::Display::ColorOverrideSettings const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::ColorOverrideSettings(Windows::Graphics::Display::ColorOverrideSettings const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->put_ColorOverrideSettings(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::BrightnessOverrideSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::BrightnessOverrideSettings) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::BrightnessOverrideSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->get_BrightnessOverrideSettings(&value));
         return Windows::Graphics::Display::BrightnessOverrideSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::BrightnessOverrideSettings(Windows::Graphics::Display::BrightnessOverrideSettings const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::BrightnessOverrideSettings(Windows::Graphics::Display::BrightnessOverrideSettings const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->put_BrightnessOverrideSettings(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::CanOverride() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::CanOverride() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->get_CanOverride(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::IsOverrideActive() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::IsOverrideActive() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->get_IsOverrideActive(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::GetCurrentDisplayEnhancementOverrideCapabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::GetCurrentDisplayEnhancementOverrideCapabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->GetCurrentDisplayEnhancementOverrideCapabilities(&value));
         return Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::RequestOverride() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::RequestOverride() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->RequestOverride());
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::StopOverride() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::StopOverride() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->StopOverride());
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::CanOverrideChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayEnhancementOverride, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::CanOverrideChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayEnhancementOverride, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->add_CanOverrideChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -278,13 +279,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CanOverrideChanged_revoker>(this, CanOverrideChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::CanOverrideChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::CanOverrideChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->remove_CanOverrideChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::IsOverrideActiveChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayEnhancementOverride, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::IsOverrideActiveChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayEnhancementOverride, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->add_IsOverrideActiveChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -292,13 +293,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, IsOverrideActiveChanged_revoker>(this, IsOverrideActiveChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::IsOverrideActiveChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::IsOverrideActiveChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->remove_IsOverrideActiveChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::DisplayEnhancementOverrideCapabilitiesChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayEnhancementOverride, Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::DisplayEnhancementOverrideCapabilitiesChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayEnhancementOverride, Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->add_DisplayEnhancementOverrideCapabilitiesChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -306,55 +307,55 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DisplayEnhancementOverrideCapabilitiesChanged_revoker>(this, DisplayEnhancementOverrideCapabilitiesChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::DisplayEnhancementOverrideCapabilitiesChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayEnhancementOverride<D>::DisplayEnhancementOverrideCapabilitiesChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverride)->remove_DisplayEnhancementOverrideCapabilitiesChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverrideCapabilities<D>::IsBrightnessControlSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IDisplayEnhancementOverrideCapabilities<D>::IsBrightnessControlSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities)->get_IsBrightnessControlSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverrideCapabilities<D>::IsBrightnessNitsControlSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IDisplayEnhancementOverrideCapabilities<D>::IsBrightnessNitsControlSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities)->get_IsBrightnessNitsControlSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverrideCapabilities<D>::GetSupportedNitRanges() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Graphics::Display::NitRange>) consume_Windows_Graphics_Display_IDisplayEnhancementOverrideCapabilities<D>::GetSupportedNitRanges() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities)->GetSupportedNitRanges(&result));
         return Windows::Foundation::Collections::IVectorView<Windows::Graphics::Display::NitRange>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverrideCapabilitiesChangedEventArgs<D>::Capabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities) consume_Windows_Graphics_Display_IDisplayEnhancementOverrideCapabilitiesChangedEventArgs<D>::Capabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilitiesChangedEventArgs)->get_Capabilities(&value));
         return Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayEnhancementOverrideStatics<D>::GetForCurrentView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayEnhancementOverride) consume_Windows_Graphics_Display_IDisplayEnhancementOverrideStatics<D>::GetForCurrentView() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayEnhancementOverrideStatics)->GetForCurrentView(&result));
         return Windows::Graphics::Display::DisplayEnhancementOverride{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::CurrentOrientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayOrientations) consume_Windows_Graphics_Display_IDisplayInformation<D>::CurrentOrientation() const
     {
-        Windows::Graphics::Display::DisplayOrientations value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_CurrentOrientation(put_abi(value)));
+        Windows::Graphics::Display::DisplayOrientations value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_CurrentOrientation(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::NativeOrientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayOrientations) consume_Windows_Graphics_Display_IDisplayInformation<D>::NativeOrientation() const
     {
-        Windows::Graphics::Display::DisplayOrientations value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_NativeOrientation(put_abi(value)));
+        Windows::Graphics::Display::DisplayOrientations value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_NativeOrientation(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::OrientationChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayInformation<D>::OrientationChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->add_OrientationChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -362,37 +363,37 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, OrientationChanged_revoker>(this, OrientationChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::OrientationChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayInformation<D>::OrientationChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->remove_OrientationChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::ResolutionScale() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::ResolutionScale) consume_Windows_Graphics_Display_IDisplayInformation<D>::ResolutionScale() const
     {
-        Windows::Graphics::Display::ResolutionScale value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_ResolutionScale(put_abi(value)));
+        Windows::Graphics::Display::ResolutionScale value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_ResolutionScale(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::LogicalDpi() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Graphics_Display_IDisplayInformation<D>::LogicalDpi() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_LogicalDpi(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::RawDpiX() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Graphics_Display_IDisplayInformation<D>::RawDpiX() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_RawDpiX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::RawDpiY() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Graphics_Display_IDisplayInformation<D>::RawDpiY() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_RawDpiY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::DpiChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayInformation<D>::DpiChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->add_DpiChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -400,19 +401,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DpiChanged_revoker>(this, DpiChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::DpiChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayInformation<D>::DpiChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->remove_DpiChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::StereoEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IDisplayInformation<D>::StereoEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->get_StereoEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::StereoEnabledChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayInformation<D>::StereoEnabledChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->add_StereoEnabledChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -420,19 +421,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StereoEnabledChanged_revoker>(this, StereoEnabledChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::StereoEnabledChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayInformation<D>::StereoEnabledChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->remove_StereoEnabledChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::GetColorProfileAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStream>) consume_Windows_Graphics_Display_IDisplayInformation<D>::GetColorProfileAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->GetColorProfileAsync(&asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStream>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::ColorProfileChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayInformation<D>::ColorProfileChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->add_ColorProfileChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -440,43 +441,43 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ColorProfileChanged_revoker>(this, ColorProfileChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation<D>::ColorProfileChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayInformation<D>::ColorProfileChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation)->remove_ColorProfileChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation2<D>::RawPixelsPerViewPixel() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Graphics_Display_IDisplayInformation2<D>::RawPixelsPerViewPixel() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation2)->get_RawPixelsPerViewPixel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation3<D>::DiagonalSizeInInches() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<double>) consume_Windows_Graphics_Display_IDisplayInformation3<D>::DiagonalSizeInInches() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation3)->get_DiagonalSizeInInches(&value));
         return Windows::Foundation::IReference<double>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation4<D>::ScreenWidthInRawPixels() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Display_IDisplayInformation4<D>::ScreenWidthInRawPixels() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation4)->get_ScreenWidthInRawPixels(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation4<D>::ScreenHeightInRawPixels() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Display_IDisplayInformation4<D>::ScreenHeightInRawPixels() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation4)->get_ScreenHeightInRawPixels(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation5<D>::GetAdvancedColorInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::AdvancedColorInfo) consume_Windows_Graphics_Display_IDisplayInformation5<D>::GetAdvancedColorInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation5)->GetAdvancedColorInfo(&value));
         return Windows::Graphics::Display::AdvancedColorInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation5<D>::AdvancedColorInfoChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayInformation5<D>::AdvancedColorInfoChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation5)->add_AdvancedColorInfoChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -484,29 +485,29 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AdvancedColorInfoChanged_revoker>(this, AdvancedColorInfoChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformation5<D>::AdvancedColorInfoChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayInformation5<D>::AdvancedColorInfoChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformation5)->remove_AdvancedColorInfoChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::GetForCurrentView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayInformation) consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::GetForCurrentView() const
     {
         void* current{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformationStatics)->GetForCurrentView(&current));
         return Windows::Graphics::Display::DisplayInformation{ current, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::AutoRotationPreferences() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayOrientations) consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::AutoRotationPreferences() const
     {
-        Windows::Graphics::Display::DisplayOrientations value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformationStatics)->get_AutoRotationPreferences(put_abi(value)));
+        Windows::Graphics::Display::DisplayOrientations value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformationStatics)->get_AutoRotationPreferences(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::AutoRotationPreferences(Windows::Graphics::Display::DisplayOrientations const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::AutoRotationPreferences(Windows::Graphics::Display::DisplayOrientations const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformationStatics)->put_AutoRotationPreferences(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::DisplayContentsInvalidated(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::DisplayContentsInvalidated(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformationStatics)->add_DisplayContentsInvalidated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -514,35 +515,35 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DisplayContentsInvalidated_revoker>(this, DisplayContentsInvalidated(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::DisplayContentsInvalidated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayInformationStatics<D>::DisplayContentsInvalidated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayInformationStatics)->remove_DisplayContentsInvalidated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::CurrentOrientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayOrientations) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::CurrentOrientation() const
     {
-        Windows::Graphics::Display::DisplayOrientations value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_CurrentOrientation(put_abi(value)));
+        Windows::Graphics::Display::DisplayOrientations value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_CurrentOrientation(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::NativeOrientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayOrientations) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::NativeOrientation() const
     {
-        Windows::Graphics::Display::DisplayOrientations value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_NativeOrientation(put_abi(value)));
+        Windows::Graphics::Display::DisplayOrientations value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_NativeOrientation(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::AutoRotationPreferences() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::DisplayOrientations) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::AutoRotationPreferences() const
     {
-        Windows::Graphics::Display::DisplayOrientations value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_AutoRotationPreferences(put_abi(value)));
+        Windows::Graphics::Display::DisplayOrientations value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_AutoRotationPreferences(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::AutoRotationPreferences(Windows::Graphics::Display::DisplayOrientations const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::AutoRotationPreferences(Windows::Graphics::Display::DisplayOrientations const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->put_AutoRotationPreferences(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::OrientationChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::OrientationChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->add_OrientationChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -550,25 +551,25 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, OrientationChanged_revoker>(this, OrientationChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::OrientationChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::OrientationChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->remove_OrientationChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::ResolutionScale() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Display::ResolutionScale) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::ResolutionScale() const
     {
-        Windows::Graphics::Display::ResolutionScale value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_ResolutionScale(put_abi(value)));
+        Windows::Graphics::Display::ResolutionScale value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_ResolutionScale(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::LogicalDpi() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::LogicalDpi() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_LogicalDpi(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::LogicalDpiChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::LogicalDpiChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->add_LogicalDpiChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -576,19 +577,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LogicalDpiChanged_revoker>(this, LogicalDpiChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::LogicalDpiChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::LogicalDpiChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->remove_LogicalDpiChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::StereoEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::StereoEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->get_StereoEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::StereoEnabledChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::StereoEnabledChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->add_StereoEnabledChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -596,19 +597,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StereoEnabledChanged_revoker>(this, StereoEnabledChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::StereoEnabledChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::StereoEnabledChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->remove_StereoEnabledChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::GetColorProfileAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStream>) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::GetColorProfileAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->GetColorProfileAsync(&asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStream>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::ColorProfileChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::ColorProfileChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->add_ColorProfileChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -616,13 +617,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ColorProfileChanged_revoker>(this, ColorProfileChanged(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::ColorProfileChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::ColorProfileChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->remove_ColorProfileChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::DisplayContentsInvalidated(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::DisplayContentsInvalidated(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->add_DisplayContentsInvalidated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -630,11 +631,18 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DisplayContentsInvalidated_revoker>(this, DisplayContentsInvalidated(handler));
     }
-    template <typename D> auto consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::DisplayContentsInvalidated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Display_IDisplayPropertiesStatics<D>::DisplayContentsInvalidated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayPropertiesStatics)->remove_DisplayContentsInvalidated(impl::bind_in(token)));
     }
-    template <typename H> struct delegate<Windows::Graphics::Display::DisplayPropertiesEventHandler, H> : implements_delegate<Windows::Graphics::Display::DisplayPropertiesEventHandler, H>
+    template <typename D> WINRT_IMPL_AUTO(com_array<Windows::Graphics::DisplayId>) consume_Windows_Graphics_Display_IDisplayServicesStatics<D>::FindAll() const
+    {
+        uint32_t result_impl_size{};
+        struct struct_Windows_Graphics_DisplayId* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Display::IDisplayServicesStatics)->FindAll(&result_impl_size, &result));
+        return com_array<Windows::Graphics::DisplayId>{ result, result_impl_size, take_ownership_from_abi };
+    }
+    template <typename H> struct delegate<Windows::Graphics::Display::DisplayPropertiesEventHandler, H> final : implements_delegate<Windows::Graphics::Display::DisplayPropertiesEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Graphics::Display::DisplayPropertiesEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -645,6 +653,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IAdvancedColorInfo> : produce_base<D, Windows::Graphics::Display::IAdvancedColorInfo>
     {
@@ -730,6 +739,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IBrightnessOverride> : produce_base<D, Windows::Graphics::Display::IBrightnessOverride>
     {
@@ -832,6 +843,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IBrightnessOverrideSettings> : produce_base<D, Windows::Graphics::Display::IBrightnessOverrideSettings>
     {
@@ -850,6 +863,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IBrightnessOverrideSettingsStatics> : produce_base<D, Windows::Graphics::Display::IBrightnessOverrideSettingsStatics>
     {
@@ -878,6 +893,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IBrightnessOverrideStatics> : produce_base<D, Windows::Graphics::Display::IBrightnessOverrideStatics>
     {
@@ -906,6 +923,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IColorOverrideSettings> : produce_base<D, Windows::Graphics::Display::IColorOverrideSettings>
     {
@@ -917,6 +936,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IColorOverrideSettingsStatics> : produce_base<D, Windows::Graphics::Display::IColorOverrideSettingsStatics>
     {
@@ -929,6 +950,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayEnhancementOverride> : produce_base<D, Windows::Graphics::Display::IDisplayEnhancementOverride>
     {
@@ -1041,6 +1064,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities> : produce_base<D, Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities>
     {
@@ -1067,6 +1092,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilitiesChangedEventArgs> : produce_base<D, Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilitiesChangedEventArgs>
     {
@@ -1079,6 +1106,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayEnhancementOverrideStatics> : produce_base<D, Windows::Graphics::Display::IDisplayEnhancementOverrideStatics>
     {
@@ -1091,6 +1120,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayInformation> : produce_base<D, Windows::Graphics::Display::IDisplayInformation>
     {
@@ -1208,6 +1239,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayInformation2> : produce_base<D, Windows::Graphics::Display::IDisplayInformation2>
     {
@@ -1219,6 +1252,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayInformation3> : produce_base<D, Windows::Graphics::Display::IDisplayInformation3>
     {
@@ -1231,6 +1266,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayInformation4> : produce_base<D, Windows::Graphics::Display::IDisplayInformation4>
     {
@@ -1249,6 +1286,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayInformation5> : produce_base<D, Windows::Graphics::Display::IDisplayInformation5>
     {
@@ -1275,6 +1314,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayInformationStatics> : produce_base<D, Windows::Graphics::Display::IDisplayInformationStatics>
     {
@@ -1315,6 +1356,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Display::IDisplayPropertiesStatics> : produce_base<D, Windows::Graphics::Display::IDisplayPropertiesStatics>
     {
@@ -1446,8 +1489,29 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Graphics::Display::IDisplayServices> : produce_base<D, Windows::Graphics::Display::IDisplayServices>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Graphics::Display::IDisplayServicesStatics> : produce_base<D, Windows::Graphics::Display::IDisplayServicesStatics>
+    {
+        int32_t __stdcall FindAll(uint32_t* __resultSize, struct struct_Windows_Graphics_DisplayId** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            std::tie(*__resultSize, *result) = detach_abi(this->shim().FindAll());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
-namespace winrt::Windows::Graphics::Display
+WINRT_EXPORT namespace winrt::Windows::Graphics::Display
 {
     constexpr auto operator|(DisplayBrightnessOverrideOptions const left, DisplayBrightnessOverrideOptions const right) noexcept
     {
@@ -1513,51 +1577,51 @@ namespace winrt::Windows::Graphics::Display
     }
     inline auto BrightnessOverride::GetDefaultForSystem()
     {
-        return impl::call_factory<BrightnessOverride, Windows::Graphics::Display::IBrightnessOverrideStatics>([&](auto&& f) { return f.GetDefaultForSystem(); });
+        return impl::call_factory_cast<Windows::Graphics::Display::BrightnessOverride(*)(IBrightnessOverrideStatics const&), BrightnessOverride, IBrightnessOverrideStatics>([](IBrightnessOverrideStatics const& f) { return f.GetDefaultForSystem(); });
     }
     inline auto BrightnessOverride::GetForCurrentView()
     {
-        return impl::call_factory<BrightnessOverride, Windows::Graphics::Display::IBrightnessOverrideStatics>([&](auto&& f) { return f.GetForCurrentView(); });
+        return impl::call_factory_cast<Windows::Graphics::Display::BrightnessOverride(*)(IBrightnessOverrideStatics const&), BrightnessOverride, IBrightnessOverrideStatics>([](IBrightnessOverrideStatics const& f) { return f.GetForCurrentView(); });
     }
     inline auto BrightnessOverride::SaveForSystemAsync(Windows::Graphics::Display::BrightnessOverride const& value)
     {
-        return impl::call_factory<BrightnessOverride, Windows::Graphics::Display::IBrightnessOverrideStatics>([&](auto&& f) { return f.SaveForSystemAsync(value); });
+        return impl::call_factory<BrightnessOverride, IBrightnessOverrideStatics>([&](IBrightnessOverrideStatics const& f) { return f.SaveForSystemAsync(value); });
     }
     inline auto BrightnessOverrideSettings::CreateFromLevel(double level)
     {
-        return impl::call_factory<BrightnessOverrideSettings, Windows::Graphics::Display::IBrightnessOverrideSettingsStatics>([&](auto&& f) { return f.CreateFromLevel(level); });
+        return impl::call_factory<BrightnessOverrideSettings, IBrightnessOverrideSettingsStatics>([&](IBrightnessOverrideSettingsStatics const& f) { return f.CreateFromLevel(level); });
     }
     inline auto BrightnessOverrideSettings::CreateFromNits(float nits)
     {
-        return impl::call_factory<BrightnessOverrideSettings, Windows::Graphics::Display::IBrightnessOverrideSettingsStatics>([&](auto&& f) { return f.CreateFromNits(nits); });
+        return impl::call_factory<BrightnessOverrideSettings, IBrightnessOverrideSettingsStatics>([&](IBrightnessOverrideSettingsStatics const& f) { return f.CreateFromNits(nits); });
     }
     inline auto BrightnessOverrideSettings::CreateFromDisplayBrightnessOverrideScenario(Windows::Graphics::Display::DisplayBrightnessOverrideScenario const& overrideScenario)
     {
-        return impl::call_factory<BrightnessOverrideSettings, Windows::Graphics::Display::IBrightnessOverrideSettingsStatics>([&](auto&& f) { return f.CreateFromDisplayBrightnessOverrideScenario(overrideScenario); });
+        return impl::call_factory<BrightnessOverrideSettings, IBrightnessOverrideSettingsStatics>([&](IBrightnessOverrideSettingsStatics const& f) { return f.CreateFromDisplayBrightnessOverrideScenario(overrideScenario); });
     }
     inline auto ColorOverrideSettings::CreateFromDisplayColorOverrideScenario(Windows::Graphics::Display::DisplayColorOverrideScenario const& overrideScenario)
     {
-        return impl::call_factory<ColorOverrideSettings, Windows::Graphics::Display::IColorOverrideSettingsStatics>([&](auto&& f) { return f.CreateFromDisplayColorOverrideScenario(overrideScenario); });
+        return impl::call_factory<ColorOverrideSettings, IColorOverrideSettingsStatics>([&](IColorOverrideSettingsStatics const& f) { return f.CreateFromDisplayColorOverrideScenario(overrideScenario); });
     }
     inline auto DisplayEnhancementOverride::GetForCurrentView()
     {
-        return impl::call_factory<DisplayEnhancementOverride, Windows::Graphics::Display::IDisplayEnhancementOverrideStatics>([&](auto&& f) { return f.GetForCurrentView(); });
+        return impl::call_factory_cast<Windows::Graphics::Display::DisplayEnhancementOverride(*)(IDisplayEnhancementOverrideStatics const&), DisplayEnhancementOverride, IDisplayEnhancementOverrideStatics>([](IDisplayEnhancementOverrideStatics const& f) { return f.GetForCurrentView(); });
     }
     inline auto DisplayInformation::GetForCurrentView()
     {
-        return impl::call_factory<DisplayInformation, Windows::Graphics::Display::IDisplayInformationStatics>([&](auto&& f) { return f.GetForCurrentView(); });
+        return impl::call_factory_cast<Windows::Graphics::Display::DisplayInformation(*)(IDisplayInformationStatics const&), DisplayInformation, IDisplayInformationStatics>([](IDisplayInformationStatics const& f) { return f.GetForCurrentView(); });
     }
     inline auto DisplayInformation::AutoRotationPreferences()
     {
-        return impl::call_factory<DisplayInformation, Windows::Graphics::Display::IDisplayInformationStatics>([&](auto&& f) { return f.AutoRotationPreferences(); });
+        return impl::call_factory_cast<Windows::Graphics::Display::DisplayOrientations(*)(IDisplayInformationStatics const&), DisplayInformation, IDisplayInformationStatics>([](IDisplayInformationStatics const& f) { return f.AutoRotationPreferences(); });
     }
     inline auto DisplayInformation::AutoRotationPreferences(Windows::Graphics::Display::DisplayOrientations const& value)
     {
-        impl::call_factory<DisplayInformation, Windows::Graphics::Display::IDisplayInformationStatics>([&](auto&& f) { return f.AutoRotationPreferences(value); });
+        impl::call_factory<DisplayInformation, IDisplayInformationStatics>([&](IDisplayInformationStatics const& f) { return f.AutoRotationPreferences(value); });
     }
     inline auto DisplayInformation::DisplayContentsInvalidated(Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<DisplayInformation, Windows::Graphics::Display::IDisplayInformationStatics>([&](auto&& f) { return f.DisplayContentsInvalidated(handler); });
+        return impl::call_factory<DisplayInformation, IDisplayInformationStatics>([&](IDisplayInformationStatics const& f) { return f.DisplayContentsInvalidated(handler); });
     }
     inline DisplayInformation::DisplayContentsInvalidated_revoker DisplayInformation::DisplayContentsInvalidated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Graphics::Display::DisplayInformation, Windows::Foundation::IInspectable> const& handler)
     {
@@ -1566,27 +1630,27 @@ namespace winrt::Windows::Graphics::Display
     }
     inline auto DisplayInformation::DisplayContentsInvalidated(winrt::event_token const& token)
     {
-        impl::call_factory<DisplayInformation, Windows::Graphics::Display::IDisplayInformationStatics>([&](auto&& f) { return f.DisplayContentsInvalidated(token); });
+        impl::call_factory<DisplayInformation, IDisplayInformationStatics>([&](IDisplayInformationStatics const& f) { return f.DisplayContentsInvalidated(token); });
     }
     inline auto DisplayProperties::CurrentOrientation()
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.CurrentOrientation(); });
+        return impl::call_factory_cast<Windows::Graphics::Display::DisplayOrientations(*)(IDisplayPropertiesStatics const&), DisplayProperties, IDisplayPropertiesStatics>([](IDisplayPropertiesStatics const& f) { return f.CurrentOrientation(); });
     }
     inline auto DisplayProperties::NativeOrientation()
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.NativeOrientation(); });
+        return impl::call_factory_cast<Windows::Graphics::Display::DisplayOrientations(*)(IDisplayPropertiesStatics const&), DisplayProperties, IDisplayPropertiesStatics>([](IDisplayPropertiesStatics const& f) { return f.NativeOrientation(); });
     }
     inline auto DisplayProperties::AutoRotationPreferences()
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.AutoRotationPreferences(); });
+        return impl::call_factory_cast<Windows::Graphics::Display::DisplayOrientations(*)(IDisplayPropertiesStatics const&), DisplayProperties, IDisplayPropertiesStatics>([](IDisplayPropertiesStatics const& f) { return f.AutoRotationPreferences(); });
     }
     inline auto DisplayProperties::AutoRotationPreferences(Windows::Graphics::Display::DisplayOrientations const& value)
     {
-        impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.AutoRotationPreferences(value); });
+        impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.AutoRotationPreferences(value); });
     }
     inline auto DisplayProperties::OrientationChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.OrientationChanged(handler); });
+        return impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.OrientationChanged(handler); });
     }
     inline DisplayProperties::OrientationChanged_revoker DisplayProperties::OrientationChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
@@ -1595,19 +1659,19 @@ namespace winrt::Windows::Graphics::Display
     }
     inline auto DisplayProperties::OrientationChanged(winrt::event_token const& token)
     {
-        impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.OrientationChanged(token); });
+        impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.OrientationChanged(token); });
     }
     inline auto DisplayProperties::ResolutionScale()
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.ResolutionScale(); });
+        return impl::call_factory_cast<Windows::Graphics::Display::ResolutionScale(*)(IDisplayPropertiesStatics const&), DisplayProperties, IDisplayPropertiesStatics>([](IDisplayPropertiesStatics const& f) { return f.ResolutionScale(); });
     }
     inline auto DisplayProperties::LogicalDpi()
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.LogicalDpi(); });
+        return impl::call_factory_cast<float(*)(IDisplayPropertiesStatics const&), DisplayProperties, IDisplayPropertiesStatics>([](IDisplayPropertiesStatics const& f) { return f.LogicalDpi(); });
     }
     inline auto DisplayProperties::LogicalDpiChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.LogicalDpiChanged(handler); });
+        return impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.LogicalDpiChanged(handler); });
     }
     inline DisplayProperties::LogicalDpiChanged_revoker DisplayProperties::LogicalDpiChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
@@ -1616,15 +1680,15 @@ namespace winrt::Windows::Graphics::Display
     }
     inline auto DisplayProperties::LogicalDpiChanged(winrt::event_token const& token)
     {
-        impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.LogicalDpiChanged(token); });
+        impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.LogicalDpiChanged(token); });
     }
     inline auto DisplayProperties::StereoEnabled()
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.StereoEnabled(); });
+        return impl::call_factory_cast<bool(*)(IDisplayPropertiesStatics const&), DisplayProperties, IDisplayPropertiesStatics>([](IDisplayPropertiesStatics const& f) { return f.StereoEnabled(); });
     }
     inline auto DisplayProperties::StereoEnabledChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.StereoEnabledChanged(handler); });
+        return impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.StereoEnabledChanged(handler); });
     }
     inline DisplayProperties::StereoEnabledChanged_revoker DisplayProperties::StereoEnabledChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
@@ -1633,15 +1697,15 @@ namespace winrt::Windows::Graphics::Display
     }
     inline auto DisplayProperties::StereoEnabledChanged(winrt::event_token const& token)
     {
-        impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.StereoEnabledChanged(token); });
+        impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.StereoEnabledChanged(token); });
     }
     inline auto DisplayProperties::GetColorProfileAsync()
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.GetColorProfileAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStream>(*)(IDisplayPropertiesStatics const&), DisplayProperties, IDisplayPropertiesStatics>([](IDisplayPropertiesStatics const& f) { return f.GetColorProfileAsync(); });
     }
     inline auto DisplayProperties::ColorProfileChanged(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.ColorProfileChanged(handler); });
+        return impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.ColorProfileChanged(handler); });
     }
     inline DisplayProperties::ColorProfileChanged_revoker DisplayProperties::ColorProfileChanged(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
@@ -1650,11 +1714,11 @@ namespace winrt::Windows::Graphics::Display
     }
     inline auto DisplayProperties::ColorProfileChanged(winrt::event_token const& token)
     {
-        impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.ColorProfileChanged(token); });
+        impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.ColorProfileChanged(token); });
     }
     inline auto DisplayProperties::DisplayContentsInvalidated(Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
-        return impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.DisplayContentsInvalidated(handler); });
+        return impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.DisplayContentsInvalidated(handler); });
     }
     inline DisplayProperties::DisplayContentsInvalidated_revoker DisplayProperties::DisplayContentsInvalidated(auto_revoke_t, Windows::Graphics::Display::DisplayPropertiesEventHandler const& handler)
     {
@@ -1663,7 +1727,11 @@ namespace winrt::Windows::Graphics::Display
     }
     inline auto DisplayProperties::DisplayContentsInvalidated(winrt::event_token const& token)
     {
-        impl::call_factory<DisplayProperties, Windows::Graphics::Display::IDisplayPropertiesStatics>([&](auto&& f) { return f.DisplayContentsInvalidated(token); });
+        impl::call_factory<DisplayProperties, IDisplayPropertiesStatics>([&](IDisplayPropertiesStatics const& f) { return f.DisplayContentsInvalidated(token); });
+    }
+    inline auto DisplayServices::FindAll()
+    {
+        return impl::call_factory_cast<com_array<Windows::Graphics::DisplayId>(*)(IDisplayServicesStatics const&), DisplayServices, IDisplayServicesStatics>([](IDisplayServicesStatics const& f) { return f.FindAll(); });
     }
     template <typename L> DisplayPropertiesEventHandler::DisplayPropertiesEventHandler(L handler) :
         DisplayPropertiesEventHandler(impl::make_delegate<DisplayPropertiesEventHandler>(std::forward<L>(handler)))
@@ -1692,32 +1760,37 @@ namespace winrt::Windows::Graphics::Display
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Graphics::Display::IAdvancedColorInfo> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IAdvancedColorInfo> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IBrightnessOverride> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IBrightnessOverride> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IBrightnessOverrideSettings> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IBrightnessOverrideSettings> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IBrightnessOverrideSettingsStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IBrightnessOverrideSettingsStatics> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IBrightnessOverrideStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IBrightnessOverrideStatics> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IColorOverrideSettings> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IColorOverrideSettings> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IColorOverrideSettingsStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IColorOverrideSettingsStatics> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayEnhancementOverride> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayEnhancementOverride> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilitiesChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilitiesChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayEnhancementOverrideStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayEnhancementOverrideStatics> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayInformation> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation2> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayInformation2> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation3> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayInformation3> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation4> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayInformation4> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation5> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayInformation5> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformationStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayInformationStatics> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayPropertiesStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::IDisplayPropertiesStatics> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::AdvancedColorInfo> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::AdvancedColorInfo> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::BrightnessOverride> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::BrightnessOverride> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::BrightnessOverrideSettings> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::BrightnessOverrideSettings> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::ColorOverrideSettings> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::ColorOverrideSettings> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::DisplayEnhancementOverride> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::DisplayEnhancementOverride> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::DisplayInformation> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::DisplayInformation> {};
-    template<> struct hash<winrt::Windows::Graphics::Display::DisplayProperties> : winrt::impl::hash_base<winrt::Windows::Graphics::Display::DisplayProperties> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Graphics::Display::IAdvancedColorInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IBrightnessOverride> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IBrightnessOverrideSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IBrightnessOverrideSettingsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IBrightnessOverrideStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IColorOverrideSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IColorOverrideSettingsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayEnhancementOverride> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayEnhancementOverrideCapabilitiesChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayEnhancementOverrideStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformation5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayInformationStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayPropertiesStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayServices> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::IDisplayServicesStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::AdvancedColorInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::BrightnessOverride> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::BrightnessOverrideSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::ColorOverrideSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::DisplayEnhancementOverride> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::DisplayInformation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::DisplayProperties> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Display::DisplayServices> : winrt::impl::hash_base {};
+#endif
 }
 #endif

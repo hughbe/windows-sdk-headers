@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,226 +6,227 @@
 #ifndef WINRT_Windows_Data_Json_H
 #define WINRT_Windows_Data_Json_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Data.Json.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Data_Json_IJsonArray<D>::GetObjectAt(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) consume_Windows_Data_Json_IJsonArray<D>::GetObjectAt(uint32_t index) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonArray)->GetObjectAt(index, &returnValue));
         return Windows::Data::Json::JsonObject{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonArray<D>::GetArrayAt(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) consume_Windows_Data_Json_IJsonArray<D>::GetArrayAt(uint32_t index) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonArray)->GetArrayAt(index, &returnValue));
         return Windows::Data::Json::JsonArray{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonArray<D>::GetStringAt(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Json_IJsonArray<D>::GetStringAt(uint32_t index) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonArray)->GetStringAt(index, &returnValue));
         return hstring{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonArray<D>::GetNumberAt(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Data_Json_IJsonArray<D>::GetNumberAt(uint32_t index) const
     {
-        double returnValue;
+        double returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonArray)->GetNumberAt(index, &returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonArray<D>::GetBooleanAt(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Json_IJsonArray<D>::GetBooleanAt(uint32_t index) const
     {
-        bool returnValue;
+        bool returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonArray)->GetBooleanAt(index, &returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonArrayStatics<D>::Parse(param::hstring const& input) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) consume_Windows_Data_Json_IJsonArrayStatics<D>::Parse(param::hstring const& input) const
     {
         void* jsonArray{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonArrayStatics)->Parse(*(void**)(&input), &jsonArray));
         return Windows::Data::Json::JsonArray{ jsonArray, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonArrayStatics<D>::TryParse(param::hstring const& input, Windows::Data::Json::JsonArray& result) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Json_IJsonArrayStatics<D>::TryParse(param::hstring const& input, Windows::Data::Json::JsonArray& result) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonArrayStatics)->TryParse(*(void**)(&input), impl::bind_out(result), &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonErrorStatics2<D>::GetJsonStatus(int32_t hresult) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonErrorStatus) consume_Windows_Data_Json_IJsonErrorStatics2<D>::GetJsonStatus(int32_t hresult) const
     {
-        Windows::Data::Json::JsonErrorStatus status;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonErrorStatics2)->GetJsonStatus(hresult, put_abi(status)));
+        Windows::Data::Json::JsonErrorStatus status{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonErrorStatics2)->GetJsonStatus(hresult, reinterpret_cast<int32_t*>(&status)));
         return status;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObject<D>::GetNamedValue(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) consume_Windows_Data_Json_IJsonObject<D>::GetNamedValue(param::hstring const& name) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObject)->GetNamedValue(*(void**)(&name), &returnValue));
         return Windows::Data::Json::JsonValue{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObject<D>::SetNamedValue(param::hstring const& name, Windows::Data::Json::IJsonValue const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Json_IJsonObject<D>::SetNamedValue(param::hstring const& name, Windows::Data::Json::IJsonValue const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObject)->SetNamedValue(*(void**)(&name), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObject<D>::GetNamedObject(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) consume_Windows_Data_Json_IJsonObject<D>::GetNamedObject(param::hstring const& name) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObject)->GetNamedObject(*(void**)(&name), &returnValue));
         return Windows::Data::Json::JsonObject{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObject<D>::GetNamedArray(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) consume_Windows_Data_Json_IJsonObject<D>::GetNamedArray(param::hstring const& name) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObject)->GetNamedArray(*(void**)(&name), &returnValue));
         return Windows::Data::Json::JsonArray{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObject<D>::GetNamedString(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Json_IJsonObject<D>::GetNamedString(param::hstring const& name) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObject)->GetNamedString(*(void**)(&name), &returnValue));
         return hstring{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObject<D>::GetNamedNumber(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Data_Json_IJsonObject<D>::GetNamedNumber(param::hstring const& name) const
     {
-        double returnValue;
+        double returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObject)->GetNamedNumber(*(void**)(&name), &returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObject<D>::GetNamedBoolean(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Json_IJsonObject<D>::GetNamedBoolean(param::hstring const& name) const
     {
-        bool returnValue;
+        bool returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObject)->GetNamedBoolean(*(void**)(&name), &returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObjectStatics<D>::Parse(param::hstring const& input) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) consume_Windows_Data_Json_IJsonObjectStatics<D>::Parse(param::hstring const& input) const
     {
         void* jsonObject{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObjectStatics)->Parse(*(void**)(&input), &jsonObject));
         return Windows::Data::Json::JsonObject{ jsonObject, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObjectStatics<D>::TryParse(param::hstring const& input, Windows::Data::Json::JsonObject& result) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Json_IJsonObjectStatics<D>::TryParse(param::hstring const& input, Windows::Data::Json::JsonObject& result) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObjectStatics)->TryParse(*(void**)(&input), impl::bind_out(result), &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedValue(param::hstring const& name, Windows::Data::Json::JsonValue const& defaultValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedValue(param::hstring const& name, Windows::Data::Json::JsonValue const& defaultValue) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObjectWithDefaultValues)->GetNamedValueOrDefault(*(void**)(&name), *(void**)(&defaultValue), &returnValue));
         return Windows::Data::Json::JsonValue{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedObject(param::hstring const& name, Windows::Data::Json::JsonObject const& defaultValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedObject(param::hstring const& name, Windows::Data::Json::JsonObject const& defaultValue) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObjectWithDefaultValues)->GetNamedObjectOrDefault(*(void**)(&name), *(void**)(&defaultValue), &returnValue));
         return Windows::Data::Json::JsonObject{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedString(param::hstring const& name, param::hstring const& defaultValue) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedString(param::hstring const& name, param::hstring const& defaultValue) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObjectWithDefaultValues)->GetNamedStringOrDefault(*(void**)(&name), *(void**)(&defaultValue), &returnValue));
         return hstring{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedArray(param::hstring const& name, Windows::Data::Json::JsonArray const& defaultValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedArray(param::hstring const& name, Windows::Data::Json::JsonArray const& defaultValue) const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObjectWithDefaultValues)->GetNamedArrayOrDefault(*(void**)(&name), *(void**)(&defaultValue), &returnValue));
         return Windows::Data::Json::JsonArray{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedNumber(param::hstring const& name, double defaultValue) const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedNumber(param::hstring const& name, double defaultValue) const
     {
-        double returnValue;
+        double returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObjectWithDefaultValues)->GetNamedNumberOrDefault(*(void**)(&name), defaultValue, &returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedBoolean(param::hstring const& name, bool defaultValue) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Json_IJsonObjectWithDefaultValues<D>::GetNamedBoolean(param::hstring const& name, bool defaultValue) const
     {
-        bool returnValue;
+        bool returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonObjectWithDefaultValues)->GetNamedBooleanOrDefault(*(void**)(&name), defaultValue, &returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValue<D>::ValueType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonValueType) consume_Windows_Data_Json_IJsonValue<D>::ValueType() const
     {
-        Windows::Data::Json::JsonValueType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValue)->get_ValueType(put_abi(value)));
+        Windows::Data::Json::JsonValueType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValue)->get_ValueType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValue<D>::Stringify() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Json_IJsonValue<D>::Stringify() const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValue)->Stringify(&returnValue));
         return hstring{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValue<D>::GetString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Json_IJsonValue<D>::GetString() const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValue)->GetString(&returnValue));
         return hstring{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValue<D>::GetNumber() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Data_Json_IJsonValue<D>::GetNumber() const
     {
-        double returnValue;
+        double returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValue)->GetNumber(&returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValue<D>::GetBoolean() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Json_IJsonValue<D>::GetBoolean() const
     {
-        bool returnValue;
+        bool returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValue)->GetBoolean(&returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValue<D>::GetArray() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) consume_Windows_Data_Json_IJsonValue<D>::GetArray() const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValue)->GetArray(&returnValue));
         return Windows::Data::Json::JsonArray{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValue<D>::GetObject() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) consume_Windows_Data_Json_IJsonValue<D>::GetObject() const
     {
         void* returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValue)->GetObject(&returnValue));
         return Windows::Data::Json::JsonObject{ returnValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValueStatics<D>::Parse(param::hstring const& input) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) consume_Windows_Data_Json_IJsonValueStatics<D>::Parse(param::hstring const& input) const
     {
         void* jsonValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValueStatics)->Parse(*(void**)(&input), &jsonValue));
         return Windows::Data::Json::JsonValue{ jsonValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValueStatics<D>::TryParse(param::hstring const& input, Windows::Data::Json::JsonValue& result) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Json_IJsonValueStatics<D>::TryParse(param::hstring const& input, Windows::Data::Json::JsonValue& result) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValueStatics)->TryParse(*(void**)(&input), impl::bind_out(result), &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValueStatics<D>::CreateBooleanValue(bool input) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) consume_Windows_Data_Json_IJsonValueStatics<D>::CreateBooleanValue(bool input) const
     {
         void* jsonValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValueStatics)->CreateBooleanValue(input, &jsonValue));
         return Windows::Data::Json::JsonValue{ jsonValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValueStatics<D>::CreateNumberValue(double input) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) consume_Windows_Data_Json_IJsonValueStatics<D>::CreateNumberValue(double input) const
     {
         void* jsonValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValueStatics)->CreateNumberValue(input, &jsonValue));
         return Windows::Data::Json::JsonValue{ jsonValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValueStatics<D>::CreateStringValue(param::hstring const& input) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) consume_Windows_Data_Json_IJsonValueStatics<D>::CreateStringValue(param::hstring const& input) const
     {
         void* jsonValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValueStatics)->CreateStringValue(*(void**)(&input), &jsonValue));
         return Windows::Data::Json::JsonValue{ jsonValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Data_Json_IJsonValueStatics2<D>::CreateNullValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) consume_Windows_Data_Json_IJsonValueStatics2<D>::CreateNullValue() const
     {
         void* jsonValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Data::Json::IJsonValueStatics2)->CreateNullValue(&jsonValue));
         return Windows::Data::Json::JsonValue{ jsonValue, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Data::Json::IJsonArray> : produce_base<D, Windows::Data::Json::IJsonArray>
     {
@@ -268,6 +269,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Data::Json::IJsonArrayStatics> : produce_base<D, Windows::Data::Json::IJsonArrayStatics>
     {
@@ -288,6 +291,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Data::Json::IJsonErrorStatics2> : produce_base<D, Windows::Data::Json::IJsonErrorStatics2>
     {
@@ -299,6 +304,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Data::Json::IJsonObject> : produce_base<D, Windows::Data::Json::IJsonObject>
     {
@@ -356,6 +363,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Data::Json::IJsonObjectStatics> : produce_base<D, Windows::Data::Json::IJsonObjectStatics>
     {
@@ -376,6 +385,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Data::Json::IJsonObjectWithDefaultValues> : produce_base<D, Windows::Data::Json::IJsonObjectWithDefaultValues>
     {
@@ -426,6 +437,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Data::Json::IJsonValue> : produce_base<D, Windows::Data::Json::IJsonValue>
     {
@@ -483,6 +495,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Data::Json::IJsonValueStatics> : produce_base<D, Windows::Data::Json::IJsonValueStatics>
     {
@@ -527,6 +540,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Data::Json::IJsonValueStatics2> : produce_base<D, Windows::Data::Json::IJsonValueStatics2>
     {
@@ -539,76 +554,79 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Data::Json
+WINRT_EXPORT namespace winrt::Windows::Data::Json
 {
     inline JsonArray::JsonArray() :
-        JsonArray(impl::call_factory<JsonArray>([](auto&& f) { return f.template ActivateInstance<JsonArray>(); }))
+        JsonArray(impl::call_factory_cast<JsonArray(*)(Windows::Foundation::IActivationFactory const&), JsonArray>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<JsonArray>(); }))
     {
     }
     inline auto JsonArray::Parse(param::hstring const& input)
     {
-        return impl::call_factory<JsonArray, Windows::Data::Json::IJsonArrayStatics>([&](auto&& f) { return f.Parse(input); });
+        return impl::call_factory<JsonArray, IJsonArrayStatics>([&](IJsonArrayStatics const& f) { return f.Parse(input); });
     }
     inline auto JsonArray::TryParse(param::hstring const& input, Windows::Data::Json::JsonArray& result)
     {
-        return impl::call_factory<JsonArray, Windows::Data::Json::IJsonArrayStatics>([&](auto&& f) { return f.TryParse(input, result); });
+        return impl::call_factory<JsonArray, IJsonArrayStatics>([&](IJsonArrayStatics const& f) { return f.TryParse(input, result); });
     }
     inline auto JsonError::GetJsonStatus(int32_t hresult)
     {
-        return impl::call_factory<JsonError, Windows::Data::Json::IJsonErrorStatics2>([&](auto&& f) { return f.GetJsonStatus(hresult); });
+        return impl::call_factory<JsonError, IJsonErrorStatics2>([&](IJsonErrorStatics2 const& f) { return f.GetJsonStatus(hresult); });
     }
     inline JsonObject::JsonObject() :
-        JsonObject(impl::call_factory<JsonObject>([](auto&& f) { return f.template ActivateInstance<JsonObject>(); }))
+        JsonObject(impl::call_factory_cast<JsonObject(*)(Windows::Foundation::IActivationFactory const&), JsonObject>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<JsonObject>(); }))
     {
     }
     inline auto JsonObject::Parse(param::hstring const& input)
     {
-        return impl::call_factory<JsonObject, Windows::Data::Json::IJsonObjectStatics>([&](auto&& f) { return f.Parse(input); });
+        return impl::call_factory<JsonObject, IJsonObjectStatics>([&](IJsonObjectStatics const& f) { return f.Parse(input); });
     }
     inline auto JsonObject::TryParse(param::hstring const& input, Windows::Data::Json::JsonObject& result)
     {
-        return impl::call_factory<JsonObject, Windows::Data::Json::IJsonObjectStatics>([&](auto&& f) { return f.TryParse(input, result); });
+        return impl::call_factory<JsonObject, IJsonObjectStatics>([&](IJsonObjectStatics const& f) { return f.TryParse(input, result); });
     }
     inline auto JsonValue::Parse(param::hstring const& input)
     {
-        return impl::call_factory<JsonValue, Windows::Data::Json::IJsonValueStatics>([&](auto&& f) { return f.Parse(input); });
+        return impl::call_factory<JsonValue, IJsonValueStatics>([&](IJsonValueStatics const& f) { return f.Parse(input); });
     }
     inline auto JsonValue::TryParse(param::hstring const& input, Windows::Data::Json::JsonValue& result)
     {
-        return impl::call_factory<JsonValue, Windows::Data::Json::IJsonValueStatics>([&](auto&& f) { return f.TryParse(input, result); });
+        return impl::call_factory<JsonValue, IJsonValueStatics>([&](IJsonValueStatics const& f) { return f.TryParse(input, result); });
     }
     inline auto JsonValue::CreateBooleanValue(bool input)
     {
-        return impl::call_factory<JsonValue, Windows::Data::Json::IJsonValueStatics>([&](auto&& f) { return f.CreateBooleanValue(input); });
+        return impl::call_factory<JsonValue, IJsonValueStatics>([&](IJsonValueStatics const& f) { return f.CreateBooleanValue(input); });
     }
     inline auto JsonValue::CreateNumberValue(double input)
     {
-        return impl::call_factory<JsonValue, Windows::Data::Json::IJsonValueStatics>([&](auto&& f) { return f.CreateNumberValue(input); });
+        return impl::call_factory<JsonValue, IJsonValueStatics>([&](IJsonValueStatics const& f) { return f.CreateNumberValue(input); });
     }
     inline auto JsonValue::CreateStringValue(param::hstring const& input)
     {
-        return impl::call_factory<JsonValue, Windows::Data::Json::IJsonValueStatics>([&](auto&& f) { return f.CreateStringValue(input); });
+        return impl::call_factory<JsonValue, IJsonValueStatics>([&](IJsonValueStatics const& f) { return f.CreateStringValue(input); });
     }
     inline auto JsonValue::CreateNullValue()
     {
-        return impl::call_factory<JsonValue, Windows::Data::Json::IJsonValueStatics2>([&](auto&& f) { return f.CreateNullValue(); });
+        return impl::call_factory_cast<Windows::Data::Json::JsonValue(*)(IJsonValueStatics2 const&), JsonValue, IJsonValueStatics2>([](IJsonValueStatics2 const& f) { return f.CreateNullValue(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Data::Json::IJsonArray> : winrt::impl::hash_base<winrt::Windows::Data::Json::IJsonArray> {};
-    template<> struct hash<winrt::Windows::Data::Json::IJsonArrayStatics> : winrt::impl::hash_base<winrt::Windows::Data::Json::IJsonArrayStatics> {};
-    template<> struct hash<winrt::Windows::Data::Json::IJsonErrorStatics2> : winrt::impl::hash_base<winrt::Windows::Data::Json::IJsonErrorStatics2> {};
-    template<> struct hash<winrt::Windows::Data::Json::IJsonObject> : winrt::impl::hash_base<winrt::Windows::Data::Json::IJsonObject> {};
-    template<> struct hash<winrt::Windows::Data::Json::IJsonObjectStatics> : winrt::impl::hash_base<winrt::Windows::Data::Json::IJsonObjectStatics> {};
-    template<> struct hash<winrt::Windows::Data::Json::IJsonObjectWithDefaultValues> : winrt::impl::hash_base<winrt::Windows::Data::Json::IJsonObjectWithDefaultValues> {};
-    template<> struct hash<winrt::Windows::Data::Json::IJsonValue> : winrt::impl::hash_base<winrt::Windows::Data::Json::IJsonValue> {};
-    template<> struct hash<winrt::Windows::Data::Json::IJsonValueStatics> : winrt::impl::hash_base<winrt::Windows::Data::Json::IJsonValueStatics> {};
-    template<> struct hash<winrt::Windows::Data::Json::IJsonValueStatics2> : winrt::impl::hash_base<winrt::Windows::Data::Json::IJsonValueStatics2> {};
-    template<> struct hash<winrt::Windows::Data::Json::JsonArray> : winrt::impl::hash_base<winrt::Windows::Data::Json::JsonArray> {};
-    template<> struct hash<winrt::Windows::Data::Json::JsonError> : winrt::impl::hash_base<winrt::Windows::Data::Json::JsonError> {};
-    template<> struct hash<winrt::Windows::Data::Json::JsonObject> : winrt::impl::hash_base<winrt::Windows::Data::Json::JsonObject> {};
-    template<> struct hash<winrt::Windows::Data::Json::JsonValue> : winrt::impl::hash_base<winrt::Windows::Data::Json::JsonValue> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Data::Json::IJsonArray> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::IJsonArrayStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::IJsonErrorStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::IJsonObject> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::IJsonObjectStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::IJsonObjectWithDefaultValues> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::IJsonValue> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::IJsonValueStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::IJsonValueStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::JsonArray> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::JsonError> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::JsonObject> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Data::Json::JsonValue> : winrt::impl::hash_base {};
+#endif
 }
 #endif

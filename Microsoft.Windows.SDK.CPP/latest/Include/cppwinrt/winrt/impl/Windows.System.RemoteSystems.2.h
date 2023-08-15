@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,7 +12,7 @@
 #include "winrt/impl/Windows.Security.Credentials.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.System.RemoteSystems.1.h"
-namespace winrt::Windows::System::RemoteSystems
+WINRT_EXPORT namespace winrt::Windows::System::RemoteSystems
 {
     struct KnownRemoteSystemCapabilities
     {
@@ -58,7 +58,7 @@ namespace winrt::Windows::System::RemoteSystems
     {
         RemoteSystemAuthorizationKindFilter(std::nullptr_t) noexcept {}
         RemoteSystemAuthorizationKindFilter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter(ptr, take_ownership_from_abi) {}
-        RemoteSystemAuthorizationKindFilter(Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& remoteSystemAuthorizationKind);
+        explicit RemoteSystemAuthorizationKindFilter(Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& remoteSystemAuthorizationKind);
     };
     struct __declspec(empty_bases) RemoteSystemConnectionInfo : Windows::System::RemoteSystems::IRemoteSystemConnectionInfo
     {
@@ -71,7 +71,7 @@ namespace winrt::Windows::System::RemoteSystems
     {
         RemoteSystemConnectionRequest(std::nullptr_t) noexcept {}
         RemoteSystemConnectionRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::RemoteSystems::IRemoteSystemConnectionRequest(ptr, take_ownership_from_abi) {}
-        RemoteSystemConnectionRequest(Windows::System::RemoteSystems::RemoteSystem const& remoteSystem);
+        explicit RemoteSystemConnectionRequest(Windows::System::RemoteSystems::RemoteSystem const& remoteSystem);
         static auto CreateForApp(Windows::System::RemoteSystems::RemoteSystemApp const& remoteSystemApp);
         static auto CreateFromConnectionToken(param::hstring const& connectionToken);
         static auto CreateFromConnectionTokenForUser(Windows::System::User const& user, param::hstring const& connectionToken);
@@ -81,7 +81,7 @@ namespace winrt::Windows::System::RemoteSystems
     {
         RemoteSystemDiscoveryTypeFilter(std::nullptr_t) noexcept {}
         RemoteSystemDiscoveryTypeFilter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter(ptr, take_ownership_from_abi) {}
-        RemoteSystemDiscoveryTypeFilter(Windows::System::RemoteSystems::RemoteSystemDiscoveryType const& discoveryType);
+        explicit RemoteSystemDiscoveryTypeFilter(Windows::System::RemoteSystems::RemoteSystemDiscoveryType const& discoveryType);
     };
     struct __declspec(empty_bases) RemoteSystemEnumerationCompletedEventArgs : Windows::System::RemoteSystems::IRemoteSystemEnumerationCompletedEventArgs
     {
@@ -93,7 +93,7 @@ namespace winrt::Windows::System::RemoteSystems
     {
         RemoteSystemKindFilter(std::nullptr_t) noexcept {}
         RemoteSystemKindFilter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::RemoteSystems::IRemoteSystemKindFilter(ptr, take_ownership_from_abi) {}
-        RemoteSystemKindFilter(param::iterable<hstring> const& remoteSystemKinds);
+        explicit RemoteSystemKindFilter(param::iterable<hstring> const& remoteSystemKinds);
     };
     struct RemoteSystemKinds
     {
@@ -128,7 +128,7 @@ namespace winrt::Windows::System::RemoteSystems
     {
         RemoteSystemSessionController(std::nullptr_t) noexcept {}
         RemoteSystemSessionController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::RemoteSystems::IRemoteSystemSessionController(ptr, take_ownership_from_abi) {}
-        RemoteSystemSessionController(param::hstring const& displayName);
+        explicit RemoteSystemSessionController(param::hstring const& displayName);
         RemoteSystemSessionController(param::hstring const& displayName, Windows::System::RemoteSystems::RemoteSystemSessionOptions const& options);
     };
     struct __declspec(empty_bases) RemoteSystemSessionCreationResult : Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult
@@ -235,7 +235,7 @@ namespace winrt::Windows::System::RemoteSystems
     {
         RemoteSystemStatusTypeFilter(std::nullptr_t) noexcept {}
         RemoteSystemStatusTypeFilter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter(ptr, take_ownership_from_abi) {}
-        RemoteSystemStatusTypeFilter(Windows::System::RemoteSystems::RemoteSystemStatusType const& remoteSystemStatusType);
+        explicit RemoteSystemStatusTypeFilter(Windows::System::RemoteSystems::RemoteSystemStatusType const& remoteSystemStatusType);
     };
     struct __declspec(empty_bases) RemoteSystemUpdatedEventArgs : Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs
     {
@@ -258,7 +258,7 @@ namespace winrt::Windows::System::RemoteSystems
     {
         RemoteSystemWebAccountFilter(std::nullptr_t) noexcept {}
         RemoteSystemWebAccountFilter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter(ptr, take_ownership_from_abi) {}
-        RemoteSystemWebAccountFilter(Windows::Security::Credentials::WebAccount const& account);
+        explicit RemoteSystemWebAccountFilter(Windows::Security::Credentials::WebAccount const& account);
     };
 }
 #endif

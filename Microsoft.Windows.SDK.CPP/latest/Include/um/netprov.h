@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -130,22 +138,27 @@ EXTERN_C const IID IID_IProvisioningDomain;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IProvisioningDomain * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IProvisioningDomain * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IProvisioningDomain * This);
         
+        DECLSPEC_XFGVIRT(IProvisioningDomain, Add)
         HRESULT ( STDMETHODCALLTYPE *Add )( 
             __RPC__in IProvisioningDomain * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszwPathToFolder);
         
+        DECLSPEC_XFGVIRT(IProvisioningDomain, Query)
         HRESULT ( STDMETHODCALLTYPE *Query )( 
             __RPC__in IProvisioningDomain * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pszwDomain,
@@ -273,18 +286,22 @@ EXTERN_C const IID IID_IProvisioningProfileWireless;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IProvisioningProfileWireless * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IProvisioningProfileWireless * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IProvisioningProfileWireless * This);
         
+        DECLSPEC_XFGVIRT(IProvisioningProfileWireless, CreateProfile)
         HRESULT ( STDMETHODCALLTYPE *CreateProfile )( 
             __RPC__in IProvisioningProfileWireless * This,
             /* [in] */ __RPC__in BSTR bstrXMLWirelessConfigProfile,

@@ -1,33 +1,39 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_WiFiDirect_0_H
 #define WINRT_Windows_Devices_WiFiDirect_0_H
-namespace winrt::Windows::Devices::Enumeration
+WINRT_EXPORT namespace winrt::Windows::Devices::Enumeration
 {
     struct DeviceInformation;
     enum class DevicePairingKinds : uint32_t;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IVector;
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+    template <typename T> struct __declspec(empty_bases) IVector;
 }
-namespace winrt::Windows::Security::Credentials
+WINRT_EXPORT namespace winrt::Windows::Networking
+{
+    struct EndpointPair;
+}
+WINRT_EXPORT namespace winrt::Windows::Security::Credentials
 {
     struct PasswordCredential;
 }
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IBuffer;
 }
-namespace winrt::Windows::Devices::WiFiDirect
+WINRT_EXPORT namespace winrt::Windows::Devices::WiFiDirect
 {
     enum class WiFiDirectAdvertisementListenStateDiscoverability : int32_t
     {
@@ -98,374 +104,98 @@ namespace winrt::Windows::Devices::WiFiDirect
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParametersStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectDevice>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectInformationElement>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectInformationElementStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectDevice>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectInformationElement>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectError>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement2" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisherStatusChangedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionListener" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParametersStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionParametersStatics" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequest" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectDevice>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectDevice" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectInformationElement>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectInformationElement" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectInformationElementStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectInformationElementStatics" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectConnectionListener" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectDevice>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectDevice" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectInformationElement>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatus" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectConnectionStatus" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectDeviceSelectorType" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectError>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectError" };
-    };
-    template <> struct name<Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure>
-    {
-        static constexpr auto & value{ L"Windows.Devices.WiFiDirect.WiFiDirectPairingProcedure" };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement>
-    {
-        static constexpr guid value{ 0xAB511A2D,0x2A06,0x49A1,{ 0xA5,0x84,0x61,0x43,0x5C,0x79,0x05,0xA6 } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement2>
-    {
-        static constexpr guid value{ 0xB759AA46,0xD816,0x491B,{ 0x91,0x7A,0xB4,0x0D,0x7D,0xC4,0x03,0xA2 } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher>
-    {
-        static constexpr guid value{ 0xB35A2D1A,0x9B1F,0x45D9,{ 0x92,0x5A,0x69,0x4D,0x66,0xDF,0x68,0xEF } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs>
-    {
-        static constexpr guid value{ 0xAAFDE53C,0x5481,0x46E6,{ 0x90,0xDD,0x32,0x11,0x65,0x18,0xF1,0x92 } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener>
-    {
-        static constexpr guid value{ 0x699C1B0D,0x8D13,0x4EE9,{ 0xB9,0xEC,0x9C,0x72,0xF8,0x25,0x1F,0x7D } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters>
-    {
-        static constexpr guid value{ 0xB2E55405,0x5702,0x4B16,{ 0xA0,0x2C,0xBB,0xCD,0x21,0xEF,0x60,0x98 } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters2>
-    {
-        static constexpr guid value{ 0xAB3B0FBE,0xAA82,0x44B4,{ 0x88,0xC8,0xE3,0x05,0x6B,0x89,0x80,0x1D } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParametersStatics>
-    {
-        static constexpr guid value{ 0x598AF493,0x7642,0x456F,{ 0xB9,0xD8,0xE8,0xA9,0xEB,0x1F,0x40,0x1A } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest>
-    {
-        static constexpr guid value{ 0x8EB99605,0x914F,0x49C3,{ 0xA6,0x14,0xD1,0x8D,0xC5,0xB1,0x9B,0x43 } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs>
-    {
-        static constexpr guid value{ 0xF99D20BE,0xD38D,0x484F,{ 0x82,0x15,0xE7,0xB6,0x5A,0xBF,0x24,0x4C } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectDevice>
-    {
-        static constexpr guid value{ 0x72DEAAA8,0x72EB,0x4DAE,{ 0x8A,0x28,0x85,0x13,0x35,0x5D,0x27,0x77 } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics>
-    {
-        static constexpr guid value{ 0xE86CB57C,0x3AAC,0x4851,{ 0xA7,0x92,0x48,0x2A,0xAF,0x93,0x1B,0x04 } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics2>
-    {
-        static constexpr guid value{ 0x1A953E49,0xB103,0x437E,{ 0x92,0x26,0xAB,0x67,0x97,0x13,0x42,0xF9 } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectInformationElement>
-    {
-        static constexpr guid value{ 0xAFFB72D6,0x76BB,0x497E,{ 0xAC,0x8B,0xDC,0x72,0x83,0x8B,0xC3,0x09 } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectInformationElementStatics>
-    {
-        static constexpr guid value{ 0xDBD02F16,0x11A5,0x4E60,{ 0x8C,0xAA,0x34,0x77,0x21,0x48,0x37,0x8A } };
-    };
-    template <> struct guid_storage<Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings>
-    {
-        static constexpr guid value{ 0xA64FDBBA,0xF2FD,0x4567,{ 0xA9,0x1B,0xF5,0xC2,0xF5,0x32,0x10,0x57 } };
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement;
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher;
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener;
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters;
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest;
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectDevice>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectDevice;
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectInformationElement>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectInformationElement;
-    };
-    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>
-    {
-        using type = Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings;
-    };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParametersStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectDevice>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectInformationElement>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectInformationElementStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectDevice>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectInformationElement>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>{ using type = class_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectError>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectAdvertisement> = L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher> = L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs> = L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener> = L"Windows.Devices.WiFiDirect.WiFiDirectConnectionListener";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters> = L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest> = L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs> = L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectDevice> = L"Windows.Devices.WiFiDirect.WiFiDirectDevice";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectInformationElement> = L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectLegacySettings> = L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability> = L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus> = L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod> = L"Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus> = L"Windows.Devices.WiFiDirect.WiFiDirectConnectionStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType> = L"Windows.Devices.WiFiDirect.WiFiDirectDeviceSelectorType";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectError> = L"Windows.Devices.WiFiDirect.WiFiDirectError";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure> = L"Windows.Devices.WiFiDirect.WiFiDirectPairingProcedure";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement> = L"Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement2> = L"Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement2";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher> = L"Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs> = L"Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisherStatusChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener> = L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionListener";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters> = L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters2> = L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParametersStatics> = L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionParametersStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest> = L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequest";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs> = L"Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectDevice> = L"Windows.Devices.WiFiDirect.IWiFiDirectDevice";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics> = L"Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics2> = L"Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectInformationElement> = L"Windows.Devices.WiFiDirect.IWiFiDirectInformationElement";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectInformationElementStatics> = L"Windows.Devices.WiFiDirect.IWiFiDirectInformationElementStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings> = L"Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings";
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement>{ 0xAB511A2D,0x2A06,0x49A1,{ 0xA5,0x84,0x61,0x43,0x5C,0x79,0x05,0xA6 } }; // AB511A2D-2A06-49A1-A584-61435C7905A6
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement2>{ 0xB759AA46,0xD816,0x491B,{ 0x91,0x7A,0xB4,0x0D,0x7D,0xC4,0x03,0xA2 } }; // B759AA46-D816-491B-917A-B40D7DC403A2
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher>{ 0xB35A2D1A,0x9B1F,0x45D9,{ 0x92,0x5A,0x69,0x4D,0x66,0xDF,0x68,0xEF } }; // B35A2D1A-9B1F-45D9-925A-694D66DF68EF
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs>{ 0xAAFDE53C,0x5481,0x46E6,{ 0x90,0xDD,0x32,0x11,0x65,0x18,0xF1,0x92 } }; // AAFDE53C-5481-46E6-90DD-32116518F192
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener>{ 0x699C1B0D,0x8D13,0x4EE9,{ 0xB9,0xEC,0x9C,0x72,0xF8,0x25,0x1F,0x7D } }; // 699C1B0D-8D13-4EE9-B9EC-9C72F8251F7D
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters>{ 0xB2E55405,0x5702,0x4B16,{ 0xA0,0x2C,0xBB,0xCD,0x21,0xEF,0x60,0x98 } }; // B2E55405-5702-4B16-A02C-BBCD21EF6098
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters2>{ 0xAB3B0FBE,0xAA82,0x44B4,{ 0x88,0xC8,0xE3,0x05,0x6B,0x89,0x80,0x1D } }; // AB3B0FBE-AA82-44B4-88C8-E3056B89801D
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParametersStatics>{ 0x598AF493,0x7642,0x456F,{ 0xB9,0xD8,0xE8,0xA9,0xEB,0x1F,0x40,0x1A } }; // 598AF493-7642-456F-B9D8-E8A9EB1F401A
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest>{ 0x8EB99605,0x914F,0x49C3,{ 0xA6,0x14,0xD1,0x8D,0xC5,0xB1,0x9B,0x43 } }; // 8EB99605-914F-49C3-A614-D18DC5B19B43
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs>{ 0xF99D20BE,0xD38D,0x484F,{ 0x82,0x15,0xE7,0xB6,0x5A,0xBF,0x24,0x4C } }; // F99D20BE-D38D-484F-8215-E7B65ABF244C
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectDevice>{ 0x72DEAAA8,0x72EB,0x4DAE,{ 0x8A,0x28,0x85,0x13,0x35,0x5D,0x27,0x77 } }; // 72DEAAA8-72EB-4DAE-8A28-8513355D2777
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics>{ 0xE86CB57C,0x3AAC,0x4851,{ 0xA7,0x92,0x48,0x2A,0xAF,0x93,0x1B,0x04 } }; // E86CB57C-3AAC-4851-A792-482AAF931B04
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics2>{ 0x1A953E49,0xB103,0x437E,{ 0x92,0x26,0xAB,0x67,0x97,0x13,0x42,0xF9 } }; // 1A953E49-B103-437E-9226-AB67971342F9
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectInformationElement>{ 0xAFFB72D6,0x76BB,0x497E,{ 0xAC,0x8B,0xDC,0x72,0x83,0x8B,0xC3,0x09 } }; // AFFB72D6-76BB-497E-AC8B-DC72838BC309
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectInformationElementStatics>{ 0xDBD02F16,0x11A5,0x4E60,{ 0x8C,0xAA,0x34,0x77,0x21,0x48,0x37,0x8A } }; // DBD02F16-11A5-4E60-8CAA-34772148378A
+    template <> inline constexpr guid guid_v<Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings>{ 0xA64FDBBA,0xF2FD,0x4567,{ 0xA9,0x1B,0xF5,0xC2,0xF5,0x32,0x10,0x57 } }; // A64FDBBA-F2FD-4567-A91B-F5C2F5321057
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement; };
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher; };
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs; };
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener; };
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters; };
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest; };
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs; };
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectDevice>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectDevice; };
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectInformationElement>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectInformationElement; };
+    template <> struct default_interface<Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>{ using type = Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings; };
     template <> struct abi<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -614,13 +344,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectAdvertisement
     {
-        [[nodiscard]] auto InformationElements() const;
-        auto InformationElements(param::vector<Windows::Devices::WiFiDirect::WiFiDirectInformationElement> const& value) const;
-        [[nodiscard]] auto ListenStateDiscoverability() const;
-        auto ListenStateDiscoverability(Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability const& value) const;
-        [[nodiscard]] auto IsAutonomousGroupOwnerEnabled() const;
-        auto IsAutonomousGroupOwnerEnabled(bool value) const;
-        [[nodiscard]] auto LegacySettings() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::WiFiDirect::WiFiDirectInformationElement>) InformationElements() const;
+        WINRT_IMPL_AUTO(void) InformationElements(param::vector<Windows::Devices::WiFiDirect::WiFiDirectInformationElement> const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability) ListenStateDiscoverability() const;
+        WINRT_IMPL_AUTO(void) ListenStateDiscoverability(Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAutonomousGroupOwnerEnabled() const;
+        WINRT_IMPL_AUTO(void) IsAutonomousGroupOwnerEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::WiFiDirect::WiFiDirectLegacySettings) LegacySettings() const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement>
     {
@@ -629,7 +359,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectAdvertisement2
     {
-        [[nodiscard]] auto SupportedConfigurationMethods() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>) SupportedConfigurationMethods() const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisement2>
     {
@@ -638,14 +368,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectAdvertisementPublisher
     {
-        [[nodiscard]] auto Advertisement() const;
-        [[nodiscard]] auto Status() const;
-        auto StatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher, Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::WiFiDirect::WiFiDirectAdvertisement) Advertisement() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus) Status() const;
+        WINRT_IMPL_AUTO(winrt::event_token) StatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher, Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs> const& handler) const;
         using StatusChanged_revoker = impl::event_revoker<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher, &impl::abi_t<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher>::remove_StatusChanged>;
-        StatusChanged_revoker StatusChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher, Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs> const& handler) const;
-        auto StatusChanged(winrt::event_token const& token) const noexcept;
-        auto Start() const;
-        auto Stop() const;
+        [[nodiscard]] StatusChanged_revoker StatusChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher, Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) StatusChanged(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(void) Start() const;
+        WINRT_IMPL_AUTO(void) Stop() const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisher>
     {
@@ -654,8 +384,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectAdvertisementPublisherStatusChangedEventArgs
     {
-        [[nodiscard]] auto Status() const;
-        [[nodiscard]] auto Error() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus) Status() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::WiFiDirect::WiFiDirectError) Error() const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectAdvertisementPublisherStatusChangedEventArgs>
     {
@@ -664,10 +394,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionListener
     {
-        auto ConnectionRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener, Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) ConnectionRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener, Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs> const& handler) const;
         using ConnectionRequested_revoker = impl::event_revoker<Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener, &impl::abi_t<Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener>::remove_ConnectionRequested>;
-        ConnectionRequested_revoker ConnectionRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener, Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs> const& handler) const;
-        auto ConnectionRequested(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] ConnectionRequested_revoker ConnectionRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectConnectionListener, Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ConnectionRequested(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectConnectionListener>
     {
@@ -676,8 +406,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionParameters
     {
-        [[nodiscard]] auto GroupOwnerIntent() const;
-        auto GroupOwnerIntent(int16_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int16_t) GroupOwnerIntent() const;
+        WINRT_IMPL_AUTO(void) GroupOwnerIntent(int16_t value) const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters>
     {
@@ -686,9 +416,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionParameters2
     {
-        [[nodiscard]] auto PreferenceOrderedConfigurationMethods() const;
-        [[nodiscard]] auto PreferredPairingProcedure() const;
-        auto PreferredPairingProcedure(Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>) PreferenceOrderedConfigurationMethods() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure) PreferredPairingProcedure() const;
+        WINRT_IMPL_AUTO(void) PreferredPairingProcedure(Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure const& value) const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters2>
     {
@@ -697,7 +427,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionParametersStatics
     {
-        auto GetDevicePairingKinds(Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod const& configurationMethod) const;
+        WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DevicePairingKinds) GetDevicePairingKinds(Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod const& configurationMethod) const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectConnectionParametersStatics>
     {
@@ -706,7 +436,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionRequest
     {
-        [[nodiscard]] auto DeviceInformation() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DeviceInformation) DeviceInformation() const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequest>
     {
@@ -715,7 +445,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectConnectionRequestedEventArgs
     {
-        auto GetConnectionRequest() const;
+        WINRT_IMPL_AUTO(Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest) GetConnectionRequest() const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectConnectionRequestedEventArgs>
     {
@@ -724,13 +454,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectDevice
     {
-        [[nodiscard]] auto ConnectionStatus() const;
-        [[nodiscard]] auto DeviceId() const;
-        auto ConnectionStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectDevice, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus) ConnectionStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
+        WINRT_IMPL_AUTO(winrt::event_token) ConnectionStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectDevice, Windows::Foundation::IInspectable> const& handler) const;
         using ConnectionStatusChanged_revoker = impl::event_revoker<Windows::Devices::WiFiDirect::IWiFiDirectDevice, &impl::abi_t<Windows::Devices::WiFiDirect::IWiFiDirectDevice>::remove_ConnectionStatusChanged>;
-        ConnectionStatusChanged_revoker ConnectionStatusChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectDevice, Windows::Foundation::IInspectable> const& handler) const;
-        auto ConnectionStatusChanged(winrt::event_token const& token) const noexcept;
-        auto GetConnectionEndpointPairs() const;
+        [[nodiscard]] ConnectionStatusChanged_revoker ConnectionStatusChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::WiFiDirect::WiFiDirectDevice, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) ConnectionStatusChanged(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Networking::EndpointPair>) GetConnectionEndpointPairs() const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectDevice>
     {
@@ -739,8 +469,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectDeviceStatics
     {
-        auto GetDeviceSelector() const;
-        auto FromIdAsync(param::hstring const& deviceId) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::WiFiDirect::WiFiDirectDevice>) FromIdAsync(param::hstring const& deviceId) const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics>
     {
@@ -749,8 +479,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectDeviceStatics2
     {
-        auto GetDeviceSelector(Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType const& type) const;
-        auto FromIdAsync(param::hstring const& deviceId, Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters const& connectionParameters) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType const& type) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::WiFiDirect::WiFiDirectDevice>) FromIdAsync(param::hstring const& deviceId, Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters const& connectionParameters) const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectDeviceStatics2>
     {
@@ -759,12 +489,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectInformationElement
     {
-        [[nodiscard]] auto Oui() const;
-        auto Oui(Windows::Storage::Streams::IBuffer const& value) const;
-        [[nodiscard]] auto OuiType() const;
-        auto OuiType(uint8_t value) const;
-        [[nodiscard]] auto Value() const;
-        auto Value(Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) Oui() const;
+        WINRT_IMPL_AUTO(void) Oui(Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) OuiType() const;
+        WINRT_IMPL_AUTO(void) OuiType(uint8_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) Value() const;
+        WINRT_IMPL_AUTO(void) Value(Windows::Storage::Streams::IBuffer const& value) const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectInformationElement>
     {
@@ -773,8 +503,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectInformationElementStatics
     {
-        auto CreateFromBuffer(Windows::Storage::Streams::IBuffer const& buffer) const;
-        auto CreateFromDeviceInformation(Windows::Devices::Enumeration::DeviceInformation const& deviceInformation) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::WiFiDirect::WiFiDirectInformationElement>) CreateFromBuffer(Windows::Storage::Streams::IBuffer const& buffer) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::WiFiDirect::WiFiDirectInformationElement>) CreateFromDeviceInformation(Windows::Devices::Enumeration::DeviceInformation const& deviceInformation) const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectInformationElementStatics>
     {
@@ -783,12 +513,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_WiFiDirect_IWiFiDirectLegacySettings
     {
-        [[nodiscard]] auto IsEnabled() const;
-        auto IsEnabled(bool value) const;
-        [[nodiscard]] auto Ssid() const;
-        auto Ssid(param::hstring const& value) const;
-        [[nodiscard]] auto Passphrase() const;
-        auto Passphrase(Windows::Security::Credentials::PasswordCredential const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
+        WINRT_IMPL_AUTO(void) IsEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Ssid() const;
+        WINRT_IMPL_AUTO(void) Ssid(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) Passphrase() const;
+        WINRT_IMPL_AUTO(void) Passphrase(Windows::Security::Credentials::PasswordCredential const& value) const;
     };
     template <> struct consume<Windows::Devices::WiFiDirect::IWiFiDirectLegacySettings>
     {

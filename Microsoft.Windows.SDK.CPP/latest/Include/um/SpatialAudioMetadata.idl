@@ -10,8 +10,8 @@ import "hstring.idl";
 import "propidl.idl";
 import "SpatialAudioClient.idl";
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application and Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 // Microsoft reserved metadata commands.   Custom metadata commands are restricted to
 // command ID zero thru 199.  200 to 255 are reserved for Microsoft use.
@@ -610,4 +610,4 @@ cpp_quote("#define SPTLAUD_MD_CLNT_E_BUFFER_STILL_ATTACHED               AUDCLNT
 cpp_quote("#define SPTLAUD_MD_CLNT_E_ITEMS_LOCKED_FOR_WRITING            AUDCLNT_ERR(0x0225)")
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")

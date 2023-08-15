@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -322,30 +330,38 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IMFPMediaPlayer * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMFPMediaPlayer * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IMFPMediaPlayer * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, Play)
         HRESULT ( STDMETHODCALLTYPE *Play )( 
             IMFPMediaPlayer * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, Pause)
         HRESULT ( STDMETHODCALLTYPE *Pause )( 
             IMFPMediaPlayer * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, Stop)
         HRESULT ( STDMETHODCALLTYPE *Stop )( 
             IMFPMediaPlayer * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, FrameStep)
         HRESULT ( STDMETHODCALLTYPE *FrameStep )( 
             IMFPMediaPlayer * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, SetPosition)
         HRESULT ( STDMETHODCALLTYPE *SetPosition )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
@@ -353,6 +369,7 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
             /* [annotation][in] */ 
             _In_  const PROPVARIANT *pvPositionValue);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetPosition)
         HRESULT ( STDMETHODCALLTYPE *GetPosition )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
@@ -360,6 +377,7 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
             /* [annotation][out] */ 
             _Out_  PROPVARIANT *pvPositionValue);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetDuration)
         HRESULT ( STDMETHODCALLTYPE *GetDuration )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
@@ -367,16 +385,19 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
             /* [annotation][out] */ 
             _Out_  PROPVARIANT *pvDurationValue);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, SetRate)
         HRESULT ( STDMETHODCALLTYPE *SetRate )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
             _In_  float flRate);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetRate)
         HRESULT ( STDMETHODCALLTYPE *GetRate )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  float *pflRate);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetSupportedRates)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedRates )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
@@ -386,11 +407,13 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
             /* [annotation][out] */ 
             _Out_  float *pflFastestRate);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetState)
         HRESULT ( STDMETHODCALLTYPE *GetState )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  MFP_MEDIAPLAYER_STATE *peState);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, CreateMediaItemFromURL)
         HRESULT ( STDMETHODCALLTYPE *CreateMediaItemFromURL )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
@@ -402,6 +425,7 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
             /* [annotation][out] */ 
             _Out_opt_  IMFPMediaItem **ppMediaItem);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, CreateMediaItemFromObject)
         HRESULT ( STDMETHODCALLTYPE *CreateMediaItemFromObject )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
@@ -413,49 +437,59 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
             /* [annotation][out] */ 
             _Out_opt_  IMFPMediaItem **ppMediaItem);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, SetMediaItem)
         HRESULT ( STDMETHODCALLTYPE *SetMediaItem )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
             _In_  IMFPMediaItem *pIMFPMediaItem);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, ClearMediaItem)
         HRESULT ( STDMETHODCALLTYPE *ClearMediaItem )( 
             IMFPMediaPlayer * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetMediaItem)
         HRESULT ( STDMETHODCALLTYPE *GetMediaItem )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  IMFPMediaItem **ppIMFPMediaItem);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetVolume)
         HRESULT ( STDMETHODCALLTYPE *GetVolume )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  float *pflVolume);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, SetVolume)
         HRESULT ( STDMETHODCALLTYPE *SetVolume )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
             _In_  float flVolume);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetBalance)
         HRESULT ( STDMETHODCALLTYPE *GetBalance )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  float *pflBalance);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, SetBalance)
         HRESULT ( STDMETHODCALLTYPE *SetBalance )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
             _In_  float flBalance);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetMute)
         HRESULT ( STDMETHODCALLTYPE *GetMute )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  BOOL *pfMute);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, SetMute)
         HRESULT ( STDMETHODCALLTYPE *SetMute )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
             _In_  BOOL fMute);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetNativeVideoSize)
         HRESULT ( STDMETHODCALLTYPE *GetNativeVideoSize )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
@@ -463,6 +497,7 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
             /* [annotation][out] */ 
             _Out_opt_  SIZE *pszARVideo);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetIdealVideoSize)
         HRESULT ( STDMETHODCALLTYPE *GetIdealVideoSize )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
@@ -470,44 +505,53 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
             /* [annotation][out] */ 
             _Out_opt_  SIZE *pszMax);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, SetVideoSourceRect)
         HRESULT ( STDMETHODCALLTYPE *SetVideoSourceRect )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
             _In_  const MFVideoNormalizedRect *pnrcSource);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetVideoSourceRect)
         HRESULT ( STDMETHODCALLTYPE *GetVideoSourceRect )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  MFVideoNormalizedRect *pnrcSource);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, SetAspectRatioMode)
         HRESULT ( STDMETHODCALLTYPE *SetAspectRatioMode )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
             _In_  DWORD dwAspectRatioMode);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetAspectRatioMode)
         HRESULT ( STDMETHODCALLTYPE *GetAspectRatioMode )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  DWORD *pdwAspectRatioMode);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetVideoWindow)
         HRESULT ( STDMETHODCALLTYPE *GetVideoWindow )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  HWND *phwndVideo);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, UpdateVideo)
         HRESULT ( STDMETHODCALLTYPE *UpdateVideo )( 
             IMFPMediaPlayer * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, SetBorderColor)
         HRESULT ( STDMETHODCALLTYPE *SetBorderColor )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
             _In_  COLORREF Clr);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, GetBorderColor)
         HRESULT ( STDMETHODCALLTYPE *GetBorderColor )( 
             IMFPMediaPlayer * This,
             /* [annotation][out] */ 
             _Out_  COLORREF *pClr);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, InsertEffect)
         HRESULT ( STDMETHODCALLTYPE *InsertEffect )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
@@ -515,14 +559,17 @@ EXTERN_C const IID IID_IMFPMediaPlayer;
             /* [annotation][in] */ 
             _In_  BOOL fOptional);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, RemoveEffect)
         HRESULT ( STDMETHODCALLTYPE *RemoveEffect )( 
             IMFPMediaPlayer * This,
             /* [annotation][in] */ 
             _In_  IUnknown *pEffect);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, RemoveAllEffects)
         HRESULT ( STDMETHODCALLTYPE *RemoveAllEffects )( 
             IMFPMediaPlayer * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayer, Shutdown)
         HRESULT ( STDMETHODCALLTYPE *Shutdown )( 
             IMFPMediaPlayer * This);
         
@@ -807,43 +854,52 @@ EXTERN_C const IID IID_IMFPMediaItem;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IMFPMediaItem * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMFPMediaItem * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IMFPMediaItem * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetMediaPlayer)
         HRESULT ( STDMETHODCALLTYPE *GetMediaPlayer )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
             _Out_  IMFPMediaPlayer **ppMediaPlayer);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetURL)
         HRESULT ( STDMETHODCALLTYPE *GetURL )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
             _Out_  LPWSTR *ppwszURL);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetObject)
         HRESULT ( STDMETHODCALLTYPE *GetObject )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
             _Out_  IUnknown **ppIUnknown);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetUserData)
         HRESULT ( STDMETHODCALLTYPE *GetUserData )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
             _Out_  DWORD_PTR *pdwUserData);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, SetUserData)
         HRESULT ( STDMETHODCALLTYPE *SetUserData )( 
             IMFPMediaItem * This,
             /* [annotation][in] */ 
             _In_  DWORD_PTR dwUserData);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetStartStopPosition)
         HRESULT ( STDMETHODCALLTYPE *GetStartStopPosition )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
@@ -855,6 +911,7 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][out] */ 
             _Out_opt_  PROPVARIANT *pvStopValue);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, SetStartStopPosition)
         HRESULT ( STDMETHODCALLTYPE *SetStartStopPosition )( 
             IMFPMediaItem * This,
             /* [annotation][in] */ 
@@ -866,6 +923,7 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][in] */ 
             _In_opt_  const PROPVARIANT *pvStopValue);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, HasVideo)
         HRESULT ( STDMETHODCALLTYPE *HasVideo )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
@@ -873,6 +931,7 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][out] */ 
             _Out_opt_  BOOL *pfSelected);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, HasAudio)
         HRESULT ( STDMETHODCALLTYPE *HasAudio )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
@@ -880,11 +939,13 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][out] */ 
             _Out_opt_  BOOL *pfSelected);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, IsProtected)
         HRESULT ( STDMETHODCALLTYPE *IsProtected )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
             _Out_  BOOL *pfProtected);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetDuration)
         HRESULT ( STDMETHODCALLTYPE *GetDuration )( 
             IMFPMediaItem * This,
             /* [annotation][in] */ 
@@ -892,11 +953,13 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][out] */ 
             _Out_  PROPVARIANT *pvDurationValue);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetNumberOfStreams)
         HRESULT ( STDMETHODCALLTYPE *GetNumberOfStreams )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
             _Out_  DWORD *pdwStreamCount);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetStreamSelection)
         HRESULT ( STDMETHODCALLTYPE *GetStreamSelection )( 
             IMFPMediaItem * This,
             /* [annotation][in] */ 
@@ -904,6 +967,7 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][out] */ 
             _Out_  BOOL *pfEnabled);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, SetStreamSelection)
         HRESULT ( STDMETHODCALLTYPE *SetStreamSelection )( 
             IMFPMediaItem * This,
             /* [annotation][in] */ 
@@ -911,6 +975,7 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][in] */ 
             _In_  BOOL fEnabled);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetStreamAttribute)
         HRESULT ( STDMETHODCALLTYPE *GetStreamAttribute )( 
             IMFPMediaItem * This,
             /* [annotation][in] */ 
@@ -920,6 +985,7 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][out] */ 
             _Out_  PROPVARIANT *pvValue);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetPresentationAttribute)
         HRESULT ( STDMETHODCALLTYPE *GetPresentationAttribute )( 
             IMFPMediaItem * This,
             /* [annotation][in] */ 
@@ -927,11 +993,13 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][out] */ 
             _Out_  PROPVARIANT *pvValue);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetCharacteristics)
         HRESULT ( STDMETHODCALLTYPE *GetCharacteristics )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
             _Out_  MFP_MEDIAITEM_CHARACTERISTICS *pCharacteristics);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, SetStreamSink)
         HRESULT ( STDMETHODCALLTYPE *SetStreamSink )( 
             IMFPMediaItem * This,
             /* [annotation][in] */ 
@@ -939,6 +1007,7 @@ EXTERN_C const IID IID_IMFPMediaItem;
             /* [annotation][in] */ 
             _In_opt_  IUnknown *pMediaSink);
         
+        DECLSPEC_XFGVIRT(IMFPMediaItem, GetMetadata)
         HRESULT ( STDMETHODCALLTYPE *GetMetadata )( 
             IMFPMediaItem * This,
             /* [annotation][out] */ 
@@ -1204,18 +1273,22 @@ EXTERN_C const IID IID_IMFPMediaPlayerCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IMFPMediaPlayerCallback * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMFPMediaPlayerCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IMFPMediaPlayerCallback * This);
         
+        DECLSPEC_XFGVIRT(IMFPMediaPlayerCallback, OnMediaPlayerEvent)
         void ( STDMETHODCALLTYPE *OnMediaPlayerEvent )( 
             IMFPMediaPlayerCallback * This,
             /* [annotation][in] */ 

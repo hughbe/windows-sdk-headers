@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Graphics_Imaging_H
 #define WINRT_Windows_Graphics_Imaging_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Graphics.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -15,611 +15,612 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Graphics.Imaging.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapBuffer<D>::GetPlaneCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Graphics_Imaging_IBitmapBuffer<D>::GetPlaneCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapBuffer)->GetPlaneCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapBuffer<D>::GetPlaneDescription(int32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapPlaneDescription) consume_Windows_Graphics_Imaging_IBitmapBuffer<D>::GetPlaneDescription(int32_t index) const
     {
-        Windows::Graphics::Imaging::BitmapPlaneDescription value;
+        Windows::Graphics::Imaging::BitmapPlaneDescription value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapBuffer)->GetPlaneDescription(index, put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapCodecInformation<D>::CodecId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapCodecInformation<D>::CodecId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapCodecInformation)->get_CodecId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapCodecInformation<D>::FileExtensions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Graphics_Imaging_IBitmapCodecInformation<D>::FileExtensions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapCodecInformation)->get_FileExtensions(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapCodecInformation<D>::FriendlyName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Imaging_IBitmapCodecInformation<D>::FriendlyName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapCodecInformation)->get_FriendlyName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapCodecInformation<D>::MimeTypes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Graphics_Imaging_IBitmapCodecInformation<D>::MimeTypes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapCodecInformation)->get_MimeTypes(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::BitmapContainerProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapPropertiesView) consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::BitmapContainerProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoder)->get_BitmapContainerProperties(&value));
         return Windows::Graphics::Imaging::BitmapPropertiesView{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::DecoderInformation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapCodecInformation) consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::DecoderInformation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoder)->get_DecoderInformation(&value));
         return Windows::Graphics::Imaging::BitmapCodecInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::FrameCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::FrameCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoder)->get_FrameCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::GetPreviewAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::ImageStream>) consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::GetPreviewAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoder)->GetPreviewAsync(&asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::ImageStream>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::GetFrameAsync(uint32_t frameIndex) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapFrame>) consume_Windows_Graphics_Imaging_IBitmapDecoder<D>::GetFrameAsync(uint32_t frameIndex) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoder)->GetFrameAsync(frameIndex, &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapFrame>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::BmpDecoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::BmpDecoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->get_BmpDecoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::JpegDecoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::JpegDecoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->get_JpegDecoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::PngDecoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::PngDecoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->get_PngDecoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::TiffDecoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::TiffDecoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->get_TiffDecoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::GifDecoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::GifDecoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->get_GifDecoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::JpegXRDecoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::JpegXRDecoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->get_JpegXRDecoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::IcoDecoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::IcoDecoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->get_IcoDecoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::GetDecoderInformationEnumerator() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapCodecInformation>) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::GetDecoderInformationEnumerator() const
     {
         void* decoderInformationEnumerator{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->GetDecoderInformationEnumerator(&decoderInformationEnumerator));
         return Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapCodecInformation>{ decoderInformationEnumerator, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::CreateAsync(Windows::Storage::Streams::IRandomAccessStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapDecoder>) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::CreateAsync(Windows::Storage::Streams::IRandomAccessStream const& stream) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->CreateAsync(*(void**)(&stream), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapDecoder>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::CreateAsync(winrt::guid const& decoderId, Windows::Storage::Streams::IRandomAccessStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapDecoder>) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics<D>::CreateAsync(winrt::guid const& decoderId, Windows::Storage::Streams::IRandomAccessStream const& stream) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics)->CreateWithIdAsync(impl::bind_in(decoderId), *(void**)(&stream), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapDecoder>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics2<D>::HeifDecoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics2<D>::HeifDecoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics2)->get_HeifDecoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapDecoderStatics2<D>::WebpDecoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapDecoderStatics2<D>::WebpDecoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapDecoderStatics2)->get_WebpDecoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::EncoderInformation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapCodecInformation) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::EncoderInformation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->get_EncoderInformation(&value));
         return Windows::Graphics::Imaging::BitmapCodecInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::BitmapProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapProperties) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::BitmapProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->get_BitmapProperties(&value));
         return Windows::Graphics::Imaging::BitmapProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::BitmapContainerProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapProperties) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::BitmapContainerProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->get_BitmapContainerProperties(&value));
         return Windows::Graphics::Imaging::BitmapProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::IsThumbnailGenerated() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::IsThumbnailGenerated() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->get_IsThumbnailGenerated(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::IsThumbnailGenerated(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::IsThumbnailGenerated(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->put_IsThumbnailGenerated(value));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GeneratedThumbnailWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GeneratedThumbnailWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->get_GeneratedThumbnailWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GeneratedThumbnailWidth(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GeneratedThumbnailWidth(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->put_GeneratedThumbnailWidth(value));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GeneratedThumbnailHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GeneratedThumbnailHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->get_GeneratedThumbnailHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GeneratedThumbnailHeight(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GeneratedThumbnailHeight(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->put_GeneratedThumbnailHeight(value));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::BitmapTransform() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapTransform) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::BitmapTransform() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->get_BitmapTransform(&value));
         return Windows::Graphics::Imaging::BitmapTransform{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::SetPixelData(Windows::Graphics::Imaging::BitmapPixelFormat const& pixelFormat, Windows::Graphics::Imaging::BitmapAlphaMode const& alphaMode, uint32_t width, uint32_t height, double dpiX, double dpiY, array_view<uint8_t const> pixels) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::SetPixelData(Windows::Graphics::Imaging::BitmapPixelFormat const& pixelFormat, Windows::Graphics::Imaging::BitmapAlphaMode const& alphaMode, uint32_t width, uint32_t height, double dpiX, double dpiY, array_view<uint8_t const> pixels) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->SetPixelData(static_cast<int32_t>(pixelFormat), static_cast<int32_t>(alphaMode), width, height, dpiX, dpiY, pixels.size(), get_abi(pixels)));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GoToNextFrameAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GoToNextFrameAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->GoToNextFrameAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GoToNextFrameAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Graphics::Imaging::BitmapTypedValue>> const& encodingOptions) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::GoToNextFrameAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Graphics::Imaging::BitmapTypedValue>> const& encodingOptions) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->GoToNextFrameWithEncodingOptionsAsync(*(void**)(&encodingOptions), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::FlushAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Graphics_Imaging_IBitmapEncoder<D>::FlushAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoder)->FlushAsync(&asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::BmpEncoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::BmpEncoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->get_BmpEncoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::JpegEncoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::JpegEncoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->get_JpegEncoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::PngEncoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::PngEncoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->get_PngEncoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::TiffEncoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::TiffEncoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->get_TiffEncoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::GifEncoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::GifEncoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->get_GifEncoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::JpegXREncoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::JpegXREncoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->get_JpegXREncoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::GetEncoderInformationEnumerator() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapCodecInformation>) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::GetEncoderInformationEnumerator() const
     {
         void* encoderInformationEnumerator{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->GetEncoderInformationEnumerator(&encoderInformationEnumerator));
         return Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapCodecInformation>{ encoderInformationEnumerator, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::CreateAsync(winrt::guid const& encoderId, Windows::Storage::Streams::IRandomAccessStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapEncoder>) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::CreateAsync(winrt::guid const& encoderId, Windows::Storage::Streams::IRandomAccessStream const& stream) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->CreateAsync(impl::bind_in(encoderId), *(void**)(&stream), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapEncoder>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::CreateAsync(winrt::guid const& encoderId, Windows::Storage::Streams::IRandomAccessStream const& stream, param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Graphics::Imaging::BitmapTypedValue>> const& encodingOptions) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapEncoder>) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::CreateAsync(winrt::guid const& encoderId, Windows::Storage::Streams::IRandomAccessStream const& stream, param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Graphics::Imaging::BitmapTypedValue>> const& encodingOptions) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->CreateWithEncodingOptionsAsync(impl::bind_in(encoderId), *(void**)(&stream), *(void**)(&encodingOptions), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapEncoder>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::CreateForTranscodingAsync(Windows::Storage::Streams::IRandomAccessStream const& stream, Windows::Graphics::Imaging::BitmapDecoder const& bitmapDecoder) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapEncoder>) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::CreateForTranscodingAsync(Windows::Storage::Streams::IRandomAccessStream const& stream, Windows::Graphics::Imaging::BitmapDecoder const& bitmapDecoder) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->CreateForTranscodingAsync(*(void**)(&stream), *(void**)(&bitmapDecoder), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapEncoder>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::CreateForInPlacePropertyEncodingAsync(Windows::Graphics::Imaging::BitmapDecoder const& bitmapDecoder) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapEncoder>) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics<D>::CreateForInPlacePropertyEncodingAsync(Windows::Graphics::Imaging::BitmapDecoder const& bitmapDecoder) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics)->CreateForInPlacePropertyEncodingAsync(*(void**)(&bitmapDecoder), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapEncoder>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderStatics2<D>::HeifEncoderId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Graphics_Imaging_IBitmapEncoderStatics2<D>::HeifEncoderId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderStatics2)->get_HeifEncoderId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapEncoderWithSoftwareBitmap<D>::SetSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapEncoderWithSoftwareBitmap<D>::SetSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapEncoderWithSoftwareBitmap)->SetSoftwareBitmap(*(void**)(&bitmap)));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::GetThumbnailAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::ImageStream>) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::GetThumbnailAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->GetThumbnailAsync(&asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::ImageStream>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::BitmapProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapPropertiesView) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::BitmapProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_BitmapProperties(&value));
         return Windows::Graphics::Imaging::BitmapPropertiesView{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::BitmapPixelFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapPixelFormat) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::BitmapPixelFormat() const
     {
-        Windows::Graphics::Imaging::BitmapPixelFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_BitmapPixelFormat(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapPixelFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_BitmapPixelFormat(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::BitmapAlphaMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapAlphaMode) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::BitmapAlphaMode() const
     {
-        Windows::Graphics::Imaging::BitmapAlphaMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_BitmapAlphaMode(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapAlphaMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_BitmapAlphaMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::DpiX() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::DpiX() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_DpiX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::DpiY() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::DpiY() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_DpiY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::PixelWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::PixelWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_PixelWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::PixelHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::PixelHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_PixelHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::OrientedPixelWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::OrientedPixelWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_OrientedPixelWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::OrientedPixelHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::OrientedPixelHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->get_OrientedPixelHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::GetPixelDataAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::PixelDataProvider>) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::GetPixelDataAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->GetPixelDataAsync(&asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::PixelDataProvider>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrame<D>::GetPixelDataAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& pixelFormat, Windows::Graphics::Imaging::BitmapAlphaMode const& alphaMode, Windows::Graphics::Imaging::BitmapTransform const& transform, Windows::Graphics::Imaging::ExifOrientationMode const& exifOrientationMode, Windows::Graphics::Imaging::ColorManagementMode const& colorManagementMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::PixelDataProvider>) consume_Windows_Graphics_Imaging_IBitmapFrame<D>::GetPixelDataAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& pixelFormat, Windows::Graphics::Imaging::BitmapAlphaMode const& alphaMode, Windows::Graphics::Imaging::BitmapTransform const& transform, Windows::Graphics::Imaging::ExifOrientationMode const& exifOrientationMode, Windows::Graphics::Imaging::ColorManagementMode const& colorManagementMode) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrame)->GetPixelDataTransformedAsync(static_cast<int32_t>(pixelFormat), static_cast<int32_t>(alphaMode), *(void**)(&transform), static_cast<int32_t>(exifOrientationMode), static_cast<int32_t>(colorManagementMode), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::PixelDataProvider>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrameWithSoftwareBitmap<D>::GetSoftwareBitmapAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>) consume_Windows_Graphics_Imaging_IBitmapFrameWithSoftwareBitmap<D>::GetSoftwareBitmapAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap)->GetSoftwareBitmapAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrameWithSoftwareBitmap<D>::GetSoftwareBitmapAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& pixelFormat, Windows::Graphics::Imaging::BitmapAlphaMode const& alphaMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>) consume_Windows_Graphics_Imaging_IBitmapFrameWithSoftwareBitmap<D>::GetSoftwareBitmapAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& pixelFormat, Windows::Graphics::Imaging::BitmapAlphaMode const& alphaMode) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap)->GetSoftwareBitmapConvertedAsync(static_cast<int32_t>(pixelFormat), static_cast<int32_t>(alphaMode), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapFrameWithSoftwareBitmap<D>::GetSoftwareBitmapAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& pixelFormat, Windows::Graphics::Imaging::BitmapAlphaMode const& alphaMode, Windows::Graphics::Imaging::BitmapTransform const& transform, Windows::Graphics::Imaging::ExifOrientationMode const& exifOrientationMode, Windows::Graphics::Imaging::ColorManagementMode const& colorManagementMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>) consume_Windows_Graphics_Imaging_IBitmapFrameWithSoftwareBitmap<D>::GetSoftwareBitmapAsync(Windows::Graphics::Imaging::BitmapPixelFormat const& pixelFormat, Windows::Graphics::Imaging::BitmapAlphaMode const& alphaMode, Windows::Graphics::Imaging::BitmapTransform const& transform, Windows::Graphics::Imaging::ExifOrientationMode const& exifOrientationMode, Windows::Graphics::Imaging::ColorManagementMode const& colorManagementMode) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap)->GetSoftwareBitmapTransformedAsync(static_cast<int32_t>(pixelFormat), static_cast<int32_t>(alphaMode), *(void**)(&transform), static_cast<int32_t>(exifOrientationMode), static_cast<int32_t>(colorManagementMode), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapProperties<D>::SetPropertiesAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Graphics::Imaging::BitmapTypedValue>> const& propertiesToSet) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Graphics_Imaging_IBitmapProperties<D>::SetPropertiesAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Graphics::Imaging::BitmapTypedValue>> const& propertiesToSet) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapProperties)->SetPropertiesAsync(*(void**)(&propertiesToSet), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapPropertiesView<D>::GetPropertiesAsync(param::async_iterable<hstring> const& propertiesToRetrieve) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapPropertySet>) consume_Windows_Graphics_Imaging_IBitmapPropertiesView<D>::GetPropertiesAsync(param::async_iterable<hstring> const& propertiesToRetrieve) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapPropertiesView)->GetPropertiesAsync(*(void**)(&propertiesToRetrieve), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::BitmapPropertySet>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::ScaledWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::ScaledWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->get_ScaledWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::ScaledWidth(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::ScaledWidth(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->put_ScaledWidth(value));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::ScaledHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::ScaledHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->get_ScaledHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::ScaledHeight(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::ScaledHeight(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->put_ScaledHeight(value));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::InterpolationMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapInterpolationMode) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::InterpolationMode() const
     {
-        Windows::Graphics::Imaging::BitmapInterpolationMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->get_InterpolationMode(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapInterpolationMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->get_InterpolationMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::InterpolationMode(Windows::Graphics::Imaging::BitmapInterpolationMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::InterpolationMode(Windows::Graphics::Imaging::BitmapInterpolationMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->put_InterpolationMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Flip() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapFlip) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Flip() const
     {
-        Windows::Graphics::Imaging::BitmapFlip value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->get_Flip(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapFlip value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->get_Flip(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Flip(Windows::Graphics::Imaging::BitmapFlip const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Flip(Windows::Graphics::Imaging::BitmapFlip const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->put_Flip(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Rotation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapRotation) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Rotation() const
     {
-        Windows::Graphics::Imaging::BitmapRotation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->get_Rotation(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapRotation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->get_Rotation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Rotation(Windows::Graphics::Imaging::BitmapRotation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Rotation(Windows::Graphics::Imaging::BitmapRotation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->put_Rotation(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Bounds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapBounds) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Bounds() const
     {
-        Windows::Graphics::Imaging::BitmapBounds value;
+        Windows::Graphics::Imaging::BitmapBounds value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->get_Bounds(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Bounds(Windows::Graphics::Imaging::BitmapBounds const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_IBitmapTransform<D>::Bounds(Windows::Graphics::Imaging::BitmapBounds const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTransform)->put_Bounds(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTypedValue<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Graphics_Imaging_IBitmapTypedValue<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTypedValue)->get_Value(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTypedValue<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::PropertyType) consume_Windows_Graphics_Imaging_IBitmapTypedValue<D>::Type() const
     {
-        Windows::Foundation::PropertyType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTypedValue)->get_Type(put_abi(value)));
+        Windows::Foundation::PropertyType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTypedValue)->get_Type(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IBitmapTypedValueFactory<D>::Create(Windows::Foundation::IInspectable const& value, Windows::Foundation::PropertyType const& type) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapTypedValue) consume_Windows_Graphics_Imaging_IBitmapTypedValueFactory<D>::Create(Windows::Foundation::IInspectable const& value, Windows::Foundation::PropertyType const& type) const
     {
         void* bitmapTypedValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IBitmapTypedValueFactory)->Create(*(void**)(&value), static_cast<int32_t>(type), &bitmapTypedValue));
         return Windows::Graphics::Imaging::BitmapTypedValue{ bitmapTypedValue, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_IPixelDataProvider<D>::DetachPixelData() const
+    template <typename D> WINRT_IMPL_AUTO(com_array<uint8_t>) consume_Windows_Graphics_Imaging_IPixelDataProvider<D>::DetachPixelData() const
     {
         uint32_t pixelData_impl_size{};
         uint8_t* pixelData{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::IPixelDataProvider)->DetachPixelData(&pixelData_impl_size, &pixelData));
         return com_array<uint8_t>{ pixelData, pixelData_impl_size, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::BitmapPixelFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapPixelFormat) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::BitmapPixelFormat() const
     {
-        Windows::Graphics::Imaging::BitmapPixelFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->get_BitmapPixelFormat(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapPixelFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->get_BitmapPixelFormat(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::BitmapAlphaMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapAlphaMode) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::BitmapAlphaMode() const
     {
-        Windows::Graphics::Imaging::BitmapAlphaMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->get_BitmapAlphaMode(put_abi(value)));
+        Windows::Graphics::Imaging::BitmapAlphaMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->get_BitmapAlphaMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::PixelWidth() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::PixelWidth() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->get_PixelWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::PixelHeight() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::PixelHeight() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->get_PixelHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::IsReadOnly() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::IsReadOnly() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->get_IsReadOnly(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::DpiX(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::DpiX(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->put_DpiX(value));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::DpiX() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::DpiX() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->get_DpiX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::DpiY(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::DpiY(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->put_DpiY(value));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::DpiY() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::DpiY() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->get_DpiY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::LockBuffer(Windows::Graphics::Imaging::BitmapBufferAccessMode const& mode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::BitmapBuffer) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::LockBuffer(Windows::Graphics::Imaging::BitmapBufferAccessMode const& mode) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->LockBuffer(static_cast<int32_t>(mode), &value));
         return Windows::Graphics::Imaging::BitmapBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::CopyTo(Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::CopyTo(Windows::Graphics::Imaging::SoftwareBitmap const& bitmap) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->CopyTo(*(void**)(&bitmap)));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::CopyFromBuffer(Windows::Storage::Streams::IBuffer const& buffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::CopyFromBuffer(Windows::Storage::Streams::IBuffer const& buffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->CopyFromBuffer(*(void**)(&buffer)));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::CopyToBuffer(Windows::Storage::Streams::IBuffer const& buffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::CopyToBuffer(Windows::Storage::Streams::IBuffer const& buffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->CopyToBuffer(*(void**)(&buffer)));
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::GetReadOnlyView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Graphics_Imaging_ISoftwareBitmap<D>::GetReadOnlyView() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmap)->GetReadOnlyView(&value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmapFactory<D>::Create(Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Graphics_Imaging_ISoftwareBitmapFactory<D>::Create(Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmapFactory)->Create(static_cast<int32_t>(format), width, height, &value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmapFactory<D>::CreateWithAlpha(Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Graphics_Imaging_ISoftwareBitmapFactory<D>::CreateWithAlpha(Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmapFactory)->CreateWithAlpha(static_cast<int32_t>(format), width, height, static_cast<int32_t>(alpha), &value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::Copy(Windows::Graphics::Imaging::SoftwareBitmap const& source) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::Copy(Windows::Graphics::Imaging::SoftwareBitmap const& source) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmapStatics)->Copy(*(void**)(&source), &value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::Convert(Windows::Graphics::Imaging::SoftwareBitmap const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::Convert(Windows::Graphics::Imaging::SoftwareBitmap const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmapStatics)->Convert(*(void**)(&source), static_cast<int32_t>(format), &value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::Convert(Windows::Graphics::Imaging::SoftwareBitmap const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::Convert(Windows::Graphics::Imaging::SoftwareBitmap const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmapStatics)->ConvertWithAlpha(*(void**)(&source), static_cast<int32_t>(format), static_cast<int32_t>(alpha), &value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::CreateCopyFromBuffer(Windows::Storage::Streams::IBuffer const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::CreateCopyFromBuffer(Windows::Storage::Streams::IBuffer const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmapStatics)->CreateCopyFromBuffer(*(void**)(&source), static_cast<int32_t>(format), width, height, &value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::CreateCopyFromBuffer(Windows::Storage::Streams::IBuffer const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::CreateCopyFromBuffer(Windows::Storage::Streams::IBuffer const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmapStatics)->CreateCopyWithAlphaFromBuffer(*(void**)(&source), static_cast<int32_t>(format), width, height, static_cast<int32_t>(alpha), &value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::CreateCopyFromSurfaceAsync(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>) consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::CreateCopyFromSurfaceAsync(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmapStatics)->CreateCopyFromSurfaceAsync(*(void**)(&surface), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::CreateCopyFromSurfaceAsync(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>) consume_Windows_Graphics_Imaging_ISoftwareBitmapStatics<D>::CreateCopyFromSurfaceAsync(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Imaging::ISoftwareBitmapStatics)->CreateCopyWithAlphaFromSurfaceAsync(*(void**)(&surface), static_cast<int32_t>(alpha), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Imaging::SoftwareBitmap>{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapBuffer> : produce_base<D, Windows::Graphics::Imaging::IBitmapBuffer>
     {
@@ -639,6 +640,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapCodecInformation> : produce_base<D, Windows::Graphics::Imaging::IBitmapCodecInformation>
     {
@@ -674,6 +677,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapDecoder> : produce_base<D, Windows::Graphics::Imaging::IBitmapDecoder>
     {
@@ -717,6 +722,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapDecoderStatics> : produce_base<D, Windows::Graphics::Imaging::IBitmapDecoderStatics>
     {
@@ -794,6 +801,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapDecoderStatics2> : produce_base<D, Windows::Graphics::Imaging::IBitmapDecoderStatics2>
     {
@@ -812,6 +821,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapEncoder> : produce_base<D, Windows::Graphics::Imaging::IBitmapEncoder>
     {
@@ -921,6 +932,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapEncoderStatics> : produce_base<D, Windows::Graphics::Imaging::IBitmapEncoderStatics>
     {
@@ -1007,6 +1020,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapEncoderStatics2> : produce_base<D, Windows::Graphics::Imaging::IBitmapEncoderStatics2>
     {
@@ -1018,6 +1033,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapEncoderWithSoftwareBitmap> : produce_base<D, Windows::Graphics::Imaging::IBitmapEncoderWithSoftwareBitmap>
     {
@@ -1029,6 +1046,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapFrame> : produce_base<D, Windows::Graphics::Imaging::IBitmapFrame>
     {
@@ -1149,6 +1167,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapProperties> : produce_base<D, Windows::Graphics::Imaging::IBitmapProperties>
     {
@@ -1161,6 +1180,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapPropertiesView> : produce_base<D, Windows::Graphics::Imaging::IBitmapPropertiesView>
     {
@@ -1173,6 +1193,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapTransform> : produce_base<D, Windows::Graphics::Imaging::IBitmapTransform>
     {
@@ -1262,6 +1283,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapTypedValue> : produce_base<D, Windows::Graphics::Imaging::IBitmapTypedValue>
     {
@@ -1281,6 +1304,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IBitmapTypedValueFactory> : produce_base<D, Windows::Graphics::Imaging::IBitmapTypedValueFactory>
     {
@@ -1293,6 +1318,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::IPixelDataProvider> : produce_base<D, Windows::Graphics::Imaging::IPixelDataProvider>
     {
@@ -1305,6 +1332,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::ISoftwareBitmap> : produce_base<D, Windows::Graphics::Imaging::ISoftwareBitmap>
     {
@@ -1409,6 +1438,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::ISoftwareBitmapFactory> : produce_base<D, Windows::Graphics::Imaging::ISoftwareBitmapFactory>
     {
@@ -1429,6 +1460,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Imaging::ISoftwareBitmapStatics> : produce_base<D, Windows::Graphics::Imaging::ISoftwareBitmapStatics>
     {
@@ -1489,188 +1522,191 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Graphics::Imaging
+WINRT_EXPORT namespace winrt::Windows::Graphics::Imaging
 {
     inline auto BitmapDecoder::BmpDecoderId()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.BmpDecoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapDecoderStatics const&), BitmapDecoder, IBitmapDecoderStatics>([](IBitmapDecoderStatics const& f) { return f.BmpDecoderId(); });
     }
     inline auto BitmapDecoder::JpegDecoderId()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.JpegDecoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapDecoderStatics const&), BitmapDecoder, IBitmapDecoderStatics>([](IBitmapDecoderStatics const& f) { return f.JpegDecoderId(); });
     }
     inline auto BitmapDecoder::PngDecoderId()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.PngDecoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapDecoderStatics const&), BitmapDecoder, IBitmapDecoderStatics>([](IBitmapDecoderStatics const& f) { return f.PngDecoderId(); });
     }
     inline auto BitmapDecoder::TiffDecoderId()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.TiffDecoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapDecoderStatics const&), BitmapDecoder, IBitmapDecoderStatics>([](IBitmapDecoderStatics const& f) { return f.TiffDecoderId(); });
     }
     inline auto BitmapDecoder::GifDecoderId()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.GifDecoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapDecoderStatics const&), BitmapDecoder, IBitmapDecoderStatics>([](IBitmapDecoderStatics const& f) { return f.GifDecoderId(); });
     }
     inline auto BitmapDecoder::JpegXRDecoderId()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.JpegXRDecoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapDecoderStatics const&), BitmapDecoder, IBitmapDecoderStatics>([](IBitmapDecoderStatics const& f) { return f.JpegXRDecoderId(); });
     }
     inline auto BitmapDecoder::IcoDecoderId()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.IcoDecoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapDecoderStatics const&), BitmapDecoder, IBitmapDecoderStatics>([](IBitmapDecoderStatics const& f) { return f.IcoDecoderId(); });
     }
     inline auto BitmapDecoder::GetDecoderInformationEnumerator()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.GetDecoderInformationEnumerator(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapCodecInformation>(*)(IBitmapDecoderStatics const&), BitmapDecoder, IBitmapDecoderStatics>([](IBitmapDecoderStatics const& f) { return f.GetDecoderInformationEnumerator(); });
     }
     inline auto BitmapDecoder::CreateAsync(Windows::Storage::Streams::IRandomAccessStream const& stream)
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.CreateAsync(stream); });
+        return impl::call_factory<BitmapDecoder, IBitmapDecoderStatics>([&](IBitmapDecoderStatics const& f) { return f.CreateAsync(stream); });
     }
     inline auto BitmapDecoder::CreateAsync(winrt::guid const& decoderId, Windows::Storage::Streams::IRandomAccessStream const& stream)
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics>([&](auto&& f) { return f.CreateAsync(decoderId, stream); });
+        return impl::call_factory<BitmapDecoder, IBitmapDecoderStatics>([&](IBitmapDecoderStatics const& f) { return f.CreateAsync(decoderId, stream); });
     }
     inline auto BitmapDecoder::HeifDecoderId()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics2>([&](auto&& f) { return f.HeifDecoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapDecoderStatics2 const&), BitmapDecoder, IBitmapDecoderStatics2>([](IBitmapDecoderStatics2 const& f) { return f.HeifDecoderId(); });
     }
     inline auto BitmapDecoder::WebpDecoderId()
     {
-        return impl::call_factory<BitmapDecoder, Windows::Graphics::Imaging::IBitmapDecoderStatics2>([&](auto&& f) { return f.WebpDecoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapDecoderStatics2 const&), BitmapDecoder, IBitmapDecoderStatics2>([](IBitmapDecoderStatics2 const& f) { return f.WebpDecoderId(); });
     }
     inline auto BitmapEncoder::BmpEncoderId()
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.BmpEncoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapEncoderStatics const&), BitmapEncoder, IBitmapEncoderStatics>([](IBitmapEncoderStatics const& f) { return f.BmpEncoderId(); });
     }
     inline auto BitmapEncoder::JpegEncoderId()
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.JpegEncoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapEncoderStatics const&), BitmapEncoder, IBitmapEncoderStatics>([](IBitmapEncoderStatics const& f) { return f.JpegEncoderId(); });
     }
     inline auto BitmapEncoder::PngEncoderId()
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.PngEncoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapEncoderStatics const&), BitmapEncoder, IBitmapEncoderStatics>([](IBitmapEncoderStatics const& f) { return f.PngEncoderId(); });
     }
     inline auto BitmapEncoder::TiffEncoderId()
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.TiffEncoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapEncoderStatics const&), BitmapEncoder, IBitmapEncoderStatics>([](IBitmapEncoderStatics const& f) { return f.TiffEncoderId(); });
     }
     inline auto BitmapEncoder::GifEncoderId()
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.GifEncoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapEncoderStatics const&), BitmapEncoder, IBitmapEncoderStatics>([](IBitmapEncoderStatics const& f) { return f.GifEncoderId(); });
     }
     inline auto BitmapEncoder::JpegXREncoderId()
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.JpegXREncoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapEncoderStatics const&), BitmapEncoder, IBitmapEncoderStatics>([](IBitmapEncoderStatics const& f) { return f.JpegXREncoderId(); });
     }
     inline auto BitmapEncoder::GetEncoderInformationEnumerator()
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.GetEncoderInformationEnumerator(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapCodecInformation>(*)(IBitmapEncoderStatics const&), BitmapEncoder, IBitmapEncoderStatics>([](IBitmapEncoderStatics const& f) { return f.GetEncoderInformationEnumerator(); });
     }
     inline auto BitmapEncoder::CreateAsync(winrt::guid const& encoderId, Windows::Storage::Streams::IRandomAccessStream const& stream)
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.CreateAsync(encoderId, stream); });
+        return impl::call_factory<BitmapEncoder, IBitmapEncoderStatics>([&](IBitmapEncoderStatics const& f) { return f.CreateAsync(encoderId, stream); });
     }
     inline auto BitmapEncoder::CreateAsync(winrt::guid const& encoderId, Windows::Storage::Streams::IRandomAccessStream const& stream, param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Graphics::Imaging::BitmapTypedValue>> const& encodingOptions)
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.CreateAsync(encoderId, stream, encodingOptions); });
+        return impl::call_factory<BitmapEncoder, IBitmapEncoderStatics>([&](IBitmapEncoderStatics const& f) { return f.CreateAsync(encoderId, stream, encodingOptions); });
     }
     inline auto BitmapEncoder::CreateForTranscodingAsync(Windows::Storage::Streams::IRandomAccessStream const& stream, Windows::Graphics::Imaging::BitmapDecoder const& bitmapDecoder)
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.CreateForTranscodingAsync(stream, bitmapDecoder); });
+        return impl::call_factory<BitmapEncoder, IBitmapEncoderStatics>([&](IBitmapEncoderStatics const& f) { return f.CreateForTranscodingAsync(stream, bitmapDecoder); });
     }
     inline auto BitmapEncoder::CreateForInPlacePropertyEncodingAsync(Windows::Graphics::Imaging::BitmapDecoder const& bitmapDecoder)
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics>([&](auto&& f) { return f.CreateForInPlacePropertyEncodingAsync(bitmapDecoder); });
+        return impl::call_factory<BitmapEncoder, IBitmapEncoderStatics>([&](IBitmapEncoderStatics const& f) { return f.CreateForInPlacePropertyEncodingAsync(bitmapDecoder); });
     }
     inline auto BitmapEncoder::HeifEncoderId()
     {
-        return impl::call_factory<BitmapEncoder, Windows::Graphics::Imaging::IBitmapEncoderStatics2>([&](auto&& f) { return f.HeifEncoderId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IBitmapEncoderStatics2 const&), BitmapEncoder, IBitmapEncoderStatics2>([](IBitmapEncoderStatics2 const& f) { return f.HeifEncoderId(); });
     }
     inline BitmapPropertySet::BitmapPropertySet() :
-        BitmapPropertySet(impl::call_factory<BitmapPropertySet>([](auto&& f) { return f.template ActivateInstance<BitmapPropertySet>(); }))
+        BitmapPropertySet(impl::call_factory_cast<BitmapPropertySet(*)(Windows::Foundation::IActivationFactory const&), BitmapPropertySet>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<BitmapPropertySet>(); }))
     {
     }
     inline BitmapTransform::BitmapTransform() :
-        BitmapTransform(impl::call_factory<BitmapTransform>([](auto&& f) { return f.template ActivateInstance<BitmapTransform>(); }))
+        BitmapTransform(impl::call_factory_cast<BitmapTransform(*)(Windows::Foundation::IActivationFactory const&), BitmapTransform>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<BitmapTransform>(); }))
     {
     }
     inline BitmapTypedValue::BitmapTypedValue(Windows::Foundation::IInspectable const& value, Windows::Foundation::PropertyType const& type) :
-        BitmapTypedValue(impl::call_factory<BitmapTypedValue, Windows::Graphics::Imaging::IBitmapTypedValueFactory>([&](auto&& f) { return f.Create(value, type); }))
+        BitmapTypedValue(impl::call_factory<BitmapTypedValue, IBitmapTypedValueFactory>([&](IBitmapTypedValueFactory const& f) { return f.Create(value, type); }))
     {
     }
     inline SoftwareBitmap::SoftwareBitmap(Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height) :
-        SoftwareBitmap(impl::call_factory<SoftwareBitmap, Windows::Graphics::Imaging::ISoftwareBitmapFactory>([&](auto&& f) { return f.Create(format, width, height); }))
+        SoftwareBitmap(impl::call_factory<SoftwareBitmap, ISoftwareBitmapFactory>([&](ISoftwareBitmapFactory const& f) { return f.Create(format, width, height); }))
     {
     }
     inline SoftwareBitmap::SoftwareBitmap(Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) :
-        SoftwareBitmap(impl::call_factory<SoftwareBitmap, Windows::Graphics::Imaging::ISoftwareBitmapFactory>([&](auto&& f) { return f.CreateWithAlpha(format, width, height, alpha); }))
+        SoftwareBitmap(impl::call_factory<SoftwareBitmap, ISoftwareBitmapFactory>([&](ISoftwareBitmapFactory const& f) { return f.CreateWithAlpha(format, width, height, alpha); }))
     {
     }
     inline auto SoftwareBitmap::Copy(Windows::Graphics::Imaging::SoftwareBitmap const& source)
     {
-        return impl::call_factory<SoftwareBitmap, Windows::Graphics::Imaging::ISoftwareBitmapStatics>([&](auto&& f) { return f.Copy(source); });
+        return impl::call_factory<SoftwareBitmap, ISoftwareBitmapStatics>([&](ISoftwareBitmapStatics const& f) { return f.Copy(source); });
     }
     inline auto SoftwareBitmap::Convert(Windows::Graphics::Imaging::SoftwareBitmap const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format)
     {
-        return impl::call_factory<SoftwareBitmap, Windows::Graphics::Imaging::ISoftwareBitmapStatics>([&](auto&& f) { return f.Convert(source, format); });
+        return impl::call_factory<SoftwareBitmap, ISoftwareBitmapStatics>([&](ISoftwareBitmapStatics const& f) { return f.Convert(source, format); });
     }
     inline auto SoftwareBitmap::Convert(Windows::Graphics::Imaging::SoftwareBitmap const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha)
     {
-        return impl::call_factory<SoftwareBitmap, Windows::Graphics::Imaging::ISoftwareBitmapStatics>([&](auto&& f) { return f.Convert(source, format, alpha); });
+        return impl::call_factory<SoftwareBitmap, ISoftwareBitmapStatics>([&](ISoftwareBitmapStatics const& f) { return f.Convert(source, format, alpha); });
     }
     inline auto SoftwareBitmap::CreateCopyFromBuffer(Windows::Storage::Streams::IBuffer const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height)
     {
-        return impl::call_factory<SoftwareBitmap, Windows::Graphics::Imaging::ISoftwareBitmapStatics>([&](auto&& f) { return f.CreateCopyFromBuffer(source, format, width, height); });
+        return impl::call_factory<SoftwareBitmap, ISoftwareBitmapStatics>([&](ISoftwareBitmapStatics const& f) { return f.CreateCopyFromBuffer(source, format, width, height); });
     }
     inline auto SoftwareBitmap::CreateCopyFromBuffer(Windows::Storage::Streams::IBuffer const& source, Windows::Graphics::Imaging::BitmapPixelFormat const& format, int32_t width, int32_t height, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha)
     {
-        return impl::call_factory<SoftwareBitmap, Windows::Graphics::Imaging::ISoftwareBitmapStatics>([&](auto&& f) { return f.CreateCopyFromBuffer(source, format, width, height, alpha); });
+        return impl::call_factory<SoftwareBitmap, ISoftwareBitmapStatics>([&](ISoftwareBitmapStatics const& f) { return f.CreateCopyFromBuffer(source, format, width, height, alpha); });
     }
     inline auto SoftwareBitmap::CreateCopyFromSurfaceAsync(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface)
     {
-        return impl::call_factory<SoftwareBitmap, Windows::Graphics::Imaging::ISoftwareBitmapStatics>([&](auto&& f) { return f.CreateCopyFromSurfaceAsync(surface); });
+        return impl::call_factory<SoftwareBitmap, ISoftwareBitmapStatics>([&](ISoftwareBitmapStatics const& f) { return f.CreateCopyFromSurfaceAsync(surface); });
     }
     inline auto SoftwareBitmap::CreateCopyFromSurfaceAsync(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha)
     {
-        return impl::call_factory<SoftwareBitmap, Windows::Graphics::Imaging::ISoftwareBitmapStatics>([&](auto&& f) { return f.CreateCopyFromSurfaceAsync(surface, alpha); });
+        return impl::call_factory<SoftwareBitmap, ISoftwareBitmapStatics>([&](ISoftwareBitmapStatics const& f) { return f.CreateCopyFromSurfaceAsync(surface, alpha); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapBuffer> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapBuffer> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapCodecInformation> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapCodecInformation> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapDecoder> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapDecoder> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapDecoderStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapDecoderStatics> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapDecoderStatics2> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapDecoderStatics2> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapEncoder> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapEncoder> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapEncoderStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapEncoderStatics> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapEncoderStatics2> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapEncoderStatics2> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapEncoderWithSoftwareBitmap> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapEncoderWithSoftwareBitmap> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapFrame> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapFrame> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapProperties> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapProperties> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapTransform> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapTransform> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapTypedValue> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapTypedValue> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapTypedValueFactory> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IBitmapTypedValueFactory> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::IPixelDataProvider> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::IPixelDataProvider> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::ISoftwareBitmap> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::ISoftwareBitmap> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::ISoftwareBitmapFactory> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::ISoftwareBitmapFactory> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::ISoftwareBitmapStatics> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::ISoftwareBitmapStatics> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapBuffer> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapBuffer> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapCodecInformation> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapCodecInformation> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapDecoder> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapDecoder> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapEncoder> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapEncoder> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapFrame> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapFrame> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapProperties> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapProperties> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapPropertiesView> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapPropertiesView> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapPropertySet> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapPropertySet> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapTransform> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapTransform> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapTypedValue> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::BitmapTypedValue> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::ImageStream> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::ImageStream> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::PixelDataProvider> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::PixelDataProvider> {};
-    template<> struct hash<winrt::Windows::Graphics::Imaging::SoftwareBitmap> : winrt::impl::hash_base<winrt::Windows::Graphics::Imaging::SoftwareBitmap> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapBuffer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapCodecInformation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapDecoder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapDecoderStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapDecoderStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapEncoder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapEncoderStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapEncoderStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapEncoderWithSoftwareBitmap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapProperties> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapTransform> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapTypedValue> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IBitmapTypedValueFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::IPixelDataProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::ISoftwareBitmap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::ISoftwareBitmapFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::ISoftwareBitmapStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapBuffer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapCodecInformation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapDecoder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapEncoder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapProperties> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapPropertiesView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapPropertySet> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapTransform> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::BitmapTypedValue> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::ImageStream> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::PixelDataProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Imaging::SoftwareBitmap> : winrt::impl::hash_base {};
+#endif
 }
 #endif

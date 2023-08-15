@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -16,7 +16,7 @@
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.UI.Notifications.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Background.1.h"
-namespace winrt::Windows::ApplicationModel::Background
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Background
 {
     struct BackgroundTaskCanceledEventHandler : Windows::Foundation::IUnknown
     {
@@ -55,7 +55,7 @@ namespace winrt::Windows::ApplicationModel::Background
     {
         ActivitySensorTrigger(std::nullptr_t) noexcept {}
         ActivitySensorTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IActivitySensorTrigger(ptr, take_ownership_from_abi) {}
-        ActivitySensorTrigger(uint32_t reportIntervalInMilliseconds);
+        explicit ActivitySensorTrigger(uint32_t reportIntervalInMilliseconds);
     };
     struct AlarmApplicationManager
     {
@@ -67,7 +67,7 @@ namespace winrt::Windows::ApplicationModel::Background
     {
         AppBroadcastTrigger(std::nullptr_t) noexcept {}
         AppBroadcastTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IAppBroadcastTrigger(ptr, take_ownership_from_abi) {}
-        AppBroadcastTrigger(param::hstring const& providerKey);
+        explicit AppBroadcastTrigger(param::hstring const& providerKey);
     };
     struct __declspec(empty_bases) AppBroadcastTriggerProviderInfo : Windows::ApplicationModel::Background::IAppBroadcastTriggerProviderInfo
     {
@@ -137,7 +137,7 @@ namespace winrt::Windows::ApplicationModel::Background
     {
         BackgroundTaskRegistrationGroup(std::nullptr_t) noexcept {}
         BackgroundTaskRegistrationGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IBackgroundTaskRegistrationGroup(ptr, take_ownership_from_abi) {}
-        BackgroundTaskRegistrationGroup(param::hstring const& id);
+        explicit BackgroundTaskRegistrationGroup(param::hstring const& id);
         BackgroundTaskRegistrationGroup(param::hstring const& id, param::hstring const& name);
     };
     struct BackgroundWorkCost
@@ -199,7 +199,7 @@ namespace winrt::Windows::ApplicationModel::Background
         ContentPrefetchTrigger(std::nullptr_t) noexcept {}
         ContentPrefetchTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IContentPrefetchTrigger(ptr, take_ownership_from_abi) {}
         ContentPrefetchTrigger();
-        ContentPrefetchTrigger(Windows::Foundation::TimeSpan const& waitInterval);
+        explicit ContentPrefetchTrigger(Windows::Foundation::TimeSpan const& waitInterval);
     };
     struct __declspec(empty_bases) ConversationalAgentTrigger : Windows::ApplicationModel::Background::IBackgroundTrigger
     {
@@ -254,7 +254,7 @@ namespace winrt::Windows::ApplicationModel::Background
     {
         GattCharacteristicNotificationTrigger(std::nullptr_t) noexcept {}
         GattCharacteristicNotificationTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IGattCharacteristicNotificationTrigger(ptr, take_ownership_from_abi) {}
-        GattCharacteristicNotificationTrigger(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic const& characteristic);
+        explicit GattCharacteristicNotificationTrigger(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic const& characteristic);
         GattCharacteristicNotificationTrigger(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic const& characteristic, Windows::Devices::Bluetooth::Background::BluetoothEventTriggeringMode const& eventTriggeringMode);
     };
     struct __declspec(empty_bases) GattServiceProviderTrigger : Windows::ApplicationModel::Background::IGattServiceProviderTrigger,
@@ -279,7 +279,7 @@ namespace winrt::Windows::ApplicationModel::Background
     {
         LocationTrigger(std::nullptr_t) noexcept {}
         LocationTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::ILocationTrigger(ptr, take_ownership_from_abi) {}
-        LocationTrigger(Windows::ApplicationModel::Background::LocationTriggerType const& triggerType);
+        explicit LocationTrigger(Windows::ApplicationModel::Background::LocationTriggerType const& triggerType);
     };
     struct __declspec(empty_bases) MaintenanceTrigger : Windows::ApplicationModel::Background::IMaintenanceTrigger
     {
@@ -339,7 +339,7 @@ namespace winrt::Windows::ApplicationModel::Background
     {
         NetworkOperatorNotificationTrigger(std::nullptr_t) noexcept {}
         NetworkOperatorNotificationTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::INetworkOperatorNotificationTrigger(ptr, take_ownership_from_abi) {}
-        NetworkOperatorNotificationTrigger(param::hstring const& networkAccountId);
+        explicit NetworkOperatorNotificationTrigger(param::hstring const& networkAccountId);
     };
     struct __declspec(empty_bases) PaymentAppCanMakePaymentTrigger : Windows::ApplicationModel::Background::IBackgroundTrigger
     {
@@ -358,7 +358,7 @@ namespace winrt::Windows::ApplicationModel::Background
         PushNotificationTrigger(std::nullptr_t) noexcept {}
         PushNotificationTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IBackgroundTrigger(ptr, take_ownership_from_abi) {}
         PushNotificationTrigger();
-        PushNotificationTrigger(param::hstring const& applicationId);
+        explicit PushNotificationTrigger(param::hstring const& applicationId);
     };
     struct __declspec(empty_bases) RcsEndUserMessageAvailableTrigger : Windows::ApplicationModel::Background::IRcsEndUserMessageAvailableTrigger
     {
@@ -382,19 +382,19 @@ namespace winrt::Windows::ApplicationModel::Background
     {
         SensorDataThresholdTrigger(std::nullptr_t) noexcept {}
         SensorDataThresholdTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::ISensorDataThresholdTrigger(ptr, take_ownership_from_abi) {}
-        SensorDataThresholdTrigger(Windows::Devices::Sensors::ISensorDataThreshold const& threshold);
+        explicit SensorDataThresholdTrigger(Windows::Devices::Sensors::ISensorDataThreshold const& threshold);
     };
     struct __declspec(empty_bases) SmartCardTrigger : Windows::ApplicationModel::Background::ISmartCardTrigger
     {
         SmartCardTrigger(std::nullptr_t) noexcept {}
         SmartCardTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::ISmartCardTrigger(ptr, take_ownership_from_abi) {}
-        SmartCardTrigger(Windows::Devices::SmartCards::SmartCardTriggerType const& triggerType);
+        explicit SmartCardTrigger(Windows::Devices::SmartCards::SmartCardTriggerType const& triggerType);
     };
     struct __declspec(empty_bases) SmsMessageReceivedTrigger : Windows::ApplicationModel::Background::IBackgroundTrigger
     {
         SmsMessageReceivedTrigger(std::nullptr_t) noexcept {}
         SmsMessageReceivedTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IBackgroundTrigger(ptr, take_ownership_from_abi) {}
-        SmsMessageReceivedTrigger(Windows::Devices::Sms::SmsFilterRules const& filterRules);
+        explicit SmsMessageReceivedTrigger(Windows::Devices::Sms::SmsFilterRules const& filterRules);
     };
     struct __declspec(empty_bases) SocketActivityTrigger : Windows::ApplicationModel::Background::IBackgroundTrigger,
         impl::require<SocketActivityTrigger, Windows::ApplicationModel::Background::ISocketActivityTrigger>
@@ -407,7 +407,7 @@ namespace winrt::Windows::ApplicationModel::Background
     {
         StorageLibraryChangeTrackerTrigger(std::nullptr_t) noexcept {}
         StorageLibraryChangeTrackerTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IBackgroundTrigger(ptr, take_ownership_from_abi) {}
-        StorageLibraryChangeTrackerTrigger(Windows::Storage::StorageLibraryChangeTracker const& tracker);
+        explicit StorageLibraryChangeTrackerTrigger(Windows::Storage::StorageLibraryChangeTracker const& tracker);
     };
     struct __declspec(empty_bases) StorageLibraryContentChangedTrigger : Windows::ApplicationModel::Background::IStorageLibraryContentChangedTrigger
     {
@@ -420,7 +420,7 @@ namespace winrt::Windows::ApplicationModel::Background
     {
         SystemCondition(std::nullptr_t) noexcept {}
         SystemCondition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::ISystemCondition(ptr, take_ownership_from_abi) {}
-        SystemCondition(Windows::ApplicationModel::Background::SystemConditionType const& conditionType);
+        explicit SystemCondition(Windows::ApplicationModel::Background::SystemConditionType const& conditionType);
     };
     struct __declspec(empty_bases) SystemTrigger : Windows::ApplicationModel::Background::ISystemTrigger
     {
@@ -445,20 +445,20 @@ namespace winrt::Windows::ApplicationModel::Background
         ToastNotificationActionTrigger(std::nullptr_t) noexcept {}
         ToastNotificationActionTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IBackgroundTrigger(ptr, take_ownership_from_abi) {}
         ToastNotificationActionTrigger();
-        ToastNotificationActionTrigger(param::hstring const& applicationId);
+        explicit ToastNotificationActionTrigger(param::hstring const& applicationId);
     };
     struct __declspec(empty_bases) ToastNotificationHistoryChangedTrigger : Windows::ApplicationModel::Background::IBackgroundTrigger
     {
         ToastNotificationHistoryChangedTrigger(std::nullptr_t) noexcept {}
         ToastNotificationHistoryChangedTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IBackgroundTrigger(ptr, take_ownership_from_abi) {}
         ToastNotificationHistoryChangedTrigger();
-        ToastNotificationHistoryChangedTrigger(param::hstring const& applicationId);
+        explicit ToastNotificationHistoryChangedTrigger(param::hstring const& applicationId);
     };
     struct __declspec(empty_bases) UserNotificationChangedTrigger : Windows::ApplicationModel::Background::IBackgroundTrigger
     {
         UserNotificationChangedTrigger(std::nullptr_t) noexcept {}
         UserNotificationChangedTrigger(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Background::IBackgroundTrigger(ptr, take_ownership_from_abi) {}
-        UserNotificationChangedTrigger(Windows::UI::Notifications::NotificationKinds const& notificationKinds);
+        explicit UserNotificationChangedTrigger(Windows::UI::Notifications::NotificationKinds const& notificationKinds);
     };
 }
 #endif

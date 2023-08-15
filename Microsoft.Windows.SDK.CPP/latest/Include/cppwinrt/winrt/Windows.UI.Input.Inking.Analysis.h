@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Input_Inking_Analysis_H
 #define WINRT_Windows_UI_Input_Inking_Analysis_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.Input.Inking.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -14,184 +14,185 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.UI.Input.Inking.Analysis.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkBullet<D>::RecognizedText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkBullet<D>::RecognizedText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisInkBullet)->get_RecognizedText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkDrawing<D>::DrawingKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkDrawing<D>::DrawingKind() const
     {
-        Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing)->get_DrawingKind(put_abi(value)));
+        Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing)->get_DrawingKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkDrawing<D>::Center() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkDrawing<D>::Center() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing)->get_Center(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkDrawing<D>::Points() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Foundation::Point>) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkDrawing<D>::Points() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing)->get_Points(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Foundation::Point>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkWord<D>::RecognizedText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkWord<D>::RecognizedText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord)->get_RecognizedText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkWord<D>::TextAlternates() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkWord<D>::TextAlternates() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord)->get_TextAlternates(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisLine<D>::RecognizedText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisLine<D>::RecognizedText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisLine)->get_RecognizedText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisLine<D>::IndentLevel() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisLine<D>::IndentLevel() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisLine)->get_IndentLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisListItem<D>::RecognizedText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisListItem<D>::RecognizedText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisListItem)->get_RecognizedText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::Id() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisNode)->get_Id(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::Kind() const
     {
-        Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisNode)->get_Kind(put_abi(value)));
+        Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisNode)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::BoundingRect() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::BoundingRect() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisNode)->get_BoundingRect(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::RotatedBoundingRect() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Foundation::Point>) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::RotatedBoundingRect() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisNode)->get_RotatedBoundingRect(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Foundation::Point>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::Children() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::Children() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisNode)->get_Children(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::Parent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Inking::Analysis::IInkAnalysisNode) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::Parent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisNode)->get_Parent(&value));
         return Windows::UI::Input::Inking::Analysis::IInkAnalysisNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::GetStrokeIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<uint32_t>) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode<D>::GetStrokeIds() const
     {
         void* strokeIds{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisNode)->GetStrokeIds(&strokeIds));
         return Windows::Foundation::Collections::IVectorView<uint32_t>{ strokeIds, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisParagraph<D>::RecognizedText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisParagraph<D>::RecognizedText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisParagraph)->get_RecognizedText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Inking::Analysis::InkAnalysisStatus) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisResult<D>::Status() const
     {
-        Windows::UI::Input::Inking::Analysis::InkAnalysisStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisResult)->get_Status(put_abi(value)));
+        Windows::UI::Input::Inking::Analysis::InkAnalysisStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisRoot<D>::RecognizedText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisRoot<D>::RecognizedText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot)->get_RecognizedText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisRoot<D>::FindNodes(Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind const& nodeKind) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisRoot<D>::FindNodes(Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind const& nodeKind) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot)->FindNodes(static_cast<int32_t>(nodeKind), &result));
         return Windows::Foundation::Collections::IVectorView<Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisWritingRegion<D>::RecognizedText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Input_Inking_Analysis_IInkAnalysisWritingRegion<D>::RecognizedText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalysisWritingRegion)->get_RecognizedText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::AnalysisRoot() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Inking::Analysis::InkAnalysisRoot) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::AnalysisRoot() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->get_AnalysisRoot(&value));
         return Windows::UI::Input::Inking::Analysis::InkAnalysisRoot{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::IsAnalyzing() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::IsAnalyzing() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->get_IsAnalyzing(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::AddDataForStroke(Windows::UI::Input::Inking::InkStroke const& stroke) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::AddDataForStroke(Windows::UI::Input::Inking::InkStroke const& stroke) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->AddDataForStroke(*(void**)(&stroke)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::AddDataForStrokes(param::iterable<Windows::UI::Input::Inking::InkStroke> const& strokes) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::AddDataForStrokes(param::iterable<Windows::UI::Input::Inking::InkStroke> const& strokes) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->AddDataForStrokes(*(void**)(&strokes)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::ClearDataForAllStrokes() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::ClearDataForAllStrokes() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->ClearDataForAllStrokes());
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::RemoveDataForStroke(uint32_t strokeId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::RemoveDataForStroke(uint32_t strokeId) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->RemoveDataForStroke(strokeId));
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::RemoveDataForStrokes(param::iterable<uint32_t> const& strokeIds) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::RemoveDataForStrokes(param::iterable<uint32_t> const& strokeIds) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->RemoveDataForStrokes(*(void**)(&strokeIds)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::ReplaceDataForStroke(Windows::UI::Input::Inking::InkStroke const& stroke) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::ReplaceDataForStroke(Windows::UI::Input::Inking::InkStroke const& stroke) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->ReplaceDataForStroke(*(void**)(&stroke)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::SetStrokeDataKind(uint32_t strokeId, Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind const& strokeKind) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::SetStrokeDataKind(uint32_t strokeId, Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind const& strokeKind) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->SetStrokeDataKind(strokeId, static_cast<int32_t>(strokeKind)));
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::AnalyzeAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::UI::Input::Inking::Analysis::InkAnalysisResult>) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzer<D>::AnalyzeAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzer)->AnalyzeAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::UI::Input::Inking::Analysis::InkAnalysisResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzerFactory<D>::CreateAnalyzer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Inking::Analysis::InkAnalyzer) consume_Windows_UI_Input_Inking_Analysis_IInkAnalyzerFactory<D>::CreateAnalyzer() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory)->CreateAnalyzer(&result));
         return Windows::UI::Input::Inking::Analysis::InkAnalyzer{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisInkBullet> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisInkBullet>
     {
@@ -204,6 +205,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing>
     {
@@ -231,6 +234,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord>
     {
@@ -251,6 +256,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisLine> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisLine>
     {
@@ -270,6 +277,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisListItem> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisListItem>
     {
@@ -282,6 +291,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisNode> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>
     {
@@ -340,6 +350,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisParagraph> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisParagraph>
     {
@@ -352,6 +363,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisResult> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisResult>
     {
@@ -363,6 +376,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot>
     {
@@ -383,6 +398,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisWritingRegion> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalysisWritingRegion>
     {
@@ -395,6 +412,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalyzer> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalyzer>
     {
@@ -471,6 +490,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory> : produce_base<D, Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>
     {
@@ -484,37 +504,39 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 }
-namespace winrt::Windows::UI::Input::Inking::Analysis
+WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking::Analysis
 {
     inline InkAnalyzer::InkAnalyzer() :
-        InkAnalyzer(impl::call_factory<InkAnalyzer>([](auto&& f) { return f.template ActivateInstance<InkAnalyzer>(); }))
+        InkAnalyzer(impl::call_factory_cast<InkAnalyzer(*)(Windows::Foundation::IActivationFactory const&), InkAnalyzer>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<InkAnalyzer>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkBullet> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkBullet> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisLine> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisLine> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisListItem> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisListItem> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisParagraph> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisParagraph> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisWritingRegion> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisWritingRegion> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzer> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzer> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisLine> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisLine> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNode> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNode> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisResult> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisResult> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion> {};
-    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalyzer> : winrt::impl::hash_base<winrt::Windows::UI::Input::Inking::Analysis::InkAnalyzer> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkBullet> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisLine> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisListItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisParagraph> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisWritingRegion> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisLine> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Inking::Analysis::InkAnalyzer> : winrt::impl::hash_base {};
+#endif
 }
 #endif

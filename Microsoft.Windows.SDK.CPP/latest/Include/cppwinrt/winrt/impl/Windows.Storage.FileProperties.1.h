@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Storage_FileProperties_1_H
 #define WINRT_Windows_Storage_FileProperties_1_H
 #include "winrt/impl/Windows.Storage.FileProperties.0.h"
-namespace winrt::Windows::Storage::FileProperties
+WINRT_EXPORT namespace winrt::Windows::Storage::FileProperties
 {
     struct __declspec(empty_bases) IBasicProperties :
         Windows::Foundation::IInspectable,

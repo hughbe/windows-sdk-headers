@@ -1,24 +1,24 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_ApplicationModel_Contacts_DataProvider_0_H
 #define WINRT_Windows_ApplicationModel_Contacts_DataProvider_0_H
-namespace winrt::Windows::ApplicationModel::Contacts
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Contacts
 {
     struct Contact;
     enum class ContactBatchStatus : int32_t;
     struct ContactQueryOptions;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Deferral;
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::ApplicationModel::Contacts::DataProvider
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Contacts::DataProvider
 {
     struct IContactDataProviderConnection;
     struct IContactDataProviderConnection2;
@@ -44,258 +44,69 @@ namespace winrt::Windows::ApplicationModel::Contacts::DataProvider
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequestEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequestEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequestEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequestEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs" };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection>
-    {
-        static constexpr guid value{ 0x1A398A52,0x8C9D,0x4D6F,{ 0xA4,0xE0,0x11,0x1E,0x9A,0x12,0x5A,0x30 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2>
-    {
-        static constexpr guid value{ 0xA1D327B0,0x196C,0x4BFD,{ 0x8F,0x0F,0xC6,0x8D,0x67,0xF2,0x49,0xD3 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails>
-    {
-        static constexpr guid value{ 0x527104BE,0x3C62,0x43C8,{ 0x9A,0xE7,0xDB,0x53,0x16,0x85,0xCD,0x99 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest>
-    {
-        static constexpr guid value{ 0xB4AF411F,0xC849,0x47D0,{ 0xB1,0x19,0x91,0xCF,0x60,0x5B,0x2F,0x2A } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs>
-    {
-        static constexpr guid value{ 0x851C1690,0x1A51,0x4B0C,{ 0xAE,0xEF,0x12,0x40,0xAC,0x5B,0xED,0x75 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest>
-    {
-        static constexpr guid value{ 0x5E114687,0xCE03,0x4DE5,{ 0x85,0x57,0x9C,0xCF,0x55,0x2D,0x47,0x2A } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs>
-    {
-        static constexpr guid value{ 0xB22054A1,0xE8FA,0x4DB5,{ 0x93,0x89,0x2D,0x12,0xEE,0x7D,0x15,0xEE } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest>
-    {
-        static constexpr guid value{ 0xBA776A97,0x4030,0x4925,{ 0x9F,0xB4,0x14,0x3B,0x29,0x5E,0x65,0x3B } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs>
-    {
-        static constexpr guid value{ 0x1A27E87B,0x69D7,0x4E4E,{ 0x80,0x42,0x86,0x1C,0xBA,0x61,0x47,0x1E } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest>
-    {
-        static constexpr guid value{ 0x3C0E57A4,0xC4E7,0x4970,{ 0x9A,0x8F,0x9A,0x66,0xA2,0xBB,0x6C,0x1A } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs>
-    {
-        static constexpr guid value{ 0x158E4DAC,0x446D,0x4F10,{ 0xAF,0xC2,0x02,0x68,0x3E,0xC5,0x33,0xA6 } };
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>
-    {
-        using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs;
-    };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>{ using type = class_category; };
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs> = L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequestEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequestEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequestEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs> = L"Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequestEventArgs";
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection>{ 0x1A398A52,0x8C9D,0x4D6F,{ 0xA4,0xE0,0x11,0x1E,0x9A,0x12,0x5A,0x30 } }; // 1A398A52-8C9D-4D6F-A4E0-111E9A125A30
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2>{ 0xA1D327B0,0x196C,0x4BFD,{ 0x8F,0x0F,0xC6,0x8D,0x67,0xF2,0x49,0xD3 } }; // A1D327B0-196C-4BFD-8F0F-C68D67F249D3
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails>{ 0x527104BE,0x3C62,0x43C8,{ 0x9A,0xE7,0xDB,0x53,0x16,0x85,0xCD,0x99 } }; // 527104BE-3C62-43C8-9AE7-DB531685CD99
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest>{ 0xB4AF411F,0xC849,0x47D0,{ 0xB1,0x19,0x91,0xCF,0x60,0x5B,0x2F,0x2A } }; // B4AF411F-C849-47D0-B119-91CF605B2F2A
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs>{ 0x851C1690,0x1A51,0x4B0C,{ 0xAE,0xEF,0x12,0x40,0xAC,0x5B,0xED,0x75 } }; // 851C1690-1A51-4B0C-AEEF-1240AC5BED75
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest>{ 0x5E114687,0xCE03,0x4DE5,{ 0x85,0x57,0x9C,0xCF,0x55,0x2D,0x47,0x2A } }; // 5E114687-CE03-4DE5-8557-9CCF552D472A
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs>{ 0xB22054A1,0xE8FA,0x4DB5,{ 0x93,0x89,0x2D,0x12,0xEE,0x7D,0x15,0xEE } }; // B22054A1-E8FA-4DB5-9389-2D12EE7D15EE
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest>{ 0xBA776A97,0x4030,0x4925,{ 0x9F,0xB4,0x14,0x3B,0x29,0x5E,0x65,0x3B } }; // BA776A97-4030-4925-9FB4-143B295E653B
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs>{ 0x1A27E87B,0x69D7,0x4E4E,{ 0x80,0x42,0x86,0x1C,0xBA,0x61,0x47,0x1E } }; // 1A27E87B-69D7-4E4E-8042-861CBA61471E
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest>{ 0x3C0E57A4,0xC4E7,0x4970,{ 0x9A,0x8F,0x9A,0x66,0xA2,0xBB,0x6C,0x1A } }; // 3C0E57A4-C4E7-4970-9A8F-9A66A2BB6C1A
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs>{ 0x158E4DAC,0x446D,0x4F10,{ 0xAF,0xC2,0x02,0x68,0x3E,0xC5,0x33,0xA6 } }; // 158E4DAC-446D-4F10-AFC2-02683EC533A6
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection; };
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails; };
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest; };
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs; };
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest; };
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs; };
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest; };
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs; };
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest; };
+    template <> struct default_interface<Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>{ using type = Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs; };
     template <> struct abi<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -401,15 +212,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactDataProviderConnection
     {
-        auto SyncRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) SyncRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs> const& handler) const;
         using SyncRequested_revoker = impl::event_revoker<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection, &impl::abi_t<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection>::remove_SyncRequested>;
-        SyncRequested_revoker SyncRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs> const& handler) const;
-        auto SyncRequested(winrt::event_token const& token) const noexcept;
-        auto ServerSearchReadBatchRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs> const& handler) const;
+        [[nodiscard]] SyncRequested_revoker SyncRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SyncRequested(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ServerSearchReadBatchRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs> const& handler) const;
         using ServerSearchReadBatchRequested_revoker = impl::event_revoker<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection, &impl::abi_t<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection>::remove_ServerSearchReadBatchRequested>;
-        ServerSearchReadBatchRequested_revoker ServerSearchReadBatchRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs> const& handler) const;
-        auto ServerSearchReadBatchRequested(winrt::event_token const& token) const noexcept;
-        auto Start() const;
+        [[nodiscard]] ServerSearchReadBatchRequested_revoker ServerSearchReadBatchRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ServerSearchReadBatchRequested(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(void) Start() const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection>
     {
@@ -418,14 +229,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactDataProviderConnection2
     {
-        auto CreateOrUpdateContactRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) CreateOrUpdateContactRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs> const& handler) const;
         using CreateOrUpdateContactRequested_revoker = impl::event_revoker<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2, &impl::abi_t<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2>::remove_CreateOrUpdateContactRequested>;
-        CreateOrUpdateContactRequested_revoker CreateOrUpdateContactRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs> const& handler) const;
-        auto CreateOrUpdateContactRequested(winrt::event_token const& token) const noexcept;
-        auto DeleteContactRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs> const& handler) const;
+        [[nodiscard]] CreateOrUpdateContactRequested_revoker CreateOrUpdateContactRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) CreateOrUpdateContactRequested(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) DeleteContactRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs> const& handler) const;
         using DeleteContactRequested_revoker = impl::event_revoker<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2, &impl::abi_t<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2>::remove_DeleteContactRequested>;
-        DeleteContactRequested_revoker DeleteContactRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs> const& handler) const;
-        auto DeleteContactRequested(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] DeleteContactRequested_revoker DeleteContactRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) DeleteContactRequested(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderConnection2>
     {
@@ -434,7 +245,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactDataProviderTriggerDetails
     {
-        [[nodiscard]] auto Connection() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection) Connection() const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactDataProviderTriggerDetails>
     {
@@ -443,10 +254,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactListCreateOrUpdateContactRequest
     {
-        [[nodiscard]] auto ContactListId() const;
-        [[nodiscard]] auto Contact() const;
-        auto ReportCompletedAsync(Windows::ApplicationModel::Contacts::Contact const& createdOrUpdatedContact) const;
-        auto ReportFailedAsync() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactListId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Contacts::Contact) Contact() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ReportCompletedAsync(Windows::ApplicationModel::Contacts::Contact const& createdOrUpdatedContact) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ReportFailedAsync() const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequest>
     {
@@ -455,8 +266,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactListCreateOrUpdateContactRequestEventArgs
     {
-        [[nodiscard]] auto Request() const;
-        auto GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest) Request() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactListCreateOrUpdateContactRequestEventArgs>
     {
@@ -465,10 +276,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactListDeleteContactRequest
     {
-        [[nodiscard]] auto ContactListId() const;
-        [[nodiscard]] auto ContactId() const;
-        auto ReportCompletedAsync() const;
-        auto ReportFailedAsync() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactListId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactId() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ReportCompletedAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ReportFailedAsync() const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequest>
     {
@@ -477,8 +288,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactListDeleteContactRequestEventArgs
     {
-        [[nodiscard]] auto Request() const;
-        auto GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest) Request() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactListDeleteContactRequestEventArgs>
     {
@@ -487,13 +298,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactListServerSearchReadBatchRequest
     {
-        [[nodiscard]] auto SessionId() const;
-        [[nodiscard]] auto ContactListId() const;
-        [[nodiscard]] auto Options() const;
-        [[nodiscard]] auto SuggestedBatchSize() const;
-        auto SaveContactAsync(Windows::ApplicationModel::Contacts::Contact const& contact) const;
-        auto ReportCompletedAsync() const;
-        auto ReportFailedAsync(Windows::ApplicationModel::Contacts::ContactBatchStatus const& batchStatus) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SessionId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactListId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Contacts::ContactQueryOptions) Options() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) SuggestedBatchSize() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) SaveContactAsync(Windows::ApplicationModel::Contacts::Contact const& contact) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ReportCompletedAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ReportFailedAsync(Windows::ApplicationModel::Contacts::ContactBatchStatus const& batchStatus) const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequest>
     {
@@ -502,8 +313,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactListServerSearchReadBatchRequestEventArgs
     {
-        [[nodiscard]] auto Request() const;
-        auto GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest) Request() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactListServerSearchReadBatchRequestEventArgs>
     {
@@ -512,9 +323,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactListSyncManagerSyncRequest
     {
-        [[nodiscard]] auto ContactListId() const;
-        auto ReportCompletedAsync() const;
-        auto ReportFailedAsync() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContactListId() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ReportCompletedAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ReportFailedAsync() const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequest>
     {
@@ -523,8 +334,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_Contacts_DataProvider_IContactListSyncManagerSyncRequestEventArgs
     {
-        [[nodiscard]] auto Request() const;
-        auto GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest) Request() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
     };
     template <> struct consume<Windows::ApplicationModel::Contacts::DataProvider::IContactListSyncManagerSyncRequestEventArgs>
     {

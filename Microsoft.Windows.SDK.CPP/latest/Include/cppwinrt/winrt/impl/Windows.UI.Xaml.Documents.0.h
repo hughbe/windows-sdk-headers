@@ -1,26 +1,26 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_UI_Xaml_Documents_0_H
 #define WINRT_Windows_UI_Xaml_Documents_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct Rect;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IVector;
+    template <typename T> struct __declspec(empty_bases) IVector;
 }
-namespace winrt::Windows::UI::Core
+WINRT_EXPORT namespace winrt::Windows::UI::Core
 {
     enum class CoreCursorType : int32_t;
 }
-namespace winrt::Windows::UI::Text
+WINRT_EXPORT namespace winrt::Windows::UI::Text
 {
     struct ContentLinkInfo;
     enum class FontStretch : int32_t;
@@ -28,7 +28,7 @@ namespace winrt::Windows::UI::Text
     struct FontWeight;
     enum class TextDecorations : uint32_t;
 }
-namespace winrt::Windows::UI::Xaml
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml
 {
     struct DependencyObject;
     struct DependencyProperty;
@@ -50,7 +50,7 @@ namespace winrt::Windows::UI::Xaml
     struct UIElement;
     struct XamlRoot;
 }
-namespace winrt::Windows::UI::Xaml::Input
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
 {
     struct AccessKeyDisplayDismissedEventArgs;
     struct AccessKeyDisplayRequestedEventArgs;
@@ -58,13 +58,13 @@ namespace winrt::Windows::UI::Xaml::Input
     enum class KeyTipPlacementMode : int32_t;
     enum class XYFocusNavigationStrategy : int32_t;
 }
-namespace winrt::Windows::UI::Xaml::Media
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media
 {
     struct Brush;
     struct FontFamily;
     enum class StyleSimulations : int32_t;
 }
-namespace winrt::Windows::UI::Xaml::Documents
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Documents
 {
     enum class LogicalDirection : int32_t
     {
@@ -166,1062 +166,270 @@ namespace winrt::Windows::UI::Xaml::Documents
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::Xaml::Documents::IBlock>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IBlock2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IBlockFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IBlockStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IBlockStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IBold>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IContactContentLinkProvider>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IContentLink>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkProvider>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkProviderCollection>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkProviderFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IGlyphs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IGlyphs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IGlyphsStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IGlyphsStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink4>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink5>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics4>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics5>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IInline>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IInlineFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IInlineUIContainer>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IItalic>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ILineBreak>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IParagraph>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IParagraphStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IPlaceContentLinkProvider>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IRun>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IRunStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ISpan>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ISpanFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElement>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElement2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElement3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElement4>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElement5>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElementFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElementOverrides>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElementStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElementStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElementStatics3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextElementStatics4>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighter>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighterBase>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighterFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighterStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITextPointer>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITypography>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ITypographyStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::IUnderline>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Block>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::BlockCollection>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Bold>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ContactContentLinkProvider>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ContentLink>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ContentLinkProvider>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::ContentLinkProviderCollection>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Glyphs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Hyperlink>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Inline>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::InlineCollection>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::InlineUIContainer>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Italic>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::LineBreak>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Paragraph>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::PlaceContentLinkProvider>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Run>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Span>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::TextElement>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::TextHighlighter>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::TextHighlighterBase>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::TextPointer>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Typography>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::Underline>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::LogicalDirection>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::UnderlineStyle>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Xaml::Documents::TextRange>
-    {
-        using type = struct_category<int32_t, int32_t>;
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IBlock>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IBlock" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IBlock2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IBlock2" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IBlockFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IBlockFactory" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IBlockStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IBlockStatics" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IBlockStatics2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IBlockStatics2" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IBold>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IBold" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IContactContentLinkProvider>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IContactContentLinkProvider" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IContentLink>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IContentLink" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IContentLinkInvokedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IContentLinkProvider>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IContentLinkProvider" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IContentLinkProviderCollection>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IContentLinkProviderCollection" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IContentLinkProviderFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IContentLinkProviderFactory" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IContentLinkStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IContentLinkStatics" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IGlyphs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IGlyphs" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IGlyphs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IGlyphs2" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IGlyphsStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IGlyphsStatics" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IGlyphsStatics2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IGlyphsStatics2" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlink>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlink" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlink2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlink2" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlink3>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlink3" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlink4>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlink4" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlink5>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlink5" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlinkClickEventArgs" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlinkStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlinkStatics" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlinkStatics2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlinkStatics2" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlinkStatics3>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlinkStatics3" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlinkStatics4>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlinkStatics4" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IHyperlinkStatics5>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IHyperlinkStatics5" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IInline>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IInline" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IInlineFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IInlineFactory" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IInlineUIContainer>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IInlineUIContainer" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IItalic>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IItalic" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ILineBreak>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ILineBreak" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IParagraph>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IParagraph" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IParagraphStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IParagraphStatics" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IPlaceContentLinkProvider>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IPlaceContentLinkProvider" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IRun>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IRun" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IRunStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IRunStatics" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ISpan>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ISpan" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ISpanFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ISpanFactory" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElement>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElement" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElement2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElement2" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElement3>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElement3" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElement4>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElement4" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElement5>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElement5" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElementFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElementFactory" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElementOverrides>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElementOverrides" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElementStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElementStatics" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElementStatics2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElementStatics2" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElementStatics3>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElementStatics3" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextElementStatics4>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextElementStatics4" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextHighlighter>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextHighlighter" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextHighlighterBase>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextHighlighterBase" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextHighlighterBaseFactory" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextHighlighterFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextHighlighterFactory" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextHighlighterStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextHighlighterStatics" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITextPointer>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITextPointer" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITypography>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITypography" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ITypographyStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ITypographyStatics" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::IUnderline>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.IUnderline" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Block>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Block" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::BlockCollection>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.BlockCollection" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Bold>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Bold" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ContactContentLinkProvider>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ContactContentLinkProvider" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ContentLink>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ContentLink" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ContentLinkProvider>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ContentLinkProvider" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::ContentLinkProviderCollection>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.ContentLinkProviderCollection" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Glyphs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Glyphs" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Hyperlink>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Hyperlink" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.HyperlinkClickEventArgs" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Inline>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Inline" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::InlineCollection>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.InlineCollection" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::InlineUIContainer>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.InlineUIContainer" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Italic>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Italic" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::LineBreak>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.LineBreak" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Paragraph>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Paragraph" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::PlaceContentLinkProvider>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.PlaceContentLinkProvider" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Run>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Run" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Span>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Span" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::TextElement>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.TextElement" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::TextHighlighter>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.TextHighlighter" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::TextHighlighterBase>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.TextHighlighterBase" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::TextPointer>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.TextPointer" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Typography>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Typography" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::Underline>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.Underline" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::LogicalDirection>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.LogicalDirection" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::UnderlineStyle>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.UnderlineStyle" };
-    };
-    template <> struct name<Windows::UI::Xaml::Documents::TextRange>
-    {
-        static constexpr auto & value{ L"Windows.UI.Xaml.Documents.TextRange" };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IBlock>
-    {
-        static constexpr guid value{ 0x4BCE0016,0xDD47,0x4350,{ 0x8C,0xB0,0xE1,0x71,0x60,0x0A,0xC8,0x96 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IBlock2>
-    {
-        static constexpr guid value{ 0x5EC7BDF3,0x1333,0x4A92,{ 0x83,0x18,0x6C,0xAE,0xDC,0x12,0xEF,0x89 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IBlockFactory>
-    {
-        static constexpr guid value{ 0x07110532,0x4F59,0x4F3B,{ 0x9C,0xE5,0x25,0x78,0x4C,0x43,0x05,0x07 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IBlockStatics>
-    {
-        static constexpr guid value{ 0xF86A8C34,0x8D18,0x4C53,{ 0xAE,0xBD,0x91,0xE6,0x10,0xA5,0xE0,0x10 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IBlockStatics2>
-    {
-        static constexpr guid value{ 0xAF01A4D6,0x03E3,0x4CEE,{ 0x9B,0x02,0x2B,0xFC,0x30,0x8B,0x27,0xA9 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IBold>
-    {
-        static constexpr guid value{ 0xADE73784,0x1B59,0x4DA4,{ 0xBB,0x23,0x0F,0x20,0xE8,0x85,0xB4,0xBF } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IContactContentLinkProvider>
-    {
-        static constexpr guid value{ 0xF92FD29B,0x589B,0x4ABD,{ 0x9D,0x37,0x35,0xA1,0x46,0x8F,0x02,0x1E } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IContentLink>
-    {
-        static constexpr guid value{ 0x6C60C3E1,0x528C,0x42F8,{ 0x92,0xBE,0x34,0xB8,0xC6,0x8B,0xE3,0x04 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs>
-    {
-        static constexpr guid value{ 0x546717C1,0xE8DF,0x4593,{ 0x96,0x39,0x97,0x59,0x5F,0xDF,0x83,0x10 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IContentLinkProvider>
-    {
-        static constexpr guid value{ 0x730587FD,0xBFDC,0x4CB3,{ 0x90,0x4D,0xB6,0x5A,0xB3,0x39,0xBB,0xF5 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IContentLinkProviderCollection>
-    {
-        static constexpr guid value{ 0xF5B84D0C,0xA9F4,0x4D1A,{ 0xA1,0x3C,0x10,0xDE,0xF1,0x84,0x37,0x34 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IContentLinkProviderFactory>
-    {
-        static constexpr guid value{ 0x57D60D3B,0xEF1A,0x4E8E,{ 0x83,0x9B,0xD3,0x6E,0xF3,0xA5,0x03,0xE0 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IContentLinkStatics>
-    {
-        static constexpr guid value{ 0xA34E3063,0xEB16,0x484E,{ 0xA3,0xDF,0x52,0x2B,0x9A,0x83,0x2E,0x6E } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IGlyphs>
-    {
-        static constexpr guid value{ 0xD079498B,0xF2B1,0x4281,{ 0x99,0xA2,0xE4,0xD0,0x59,0x32,0xB2,0xB5 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IGlyphs2>
-    {
-        static constexpr guid value{ 0xAA8BFE5C,0x3754,0x4BEE,{ 0xBB,0xE1,0x44,0x03,0xEE,0x9B,0x86,0xF0 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IGlyphsStatics>
-    {
-        static constexpr guid value{ 0x225CF4C5,0xFDF1,0x43ED,{ 0x95,0x8F,0x41,0x4E,0x86,0xF1,0x03,0xF2 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IGlyphsStatics2>
-    {
-        static constexpr guid value{ 0x10489AA7,0x1615,0x4A33,{ 0xAA,0x02,0xD7,0xEF,0x2A,0xEF,0xC7,0x39 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlink>
-    {
-        static constexpr guid value{ 0x0FE2363B,0x14E9,0x4152,{ 0x9E,0x58,0x5A,0xEA,0x5B,0x21,0xF0,0x8D } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlink2>
-    {
-        static constexpr guid value{ 0x4CE9DA5F,0x7CFF,0x4291,{ 0xB7,0x8F,0xDF,0xEC,0x72,0x49,0x05,0x76 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlink3>
-    {
-        static constexpr guid value{ 0xC3F157D9,0xE5D3,0x4FB7,{ 0x87,0x02,0x4F,0x6D,0x85,0xDD,0x9E,0x0A } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlink4>
-    {
-        static constexpr guid value{ 0xF7D02959,0x82FB,0x400A,{ 0xA4,0x07,0x5A,0x4E,0xE6,0x77,0x98,0x8A } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlink5>
-    {
-        static constexpr guid value{ 0x607DD7D2,0x0945,0x4328,{ 0x91,0xEE,0x94,0xCC,0xEC,0x2E,0xA6,0xC3 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs>
-    {
-        static constexpr guid value{ 0xC755916B,0x7BDC,0x4BE7,{ 0xB3,0x73,0x92,0x40,0xA5,0x03,0xD8,0x70 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlinkStatics>
-    {
-        static constexpr guid value{ 0x3A44D3D4,0xFD41,0x41DB,{ 0x8C,0x72,0x3B,0x79,0x0A,0xCD,0x9F,0xD3 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlinkStatics2>
-    {
-        static constexpr guid value{ 0x5028D8B7,0x7ADF,0x43EE,{ 0xA4,0xAE,0x9C,0x92,0x5F,0x75,0x57,0x16 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlinkStatics3>
-    {
-        static constexpr guid value{ 0x3E15DEA0,0x205E,0x4947,{ 0x99,0xA5,0x74,0xE7,0x57,0xE8,0xE1,0xB4 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlinkStatics4>
-    {
-        static constexpr guid value{ 0x0476B378,0x8FAA,0x4E24,{ 0xB3,0xB6,0xE9,0xDE,0x4D,0x3C,0x70,0x8C } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IHyperlinkStatics5>
-    {
-        static constexpr guid value{ 0x59308CEA,0x1E49,0x4921,{ 0xBD,0x88,0xA2,0x87,0x8D,0x07,0xE3,0x0E } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IInline>
-    {
-        static constexpr guid value{ 0x0C92712D,0x1BC9,0x4931,{ 0x8C,0xB1,0x1A,0xEA,0xDF,0x1C,0xC6,0x85 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IInlineFactory>
-    {
-        static constexpr guid value{ 0x4058ACD1,0x2F90,0x4B8F,{ 0x99,0xDD,0x42,0x18,0xEF,0x5F,0x03,0xDE } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IInlineUIContainer>
-    {
-        static constexpr guid value{ 0x1416CE81,0x28EE,0x452E,{ 0xB1,0x21,0x5F,0xC4,0xF6,0x0B,0x86,0xA6 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IItalic>
-    {
-        static constexpr guid value{ 0x91F4619C,0xFCBB,0x4157,{ 0x80,0x2C,0x76,0xF6,0x3B,0x5F,0xB6,0x57 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ILineBreak>
-    {
-        static constexpr guid value{ 0x645589C4,0xF769,0x41ED,{ 0x89,0x5B,0x8A,0x1B,0x2F,0xB3,0x15,0x62 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IParagraph>
-    {
-        static constexpr guid value{ 0xF83EF59A,0xFA61,0x4BEF,{ 0xAE,0x33,0x0B,0x0A,0xD7,0x56,0xA8,0x4D } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IParagraphStatics>
-    {
-        static constexpr guid value{ 0xEF08889A,0x535B,0x4E4C,{ 0x8D,0x84,0x28,0x3B,0x33,0xE9,0x8A,0x37 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IPlaceContentLinkProvider>
-    {
-        static constexpr guid value{ 0x10348A4C,0x2366,0x41BE,{ 0x90,0xC8,0x32,0x58,0xB5,0x3B,0x54,0x83 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IRun>
-    {
-        static constexpr guid value{ 0x59553C83,0x0E14,0x49BD,{ 0xB8,0x4B,0xC5,0x26,0xF3,0x03,0x43,0x49 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IRunStatics>
-    {
-        static constexpr guid value{ 0xE9303CEF,0x65A0,0x4B8D,{ 0xA7,0xF7,0x8F,0xDB,0x28,0x7B,0x46,0xF3 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ISpan>
-    {
-        static constexpr guid value{ 0x9839D4A9,0x02AF,0x4811,{ 0xAA,0x15,0x6B,0xEF,0x3A,0xCA,0xC9,0x7A } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ISpanFactory>
-    {
-        static constexpr guid value{ 0x5B916F5C,0xCD2D,0x40C0,{ 0x95,0x6A,0x38,0x64,0x48,0x32,0x2F,0x79 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement>
-    {
-        static constexpr guid value{ 0xE83B0062,0xD776,0x4F92,{ 0xBA,0xEA,0x40,0xE7,0x7D,0x47,0x91,0xD5 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement2>
-    {
-        static constexpr guid value{ 0xA8076AA8,0xF892,0x49F6,{ 0x8C,0xD2,0x89,0xAD,0xDA,0xF0,0x6D,0x2D } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement3>
-    {
-        static constexpr guid value{ 0xD1DB340F,0x1BC4,0x4CA8,{ 0xBC,0xF7,0x77,0x0B,0xFF,0x9B,0x27,0xAB } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement4>
-    {
-        static constexpr guid value{ 0xB196E222,0xCA0E,0x48A9,{ 0x83,0xBC,0x36,0xCE,0x50,0x56,0x6A,0xC7 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElement5>
-    {
-        static constexpr guid value{ 0xBD9552F3,0x540D,0x58BF,{ 0xB6,0xA8,0x07,0x55,0x6A,0xED,0xA2,0xEA } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElementFactory>
-    {
-        static constexpr guid value{ 0x35007285,0xCF47,0x4BFE,{ 0xB1,0xBC,0x39,0xC9,0x3A,0xF4,0xAE,0x80 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElementOverrides>
-    {
-        static constexpr guid value{ 0x0CE21EE7,0x4F76,0x4DD9,{ 0xBF,0x91,0x16,0x3B,0xEC,0xCF,0x84,0xBC } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElementStatics>
-    {
-        static constexpr guid value{ 0x0A2F9B98,0x6C03,0x4470,{ 0xA7,0x9B,0x32,0x98,0xA1,0x04,0x82,0xCE } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElementStatics2>
-    {
-        static constexpr guid value{ 0x164297B2,0x982B,0x49E1,{ 0x8C,0x03,0xCA,0x43,0xBC,0x4D,0x5B,0x6D } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElementStatics3>
-    {
-        static constexpr guid value{ 0xCFEFCFAF,0x0FA1,0x45EC,{ 0x9A,0x4E,0x9B,0x33,0x66,0x4D,0xC8,0xB1 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextElementStatics4>
-    {
-        static constexpr guid value{ 0xFD8F641E,0x6B12,0x40D5,{ 0xB6,0xEF,0xD1,0xBD,0x12,0xAC,0x90,0x66 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextHighlighter>
-    {
-        static constexpr guid value{ 0xBA6CB54B,0x7D75,0x4535,{ 0xB3,0x0D,0xA8,0x1A,0x00,0xB6,0x37,0xA4 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextHighlighterBase>
-    {
-        static constexpr guid value{ 0xD957601A,0x5F0D,0x4CDF,{ 0x97,0x58,0x97,0xE0,0xEB,0x95,0xC8,0xFA } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory>
-    {
-        static constexpr guid value{ 0x9592B2D0,0xEADC,0x4C74,{ 0x92,0xC8,0x6E,0x89,0x6E,0x22,0x50,0x6D } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextHighlighterFactory>
-    {
-        static constexpr guid value{ 0x70125461,0x9A8F,0x4FA0,{ 0xB2,0x35,0x8F,0xFA,0xA5,0x07,0xBE,0xF2 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextHighlighterStatics>
-    {
-        static constexpr guid value{ 0xB3B009C4,0x3A7E,0x49CC,{ 0xAB,0x84,0x29,0xC4,0x05,0x48,0x87,0x65 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITextPointer>
-    {
-        static constexpr guid value{ 0xAC687AA1,0x6A41,0x43FF,{ 0x85,0x1E,0x45,0x34,0x8A,0xA2,0xCF,0x7B } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITypography>
-    {
-        static constexpr guid value{ 0x866F65D5,0xEA97,0x42AB,{ 0x92,0x88,0x9C,0x01,0xAE,0xBC,0x7A,0x97 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::ITypographyStatics>
-    {
-        static constexpr guid value{ 0x67B9EC88,0x6C57,0x4CE0,{ 0x95,0xF1,0xD4,0xB9,0xED,0x63,0x2F,0xB4 } };
-    };
-    template <> struct guid_storage<Windows::UI::Xaml::Documents::IUnderline>
-    {
-        static constexpr guid value{ 0xA5FA8202,0x61C0,0x47D7,{ 0x93,0xEF,0xBC,0x0B,0x57,0x7C,0x5F,0x26 } };
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Block>
-    {
-        using type = Windows::UI::Xaml::Documents::IBlock;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::BlockCollection>
-    {
-        using type = Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Block>;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Bold>
-    {
-        using type = Windows::UI::Xaml::Documents::IBold;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::ContactContentLinkProvider>
-    {
-        using type = Windows::UI::Xaml::Documents::IContactContentLinkProvider;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::ContentLink>
-    {
-        using type = Windows::UI::Xaml::Documents::IContentLink;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>
-    {
-        using type = Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::ContentLinkProvider>
-    {
-        using type = Windows::UI::Xaml::Documents::IContentLinkProvider;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::ContentLinkProviderCollection>
-    {
-        using type = Windows::UI::Xaml::Documents::IContentLinkProviderCollection;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Glyphs>
-    {
-        using type = Windows::UI::Xaml::Documents::IGlyphs;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Hyperlink>
-    {
-        using type = Windows::UI::Xaml::Documents::IHyperlink;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>
-    {
-        using type = Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Inline>
-    {
-        using type = Windows::UI::Xaml::Documents::IInline;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::InlineCollection>
-    {
-        using type = Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Inline>;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::InlineUIContainer>
-    {
-        using type = Windows::UI::Xaml::Documents::IInlineUIContainer;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Italic>
-    {
-        using type = Windows::UI::Xaml::Documents::IItalic;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::LineBreak>
-    {
-        using type = Windows::UI::Xaml::Documents::ILineBreak;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Paragraph>
-    {
-        using type = Windows::UI::Xaml::Documents::IParagraph;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::PlaceContentLinkProvider>
-    {
-        using type = Windows::UI::Xaml::Documents::IPlaceContentLinkProvider;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Run>
-    {
-        using type = Windows::UI::Xaml::Documents::IRun;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Span>
-    {
-        using type = Windows::UI::Xaml::Documents::ISpan;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::TextElement>
-    {
-        using type = Windows::UI::Xaml::Documents::ITextElement;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::TextHighlighter>
-    {
-        using type = Windows::UI::Xaml::Documents::ITextHighlighter;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::TextHighlighterBase>
-    {
-        using type = Windows::UI::Xaml::Documents::ITextHighlighterBase;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::TextPointer>
-    {
-        using type = Windows::UI::Xaml::Documents::ITextPointer;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Typography>
-    {
-        using type = Windows::UI::Xaml::Documents::ITypography;
-    };
-    template <> struct default_interface<Windows::UI::Xaml::Documents::Underline>
-    {
-        using type = Windows::UI::Xaml::Documents::IUnderline;
-    };
+    template <> struct category<Windows::UI::Xaml::Documents::IBlock>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IBlock2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IBlockFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IBlockStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IBlockStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IBold>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IContactContentLinkProvider>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IContentLink>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkProvider>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkProviderCollection>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkProviderFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IContentLinkStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IGlyphs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IGlyphs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IGlyphsStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IGlyphsStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink4>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlink5>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics4>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IHyperlinkStatics5>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IInline>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IInlineFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IInlineUIContainer>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IItalic>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ILineBreak>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IParagraph>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IParagraphStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IPlaceContentLinkProvider>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IRun>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IRunStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ISpan>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ISpanFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElement>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElement2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElement3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElement4>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElement5>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElementFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElementOverrides>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElementStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElementStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElementStatics3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextElementStatics4>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighter>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighterBase>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighterFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextHighlighterStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITextPointer>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITypography>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ITypographyStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::IUnderline>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Block>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::BlockCollection>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Bold>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ContactContentLinkProvider>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ContentLink>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ContentLinkProvider>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::ContentLinkProviderCollection>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Glyphs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Hyperlink>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Inline>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::InlineCollection>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::InlineUIContainer>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Italic>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::LineBreak>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Paragraph>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::PlaceContentLinkProvider>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Run>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Span>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::TextElement>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::TextHighlighter>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::TextHighlighterBase>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::TextPointer>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Typography>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::Underline>{ using type = class_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::LogicalDirection>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::UnderlineStyle>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Xaml::Documents::TextRange>{ using type = struct_category<int32_t, int32_t>; };
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Block> = L"Windows.UI.Xaml.Documents.Block";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::BlockCollection> = L"Windows.UI.Xaml.Documents.BlockCollection";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Bold> = L"Windows.UI.Xaml.Documents.Bold";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ContactContentLinkProvider> = L"Windows.UI.Xaml.Documents.ContactContentLinkProvider";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ContentLink> = L"Windows.UI.Xaml.Documents.ContentLink";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> = L"Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ContentLinkProvider> = L"Windows.UI.Xaml.Documents.ContentLinkProvider";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ContentLinkProviderCollection> = L"Windows.UI.Xaml.Documents.ContentLinkProviderCollection";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Glyphs> = L"Windows.UI.Xaml.Documents.Glyphs";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Hyperlink> = L"Windows.UI.Xaml.Documents.Hyperlink";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> = L"Windows.UI.Xaml.Documents.HyperlinkClickEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Inline> = L"Windows.UI.Xaml.Documents.Inline";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::InlineCollection> = L"Windows.UI.Xaml.Documents.InlineCollection";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::InlineUIContainer> = L"Windows.UI.Xaml.Documents.InlineUIContainer";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Italic> = L"Windows.UI.Xaml.Documents.Italic";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::LineBreak> = L"Windows.UI.Xaml.Documents.LineBreak";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Paragraph> = L"Windows.UI.Xaml.Documents.Paragraph";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::PlaceContentLinkProvider> = L"Windows.UI.Xaml.Documents.PlaceContentLinkProvider";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Run> = L"Windows.UI.Xaml.Documents.Run";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Span> = L"Windows.UI.Xaml.Documents.Span";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::TextElement> = L"Windows.UI.Xaml.Documents.TextElement";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::TextHighlighter> = L"Windows.UI.Xaml.Documents.TextHighlighter";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::TextHighlighterBase> = L"Windows.UI.Xaml.Documents.TextHighlighterBase";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::TextPointer> = L"Windows.UI.Xaml.Documents.TextPointer";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Typography> = L"Windows.UI.Xaml.Documents.Typography";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::Underline> = L"Windows.UI.Xaml.Documents.Underline";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::LogicalDirection> = L"Windows.UI.Xaml.Documents.LogicalDirection";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::UnderlineStyle> = L"Windows.UI.Xaml.Documents.UnderlineStyle";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::TextRange> = L"Windows.UI.Xaml.Documents.TextRange";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IBlock> = L"Windows.UI.Xaml.Documents.IBlock";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IBlock2> = L"Windows.UI.Xaml.Documents.IBlock2";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IBlockFactory> = L"Windows.UI.Xaml.Documents.IBlockFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IBlockStatics> = L"Windows.UI.Xaml.Documents.IBlockStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IBlockStatics2> = L"Windows.UI.Xaml.Documents.IBlockStatics2";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IBold> = L"Windows.UI.Xaml.Documents.IBold";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IContactContentLinkProvider> = L"Windows.UI.Xaml.Documents.IContactContentLinkProvider";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IContentLink> = L"Windows.UI.Xaml.Documents.IContentLink";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs> = L"Windows.UI.Xaml.Documents.IContentLinkInvokedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IContentLinkProvider> = L"Windows.UI.Xaml.Documents.IContentLinkProvider";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IContentLinkProviderCollection> = L"Windows.UI.Xaml.Documents.IContentLinkProviderCollection";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IContentLinkProviderFactory> = L"Windows.UI.Xaml.Documents.IContentLinkProviderFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IContentLinkStatics> = L"Windows.UI.Xaml.Documents.IContentLinkStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IGlyphs> = L"Windows.UI.Xaml.Documents.IGlyphs";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IGlyphs2> = L"Windows.UI.Xaml.Documents.IGlyphs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IGlyphsStatics> = L"Windows.UI.Xaml.Documents.IGlyphsStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IGlyphsStatics2> = L"Windows.UI.Xaml.Documents.IGlyphsStatics2";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlink> = L"Windows.UI.Xaml.Documents.IHyperlink";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlink2> = L"Windows.UI.Xaml.Documents.IHyperlink2";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlink3> = L"Windows.UI.Xaml.Documents.IHyperlink3";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlink4> = L"Windows.UI.Xaml.Documents.IHyperlink4";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlink5> = L"Windows.UI.Xaml.Documents.IHyperlink5";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs> = L"Windows.UI.Xaml.Documents.IHyperlinkClickEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlinkStatics> = L"Windows.UI.Xaml.Documents.IHyperlinkStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlinkStatics2> = L"Windows.UI.Xaml.Documents.IHyperlinkStatics2";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlinkStatics3> = L"Windows.UI.Xaml.Documents.IHyperlinkStatics3";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlinkStatics4> = L"Windows.UI.Xaml.Documents.IHyperlinkStatics4";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IHyperlinkStatics5> = L"Windows.UI.Xaml.Documents.IHyperlinkStatics5";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IInline> = L"Windows.UI.Xaml.Documents.IInline";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IInlineFactory> = L"Windows.UI.Xaml.Documents.IInlineFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IInlineUIContainer> = L"Windows.UI.Xaml.Documents.IInlineUIContainer";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IItalic> = L"Windows.UI.Xaml.Documents.IItalic";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ILineBreak> = L"Windows.UI.Xaml.Documents.ILineBreak";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IParagraph> = L"Windows.UI.Xaml.Documents.IParagraph";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IParagraphStatics> = L"Windows.UI.Xaml.Documents.IParagraphStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IPlaceContentLinkProvider> = L"Windows.UI.Xaml.Documents.IPlaceContentLinkProvider";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IRun> = L"Windows.UI.Xaml.Documents.IRun";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IRunStatics> = L"Windows.UI.Xaml.Documents.IRunStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ISpan> = L"Windows.UI.Xaml.Documents.ISpan";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ISpanFactory> = L"Windows.UI.Xaml.Documents.ISpanFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElement> = L"Windows.UI.Xaml.Documents.ITextElement";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElement2> = L"Windows.UI.Xaml.Documents.ITextElement2";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElement3> = L"Windows.UI.Xaml.Documents.ITextElement3";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElement4> = L"Windows.UI.Xaml.Documents.ITextElement4";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElement5> = L"Windows.UI.Xaml.Documents.ITextElement5";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElementFactory> = L"Windows.UI.Xaml.Documents.ITextElementFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElementOverrides> = L"Windows.UI.Xaml.Documents.ITextElementOverrides";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElementStatics> = L"Windows.UI.Xaml.Documents.ITextElementStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElementStatics2> = L"Windows.UI.Xaml.Documents.ITextElementStatics2";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElementStatics3> = L"Windows.UI.Xaml.Documents.ITextElementStatics3";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextElementStatics4> = L"Windows.UI.Xaml.Documents.ITextElementStatics4";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextHighlighter> = L"Windows.UI.Xaml.Documents.ITextHighlighter";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextHighlighterBase> = L"Windows.UI.Xaml.Documents.ITextHighlighterBase";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory> = L"Windows.UI.Xaml.Documents.ITextHighlighterBaseFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextHighlighterFactory> = L"Windows.UI.Xaml.Documents.ITextHighlighterFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextHighlighterStatics> = L"Windows.UI.Xaml.Documents.ITextHighlighterStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITextPointer> = L"Windows.UI.Xaml.Documents.ITextPointer";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITypography> = L"Windows.UI.Xaml.Documents.ITypography";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::ITypographyStatics> = L"Windows.UI.Xaml.Documents.ITypographyStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Documents::IUnderline> = L"Windows.UI.Xaml.Documents.IUnderline";
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IBlock>{ 0x4BCE0016,0xDD47,0x4350,{ 0x8C,0xB0,0xE1,0x71,0x60,0x0A,0xC8,0x96 } }; // 4BCE0016-DD47-4350-8CB0-E171600AC896
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IBlock2>{ 0x5EC7BDF3,0x1333,0x4A92,{ 0x83,0x18,0x6C,0xAE,0xDC,0x12,0xEF,0x89 } }; // 5EC7BDF3-1333-4A92-8318-6CAEDC12EF89
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IBlockFactory>{ 0x07110532,0x4F59,0x4F3B,{ 0x9C,0xE5,0x25,0x78,0x4C,0x43,0x05,0x07 } }; // 07110532-4F59-4F3B-9CE5-25784C430507
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IBlockStatics>{ 0xF86A8C34,0x8D18,0x4C53,{ 0xAE,0xBD,0x91,0xE6,0x10,0xA5,0xE0,0x10 } }; // F86A8C34-8D18-4C53-AEBD-91E610A5E010
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IBlockStatics2>{ 0xAF01A4D6,0x03E3,0x4CEE,{ 0x9B,0x02,0x2B,0xFC,0x30,0x8B,0x27,0xA9 } }; // AF01A4D6-03E3-4CEE-9B02-2BFC308B27A9
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IBold>{ 0xADE73784,0x1B59,0x4DA4,{ 0xBB,0x23,0x0F,0x20,0xE8,0x85,0xB4,0xBF } }; // ADE73784-1B59-4DA4-BB23-0F20E885B4BF
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IContactContentLinkProvider>{ 0xF92FD29B,0x589B,0x4ABD,{ 0x9D,0x37,0x35,0xA1,0x46,0x8F,0x02,0x1E } }; // F92FD29B-589B-4ABD-9D37-35A1468F021E
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IContentLink>{ 0x6C60C3E1,0x528C,0x42F8,{ 0x92,0xBE,0x34,0xB8,0xC6,0x8B,0xE3,0x04 } }; // 6C60C3E1-528C-42F8-92BE-34B8C68BE304
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs>{ 0x546717C1,0xE8DF,0x4593,{ 0x96,0x39,0x97,0x59,0x5F,0xDF,0x83,0x10 } }; // 546717C1-E8DF-4593-9639-97595FDF8310
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IContentLinkProvider>{ 0x730587FD,0xBFDC,0x4CB3,{ 0x90,0x4D,0xB6,0x5A,0xB3,0x39,0xBB,0xF5 } }; // 730587FD-BFDC-4CB3-904D-B65AB339BBF5
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IContentLinkProviderCollection>{ 0xF5B84D0C,0xA9F4,0x4D1A,{ 0xA1,0x3C,0x10,0xDE,0xF1,0x84,0x37,0x34 } }; // F5B84D0C-A9F4-4D1A-A13C-10DEF1843734
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IContentLinkProviderFactory>{ 0x57D60D3B,0xEF1A,0x4E8E,{ 0x83,0x9B,0xD3,0x6E,0xF3,0xA5,0x03,0xE0 } }; // 57D60D3B-EF1A-4E8E-839B-D36EF3A503E0
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IContentLinkStatics>{ 0xA34E3063,0xEB16,0x484E,{ 0xA3,0xDF,0x52,0x2B,0x9A,0x83,0x2E,0x6E } }; // A34E3063-EB16-484E-A3DF-522B9A832E6E
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IGlyphs>{ 0xD079498B,0xF2B1,0x4281,{ 0x99,0xA2,0xE4,0xD0,0x59,0x32,0xB2,0xB5 } }; // D079498B-F2B1-4281-99A2-E4D05932B2B5
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IGlyphs2>{ 0xAA8BFE5C,0x3754,0x4BEE,{ 0xBB,0xE1,0x44,0x03,0xEE,0x9B,0x86,0xF0 } }; // AA8BFE5C-3754-4BEE-BBE1-4403EE9B86F0
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IGlyphsStatics>{ 0x225CF4C5,0xFDF1,0x43ED,{ 0x95,0x8F,0x41,0x4E,0x86,0xF1,0x03,0xF2 } }; // 225CF4C5-FDF1-43ED-958F-414E86F103F2
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IGlyphsStatics2>{ 0x10489AA7,0x1615,0x4A33,{ 0xAA,0x02,0xD7,0xEF,0x2A,0xEF,0xC7,0x39 } }; // 10489AA7-1615-4A33-AA02-D7EF2AEFC739
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlink>{ 0x0FE2363B,0x14E9,0x4152,{ 0x9E,0x58,0x5A,0xEA,0x5B,0x21,0xF0,0x8D } }; // 0FE2363B-14E9-4152-9E58-5AEA5B21F08D
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlink2>{ 0x4CE9DA5F,0x7CFF,0x4291,{ 0xB7,0x8F,0xDF,0xEC,0x72,0x49,0x05,0x76 } }; // 4CE9DA5F-7CFF-4291-B78F-DFEC72490576
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlink3>{ 0xC3F157D9,0xE5D3,0x4FB7,{ 0x87,0x02,0x4F,0x6D,0x85,0xDD,0x9E,0x0A } }; // C3F157D9-E5D3-4FB7-8702-4F6D85DD9E0A
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlink4>{ 0xF7D02959,0x82FB,0x400A,{ 0xA4,0x07,0x5A,0x4E,0xE6,0x77,0x98,0x8A } }; // F7D02959-82FB-400A-A407-5A4EE677988A
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlink5>{ 0x607DD7D2,0x0945,0x4328,{ 0x91,0xEE,0x94,0xCC,0xEC,0x2E,0xA6,0xC3 } }; // 607DD7D2-0945-4328-91EE-94CCEC2EA6C3
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs>{ 0xC755916B,0x7BDC,0x4BE7,{ 0xB3,0x73,0x92,0x40,0xA5,0x03,0xD8,0x70 } }; // C755916B-7BDC-4BE7-B373-9240A503D870
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlinkStatics>{ 0x3A44D3D4,0xFD41,0x41DB,{ 0x8C,0x72,0x3B,0x79,0x0A,0xCD,0x9F,0xD3 } }; // 3A44D3D4-FD41-41DB-8C72-3B790ACD9FD3
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlinkStatics2>{ 0x5028D8B7,0x7ADF,0x43EE,{ 0xA4,0xAE,0x9C,0x92,0x5F,0x75,0x57,0x16 } }; // 5028D8B7-7ADF-43EE-A4AE-9C925F755716
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlinkStatics3>{ 0x3E15DEA0,0x205E,0x4947,{ 0x99,0xA5,0x74,0xE7,0x57,0xE8,0xE1,0xB4 } }; // 3E15DEA0-205E-4947-99A5-74E757E8E1B4
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlinkStatics4>{ 0x0476B378,0x8FAA,0x4E24,{ 0xB3,0xB6,0xE9,0xDE,0x4D,0x3C,0x70,0x8C } }; // 0476B378-8FAA-4E24-B3B6-E9DE4D3C708C
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IHyperlinkStatics5>{ 0x59308CEA,0x1E49,0x4921,{ 0xBD,0x88,0xA2,0x87,0x8D,0x07,0xE3,0x0E } }; // 59308CEA-1E49-4921-BD88-A2878D07E30E
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IInline>{ 0x0C92712D,0x1BC9,0x4931,{ 0x8C,0xB1,0x1A,0xEA,0xDF,0x1C,0xC6,0x85 } }; // 0C92712D-1BC9-4931-8CB1-1AEADF1CC685
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IInlineFactory>{ 0x4058ACD1,0x2F90,0x4B8F,{ 0x99,0xDD,0x42,0x18,0xEF,0x5F,0x03,0xDE } }; // 4058ACD1-2F90-4B8F-99DD-4218EF5F03DE
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IInlineUIContainer>{ 0x1416CE81,0x28EE,0x452E,{ 0xB1,0x21,0x5F,0xC4,0xF6,0x0B,0x86,0xA6 } }; // 1416CE81-28EE-452E-B121-5FC4F60B86A6
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IItalic>{ 0x91F4619C,0xFCBB,0x4157,{ 0x80,0x2C,0x76,0xF6,0x3B,0x5F,0xB6,0x57 } }; // 91F4619C-FCBB-4157-802C-76F63B5FB657
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ILineBreak>{ 0x645589C4,0xF769,0x41ED,{ 0x89,0x5B,0x8A,0x1B,0x2F,0xB3,0x15,0x62 } }; // 645589C4-F769-41ED-895B-8A1B2FB31562
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IParagraph>{ 0xF83EF59A,0xFA61,0x4BEF,{ 0xAE,0x33,0x0B,0x0A,0xD7,0x56,0xA8,0x4D } }; // F83EF59A-FA61-4BEF-AE33-0B0AD756A84D
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IParagraphStatics>{ 0xEF08889A,0x535B,0x4E4C,{ 0x8D,0x84,0x28,0x3B,0x33,0xE9,0x8A,0x37 } }; // EF08889A-535B-4E4C-8D84-283B33E98A37
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IPlaceContentLinkProvider>{ 0x10348A4C,0x2366,0x41BE,{ 0x90,0xC8,0x32,0x58,0xB5,0x3B,0x54,0x83 } }; // 10348A4C-2366-41BE-90C8-3258B53B5483
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IRun>{ 0x59553C83,0x0E14,0x49BD,{ 0xB8,0x4B,0xC5,0x26,0xF3,0x03,0x43,0x49 } }; // 59553C83-0E14-49BD-B84B-C526F3034349
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IRunStatics>{ 0xE9303CEF,0x65A0,0x4B8D,{ 0xA7,0xF7,0x8F,0xDB,0x28,0x7B,0x46,0xF3 } }; // E9303CEF-65A0-4B8D-A7F7-8FDB287B46F3
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ISpan>{ 0x9839D4A9,0x02AF,0x4811,{ 0xAA,0x15,0x6B,0xEF,0x3A,0xCA,0xC9,0x7A } }; // 9839D4A9-02AF-4811-AA15-6BEF3ACAC97A
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ISpanFactory>{ 0x5B916F5C,0xCD2D,0x40C0,{ 0x95,0x6A,0x38,0x64,0x48,0x32,0x2F,0x79 } }; // 5B916F5C-CD2D-40C0-956A-386448322F79
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElement>{ 0xE83B0062,0xD776,0x4F92,{ 0xBA,0xEA,0x40,0xE7,0x7D,0x47,0x91,0xD5 } }; // E83B0062-D776-4F92-BAEA-40E77D4791D5
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElement2>{ 0xA8076AA8,0xF892,0x49F6,{ 0x8C,0xD2,0x89,0xAD,0xDA,0xF0,0x6D,0x2D } }; // A8076AA8-F892-49F6-8CD2-89ADDAF06D2D
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElement3>{ 0xD1DB340F,0x1BC4,0x4CA8,{ 0xBC,0xF7,0x77,0x0B,0xFF,0x9B,0x27,0xAB } }; // D1DB340F-1BC4-4CA8-BCF7-770BFF9B27AB
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElement4>{ 0xB196E222,0xCA0E,0x48A9,{ 0x83,0xBC,0x36,0xCE,0x50,0x56,0x6A,0xC7 } }; // B196E222-CA0E-48A9-83BC-36CE50566AC7
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElement5>{ 0xBD9552F3,0x540D,0x58BF,{ 0xB6,0xA8,0x07,0x55,0x6A,0xED,0xA2,0xEA } }; // BD9552F3-540D-58BF-B6A8-07556AEDA2EA
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElementFactory>{ 0x35007285,0xCF47,0x4BFE,{ 0xB1,0xBC,0x39,0xC9,0x3A,0xF4,0xAE,0x80 } }; // 35007285-CF47-4BFE-B1BC-39C93AF4AE80
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElementOverrides>{ 0x0CE21EE7,0x4F76,0x4DD9,{ 0xBF,0x91,0x16,0x3B,0xEC,0xCF,0x84,0xBC } }; // 0CE21EE7-4F76-4DD9-BF91-163BECCF84BC
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElementStatics>{ 0x0A2F9B98,0x6C03,0x4470,{ 0xA7,0x9B,0x32,0x98,0xA1,0x04,0x82,0xCE } }; // 0A2F9B98-6C03-4470-A79B-3298A10482CE
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElementStatics2>{ 0x164297B2,0x982B,0x49E1,{ 0x8C,0x03,0xCA,0x43,0xBC,0x4D,0x5B,0x6D } }; // 164297B2-982B-49E1-8C03-CA43BC4D5B6D
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElementStatics3>{ 0xCFEFCFAF,0x0FA1,0x45EC,{ 0x9A,0x4E,0x9B,0x33,0x66,0x4D,0xC8,0xB1 } }; // CFEFCFAF-0FA1-45EC-9A4E-9B33664DC8B1
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextElementStatics4>{ 0xFD8F641E,0x6B12,0x40D5,{ 0xB6,0xEF,0xD1,0xBD,0x12,0xAC,0x90,0x66 } }; // FD8F641E-6B12-40D5-B6EF-D1BD12AC9066
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextHighlighter>{ 0xBA6CB54B,0x7D75,0x4535,{ 0xB3,0x0D,0xA8,0x1A,0x00,0xB6,0x37,0xA4 } }; // BA6CB54B-7D75-4535-B30D-A81A00B637A4
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextHighlighterBase>{ 0xD957601A,0x5F0D,0x4CDF,{ 0x97,0x58,0x97,0xE0,0xEB,0x95,0xC8,0xFA } }; // D957601A-5F0D-4CDF-9758-97E0EB95C8FA
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory>{ 0x9592B2D0,0xEADC,0x4C74,{ 0x92,0xC8,0x6E,0x89,0x6E,0x22,0x50,0x6D } }; // 9592B2D0-EADC-4C74-92C8-6E896E22506D
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextHighlighterFactory>{ 0x70125461,0x9A8F,0x4FA0,{ 0xB2,0x35,0x8F,0xFA,0xA5,0x07,0xBE,0xF2 } }; // 70125461-9A8F-4FA0-B235-8FFAA507BEF2
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextHighlighterStatics>{ 0xB3B009C4,0x3A7E,0x49CC,{ 0xAB,0x84,0x29,0xC4,0x05,0x48,0x87,0x65 } }; // B3B009C4-3A7E-49CC-AB84-29C405488765
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITextPointer>{ 0xAC687AA1,0x6A41,0x43FF,{ 0x85,0x1E,0x45,0x34,0x8A,0xA2,0xCF,0x7B } }; // AC687AA1-6A41-43FF-851E-45348AA2CF7B
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITypography>{ 0x866F65D5,0xEA97,0x42AB,{ 0x92,0x88,0x9C,0x01,0xAE,0xBC,0x7A,0x97 } }; // 866F65D5-EA97-42AB-9288-9C01AEBC7A97
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::ITypographyStatics>{ 0x67B9EC88,0x6C57,0x4CE0,{ 0x95,0xF1,0xD4,0xB9,0xED,0x63,0x2F,0xB4 } }; // 67B9EC88-6C57-4CE0-95F1-D4B9ED632FB4
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Documents::IUnderline>{ 0xA5FA8202,0x61C0,0x47D7,{ 0x93,0xEF,0xBC,0x0B,0x57,0x7C,0x5F,0x26 } }; // A5FA8202-61C0-47D7-93EF-BC0B577C5F26
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Block>{ using type = Windows::UI::Xaml::Documents::IBlock; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::BlockCollection>{ using type = Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Block>; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Bold>{ using type = Windows::UI::Xaml::Documents::IBold; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::ContactContentLinkProvider>{ using type = Windows::UI::Xaml::Documents::IContactContentLinkProvider; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::ContentLink>{ using type = Windows::UI::Xaml::Documents::IContentLink; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>{ using type = Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::ContentLinkProvider>{ using type = Windows::UI::Xaml::Documents::IContentLinkProvider; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::ContentLinkProviderCollection>{ using type = Windows::UI::Xaml::Documents::IContentLinkProviderCollection; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Glyphs>{ using type = Windows::UI::Xaml::Documents::IGlyphs; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Hyperlink>{ using type = Windows::UI::Xaml::Documents::IHyperlink; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>{ using type = Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Inline>{ using type = Windows::UI::Xaml::Documents::IInline; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::InlineCollection>{ using type = Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Inline>; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::InlineUIContainer>{ using type = Windows::UI::Xaml::Documents::IInlineUIContainer; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Italic>{ using type = Windows::UI::Xaml::Documents::IItalic; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::LineBreak>{ using type = Windows::UI::Xaml::Documents::ILineBreak; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Paragraph>{ using type = Windows::UI::Xaml::Documents::IParagraph; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::PlaceContentLinkProvider>{ using type = Windows::UI::Xaml::Documents::IPlaceContentLinkProvider; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Run>{ using type = Windows::UI::Xaml::Documents::IRun; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Span>{ using type = Windows::UI::Xaml::Documents::ISpan; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::TextElement>{ using type = Windows::UI::Xaml::Documents::ITextElement; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::TextHighlighter>{ using type = Windows::UI::Xaml::Documents::ITextHighlighter; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::TextHighlighterBase>{ using type = Windows::UI::Xaml::Documents::ITextHighlighterBase; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::TextPointer>{ using type = Windows::UI::Xaml::Documents::ITextPointer; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Typography>{ using type = Windows::UI::Xaml::Documents::ITypography; };
+    template <> struct default_interface<Windows::UI::Xaml::Documents::Underline>{ using type = Windows::UI::Xaml::Documents::IUnderline; };
     template <> struct abi<Windows::UI::Xaml::Documents::IBlock>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -1960,14 +1168,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IBlock
     {
-        [[nodiscard]] auto TextAlignment() const;
-        auto TextAlignment(Windows::UI::Xaml::TextAlignment const& value) const;
-        [[nodiscard]] auto LineHeight() const;
-        auto LineHeight(double value) const;
-        [[nodiscard]] auto LineStackingStrategy() const;
-        auto LineStackingStrategy(Windows::UI::Xaml::LineStackingStrategy const& value) const;
-        [[nodiscard]] auto Margin() const;
-        auto Margin(Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::TextAlignment) TextAlignment() const;
+        WINRT_IMPL_AUTO(void) TextAlignment(Windows::UI::Xaml::TextAlignment const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) LineHeight() const;
+        WINRT_IMPL_AUTO(void) LineHeight(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::LineStackingStrategy) LineStackingStrategy() const;
+        WINRT_IMPL_AUTO(void) LineStackingStrategy(Windows::UI::Xaml::LineStackingStrategy const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) Margin() const;
+        WINRT_IMPL_AUTO(void) Margin(Windows::UI::Xaml::Thickness const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IBlock>
     {
@@ -1976,8 +1184,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IBlock2
     {
-        [[nodiscard]] auto HorizontalTextAlignment() const;
-        auto HorizontalTextAlignment(Windows::UI::Xaml::TextAlignment const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::TextAlignment) HorizontalTextAlignment() const;
+        WINRT_IMPL_AUTO(void) HorizontalTextAlignment(Windows::UI::Xaml::TextAlignment const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IBlock2>
     {
@@ -1986,7 +1194,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IBlockFactory
     {
-        auto CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::Block) CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IBlockFactory>
     {
@@ -1995,10 +1203,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IBlockStatics
     {
-        [[nodiscard]] auto TextAlignmentProperty() const;
-        [[nodiscard]] auto LineHeightProperty() const;
-        [[nodiscard]] auto LineStackingStrategyProperty() const;
-        [[nodiscard]] auto MarginProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TextAlignmentProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) LineHeightProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) LineStackingStrategyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) MarginProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IBlockStatics>
     {
@@ -2007,7 +1215,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IBlockStatics2
     {
-        [[nodiscard]] auto HorizontalTextAlignmentProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) HorizontalTextAlignmentProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IBlockStatics2>
     {
@@ -2032,48 +1240,48 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IContentLink
     {
-        [[nodiscard]] auto Info() const;
-        auto Info(Windows::UI::Text::ContentLinkInfo const& value) const;
-        [[nodiscard]] auto Background() const;
-        auto Background(Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] auto Cursor() const;
-        auto Cursor(Windows::UI::Core::CoreCursorType const& value) const;
-        [[nodiscard]] auto XYFocusLeft() const;
-        auto XYFocusLeft(Windows::UI::Xaml::DependencyObject const& value) const;
-        [[nodiscard]] auto XYFocusRight() const;
-        auto XYFocusRight(Windows::UI::Xaml::DependencyObject const& value) const;
-        [[nodiscard]] auto XYFocusUp() const;
-        auto XYFocusUp(Windows::UI::Xaml::DependencyObject const& value) const;
-        [[nodiscard]] auto XYFocusDown() const;
-        auto XYFocusDown(Windows::UI::Xaml::DependencyObject const& value) const;
-        [[nodiscard]] auto ElementSoundMode() const;
-        auto ElementSoundMode(Windows::UI::Xaml::ElementSoundMode const& value) const;
-        [[nodiscard]] auto FocusState() const;
-        [[nodiscard]] auto XYFocusUpNavigationStrategy() const;
-        auto XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
-        [[nodiscard]] auto XYFocusDownNavigationStrategy() const;
-        auto XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
-        [[nodiscard]] auto XYFocusLeftNavigationStrategy() const;
-        auto XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
-        [[nodiscard]] auto XYFocusRightNavigationStrategy() const;
-        auto XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
-        [[nodiscard]] auto IsTabStop() const;
-        auto IsTabStop(bool value) const;
-        [[nodiscard]] auto TabIndex() const;
-        auto TabIndex(int32_t value) const;
-        auto Invoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::ContentLink, Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::ContentLinkInfo) Info() const;
+        WINRT_IMPL_AUTO(void) Info(Windows::UI::Text::ContentLinkInfo const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) Background() const;
+        WINRT_IMPL_AUTO(void) Background(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreCursorType) Cursor() const;
+        WINRT_IMPL_AUTO(void) Cursor(Windows::UI::Core::CoreCursorType const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) XYFocusLeft() const;
+        WINRT_IMPL_AUTO(void) XYFocusLeft(Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) XYFocusRight() const;
+        WINRT_IMPL_AUTO(void) XYFocusRight(Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) XYFocusUp() const;
+        WINRT_IMPL_AUTO(void) XYFocusUp(Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) XYFocusDown() const;
+        WINRT_IMPL_AUTO(void) XYFocusDown(Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementSoundMode) ElementSoundMode() const;
+        WINRT_IMPL_AUTO(void) ElementSoundMode(Windows::UI::Xaml::ElementSoundMode const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::FocusState) FocusState() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) XYFocusUpNavigationStrategy() const;
+        WINRT_IMPL_AUTO(void) XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) XYFocusDownNavigationStrategy() const;
+        WINRT_IMPL_AUTO(void) XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) XYFocusLeftNavigationStrategy() const;
+        WINRT_IMPL_AUTO(void) XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) XYFocusRightNavigationStrategy() const;
+        WINRT_IMPL_AUTO(void) XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTabStop() const;
+        WINRT_IMPL_AUTO(void) IsTabStop(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) TabIndex() const;
+        WINRT_IMPL_AUTO(void) TabIndex(int32_t value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) Invoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::ContentLink, Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> const& handler) const;
         using Invoked_revoker = impl::event_revoker<Windows::UI::Xaml::Documents::IContentLink, &impl::abi_t<Windows::UI::Xaml::Documents::IContentLink>::remove_Invoked>;
-        Invoked_revoker Invoked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::ContentLink, Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> const& handler) const;
-        auto Invoked(winrt::event_token const& token) const noexcept;
-        auto GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        [[nodiscard]] Invoked_revoker Invoked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::ContentLink, Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Invoked(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const;
         using GotFocus_revoker = impl::event_revoker<Windows::UI::Xaml::Documents::IContentLink, &impl::abi_t<Windows::UI::Xaml::Documents::IContentLink>::remove_GotFocus>;
-        GotFocus_revoker GotFocus(auto_revoke_t, Windows::UI::Xaml::RoutedEventHandler const& handler) const;
-        auto GotFocus(winrt::event_token const& token) const noexcept;
-        auto LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        [[nodiscard]] GotFocus_revoker GotFocus(auto_revoke_t, Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        WINRT_IMPL_AUTO(void) GotFocus(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const;
         using LostFocus_revoker = impl::event_revoker<Windows::UI::Xaml::Documents::IContentLink, &impl::abi_t<Windows::UI::Xaml::Documents::IContentLink>::remove_LostFocus>;
-        LostFocus_revoker LostFocus(auto_revoke_t, Windows::UI::Xaml::RoutedEventHandler const& handler) const;
-        auto LostFocus(winrt::event_token const& token) const noexcept;
-        auto Focus(Windows::UI::Xaml::FocusState const& value) const;
+        [[nodiscard]] LostFocus_revoker LostFocus(auto_revoke_t, Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        WINRT_IMPL_AUTO(void) LostFocus(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(bool) Focus(Windows::UI::Xaml::FocusState const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IContentLink>
     {
@@ -2082,9 +1290,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IContentLinkInvokedEventArgs
     {
-        [[nodiscard]] auto ContentLinkInfo() const;
-        [[nodiscard]] auto Handled() const;
-        auto Handled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::ContentLinkInfo) ContentLinkInfo() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
+        WINRT_IMPL_AUTO(void) Handled(bool value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs>
     {
@@ -2109,7 +1317,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IContentLinkProviderFactory
     {
-        auto CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::ContentLinkProvider) CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IContentLinkProviderFactory>
     {
@@ -2118,20 +1326,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IContentLinkStatics
     {
-        [[nodiscard]] auto BackgroundProperty() const;
-        [[nodiscard]] auto CursorProperty() const;
-        [[nodiscard]] auto XYFocusLeftProperty() const;
-        [[nodiscard]] auto XYFocusRightProperty() const;
-        [[nodiscard]] auto XYFocusUpProperty() const;
-        [[nodiscard]] auto XYFocusDownProperty() const;
-        [[nodiscard]] auto ElementSoundModeProperty() const;
-        [[nodiscard]] auto FocusStateProperty() const;
-        [[nodiscard]] auto XYFocusUpNavigationStrategyProperty() const;
-        [[nodiscard]] auto XYFocusDownNavigationStrategyProperty() const;
-        [[nodiscard]] auto XYFocusLeftNavigationStrategyProperty() const;
-        [[nodiscard]] auto XYFocusRightNavigationStrategyProperty() const;
-        [[nodiscard]] auto IsTabStopProperty() const;
-        [[nodiscard]] auto TabIndexProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) BackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CursorProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusLeftProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusRightProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusUpProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusDownProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ElementSoundModeProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FocusStateProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusUpNavigationStrategyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusDownNavigationStrategyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusLeftNavigationStrategyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusRightNavigationStrategyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) IsTabStopProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TabIndexProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IContentLinkStatics>
     {
@@ -2140,22 +1348,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IGlyphs
     {
-        [[nodiscard]] auto UnicodeString() const;
-        auto UnicodeString(param::hstring const& value) const;
-        [[nodiscard]] auto Indices() const;
-        auto Indices(param::hstring const& value) const;
-        [[nodiscard]] auto FontUri() const;
-        auto FontUri(Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] auto StyleSimulations() const;
-        auto StyleSimulations(Windows::UI::Xaml::Media::StyleSimulations const& value) const;
-        [[nodiscard]] auto FontRenderingEmSize() const;
-        auto FontRenderingEmSize(double value) const;
-        [[nodiscard]] auto OriginX() const;
-        auto OriginX(double value) const;
-        [[nodiscard]] auto OriginY() const;
-        auto OriginY(double value) const;
-        [[nodiscard]] auto Fill() const;
-        auto Fill(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UnicodeString() const;
+        WINRT_IMPL_AUTO(void) UnicodeString(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Indices() const;
+        WINRT_IMPL_AUTO(void) Indices(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Uri) FontUri() const;
+        WINRT_IMPL_AUTO(void) FontUri(Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::StyleSimulations) StyleSimulations() const;
+        WINRT_IMPL_AUTO(void) StyleSimulations(Windows::UI::Xaml::Media::StyleSimulations const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) FontRenderingEmSize() const;
+        WINRT_IMPL_AUTO(void) FontRenderingEmSize(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) OriginX() const;
+        WINRT_IMPL_AUTO(void) OriginX(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) OriginY() const;
+        WINRT_IMPL_AUTO(void) OriginY(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) Fill() const;
+        WINRT_IMPL_AUTO(void) Fill(Windows::UI::Xaml::Media::Brush const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IGlyphs>
     {
@@ -2164,10 +1372,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IGlyphs2
     {
-        [[nodiscard]] auto IsColorFontEnabled() const;
-        auto IsColorFontEnabled(bool value) const;
-        [[nodiscard]] auto ColorFontPaletteIndex() const;
-        auto ColorFontPaletteIndex(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsColorFontEnabled() const;
+        WINRT_IMPL_AUTO(void) IsColorFontEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ColorFontPaletteIndex() const;
+        WINRT_IMPL_AUTO(void) ColorFontPaletteIndex(int32_t value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IGlyphs2>
     {
@@ -2176,14 +1384,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IGlyphsStatics
     {
-        [[nodiscard]] auto UnicodeStringProperty() const;
-        [[nodiscard]] auto IndicesProperty() const;
-        [[nodiscard]] auto FontUriProperty() const;
-        [[nodiscard]] auto StyleSimulationsProperty() const;
-        [[nodiscard]] auto FontRenderingEmSizeProperty() const;
-        [[nodiscard]] auto OriginXProperty() const;
-        [[nodiscard]] auto OriginYProperty() const;
-        [[nodiscard]] auto FillProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) UnicodeStringProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) IndicesProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FontUriProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StyleSimulationsProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FontRenderingEmSizeProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) OriginXProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) OriginYProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FillProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IGlyphsStatics>
     {
@@ -2192,8 +1400,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IGlyphsStatics2
     {
-        [[nodiscard]] auto IsColorFontEnabledProperty() const;
-        [[nodiscard]] auto ColorFontPaletteIndexProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) IsColorFontEnabledProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ColorFontPaletteIndexProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IGlyphsStatics2>
     {
@@ -2202,12 +1410,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlink
     {
-        [[nodiscard]] auto NavigateUri() const;
-        auto NavigateUri(Windows::Foundation::Uri const& value) const;
-        auto Click(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::Hyperlink, Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Uri) NavigateUri() const;
+        WINRT_IMPL_AUTO(void) NavigateUri(Windows::Foundation::Uri const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) Click(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::Hyperlink, Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> const& handler) const;
         using Click_revoker = impl::event_revoker<Windows::UI::Xaml::Documents::IHyperlink, &impl::abi_t<Windows::UI::Xaml::Documents::IHyperlink>::remove_Click>;
-        Click_revoker Click(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::Hyperlink, Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> const& handler) const;
-        auto Click(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] Click_revoker Click(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::Hyperlink, Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Click(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlink>
     {
@@ -2216,8 +1424,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlink2
     {
-        [[nodiscard]] auto UnderlineStyle() const;
-        auto UnderlineStyle(Windows::UI::Xaml::Documents::UnderlineStyle const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::UnderlineStyle) UnderlineStyle() const;
+        WINRT_IMPL_AUTO(void) UnderlineStyle(Windows::UI::Xaml::Documents::UnderlineStyle const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlink2>
     {
@@ -2226,16 +1434,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlink3
     {
-        [[nodiscard]] auto XYFocusLeft() const;
-        auto XYFocusLeft(Windows::UI::Xaml::DependencyObject const& value) const;
-        [[nodiscard]] auto XYFocusRight() const;
-        auto XYFocusRight(Windows::UI::Xaml::DependencyObject const& value) const;
-        [[nodiscard]] auto XYFocusUp() const;
-        auto XYFocusUp(Windows::UI::Xaml::DependencyObject const& value) const;
-        [[nodiscard]] auto XYFocusDown() const;
-        auto XYFocusDown(Windows::UI::Xaml::DependencyObject const& value) const;
-        [[nodiscard]] auto ElementSoundMode() const;
-        auto ElementSoundMode(Windows::UI::Xaml::ElementSoundMode const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) XYFocusLeft() const;
+        WINRT_IMPL_AUTO(void) XYFocusLeft(Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) XYFocusRight() const;
+        WINRT_IMPL_AUTO(void) XYFocusRight(Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) XYFocusUp() const;
+        WINRT_IMPL_AUTO(void) XYFocusUp(Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) XYFocusDown() const;
+        WINRT_IMPL_AUTO(void) XYFocusDown(Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementSoundMode) ElementSoundMode() const;
+        WINRT_IMPL_AUTO(void) ElementSoundMode(Windows::UI::Xaml::ElementSoundMode const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlink3>
     {
@@ -2244,24 +1452,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlink4
     {
-        [[nodiscard]] auto FocusState() const;
-        [[nodiscard]] auto XYFocusUpNavigationStrategy() const;
-        auto XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
-        [[nodiscard]] auto XYFocusDownNavigationStrategy() const;
-        auto XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
-        [[nodiscard]] auto XYFocusLeftNavigationStrategy() const;
-        auto XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
-        [[nodiscard]] auto XYFocusRightNavigationStrategy() const;
-        auto XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
-        auto GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::FocusState) FocusState() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) XYFocusUpNavigationStrategy() const;
+        WINRT_IMPL_AUTO(void) XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) XYFocusDownNavigationStrategy() const;
+        WINRT_IMPL_AUTO(void) XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) XYFocusLeftNavigationStrategy() const;
+        WINRT_IMPL_AUTO(void) XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) XYFocusRightNavigationStrategy() const;
+        WINRT_IMPL_AUTO(void) XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const;
         using GotFocus_revoker = impl::event_revoker<Windows::UI::Xaml::Documents::IHyperlink4, &impl::abi_t<Windows::UI::Xaml::Documents::IHyperlink4>::remove_GotFocus>;
-        GotFocus_revoker GotFocus(auto_revoke_t, Windows::UI::Xaml::RoutedEventHandler const& handler) const;
-        auto GotFocus(winrt::event_token const& token) const noexcept;
-        auto LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        [[nodiscard]] GotFocus_revoker GotFocus(auto_revoke_t, Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        WINRT_IMPL_AUTO(void) GotFocus(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const;
         using LostFocus_revoker = impl::event_revoker<Windows::UI::Xaml::Documents::IHyperlink4, &impl::abi_t<Windows::UI::Xaml::Documents::IHyperlink4>::remove_LostFocus>;
-        LostFocus_revoker LostFocus(auto_revoke_t, Windows::UI::Xaml::RoutedEventHandler const& handler) const;
-        auto LostFocus(winrt::event_token const& token) const noexcept;
-        auto Focus(Windows::UI::Xaml::FocusState const& value) const;
+        [[nodiscard]] LostFocus_revoker LostFocus(auto_revoke_t, Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+        WINRT_IMPL_AUTO(void) LostFocus(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(bool) Focus(Windows::UI::Xaml::FocusState const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlink4>
     {
@@ -2270,10 +1478,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlink5
     {
-        [[nodiscard]] auto IsTabStop() const;
-        auto IsTabStop(bool value) const;
-        [[nodiscard]] auto TabIndex() const;
-        auto TabIndex(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTabStop() const;
+        WINRT_IMPL_AUTO(void) IsTabStop(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) TabIndex() const;
+        WINRT_IMPL_AUTO(void) TabIndex(int32_t value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlink5>
     {
@@ -2290,7 +1498,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlinkStatics
     {
-        [[nodiscard]] auto NavigateUriProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) NavigateUriProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlinkStatics>
     {
@@ -2299,7 +1507,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlinkStatics2
     {
-        [[nodiscard]] auto UnderlineStyleProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) UnderlineStyleProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlinkStatics2>
     {
@@ -2308,11 +1516,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3
     {
-        [[nodiscard]] auto XYFocusLeftProperty() const;
-        [[nodiscard]] auto XYFocusRightProperty() const;
-        [[nodiscard]] auto XYFocusUpProperty() const;
-        [[nodiscard]] auto XYFocusDownProperty() const;
-        [[nodiscard]] auto ElementSoundModeProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusLeftProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusRightProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusUpProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusDownProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ElementSoundModeProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlinkStatics3>
     {
@@ -2321,11 +1529,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4
     {
-        [[nodiscard]] auto FocusStateProperty() const;
-        [[nodiscard]] auto XYFocusUpNavigationStrategyProperty() const;
-        [[nodiscard]] auto XYFocusDownNavigationStrategyProperty() const;
-        [[nodiscard]] auto XYFocusLeftNavigationStrategyProperty() const;
-        [[nodiscard]] auto XYFocusRightNavigationStrategyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FocusStateProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusUpNavigationStrategyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusDownNavigationStrategyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusLeftNavigationStrategyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) XYFocusRightNavigationStrategyProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlinkStatics4>
     {
@@ -2334,8 +1542,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IHyperlinkStatics5
     {
-        [[nodiscard]] auto IsTabStopProperty() const;
-        [[nodiscard]] auto TabIndexProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) IsTabStopProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TabIndexProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IHyperlinkStatics5>
     {
@@ -2352,7 +1560,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IInlineFactory
     {
-        auto CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::Inline) CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IInlineFactory>
     {
@@ -2361,8 +1569,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IInlineUIContainer
     {
-        [[nodiscard]] auto Child() const;
-        auto Child(Windows::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElement) Child() const;
+        WINRT_IMPL_AUTO(void) Child(Windows::UI::Xaml::UIElement const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IInlineUIContainer>
     {
@@ -2387,9 +1595,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IParagraph
     {
-        [[nodiscard]] auto Inlines() const;
-        [[nodiscard]] auto TextIndent() const;
-        auto TextIndent(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::InlineCollection) Inlines() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) TextIndent() const;
+        WINRT_IMPL_AUTO(void) TextIndent(double value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IParagraph>
     {
@@ -2398,7 +1606,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IParagraphStatics
     {
-        [[nodiscard]] auto TextIndentProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TextIndentProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IParagraphStatics>
     {
@@ -2415,10 +1623,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IRun
     {
-        [[nodiscard]] auto Text() const;
-        auto Text(param::hstring const& value) const;
-        [[nodiscard]] auto FlowDirection() const;
-        auto FlowDirection(Windows::UI::Xaml::FlowDirection const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
+        WINRT_IMPL_AUTO(void) Text(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::FlowDirection) FlowDirection() const;
+        WINRT_IMPL_AUTO(void) FlowDirection(Windows::UI::Xaml::FlowDirection const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IRun>
     {
@@ -2427,7 +1635,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_IRunStatics
     {
-        [[nodiscard]] auto FlowDirectionProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FlowDirectionProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::IRunStatics>
     {
@@ -2436,8 +1644,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ISpan
     {
-        [[nodiscard]] auto Inlines() const;
-        auto Inlines(Windows::UI::Xaml::Documents::InlineCollection const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::InlineCollection) Inlines() const;
+        WINRT_IMPL_AUTO(void) Inlines(Windows::UI::Xaml::Documents::InlineCollection const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ISpan>
     {
@@ -2446,7 +1654,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ISpanFactory
     {
-        auto CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::Span) CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ISpanFactory>
     {
@@ -2455,28 +1663,28 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElement
     {
-        [[nodiscard]] auto Name() const;
-        [[nodiscard]] auto FontSize() const;
-        auto FontSize(double value) const;
-        [[nodiscard]] auto FontFamily() const;
-        auto FontFamily(Windows::UI::Xaml::Media::FontFamily const& value) const;
-        [[nodiscard]] auto FontWeight() const;
-        auto FontWeight(Windows::UI::Text::FontWeight const& value) const;
-        [[nodiscard]] auto FontStyle() const;
-        auto FontStyle(Windows::UI::Text::FontStyle const& value) const;
-        [[nodiscard]] auto FontStretch() const;
-        auto FontStretch(Windows::UI::Text::FontStretch const& value) const;
-        [[nodiscard]] auto CharacterSpacing() const;
-        auto CharacterSpacing(int32_t value) const;
-        [[nodiscard]] auto Foreground() const;
-        auto Foreground(Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] auto Language() const;
-        auto Language(param::hstring const& value) const;
-        [[nodiscard]] auto ContentStart() const;
-        [[nodiscard]] auto ContentEnd() const;
-        [[nodiscard]] auto ElementStart() const;
-        [[nodiscard]] auto ElementEnd() const;
-        auto FindName(param::hstring const& name) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) FontSize() const;
+        WINRT_IMPL_AUTO(void) FontSize(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::FontFamily) FontFamily() const;
+        WINRT_IMPL_AUTO(void) FontFamily(Windows::UI::Xaml::Media::FontFamily const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) FontWeight() const;
+        WINRT_IMPL_AUTO(void) FontWeight(Windows::UI::Text::FontWeight const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::FontStyle) FontStyle() const;
+        WINRT_IMPL_AUTO(void) FontStyle(Windows::UI::Text::FontStyle const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::FontStretch) FontStretch() const;
+        WINRT_IMPL_AUTO(void) FontStretch(Windows::UI::Text::FontStretch const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) CharacterSpacing() const;
+        WINRT_IMPL_AUTO(void) CharacterSpacing(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) Foreground() const;
+        WINRT_IMPL_AUTO(void) Foreground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Language() const;
+        WINRT_IMPL_AUTO(void) Language(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) ContentStart() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) ContentEnd() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) ElementStart() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) ElementEnd() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) FindName(param::hstring const& name) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElement>
     {
@@ -2485,8 +1693,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElement2
     {
-        [[nodiscard]] auto IsTextScaleFactorEnabled() const;
-        auto IsTextScaleFactorEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTextScaleFactorEnabled() const;
+        WINRT_IMPL_AUTO(void) IsTextScaleFactorEnabled(bool value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElement2>
     {
@@ -2495,12 +1703,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElement3
     {
-        [[nodiscard]] auto AllowFocusOnInteraction() const;
-        auto AllowFocusOnInteraction(bool value) const;
-        [[nodiscard]] auto AccessKey() const;
-        auto AccessKey(param::hstring const& value) const;
-        [[nodiscard]] auto ExitDisplayModeOnAccessKeyInvoked() const;
-        auto ExitDisplayModeOnAccessKeyInvoked(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowFocusOnInteraction() const;
+        WINRT_IMPL_AUTO(void) AllowFocusOnInteraction(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AccessKey() const;
+        WINRT_IMPL_AUTO(void) AccessKey(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) ExitDisplayModeOnAccessKeyInvoked() const;
+        WINRT_IMPL_AUTO(void) ExitDisplayModeOnAccessKeyInvoked(bool value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElement3>
     {
@@ -2509,30 +1717,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElement4
     {
-        [[nodiscard]] auto TextDecorations() const;
-        auto TextDecorations(Windows::UI::Text::TextDecorations const& value) const;
-        [[nodiscard]] auto IsAccessKeyScope() const;
-        auto IsAccessKeyScope(bool value) const;
-        [[nodiscard]] auto AccessKeyScopeOwner() const;
-        auto AccessKeyScopeOwner(Windows::UI::Xaml::DependencyObject const& value) const;
-        [[nodiscard]] auto KeyTipPlacementMode() const;
-        auto KeyTipPlacementMode(Windows::UI::Xaml::Input::KeyTipPlacementMode const& value) const;
-        [[nodiscard]] auto KeyTipHorizontalOffset() const;
-        auto KeyTipHorizontalOffset(double value) const;
-        [[nodiscard]] auto KeyTipVerticalOffset() const;
-        auto KeyTipVerticalOffset(double value) const;
-        auto AccessKeyDisplayRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::TextDecorations) TextDecorations() const;
+        WINRT_IMPL_AUTO(void) TextDecorations(Windows::UI::Text::TextDecorations const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAccessKeyScope() const;
+        WINRT_IMPL_AUTO(void) IsAccessKeyScope(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) AccessKeyScopeOwner() const;
+        WINRT_IMPL_AUTO(void) AccessKeyScopeOwner(Windows::UI::Xaml::DependencyObject const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::KeyTipPlacementMode) KeyTipPlacementMode() const;
+        WINRT_IMPL_AUTO(void) KeyTipPlacementMode(Windows::UI::Xaml::Input::KeyTipPlacementMode const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) KeyTipHorizontalOffset() const;
+        WINRT_IMPL_AUTO(void) KeyTipHorizontalOffset(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) KeyTipVerticalOffset() const;
+        WINRT_IMPL_AUTO(void) KeyTipVerticalOffset(double value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) AccessKeyDisplayRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs> const& handler) const;
         using AccessKeyDisplayRequested_revoker = impl::event_revoker<Windows::UI::Xaml::Documents::ITextElement4, &impl::abi_t<Windows::UI::Xaml::Documents::ITextElement4>::remove_AccessKeyDisplayRequested>;
-        AccessKeyDisplayRequested_revoker AccessKeyDisplayRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs> const& handler) const;
-        auto AccessKeyDisplayRequested(winrt::event_token const& token) const noexcept;
-        auto AccessKeyDisplayDismissed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs> const& handler) const;
+        [[nodiscard]] AccessKeyDisplayRequested_revoker AccessKeyDisplayRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) AccessKeyDisplayRequested(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) AccessKeyDisplayDismissed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs> const& handler) const;
         using AccessKeyDisplayDismissed_revoker = impl::event_revoker<Windows::UI::Xaml::Documents::ITextElement4, &impl::abi_t<Windows::UI::Xaml::Documents::ITextElement4>::remove_AccessKeyDisplayDismissed>;
-        AccessKeyDisplayDismissed_revoker AccessKeyDisplayDismissed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs> const& handler) const;
-        auto AccessKeyDisplayDismissed(winrt::event_token const& token) const noexcept;
-        auto AccessKeyInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs> const& handler) const;
+        [[nodiscard]] AccessKeyDisplayDismissed_revoker AccessKeyDisplayDismissed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) AccessKeyDisplayDismissed(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) AccessKeyInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs> const& handler) const;
         using AccessKeyInvoked_revoker = impl::event_revoker<Windows::UI::Xaml::Documents::ITextElement4, &impl::abi_t<Windows::UI::Xaml::Documents::ITextElement4>::remove_AccessKeyInvoked>;
-        AccessKeyInvoked_revoker AccessKeyInvoked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs> const& handler) const;
-        auto AccessKeyInvoked(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] AccessKeyInvoked_revoker AccessKeyInvoked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) AccessKeyInvoked(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElement4>
     {
@@ -2541,8 +1749,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElement5
     {
-        [[nodiscard]] auto XamlRoot() const;
-        auto XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::XamlRoot) XamlRoot() const;
+        WINRT_IMPL_AUTO(void) XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElement5>
     {
@@ -2559,7 +1767,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElementOverrides
     {
-        auto OnDisconnectVisualChildren() const;
+        WINRT_IMPL_AUTO(void) OnDisconnectVisualChildren() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElementOverrides>
     {
@@ -2568,14 +1776,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElementStatics
     {
-        [[nodiscard]] auto FontSizeProperty() const;
-        [[nodiscard]] auto FontFamilyProperty() const;
-        [[nodiscard]] auto FontWeightProperty() const;
-        [[nodiscard]] auto FontStyleProperty() const;
-        [[nodiscard]] auto FontStretchProperty() const;
-        [[nodiscard]] auto CharacterSpacingProperty() const;
-        [[nodiscard]] auto ForegroundProperty() const;
-        [[nodiscard]] auto LanguageProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FontSizeProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FontFamilyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FontWeightProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FontStyleProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FontStretchProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CharacterSpacingProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ForegroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) LanguageProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElementStatics>
     {
@@ -2584,7 +1792,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElementStatics2
     {
-        [[nodiscard]] auto IsTextScaleFactorEnabledProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) IsTextScaleFactorEnabledProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElementStatics2>
     {
@@ -2593,9 +1801,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElementStatics3
     {
-        [[nodiscard]] auto AllowFocusOnInteractionProperty() const;
-        [[nodiscard]] auto AccessKeyProperty() const;
-        [[nodiscard]] auto ExitDisplayModeOnAccessKeyInvokedProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) AllowFocusOnInteractionProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) AccessKeyProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ExitDisplayModeOnAccessKeyInvokedProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElementStatics3>
     {
@@ -2604,12 +1812,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextElementStatics4
     {
-        [[nodiscard]] auto TextDecorationsProperty() const;
-        [[nodiscard]] auto IsAccessKeyScopeProperty() const;
-        [[nodiscard]] auto AccessKeyScopeOwnerProperty() const;
-        [[nodiscard]] auto KeyTipPlacementModeProperty() const;
-        [[nodiscard]] auto KeyTipHorizontalOffsetProperty() const;
-        [[nodiscard]] auto KeyTipVerticalOffsetProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TextDecorationsProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) IsAccessKeyScopeProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) AccessKeyScopeOwnerProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) KeyTipPlacementModeProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) KeyTipHorizontalOffsetProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) KeyTipVerticalOffsetProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextElementStatics4>
     {
@@ -2618,11 +1826,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextHighlighter
     {
-        [[nodiscard]] auto Ranges() const;
-        [[nodiscard]] auto Foreground() const;
-        auto Foreground(Windows::UI::Xaml::Media::Brush const& value) const;
-        [[nodiscard]] auto Background() const;
-        auto Background(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::TextRange>) Ranges() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) Foreground() const;
+        WINRT_IMPL_AUTO(void) Foreground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) Background() const;
+        WINRT_IMPL_AUTO(void) Background(Windows::UI::Xaml::Media::Brush const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextHighlighter>
     {
@@ -2647,7 +1855,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextHighlighterFactory
     {
-        auto CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextHighlighter) CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextHighlighterFactory>
     {
@@ -2656,8 +1864,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextHighlighterStatics
     {
-        [[nodiscard]] auto ForegroundProperty() const;
-        [[nodiscard]] auto BackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ForegroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) BackgroundProperty() const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextHighlighterStatics>
     {
@@ -2666,12 +1874,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITextPointer
     {
-        [[nodiscard]] auto Parent() const;
-        [[nodiscard]] auto VisualParent() const;
-        [[nodiscard]] auto LogicalDirection() const;
-        [[nodiscard]] auto Offset() const;
-        auto GetCharacterRect(Windows::UI::Xaml::Documents::LogicalDirection const& direction) const;
-        auto GetPositionAtOffset(int32_t offset, Windows::UI::Xaml::Documents::LogicalDirection const& direction) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) Parent() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::FrameworkElement) VisualParent() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::LogicalDirection) LogicalDirection() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Offset() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Rect) GetCharacterRect(Windows::UI::Xaml::Documents::LogicalDirection const& direction) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) GetPositionAtOffset(int32_t offset, Windows::UI::Xaml::Documents::LogicalDirection const& direction) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITextPointer>
     {
@@ -2688,135 +1896,135 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Xaml_Documents_ITypographyStatics
     {
-        [[nodiscard]] auto AnnotationAlternatesProperty() const;
-        auto GetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
-        [[nodiscard]] auto EastAsianExpertFormsProperty() const;
-        auto GetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto EastAsianLanguageProperty() const;
-        auto GetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianLanguage const& value) const;
-        [[nodiscard]] auto EastAsianWidthsProperty() const;
-        auto GetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianWidths const& value) const;
-        [[nodiscard]] auto StandardLigaturesProperty() const;
-        auto GetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto ContextualLigaturesProperty() const;
-        auto GetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto DiscretionaryLigaturesProperty() const;
-        auto GetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto HistoricalLigaturesProperty() const;
-        auto GetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StandardSwashesProperty() const;
-        auto GetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
-        [[nodiscard]] auto ContextualSwashesProperty() const;
-        auto GetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
-        [[nodiscard]] auto ContextualAlternatesProperty() const;
-        auto GetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticAlternatesProperty() const;
-        auto GetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
-        [[nodiscard]] auto StylisticSet1Property() const;
-        auto GetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet2Property() const;
-        auto GetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet3Property() const;
-        auto GetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet4Property() const;
-        auto GetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet5Property() const;
-        auto GetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet6Property() const;
-        auto GetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet7Property() const;
-        auto GetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet8Property() const;
-        auto GetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet9Property() const;
-        auto GetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet10Property() const;
-        auto GetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet11Property() const;
-        auto GetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet12Property() const;
-        auto GetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet13Property() const;
-        auto GetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet14Property() const;
-        auto GetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet15Property() const;
-        auto GetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet16Property() const;
-        auto GetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet17Property() const;
-        auto GetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet18Property() const;
-        auto GetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet19Property() const;
-        auto GetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto StylisticSet20Property() const;
-        auto GetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto CapitalsProperty() const;
-        auto GetCapitals(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetCapitals(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontCapitals const& value) const;
-        [[nodiscard]] auto CapitalSpacingProperty() const;
-        auto GetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto KerningProperty() const;
-        auto GetKerning(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetKerning(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto CaseSensitiveFormsProperty() const;
-        auto GetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto HistoricalFormsProperty() const;
-        auto GetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto FractionProperty() const;
-        auto GetFraction(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetFraction(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontFraction const& value) const;
-        [[nodiscard]] auto NumeralStyleProperty() const;
-        auto GetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralStyle const& value) const;
-        [[nodiscard]] auto NumeralAlignmentProperty() const;
-        auto GetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralAlignment const& value) const;
-        [[nodiscard]] auto SlashedZeroProperty() const;
-        auto GetSlashedZero(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetSlashedZero(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto MathematicalGreekProperty() const;
-        auto GetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
-        [[nodiscard]] auto VariantsProperty() const;
-        auto GetVariants(Windows::UI::Xaml::DependencyObject const& element) const;
-        auto SetVariants(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontVariants const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) AnnotationAlternatesProperty() const;
+        WINRT_IMPL_AUTO(int32_t) GetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) EastAsianExpertFormsProperty() const;
+        WINRT_IMPL_AUTO(bool) GetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) EastAsianLanguageProperty() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::FontEastAsianLanguage) GetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianLanguage const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) EastAsianWidthsProperty() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::FontEastAsianWidths) GetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianWidths const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StandardLigaturesProperty() const;
+        WINRT_IMPL_AUTO(bool) GetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ContextualLigaturesProperty() const;
+        WINRT_IMPL_AUTO(bool) GetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) DiscretionaryLigaturesProperty() const;
+        WINRT_IMPL_AUTO(bool) GetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) HistoricalLigaturesProperty() const;
+        WINRT_IMPL_AUTO(bool) GetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StandardSwashesProperty() const;
+        WINRT_IMPL_AUTO(int32_t) GetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ContextualSwashesProperty() const;
+        WINRT_IMPL_AUTO(int32_t) GetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ContextualAlternatesProperty() const;
+        WINRT_IMPL_AUTO(bool) GetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticAlternatesProperty() const;
+        WINRT_IMPL_AUTO(int32_t) GetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet1Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet2Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet3Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet4Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet5Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet6Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet7Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet8Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet9Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet10Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet11Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet12Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet13Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet14Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet15Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet16Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet17Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet18Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet19Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) StylisticSet20Property() const;
+        WINRT_IMPL_AUTO(bool) GetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CapitalsProperty() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::FontCapitals) GetCapitals(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetCapitals(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontCapitals const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CapitalSpacingProperty() const;
+        WINRT_IMPL_AUTO(bool) GetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) KerningProperty() const;
+        WINRT_IMPL_AUTO(bool) GetKerning(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetKerning(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CaseSensitiveFormsProperty() const;
+        WINRT_IMPL_AUTO(bool) GetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) HistoricalFormsProperty() const;
+        WINRT_IMPL_AUTO(bool) GetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FractionProperty() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::FontFraction) GetFraction(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetFraction(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontFraction const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) NumeralStyleProperty() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::FontNumeralStyle) GetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralStyle const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) NumeralAlignmentProperty() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::FontNumeralAlignment) GetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralAlignment const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SlashedZeroProperty() const;
+        WINRT_IMPL_AUTO(bool) GetSlashedZero(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetSlashedZero(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) MathematicalGreekProperty() const;
+        WINRT_IMPL_AUTO(bool) GetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element, bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) VariantsProperty() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::FontVariants) GetVariants(Windows::UI::Xaml::DependencyObject const& element) const;
+        WINRT_IMPL_AUTO(void) SetVariants(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontVariants const& value) const;
     };
     template <> struct consume<Windows::UI::Xaml::Documents::ITypographyStatics>
     {

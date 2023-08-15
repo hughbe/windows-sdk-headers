@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Graphics_Printing_OptionDetails_2_H
 #include "winrt/impl/Windows.Graphics.Printing.1.h"
 #include "winrt/impl/Windows.Graphics.Printing.OptionDetails.1.h"
-namespace winrt::Windows::Graphics::Printing::OptionDetails
+WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::OptionDetails
 {
     struct __declspec(empty_bases) PrintBindingOptionDetails : Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails,
         impl::require<PrintBindingOptionDetails, Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails, Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails>

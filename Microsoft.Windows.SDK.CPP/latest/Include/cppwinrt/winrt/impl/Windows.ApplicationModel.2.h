@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_ApplicationModel_2_H
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.ApplicationModel.1.h"
-namespace winrt::Windows::ApplicationModel
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel
 {
     struct PackageInstallProgress
     {
@@ -42,7 +42,7 @@ namespace winrt::Windows::ApplicationModel
         AppDisplayInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::IAppDisplayInfo(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) AppInfo : Windows::ApplicationModel::IAppInfo,
-        impl::require<AppInfo, Windows::ApplicationModel::IAppInfo2>
+        impl::require<AppInfo, Windows::ApplicationModel::IAppInfo2, Windows::ApplicationModel::IAppInfo3, Windows::ApplicationModel::IAppInfo4>
     {
         AppInfo(std::nullptr_t) noexcept {}
         AppInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::IAppInfo(ptr, take_ownership_from_abi) {}

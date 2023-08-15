@@ -279,7 +279,7 @@ struct AsyncCausalityOptionsHelper < true, TComplete, TOptions >
         return TOptions::GetPlatformId();
     }
 
-    static const ::ABI::Windows::Foundation::Diagnostics::CausalitySource GetCausalitySource()
+    static ::ABI::Windows::Foundation::Diagnostics::CausalitySource GetCausalitySource()
     {
         return TOptions::GetCausalitySource();
     }
@@ -988,7 +988,7 @@ private:
         }
 #endif
     }
-#endif _WRL_DISABLE_CAUSALITY_
+#endif // _WRL_DISABLE_CAUSALITY_
 
     // This method is used to check if calls to the AsyncInfo properties
     // (id, status, error code) are legal in the current state. It also

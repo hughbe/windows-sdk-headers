@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Media.Core.1.h"
 #include "winrt/impl/Windows.Media.Playback.1.h"
-namespace winrt::Windows::Media::Playback
+WINRT_EXPORT namespace winrt::Windows::Media::Playback
 {
     struct BackgroundMediaPlayer
     {
@@ -17,11 +17,11 @@ namespace winrt::Windows::Media::Playback
         [[nodiscard]] static auto Current();
         static auto MessageReceivedFromBackground(Windows::Foundation::EventHandler<Windows::Media::Playback::MediaPlayerDataReceivedEventArgs> const& value);
         using MessageReceivedFromBackground_revoker = impl::factory_event_revoker<Windows::Media::Playback::IBackgroundMediaPlayerStatics, &impl::abi_t<Windows::Media::Playback::IBackgroundMediaPlayerStatics>::remove_MessageReceivedFromBackground>;
-        static MessageReceivedFromBackground_revoker MessageReceivedFromBackground(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Media::Playback::MediaPlayerDataReceivedEventArgs> const& value);
+        [[nodiscard]] static MessageReceivedFromBackground_revoker MessageReceivedFromBackground(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Media::Playback::MediaPlayerDataReceivedEventArgs> const& value);
         static auto MessageReceivedFromBackground(winrt::event_token const& token);
         static auto MessageReceivedFromForeground(Windows::Foundation::EventHandler<Windows::Media::Playback::MediaPlayerDataReceivedEventArgs> const& value);
         using MessageReceivedFromForeground_revoker = impl::factory_event_revoker<Windows::Media::Playback::IBackgroundMediaPlayerStatics, &impl::abi_t<Windows::Media::Playback::IBackgroundMediaPlayerStatics>::remove_MessageReceivedFromForeground>;
-        static MessageReceivedFromForeground_revoker MessageReceivedFromForeground(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Media::Playback::MediaPlayerDataReceivedEventArgs> const& value);
+        [[nodiscard]] static MessageReceivedFromForeground_revoker MessageReceivedFromForeground(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Media::Playback::MediaPlayerDataReceivedEventArgs> const& value);
         static auto MessageReceivedFromForeground(winrt::event_token const& token);
         static auto SendMessageToBackground(Windows::Foundation::Collections::ValueSet const& value);
         static auto SendMessageToForeground(Windows::Foundation::Collections::ValueSet const& value);
@@ -38,7 +38,7 @@ namespace winrt::Windows::Media::Playback
     {
         MediaBreak(std::nullptr_t) noexcept {}
         MediaBreak(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Playback::IMediaBreak(ptr, take_ownership_from_abi) {}
-        MediaBreak(Windows::Media::Playback::MediaBreakInsertionMethod const& insertionMethod);
+        explicit MediaBreak(Windows::Media::Playback::MediaBreakInsertionMethod const& insertionMethod);
         MediaBreak(Windows::Media::Playback::MediaBreakInsertionMethod const& insertionMethod, Windows::Foundation::TimeSpan const& presentationPosition);
     };
     struct __declspec(empty_bases) MediaBreakEndedEventArgs : Windows::Media::Playback::IMediaBreakEndedEventArgs
@@ -147,7 +147,7 @@ namespace winrt::Windows::Media::Playback
     {
         MediaPlaybackItem(std::nullptr_t) noexcept {}
         MediaPlaybackItem(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Playback::IMediaPlaybackItem(ptr, take_ownership_from_abi) {}
-        MediaPlaybackItem(Windows::Media::Core::MediaSource const& source);
+        explicit MediaPlaybackItem(Windows::Media::Core::MediaSource const& source);
         MediaPlaybackItem(Windows::Media::Core::MediaSource const& source, Windows::Foundation::TimeSpan const& startTime);
         MediaPlaybackItem(Windows::Media::Core::MediaSource const& source, Windows::Foundation::TimeSpan const& startTime, Windows::Foundation::TimeSpan const& durationLimit);
         static auto FindFromMediaSource(Windows::Media::Core::MediaSource const& source);
@@ -239,7 +239,7 @@ namespace winrt::Windows::Media::Playback
     {
         PlaybackMediaMarker(std::nullptr_t) noexcept {}
         PlaybackMediaMarker(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Playback::IPlaybackMediaMarker(ptr, take_ownership_from_abi) {}
-        PlaybackMediaMarker(Windows::Foundation::TimeSpan const& value);
+        explicit PlaybackMediaMarker(Windows::Foundation::TimeSpan const& value);
         PlaybackMediaMarker(Windows::Foundation::TimeSpan const& value, param::hstring const& mediaMarketType, param::hstring const& text);
     };
     struct __declspec(empty_bases) PlaybackMediaMarkerReachedEventArgs : Windows::Media::Playback::IPlaybackMediaMarkerReachedEventArgs

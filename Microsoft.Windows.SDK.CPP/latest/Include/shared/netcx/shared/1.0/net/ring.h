@@ -197,6 +197,16 @@ NetRingGetFragmentAtIndex(
     return (NET_FRAGMENT *)NetRingGetElementAtIndex(Ring, Index);
 }
 
+inline
+SIZE_T *
+NetRingGetDataBufferAtIndex(
+    NET_RING const * Ring,
+    UINT32 Index
+)
+{
+    return (SIZE_T *)NetRingGetElementAtIndex(Ring, Index);
+}
+
 EXTERN_C_END
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)

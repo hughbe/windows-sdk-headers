@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_System_Diagnostics_2_H
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.System.Diagnostics.1.h"
-namespace winrt::Windows::System::Diagnostics
+WINRT_EXPORT namespace winrt::Windows::System::Diagnostics
 {
     struct __declspec(empty_bases) DiagnosticActionResult : Windows::System::Diagnostics::IDiagnosticActionResult
     {
@@ -77,6 +77,8 @@ namespace winrt::Windows::System::Diagnostics
         SystemDiagnosticInfo(std::nullptr_t) noexcept {}
         SystemDiagnosticInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::Diagnostics::ISystemDiagnosticInfo(ptr, take_ownership_from_abi) {}
         static auto GetForCurrentSystem();
+        static auto IsArchitectureSupported(Windows::System::ProcessorArchitecture const& type);
+        [[nodiscard]] static auto PreferredArchitecture();
     };
     struct __declspec(empty_bases) SystemMemoryUsage : Windows::System::Diagnostics::ISystemMemoryUsage
     {

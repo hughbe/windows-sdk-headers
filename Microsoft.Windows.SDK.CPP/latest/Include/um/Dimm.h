@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -31,6 +31,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -356,31 +364,38 @@ EXTERN_C const IID IID_IEnumRegisterWordA;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumRegisterWordA * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumRegisterWordA * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumRegisterWordA * This);
         
+        DECLSPEC_XFGVIRT(IEnumRegisterWordA, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumRegisterWordA * This,
             /* [out] */ __RPC__deref_out_opt IEnumRegisterWordA **ppEnum);
         
+        DECLSPEC_XFGVIRT(IEnumRegisterWordA, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumRegisterWordA * This,
             /* [in] */ ULONG ulCount,
             /* [out] */ __RPC__out REGISTERWORDA *rgRegisterWord,
             /* [out] */ __RPC__out ULONG *pcFetched);
         
+        DECLSPEC_XFGVIRT(IEnumRegisterWordA, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumRegisterWordA * This);
         
+        DECLSPEC_XFGVIRT(IEnumRegisterWordA, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumRegisterWordA * This,
             /* [in] */ ULONG ulCount);
@@ -468,31 +483,38 @@ EXTERN_C const IID IID_IEnumRegisterWordW;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumRegisterWordW * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumRegisterWordW * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumRegisterWordW * This);
         
+        DECLSPEC_XFGVIRT(IEnumRegisterWordW, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumRegisterWordW * This,
             /* [out] */ __RPC__deref_out_opt IEnumRegisterWordW **ppEnum);
         
+        DECLSPEC_XFGVIRT(IEnumRegisterWordW, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumRegisterWordW * This,
             /* [in] */ ULONG ulCount,
             /* [out] */ __RPC__out REGISTERWORDW *rgRegisterWord,
             /* [out] */ __RPC__out ULONG *pcFetched);
         
+        DECLSPEC_XFGVIRT(IEnumRegisterWordW, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumRegisterWordW * This);
         
+        DECLSPEC_XFGVIRT(IEnumRegisterWordW, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumRegisterWordW * This,
             /* [in] */ ULONG ulCount);
@@ -580,31 +602,38 @@ EXTERN_C const IID IID_IEnumInputContext;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumInputContext * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumInputContext * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumInputContext * This);
         
+        DECLSPEC_XFGVIRT(IEnumInputContext, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumInputContext * This,
             /* [out] */ __RPC__deref_out_opt IEnumInputContext **ppEnum);
         
+        DECLSPEC_XFGVIRT(IEnumInputContext, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumInputContext * This,
             /* [in] */ ULONG ulCount,
             /* [out] */ __RPC__out HIMC *rgInputContext,
             /* [out] */ __RPC__out ULONG *pcFetched);
         
+        DECLSPEC_XFGVIRT(IEnumInputContext, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumInputContext * This);
         
+        DECLSPEC_XFGVIRT(IEnumInputContext, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumInputContext * This,
             /* [in] */ ULONG ulCount);
@@ -688,18 +717,22 @@ EXTERN_C const IID IID_IActiveIMMRegistrar;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IActiveIMMRegistrar * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IActiveIMMRegistrar * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IActiveIMMRegistrar * This);
         
+        DECLSPEC_XFGVIRT(IActiveIMMRegistrar, RegisterIME)
         HRESULT ( STDMETHODCALLTYPE *RegisterIME )( 
             __RPC__in IActiveIMMRegistrar * This,
             /* [in] */ __RPC__in REFCLSID rclsid,
@@ -707,6 +740,7 @@ EXTERN_C const IID IID_IActiveIMMRegistrar;
             /* [in] */ __RPC__in LPCWSTR pszIconFile,
             /* [in] */ __RPC__in LPCWSTR pszDesc);
         
+        DECLSPEC_XFGVIRT(IActiveIMMRegistrar, UnregisterIME)
         HRESULT ( STDMETHODCALLTYPE *UnregisterIME )( 
             __RPC__in IActiveIMMRegistrar * This,
             /* [in] */ __RPC__in REFCLSID rclsid);
@@ -788,32 +822,40 @@ EXTERN_C const IID IID_IActiveIMMMessagePumpOwner;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IActiveIMMMessagePumpOwner * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IActiveIMMMessagePumpOwner * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IActiveIMMMessagePumpOwner * This);
         
+        DECLSPEC_XFGVIRT(IActiveIMMMessagePumpOwner, Start)
         HRESULT ( STDMETHODCALLTYPE *Start )( 
             __RPC__in IActiveIMMMessagePumpOwner * This);
         
+        DECLSPEC_XFGVIRT(IActiveIMMMessagePumpOwner, End)
         HRESULT ( STDMETHODCALLTYPE *End )( 
             __RPC__in IActiveIMMMessagePumpOwner * This);
         
+        DECLSPEC_XFGVIRT(IActiveIMMMessagePumpOwner, OnTranslateMessage)
         HRESULT ( STDMETHODCALLTYPE *OnTranslateMessage )( 
             __RPC__in IActiveIMMMessagePumpOwner * This,
             /* [in] */ __RPC__in const MSG *pMsg);
         
+        DECLSPEC_XFGVIRT(IActiveIMMMessagePumpOwner, Pause)
         HRESULT ( STDMETHODCALLTYPE *Pause )( 
             __RPC__in IActiveIMMMessagePumpOwner * This,
             /* [out] */ __RPC__out DWORD *pdwCookie);
         
+        DECLSPEC_XFGVIRT(IActiveIMMMessagePumpOwner, Resume)
         HRESULT ( STDMETHODCALLTYPE *Resume )( 
             __RPC__in IActiveIMMMessagePumpOwner * This,
             /* [in] */ DWORD dwCookie);
@@ -1258,24 +1300,29 @@ EXTERN_C const IID IID_IActiveIMMApp;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IActiveIMMApp * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IActiveIMMApp * This);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, AssociateContext)
         HRESULT ( STDMETHODCALLTYPE *AssociateContext )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [in] */ HIMC hIME,
             /* [out] */ __RPC__out HIMC *phPrev);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, ConfigureIMEA)
         HRESULT ( STDMETHODCALLTYPE *ConfigureIMEA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1283,6 +1330,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ DWORD dwMode,
             /* [in] */ __RPC__in REGISTERWORDA *pData);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, ConfigureIMEW)
         HRESULT ( STDMETHODCALLTYPE *ConfigureIMEW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1290,14 +1338,17 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ DWORD dwMode,
             /* [in] */ __RPC__in REGISTERWORDW *pData);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, CreateContext)
         HRESULT ( STDMETHODCALLTYPE *CreateContext )( 
             __RPC__in IActiveIMMApp * This,
             /* [out] */ __RPC__out HIMC *phIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, DestroyContext)
         HRESULT ( STDMETHODCALLTYPE *DestroyContext )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIME);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, EnumRegisterWordA)
         HRESULT ( STDMETHODCALLTYPE *EnumRegisterWordA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1307,6 +1358,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ __RPC__in LPVOID pData,
             /* [out] */ __RPC__deref_out_opt IEnumRegisterWordA **pEnum);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, EnumRegisterWordW)
         HRESULT ( STDMETHODCALLTYPE *EnumRegisterWordW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1316,6 +1368,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ __RPC__in LPVOID pData,
             /* [out] */ __RPC__deref_out_opt IEnumRegisterWordW **pEnum);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, EscapeA)
         HRESULT ( STDMETHODCALLTYPE *EscapeA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1324,6 +1377,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out][in] */ __RPC__inout LPVOID pData,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, EscapeW)
         HRESULT ( STDMETHODCALLTYPE *EscapeW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1332,6 +1386,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out][in] */ __RPC__inout LPVOID pData,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCandidateListA)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateListA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1340,6 +1395,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out CANDIDATELIST *pCandList,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCandidateListW)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateListW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1348,34 +1404,40 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out CANDIDATELIST *pCandList,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCandidateListCountA)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateListCountA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out DWORD *pdwListSize,
             /* [out] */ __RPC__out DWORD *pdwBufLen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCandidateListCountW)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateListCountW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out DWORD *pdwListSize,
             /* [out] */ __RPC__out DWORD *pdwBufLen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCandidateWindow)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateWindow )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ DWORD dwIndex,
             /* [out] */ __RPC__out CANDIDATEFORM *pCandidate);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCompositionFontA)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionFontA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out LOGFONTA *plf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCompositionFontW)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionFontW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out LOGFONTW *plf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCompositionStringA)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionStringA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1384,6 +1446,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out LONG *plCopied,
             /* [out] */ __RPC__out LPVOID pBuf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCompositionStringW)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionStringW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1392,16 +1455,19 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out LONG *plCopied,
             /* [out] */ __RPC__out LPVOID pBuf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCompositionWindow)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionWindow )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out COMPOSITIONFORM *pCompForm);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetContext)
         HRESULT ( STDMETHODCALLTYPE *GetContext )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [out] */ __RPC__out HIMC *phIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetConversionListA)
         HRESULT ( STDMETHODCALLTYPE *GetConversionListA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1412,6 +1478,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out CANDIDATELIST *pDst,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetConversionListW)
         HRESULT ( STDMETHODCALLTYPE *GetConversionListW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1422,17 +1489,20 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out CANDIDATELIST *pDst,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetConversionStatus)
         HRESULT ( STDMETHODCALLTYPE *GetConversionStatus )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out DWORD *pfdwConversion,
             /* [out] */ __RPC__out DWORD *pfdwSentence);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetDefaultIMEWnd)
         HRESULT ( STDMETHODCALLTYPE *GetDefaultIMEWnd )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [out] */ __RPC__deref_out_opt HWND *phDefWnd);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetDescriptionA)
         HRESULT ( STDMETHODCALLTYPE *GetDescriptionA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1440,6 +1510,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out LPSTR szDescription,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetDescriptionW)
         HRESULT ( STDMETHODCALLTYPE *GetDescriptionW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1447,6 +1518,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out LPWSTR szDescription,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetGuideLineA)
         HRESULT ( STDMETHODCALLTYPE *GetGuideLineA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1455,6 +1527,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out LPSTR pBuf,
             /* [out] */ __RPC__out DWORD *pdwResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetGuideLineW)
         HRESULT ( STDMETHODCALLTYPE *GetGuideLineW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1463,6 +1536,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out LPWSTR pBuf,
             /* [out] */ __RPC__out DWORD *pdwResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetIMEFileNameA)
         HRESULT ( STDMETHODCALLTYPE *GetIMEFileNameA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1470,6 +1544,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out LPSTR szFileName,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetIMEFileNameW)
         HRESULT ( STDMETHODCALLTYPE *GetIMEFileNameW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1477,16 +1552,19 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out LPWSTR szFileName,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetOpenStatus)
         HRESULT ( STDMETHODCALLTYPE *GetOpenStatus )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetProperty)
         HRESULT ( STDMETHODCALLTYPE *GetProperty )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
             /* [in] */ DWORD fdwIndex,
             /* [out] */ __RPC__out DWORD *pdwProperty);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetRegisterWordStyleA)
         HRESULT ( STDMETHODCALLTYPE *GetRegisterWordStyleA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1494,6 +1572,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out STYLEBUFA *pStyleBuf,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetRegisterWordStyleW)
         HRESULT ( STDMETHODCALLTYPE *GetRegisterWordStyleW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1501,32 +1580,38 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [out] */ __RPC__out STYLEBUFW *pStyleBuf,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetStatusWindowPos)
         HRESULT ( STDMETHODCALLTYPE *GetStatusWindowPos )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out POINT *pptPos);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetVirtualKey)
         HRESULT ( STDMETHODCALLTYPE *GetVirtualKey )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [out] */ __RPC__out UINT *puVirtualKey);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, InstallIMEA)
         HRESULT ( STDMETHODCALLTYPE *InstallIMEA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in LPSTR szIMEFileName,
             /* [in] */ __RPC__in LPSTR szLayoutText,
             /* [out] */ __RPC__deref_out_opt HKL *phKL);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, InstallIMEW)
         HRESULT ( STDMETHODCALLTYPE *InstallIMEW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in LPWSTR szIMEFileName,
             /* [in] */ __RPC__in LPWSTR szLayoutText,
             /* [out] */ __RPC__deref_out_opt HKL *phKL);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, IsIME)
         HRESULT ( STDMETHODCALLTYPE *IsIME )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, IsUIMessageA)
         HRESULT ( STDMETHODCALLTYPE *IsUIMessageA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWndIME,
@@ -1534,6 +1619,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ WPARAM wParam,
             /* [in] */ LPARAM lParam);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, IsUIMessageW)
         HRESULT ( STDMETHODCALLTYPE *IsUIMessageW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWndIME,
@@ -1541,6 +1627,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ WPARAM wParam,
             /* [in] */ LPARAM lParam);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, NotifyIME)
         HRESULT ( STDMETHODCALLTYPE *NotifyIME )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1548,6 +1635,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ DWORD dwIndex,
             /* [in] */ DWORD dwValue);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, RegisterWordA)
         HRESULT ( STDMETHODCALLTYPE *RegisterWordA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1555,6 +1643,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPSTR szRegister);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, RegisterWordW)
         HRESULT ( STDMETHODCALLTYPE *RegisterWordW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1562,26 +1651,31 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPWSTR szRegister);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, ReleaseContext)
         HRESULT ( STDMETHODCALLTYPE *ReleaseContext )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [in] */ HIMC hIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SetCandidateWindow)
         HRESULT ( STDMETHODCALLTYPE *SetCandidateWindow )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in CANDIDATEFORM *pCandidate);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SetCompositionFontA)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionFontA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in LOGFONTA *plf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SetCompositionFontW)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionFontW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in LOGFONTW *plf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SetCompositionStringA)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionStringA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1591,6 +1685,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ __RPC__in LPVOID pRead,
             /* [in] */ DWORD dwReadLen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SetCompositionStringW)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionStringW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1600,32 +1695,38 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ __RPC__in LPVOID pRead,
             /* [in] */ DWORD dwReadLen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SetCompositionWindow)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionWindow )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in COMPOSITIONFORM *pCompForm);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SetConversionStatus)
         HRESULT ( STDMETHODCALLTYPE *SetConversionStatus )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ DWORD fdwConversion,
             /* [in] */ DWORD fdwSentence);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SetOpenStatus)
         HRESULT ( STDMETHODCALLTYPE *SetOpenStatus )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ BOOL fOpen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SetStatusWindowPos)
         HRESULT ( STDMETHODCALLTYPE *SetStatusWindowPos )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in POINT *pptPos);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, SimulateHotKey)
         HRESULT ( STDMETHODCALLTYPE *SimulateHotKey )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [in] */ DWORD dwHotKeyID);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, UnregisterWordA)
         HRESULT ( STDMETHODCALLTYPE *UnregisterWordA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1633,6 +1734,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPSTR szUnregister);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, UnregisterWordW)
         HRESULT ( STDMETHODCALLTYPE *UnregisterWordW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -1640,13 +1742,16 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPWSTR szUnregister);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, Activate)
         HRESULT ( STDMETHODCALLTYPE *Activate )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ BOOL fRestoreLayout);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, Deactivate)
         HRESULT ( STDMETHODCALLTYPE *Deactivate )( 
             __RPC__in IActiveIMMApp * This);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, OnDefWindowProc)
         HRESULT ( STDMETHODCALLTYPE *OnDefWindowProc )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWnd,
@@ -1655,31 +1760,37 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ LPARAM lParam,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, FilterClientWindows)
         HRESULT ( STDMETHODCALLTYPE *FilterClientWindows )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in ATOM *aaClassList,
             /* [in] */ UINT uSize);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetCodePageA)
         HRESULT ( STDMETHODCALLTYPE *GetCodePageA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
             /* [out] */ __RPC__out UINT *uCodePage);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetLangId)
         HRESULT ( STDMETHODCALLTYPE *GetLangId )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HKL hKL,
             /* [out] */ __RPC__out LANGID *plid);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, AssociateContextEx)
         HRESULT ( STDMETHODCALLTYPE *AssociateContextEx )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [in] */ HIMC hIMC,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, DisableIME)
         HRESULT ( STDMETHODCALLTYPE *DisableIME )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ DWORD idThread);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetImeMenuItemsA)
         HRESULT ( STDMETHODCALLTYPE *GetImeMenuItemsA )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1690,6 +1801,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ DWORD dwSize,
             /* [out] */ __RPC__out DWORD *pdwResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, GetImeMenuItemsW)
         HRESULT ( STDMETHODCALLTYPE *GetImeMenuItemsW )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ HIMC hIMC,
@@ -1700,6 +1812,7 @@ EXTERN_C const IID IID_IActiveIMMApp;
             /* [in] */ DWORD dwSize,
             /* [out] */ __RPC__out DWORD *pdwResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMApp, EnumInputContext)
         HRESULT ( STDMETHODCALLTYPE *EnumInputContext )( 
             __RPC__in IActiveIMMApp * This,
             /* [in] */ DWORD idThread,
@@ -2424,24 +2537,29 @@ EXTERN_C const IID IID_IActiveIMMIME;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IActiveIMMIME * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IActiveIMMIME * This);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, AssociateContext)
         HRESULT ( STDMETHODCALLTYPE *AssociateContext )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [in] */ HIMC hIME,
             /* [out] */ __RPC__out HIMC *phPrev);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, ConfigureIMEA)
         HRESULT ( STDMETHODCALLTYPE *ConfigureIMEA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2449,6 +2567,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwMode,
             /* [in] */ __RPC__in REGISTERWORDA *pData);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, ConfigureIMEW)
         HRESULT ( STDMETHODCALLTYPE *ConfigureIMEW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2456,14 +2575,17 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwMode,
             /* [in] */ __RPC__in REGISTERWORDW *pData);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, CreateContext)
         HRESULT ( STDMETHODCALLTYPE *CreateContext )( 
             __RPC__in IActiveIMMIME * This,
             /* [out] */ __RPC__out HIMC *phIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, DestroyContext)
         HRESULT ( STDMETHODCALLTYPE *DestroyContext )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIME);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, EnumRegisterWordA)
         HRESULT ( STDMETHODCALLTYPE *EnumRegisterWordA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2473,6 +2595,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ __RPC__in LPVOID pData,
             /* [out] */ __RPC__deref_out_opt IEnumRegisterWordA **pEnum);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, EnumRegisterWordW)
         HRESULT ( STDMETHODCALLTYPE *EnumRegisterWordW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2482,6 +2605,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ __RPC__in LPVOID pData,
             /* [out] */ __RPC__deref_out_opt IEnumRegisterWordW **pEnum);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, EscapeA)
         HRESULT ( STDMETHODCALLTYPE *EscapeA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2490,6 +2614,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out][in] */ __RPC__inout LPVOID pData,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, EscapeW)
         HRESULT ( STDMETHODCALLTYPE *EscapeW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2498,6 +2623,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out][in] */ __RPC__inout LPVOID pData,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCandidateListA)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateListA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2506,6 +2632,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out CANDIDATELIST *pCandList,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCandidateListW)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateListW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2514,34 +2641,40 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out CANDIDATELIST *pCandList,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCandidateListCountA)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateListCountA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out DWORD *pdwListSize,
             /* [out] */ __RPC__out DWORD *pdwBufLen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCandidateListCountW)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateListCountW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out DWORD *pdwListSize,
             /* [out] */ __RPC__out DWORD *pdwBufLen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCandidateWindow)
         HRESULT ( STDMETHODCALLTYPE *GetCandidateWindow )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ DWORD dwIndex,
             /* [out] */ __RPC__out CANDIDATEFORM *pCandidate);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCompositionFontA)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionFontA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out LOGFONTA *plf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCompositionFontW)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionFontW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out LOGFONTW *plf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCompositionStringA)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionStringA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2550,6 +2683,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out LONG *plCopied,
             /* [out] */ __RPC__out LPVOID pBuf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCompositionStringW)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionStringW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2558,16 +2692,19 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out LONG *plCopied,
             /* [out] */ __RPC__out LPVOID pBuf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCompositionWindow)
         HRESULT ( STDMETHODCALLTYPE *GetCompositionWindow )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out COMPOSITIONFORM *pCompForm);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetContext)
         HRESULT ( STDMETHODCALLTYPE *GetContext )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [out] */ __RPC__out HIMC *phIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetConversionListA)
         HRESULT ( STDMETHODCALLTYPE *GetConversionListA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2578,6 +2715,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out CANDIDATELIST *pDst,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetConversionListW)
         HRESULT ( STDMETHODCALLTYPE *GetConversionListW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2588,17 +2726,20 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out CANDIDATELIST *pDst,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetConversionStatus)
         HRESULT ( STDMETHODCALLTYPE *GetConversionStatus )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out DWORD *pfdwConversion,
             /* [out] */ __RPC__out DWORD *pfdwSentence);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetDefaultIMEWnd)
         HRESULT ( STDMETHODCALLTYPE *GetDefaultIMEWnd )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [out] */ __RPC__deref_out_opt HWND *phDefWnd);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetDescriptionA)
         HRESULT ( STDMETHODCALLTYPE *GetDescriptionA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2606,6 +2747,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out LPSTR szDescription,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetDescriptionW)
         HRESULT ( STDMETHODCALLTYPE *GetDescriptionW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2613,6 +2755,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out LPWSTR szDescription,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetGuideLineA)
         HRESULT ( STDMETHODCALLTYPE *GetGuideLineA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2621,6 +2764,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out LPSTR pBuf,
             /* [out] */ __RPC__out DWORD *pdwResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetGuideLineW)
         HRESULT ( STDMETHODCALLTYPE *GetGuideLineW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2629,6 +2773,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out LPWSTR pBuf,
             /* [out] */ __RPC__out DWORD *pdwResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetIMEFileNameA)
         HRESULT ( STDMETHODCALLTYPE *GetIMEFileNameA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2636,6 +2781,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out LPSTR szFileName,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetIMEFileNameW)
         HRESULT ( STDMETHODCALLTYPE *GetIMEFileNameW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2643,16 +2789,19 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out LPWSTR szFileName,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetOpenStatus)
         HRESULT ( STDMETHODCALLTYPE *GetOpenStatus )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetProperty)
         HRESULT ( STDMETHODCALLTYPE *GetProperty )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
             /* [in] */ DWORD fdwIndex,
             /* [out] */ __RPC__out DWORD *pdwProperty);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetRegisterWordStyleA)
         HRESULT ( STDMETHODCALLTYPE *GetRegisterWordStyleA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2660,6 +2809,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out STYLEBUFA *pStyleBuf,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetRegisterWordStyleW)
         HRESULT ( STDMETHODCALLTYPE *GetRegisterWordStyleW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2667,32 +2817,38 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out STYLEBUFW *pStyleBuf,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetStatusWindowPos)
         HRESULT ( STDMETHODCALLTYPE *GetStatusWindowPos )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out POINT *pptPos);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetVirtualKey)
         HRESULT ( STDMETHODCALLTYPE *GetVirtualKey )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [out] */ __RPC__out UINT *puVirtualKey);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, InstallIMEA)
         HRESULT ( STDMETHODCALLTYPE *InstallIMEA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in LPSTR szIMEFileName,
             /* [in] */ __RPC__in LPSTR szLayoutText,
             /* [out] */ __RPC__deref_out_opt HKL *phKL);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, InstallIMEW)
         HRESULT ( STDMETHODCALLTYPE *InstallIMEW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in LPWSTR szIMEFileName,
             /* [in] */ __RPC__in LPWSTR szLayoutText,
             /* [out] */ __RPC__deref_out_opt HKL *phKL);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, IsIME)
         HRESULT ( STDMETHODCALLTYPE *IsIME )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, IsUIMessageA)
         HRESULT ( STDMETHODCALLTYPE *IsUIMessageA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWndIME,
@@ -2700,6 +2856,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ WPARAM wParam,
             /* [in] */ LPARAM lParam);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, IsUIMessageW)
         HRESULT ( STDMETHODCALLTYPE *IsUIMessageW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWndIME,
@@ -2707,6 +2864,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ WPARAM wParam,
             /* [in] */ LPARAM lParam);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, NotifyIME)
         HRESULT ( STDMETHODCALLTYPE *NotifyIME )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2714,6 +2872,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwIndex,
             /* [in] */ DWORD dwValue);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, RegisterWordA)
         HRESULT ( STDMETHODCALLTYPE *RegisterWordA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2721,6 +2880,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPSTR szRegister);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, RegisterWordW)
         HRESULT ( STDMETHODCALLTYPE *RegisterWordW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2728,26 +2888,31 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPWSTR szRegister);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, ReleaseContext)
         HRESULT ( STDMETHODCALLTYPE *ReleaseContext )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [in] */ HIMC hIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetCandidateWindow)
         HRESULT ( STDMETHODCALLTYPE *SetCandidateWindow )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in CANDIDATEFORM *pCandidate);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetCompositionFontA)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionFontA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in LOGFONTA *plf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetCompositionFontW)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionFontW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in LOGFONTW *plf);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetCompositionStringA)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionStringA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2757,6 +2922,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ __RPC__in LPVOID pRead,
             /* [in] */ DWORD dwReadLen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetCompositionStringW)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionStringW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2766,32 +2932,38 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ __RPC__in LPVOID pRead,
             /* [in] */ DWORD dwReadLen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetCompositionWindow)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionWindow )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in COMPOSITIONFORM *pCompForm);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetConversionStatus)
         HRESULT ( STDMETHODCALLTYPE *SetConversionStatus )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ DWORD fdwConversion,
             /* [in] */ DWORD fdwSentence);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetOpenStatus)
         HRESULT ( STDMETHODCALLTYPE *SetOpenStatus )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ BOOL fOpen);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetStatusWindowPos)
         HRESULT ( STDMETHODCALLTYPE *SetStatusWindowPos )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ __RPC__in POINT *pptPos);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SimulateHotKey)
         HRESULT ( STDMETHODCALLTYPE *SimulateHotKey )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [in] */ DWORD dwHotKeyID);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, UnregisterWordA)
         HRESULT ( STDMETHODCALLTYPE *UnregisterWordA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2799,6 +2971,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPSTR szUnregister);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, UnregisterWordW)
         HRESULT ( STDMETHODCALLTYPE *UnregisterWordW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -2806,58 +2979,70 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPWSTR szUnregister);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GenerateMessage)
         HRESULT ( STDMETHODCALLTYPE *GenerateMessage )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, LockIMC)
         HRESULT ( STDMETHODCALLTYPE *LockIMC )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__deref_out_opt INPUTCONTEXT **ppIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, UnlockIMC)
         HRESULT ( STDMETHODCALLTYPE *UnlockIMC )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetIMCLockCount)
         HRESULT ( STDMETHODCALLTYPE *GetIMCLockCount )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
             /* [out] */ __RPC__out DWORD *pdwLockCount);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, CreateIMCC)
         HRESULT ( STDMETHODCALLTYPE *CreateIMCC )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ DWORD dwSize,
             /* [out] */ __RPC__out HIMCC *phIMCC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, DestroyIMCC)
         HRESULT ( STDMETHODCALLTYPE *DestroyIMCC )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMCC hIMCC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, LockIMCC)
         HRESULT ( STDMETHODCALLTYPE *LockIMCC )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMCC hIMCC,
             /* [out] */ __RPC__deref_out_opt void **ppv);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, UnlockIMCC)
         HRESULT ( STDMETHODCALLTYPE *UnlockIMCC )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMCC hIMCC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, ReSizeIMCC)
         HRESULT ( STDMETHODCALLTYPE *ReSizeIMCC )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMCC hIMCC,
             /* [in] */ DWORD dwSize,
             /* [out] */ __RPC__out HIMCC *phIMCC);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetIMCCSize)
         HRESULT ( STDMETHODCALLTYPE *GetIMCCSize )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMCC hIMCC,
             /* [out] */ __RPC__out DWORD *pdwSize);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetIMCCLockCount)
         HRESULT ( STDMETHODCALLTYPE *GetIMCCLockCount )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMCC hIMCC,
             /* [out] */ __RPC__out DWORD *pdwLockCount);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetHotKey)
         HRESULT ( STDMETHODCALLTYPE *GetHotKey )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ DWORD dwHotKeyID,
@@ -2865,6 +3050,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [out] */ __RPC__out UINT *puVKey,
             /* [out] */ __RPC__deref_out_opt HKL *phKL);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SetHotKey)
         HRESULT ( STDMETHODCALLTYPE *SetHotKey )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ DWORD dwHotKeyID,
@@ -2872,6 +3058,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ UINT uVKey,
             /* [in] */ __RPC__in HKL hKL);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, CreateSoftKeyboard)
         HRESULT ( STDMETHODCALLTYPE *CreateSoftKeyboard )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ UINT uType,
@@ -2880,25 +3067,30 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ int y,
             /* [out] */ __RPC__deref_out_opt HWND *phSoftKbdWnd);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, DestroySoftKeyboard)
         HRESULT ( STDMETHODCALLTYPE *DestroySoftKeyboard )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hSoftKbdWnd);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, ShowSoftKeyboard)
         HRESULT ( STDMETHODCALLTYPE *ShowSoftKeyboard )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hSoftKbdWnd,
             /* [in] */ int nCmdShow);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetCodePageA)
         HRESULT ( STDMETHODCALLTYPE *GetCodePageA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
             /* [out] */ __RPC__out UINT *uCodePage);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetLangId)
         HRESULT ( STDMETHODCALLTYPE *GetLangId )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HKL hKL,
             /* [out] */ __RPC__out LANGID *plid);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, KeybdEvent)
         HRESULT ( STDMETHODCALLTYPE *KeybdEvent )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ LANGID lgidIME,
@@ -2907,22 +3099,27 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwFlags,
             /* [in] */ DWORD dwExtraInfo);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, LockModal)
         HRESULT ( STDMETHODCALLTYPE *LockModal )( 
             __RPC__in IActiveIMMIME * This);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, UnlockModal)
         HRESULT ( STDMETHODCALLTYPE *UnlockModal )( 
             __RPC__in IActiveIMMIME * This);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, AssociateContextEx)
         HRESULT ( STDMETHODCALLTYPE *AssociateContextEx )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWnd,
             /* [in] */ HIMC hIMC,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, DisableIME)
         HRESULT ( STDMETHODCALLTYPE *DisableIME )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ DWORD idThread);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetImeMenuItemsA)
         HRESULT ( STDMETHODCALLTYPE *GetImeMenuItemsA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2933,6 +3130,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwSize,
             /* [out] */ __RPC__out DWORD *pdwResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, GetImeMenuItemsW)
         HRESULT ( STDMETHODCALLTYPE *GetImeMenuItemsW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2943,11 +3141,13 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ DWORD dwSize,
             /* [out] */ __RPC__out DWORD *pdwResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, EnumInputContext)
         HRESULT ( STDMETHODCALLTYPE *EnumInputContext )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ DWORD idThread,
             /* [out] */ __RPC__deref_out_opt IEnumInputContext **ppEnum);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, RequestMessageA)
         HRESULT ( STDMETHODCALLTYPE *RequestMessageA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2955,6 +3155,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ LPARAM lParam,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, RequestMessageW)
         HRESULT ( STDMETHODCALLTYPE *RequestMessageW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ HIMC hIMC,
@@ -2962,6 +3163,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ LPARAM lParam,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SendIMCA)
         HRESULT ( STDMETHODCALLTYPE *SendIMCA )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWnd,
@@ -2970,6 +3172,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ LPARAM lParam,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, SendIMCW)
         HRESULT ( STDMETHODCALLTYPE *SendIMCW )( 
             __RPC__in IActiveIMMIME * This,
             /* [in] */ __RPC__in HWND hWnd,
@@ -2978,6 +3181,7 @@ EXTERN_C const IID IID_IActiveIMMIME;
             /* [in] */ LPARAM lParam,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIMMIME, IsSleeping)
         HRESULT ( STDMETHODCALLTYPE *IsSleeping )( 
             __RPC__in IActiveIMMIME * This);
         
@@ -3397,18 +3601,22 @@ EXTERN_C const IID IID_IActiveIME;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IActiveIME * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IActiveIME * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IActiveIME * This);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Inquire)
         HRESULT ( STDMETHODCALLTYPE *Inquire )( 
             __RPC__in IActiveIME * This,
             /* [in] */ DWORD dwSystemInfoFlags,
@@ -3416,6 +3624,7 @@ EXTERN_C const IID IID_IActiveIME;
             /* [out] */ __RPC__out LPWSTR szWndClass,
             /* [out] */ __RPC__out DWORD *pdwPrivate);
         
+        DECLSPEC_XFGVIRT(IActiveIME, ConversionList)
         HRESULT ( STDMETHODCALLTYPE *ConversionList )( 
             __RPC__in IActiveIME * This,
             /* [in] */ HIMC hIMC,
@@ -3425,6 +3634,7 @@ EXTERN_C const IID IID_IActiveIME;
             /* [out] */ __RPC__out CANDIDATELIST *pDest,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Configure)
         HRESULT ( STDMETHODCALLTYPE *Configure )( 
             __RPC__in IActiveIME * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -3432,10 +3642,12 @@ EXTERN_C const IID IID_IActiveIME;
             /* [in] */ DWORD dwMode,
             /* [in] */ __RPC__in REGISTERWORDW *pRegisterWord);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Destroy)
         HRESULT ( STDMETHODCALLTYPE *Destroy )( 
             __RPC__in IActiveIME * This,
             /* [in] */ UINT uReserved);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Escape)
         HRESULT ( STDMETHODCALLTYPE *Escape )( 
             __RPC__in IActiveIME * This,
             /* [in] */ HIMC hIMC,
@@ -3443,11 +3655,13 @@ EXTERN_C const IID IID_IActiveIME;
             /* [out][in] */ __RPC__inout void *pData,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIME, SetActiveContext)
         HRESULT ( STDMETHODCALLTYPE *SetActiveContext )( 
             __RPC__in IActiveIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ BOOL fFlag);
         
+        DECLSPEC_XFGVIRT(IActiveIME, ProcessKey)
         HRESULT ( STDMETHODCALLTYPE *ProcessKey )( 
             __RPC__in IActiveIME * This,
             /* [in] */ HIMC hIMC,
@@ -3455,6 +3669,7 @@ EXTERN_C const IID IID_IActiveIME;
             /* [in] */ DWORD lParam,
             /* [in] */ __RPC__in BYTE *pbKeyState);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Notify)
         HRESULT ( STDMETHODCALLTYPE *Notify )( 
             __RPC__in IActiveIME * This,
             /* [in] */ HIMC hIMC,
@@ -3462,11 +3677,13 @@ EXTERN_C const IID IID_IActiveIME;
             /* [in] */ DWORD dwIndex,
             /* [in] */ DWORD dwValue);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Select)
         HRESULT ( STDMETHODCALLTYPE *Select )( 
             __RPC__in IActiveIME * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ BOOL fSelect);
         
+        DECLSPEC_XFGVIRT(IActiveIME, SetCompositionString)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionString )( 
             __RPC__in IActiveIME * This,
             /* [in] */ HIMC hIMC,
@@ -3476,6 +3693,7 @@ EXTERN_C const IID IID_IActiveIME;
             /* [in] */ __RPC__in void *pRead,
             /* [in] */ DWORD dwReadLen);
         
+        DECLSPEC_XFGVIRT(IActiveIME, ToAsciiEx)
         HRESULT ( STDMETHODCALLTYPE *ToAsciiEx )( 
             __RPC__in IActiveIME * This,
             /* [in] */ UINT uVirKey,
@@ -3486,24 +3704,28 @@ EXTERN_C const IID IID_IActiveIME;
             /* [out] */ __RPC__out DWORD *pdwTransBuf,
             /* [out] */ __RPC__out UINT *puSize);
         
+        DECLSPEC_XFGVIRT(IActiveIME, RegisterWord)
         HRESULT ( STDMETHODCALLTYPE *RegisterWord )( 
             __RPC__in IActiveIME * This,
             /* [in] */ __RPC__in LPWSTR szReading,
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPWSTR szString);
         
+        DECLSPEC_XFGVIRT(IActiveIME, UnregisterWord)
         HRESULT ( STDMETHODCALLTYPE *UnregisterWord )( 
             __RPC__in IActiveIME * This,
             /* [in] */ __RPC__in LPWSTR szReading,
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPWSTR szString);
         
+        DECLSPEC_XFGVIRT(IActiveIME, GetRegisterWordStyle)
         HRESULT ( STDMETHODCALLTYPE *GetRegisterWordStyle )( 
             __RPC__in IActiveIME * This,
             /* [in] */ UINT nItem,
             /* [out] */ __RPC__out STYLEBUFW *pStyleBuf,
             /* [out] */ __RPC__out UINT *puBufSize);
         
+        DECLSPEC_XFGVIRT(IActiveIME, EnumRegisterWord)
         HRESULT ( STDMETHODCALLTYPE *EnumRegisterWord )( 
             __RPC__in IActiveIME * This,
             /* [in] */ __RPC__in LPWSTR szReading,
@@ -3512,10 +3734,12 @@ EXTERN_C const IID IID_IActiveIME;
             /* [in] */ __RPC__in LPVOID pData,
             /* [out] */ __RPC__deref_out_opt IEnumRegisterWordW **ppEnum);
         
+        DECLSPEC_XFGVIRT(IActiveIME, GetCodePageA)
         HRESULT ( STDMETHODCALLTYPE *GetCodePageA )( 
             __RPC__in IActiveIME * This,
             /* [out] */ __RPC__out UINT *uCodePage);
         
+        DECLSPEC_XFGVIRT(IActiveIME, GetLangId)
         HRESULT ( STDMETHODCALLTYPE *GetLangId )( 
             __RPC__in IActiveIME * This,
             /* [out] */ __RPC__out LANGID *plid);
@@ -3634,18 +3858,22 @@ EXTERN_C const IID IID_IActiveIME2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IActiveIME2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IActiveIME2 * This);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Inquire)
         HRESULT ( STDMETHODCALLTYPE *Inquire )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ DWORD dwSystemInfoFlags,
@@ -3653,6 +3881,7 @@ EXTERN_C const IID IID_IActiveIME2;
             /* [out] */ __RPC__out LPWSTR szWndClass,
             /* [out] */ __RPC__out DWORD *pdwPrivate);
         
+        DECLSPEC_XFGVIRT(IActiveIME, ConversionList)
         HRESULT ( STDMETHODCALLTYPE *ConversionList )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ HIMC hIMC,
@@ -3662,6 +3891,7 @@ EXTERN_C const IID IID_IActiveIME2;
             /* [out] */ __RPC__out CANDIDATELIST *pDest,
             /* [out] */ __RPC__out UINT *puCopied);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Configure)
         HRESULT ( STDMETHODCALLTYPE *Configure )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ __RPC__in HKL hKL,
@@ -3669,10 +3899,12 @@ EXTERN_C const IID IID_IActiveIME2;
             /* [in] */ DWORD dwMode,
             /* [in] */ __RPC__in REGISTERWORDW *pRegisterWord);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Destroy)
         HRESULT ( STDMETHODCALLTYPE *Destroy )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ UINT uReserved);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Escape)
         HRESULT ( STDMETHODCALLTYPE *Escape )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ HIMC hIMC,
@@ -3680,11 +3912,13 @@ EXTERN_C const IID IID_IActiveIME2;
             /* [out][in] */ __RPC__inout void *pData,
             /* [out] */ __RPC__out LRESULT *plResult);
         
+        DECLSPEC_XFGVIRT(IActiveIME, SetActiveContext)
         HRESULT ( STDMETHODCALLTYPE *SetActiveContext )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ BOOL fFlag);
         
+        DECLSPEC_XFGVIRT(IActiveIME, ProcessKey)
         HRESULT ( STDMETHODCALLTYPE *ProcessKey )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ HIMC hIMC,
@@ -3692,6 +3926,7 @@ EXTERN_C const IID IID_IActiveIME2;
             /* [in] */ DWORD lParam,
             /* [in] */ __RPC__in BYTE *pbKeyState);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Notify)
         HRESULT ( STDMETHODCALLTYPE *Notify )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ HIMC hIMC,
@@ -3699,11 +3934,13 @@ EXTERN_C const IID IID_IActiveIME2;
             /* [in] */ DWORD dwIndex,
             /* [in] */ DWORD dwValue);
         
+        DECLSPEC_XFGVIRT(IActiveIME, Select)
         HRESULT ( STDMETHODCALLTYPE *Select )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ HIMC hIMC,
             /* [in] */ BOOL fSelect);
         
+        DECLSPEC_XFGVIRT(IActiveIME, SetCompositionString)
         HRESULT ( STDMETHODCALLTYPE *SetCompositionString )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ HIMC hIMC,
@@ -3713,6 +3950,7 @@ EXTERN_C const IID IID_IActiveIME2;
             /* [in] */ __RPC__in void *pRead,
             /* [in] */ DWORD dwReadLen);
         
+        DECLSPEC_XFGVIRT(IActiveIME, ToAsciiEx)
         HRESULT ( STDMETHODCALLTYPE *ToAsciiEx )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ UINT uVirKey,
@@ -3723,24 +3961,28 @@ EXTERN_C const IID IID_IActiveIME2;
             /* [out] */ __RPC__out DWORD *pdwTransBuf,
             /* [out] */ __RPC__out UINT *puSize);
         
+        DECLSPEC_XFGVIRT(IActiveIME, RegisterWord)
         HRESULT ( STDMETHODCALLTYPE *RegisterWord )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ __RPC__in LPWSTR szReading,
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPWSTR szString);
         
+        DECLSPEC_XFGVIRT(IActiveIME, UnregisterWord)
         HRESULT ( STDMETHODCALLTYPE *UnregisterWord )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ __RPC__in LPWSTR szReading,
             /* [in] */ DWORD dwStyle,
             /* [in] */ __RPC__in LPWSTR szString);
         
+        DECLSPEC_XFGVIRT(IActiveIME, GetRegisterWordStyle)
         HRESULT ( STDMETHODCALLTYPE *GetRegisterWordStyle )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ UINT nItem,
             /* [out] */ __RPC__out STYLEBUFW *pStyleBuf,
             /* [out] */ __RPC__out UINT *puBufSize);
         
+        DECLSPEC_XFGVIRT(IActiveIME, EnumRegisterWord)
         HRESULT ( STDMETHODCALLTYPE *EnumRegisterWord )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ __RPC__in LPWSTR szReading,
@@ -3749,17 +3991,21 @@ EXTERN_C const IID IID_IActiveIME2;
             /* [in] */ __RPC__in LPVOID pData,
             /* [out] */ __RPC__deref_out_opt IEnumRegisterWordW **ppEnum);
         
+        DECLSPEC_XFGVIRT(IActiveIME, GetCodePageA)
         HRESULT ( STDMETHODCALLTYPE *GetCodePageA )( 
             __RPC__in IActiveIME2 * This,
             /* [out] */ __RPC__out UINT *uCodePage);
         
+        DECLSPEC_XFGVIRT(IActiveIME, GetLangId)
         HRESULT ( STDMETHODCALLTYPE *GetLangId )( 
             __RPC__in IActiveIME2 * This,
             /* [out] */ __RPC__out LANGID *plid);
         
+        DECLSPEC_XFGVIRT(IActiveIME2, Sleep)
         HRESULT ( STDMETHODCALLTYPE *Sleep )( 
             __RPC__in IActiveIME2 * This);
         
+        DECLSPEC_XFGVIRT(IActiveIME2, Unsleep)
         HRESULT ( STDMETHODCALLTYPE *Unsleep )( 
             __RPC__in IActiveIME2 * This,
             /* [in] */ BOOL fDead);

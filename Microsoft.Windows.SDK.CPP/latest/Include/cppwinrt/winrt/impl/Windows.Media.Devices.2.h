@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Media_Devices_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Media.Devices.1.h"
-namespace winrt::Windows::Media::Devices
+WINRT_EXPORT namespace winrt::Windows::Media::Devices
 {
     struct CallControlEventHandler : Windows::Foundation::IUnknown
     {
@@ -83,7 +83,7 @@ namespace winrt::Windows::Media::Devices
     {
         AudioDeviceModulesManager(std::nullptr_t) noexcept {}
         AudioDeviceModulesManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::IAudioDeviceModulesManager(ptr, take_ownership_from_abi) {}
-        AudioDeviceModulesManager(param::hstring const& deviceId);
+        explicit AudioDeviceModulesManager(param::hstring const& deviceId);
     };
     struct __declspec(empty_bases) CallControl : Windows::Media::Devices::ICallControl
     {
@@ -106,6 +106,22 @@ namespace winrt::Windows::Media::Devices
     {
         DialRequestedEventArgs(std::nullptr_t) noexcept {}
         DialRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::IDialRequestedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) DigitalWindowBounds : Windows::Media::Devices::IDigitalWindowBounds
+    {
+        DigitalWindowBounds(std::nullptr_t) noexcept {}
+        DigitalWindowBounds(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::IDigitalWindowBounds(ptr, take_ownership_from_abi) {}
+        DigitalWindowBounds();
+    };
+    struct __declspec(empty_bases) DigitalWindowCapability : Windows::Media::Devices::IDigitalWindowCapability
+    {
+        DigitalWindowCapability(std::nullptr_t) noexcept {}
+        DigitalWindowCapability(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::IDigitalWindowCapability(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) DigitalWindowControl : Windows::Media::Devices::IDigitalWindowControl
+    {
+        DigitalWindowControl(std::nullptr_t) noexcept {}
+        DigitalWindowControl(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::IDigitalWindowControl(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ExposureCompensationControl : Windows::Media::Devices::IExposureCompensationControl
     {
@@ -181,11 +197,11 @@ namespace winrt::Windows::Media::Devices
         static auto GetDefaultAudioRenderId(Windows::Media::Devices::AudioDeviceRole const& role);
         static auto DefaultAudioCaptureDeviceChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> const& handler);
         using DefaultAudioCaptureDeviceChanged_revoker = impl::factory_event_revoker<Windows::Media::Devices::IMediaDeviceStatics, &impl::abi_t<Windows::Media::Devices::IMediaDeviceStatics>::remove_DefaultAudioCaptureDeviceChanged>;
-        static DefaultAudioCaptureDeviceChanged_revoker DefaultAudioCaptureDeviceChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> const& handler);
+        [[nodiscard]] static DefaultAudioCaptureDeviceChanged_revoker DefaultAudioCaptureDeviceChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> const& handler);
         static auto DefaultAudioCaptureDeviceChanged(winrt::event_token const& cookie);
         static auto DefaultAudioRenderDeviceChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> const& handler);
         using DefaultAudioRenderDeviceChanged_revoker = impl::factory_event_revoker<Windows::Media::Devices::IMediaDeviceStatics, &impl::abi_t<Windows::Media::Devices::IMediaDeviceStatics>::remove_DefaultAudioRenderDeviceChanged>;
-        static DefaultAudioRenderDeviceChanged_revoker DefaultAudioRenderDeviceChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> const& handler);
+        [[nodiscard]] static DefaultAudioRenderDeviceChanged_revoker DefaultAudioRenderDeviceChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> const& handler);
         static auto DefaultAudioRenderDeviceChanged(winrt::event_token const& cookie);
     };
     struct __declspec(empty_bases) MediaDeviceControl : Windows::Media::Devices::IMediaDeviceControl
@@ -246,7 +262,7 @@ namespace winrt::Windows::Media::Devices
         TorchControl(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::ITorchControl(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) VideoDeviceController : Windows::Media::Devices::IVideoDeviceController,
-        impl::require<VideoDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8>
+        impl::require<VideoDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9>
     {
         VideoDeviceController(std::nullptr_t) noexcept {}
         VideoDeviceController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::IVideoDeviceController(ptr, take_ownership_from_abi) {}

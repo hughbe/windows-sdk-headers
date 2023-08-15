@@ -85,13 +85,13 @@ namespace Windows
         {
             namespace Background
             {
-                [contractversion(2.0)]
+                [contractversion(3.0)]
                 apicontract CallsBackgroundContract
                 {
                 }
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 enum PhoneCallBlockedReason
                 {
                     InCallBlockingList = 0,
@@ -109,7 +109,7 @@ namespace Windows
                 };
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 enum PhoneLineChangeKind
                 {
                     Added             = 0,
@@ -119,7 +119,7 @@ namespace Windows
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
                 [flags]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 enum PhoneLineProperties
                 {
                     None            = 0x0,
@@ -135,7 +135,7 @@ namespace Windows
                 };
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 enum PhoneTriggerType
                 {
                     NewVoicemailMessage                  = 0,
@@ -150,7 +150,7 @@ namespace Windows
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
                 [exclusiveto(Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 [uuid(A4A690A2-E4C1-427F-864E-E470477DDB67)]
                 interface IPhoneCallBlockedTriggerDetails : IInspectable
                 {
@@ -161,7 +161,7 @@ namespace Windows
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
                 [exclusiveto(Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 [uuid(6E9B5B3F-C54B-4E82-4CC9-E329A4184592)]
                 interface IPhoneCallOriginDataRequestTriggerDetails : IInspectable
                 {
@@ -184,7 +184,7 @@ namespace Windows
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
                 [exclusiveto(Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 [uuid(C6D321E7-D11D-40D8-B2B7-E40A01D66249)]
                 interface IPhoneLineChangedTriggerDetails : IInspectable
                 {
@@ -195,7 +195,7 @@ namespace Windows
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
                 [exclusiveto(Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 [uuid(13A8C01B-B831-48D3-8BA9-8D22A6580DCF)]
                 interface IPhoneNewVoicemailMessageTriggerDetails : IInspectable
                 {
@@ -205,7 +205,7 @@ namespace Windows
                 }
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 [marshaling_behavior(agile)]
                 [threading(both)]
                 runtimeclass PhoneCallBlockedTriggerDetails
@@ -214,7 +214,7 @@ namespace Windows
                 }
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 [marshaling_behavior(agile)]
                 [threading(both)]
                 runtimeclass PhoneCallOriginDataRequestTriggerDetails
@@ -230,7 +230,7 @@ namespace Windows
                 }
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 [marshaling_behavior(agile)]
                 [threading(both)]
                 runtimeclass PhoneLineChangedTriggerDetails
@@ -239,7 +239,7 @@ namespace Windows
                 }
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
-                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 2.0))]
+                [from_contract(Windows.ApplicationModel.Calls.CallsPhoneContract, range(1.0, 3.0))]
                 [marshaling_behavior(agile)]
                 [threading(both)]
                 runtimeclass PhoneNewVoicemailMessageTriggerDetails

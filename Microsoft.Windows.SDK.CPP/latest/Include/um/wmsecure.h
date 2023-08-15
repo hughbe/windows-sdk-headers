@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -129,27 +137,33 @@ EXTERN_C const IID IID_IWMAuthorizer;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWMAuthorizer * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWMAuthorizer * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWMAuthorizer * This);
         
+        DECLSPEC_XFGVIRT(IWMAuthorizer, GetCertCount)
         HRESULT ( STDMETHODCALLTYPE *GetCertCount )( 
             IWMAuthorizer * This,
             /* [out] */ DWORD *pcCerts);
         
+        DECLSPEC_XFGVIRT(IWMAuthorizer, GetCert)
         HRESULT ( STDMETHODCALLTYPE *GetCert )( 
             IWMAuthorizer * This,
             /* [in] */ DWORD dwIndex,
             /* [out] */ BYTE **ppbCertData);
         
+        DECLSPEC_XFGVIRT(IWMAuthorizer, GetSharedData)
         HRESULT ( STDMETHODCALLTYPE *GetSharedData )( 
             IWMAuthorizer * This,
             /* [in] */ DWORD dwCertIndex,
@@ -259,27 +273,33 @@ EXTERN_C const IID IID_IWMSecureChannel;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWMSecureChannel * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWMSecureChannel * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWMSecureChannel * This);
         
+        DECLSPEC_XFGVIRT(IWMAuthorizer, GetCertCount)
         HRESULT ( STDMETHODCALLTYPE *GetCertCount )( 
             IWMSecureChannel * This,
             /* [out] */ DWORD *pcCerts);
         
+        DECLSPEC_XFGVIRT(IWMAuthorizer, GetCert)
         HRESULT ( STDMETHODCALLTYPE *GetCert )( 
             IWMSecureChannel * This,
             /* [in] */ DWORD dwIndex,
             /* [out] */ BYTE **ppbCertData);
         
+        DECLSPEC_XFGVIRT(IWMAuthorizer, GetSharedData)
         HRESULT ( STDMETHODCALLTYPE *GetSharedData )( 
             IWMSecureChannel * This,
             /* [in] */ DWORD dwCertIndex,
@@ -287,47 +307,58 @@ EXTERN_C const IID IID_IWMSecureChannel;
             /* [in] */ BYTE *pbCert,
             /* [out] */ BYTE **ppbSharedData);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_AddCertificate)
         HRESULT ( STDMETHODCALLTYPE *WMSC_AddCertificate )( 
             IWMSecureChannel * This,
             /* [in] */ IWMAuthorizer *pCert);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_AddSignature)
         HRESULT ( STDMETHODCALLTYPE *WMSC_AddSignature )( 
             IWMSecureChannel * This,
             /* [in] */ BYTE *pbCertSig,
             /* [in] */ DWORD cbCertSig);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_Connect)
         HRESULT ( STDMETHODCALLTYPE *WMSC_Connect )( 
             IWMSecureChannel * This,
             /* [in] */ IWMSecureChannel *pOtherSide);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_IsConnected)
         HRESULT ( STDMETHODCALLTYPE *WMSC_IsConnected )( 
             IWMSecureChannel * This,
             /* [out] */ BOOL *pfIsConnected);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_Disconnect)
         HRESULT ( STDMETHODCALLTYPE *WMSC_Disconnect )( 
             IWMSecureChannel * This);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_GetValidCertificate)
         HRESULT ( STDMETHODCALLTYPE *WMSC_GetValidCertificate )( 
             IWMSecureChannel * This,
             /* [out] */ BYTE **ppbCertificate,
             /* [out] */ DWORD *pdwSignature);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_Encrypt)
         HRESULT ( STDMETHODCALLTYPE *WMSC_Encrypt )( 
             IWMSecureChannel * This,
             /* [in] */ BYTE *pbData,
             /* [in] */ DWORD cbData);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_Decrypt)
         HRESULT ( STDMETHODCALLTYPE *WMSC_Decrypt )( 
             IWMSecureChannel * This,
             /* [in] */ BYTE *pbData,
             /* [in] */ DWORD cbData);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_Lock)
         HRESULT ( STDMETHODCALLTYPE *WMSC_Lock )( 
             IWMSecureChannel * This);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_Unlock)
         HRESULT ( STDMETHODCALLTYPE *WMSC_Unlock )( 
             IWMSecureChannel * This);
         
+        DECLSPEC_XFGVIRT(IWMSecureChannel, WMSC_SetSharedData)
         HRESULT ( STDMETHODCALLTYPE *WMSC_SetSharedData )( 
             IWMSecureChannel * This,
             /* [in] */ DWORD dwCertIndex,
@@ -437,18 +468,22 @@ EXTERN_C const IID IID_IWMGetSecureChannel;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWMGetSecureChannel * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWMGetSecureChannel * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWMGetSecureChannel * This);
         
+        DECLSPEC_XFGVIRT(IWMGetSecureChannel, GetPeerSecureChannelInterface)
         HRESULT ( STDMETHODCALLTYPE *GetPeerSecureChannelInterface )( 
             IWMGetSecureChannel * This,
             /* [out] */ IWMSecureChannel **ppPeer);

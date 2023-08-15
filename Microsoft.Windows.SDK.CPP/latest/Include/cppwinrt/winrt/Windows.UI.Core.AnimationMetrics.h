@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,121 +6,122 @@
 #ifndef WINRT_Windows_UI_Core_AnimationMetrics_H
 #define WINRT_Windows_UI_Core_AnimationMetrics_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.Core.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.UI.Core.AnimationMetrics.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::Animations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::UI::Core::AnimationMetrics::IPropertyAnimation>) consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::Animations() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IAnimationDescription)->get_Animations(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::UI::Core::AnimationMetrics::IPropertyAnimation>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::StaggerDelay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::StaggerDelay() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IAnimationDescription)->get_StaggerDelay(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::StaggerDelayFactor() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::StaggerDelayFactor() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IAnimationDescription)->get_StaggerDelayFactor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::DelayLimit() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::DelayLimit() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IAnimationDescription)->get_DelayLimit(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::ZOrder() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>::ZOrder() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IAnimationDescription)->get_ZOrder(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IAnimationDescriptionFactory<D>::CreateInstance(Windows::UI::Core::AnimationMetrics::AnimationEffect const& effect, Windows::UI::Core::AnimationMetrics::AnimationEffectTarget const& target) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::AnimationMetrics::AnimationDescription) consume_Windows_UI_Core_AnimationMetrics_IAnimationDescriptionFactory<D>::CreateInstance(Windows::UI::Core::AnimationMetrics::AnimationEffect const& effect, Windows::UI::Core::AnimationMetrics::AnimationEffectTarget const& target) const
     {
         void* animation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory)->CreateInstance(static_cast<int32_t>(effect), static_cast<int32_t>(target), &animation));
         return Windows::UI::Core::AnimationMetrics::AnimationDescription{ animation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IOpacityAnimation<D>::InitialOpacity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) consume_Windows_UI_Core_AnimationMetrics_IOpacityAnimation<D>::InitialOpacity() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IOpacityAnimation)->get_InitialOpacity(&value));
         return Windows::Foundation::IReference<float>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IOpacityAnimation<D>::FinalOpacity() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Core_AnimationMetrics_IOpacityAnimation<D>::FinalOpacity() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IOpacityAnimation)->get_FinalOpacity(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::AnimationMetrics::PropertyAnimationType) consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Type() const
     {
-        Windows::UI::Core::AnimationMetrics::PropertyAnimationType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IPropertyAnimation)->get_Type(put_abi(value)));
+        Windows::UI::Core::AnimationMetrics::PropertyAnimationType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IPropertyAnimation)->get_Type(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Delay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Delay() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IPropertyAnimation)->get_Delay(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IPropertyAnimation)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Control1() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Control1() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IPropertyAnimation)->get_Control1(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Control2() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>::Control2() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IPropertyAnimation)->get_Control2(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::InitialScaleX() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::InitialScaleX() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IScaleAnimation)->get_InitialScaleX(&value));
         return Windows::Foundation::IReference<float>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::InitialScaleY() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::InitialScaleY() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IScaleAnimation)->get_InitialScaleY(&value));
         return Windows::Foundation::IReference<float>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::FinalScaleX() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::FinalScaleX() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IScaleAnimation)->get_FinalScaleX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::FinalScaleY() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::FinalScaleY() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IScaleAnimation)->get_FinalScaleY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::NormalizedOrigin() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>::NormalizedOrigin() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::AnimationMetrics::IScaleAnimation)->get_NormalizedOrigin(put_abi(value)));
         return value;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::AnimationMetrics::IAnimationDescription> : produce_base<D, Windows::UI::Core::AnimationMetrics::IAnimationDescription>
     {
@@ -163,6 +164,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory> : produce_base<D, Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>
     {
@@ -175,6 +178,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::AnimationMetrics::IOpacityAnimation> : produce_base<D, Windows::UI::Core::AnimationMetrics::IOpacityAnimation>
     {
@@ -194,6 +199,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Core::AnimationMetrics::IPropertyAnimation> : produce_base<D, Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
     {
@@ -237,6 +243,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::AnimationMetrics::IScaleAnimation> : produce_base<D, Windows::UI::Core::AnimationMetrics::IScaleAnimation>
     {
@@ -279,25 +286,28 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::UI::Core::AnimationMetrics
+WINRT_EXPORT namespace winrt::Windows::UI::Core::AnimationMetrics
 {
     inline AnimationDescription::AnimationDescription(Windows::UI::Core::AnimationMetrics::AnimationEffect const& effect, Windows::UI::Core::AnimationMetrics::AnimationEffectTarget const& target) :
-        AnimationDescription(impl::call_factory<AnimationDescription, Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>([&](auto&& f) { return f.CreateInstance(effect, target); }))
+        AnimationDescription(impl::call_factory<AnimationDescription, IAnimationDescriptionFactory>([&](IAnimationDescriptionFactory const& f) { return f.CreateInstance(effect, target); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescription> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescription> {};
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory> {};
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IOpacityAnimation> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::IOpacityAnimation> {};
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation> {};
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IScaleAnimation> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::IScaleAnimation> {};
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription> {};
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation> {};
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation> {};
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation> {};
-    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation> : winrt::impl::hash_base<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescription> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IOpacityAnimation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::IScaleAnimation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -1,17 +1,21 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Phone_StartScreen_0_H
 #define WINRT_Windows_Phone_StartScreen_0_H
-namespace winrt::Windows::UI::Notifications
+WINRT_EXPORT namespace winrt::Windows::Foundation
+{
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+}
+WINRT_EXPORT namespace winrt::Windows::UI::Notifications
 {
     struct BadgeUpdater;
     struct TileUpdater;
     struct ToastNotifier;
 }
-namespace winrt::Windows::Phone::StartScreen
+WINRT_EXPORT namespace winrt::Windows::Phone::StartScreen
 {
     struct IDualSimTile;
     struct IDualSimTileStatics;
@@ -20,54 +24,18 @@ namespace winrt::Windows::Phone::StartScreen
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Phone::StartScreen::IDualSimTile>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Phone::StartScreen::IDualSimTileStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Phone::StartScreen::IToastNotificationManagerStatics3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Phone::StartScreen::DualSimTile>
-    {
-        using type = class_category;
-    };
-    template <> struct name<Windows::Phone::StartScreen::IDualSimTile>
-    {
-        static constexpr auto & value{ L"Windows.Phone.StartScreen.IDualSimTile" };
-    };
-    template <> struct name<Windows::Phone::StartScreen::IDualSimTileStatics>
-    {
-        static constexpr auto & value{ L"Windows.Phone.StartScreen.IDualSimTileStatics" };
-    };
-    template <> struct name<Windows::Phone::StartScreen::IToastNotificationManagerStatics3>
-    {
-        static constexpr auto & value{ L"Windows.Phone.StartScreen.IToastNotificationManagerStatics3" };
-    };
-    template <> struct name<Windows::Phone::StartScreen::DualSimTile>
-    {
-        static constexpr auto & value{ L"Windows.Phone.StartScreen.DualSimTile" };
-    };
-    template <> struct guid_storage<Windows::Phone::StartScreen::IDualSimTile>
-    {
-        static constexpr guid value{ 0x143AB213,0xD05F,0x4041,{ 0xA1,0x8C,0x3E,0x3F,0xCB,0x75,0xB4,0x1E } };
-    };
-    template <> struct guid_storage<Windows::Phone::StartScreen::IDualSimTileStatics>
-    {
-        static constexpr guid value{ 0x50567C9E,0xC58F,0x4DC9,{ 0xB6,0xE8,0xFA,0x67,0x77,0xEE,0xEB,0x37 } };
-    };
-    template <> struct guid_storage<Windows::Phone::StartScreen::IToastNotificationManagerStatics3>
-    {
-        static constexpr guid value{ 0x2717F54B,0x50DF,0x4455,{ 0x8E,0x6E,0x41,0xE0,0xFC,0x8E,0x13,0xCE } };
-    };
-    template <> struct default_interface<Windows::Phone::StartScreen::DualSimTile>
-    {
-        using type = Windows::Phone::StartScreen::IDualSimTile;
-    };
+    template <> struct category<Windows::Phone::StartScreen::IDualSimTile>{ using type = interface_category; };
+    template <> struct category<Windows::Phone::StartScreen::IDualSimTileStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Phone::StartScreen::IToastNotificationManagerStatics3>{ using type = interface_category; };
+    template <> struct category<Windows::Phone::StartScreen::DualSimTile>{ using type = class_category; };
+    template <> inline constexpr auto& name_v<Windows::Phone::StartScreen::DualSimTile> = L"Windows.Phone.StartScreen.DualSimTile";
+    template <> inline constexpr auto& name_v<Windows::Phone::StartScreen::IDualSimTile> = L"Windows.Phone.StartScreen.IDualSimTile";
+    template <> inline constexpr auto& name_v<Windows::Phone::StartScreen::IDualSimTileStatics> = L"Windows.Phone.StartScreen.IDualSimTileStatics";
+    template <> inline constexpr auto& name_v<Windows::Phone::StartScreen::IToastNotificationManagerStatics3> = L"Windows.Phone.StartScreen.IToastNotificationManagerStatics3";
+    template <> inline constexpr guid guid_v<Windows::Phone::StartScreen::IDualSimTile>{ 0x143AB213,0xD05F,0x4041,{ 0xA1,0x8C,0x3E,0x3F,0xCB,0x75,0xB4,0x1E } }; // 143AB213-D05F-4041-A18C-3E3FCB75B41E
+    template <> inline constexpr guid guid_v<Windows::Phone::StartScreen::IDualSimTileStatics>{ 0x50567C9E,0xC58F,0x4DC9,{ 0xB6,0xE8,0xFA,0x67,0x77,0xEE,0xEB,0x37 } }; // 50567C9E-C58F-4DC9-B6E8-FA6777EEEB37
+    template <> inline constexpr guid guid_v<Windows::Phone::StartScreen::IToastNotificationManagerStatics3>{ 0x2717F54B,0x50DF,0x4455,{ 0x8E,0x6E,0x41,0xE0,0xFC,0x8E,0x13,0xCE } }; // 2717F54B-50DF-4455-8E6E-41E0FC8E13CE
+    template <> struct default_interface<Windows::Phone::StartScreen::DualSimTile>{ using type = Windows::Phone::StartScreen::IDualSimTile; };
     template <> struct abi<Windows::Phone::StartScreen::IDualSimTile>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -104,12 +72,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_StartScreen_IDualSimTile
     {
-        auto DisplayName(param::hstring const& value) const;
-        [[nodiscard]] auto DisplayName() const;
-        [[nodiscard]] auto IsPinnedToStart() const;
-        auto CreateAsync() const;
-        auto UpdateAsync() const;
-        auto DeleteAsync() const;
+        WINRT_IMPL_AUTO(void) DisplayName(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPinnedToStart() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) CreateAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) UpdateAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) DeleteAsync() const;
     };
     template <> struct consume<Windows::Phone::StartScreen::IDualSimTile>
     {
@@ -118,14 +86,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_StartScreen_IDualSimTileStatics
     {
-        auto GetTileForSim2() const;
-        auto UpdateDisplayNameForSim1Async(param::hstring const& name) const;
-        auto CreateTileUpdaterForSim1() const;
-        auto CreateTileUpdaterForSim2() const;
-        auto CreateBadgeUpdaterForSim1() const;
-        auto CreateBadgeUpdaterForSim2() const;
-        auto CreateToastNotifierForSim1() const;
-        auto CreateToastNotifierForSim2() const;
+        WINRT_IMPL_AUTO(Windows::Phone::StartScreen::DualSimTile) GetTileForSim2() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) UpdateDisplayNameForSim1Async(param::hstring const& name) const;
+        WINRT_IMPL_AUTO(Windows::UI::Notifications::TileUpdater) CreateTileUpdaterForSim1() const;
+        WINRT_IMPL_AUTO(Windows::UI::Notifications::TileUpdater) CreateTileUpdaterForSim2() const;
+        WINRT_IMPL_AUTO(Windows::UI::Notifications::BadgeUpdater) CreateBadgeUpdaterForSim1() const;
+        WINRT_IMPL_AUTO(Windows::UI::Notifications::BadgeUpdater) CreateBadgeUpdaterForSim2() const;
+        WINRT_IMPL_AUTO(Windows::UI::Notifications::ToastNotifier) CreateToastNotifierForSim1() const;
+        WINRT_IMPL_AUTO(Windows::UI::Notifications::ToastNotifier) CreateToastNotifierForSim2() const;
     };
     template <> struct consume<Windows::Phone::StartScreen::IDualSimTileStatics>
     {
@@ -134,7 +102,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_StartScreen_IToastNotificationManagerStatics3
     {
-        auto CreateToastNotifierForSecondaryTile(param::hstring const& tileId) const;
+        WINRT_IMPL_AUTO(Windows::UI::Notifications::ToastNotifier) CreateToastNotifierForSecondaryTile(param::hstring const& tileId) const;
     };
     template <> struct consume<Windows::Phone::StartScreen::IToastNotificationManagerStatics3>
     {

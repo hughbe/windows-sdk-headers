@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_ContentRestrictions_2_H
 #define WINRT_Windows_Media_ContentRestrictions_2_H
 #include "winrt/impl/Windows.Media.ContentRestrictions.1.h"
-namespace winrt::Windows::Media::ContentRestrictions
+WINRT_EXPORT namespace winrt::Windows::Media::ContentRestrictions
 {
     struct __declspec(empty_bases) ContentRestrictionsBrowsePolicy : Windows::Media::ContentRestrictions::IContentRestrictionsBrowsePolicy
     {
@@ -24,7 +24,7 @@ namespace winrt::Windows::Media::ContentRestrictions
         RatedContentRestrictions(std::nullptr_t) noexcept {}
         RatedContentRestrictions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::ContentRestrictions::IRatedContentRestrictions(ptr, take_ownership_from_abi) {}
         RatedContentRestrictions();
-        RatedContentRestrictions(uint32_t maxAgeRating);
+        explicit RatedContentRestrictions(uint32_t maxAgeRating);
     };
 }
 #endif

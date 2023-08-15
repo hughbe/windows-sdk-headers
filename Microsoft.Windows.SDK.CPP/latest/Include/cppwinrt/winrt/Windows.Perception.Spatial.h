@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Perception_Spatial_H
 #define WINRT_Windows_Perception_Spatial_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Perception.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -17,21 +17,21 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Perception.Spatial.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchor<D>::CoordinateSystem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialCoordinateSystem) consume_Windows_Perception_Spatial_ISpatialAnchor<D>::CoordinateSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchor)->get_CoordinateSystem(&value));
         return Windows::Perception::Spatial::SpatialCoordinateSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchor<D>::RawCoordinateSystem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialCoordinateSystem) consume_Windows_Perception_Spatial_ISpatialAnchor<D>::RawCoordinateSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchor)->get_RawCoordinateSystem(&value));
         return Windows::Perception::Spatial::SpatialCoordinateSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchor<D>::RawCoordinateSystemAdjusted(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialAnchor, Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Perception_Spatial_ISpatialAnchor<D>::RawCoordinateSystemAdjusted(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialAnchor, Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs> const& handler) const
     {
-        winrt::event_token cookie;
+        winrt::event_token cookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchor)->add_RawCoordinateSystemAdjusted(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
@@ -39,243 +39,243 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RawCoordinateSystemAdjusted_revoker>(this, RawCoordinateSystemAdjusted(handler));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchor<D>::RawCoordinateSystemAdjusted(winrt::event_token const& cookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialAnchor<D>::RawCoordinateSystemAdjusted(winrt::event_token const& cookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchor)->remove_RawCoordinateSystemAdjusted(impl::bind_in(cookie)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchor2<D>::RemovedByUser() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Perception_Spatial_ISpatialAnchor2<D>::RemovedByUser() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchor2)->get_RemovedByUser(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorExportSufficiency<D>::IsMinimallySufficient() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Perception_Spatial_ISpatialAnchorExportSufficiency<D>::IsMinimallySufficient() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorExportSufficiency)->get_IsMinimallySufficient(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorExportSufficiency<D>::SufficiencyLevel() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Perception_Spatial_ISpatialAnchorExportSufficiency<D>::SufficiencyLevel() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorExportSufficiency)->get_SufficiencyLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorExportSufficiency<D>::RecommendedSufficiencyLevel() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Perception_Spatial_ISpatialAnchorExportSufficiency<D>::RecommendedSufficiencyLevel() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorExportSufficiency)->get_RecommendedSufficiencyLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorExporter<D>::GetAnchorExportSufficiencyAsync(Windows::Perception::Spatial::SpatialAnchor const& anchor, Windows::Perception::Spatial::SpatialAnchorExportPurpose const& purpose) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialAnchorExportSufficiency>) consume_Windows_Perception_Spatial_ISpatialAnchorExporter<D>::GetAnchorExportSufficiencyAsync(Windows::Perception::Spatial::SpatialAnchor const& anchor, Windows::Perception::Spatial::SpatialAnchorExportPurpose const& purpose) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorExporter)->GetAnchorExportSufficiencyAsync(*(void**)(&anchor), static_cast<int32_t>(purpose), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialAnchorExportSufficiency>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorExporter<D>::TryExportAnchorAsync(Windows::Perception::Spatial::SpatialAnchor const& anchor, Windows::Perception::Spatial::SpatialAnchorExportPurpose const& purpose, Windows::Storage::Streams::IOutputStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Perception_Spatial_ISpatialAnchorExporter<D>::TryExportAnchorAsync(Windows::Perception::Spatial::SpatialAnchor const& anchor, Windows::Perception::Spatial::SpatialAnchorExportPurpose const& purpose, Windows::Storage::Streams::IOutputStream const& stream) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorExporter)->TryExportAnchorAsync(*(void**)(&anchor), static_cast<int32_t>(purpose), *(void**)(&stream), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorExporterStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialAnchorExporter) consume_Windows_Perception_Spatial_ISpatialAnchorExporterStatics<D>::GetDefault() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorExporterStatics)->GetDefault(&value));
         return Windows::Perception::Spatial::SpatialAnchorExporter{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorExporterStatics<D>::RequestAccessAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialPerceptionAccessStatus>) consume_Windows_Perception_Spatial_ISpatialAnchorExporterStatics<D>::RequestAccessAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorExporterStatics)->RequestAccessAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialPerceptionAccessStatus>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorManagerStatics<D>::RequestStoreAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialAnchorStore>) consume_Windows_Perception_Spatial_ISpatialAnchorManagerStatics<D>::RequestStoreAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorManagerStatics)->RequestStoreAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialAnchorStore>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorRawCoordinateSystemAdjustedEventArgs<D>::OldRawCoordinateSystemToNewRawCoordinateSystemTransform() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float4x4) consume_Windows_Perception_Spatial_ISpatialAnchorRawCoordinateSystemAdjustedEventArgs<D>::OldRawCoordinateSystemToNewRawCoordinateSystemTransform() const
     {
-        Windows::Foundation::Numerics::float4x4 value;
+        Windows::Foundation::Numerics::float4x4 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorRawCoordinateSystemAdjustedEventArgs)->get_OldRawCoordinateSystemToNewRawCoordinateSystemTransform(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorStatics<D>::TryCreateRelativeTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialAnchor) consume_Windows_Perception_Spatial_ISpatialAnchorStatics<D>::TryCreateRelativeTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorStatics)->TryCreateRelativeTo(*(void**)(&coordinateSystem), &value));
         return Windows::Perception::Spatial::SpatialAnchor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorStatics<D>::TryCreateRelativeTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Foundation::Numerics::float3 const& position) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialAnchor) consume_Windows_Perception_Spatial_ISpatialAnchorStatics<D>::TryCreateRelativeTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Foundation::Numerics::float3 const& position) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorStatics)->TryCreateWithPositionRelativeTo(*(void**)(&coordinateSystem), impl::bind_in(position), &value));
         return Windows::Perception::Spatial::SpatialAnchor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorStatics<D>::TryCreateRelativeTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Foundation::Numerics::float3 const& position, Windows::Foundation::Numerics::quaternion const& orientation) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialAnchor) consume_Windows_Perception_Spatial_ISpatialAnchorStatics<D>::TryCreateRelativeTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Foundation::Numerics::float3 const& position, Windows::Foundation::Numerics::quaternion const& orientation) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorStatics)->TryCreateWithPositionAndOrientationRelativeTo(*(void**)(&coordinateSystem), impl::bind_in(position), impl::bind_in(orientation), &value));
         return Windows::Perception::Spatial::SpatialAnchor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorStore<D>::GetAllSavedAnchors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::Perception::Spatial::SpatialAnchor>) consume_Windows_Perception_Spatial_ISpatialAnchorStore<D>::GetAllSavedAnchors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorStore)->GetAllSavedAnchors(&value));
         return Windows::Foundation::Collections::IMapView<hstring, Windows::Perception::Spatial::SpatialAnchor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorStore<D>::TrySave(param::hstring const& id, Windows::Perception::Spatial::SpatialAnchor const& anchor) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Perception_Spatial_ISpatialAnchorStore<D>::TrySave(param::hstring const& id, Windows::Perception::Spatial::SpatialAnchor const& anchor) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorStore)->TrySave(*(void**)(&id), *(void**)(&anchor), &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorStore<D>::Remove(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialAnchorStore<D>::Remove(param::hstring const& id) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorStore)->Remove(*(void**)(&id)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorStore<D>::Clear() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialAnchorStore<D>::Clear() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorStore)->Clear());
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorTransferManagerStatics<D>::TryImportAnchorsAsync(Windows::Storage::Streams::IInputStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMapView<hstring, Windows::Perception::Spatial::SpatialAnchor>>) consume_Windows_Perception_Spatial_ISpatialAnchorTransferManagerStatics<D>::TryImportAnchorsAsync(Windows::Storage::Streams::IInputStream const& stream) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics)->TryImportAnchorsAsync(*(void**)(&stream), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMapView<hstring, Windows::Perception::Spatial::SpatialAnchor>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorTransferManagerStatics<D>::TryExportAnchorsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Perception::Spatial::SpatialAnchor>> const& anchors, Windows::Storage::Streams::IOutputStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Perception_Spatial_ISpatialAnchorTransferManagerStatics<D>::TryExportAnchorsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Perception::Spatial::SpatialAnchor>> const& anchors, Windows::Storage::Streams::IOutputStream const& stream) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics)->TryExportAnchorsAsync(*(void**)(&anchors), *(void**)(&stream), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialAnchorTransferManagerStatics<D>::RequestAccessAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialPerceptionAccessStatus>) consume_Windows_Perception_Spatial_ISpatialAnchorTransferManagerStatics<D>::RequestAccessAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics)->RequestAccessAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialPerceptionAccessStatus>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialBoundingVolumeStatics<D>::FromBox(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingBox const& box) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialBoundingVolume) consume_Windows_Perception_Spatial_ISpatialBoundingVolumeStatics<D>::FromBox(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingBox const& box) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialBoundingVolumeStatics)->FromBox(*(void**)(&coordinateSystem), impl::bind_in(box), &value));
         return Windows::Perception::Spatial::SpatialBoundingVolume{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialBoundingVolumeStatics<D>::FromOrientedBox(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingOrientedBox const& box) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialBoundingVolume) consume_Windows_Perception_Spatial_ISpatialBoundingVolumeStatics<D>::FromOrientedBox(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingOrientedBox const& box) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialBoundingVolumeStatics)->FromOrientedBox(*(void**)(&coordinateSystem), impl::bind_in(box), &value));
         return Windows::Perception::Spatial::SpatialBoundingVolume{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialBoundingVolumeStatics<D>::FromSphere(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingSphere const& sphere) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialBoundingVolume) consume_Windows_Perception_Spatial_ISpatialBoundingVolumeStatics<D>::FromSphere(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingSphere const& sphere) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialBoundingVolumeStatics)->FromSphere(*(void**)(&coordinateSystem), impl::bind_in(sphere), &value));
         return Windows::Perception::Spatial::SpatialBoundingVolume{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialBoundingVolumeStatics<D>::FromFrustum(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingFrustum const& frustum) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialBoundingVolume) consume_Windows_Perception_Spatial_ISpatialBoundingVolumeStatics<D>::FromFrustum(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingFrustum const& frustum) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialBoundingVolumeStatics)->FromFrustum(*(void**)(&coordinateSystem), impl::bind_in(frustum), &value));
         return Windows::Perception::Spatial::SpatialBoundingVolume{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialCoordinateSystem<D>::TryGetTransformTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& target) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::Numerics::float4x4>) consume_Windows_Perception_Spatial_ISpatialCoordinateSystem<D>::TryGetTransformTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& target) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialCoordinateSystem)->TryGetTransformTo(*(void**)(&target), &value));
         return Windows::Foundation::IReference<Windows::Foundation::Numerics::float4x4>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntity<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Perception_Spatial_ISpatialEntity<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntity)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntity<D>::Anchor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialAnchor) consume_Windows_Perception_Spatial_ISpatialEntity<D>::Anchor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntity)->get_Anchor(&value));
         return Windows::Perception::Spatial::SpatialAnchor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntity<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::ValueSet) consume_Windows_Perception_Spatial_ISpatialEntity<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntity)->get_Properties(&value));
         return Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityAddedEventArgs<D>::Entity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialEntity) consume_Windows_Perception_Spatial_ISpatialEntityAddedEventArgs<D>::Entity() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityAddedEventArgs)->get_Entity(&value));
         return Windows::Perception::Spatial::SpatialEntity{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityFactory<D>::CreateWithSpatialAnchor(Windows::Perception::Spatial::SpatialAnchor const& spatialAnchor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialEntity) consume_Windows_Perception_Spatial_ISpatialEntityFactory<D>::CreateWithSpatialAnchor(Windows::Perception::Spatial::SpatialAnchor const& spatialAnchor) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityFactory)->CreateWithSpatialAnchor(*(void**)(&spatialAnchor), &value));
         return Windows::Perception::Spatial::SpatialEntity{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityFactory<D>::CreateWithSpatialAnchorAndProperties(Windows::Perception::Spatial::SpatialAnchor const& spatialAnchor, Windows::Foundation::Collections::ValueSet const& propertySet) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialEntity) consume_Windows_Perception_Spatial_ISpatialEntityFactory<D>::CreateWithSpatialAnchorAndProperties(Windows::Perception::Spatial::SpatialAnchor const& spatialAnchor, Windows::Foundation::Collections::ValueSet const& propertySet) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityFactory)->CreateWithSpatialAnchorAndProperties(*(void**)(&spatialAnchor), *(void**)(&propertySet), &value));
         return Windows::Perception::Spatial::SpatialEntity{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityRemovedEventArgs<D>::Entity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialEntity) consume_Windows_Perception_Spatial_ISpatialEntityRemovedEventArgs<D>::Entity() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityRemovedEventArgs)->get_Entity(&value));
         return Windows::Perception::Spatial::SpatialEntity{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityStore<D>::SaveAsync(Windows::Perception::Spatial::SpatialEntity const& entity) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Perception_Spatial_ISpatialEntityStore<D>::SaveAsync(Windows::Perception::Spatial::SpatialEntity const& entity) const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityStore)->SaveAsync(*(void**)(&entity), &action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityStore<D>::RemoveAsync(Windows::Perception::Spatial::SpatialEntity const& entity) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Perception_Spatial_ISpatialEntityStore<D>::RemoveAsync(Windows::Perception::Spatial::SpatialEntity const& entity) const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityStore)->RemoveAsync(*(void**)(&entity), &action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityStore<D>::CreateEntityWatcher() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialEntityWatcher) consume_Windows_Perception_Spatial_ISpatialEntityStore<D>::CreateEntityWatcher() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityStore)->CreateEntityWatcher(&value));
         return Windows::Perception::Spatial::SpatialEntityWatcher{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityStoreStatics<D>::IsSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Perception_Spatial_ISpatialEntityStoreStatics<D>::IsSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityStoreStatics)->get_IsSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityStoreStatics<D>::TryGet(Windows::System::RemoteSystems::RemoteSystemSession const& session) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialEntityStore) consume_Windows_Perception_Spatial_ISpatialEntityStoreStatics<D>::TryGet(Windows::System::RemoteSystems::RemoteSystemSession const& session) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityStoreStatics)->TryGetForRemoteSystemSession(*(void**)(&session), &value));
         return Windows::Perception::Spatial::SpatialEntityStore{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityUpdatedEventArgs<D>::Entity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialEntity) consume_Windows_Perception_Spatial_ISpatialEntityUpdatedEventArgs<D>::Entity() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityUpdatedEventArgs)->get_Entity(&value));
         return Windows::Perception::Spatial::SpatialEntity{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialEntityWatcherStatus) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Status() const
     {
-        Windows::Perception::Spatial::SpatialEntityWatcherStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->get_Status(put_abi(value)));
+        Windows::Perception::Spatial::SpatialEntityWatcherStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Added(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialEntityWatcher, Windows::Perception::Spatial::SpatialEntityAddedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Added(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialEntityWatcher, Windows::Perception::Spatial::SpatialEntityAddedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->add_Added(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -283,13 +283,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Added_revoker>(this, Added(handler));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Added(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Added(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->remove_Added(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Updated(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialEntityWatcher, Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Updated(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialEntityWatcher, Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->add_Updated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -297,13 +297,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Updated_revoker>(this, Updated(handler));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Updated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Updated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->remove_Updated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Removed(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialEntityWatcher, Windows::Perception::Spatial::SpatialEntityRemovedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Removed(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialEntityWatcher, Windows::Perception::Spatial::SpatialEntityRemovedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->add_Removed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -311,13 +311,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Removed_revoker>(this, Removed(handler));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Removed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Removed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->remove_Removed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::EnumerationCompleted(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialEntityWatcher, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::EnumerationCompleted(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialEntityWatcher, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->add_EnumerationCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -325,75 +325,75 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, EnumerationCompleted_revoker>(this, EnumerationCompleted(handler));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Start() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->Start());
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Stop() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialEntityWatcher<D>::Stop() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialEntityWatcher)->Stop());
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocation<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Perception_Spatial_ISpatialLocation<D>::Position() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocation)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocation<D>::Orientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::quaternion) consume_Windows_Perception_Spatial_ISpatialLocation<D>::Orientation() const
     {
-        Windows::Foundation::Numerics::quaternion value;
+        Windows::Foundation::Numerics::quaternion value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocation)->get_Orientation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocation<D>::AbsoluteLinearVelocity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Perception_Spatial_ISpatialLocation<D>::AbsoluteLinearVelocity() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocation)->get_AbsoluteLinearVelocity(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocation<D>::AbsoluteLinearAcceleration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Perception_Spatial_ISpatialLocation<D>::AbsoluteLinearAcceleration() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocation)->get_AbsoluteLinearAcceleration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocation<D>::AbsoluteAngularVelocity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::quaternion) consume_Windows_Perception_Spatial_ISpatialLocation<D>::AbsoluteAngularVelocity() const
     {
-        Windows::Foundation::Numerics::quaternion value;
+        Windows::Foundation::Numerics::quaternion value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocation)->get_AbsoluteAngularVelocity(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocation<D>::AbsoluteAngularAcceleration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::quaternion) consume_Windows_Perception_Spatial_ISpatialLocation<D>::AbsoluteAngularAcceleration() const
     {
-        Windows::Foundation::Numerics::quaternion value;
+        Windows::Foundation::Numerics::quaternion value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocation)->get_AbsoluteAngularAcceleration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocation2<D>::AbsoluteAngularVelocityAxisAngle() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Perception_Spatial_ISpatialLocation2<D>::AbsoluteAngularVelocityAxisAngle() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocation2)->get_AbsoluteAngularVelocityAxisAngle(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocation2<D>::AbsoluteAngularAccelerationAxisAngle() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Perception_Spatial_ISpatialLocation2<D>::AbsoluteAngularAccelerationAxisAngle() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocation2)->get_AbsoluteAngularAccelerationAxisAngle(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::Locatability() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialLocatability) consume_Windows_Perception_Spatial_ISpatialLocator<D>::Locatability() const
     {
-        Windows::Perception::Spatial::SpatialLocatability value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->get_Locatability(put_abi(value)));
+        Windows::Perception::Spatial::SpatialLocatability value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->get_Locatability(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::LocatabilityChanged(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialLocator, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Perception_Spatial_ISpatialLocator<D>::LocatabilityChanged(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialLocator, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token cookie;
+        winrt::event_token cookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->add_LocatabilityChanged(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
@@ -401,13 +401,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LocatabilityChanged_revoker>(this, LocatabilityChanged(handler));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::LocatabilityChanged(winrt::event_token const& cookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialLocator<D>::LocatabilityChanged(winrt::event_token const& cookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->remove_LocatabilityChanged(impl::bind_in(cookie)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::PositionalTrackingDeactivating(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialLocator, Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Perception_Spatial_ISpatialLocator<D>::PositionalTrackingDeactivating(Windows::Foundation::TypedEventHandler<Windows::Perception::Spatial::SpatialLocator, Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs> const& handler) const
     {
-        winrt::event_token cookie;
+        winrt::event_token cookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->add_PositionalTrackingDeactivating(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
@@ -415,156 +415,156 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PositionalTrackingDeactivating_revoker>(this, PositionalTrackingDeactivating(handler));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::PositionalTrackingDeactivating(winrt::event_token const& cookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialLocator<D>::PositionalTrackingDeactivating(winrt::event_token const& cookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->remove_PositionalTrackingDeactivating(impl::bind_in(cookie)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::TryLocateAtTimestamp(Windows::Perception::PerceptionTimestamp const& timestamp, Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialLocation) consume_Windows_Perception_Spatial_ISpatialLocator<D>::TryLocateAtTimestamp(Windows::Perception::PerceptionTimestamp const& timestamp, Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->TryLocateAtTimestamp(*(void**)(&timestamp), *(void**)(&coordinateSystem), &value));
         return Windows::Perception::Spatial::SpatialLocation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateAttachedFrameOfReferenceAtCurrentHeading() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference) consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateAttachedFrameOfReferenceAtCurrentHeading() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->CreateAttachedFrameOfReferenceAtCurrentHeading(&value));
         return Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows::Foundation::Numerics::float3 const& relativePosition) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference) consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows::Foundation::Numerics::float3 const& relativePosition) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->CreateAttachedFrameOfReferenceAtCurrentHeadingWithPosition(impl::bind_in(relativePosition), &value));
         return Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows::Foundation::Numerics::float3 const& relativePosition, Windows::Foundation::Numerics::quaternion const& relativeOrientation) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference) consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows::Foundation::Numerics::float3 const& relativePosition, Windows::Foundation::Numerics::quaternion const& relativeOrientation) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->CreateAttachedFrameOfReferenceAtCurrentHeadingWithPositionAndOrientation(impl::bind_in(relativePosition), impl::bind_in(relativeOrientation), &value));
         return Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows::Foundation::Numerics::float3 const& relativePosition, Windows::Foundation::Numerics::quaternion const& relativeOrientation, double relativeHeadingInRadians) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference) consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows::Foundation::Numerics::float3 const& relativePosition, Windows::Foundation::Numerics::quaternion const& relativeOrientation, double relativeHeadingInRadians) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->CreateAttachedFrameOfReferenceAtCurrentHeadingWithPositionAndOrientationAndRelativeHeading(impl::bind_in(relativePosition), impl::bind_in(relativeOrientation), relativeHeadingInRadians, &value));
         return Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateStationaryFrameOfReferenceAtCurrentLocation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialStationaryFrameOfReference) consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateStationaryFrameOfReferenceAtCurrentLocation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->CreateStationaryFrameOfReferenceAtCurrentLocation(&value));
         return Windows::Perception::Spatial::SpatialStationaryFrameOfReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows::Foundation::Numerics::float3 const& relativePosition) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialStationaryFrameOfReference) consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows::Foundation::Numerics::float3 const& relativePosition) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->CreateStationaryFrameOfReferenceAtCurrentLocationWithPosition(impl::bind_in(relativePosition), &value));
         return Windows::Perception::Spatial::SpatialStationaryFrameOfReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows::Foundation::Numerics::float3 const& relativePosition, Windows::Foundation::Numerics::quaternion const& relativeOrientation) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialStationaryFrameOfReference) consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows::Foundation::Numerics::float3 const& relativePosition, Windows::Foundation::Numerics::quaternion const& relativeOrientation) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->CreateStationaryFrameOfReferenceAtCurrentLocationWithPositionAndOrientation(impl::bind_in(relativePosition), impl::bind_in(relativeOrientation), &value));
         return Windows::Perception::Spatial::SpatialStationaryFrameOfReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows::Foundation::Numerics::float3 const& relativePosition, Windows::Foundation::Numerics::quaternion const& relativeOrientation, double relativeHeadingInRadians) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialStationaryFrameOfReference) consume_Windows_Perception_Spatial_ISpatialLocator<D>::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows::Foundation::Numerics::float3 const& relativePosition, Windows::Foundation::Numerics::quaternion const& relativeOrientation, double relativeHeadingInRadians) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocator)->CreateStationaryFrameOfReferenceAtCurrentLocationWithPositionAndOrientationAndRelativeHeading(impl::bind_in(relativePosition), impl::bind_in(relativeOrientation), relativeHeadingInRadians, &value));
         return Windows::Perception::Spatial::SpatialStationaryFrameOfReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::RelativePosition() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::RelativePosition() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference)->get_RelativePosition(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::RelativePosition(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::RelativePosition(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference)->put_RelativePosition(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::RelativeOrientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::quaternion) consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::RelativeOrientation() const
     {
-        Windows::Foundation::Numerics::quaternion value;
+        Windows::Foundation::Numerics::quaternion value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference)->get_RelativeOrientation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::RelativeOrientation(Windows::Foundation::Numerics::quaternion const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::RelativeOrientation(Windows::Foundation::Numerics::quaternion const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference)->put_RelativeOrientation(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::AdjustHeading(double headingOffsetInRadians) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::AdjustHeading(double headingOffsetInRadians) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference)->AdjustHeading(headingOffsetInRadians));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::GetStationaryCoordinateSystemAtTimestamp(Windows::Perception::PerceptionTimestamp const& timestamp) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialCoordinateSystem) consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::GetStationaryCoordinateSystemAtTimestamp(Windows::Perception::PerceptionTimestamp const& timestamp) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference)->GetStationaryCoordinateSystemAtTimestamp(*(void**)(&timestamp), &value));
         return Windows::Perception::Spatial::SpatialCoordinateSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::TryGetRelativeHeadingAtTimestamp(Windows::Perception::PerceptionTimestamp const& timestamp) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<double>) consume_Windows_Perception_Spatial_ISpatialLocatorAttachedFrameOfReference<D>::TryGetRelativeHeadingAtTimestamp(Windows::Perception::PerceptionTimestamp const& timestamp) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference)->TryGetRelativeHeadingAtTimestamp(*(void**)(&timestamp), &value));
         return Windows::Foundation::IReference<double>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorPositionalTrackingDeactivatingEventArgs<D>::Canceled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Perception_Spatial_ISpatialLocatorPositionalTrackingDeactivatingEventArgs<D>::Canceled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorPositionalTrackingDeactivatingEventArgs)->get_Canceled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorPositionalTrackingDeactivatingEventArgs<D>::Canceled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialLocatorPositionalTrackingDeactivatingEventArgs<D>::Canceled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorPositionalTrackingDeactivatingEventArgs)->put_Canceled(value));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialLocatorStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialLocator) consume_Windows_Perception_Spatial_ISpatialLocatorStatics<D>::GetDefault() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialLocatorStatics)->GetDefault(&value));
         return Windows::Perception::Spatial::SpatialLocator{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::CoordinateSystem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialCoordinateSystem) consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::CoordinateSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReference)->get_CoordinateSystem(&value));
         return Windows::Perception::Spatial::SpatialCoordinateSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::MovementRange() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialMovementRange) consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::MovementRange() const
     {
-        Windows::Perception::Spatial::SpatialMovementRange value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReference)->get_MovementRange(put_abi(value)));
+        Windows::Perception::Spatial::SpatialMovementRange value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReference)->get_MovementRange(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::LookDirectionRange() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialLookDirectionRange) consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::LookDirectionRange() const
     {
-        Windows::Perception::Spatial::SpatialLookDirectionRange value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReference)->get_LookDirectionRange(put_abi(value)));
+        Windows::Perception::Spatial::SpatialLookDirectionRange value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReference)->get_LookDirectionRange(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::GetCoordinateSystemAtCurrentLocation(Windows::Perception::Spatial::SpatialLocator const& locator) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialCoordinateSystem) consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::GetCoordinateSystemAtCurrentLocation(Windows::Perception::Spatial::SpatialLocator const& locator) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReference)->GetCoordinateSystemAtCurrentLocation(*(void**)(&locator), &result));
         return Windows::Perception::Spatial::SpatialCoordinateSystem{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::TryGetMovementBounds(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const
+    template <typename D> WINRT_IMPL_AUTO(com_array<Windows::Foundation::Numerics::float3>) consume_Windows_Perception_Spatial_ISpatialStageFrameOfReference<D>::TryGetMovementBounds(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const
     {
         uint32_t value_impl_size{};
         Windows::Foundation::Numerics::float3* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReference)->TryGetMovementBounds(*(void**)(&coordinateSystem), &value_impl_size, &value));
         return com_array<Windows::Foundation::Numerics::float3>{ value, value_impl_size, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStageFrameOfReferenceStatics<D>::Current() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialStageFrameOfReference) consume_Windows_Perception_Spatial_ISpatialStageFrameOfReferenceStatics<D>::Current() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics)->get_Current(&value));
         return Windows::Perception::Spatial::SpatialStageFrameOfReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStageFrameOfReferenceStatics<D>::CurrentChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Perception_Spatial_ISpatialStageFrameOfReferenceStatics<D>::CurrentChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token cookie;
+        winrt::event_token cookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics)->add_CurrentChanged(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
@@ -572,22 +572,23 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CurrentChanged_revoker>(this, CurrentChanged(handler));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStageFrameOfReferenceStatics<D>::CurrentChanged(winrt::event_token const& cookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_Spatial_ISpatialStageFrameOfReferenceStatics<D>::CurrentChanged(winrt::event_token const& cookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics)->remove_CurrentChanged(impl::bind_in(cookie)));
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStageFrameOfReferenceStatics<D>::RequestNewStageAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialStageFrameOfReference>) consume_Windows_Perception_Spatial_ISpatialStageFrameOfReferenceStatics<D>::RequestNewStageAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics)->RequestNewStageAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialStageFrameOfReference>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_Spatial_ISpatialStationaryFrameOfReference<D>::CoordinateSystem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialCoordinateSystem) consume_Windows_Perception_Spatial_ISpatialStationaryFrameOfReference<D>::CoordinateSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Spatial::ISpatialStationaryFrameOfReference)->get_CoordinateSystem(&value));
         return Windows::Perception::Spatial::SpatialCoordinateSystem{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchor> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchor>
     {
@@ -622,6 +623,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchor2> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchor2>
     {
@@ -633,6 +636,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchorExportSufficiency> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchorExportSufficiency>
     {
@@ -658,6 +663,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchorExporter> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchorExporter>
     {
@@ -678,6 +685,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchorExporterStatics> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchorExporterStatics>
     {
@@ -698,6 +707,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchorManagerStatics> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchorManagerStatics>
     {
@@ -710,6 +721,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchorRawCoordinateSystemAdjustedEventArgs> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchorRawCoordinateSystemAdjustedEventArgs>
     {
@@ -722,6 +735,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchorStatics> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchorStatics>
     {
@@ -750,6 +765,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchorStore> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchorStore>
     {
@@ -783,6 +800,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics> : produce_base<D, Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics>
     {
@@ -811,10 +830,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialBoundingVolume> : produce_base<D, Windows::Perception::Spatial::ISpatialBoundingVolume>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialBoundingVolumeStatics> : produce_base<D, Windows::Perception::Spatial::ISpatialBoundingVolumeStatics>
     {
@@ -851,6 +874,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialCoordinateSystem> : produce_base<D, Windows::Perception::Spatial::ISpatialCoordinateSystem>
     {
@@ -863,6 +888,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialEntity> : produce_base<D, Windows::Perception::Spatial::ISpatialEntity>
     {
@@ -891,6 +918,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialEntityAddedEventArgs> : produce_base<D, Windows::Perception::Spatial::ISpatialEntityAddedEventArgs>
     {
@@ -903,6 +932,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialEntityFactory> : produce_base<D, Windows::Perception::Spatial::ISpatialEntityFactory>
     {
@@ -923,6 +954,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialEntityRemovedEventArgs> : produce_base<D, Windows::Perception::Spatial::ISpatialEntityRemovedEventArgs>
     {
@@ -935,6 +968,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialEntityStore> : produce_base<D, Windows::Perception::Spatial::ISpatialEntityStore>
     {
@@ -963,6 +998,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialEntityStoreStatics> : produce_base<D, Windows::Perception::Spatial::ISpatialEntityStoreStatics>
     {
@@ -982,6 +1019,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialEntityUpdatedEventArgs> : produce_base<D, Windows::Perception::Spatial::ISpatialEntityUpdatedEventArgs>
     {
@@ -994,6 +1033,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialEntityWatcher> : produce_base<D, Windows::Perception::Spatial::ISpatialEntityWatcher>
     {
@@ -1075,6 +1116,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialLocation> : produce_base<D, Windows::Perception::Spatial::ISpatialLocation>
     {
@@ -1127,6 +1170,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialLocation2> : produce_base<D, Windows::Perception::Spatial::ISpatialLocation2>
     {
@@ -1147,6 +1192,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialLocator> : produce_base<D, Windows::Perception::Spatial::ISpatialLocator>
     {
@@ -1258,6 +1305,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference> : produce_base<D, Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference>
     {
@@ -1315,6 +1364,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialLocatorPositionalTrackingDeactivatingEventArgs> : produce_base<D, Windows::Perception::Spatial::ISpatialLocatorPositionalTrackingDeactivatingEventArgs>
     {
@@ -1333,6 +1384,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialLocatorStatics> : produce_base<D, Windows::Perception::Spatial::ISpatialLocatorStatics>
     {
@@ -1345,6 +1398,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialStageFrameOfReference> : produce_base<D, Windows::Perception::Spatial::ISpatialStageFrameOfReference>
     {
@@ -1387,6 +1442,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics> : produce_base<D, Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics>
     {
@@ -1421,6 +1478,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::Spatial::ISpatialStationaryFrameOfReference> : produce_base<D, Windows::Perception::Spatial::ISpatialStationaryFrameOfReference>
     {
@@ -1433,88 +1492,89 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Perception::Spatial
+WINRT_EXPORT namespace winrt::Windows::Perception::Spatial
 {
     inline auto SpatialAnchor::TryCreateRelativeTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem)
     {
-        return impl::call_factory<SpatialAnchor, Windows::Perception::Spatial::ISpatialAnchorStatics>([&](auto&& f) { return f.TryCreateRelativeTo(coordinateSystem); });
+        return impl::call_factory<SpatialAnchor, ISpatialAnchorStatics>([&](ISpatialAnchorStatics const& f) { return f.TryCreateRelativeTo(coordinateSystem); });
     }
     inline auto SpatialAnchor::TryCreateRelativeTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Foundation::Numerics::float3 const& position)
     {
-        return impl::call_factory<SpatialAnchor, Windows::Perception::Spatial::ISpatialAnchorStatics>([&](auto&& f) { return f.TryCreateRelativeTo(coordinateSystem, position); });
+        return impl::call_factory<SpatialAnchor, ISpatialAnchorStatics>([&](ISpatialAnchorStatics const& f) { return f.TryCreateRelativeTo(coordinateSystem, position); });
     }
     inline auto SpatialAnchor::TryCreateRelativeTo(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Foundation::Numerics::float3 const& position, Windows::Foundation::Numerics::quaternion const& orientation)
     {
-        return impl::call_factory<SpatialAnchor, Windows::Perception::Spatial::ISpatialAnchorStatics>([&](auto&& f) { return f.TryCreateRelativeTo(coordinateSystem, position, orientation); });
+        return impl::call_factory<SpatialAnchor, ISpatialAnchorStatics>([&](ISpatialAnchorStatics const& f) { return f.TryCreateRelativeTo(coordinateSystem, position, orientation); });
     }
     inline auto SpatialAnchorExporter::GetDefault()
     {
-        return impl::call_factory<SpatialAnchorExporter, Windows::Perception::Spatial::ISpatialAnchorExporterStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::Perception::Spatial::SpatialAnchorExporter(*)(ISpatialAnchorExporterStatics const&), SpatialAnchorExporter, ISpatialAnchorExporterStatics>([](ISpatialAnchorExporterStatics const& f) { return f.GetDefault(); });
     }
     inline auto SpatialAnchorExporter::RequestAccessAsync()
     {
-        return impl::call_factory<SpatialAnchorExporter, Windows::Perception::Spatial::ISpatialAnchorExporterStatics>([&](auto&& f) { return f.RequestAccessAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialPerceptionAccessStatus>(*)(ISpatialAnchorExporterStatics const&), SpatialAnchorExporter, ISpatialAnchorExporterStatics>([](ISpatialAnchorExporterStatics const& f) { return f.RequestAccessAsync(); });
     }
     inline auto SpatialAnchorManager::RequestStoreAsync()
     {
-        return impl::call_factory<SpatialAnchorManager, Windows::Perception::Spatial::ISpatialAnchorManagerStatics>([&](auto&& f) { return f.RequestStoreAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialAnchorStore>(*)(ISpatialAnchorManagerStatics const&), SpatialAnchorManager, ISpatialAnchorManagerStatics>([](ISpatialAnchorManagerStatics const& f) { return f.RequestStoreAsync(); });
     }
     inline auto SpatialAnchorTransferManager::TryImportAnchorsAsync(Windows::Storage::Streams::IInputStream const& stream)
     {
-        return impl::call_factory<SpatialAnchorTransferManager, Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics>([&](auto&& f) { return f.TryImportAnchorsAsync(stream); });
+        return impl::call_factory<SpatialAnchorTransferManager, ISpatialAnchorTransferManagerStatics>([&](ISpatialAnchorTransferManagerStatics const& f) { return f.TryImportAnchorsAsync(stream); });
     }
     inline auto SpatialAnchorTransferManager::TryExportAnchorsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Perception::Spatial::SpatialAnchor>> const& anchors, Windows::Storage::Streams::IOutputStream const& stream)
     {
-        return impl::call_factory<SpatialAnchorTransferManager, Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics>([&](auto&& f) { return f.TryExportAnchorsAsync(anchors, stream); });
+        return impl::call_factory<SpatialAnchorTransferManager, ISpatialAnchorTransferManagerStatics>([&](ISpatialAnchorTransferManagerStatics const& f) { return f.TryExportAnchorsAsync(anchors, stream); });
     }
     inline auto SpatialAnchorTransferManager::RequestAccessAsync()
     {
-        return impl::call_factory<SpatialAnchorTransferManager, Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics>([&](auto&& f) { return f.RequestAccessAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialPerceptionAccessStatus>(*)(ISpatialAnchorTransferManagerStatics const&), SpatialAnchorTransferManager, ISpatialAnchorTransferManagerStatics>([](ISpatialAnchorTransferManagerStatics const& f) { return f.RequestAccessAsync(); });
     }
     inline auto SpatialBoundingVolume::FromBox(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingBox const& box)
     {
-        return impl::call_factory<SpatialBoundingVolume, Windows::Perception::Spatial::ISpatialBoundingVolumeStatics>([&](auto&& f) { return f.FromBox(coordinateSystem, box); });
+        return impl::call_factory<SpatialBoundingVolume, ISpatialBoundingVolumeStatics>([&](ISpatialBoundingVolumeStatics const& f) { return f.FromBox(coordinateSystem, box); });
     }
     inline auto SpatialBoundingVolume::FromOrientedBox(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingOrientedBox const& box)
     {
-        return impl::call_factory<SpatialBoundingVolume, Windows::Perception::Spatial::ISpatialBoundingVolumeStatics>([&](auto&& f) { return f.FromOrientedBox(coordinateSystem, box); });
+        return impl::call_factory<SpatialBoundingVolume, ISpatialBoundingVolumeStatics>([&](ISpatialBoundingVolumeStatics const& f) { return f.FromOrientedBox(coordinateSystem, box); });
     }
     inline auto SpatialBoundingVolume::FromSphere(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingSphere const& sphere)
     {
-        return impl::call_factory<SpatialBoundingVolume, Windows::Perception::Spatial::ISpatialBoundingVolumeStatics>([&](auto&& f) { return f.FromSphere(coordinateSystem, sphere); });
+        return impl::call_factory<SpatialBoundingVolume, ISpatialBoundingVolumeStatics>([&](ISpatialBoundingVolumeStatics const& f) { return f.FromSphere(coordinateSystem, sphere); });
     }
     inline auto SpatialBoundingVolume::FromFrustum(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::Spatial::SpatialBoundingFrustum const& frustum)
     {
-        return impl::call_factory<SpatialBoundingVolume, Windows::Perception::Spatial::ISpatialBoundingVolumeStatics>([&](auto&& f) { return f.FromFrustum(coordinateSystem, frustum); });
+        return impl::call_factory<SpatialBoundingVolume, ISpatialBoundingVolumeStatics>([&](ISpatialBoundingVolumeStatics const& f) { return f.FromFrustum(coordinateSystem, frustum); });
     }
     inline SpatialEntity::SpatialEntity(Windows::Perception::Spatial::SpatialAnchor const& spatialAnchor) :
-        SpatialEntity(impl::call_factory<SpatialEntity, Windows::Perception::Spatial::ISpatialEntityFactory>([&](auto&& f) { return f.CreateWithSpatialAnchor(spatialAnchor); }))
+        SpatialEntity(impl::call_factory<SpatialEntity, ISpatialEntityFactory>([&](ISpatialEntityFactory const& f) { return f.CreateWithSpatialAnchor(spatialAnchor); }))
     {
     }
     inline SpatialEntity::SpatialEntity(Windows::Perception::Spatial::SpatialAnchor const& spatialAnchor, Windows::Foundation::Collections::ValueSet const& propertySet) :
-        SpatialEntity(impl::call_factory<SpatialEntity, Windows::Perception::Spatial::ISpatialEntityFactory>([&](auto&& f) { return f.CreateWithSpatialAnchorAndProperties(spatialAnchor, propertySet); }))
+        SpatialEntity(impl::call_factory<SpatialEntity, ISpatialEntityFactory>([&](ISpatialEntityFactory const& f) { return f.CreateWithSpatialAnchorAndProperties(spatialAnchor, propertySet); }))
     {
     }
     inline auto SpatialEntityStore::IsSupported()
     {
-        return impl::call_factory<SpatialEntityStore, Windows::Perception::Spatial::ISpatialEntityStoreStatics>([&](auto&& f) { return f.IsSupported(); });
+        return impl::call_factory_cast<bool(*)(ISpatialEntityStoreStatics const&), SpatialEntityStore, ISpatialEntityStoreStatics>([](ISpatialEntityStoreStatics const& f) { return f.IsSupported(); });
     }
     inline auto SpatialEntityStore::TryGet(Windows::System::RemoteSystems::RemoteSystemSession const& session)
     {
-        return impl::call_factory<SpatialEntityStore, Windows::Perception::Spatial::ISpatialEntityStoreStatics>([&](auto&& f) { return f.TryGet(session); });
+        return impl::call_factory<SpatialEntityStore, ISpatialEntityStoreStatics>([&](ISpatialEntityStoreStatics const& f) { return f.TryGet(session); });
     }
     inline auto SpatialLocator::GetDefault()
     {
-        return impl::call_factory<SpatialLocator, Windows::Perception::Spatial::ISpatialLocatorStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::Perception::Spatial::SpatialLocator(*)(ISpatialLocatorStatics const&), SpatialLocator, ISpatialLocatorStatics>([](ISpatialLocatorStatics const& f) { return f.GetDefault(); });
     }
     inline auto SpatialStageFrameOfReference::Current()
     {
-        return impl::call_factory<SpatialStageFrameOfReference, Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics>([&](auto&& f) { return f.Current(); });
+        return impl::call_factory_cast<Windows::Perception::Spatial::SpatialStageFrameOfReference(*)(ISpatialStageFrameOfReferenceStatics const&), SpatialStageFrameOfReference, ISpatialStageFrameOfReferenceStatics>([](ISpatialStageFrameOfReferenceStatics const& f) { return f.Current(); });
     }
     inline auto SpatialStageFrameOfReference::CurrentChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<SpatialStageFrameOfReference, Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics>([&](auto&& f) { return f.CurrentChanged(handler); });
+        return impl::call_factory<SpatialStageFrameOfReference, ISpatialStageFrameOfReferenceStatics>([&](ISpatialStageFrameOfReferenceStatics const& f) { return f.CurrentChanged(handler); });
     }
     inline SpatialStageFrameOfReference::CurrentChanged_revoker SpatialStageFrameOfReference::CurrentChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -1523,65 +1583,67 @@ namespace winrt::Windows::Perception::Spatial
     }
     inline auto SpatialStageFrameOfReference::CurrentChanged(winrt::event_token const& cookie)
     {
-        impl::call_factory<SpatialStageFrameOfReference, Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics>([&](auto&& f) { return f.CurrentChanged(cookie); });
+        impl::call_factory<SpatialStageFrameOfReference, ISpatialStageFrameOfReferenceStatics>([&](ISpatialStageFrameOfReferenceStatics const& f) { return f.CurrentChanged(cookie); });
     }
     inline auto SpatialStageFrameOfReference::RequestNewStageAsync()
     {
-        return impl::call_factory<SpatialStageFrameOfReference, Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics>([&](auto&& f) { return f.RequestNewStageAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialStageFrameOfReference>(*)(ISpatialStageFrameOfReferenceStatics const&), SpatialStageFrameOfReference, ISpatialStageFrameOfReferenceStatics>([](ISpatialStageFrameOfReferenceStatics const& f) { return f.RequestNewStageAsync(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchor> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchor> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchor2> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchor2> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorExportSufficiency> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchorExportSufficiency> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorExporter> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchorExporter> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorExporterStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchorExporterStatics> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorManagerStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchorManagerStatics> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorRawCoordinateSystemAdjustedEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchorRawCoordinateSystemAdjustedEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchorStatics> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorStore> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchorStore> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialBoundingVolume> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialBoundingVolume> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialBoundingVolumeStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialBoundingVolumeStatics> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialCoordinateSystem> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialCoordinateSystem> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntity> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialEntity> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityAddedEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialEntityAddedEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityFactory> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialEntityFactory> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityRemovedEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialEntityRemovedEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityStore> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialEntityStore> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityStoreStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialEntityStoreStatics> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialEntityUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityWatcher> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialEntityWatcher> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocation> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialLocation> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocation2> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialLocation2> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocator> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialLocator> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocatorPositionalTrackingDeactivatingEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialLocatorPositionalTrackingDeactivatingEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocatorStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialLocatorStatics> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialStageFrameOfReference> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialStageFrameOfReference> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialStationaryFrameOfReference> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::ISpatialStationaryFrameOfReference> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchor> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialAnchor> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorExporter> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialAnchorExporter> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorManager> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialAnchorManager> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorStore> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialAnchorStore> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialBoundingVolume> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialBoundingVolume> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntity> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialEntity> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityStore> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialEntityStore> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityWatcher> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialEntityWatcher> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialLocation> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialLocation> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialLocator> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialLocator> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference> {};
-    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference> : winrt::impl::hash_base<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchor2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorExportSufficiency> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorExporter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorExporterStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorRawCoordinateSystemAdjustedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorStore> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialAnchorTransferManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialBoundingVolume> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialBoundingVolumeStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialCoordinateSystem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntity> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityAddedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityRemovedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityStore> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityStoreStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialEntityWatcher> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocation2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocatorAttachedFrameOfReference> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocatorPositionalTrackingDeactivatingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialLocatorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialStageFrameOfReference> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::ISpatialStationaryFrameOfReference> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorExporter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorStore> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialBoundingVolume> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntity> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityStore> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialEntityWatcher> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialLocation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialLocator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference> : winrt::impl::hash_base {};
+#endif
 }
 #endif

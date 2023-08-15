@@ -113,6 +113,8 @@ namespace Windows
 
             typedef enum ColorTemperaturePreset ColorTemperaturePreset;
 
+            typedef enum DigitalWindowMode DigitalWindowMode;
+
             typedef enum FocusMode FocusMode;
 
             typedef enum FocusPreset FocusPreset;
@@ -175,6 +177,8 @@ namespace Windows
 
             interface IAdvancedVideoCaptureDeviceController8;
 
+            interface IAdvancedVideoCaptureDeviceController9;
+
             interface IAudioDeviceController;
 
             interface IAudioDeviceModule;
@@ -192,6 +196,12 @@ namespace Windows
             interface IDefaultAudioDeviceChangedEventArgs;
 
             interface IDialRequestedEventArgs;
+
+            interface IDigitalWindowBounds;
+
+            interface IDigitalWindowCapability;
+
+            interface IDigitalWindowControl;
 
             interface IExposureCompensationControl;
 
@@ -285,6 +295,12 @@ namespace Windows
 
             runtimeclass DialRequestedEventArgs;
 
+            runtimeclass DigitalWindowBounds;
+
+            runtimeclass DigitalWindowCapability;
+
+            runtimeclass DigitalWindowControl;
+
             runtimeclass ExposureCompensationControl;
 
             runtimeclass ExposureControl;
@@ -365,6 +381,8 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.CaptureSceneMode>;
 
+                interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.DigitalWindowCapability*>;
+
                 interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusMode>;
 
                 interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusPreset>;
@@ -393,6 +411,8 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode>;
 
+                interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability*>;
+
                 interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode>;
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset>;
@@ -420,6 +440,8 @@ namespace Windows
                 interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange>;
 
                 interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode>;
+
+                interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability*>;
 
                 interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode>;
 
@@ -540,6 +562,14 @@ namespace Windows
                 Fluorescent = 5,
                 Tungsten    = 6,
                 Candlelight = 7
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+            enum DigitalWindowMode
+            {
+                Off  = 0,
+                On   = 1,
+                Auto = 2
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -843,6 +873,14 @@ namespace Windows
                 [propget] HRESULT PanelBasedOptimizationControl([out] [retval] Windows.Media.Devices.PanelBasedOptimizationControl** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+            [exclusiveto(Windows.Media.Devices.VideoDeviceController)]
+            [uuid(8BDCA95D-0255-51BC-A10D-5A169EC1625A)]
+            interface IAdvancedVideoCaptureDeviceController9 : IInspectable
+            {
+                [propget] HRESULT DigitalWindowControl([out] [retval] Windows.Media.Devices.DigitalWindowControl** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Media.Devices.AudioDeviceController)]
             [uuid(EDD4A388-79C7-4F7C-90E8-EF934B21580A)]
@@ -945,6 +983,47 @@ namespace Windows
             {
                 HRESULT Handled();
                 [propget] HRESULT Contact([out] [retval] IInspectable** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+            [exclusiveto(Windows.Media.Devices.DigitalWindowBounds)]
+            [uuid(DD4F21DD-D173-5C6B-8C25-BDD26D5122B1)]
+            interface IDigitalWindowBounds : IInspectable
+            {
+                [propget] HRESULT NormalizedOriginTop([out] [retval] DOUBLE* value);
+                [propput] HRESULT NormalizedOriginTop([in] DOUBLE value);
+                [propget] HRESULT NormalizedOriginLeft([out] [retval] DOUBLE* value);
+                [propput] HRESULT NormalizedOriginLeft([in] DOUBLE value);
+                [propget] HRESULT Scale([out] [retval] DOUBLE* value);
+                [propput] HRESULT Scale([in] DOUBLE value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+            [exclusiveto(Windows.Media.Devices.DigitalWindowCapability)]
+            [uuid(D78BAD2C-F721-5244-A196-B56CCBEC606C)]
+            interface IDigitalWindowCapability : IInspectable
+            {
+                [propget] HRESULT Width([out] [retval] INT32* value);
+                [propget] HRESULT Height([out] [retval] INT32* value);
+                [propget] HRESULT MinScaleValue([out] [retval] DOUBLE* value);
+                [propget] HRESULT MaxScaleValue([out] [retval] DOUBLE* value);
+                [propget] HRESULT MinScaleValueWithoutUpsampling([out] [retval] DOUBLE* value);
+                [propget] HRESULT NormalizedFieldOfViewLimit([out] [retval] Windows.Foundation.Rect* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+            [exclusiveto(Windows.Media.Devices.DigitalWindowControl)]
+            [uuid(23B69EFF-65D2-53EA-8780-DE582B48B544)]
+            interface IDigitalWindowControl : IInspectable
+            {
+                [propget] HRESULT IsSupported([out] [retval] boolean* value);
+                [propget] HRESULT SupportedModes([out] UINT32* __valueSize, [out] [retval] [size_is(, *__valueSize)] Windows.Media.Devices.DigitalWindowMode** value);
+                [propget] HRESULT CurrentMode([out] [retval] Windows.Media.Devices.DigitalWindowMode* value);
+                HRESULT GetBounds([out] [retval] Windows.Media.Devices.DigitalWindowBounds** result);
+                [overload("Configure")] HRESULT Configure([in] Windows.Media.Devices.DigitalWindowMode digitalWindowMode);
+                [overload("Configure")] HRESULT ConfigureWithBounds([in] Windows.Media.Devices.DigitalWindowMode digitalWindowMode, [in] Windows.Media.Devices.DigitalWindowBounds* digitalWindowBounds);
+                [propget] HRESULT SupportedCapabilities([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability*>** value);
+                HRESULT GetCapabilityForSize([in] INT32 width, [in] INT32 height, [out] [retval] Windows.Media.Devices.DigitalWindowCapability** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1501,6 +1580,29 @@ namespace Windows
                 [default] interface Windows.Media.Devices.IDialRequestedEventArgs;
             }
 
+            [activatable(Windows.Foundation.UniversalApiContract, 12.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass DigitalWindowBounds
+            {
+                [default] interface Windows.Media.Devices.IDigitalWindowBounds;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass DigitalWindowCapability
+            {
+                [default] interface Windows.Media.Devices.IDigitalWindowCapability;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass DigitalWindowControl
+            {
+                [default] interface Windows.Media.Devices.IDigitalWindowControl;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(standard)]
             [threading(mta)]
@@ -1710,6 +1812,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7;
                 [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8;
+                [contract(Windows.Foundation.UniversalApiContract, 12.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]

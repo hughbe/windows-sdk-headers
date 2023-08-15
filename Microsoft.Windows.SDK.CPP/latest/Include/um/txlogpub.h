@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -173,22 +181,27 @@ EXTERN_C const IID IID_ILog;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ILog * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ILog * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ILog * This);
         
+        DECLSPEC_XFGVIRT(ILog, Force)
         HRESULT ( STDMETHODCALLTYPE *Force )( 
             __RPC__in ILog * This,
             /* [in] */ LSN lsnMinToForce);
         
+        DECLSPEC_XFGVIRT(ILog, AppendRecord)
         HRESULT ( STDMETHODCALLTYPE *AppendRecord )( 
             __RPC__in ILog * This,
             /* [size_is][in] */ __RPC__in_ecount_full(cBlob) BLOB *rgBlob,
@@ -196,6 +209,7 @@ EXTERN_C const IID IID_ILog;
             /* [in] */ BOOL fForceNow,
             /* [unique][in][out] */ __RPC__inout_opt LSN *plsn);
         
+        DECLSPEC_XFGVIRT(ILog, ReadRecord)
         HRESULT ( STDMETHODCALLTYPE *ReadRecord )( 
             __RPC__in ILog * This,
             /* [in] */ LSN lsnToRead,
@@ -204,6 +218,7 @@ EXTERN_C const IID IID_ILog;
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*pcbData) BYTE **ppbData,
             /* [out] */ __RPC__out ULONG *pcbData);
         
+        DECLSPEC_XFGVIRT(ILog, ReadRecordPrefix)
         HRESULT ( STDMETHODCALLTYPE *ReadRecordPrefix )( 
             __RPC__in ILog * This,
             /* [in] */ LSN lsnToRead,
@@ -213,15 +228,18 @@ EXTERN_C const IID IID_ILog;
             /* [out][in] */ __RPC__inout ULONG *pcbData,
             /* [out] */ __RPC__out ULONG *pcbRecord);
         
+        DECLSPEC_XFGVIRT(ILog, GetLogLimits)
         HRESULT ( STDMETHODCALLTYPE *GetLogLimits )( 
             __RPC__in ILog * This,
             /* [unique][in][out] */ __RPC__inout_opt LSN *plsnFirst,
             /* [unique][in][out] */ __RPC__inout_opt LSN *plsnLast);
         
+        DECLSPEC_XFGVIRT(ILog, TruncatePrefix)
         HRESULT ( STDMETHODCALLTYPE *TruncatePrefix )( 
             __RPC__in ILog * This,
             /* [in] */ LSN lsnFirstToKeep);
         
+        DECLSPEC_XFGVIRT(ILog, SetAccessPolicyHint)
         HRESULT ( STDMETHODCALLTYPE *SetAccessPolicyHint )( 
             __RPC__in ILog * This,
             /* [in] */ RECORD_READING_POLICY policy);
@@ -324,18 +342,22 @@ EXTERN_C const IID IID_IFileBasedLogInit;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IFileBasedLogInit * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IFileBasedLogInit * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IFileBasedLogInit * This);
         
+        DECLSPEC_XFGVIRT(IFileBasedLogInit, InitNew)
         HRESULT ( STDMETHODCALLTYPE *InitNew )( 
             __RPC__in IFileBasedLogInit * This,
             /* [in] */ __RPC__in LPCWSTR filename,

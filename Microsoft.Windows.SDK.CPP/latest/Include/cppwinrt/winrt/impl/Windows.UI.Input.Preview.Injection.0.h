@@ -1,20 +1,20 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_UI_Input_Preview_Injection_0_H
 #define WINRT_Windows_UI_Input_Preview_Injection_0_H
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IIterable;
+    template <typename T> struct __declspec(empty_bases) IIterable;
 }
-namespace winrt::Windows::Gaming::Input
+WINRT_EXPORT namespace winrt::Windows::Gaming::Input
 {
     enum class GamepadButtons : uint32_t;
     struct GamepadReading;
 }
-namespace winrt::Windows::UI::Input::Preview::Injection
+WINRT_EXPORT namespace winrt::Windows::UI::Input::Preview::Injection
 {
     enum class InjectedInputButtonChangeKind : int32_t
     {
@@ -128,294 +128,78 @@ namespace winrt::Windows::UI::Input::Preview::Injection
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInputInjector>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInputInjector2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInputInjectorStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::IInputInjectorStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InputInjector>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputButtonChangeKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPenButtons>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPenParameters>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputShortcut>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPoint>
-    {
-        using type = struct_category<int32_t, int32_t>;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>
-    {
-        using type = struct_category<uint32_t, Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions, Windows::UI::Input::Preview::Injection::InjectedInputPoint, uint32_t, uint64_t>;
-    };
-    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputRectangle>
-    {
-        using type = struct_category<int32_t, int32_t, int32_t, int32_t>;
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfoFactory" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInputInjector>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInputInjector" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInputInjector2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInputInjector2" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInputInjectorStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInputInjectorStatics" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::IInputInjectorStatics2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.IInputInjectorStatics2" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InputInjector>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InputInjector" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputButtonChangeKind>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputButtonChangeKind" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputPenButtons>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputPenButtons" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputPenParameters>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputPenParameters" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputPointerOptions" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputShortcut>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputShortcut" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputPoint>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputPoint" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo" };
-    };
-    template <> struct name<Windows::UI::Input::Preview::Injection::InjectedInputRectangle>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.Preview.Injection.InjectedInputRectangle" };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo>
-    {
-        static constexpr guid value{ 0x20AE9A3F,0xDF11,0x4572,{ 0xA9,0xAB,0xD7,0x5B,0x8A,0x5E,0x48,0xAD } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory>
-    {
-        static constexpr guid value{ 0x59596876,0x6C39,0x4EC4,{ 0x8B,0x2A,0x29,0xEF,0x7D,0xE1,0x8A,0xCA } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo>
-    {
-        static constexpr guid value{ 0x4B46D140,0x2B6A,0x5FFA,{ 0x7E,0xAE,0xBD,0x07,0x7B,0x05,0x2A,0xCD } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo>
-    {
-        static constexpr guid value{ 0x96F56E6B,0xE47A,0x5CF4,{ 0x41,0x8D,0x8A,0x5F,0xB9,0x67,0x0C,0x7D } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo>
-    {
-        static constexpr guid value{ 0x6B40AD03,0xCA1E,0x5527,{ 0x7E,0x02,0x28,0x28,0x54,0x0B,0xB1,0xD4 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo>
-    {
-        static constexpr guid value{ 0x224FD1DF,0x43E8,0x5EF5,{ 0x51,0x0A,0x69,0xCA,0x8C,0x9B,0x4C,0x28 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInputInjector>
-    {
-        static constexpr guid value{ 0x8EC26F84,0x0B02,0x4BD2,{ 0xAD,0x7A,0x3D,0x46,0x58,0xBE,0x3E,0x18 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInputInjector2>
-    {
-        static constexpr guid value{ 0x8E7A905D,0x1453,0x43A7,{ 0x9B,0xCB,0x06,0xD6,0xD7,0xB3,0x05,0xF7 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInputInjectorStatics>
-    {
-        static constexpr guid value{ 0xDEAE6943,0x7402,0x4141,{ 0xA5,0xC6,0x0C,0x01,0xAA,0x57,0xB1,0x6A } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::Preview::Injection::IInputInjectorStatics2>
-    {
-        static constexpr guid value{ 0xA4DB38FB,0xDD8C,0x414F,{ 0x95,0xEA,0xF8,0x7E,0xF4,0xC0,0xAE,0x6C } };
-    };
-    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>
-    {
-        using type = Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo;
-    };
-    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>
-    {
-        using type = Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo;
-    };
-    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>
-    {
-        using type = Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo;
-    };
-    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>
-    {
-        using type = Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo;
-    };
-    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>
-    {
-        using type = Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo;
-    };
-    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InputInjector>
-    {
-        using type = Windows::UI::Input::Preview::Injection::IInputInjector;
-    };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInputInjector>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInputInjector2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInputInjectorStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::IInputInjectorStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InputInjector>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputButtonChangeKind>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPenButtons>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPenParameters>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputShortcut>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPoint>{ using type = struct_category<int32_t, int32_t>; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>{ using type = struct_category<uint32_t, Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions, Windows::UI::Input::Preview::Injection::InjectedInputPoint, uint32_t, uint64_t>; };
+    template <> struct category<Windows::UI::Input::Preview::Injection::InjectedInputRectangle>{ using type = struct_category<int32_t, int32_t, int32_t, int32_t>; };
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo> = L"Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo> = L"Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo> = L"Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputPenInfo> = L"Windows.UI.Input.Preview.Injection.InjectedInputPenInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo> = L"Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InputInjector> = L"Windows.UI.Input.Preview.Injection.InputInjector";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputButtonChangeKind> = L"Windows.UI.Input.Preview.Injection.InjectedInputButtonChangeKind";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions> = L"Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions> = L"Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputPenButtons> = L"Windows.UI.Input.Preview.Injection.InjectedInputPenButtons";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputPenParameters> = L"Windows.UI.Input.Preview.Injection.InjectedInputPenParameters";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions> = L"Windows.UI.Input.Preview.Injection.InjectedInputPointerOptions";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputShortcut> = L"Windows.UI.Input.Preview.Injection.InjectedInputShortcut";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters> = L"Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode> = L"Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputPoint> = L"Windows.UI.Input.Preview.Injection.InjectedInputPoint";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo> = L"Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::InjectedInputRectangle> = L"Windows.UI.Input.Preview.Injection.InjectedInputRectangle";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo> = L"Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory> = L"Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfoFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo> = L"Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo> = L"Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo> = L"Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo> = L"Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInputInjector> = L"Windows.UI.Input.Preview.Injection.IInputInjector";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInputInjector2> = L"Windows.UI.Input.Preview.Injection.IInputInjector2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInputInjectorStatics> = L"Windows.UI.Input.Preview.Injection.IInputInjectorStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Preview::Injection::IInputInjectorStatics2> = L"Windows.UI.Input.Preview.Injection.IInputInjectorStatics2";
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo>{ 0x20AE9A3F,0xDF11,0x4572,{ 0xA9,0xAB,0xD7,0x5B,0x8A,0x5E,0x48,0xAD } }; // 20AE9A3F-DF11-4572-A9AB-D75B8A5E48AD
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory>{ 0x59596876,0x6C39,0x4EC4,{ 0x8B,0x2A,0x29,0xEF,0x7D,0xE1,0x8A,0xCA } }; // 59596876-6C39-4EC4-8B2A-29EF7DE18ACA
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo>{ 0x4B46D140,0x2B6A,0x5FFA,{ 0x7E,0xAE,0xBD,0x07,0x7B,0x05,0x2A,0xCD } }; // 4B46D140-2B6A-5FFA-7EAE-BD077B052ACD
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo>{ 0x96F56E6B,0xE47A,0x5CF4,{ 0x41,0x8D,0x8A,0x5F,0xB9,0x67,0x0C,0x7D } }; // 96F56E6B-E47A-5CF4-418D-8A5FB9670C7D
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo>{ 0x6B40AD03,0xCA1E,0x5527,{ 0x7E,0x02,0x28,0x28,0x54,0x0B,0xB1,0xD4 } }; // 6B40AD03-CA1E-5527-7E02-2828540BB1D4
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo>{ 0x224FD1DF,0x43E8,0x5EF5,{ 0x51,0x0A,0x69,0xCA,0x8C,0x9B,0x4C,0x28 } }; // 224FD1DF-43E8-5EF5-510A-69CA8C9B4C28
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInputInjector>{ 0x8EC26F84,0x0B02,0x4BD2,{ 0xAD,0x7A,0x3D,0x46,0x58,0xBE,0x3E,0x18 } }; // 8EC26F84-0B02-4BD2-AD7A-3D4658BE3E18
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInputInjector2>{ 0x8E7A905D,0x1453,0x43A7,{ 0x9B,0xCB,0x06,0xD6,0xD7,0xB3,0x05,0xF7 } }; // 8E7A905D-1453-43A7-9BCB-06D6D7B305F7
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInputInjectorStatics>{ 0xDEAE6943,0x7402,0x4141,{ 0xA5,0xC6,0x0C,0x01,0xAA,0x57,0xB1,0x6A } }; // DEAE6943-7402-4141-A5C6-0C01AA57B16A
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Preview::Injection::IInputInjectorStatics2>{ 0xA4DB38FB,0xDD8C,0x414F,{ 0x95,0xEA,0xF8,0x7E,0xF4,0xC0,0xAE,0x6C } }; // A4DB38FB-DD8C-414F-95EA-F87EF4C0AE6C
+    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>{ using type = Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo; };
+    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>{ using type = Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo; };
+    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>{ using type = Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo; };
+    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>{ using type = Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo; };
+    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>{ using type = Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo; };
+    template <> struct default_interface<Windows::UI::Input::Preview::Injection::InputInjector>{ using type = Windows::UI::Input::Preview::Injection::IInputInjector; };
     template <> struct abi<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -548,20 +332,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfo
     {
-        [[nodiscard]] auto Buttons() const;
-        auto Buttons(Windows::Gaming::Input::GamepadButtons const& value) const;
-        [[nodiscard]] auto LeftThumbstickX() const;
-        auto LeftThumbstickX(double value) const;
-        [[nodiscard]] auto LeftThumbstickY() const;
-        auto LeftThumbstickY(double value) const;
-        [[nodiscard]] auto LeftTrigger() const;
-        auto LeftTrigger(double value) const;
-        [[nodiscard]] auto RightThumbstickX() const;
-        auto RightThumbstickX(double value) const;
-        [[nodiscard]] auto RightThumbstickY() const;
-        auto RightThumbstickY(double value) const;
-        [[nodiscard]] auto RightTrigger() const;
-        auto RightTrigger(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Gaming::Input::GamepadButtons) Buttons() const;
+        WINRT_IMPL_AUTO(void) Buttons(Windows::Gaming::Input::GamepadButtons const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) LeftThumbstickX() const;
+        WINRT_IMPL_AUTO(void) LeftThumbstickX(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) LeftThumbstickY() const;
+        WINRT_IMPL_AUTO(void) LeftThumbstickY(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) LeftTrigger() const;
+        WINRT_IMPL_AUTO(void) LeftTrigger(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) RightThumbstickX() const;
+        WINRT_IMPL_AUTO(void) RightThumbstickX(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) RightThumbstickY() const;
+        WINRT_IMPL_AUTO(void) RightThumbstickY(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) RightTrigger() const;
+        WINRT_IMPL_AUTO(void) RightTrigger(double value) const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo>
     {
@@ -570,7 +354,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInjectedInputGamepadInfoFactory
     {
-        auto CreateInstance(Windows::Gaming::Input::GamepadReading const& reading) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo) CreateInstance(Windows::Gaming::Input::GamepadReading const& reading) const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfoFactory>
     {
@@ -579,12 +363,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInjectedInputKeyboardInfo
     {
-        [[nodiscard]] auto KeyOptions() const;
-        auto KeyOptions(Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions const& value) const;
-        [[nodiscard]] auto ScanCode() const;
-        auto ScanCode(uint16_t value) const;
-        [[nodiscard]] auto VirtualKey() const;
-        auto VirtualKey(uint16_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions) KeyOptions() const;
+        WINRT_IMPL_AUTO(void) KeyOptions(Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) ScanCode() const;
+        WINRT_IMPL_AUTO(void) ScanCode(uint16_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) VirtualKey() const;
+        WINRT_IMPL_AUTO(void) VirtualKey(uint16_t value) const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo>
     {
@@ -593,16 +377,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInjectedInputMouseInfo
     {
-        [[nodiscard]] auto MouseOptions() const;
-        auto MouseOptions(Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions const& value) const;
-        [[nodiscard]] auto MouseData() const;
-        auto MouseData(uint32_t value) const;
-        [[nodiscard]] auto DeltaY() const;
-        auto DeltaY(int32_t value) const;
-        [[nodiscard]] auto DeltaX() const;
-        auto DeltaX(int32_t value) const;
-        [[nodiscard]] auto TimeOffsetInMilliseconds() const;
-        auto TimeOffsetInMilliseconds(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions) MouseOptions() const;
+        WINRT_IMPL_AUTO(void) MouseOptions(Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MouseData() const;
+        WINRT_IMPL_AUTO(void) MouseData(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) DeltaY() const;
+        WINRT_IMPL_AUTO(void) DeltaY(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) DeltaX() const;
+        WINRT_IMPL_AUTO(void) DeltaX(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TimeOffsetInMilliseconds() const;
+        WINRT_IMPL_AUTO(void) TimeOffsetInMilliseconds(uint32_t value) const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo>
     {
@@ -611,20 +395,20 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInjectedInputPenInfo
     {
-        [[nodiscard]] auto PointerInfo() const;
-        auto PointerInfo(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo const& value) const;
-        [[nodiscard]] auto PenButtons() const;
-        auto PenButtons(Windows::UI::Input::Preview::Injection::InjectedInputPenButtons const& value) const;
-        [[nodiscard]] auto PenParameters() const;
-        auto PenParameters(Windows::UI::Input::Preview::Injection::InjectedInputPenParameters const& value) const;
-        [[nodiscard]] auto Pressure() const;
-        auto Pressure(double value) const;
-        [[nodiscard]] auto Rotation() const;
-        auto Rotation(double value) const;
-        [[nodiscard]] auto TiltX() const;
-        auto TiltX(int32_t value) const;
-        [[nodiscard]] auto TiltY() const;
-        auto TiltY(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo) PointerInfo() const;
+        WINRT_IMPL_AUTO(void) PointerInfo(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputPenButtons) PenButtons() const;
+        WINRT_IMPL_AUTO(void) PenButtons(Windows::UI::Input::Preview::Injection::InjectedInputPenButtons const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputPenParameters) PenParameters() const;
+        WINRT_IMPL_AUTO(void) PenParameters(Windows::UI::Input::Preview::Injection::InjectedInputPenParameters const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) Pressure() const;
+        WINRT_IMPL_AUTO(void) Pressure(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) Rotation() const;
+        WINRT_IMPL_AUTO(void) Rotation(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) TiltX() const;
+        WINRT_IMPL_AUTO(void) TiltX(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) TiltY() const;
+        WINRT_IMPL_AUTO(void) TiltY(int32_t value) const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo>
     {
@@ -633,16 +417,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInjectedInputTouchInfo
     {
-        [[nodiscard]] auto Contact() const;
-        auto Contact(Windows::UI::Input::Preview::Injection::InjectedInputRectangle const& value) const;
-        [[nodiscard]] auto Orientation() const;
-        auto Orientation(int32_t value) const;
-        [[nodiscard]] auto PointerInfo() const;
-        auto PointerInfo(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo const& value) const;
-        [[nodiscard]] auto Pressure() const;
-        auto Pressure(double value) const;
-        [[nodiscard]] auto TouchParameters() const;
-        auto TouchParameters(Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputRectangle) Contact() const;
+        WINRT_IMPL_AUTO(void) Contact(Windows::UI::Input::Preview::Injection::InjectedInputRectangle const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Orientation() const;
+        WINRT_IMPL_AUTO(void) Orientation(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo) PointerInfo() const;
+        WINRT_IMPL_AUTO(void) PointerInfo(Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) Pressure() const;
+        WINRT_IMPL_AUTO(void) Pressure(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters) TouchParameters() const;
+        WINRT_IMPL_AUTO(void) TouchParameters(Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters const& value) const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo>
     {
@@ -651,15 +435,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInputInjector
     {
-        auto InjectKeyboardInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo> const& input) const;
-        auto InjectMouseInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo> const& input) const;
-        auto InitializeTouchInjection(Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode const& visualMode) const;
-        auto InjectTouchInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo> const& input) const;
-        auto UninitializeTouchInjection() const;
-        auto InitializePenInjection(Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode const& visualMode) const;
-        auto InjectPenInput(Windows::UI::Input::Preview::Injection::InjectedInputPenInfo const& input) const;
-        auto UninitializePenInjection() const;
-        auto InjectShortcut(Windows::UI::Input::Preview::Injection::InjectedInputShortcut const& shortcut) const;
+        WINRT_IMPL_AUTO(void) InjectKeyboardInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo> const& input) const;
+        WINRT_IMPL_AUTO(void) InjectMouseInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo> const& input) const;
+        WINRT_IMPL_AUTO(void) InitializeTouchInjection(Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode const& visualMode) const;
+        WINRT_IMPL_AUTO(void) InjectTouchInput(param::iterable<Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo> const& input) const;
+        WINRT_IMPL_AUTO(void) UninitializeTouchInjection() const;
+        WINRT_IMPL_AUTO(void) InitializePenInjection(Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode const& visualMode) const;
+        WINRT_IMPL_AUTO(void) InjectPenInput(Windows::UI::Input::Preview::Injection::InjectedInputPenInfo const& input) const;
+        WINRT_IMPL_AUTO(void) UninitializePenInjection() const;
+        WINRT_IMPL_AUTO(void) InjectShortcut(Windows::UI::Input::Preview::Injection::InjectedInputShortcut const& shortcut) const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInputInjector>
     {
@@ -668,9 +452,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInputInjector2
     {
-        auto InitializeGamepadInjection() const;
-        auto InjectGamepadInput(Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo const& input) const;
-        auto UninitializeGamepadInjection() const;
+        WINRT_IMPL_AUTO(void) InitializeGamepadInjection() const;
+        WINRT_IMPL_AUTO(void) InjectGamepadInput(Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo const& input) const;
+        WINRT_IMPL_AUTO(void) UninitializeGamepadInjection() const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInputInjector2>
     {
@@ -679,7 +463,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInputInjectorStatics
     {
-        auto TryCreate() const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InputInjector) TryCreate() const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInputInjectorStatics>
     {
@@ -688,7 +472,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_Preview_Injection_IInputInjectorStatics2
     {
-        auto TryCreateForAppBroadcastOnly() const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::Preview::Injection::InputInjector) TryCreateForAppBroadcastOnly() const;
     };
     template <> struct consume<Windows::UI::Input::Preview::Injection::IInputInjectorStatics2>
     {

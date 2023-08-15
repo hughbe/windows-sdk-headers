@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_System_Update_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.System.Update.1.h"
-namespace winrt::Windows::System::Update
+WINRT_EXPORT namespace winrt::Windows::System::Update
 {
     struct __declspec(empty_bases) SystemUpdateItem : Windows::System::Update::ISystemUpdateItem
     {
@@ -26,7 +26,7 @@ namespace winrt::Windows::System::Update
         [[nodiscard]] static auto State();
         static auto StateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using StateChanged_revoker = impl::factory_event_revoker<Windows::System::Update::ISystemUpdateManagerStatics, &impl::abi_t<Windows::System::Update::ISystemUpdateManagerStatics>::remove_StateChanged>;
-        static StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto StateChanged(winrt::event_token const& token);
         [[nodiscard]] static auto DownloadProgress();
         [[nodiscard]] static auto InstallProgress();

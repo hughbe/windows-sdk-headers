@@ -1,15 +1,16 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_System_Diagnostics_TraceReporting_0_H
 #define WINRT_Windows_System_Diagnostics_TraceReporting_0_H
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename K, typename V> struct IMapView;
+    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
+    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
-namespace winrt::Windows::System::Diagnostics::TraceReporting
+WINRT_EXPORT namespace winrt::Windows::System::Diagnostics::TraceReporting
 {
     enum class PlatformDiagnosticActionState : int32_t
     {
@@ -54,122 +55,35 @@ namespace winrt::Windows::System::Diagnostics::TraceReporting
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticActionsStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTracePriority>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticActionsStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEscalationType" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTracePriority>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotState" };
-    };
-    template <> struct name<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType>
-    {
-        static constexpr auto & value{ L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType" };
-    };
-    template <> struct guid_storage<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticActionsStatics>
-    {
-        static constexpr guid value{ 0xC1145CFA,0x9292,0x4267,{ 0x89,0x0A,0x9E,0xA3,0xED,0x07,0x23,0x12 } };
-    };
-    template <> struct guid_storage<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo>
-    {
-        static constexpr guid value{ 0xF870ED97,0xD597,0x4BF7,{ 0x88,0xDC,0xCF,0x5C,0x7D,0xC2,0xA1,0xD2 } };
-    };
-    template <> struct guid_storage<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo>
-    {
-        static constexpr guid value{ 0x3D4D5E2D,0x01D8,0x4768,{ 0x85,0x54,0x1E,0xB1,0xCA,0x61,0x09,0x86 } };
-    };
-    template <> struct default_interface<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>
-    {
-        using type = Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo;
-    };
-    template <> struct default_interface<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>
-    {
-        using type = Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo;
-    };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticActionsStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo>{ using type = interface_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo>{ using type = interface_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions>{ using type = class_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>{ using type = class_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>{ using type = class_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState>{ using type = enum_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType>{ using type = enum_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies>{ using type = enum_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTracePriority>{ using type = enum_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState>{ using type = enum_category; };
+    template <> struct category<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions> = L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo> = L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo> = L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState> = L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType> = L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEscalationType";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies> = L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTracePriority> = L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState> = L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotState";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType> = L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticActionsStatics> = L"Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo> = L"Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo";
+    template <> inline constexpr auto& name_v<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo> = L"Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo";
+    template <> inline constexpr guid guid_v<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticActionsStatics>{ 0xC1145CFA,0x9292,0x4267,{ 0x89,0x0A,0x9E,0xA3,0xED,0x07,0x23,0x12 } }; // C1145CFA-9292-4267-890A-9EA3ED072312
+    template <> inline constexpr guid guid_v<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo>{ 0xF870ED97,0xD597,0x4BF7,{ 0x88,0xDC,0xCF,0x5C,0x7D,0xC2,0xA1,0xD2 } }; // F870ED97-D597-4BF7-88DC-CF5C7DC2A1D2
+    template <> inline constexpr guid guid_v<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo>{ 0x3D4D5E2D,0x01D8,0x4768,{ 0x85,0x54,0x1E,0xB1,0xCA,0x61,0x09,0x86 } }; // 3D4D5E2D-01D8-4768-8554-1EB1CA610986
+    template <> struct default_interface<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>{ using type = Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo; };
+    template <> struct default_interface<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>{ using type = Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo; };
     template <> struct abi<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticActionsStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -207,14 +121,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_TraceReporting_IPlatformDiagnosticActionsStatics
     {
-        auto IsScenarioEnabled(winrt::guid const& scenarioId) const;
-        auto TryEscalateScenario(winrt::guid const& scenarioId, Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType const& escalationType, param::hstring const& outputDirectory, bool timestampOutputDirectory, bool forceEscalationUpload, param::map_view<hstring, hstring> const& triggers) const;
-        auto DownloadLatestSettingsForNamespace(param::hstring const& partner, param::hstring const& feature, bool isScenarioNamespace, bool downloadOverCostedNetwork, bool downloadOverBattery) const;
-        auto GetActiveScenarioList() const;
-        auto ForceUpload(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies const& latency, bool uploadOverCostedNetwork, bool uploadOverBattery) const;
-        auto IsTraceRunning(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType, winrt::guid const& scenarioId, uint64_t traceProfileHash) const;
-        auto GetActiveTraceRuntime(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType) const;
-        auto GetKnownTraceList(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType) const;
+        WINRT_IMPL_AUTO(bool) IsScenarioEnabled(winrt::guid const& scenarioId) const;
+        WINRT_IMPL_AUTO(bool) TryEscalateScenario(winrt::guid const& scenarioId, Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType const& escalationType, param::hstring const& outputDirectory, bool timestampOutputDirectory, bool forceEscalationUpload, param::map_view<hstring, hstring> const& triggers) const;
+        WINRT_IMPL_AUTO(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState) DownloadLatestSettingsForNamespace(param::hstring const& partner, param::hstring const& feature, bool isScenarioNamespace, bool downloadOverCostedNetwork, bool downloadOverBattery) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<winrt::guid>) GetActiveScenarioList() const;
+        WINRT_IMPL_AUTO(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState) ForceUpload(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies const& latency, bool uploadOverCostedNetwork, bool uploadOverBattery) const;
+        WINRT_IMPL_AUTO(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState) IsTraceRunning(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType, winrt::guid const& scenarioId, uint64_t traceProfileHash) const;
+        WINRT_IMPL_AUTO(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo) GetActiveTraceRuntime(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>) GetKnownTraceList(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType) const;
     };
     template <> struct consume<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticActionsStatics>
     {
@@ -223,12 +137,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_TraceReporting_IPlatformDiagnosticTraceInfo
     {
-        [[nodiscard]] auto ScenarioId() const;
-        [[nodiscard]] auto ProfileHash() const;
-        [[nodiscard]] auto IsExclusive() const;
-        [[nodiscard]] auto IsAutoLogger() const;
-        [[nodiscard]] auto MaxTraceDurationFileTime() const;
-        [[nodiscard]] auto Priority() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) ScenarioId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) ProfileHash() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsExclusive() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAutoLogger() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) MaxTraceDurationFileTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTracePriority) Priority() const;
     };
     template <> struct consume<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo>
     {
@@ -237,8 +151,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Diagnostics_TraceReporting_IPlatformDiagnosticTraceRuntimeInfo
     {
-        [[nodiscard]] auto RuntimeFileTime() const;
-        [[nodiscard]] auto EtwRuntimeFileTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) RuntimeFileTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) EtwRuntimeFileTime() const;
     };
     template <> struct consume<Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo>
     {

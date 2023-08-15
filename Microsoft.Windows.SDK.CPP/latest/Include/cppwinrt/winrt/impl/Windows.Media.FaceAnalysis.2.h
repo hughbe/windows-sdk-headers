@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Media_FaceAnalysis_2_H
 #include "winrt/impl/Windows.Graphics.Imaging.1.h"
 #include "winrt/impl/Windows.Media.FaceAnalysis.1.h"
-namespace winrt::Windows::Media::FaceAnalysis
+WINRT_EXPORT namespace winrt::Windows::Media::FaceAnalysis
 {
     struct __declspec(empty_bases) DetectedFace : Windows::Media::FaceAnalysis::IDetectedFace
     {

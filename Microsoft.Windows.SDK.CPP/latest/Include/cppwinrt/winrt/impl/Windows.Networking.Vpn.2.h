@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Networking.1.h"
 #include "winrt/impl/Windows.Networking.Vpn.1.h"
-namespace winrt::Windows::Networking::Vpn
+WINRT_EXPORT namespace winrt::Windows::Networking::Vpn
 {
     struct __declspec(empty_bases) VpnAppId : Windows::Networking::Vpn::IVpnAppId
     {
@@ -17,7 +17,7 @@ namespace winrt::Windows::Networking::Vpn
         VpnAppId(Windows::Networking::Vpn::VpnAppIdType const& type, param::hstring const& value);
     };
     struct __declspec(empty_bases) VpnChannel : Windows::Networking::Vpn::IVpnChannel,
-        impl::require<VpnChannel, Windows::Networking::Vpn::IVpnChannel2, Windows::Networking::Vpn::IVpnChannel4>
+        impl::require<VpnChannel, Windows::Networking::Vpn::IVpnChannel2, Windows::Networking::Vpn::IVpnChannel4, Windows::Networking::Vpn::IVpnChannel5>
     {
         VpnChannel(std::nullptr_t) noexcept {}
         VpnChannel(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Vpn::IVpnChannel(ptr, take_ownership_from_abi) {}
@@ -117,7 +117,7 @@ namespace winrt::Windows::Networking::Vpn
     {
         VpnInterfaceId(std::nullptr_t) noexcept {}
         VpnInterfaceId(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Vpn::IVpnInterfaceId(ptr, take_ownership_from_abi) {}
-        VpnInterfaceId(array_view<uint8_t const> address);
+        explicit VpnInterfaceId(array_view<uint8_t const> address);
     };
     struct __declspec(empty_bases) VpnManagementAgent : Windows::Networking::Vpn::IVpnManagementAgent
     {
@@ -189,7 +189,7 @@ namespace winrt::Windows::Networking::Vpn
     {
         VpnTrafficFilter(std::nullptr_t) noexcept {}
         VpnTrafficFilter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Vpn::IVpnTrafficFilter(ptr, take_ownership_from_abi) {}
-        VpnTrafficFilter(Windows::Networking::Vpn::VpnAppId const& appId);
+        explicit VpnTrafficFilter(Windows::Networking::Vpn::VpnAppId const& appId);
     };
     struct __declspec(empty_bases) VpnTrafficFilterAssignment : Windows::Networking::Vpn::IVpnTrafficFilterAssignment
     {

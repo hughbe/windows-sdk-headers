@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Xaml_H
 #define WINRT_Windows_UI_Xaml_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Activation.2.h"
@@ -34,73 +34,73 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.UI.Xaml.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Xaml_IAdaptiveTrigger<D>::MinWindowWidth() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IAdaptiveTrigger<D>::MinWindowWidth() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IAdaptiveTrigger)->get_MinWindowWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IAdaptiveTrigger<D>::MinWindowWidth(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IAdaptiveTrigger<D>::MinWindowWidth(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IAdaptiveTrigger)->put_MinWindowWidth(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IAdaptiveTrigger<D>::MinWindowHeight() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IAdaptiveTrigger<D>::MinWindowHeight() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IAdaptiveTrigger)->get_MinWindowHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IAdaptiveTrigger<D>::MinWindowHeight(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IAdaptiveTrigger<D>::MinWindowHeight(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IAdaptiveTrigger)->put_MinWindowHeight(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IAdaptiveTriggerFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::AdaptiveTrigger) consume_Windows_UI_Xaml_IAdaptiveTriggerFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IAdaptiveTriggerFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::AdaptiveTrigger{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IAdaptiveTriggerStatics<D>::MinWindowWidthProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IAdaptiveTriggerStatics<D>::MinWindowWidthProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IAdaptiveTriggerStatics)->get_MinWindowWidthProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IAdaptiveTriggerStatics<D>::MinWindowHeightProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IAdaptiveTriggerStatics<D>::MinWindowHeightProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IAdaptiveTriggerStatics)->get_MinWindowHeightProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::Resources() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ResourceDictionary) consume_Windows_UI_Xaml_IApplication<D>::Resources() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->get_Resources(&value));
         return Windows::UI::Xaml::ResourceDictionary{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::Resources(Windows::UI::Xaml::ResourceDictionary const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::Resources(Windows::UI::Xaml::ResourceDictionary const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->put_Resources(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::DebugSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DebugSettings) consume_Windows_UI_Xaml_IApplication<D>::DebugSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->get_DebugSettings(&value));
         return Windows::UI::Xaml::DebugSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::RequestedTheme() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ApplicationTheme) consume_Windows_UI_Xaml_IApplication<D>::RequestedTheme() const
     {
-        Windows::UI::Xaml::ApplicationTheme value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->get_RequestedTheme(put_abi(value)));
+        Windows::UI::Xaml::ApplicationTheme value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->get_RequestedTheme(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::RequestedTheme(Windows::UI::Xaml::ApplicationTheme const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::RequestedTheme(Windows::UI::Xaml::ApplicationTheme const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->put_RequestedTheme(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::UnhandledException(Windows::UI::Xaml::UnhandledExceptionEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IApplication<D>::UnhandledException(Windows::UI::Xaml::UnhandledExceptionEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->add_UnhandledException(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -108,13 +108,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, UnhandledException_revoker>(this, UnhandledException(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::UnhandledException(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::UnhandledException(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->remove_UnhandledException(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::Suspending(Windows::UI::Xaml::SuspendingEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IApplication<D>::Suspending(Windows::UI::Xaml::SuspendingEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->add_Suspending(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -122,13 +122,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Suspending_revoker>(this, Suspending(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::Suspending(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::Suspending(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->remove_Suspending(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::Resuming(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IApplication<D>::Resuming(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->add_Resuming(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -136,37 +136,37 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Resuming_revoker>(this, Resuming(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::Resuming(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::Resuming(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->remove_Resuming(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication<D>::Exit() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::Exit() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication)->Exit());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication2<D>::FocusVisualKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FocusVisualKind) consume_Windows_UI_Xaml_IApplication2<D>::FocusVisualKind() const
     {
-        Windows::UI::Xaml::FocusVisualKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->get_FocusVisualKind(put_abi(value)));
+        Windows::UI::Xaml::FocusVisualKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->get_FocusVisualKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication2<D>::FocusVisualKind(Windows::UI::Xaml::FocusVisualKind const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication2<D>::FocusVisualKind(Windows::UI::Xaml::FocusVisualKind const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->put_FocusVisualKind(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication2<D>::RequiresPointerMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ApplicationRequiresPointerMode) consume_Windows_UI_Xaml_IApplication2<D>::RequiresPointerMode() const
     {
-        Windows::UI::Xaml::ApplicationRequiresPointerMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->get_RequiresPointerMode(put_abi(value)));
+        Windows::UI::Xaml::ApplicationRequiresPointerMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->get_RequiresPointerMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication2<D>::RequiresPointerMode(Windows::UI::Xaml::ApplicationRequiresPointerMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication2<D>::RequiresPointerMode(Windows::UI::Xaml::ApplicationRequiresPointerMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->put_RequiresPointerMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication2<D>::LeavingBackground(Windows::UI::Xaml::LeavingBackgroundEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IApplication2<D>::LeavingBackground(Windows::UI::Xaml::LeavingBackgroundEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->add_LeavingBackground(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -174,13 +174,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LeavingBackground_revoker>(this, LeavingBackground(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication2<D>::LeavingBackground(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication2<D>::LeavingBackground(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->remove_LeavingBackground(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication2<D>::EnteredBackground(Windows::UI::Xaml::EnteredBackgroundEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IApplication2<D>::EnteredBackground(Windows::UI::Xaml::EnteredBackgroundEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->add_EnteredBackground(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -188,641 +188,641 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, EnteredBackground_revoker>(this, EnteredBackground(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication2<D>::EnteredBackground(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication2<D>::EnteredBackground(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication2)->remove_EnteredBackground(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication3<D>::HighContrastAdjustment() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ApplicationHighContrastAdjustment) consume_Windows_UI_Xaml_IApplication3<D>::HighContrastAdjustment() const
     {
-        Windows::UI::Xaml::ApplicationHighContrastAdjustment value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication3)->get_HighContrastAdjustment(put_abi(value)));
+        Windows::UI::Xaml::ApplicationHighContrastAdjustment value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication3)->get_HighContrastAdjustment(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplication3<D>::HighContrastAdjustment(Windows::UI::Xaml::ApplicationHighContrastAdjustment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication3<D>::HighContrastAdjustment(Windows::UI::Xaml::ApplicationHighContrastAdjustment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplication3)->put_HighContrastAdjustment(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Application) consume_Windows_UI_Xaml_IApplicationFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::Application{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides)->OnActivated(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides)->OnLaunched(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides)->OnFileActivated(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnSearchActivated(Windows::ApplicationModel::Activation::SearchActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnSearchActivated(Windows::ApplicationModel::Activation::SearchActivatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides)->OnSearchActivated(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnShareTargetActivated(Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnShareTargetActivated(Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides)->OnShareTargetActivated(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnFileOpenPickerActivated(Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnFileOpenPickerActivated(Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides)->OnFileOpenPickerActivated(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnFileSavePickerActivated(Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnFileSavePickerActivated(Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides)->OnFileSavePickerActivated(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnCachedFileUpdaterActivated(Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnCachedFileUpdaterActivated(Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides)->OnCachedFileUpdaterActivated(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnWindowCreated(Windows::UI::Xaml::WindowCreatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides<D>::OnWindowCreated(Windows::UI::Xaml::WindowCreatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides)->OnWindowCreated(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationOverrides2<D>::OnBackgroundActivated(Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationOverrides2<D>::OnBackgroundActivated(Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationOverrides2)->OnBackgroundActivated(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationStatics<D>::Current() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Application) consume_Windows_UI_Xaml_IApplicationStatics<D>::Current() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationStatics)->get_Current(&value));
         return Windows::UI::Xaml::Application{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationStatics<D>::Start(Windows::UI::Xaml::ApplicationInitializationCallback const& callback) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationStatics<D>::Start(Windows::UI::Xaml::ApplicationInitializationCallback const& callback) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationStatics)->Start(*(void**)(&callback)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationStatics<D>::LoadComponent(Windows::Foundation::IInspectable const& component, Windows::Foundation::Uri const& resourceLocator) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationStatics<D>::LoadComponent(Windows::Foundation::IInspectable const& component, Windows::Foundation::Uri const& resourceLocator) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationStatics)->LoadComponent(*(void**)(&component), *(void**)(&resourceLocator)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IApplicationStatics<D>::LoadComponent(Windows::Foundation::IInspectable const& component, Windows::Foundation::Uri const& resourceLocator, Windows::UI::Xaml::Controls::Primitives::ComponentResourceLocation const& componentResourceLocation) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplicationStatics<D>::LoadComponent(Windows::Foundation::IInspectable const& component, Windows::Foundation::Uri const& resourceLocator, Windows::UI::Xaml::Controls::Primitives::ComponentResourceLocation const& componentResourceLocation) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IApplicationStatics)->LoadComponentWithResourceLocation(*(void**)(&component), *(void**)(&resourceLocator), static_cast<int32_t>(componentResourceLocation)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBindingFailedEventArgs<D>::Message() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IBindingFailedEventArgs<D>::Message() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBindingFailedEventArgs)->get_Message(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions<D>::AnimationDesired() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IBringIntoViewOptions<D>::AnimationDesired() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions)->get_AnimationDesired(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions<D>::AnimationDesired(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewOptions<D>::AnimationDesired(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions)->put_AnimationDesired(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions<D>::TargetRect() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::Rect>) consume_Windows_UI_Xaml_IBringIntoViewOptions<D>::TargetRect() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions)->get_TargetRect(&value));
         return Windows::Foundation::IReference<Windows::Foundation::Rect>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions<D>::TargetRect(Windows::Foundation::IReference<Windows::Foundation::Rect> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewOptions<D>::TargetRect(Windows::Foundation::IReference<Windows::Foundation::Rect> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions)->put_TargetRect(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::HorizontalAlignmentRatio() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::HorizontalAlignmentRatio() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions2)->get_HorizontalAlignmentRatio(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::HorizontalAlignmentRatio(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::HorizontalAlignmentRatio(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions2)->put_HorizontalAlignmentRatio(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::VerticalAlignmentRatio() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::VerticalAlignmentRatio() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions2)->get_VerticalAlignmentRatio(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::VerticalAlignmentRatio(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::VerticalAlignmentRatio(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions2)->put_VerticalAlignmentRatio(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::HorizontalOffset() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::HorizontalOffset() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions2)->get_HorizontalOffset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::HorizontalOffset(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::HorizontalOffset(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions2)->put_HorizontalOffset(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::VerticalOffset() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::VerticalOffset() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions2)->get_VerticalOffset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::VerticalOffset(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewOptions2<D>::VerticalOffset(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewOptions2)->put_VerticalOffset(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::TargetElement() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElement) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::TargetElement() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->get_TargetElement(&value));
         return Windows::UI::Xaml::UIElement{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::TargetElement(Windows::UI::Xaml::UIElement const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::TargetElement(Windows::UI::Xaml::UIElement const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->put_TargetElement(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::AnimationDesired() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::AnimationDesired() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->get_AnimationDesired(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::AnimationDesired(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::AnimationDesired(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->put_AnimationDesired(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::TargetRect() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::TargetRect() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->get_TargetRect(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::TargetRect(Windows::Foundation::Rect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::TargetRect(Windows::Foundation::Rect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->put_TargetRect(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::HorizontalAlignmentRatio() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::HorizontalAlignmentRatio() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->get_HorizontalAlignmentRatio(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::VerticalAlignmentRatio() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::VerticalAlignmentRatio() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->get_VerticalAlignmentRatio(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::HorizontalOffset() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::HorizontalOffset() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->get_HorizontalOffset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::HorizontalOffset(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::HorizontalOffset(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->put_HorizontalOffset(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::VerticalOffset() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::VerticalOffset() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->get_VerticalOffset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::VerticalOffset(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::VerticalOffset(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->put_VerticalOffset(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::Handled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->get_Handled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::Handled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBringIntoViewRequestedEventArgs<D>::Handled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBringIntoViewRequestedEventArgs)->put_Handled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBrushTransition<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_UI_Xaml_IBrushTransition<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBrushTransition)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBrushTransition<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IBrushTransition<D>::Duration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBrushTransition)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IBrushTransitionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::BrushTransition) consume_Windows_UI_Xaml_IBrushTransitionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IBrushTransitionFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::BrushTransition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltHigh() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltHigh() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_AltHigh(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_AltHigh(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_AltLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_AltLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMedium() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMedium() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_AltMedium(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_AltMedium(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMediumHigh() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMediumHigh() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_AltMediumHigh(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMediumHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMediumHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_AltMediumHigh(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMediumLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMediumLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_AltMediumLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMediumLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::AltMediumLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_AltMediumLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseHigh() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseHigh() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_BaseHigh(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_BaseHigh(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_BaseLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_BaseLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMedium() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMedium() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_BaseMedium(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_BaseMedium(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMediumHigh() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMediumHigh() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_BaseMediumHigh(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMediumHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMediumHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_BaseMediumHigh(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMediumLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMediumLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_BaseMediumLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMediumLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::BaseMediumLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_BaseMediumLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeAltLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeAltLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeAltLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeAltLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeAltLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeAltLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackHigh() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackHigh() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeBlackHigh(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeBlackHigh(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeBlackLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeBlackLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackMediumLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackMediumLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeBlackMediumLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackMediumLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackMediumLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeBlackMediumLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackMedium() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackMedium() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeBlackMedium(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeBlackMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeBlackMedium(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeDisabledHigh() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeDisabledHigh() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeDisabledHigh(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeDisabledHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeDisabledHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeDisabledHigh(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeDisabledLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeDisabledLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeDisabledLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeDisabledLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeDisabledLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeDisabledLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeHigh() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeHigh() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeHigh(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeHigh(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeHigh(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeMedium() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeMedium() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeMedium(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeMedium(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeMediumLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeMediumLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeMediumLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeMediumLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeMediumLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeMediumLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeWhite() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeWhite() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeWhite(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeWhite(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeWhite(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeWhite(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeGray() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeGray() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ChromeGray(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeGray(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ChromeGray(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ChromeGray(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ListLow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ListLow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ListLow(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ListLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ListLow(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ListLow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ListMedium() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ListMedium() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ListMedium(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ListMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ListMedium(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ListMedium(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ErrorText() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ErrorText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_ErrorText(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::ErrorText(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::ErrorText(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_ErrorText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::Accent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Color>) consume_Windows_UI_Xaml_IColorPaletteResources<D>::Accent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->get_Accent(&value));
         return Windows::Foundation::IReference<Windows::UI::Color>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResources<D>::Accent(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IColorPaletteResources<D>::Accent(Windows::Foundation::IReference<Windows::UI::Color> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResources)->put_Accent(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IColorPaletteResourcesFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ColorPaletteResources) consume_Windows_UI_Xaml_IColorPaletteResourcesFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IColorPaletteResourcesFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::ColorPaletteResources{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ICornerRadiusHelperStatics<D>::FromRadii(double topLeft, double topRight, double bottomRight, double bottomLeft) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::CornerRadius) consume_Windows_UI_Xaml_ICornerRadiusHelperStatics<D>::FromRadii(double topLeft, double topRight, double bottomRight, double bottomLeft) const
     {
-        Windows::UI::Xaml::CornerRadius result;
+        Windows::UI::Xaml::CornerRadius result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ICornerRadiusHelperStatics)->FromRadii(topLeft, topRight, bottomRight, bottomLeft, put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ICornerRadiusHelperStatics<D>::FromUniformRadius(double uniformRadius) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::CornerRadius) consume_Windows_UI_Xaml_ICornerRadiusHelperStatics<D>::FromUniformRadius(double uniformRadius) const
     {
-        Windows::UI::Xaml::CornerRadius result;
+        Windows::UI::Xaml::CornerRadius result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ICornerRadiusHelperStatics)->FromUniformRadius(uniformRadius, put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataContextChangedEventArgs<D>::NewValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IDataContextChangedEventArgs<D>::NewValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataContextChangedEventArgs)->get_NewValue(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataContextChangedEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDataContextChangedEventArgs<D>::Handled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataContextChangedEventArgs)->get_Handled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataContextChangedEventArgs<D>::Handled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDataContextChangedEventArgs<D>::Handled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataContextChangedEventArgs)->put_Handled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplate<D>::LoadContent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_IDataTemplate<D>::LoadContent() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplate)->LoadContent(&result));
         return Windows::UI::Xaml::DependencyObject{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateExtension<D>::ResetTemplate() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDataTemplateExtension<D>::ResetTemplate() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateExtension)->ResetTemplate());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateExtension<D>::ProcessBinding(uint32_t phase) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDataTemplateExtension<D>::ProcessBinding(uint32_t phase) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateExtension)->ProcessBinding(phase, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateExtension<D>::ProcessBindings(Windows::UI::Xaml::Controls::ContainerContentChangingEventArgs const& arg) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_IDataTemplateExtension<D>::ProcessBindings(Windows::UI::Xaml::Controls::ContainerContentChangingEventArgs const& arg) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateExtension)->ProcessBindings(*(void**)(&arg), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DataTemplate) consume_Windows_UI_Xaml_IDataTemplateFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::DataTemplate{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateKey<D>::DataType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IDataTemplateKey<D>::DataType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateKey)->get_DataType(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateKey<D>::DataType(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDataTemplateKey<D>::DataType(Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateKey)->put_DataType(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateKeyFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DataTemplateKey) consume_Windows_UI_Xaml_IDataTemplateKeyFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateKeyFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::DataTemplateKey{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateKeyFactory<D>::CreateInstanceWithType(Windows::Foundation::IInspectable const& dataType, Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DataTemplateKey) consume_Windows_UI_Xaml_IDataTemplateKeyFactory<D>::CreateInstanceWithType(Windows::Foundation::IInspectable const& dataType, Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateKeyFactory)->CreateInstanceWithType(*(void**)(&dataType), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::DataTemplateKey{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateStatics2<D>::ExtensionInstanceProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IDataTemplateStatics2<D>::ExtensionInstanceProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateStatics2)->get_ExtensionInstanceProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateStatics2<D>::GetExtensionInstance(Windows::UI::Xaml::FrameworkElement const& element) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::IDataTemplateExtension) consume_Windows_UI_Xaml_IDataTemplateStatics2<D>::GetExtensionInstance(Windows::UI::Xaml::FrameworkElement const& element) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateStatics2)->GetExtensionInstance(*(void**)(&element), &result));
         return Windows::UI::Xaml::IDataTemplateExtension{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDataTemplateStatics2<D>::SetExtensionInstance(Windows::UI::Xaml::FrameworkElement const& element, Windows::UI::Xaml::IDataTemplateExtension const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDataTemplateStatics2<D>::SetExtensionInstance(Windows::UI::Xaml::FrameworkElement const& element, Windows::UI::Xaml::IDataTemplateExtension const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDataTemplateStatics2)->SetExtensionInstance(*(void**)(&element), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings<D>::EnableFrameRateCounter() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDebugSettings<D>::EnableFrameRateCounter() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings)->get_EnableFrameRateCounter(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings<D>::EnableFrameRateCounter(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDebugSettings<D>::EnableFrameRateCounter(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings)->put_EnableFrameRateCounter(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings<D>::IsBindingTracingEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDebugSettings<D>::IsBindingTracingEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings)->get_IsBindingTracingEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings<D>::IsBindingTracingEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDebugSettings<D>::IsBindingTracingEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings)->put_IsBindingTracingEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings<D>::IsOverdrawHeatMapEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDebugSettings<D>::IsOverdrawHeatMapEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings)->get_IsOverdrawHeatMapEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings<D>::IsOverdrawHeatMapEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDebugSettings<D>::IsOverdrawHeatMapEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings)->put_IsOverdrawHeatMapEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings<D>::BindingFailed(Windows::UI::Xaml::BindingFailedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IDebugSettings<D>::BindingFailed(Windows::UI::Xaml::BindingFailedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings)->add_BindingFailed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -830,155 +830,155 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BindingFailed_revoker>(this, BindingFailed(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings<D>::BindingFailed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDebugSettings<D>::BindingFailed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings)->remove_BindingFailed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings2<D>::EnableRedrawRegions() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDebugSettings2<D>::EnableRedrawRegions() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings2)->get_EnableRedrawRegions(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings2<D>::EnableRedrawRegions(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDebugSettings2<D>::EnableRedrawRegions(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings2)->put_EnableRedrawRegions(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings3<D>::IsTextPerformanceVisualizationEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDebugSettings3<D>::IsTextPerformanceVisualizationEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings3)->get_IsTextPerformanceVisualizationEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings3<D>::IsTextPerformanceVisualizationEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDebugSettings3<D>::IsTextPerformanceVisualizationEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings3)->put_IsTextPerformanceVisualizationEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings4<D>::FailFastOnErrors() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDebugSettings4<D>::FailFastOnErrors() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings4)->get_FailFastOnErrors(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDebugSettings4<D>::FailFastOnErrors(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDebugSettings4<D>::FailFastOnErrors(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDebugSettings4)->put_FailFastOnErrors(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObject<D>::GetValue(Windows::UI::Xaml::DependencyProperty const& dp) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IDependencyObject<D>::GetValue(Windows::UI::Xaml::DependencyProperty const& dp) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObject)->GetValue(*(void**)(&dp), &result));
         return Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObject<D>::SetValue(Windows::UI::Xaml::DependencyProperty const& dp, Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDependencyObject<D>::SetValue(Windows::UI::Xaml::DependencyProperty const& dp, Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObject)->SetValue(*(void**)(&dp), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObject<D>::ClearValue(Windows::UI::Xaml::DependencyProperty const& dp) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDependencyObject<D>::ClearValue(Windows::UI::Xaml::DependencyProperty const& dp) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObject)->ClearValue(*(void**)(&dp)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObject<D>::ReadLocalValue(Windows::UI::Xaml::DependencyProperty const& dp) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IDependencyObject<D>::ReadLocalValue(Windows::UI::Xaml::DependencyProperty const& dp) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObject)->ReadLocalValue(*(void**)(&dp), &result));
         return Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObject<D>::GetAnimationBaseValue(Windows::UI::Xaml::DependencyProperty const& dp) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IDependencyObject<D>::GetAnimationBaseValue(Windows::UI::Xaml::DependencyProperty const& dp) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObject)->GetAnimationBaseValue(*(void**)(&dp), &result));
         return Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObject<D>::Dispatcher() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreDispatcher) consume_Windows_UI_Xaml_IDependencyObject<D>::Dispatcher() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObject)->get_Dispatcher(&value));
         return Windows::UI::Core::CoreDispatcher{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObject2<D>::RegisterPropertyChangedCallback(Windows::UI::Xaml::DependencyProperty const& dp, Windows::UI::Xaml::DependencyPropertyChangedCallback const& callback) const
+    template <typename D> WINRT_IMPL_AUTO(int64_t) consume_Windows_UI_Xaml_IDependencyObject2<D>::RegisterPropertyChangedCallback(Windows::UI::Xaml::DependencyProperty const& dp, Windows::UI::Xaml::DependencyPropertyChangedCallback const& callback) const
     {
-        int64_t result;
+        int64_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObject2)->RegisterPropertyChangedCallback(*(void**)(&dp), *(void**)(&callback), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObject2<D>::UnregisterPropertyChangedCallback(Windows::UI::Xaml::DependencyProperty const& dp, int64_t token) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDependencyObject2<D>::UnregisterPropertyChangedCallback(Windows::UI::Xaml::DependencyProperty const& dp, int64_t token) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObject2)->UnregisterPropertyChangedCallback(*(void**)(&dp), token));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObjectCollectionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObjectCollection) consume_Windows_UI_Xaml_IDependencyObjectCollectionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObjectCollectionFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::DependencyObjectCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyObjectFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_IDependencyObjectFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyObjectFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyProperty<D>::GetMetadata(Windows::UI::Xaml::Interop::TypeName const& forType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::PropertyMetadata) consume_Windows_UI_Xaml_IDependencyProperty<D>::GetMetadata(Windows::UI::Xaml::Interop::TypeName const& forType) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyProperty)->GetMetadata(impl::bind_in(forType), &result));
         return Windows::UI::Xaml::PropertyMetadata{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyPropertyChangedEventArgs<D>::Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IDependencyPropertyChangedEventArgs<D>::Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyPropertyChangedEventArgs)->get_Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyPropertyChangedEventArgs<D>::OldValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IDependencyPropertyChangedEventArgs<D>::OldValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyPropertyChangedEventArgs)->get_OldValue(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyPropertyChangedEventArgs<D>::NewValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IDependencyPropertyChangedEventArgs<D>::NewValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyPropertyChangedEventArgs)->get_NewValue(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyPropertyStatics<D>::UnsetValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IDependencyPropertyStatics<D>::UnsetValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyPropertyStatics)->get_UnsetValue(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyPropertyStatics<D>::Register(param::hstring const& name, Windows::UI::Xaml::Interop::TypeName const& propertyType, Windows::UI::Xaml::Interop::TypeName const& ownerType, Windows::UI::Xaml::PropertyMetadata const& typeMetadata) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IDependencyPropertyStatics<D>::Register(param::hstring const& name, Windows::UI::Xaml::Interop::TypeName const& propertyType, Windows::UI::Xaml::Interop::TypeName const& ownerType, Windows::UI::Xaml::PropertyMetadata const& typeMetadata) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyPropertyStatics)->Register(*(void**)(&name), impl::bind_in(propertyType), impl::bind_in(ownerType), *(void**)(&typeMetadata), &result));
         return Windows::UI::Xaml::DependencyProperty{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDependencyPropertyStatics<D>::RegisterAttached(param::hstring const& name, Windows::UI::Xaml::Interop::TypeName const& propertyType, Windows::UI::Xaml::Interop::TypeName const& ownerType, Windows::UI::Xaml::PropertyMetadata const& defaultMetadata) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IDependencyPropertyStatics<D>::RegisterAttached(param::hstring const& name, Windows::UI::Xaml::Interop::TypeName const& propertyType, Windows::UI::Xaml::Interop::TypeName const& ownerType, Windows::UI::Xaml::PropertyMetadata const& defaultMetadata) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDependencyPropertyStatics)->RegisterAttached(*(void**)(&name), impl::bind_in(propertyType), impl::bind_in(ownerType), *(void**)(&defaultMetadata), &result));
         return Windows::UI::Xaml::DependencyProperty{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDispatcherTimer<D>::Interval() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_UI_Xaml_IDispatcherTimer<D>::Interval() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDispatcherTimer)->get_Interval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDispatcherTimer<D>::Interval(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDispatcherTimer<D>::Interval(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDispatcherTimer)->put_Interval(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDispatcherTimer<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDispatcherTimer<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDispatcherTimer)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDispatcherTimer<D>::Tick(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IDispatcherTimer<D>::Tick(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDispatcherTimer)->add_Tick(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -986,607 +986,607 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Tick_revoker>(this, Tick(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDispatcherTimer<D>::Tick(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDispatcherTimer<D>::Tick(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IDispatcherTimer)->remove_Tick(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDispatcherTimer<D>::Start() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDispatcherTimer<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDispatcherTimer)->Start());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDispatcherTimer<D>::Stop() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDispatcherTimer<D>::Stop() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDispatcherTimer)->Stop());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDispatcherTimerFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DispatcherTimer) consume_Windows_UI_Xaml_IDispatcherTimerFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDispatcherTimerFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::DispatcherTimer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDragEventArgs<D>::Handled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs)->get_Handled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs<D>::Handled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragEventArgs<D>::Handled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs)->put_Handled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs<D>::Data() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DataPackage) consume_Windows_UI_Xaml_IDragEventArgs<D>::Data() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs)->get_Data(&value));
         return Windows::ApplicationModel::DataTransfer::DataPackage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs<D>::Data(Windows::ApplicationModel::DataTransfer::DataPackage const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragEventArgs<D>::Data(Windows::ApplicationModel::DataTransfer::DataPackage const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs)->put_Data(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs<D>::GetPosition(Windows::UI::Xaml::UIElement const& relativeTo) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_UI_Xaml_IDragEventArgs<D>::GetPosition(Windows::UI::Xaml::UIElement const& relativeTo) const
     {
-        Windows::Foundation::Point result;
+        Windows::Foundation::Point result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs)->GetPosition(*(void**)(&relativeTo), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs2<D>::DataView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DataPackageView) consume_Windows_UI_Xaml_IDragEventArgs2<D>::DataView() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs2)->get_DataView(&value));
         return Windows::ApplicationModel::DataTransfer::DataPackageView{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs2<D>::DragUIOverride() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DragUIOverride) consume_Windows_UI_Xaml_IDragEventArgs2<D>::DragUIOverride() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs2)->get_DragUIOverride(&value));
         return Windows::UI::Xaml::DragUIOverride{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs2<D>::Modifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers) consume_Windows_UI_Xaml_IDragEventArgs2<D>::Modifiers() const
     {
-        Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs2)->get_Modifiers(put_abi(value)));
+        Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs2)->get_Modifiers(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs2<D>::AcceptedOperation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DataPackageOperation) consume_Windows_UI_Xaml_IDragEventArgs2<D>::AcceptedOperation() const
     {
-        Windows::ApplicationModel::DataTransfer::DataPackageOperation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs2)->get_AcceptedOperation(put_abi(value)));
+        Windows::ApplicationModel::DataTransfer::DataPackageOperation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs2)->get_AcceptedOperation(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs2<D>::AcceptedOperation(Windows::ApplicationModel::DataTransfer::DataPackageOperation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragEventArgs2<D>::AcceptedOperation(Windows::ApplicationModel::DataTransfer::DataPackageOperation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs2)->put_AcceptedOperation(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs2<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DragOperationDeferral) consume_Windows_UI_Xaml_IDragEventArgs2<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs2)->GetDeferral(&result));
         return Windows::UI::Xaml::DragOperationDeferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragEventArgs3<D>::AllowedOperations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DataPackageOperation) consume_Windows_UI_Xaml_IDragEventArgs3<D>::AllowedOperations() const
     {
-        Windows::ApplicationModel::DataTransfer::DataPackageOperation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs3)->get_AllowedOperations(put_abi(value)));
+        Windows::ApplicationModel::DataTransfer::DataPackageOperation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragEventArgs3)->get_AllowedOperations(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragOperationDeferral<D>::Complete() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragOperationDeferral<D>::Complete() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragOperationDeferral)->Complete());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::Cancel() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::Cancel() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragStartingEventArgs)->get_Cancel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::Cancel(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::Cancel(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragStartingEventArgs)->put_Cancel(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::Data() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DataPackage) consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::Data() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragStartingEventArgs)->get_Data(&value));
         return Windows::ApplicationModel::DataTransfer::DataPackage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::DragUI() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DragUI) consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::DragUI() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragStartingEventArgs)->get_DragUI(&value));
         return Windows::UI::Xaml::DragUI{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DragOperationDeferral) consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragStartingEventArgs)->GetDeferral(&result));
         return Windows::UI::Xaml::DragOperationDeferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::GetPosition(Windows::UI::Xaml::UIElement const& relativeTo) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_UI_Xaml_IDragStartingEventArgs<D>::GetPosition(Windows::UI::Xaml::UIElement const& relativeTo) const
     {
-        Windows::Foundation::Point result;
+        Windows::Foundation::Point result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragStartingEventArgs)->GetPosition(*(void**)(&relativeTo), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragStartingEventArgs2<D>::AllowedOperations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DataPackageOperation) consume_Windows_UI_Xaml_IDragStartingEventArgs2<D>::AllowedOperations() const
     {
-        Windows::ApplicationModel::DataTransfer::DataPackageOperation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragStartingEventArgs2)->get_AllowedOperations(put_abi(value)));
+        Windows::ApplicationModel::DataTransfer::DataPackageOperation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragStartingEventArgs2)->get_AllowedOperations(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragStartingEventArgs2<D>::AllowedOperations(Windows::ApplicationModel::DataTransfer::DataPackageOperation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragStartingEventArgs2<D>::AllowedOperations(Windows::ApplicationModel::DataTransfer::DataPackageOperation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragStartingEventArgs2)->put_AllowedOperations(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromBitmapImage(Windows::UI::Xaml::Media::Imaging::BitmapImage const& bitmapImage) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromBitmapImage(Windows::UI::Xaml::Media::Imaging::BitmapImage const& bitmapImage) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUI)->SetContentFromBitmapImage(*(void**)(&bitmapImage)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromBitmapImage(Windows::UI::Xaml::Media::Imaging::BitmapImage const& bitmapImage, Windows::Foundation::Point const& anchorPoint) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromBitmapImage(Windows::UI::Xaml::Media::Imaging::BitmapImage const& bitmapImage, Windows::Foundation::Point const& anchorPoint) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUI)->SetContentFromBitmapImageWithAnchorPoint(*(void**)(&bitmapImage), impl::bind_in(anchorPoint)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUI)->SetContentFromSoftwareBitmap(*(void**)(&softwareBitmap)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap, Windows::Foundation::Point const& anchorPoint) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap, Windows::Foundation::Point const& anchorPoint) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUI)->SetContentFromSoftwareBitmapWithAnchorPoint(*(void**)(&softwareBitmap), impl::bind_in(anchorPoint)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromDataPackage() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUI<D>::SetContentFromDataPackage() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUI)->SetContentFromDataPackage());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::Caption() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IDragUIOverride<D>::Caption() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->get_Caption(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::Caption(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUIOverride<D>::Caption(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->put_Caption(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::IsContentVisible() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDragUIOverride<D>::IsContentVisible() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->get_IsContentVisible(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::IsContentVisible(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUIOverride<D>::IsContentVisible(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->put_IsContentVisible(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::IsCaptionVisible() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDragUIOverride<D>::IsCaptionVisible() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->get_IsCaptionVisible(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::IsCaptionVisible(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUIOverride<D>::IsCaptionVisible(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->put_IsCaptionVisible(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::IsGlyphVisible() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDragUIOverride<D>::IsGlyphVisible() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->get_IsGlyphVisible(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::IsGlyphVisible(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUIOverride<D>::IsGlyphVisible(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->put_IsGlyphVisible(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::Clear() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUIOverride<D>::Clear() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->Clear());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::SetContentFromBitmapImage(Windows::UI::Xaml::Media::Imaging::BitmapImage const& bitmapImage) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUIOverride<D>::SetContentFromBitmapImage(Windows::UI::Xaml::Media::Imaging::BitmapImage const& bitmapImage) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->SetContentFromBitmapImage(*(void**)(&bitmapImage)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::SetContentFromBitmapImage(Windows::UI::Xaml::Media::Imaging::BitmapImage const& bitmapImage, Windows::Foundation::Point const& anchorPoint) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUIOverride<D>::SetContentFromBitmapImage(Windows::UI::Xaml::Media::Imaging::BitmapImage const& bitmapImage, Windows::Foundation::Point const& anchorPoint) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->SetContentFromBitmapImageWithAnchorPoint(*(void**)(&bitmapImage), impl::bind_in(anchorPoint)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::SetContentFromSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUIOverride<D>::SetContentFromSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->SetContentFromSoftwareBitmap(*(void**)(&softwareBitmap)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDragUIOverride<D>::SetContentFromSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap, Windows::Foundation::Point const& anchorPoint) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDragUIOverride<D>::SetContentFromSoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap, Windows::Foundation::Point const& anchorPoint) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDragUIOverride)->SetContentFromSoftwareBitmapWithAnchorPoint(*(void**)(&softwareBitmap), impl::bind_in(anchorPoint)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDropCompletedEventArgs<D>::DropResult() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::DataTransfer::DataPackageOperation) consume_Windows_UI_Xaml_IDropCompletedEventArgs<D>::DropResult() const
     {
-        Windows::ApplicationModel::DataTransfer::DataPackageOperation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDropCompletedEventArgs)->get_DropResult(put_abi(value)));
+        Windows::ApplicationModel::DataTransfer::DataPackageOperation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDropCompletedEventArgs)->get_DropResult(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Automatic() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Duration) consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Automatic() const
     {
-        Windows::UI::Xaml::Duration value;
+        Windows::UI::Xaml::Duration value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDurationHelperStatics)->get_Automatic(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Forever() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Duration) consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Forever() const
     {
-        Windows::UI::Xaml::Duration value;
+        Windows::UI::Xaml::Duration value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDurationHelperStatics)->get_Forever(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Compare(Windows::UI::Xaml::Duration const& duration1, Windows::UI::Xaml::Duration const& duration2) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Compare(Windows::UI::Xaml::Duration const& duration1, Windows::UI::Xaml::Duration const& duration2) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDurationHelperStatics)->Compare(impl::bind_in(duration1), impl::bind_in(duration2), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDurationHelperStatics<D>::FromTimeSpan(Windows::Foundation::TimeSpan const& timeSpan) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Duration) consume_Windows_UI_Xaml_IDurationHelperStatics<D>::FromTimeSpan(Windows::Foundation::TimeSpan const& timeSpan) const
     {
-        Windows::UI::Xaml::Duration result;
+        Windows::UI::Xaml::Duration result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDurationHelperStatics)->FromTimeSpan(impl::bind_in(timeSpan), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDurationHelperStatics<D>::GetHasTimeSpan(Windows::UI::Xaml::Duration const& target) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDurationHelperStatics<D>::GetHasTimeSpan(Windows::UI::Xaml::Duration const& target) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDurationHelperStatics)->GetHasTimeSpan(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Add(Windows::UI::Xaml::Duration const& target, Windows::UI::Xaml::Duration const& duration) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Duration) consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Add(Windows::UI::Xaml::Duration const& target, Windows::UI::Xaml::Duration const& duration) const
     {
-        Windows::UI::Xaml::Duration result;
+        Windows::UI::Xaml::Duration result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDurationHelperStatics)->Add(impl::bind_in(target), impl::bind_in(duration), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Equals(Windows::UI::Xaml::Duration const& target, Windows::UI::Xaml::Duration const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Equals(Windows::UI::Xaml::Duration const& target, Windows::UI::Xaml::Duration const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDurationHelperStatics)->Equals(impl::bind_in(target), impl::bind_in(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Subtract(Windows::UI::Xaml::Duration const& target, Windows::UI::Xaml::Duration const& duration) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Duration) consume_Windows_UI_Xaml_IDurationHelperStatics<D>::Subtract(Windows::UI::Xaml::Duration const& target, Windows::UI::Xaml::Duration const& duration) const
     {
-        Windows::UI::Xaml::Duration result;
+        Windows::UI::Xaml::Duration result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IDurationHelperStatics)->Subtract(impl::bind_in(target), impl::bind_in(duration), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IEffectiveViewportChangedEventArgs<D>::EffectiveViewport() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IEffectiveViewportChangedEventArgs<D>::EffectiveViewport() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IEffectiveViewportChangedEventArgs)->get_EffectiveViewport(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IEffectiveViewportChangedEventArgs<D>::MaxViewport() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IEffectiveViewportChangedEventArgs<D>::MaxViewport() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IEffectiveViewportChangedEventArgs)->get_MaxViewport(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IEffectiveViewportChangedEventArgs<D>::BringIntoViewDistanceX() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IEffectiveViewportChangedEventArgs<D>::BringIntoViewDistanceX() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IEffectiveViewportChangedEventArgs)->get_BringIntoViewDistanceX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IEffectiveViewportChangedEventArgs<D>::BringIntoViewDistanceY() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IEffectiveViewportChangedEventArgs<D>::BringIntoViewDistanceY() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IEffectiveViewportChangedEventArgs)->get_BringIntoViewDistanceY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactory<D>::GetElement(Windows::UI::Xaml::ElementFactoryGetArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElement) consume_Windows_UI_Xaml_IElementFactory<D>::GetElement(Windows::UI::Xaml::ElementFactoryGetArgs const& args) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactory)->GetElement(*(void**)(&args), &result));
         return Windows::UI::Xaml::UIElement{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactory<D>::RecycleElement(Windows::UI::Xaml::ElementFactoryRecycleArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IElementFactory<D>::RecycleElement(Windows::UI::Xaml::ElementFactoryRecycleArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactory)->RecycleElement(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryGetArgs<D>::Data() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IElementFactoryGetArgs<D>::Data() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryGetArgs)->get_Data(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryGetArgs<D>::Data(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IElementFactoryGetArgs<D>::Data(Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryGetArgs)->put_Data(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryGetArgs<D>::Parent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElement) consume_Windows_UI_Xaml_IElementFactoryGetArgs<D>::Parent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryGetArgs)->get_Parent(&value));
         return Windows::UI::Xaml::UIElement{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryGetArgs<D>::Parent(Windows::UI::Xaml::UIElement const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IElementFactoryGetArgs<D>::Parent(Windows::UI::Xaml::UIElement const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryGetArgs)->put_Parent(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryGetArgsFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementFactoryGetArgs) consume_Windows_UI_Xaml_IElementFactoryGetArgsFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryGetArgsFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::ElementFactoryGetArgs{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryRecycleArgs<D>::Element() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElement) consume_Windows_UI_Xaml_IElementFactoryRecycleArgs<D>::Element() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryRecycleArgs)->get_Element(&value));
         return Windows::UI::Xaml::UIElement{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryRecycleArgs<D>::Element(Windows::UI::Xaml::UIElement const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IElementFactoryRecycleArgs<D>::Element(Windows::UI::Xaml::UIElement const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryRecycleArgs)->put_Element(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryRecycleArgs<D>::Parent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElement) consume_Windows_UI_Xaml_IElementFactoryRecycleArgs<D>::Parent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryRecycleArgs)->get_Parent(&value));
         return Windows::UI::Xaml::UIElement{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryRecycleArgs<D>::Parent(Windows::UI::Xaml::UIElement const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IElementFactoryRecycleArgs<D>::Parent(Windows::UI::Xaml::UIElement const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryRecycleArgs)->put_Parent(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementFactoryRecycleArgsFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementFactoryRecycleArgs) consume_Windows_UI_Xaml_IElementFactoryRecycleArgsFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementFactoryRecycleArgsFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::ElementFactoryRecycleArgs{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::Volume() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::Volume() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementSoundPlayerStatics)->get_Volume(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::Volume(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::Volume(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementSoundPlayerStatics)->put_Volume(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementSoundPlayerState) consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::State() const
     {
-        Windows::UI::Xaml::ElementSoundPlayerState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementSoundPlayerStatics)->get_State(put_abi(value)));
+        Windows::UI::Xaml::ElementSoundPlayerState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementSoundPlayerStatics)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::State(Windows::UI::Xaml::ElementSoundPlayerState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::State(Windows::UI::Xaml::ElementSoundPlayerState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementSoundPlayerStatics)->put_State(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::Play(Windows::UI::Xaml::ElementSoundKind const& sound) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IElementSoundPlayerStatics<D>::Play(Windows::UI::Xaml::ElementSoundKind const& sound) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementSoundPlayerStatics)->Play(static_cast<int32_t>(sound)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementSoundPlayerStatics2<D>::SpatialAudioMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementSpatialAudioMode) consume_Windows_UI_Xaml_IElementSoundPlayerStatics2<D>::SpatialAudioMode() const
     {
-        Windows::UI::Xaml::ElementSpatialAudioMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementSoundPlayerStatics2)->get_SpatialAudioMode(put_abi(value)));
+        Windows::UI::Xaml::ElementSpatialAudioMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementSoundPlayerStatics2)->get_SpatialAudioMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IElementSoundPlayerStatics2<D>::SpatialAudioMode(Windows::UI::Xaml::ElementSpatialAudioMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IElementSoundPlayerStatics2<D>::SpatialAudioMode(Windows::UI::Xaml::ElementSpatialAudioMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IElementSoundPlayerStatics2)->put_SpatialAudioMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IEventTrigger<D>::RoutedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IEventTrigger<D>::RoutedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IEventTrigger)->get_RoutedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IEventTrigger<D>::RoutedEvent(Windows::UI::Xaml::RoutedEvent const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IEventTrigger<D>::RoutedEvent(Windows::UI::Xaml::RoutedEvent const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IEventTrigger)->put_RoutedEvent(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IEventTrigger<D>::Actions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::TriggerActionCollection) consume_Windows_UI_Xaml_IEventTrigger<D>::Actions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IEventTrigger)->get_Actions(&value));
         return Windows::UI::Xaml::TriggerActionCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IExceptionRoutedEventArgs<D>::ErrorMessage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IExceptionRoutedEventArgs<D>::ErrorMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IExceptionRoutedEventArgs)->get_ErrorMessage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Triggers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::TriggerCollection) consume_Windows_UI_Xaml_IFrameworkElement<D>::Triggers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Triggers(&value));
         return Windows::UI::Xaml::TriggerCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Resources() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ResourceDictionary) consume_Windows_UI_Xaml_IFrameworkElement<D>::Resources() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Resources(&value));
         return Windows::UI::Xaml::ResourceDictionary{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Resources(Windows::UI::Xaml::ResourceDictionary const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Resources(Windows::UI::Xaml::ResourceDictionary const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_Resources(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Tag() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IFrameworkElement<D>::Tag() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Tag(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Tag(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Tag(Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_Tag(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Language() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IFrameworkElement<D>::Language() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Language(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Language(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Language(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_Language(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::ActualWidth() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IFrameworkElement<D>::ActualWidth() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_ActualWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::ActualHeight() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IFrameworkElement<D>::ActualHeight() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_ActualHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Width() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IFrameworkElement<D>::Width() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Width(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Width(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Width(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_Width(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Height() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IFrameworkElement<D>::Height() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Height(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Height(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Height(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_Height(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::MinWidth() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IFrameworkElement<D>::MinWidth() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_MinWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::MinWidth(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::MinWidth(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_MinWidth(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::MaxWidth() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IFrameworkElement<D>::MaxWidth() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_MaxWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::MaxWidth(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::MaxWidth(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_MaxWidth(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::MinHeight() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IFrameworkElement<D>::MinHeight() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_MinHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::MinHeight(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::MinHeight(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_MinHeight(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::MaxHeight() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IFrameworkElement<D>::MaxHeight() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_MaxHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::MaxHeight(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::MaxHeight(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_MaxHeight(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::HorizontalAlignment() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::HorizontalAlignment) consume_Windows_UI_Xaml_IFrameworkElement<D>::HorizontalAlignment() const
     {
-        Windows::UI::Xaml::HorizontalAlignment value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_HorizontalAlignment(put_abi(value)));
+        Windows::UI::Xaml::HorizontalAlignment value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_HorizontalAlignment(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::HorizontalAlignment(Windows::UI::Xaml::HorizontalAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::HorizontalAlignment(Windows::UI::Xaml::HorizontalAlignment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_HorizontalAlignment(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::VerticalAlignment() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::VerticalAlignment) consume_Windows_UI_Xaml_IFrameworkElement<D>::VerticalAlignment() const
     {
-        Windows::UI::Xaml::VerticalAlignment value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_VerticalAlignment(put_abi(value)));
+        Windows::UI::Xaml::VerticalAlignment value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_VerticalAlignment(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::VerticalAlignment(Windows::UI::Xaml::VerticalAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::VerticalAlignment(Windows::UI::Xaml::VerticalAlignment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_VerticalAlignment(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Margin() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) consume_Windows_UI_Xaml_IFrameworkElement<D>::Margin() const
     {
-        Windows::UI::Xaml::Thickness value;
+        Windows::UI::Xaml::Thickness value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Margin(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Margin(Windows::UI::Xaml::Thickness const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Margin(Windows::UI::Xaml::Thickness const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_Margin(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IFrameworkElement<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Name(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Name(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_Name(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::BaseUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_UI_Xaml_IFrameworkElement<D>::BaseUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_BaseUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::DataContext() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IFrameworkElement<D>::DataContext() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_DataContext(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::DataContext(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::DataContext(Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_DataContext(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Style() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Style) consume_Windows_UI_Xaml_IFrameworkElement<D>::Style() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Style(&value));
         return Windows::UI::Xaml::Style{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Style(Windows::UI::Xaml::Style const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Style(Windows::UI::Xaml::Style const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_Style(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Parent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_IFrameworkElement<D>::Parent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_Parent(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::FlowDirection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FlowDirection) consume_Windows_UI_Xaml_IFrameworkElement<D>::FlowDirection() const
     {
-        Windows::UI::Xaml::FlowDirection value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_FlowDirection(put_abi(value)));
+        Windows::UI::Xaml::FlowDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->get_FlowDirection(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::FlowDirection(Windows::UI::Xaml::FlowDirection const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::FlowDirection(Windows::UI::Xaml::FlowDirection const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->put_FlowDirection(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Loaded(Windows::UI::Xaml::RoutedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement<D>::Loaded(Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->add_Loaded(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1594,13 +1594,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Loaded_revoker>(this, Loaded(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Loaded(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Loaded(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->remove_Loaded(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Unloaded(Windows::UI::Xaml::RoutedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement<D>::Unloaded(Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->add_Unloaded(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1608,13 +1608,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Unloaded_revoker>(this, Unloaded(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::Unloaded(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Unloaded(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->remove_Unloaded(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::SizeChanged(Windows::UI::Xaml::SizeChangedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement<D>::SizeChanged(Windows::UI::Xaml::SizeChangedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->add_SizeChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1622,13 +1622,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SizeChanged_revoker>(this, SizeChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::SizeChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::SizeChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->remove_SizeChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::LayoutUpdated(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement<D>::LayoutUpdated(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->add_LayoutUpdated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1636,33 +1636,33 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LayoutUpdated_revoker>(this, LayoutUpdated(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::LayoutUpdated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::LayoutUpdated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->remove_LayoutUpdated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::FindName(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IFrameworkElement<D>::FindName(param::hstring const& name) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->FindName(*(void**)(&name), &result));
         return Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement<D>::SetBinding(Windows::UI::Xaml::DependencyProperty const& dp, Windows::UI::Xaml::Data::BindingBase const& binding) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::SetBinding(Windows::UI::Xaml::DependencyProperty const& dp, Windows::UI::Xaml::Data::BindingBase const& binding) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement)->SetBinding(*(void**)(&dp), *(void**)(&binding)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement2<D>::RequestedTheme() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementTheme) consume_Windows_UI_Xaml_IFrameworkElement2<D>::RequestedTheme() const
     {
-        Windows::UI::Xaml::ElementTheme value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement2)->get_RequestedTheme(put_abi(value)));
+        Windows::UI::Xaml::ElementTheme value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement2)->get_RequestedTheme(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement2<D>::RequestedTheme(Windows::UI::Xaml::ElementTheme const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement2<D>::RequestedTheme(Windows::UI::Xaml::ElementTheme const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement2)->put_RequestedTheme(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement2<D>::DataContextChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::DataContextChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement2<D>::DataContextChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::DataContextChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement2)->add_DataContextChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1670,19 +1670,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DataContextChanged_revoker>(this, DataContextChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement2<D>::DataContextChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement2<D>::DataContextChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement2)->remove_DataContextChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement2<D>::GetBindingExpression(Windows::UI::Xaml::DependencyProperty const& dp) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Data::BindingExpression) consume_Windows_UI_Xaml_IFrameworkElement2<D>::GetBindingExpression(Windows::UI::Xaml::DependencyProperty const& dp) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement2)->GetBindingExpression(*(void**)(&dp), &result));
         return Windows::UI::Xaml::Data::BindingExpression{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement3<D>::Loading(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::FrameworkElement, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement3<D>::Loading(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::FrameworkElement, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement3)->add_Loading(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1690,89 +1690,89 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Loading_revoker>(this, Loading(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement3<D>::Loading(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement3<D>::Loading(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement3)->remove_Loading(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::AllowFocusOnInteraction() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IFrameworkElement4<D>::AllowFocusOnInteraction() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->get_AllowFocusOnInteraction(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::AllowFocusOnInteraction(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement4<D>::AllowFocusOnInteraction(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->put_AllowFocusOnInteraction(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualMargin() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualMargin() const
     {
-        Windows::UI::Xaml::Thickness value;
+        Windows::UI::Xaml::Thickness value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->get_FocusVisualMargin(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualMargin(Windows::UI::Xaml::Thickness const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualMargin(Windows::UI::Xaml::Thickness const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->put_FocusVisualMargin(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualSecondaryThickness() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualSecondaryThickness() const
     {
-        Windows::UI::Xaml::Thickness value;
+        Windows::UI::Xaml::Thickness value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->get_FocusVisualSecondaryThickness(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualSecondaryThickness(Windows::UI::Xaml::Thickness const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualSecondaryThickness(Windows::UI::Xaml::Thickness const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->put_FocusVisualSecondaryThickness(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualPrimaryThickness() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualPrimaryThickness() const
     {
-        Windows::UI::Xaml::Thickness value;
+        Windows::UI::Xaml::Thickness value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->get_FocusVisualPrimaryThickness(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualPrimaryThickness(Windows::UI::Xaml::Thickness const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualPrimaryThickness(Windows::UI::Xaml::Thickness const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->put_FocusVisualPrimaryThickness(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualSecondaryBrush() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualSecondaryBrush() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->get_FocusVisualSecondaryBrush(&value));
         return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualSecondaryBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualSecondaryBrush(Windows::UI::Xaml::Media::Brush const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->put_FocusVisualSecondaryBrush(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualPrimaryBrush() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualPrimaryBrush() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->get_FocusVisualPrimaryBrush(&value));
         return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualPrimaryBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement4<D>::FocusVisualPrimaryBrush(Windows::UI::Xaml::Media::Brush const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->put_FocusVisualPrimaryBrush(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::AllowFocusWhenDisabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IFrameworkElement4<D>::AllowFocusWhenDisabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->get_AllowFocusWhenDisabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement4<D>::AllowFocusWhenDisabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement4<D>::AllowFocusWhenDisabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement4)->put_AllowFocusWhenDisabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement6<D>::ActualTheme() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementTheme) consume_Windows_UI_Xaml_IFrameworkElement6<D>::ActualTheme() const
     {
-        Windows::UI::Xaml::ElementTheme value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement6)->get_ActualTheme(put_abi(value)));
+        Windows::UI::Xaml::ElementTheme value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement6)->get_ActualTheme(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement6<D>::ActualThemeChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::FrameworkElement, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement6<D>::ActualThemeChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::FrameworkElement, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement6)->add_ActualThemeChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1780,19 +1780,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ActualThemeChanged_revoker>(this, ActualThemeChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement6<D>::ActualThemeChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement6<D>::ActualThemeChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement6)->remove_ActualThemeChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement7<D>::IsLoaded() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IFrameworkElement7<D>::IsLoaded() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement7)->get_IsLoaded(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement7<D>::EffectiveViewportChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::EffectiveViewportChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement7<D>::EffectiveViewportChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::EffectiveViewportChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement7)->add_EffectiveViewportChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1800,833 +1800,833 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, EffectiveViewportChanged_revoker>(this, EffectiveViewportChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElement7<D>::EffectiveViewportChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement7<D>::EffectiveViewportChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElement7)->remove_EffectiveViewportChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FrameworkElement) consume_Windows_UI_Xaml_IFrameworkElementFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::FrameworkElement{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementOverrides<D>::MeasureOverride(Windows::Foundation::Size const& availableSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_Xaml_IFrameworkElementOverrides<D>::MeasureOverride(Windows::Foundation::Size const& availableSize) const
     {
-        Windows::Foundation::Size result;
+        Windows::Foundation::Size result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementOverrides)->MeasureOverride(impl::bind_in(availableSize), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementOverrides<D>::ArrangeOverride(Windows::Foundation::Size const& finalSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_Xaml_IFrameworkElementOverrides<D>::ArrangeOverride(Windows::Foundation::Size const& finalSize) const
     {
-        Windows::Foundation::Size result;
+        Windows::Foundation::Size result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementOverrides)->ArrangeOverride(impl::bind_in(finalSize), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementOverrides<D>::OnApplyTemplate() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElementOverrides<D>::OnApplyTemplate() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementOverrides)->OnApplyTemplate());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementOverrides2<D>::GoToElementStateCore(param::hstring const& stateName, bool useTransitions) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IFrameworkElementOverrides2<D>::GoToElementStateCore(param::hstring const& stateName, bool useTransitions) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementOverrides2)->GoToElementStateCore(*(void**)(&stateName), useTransitions, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementProtected7<D>::InvalidateViewport() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElementProtected7<D>::InvalidateViewport() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementProtected7)->InvalidateViewport());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::TagProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::TagProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_TagProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::LanguageProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::LanguageProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_LanguageProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::ActualWidthProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::ActualWidthProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_ActualWidthProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::ActualHeightProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::ActualHeightProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_ActualHeightProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::WidthProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::WidthProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_WidthProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::HeightProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::HeightProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_HeightProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MinWidthProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MinWidthProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_MinWidthProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MaxWidthProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MaxWidthProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_MaxWidthProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MinHeightProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MinHeightProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_MinHeightProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MaxHeightProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MaxHeightProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_MaxHeightProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::HorizontalAlignmentProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::HorizontalAlignmentProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_HorizontalAlignmentProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::VerticalAlignmentProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::VerticalAlignmentProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_VerticalAlignmentProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MarginProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::MarginProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_MarginProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::NameProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::NameProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_NameProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::DataContextProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::DataContextProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_DataContextProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::StyleProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::StyleProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_StyleProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::FlowDirectionProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics<D>::FlowDirectionProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics)->get_FlowDirectionProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics2<D>::RequestedThemeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics2<D>::RequestedThemeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics2)->get_RequestedThemeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::AllowFocusOnInteractionProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::AllowFocusOnInteractionProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics4)->get_AllowFocusOnInteractionProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualMarginProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualMarginProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics4)->get_FocusVisualMarginProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualSecondaryThicknessProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualSecondaryThicknessProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics4)->get_FocusVisualSecondaryThicknessProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualPrimaryThicknessProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualPrimaryThicknessProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics4)->get_FocusVisualPrimaryThicknessProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualSecondaryBrushProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualSecondaryBrushProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics4)->get_FocusVisualSecondaryBrushProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualPrimaryBrushProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::FocusVisualPrimaryBrushProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics4)->get_FocusVisualPrimaryBrushProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::AllowFocusWhenDisabledProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics4<D>::AllowFocusWhenDisabledProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics4)->get_AllowFocusWhenDisabledProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics5<D>::DeferTree(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElementStatics5<D>::DeferTree(Windows::UI::Xaml::DependencyObject const& element) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics5)->DeferTree(*(void**)(&element)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkElementStatics6<D>::ActualThemeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IFrameworkElementStatics6<D>::ActualThemeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkElementStatics6)->get_ActualThemeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IFrameworkTemplateFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FrameworkTemplate) consume_Windows_UI_Xaml_IFrameworkTemplateFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IFrameworkTemplateFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::FrameworkTemplate{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::Auto() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::GridLength) consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::Auto() const
     {
-        Windows::UI::Xaml::GridLength value;
+        Windows::UI::Xaml::GridLength value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IGridLengthHelperStatics)->get_Auto(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::FromPixels(double pixels) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::GridLength) consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::FromPixels(double pixels) const
     {
-        Windows::UI::Xaml::GridLength result;
+        Windows::UI::Xaml::GridLength result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IGridLengthHelperStatics)->FromPixels(pixels, put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::FromValueAndType(double value, Windows::UI::Xaml::GridUnitType const& type) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::GridLength) consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::FromValueAndType(double value, Windows::UI::Xaml::GridUnitType const& type) const
     {
-        Windows::UI::Xaml::GridLength result;
+        Windows::UI::Xaml::GridLength result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IGridLengthHelperStatics)->FromValueAndType(value, static_cast<int32_t>(type), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::GetIsAbsolute(Windows::UI::Xaml::GridLength const& target) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::GetIsAbsolute(Windows::UI::Xaml::GridLength const& target) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IGridLengthHelperStatics)->GetIsAbsolute(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::GetIsAuto(Windows::UI::Xaml::GridLength const& target) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::GetIsAuto(Windows::UI::Xaml::GridLength const& target) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IGridLengthHelperStatics)->GetIsAuto(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::GetIsStar(Windows::UI::Xaml::GridLength const& target) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::GetIsStar(Windows::UI::Xaml::GridLength const& target) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IGridLengthHelperStatics)->GetIsStar(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::Equals(Windows::UI::Xaml::GridLength const& target, Windows::UI::Xaml::GridLength const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IGridLengthHelperStatics<D>::Equals(Windows::UI::Xaml::GridLength const& target, Windows::UI::Xaml::GridLength const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IGridLengthHelperStatics)->Equals(impl::bind_in(target), impl::bind_in(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IMediaFailedRoutedEventArgs<D>::ErrorTrace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IMediaFailedRoutedEventArgs<D>::ErrorTrace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IMediaFailedRoutedEventArgs)->get_ErrorTrace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPointHelperStatics<D>::FromCoordinates(float x, float y) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_UI_Xaml_IPointHelperStatics<D>::FromCoordinates(float x, float y) const
     {
-        Windows::Foundation::Point result;
+        Windows::Foundation::Point result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPointHelperStatics)->FromCoordinates(x, y, put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyMetadata<D>::DefaultValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IPropertyMetadata<D>::DefaultValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyMetadata)->get_DefaultValue(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyMetadata<D>::CreateDefaultValueCallback() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::CreateDefaultValueCallback) consume_Windows_UI_Xaml_IPropertyMetadata<D>::CreateDefaultValueCallback() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyMetadata)->get_CreateDefaultValueCallback(&value));
         return Windows::UI::Xaml::CreateDefaultValueCallback{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyMetadataFactory<D>::CreateInstanceWithDefaultValue(Windows::Foundation::IInspectable const& defaultValue, Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::PropertyMetadata) consume_Windows_UI_Xaml_IPropertyMetadataFactory<D>::CreateInstanceWithDefaultValue(Windows::Foundation::IInspectable const& defaultValue, Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyMetadataFactory)->CreateInstanceWithDefaultValue(*(void**)(&defaultValue), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::PropertyMetadata{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyMetadataFactory<D>::CreateInstanceWithDefaultValueAndCallback(Windows::Foundation::IInspectable const& defaultValue, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback, Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::PropertyMetadata) consume_Windows_UI_Xaml_IPropertyMetadataFactory<D>::CreateInstanceWithDefaultValueAndCallback(Windows::Foundation::IInspectable const& defaultValue, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback, Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyMetadataFactory)->CreateInstanceWithDefaultValueAndCallback(*(void**)(&defaultValue), *(void**)(&propertyChangedCallback), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::PropertyMetadata{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyMetadataStatics<D>::Create(Windows::Foundation::IInspectable const& defaultValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::PropertyMetadata) consume_Windows_UI_Xaml_IPropertyMetadataStatics<D>::Create(Windows::Foundation::IInspectable const& defaultValue) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyMetadataStatics)->CreateWithDefaultValue(*(void**)(&defaultValue), &result));
         return Windows::UI::Xaml::PropertyMetadata{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyMetadataStatics<D>::Create(Windows::Foundation::IInspectable const& defaultValue, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::PropertyMetadata) consume_Windows_UI_Xaml_IPropertyMetadataStatics<D>::Create(Windows::Foundation::IInspectable const& defaultValue, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyMetadataStatics)->CreateWithDefaultValueAndCallback(*(void**)(&defaultValue), *(void**)(&propertyChangedCallback), &result));
         return Windows::UI::Xaml::PropertyMetadata{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyMetadataStatics<D>::Create(Windows::UI::Xaml::CreateDefaultValueCallback const& createDefaultValueCallback) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::PropertyMetadata) consume_Windows_UI_Xaml_IPropertyMetadataStatics<D>::Create(Windows::UI::Xaml::CreateDefaultValueCallback const& createDefaultValueCallback) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyMetadataStatics)->CreateWithFactory(*(void**)(&createDefaultValueCallback), &result));
         return Windows::UI::Xaml::PropertyMetadata{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyMetadataStatics<D>::Create(Windows::UI::Xaml::CreateDefaultValueCallback const& createDefaultValueCallback, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::PropertyMetadata) consume_Windows_UI_Xaml_IPropertyMetadataStatics<D>::Create(Windows::UI::Xaml::CreateDefaultValueCallback const& createDefaultValueCallback, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyMetadataStatics)->CreateWithFactoryAndCallback(*(void**)(&createDefaultValueCallback), *(void**)(&propertyChangedCallback), &result));
         return Windows::UI::Xaml::PropertyMetadata{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyPath<D>::Path() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IPropertyPath<D>::Path() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyPath)->get_Path(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IPropertyPathFactory<D>::CreateInstance(param::hstring const& path) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::PropertyPath) consume_Windows_UI_Xaml_IPropertyPathFactory<D>::CreateInstance(param::hstring const& path) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IPropertyPathFactory)->CreateInstance(*(void**)(&path), &value));
         return Windows::UI::Xaml::PropertyPath{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::Empty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IRectHelperStatics<D>::Empty() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->get_Empty(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::FromCoordinatesAndDimensions(float x, float y, float width, float height) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IRectHelperStatics<D>::FromCoordinatesAndDimensions(float x, float y, float width, float height) const
     {
-        Windows::Foundation::Rect result;
+        Windows::Foundation::Rect result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->FromCoordinatesAndDimensions(x, y, width, height, put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::FromPoints(Windows::Foundation::Point const& point1, Windows::Foundation::Point const& point2) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IRectHelperStatics<D>::FromPoints(Windows::Foundation::Point const& point1, Windows::Foundation::Point const& point2) const
     {
-        Windows::Foundation::Rect result;
+        Windows::Foundation::Rect result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->FromPoints(impl::bind_in(point1), impl::bind_in(point2), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::FromLocationAndSize(Windows::Foundation::Point const& location, Windows::Foundation::Size const& size) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IRectHelperStatics<D>::FromLocationAndSize(Windows::Foundation::Point const& location, Windows::Foundation::Size const& size) const
     {
-        Windows::Foundation::Rect result;
+        Windows::Foundation::Rect result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->FromLocationAndSize(impl::bind_in(location), impl::bind_in(size), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetIsEmpty(Windows::Foundation::Rect const& target) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetIsEmpty(Windows::Foundation::Rect const& target) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->GetIsEmpty(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetBottom(Windows::Foundation::Rect const& target) const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetBottom(Windows::Foundation::Rect const& target) const
     {
-        float result;
+        float result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->GetBottom(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetLeft(Windows::Foundation::Rect const& target) const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetLeft(Windows::Foundation::Rect const& target) const
     {
-        float result;
+        float result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->GetLeft(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetRight(Windows::Foundation::Rect const& target) const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetRight(Windows::Foundation::Rect const& target) const
     {
-        float result;
+        float result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->GetRight(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetTop(Windows::Foundation::Rect const& target) const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Xaml_IRectHelperStatics<D>::GetTop(Windows::Foundation::Rect const& target) const
     {
-        float result;
+        float result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->GetTop(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::Contains(Windows::Foundation::Rect const& target, Windows::Foundation::Point const& point) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IRectHelperStatics<D>::Contains(Windows::Foundation::Rect const& target, Windows::Foundation::Point const& point) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->Contains(impl::bind_in(target), impl::bind_in(point), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::Equals(Windows::Foundation::Rect const& target, Windows::Foundation::Rect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IRectHelperStatics<D>::Equals(Windows::Foundation::Rect const& target, Windows::Foundation::Rect const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->Equals(impl::bind_in(target), impl::bind_in(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::Intersect(Windows::Foundation::Rect const& target, Windows::Foundation::Rect const& rect) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IRectHelperStatics<D>::Intersect(Windows::Foundation::Rect const& target, Windows::Foundation::Rect const& rect) const
     {
-        Windows::Foundation::Rect result;
+        Windows::Foundation::Rect result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->Intersect(impl::bind_in(target), impl::bind_in(rect), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::Union(Windows::Foundation::Rect const& target, Windows::Foundation::Point const& point) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IRectHelperStatics<D>::Union(Windows::Foundation::Rect const& target, Windows::Foundation::Point const& point) const
     {
-        Windows::Foundation::Rect result;
+        Windows::Foundation::Rect result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->UnionWithPoint(impl::bind_in(target), impl::bind_in(point), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRectHelperStatics<D>::Union(Windows::Foundation::Rect const& target, Windows::Foundation::Rect const& rect) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IRectHelperStatics<D>::Union(Windows::Foundation::Rect const& target, Windows::Foundation::Rect const& rect) const
     {
-        Windows::Foundation::Rect result;
+        Windows::Foundation::Rect result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRectHelperStatics)->UnionWithRect(impl::bind_in(target), impl::bind_in(rect), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IResourceDictionary<D>::Source() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_UI_Xaml_IResourceDictionary<D>::Source() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IResourceDictionary)->get_Source(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IResourceDictionary<D>::Source(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IResourceDictionary<D>::Source(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IResourceDictionary)->put_Source(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IResourceDictionary<D>::MergedDictionaries() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::ResourceDictionary>) consume_Windows_UI_Xaml_IResourceDictionary<D>::MergedDictionaries() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IResourceDictionary)->get_MergedDictionaries(&value));
         return Windows::Foundation::Collections::IVector<Windows::UI::Xaml::ResourceDictionary>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IResourceDictionary<D>::ThemeDictionaries() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<Windows::Foundation::IInspectable, Windows::Foundation::IInspectable>) consume_Windows_UI_Xaml_IResourceDictionary<D>::ThemeDictionaries() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IResourceDictionary)->get_ThemeDictionaries(&value));
         return Windows::Foundation::Collections::IMap<Windows::Foundation::IInspectable, Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IResourceDictionaryFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ResourceDictionary) consume_Windows_UI_Xaml_IResourceDictionaryFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IResourceDictionaryFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::ResourceDictionary{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRoutedEventArgs<D>::OriginalSource() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IRoutedEventArgs<D>::OriginalSource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRoutedEventArgs)->get_OriginalSource(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IRoutedEventArgsFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEventArgs) consume_Windows_UI_Xaml_IRoutedEventArgsFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IRoutedEventArgsFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::RoutedEventArgs{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IScalarTransition<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_UI_Xaml_IScalarTransition<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IScalarTransition)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IScalarTransition<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IScalarTransition<D>::Duration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IScalarTransition)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IScalarTransitionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ScalarTransition) consume_Windows_UI_Xaml_IScalarTransitionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IScalarTransitionFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::ScalarTransition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISetter<D>::Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_ISetter<D>::Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISetter)->get_Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISetter<D>::Property(Windows::UI::Xaml::DependencyProperty const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_ISetter<D>::Property(Windows::UI::Xaml::DependencyProperty const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISetter)->put_Property(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISetter<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_ISetter<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISetter)->get_Value(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISetter<D>::Value(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_ISetter<D>::Value(Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISetter)->put_Value(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISetter2<D>::Target() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::TargetPropertyPath) consume_Windows_UI_Xaml_ISetter2<D>::Target() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISetter2)->get_Target(&value));
         return Windows::UI::Xaml::TargetPropertyPath{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISetter2<D>::Target(Windows::UI::Xaml::TargetPropertyPath const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_ISetter2<D>::Target(Windows::UI::Xaml::TargetPropertyPath const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISetter2)->put_Target(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISetterBase<D>::IsSealed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_ISetterBase<D>::IsSealed() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISetterBase)->get_IsSealed(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISetterBaseCollection<D>::IsSealed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_ISetterBaseCollection<D>::IsSealed() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISetterBaseCollection)->get_IsSealed(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISetterFactory<D>::CreateInstance(Windows::UI::Xaml::DependencyProperty const& targetProperty, Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Setter) consume_Windows_UI_Xaml_ISetterFactory<D>::CreateInstance(Windows::UI::Xaml::DependencyProperty const& targetProperty, Windows::Foundation::IInspectable const& value) const
     {
         void* instance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISetterFactory)->CreateInstance(*(void**)(&targetProperty), *(void**)(&value), &instance));
         return Windows::UI::Xaml::Setter{ instance, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISizeChangedEventArgs<D>::PreviousSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_Xaml_ISizeChangedEventArgs<D>::PreviousSize() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISizeChangedEventArgs)->get_PreviousSize(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISizeChangedEventArgs<D>::NewSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_Xaml_ISizeChangedEventArgs<D>::NewSize() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISizeChangedEventArgs)->get_NewSize(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISizeHelperStatics<D>::Empty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_Xaml_ISizeHelperStatics<D>::Empty() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISizeHelperStatics)->get_Empty(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISizeHelperStatics<D>::FromDimensions(float width, float height) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_Xaml_ISizeHelperStatics<D>::FromDimensions(float width, float height) const
     {
-        Windows::Foundation::Size result;
+        Windows::Foundation::Size result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISizeHelperStatics)->FromDimensions(width, height, put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISizeHelperStatics<D>::GetIsEmpty(Windows::Foundation::Size const& target) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_ISizeHelperStatics<D>::GetIsEmpty(Windows::Foundation::Size const& target) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISizeHelperStatics)->GetIsEmpty(impl::bind_in(target), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ISizeHelperStatics<D>::Equals(Windows::Foundation::Size const& target, Windows::Foundation::Size const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_ISizeHelperStatics<D>::Equals(Windows::Foundation::Size const& target, Windows::Foundation::Size const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ISizeHelperStatics)->Equals(impl::bind_in(target), impl::bind_in(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStateTrigger<D>::IsActive() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IStateTrigger<D>::IsActive() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStateTrigger)->get_IsActive(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStateTrigger<D>::IsActive(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IStateTrigger<D>::IsActive(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStateTrigger)->put_IsActive(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStateTriggerBaseFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::StateTriggerBase) consume_Windows_UI_Xaml_IStateTriggerBaseFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStateTriggerBaseFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::StateTriggerBase{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStateTriggerBaseProtected<D>::SetActive(bool IsActive) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IStateTriggerBaseProtected<D>::SetActive(bool IsActive) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStateTriggerBaseProtected)->SetActive(IsActive));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStateTriggerStatics<D>::IsActiveProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IStateTriggerStatics<D>::IsActiveProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStateTriggerStatics)->get_IsActiveProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStyle<D>::IsSealed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IStyle<D>::IsSealed() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStyle)->get_IsSealed(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStyle<D>::Setters() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::SetterBaseCollection) consume_Windows_UI_Xaml_IStyle<D>::Setters() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStyle)->get_Setters(&value));
         return Windows::UI::Xaml::SetterBaseCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStyle<D>::TargetType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::TypeName) consume_Windows_UI_Xaml_IStyle<D>::TargetType() const
     {
-        Windows::UI::Xaml::Interop::TypeName value;
+        Windows::UI::Xaml::Interop::TypeName value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStyle)->get_TargetType(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStyle<D>::TargetType(Windows::UI::Xaml::Interop::TypeName const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IStyle<D>::TargetType(Windows::UI::Xaml::Interop::TypeName const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStyle)->put_TargetType(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStyle<D>::BasedOn() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Style) consume_Windows_UI_Xaml_IStyle<D>::BasedOn() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStyle)->get_BasedOn(&value));
         return Windows::UI::Xaml::Style{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStyle<D>::BasedOn(Windows::UI::Xaml::Style const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IStyle<D>::BasedOn(Windows::UI::Xaml::Style const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStyle)->put_BasedOn(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStyle<D>::Seal() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IStyle<D>::Seal() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStyle)->Seal());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IStyleFactory<D>::CreateInstance(Windows::UI::Xaml::Interop::TypeName const& targetType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Style) consume_Windows_UI_Xaml_IStyleFactory<D>::CreateInstance(Windows::UI::Xaml::Interop::TypeName const& targetType) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IStyleFactory)->CreateInstance(impl::bind_in(targetType), &value));
         return Windows::UI::Xaml::Style{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ITargetPropertyPath<D>::Path() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::PropertyPath) consume_Windows_UI_Xaml_ITargetPropertyPath<D>::Path() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ITargetPropertyPath)->get_Path(&value));
         return Windows::UI::Xaml::PropertyPath{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ITargetPropertyPath<D>::Path(Windows::UI::Xaml::PropertyPath const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_ITargetPropertyPath<D>::Path(Windows::UI::Xaml::PropertyPath const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ITargetPropertyPath)->put_Path(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ITargetPropertyPath<D>::Target() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_ITargetPropertyPath<D>::Target() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ITargetPropertyPath)->get_Target(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ITargetPropertyPath<D>::Target(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_ITargetPropertyPath<D>::Target(Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ITargetPropertyPath)->put_Target(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_ITargetPropertyPathFactory<D>::CreateInstance(Windows::UI::Xaml::DependencyProperty const& targetProperty) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::TargetPropertyPath) consume_Windows_UI_Xaml_ITargetPropertyPathFactory<D>::CreateInstance(Windows::UI::Xaml::DependencyProperty const& targetProperty) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::ITargetPropertyPathFactory)->CreateInstance(*(void**)(&targetProperty), &value));
         return Windows::UI::Xaml::TargetPropertyPath{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IThicknessHelperStatics<D>::FromLengths(double left, double top, double right, double bottom) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) consume_Windows_UI_Xaml_IThicknessHelperStatics<D>::FromLengths(double left, double top, double right, double bottom) const
     {
-        Windows::UI::Xaml::Thickness result;
+        Windows::UI::Xaml::Thickness result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IThicknessHelperStatics)->FromLengths(left, top, right, bottom, put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IThicknessHelperStatics<D>::FromUniformLength(double uniformLength) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) consume_Windows_UI_Xaml_IThicknessHelperStatics<D>::FromUniformLength(double uniformLength) const
     {
-        Windows::UI::Xaml::Thickness result;
+        Windows::UI::Xaml::Thickness result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IThicknessHelperStatics)->FromUniformLength(uniformLength, put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::DesiredSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_Xaml_IUIElement<D>::DesiredSize() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_DesiredSize(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::AllowDrop() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement<D>::AllowDrop() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_AllowDrop(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::AllowDrop(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::AllowDrop(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_AllowDrop(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Opacity() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IUIElement<D>::Opacity() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_Opacity(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Opacity(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Opacity(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_Opacity(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Clip() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::RectangleGeometry) consume_Windows_UI_Xaml_IUIElement<D>::Clip() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_Clip(&value));
         return Windows::UI::Xaml::Media::RectangleGeometry{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Clip(Windows::UI::Xaml::Media::RectangleGeometry const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Clip(Windows::UI::Xaml::Media::RectangleGeometry const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_Clip(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::RenderTransform() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Transform) consume_Windows_UI_Xaml_IUIElement<D>::RenderTransform() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_RenderTransform(&value));
         return Windows::UI::Xaml::Media::Transform{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::RenderTransform(Windows::UI::Xaml::Media::Transform const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::RenderTransform(Windows::UI::Xaml::Media::Transform const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_RenderTransform(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Projection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Projection) consume_Windows_UI_Xaml_IUIElement<D>::Projection() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_Projection(&value));
         return Windows::UI::Xaml::Media::Projection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Projection(Windows::UI::Xaml::Media::Projection const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Projection(Windows::UI::Xaml::Media::Projection const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_Projection(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::RenderTransformOrigin() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_UI_Xaml_IUIElement<D>::RenderTransformOrigin() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_RenderTransformOrigin(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::RenderTransformOrigin(Windows::Foundation::Point const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::RenderTransformOrigin(Windows::Foundation::Point const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_RenderTransformOrigin(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsHitTestVisible() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement<D>::IsHitTestVisible() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_IsHitTestVisible(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsHitTestVisible(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::IsHitTestVisible(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_IsHitTestVisible(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Visibility() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Visibility) consume_Windows_UI_Xaml_IUIElement<D>::Visibility() const
     {
-        Windows::UI::Xaml::Visibility value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_Visibility(put_abi(value)));
+        Windows::UI::Xaml::Visibility value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_Visibility(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Visibility(Windows::UI::Xaml::Visibility const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Visibility(Windows::UI::Xaml::Visibility const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_Visibility(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::RenderSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_Xaml_IUIElement<D>::RenderSize() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_RenderSize(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::UseLayoutRounding() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement<D>::UseLayoutRounding() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_UseLayoutRounding(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::UseLayoutRounding(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::UseLayoutRounding(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_UseLayoutRounding(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Transitions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Animation::TransitionCollection) consume_Windows_UI_Xaml_IUIElement<D>::Transitions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_Transitions(&value));
         return Windows::UI::Xaml::Media::Animation::TransitionCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Transitions(Windows::UI::Xaml::Media::Animation::TransitionCollection const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Transitions(Windows::UI::Xaml::Media::Animation::TransitionCollection const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_Transitions(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::CacheMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::CacheMode) consume_Windows_UI_Xaml_IUIElement<D>::CacheMode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_CacheMode(&value));
         return Windows::UI::Xaml::Media::CacheMode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::CacheMode(Windows::UI::Xaml::Media::CacheMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::CacheMode(Windows::UI::Xaml::Media::CacheMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_CacheMode(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsTapEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement<D>::IsTapEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_IsTapEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsTapEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::IsTapEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_IsTapEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsDoubleTapEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement<D>::IsDoubleTapEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_IsDoubleTapEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsDoubleTapEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::IsDoubleTapEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_IsDoubleTapEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsRightTapEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement<D>::IsRightTapEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_IsRightTapEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsRightTapEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::IsRightTapEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_IsRightTapEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsHoldingEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement<D>::IsHoldingEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_IsHoldingEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::IsHoldingEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::IsHoldingEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_IsHoldingEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::ManipulationModes) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationMode() const
     {
-        Windows::UI::Xaml::Input::ManipulationModes value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_ManipulationMode(put_abi(value)));
+        Windows::UI::Xaml::Input::ManipulationModes value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_ManipulationMode(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationMode(Windows::UI::Xaml::Input::ManipulationModes const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationMode(Windows::UI::Xaml::Input::ManipulationModes const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->put_ManipulationMode(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerCaptures() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Input::Pointer>) consume_Windows_UI_Xaml_IUIElement<D>::PointerCaptures() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->get_PointerCaptures(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::UI::Xaml::Input::Pointer>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::KeyUp(Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::KeyUp(Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_KeyUp(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2634,13 +2634,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, KeyUp_revoker>(this, KeyUp(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::KeyUp(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::KeyUp(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_KeyUp(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::KeyDown(Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::KeyDown(Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_KeyDown(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2648,13 +2648,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, KeyDown_revoker>(this, KeyDown(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::KeyDown(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::KeyDown(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_KeyDown(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_GotFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2662,13 +2662,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GotFocus_revoker>(this, GotFocus(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::GotFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::GotFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_GotFocus(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_LostFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2676,13 +2676,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LostFocus_revoker>(this, LostFocus(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::LostFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::LostFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_LostFocus(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::DragEnter(Windows::UI::Xaml::DragEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::DragEnter(Windows::UI::Xaml::DragEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_DragEnter(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2690,13 +2690,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DragEnter_revoker>(this, DragEnter(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::DragEnter(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::DragEnter(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_DragEnter(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::DragLeave(Windows::UI::Xaml::DragEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::DragLeave(Windows::UI::Xaml::DragEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_DragLeave(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2704,13 +2704,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DragLeave_revoker>(this, DragLeave(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::DragLeave(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::DragLeave(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_DragLeave(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::DragOver(Windows::UI::Xaml::DragEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::DragOver(Windows::UI::Xaml::DragEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_DragOver(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2718,13 +2718,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DragOver_revoker>(this, DragOver(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::DragOver(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::DragOver(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_DragOver(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Drop(Windows::UI::Xaml::DragEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::Drop(Windows::UI::Xaml::DragEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_Drop(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2732,13 +2732,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Drop_revoker>(this, Drop(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Drop(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Drop(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_Drop(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerPressed(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerPressed(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_PointerPressed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2746,13 +2746,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PointerPressed_revoker>(this, PointerPressed(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerPressed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerPressed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_PointerPressed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerMoved(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerMoved(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_PointerMoved(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2760,13 +2760,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PointerMoved_revoker>(this, PointerMoved(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerMoved(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerMoved(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_PointerMoved(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerReleased(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerReleased(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_PointerReleased(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2774,13 +2774,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PointerReleased_revoker>(this, PointerReleased(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerReleased(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerReleased(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_PointerReleased(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerEntered(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerEntered(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_PointerEntered(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2788,13 +2788,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PointerEntered_revoker>(this, PointerEntered(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerEntered(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerEntered(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_PointerEntered(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerExited(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerExited(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_PointerExited(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2802,13 +2802,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PointerExited_revoker>(this, PointerExited(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerExited(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerExited(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_PointerExited(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerCaptureLost(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerCaptureLost(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_PointerCaptureLost(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2816,13 +2816,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PointerCaptureLost_revoker>(this, PointerCaptureLost(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerCaptureLost(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerCaptureLost(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_PointerCaptureLost(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerCanceled(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerCanceled(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_PointerCanceled(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2830,13 +2830,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PointerCanceled_revoker>(this, PointerCanceled(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerCanceled(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerCanceled(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_PointerCanceled(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerWheelChanged(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerWheelChanged(Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_PointerWheelChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2844,13 +2844,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PointerWheelChanged_revoker>(this, PointerWheelChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::PointerWheelChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerWheelChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_PointerWheelChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Tapped(Windows::UI::Xaml::Input::TappedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::Tapped(Windows::UI::Xaml::Input::TappedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_Tapped(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2858,13 +2858,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Tapped_revoker>(this, Tapped(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Tapped(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Tapped(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_Tapped(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::DoubleTapped(Windows::UI::Xaml::Input::DoubleTappedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::DoubleTapped(Windows::UI::Xaml::Input::DoubleTappedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_DoubleTapped(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2872,13 +2872,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DoubleTapped_revoker>(this, DoubleTapped(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::DoubleTapped(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::DoubleTapped(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_DoubleTapped(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Holding(Windows::UI::Xaml::Input::HoldingEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::Holding(Windows::UI::Xaml::Input::HoldingEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_Holding(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2886,13 +2886,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Holding_revoker>(this, Holding(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Holding(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Holding(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_Holding(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::RightTapped(Windows::UI::Xaml::Input::RightTappedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::RightTapped(Windows::UI::Xaml::Input::RightTappedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_RightTapped(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2900,13 +2900,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RightTapped_revoker>(this, RightTapped(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::RightTapped(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::RightTapped(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_RightTapped(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarting(Windows::UI::Xaml::Input::ManipulationStartingEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarting(Windows::UI::Xaml::Input::ManipulationStartingEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_ManipulationStarting(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2914,13 +2914,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ManipulationStarting_revoker>(this, ManipulationStarting(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarting(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarting(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_ManipulationStarting(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationInertiaStarting(Windows::UI::Xaml::Input::ManipulationInertiaStartingEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationInertiaStarting(Windows::UI::Xaml::Input::ManipulationInertiaStartingEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_ManipulationInertiaStarting(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2928,13 +2928,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ManipulationInertiaStarting_revoker>(this, ManipulationInertiaStarting(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationInertiaStarting(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationInertiaStarting(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_ManipulationInertiaStarting(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarted(Windows::UI::Xaml::Input::ManipulationStartedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarted(Windows::UI::Xaml::Input::ManipulationStartedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_ManipulationStarted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2942,13 +2942,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ManipulationStarted_revoker>(this, ManipulationStarted(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_ManipulationStarted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationDelta(Windows::UI::Xaml::Input::ManipulationDeltaEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationDelta(Windows::UI::Xaml::Input::ManipulationDeltaEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_ManipulationDelta(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2956,13 +2956,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ManipulationDelta_revoker>(this, ManipulationDelta(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationDelta(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationDelta(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_ManipulationDelta(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationCompleted(Windows::UI::Xaml::Input::ManipulationCompletedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationCompleted(Windows::UI::Xaml::Input::ManipulationCompletedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->add_ManipulationCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2970,135 +2970,135 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ManipulationCompleted_revoker>(this, ManipulationCompleted(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ManipulationCompleted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationCompleted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->remove_ManipulationCompleted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Measure(Windows::Foundation::Size const& availableSize) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Measure(Windows::Foundation::Size const& availableSize) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->Measure(impl::bind_in(availableSize)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::Arrange(Windows::Foundation::Rect const& finalRect) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Arrange(Windows::Foundation::Rect const& finalRect) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->Arrange(impl::bind_in(finalRect)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::CapturePointer(Windows::UI::Xaml::Input::Pointer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement<D>::CapturePointer(Windows::UI::Xaml::Input::Pointer const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->CapturePointer(*(void**)(&value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ReleasePointerCapture(Windows::UI::Xaml::Input::Pointer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ReleasePointerCapture(Windows::UI::Xaml::Input::Pointer const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->ReleasePointerCapture(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::ReleasePointerCaptures() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ReleasePointerCaptures() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->ReleasePointerCaptures());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::AddHandler(Windows::UI::Xaml::RoutedEvent const& routedEvent, Windows::Foundation::IInspectable const& handler, bool handledEventsToo) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::AddHandler(Windows::UI::Xaml::RoutedEvent const& routedEvent, Windows::Foundation::IInspectable const& handler, bool handledEventsToo) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->AddHandler(*(void**)(&routedEvent), *(void**)(&handler), handledEventsToo));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::RemoveHandler(Windows::UI::Xaml::RoutedEvent const& routedEvent, Windows::Foundation::IInspectable const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::RemoveHandler(Windows::UI::Xaml::RoutedEvent const& routedEvent, Windows::Foundation::IInspectable const& handler) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->RemoveHandler(*(void**)(&routedEvent), *(void**)(&handler)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::TransformToVisual(Windows::UI::Xaml::UIElement const& visual) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::GeneralTransform) consume_Windows_UI_Xaml_IUIElement<D>::TransformToVisual(Windows::UI::Xaml::UIElement const& visual) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->TransformToVisual(*(void**)(&visual), &result));
         return Windows::UI::Xaml::Media::GeneralTransform{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::InvalidateMeasure() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::InvalidateMeasure() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->InvalidateMeasure());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::InvalidateArrange() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::InvalidateArrange() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->InvalidateArrange());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement<D>::UpdateLayout() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::UpdateLayout() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement)->UpdateLayout());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement10<D>::ActualOffset() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Xaml_IUIElement10<D>::ActualOffset() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement10)->get_ActualOffset(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement10<D>::ActualSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float2) consume_Windows_UI_Xaml_IUIElement10<D>::ActualSize() const
     {
-        Windows::Foundation::Numerics::float2 value;
+        Windows::Foundation::Numerics::float2 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement10)->get_ActualSize(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement10<D>::XamlRoot() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::XamlRoot) consume_Windows_UI_Xaml_IUIElement10<D>::XamlRoot() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement10)->get_XamlRoot(&value));
         return Windows::UI::Xaml::XamlRoot{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement10<D>::XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement10<D>::XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement10)->put_XamlRoot(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement10<D>::UIContext() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::UIContext) consume_Windows_UI_Xaml_IUIElement10<D>::UIContext() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement10)->get_UIContext(&value));
         return Windows::UI::UIContext{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement10<D>::Shadow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Shadow) consume_Windows_UI_Xaml_IUIElement10<D>::Shadow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement10)->get_Shadow(&value));
         return Windows::UI::Xaml::Media::Shadow{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement10<D>::Shadow(Windows::UI::Xaml::Media::Shadow const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement10<D>::Shadow(Windows::UI::Xaml::Media::Shadow const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement10)->put_Shadow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement2<D>::CompositeMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::ElementCompositeMode) consume_Windows_UI_Xaml_IUIElement2<D>::CompositeMode() const
     {
-        Windows::UI::Xaml::Media::ElementCompositeMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement2)->get_CompositeMode(put_abi(value)));
+        Windows::UI::Xaml::Media::ElementCompositeMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement2)->get_CompositeMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement2<D>::CompositeMode(Windows::UI::Xaml::Media::ElementCompositeMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement2<D>::CompositeMode(Windows::UI::Xaml::Media::ElementCompositeMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement2)->put_CompositeMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement2<D>::CancelDirectManipulations() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement2<D>::CancelDirectManipulations() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement2)->CancelDirectManipulations(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement3<D>::Transform3D() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Media3D::Transform3D) consume_Windows_UI_Xaml_IUIElement3<D>::Transform3D() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement3)->get_Transform3D(&value));
         return Windows::UI::Xaml::Media::Media3D::Transform3D{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement3<D>::Transform3D(Windows::UI::Xaml::Media::Media3D::Transform3D const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement3<D>::Transform3D(Windows::UI::Xaml::Media::Media3D::Transform3D const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement3)->put_Transform3D(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement3<D>::CanDrag() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement3<D>::CanDrag() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement3)->get_CanDrag(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement3<D>::CanDrag(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement3<D>::CanDrag(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement3)->put_CanDrag(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement3<D>::DragStarting(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DragStartingEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement3<D>::DragStarting(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DragStartingEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement3)->add_DragStarting(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3106,13 +3106,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DragStarting_revoker>(this, DragStarting(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement3<D>::DragStarting(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement3<D>::DragStarting(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement3)->remove_DragStarting(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement3<D>::DropCompleted(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DropCompletedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement3<D>::DropCompleted(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DropCompletedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement3)->add_DropCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3120,69 +3120,69 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DropCompleted_revoker>(this, DropCompleted(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement3<D>::DropCompleted(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement3<D>::DropCompleted(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement3)->remove_DropCompleted(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement3<D>::StartDragAsync(Windows::UI::Input::PointerPoint const& pointerPoint) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::DataTransfer::DataPackageOperation>) consume_Windows_UI_Xaml_IUIElement3<D>::StartDragAsync(Windows::UI::Input::PointerPoint const& pointerPoint) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement3)->StartDragAsync(*(void**)(&pointerPoint), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::DataTransfer::DataPackageOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::ContextFlyout() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Primitives::FlyoutBase) consume_Windows_UI_Xaml_IUIElement4<D>::ContextFlyout() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->get_ContextFlyout(&value));
         return Windows::UI::Xaml::Controls::Primitives::FlyoutBase{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::ContextFlyout(Windows::UI::Xaml::Controls::Primitives::FlyoutBase const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::ContextFlyout(Windows::UI::Xaml::Controls::Primitives::FlyoutBase const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->put_ContextFlyout(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::ExitDisplayModeOnAccessKeyInvoked() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement4<D>::ExitDisplayModeOnAccessKeyInvoked() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->get_ExitDisplayModeOnAccessKeyInvoked(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::ExitDisplayModeOnAccessKeyInvoked(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::ExitDisplayModeOnAccessKeyInvoked(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->put_ExitDisplayModeOnAccessKeyInvoked(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::IsAccessKeyScope() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement4<D>::IsAccessKeyScope() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->get_IsAccessKeyScope(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::IsAccessKeyScope(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::IsAccessKeyScope(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->put_IsAccessKeyScope(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyScopeOwner() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyScopeOwner() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->get_AccessKeyScopeOwner(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyScopeOwner(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyScopeOwner(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->put_AccessKeyScopeOwner(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKey() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKey() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->get_AccessKey(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKey(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKey(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->put_AccessKey(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::ContextRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::ContextRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement4<D>::ContextRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::ContextRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->add_ContextRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3190,13 +3190,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ContextRequested_revoker>(this, ContextRequested(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::ContextRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::ContextRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->remove_ContextRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::ContextCanceled(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::RoutedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement4<D>::ContextCanceled(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::RoutedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->add_ContextCanceled(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3204,13 +3204,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ContextCanceled_revoker>(this, ContextCanceled(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::ContextCanceled(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::ContextCanceled(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->remove_ContextCanceled(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->add_AccessKeyDisplayRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3218,13 +3218,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AccessKeyDisplayRequested_revoker>(this, AccessKeyDisplayRequested(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->remove_AccessKeyDisplayRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayDismissed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayDismissed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->add_AccessKeyDisplayDismissed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3232,13 +3232,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AccessKeyDisplayDismissed_revoker>(this, AccessKeyDisplayDismissed(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayDismissed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayDismissed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->remove_AccessKeyDisplayDismissed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->add_AccessKeyInvoked(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3246,119 +3246,119 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AccessKeyInvoked_revoker>(this, AccessKeyInvoked(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyInvoked(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyInvoked(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement4)->remove_AccessKeyInvoked(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::Lights() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Media::XamlLight>) consume_Windows_UI_Xaml_IUIElement5<D>::Lights() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_Lights(&value));
         return Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Media::XamlLight>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipPlacementMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::KeyTipPlacementMode) consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipPlacementMode() const
     {
-        Windows::UI::Xaml::Input::KeyTipPlacementMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_KeyTipPlacementMode(put_abi(value)));
+        Windows::UI::Xaml::Input::KeyTipPlacementMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_KeyTipPlacementMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipPlacementMode(Windows::UI::Xaml::Input::KeyTipPlacementMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipPlacementMode(Windows::UI::Xaml::Input::KeyTipPlacementMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_KeyTipPlacementMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipHorizontalOffset() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipHorizontalOffset() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_KeyTipHorizontalOffset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipHorizontalOffset(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipHorizontalOffset(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_KeyTipHorizontalOffset(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipVerticalOffset() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipVerticalOffset() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_KeyTipVerticalOffset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipVerticalOffset(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::KeyTipVerticalOffset(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_KeyTipVerticalOffset(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusKeyboardNavigation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusKeyboardNavigationMode) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusKeyboardNavigation() const
     {
-        Windows::UI::Xaml::Input::XYFocusKeyboardNavigationMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusKeyboardNavigation(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusKeyboardNavigationMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusKeyboardNavigation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusKeyboardNavigation(Windows::UI::Xaml::Input::XYFocusKeyboardNavigationMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusKeyboardNavigation(Windows::UI::Xaml::Input::XYFocusKeyboardNavigationMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_XYFocusKeyboardNavigation(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusUpNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusUpNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusUpNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusUpNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_XYFocusUpNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusDownNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusDownNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusDownNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusDownNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_XYFocusDownNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusLeftNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusLeftNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusLeftNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusLeftNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_XYFocusLeftNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusRightNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusRightNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusRightNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_XYFocusRightNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_XYFocusRightNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::HighContrastAdjustment() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementHighContrastAdjustment) consume_Windows_UI_Xaml_IUIElement5<D>::HighContrastAdjustment() const
     {
-        Windows::UI::Xaml::ElementHighContrastAdjustment value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_HighContrastAdjustment(put_abi(value)));
+        Windows::UI::Xaml::ElementHighContrastAdjustment value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_HighContrastAdjustment(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::HighContrastAdjustment(Windows::UI::Xaml::ElementHighContrastAdjustment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::HighContrastAdjustment(Windows::UI::Xaml::ElementHighContrastAdjustment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_HighContrastAdjustment(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::TabFocusNavigation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::KeyboardNavigationMode) consume_Windows_UI_Xaml_IUIElement5<D>::TabFocusNavigation() const
     {
-        Windows::UI::Xaml::Input::KeyboardNavigationMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_TabFocusNavigation(put_abi(value)));
+        Windows::UI::Xaml::Input::KeyboardNavigationMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->get_TabFocusNavigation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::TabFocusNavigation(Windows::UI::Xaml::Input::KeyboardNavigationMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::TabFocusNavigation(Windows::UI::Xaml::Input::KeyboardNavigationMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->put_TabFocusNavigation(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::GettingFocus(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::GettingFocusEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement5<D>::GettingFocus(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::GettingFocusEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->add_GettingFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3366,13 +3366,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GettingFocus_revoker>(this, GettingFocus(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::GettingFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::GettingFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->remove_GettingFocus(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::LosingFocus(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::LosingFocusEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement5<D>::LosingFocus(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::LosingFocusEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->add_LosingFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3380,13 +3380,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LosingFocus_revoker>(this, LosingFocus(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::LosingFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::LosingFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->remove_LosingFocus(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::NoFocusCandidateFound(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement5<D>::NoFocusCandidateFound(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->add_NoFocusCandidateFound(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3394,27 +3394,27 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, NoFocusCandidateFound_revoker>(this, NoFocusCandidateFound(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::NoFocusCandidateFound(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::NoFocusCandidateFound(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->remove_NoFocusCandidateFound(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::StartBringIntoView() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::StartBringIntoView() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->StartBringIntoView());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement5<D>::StartBringIntoView(Windows::UI::Xaml::BringIntoViewOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::StartBringIntoView(Windows::UI::Xaml::BringIntoViewOptions const& options) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement5)->StartBringIntoViewWithOptions(*(void**)(&options)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::KeyboardAccelerators() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Input::KeyboardAccelerator>) consume_Windows_UI_Xaml_IUIElement7<D>::KeyboardAccelerators() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->get_KeyboardAccelerators(&value));
         return Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Input::KeyboardAccelerator>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::CharacterReceived(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement7<D>::CharacterReceived(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->add_CharacterReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3422,13 +3422,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CharacterReceived_revoker>(this, CharacterReceived(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::CharacterReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::CharacterReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->remove_CharacterReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::ProcessKeyboardAccelerators(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement7<D>::ProcessKeyboardAccelerators(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->add_ProcessKeyboardAccelerators(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3436,13 +3436,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ProcessKeyboardAccelerators_revoker>(this, ProcessKeyboardAccelerators(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::ProcessKeyboardAccelerators(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::ProcessKeyboardAccelerators(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->remove_ProcessKeyboardAccelerators(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyDown(Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyDown(Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->add_PreviewKeyDown(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3450,13 +3450,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PreviewKeyDown_revoker>(this, PreviewKeyDown(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyDown(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyDown(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->remove_PreviewKeyDown(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyUp(Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyUp(Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->add_PreviewKeyUp(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3464,47 +3464,47 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PreviewKeyUp_revoker>(this, PreviewKeyUp(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyUp(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyUp(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->remove_PreviewKeyUp(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement7<D>::TryInvokeKeyboardAccelerator(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::TryInvokeKeyboardAccelerator(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement7)->TryInvokeKeyboardAccelerator(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement8<D>::KeyTipTarget() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_IUIElement8<D>::KeyTipTarget() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement8)->get_KeyTipTarget(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement8<D>::KeyTipTarget(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement8<D>::KeyTipTarget(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement8)->put_KeyTipTarget(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement8<D>::KeyboardAcceleratorPlacementTarget() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_IUIElement8<D>::KeyboardAcceleratorPlacementTarget() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement8)->get_KeyboardAcceleratorPlacementTarget(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement8<D>::KeyboardAcceleratorPlacementTarget(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement8<D>::KeyboardAcceleratorPlacementTarget(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement8)->put_KeyboardAcceleratorPlacementTarget(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement8<D>::KeyboardAcceleratorPlacementMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::KeyboardAcceleratorPlacementMode) consume_Windows_UI_Xaml_IUIElement8<D>::KeyboardAcceleratorPlacementMode() const
     {
-        Windows::UI::Xaml::Input::KeyboardAcceleratorPlacementMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement8)->get_KeyboardAcceleratorPlacementMode(put_abi(value)));
+        Windows::UI::Xaml::Input::KeyboardAcceleratorPlacementMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement8)->get_KeyboardAcceleratorPlacementMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement8<D>::KeyboardAcceleratorPlacementMode(Windows::UI::Xaml::Input::KeyboardAcceleratorPlacementMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement8<D>::KeyboardAcceleratorPlacementMode(Windows::UI::Xaml::Input::KeyboardAcceleratorPlacementMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement8)->put_KeyboardAcceleratorPlacementMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement8<D>::BringIntoViewRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::BringIntoViewRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement8<D>::BringIntoViewRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::UIElement, Windows::UI::Xaml::BringIntoViewRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement8)->add_BringIntoViewRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3512,747 +3512,747 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BringIntoViewRequested_revoker>(this, BringIntoViewRequested(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement8<D>::BringIntoViewRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement8<D>::BringIntoViewRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement8)->remove_BringIntoViewRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::CanBeScrollAnchor() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement9<D>::CanBeScrollAnchor() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_CanBeScrollAnchor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::CanBeScrollAnchor(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::CanBeScrollAnchor(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_CanBeScrollAnchor(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::OpacityTransition() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ScalarTransition) consume_Windows_UI_Xaml_IUIElement9<D>::OpacityTransition() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_OpacityTransition(&value));
         return Windows::UI::Xaml::ScalarTransition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::OpacityTransition(Windows::UI::Xaml::ScalarTransition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::OpacityTransition(Windows::UI::Xaml::ScalarTransition const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_OpacityTransition(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::Translation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Xaml_IUIElement9<D>::Translation() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_Translation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::Translation(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::Translation(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_Translation(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::TranslationTransition() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Vector3Transition) consume_Windows_UI_Xaml_IUIElement9<D>::TranslationTransition() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_TranslationTransition(&value));
         return Windows::UI::Xaml::Vector3Transition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::TranslationTransition(Windows::UI::Xaml::Vector3Transition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::TranslationTransition(Windows::UI::Xaml::Vector3Transition const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_TranslationTransition(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::Rotation() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Xaml_IUIElement9<D>::Rotation() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_Rotation(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::Rotation(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::Rotation(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_Rotation(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::RotationTransition() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ScalarTransition) consume_Windows_UI_Xaml_IUIElement9<D>::RotationTransition() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_RotationTransition(&value));
         return Windows::UI::Xaml::ScalarTransition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::RotationTransition(Windows::UI::Xaml::ScalarTransition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::RotationTransition(Windows::UI::Xaml::ScalarTransition const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_RotationTransition(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::Scale() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Xaml_IUIElement9<D>::Scale() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_Scale(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::Scale(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::Scale(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_Scale(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::ScaleTransition() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Vector3Transition) consume_Windows_UI_Xaml_IUIElement9<D>::ScaleTransition() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_ScaleTransition(&value));
         return Windows::UI::Xaml::Vector3Transition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::ScaleTransition(Windows::UI::Xaml::Vector3Transition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::ScaleTransition(Windows::UI::Xaml::Vector3Transition const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_ScaleTransition(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::TransformMatrix() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float4x4) consume_Windows_UI_Xaml_IUIElement9<D>::TransformMatrix() const
     {
-        Windows::Foundation::Numerics::float4x4 value;
+        Windows::Foundation::Numerics::float4x4 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_TransformMatrix(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::TransformMatrix(Windows::Foundation::Numerics::float4x4 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::TransformMatrix(Windows::Foundation::Numerics::float4x4 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_TransformMatrix(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::CenterPoint() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Xaml_IUIElement9<D>::CenterPoint() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_CenterPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::CenterPoint(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::CenterPoint(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_CenterPoint(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::RotationAxis() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Xaml_IUIElement9<D>::RotationAxis() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->get_RotationAxis(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::RotationAxis(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::RotationAxis(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->put_RotationAxis(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::StartAnimation(Windows::UI::Composition::ICompositionAnimationBase const& animation) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::StartAnimation(Windows::UI::Composition::ICompositionAnimationBase const& animation) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->StartAnimation(*(void**)(&animation)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElement9<D>::StopAnimation(Windows::UI::Composition::ICompositionAnimationBase const& animation) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement9<D>::StopAnimation(Windows::UI::Composition::ICompositionAnimationBase const& animation) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElement9)->StopAnimation(*(void**)(&animation)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementOverrides<D>::OnCreateAutomationPeer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationPeer) consume_Windows_UI_Xaml_IUIElementOverrides<D>::OnCreateAutomationPeer() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementOverrides)->OnCreateAutomationPeer(&result));
         return Windows::UI::Xaml::Automation::Peers::AutomationPeer{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementOverrides<D>::OnDisconnectVisualChildren() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElementOverrides<D>::OnDisconnectVisualChildren() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementOverrides)->OnDisconnectVisualChildren());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementOverrides<D>::FindSubElementsForTouchTargeting(Windows::Foundation::Point const& point, Windows::Foundation::Rect const& boundingRect) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IIterable<Windows::Foundation::Point>>) consume_Windows_UI_Xaml_IUIElementOverrides<D>::FindSubElementsForTouchTargeting(Windows::Foundation::Point const& point, Windows::Foundation::Rect const& boundingRect) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementOverrides)->FindSubElementsForTouchTargeting(impl::bind_in(point), impl::bind_in(boundingRect), &result));
         return Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IIterable<Windows::Foundation::Point>>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementOverrides7<D>::GetChildrenInTabFocusOrder() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::DependencyObject>) consume_Windows_UI_Xaml_IUIElementOverrides7<D>::GetChildrenInTabFocusOrder() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementOverrides7)->GetChildrenInTabFocusOrder(&result));
         return Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::DependencyObject>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementOverrides7<D>::OnProcessKeyboardAccelerators(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElementOverrides7<D>::OnProcessKeyboardAccelerators(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementOverrides7)->OnProcessKeyboardAccelerators(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementOverrides8<D>::OnKeyboardAcceleratorInvoked(Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElementOverrides8<D>::OnKeyboardAcceleratorInvoked(Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementOverrides8)->OnKeyboardAcceleratorInvoked(*(void**)(&args)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementOverrides8<D>::OnBringIntoViewRequested(Windows::UI::Xaml::BringIntoViewRequestedEventArgs const& e) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElementOverrides8<D>::OnBringIntoViewRequested(Windows::UI::Xaml::BringIntoViewRequestedEventArgs const& e) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementOverrides8)->OnBringIntoViewRequested(*(void**)(&e)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementOverrides9<D>::PopulatePropertyInfoOverride(param::hstring const& propertyName, Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElementOverrides9<D>::PopulatePropertyInfoOverride(param::hstring const& propertyName, Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementOverrides9)->PopulatePropertyInfoOverride(*(void**)(&propertyName), *(void**)(&animationPropertyInfo)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::KeyDownEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::KeyDownEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_KeyDownEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::KeyUpEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::KeyUpEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_KeyUpEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerEnteredEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerEnteredEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_PointerEnteredEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerPressedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerPressedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_PointerPressedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerMovedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerMovedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_PointerMovedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerReleasedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerReleasedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_PointerReleasedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerExitedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerExitedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_PointerExitedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerCaptureLostEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerCaptureLostEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_PointerCaptureLostEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerCanceledEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerCanceledEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_PointerCanceledEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerWheelChangedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerWheelChangedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_PointerWheelChangedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::TappedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::TappedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_TappedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::DoubleTappedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::DoubleTappedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_DoubleTappedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::HoldingEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::HoldingEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_HoldingEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::RightTappedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::RightTappedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_RightTappedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationStartingEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationStartingEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_ManipulationStartingEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationInertiaStartingEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationInertiaStartingEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_ManipulationInertiaStartingEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationStartedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationStartedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_ManipulationStartedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationDeltaEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationDeltaEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_ManipulationDeltaEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationCompletedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationCompletedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_ManipulationCompletedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::DragEnterEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::DragEnterEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_DragEnterEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::DragLeaveEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::DragLeaveEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_DragLeaveEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::DragOverEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::DragOverEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_DragOverEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::DropEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics<D>::DropEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_DropEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::AllowDropProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::AllowDropProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_AllowDropProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::OpacityProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::OpacityProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_OpacityProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::ClipProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::ClipProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_ClipProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::RenderTransformProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::RenderTransformProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_RenderTransformProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::ProjectionProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::ProjectionProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_ProjectionProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::RenderTransformOriginProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::RenderTransformOriginProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_RenderTransformOriginProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::IsHitTestVisibleProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::IsHitTestVisibleProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_IsHitTestVisibleProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::VisibilityProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::VisibilityProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_VisibilityProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::UseLayoutRoundingProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::UseLayoutRoundingProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_UseLayoutRoundingProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::TransitionsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::TransitionsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_TransitionsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::CacheModeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::CacheModeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_CacheModeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::IsTapEnabledProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::IsTapEnabledProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_IsTapEnabledProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::IsDoubleTapEnabledProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::IsDoubleTapEnabledProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_IsDoubleTapEnabledProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::IsRightTapEnabledProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::IsRightTapEnabledProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_IsRightTapEnabledProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::IsHoldingEnabledProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::IsHoldingEnabledProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_IsHoldingEnabledProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationModeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::ManipulationModeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_ManipulationModeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerCapturesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics<D>::PointerCapturesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics)->get_PointerCapturesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics10<D>::ShadowProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics10<D>::ShadowProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics10)->get_ShadowProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics2<D>::CompositeModeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics2<D>::CompositeModeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics2)->get_CompositeModeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics3<D>::Transform3DProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics3<D>::Transform3DProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics3)->get_Transform3DProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics3<D>::CanDragProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics3<D>::CanDragProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics3)->get_CanDragProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics3<D>::TryStartDirectManipulation(Windows::UI::Xaml::Input::Pointer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElementStatics3<D>::TryStartDirectManipulation(Windows::UI::Xaml::Input::Pointer const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics3)->TryStartDirectManipulation(*(void**)(&value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics4<D>::ContextFlyoutProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics4<D>::ContextFlyoutProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics4)->get_ContextFlyoutProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics4<D>::ExitDisplayModeOnAccessKeyInvokedProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics4<D>::ExitDisplayModeOnAccessKeyInvokedProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics4)->get_ExitDisplayModeOnAccessKeyInvokedProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics4<D>::IsAccessKeyScopeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics4<D>::IsAccessKeyScopeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics4)->get_IsAccessKeyScopeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics4<D>::AccessKeyScopeOwnerProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics4<D>::AccessKeyScopeOwnerProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics4)->get_AccessKeyScopeOwnerProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics4<D>::AccessKeyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics4<D>::AccessKeyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics4)->get_AccessKeyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::LightsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::LightsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_LightsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::KeyTipPlacementModeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::KeyTipPlacementModeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_KeyTipPlacementModeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::KeyTipHorizontalOffsetProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::KeyTipHorizontalOffsetProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_KeyTipHorizontalOffsetProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::KeyTipVerticalOffsetProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::KeyTipVerticalOffsetProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_KeyTipVerticalOffsetProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusKeyboardNavigationProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusKeyboardNavigationProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_XYFocusKeyboardNavigationProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusUpNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusUpNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_XYFocusUpNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusDownNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusDownNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_XYFocusDownNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusLeftNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusLeftNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_XYFocusLeftNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusRightNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::XYFocusRightNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_XYFocusRightNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::HighContrastAdjustmentProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::HighContrastAdjustmentProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_HighContrastAdjustmentProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics5<D>::TabFocusNavigationProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics5<D>::TabFocusNavigationProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics5)->get_TabFocusNavigationProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics6<D>::GettingFocusEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics6<D>::GettingFocusEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics6)->get_GettingFocusEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics6<D>::LosingFocusEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics6<D>::LosingFocusEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics6)->get_LosingFocusEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics6<D>::NoFocusCandidateFoundEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics6<D>::NoFocusCandidateFoundEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics6)->get_NoFocusCandidateFoundEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics7<D>::PreviewKeyDownEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics7<D>::PreviewKeyDownEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics7)->get_PreviewKeyDownEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics7<D>::CharacterReceivedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics7<D>::CharacterReceivedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics7)->get_CharacterReceivedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics7<D>::PreviewKeyUpEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics7<D>::PreviewKeyUpEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics7)->get_PreviewKeyUpEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics8<D>::BringIntoViewRequestedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics8<D>::BringIntoViewRequestedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics8)->get_BringIntoViewRequestedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics8<D>::ContextRequestedEvent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::RoutedEvent) consume_Windows_UI_Xaml_IUIElementStatics8<D>::ContextRequestedEvent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics8)->get_ContextRequestedEvent(&value));
         return Windows::UI::Xaml::RoutedEvent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics8<D>::KeyTipTargetProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics8<D>::KeyTipTargetProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics8)->get_KeyTipTargetProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics8<D>::KeyboardAcceleratorPlacementTargetProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics8<D>::KeyboardAcceleratorPlacementTargetProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics8)->get_KeyboardAcceleratorPlacementTargetProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics8<D>::KeyboardAcceleratorPlacementModeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics8<D>::KeyboardAcceleratorPlacementModeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics8)->get_KeyboardAcceleratorPlacementModeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics8<D>::RegisterAsScrollPort(Windows::UI::Xaml::UIElement const& element) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElementStatics8<D>::RegisterAsScrollPort(Windows::UI::Xaml::UIElement const& element) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics8)->RegisterAsScrollPort(*(void**)(&element)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementStatics9<D>::CanBeScrollAnchorProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IUIElementStatics9<D>::CanBeScrollAnchorProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementStatics9)->get_CanBeScrollAnchorProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUIElementWeakCollectionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElementWeakCollection) consume_Windows_UI_Xaml_IUIElementWeakCollectionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUIElementWeakCollectionFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::UIElementWeakCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUnhandledExceptionEventArgs<D>::Exception() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_UI_Xaml_IUnhandledExceptionEventArgs<D>::Exception() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUnhandledExceptionEventArgs)->get_Exception(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUnhandledExceptionEventArgs<D>::Message() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IUnhandledExceptionEventArgs<D>::Message() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUnhandledExceptionEventArgs)->get_Message(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUnhandledExceptionEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUnhandledExceptionEventArgs<D>::Handled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUnhandledExceptionEventArgs)->get_Handled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IUnhandledExceptionEventArgs<D>::Handled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUnhandledExceptionEventArgs<D>::Handled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IUnhandledExceptionEventArgs)->put_Handled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVector3Transition<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_UI_Xaml_IVector3Transition<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVector3Transition)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVector3Transition<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVector3Transition<D>::Duration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVector3Transition)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVector3Transition<D>::Components() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Vector3TransitionComponents) consume_Windows_UI_Xaml_IVector3Transition<D>::Components() const
     {
-        Windows::UI::Xaml::Vector3TransitionComponents value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVector3Transition)->get_Components(put_abi(value)));
+        Windows::UI::Xaml::Vector3TransitionComponents value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVector3Transition)->get_Components(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVector3Transition<D>::Components(Windows::UI::Xaml::Vector3TransitionComponents const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVector3Transition<D>::Components(Windows::UI::Xaml::Vector3TransitionComponents const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVector3Transition)->put_Components(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVector3TransitionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Vector3Transition) consume_Windows_UI_Xaml_IVector3TransitionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVector3TransitionFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::Vector3Transition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualState<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IVisualState<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualState)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualState<D>::Storyboard() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Animation::Storyboard) consume_Windows_UI_Xaml_IVisualState<D>::Storyboard() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualState)->get_Storyboard(&value));
         return Windows::UI::Xaml::Media::Animation::Storyboard{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualState<D>::Storyboard(Windows::UI::Xaml::Media::Animation::Storyboard const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualState<D>::Storyboard(Windows::UI::Xaml::Media::Animation::Storyboard const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualState)->put_Storyboard(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualState2<D>::Setters() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::SetterBaseCollection) consume_Windows_UI_Xaml_IVisualState2<D>::Setters() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualState2)->get_Setters(&value));
         return Windows::UI::Xaml::SetterBaseCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualState2<D>::StateTriggers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::StateTriggerBase>) consume_Windows_UI_Xaml_IVisualState2<D>::StateTriggers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualState2)->get_StateTriggers(&value));
         return Windows::Foundation::Collections::IVector<Windows::UI::Xaml::StateTriggerBase>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::OldState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::VisualState) consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::OldState() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateChangedEventArgs)->get_OldState(&value));
         return Windows::UI::Xaml::VisualState{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::OldState(Windows::UI::Xaml::VisualState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::OldState(Windows::UI::Xaml::VisualState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateChangedEventArgs)->put_OldState(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::NewState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::VisualState) consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::NewState() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateChangedEventArgs)->get_NewState(&value));
         return Windows::UI::Xaml::VisualState{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::NewState(Windows::UI::Xaml::VisualState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::NewState(Windows::UI::Xaml::VisualState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateChangedEventArgs)->put_NewState(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::Control() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Control) consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::Control() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateChangedEventArgs)->get_Control(&value));
         return Windows::UI::Xaml::Controls::Control{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::Control(Windows::UI::Xaml::Controls::Control const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateChangedEventArgs<D>::Control(Windows::UI::Xaml::Controls::Control const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateChangedEventArgs)->put_Control(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateGroup<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IVisualStateGroup<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateGroup)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateGroup<D>::Transitions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::VisualTransition>) consume_Windows_UI_Xaml_IVisualStateGroup<D>::Transitions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateGroup)->get_Transitions(&value));
         return Windows::Foundation::Collections::IVector<Windows::UI::Xaml::VisualTransition>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateGroup<D>::States() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::VisualState>) consume_Windows_UI_Xaml_IVisualStateGroup<D>::States() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateGroup)->get_States(&value));
         return Windows::Foundation::Collections::IVector<Windows::UI::Xaml::VisualState>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::VisualState) consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentState() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateGroup)->get_CurrentState(&value));
         return Windows::UI::Xaml::VisualState{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanged(Windows::UI::Xaml::VisualStateChangedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanged(Windows::UI::Xaml::VisualStateChangedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateGroup)->add_CurrentStateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -4260,13 +4260,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CurrentStateChanged_revoker>(this, CurrentStateChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateGroup)->remove_CurrentStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanging(Windows::UI::Xaml::VisualStateChangedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanging(Windows::UI::Xaml::VisualStateChangedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateGroup)->add_CurrentStateChanging(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -4274,151 +4274,151 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CurrentStateChanging_revoker>(this, CurrentStateChanging(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanging(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanging(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateGroup)->remove_CurrentStateChanging(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateManagerFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::VisualStateManager) consume_Windows_UI_Xaml_IVisualStateManagerFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateManagerFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::VisualStateManager{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateManagerOverrides<D>::GoToStateCore(Windows::UI::Xaml::Controls::Control const& control, Windows::UI::Xaml::FrameworkElement const& templateRoot, param::hstring const& stateName, Windows::UI::Xaml::VisualStateGroup const& group, Windows::UI::Xaml::VisualState const& state, bool useTransitions) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IVisualStateManagerOverrides<D>::GoToStateCore(Windows::UI::Xaml::Controls::Control const& control, Windows::UI::Xaml::FrameworkElement const& templateRoot, param::hstring const& stateName, Windows::UI::Xaml::VisualStateGroup const& group, Windows::UI::Xaml::VisualState const& state, bool useTransitions) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateManagerOverrides)->GoToStateCore(*(void**)(&control), *(void**)(&templateRoot), *(void**)(&stateName), *(void**)(&group), *(void**)(&state), useTransitions, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateManagerProtected<D>::RaiseCurrentStateChanging(Windows::UI::Xaml::VisualStateGroup const& stateGroup, Windows::UI::Xaml::VisualState const& oldState, Windows::UI::Xaml::VisualState const& newState, Windows::UI::Xaml::Controls::Control const& control) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateManagerProtected<D>::RaiseCurrentStateChanging(Windows::UI::Xaml::VisualStateGroup const& stateGroup, Windows::UI::Xaml::VisualState const& oldState, Windows::UI::Xaml::VisualState const& newState, Windows::UI::Xaml::Controls::Control const& control) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateManagerProtected)->RaiseCurrentStateChanging(*(void**)(&stateGroup), *(void**)(&oldState), *(void**)(&newState), *(void**)(&control)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateManagerProtected<D>::RaiseCurrentStateChanged(Windows::UI::Xaml::VisualStateGroup const& stateGroup, Windows::UI::Xaml::VisualState const& oldState, Windows::UI::Xaml::VisualState const& newState, Windows::UI::Xaml::Controls::Control const& control) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateManagerProtected<D>::RaiseCurrentStateChanged(Windows::UI::Xaml::VisualStateGroup const& stateGroup, Windows::UI::Xaml::VisualState const& oldState, Windows::UI::Xaml::VisualState const& newState, Windows::UI::Xaml::Controls::Control const& control) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateManagerProtected)->RaiseCurrentStateChanged(*(void**)(&stateGroup), *(void**)(&oldState), *(void**)(&newState), *(void**)(&control)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::GetVisualStateGroups(Windows::UI::Xaml::FrameworkElement const& obj) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::VisualStateGroup>) consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::GetVisualStateGroups(Windows::UI::Xaml::FrameworkElement const& obj) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateManagerStatics)->GetVisualStateGroups(*(void**)(&obj), &result));
         return Windows::Foundation::Collections::IVector<Windows::UI::Xaml::VisualStateGroup>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::CustomVisualStateManagerProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::CustomVisualStateManagerProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateManagerStatics)->get_CustomVisualStateManagerProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::GetCustomVisualStateManager(Windows::UI::Xaml::FrameworkElement const& obj) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::VisualStateManager) consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::GetCustomVisualStateManager(Windows::UI::Xaml::FrameworkElement const& obj) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateManagerStatics)->GetCustomVisualStateManager(*(void**)(&obj), &result));
         return Windows::UI::Xaml::VisualStateManager{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::SetCustomVisualStateManager(Windows::UI::Xaml::FrameworkElement const& obj, Windows::UI::Xaml::VisualStateManager const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::SetCustomVisualStateManager(Windows::UI::Xaml::FrameworkElement const& obj, Windows::UI::Xaml::VisualStateManager const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateManagerStatics)->SetCustomVisualStateManager(*(void**)(&obj), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::GoToState(Windows::UI::Xaml::Controls::Control const& control, param::hstring const& stateName, bool useTransitions) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IVisualStateManagerStatics<D>::GoToState(Windows::UI::Xaml::Controls::Control const& control, param::hstring const& stateName, bool useTransitions) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualStateManagerStatics)->GoToState(*(void**)(&control), *(void**)(&stateName), useTransitions, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::GeneratedDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Duration) consume_Windows_UI_Xaml_IVisualTransition<D>::GeneratedDuration() const
     {
-        Windows::UI::Xaml::Duration value;
+        Windows::UI::Xaml::Duration value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->get_GeneratedDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::GeneratedDuration(Windows::UI::Xaml::Duration const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualTransition<D>::GeneratedDuration(Windows::UI::Xaml::Duration const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->put_GeneratedDuration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::GeneratedEasingFunction() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Animation::EasingFunctionBase) consume_Windows_UI_Xaml_IVisualTransition<D>::GeneratedEasingFunction() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->get_GeneratedEasingFunction(&value));
         return Windows::UI::Xaml::Media::Animation::EasingFunctionBase{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::GeneratedEasingFunction(Windows::UI::Xaml::Media::Animation::EasingFunctionBase const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualTransition<D>::GeneratedEasingFunction(Windows::UI::Xaml::Media::Animation::EasingFunctionBase const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->put_GeneratedEasingFunction(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::To() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IVisualTransition<D>::To() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->get_To(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::To(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualTransition<D>::To(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->put_To(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::From() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_IVisualTransition<D>::From() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->get_From(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::From(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualTransition<D>::From(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->put_From(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::Storyboard() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Animation::Storyboard) consume_Windows_UI_Xaml_IVisualTransition<D>::Storyboard() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->get_Storyboard(&value));
         return Windows::UI::Xaml::Media::Animation::Storyboard{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransition<D>::Storyboard(Windows::UI::Xaml::Media::Animation::Storyboard const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualTransition<D>::Storyboard(Windows::UI::Xaml::Media::Animation::Storyboard const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransition)->put_Storyboard(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IVisualTransitionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::VisualTransition) consume_Windows_UI_Xaml_IVisualTransitionFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IVisualTransitionFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::VisualTransition{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Bounds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_IWindow<D>::Bounds() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->get_Bounds(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Visible() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IWindow<D>::Visible() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->get_Visible(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Content() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElement) consume_Windows_UI_Xaml_IWindow<D>::Content() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->get_Content(&value));
         return Windows::UI::Xaml::UIElement{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Content(Windows::UI::Xaml::UIElement const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::Content(Windows::UI::Xaml::UIElement const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->put_Content(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::CoreWindow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreWindow) consume_Windows_UI_Xaml_IWindow<D>::CoreWindow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->get_CoreWindow(&value));
         return Windows::UI::Core::CoreWindow{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Dispatcher() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreDispatcher) consume_Windows_UI_Xaml_IWindow<D>::Dispatcher() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->get_Dispatcher(&value));
         return Windows::UI::Core::CoreDispatcher{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Activated(Windows::UI::Xaml::WindowActivatedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IWindow<D>::Activated(Windows::UI::Xaml::WindowActivatedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->add_Activated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -4426,13 +4426,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Activated_revoker>(this, Activated(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Activated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::Activated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->remove_Activated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Closed(Windows::UI::Xaml::WindowClosedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IWindow<D>::Closed(Windows::UI::Xaml::WindowClosedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->add_Closed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -4440,13 +4440,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Closed_revoker>(this, Closed(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Closed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::Closed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->remove_Closed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::SizeChanged(Windows::UI::Xaml::WindowSizeChangedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IWindow<D>::SizeChanged(Windows::UI::Xaml::WindowSizeChangedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->add_SizeChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -4454,13 +4454,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SizeChanged_revoker>(this, SizeChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::SizeChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::SizeChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->remove_SizeChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::VisibilityChanged(Windows::UI::Xaml::WindowVisibilityChangedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IWindow<D>::VisibilityChanged(Windows::UI::Xaml::WindowVisibilityChangedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->add_VisibilityChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -4468,79 +4468,79 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, VisibilityChanged_revoker>(this, VisibilityChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::VisibilityChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::VisibilityChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->remove_VisibilityChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Activate() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::Activate() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->Activate());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow<D>::Close() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::Close() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow)->Close());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow2<D>::SetTitleBar(Windows::UI::Xaml::UIElement const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow2<D>::SetTitleBar(Windows::UI::Xaml::UIElement const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow2)->SetTitleBar(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow3<D>::Compositor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Compositor) consume_Windows_UI_Xaml_IWindow3<D>::Compositor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow3)->get_Compositor(&value));
         return Windows::UI::Composition::Compositor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindow4<D>::UIContext() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::UIContext) consume_Windows_UI_Xaml_IWindow4<D>::UIContext() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindow4)->get_UIContext(&value));
         return Windows::UI::UIContext{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindowCreatedEventArgs<D>::Window() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Window) consume_Windows_UI_Xaml_IWindowCreatedEventArgs<D>::Window() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindowCreatedEventArgs)->get_Window(&value));
         return Windows::UI::Xaml::Window{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IWindowStatics<D>::Current() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Window) consume_Windows_UI_Xaml_IWindowStatics<D>::Current() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IWindowStatics)->get_Current(&value));
         return Windows::UI::Xaml::Window{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IXamlRoot<D>::Content() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElement) consume_Windows_UI_Xaml_IXamlRoot<D>::Content() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IXamlRoot)->get_Content(&value));
         return Windows::UI::Xaml::UIElement{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IXamlRoot<D>::Size() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_Xaml_IXamlRoot<D>::Size() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IXamlRoot)->get_Size(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IXamlRoot<D>::RasterizationScale() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_IXamlRoot<D>::RasterizationScale() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IXamlRoot)->get_RasterizationScale(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IXamlRoot<D>::IsHostVisible() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IXamlRoot<D>::IsHostVisible() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IXamlRoot)->get_IsHostVisible(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IXamlRoot<D>::UIContext() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::UIContext) consume_Windows_UI_Xaml_IXamlRoot<D>::UIContext() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IXamlRoot)->get_UIContext(&value));
         return Windows::UI::UIContext{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IXamlRoot<D>::Changed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::XamlRoot, Windows::UI::Xaml::XamlRootChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IXamlRoot<D>::Changed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::XamlRoot, Windows::UI::Xaml::XamlRootChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::IXamlRoot)->add_Changed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -4548,11 +4548,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Changed_revoker>(this, Changed(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_IXamlRoot<D>::Changed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IXamlRoot<D>::Changed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::IXamlRoot)->remove_Changed(impl::bind_in(token)));
     }
-    template <typename H> struct delegate<Windows::UI::Xaml::ApplicationInitializationCallback, H> : implements_delegate<Windows::UI::Xaml::ApplicationInitializationCallback, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::ApplicationInitializationCallback, H> final : implements_delegate<Windows::UI::Xaml::ApplicationInitializationCallback, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::ApplicationInitializationCallback, H>(std::forward<H>(handler)) {}
 
@@ -4563,7 +4563,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::BindingFailedEventHandler, H> : implements_delegate<Windows::UI::Xaml::BindingFailedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::BindingFailedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::BindingFailedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::BindingFailedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4574,7 +4574,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::CreateDefaultValueCallback, H> : implements_delegate<Windows::UI::Xaml::CreateDefaultValueCallback, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::CreateDefaultValueCallback, H> final : implements_delegate<Windows::UI::Xaml::CreateDefaultValueCallback, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::CreateDefaultValueCallback, H>(std::forward<H>(handler)) {}
 
@@ -4586,7 +4586,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::DependencyPropertyChangedCallback, H> : implements_delegate<Windows::UI::Xaml::DependencyPropertyChangedCallback, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::DependencyPropertyChangedCallback, H> final : implements_delegate<Windows::UI::Xaml::DependencyPropertyChangedCallback, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::DependencyPropertyChangedCallback, H>(std::forward<H>(handler)) {}
 
@@ -4597,7 +4597,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::DependencyPropertyChangedEventHandler, H> : implements_delegate<Windows::UI::Xaml::DependencyPropertyChangedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::DependencyPropertyChangedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::DependencyPropertyChangedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::DependencyPropertyChangedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4608,7 +4608,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::DragEventHandler, H> : implements_delegate<Windows::UI::Xaml::DragEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::DragEventHandler, H> final : implements_delegate<Windows::UI::Xaml::DragEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::DragEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4619,7 +4619,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::EnteredBackgroundEventHandler, H> : implements_delegate<Windows::UI::Xaml::EnteredBackgroundEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::EnteredBackgroundEventHandler, H> final : implements_delegate<Windows::UI::Xaml::EnteredBackgroundEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::EnteredBackgroundEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4630,7 +4630,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::ExceptionRoutedEventHandler, H> : implements_delegate<Windows::UI::Xaml::ExceptionRoutedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::ExceptionRoutedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::ExceptionRoutedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::ExceptionRoutedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4641,7 +4641,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::LeavingBackgroundEventHandler, H> : implements_delegate<Windows::UI::Xaml::LeavingBackgroundEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::LeavingBackgroundEventHandler, H> final : implements_delegate<Windows::UI::Xaml::LeavingBackgroundEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::LeavingBackgroundEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4652,7 +4652,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::PropertyChangedCallback, H> : implements_delegate<Windows::UI::Xaml::PropertyChangedCallback, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::PropertyChangedCallback, H> final : implements_delegate<Windows::UI::Xaml::PropertyChangedCallback, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::PropertyChangedCallback, H>(std::forward<H>(handler)) {}
 
@@ -4663,7 +4663,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::RoutedEventHandler, H> : implements_delegate<Windows::UI::Xaml::RoutedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::RoutedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::RoutedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::RoutedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4674,7 +4674,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::SizeChangedEventHandler, H> : implements_delegate<Windows::UI::Xaml::SizeChangedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::SizeChangedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::SizeChangedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::SizeChangedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4685,7 +4685,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::SuspendingEventHandler, H> : implements_delegate<Windows::UI::Xaml::SuspendingEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::SuspendingEventHandler, H> final : implements_delegate<Windows::UI::Xaml::SuspendingEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::SuspendingEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4696,7 +4696,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::UnhandledExceptionEventHandler, H> : implements_delegate<Windows::UI::Xaml::UnhandledExceptionEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::UnhandledExceptionEventHandler, H> final : implements_delegate<Windows::UI::Xaml::UnhandledExceptionEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::UnhandledExceptionEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4707,7 +4707,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::VisualStateChangedEventHandler, H> : implements_delegate<Windows::UI::Xaml::VisualStateChangedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::VisualStateChangedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::VisualStateChangedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::VisualStateChangedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4718,7 +4718,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::WindowActivatedEventHandler, H> : implements_delegate<Windows::UI::Xaml::WindowActivatedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::WindowActivatedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::WindowActivatedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::WindowActivatedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4729,7 +4729,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::WindowClosedEventHandler, H> : implements_delegate<Windows::UI::Xaml::WindowClosedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::WindowClosedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::WindowClosedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::WindowClosedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4740,7 +4740,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::WindowSizeChangedEventHandler, H> : implements_delegate<Windows::UI::Xaml::WindowSizeChangedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::WindowSizeChangedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::WindowSizeChangedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::WindowSizeChangedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4751,7 +4751,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::WindowVisibilityChangedEventHandler, H> : implements_delegate<Windows::UI::Xaml::WindowVisibilityChangedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::WindowVisibilityChangedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::WindowVisibilityChangedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::WindowVisibilityChangedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -4762,6 +4762,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IAdaptiveTrigger> : produce_base<D, Windows::UI::Xaml::IAdaptiveTrigger>
     {
@@ -4794,6 +4795,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IAdaptiveTriggerFactory> : produce_base<D, Windows::UI::Xaml::IAdaptiveTriggerFactory>
     {
@@ -4809,6 +4812,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IAdaptiveTriggerStatics> : produce_base<D, Windows::UI::Xaml::IAdaptiveTriggerStatics>
     {
@@ -4829,6 +4834,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IApplication> : produce_base<D, Windows::UI::Xaml::IApplication>
     {
@@ -4919,6 +4926,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IApplication2> : produce_base<D, Windows::UI::Xaml::IApplication2>
     {
@@ -4979,6 +4988,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IApplication3> : produce_base<D, Windows::UI::Xaml::IApplication3>
     {
@@ -4997,6 +5008,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IApplicationFactory> : produce_base<D, Windows::UI::Xaml::IApplicationFactory>
     {
@@ -5012,10 +5025,13 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IApplicationInitializationCallbackParams> : produce_base<D, Windows::UI::Xaml::IApplicationInitializationCallbackParams>
     {
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IApplicationOverrides> : produce_base<D, Windows::UI::Xaml::IApplicationOverrides>
     {
@@ -5094,6 +5110,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IApplicationStatics> : produce_base<D, Windows::UI::Xaml::IApplicationStatics>
     {
@@ -5127,6 +5144,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IBindingFailedEventArgs> : produce_base<D, Windows::UI::Xaml::IBindingFailedEventArgs>
     {
@@ -5139,6 +5158,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IBringIntoViewOptions> : produce_base<D, Windows::UI::Xaml::IBringIntoViewOptions>
     {
@@ -5172,6 +5193,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IBringIntoViewOptions2> : produce_base<D, Windows::UI::Xaml::IBringIntoViewOptions2>
     {
@@ -5232,6 +5255,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IBringIntoViewRequestedEventArgs> : produce_base<D, Windows::UI::Xaml::IBringIntoViewRequestedEventArgs>
     {
@@ -5336,6 +5361,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IBrushTransition> : produce_base<D, Windows::UI::Xaml::IBrushTransition>
     {
@@ -5355,6 +5382,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IBrushTransitionFactory> : produce_base<D, Windows::UI::Xaml::IBrushTransitionFactory>
     {
@@ -5370,6 +5399,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IColorPaletteResources> : produce_base<D, Windows::UI::Xaml::IColorPaletteResources>
     {
@@ -5779,6 +5810,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IColorPaletteResourcesFactory> : produce_base<D, Windows::UI::Xaml::IColorPaletteResourcesFactory>
     {
@@ -5794,10 +5827,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ICornerRadiusHelper> : produce_base<D, Windows::UI::Xaml::ICornerRadiusHelper>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ICornerRadiusHelperStatics> : produce_base<D, Windows::UI::Xaml::ICornerRadiusHelperStatics>
     {
@@ -5818,6 +5855,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDataContextChangedEventArgs> : produce_base<D, Windows::UI::Xaml::IDataContextChangedEventArgs>
     {
@@ -5844,6 +5883,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDataTemplate> : produce_base<D, Windows::UI::Xaml::IDataTemplate>
     {
@@ -5856,6 +5897,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDataTemplateExtension> : produce_base<D, Windows::UI::Xaml::IDataTemplateExtension>
     {
@@ -5881,6 +5923,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDataTemplateFactory> : produce_base<D, Windows::UI::Xaml::IDataTemplateFactory>
     {
@@ -5896,6 +5939,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDataTemplateKey> : produce_base<D, Windows::UI::Xaml::IDataTemplateKey>
     {
@@ -5915,6 +5960,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDataTemplateKeyFactory> : produce_base<D, Windows::UI::Xaml::IDataTemplateKeyFactory>
     {
@@ -5941,6 +5988,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDataTemplateStatics2> : produce_base<D, Windows::UI::Xaml::IDataTemplateStatics2>
     {
@@ -5968,6 +6017,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDebugSettings> : produce_base<D, Windows::UI::Xaml::IDebugSettings>
     {
@@ -6028,6 +6079,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDebugSettings2> : produce_base<D, Windows::UI::Xaml::IDebugSettings2>
     {
@@ -6046,6 +6099,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDebugSettings3> : produce_base<D, Windows::UI::Xaml::IDebugSettings3>
     {
@@ -6064,6 +6119,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDebugSettings4> : produce_base<D, Windows::UI::Xaml::IDebugSettings4>
     {
@@ -6082,6 +6139,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDependencyObject> : produce_base<D, Windows::UI::Xaml::IDependencyObject>
     {
@@ -6132,6 +6191,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDependencyObject2> : produce_base<D, Windows::UI::Xaml::IDependencyObject2>
     {
@@ -6150,6 +6211,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDependencyObjectCollectionFactory> : produce_base<D, Windows::UI::Xaml::IDependencyObjectCollectionFactory>
     {
@@ -6165,6 +6228,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDependencyObjectFactory> : produce_base<D, Windows::UI::Xaml::IDependencyObjectFactory>
     {
@@ -6180,6 +6245,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDependencyProperty> : produce_base<D, Windows::UI::Xaml::IDependencyProperty>
     {
@@ -6192,6 +6259,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDependencyPropertyChangedEventArgs> : produce_base<D, Windows::UI::Xaml::IDependencyPropertyChangedEventArgs>
     {
@@ -6220,6 +6289,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDependencyPropertyStatics> : produce_base<D, Windows::UI::Xaml::IDependencyPropertyStatics>
     {
@@ -6248,6 +6319,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDispatcherTimer> : produce_base<D, Windows::UI::Xaml::IDispatcherTimer>
     {
@@ -6302,6 +6375,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDispatcherTimerFactory> : produce_base<D, Windows::UI::Xaml::IDispatcherTimerFactory>
     {
@@ -6317,6 +6392,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDragEventArgs> : produce_base<D, Windows::UI::Xaml::IDragEventArgs>
     {
@@ -6358,6 +6435,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDragEventArgs2> : produce_base<D, Windows::UI::Xaml::IDragEventArgs2>
     {
@@ -6407,6 +6486,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDragEventArgs3> : produce_base<D, Windows::UI::Xaml::IDragEventArgs3>
     {
@@ -6418,6 +6499,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDragOperationDeferral> : produce_base<D, Windows::UI::Xaml::IDragOperationDeferral>
     {
@@ -6429,6 +6512,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDragStartingEventArgs> : produce_base<D, Windows::UI::Xaml::IDragStartingEventArgs>
     {
@@ -6479,6 +6564,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDragStartingEventArgs2> : produce_base<D, Windows::UI::Xaml::IDragStartingEventArgs2>
     {
@@ -6497,6 +6584,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDragUI> : produce_base<D, Windows::UI::Xaml::IDragUI>
     {
@@ -6536,6 +6625,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDragUIOverride> : produce_base<D, Windows::UI::Xaml::IDragUIOverride>
     {
@@ -6632,6 +6723,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDropCompletedEventArgs> : produce_base<D, Windows::UI::Xaml::IDropCompletedEventArgs>
     {
@@ -6643,10 +6736,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDurationHelper> : produce_base<D, Windows::UI::Xaml::IDurationHelper>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IDurationHelperStatics> : produce_base<D, Windows::UI::Xaml::IDurationHelperStatics>
     {
@@ -6712,6 +6809,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IEffectiveViewportChangedEventArgs> : produce_base<D, Windows::UI::Xaml::IEffectiveViewportChangedEventArgs>
     {
@@ -6746,6 +6845,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IElementFactory> : produce_base<D, Windows::UI::Xaml::IElementFactory>
     {
@@ -6765,6 +6865,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IElementFactoryGetArgs> : produce_base<D, Windows::UI::Xaml::IElementFactoryGetArgs>
     {
@@ -6799,6 +6900,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IElementFactoryGetArgsFactory> : produce_base<D, Windows::UI::Xaml::IElementFactoryGetArgsFactory>
     {
@@ -6814,6 +6917,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IElementFactoryRecycleArgs> : produce_base<D, Windows::UI::Xaml::IElementFactoryRecycleArgs>
     {
@@ -6848,6 +6953,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IElementFactoryRecycleArgsFactory> : produce_base<D, Windows::UI::Xaml::IElementFactoryRecycleArgsFactory>
     {
@@ -6863,10 +6970,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IElementSoundPlayer> : produce_base<D, Windows::UI::Xaml::IElementSoundPlayer>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IElementSoundPlayerStatics> : produce_base<D, Windows::UI::Xaml::IElementSoundPlayerStatics>
     {
@@ -6906,6 +7017,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IElementSoundPlayerStatics2> : produce_base<D, Windows::UI::Xaml::IElementSoundPlayerStatics2>
     {
@@ -6924,6 +7037,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IEventTrigger> : produce_base<D, Windows::UI::Xaml::IEventTrigger>
     {
@@ -6951,6 +7066,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IExceptionRoutedEventArgs> : produce_base<D, Windows::UI::Xaml::IExceptionRoutedEventArgs>
     {
@@ -6963,10 +7080,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IExceptionRoutedEventArgsFactory> : produce_base<D, Windows::UI::Xaml::IExceptionRoutedEventArgsFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElement> : produce_base<D, Windows::UI::Xaml::IFrameworkElement>
     {
@@ -7311,6 +7432,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElement2> : produce_base<D, Windows::UI::Xaml::IFrameworkElement2>
     {
@@ -7351,6 +7474,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElement3> : produce_base<D, Windows::UI::Xaml::IFrameworkElement3>
     {
@@ -7369,6 +7494,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElement4> : produce_base<D, Windows::UI::Xaml::IFrameworkElement4>
     {
@@ -7476,6 +7603,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElement6> : produce_base<D, Windows::UI::Xaml::IFrameworkElement6>
     {
@@ -7501,6 +7630,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElement7> : produce_base<D, Windows::UI::Xaml::IFrameworkElement7>
     {
@@ -7526,6 +7657,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElementFactory> : produce_base<D, Windows::UI::Xaml::IFrameworkElementFactory>
     {
@@ -7541,6 +7674,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElementOverrides> : produce_base<D, Windows::UI::Xaml::IFrameworkElementOverrides>
     {
@@ -7579,6 +7713,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElementProtected7> : produce_base<D, Windows::UI::Xaml::IFrameworkElementProtected7>
     {
@@ -7590,6 +7725,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElementStatics> : produce_base<D, Windows::UI::Xaml::IFrameworkElementStatics>
     {
@@ -7730,6 +7867,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElementStatics2> : produce_base<D, Windows::UI::Xaml::IFrameworkElementStatics2>
     {
@@ -7742,6 +7881,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElementStatics4> : produce_base<D, Windows::UI::Xaml::IFrameworkElementStatics4>
     {
@@ -7802,6 +7943,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElementStatics5> : produce_base<D, Windows::UI::Xaml::IFrameworkElementStatics5>
     {
@@ -7813,6 +7956,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkElementStatics6> : produce_base<D, Windows::UI::Xaml::IFrameworkElementStatics6>
     {
@@ -7825,10 +7970,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkTemplate> : produce_base<D, Windows::UI::Xaml::IFrameworkTemplate>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkTemplateFactory> : produce_base<D, Windows::UI::Xaml::IFrameworkTemplateFactory>
     {
@@ -7844,18 +7993,26 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkView> : produce_base<D, Windows::UI::Xaml::IFrameworkView>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IFrameworkViewSource> : produce_base<D, Windows::UI::Xaml::IFrameworkViewSource>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IGridLengthHelper> : produce_base<D, Windows::UI::Xaml::IGridLengthHelper>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IGridLengthHelperStatics> : produce_base<D, Windows::UI::Xaml::IGridLengthHelperStatics>
     {
@@ -7912,6 +8069,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IMediaFailedRoutedEventArgs> : produce_base<D, Windows::UI::Xaml::IMediaFailedRoutedEventArgs>
     {
@@ -7924,10 +8083,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IPointHelper> : produce_base<D, Windows::UI::Xaml::IPointHelper>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IPointHelperStatics> : produce_base<D, Windows::UI::Xaml::IPointHelperStatics>
     {
@@ -7940,6 +8103,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IPropertyMetadata> : produce_base<D, Windows::UI::Xaml::IPropertyMetadata>
     {
@@ -7960,6 +8125,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IPropertyMetadataFactory> : produce_base<D, Windows::UI::Xaml::IPropertyMetadataFactory>
     {
@@ -7986,6 +8153,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IPropertyMetadataStatics> : produce_base<D, Windows::UI::Xaml::IPropertyMetadataStatics>
     {
@@ -8022,6 +8191,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IPropertyPath> : produce_base<D, Windows::UI::Xaml::IPropertyPath>
     {
@@ -8034,6 +8205,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IPropertyPathFactory> : produce_base<D, Windows::UI::Xaml::IPropertyPathFactory>
     {
@@ -8046,10 +8219,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IRectHelper> : produce_base<D, Windows::UI::Xaml::IRectHelper>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IRectHelperStatics> : produce_base<D, Windows::UI::Xaml::IRectHelperStatics>
     {
@@ -8159,6 +8336,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IResourceDictionary> : produce_base<D, Windows::UI::Xaml::IResourceDictionary>
     {
@@ -8194,6 +8373,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IResourceDictionaryFactory> : produce_base<D, Windows::UI::Xaml::IResourceDictionaryFactory>
     {
@@ -8209,10 +8390,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IRoutedEvent> : produce_base<D, Windows::UI::Xaml::IRoutedEvent>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IRoutedEventArgs> : produce_base<D, Windows::UI::Xaml::IRoutedEventArgs>
     {
@@ -8225,6 +8410,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IRoutedEventArgsFactory> : produce_base<D, Windows::UI::Xaml::IRoutedEventArgsFactory>
     {
@@ -8240,6 +8427,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IScalarTransition> : produce_base<D, Windows::UI::Xaml::IScalarTransition>
     {
@@ -8259,6 +8448,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IScalarTransitionFactory> : produce_base<D, Windows::UI::Xaml::IScalarTransitionFactory>
     {
@@ -8274,6 +8465,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ISetter> : produce_base<D, Windows::UI::Xaml::ISetter>
     {
@@ -8308,6 +8501,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ISetter2> : produce_base<D, Windows::UI::Xaml::ISetter2>
     {
@@ -8327,6 +8522,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ISetterBase> : produce_base<D, Windows::UI::Xaml::ISetterBase>
     {
@@ -8338,6 +8535,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ISetterBaseCollection> : produce_base<D, Windows::UI::Xaml::ISetterBaseCollection>
     {
@@ -8349,10 +8548,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ISetterBaseFactory> : produce_base<D, Windows::UI::Xaml::ISetterBaseFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ISetterFactory> : produce_base<D, Windows::UI::Xaml::ISetterFactory>
     {
@@ -8365,6 +8568,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ISizeChangedEventArgs> : produce_base<D, Windows::UI::Xaml::ISizeChangedEventArgs>
     {
@@ -8385,10 +8590,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ISizeHelper> : produce_base<D, Windows::UI::Xaml::ISizeHelper>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ISizeHelperStatics> : produce_base<D, Windows::UI::Xaml::ISizeHelperStatics>
     {
@@ -8423,6 +8632,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IStateTrigger> : produce_base<D, Windows::UI::Xaml::IStateTrigger>
     {
@@ -8441,10 +8652,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IStateTriggerBase> : produce_base<D, Windows::UI::Xaml::IStateTriggerBase>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IStateTriggerBaseFactory> : produce_base<D, Windows::UI::Xaml::IStateTriggerBaseFactory>
     {
@@ -8460,6 +8675,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IStateTriggerBaseProtected> : produce_base<D, Windows::UI::Xaml::IStateTriggerBaseProtected>
     {
@@ -8471,6 +8688,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IStateTriggerStatics> : produce_base<D, Windows::UI::Xaml::IStateTriggerStatics>
     {
@@ -8483,6 +8702,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IStyle> : produce_base<D, Windows::UI::Xaml::IStyle>
     {
@@ -8539,6 +8760,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IStyleFactory> : produce_base<D, Windows::UI::Xaml::IStyleFactory>
     {
@@ -8551,6 +8774,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ITargetPropertyPath> : produce_base<D, Windows::UI::Xaml::ITargetPropertyPath>
     {
@@ -8585,6 +8810,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ITargetPropertyPathFactory> : produce_base<D, Windows::UI::Xaml::ITargetPropertyPathFactory>
     {
@@ -8597,10 +8824,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IThicknessHelper> : produce_base<D, Windows::UI::Xaml::IThicknessHelper>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IThicknessHelperStatics> : produce_base<D, Windows::UI::Xaml::IThicknessHelperStatics>
     {
@@ -8621,22 +8852,32 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ITriggerAction> : produce_base<D, Windows::UI::Xaml::ITriggerAction>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ITriggerActionFactory> : produce_base<D, Windows::UI::Xaml::ITriggerActionFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ITriggerBase> : produce_base<D, Windows::UI::Xaml::ITriggerBase>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::ITriggerBaseFactory> : produce_base<D, Windows::UI::Xaml::ITriggerBaseFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElement> : produce_base<D, Windows::UI::Xaml::IUIElement>
     {
@@ -9323,6 +9564,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElement10> : produce_base<D, Windows::UI::Xaml::IUIElement10>
     {
@@ -9381,6 +9624,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElement2> : produce_base<D, Windows::UI::Xaml::IUIElement2>
     {
@@ -9406,6 +9651,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElement3> : produce_base<D, Windows::UI::Xaml::IUIElement3>
     {
@@ -9475,6 +9722,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElement4> : produce_base<D, Windows::UI::Xaml::IUIElement4>
     {
@@ -9622,6 +9871,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElement5> : produce_base<D, Windows::UI::Xaml::IUIElement5>
     {
@@ -9830,6 +10081,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElement7> : produce_base<D, Windows::UI::Xaml::IUIElement7>
     {
@@ -9905,6 +10158,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElement8> : produce_base<D, Windows::UI::Xaml::IUIElement8>
     {
@@ -9967,6 +10222,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElement9> : produce_base<D, Windows::UI::Xaml::IUIElement9>
     {
@@ -10148,10 +10405,13 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementFactory> : produce_base<D, Windows::UI::Xaml::IUIElementFactory>
     {
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementOverrides> : produce_base<D, Windows::UI::Xaml::IUIElementOverrides>
     {
@@ -10227,6 +10487,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics> : produce_base<D, Windows::UI::Xaml::IUIElementStatics>
     {
@@ -10551,6 +10812,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics10> : produce_base<D, Windows::UI::Xaml::IUIElementStatics10>
     {
@@ -10563,6 +10826,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics2> : produce_base<D, Windows::UI::Xaml::IUIElementStatics2>
     {
@@ -10575,6 +10840,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics3> : produce_base<D, Windows::UI::Xaml::IUIElementStatics3>
     {
@@ -10602,6 +10869,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics4> : produce_base<D, Windows::UI::Xaml::IUIElementStatics4>
     {
@@ -10646,6 +10915,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics5> : produce_base<D, Windows::UI::Xaml::IUIElementStatics5>
     {
@@ -10738,6 +11009,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics6> : produce_base<D, Windows::UI::Xaml::IUIElementStatics6>
     {
@@ -10766,6 +11039,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics7> : produce_base<D, Windows::UI::Xaml::IUIElementStatics7>
     {
@@ -10794,6 +11069,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics8> : produce_base<D, Windows::UI::Xaml::IUIElementStatics8>
     {
@@ -10845,6 +11122,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementStatics9> : produce_base<D, Windows::UI::Xaml::IUIElementStatics9>
     {
@@ -10857,10 +11136,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementWeakCollection> : produce_base<D, Windows::UI::Xaml::IUIElementWeakCollection>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUIElementWeakCollectionFactory> : produce_base<D, Windows::UI::Xaml::IUIElementWeakCollectionFactory>
     {
@@ -10876,6 +11159,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IUnhandledExceptionEventArgs> : produce_base<D, Windows::UI::Xaml::IUnhandledExceptionEventArgs>
     {
@@ -10910,6 +11195,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVector3Transition> : produce_base<D, Windows::UI::Xaml::IVector3Transition>
     {
@@ -10943,6 +11230,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVector3TransitionFactory> : produce_base<D, Windows::UI::Xaml::IVector3TransitionFactory>
     {
@@ -10958,6 +11247,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualState> : produce_base<D, Windows::UI::Xaml::IVisualState>
     {
@@ -10985,6 +11276,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualState2> : produce_base<D, Windows::UI::Xaml::IVisualState2>
     {
@@ -11005,6 +11298,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualStateChangedEventArgs> : produce_base<D, Windows::UI::Xaml::IVisualStateChangedEventArgs>
     {
@@ -11054,6 +11349,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualStateGroup> : produce_base<D, Windows::UI::Xaml::IVisualStateGroup>
     {
@@ -11118,10 +11415,14 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualStateManager> : produce_base<D, Windows::UI::Xaml::IVisualStateManager>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualStateManagerFactory> : produce_base<D, Windows::UI::Xaml::IVisualStateManagerFactory>
     {
@@ -11137,6 +11438,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualStateManagerOverrides> : produce_base<D, Windows::UI::Xaml::IVisualStateManagerOverrides>
     {
@@ -11148,6 +11450,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualStateManagerProtected> : produce_base<D, Windows::UI::Xaml::IVisualStateManagerProtected>
     {
@@ -11166,6 +11469,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualStateManagerStatics> : produce_base<D, Windows::UI::Xaml::IVisualStateManagerStatics>
     {
@@ -11208,6 +11513,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualTransition> : produce_base<D, Windows::UI::Xaml::IVisualTransition>
     {
@@ -11287,6 +11594,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IVisualTransitionFactory> : produce_base<D, Windows::UI::Xaml::IVisualTransitionFactory>
     {
@@ -11302,6 +11611,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IWindow> : produce_base<D, Windows::UI::Xaml::IWindow>
     {
@@ -11422,6 +11733,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IWindow2> : produce_base<D, Windows::UI::Xaml::IWindow2>
     {
@@ -11433,6 +11746,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IWindow3> : produce_base<D, Windows::UI::Xaml::IWindow3>
     {
@@ -11445,6 +11760,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IWindow4> : produce_base<D, Windows::UI::Xaml::IWindow4>
     {
@@ -11457,6 +11774,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IWindowCreatedEventArgs> : produce_base<D, Windows::UI::Xaml::IWindowCreatedEventArgs>
     {
@@ -11469,6 +11788,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IWindowStatics> : produce_base<D, Windows::UI::Xaml::IWindowStatics>
     {
@@ -11481,6 +11802,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IXamlRoot> : produce_base<D, Windows::UI::Xaml::IXamlRoot>
     {
@@ -11537,10 +11860,13 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::IXamlRootChangedEventArgs> : produce_base<D, Windows::UI::Xaml::IXamlRootChangedEventArgs>
     {
     };
+#endif
 template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IApplicationOverrides>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::IApplicationOverrides>
@@ -11626,7 +11952,8 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().OnWindowCreated(args);
     }
-};template <typename T, typename D>
+};
+template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IApplicationOverrides2>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::IApplicationOverrides2>
 {
@@ -11639,7 +11966,8 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().OnBackgroundActivated(args);
     }
-};template <typename T, typename D>
+};
+template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IFrameworkElementOverrides>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::IFrameworkElementOverrides>
 {
@@ -11670,7 +11998,8 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().OnApplyTemplate();
     }
-};template <typename T, typename D>
+};
+template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IFrameworkElementOverrides2>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::IFrameworkElementOverrides2>
 {
@@ -11683,7 +12012,8 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().GoToElementStateCore(stateName, useTransitions);
     }
-};template <typename T, typename D>
+};
+template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IUIElementOverrides>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::IUIElementOverrides>
 {
@@ -11714,7 +12044,8 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().FindSubElementsForTouchTargeting(point, boundingRect);
     }
-};template <typename T, typename D>
+};
+template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IUIElementOverrides7>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::IUIElementOverrides7>
 {
@@ -11736,7 +12067,8 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().OnProcessKeyboardAccelerators(args);
     }
-};template <typename T, typename D>
+};
+template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IUIElementOverrides8>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::IUIElementOverrides8>
 {
@@ -11758,7 +12090,8 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().OnBringIntoViewRequested(e);
     }
-};template <typename T, typename D>
+};
+template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IUIElementOverrides9>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::IUIElementOverrides9>
 {
@@ -11771,7 +12104,8 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().PopulatePropertyInfoOverride(propertyName, animationPropertyInfo);
     }
-};template <typename T, typename D>
+};
+template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::IVisualStateManagerOverrides>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::IVisualStateManagerOverrides>
 {
@@ -11784,8 +12118,9 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().GoToStateCore(control, templateRoot, stateName, group, state, useTransitions);
     }
-};}
-namespace winrt::Windows::UI::Xaml
+};
+}
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml
 {
     constexpr auto operator|(ApplicationHighContrastAdjustment const left, ApplicationHighContrastAdjustment const right) noexcept
     {
@@ -11883,846 +12218,846 @@ namespace winrt::Windows::UI::Xaml
     inline AdaptiveTrigger::AdaptiveTrigger()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<AdaptiveTrigger, Windows::UI::Xaml::IAdaptiveTriggerFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<AdaptiveTrigger, IAdaptiveTriggerFactory>([&](IAdaptiveTriggerFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto AdaptiveTrigger::MinWindowWidthProperty()
     {
-        return impl::call_factory<AdaptiveTrigger, Windows::UI::Xaml::IAdaptiveTriggerStatics>([&](auto&& f) { return f.MinWindowWidthProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IAdaptiveTriggerStatics const&), AdaptiveTrigger, IAdaptiveTriggerStatics>([](IAdaptiveTriggerStatics const& f) { return f.MinWindowWidthProperty(); });
     }
     inline auto AdaptiveTrigger::MinWindowHeightProperty()
     {
-        return impl::call_factory<AdaptiveTrigger, Windows::UI::Xaml::IAdaptiveTriggerStatics>([&](auto&& f) { return f.MinWindowHeightProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IAdaptiveTriggerStatics const&), AdaptiveTrigger, IAdaptiveTriggerStatics>([](IAdaptiveTriggerStatics const& f) { return f.MinWindowHeightProperty(); });
     }
     inline Application::Application()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<Application, Windows::UI::Xaml::IApplicationFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<Application, IApplicationFactory>([&](IApplicationFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto Application::Current()
     {
-        return impl::call_factory<Application, Windows::UI::Xaml::IApplicationStatics>([&](auto&& f) { return f.Current(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::Application(*)(IApplicationStatics const&), Application, IApplicationStatics>([](IApplicationStatics const& f) { return f.Current(); });
     }
     inline auto Application::Start(Windows::UI::Xaml::ApplicationInitializationCallback const& callback)
     {
-        impl::call_factory<Application, Windows::UI::Xaml::IApplicationStatics>([&](auto&& f) { return f.Start(callback); });
+        impl::call_factory<Application, IApplicationStatics>([&](IApplicationStatics const& f) { return f.Start(callback); });
     }
     inline auto Application::LoadComponent(Windows::Foundation::IInspectable const& component, Windows::Foundation::Uri const& resourceLocator)
     {
-        impl::call_factory<Application, Windows::UI::Xaml::IApplicationStatics>([&](auto&& f) { return f.LoadComponent(component, resourceLocator); });
+        impl::call_factory<Application, IApplicationStatics>([&](IApplicationStatics const& f) { return f.LoadComponent(component, resourceLocator); });
     }
     inline auto Application::LoadComponent(Windows::Foundation::IInspectable const& component, Windows::Foundation::Uri const& resourceLocator, Windows::UI::Xaml::Controls::Primitives::ComponentResourceLocation const& componentResourceLocation)
     {
-        impl::call_factory<Application, Windows::UI::Xaml::IApplicationStatics>([&](auto&& f) { return f.LoadComponent(component, resourceLocator, componentResourceLocation); });
+        impl::call_factory<Application, IApplicationStatics>([&](IApplicationStatics const& f) { return f.LoadComponent(component, resourceLocator, componentResourceLocation); });
     }
     inline BringIntoViewOptions::BringIntoViewOptions() :
-        BringIntoViewOptions(impl::call_factory<BringIntoViewOptions>([](auto&& f) { return f.template ActivateInstance<BringIntoViewOptions>(); }))
+        BringIntoViewOptions(impl::call_factory_cast<BringIntoViewOptions(*)(Windows::Foundation::IActivationFactory const&), BringIntoViewOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<BringIntoViewOptions>(); }))
     {
     }
     inline BrushTransition::BrushTransition()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<BrushTransition, Windows::UI::Xaml::IBrushTransitionFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<BrushTransition, IBrushTransitionFactory>([&](IBrushTransitionFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline ColorPaletteResources::ColorPaletteResources()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<ColorPaletteResources, Windows::UI::Xaml::IColorPaletteResourcesFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<ColorPaletteResources, IColorPaletteResourcesFactory>([&](IColorPaletteResourcesFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto CornerRadiusHelper::FromRadii(double topLeft, double topRight, double bottomRight, double bottomLeft)
     {
-        return impl::call_factory<CornerRadiusHelper, Windows::UI::Xaml::ICornerRadiusHelperStatics>([&](auto&& f) { return f.FromRadii(topLeft, topRight, bottomRight, bottomLeft); });
+        return impl::call_factory<CornerRadiusHelper, ICornerRadiusHelperStatics>([&](ICornerRadiusHelperStatics const& f) { return f.FromRadii(topLeft, topRight, bottomRight, bottomLeft); });
     }
     inline auto CornerRadiusHelper::FromUniformRadius(double uniformRadius)
     {
-        return impl::call_factory<CornerRadiusHelper, Windows::UI::Xaml::ICornerRadiusHelperStatics>([&](auto&& f) { return f.FromUniformRadius(uniformRadius); });
+        return impl::call_factory<CornerRadiusHelper, ICornerRadiusHelperStatics>([&](ICornerRadiusHelperStatics const& f) { return f.FromUniformRadius(uniformRadius); });
     }
     inline DataTemplate::DataTemplate()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<DataTemplate, Windows::UI::Xaml::IDataTemplateFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<DataTemplate, IDataTemplateFactory>([&](IDataTemplateFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto DataTemplate::ExtensionInstanceProperty()
     {
-        return impl::call_factory<DataTemplate, Windows::UI::Xaml::IDataTemplateStatics2>([&](auto&& f) { return f.ExtensionInstanceProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IDataTemplateStatics2 const&), DataTemplate, IDataTemplateStatics2>([](IDataTemplateStatics2 const& f) { return f.ExtensionInstanceProperty(); });
     }
     inline auto DataTemplate::GetExtensionInstance(Windows::UI::Xaml::FrameworkElement const& element)
     {
-        return impl::call_factory<DataTemplate, Windows::UI::Xaml::IDataTemplateStatics2>([&](auto&& f) { return f.GetExtensionInstance(element); });
+        return impl::call_factory<DataTemplate, IDataTemplateStatics2>([&](IDataTemplateStatics2 const& f) { return f.GetExtensionInstance(element); });
     }
     inline auto DataTemplate::SetExtensionInstance(Windows::UI::Xaml::FrameworkElement const& element, Windows::UI::Xaml::IDataTemplateExtension const& value)
     {
-        impl::call_factory<DataTemplate, Windows::UI::Xaml::IDataTemplateStatics2>([&](auto&& f) { return f.SetExtensionInstance(element, value); });
+        impl::call_factory<DataTemplate, IDataTemplateStatics2>([&](IDataTemplateStatics2 const& f) { return f.SetExtensionInstance(element, value); });
     }
     inline DataTemplateKey::DataTemplateKey()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<DataTemplateKey, Windows::UI::Xaml::IDataTemplateKeyFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<DataTemplateKey, IDataTemplateKeyFactory>([&](IDataTemplateKeyFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline DataTemplateKey::DataTemplateKey(Windows::Foundation::IInspectable const& dataType)
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<DataTemplateKey, Windows::UI::Xaml::IDataTemplateKeyFactory>([&](auto&& f) { return f.CreateInstanceWithType(dataType, baseInterface, innerInterface); });
+        *this = impl::call_factory<DataTemplateKey, IDataTemplateKeyFactory>([&](IDataTemplateKeyFactory const& f) { return f.CreateInstanceWithType(dataType, baseInterface, innerInterface); });
     }
     inline DependencyObjectCollection::DependencyObjectCollection()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<DependencyObjectCollection, Windows::UI::Xaml::IDependencyObjectCollectionFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<DependencyObjectCollection, IDependencyObjectCollectionFactory>([&](IDependencyObjectCollectionFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto DependencyProperty::UnsetValue()
     {
-        return impl::call_factory<DependencyProperty, Windows::UI::Xaml::IDependencyPropertyStatics>([&](auto&& f) { return f.UnsetValue(); });
+        return impl::call_factory_cast<Windows::Foundation::IInspectable(*)(IDependencyPropertyStatics const&), DependencyProperty, IDependencyPropertyStatics>([](IDependencyPropertyStatics const& f) { return f.UnsetValue(); });
     }
     inline auto DependencyProperty::Register(param::hstring const& name, Windows::UI::Xaml::Interop::TypeName const& propertyType, Windows::UI::Xaml::Interop::TypeName const& ownerType, Windows::UI::Xaml::PropertyMetadata const& typeMetadata)
     {
-        return impl::call_factory<DependencyProperty, Windows::UI::Xaml::IDependencyPropertyStatics>([&](auto&& f) { return f.Register(name, propertyType, ownerType, typeMetadata); });
+        return impl::call_factory<DependencyProperty, IDependencyPropertyStatics>([&](IDependencyPropertyStatics const& f) { return f.Register(name, propertyType, ownerType, typeMetadata); });
     }
     inline auto DependencyProperty::RegisterAttached(param::hstring const& name, Windows::UI::Xaml::Interop::TypeName const& propertyType, Windows::UI::Xaml::Interop::TypeName const& ownerType, Windows::UI::Xaml::PropertyMetadata const& defaultMetadata)
     {
-        return impl::call_factory<DependencyProperty, Windows::UI::Xaml::IDependencyPropertyStatics>([&](auto&& f) { return f.RegisterAttached(name, propertyType, ownerType, defaultMetadata); });
+        return impl::call_factory<DependencyProperty, IDependencyPropertyStatics>([&](IDependencyPropertyStatics const& f) { return f.RegisterAttached(name, propertyType, ownerType, defaultMetadata); });
     }
     inline DispatcherTimer::DispatcherTimer()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<DispatcherTimer, Windows::UI::Xaml::IDispatcherTimerFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<DispatcherTimer, IDispatcherTimerFactory>([&](IDispatcherTimerFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto DurationHelper::Automatic()
     {
-        return impl::call_factory<DurationHelper, Windows::UI::Xaml::IDurationHelperStatics>([&](auto&& f) { return f.Automatic(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::Duration(*)(IDurationHelperStatics const&), DurationHelper, IDurationHelperStatics>([](IDurationHelperStatics const& f) { return f.Automatic(); });
     }
     inline auto DurationHelper::Forever()
     {
-        return impl::call_factory<DurationHelper, Windows::UI::Xaml::IDurationHelperStatics>([&](auto&& f) { return f.Forever(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::Duration(*)(IDurationHelperStatics const&), DurationHelper, IDurationHelperStatics>([](IDurationHelperStatics const& f) { return f.Forever(); });
     }
     inline auto DurationHelper::Compare(Windows::UI::Xaml::Duration const& duration1, Windows::UI::Xaml::Duration const& duration2)
     {
-        return impl::call_factory<DurationHelper, Windows::UI::Xaml::IDurationHelperStatics>([&](auto&& f) { return f.Compare(duration1, duration2); });
+        return impl::call_factory<DurationHelper, IDurationHelperStatics>([&](IDurationHelperStatics const& f) { return f.Compare(duration1, duration2); });
     }
     inline auto DurationHelper::FromTimeSpan(Windows::Foundation::TimeSpan const& timeSpan)
     {
-        return impl::call_factory<DurationHelper, Windows::UI::Xaml::IDurationHelperStatics>([&](auto&& f) { return f.FromTimeSpan(timeSpan); });
+        return impl::call_factory<DurationHelper, IDurationHelperStatics>([&](IDurationHelperStatics const& f) { return f.FromTimeSpan(timeSpan); });
     }
     inline auto DurationHelper::GetHasTimeSpan(Windows::UI::Xaml::Duration const& target)
     {
-        return impl::call_factory<DurationHelper, Windows::UI::Xaml::IDurationHelperStatics>([&](auto&& f) { return f.GetHasTimeSpan(target); });
+        return impl::call_factory<DurationHelper, IDurationHelperStatics>([&](IDurationHelperStatics const& f) { return f.GetHasTimeSpan(target); });
     }
     inline auto DurationHelper::Add(Windows::UI::Xaml::Duration const& target, Windows::UI::Xaml::Duration const& duration)
     {
-        return impl::call_factory<DurationHelper, Windows::UI::Xaml::IDurationHelperStatics>([&](auto&& f) { return f.Add(target, duration); });
+        return impl::call_factory<DurationHelper, IDurationHelperStatics>([&](IDurationHelperStatics const& f) { return f.Add(target, duration); });
     }
     inline auto DurationHelper::Equals(Windows::UI::Xaml::Duration const& target, Windows::UI::Xaml::Duration const& value)
     {
-        return impl::call_factory<DurationHelper, Windows::UI::Xaml::IDurationHelperStatics>([&](auto&& f) { return f.Equals(target, value); });
+        return impl::call_factory<DurationHelper, IDurationHelperStatics>([&](IDurationHelperStatics const& f) { return f.Equals(target, value); });
     }
     inline auto DurationHelper::Subtract(Windows::UI::Xaml::Duration const& target, Windows::UI::Xaml::Duration const& duration)
     {
-        return impl::call_factory<DurationHelper, Windows::UI::Xaml::IDurationHelperStatics>([&](auto&& f) { return f.Subtract(target, duration); });
+        return impl::call_factory<DurationHelper, IDurationHelperStatics>([&](IDurationHelperStatics const& f) { return f.Subtract(target, duration); });
     }
     inline ElementFactoryGetArgs::ElementFactoryGetArgs()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<ElementFactoryGetArgs, Windows::UI::Xaml::IElementFactoryGetArgsFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<ElementFactoryGetArgs, IElementFactoryGetArgsFactory>([&](IElementFactoryGetArgsFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline ElementFactoryRecycleArgs::ElementFactoryRecycleArgs()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<ElementFactoryRecycleArgs, Windows::UI::Xaml::IElementFactoryRecycleArgsFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<ElementFactoryRecycleArgs, IElementFactoryRecycleArgsFactory>([&](IElementFactoryRecycleArgsFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto ElementSoundPlayer::Volume()
     {
-        return impl::call_factory<ElementSoundPlayer, Windows::UI::Xaml::IElementSoundPlayerStatics>([&](auto&& f) { return f.Volume(); });
+        return impl::call_factory_cast<double(*)(IElementSoundPlayerStatics const&), ElementSoundPlayer, IElementSoundPlayerStatics>([](IElementSoundPlayerStatics const& f) { return f.Volume(); });
     }
     inline auto ElementSoundPlayer::Volume(double value)
     {
-        impl::call_factory<ElementSoundPlayer, Windows::UI::Xaml::IElementSoundPlayerStatics>([&](auto&& f) { return f.Volume(value); });
+        impl::call_factory<ElementSoundPlayer, IElementSoundPlayerStatics>([&](IElementSoundPlayerStatics const& f) { return f.Volume(value); });
     }
     inline auto ElementSoundPlayer::State()
     {
-        return impl::call_factory<ElementSoundPlayer, Windows::UI::Xaml::IElementSoundPlayerStatics>([&](auto&& f) { return f.State(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::ElementSoundPlayerState(*)(IElementSoundPlayerStatics const&), ElementSoundPlayer, IElementSoundPlayerStatics>([](IElementSoundPlayerStatics const& f) { return f.State(); });
     }
     inline auto ElementSoundPlayer::State(Windows::UI::Xaml::ElementSoundPlayerState const& value)
     {
-        impl::call_factory<ElementSoundPlayer, Windows::UI::Xaml::IElementSoundPlayerStatics>([&](auto&& f) { return f.State(value); });
+        impl::call_factory<ElementSoundPlayer, IElementSoundPlayerStatics>([&](IElementSoundPlayerStatics const& f) { return f.State(value); });
     }
     inline auto ElementSoundPlayer::Play(Windows::UI::Xaml::ElementSoundKind const& sound)
     {
-        impl::call_factory<ElementSoundPlayer, Windows::UI::Xaml::IElementSoundPlayerStatics>([&](auto&& f) { return f.Play(sound); });
+        impl::call_factory<ElementSoundPlayer, IElementSoundPlayerStatics>([&](IElementSoundPlayerStatics const& f) { return f.Play(sound); });
     }
     inline auto ElementSoundPlayer::SpatialAudioMode()
     {
-        return impl::call_factory<ElementSoundPlayer, Windows::UI::Xaml::IElementSoundPlayerStatics2>([&](auto&& f) { return f.SpatialAudioMode(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::ElementSpatialAudioMode(*)(IElementSoundPlayerStatics2 const&), ElementSoundPlayer, IElementSoundPlayerStatics2>([](IElementSoundPlayerStatics2 const& f) { return f.SpatialAudioMode(); });
     }
     inline auto ElementSoundPlayer::SpatialAudioMode(Windows::UI::Xaml::ElementSpatialAudioMode const& value)
     {
-        impl::call_factory<ElementSoundPlayer, Windows::UI::Xaml::IElementSoundPlayerStatics2>([&](auto&& f) { return f.SpatialAudioMode(value); });
+        impl::call_factory<ElementSoundPlayer, IElementSoundPlayerStatics2>([&](IElementSoundPlayerStatics2 const& f) { return f.SpatialAudioMode(value); });
     }
     inline EventTrigger::EventTrigger() :
-        EventTrigger(impl::call_factory<EventTrigger>([](auto&& f) { return f.template ActivateInstance<EventTrigger>(); }))
+        EventTrigger(impl::call_factory_cast<EventTrigger(*)(Windows::Foundation::IActivationFactory const&), EventTrigger>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EventTrigger>(); }))
     {
     }
     inline auto FrameworkElement::TagProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.TagProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.TagProperty(); });
     }
     inline auto FrameworkElement::LanguageProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.LanguageProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.LanguageProperty(); });
     }
     inline auto FrameworkElement::ActualWidthProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.ActualWidthProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.ActualWidthProperty(); });
     }
     inline auto FrameworkElement::ActualHeightProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.ActualHeightProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.ActualHeightProperty(); });
     }
     inline auto FrameworkElement::WidthProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.WidthProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.WidthProperty(); });
     }
     inline auto FrameworkElement::HeightProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.HeightProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.HeightProperty(); });
     }
     inline auto FrameworkElement::MinWidthProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.MinWidthProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.MinWidthProperty(); });
     }
     inline auto FrameworkElement::MaxWidthProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.MaxWidthProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.MaxWidthProperty(); });
     }
     inline auto FrameworkElement::MinHeightProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.MinHeightProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.MinHeightProperty(); });
     }
     inline auto FrameworkElement::MaxHeightProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.MaxHeightProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.MaxHeightProperty(); });
     }
     inline auto FrameworkElement::HorizontalAlignmentProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.HorizontalAlignmentProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.HorizontalAlignmentProperty(); });
     }
     inline auto FrameworkElement::VerticalAlignmentProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.VerticalAlignmentProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.VerticalAlignmentProperty(); });
     }
     inline auto FrameworkElement::MarginProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.MarginProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.MarginProperty(); });
     }
     inline auto FrameworkElement::NameProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.NameProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.NameProperty(); });
     }
     inline auto FrameworkElement::DataContextProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.DataContextProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.DataContextProperty(); });
     }
     inline auto FrameworkElement::StyleProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.StyleProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.StyleProperty(); });
     }
     inline auto FrameworkElement::FlowDirectionProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics>([&](auto&& f) { return f.FlowDirectionProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics const&), FrameworkElement, IFrameworkElementStatics>([](IFrameworkElementStatics const& f) { return f.FlowDirectionProperty(); });
     }
     inline auto FrameworkElement::RequestedThemeProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics2>([&](auto&& f) { return f.RequestedThemeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics2 const&), FrameworkElement, IFrameworkElementStatics2>([](IFrameworkElementStatics2 const& f) { return f.RequestedThemeProperty(); });
     }
     inline auto FrameworkElement::AllowFocusOnInteractionProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics4>([&](auto&& f) { return f.AllowFocusOnInteractionProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics4 const&), FrameworkElement, IFrameworkElementStatics4>([](IFrameworkElementStatics4 const& f) { return f.AllowFocusOnInteractionProperty(); });
     }
     inline auto FrameworkElement::FocusVisualMarginProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics4>([&](auto&& f) { return f.FocusVisualMarginProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics4 const&), FrameworkElement, IFrameworkElementStatics4>([](IFrameworkElementStatics4 const& f) { return f.FocusVisualMarginProperty(); });
     }
     inline auto FrameworkElement::FocusVisualSecondaryThicknessProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics4>([&](auto&& f) { return f.FocusVisualSecondaryThicknessProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics4 const&), FrameworkElement, IFrameworkElementStatics4>([](IFrameworkElementStatics4 const& f) { return f.FocusVisualSecondaryThicknessProperty(); });
     }
     inline auto FrameworkElement::FocusVisualPrimaryThicknessProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics4>([&](auto&& f) { return f.FocusVisualPrimaryThicknessProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics4 const&), FrameworkElement, IFrameworkElementStatics4>([](IFrameworkElementStatics4 const& f) { return f.FocusVisualPrimaryThicknessProperty(); });
     }
     inline auto FrameworkElement::FocusVisualSecondaryBrushProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics4>([&](auto&& f) { return f.FocusVisualSecondaryBrushProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics4 const&), FrameworkElement, IFrameworkElementStatics4>([](IFrameworkElementStatics4 const& f) { return f.FocusVisualSecondaryBrushProperty(); });
     }
     inline auto FrameworkElement::FocusVisualPrimaryBrushProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics4>([&](auto&& f) { return f.FocusVisualPrimaryBrushProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics4 const&), FrameworkElement, IFrameworkElementStatics4>([](IFrameworkElementStatics4 const& f) { return f.FocusVisualPrimaryBrushProperty(); });
     }
     inline auto FrameworkElement::AllowFocusWhenDisabledProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics4>([&](auto&& f) { return f.AllowFocusWhenDisabledProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics4 const&), FrameworkElement, IFrameworkElementStatics4>([](IFrameworkElementStatics4 const& f) { return f.AllowFocusWhenDisabledProperty(); });
     }
     inline auto FrameworkElement::DeferTree(Windows::UI::Xaml::DependencyObject const& element)
     {
-        impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics5>([&](auto&& f) { return f.DeferTree(element); });
+        impl::call_factory<FrameworkElement, IFrameworkElementStatics5>([&](IFrameworkElementStatics5 const& f) { return f.DeferTree(element); });
     }
     inline auto FrameworkElement::ActualThemeProperty()
     {
-        return impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementStatics6>([&](auto&& f) { return f.ActualThemeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IFrameworkElementStatics6 const&), FrameworkElement, IFrameworkElementStatics6>([](IFrameworkElementStatics6 const& f) { return f.ActualThemeProperty(); });
     }
     inline FrameworkView::FrameworkView() :
-        FrameworkView(impl::call_factory<FrameworkView>([](auto&& f) { return f.template ActivateInstance<FrameworkView>(); }))
+        FrameworkView(impl::call_factory_cast<FrameworkView(*)(Windows::Foundation::IActivationFactory const&), FrameworkView>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<FrameworkView>(); }))
     {
     }
     inline FrameworkViewSource::FrameworkViewSource() :
-        FrameworkViewSource(impl::call_factory<FrameworkViewSource>([](auto&& f) { return f.template ActivateInstance<FrameworkViewSource>(); }))
+        FrameworkViewSource(impl::call_factory_cast<FrameworkViewSource(*)(Windows::Foundation::IActivationFactory const&), FrameworkViewSource>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<FrameworkViewSource>(); }))
     {
     }
     inline auto GridLengthHelper::Auto()
     {
-        return impl::call_factory<GridLengthHelper, Windows::UI::Xaml::IGridLengthHelperStatics>([&](auto&& f) { return f.Auto(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::GridLength(*)(IGridLengthHelperStatics const&), GridLengthHelper, IGridLengthHelperStatics>([](IGridLengthHelperStatics const& f) { return f.Auto(); });
     }
     inline auto GridLengthHelper::FromPixels(double pixels)
     {
-        return impl::call_factory<GridLengthHelper, Windows::UI::Xaml::IGridLengthHelperStatics>([&](auto&& f) { return f.FromPixels(pixels); });
+        return impl::call_factory<GridLengthHelper, IGridLengthHelperStatics>([&](IGridLengthHelperStatics const& f) { return f.FromPixels(pixels); });
     }
     inline auto GridLengthHelper::FromValueAndType(double value, Windows::UI::Xaml::GridUnitType const& type)
     {
-        return impl::call_factory<GridLengthHelper, Windows::UI::Xaml::IGridLengthHelperStatics>([&](auto&& f) { return f.FromValueAndType(value, type); });
+        return impl::call_factory<GridLengthHelper, IGridLengthHelperStatics>([&](IGridLengthHelperStatics const& f) { return f.FromValueAndType(value, type); });
     }
     inline auto GridLengthHelper::GetIsAbsolute(Windows::UI::Xaml::GridLength const& target)
     {
-        return impl::call_factory<GridLengthHelper, Windows::UI::Xaml::IGridLengthHelperStatics>([&](auto&& f) { return f.GetIsAbsolute(target); });
+        return impl::call_factory<GridLengthHelper, IGridLengthHelperStatics>([&](IGridLengthHelperStatics const& f) { return f.GetIsAbsolute(target); });
     }
     inline auto GridLengthHelper::GetIsAuto(Windows::UI::Xaml::GridLength const& target)
     {
-        return impl::call_factory<GridLengthHelper, Windows::UI::Xaml::IGridLengthHelperStatics>([&](auto&& f) { return f.GetIsAuto(target); });
+        return impl::call_factory<GridLengthHelper, IGridLengthHelperStatics>([&](IGridLengthHelperStatics const& f) { return f.GetIsAuto(target); });
     }
     inline auto GridLengthHelper::GetIsStar(Windows::UI::Xaml::GridLength const& target)
     {
-        return impl::call_factory<GridLengthHelper, Windows::UI::Xaml::IGridLengthHelperStatics>([&](auto&& f) { return f.GetIsStar(target); });
+        return impl::call_factory<GridLengthHelper, IGridLengthHelperStatics>([&](IGridLengthHelperStatics const& f) { return f.GetIsStar(target); });
     }
     inline auto GridLengthHelper::Equals(Windows::UI::Xaml::GridLength const& target, Windows::UI::Xaml::GridLength const& value)
     {
-        return impl::call_factory<GridLengthHelper, Windows::UI::Xaml::IGridLengthHelperStatics>([&](auto&& f) { return f.Equals(target, value); });
+        return impl::call_factory<GridLengthHelper, IGridLengthHelperStatics>([&](IGridLengthHelperStatics const& f) { return f.Equals(target, value); });
     }
     inline auto PointHelper::FromCoordinates(float x, float y)
     {
-        return impl::call_factory<PointHelper, Windows::UI::Xaml::IPointHelperStatics>([&](auto&& f) { return f.FromCoordinates(x, y); });
+        return impl::call_factory<PointHelper, IPointHelperStatics>([&](IPointHelperStatics const& f) { return f.FromCoordinates(x, y); });
     }
     inline PropertyMetadata::PropertyMetadata(Windows::Foundation::IInspectable const& defaultValue)
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<PropertyMetadata, Windows::UI::Xaml::IPropertyMetadataFactory>([&](auto&& f) { return f.CreateInstanceWithDefaultValue(defaultValue, baseInterface, innerInterface); });
+        *this = impl::call_factory<PropertyMetadata, IPropertyMetadataFactory>([&](IPropertyMetadataFactory const& f) { return f.CreateInstanceWithDefaultValue(defaultValue, baseInterface, innerInterface); });
     }
     inline PropertyMetadata::PropertyMetadata(Windows::Foundation::IInspectable const& defaultValue, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback)
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<PropertyMetadata, Windows::UI::Xaml::IPropertyMetadataFactory>([&](auto&& f) { return f.CreateInstanceWithDefaultValueAndCallback(defaultValue, propertyChangedCallback, baseInterface, innerInterface); });
+        *this = impl::call_factory<PropertyMetadata, IPropertyMetadataFactory>([&](IPropertyMetadataFactory const& f) { return f.CreateInstanceWithDefaultValueAndCallback(defaultValue, propertyChangedCallback, baseInterface, innerInterface); });
     }
     inline auto PropertyMetadata::Create(Windows::Foundation::IInspectable const& defaultValue)
     {
-        return impl::call_factory<PropertyMetadata, Windows::UI::Xaml::IPropertyMetadataStatics>([&](auto&& f) { return f.Create(defaultValue); });
+        return impl::call_factory<PropertyMetadata, IPropertyMetadataStatics>([&](IPropertyMetadataStatics const& f) { return f.Create(defaultValue); });
     }
     inline auto PropertyMetadata::Create(Windows::Foundation::IInspectable const& defaultValue, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback)
     {
-        return impl::call_factory<PropertyMetadata, Windows::UI::Xaml::IPropertyMetadataStatics>([&](auto&& f) { return f.Create(defaultValue, propertyChangedCallback); });
+        return impl::call_factory<PropertyMetadata, IPropertyMetadataStatics>([&](IPropertyMetadataStatics const& f) { return f.Create(defaultValue, propertyChangedCallback); });
     }
     inline auto PropertyMetadata::Create(Windows::UI::Xaml::CreateDefaultValueCallback const& createDefaultValueCallback)
     {
-        return impl::call_factory<PropertyMetadata, Windows::UI::Xaml::IPropertyMetadataStatics>([&](auto&& f) { return f.Create(createDefaultValueCallback); });
+        return impl::call_factory<PropertyMetadata, IPropertyMetadataStatics>([&](IPropertyMetadataStatics const& f) { return f.Create(createDefaultValueCallback); });
     }
     inline auto PropertyMetadata::Create(Windows::UI::Xaml::CreateDefaultValueCallback const& createDefaultValueCallback, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback)
     {
-        return impl::call_factory<PropertyMetadata, Windows::UI::Xaml::IPropertyMetadataStatics>([&](auto&& f) { return f.Create(createDefaultValueCallback, propertyChangedCallback); });
+        return impl::call_factory<PropertyMetadata, IPropertyMetadataStatics>([&](IPropertyMetadataStatics const& f) { return f.Create(createDefaultValueCallback, propertyChangedCallback); });
     }
     inline PropertyPath::PropertyPath(param::hstring const& path) :
-        PropertyPath(impl::call_factory<PropertyPath, Windows::UI::Xaml::IPropertyPathFactory>([&](auto&& f) { return f.CreateInstance(path); }))
+        PropertyPath(impl::call_factory<PropertyPath, IPropertyPathFactory>([&](IPropertyPathFactory const& f) { return f.CreateInstance(path); }))
     {
     }
     inline auto RectHelper::Empty()
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.Empty(); });
+        return impl::call_factory_cast<Windows::Foundation::Rect(*)(IRectHelperStatics const&), RectHelper, IRectHelperStatics>([](IRectHelperStatics const& f) { return f.Empty(); });
     }
     inline auto RectHelper::FromCoordinatesAndDimensions(float x, float y, float width, float height)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.FromCoordinatesAndDimensions(x, y, width, height); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.FromCoordinatesAndDimensions(x, y, width, height); });
     }
     inline auto RectHelper::FromPoints(Windows::Foundation::Point const& point1, Windows::Foundation::Point const& point2)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.FromPoints(point1, point2); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.FromPoints(point1, point2); });
     }
     inline auto RectHelper::FromLocationAndSize(Windows::Foundation::Point const& location, Windows::Foundation::Size const& size)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.FromLocationAndSize(location, size); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.FromLocationAndSize(location, size); });
     }
     inline auto RectHelper::GetIsEmpty(Windows::Foundation::Rect const& target)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.GetIsEmpty(target); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.GetIsEmpty(target); });
     }
     inline auto RectHelper::GetBottom(Windows::Foundation::Rect const& target)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.GetBottom(target); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.GetBottom(target); });
     }
     inline auto RectHelper::GetLeft(Windows::Foundation::Rect const& target)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.GetLeft(target); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.GetLeft(target); });
     }
     inline auto RectHelper::GetRight(Windows::Foundation::Rect const& target)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.GetRight(target); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.GetRight(target); });
     }
     inline auto RectHelper::GetTop(Windows::Foundation::Rect const& target)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.GetTop(target); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.GetTop(target); });
     }
     inline auto RectHelper::Contains(Windows::Foundation::Rect const& target, Windows::Foundation::Point const& point)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.Contains(target, point); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.Contains(target, point); });
     }
     inline auto RectHelper::Equals(Windows::Foundation::Rect const& target, Windows::Foundation::Rect const& value)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.Equals(target, value); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.Equals(target, value); });
     }
     inline auto RectHelper::Intersect(Windows::Foundation::Rect const& target, Windows::Foundation::Rect const& rect)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.Intersect(target, rect); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.Intersect(target, rect); });
     }
     inline auto RectHelper::Union(Windows::Foundation::Rect const& target, Windows::Foundation::Point const& point)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.Union(target, point); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.Union(target, point); });
     }
     inline auto RectHelper::Union(Windows::Foundation::Rect const& target, Windows::Foundation::Rect const& rect)
     {
-        return impl::call_factory<RectHelper, Windows::UI::Xaml::IRectHelperStatics>([&](auto&& f) { return f.Union(target, rect); });
+        return impl::call_factory<RectHelper, IRectHelperStatics>([&](IRectHelperStatics const& f) { return f.Union(target, rect); });
     }
     inline ResourceDictionary::ResourceDictionary()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<ResourceDictionary, Windows::UI::Xaml::IResourceDictionaryFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<ResourceDictionary, IResourceDictionaryFactory>([&](IResourceDictionaryFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline RoutedEventArgs::RoutedEventArgs()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<RoutedEventArgs, Windows::UI::Xaml::IRoutedEventArgsFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<RoutedEventArgs, IRoutedEventArgsFactory>([&](IRoutedEventArgsFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline ScalarTransition::ScalarTransition()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<ScalarTransition, Windows::UI::Xaml::IScalarTransitionFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<ScalarTransition, IScalarTransitionFactory>([&](IScalarTransitionFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline Setter::Setter() :
-        Setter(impl::call_factory<Setter>([](auto&& f) { return f.template ActivateInstance<Setter>(); }))
+        Setter(impl::call_factory_cast<Setter(*)(Windows::Foundation::IActivationFactory const&), Setter>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Setter>(); }))
     {
     }
     inline Setter::Setter(Windows::UI::Xaml::DependencyProperty const& targetProperty, Windows::Foundation::IInspectable const& value) :
-        Setter(impl::call_factory<Setter, Windows::UI::Xaml::ISetterFactory>([&](auto&& f) { return f.CreateInstance(targetProperty, value); }))
+        Setter(impl::call_factory<Setter, ISetterFactory>([&](ISetterFactory const& f) { return f.CreateInstance(targetProperty, value); }))
     {
     }
     inline SetterBaseCollection::SetterBaseCollection() :
-        SetterBaseCollection(impl::call_factory<SetterBaseCollection>([](auto&& f) { return f.template ActivateInstance<SetterBaseCollection>(); }))
+        SetterBaseCollection(impl::call_factory_cast<SetterBaseCollection(*)(Windows::Foundation::IActivationFactory const&), SetterBaseCollection>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SetterBaseCollection>(); }))
     {
     }
     inline auto SizeHelper::Empty()
     {
-        return impl::call_factory<SizeHelper, Windows::UI::Xaml::ISizeHelperStatics>([&](auto&& f) { return f.Empty(); });
+        return impl::call_factory_cast<Windows::Foundation::Size(*)(ISizeHelperStatics const&), SizeHelper, ISizeHelperStatics>([](ISizeHelperStatics const& f) { return f.Empty(); });
     }
     inline auto SizeHelper::FromDimensions(float width, float height)
     {
-        return impl::call_factory<SizeHelper, Windows::UI::Xaml::ISizeHelperStatics>([&](auto&& f) { return f.FromDimensions(width, height); });
+        return impl::call_factory<SizeHelper, ISizeHelperStatics>([&](ISizeHelperStatics const& f) { return f.FromDimensions(width, height); });
     }
     inline auto SizeHelper::GetIsEmpty(Windows::Foundation::Size const& target)
     {
-        return impl::call_factory<SizeHelper, Windows::UI::Xaml::ISizeHelperStatics>([&](auto&& f) { return f.GetIsEmpty(target); });
+        return impl::call_factory<SizeHelper, ISizeHelperStatics>([&](ISizeHelperStatics const& f) { return f.GetIsEmpty(target); });
     }
     inline auto SizeHelper::Equals(Windows::Foundation::Size const& target, Windows::Foundation::Size const& value)
     {
-        return impl::call_factory<SizeHelper, Windows::UI::Xaml::ISizeHelperStatics>([&](auto&& f) { return f.Equals(target, value); });
+        return impl::call_factory<SizeHelper, ISizeHelperStatics>([&](ISizeHelperStatics const& f) { return f.Equals(target, value); });
     }
     inline StateTrigger::StateTrigger() :
-        StateTrigger(impl::call_factory<StateTrigger>([](auto&& f) { return f.template ActivateInstance<StateTrigger>(); }))
+        StateTrigger(impl::call_factory_cast<StateTrigger(*)(Windows::Foundation::IActivationFactory const&), StateTrigger>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<StateTrigger>(); }))
     {
     }
     inline auto StateTrigger::IsActiveProperty()
     {
-        return impl::call_factory<StateTrigger, Windows::UI::Xaml::IStateTriggerStatics>([&](auto&& f) { return f.IsActiveProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IStateTriggerStatics const&), StateTrigger, IStateTriggerStatics>([](IStateTriggerStatics const& f) { return f.IsActiveProperty(); });
     }
     inline Style::Style() :
-        Style(impl::call_factory<Style>([](auto&& f) { return f.template ActivateInstance<Style>(); }))
+        Style(impl::call_factory_cast<Style(*)(Windows::Foundation::IActivationFactory const&), Style>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Style>(); }))
     {
     }
     inline Style::Style(Windows::UI::Xaml::Interop::TypeName const& targetType) :
-        Style(impl::call_factory<Style, Windows::UI::Xaml::IStyleFactory>([&](auto&& f) { return f.CreateInstance(targetType); }))
+        Style(impl::call_factory<Style, IStyleFactory>([&](IStyleFactory const& f) { return f.CreateInstance(targetType); }))
     {
     }
     inline TargetPropertyPath::TargetPropertyPath() :
-        TargetPropertyPath(impl::call_factory<TargetPropertyPath>([](auto&& f) { return f.template ActivateInstance<TargetPropertyPath>(); }))
+        TargetPropertyPath(impl::call_factory_cast<TargetPropertyPath(*)(Windows::Foundation::IActivationFactory const&), TargetPropertyPath>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TargetPropertyPath>(); }))
     {
     }
     inline TargetPropertyPath::TargetPropertyPath(Windows::UI::Xaml::DependencyProperty const& targetProperty) :
-        TargetPropertyPath(impl::call_factory<TargetPropertyPath, Windows::UI::Xaml::ITargetPropertyPathFactory>([&](auto&& f) { return f.CreateInstance(targetProperty); }))
+        TargetPropertyPath(impl::call_factory<TargetPropertyPath, ITargetPropertyPathFactory>([&](ITargetPropertyPathFactory const& f) { return f.CreateInstance(targetProperty); }))
     {
     }
     inline auto ThicknessHelper::FromLengths(double left, double top, double right, double bottom)
     {
-        return impl::call_factory<ThicknessHelper, Windows::UI::Xaml::IThicknessHelperStatics>([&](auto&& f) { return f.FromLengths(left, top, right, bottom); });
+        return impl::call_factory<ThicknessHelper, IThicknessHelperStatics>([&](IThicknessHelperStatics const& f) { return f.FromLengths(left, top, right, bottom); });
     }
     inline auto ThicknessHelper::FromUniformLength(double uniformLength)
     {
-        return impl::call_factory<ThicknessHelper, Windows::UI::Xaml::IThicknessHelperStatics>([&](auto&& f) { return f.FromUniformLength(uniformLength); });
+        return impl::call_factory<ThicknessHelper, IThicknessHelperStatics>([&](IThicknessHelperStatics const& f) { return f.FromUniformLength(uniformLength); });
     }
     inline TriggerActionCollection::TriggerActionCollection() :
-        TriggerActionCollection(impl::call_factory<TriggerActionCollection>([](auto&& f) { return f.template ActivateInstance<TriggerActionCollection>(); }))
+        TriggerActionCollection(impl::call_factory_cast<TriggerActionCollection(*)(Windows::Foundation::IActivationFactory const&), TriggerActionCollection>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TriggerActionCollection>(); }))
     {
     }
     inline auto UIElement::KeyDownEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.KeyDownEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.KeyDownEvent(); });
     }
     inline auto UIElement::KeyUpEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.KeyUpEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.KeyUpEvent(); });
     }
     inline auto UIElement::PointerEnteredEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerEnteredEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.PointerEnteredEvent(); });
     }
     inline auto UIElement::PointerPressedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerPressedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.PointerPressedEvent(); });
     }
     inline auto UIElement::PointerMovedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerMovedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.PointerMovedEvent(); });
     }
     inline auto UIElement::PointerReleasedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerReleasedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.PointerReleasedEvent(); });
     }
     inline auto UIElement::PointerExitedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerExitedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.PointerExitedEvent(); });
     }
     inline auto UIElement::PointerCaptureLostEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerCaptureLostEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.PointerCaptureLostEvent(); });
     }
     inline auto UIElement::PointerCanceledEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerCanceledEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.PointerCanceledEvent(); });
     }
     inline auto UIElement::PointerWheelChangedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerWheelChangedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.PointerWheelChangedEvent(); });
     }
     inline auto UIElement::TappedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.TappedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.TappedEvent(); });
     }
     inline auto UIElement::DoubleTappedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.DoubleTappedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.DoubleTappedEvent(); });
     }
     inline auto UIElement::HoldingEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.HoldingEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.HoldingEvent(); });
     }
     inline auto UIElement::RightTappedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.RightTappedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.RightTappedEvent(); });
     }
     inline auto UIElement::ManipulationStartingEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.ManipulationStartingEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.ManipulationStartingEvent(); });
     }
     inline auto UIElement::ManipulationInertiaStartingEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.ManipulationInertiaStartingEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.ManipulationInertiaStartingEvent(); });
     }
     inline auto UIElement::ManipulationStartedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.ManipulationStartedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.ManipulationStartedEvent(); });
     }
     inline auto UIElement::ManipulationDeltaEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.ManipulationDeltaEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.ManipulationDeltaEvent(); });
     }
     inline auto UIElement::ManipulationCompletedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.ManipulationCompletedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.ManipulationCompletedEvent(); });
     }
     inline auto UIElement::DragEnterEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.DragEnterEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.DragEnterEvent(); });
     }
     inline auto UIElement::DragLeaveEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.DragLeaveEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.DragLeaveEvent(); });
     }
     inline auto UIElement::DragOverEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.DragOverEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.DragOverEvent(); });
     }
     inline auto UIElement::DropEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.DropEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.DropEvent(); });
     }
     inline auto UIElement::AllowDropProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.AllowDropProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.AllowDropProperty(); });
     }
     inline auto UIElement::OpacityProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.OpacityProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.OpacityProperty(); });
     }
     inline auto UIElement::ClipProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.ClipProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.ClipProperty(); });
     }
     inline auto UIElement::RenderTransformProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.RenderTransformProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.RenderTransformProperty(); });
     }
     inline auto UIElement::ProjectionProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.ProjectionProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.ProjectionProperty(); });
     }
     inline auto UIElement::RenderTransformOriginProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.RenderTransformOriginProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.RenderTransformOriginProperty(); });
     }
     inline auto UIElement::IsHitTestVisibleProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.IsHitTestVisibleProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.IsHitTestVisibleProperty(); });
     }
     inline auto UIElement::VisibilityProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.VisibilityProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.VisibilityProperty(); });
     }
     inline auto UIElement::UseLayoutRoundingProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.UseLayoutRoundingProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.UseLayoutRoundingProperty(); });
     }
     inline auto UIElement::TransitionsProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.TransitionsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.TransitionsProperty(); });
     }
     inline auto UIElement::CacheModeProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.CacheModeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.CacheModeProperty(); });
     }
     inline auto UIElement::IsTapEnabledProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.IsTapEnabledProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.IsTapEnabledProperty(); });
     }
     inline auto UIElement::IsDoubleTapEnabledProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.IsDoubleTapEnabledProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.IsDoubleTapEnabledProperty(); });
     }
     inline auto UIElement::IsRightTapEnabledProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.IsRightTapEnabledProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.IsRightTapEnabledProperty(); });
     }
     inline auto UIElement::IsHoldingEnabledProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.IsHoldingEnabledProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.IsHoldingEnabledProperty(); });
     }
     inline auto UIElement::ManipulationModeProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.ManipulationModeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.ManipulationModeProperty(); });
     }
     inline auto UIElement::PointerCapturesProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics>([&](auto&& f) { return f.PointerCapturesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics const&), UIElement, IUIElementStatics>([](IUIElementStatics const& f) { return f.PointerCapturesProperty(); });
     }
     inline auto UIElement::ShadowProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics10>([&](auto&& f) { return f.ShadowProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics10 const&), UIElement, IUIElementStatics10>([](IUIElementStatics10 const& f) { return f.ShadowProperty(); });
     }
     inline auto UIElement::CompositeModeProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics2>([&](auto&& f) { return f.CompositeModeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics2 const&), UIElement, IUIElementStatics2>([](IUIElementStatics2 const& f) { return f.CompositeModeProperty(); });
     }
     inline auto UIElement::Transform3DProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics3>([&](auto&& f) { return f.Transform3DProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics3 const&), UIElement, IUIElementStatics3>([](IUIElementStatics3 const& f) { return f.Transform3DProperty(); });
     }
     inline auto UIElement::CanDragProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics3>([&](auto&& f) { return f.CanDragProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics3 const&), UIElement, IUIElementStatics3>([](IUIElementStatics3 const& f) { return f.CanDragProperty(); });
     }
     inline auto UIElement::TryStartDirectManipulation(Windows::UI::Xaml::Input::Pointer const& value)
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics3>([&](auto&& f) { return f.TryStartDirectManipulation(value); });
+        return impl::call_factory<UIElement, IUIElementStatics3>([&](IUIElementStatics3 const& f) { return f.TryStartDirectManipulation(value); });
     }
     inline auto UIElement::ContextFlyoutProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics4>([&](auto&& f) { return f.ContextFlyoutProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics4 const&), UIElement, IUIElementStatics4>([](IUIElementStatics4 const& f) { return f.ContextFlyoutProperty(); });
     }
     inline auto UIElement::ExitDisplayModeOnAccessKeyInvokedProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics4>([&](auto&& f) { return f.ExitDisplayModeOnAccessKeyInvokedProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics4 const&), UIElement, IUIElementStatics4>([](IUIElementStatics4 const& f) { return f.ExitDisplayModeOnAccessKeyInvokedProperty(); });
     }
     inline auto UIElement::IsAccessKeyScopeProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics4>([&](auto&& f) { return f.IsAccessKeyScopeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics4 const&), UIElement, IUIElementStatics4>([](IUIElementStatics4 const& f) { return f.IsAccessKeyScopeProperty(); });
     }
     inline auto UIElement::AccessKeyScopeOwnerProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics4>([&](auto&& f) { return f.AccessKeyScopeOwnerProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics4 const&), UIElement, IUIElementStatics4>([](IUIElementStatics4 const& f) { return f.AccessKeyScopeOwnerProperty(); });
     }
     inline auto UIElement::AccessKeyProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics4>([&](auto&& f) { return f.AccessKeyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics4 const&), UIElement, IUIElementStatics4>([](IUIElementStatics4 const& f) { return f.AccessKeyProperty(); });
     }
     inline auto UIElement::LightsProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.LightsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.LightsProperty(); });
     }
     inline auto UIElement::KeyTipPlacementModeProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.KeyTipPlacementModeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.KeyTipPlacementModeProperty(); });
     }
     inline auto UIElement::KeyTipHorizontalOffsetProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.KeyTipHorizontalOffsetProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.KeyTipHorizontalOffsetProperty(); });
     }
     inline auto UIElement::KeyTipVerticalOffsetProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.KeyTipVerticalOffsetProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.KeyTipVerticalOffsetProperty(); });
     }
     inline auto UIElement::XYFocusKeyboardNavigationProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.XYFocusKeyboardNavigationProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.XYFocusKeyboardNavigationProperty(); });
     }
     inline auto UIElement::XYFocusUpNavigationStrategyProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.XYFocusUpNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.XYFocusUpNavigationStrategyProperty(); });
     }
     inline auto UIElement::XYFocusDownNavigationStrategyProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.XYFocusDownNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.XYFocusDownNavigationStrategyProperty(); });
     }
     inline auto UIElement::XYFocusLeftNavigationStrategyProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.XYFocusLeftNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.XYFocusLeftNavigationStrategyProperty(); });
     }
     inline auto UIElement::XYFocusRightNavigationStrategyProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.XYFocusRightNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.XYFocusRightNavigationStrategyProperty(); });
     }
     inline auto UIElement::HighContrastAdjustmentProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.HighContrastAdjustmentProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.HighContrastAdjustmentProperty(); });
     }
     inline auto UIElement::TabFocusNavigationProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics5>([&](auto&& f) { return f.TabFocusNavigationProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics5 const&), UIElement, IUIElementStatics5>([](IUIElementStatics5 const& f) { return f.TabFocusNavigationProperty(); });
     }
     inline auto UIElement::GettingFocusEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics6>([&](auto&& f) { return f.GettingFocusEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics6 const&), UIElement, IUIElementStatics6>([](IUIElementStatics6 const& f) { return f.GettingFocusEvent(); });
     }
     inline auto UIElement::LosingFocusEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics6>([&](auto&& f) { return f.LosingFocusEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics6 const&), UIElement, IUIElementStatics6>([](IUIElementStatics6 const& f) { return f.LosingFocusEvent(); });
     }
     inline auto UIElement::NoFocusCandidateFoundEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics6>([&](auto&& f) { return f.NoFocusCandidateFoundEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics6 const&), UIElement, IUIElementStatics6>([](IUIElementStatics6 const& f) { return f.NoFocusCandidateFoundEvent(); });
     }
     inline auto UIElement::PreviewKeyDownEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics7>([&](auto&& f) { return f.PreviewKeyDownEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics7 const&), UIElement, IUIElementStatics7>([](IUIElementStatics7 const& f) { return f.PreviewKeyDownEvent(); });
     }
     inline auto UIElement::CharacterReceivedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics7>([&](auto&& f) { return f.CharacterReceivedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics7 const&), UIElement, IUIElementStatics7>([](IUIElementStatics7 const& f) { return f.CharacterReceivedEvent(); });
     }
     inline auto UIElement::PreviewKeyUpEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics7>([&](auto&& f) { return f.PreviewKeyUpEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics7 const&), UIElement, IUIElementStatics7>([](IUIElementStatics7 const& f) { return f.PreviewKeyUpEvent(); });
     }
     inline auto UIElement::BringIntoViewRequestedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics8>([&](auto&& f) { return f.BringIntoViewRequestedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics8 const&), UIElement, IUIElementStatics8>([](IUIElementStatics8 const& f) { return f.BringIntoViewRequestedEvent(); });
     }
     inline auto UIElement::ContextRequestedEvent()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics8>([&](auto&& f) { return f.ContextRequestedEvent(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::RoutedEvent(*)(IUIElementStatics8 const&), UIElement, IUIElementStatics8>([](IUIElementStatics8 const& f) { return f.ContextRequestedEvent(); });
     }
     inline auto UIElement::KeyTipTargetProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics8>([&](auto&& f) { return f.KeyTipTargetProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics8 const&), UIElement, IUIElementStatics8>([](IUIElementStatics8 const& f) { return f.KeyTipTargetProperty(); });
     }
     inline auto UIElement::KeyboardAcceleratorPlacementTargetProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics8>([&](auto&& f) { return f.KeyboardAcceleratorPlacementTargetProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics8 const&), UIElement, IUIElementStatics8>([](IUIElementStatics8 const& f) { return f.KeyboardAcceleratorPlacementTargetProperty(); });
     }
     inline auto UIElement::KeyboardAcceleratorPlacementModeProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics8>([&](auto&& f) { return f.KeyboardAcceleratorPlacementModeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics8 const&), UIElement, IUIElementStatics8>([](IUIElementStatics8 const& f) { return f.KeyboardAcceleratorPlacementModeProperty(); });
     }
     inline auto UIElement::RegisterAsScrollPort(Windows::UI::Xaml::UIElement const& element)
     {
-        impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics8>([&](auto&& f) { return f.RegisterAsScrollPort(element); });
+        impl::call_factory<UIElement, IUIElementStatics8>([&](IUIElementStatics8 const& f) { return f.RegisterAsScrollPort(element); });
     }
     inline auto UIElement::CanBeScrollAnchorProperty()
     {
-        return impl::call_factory<UIElement, Windows::UI::Xaml::IUIElementStatics9>([&](auto&& f) { return f.CanBeScrollAnchorProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IUIElementStatics9 const&), UIElement, IUIElementStatics9>([](IUIElementStatics9 const& f) { return f.CanBeScrollAnchorProperty(); });
     }
     inline UIElementWeakCollection::UIElementWeakCollection()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<UIElementWeakCollection, Windows::UI::Xaml::IUIElementWeakCollectionFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<UIElementWeakCollection, IUIElementWeakCollectionFactory>([&](IUIElementWeakCollectionFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline Vector3Transition::Vector3Transition()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<Vector3Transition, Windows::UI::Xaml::IVector3TransitionFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<Vector3Transition, IVector3TransitionFactory>([&](IVector3TransitionFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline VisualState::VisualState() :
-        VisualState(impl::call_factory<VisualState>([](auto&& f) { return f.template ActivateInstance<VisualState>(); }))
+        VisualState(impl::call_factory_cast<VisualState(*)(Windows::Foundation::IActivationFactory const&), VisualState>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<VisualState>(); }))
     {
     }
     inline VisualStateChangedEventArgs::VisualStateChangedEventArgs() :
-        VisualStateChangedEventArgs(impl::call_factory<VisualStateChangedEventArgs>([](auto&& f) { return f.template ActivateInstance<VisualStateChangedEventArgs>(); }))
+        VisualStateChangedEventArgs(impl::call_factory_cast<VisualStateChangedEventArgs(*)(Windows::Foundation::IActivationFactory const&), VisualStateChangedEventArgs>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<VisualStateChangedEventArgs>(); }))
     {
     }
     inline VisualStateGroup::VisualStateGroup() :
-        VisualStateGroup(impl::call_factory<VisualStateGroup>([](auto&& f) { return f.template ActivateInstance<VisualStateGroup>(); }))
+        VisualStateGroup(impl::call_factory_cast<VisualStateGroup(*)(Windows::Foundation::IActivationFactory const&), VisualStateGroup>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<VisualStateGroup>(); }))
     {
     }
     inline VisualStateManager::VisualStateManager()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<VisualStateManager, Windows::UI::Xaml::IVisualStateManagerFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<VisualStateManager, IVisualStateManagerFactory>([&](IVisualStateManagerFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto VisualStateManager::GetVisualStateGroups(Windows::UI::Xaml::FrameworkElement const& obj)
     {
-        return impl::call_factory<VisualStateManager, Windows::UI::Xaml::IVisualStateManagerStatics>([&](auto&& f) { return f.GetVisualStateGroups(obj); });
+        return impl::call_factory<VisualStateManager, IVisualStateManagerStatics>([&](IVisualStateManagerStatics const& f) { return f.GetVisualStateGroups(obj); });
     }
     inline auto VisualStateManager::CustomVisualStateManagerProperty()
     {
-        return impl::call_factory<VisualStateManager, Windows::UI::Xaml::IVisualStateManagerStatics>([&](auto&& f) { return f.CustomVisualStateManagerProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IVisualStateManagerStatics const&), VisualStateManager, IVisualStateManagerStatics>([](IVisualStateManagerStatics const& f) { return f.CustomVisualStateManagerProperty(); });
     }
     inline auto VisualStateManager::GetCustomVisualStateManager(Windows::UI::Xaml::FrameworkElement const& obj)
     {
-        return impl::call_factory<VisualStateManager, Windows::UI::Xaml::IVisualStateManagerStatics>([&](auto&& f) { return f.GetCustomVisualStateManager(obj); });
+        return impl::call_factory<VisualStateManager, IVisualStateManagerStatics>([&](IVisualStateManagerStatics const& f) { return f.GetCustomVisualStateManager(obj); });
     }
     inline auto VisualStateManager::SetCustomVisualStateManager(Windows::UI::Xaml::FrameworkElement const& obj, Windows::UI::Xaml::VisualStateManager const& value)
     {
-        impl::call_factory<VisualStateManager, Windows::UI::Xaml::IVisualStateManagerStatics>([&](auto&& f) { return f.SetCustomVisualStateManager(obj, value); });
+        impl::call_factory<VisualStateManager, IVisualStateManagerStatics>([&](IVisualStateManagerStatics const& f) { return f.SetCustomVisualStateManager(obj, value); });
     }
     inline auto VisualStateManager::GoToState(Windows::UI::Xaml::Controls::Control const& control, param::hstring const& stateName, bool useTransitions)
     {
-        return impl::call_factory<VisualStateManager, Windows::UI::Xaml::IVisualStateManagerStatics>([&](auto&& f) { return f.GoToState(control, stateName, useTransitions); });
+        return impl::call_factory<VisualStateManager, IVisualStateManagerStatics>([&](IVisualStateManagerStatics const& f) { return f.GoToState(control, stateName, useTransitions); });
     }
     inline VisualTransition::VisualTransition()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<VisualTransition, Windows::UI::Xaml::IVisualTransitionFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<VisualTransition, IVisualTransitionFactory>([&](IVisualTransitionFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto Window::Current()
     {
-        return impl::call_factory<Window, Windows::UI::Xaml::IWindowStatics>([&](auto&& f) { return f.Current(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::Window(*)(IWindowStatics const&), Window, IWindowStatics>([](IWindowStatics const& f) { return f.Current(); });
     }
     template <typename L> ApplicationInitializationCallback::ApplicationInitializationCallback(L handler) :
         ApplicationInitializationCallback(impl::make_delegate<ApplicationInitializationCallback>(std::forward<L>(handler)))
@@ -13182,95 +13517,95 @@ namespace winrt::Windows::UI::Xaml
     {
         check_hresult((*(impl::abi_t<WindowVisibilityChangedEventHandler>**)this)->Invoke(*(void**)(&sender), *(void**)(&e)));
     }
-    template <typename D> auto IApplicationOverridesT<D>::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverridesT<D>::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides>().OnActivated(args);
     }
-    template <typename D> auto IApplicationOverridesT<D>::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverridesT<D>::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides>().OnLaunched(args);
     }
-    template <typename D> auto IApplicationOverridesT<D>::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverridesT<D>::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides>().OnFileActivated(args);
     }
-    template <typename D> auto IApplicationOverridesT<D>::OnSearchActivated(Windows::ApplicationModel::Activation::SearchActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverridesT<D>::OnSearchActivated(Windows::ApplicationModel::Activation::SearchActivatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides>().OnSearchActivated(args);
     }
-    template <typename D> auto IApplicationOverridesT<D>::OnShareTargetActivated(Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverridesT<D>::OnShareTargetActivated(Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides>().OnShareTargetActivated(args);
     }
-    template <typename D> auto IApplicationOverridesT<D>::OnFileOpenPickerActivated(Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverridesT<D>::OnFileOpenPickerActivated(Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides>().OnFileOpenPickerActivated(args);
     }
-    template <typename D> auto IApplicationOverridesT<D>::OnFileSavePickerActivated(Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverridesT<D>::OnFileSavePickerActivated(Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides>().OnFileSavePickerActivated(args);
     }
-    template <typename D> auto IApplicationOverridesT<D>::OnCachedFileUpdaterActivated(Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverridesT<D>::OnCachedFileUpdaterActivated(Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides>().OnCachedFileUpdaterActivated(args);
     }
-    template <typename D> auto IApplicationOverridesT<D>::OnWindowCreated(Windows::UI::Xaml::WindowCreatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverridesT<D>::OnWindowCreated(Windows::UI::Xaml::WindowCreatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides>().OnWindowCreated(args);
     }
-    template <typename D> auto IApplicationOverrides2T<D>::OnBackgroundActivated(Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IApplicationOverrides2T<D>::OnBackgroundActivated(Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs const& args) const
     {
         return shim().template try_as<IApplicationOverrides2>().OnBackgroundActivated(args);
     }
-    template <typename D> auto IFrameworkElementOverridesT<D>::MeasureOverride(Windows::Foundation::Size const& availableSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) IFrameworkElementOverridesT<D>::MeasureOverride(Windows::Foundation::Size const& availableSize) const
     {
         return shim().template try_as<IFrameworkElementOverrides>().MeasureOverride(availableSize);
     }
-    template <typename D> auto IFrameworkElementOverridesT<D>::ArrangeOverride(Windows::Foundation::Size const& finalSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) IFrameworkElementOverridesT<D>::ArrangeOverride(Windows::Foundation::Size const& finalSize) const
     {
         return shim().template try_as<IFrameworkElementOverrides>().ArrangeOverride(finalSize);
     }
-    template <typename D> auto IFrameworkElementOverridesT<D>::OnApplyTemplate() const
+    template <typename D> WINRT_IMPL_AUTO(void) IFrameworkElementOverridesT<D>::OnApplyTemplate() const
     {
         return shim().template try_as<IFrameworkElementOverrides>().OnApplyTemplate();
     }
-    template <typename D> auto IFrameworkElementOverrides2T<D>::GoToElementStateCore(param::hstring const& stateName, bool useTransitions) const
+    template <typename D> WINRT_IMPL_AUTO(bool) IFrameworkElementOverrides2T<D>::GoToElementStateCore(param::hstring const& stateName, bool useTransitions) const
     {
         return shim().template try_as<IFrameworkElementOverrides2>().GoToElementStateCore(stateName, useTransitions);
     }
-    template <typename D> auto IUIElementOverridesT<D>::OnCreateAutomationPeer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationPeer) IUIElementOverridesT<D>::OnCreateAutomationPeer() const
     {
         return shim().template try_as<IUIElementOverrides>().OnCreateAutomationPeer();
     }
-    template <typename D> auto IUIElementOverridesT<D>::OnDisconnectVisualChildren() const
+    template <typename D> WINRT_IMPL_AUTO(void) IUIElementOverridesT<D>::OnDisconnectVisualChildren() const
     {
         return shim().template try_as<IUIElementOverrides>().OnDisconnectVisualChildren();
     }
-    template <typename D> auto IUIElementOverridesT<D>::FindSubElementsForTouchTargeting(Windows::Foundation::Point const& point, Windows::Foundation::Rect const& boundingRect) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IIterable<Windows::Foundation::Point>>) IUIElementOverridesT<D>::FindSubElementsForTouchTargeting(Windows::Foundation::Point const& point, Windows::Foundation::Rect const& boundingRect) const
     {
         return shim().template try_as<IUIElementOverrides>().FindSubElementsForTouchTargeting(point, boundingRect);
     }
-    template <typename D> auto IUIElementOverrides7T<D>::GetChildrenInTabFocusOrder() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::DependencyObject>) IUIElementOverrides7T<D>::GetChildrenInTabFocusOrder() const
     {
         return shim().template try_as<IUIElementOverrides7>().GetChildrenInTabFocusOrder();
     }
-    template <typename D> auto IUIElementOverrides7T<D>::OnProcessKeyboardAccelerators(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IUIElementOverrides7T<D>::OnProcessKeyboardAccelerators(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const
     {
         return shim().template try_as<IUIElementOverrides7>().OnProcessKeyboardAccelerators(args);
     }
-    template <typename D> auto IUIElementOverrides8T<D>::OnKeyboardAcceleratorInvoked(Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args) const
+    template <typename D> WINRT_IMPL_AUTO(void) IUIElementOverrides8T<D>::OnKeyboardAcceleratorInvoked(Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args) const
     {
         return shim().template try_as<IUIElementOverrides8>().OnKeyboardAcceleratorInvoked(args);
     }
-    template <typename D> auto IUIElementOverrides8T<D>::OnBringIntoViewRequested(Windows::UI::Xaml::BringIntoViewRequestedEventArgs const& e) const
+    template <typename D> WINRT_IMPL_AUTO(void) IUIElementOverrides8T<D>::OnBringIntoViewRequested(Windows::UI::Xaml::BringIntoViewRequestedEventArgs const& e) const
     {
         return shim().template try_as<IUIElementOverrides8>().OnBringIntoViewRequested(e);
     }
-    template <typename D> auto IUIElementOverrides9T<D>::PopulatePropertyInfoOverride(param::hstring const& propertyName, Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const
+    template <typename D> WINRT_IMPL_AUTO(void) IUIElementOverrides9T<D>::PopulatePropertyInfoOverride(param::hstring const& propertyName, Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const
     {
         return shim().template try_as<IUIElementOverrides9>().PopulatePropertyInfoOverride(propertyName, animationPropertyInfo);
     }
-    template <typename D> auto IVisualStateManagerOverridesT<D>::GoToStateCore(Windows::UI::Xaml::Controls::Control const& control, Windows::UI::Xaml::FrameworkElement const& templateRoot, param::hstring const& stateName, Windows::UI::Xaml::VisualStateGroup const& group, Windows::UI::Xaml::VisualState const& state, bool useTransitions) const
+    template <typename D> WINRT_IMPL_AUTO(bool) IVisualStateManagerOverridesT<D>::GoToStateCore(Windows::UI::Xaml::Controls::Control const& control, Windows::UI::Xaml::FrameworkElement const& templateRoot, param::hstring const& stateName, Windows::UI::Xaml::VisualStateGroup const& group, Windows::UI::Xaml::VisualState const& state, bool useTransitions) const
     {
         return shim().template try_as<IVisualStateManagerOverrides>().GoToStateCore(control, templateRoot, stateName, group, state, useTransitions);
     }
@@ -13284,7 +13619,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         AdaptiveTriggerT()
         {
-            impl::call_factory<AdaptiveTrigger, Windows::UI::Xaml::IAdaptiveTriggerFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<AdaptiveTrigger, IAdaptiveTriggerFactory>([&](IAdaptiveTriggerFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13298,7 +13633,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         ApplicationT()
         {
-            impl::call_factory<Application, Windows::UI::Xaml::IApplicationFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<Application, IApplicationFactory>([&](IApplicationFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13311,7 +13646,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         BrushTransitionT()
         {
-            impl::call_factory<BrushTransition, Windows::UI::Xaml::IBrushTransitionFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<BrushTransition, IBrushTransitionFactory>([&](IBrushTransitionFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13324,7 +13659,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         ColorPaletteResourcesT()
         {
-            impl::call_factory<ColorPaletteResources, Windows::UI::Xaml::IColorPaletteResourcesFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<ColorPaletteResources, IColorPaletteResourcesFactory>([&](IColorPaletteResourcesFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13337,7 +13672,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         DataTemplateT()
         {
-            impl::call_factory<DataTemplate, Windows::UI::Xaml::IDataTemplateFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<DataTemplate, IDataTemplateFactory>([&](IDataTemplateFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13350,11 +13685,11 @@ namespace winrt::Windows::UI::Xaml
     protected:
         DataTemplateKeyT()
         {
-            impl::call_factory<DataTemplateKey, Windows::UI::Xaml::IDataTemplateKeyFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<DataTemplateKey, IDataTemplateKeyFactory>([&](IDataTemplateKeyFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
         DataTemplateKeyT(Windows::Foundation::IInspectable const& dataType)
         {
-            impl::call_factory<DataTemplateKey, Windows::UI::Xaml::IDataTemplateKeyFactory>([&](auto&& f) { f.CreateInstanceWithType(dataType, *this, this->m_inner); });
+            impl::call_factory<DataTemplateKey, IDataTemplateKeyFactory>([&](IDataTemplateKeyFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstanceWithType(dataType, *this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13367,7 +13702,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         DependencyObjectT()
         {
-            impl::call_factory<DependencyObject, Windows::UI::Xaml::IDependencyObjectFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<DependencyObject, IDependencyObjectFactory>([&](IDependencyObjectFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13380,7 +13715,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         DependencyObjectCollectionT()
         {
-            impl::call_factory<DependencyObjectCollection, Windows::UI::Xaml::IDependencyObjectCollectionFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<DependencyObjectCollection, IDependencyObjectCollectionFactory>([&](IDependencyObjectCollectionFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13393,7 +13728,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         DispatcherTimerT()
         {
-            impl::call_factory<DispatcherTimer, Windows::UI::Xaml::IDispatcherTimerFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<DispatcherTimer, IDispatcherTimerFactory>([&](IDispatcherTimerFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13406,7 +13741,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         ElementFactoryGetArgsT()
         {
-            impl::call_factory<ElementFactoryGetArgs, Windows::UI::Xaml::IElementFactoryGetArgsFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<ElementFactoryGetArgs, IElementFactoryGetArgsFactory>([&](IElementFactoryGetArgsFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13419,7 +13754,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         ElementFactoryRecycleArgsT()
         {
-            impl::call_factory<ElementFactoryRecycleArgs, Windows::UI::Xaml::IElementFactoryRecycleArgsFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<ElementFactoryRecycleArgs, IElementFactoryRecycleArgsFactory>([&](IElementFactoryRecycleArgsFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13433,7 +13768,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         FrameworkElementT()
         {
-            impl::call_factory<FrameworkElement, Windows::UI::Xaml::IFrameworkElementFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<FrameworkElement, IFrameworkElementFactory>([&](IFrameworkElementFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13446,7 +13781,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         FrameworkTemplateT()
         {
-            impl::call_factory<FrameworkTemplate, Windows::UI::Xaml::IFrameworkTemplateFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<FrameworkTemplate, IFrameworkTemplateFactory>([&](IFrameworkTemplateFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13459,11 +13794,11 @@ namespace winrt::Windows::UI::Xaml
     protected:
         PropertyMetadataT(Windows::Foundation::IInspectable const& defaultValue)
         {
-            impl::call_factory<PropertyMetadata, Windows::UI::Xaml::IPropertyMetadataFactory>([&](auto&& f) { f.CreateInstanceWithDefaultValue(defaultValue, *this, this->m_inner); });
+            impl::call_factory<PropertyMetadata, IPropertyMetadataFactory>([&](IPropertyMetadataFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstanceWithDefaultValue(defaultValue, *this, this->m_inner); });
         }
         PropertyMetadataT(Windows::Foundation::IInspectable const& defaultValue, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback)
         {
-            impl::call_factory<PropertyMetadata, Windows::UI::Xaml::IPropertyMetadataFactory>([&](auto&& f) { f.CreateInstanceWithDefaultValueAndCallback(defaultValue, propertyChangedCallback, *this, this->m_inner); });
+            impl::call_factory<PropertyMetadata, IPropertyMetadataFactory>([&](IPropertyMetadataFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstanceWithDefaultValueAndCallback(defaultValue, propertyChangedCallback, *this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13476,7 +13811,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         ResourceDictionaryT()
         {
-            impl::call_factory<ResourceDictionary, Windows::UI::Xaml::IResourceDictionaryFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<ResourceDictionary, IResourceDictionaryFactory>([&](IResourceDictionaryFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13489,7 +13824,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         RoutedEventArgsT()
         {
-            impl::call_factory<RoutedEventArgs, Windows::UI::Xaml::IRoutedEventArgsFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<RoutedEventArgs, IRoutedEventArgsFactory>([&](IRoutedEventArgsFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13502,7 +13837,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         ScalarTransitionT()
         {
-            impl::call_factory<ScalarTransition, Windows::UI::Xaml::IScalarTransitionFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<ScalarTransition, IScalarTransitionFactory>([&](IScalarTransitionFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13515,7 +13850,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         StateTriggerBaseT()
         {
-            impl::call_factory<StateTriggerBase, Windows::UI::Xaml::IStateTriggerBaseFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<StateTriggerBase, IStateTriggerBaseFactory>([&](IStateTriggerBaseFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13528,7 +13863,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         UIElementWeakCollectionT()
         {
-            impl::call_factory<UIElementWeakCollection, Windows::UI::Xaml::IUIElementWeakCollectionFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<UIElementWeakCollection, IUIElementWeakCollectionFactory>([&](IUIElementWeakCollectionFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13541,7 +13876,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         Vector3TransitionT()
         {
-            impl::call_factory<Vector3Transition, Windows::UI::Xaml::IVector3TransitionFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<Vector3Transition, IVector3TransitionFactory>([&](IVector3TransitionFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13555,7 +13890,7 @@ namespace winrt::Windows::UI::Xaml
     protected:
         VisualStateManagerT()
         {
-            impl::call_factory<VisualStateManager, Windows::UI::Xaml::IVisualStateManagerFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<VisualStateManager, IVisualStateManagerFactory>([&](IVisualStateManagerFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -13568,257 +13903,259 @@ namespace winrt::Windows::UI::Xaml
     protected:
         VisualTransitionT()
         {
-            impl::call_factory<VisualTransition, Windows::UI::Xaml::IVisualTransitionFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<VisualTransition, IVisualTransitionFactory>([&](IVisualTransitionFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Xaml::IAdaptiveTrigger> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IAdaptiveTrigger> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IAdaptiveTriggerFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IAdaptiveTriggerFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IAdaptiveTriggerStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IAdaptiveTriggerStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IApplication> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IApplication> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IApplication2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IApplication2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IApplication3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IApplication3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IApplicationFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationInitializationCallbackParams> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IApplicationInitializationCallbackParams> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationOverrides> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IApplicationOverrides> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationOverrides2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IApplicationOverrides2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IApplicationStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IBindingFailedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IBindingFailedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IBringIntoViewOptions> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IBringIntoViewOptions> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IBringIntoViewOptions2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IBringIntoViewOptions2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IBringIntoViewRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IBringIntoViewRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IBrushTransition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IBrushTransition> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IBrushTransitionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IBrushTransitionFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IColorPaletteResources> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IColorPaletteResources> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IColorPaletteResourcesFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IColorPaletteResourcesFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ICornerRadiusHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ICornerRadiusHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ICornerRadiusHelperStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ICornerRadiusHelperStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDataContextChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDataContextChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplate> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDataTemplate> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateExtension> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDataTemplateExtension> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDataTemplateFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateKey> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDataTemplateKey> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateKeyFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDataTemplateKeyFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDataTemplateStatics2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDebugSettings> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDebugSettings> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDebugSettings2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDebugSettings2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDebugSettings3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDebugSettings3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDebugSettings4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDebugSettings4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyObject> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDependencyObject> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyObject2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDependencyObject2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyObjectCollectionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDependencyObjectCollectionFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyObjectFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDependencyObjectFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyProperty> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDependencyProperty> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyPropertyChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDependencyPropertyChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyPropertyStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDependencyPropertyStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDispatcherTimer> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDispatcherTimer> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDispatcherTimerFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDispatcherTimerFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDragEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDragEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDragEventArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDragEventArgs2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDragEventArgs3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDragEventArgs3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDragOperationDeferral> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDragOperationDeferral> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDragStartingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDragStartingEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDragStartingEventArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDragStartingEventArgs2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDragUI> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDragUI> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDragUIOverride> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDragUIOverride> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDropCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDropCompletedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDurationHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDurationHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IDurationHelperStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IDurationHelperStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IEffectiveViewportChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IEffectiveViewportChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IElementFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactoryGetArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IElementFactoryGetArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactoryGetArgsFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IElementFactoryGetArgsFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactoryRecycleArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IElementFactoryRecycleArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactoryRecycleArgsFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IElementFactoryRecycleArgsFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IElementSoundPlayer> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IElementSoundPlayer> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IElementSoundPlayerStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IElementSoundPlayerStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IElementSoundPlayerStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IElementSoundPlayerStatics2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IEventTrigger> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IEventTrigger> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IExceptionRoutedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IExceptionRoutedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IExceptionRoutedEventArgsFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IExceptionRoutedEventArgsFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElement> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElement2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElement3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElement4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement6> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElement6> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement7> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElement7> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElementFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementOverrides> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElementOverrides> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementOverrides2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElementOverrides2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementProtected7> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElementProtected7> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElementStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElementStatics2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElementStatics4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElementStatics5> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics6> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkElementStatics6> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkTemplate> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkTemplate> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkTemplateFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkTemplateFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkView> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkView> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkViewSource> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IFrameworkViewSource> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IGridLengthHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IGridLengthHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IGridLengthHelperStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IGridLengthHelperStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IMediaFailedRoutedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IMediaFailedRoutedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IPointHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IPointHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IPointHelperStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IPointHelperStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyMetadata> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IPropertyMetadata> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyMetadataFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IPropertyMetadataFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyMetadataStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IPropertyMetadataStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyPath> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IPropertyPath> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyPathFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IPropertyPathFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IRectHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IRectHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IRectHelperStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IRectHelperStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IResourceDictionary> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IResourceDictionary> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IResourceDictionaryFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IResourceDictionaryFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IRoutedEvent> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IRoutedEvent> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IRoutedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IRoutedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IRoutedEventArgsFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IRoutedEventArgsFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IScalarTransition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IScalarTransition> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IScalarTransitionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IScalarTransitionFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ISetter> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ISetter> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ISetter2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ISetter2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ISetterBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ISetterBase> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ISetterBaseCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ISetterBaseCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ISetterBaseFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ISetterBaseFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ISetterFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ISetterFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ISizeChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ISizeChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ISizeHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ISizeHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ISizeHelperStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ISizeHelperStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IStateTrigger> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IStateTrigger> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IStateTriggerBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IStateTriggerBase> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IStateTriggerBaseFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IStateTriggerBaseFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IStateTriggerBaseProtected> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IStateTriggerBaseProtected> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IStateTriggerStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IStateTriggerStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IStyle> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IStyle> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IStyleFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IStyleFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ITargetPropertyPath> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ITargetPropertyPath> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ITargetPropertyPathFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ITargetPropertyPathFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IThicknessHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IThicknessHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IThicknessHelperStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IThicknessHelperStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ITriggerAction> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ITriggerAction> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ITriggerActionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ITriggerActionFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ITriggerBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ITriggerBase> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ITriggerBaseFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ITriggerBaseFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement10> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement10> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement5> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement7> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement7> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement8> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement8> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement9> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElement9> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementOverrides> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides7> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementOverrides7> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides8> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementOverrides8> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides9> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementOverrides9> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics10> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics10> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics5> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics6> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics6> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics7> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics7> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics8> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics8> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics9> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementStatics9> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementWeakCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementWeakCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementWeakCollectionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUIElementWeakCollectionFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IUnhandledExceptionEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IUnhandledExceptionEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVector3Transition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVector3Transition> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVector3TransitionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVector3TransitionFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualState> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualState> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualState2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualState2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateGroup> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualStateGroup> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManager> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualStateManager> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManagerFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualStateManagerFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManagerOverrides> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualStateManagerOverrides> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManagerProtected> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualStateManagerProtected> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManagerStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualStateManagerStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualTransition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualTransition> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IVisualTransitionFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IVisualTransitionFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IWindow> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindow> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IWindow2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindow2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IWindow3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindow3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IWindow4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindow4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IWindowCreatedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindowCreatedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IWindowStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IWindowStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IXamlRoot> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IXamlRoot> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::IXamlRootChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::IXamlRootChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::AdaptiveTrigger> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::AdaptiveTrigger> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Application> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Application> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::BindingFailedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::BindingFailedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::BringIntoViewOptions> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::BringIntoViewOptions> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::BrushTransition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::BrushTransition> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ColorPaletteResources> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ColorPaletteResources> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::CornerRadiusHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::CornerRadiusHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DataContextChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DataContextChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DataTemplate> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DataTemplate> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DataTemplateKey> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DataTemplateKey> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DebugSettings> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DebugSettings> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DependencyObject> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DependencyObject> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DependencyObjectCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DependencyObjectCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DependencyProperty> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DependencyProperty> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DispatcherTimer> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DispatcherTimer> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DragEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DragEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DragOperationDeferral> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DragOperationDeferral> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DragStartingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DragStartingEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DragUI> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DragUI> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DragUIOverride> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DragUIOverride> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DropCompletedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DropCompletedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::DurationHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::DurationHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ElementFactoryGetArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ElementFactoryGetArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ElementSoundPlayer> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ElementSoundPlayer> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::EventTrigger> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::EventTrigger> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::FrameworkElement> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::FrameworkElement> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::FrameworkTemplate> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::FrameworkTemplate> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::FrameworkView> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::FrameworkView> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::FrameworkViewSource> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::FrameworkViewSource> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::GridLengthHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::GridLengthHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::PointHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::PointHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::PropertyMetadata> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::PropertyMetadata> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::PropertyPath> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::PropertyPath> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::RectHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::RectHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ResourceDictionary> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ResourceDictionary> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::RoutedEvent> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::RoutedEvent> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::RoutedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::RoutedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ScalarTransition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ScalarTransition> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Setter> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Setter> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::SetterBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::SetterBase> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::SetterBaseCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::SetterBaseCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::SizeChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::SizeChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::SizeHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::SizeHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::StateTrigger> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::StateTrigger> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::StateTriggerBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::StateTriggerBase> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Style> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Style> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::TargetPropertyPath> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::TargetPropertyPath> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::ThicknessHelper> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::ThicknessHelper> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::TriggerAction> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::TriggerAction> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::TriggerActionCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::TriggerActionCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::TriggerBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::TriggerBase> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::TriggerCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::TriggerCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::UIElement> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::UIElement> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::UIElementWeakCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::UIElementWeakCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Vector3Transition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Vector3Transition> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::VisualState> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::VisualState> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::VisualStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::VisualStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::VisualStateGroup> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::VisualStateGroup> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::VisualStateManager> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::VisualStateManager> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::VisualTransition> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::VisualTransition> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Window> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Window> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::WindowCreatedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::WindowCreatedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::XamlRoot> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::XamlRoot> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Xaml::IAdaptiveTrigger> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IAdaptiveTriggerFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IAdaptiveTriggerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IApplication> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IApplication2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IApplication3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationInitializationCallbackParams> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationOverrides> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationOverrides2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IApplicationStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IBindingFailedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IBringIntoViewOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IBringIntoViewOptions2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IBringIntoViewRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IBrushTransition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IBrushTransitionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IColorPaletteResources> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IColorPaletteResourcesFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ICornerRadiusHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ICornerRadiusHelperStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDataContextChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplate> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateExtension> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateKey> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateKeyFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDataTemplateStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDebugSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDebugSettings2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDebugSettings3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDebugSettings4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyObject> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyObject2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyObjectCollectionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyObjectFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyProperty> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyPropertyChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDependencyPropertyStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDispatcherTimer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDispatcherTimerFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDragEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDragEventArgs2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDragEventArgs3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDragOperationDeferral> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDragStartingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDragStartingEventArgs2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDragUI> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDragUIOverride> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDropCompletedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDurationHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IDurationHelperStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IEffectiveViewportChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactoryGetArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactoryGetArgsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactoryRecycleArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IElementFactoryRecycleArgsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IElementSoundPlayer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IElementSoundPlayerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IElementSoundPlayerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IEventTrigger> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IExceptionRoutedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IExceptionRoutedEventArgsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement6> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElement7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementOverrides> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementOverrides2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementProtected7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkElementStatics6> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkTemplate> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkTemplateFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IFrameworkViewSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IGridLengthHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IGridLengthHelperStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IMediaFailedRoutedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IPointHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IPointHelperStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyMetadata> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyMetadataFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyMetadataStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyPath> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IPropertyPathFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IRectHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IRectHelperStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IResourceDictionary> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IResourceDictionaryFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IRoutedEvent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IRoutedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IRoutedEventArgsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IScalarTransition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IScalarTransitionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ISetter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ISetter2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ISetterBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ISetterBaseCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ISetterBaseFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ISetterFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ISizeChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ISizeHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ISizeHelperStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IStateTrigger> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IStateTriggerBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IStateTriggerBaseFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IStateTriggerBaseProtected> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IStateTriggerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IStyle> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IStyleFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ITargetPropertyPath> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ITargetPropertyPathFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IThicknessHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IThicknessHelperStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ITriggerAction> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ITriggerActionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ITriggerBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ITriggerBaseFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement10> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement8> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElement9> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides8> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementOverrides9> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics10> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics6> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics8> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementStatics9> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementWeakCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUIElementWeakCollectionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IUnhandledExceptionEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVector3Transition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVector3TransitionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualState2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManagerFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManagerOverrides> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManagerProtected> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualStateManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualTransition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IVisualTransitionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IWindow> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IWindow2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IWindow3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IWindow4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IWindowCreatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IWindowStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IXamlRoot> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::IXamlRootChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::AdaptiveTrigger> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Application> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::BindingFailedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::BringIntoViewOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::BrushTransition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ColorPaletteResources> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::CornerRadiusHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DataContextChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DataTemplate> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DataTemplateKey> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DebugSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DependencyObject> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DependencyObjectCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DependencyProperty> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DispatcherTimer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DragEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DragOperationDeferral> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DragStartingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DragUI> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DragUIOverride> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DropCompletedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::DurationHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ElementFactoryGetArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ElementSoundPlayer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::EventTrigger> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::FrameworkElement> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::FrameworkTemplate> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::FrameworkView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::FrameworkViewSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::GridLengthHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::PointHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::PropertyMetadata> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::PropertyPath> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::RectHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ResourceDictionary> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::RoutedEvent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::RoutedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ScalarTransition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Setter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::SetterBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::SetterBaseCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::SizeChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::SizeHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::StateTrigger> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::StateTriggerBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Style> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::TargetPropertyPath> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::ThicknessHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::TriggerAction> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::TriggerActionCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::TriggerBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::TriggerCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::UIElement> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::UIElementWeakCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Vector3Transition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::VisualState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::VisualStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::VisualStateGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::VisualStateManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::VisualTransition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Window> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::WindowCreatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::XamlRoot> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,63 +6,63 @@
 #ifndef WINRT_Windows_System_Power_H
 #define WINRT_Windows_System_Power_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.System.Power.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::LowUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::LowUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->get_LowUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::NearMaxAcceptableUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::NearMaxAcceptableUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->get_NearMaxAcceptableUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::MaxAcceptableUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::MaxAcceptableUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->get_MaxAcceptableUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::ExcessiveUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::ExcessiveUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->get_ExcessiveUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::NearTerminationUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::NearTerminationUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->get_NearTerminationUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::TerminationUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::TerminationUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->get_TerminationUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsage() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsage() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->get_RecentEnergyUsage(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->get_RecentEnergyUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->add_RecentEnergyUsageIncreased(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -70,13 +70,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RecentEnergyUsageIncreased_revoker>(this, RecentEnergyUsageIncreased(handler));
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->remove_RecentEnergyUsageIncreased(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->add_RecentEnergyUsageReturnedToLow(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -84,49 +84,49 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RecentEnergyUsageReturnedToLow_revoker>(this, RecentEnergyUsageReturnedToLow(handler));
     }
-    template <typename D> auto consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Power::IBackgroundEnergyManagerStatics)->remove_RecentEnergyUsageReturnedToLow(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::LowUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::LowUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->get_LowUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::NearMaxAcceptableUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::NearMaxAcceptableUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->get_NearMaxAcceptableUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::MaxAcceptableUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::MaxAcceptableUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->get_MaxAcceptableUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::ExcessiveUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::ExcessiveUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->get_ExcessiveUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsage() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsage() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->get_RecentEnergyUsage(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageLevel() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageLevel() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->get_RecentEnergyUsageLevel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->add_RecentEnergyUsageIncreased(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -134,13 +134,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RecentEnergyUsageIncreased_revoker>(this, RecentEnergyUsageIncreased(handler));
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->remove_RecentEnergyUsageIncreased(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->add_RecentEnergyUsageReturnedToLow(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -148,19 +148,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RecentEnergyUsageReturnedToLow_revoker>(this, RecentEnergyUsageReturnedToLow(handler));
     }
-    template <typename D> auto consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Power::IForegroundEnergyManagerStatics)->remove_RecentEnergyUsageReturnedToLow(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::EnergySaverStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Power::EnergySaverStatus) consume_Windows_System_Power_IPowerManagerStatics<D>::EnergySaverStatus() const
     {
-        Windows::System::Power::EnergySaverStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->get_EnergySaverStatus(put_abi(value)));
+        Windows::System::Power::EnergySaverStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->get_EnergySaverStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::EnergySaverStatusChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IPowerManagerStatics<D>::EnergySaverStatusChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->add_EnergySaverStatusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -168,19 +168,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, EnergySaverStatusChanged_revoker>(this, EnergySaverStatusChanged(handler));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::EnergySaverStatusChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::EnergySaverStatusChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->remove_EnergySaverStatusChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::BatteryStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Power::BatteryStatus) consume_Windows_System_Power_IPowerManagerStatics<D>::BatteryStatus() const
     {
-        Windows::System::Power::BatteryStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->get_BatteryStatus(put_abi(value)));
+        Windows::System::Power::BatteryStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->get_BatteryStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::BatteryStatusChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IPowerManagerStatics<D>::BatteryStatusChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->add_BatteryStatusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -188,19 +188,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BatteryStatusChanged_revoker>(this, BatteryStatusChanged(handler));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::BatteryStatusChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::BatteryStatusChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->remove_BatteryStatusChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::PowerSupplyStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Power::PowerSupplyStatus) consume_Windows_System_Power_IPowerManagerStatics<D>::PowerSupplyStatus() const
     {
-        Windows::System::Power::PowerSupplyStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->get_PowerSupplyStatus(put_abi(value)));
+        Windows::System::Power::PowerSupplyStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->get_PowerSupplyStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::PowerSupplyStatusChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IPowerManagerStatics<D>::PowerSupplyStatusChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->add_PowerSupplyStatusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -208,19 +208,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PowerSupplyStatusChanged_revoker>(this, PowerSupplyStatusChanged(handler));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::PowerSupplyStatusChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::PowerSupplyStatusChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->remove_PowerSupplyStatusChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingChargePercent() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingChargePercent() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->get_RemainingChargePercent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingChargePercentChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingChargePercentChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->add_RemainingChargePercentChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -228,19 +228,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RemainingChargePercentChanged_revoker>(this, RemainingChargePercentChanged(handler));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingChargePercentChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingChargePercentChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->remove_RemainingChargePercentChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingDischargeTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingDischargeTime() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->get_RemainingDischargeTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingDischargeTimeChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingDischargeTimeChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->add_RemainingDischargeTimeChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -248,10 +248,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RemainingDischargeTimeChanged_revoker>(this, RemainingDischargeTimeChanged(handler));
     }
-    template <typename D> auto consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingDischargeTimeChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingDischargeTimeChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Power::IPowerManagerStatics)->remove_RemainingDischargeTimeChanged(impl::bind_in(token)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::Power::IBackgroundEnergyManagerStatics> : produce_base<D, Windows::System::Power::IBackgroundEnergyManagerStatics>
     {
@@ -340,6 +341,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::Power::IForegroundEnergyManagerStatics> : produce_base<D, Windows::System::Power::IForegroundEnergyManagerStatics>
     {
@@ -414,6 +417,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::Power::IPowerManagerStatics> : produce_base<D, Windows::System::Power::IPowerManagerStatics>
     {
@@ -524,44 +529,45 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
 }
-namespace winrt::Windows::System::Power
+WINRT_EXPORT namespace winrt::Windows::System::Power
 {
     inline auto BackgroundEnergyManager::LowUsageLevel()
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.LowUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IBackgroundEnergyManagerStatics const&), BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([](IBackgroundEnergyManagerStatics const& f) { return f.LowUsageLevel(); });
     }
     inline auto BackgroundEnergyManager::NearMaxAcceptableUsageLevel()
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.NearMaxAcceptableUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IBackgroundEnergyManagerStatics const&), BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([](IBackgroundEnergyManagerStatics const& f) { return f.NearMaxAcceptableUsageLevel(); });
     }
     inline auto BackgroundEnergyManager::MaxAcceptableUsageLevel()
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.MaxAcceptableUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IBackgroundEnergyManagerStatics const&), BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([](IBackgroundEnergyManagerStatics const& f) { return f.MaxAcceptableUsageLevel(); });
     }
     inline auto BackgroundEnergyManager::ExcessiveUsageLevel()
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.ExcessiveUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IBackgroundEnergyManagerStatics const&), BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([](IBackgroundEnergyManagerStatics const& f) { return f.ExcessiveUsageLevel(); });
     }
     inline auto BackgroundEnergyManager::NearTerminationUsageLevel()
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.NearTerminationUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IBackgroundEnergyManagerStatics const&), BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([](IBackgroundEnergyManagerStatics const& f) { return f.NearTerminationUsageLevel(); });
     }
     inline auto BackgroundEnergyManager::TerminationUsageLevel()
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.TerminationUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IBackgroundEnergyManagerStatics const&), BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([](IBackgroundEnergyManagerStatics const& f) { return f.TerminationUsageLevel(); });
     }
     inline auto BackgroundEnergyManager::RecentEnergyUsage()
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsage(); });
+        return impl::call_factory_cast<uint32_t(*)(IBackgroundEnergyManagerStatics const&), BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([](IBackgroundEnergyManagerStatics const& f) { return f.RecentEnergyUsage(); });
     }
     inline auto BackgroundEnergyManager::RecentEnergyUsageLevel()
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IBackgroundEnergyManagerStatics const&), BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([](IBackgroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageLevel(); });
     }
     inline auto BackgroundEnergyManager::RecentEnergyUsageIncreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageIncreased(handler); });
+        return impl::call_factory<BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([&](IBackgroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageIncreased(handler); });
     }
     inline BackgroundEnergyManager::RecentEnergyUsageIncreased_revoker BackgroundEnergyManager::RecentEnergyUsageIncreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -570,11 +576,11 @@ namespace winrt::Windows::System::Power
     }
     inline auto BackgroundEnergyManager::RecentEnergyUsageIncreased(winrt::event_token const& token)
     {
-        impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageIncreased(token); });
+        impl::call_factory<BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([&](IBackgroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageIncreased(token); });
     }
     inline auto BackgroundEnergyManager::RecentEnergyUsageReturnedToLow(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageReturnedToLow(handler); });
+        return impl::call_factory<BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([&](IBackgroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageReturnedToLow(handler); });
     }
     inline BackgroundEnergyManager::RecentEnergyUsageReturnedToLow_revoker BackgroundEnergyManager::RecentEnergyUsageReturnedToLow(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -583,35 +589,35 @@ namespace winrt::Windows::System::Power
     }
     inline auto BackgroundEnergyManager::RecentEnergyUsageReturnedToLow(winrt::event_token const& token)
     {
-        impl::call_factory<BackgroundEnergyManager, Windows::System::Power::IBackgroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageReturnedToLow(token); });
+        impl::call_factory<BackgroundEnergyManager, IBackgroundEnergyManagerStatics>([&](IBackgroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageReturnedToLow(token); });
     }
     inline auto ForegroundEnergyManager::LowUsageLevel()
     {
-        return impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.LowUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IForegroundEnergyManagerStatics const&), ForegroundEnergyManager, IForegroundEnergyManagerStatics>([](IForegroundEnergyManagerStatics const& f) { return f.LowUsageLevel(); });
     }
     inline auto ForegroundEnergyManager::NearMaxAcceptableUsageLevel()
     {
-        return impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.NearMaxAcceptableUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IForegroundEnergyManagerStatics const&), ForegroundEnergyManager, IForegroundEnergyManagerStatics>([](IForegroundEnergyManagerStatics const& f) { return f.NearMaxAcceptableUsageLevel(); });
     }
     inline auto ForegroundEnergyManager::MaxAcceptableUsageLevel()
     {
-        return impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.MaxAcceptableUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IForegroundEnergyManagerStatics const&), ForegroundEnergyManager, IForegroundEnergyManagerStatics>([](IForegroundEnergyManagerStatics const& f) { return f.MaxAcceptableUsageLevel(); });
     }
     inline auto ForegroundEnergyManager::ExcessiveUsageLevel()
     {
-        return impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.ExcessiveUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IForegroundEnergyManagerStatics const&), ForegroundEnergyManager, IForegroundEnergyManagerStatics>([](IForegroundEnergyManagerStatics const& f) { return f.ExcessiveUsageLevel(); });
     }
     inline auto ForegroundEnergyManager::RecentEnergyUsage()
     {
-        return impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsage(); });
+        return impl::call_factory_cast<uint32_t(*)(IForegroundEnergyManagerStatics const&), ForegroundEnergyManager, IForegroundEnergyManagerStatics>([](IForegroundEnergyManagerStatics const& f) { return f.RecentEnergyUsage(); });
     }
     inline auto ForegroundEnergyManager::RecentEnergyUsageLevel()
     {
-        return impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageLevel(); });
+        return impl::call_factory_cast<uint32_t(*)(IForegroundEnergyManagerStatics const&), ForegroundEnergyManager, IForegroundEnergyManagerStatics>([](IForegroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageLevel(); });
     }
     inline auto ForegroundEnergyManager::RecentEnergyUsageIncreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageIncreased(handler); });
+        return impl::call_factory<ForegroundEnergyManager, IForegroundEnergyManagerStatics>([&](IForegroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageIncreased(handler); });
     }
     inline ForegroundEnergyManager::RecentEnergyUsageIncreased_revoker ForegroundEnergyManager::RecentEnergyUsageIncreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -620,11 +626,11 @@ namespace winrt::Windows::System::Power
     }
     inline auto ForegroundEnergyManager::RecentEnergyUsageIncreased(winrt::event_token const& token)
     {
-        impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageIncreased(token); });
+        impl::call_factory<ForegroundEnergyManager, IForegroundEnergyManagerStatics>([&](IForegroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageIncreased(token); });
     }
     inline auto ForegroundEnergyManager::RecentEnergyUsageReturnedToLow(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageReturnedToLow(handler); });
+        return impl::call_factory<ForegroundEnergyManager, IForegroundEnergyManagerStatics>([&](IForegroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageReturnedToLow(handler); });
     }
     inline ForegroundEnergyManager::RecentEnergyUsageReturnedToLow_revoker ForegroundEnergyManager::RecentEnergyUsageReturnedToLow(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -633,15 +639,15 @@ namespace winrt::Windows::System::Power
     }
     inline auto ForegroundEnergyManager::RecentEnergyUsageReturnedToLow(winrt::event_token const& token)
     {
-        impl::call_factory<ForegroundEnergyManager, Windows::System::Power::IForegroundEnergyManagerStatics>([&](auto&& f) { return f.RecentEnergyUsageReturnedToLow(token); });
+        impl::call_factory<ForegroundEnergyManager, IForegroundEnergyManagerStatics>([&](IForegroundEnergyManagerStatics const& f) { return f.RecentEnergyUsageReturnedToLow(token); });
     }
     inline auto PowerManager::EnergySaverStatus()
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.EnergySaverStatus(); });
+        return impl::call_factory_cast<Windows::System::Power::EnergySaverStatus(*)(IPowerManagerStatics const&), PowerManager, IPowerManagerStatics>([](IPowerManagerStatics const& f) { return f.EnergySaverStatus(); });
     }
     inline auto PowerManager::EnergySaverStatusChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.EnergySaverStatusChanged(handler); });
+        return impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.EnergySaverStatusChanged(handler); });
     }
     inline PowerManager::EnergySaverStatusChanged_revoker PowerManager::EnergySaverStatusChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -650,15 +656,15 @@ namespace winrt::Windows::System::Power
     }
     inline auto PowerManager::EnergySaverStatusChanged(winrt::event_token const& token)
     {
-        impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.EnergySaverStatusChanged(token); });
+        impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.EnergySaverStatusChanged(token); });
     }
     inline auto PowerManager::BatteryStatus()
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.BatteryStatus(); });
+        return impl::call_factory_cast<Windows::System::Power::BatteryStatus(*)(IPowerManagerStatics const&), PowerManager, IPowerManagerStatics>([](IPowerManagerStatics const& f) { return f.BatteryStatus(); });
     }
     inline auto PowerManager::BatteryStatusChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.BatteryStatusChanged(handler); });
+        return impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.BatteryStatusChanged(handler); });
     }
     inline PowerManager::BatteryStatusChanged_revoker PowerManager::BatteryStatusChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -667,15 +673,15 @@ namespace winrt::Windows::System::Power
     }
     inline auto PowerManager::BatteryStatusChanged(winrt::event_token const& token)
     {
-        impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.BatteryStatusChanged(token); });
+        impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.BatteryStatusChanged(token); });
     }
     inline auto PowerManager::PowerSupplyStatus()
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.PowerSupplyStatus(); });
+        return impl::call_factory_cast<Windows::System::Power::PowerSupplyStatus(*)(IPowerManagerStatics const&), PowerManager, IPowerManagerStatics>([](IPowerManagerStatics const& f) { return f.PowerSupplyStatus(); });
     }
     inline auto PowerManager::PowerSupplyStatusChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.PowerSupplyStatusChanged(handler); });
+        return impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.PowerSupplyStatusChanged(handler); });
     }
     inline PowerManager::PowerSupplyStatusChanged_revoker PowerManager::PowerSupplyStatusChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -684,15 +690,15 @@ namespace winrt::Windows::System::Power
     }
     inline auto PowerManager::PowerSupplyStatusChanged(winrt::event_token const& token)
     {
-        impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.PowerSupplyStatusChanged(token); });
+        impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.PowerSupplyStatusChanged(token); });
     }
     inline auto PowerManager::RemainingChargePercent()
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.RemainingChargePercent(); });
+        return impl::call_factory_cast<int32_t(*)(IPowerManagerStatics const&), PowerManager, IPowerManagerStatics>([](IPowerManagerStatics const& f) { return f.RemainingChargePercent(); });
     }
     inline auto PowerManager::RemainingChargePercentChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.RemainingChargePercentChanged(handler); });
+        return impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.RemainingChargePercentChanged(handler); });
     }
     inline PowerManager::RemainingChargePercentChanged_revoker PowerManager::RemainingChargePercentChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -701,15 +707,15 @@ namespace winrt::Windows::System::Power
     }
     inline auto PowerManager::RemainingChargePercentChanged(winrt::event_token const& token)
     {
-        impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.RemainingChargePercentChanged(token); });
+        impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.RemainingChargePercentChanged(token); });
     }
     inline auto PowerManager::RemainingDischargeTime()
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.RemainingDischargeTime(); });
+        return impl::call_factory_cast<Windows::Foundation::TimeSpan(*)(IPowerManagerStatics const&), PowerManager, IPowerManagerStatics>([](IPowerManagerStatics const& f) { return f.RemainingDischargeTime(); });
     }
     inline auto PowerManager::RemainingDischargeTimeChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.RemainingDischargeTimeChanged(handler); });
+        return impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.RemainingDischargeTimeChanged(handler); });
     }
     inline PowerManager::RemainingDischargeTimeChanged_revoker PowerManager::RemainingDischargeTimeChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -718,16 +724,18 @@ namespace winrt::Windows::System::Power
     }
     inline auto PowerManager::RemainingDischargeTimeChanged(winrt::event_token const& token)
     {
-        impl::call_factory<PowerManager, Windows::System::Power::IPowerManagerStatics>([&](auto&& f) { return f.RemainingDischargeTimeChanged(token); });
+        impl::call_factory<PowerManager, IPowerManagerStatics>([&](IPowerManagerStatics const& f) { return f.RemainingDischargeTimeChanged(token); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::System::Power::IBackgroundEnergyManagerStatics> : winrt::impl::hash_base<winrt::Windows::System::Power::IBackgroundEnergyManagerStatics> {};
-    template<> struct hash<winrt::Windows::System::Power::IForegroundEnergyManagerStatics> : winrt::impl::hash_base<winrt::Windows::System::Power::IForegroundEnergyManagerStatics> {};
-    template<> struct hash<winrt::Windows::System::Power::IPowerManagerStatics> : winrt::impl::hash_base<winrt::Windows::System::Power::IPowerManagerStatics> {};
-    template<> struct hash<winrt::Windows::System::Power::BackgroundEnergyManager> : winrt::impl::hash_base<winrt::Windows::System::Power::BackgroundEnergyManager> {};
-    template<> struct hash<winrt::Windows::System::Power::ForegroundEnergyManager> : winrt::impl::hash_base<winrt::Windows::System::Power::ForegroundEnergyManager> {};
-    template<> struct hash<winrt::Windows::System::Power::PowerManager> : winrt::impl::hash_base<winrt::Windows::System::Power::PowerManager> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::System::Power::IBackgroundEnergyManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Power::IForegroundEnergyManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Power::IPowerManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Power::BackgroundEnergyManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Power::ForegroundEnergyManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Power::PowerManager> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.Data.Xml.Dom.1.h"
-namespace winrt::Windows::Data::Xml::Dom
+WINRT_EXPORT namespace winrt::Windows::Data::Xml::Dom
 {
     struct __declspec(empty_bases) DtdEntity : Windows::Data::Xml::Dom::IDtdEntity
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Storage.Search.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Storage.BulkAccess.1.h"
-namespace winrt::Windows::Storage::BulkAccess
+WINRT_EXPORT namespace winrt::Windows::Storage::BulkAccess
 {
     struct __declspec(empty_bases) FileInformation : Windows::Storage::BulkAccess::IStorageItemInformation,
         impl::require<FileInformation, Windows::Storage::IStorageItem, Windows::Storage::Streams::IRandomAccessStreamReference, Windows::Storage::Streams::IInputStreamReference, Windows::Storage::IStorageFile, Windows::Storage::IStorageItemProperties, Windows::Storage::IStorageItem2, Windows::Storage::IStorageItemPropertiesWithProvider, Windows::Storage::IStorageFilePropertiesWithAvailability, Windows::Storage::IStorageFile2>

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Globalization.1.h"
 #include "winrt/impl/Windows.Devices.AllJoyn.1.h"
-namespace winrt::Windows::Devices::AllJoyn
+WINRT_EXPORT namespace winrt::Windows::Devices::AllJoyn
 {
     struct __declspec(empty_bases) AllJoynAboutData : Windows::Devices::AllJoyn::IAllJoynAboutData
     {
@@ -39,7 +39,7 @@ namespace winrt::Windows::Devices::AllJoyn
         AllJoynBusAttachment(std::nullptr_t) noexcept {}
         AllJoynBusAttachment(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynBusAttachment(ptr, take_ownership_from_abi) {}
         AllJoynBusAttachment();
-        AllJoynBusAttachment(param::hstring const& connectionSpecification);
+        explicit AllJoynBusAttachment(param::hstring const& connectionSpecification);
         static auto GetDefault();
         static auto GetWatcher(param::iterable<hstring> const& requiredInterfaces);
     };
@@ -53,14 +53,14 @@ namespace winrt::Windows::Devices::AllJoyn
         AllJoynBusObject(std::nullptr_t) noexcept {}
         AllJoynBusObject(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynBusObject(ptr, take_ownership_from_abi) {}
         AllJoynBusObject();
-        AllJoynBusObject(param::hstring const& objectPath);
+        explicit AllJoynBusObject(param::hstring const& objectPath);
         AllJoynBusObject(param::hstring const& objectPath, Windows::Devices::AllJoyn::AllJoynBusAttachment const& busAttachment);
     };
     struct __declspec(empty_bases) AllJoynBusObjectStoppedEventArgs : Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs
     {
         AllJoynBusObjectStoppedEventArgs(std::nullptr_t) noexcept {}
         AllJoynBusObjectStoppedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs(ptr, take_ownership_from_abi) {}
-        AllJoynBusObjectStoppedEventArgs(int32_t status);
+        explicit AllJoynBusObjectStoppedEventArgs(int32_t status);
     };
     struct __declspec(empty_bases) AllJoynCredentials : Windows::Devices::AllJoyn::IAllJoynCredentials
     {
@@ -81,13 +81,13 @@ namespace winrt::Windows::Devices::AllJoyn
     {
         AllJoynMessageInfo(std::nullptr_t) noexcept {}
         AllJoynMessageInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynMessageInfo(ptr, take_ownership_from_abi) {}
-        AllJoynMessageInfo(param::hstring const& senderUniqueName);
+        explicit AllJoynMessageInfo(param::hstring const& senderUniqueName);
     };
     struct __declspec(empty_bases) AllJoynProducerStoppedEventArgs : Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs
     {
         AllJoynProducerStoppedEventArgs(std::nullptr_t) noexcept {}
         AllJoynProducerStoppedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs(ptr, take_ownership_from_abi) {}
-        AllJoynProducerStoppedEventArgs(int32_t status);
+        explicit AllJoynProducerStoppedEventArgs(int32_t status);
     };
     struct __declspec(empty_bases) AllJoynServiceInfo : Windows::Devices::AllJoyn::IAllJoynServiceInfo
     {
@@ -100,7 +100,7 @@ namespace winrt::Windows::Devices::AllJoyn
     {
         AllJoynServiceInfoRemovedEventArgs(std::nullptr_t) noexcept {}
         AllJoynServiceInfoRemovedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs(ptr, take_ownership_from_abi) {}
-        AllJoynServiceInfoRemovedEventArgs(param::hstring const& uniqueName);
+        explicit AllJoynServiceInfoRemovedEventArgs(param::hstring const& uniqueName);
     };
     struct __declspec(empty_bases) AllJoynSession : Windows::Devices::AllJoyn::IAllJoynSession
     {
@@ -113,25 +113,25 @@ namespace winrt::Windows::Devices::AllJoyn
     {
         AllJoynSessionJoinedEventArgs(std::nullptr_t) noexcept {}
         AllJoynSessionJoinedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs(ptr, take_ownership_from_abi) {}
-        AllJoynSessionJoinedEventArgs(Windows::Devices::AllJoyn::AllJoynSession const& session);
+        explicit AllJoynSessionJoinedEventArgs(Windows::Devices::AllJoyn::AllJoynSession const& session);
     };
     struct __declspec(empty_bases) AllJoynSessionLostEventArgs : Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs
     {
         AllJoynSessionLostEventArgs(std::nullptr_t) noexcept {}
         AllJoynSessionLostEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs(ptr, take_ownership_from_abi) {}
-        AllJoynSessionLostEventArgs(Windows::Devices::AllJoyn::AllJoynSessionLostReason const& reason);
+        explicit AllJoynSessionLostEventArgs(Windows::Devices::AllJoyn::AllJoynSessionLostReason const& reason);
     };
     struct __declspec(empty_bases) AllJoynSessionMemberAddedEventArgs : Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs
     {
         AllJoynSessionMemberAddedEventArgs(std::nullptr_t) noexcept {}
         AllJoynSessionMemberAddedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs(ptr, take_ownership_from_abi) {}
-        AllJoynSessionMemberAddedEventArgs(param::hstring const& uniqueName);
+        explicit AllJoynSessionMemberAddedEventArgs(param::hstring const& uniqueName);
     };
     struct __declspec(empty_bases) AllJoynSessionMemberRemovedEventArgs : Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs
     {
         AllJoynSessionMemberRemovedEventArgs(std::nullptr_t) noexcept {}
         AllJoynSessionMemberRemovedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs(ptr, take_ownership_from_abi) {}
-        AllJoynSessionMemberRemovedEventArgs(param::hstring const& uniqueName);
+        explicit AllJoynSessionMemberRemovedEventArgs(param::hstring const& uniqueName);
     };
     struct AllJoynStatus
     {
@@ -159,7 +159,7 @@ namespace winrt::Windows::Devices::AllJoyn
     {
         AllJoynWatcherStoppedEventArgs(std::nullptr_t) noexcept {}
         AllJoynWatcherStoppedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs(ptr, take_ownership_from_abi) {}
-        AllJoynWatcherStoppedEventArgs(int32_t status);
+        explicit AllJoynWatcherStoppedEventArgs(int32_t status);
     };
 }
 #endif

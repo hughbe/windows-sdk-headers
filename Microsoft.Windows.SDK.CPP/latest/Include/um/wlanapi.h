@@ -2396,6 +2396,44 @@ DEFINE_DEVPROPKEY(
     );
 
 //
+// Property: DEVPKEY_InfraCast_RtspTcpConnectionParametersSupported
+// Description: A value indicating if the remote Miracast over Infrastructure Sink supports changing the RTSP TCP connection direction.
+// Type: DEVPROP_TYPE_BOOLEAN
+// Availability: If remote device is a Miracast sink and supports Infrastructure and changing the RTSP TCP connection direction, then this
+//               is set to DEVPROP_TRUE, otherwise set to DEVPROP_FALSE, or empty.
+//
+DEFINE_DEVPROPKEY(
+    DEVPKEY_InfraCast_RtspTcpConnectionParametersSupported,
+    0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
+    0x1E
+    );
+
+//
+// Property: DEVPKEY_WiFiDirect_Miracast_SessionMgmtControlPort
+// Description: The port a Miracast device will use for the RTSP session.
+// Type: DEVPROP_TYPE_UINT32
+// Availability: If Miracast capable, set to the value of the Session Management Control Port in the WFD Device Information sublement.
+//
+DEFINE_DEVPROPKEY(
+    DEVPKEY_WiFiDirect_Miracast_SessionMgmtControlPort,
+    0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
+    0x1F
+    );
+
+//
+// Property: DEVPKEY_WiFiDirect_RtspTcpConnectionParametersSupported
+// Description: A value indicating if the remote Miracast Sink supports changing the RTSP TCP connection direction.
+// Type: DEVPROP_TYPE_BOOLEAN
+// Availability: If remote device is a Miracast sink and supports changing the RTSP TCP connection direction, then this
+//               is set to DEVPROP_TRUE, otherwise set to DEVPROP_FALSE, or empty.
+//
+DEFINE_DEVPROPKEY(
+    DEVPKEY_WiFiDirect_RtspTcpConnectionParametersSupported,
+    0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
+    0x20
+    );
+
+//
 // Wi-Fi Direct Services Property Key Definitions
 // These properties are exposed through Wi-Fi Direct Aep service objects when
 // enumerated through a DevQuery.

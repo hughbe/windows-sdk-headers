@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -31,6 +31,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -218,53 +226,64 @@ EXTERN_C const IID IID_OLEDBSimpleProviderListener;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in OLEDBSimpleProviderListener * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in OLEDBSimpleProviderListener * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in OLEDBSimpleProviderListener * This);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProviderListener, aboutToChangeCell)
         HRESULT ( STDMETHODCALLTYPE *aboutToChangeCell )( 
             __RPC__in OLEDBSimpleProviderListener * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DB_LORDINAL iColumn);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProviderListener, cellChanged)
         HRESULT ( STDMETHODCALLTYPE *cellChanged )( 
             __RPC__in OLEDBSimpleProviderListener * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DB_LORDINAL iColumn);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProviderListener, aboutToDeleteRows)
         HRESULT ( STDMETHODCALLTYPE *aboutToDeleteRows )( 
             __RPC__in OLEDBSimpleProviderListener * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DBROWCOUNT cRows);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProviderListener, deletedRows)
         HRESULT ( STDMETHODCALLTYPE *deletedRows )( 
             __RPC__in OLEDBSimpleProviderListener * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DBROWCOUNT cRows);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProviderListener, aboutToInsertRows)
         HRESULT ( STDMETHODCALLTYPE *aboutToInsertRows )( 
             __RPC__in OLEDBSimpleProviderListener * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DBROWCOUNT cRows);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProviderListener, insertedRows)
         HRESULT ( STDMETHODCALLTYPE *insertedRows )( 
             __RPC__in OLEDBSimpleProviderListener * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DBROWCOUNT cRows);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProviderListener, rowsAvailable)
         HRESULT ( STDMETHODCALLTYPE *rowsAvailable )( 
             __RPC__in OLEDBSimpleProviderListener * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DBROWCOUNT cRows);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProviderListener, transferComplete)
         HRESULT ( STDMETHODCALLTYPE *transferComplete )( 
             __RPC__in OLEDBSimpleProviderListener * This,
             /* [in] */ OSPXFER xfer);
@@ -409,32 +428,39 @@ EXTERN_C const IID IID_OLEDBSimpleProvider;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in OLEDBSimpleProvider * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in OLEDBSimpleProvider * This);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, getRowCount)
         HRESULT ( STDMETHODCALLTYPE *getRowCount )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [retval][out] */ __RPC__out DBROWCOUNT *pcRows);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, getColumnCount)
         HRESULT ( STDMETHODCALLTYPE *getColumnCount )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [retval][out] */ __RPC__out DB_LORDINAL *pcColumns);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, getRWStatus)
         HRESULT ( STDMETHODCALLTYPE *getRWStatus )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DB_LORDINAL iColumn,
             /* [retval][out] */ __RPC__out OSPRW *prwStatus);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, getVariant)
         HRESULT ( STDMETHODCALLTYPE *getVariant )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [in] */ DBROWCOUNT iRow,
@@ -442,6 +468,7 @@ EXTERN_C const IID IID_OLEDBSimpleProvider;
             /* [in] */ OSPFORMAT format,
             /* [retval][out] */ __RPC__out VARIANT *pVar);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, setVariant)
         HRESULT ( STDMETHODCALLTYPE *setVariant )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [in] */ DBROWCOUNT iRow,
@@ -449,22 +476,26 @@ EXTERN_C const IID IID_OLEDBSimpleProvider;
             /* [in] */ OSPFORMAT format,
             /* [in] */ VARIANT Var);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, getLocale)
         HRESULT ( STDMETHODCALLTYPE *getLocale )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *pbstrLocale);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, deleteRows)
         HRESULT ( STDMETHODCALLTYPE *deleteRows )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DBROWCOUNT cRows,
             /* [retval][out] */ __RPC__out DBROWCOUNT *pcRowsDeleted);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, insertRows)
         HRESULT ( STDMETHODCALLTYPE *insertRows )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [in] */ DBROWCOUNT iRow,
             /* [in] */ DBROWCOUNT cRows,
             /* [retval][out] */ __RPC__out DBROWCOUNT *pcRowsInserted);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, find)
         HRESULT ( STDMETHODCALLTYPE *find )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [in] */ DBROWCOUNT iRowStart,
@@ -474,22 +505,27 @@ EXTERN_C const IID IID_OLEDBSimpleProvider;
             /* [in] */ OSPCOMP compType,
             /* [retval][out] */ __RPC__out DBROWCOUNT *piRowFound);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, addOLEDBSimpleProviderListener)
         HRESULT ( STDMETHODCALLTYPE *addOLEDBSimpleProviderListener )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [in] */ __RPC__in_opt OLEDBSimpleProviderListener *pospIListener);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, removeOLEDBSimpleProviderListener)
         HRESULT ( STDMETHODCALLTYPE *removeOLEDBSimpleProviderListener )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [in] */ __RPC__in_opt OLEDBSimpleProviderListener *pospIListener);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, isAsync)
         HRESULT ( STDMETHODCALLTYPE *isAsync )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [retval][out] */ __RPC__out BOOL *pbAsynch);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, getEstimatedRows)
         HRESULT ( STDMETHODCALLTYPE *getEstimatedRows )( 
             __RPC__in OLEDBSimpleProvider * This,
             /* [retval][out] */ __RPC__out DBROWCOUNT *piRows);
         
+        DECLSPEC_XFGVIRT(OLEDBSimpleProvider, stopTransfer)
         HRESULT ( STDMETHODCALLTYPE *stopTransfer )( 
             __RPC__in OLEDBSimpleProvider * This);
         

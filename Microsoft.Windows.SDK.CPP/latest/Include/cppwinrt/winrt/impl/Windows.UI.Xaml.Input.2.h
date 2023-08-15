@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Input.1.h"
-namespace winrt::Windows::UI::Xaml::Input
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
 {
     struct DoubleTappedEventHandler : Windows::Foundation::IUnknown
     {
@@ -156,7 +156,7 @@ namespace winrt::Windows::UI::Xaml::Input
         [[nodiscard]] static auto IsDisplayModeEnabled();
         static auto IsDisplayModeEnabledChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Foundation::IInspectable> const& handler);
         using IsDisplayModeEnabledChanged_revoker = impl::factory_event_revoker<Windows::UI::Xaml::Input::IAccessKeyManagerStatics, &impl::abi_t<Windows::UI::Xaml::Input::IAccessKeyManagerStatics>::remove_IsDisplayModeEnabledChanged>;
-        static IsDisplayModeEnabledChanged_revoker IsDisplayModeEnabledChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static IsDisplayModeEnabledChanged_revoker IsDisplayModeEnabledChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Foundation::IInspectable> const& handler);
         static auto IsDisplayModeEnabledChanged(winrt::event_token const& token);
         static auto ExitDisplayMode();
         [[nodiscard]] static auto AreKeyTipsEnabled();
@@ -219,19 +219,19 @@ namespace winrt::Windows::UI::Xaml::Input
         static auto TryMoveFocusAsync(Windows::UI::Xaml::Input::FocusNavigationDirection const& focusNavigationDirection, Windows::UI::Xaml::Input::FindNextElementOptions const& focusNavigationOptions);
         static auto GotFocus(Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs> const& handler);
         using GotFocus_revoker = impl::factory_event_revoker<Windows::UI::Xaml::Input::IFocusManagerStatics6, &impl::abi_t<Windows::UI::Xaml::Input::IFocusManagerStatics6>::remove_GotFocus>;
-        static GotFocus_revoker GotFocus(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs> const& handler);
+        [[nodiscard]] static GotFocus_revoker GotFocus(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs> const& handler);
         static auto GotFocus(winrt::event_token const& token);
         static auto LostFocus(Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs> const& handler);
         using LostFocus_revoker = impl::factory_event_revoker<Windows::UI::Xaml::Input::IFocusManagerStatics6, &impl::abi_t<Windows::UI::Xaml::Input::IFocusManagerStatics6>::remove_LostFocus>;
-        static LostFocus_revoker LostFocus(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs> const& handler);
+        [[nodiscard]] static LostFocus_revoker LostFocus(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs> const& handler);
         static auto LostFocus(winrt::event_token const& token);
         static auto GettingFocus(Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::GettingFocusEventArgs> const& handler);
         using GettingFocus_revoker = impl::factory_event_revoker<Windows::UI::Xaml::Input::IFocusManagerStatics6, &impl::abi_t<Windows::UI::Xaml::Input::IFocusManagerStatics6>::remove_GettingFocus>;
-        static GettingFocus_revoker GettingFocus(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::GettingFocusEventArgs> const& handler);
+        [[nodiscard]] static GettingFocus_revoker GettingFocus(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::GettingFocusEventArgs> const& handler);
         static auto GettingFocus(winrt::event_token const& token);
         static auto LosingFocus(Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::LosingFocusEventArgs> const& handler);
         using LosingFocus_revoker = impl::factory_event_revoker<Windows::UI::Xaml::Input::IFocusManagerStatics6, &impl::abi_t<Windows::UI::Xaml::Input::IFocusManagerStatics6>::remove_LosingFocus>;
-        static LosingFocus_revoker LosingFocus(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::LosingFocusEventArgs> const& handler);
+        [[nodiscard]] static LosingFocus_revoker LosingFocus(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::Xaml::Input::LosingFocusEventArgs> const& handler);
         static auto LosingFocus(winrt::event_token const& token);
         static auto GetFocusedElement(Windows::UI::Xaml::XamlRoot const& xamlRoot);
     };
@@ -295,7 +295,7 @@ namespace winrt::Windows::UI::Xaml::Input
         InputScopeName(std::nullptr_t) noexcept {}
         InputScopeName(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Input::IInputScopeName(ptr, take_ownership_from_abi) {}
         InputScopeName();
-        InputScopeName(Windows::UI::Xaml::Input::InputScopeNameValue const& nameValue);
+        explicit InputScopeName(Windows::UI::Xaml::Input::InputScopeNameValue const& nameValue);
     };
     struct __declspec(empty_bases) KeyRoutedEventArgs : Windows::UI::Xaml::Input::IKeyRoutedEventArgs,
         impl::base<KeyRoutedEventArgs, Windows::UI::Xaml::RoutedEventArgs>,
@@ -415,7 +415,7 @@ namespace winrt::Windows::UI::Xaml::Input
         StandardUICommand(std::nullptr_t) noexcept {}
         StandardUICommand(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Input::IStandardUICommand(ptr, take_ownership_from_abi) {}
         StandardUICommand();
-        StandardUICommand(Windows::UI::Xaml::Input::StandardUICommandKind const& kind);
+        explicit StandardUICommand(Windows::UI::Xaml::Input::StandardUICommandKind const& kind);
         using Windows::UI::Xaml::Input::IStandardUICommand::Kind;
         using impl::consume_t<StandardUICommand, Windows::UI::Xaml::Input::IStandardUICommand2>::Kind;
         [[nodiscard]] static auto KindProperty();

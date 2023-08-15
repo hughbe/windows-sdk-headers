@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,7 @@
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.UI.Popups.1.h"
 #include "winrt/impl/Windows.UI.ApplicationSettings.1.h"
-namespace winrt::Windows::UI::ApplicationSettings
+WINRT_EXPORT namespace winrt::Windows::UI::ApplicationSettings
 {
     struct CredentialCommandCredentialDeletedHandler : Windows::Foundation::IUnknown
     {
@@ -70,7 +70,7 @@ namespace winrt::Windows::UI::ApplicationSettings
     {
         CredentialCommand(std::nullptr_t) noexcept {}
         CredentialCommand(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::ApplicationSettings::ICredentialCommand(ptr, take_ownership_from_abi) {}
-        CredentialCommand(Windows::Security::Credentials::PasswordCredential const& passwordCredential);
+        explicit CredentialCommand(Windows::Security::Credentials::PasswordCredential const& passwordCredential);
         CredentialCommand(Windows::Security::Credentials::PasswordCredential const& passwordCredential, Windows::UI::ApplicationSettings::CredentialCommandCredentialDeletedHandler const& deleted);
     };
     struct __declspec(empty_bases) SettingsCommand : Windows::UI::Popups::IUICommand

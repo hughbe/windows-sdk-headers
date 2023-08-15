@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Xaml_Documents_H
 #define WINRT_Windows_UI_Xaml_Documents_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.Xaml.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -19,241 +19,241 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.UI.Xaml.Documents.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock<D>::TextAlignment() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::TextAlignment) consume_Windows_UI_Xaml_Documents_IBlock<D>::TextAlignment() const
     {
-        Windows::UI::Xaml::TextAlignment value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->get_TextAlignment(put_abi(value)));
+        Windows::UI::Xaml::TextAlignment value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->get_TextAlignment(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock<D>::TextAlignment(Windows::UI::Xaml::TextAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IBlock<D>::TextAlignment(Windows::UI::Xaml::TextAlignment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->put_TextAlignment(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock<D>::LineHeight() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_Documents_IBlock<D>::LineHeight() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->get_LineHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock<D>::LineHeight(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IBlock<D>::LineHeight(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->put_LineHeight(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock<D>::LineStackingStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::LineStackingStrategy) consume_Windows_UI_Xaml_Documents_IBlock<D>::LineStackingStrategy() const
     {
-        Windows::UI::Xaml::LineStackingStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->get_LineStackingStrategy(put_abi(value)));
+        Windows::UI::Xaml::LineStackingStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->get_LineStackingStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock<D>::LineStackingStrategy(Windows::UI::Xaml::LineStackingStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IBlock<D>::LineStackingStrategy(Windows::UI::Xaml::LineStackingStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->put_LineStackingStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock<D>::Margin() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) consume_Windows_UI_Xaml_Documents_IBlock<D>::Margin() const
     {
-        Windows::UI::Xaml::Thickness value;
+        Windows::UI::Xaml::Thickness value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->get_Margin(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock<D>::Margin(Windows::UI::Xaml::Thickness const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IBlock<D>::Margin(Windows::UI::Xaml::Thickness const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock)->put_Margin(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock2<D>::HorizontalTextAlignment() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::TextAlignment) consume_Windows_UI_Xaml_Documents_IBlock2<D>::HorizontalTextAlignment() const
     {
-        Windows::UI::Xaml::TextAlignment value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock2)->get_HorizontalTextAlignment(put_abi(value)));
+        Windows::UI::Xaml::TextAlignment value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock2)->get_HorizontalTextAlignment(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlock2<D>::HorizontalTextAlignment(Windows::UI::Xaml::TextAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IBlock2<D>::HorizontalTextAlignment(Windows::UI::Xaml::TextAlignment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlock2)->put_HorizontalTextAlignment(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlockFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::Block) consume_Windows_UI_Xaml_Documents_IBlockFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlockFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::Documents::Block{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlockStatics<D>::TextAlignmentProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IBlockStatics<D>::TextAlignmentProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlockStatics)->get_TextAlignmentProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlockStatics<D>::LineHeightProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IBlockStatics<D>::LineHeightProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlockStatics)->get_LineHeightProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlockStatics<D>::LineStackingStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IBlockStatics<D>::LineStackingStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlockStatics)->get_LineStackingStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlockStatics<D>::MarginProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IBlockStatics<D>::MarginProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlockStatics)->get_MarginProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IBlockStatics2<D>::HorizontalTextAlignmentProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IBlockStatics2<D>::HorizontalTextAlignmentProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IBlockStatics2)->get_HorizontalTextAlignmentProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::Info() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ContentLinkInfo) consume_Windows_UI_Xaml_Documents_IContentLink<D>::Info() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_Info(&value));
         return Windows::UI::Text::ContentLinkInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::Info(Windows::UI::Text::ContentLinkInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::Info(Windows::UI::Text::ContentLinkInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_Info(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::Background() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Documents_IContentLink<D>::Background() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_Background(&value));
         return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::Background(Windows::UI::Xaml::Media::Brush const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::Background(Windows::UI::Xaml::Media::Brush const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_Background(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::Cursor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreCursorType) consume_Windows_UI_Xaml_Documents_IContentLink<D>::Cursor() const
     {
-        Windows::UI::Core::CoreCursorType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_Cursor(put_abi(value)));
+        Windows::UI::Core::CoreCursorType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_Cursor(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::Cursor(Windows::UI::Core::CoreCursorType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::Cursor(Windows::UI::Core::CoreCursorType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_Cursor(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusLeft() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusLeft() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusLeft(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusLeft(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusLeft(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_XYFocusLeft(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusRight() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusRight() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusRight(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusRight(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusRight(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_XYFocusRight(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusUp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusUp() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusUp(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusUp(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusUp(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_XYFocusUp(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusDown() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusDown() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusDown(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusDown(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusDown(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_XYFocusDown(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::ElementSoundMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementSoundMode) consume_Windows_UI_Xaml_Documents_IContentLink<D>::ElementSoundMode() const
     {
-        Windows::UI::Xaml::ElementSoundMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_ElementSoundMode(put_abi(value)));
+        Windows::UI::Xaml::ElementSoundMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_ElementSoundMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::ElementSoundMode(Windows::UI::Xaml::ElementSoundMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::ElementSoundMode(Windows::UI::Xaml::ElementSoundMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_ElementSoundMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::FocusState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FocusState) consume_Windows_UI_Xaml_Documents_IContentLink<D>::FocusState() const
     {
-        Windows::UI::Xaml::FocusState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_FocusState(put_abi(value)));
+        Windows::UI::Xaml::FocusState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_FocusState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusUpNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusUpNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusUpNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusUpNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_XYFocusUpNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusDownNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusDownNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusDownNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusDownNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_XYFocusDownNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusLeftNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusLeftNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusLeftNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusLeftNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_XYFocusLeftNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusRightNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusRightNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusRightNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_XYFocusRightNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_XYFocusRightNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::IsTabStop() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_IContentLink<D>::IsTabStop() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_IsTabStop(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::IsTabStop(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::IsTabStop(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_IsTabStop(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::TabIndex() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Documents_IContentLink<D>::TabIndex() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->get_TabIndex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::TabIndex(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::TabIndex(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->put_TabIndex(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::Invoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::ContentLink, Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Documents_IContentLink<D>::Invoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::ContentLink, Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->add_Invoked(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -261,13 +261,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Invoked_revoker>(this, Invoked(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::Invoked(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::Invoked(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->remove_Invoked(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Documents_IContentLink<D>::GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->add_GotFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -275,13 +275,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GotFocus_revoker>(this, GotFocus(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::GotFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::GotFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->remove_GotFocus(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Documents_IContentLink<D>::LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->add_LostFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -289,295 +289,295 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LostFocus_revoker>(this, LostFocus(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::LostFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLink<D>::LostFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->remove_LostFocus(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLink<D>::Focus(Windows::UI::Xaml::FocusState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_IContentLink<D>::Focus(Windows::UI::Xaml::FocusState const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLink)->Focus(static_cast<int32_t>(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkInvokedEventArgs<D>::ContentLinkInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ContentLinkInfo) consume_Windows_UI_Xaml_Documents_IContentLinkInvokedEventArgs<D>::ContentLinkInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs)->get_ContentLinkInfo(&value));
         return Windows::UI::Text::ContentLinkInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkInvokedEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_IContentLinkInvokedEventArgs<D>::Handled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs)->get_Handled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkInvokedEventArgs<D>::Handled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IContentLinkInvokedEventArgs<D>::Handled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs)->put_Handled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkProviderFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::ContentLinkProvider) consume_Windows_UI_Xaml_Documents_IContentLinkProviderFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkProviderFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::Documents::ContentLinkProvider{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::BackgroundProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::BackgroundProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_BackgroundProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::CursorProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::CursorProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_CursorProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusLeftProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusLeftProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_XYFocusLeftProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusRightProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusRightProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_XYFocusRightProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusUpProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusUpProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_XYFocusUpProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusDownProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusDownProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_XYFocusDownProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::ElementSoundModeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::ElementSoundModeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_ElementSoundModeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::FocusStateProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::FocusStateProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_FocusStateProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusUpNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusUpNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_XYFocusUpNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusDownNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusDownNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_XYFocusDownNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusLeftNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusLeftNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_XYFocusLeftNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusRightNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::XYFocusRightNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_XYFocusRightNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::IsTabStopProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::IsTabStopProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_IsTabStopProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::TabIndexProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IContentLinkStatics<D>::TabIndexProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IContentLinkStatics)->get_TabIndexProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::UnicodeString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::UnicodeString() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->get_UnicodeString(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::UnicodeString(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::UnicodeString(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->put_UnicodeString(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::Indices() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::Indices() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->get_Indices(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::Indices(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::Indices(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->put_Indices(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::FontUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::FontUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->get_FontUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::FontUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::FontUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->put_FontUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::StyleSimulations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::StyleSimulations) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::StyleSimulations() const
     {
-        Windows::UI::Xaml::Media::StyleSimulations value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->get_StyleSimulations(put_abi(value)));
+        Windows::UI::Xaml::Media::StyleSimulations value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->get_StyleSimulations(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::StyleSimulations(Windows::UI::Xaml::Media::StyleSimulations const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::StyleSimulations(Windows::UI::Xaml::Media::StyleSimulations const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->put_StyleSimulations(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::FontRenderingEmSize() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::FontRenderingEmSize() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->get_FontRenderingEmSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::FontRenderingEmSize(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::FontRenderingEmSize(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->put_FontRenderingEmSize(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::OriginX() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::OriginX() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->get_OriginX(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::OriginX(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::OriginX(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->put_OriginX(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::OriginY() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::OriginY() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->get_OriginY(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::OriginY(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::OriginY(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->put_OriginY(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::Fill() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::Fill() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->get_Fill(&value));
         return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs<D>::Fill(Windows::UI::Xaml::Media::Brush const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs<D>::Fill(Windows::UI::Xaml::Media::Brush const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs)->put_Fill(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs2<D>::IsColorFontEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_IGlyphs2<D>::IsColorFontEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs2)->get_IsColorFontEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs2<D>::IsColorFontEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs2<D>::IsColorFontEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs2)->put_IsColorFontEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs2<D>::ColorFontPaletteIndex() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Documents_IGlyphs2<D>::ColorFontPaletteIndex() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs2)->get_ColorFontPaletteIndex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphs2<D>::ColorFontPaletteIndex(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IGlyphs2<D>::ColorFontPaletteIndex(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphs2)->put_ColorFontPaletteIndex(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::UnicodeStringProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::UnicodeStringProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics)->get_UnicodeStringProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::IndicesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::IndicesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics)->get_IndicesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::FontUriProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::FontUriProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics)->get_FontUriProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::StyleSimulationsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::StyleSimulationsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics)->get_StyleSimulationsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::FontRenderingEmSizeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::FontRenderingEmSizeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics)->get_FontRenderingEmSizeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::OriginXProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::OriginXProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics)->get_OriginXProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::OriginYProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::OriginYProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics)->get_OriginYProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::FillProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics<D>::FillProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics)->get_FillProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics2<D>::IsColorFontEnabledProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics2<D>::IsColorFontEnabledProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics2)->get_IsColorFontEnabledProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IGlyphsStatics2<D>::ColorFontPaletteIndexProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IGlyphsStatics2<D>::ColorFontPaletteIndexProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IGlyphsStatics2)->get_ColorFontPaletteIndexProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink<D>::NavigateUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_UI_Xaml_Documents_IHyperlink<D>::NavigateUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink)->get_NavigateUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink<D>::NavigateUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink<D>::NavigateUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink)->put_NavigateUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink<D>::Click(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::Hyperlink, Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Documents_IHyperlink<D>::Click(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::Hyperlink, Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink)->add_Click(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -585,119 +585,119 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Click_revoker>(this, Click(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink<D>::Click(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink<D>::Click(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink)->remove_Click(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink2<D>::UnderlineStyle() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::UnderlineStyle) consume_Windows_UI_Xaml_Documents_IHyperlink2<D>::UnderlineStyle() const
     {
-        Windows::UI::Xaml::Documents::UnderlineStyle value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink2)->get_UnderlineStyle(put_abi(value)));
+        Windows::UI::Xaml::Documents::UnderlineStyle value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink2)->get_UnderlineStyle(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink2<D>::UnderlineStyle(Windows::UI::Xaml::Documents::UnderlineStyle const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink2<D>::UnderlineStyle(Windows::UI::Xaml::Documents::UnderlineStyle const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink2)->put_UnderlineStyle(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusLeft() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusLeft() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->get_XYFocusLeft(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusLeft(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusLeft(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->put_XYFocusLeft(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusRight() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusRight() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->get_XYFocusRight(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusRight(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusRight(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->put_XYFocusRight(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusUp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusUp() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->get_XYFocusUp(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusUp(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusUp(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->put_XYFocusUp(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusDown() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusDown() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->get_XYFocusDown(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusDown(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::XYFocusDown(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->put_XYFocusDown(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::ElementSoundMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::ElementSoundMode) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::ElementSoundMode() const
     {
-        Windows::UI::Xaml::ElementSoundMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->get_ElementSoundMode(put_abi(value)));
+        Windows::UI::Xaml::ElementSoundMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->get_ElementSoundMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::ElementSoundMode(Windows::UI::Xaml::ElementSoundMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink3<D>::ElementSoundMode(Windows::UI::Xaml::ElementSoundMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink3)->put_ElementSoundMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::FocusState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FocusState) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::FocusState() const
     {
-        Windows::UI::Xaml::FocusState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_FocusState(put_abi(value)));
+        Windows::UI::Xaml::FocusState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_FocusState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusUpNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusUpNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_XYFocusUpNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_XYFocusUpNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusUpNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->put_XYFocusUpNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusDownNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusDownNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_XYFocusDownNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_XYFocusDownNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusDownNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->put_XYFocusDownNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusLeftNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusLeftNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_XYFocusLeftNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_XYFocusLeftNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusLeftNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->put_XYFocusLeftNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusRightNavigationStrategy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::XYFocusNavigationStrategy) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusRightNavigationStrategy() const
     {
-        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_XYFocusRightNavigationStrategy(put_abi(value)));
+        Windows::UI::Xaml::Input::XYFocusNavigationStrategy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->get_XYFocusRightNavigationStrategy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::XYFocusRightNavigationStrategy(Windows::UI::Xaml::Input::XYFocusNavigationStrategy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->put_XYFocusRightNavigationStrategy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::GotFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->add_GotFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -705,13 +705,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GotFocus_revoker>(this, GotFocus(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::GotFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::GotFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->remove_GotFocus(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::LostFocus(Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->add_LostFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -719,419 +719,419 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LostFocus_revoker>(this, LostFocus(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::LostFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::LostFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->remove_LostFocus(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::Focus(Windows::UI::Xaml::FocusState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_IHyperlink4<D>::Focus(Windows::UI::Xaml::FocusState const& value) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink4)->Focus(static_cast<int32_t>(value), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink5<D>::IsTabStop() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_IHyperlink5<D>::IsTabStop() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink5)->get_IsTabStop(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink5<D>::IsTabStop(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink5<D>::IsTabStop(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink5)->put_IsTabStop(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink5<D>::TabIndex() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Documents_IHyperlink5<D>::TabIndex() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink5)->get_TabIndex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlink5<D>::TabIndex(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IHyperlink5<D>::TabIndex(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlink5)->put_TabIndex(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics<D>::NavigateUriProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics<D>::NavigateUriProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics)->get_NavigateUriProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics2<D>::UnderlineStyleProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics2<D>::UnderlineStyleProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics2)->get_UnderlineStyleProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::XYFocusLeftProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::XYFocusLeftProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics3)->get_XYFocusLeftProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::XYFocusRightProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::XYFocusRightProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics3)->get_XYFocusRightProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::XYFocusUpProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::XYFocusUpProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics3)->get_XYFocusUpProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::XYFocusDownProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::XYFocusDownProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics3)->get_XYFocusDownProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::ElementSoundModeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics3<D>::ElementSoundModeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics3)->get_ElementSoundModeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::FocusStateProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::FocusStateProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics4)->get_FocusStateProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::XYFocusUpNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::XYFocusUpNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics4)->get_XYFocusUpNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::XYFocusDownNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::XYFocusDownNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics4)->get_XYFocusDownNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::XYFocusLeftNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::XYFocusLeftNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics4)->get_XYFocusLeftNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::XYFocusRightNavigationStrategyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics4<D>::XYFocusRightNavigationStrategyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics4)->get_XYFocusRightNavigationStrategyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics5<D>::IsTabStopProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics5<D>::IsTabStopProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics5)->get_IsTabStopProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IHyperlinkStatics5<D>::TabIndexProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IHyperlinkStatics5<D>::TabIndexProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IHyperlinkStatics5)->get_TabIndexProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IInlineFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::Inline) consume_Windows_UI_Xaml_Documents_IInlineFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IInlineFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::Documents::Inline{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IInlineUIContainer<D>::Child() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::UIElement) consume_Windows_UI_Xaml_Documents_IInlineUIContainer<D>::Child() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IInlineUIContainer)->get_Child(&value));
         return Windows::UI::Xaml::UIElement{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IInlineUIContainer<D>::Child(Windows::UI::Xaml::UIElement const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IInlineUIContainer<D>::Child(Windows::UI::Xaml::UIElement const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IInlineUIContainer)->put_Child(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IParagraph<D>::Inlines() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::InlineCollection) consume_Windows_UI_Xaml_Documents_IParagraph<D>::Inlines() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IParagraph)->get_Inlines(&value));
         return Windows::UI::Xaml::Documents::InlineCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IParagraph<D>::TextIndent() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_Documents_IParagraph<D>::TextIndent() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IParagraph)->get_TextIndent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IParagraph<D>::TextIndent(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IParagraph<D>::TextIndent(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IParagraph)->put_TextIndent(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IParagraphStatics<D>::TextIndentProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IParagraphStatics<D>::TextIndentProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IParagraphStatics)->get_TextIndentProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IRun<D>::Text() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_Documents_IRun<D>::Text() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IRun)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IRun<D>::Text(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IRun<D>::Text(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IRun)->put_Text(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IRun<D>::FlowDirection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FlowDirection) consume_Windows_UI_Xaml_Documents_IRun<D>::FlowDirection() const
     {
-        Windows::UI::Xaml::FlowDirection value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IRun)->get_FlowDirection(put_abi(value)));
+        Windows::UI::Xaml::FlowDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IRun)->get_FlowDirection(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IRun<D>::FlowDirection(Windows::UI::Xaml::FlowDirection const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_IRun<D>::FlowDirection(Windows::UI::Xaml::FlowDirection const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IRun)->put_FlowDirection(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_IRunStatics<D>::FlowDirectionProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_IRunStatics<D>::FlowDirectionProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::IRunStatics)->get_FlowDirectionProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ISpan<D>::Inlines() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::InlineCollection) consume_Windows_UI_Xaml_Documents_ISpan<D>::Inlines() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ISpan)->get_Inlines(&value));
         return Windows::UI::Xaml::Documents::InlineCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ISpan<D>::Inlines(Windows::UI::Xaml::Documents::InlineCollection const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ISpan<D>::Inlines(Windows::UI::Xaml::Documents::InlineCollection const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ISpan)->put_Inlines(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ISpanFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::Span) consume_Windows_UI_Xaml_Documents_ISpanFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ISpanFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::Documents::Span{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_Documents_ITextElement<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontSize() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontSize() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_FontSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontSize(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontSize(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->put_FontSize(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontFamily() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::FontFamily) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontFamily() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_FontFamily(&value));
         return Windows::UI::Xaml::Media::FontFamily{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontFamily(Windows::UI::Xaml::Media::FontFamily const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontFamily(Windows::UI::Xaml::Media::FontFamily const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->put_FontFamily(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontWeight() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontWeight() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_FontWeight(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontWeight(Windows::UI::Text::FontWeight const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontWeight(Windows::UI::Text::FontWeight const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->put_FontWeight(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontStyle() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontStyle) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontStyle() const
     {
-        Windows::UI::Text::FontStyle value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_FontStyle(put_abi(value)));
+        Windows::UI::Text::FontStyle value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_FontStyle(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontStyle(Windows::UI::Text::FontStyle const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontStyle(Windows::UI::Text::FontStyle const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->put_FontStyle(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontStretch() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontStretch) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontStretch() const
     {
-        Windows::UI::Text::FontStretch value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_FontStretch(put_abi(value)));
+        Windows::UI::Text::FontStretch value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_FontStretch(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontStretch(Windows::UI::Text::FontStretch const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FontStretch(Windows::UI::Text::FontStretch const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->put_FontStretch(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::CharacterSpacing() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Documents_ITextElement<D>::CharacterSpacing() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_CharacterSpacing(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::CharacterSpacing(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement<D>::CharacterSpacing(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->put_CharacterSpacing(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::Foreground() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Documents_ITextElement<D>::Foreground() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_Foreground(&value));
         return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::Foreground(Windows::UI::Xaml::Media::Brush const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement<D>::Foreground(Windows::UI::Xaml::Media::Brush const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->put_Foreground(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::Language() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_Documents_ITextElement<D>::Language() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_Language(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::Language(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement<D>::Language(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->put_Language(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::ContentStart() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) consume_Windows_UI_Xaml_Documents_ITextElement<D>::ContentStart() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_ContentStart(&value));
         return Windows::UI::Xaml::Documents::TextPointer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::ContentEnd() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) consume_Windows_UI_Xaml_Documents_ITextElement<D>::ContentEnd() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_ContentEnd(&value));
         return Windows::UI::Xaml::Documents::TextPointer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::ElementStart() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) consume_Windows_UI_Xaml_Documents_ITextElement<D>::ElementStart() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_ElementStart(&value));
         return Windows::UI::Xaml::Documents::TextPointer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::ElementEnd() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) consume_Windows_UI_Xaml_Documents_ITextElement<D>::ElementEnd() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->get_ElementEnd(&value));
         return Windows::UI::Xaml::Documents::TextPointer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement<D>::FindName(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_Documents_ITextElement<D>::FindName(param::hstring const& name) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement)->FindName(*(void**)(&name), &result));
         return Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement2<D>::IsTextScaleFactorEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITextElement2<D>::IsTextScaleFactorEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement2)->get_IsTextScaleFactorEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement2<D>::IsTextScaleFactorEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement2<D>::IsTextScaleFactorEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement2)->put_IsTextScaleFactorEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement3<D>::AllowFocusOnInteraction() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITextElement3<D>::AllowFocusOnInteraction() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement3)->get_AllowFocusOnInteraction(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement3<D>::AllowFocusOnInteraction(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement3<D>::AllowFocusOnInteraction(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement3)->put_AllowFocusOnInteraction(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement3<D>::AccessKey() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Xaml_Documents_ITextElement3<D>::AccessKey() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement3)->get_AccessKey(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement3<D>::AccessKey(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement3<D>::AccessKey(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement3)->put_AccessKey(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement3<D>::ExitDisplayModeOnAccessKeyInvoked() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITextElement3<D>::ExitDisplayModeOnAccessKeyInvoked() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement3)->get_ExitDisplayModeOnAccessKeyInvoked(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement3<D>::ExitDisplayModeOnAccessKeyInvoked(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement3<D>::ExitDisplayModeOnAccessKeyInvoked(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement3)->put_ExitDisplayModeOnAccessKeyInvoked(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::TextDecorations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::TextDecorations) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::TextDecorations() const
     {
-        Windows::UI::Text::TextDecorations value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->get_TextDecorations(put_abi(value)));
+        Windows::UI::Text::TextDecorations value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->get_TextDecorations(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::TextDecorations(Windows::UI::Text::TextDecorations const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::TextDecorations(Windows::UI::Text::TextDecorations const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->put_TextDecorations(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::IsAccessKeyScope() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::IsAccessKeyScope() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->get_IsAccessKeyScope(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::IsAccessKeyScope(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::IsAccessKeyScope(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->put_IsAccessKeyScope(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyScopeOwner() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyScopeOwner() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->get_AccessKeyScopeOwner(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyScopeOwner(Windows::UI::Xaml::DependencyObject const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyScopeOwner(Windows::UI::Xaml::DependencyObject const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->put_AccessKeyScopeOwner(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipPlacementMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Input::KeyTipPlacementMode) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipPlacementMode() const
     {
-        Windows::UI::Xaml::Input::KeyTipPlacementMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->get_KeyTipPlacementMode(put_abi(value)));
+        Windows::UI::Xaml::Input::KeyTipPlacementMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->get_KeyTipPlacementMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipPlacementMode(Windows::UI::Xaml::Input::KeyTipPlacementMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipPlacementMode(Windows::UI::Xaml::Input::KeyTipPlacementMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->put_KeyTipPlacementMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipHorizontalOffset() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipHorizontalOffset() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->get_KeyTipHorizontalOffset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipHorizontalOffset(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipHorizontalOffset(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->put_KeyTipHorizontalOffset(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipVerticalOffset() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipVerticalOffset() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->get_KeyTipVerticalOffset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipVerticalOffset(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::KeyTipVerticalOffset(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->put_KeyTipVerticalOffset(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyDisplayRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyDisplayRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->add_AccessKeyDisplayRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1139,13 +1139,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AccessKeyDisplayRequested_revoker>(this, AccessKeyDisplayRequested(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyDisplayRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyDisplayRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->remove_AccessKeyDisplayRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyDisplayDismissed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyDisplayDismissed(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->add_AccessKeyDisplayDismissed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1153,13 +1153,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AccessKeyDisplayDismissed_revoker>(this, AccessKeyDisplayDismissed(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyDisplayDismissed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyDisplayDismissed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->remove_AccessKeyDisplayDismissed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->add_AccessKeyInvoked(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1167,900 +1167,901 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AccessKeyInvoked_revoker>(this, AccessKeyInvoked(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyInvoked(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement4<D>::AccessKeyInvoked(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement4)->remove_AccessKeyInvoked(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement5<D>::XamlRoot() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::XamlRoot) consume_Windows_UI_Xaml_Documents_ITextElement5<D>::XamlRoot() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement5)->get_XamlRoot(&value));
         return Windows::UI::Xaml::XamlRoot{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElement5<D>::XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElement5<D>::XamlRoot(Windows::UI::Xaml::XamlRoot const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElement5)->put_XamlRoot(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementOverrides<D>::OnDisconnectVisualChildren() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextElementOverrides<D>::OnDisconnectVisualChildren() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementOverrides)->OnDisconnectVisualChildren());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontSizeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontSizeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics)->get_FontSizeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontFamilyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontFamilyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics)->get_FontFamilyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontWeightProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontWeightProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics)->get_FontWeightProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontStyleProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontStyleProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics)->get_FontStyleProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontStretchProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::FontStretchProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics)->get_FontStretchProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::CharacterSpacingProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::CharacterSpacingProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics)->get_CharacterSpacingProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::ForegroundProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::ForegroundProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics)->get_ForegroundProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::LanguageProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics<D>::LanguageProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics)->get_LanguageProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics2<D>::IsTextScaleFactorEnabledProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics2<D>::IsTextScaleFactorEnabledProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics2)->get_IsTextScaleFactorEnabledProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics3<D>::AllowFocusOnInteractionProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics3<D>::AllowFocusOnInteractionProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics3)->get_AllowFocusOnInteractionProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics3<D>::AccessKeyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics3<D>::AccessKeyProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics3)->get_AccessKeyProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics3<D>::ExitDisplayModeOnAccessKeyInvokedProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics3<D>::ExitDisplayModeOnAccessKeyInvokedProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics3)->get_ExitDisplayModeOnAccessKeyInvokedProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::TextDecorationsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::TextDecorationsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics4)->get_TextDecorationsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::IsAccessKeyScopeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::IsAccessKeyScopeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics4)->get_IsAccessKeyScopeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::AccessKeyScopeOwnerProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::AccessKeyScopeOwnerProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics4)->get_AccessKeyScopeOwnerProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::KeyTipPlacementModeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::KeyTipPlacementModeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics4)->get_KeyTipPlacementModeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::KeyTipHorizontalOffsetProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::KeyTipHorizontalOffsetProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics4)->get_KeyTipHorizontalOffsetProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::KeyTipVerticalOffsetProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextElementStatics4<D>::KeyTipVerticalOffsetProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextElementStatics4)->get_KeyTipVerticalOffsetProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Ranges() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::TextRange>) consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Ranges() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextHighlighter)->get_Ranges(&value));
         return Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::TextRange>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Foreground() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Foreground() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextHighlighter)->get_Foreground(&value));
         return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Foreground(Windows::UI::Xaml::Media::Brush const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Foreground(Windows::UI::Xaml::Media::Brush const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextHighlighter)->put_Foreground(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Background() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Background() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextHighlighter)->get_Background(&value));
         return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Background(Windows::UI::Xaml::Media::Brush const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITextHighlighter<D>::Background(Windows::UI::Xaml::Media::Brush const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextHighlighter)->put_Background(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextHighlighterFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextHighlighter) consume_Windows_UI_Xaml_Documents_ITextHighlighterFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextHighlighterFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::Documents::TextHighlighter{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextHighlighterStatics<D>::ForegroundProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextHighlighterStatics<D>::ForegroundProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextHighlighterStatics)->get_ForegroundProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextHighlighterStatics<D>::BackgroundProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITextHighlighterStatics<D>::BackgroundProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextHighlighterStatics)->get_BackgroundProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextPointer<D>::Parent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) consume_Windows_UI_Xaml_Documents_ITextPointer<D>::Parent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextPointer)->get_Parent(&value));
         return Windows::UI::Xaml::DependencyObject{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextPointer<D>::VisualParent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FrameworkElement) consume_Windows_UI_Xaml_Documents_ITextPointer<D>::VisualParent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextPointer)->get_VisualParent(&value));
         return Windows::UI::Xaml::FrameworkElement{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextPointer<D>::LogicalDirection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::LogicalDirection) consume_Windows_UI_Xaml_Documents_ITextPointer<D>::LogicalDirection() const
     {
-        Windows::UI::Xaml::Documents::LogicalDirection value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextPointer)->get_LogicalDirection(put_abi(value)));
+        Windows::UI::Xaml::Documents::LogicalDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextPointer)->get_LogicalDirection(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextPointer<D>::Offset() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Documents_ITextPointer<D>::Offset() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextPointer)->get_Offset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextPointer<D>::GetCharacterRect(Windows::UI::Xaml::Documents::LogicalDirection const& direction) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Xaml_Documents_ITextPointer<D>::GetCharacterRect(Windows::UI::Xaml::Documents::LogicalDirection const& direction) const
     {
-        Windows::Foundation::Rect result;
+        Windows::Foundation::Rect result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextPointer)->GetCharacterRect(static_cast<int32_t>(direction), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITextPointer<D>::GetPositionAtOffset(int32_t offset, Windows::UI::Xaml::Documents::LogicalDirection const& direction) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Documents::TextPointer) consume_Windows_UI_Xaml_Documents_ITextPointer<D>::GetPositionAtOffset(int32_t offset, Windows::UI::Xaml::Documents::LogicalDirection const& direction) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITextPointer)->GetPositionAtOffset(offset, static_cast<int32_t>(direction), &result));
         return Windows::UI::Xaml::Documents::TextPointer{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::AnnotationAlternatesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::AnnotationAlternatesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_AnnotationAlternatesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetAnnotationAlternates(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetAnnotationAlternates(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::EastAsianExpertFormsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::EastAsianExpertFormsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_EastAsianExpertFormsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetEastAsianExpertForms(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetEastAsianExpertForms(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::EastAsianLanguageProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::EastAsianLanguageProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_EastAsianLanguageProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FontEastAsianLanguage) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        Windows::UI::Xaml::FontEastAsianLanguage result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetEastAsianLanguage(*(void**)(&element), put_abi(result)));
+        Windows::UI::Xaml::FontEastAsianLanguage result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetEastAsianLanguage(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianLanguage const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianLanguage const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetEastAsianLanguage(*(void**)(&element), static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::EastAsianWidthsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::EastAsianWidthsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_EastAsianWidthsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FontEastAsianWidths) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        Windows::UI::Xaml::FontEastAsianWidths result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetEastAsianWidths(*(void**)(&element), put_abi(result)));
+        Windows::UI::Xaml::FontEastAsianWidths result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetEastAsianWidths(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianWidths const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianWidths const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetEastAsianWidths(*(void**)(&element), static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StandardLigaturesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StandardLigaturesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StandardLigaturesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStandardLigatures(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStandardLigatures(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::ContextualLigaturesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::ContextualLigaturesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_ContextualLigaturesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetContextualLigatures(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetContextualLigatures(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::DiscretionaryLigaturesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::DiscretionaryLigaturesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_DiscretionaryLigaturesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetDiscretionaryLigatures(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetDiscretionaryLigatures(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::HistoricalLigaturesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::HistoricalLigaturesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_HistoricalLigaturesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetHistoricalLigatures(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetHistoricalLigatures(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StandardSwashesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StandardSwashesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StandardSwashesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStandardSwashes(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStandardSwashes(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::ContextualSwashesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::ContextualSwashesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_ContextualSwashesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetContextualSwashes(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetContextualSwashes(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::ContextualAlternatesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::ContextualAlternatesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_ContextualAlternatesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetContextualAlternates(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetContextualAlternates(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticAlternatesProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticAlternatesProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticAlternatesProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticAlternates(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticAlternates(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet1Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet1Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet1Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet1(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet1(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet2Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet2Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet2Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet2(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet2(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet3Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet3Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet3Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet3(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet3(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet4Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet4Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet4Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet4(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet4(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet5Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet5Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet5Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet5(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet5(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet6Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet6Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet6Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet6(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet6(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet7Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet7Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet7Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet7(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet7(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet8Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet8Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet8Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet8(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet8(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet9Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet9Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet9Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet9(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet9(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet10Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet10Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet10Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet10(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet10(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet11Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet11Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet11Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet11(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet11(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet12Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet12Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet12Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet12(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet12(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet13Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet13Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet13Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet13(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet13(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet14Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet14Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet14Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet14(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet14(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet15Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet15Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet15Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet15(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet15(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet16Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet16Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet16Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet16(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet16(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet17Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet17Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet17Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet17(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet17(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet18Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet18Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet18Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet18(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet18(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet19Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet19Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet19Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet19(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet19(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet20Property() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::StylisticSet20Property() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_StylisticSet20Property(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetStylisticSet20(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetStylisticSet20(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::CapitalsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::CapitalsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_CapitalsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetCapitals(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FontCapitals) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetCapitals(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        Windows::UI::Xaml::FontCapitals result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetCapitals(*(void**)(&element), put_abi(result)));
+        Windows::UI::Xaml::FontCapitals result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetCapitals(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetCapitals(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontCapitals const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetCapitals(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontCapitals const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetCapitals(*(void**)(&element), static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::CapitalSpacingProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::CapitalSpacingProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_CapitalSpacingProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetCapitalSpacing(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetCapitalSpacing(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::KerningProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::KerningProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_KerningProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetKerning(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetKerning(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetKerning(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetKerning(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetKerning(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetKerning(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::CaseSensitiveFormsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::CaseSensitiveFormsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_CaseSensitiveFormsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetCaseSensitiveForms(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetCaseSensitiveForms(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::HistoricalFormsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::HistoricalFormsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_HistoricalFormsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetHistoricalForms(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetHistoricalForms(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::FractionProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::FractionProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_FractionProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetFraction(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FontFraction) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetFraction(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        Windows::UI::Xaml::FontFraction result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetFraction(*(void**)(&element), put_abi(result)));
+        Windows::UI::Xaml::FontFraction result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetFraction(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetFraction(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontFraction const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetFraction(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontFraction const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetFraction(*(void**)(&element), static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::NumeralStyleProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::NumeralStyleProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_NumeralStyleProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FontNumeralStyle) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        Windows::UI::Xaml::FontNumeralStyle result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetNumeralStyle(*(void**)(&element), put_abi(result)));
+        Windows::UI::Xaml::FontNumeralStyle result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetNumeralStyle(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralStyle const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralStyle const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetNumeralStyle(*(void**)(&element), static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::NumeralAlignmentProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::NumeralAlignmentProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_NumeralAlignmentProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FontNumeralAlignment) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        Windows::UI::Xaml::FontNumeralAlignment result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetNumeralAlignment(*(void**)(&element), put_abi(result)));
+        Windows::UI::Xaml::FontNumeralAlignment result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetNumeralAlignment(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralAlignment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetNumeralAlignment(*(void**)(&element), static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SlashedZeroProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SlashedZeroProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_SlashedZeroProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetSlashedZero(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetSlashedZero(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetSlashedZero(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetSlashedZero(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetSlashedZero(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetSlashedZero(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::MathematicalGreekProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::MathematicalGreekProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_MathematicalGreekProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetMathematicalGreek(*(void**)(&element), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element, bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetMathematicalGreek(*(void**)(&element), value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::VariantsProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::VariantsProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->get_VariantsProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetVariants(Windows::UI::Xaml::DependencyObject const& element) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FontVariants) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::GetVariants(Windows::UI::Xaml::DependencyObject const& element) const
     {
-        Windows::UI::Xaml::FontVariants result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetVariants(*(void**)(&element), put_abi(result)));
+        Windows::UI::Xaml::FontVariants result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->GetVariants(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetVariants(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontVariants const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Documents_ITypographyStatics<D>::SetVariants(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontVariants const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Documents::ITypographyStatics)->SetVariants(*(void**)(&element), static_cast<int32_t>(value)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IBlock> : produce_base<D, Windows::UI::Xaml::Documents::IBlock>
     {
@@ -2122,6 +2123,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IBlock2> : produce_base<D, Windows::UI::Xaml::Documents::IBlock2>
     {
@@ -2140,6 +2143,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IBlockFactory> : produce_base<D, Windows::UI::Xaml::Documents::IBlockFactory>
     {
@@ -2155,6 +2160,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IBlockStatics> : produce_base<D, Windows::UI::Xaml::Documents::IBlockStatics>
     {
@@ -2191,6 +2198,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IBlockStatics2> : produce_base<D, Windows::UI::Xaml::Documents::IBlockStatics2>
     {
@@ -2203,14 +2212,20 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IBold> : produce_base<D, Windows::UI::Xaml::Documents::IBold>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IContactContentLinkProvider> : produce_base<D, Windows::UI::Xaml::Documents::IContactContentLinkProvider>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IContentLink> : produce_base<D, Windows::UI::Xaml::Documents::IContentLink>
     {
@@ -2473,6 +2488,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs> : produce_base<D, Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs>
     {
@@ -2499,14 +2516,20 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IContentLinkProvider> : produce_base<D, Windows::UI::Xaml::Documents::IContentLinkProvider>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IContentLinkProviderCollection> : produce_base<D, Windows::UI::Xaml::Documents::IContentLinkProviderCollection>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IContentLinkProviderFactory> : produce_base<D, Windows::UI::Xaml::Documents::IContentLinkProviderFactory>
     {
@@ -2522,6 +2545,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IContentLinkStatics> : produce_base<D, Windows::UI::Xaml::Documents::IContentLinkStatics>
     {
@@ -2638,6 +2663,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IGlyphs> : produce_base<D, Windows::UI::Xaml::Documents::IGlyphs>
     {
@@ -2758,6 +2785,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IGlyphs2> : produce_base<D, Windows::UI::Xaml::Documents::IGlyphs2>
     {
@@ -2790,6 +2819,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IGlyphsStatics> : produce_base<D, Windows::UI::Xaml::Documents::IGlyphsStatics>
     {
@@ -2858,6 +2889,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IGlyphsStatics2> : produce_base<D, Windows::UI::Xaml::Documents::IGlyphsStatics2>
     {
@@ -2878,6 +2911,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlink> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlink>
     {
@@ -2911,6 +2946,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlink2> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlink2>
     {
@@ -2929,6 +2966,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlink3> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlink3>
     {
@@ -3007,6 +3046,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlink4> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlink4>
     {
@@ -3109,6 +3150,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlink5> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlink5>
     {
@@ -3141,10 +3184,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlinkStatics> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlinkStatics>
     {
@@ -3157,6 +3204,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlinkStatics2> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlinkStatics2>
     {
@@ -3169,6 +3218,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlinkStatics3> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlinkStatics3>
     {
@@ -3213,6 +3264,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlinkStatics4> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlinkStatics4>
     {
@@ -3257,6 +3310,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IHyperlinkStatics5> : produce_base<D, Windows::UI::Xaml::Documents::IHyperlinkStatics5>
     {
@@ -3277,10 +3332,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IInline> : produce_base<D, Windows::UI::Xaml::Documents::IInline>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IInlineFactory> : produce_base<D, Windows::UI::Xaml::Documents::IInlineFactory>
     {
@@ -3296,6 +3355,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IInlineUIContainer> : produce_base<D, Windows::UI::Xaml::Documents::IInlineUIContainer>
     {
@@ -3315,14 +3376,20 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IItalic> : produce_base<D, Windows::UI::Xaml::Documents::IItalic>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ILineBreak> : produce_base<D, Windows::UI::Xaml::Documents::ILineBreak>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IParagraph> : produce_base<D, Windows::UI::Xaml::Documents::IParagraph>
     {
@@ -3349,6 +3416,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IParagraphStatics> : produce_base<D, Windows::UI::Xaml::Documents::IParagraphStatics>
     {
@@ -3361,10 +3430,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IPlaceContentLinkProvider> : produce_base<D, Windows::UI::Xaml::Documents::IPlaceContentLinkProvider>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IRun> : produce_base<D, Windows::UI::Xaml::Documents::IRun>
     {
@@ -3398,6 +3471,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IRunStatics> : produce_base<D, Windows::UI::Xaml::Documents::IRunStatics>
     {
@@ -3410,6 +3485,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ISpan> : produce_base<D, Windows::UI::Xaml::Documents::ISpan>
     {
@@ -3429,6 +3506,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ISpanFactory> : produce_base<D, Windows::UI::Xaml::Documents::ISpanFactory>
     {
@@ -3444,6 +3523,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElement> : produce_base<D, Windows::UI::Xaml::Documents::ITextElement>
     {
@@ -3612,6 +3693,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElement2> : produce_base<D, Windows::UI::Xaml::Documents::ITextElement2>
     {
@@ -3630,6 +3713,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElement3> : produce_base<D, Windows::UI::Xaml::Documents::ITextElement3>
     {
@@ -3677,6 +3762,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElement4> : produce_base<D, Windows::UI::Xaml::Documents::ITextElement4>
     {
@@ -3808,6 +3895,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElement5> : produce_base<D, Windows::UI::Xaml::Documents::ITextElement5>
     {
@@ -3827,10 +3916,13 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElementFactory> : produce_base<D, Windows::UI::Xaml::Documents::ITextElementFactory>
     {
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElementOverrides> : produce_base<D, Windows::UI::Xaml::Documents::ITextElementOverrides>
     {
@@ -3842,6 +3934,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElementStatics> : produce_base<D, Windows::UI::Xaml::Documents::ITextElementStatics>
     {
@@ -3910,6 +4003,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElementStatics2> : produce_base<D, Windows::UI::Xaml::Documents::ITextElementStatics2>
     {
@@ -3922,6 +4017,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElementStatics3> : produce_base<D, Windows::UI::Xaml::Documents::ITextElementStatics3>
     {
@@ -3950,6 +4047,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextElementStatics4> : produce_base<D, Windows::UI::Xaml::Documents::ITextElementStatics4>
     {
@@ -4002,6 +4101,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextHighlighter> : produce_base<D, Windows::UI::Xaml::Documents::ITextHighlighter>
     {
@@ -4044,14 +4145,20 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextHighlighterBase> : produce_base<D, Windows::UI::Xaml::Documents::ITextHighlighterBase>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory> : produce_base<D, Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextHighlighterFactory> : produce_base<D, Windows::UI::Xaml::Documents::ITextHighlighterFactory>
     {
@@ -4067,6 +4174,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextHighlighterStatics> : produce_base<D, Windows::UI::Xaml::Documents::ITextHighlighterStatics>
     {
@@ -4087,6 +4196,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITextPointer> : produce_base<D, Windows::UI::Xaml::Documents::ITextPointer>
     {
@@ -4137,10 +4248,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITypography> : produce_base<D, Windows::UI::Xaml::Documents::ITypography>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::ITypographyStatics> : produce_base<D, Windows::UI::Xaml::Documents::ITypographyStatics>
     {
@@ -5091,10 +5206,13 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Documents::IUnderline> : produce_base<D, Windows::UI::Xaml::Documents::IUnderline>
     {
     };
+#endif
 template <typename T, typename D>
 struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI::Xaml::Documents::ITextElementOverrides>
     : produce_dispatch_to_overridable_base<T, D, Windows::UI::Xaml::Documents::ITextElementOverrides>
@@ -5108,848 +5226,849 @@ struct __declspec(empty_bases) produce_dispatch_to_overridable<T, D, Windows::UI
 
         return this->shim().OnDisconnectVisualChildren();
     }
-};}
-namespace winrt::Windows::UI::Xaml::Documents
+};
+}
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Documents
 {
     inline auto Block::TextAlignmentProperty()
     {
-        return impl::call_factory<Block, Windows::UI::Xaml::Documents::IBlockStatics>([&](auto&& f) { return f.TextAlignmentProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IBlockStatics const&), Block, IBlockStatics>([](IBlockStatics const& f) { return f.TextAlignmentProperty(); });
     }
     inline auto Block::LineHeightProperty()
     {
-        return impl::call_factory<Block, Windows::UI::Xaml::Documents::IBlockStatics>([&](auto&& f) { return f.LineHeightProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IBlockStatics const&), Block, IBlockStatics>([](IBlockStatics const& f) { return f.LineHeightProperty(); });
     }
     inline auto Block::LineStackingStrategyProperty()
     {
-        return impl::call_factory<Block, Windows::UI::Xaml::Documents::IBlockStatics>([&](auto&& f) { return f.LineStackingStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IBlockStatics const&), Block, IBlockStatics>([](IBlockStatics const& f) { return f.LineStackingStrategyProperty(); });
     }
     inline auto Block::MarginProperty()
     {
-        return impl::call_factory<Block, Windows::UI::Xaml::Documents::IBlockStatics>([&](auto&& f) { return f.MarginProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IBlockStatics const&), Block, IBlockStatics>([](IBlockStatics const& f) { return f.MarginProperty(); });
     }
     inline auto Block::HorizontalTextAlignmentProperty()
     {
-        return impl::call_factory<Block, Windows::UI::Xaml::Documents::IBlockStatics2>([&](auto&& f) { return f.HorizontalTextAlignmentProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IBlockStatics2 const&), Block, IBlockStatics2>([](IBlockStatics2 const& f) { return f.HorizontalTextAlignmentProperty(); });
     }
     inline Bold::Bold() :
-        Bold(impl::call_factory<Bold>([](auto&& f) { return f.template ActivateInstance<Bold>(); }))
+        Bold(impl::call_factory_cast<Bold(*)(Windows::Foundation::IActivationFactory const&), Bold>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Bold>(); }))
     {
     }
     inline ContactContentLinkProvider::ContactContentLinkProvider() :
-        ContactContentLinkProvider(impl::call_factory<ContactContentLinkProvider>([](auto&& f) { return f.template ActivateInstance<ContactContentLinkProvider>(); }))
+        ContactContentLinkProvider(impl::call_factory_cast<ContactContentLinkProvider(*)(Windows::Foundation::IActivationFactory const&), ContactContentLinkProvider>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ContactContentLinkProvider>(); }))
     {
     }
     inline ContentLink::ContentLink() :
-        ContentLink(impl::call_factory<ContentLink>([](auto&& f) { return f.template ActivateInstance<ContentLink>(); }))
+        ContentLink(impl::call_factory_cast<ContentLink(*)(Windows::Foundation::IActivationFactory const&), ContentLink>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ContentLink>(); }))
     {
     }
     inline auto ContentLink::BackgroundProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.BackgroundProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.BackgroundProperty(); });
     }
     inline auto ContentLink::CursorProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.CursorProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.CursorProperty(); });
     }
     inline auto ContentLink::XYFocusLeftProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.XYFocusLeftProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.XYFocusLeftProperty(); });
     }
     inline auto ContentLink::XYFocusRightProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.XYFocusRightProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.XYFocusRightProperty(); });
     }
     inline auto ContentLink::XYFocusUpProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.XYFocusUpProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.XYFocusUpProperty(); });
     }
     inline auto ContentLink::XYFocusDownProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.XYFocusDownProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.XYFocusDownProperty(); });
     }
     inline auto ContentLink::ElementSoundModeProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.ElementSoundModeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.ElementSoundModeProperty(); });
     }
     inline auto ContentLink::FocusStateProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.FocusStateProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.FocusStateProperty(); });
     }
     inline auto ContentLink::XYFocusUpNavigationStrategyProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.XYFocusUpNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.XYFocusUpNavigationStrategyProperty(); });
     }
     inline auto ContentLink::XYFocusDownNavigationStrategyProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.XYFocusDownNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.XYFocusDownNavigationStrategyProperty(); });
     }
     inline auto ContentLink::XYFocusLeftNavigationStrategyProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.XYFocusLeftNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.XYFocusLeftNavigationStrategyProperty(); });
     }
     inline auto ContentLink::XYFocusRightNavigationStrategyProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.XYFocusRightNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.XYFocusRightNavigationStrategyProperty(); });
     }
     inline auto ContentLink::IsTabStopProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.IsTabStopProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.IsTabStopProperty(); });
     }
     inline auto ContentLink::TabIndexProperty()
     {
-        return impl::call_factory<ContentLink, Windows::UI::Xaml::Documents::IContentLinkStatics>([&](auto&& f) { return f.TabIndexProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IContentLinkStatics const&), ContentLink, IContentLinkStatics>([](IContentLinkStatics const& f) { return f.TabIndexProperty(); });
     }
     inline ContentLinkProviderCollection::ContentLinkProviderCollection() :
-        ContentLinkProviderCollection(impl::call_factory<ContentLinkProviderCollection>([](auto&& f) { return f.template ActivateInstance<ContentLinkProviderCollection>(); }))
+        ContentLinkProviderCollection(impl::call_factory_cast<ContentLinkProviderCollection(*)(Windows::Foundation::IActivationFactory const&), ContentLinkProviderCollection>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ContentLinkProviderCollection>(); }))
     {
     }
     inline Glyphs::Glyphs() :
-        Glyphs(impl::call_factory<Glyphs>([](auto&& f) { return f.template ActivateInstance<Glyphs>(); }))
+        Glyphs(impl::call_factory_cast<Glyphs(*)(Windows::Foundation::IActivationFactory const&), Glyphs>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Glyphs>(); }))
     {
     }
     inline auto Glyphs::UnicodeStringProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics>([&](auto&& f) { return f.UnicodeStringProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics const&), Glyphs, IGlyphsStatics>([](IGlyphsStatics const& f) { return f.UnicodeStringProperty(); });
     }
     inline auto Glyphs::IndicesProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics>([&](auto&& f) { return f.IndicesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics const&), Glyphs, IGlyphsStatics>([](IGlyphsStatics const& f) { return f.IndicesProperty(); });
     }
     inline auto Glyphs::FontUriProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics>([&](auto&& f) { return f.FontUriProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics const&), Glyphs, IGlyphsStatics>([](IGlyphsStatics const& f) { return f.FontUriProperty(); });
     }
     inline auto Glyphs::StyleSimulationsProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics>([&](auto&& f) { return f.StyleSimulationsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics const&), Glyphs, IGlyphsStatics>([](IGlyphsStatics const& f) { return f.StyleSimulationsProperty(); });
     }
     inline auto Glyphs::FontRenderingEmSizeProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics>([&](auto&& f) { return f.FontRenderingEmSizeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics const&), Glyphs, IGlyphsStatics>([](IGlyphsStatics const& f) { return f.FontRenderingEmSizeProperty(); });
     }
     inline auto Glyphs::OriginXProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics>([&](auto&& f) { return f.OriginXProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics const&), Glyphs, IGlyphsStatics>([](IGlyphsStatics const& f) { return f.OriginXProperty(); });
     }
     inline auto Glyphs::OriginYProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics>([&](auto&& f) { return f.OriginYProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics const&), Glyphs, IGlyphsStatics>([](IGlyphsStatics const& f) { return f.OriginYProperty(); });
     }
     inline auto Glyphs::FillProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics>([&](auto&& f) { return f.FillProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics const&), Glyphs, IGlyphsStatics>([](IGlyphsStatics const& f) { return f.FillProperty(); });
     }
     inline auto Glyphs::IsColorFontEnabledProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics2>([&](auto&& f) { return f.IsColorFontEnabledProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics2 const&), Glyphs, IGlyphsStatics2>([](IGlyphsStatics2 const& f) { return f.IsColorFontEnabledProperty(); });
     }
     inline auto Glyphs::ColorFontPaletteIndexProperty()
     {
-        return impl::call_factory<Glyphs, Windows::UI::Xaml::Documents::IGlyphsStatics2>([&](auto&& f) { return f.ColorFontPaletteIndexProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IGlyphsStatics2 const&), Glyphs, IGlyphsStatics2>([](IGlyphsStatics2 const& f) { return f.ColorFontPaletteIndexProperty(); });
     }
     inline Hyperlink::Hyperlink() :
-        Hyperlink(impl::call_factory<Hyperlink>([](auto&& f) { return f.template ActivateInstance<Hyperlink>(); }))
+        Hyperlink(impl::call_factory_cast<Hyperlink(*)(Windows::Foundation::IActivationFactory const&), Hyperlink>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Hyperlink>(); }))
     {
     }
     inline auto Hyperlink::NavigateUriProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics>([&](auto&& f) { return f.NavigateUriProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics const&), Hyperlink, IHyperlinkStatics>([](IHyperlinkStatics const& f) { return f.NavigateUriProperty(); });
     }
     inline auto Hyperlink::UnderlineStyleProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics2>([&](auto&& f) { return f.UnderlineStyleProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics2 const&), Hyperlink, IHyperlinkStatics2>([](IHyperlinkStatics2 const& f) { return f.UnderlineStyleProperty(); });
     }
     inline auto Hyperlink::XYFocusLeftProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics3>([&](auto&& f) { return f.XYFocusLeftProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics3 const&), Hyperlink, IHyperlinkStatics3>([](IHyperlinkStatics3 const& f) { return f.XYFocusLeftProperty(); });
     }
     inline auto Hyperlink::XYFocusRightProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics3>([&](auto&& f) { return f.XYFocusRightProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics3 const&), Hyperlink, IHyperlinkStatics3>([](IHyperlinkStatics3 const& f) { return f.XYFocusRightProperty(); });
     }
     inline auto Hyperlink::XYFocusUpProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics3>([&](auto&& f) { return f.XYFocusUpProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics3 const&), Hyperlink, IHyperlinkStatics3>([](IHyperlinkStatics3 const& f) { return f.XYFocusUpProperty(); });
     }
     inline auto Hyperlink::XYFocusDownProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics3>([&](auto&& f) { return f.XYFocusDownProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics3 const&), Hyperlink, IHyperlinkStatics3>([](IHyperlinkStatics3 const& f) { return f.XYFocusDownProperty(); });
     }
     inline auto Hyperlink::ElementSoundModeProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics3>([&](auto&& f) { return f.ElementSoundModeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics3 const&), Hyperlink, IHyperlinkStatics3>([](IHyperlinkStatics3 const& f) { return f.ElementSoundModeProperty(); });
     }
     inline auto Hyperlink::FocusStateProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics4>([&](auto&& f) { return f.FocusStateProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics4 const&), Hyperlink, IHyperlinkStatics4>([](IHyperlinkStatics4 const& f) { return f.FocusStateProperty(); });
     }
     inline auto Hyperlink::XYFocusUpNavigationStrategyProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics4>([&](auto&& f) { return f.XYFocusUpNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics4 const&), Hyperlink, IHyperlinkStatics4>([](IHyperlinkStatics4 const& f) { return f.XYFocusUpNavigationStrategyProperty(); });
     }
     inline auto Hyperlink::XYFocusDownNavigationStrategyProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics4>([&](auto&& f) { return f.XYFocusDownNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics4 const&), Hyperlink, IHyperlinkStatics4>([](IHyperlinkStatics4 const& f) { return f.XYFocusDownNavigationStrategyProperty(); });
     }
     inline auto Hyperlink::XYFocusLeftNavigationStrategyProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics4>([&](auto&& f) { return f.XYFocusLeftNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics4 const&), Hyperlink, IHyperlinkStatics4>([](IHyperlinkStatics4 const& f) { return f.XYFocusLeftNavigationStrategyProperty(); });
     }
     inline auto Hyperlink::XYFocusRightNavigationStrategyProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics4>([&](auto&& f) { return f.XYFocusRightNavigationStrategyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics4 const&), Hyperlink, IHyperlinkStatics4>([](IHyperlinkStatics4 const& f) { return f.XYFocusRightNavigationStrategyProperty(); });
     }
     inline auto Hyperlink::IsTabStopProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics5>([&](auto&& f) { return f.IsTabStopProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics5 const&), Hyperlink, IHyperlinkStatics5>([](IHyperlinkStatics5 const& f) { return f.IsTabStopProperty(); });
     }
     inline auto Hyperlink::TabIndexProperty()
     {
-        return impl::call_factory<Hyperlink, Windows::UI::Xaml::Documents::IHyperlinkStatics5>([&](auto&& f) { return f.TabIndexProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IHyperlinkStatics5 const&), Hyperlink, IHyperlinkStatics5>([](IHyperlinkStatics5 const& f) { return f.TabIndexProperty(); });
     }
     inline InlineUIContainer::InlineUIContainer() :
-        InlineUIContainer(impl::call_factory<InlineUIContainer>([](auto&& f) { return f.template ActivateInstance<InlineUIContainer>(); }))
+        InlineUIContainer(impl::call_factory_cast<InlineUIContainer(*)(Windows::Foundation::IActivationFactory const&), InlineUIContainer>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<InlineUIContainer>(); }))
     {
     }
     inline Italic::Italic() :
-        Italic(impl::call_factory<Italic>([](auto&& f) { return f.template ActivateInstance<Italic>(); }))
+        Italic(impl::call_factory_cast<Italic(*)(Windows::Foundation::IActivationFactory const&), Italic>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Italic>(); }))
     {
     }
     inline LineBreak::LineBreak() :
-        LineBreak(impl::call_factory<LineBreak>([](auto&& f) { return f.template ActivateInstance<LineBreak>(); }))
+        LineBreak(impl::call_factory_cast<LineBreak(*)(Windows::Foundation::IActivationFactory const&), LineBreak>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<LineBreak>(); }))
     {
     }
     inline Paragraph::Paragraph() :
-        Paragraph(impl::call_factory<Paragraph>([](auto&& f) { return f.template ActivateInstance<Paragraph>(); }))
+        Paragraph(impl::call_factory_cast<Paragraph(*)(Windows::Foundation::IActivationFactory const&), Paragraph>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Paragraph>(); }))
     {
     }
     inline auto Paragraph::TextIndentProperty()
     {
-        return impl::call_factory<Paragraph, Windows::UI::Xaml::Documents::IParagraphStatics>([&](auto&& f) { return f.TextIndentProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IParagraphStatics const&), Paragraph, IParagraphStatics>([](IParagraphStatics const& f) { return f.TextIndentProperty(); });
     }
     inline PlaceContentLinkProvider::PlaceContentLinkProvider() :
-        PlaceContentLinkProvider(impl::call_factory<PlaceContentLinkProvider>([](auto&& f) { return f.template ActivateInstance<PlaceContentLinkProvider>(); }))
+        PlaceContentLinkProvider(impl::call_factory_cast<PlaceContentLinkProvider(*)(Windows::Foundation::IActivationFactory const&), PlaceContentLinkProvider>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PlaceContentLinkProvider>(); }))
     {
     }
     inline Run::Run() :
-        Run(impl::call_factory<Run>([](auto&& f) { return f.template ActivateInstance<Run>(); }))
+        Run(impl::call_factory_cast<Run(*)(Windows::Foundation::IActivationFactory const&), Run>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Run>(); }))
     {
     }
     inline auto Run::FlowDirectionProperty()
     {
-        return impl::call_factory<Run, Windows::UI::Xaml::Documents::IRunStatics>([&](auto&& f) { return f.FlowDirectionProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IRunStatics const&), Run, IRunStatics>([](IRunStatics const& f) { return f.FlowDirectionProperty(); });
     }
     inline Span::Span()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<Span, Windows::UI::Xaml::Documents::ISpanFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<Span, ISpanFactory>([&](ISpanFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto TextElement::FontSizeProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics>([&](auto&& f) { return f.FontSizeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics const&), TextElement, ITextElementStatics>([](ITextElementStatics const& f) { return f.FontSizeProperty(); });
     }
     inline auto TextElement::FontFamilyProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics>([&](auto&& f) { return f.FontFamilyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics const&), TextElement, ITextElementStatics>([](ITextElementStatics const& f) { return f.FontFamilyProperty(); });
     }
     inline auto TextElement::FontWeightProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics>([&](auto&& f) { return f.FontWeightProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics const&), TextElement, ITextElementStatics>([](ITextElementStatics const& f) { return f.FontWeightProperty(); });
     }
     inline auto TextElement::FontStyleProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics>([&](auto&& f) { return f.FontStyleProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics const&), TextElement, ITextElementStatics>([](ITextElementStatics const& f) { return f.FontStyleProperty(); });
     }
     inline auto TextElement::FontStretchProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics>([&](auto&& f) { return f.FontStretchProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics const&), TextElement, ITextElementStatics>([](ITextElementStatics const& f) { return f.FontStretchProperty(); });
     }
     inline auto TextElement::CharacterSpacingProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics>([&](auto&& f) { return f.CharacterSpacingProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics const&), TextElement, ITextElementStatics>([](ITextElementStatics const& f) { return f.CharacterSpacingProperty(); });
     }
     inline auto TextElement::ForegroundProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics>([&](auto&& f) { return f.ForegroundProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics const&), TextElement, ITextElementStatics>([](ITextElementStatics const& f) { return f.ForegroundProperty(); });
     }
     inline auto TextElement::LanguageProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics>([&](auto&& f) { return f.LanguageProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics const&), TextElement, ITextElementStatics>([](ITextElementStatics const& f) { return f.LanguageProperty(); });
     }
     inline auto TextElement::IsTextScaleFactorEnabledProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics2>([&](auto&& f) { return f.IsTextScaleFactorEnabledProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics2 const&), TextElement, ITextElementStatics2>([](ITextElementStatics2 const& f) { return f.IsTextScaleFactorEnabledProperty(); });
     }
     inline auto TextElement::AllowFocusOnInteractionProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics3>([&](auto&& f) { return f.AllowFocusOnInteractionProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics3 const&), TextElement, ITextElementStatics3>([](ITextElementStatics3 const& f) { return f.AllowFocusOnInteractionProperty(); });
     }
     inline auto TextElement::AccessKeyProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics3>([&](auto&& f) { return f.AccessKeyProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics3 const&), TextElement, ITextElementStatics3>([](ITextElementStatics3 const& f) { return f.AccessKeyProperty(); });
     }
     inline auto TextElement::ExitDisplayModeOnAccessKeyInvokedProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics3>([&](auto&& f) { return f.ExitDisplayModeOnAccessKeyInvokedProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics3 const&), TextElement, ITextElementStatics3>([](ITextElementStatics3 const& f) { return f.ExitDisplayModeOnAccessKeyInvokedProperty(); });
     }
     inline auto TextElement::TextDecorationsProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics4>([&](auto&& f) { return f.TextDecorationsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics4 const&), TextElement, ITextElementStatics4>([](ITextElementStatics4 const& f) { return f.TextDecorationsProperty(); });
     }
     inline auto TextElement::IsAccessKeyScopeProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics4>([&](auto&& f) { return f.IsAccessKeyScopeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics4 const&), TextElement, ITextElementStatics4>([](ITextElementStatics4 const& f) { return f.IsAccessKeyScopeProperty(); });
     }
     inline auto TextElement::AccessKeyScopeOwnerProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics4>([&](auto&& f) { return f.AccessKeyScopeOwnerProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics4 const&), TextElement, ITextElementStatics4>([](ITextElementStatics4 const& f) { return f.AccessKeyScopeOwnerProperty(); });
     }
     inline auto TextElement::KeyTipPlacementModeProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics4>([&](auto&& f) { return f.KeyTipPlacementModeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics4 const&), TextElement, ITextElementStatics4>([](ITextElementStatics4 const& f) { return f.KeyTipPlacementModeProperty(); });
     }
     inline auto TextElement::KeyTipHorizontalOffsetProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics4>([&](auto&& f) { return f.KeyTipHorizontalOffsetProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics4 const&), TextElement, ITextElementStatics4>([](ITextElementStatics4 const& f) { return f.KeyTipHorizontalOffsetProperty(); });
     }
     inline auto TextElement::KeyTipVerticalOffsetProperty()
     {
-        return impl::call_factory<TextElement, Windows::UI::Xaml::Documents::ITextElementStatics4>([&](auto&& f) { return f.KeyTipVerticalOffsetProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextElementStatics4 const&), TextElement, ITextElementStatics4>([](ITextElementStatics4 const& f) { return f.KeyTipVerticalOffsetProperty(); });
     }
     inline TextHighlighter::TextHighlighter()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<TextHighlighter, Windows::UI::Xaml::Documents::ITextHighlighterFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<TextHighlighter, ITextHighlighterFactory>([&](ITextHighlighterFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline auto TextHighlighter::ForegroundProperty()
     {
-        return impl::call_factory<TextHighlighter, Windows::UI::Xaml::Documents::ITextHighlighterStatics>([&](auto&& f) { return f.ForegroundProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextHighlighterStatics const&), TextHighlighter, ITextHighlighterStatics>([](ITextHighlighterStatics const& f) { return f.ForegroundProperty(); });
     }
     inline auto TextHighlighter::BackgroundProperty()
     {
-        return impl::call_factory<TextHighlighter, Windows::UI::Xaml::Documents::ITextHighlighterStatics>([&](auto&& f) { return f.BackgroundProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITextHighlighterStatics const&), TextHighlighter, ITextHighlighterStatics>([](ITextHighlighterStatics const& f) { return f.BackgroundProperty(); });
     }
     inline auto Typography::AnnotationAlternatesProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.AnnotationAlternatesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.AnnotationAlternatesProperty(); });
     }
     inline auto Typography::GetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetAnnotationAlternates(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetAnnotationAlternates(element); });
     }
     inline auto Typography::SetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetAnnotationAlternates(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetAnnotationAlternates(element, value); });
     }
     inline auto Typography::EastAsianExpertFormsProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.EastAsianExpertFormsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.EastAsianExpertFormsProperty(); });
     }
     inline auto Typography::GetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetEastAsianExpertForms(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetEastAsianExpertForms(element); });
     }
     inline auto Typography::SetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetEastAsianExpertForms(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetEastAsianExpertForms(element, value); });
     }
     inline auto Typography::EastAsianLanguageProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.EastAsianLanguageProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.EastAsianLanguageProperty(); });
     }
     inline auto Typography::GetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetEastAsianLanguage(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetEastAsianLanguage(element); });
     }
     inline auto Typography::SetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianLanguage const& value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetEastAsianLanguage(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetEastAsianLanguage(element, value); });
     }
     inline auto Typography::EastAsianWidthsProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.EastAsianWidthsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.EastAsianWidthsProperty(); });
     }
     inline auto Typography::GetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetEastAsianWidths(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetEastAsianWidths(element); });
     }
     inline auto Typography::SetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianWidths const& value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetEastAsianWidths(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetEastAsianWidths(element, value); });
     }
     inline auto Typography::StandardLigaturesProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StandardLigaturesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StandardLigaturesProperty(); });
     }
     inline auto Typography::GetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStandardLigatures(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStandardLigatures(element); });
     }
     inline auto Typography::SetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStandardLigatures(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStandardLigatures(element, value); });
     }
     inline auto Typography::ContextualLigaturesProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.ContextualLigaturesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.ContextualLigaturesProperty(); });
     }
     inline auto Typography::GetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetContextualLigatures(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetContextualLigatures(element); });
     }
     inline auto Typography::SetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetContextualLigatures(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetContextualLigatures(element, value); });
     }
     inline auto Typography::DiscretionaryLigaturesProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.DiscretionaryLigaturesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.DiscretionaryLigaturesProperty(); });
     }
     inline auto Typography::GetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetDiscretionaryLigatures(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetDiscretionaryLigatures(element); });
     }
     inline auto Typography::SetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetDiscretionaryLigatures(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetDiscretionaryLigatures(element, value); });
     }
     inline auto Typography::HistoricalLigaturesProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.HistoricalLigaturesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.HistoricalLigaturesProperty(); });
     }
     inline auto Typography::GetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetHistoricalLigatures(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetHistoricalLigatures(element); });
     }
     inline auto Typography::SetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetHistoricalLigatures(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetHistoricalLigatures(element, value); });
     }
     inline auto Typography::StandardSwashesProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StandardSwashesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StandardSwashesProperty(); });
     }
     inline auto Typography::GetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStandardSwashes(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStandardSwashes(element); });
     }
     inline auto Typography::SetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStandardSwashes(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStandardSwashes(element, value); });
     }
     inline auto Typography::ContextualSwashesProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.ContextualSwashesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.ContextualSwashesProperty(); });
     }
     inline auto Typography::GetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetContextualSwashes(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetContextualSwashes(element); });
     }
     inline auto Typography::SetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetContextualSwashes(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetContextualSwashes(element, value); });
     }
     inline auto Typography::ContextualAlternatesProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.ContextualAlternatesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.ContextualAlternatesProperty(); });
     }
     inline auto Typography::GetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetContextualAlternates(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetContextualAlternates(element); });
     }
     inline auto Typography::SetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetContextualAlternates(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetContextualAlternates(element, value); });
     }
     inline auto Typography::StylisticAlternatesProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticAlternatesProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticAlternatesProperty(); });
     }
     inline auto Typography::GetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticAlternates(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticAlternates(element); });
     }
     inline auto Typography::SetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticAlternates(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticAlternates(element, value); });
     }
     inline auto Typography::StylisticSet1Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet1Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet1Property(); });
     }
     inline auto Typography::GetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet1(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet1(element); });
     }
     inline auto Typography::SetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet1(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet1(element, value); });
     }
     inline auto Typography::StylisticSet2Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet2Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet2Property(); });
     }
     inline auto Typography::GetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet2(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet2(element); });
     }
     inline auto Typography::SetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet2(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet2(element, value); });
     }
     inline auto Typography::StylisticSet3Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet3Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet3Property(); });
     }
     inline auto Typography::GetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet3(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet3(element); });
     }
     inline auto Typography::SetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet3(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet3(element, value); });
     }
     inline auto Typography::StylisticSet4Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet4Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet4Property(); });
     }
     inline auto Typography::GetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet4(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet4(element); });
     }
     inline auto Typography::SetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet4(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet4(element, value); });
     }
     inline auto Typography::StylisticSet5Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet5Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet5Property(); });
     }
     inline auto Typography::GetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet5(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet5(element); });
     }
     inline auto Typography::SetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet5(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet5(element, value); });
     }
     inline auto Typography::StylisticSet6Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet6Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet6Property(); });
     }
     inline auto Typography::GetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet6(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet6(element); });
     }
     inline auto Typography::SetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet6(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet6(element, value); });
     }
     inline auto Typography::StylisticSet7Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet7Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet7Property(); });
     }
     inline auto Typography::GetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet7(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet7(element); });
     }
     inline auto Typography::SetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet7(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet7(element, value); });
     }
     inline auto Typography::StylisticSet8Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet8Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet8Property(); });
     }
     inline auto Typography::GetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet8(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet8(element); });
     }
     inline auto Typography::SetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet8(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet8(element, value); });
     }
     inline auto Typography::StylisticSet9Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet9Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet9Property(); });
     }
     inline auto Typography::GetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet9(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet9(element); });
     }
     inline auto Typography::SetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet9(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet9(element, value); });
     }
     inline auto Typography::StylisticSet10Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet10Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet10Property(); });
     }
     inline auto Typography::GetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet10(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet10(element); });
     }
     inline auto Typography::SetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet10(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet10(element, value); });
     }
     inline auto Typography::StylisticSet11Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet11Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet11Property(); });
     }
     inline auto Typography::GetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet11(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet11(element); });
     }
     inline auto Typography::SetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet11(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet11(element, value); });
     }
     inline auto Typography::StylisticSet12Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet12Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet12Property(); });
     }
     inline auto Typography::GetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet12(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet12(element); });
     }
     inline auto Typography::SetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet12(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet12(element, value); });
     }
     inline auto Typography::StylisticSet13Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet13Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet13Property(); });
     }
     inline auto Typography::GetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet13(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet13(element); });
     }
     inline auto Typography::SetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet13(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet13(element, value); });
     }
     inline auto Typography::StylisticSet14Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet14Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet14Property(); });
     }
     inline auto Typography::GetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet14(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet14(element); });
     }
     inline auto Typography::SetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet14(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet14(element, value); });
     }
     inline auto Typography::StylisticSet15Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet15Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet15Property(); });
     }
     inline auto Typography::GetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet15(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet15(element); });
     }
     inline auto Typography::SetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet15(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet15(element, value); });
     }
     inline auto Typography::StylisticSet16Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet16Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet16Property(); });
     }
     inline auto Typography::GetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet16(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet16(element); });
     }
     inline auto Typography::SetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet16(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet16(element, value); });
     }
     inline auto Typography::StylisticSet17Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet17Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet17Property(); });
     }
     inline auto Typography::GetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet17(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet17(element); });
     }
     inline auto Typography::SetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet17(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet17(element, value); });
     }
     inline auto Typography::StylisticSet18Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet18Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet18Property(); });
     }
     inline auto Typography::GetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet18(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet18(element); });
     }
     inline auto Typography::SetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet18(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet18(element, value); });
     }
     inline auto Typography::StylisticSet19Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet19Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet19Property(); });
     }
     inline auto Typography::GetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet19(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet19(element); });
     }
     inline auto Typography::SetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet19(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet19(element, value); });
     }
     inline auto Typography::StylisticSet20Property()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.StylisticSet20Property(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.StylisticSet20Property(); });
     }
     inline auto Typography::GetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetStylisticSet20(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetStylisticSet20(element); });
     }
     inline auto Typography::SetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetStylisticSet20(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetStylisticSet20(element, value); });
     }
     inline auto Typography::CapitalsProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.CapitalsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.CapitalsProperty(); });
     }
     inline auto Typography::GetCapitals(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetCapitals(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetCapitals(element); });
     }
     inline auto Typography::SetCapitals(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontCapitals const& value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetCapitals(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetCapitals(element, value); });
     }
     inline auto Typography::CapitalSpacingProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.CapitalSpacingProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.CapitalSpacingProperty(); });
     }
     inline auto Typography::GetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetCapitalSpacing(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetCapitalSpacing(element); });
     }
     inline auto Typography::SetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetCapitalSpacing(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetCapitalSpacing(element, value); });
     }
     inline auto Typography::KerningProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.KerningProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.KerningProperty(); });
     }
     inline auto Typography::GetKerning(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetKerning(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetKerning(element); });
     }
     inline auto Typography::SetKerning(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetKerning(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetKerning(element, value); });
     }
     inline auto Typography::CaseSensitiveFormsProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.CaseSensitiveFormsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.CaseSensitiveFormsProperty(); });
     }
     inline auto Typography::GetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetCaseSensitiveForms(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetCaseSensitiveForms(element); });
     }
     inline auto Typography::SetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetCaseSensitiveForms(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetCaseSensitiveForms(element, value); });
     }
     inline auto Typography::HistoricalFormsProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.HistoricalFormsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.HistoricalFormsProperty(); });
     }
     inline auto Typography::GetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetHistoricalForms(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetHistoricalForms(element); });
     }
     inline auto Typography::SetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetHistoricalForms(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetHistoricalForms(element, value); });
     }
     inline auto Typography::FractionProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.FractionProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.FractionProperty(); });
     }
     inline auto Typography::GetFraction(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetFraction(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetFraction(element); });
     }
     inline auto Typography::SetFraction(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontFraction const& value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetFraction(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetFraction(element, value); });
     }
     inline auto Typography::NumeralStyleProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.NumeralStyleProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.NumeralStyleProperty(); });
     }
     inline auto Typography::GetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetNumeralStyle(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetNumeralStyle(element); });
     }
     inline auto Typography::SetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralStyle const& value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetNumeralStyle(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetNumeralStyle(element, value); });
     }
     inline auto Typography::NumeralAlignmentProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.NumeralAlignmentProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.NumeralAlignmentProperty(); });
     }
     inline auto Typography::GetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetNumeralAlignment(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetNumeralAlignment(element); });
     }
     inline auto Typography::SetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralAlignment const& value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetNumeralAlignment(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetNumeralAlignment(element, value); });
     }
     inline auto Typography::SlashedZeroProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SlashedZeroProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.SlashedZeroProperty(); });
     }
     inline auto Typography::GetSlashedZero(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetSlashedZero(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetSlashedZero(element); });
     }
     inline auto Typography::SetSlashedZero(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetSlashedZero(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetSlashedZero(element, value); });
     }
     inline auto Typography::MathematicalGreekProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.MathematicalGreekProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.MathematicalGreekProperty(); });
     }
     inline auto Typography::GetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetMathematicalGreek(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetMathematicalGreek(element); });
     }
     inline auto Typography::SetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element, bool value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetMathematicalGreek(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetMathematicalGreek(element, value); });
     }
     inline auto Typography::VariantsProperty()
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.VariantsProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ITypographyStatics const&), Typography, ITypographyStatics>([](ITypographyStatics const& f) { return f.VariantsProperty(); });
     }
     inline auto Typography::GetVariants(Windows::UI::Xaml::DependencyObject const& element)
     {
-        return impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.GetVariants(element); });
+        return impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.GetVariants(element); });
     }
     inline auto Typography::SetVariants(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontVariants const& value)
     {
-        impl::call_factory<Typography, Windows::UI::Xaml::Documents::ITypographyStatics>([&](auto&& f) { return f.SetVariants(element, value); });
+        impl::call_factory<Typography, ITypographyStatics>([&](ITypographyStatics const& f) { return f.SetVariants(element, value); });
     }
     inline Underline::Underline() :
-        Underline(impl::call_factory<Underline>([](auto&& f) { return f.template ActivateInstance<Underline>(); }))
+        Underline(impl::call_factory_cast<Underline(*)(Windows::Foundation::IActivationFactory const&), Underline>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Underline>(); }))
     {
     }
-    template <typename D> auto ITextElementOverridesT<D>::OnDisconnectVisualChildren() const
+    template <typename D> WINRT_IMPL_AUTO(void) ITextElementOverridesT<D>::OnDisconnectVisualChildren() const
     {
         return shim().template try_as<ITextElementOverrides>().OnDisconnectVisualChildren();
     }
@@ -5964,7 +6083,7 @@ namespace winrt::Windows::UI::Xaml::Documents
     protected:
         BlockT()
         {
-            impl::call_factory<Block, Windows::UI::Xaml::Documents::IBlockFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<Block, IBlockFactory>([&](IBlockFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -5977,7 +6096,7 @@ namespace winrt::Windows::UI::Xaml::Documents
     protected:
         ContentLinkProviderT()
         {
-            impl::call_factory<ContentLinkProvider, Windows::UI::Xaml::Documents::IContentLinkProviderFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<ContentLinkProvider, IContentLinkProviderFactory>([&](IContentLinkProviderFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -5991,7 +6110,7 @@ namespace winrt::Windows::UI::Xaml::Documents
     protected:
         InlineT()
         {
-            impl::call_factory<Inline, Windows::UI::Xaml::Documents::IInlineFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<Inline, IInlineFactory>([&](IInlineFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -6005,7 +6124,7 @@ namespace winrt::Windows::UI::Xaml::Documents
     protected:
         SpanT()
         {
-            impl::call_factory<Span, Windows::UI::Xaml::Documents::ISpanFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<Span, ISpanFactory>([&](ISpanFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -6018,97 +6137,99 @@ namespace winrt::Windows::UI::Xaml::Documents
     protected:
         TextHighlighterT()
         {
-            impl::call_factory<TextHighlighter, Windows::UI::Xaml::Documents::ITextHighlighterFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<TextHighlighter, ITextHighlighterFactory>([&](ITextHighlighterFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlock> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IBlock> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlock2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IBlock2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlockFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IBlockFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlockStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IBlockStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlockStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IBlockStatics2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBold> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IBold> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContactContentLinkProvider> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IContactContentLinkProvider> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLink> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IContentLink> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkProvider> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IContentLinkProvider> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkProviderCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IContentLinkProviderCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkProviderFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IContentLinkProviderFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IContentLinkStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IGlyphs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IGlyphs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IGlyphs2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IGlyphs2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IGlyphsStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IGlyphsStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IGlyphsStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IGlyphsStatics2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlink> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlink2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlink3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlink4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlink5> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics5> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IInline> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IInline> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IInlineFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IInlineFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IInlineUIContainer> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IInlineUIContainer> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IItalic> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IItalic> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ILineBreak> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ILineBreak> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IParagraph> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IParagraph> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IParagraphStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IParagraphStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IPlaceContentLinkProvider> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IPlaceContentLinkProvider> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IRun> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IRun> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IRunStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IRunStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ISpan> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ISpan> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ISpanFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ISpanFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElement> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElement2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElement3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElement4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement5> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElement5> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElementFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementOverrides> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElementOverrides> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElementStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementStatics2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElementStatics2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementStatics3> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElementStatics3> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementStatics4> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextElementStatics4> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighter> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextHighlighter> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighterBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextHighlighterBase> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighterFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextHighlighterFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighterStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextHighlighterStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextPointer> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITextPointer> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITypography> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITypography> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITypographyStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ITypographyStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IUnderline> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::IUnderline> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Block> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Block> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::BlockCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::BlockCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Bold> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Bold> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContentLink> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ContentLink> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Glyphs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Glyphs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Hyperlink> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Hyperlink> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Inline> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Inline> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::InlineCollection> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::InlineCollection> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::InlineUIContainer> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::InlineUIContainer> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Italic> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Italic> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::LineBreak> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::LineBreak> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Paragraph> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Paragraph> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Run> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Run> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Span> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Span> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::TextElement> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::TextElement> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::TextHighlighter> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::TextHighlighter> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::TextPointer> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::TextPointer> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Typography> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Typography> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Underline> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Documents::Underline> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlock> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlock2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlockFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlockStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBlockStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IBold> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContactContentLinkProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkProviderCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkProviderFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IContentLinkStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IGlyphs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IGlyphs2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IGlyphsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IGlyphsStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlink5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IHyperlinkStatics5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IInline> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IInlineFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IInlineUIContainer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IItalic> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ILineBreak> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IParagraph> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IParagraphStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IPlaceContentLinkProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IRun> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IRunStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ISpan> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ISpanFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElement5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementOverrides> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextElementStatics4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighterBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighterBaseFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighterFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextHighlighterStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITextPointer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITypography> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ITypographyStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::IUnderline> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Block> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::BlockCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Bold> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContentLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Glyphs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Hyperlink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Inline> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::InlineCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::InlineUIContainer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Italic> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::LineBreak> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Paragraph> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Run> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Span> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::TextElement> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::TextHighlighter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::TextPointer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Typography> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Documents::Underline> : winrt::impl::hash_base {};
+#endif
 }
 #endif

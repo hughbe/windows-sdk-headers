@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Web.Http.1.h"
 #include "winrt/impl/Windows.Media.Streaming.Adaptive.1.h"
-namespace winrt::Windows::Media::Streaming::Adaptive
+WINRT_EXPORT namespace winrt::Windows::Media::Streaming::Adaptive
 {
     struct __declspec(empty_bases) AdaptiveMediaSource : Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource,
         impl::require<AdaptiveMediaSource, Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource2, Windows::Media::Streaming::Adaptive::IAdaptiveMediaSource3, Windows::Foundation::IClosable>

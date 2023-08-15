@@ -1,39 +1,41 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_System_UserProfile_0_H
 #define WINRT_Windows_System_UserProfile_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename T> struct EventHandler;
+    template <typename T> struct __declspec(empty_bases) EventHandler;
     struct EventRegistrationToken;
     struct IAsyncAction;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Uri;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IIterable;
+    template <typename T> struct __declspec(empty_bases) IIterable;
+    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
-namespace winrt::Windows::Globalization
+WINRT_EXPORT namespace winrt::Windows::Globalization
 {
     enum class DayOfWeek : int32_t;
 }
-namespace winrt::Windows::Storage
+WINRT_EXPORT namespace winrt::Windows::Storage
 {
     struct IStorageFile;
     struct StorageFile;
 }
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IRandomAccessStream;
 }
-namespace winrt::Windows::System
+WINRT_EXPORT namespace winrt::Windows::System
 {
     struct User;
 }
-namespace winrt::Windows::System::UserProfile
+WINRT_EXPORT namespace winrt::Windows::System::UserProfile
 {
     enum class AccountPictureKind : int32_t
     {
@@ -87,350 +89,92 @@ namespace winrt::Windows::System::UserProfile
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::System::UserProfile::IAdvertisingManagerForUser>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IAdvertisingManagerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IAdvertisingManagerStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IAssignedAccessSettings>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IAssignedAccessSettingsStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IDiagnosticsSettings>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IDiagnosticsSettingsStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IFirstSignInSettings>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IFirstSignInSettingsStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IGlobalizationPreferencesForUser>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IGlobalizationPreferencesStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IGlobalizationPreferencesStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IGlobalizationPreferencesStatics3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::ILockScreenImageFeedStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::ILockScreenStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IUserInformationStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IUserProfilePersonalizationSettings>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::UserProfile::AdvertisingManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::AdvertisingManagerForUser>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::AssignedAccessSettings>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::DiagnosticsSettings>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::FirstSignInSettings>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::GlobalizationPreferences>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::GlobalizationPreferencesForUser>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::LockScreen>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::UserInformation>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::UserProfilePersonalizationSettings>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::UserProfile::AccountPictureKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::UserProfile::SetAccountPictureResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::UserProfile::SetImageFeedResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::System::UserProfile::IAdvertisingManagerForUser>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IAdvertisingManagerForUser" };
-    };
-    template <> struct name<Windows::System::UserProfile::IAdvertisingManagerStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IAdvertisingManagerStatics" };
-    };
-    template <> struct name<Windows::System::UserProfile::IAdvertisingManagerStatics2>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IAdvertisingManagerStatics2" };
-    };
-    template <> struct name<Windows::System::UserProfile::IAssignedAccessSettings>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IAssignedAccessSettings" };
-    };
-    template <> struct name<Windows::System::UserProfile::IAssignedAccessSettingsStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IAssignedAccessSettingsStatics" };
-    };
-    template <> struct name<Windows::System::UserProfile::IDiagnosticsSettings>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IDiagnosticsSettings" };
-    };
-    template <> struct name<Windows::System::UserProfile::IDiagnosticsSettingsStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IDiagnosticsSettingsStatics" };
-    };
-    template <> struct name<Windows::System::UserProfile::IFirstSignInSettings>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IFirstSignInSettings" };
-    };
-    template <> struct name<Windows::System::UserProfile::IFirstSignInSettingsStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IFirstSignInSettingsStatics" };
-    };
-    template <> struct name<Windows::System::UserProfile::IGlobalizationPreferencesForUser>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IGlobalizationPreferencesForUser" };
-    };
-    template <> struct name<Windows::System::UserProfile::IGlobalizationPreferencesStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IGlobalizationPreferencesStatics" };
-    };
-    template <> struct name<Windows::System::UserProfile::IGlobalizationPreferencesStatics2>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IGlobalizationPreferencesStatics2" };
-    };
-    template <> struct name<Windows::System::UserProfile::IGlobalizationPreferencesStatics3>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IGlobalizationPreferencesStatics3" };
-    };
-    template <> struct name<Windows::System::UserProfile::ILockScreenImageFeedStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.ILockScreenImageFeedStatics" };
-    };
-    template <> struct name<Windows::System::UserProfile::ILockScreenStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.ILockScreenStatics" };
-    };
-    template <> struct name<Windows::System::UserProfile::IUserInformationStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IUserInformationStatics" };
-    };
-    template <> struct name<Windows::System::UserProfile::IUserProfilePersonalizationSettings>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IUserProfilePersonalizationSettings" };
-    };
-    template <> struct name<Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics" };
-    };
-    template <> struct name<Windows::System::UserProfile::AdvertisingManager>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.AdvertisingManager" };
-    };
-    template <> struct name<Windows::System::UserProfile::AdvertisingManagerForUser>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.AdvertisingManagerForUser" };
-    };
-    template <> struct name<Windows::System::UserProfile::AssignedAccessSettings>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.AssignedAccessSettings" };
-    };
-    template <> struct name<Windows::System::UserProfile::DiagnosticsSettings>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.DiagnosticsSettings" };
-    };
-    template <> struct name<Windows::System::UserProfile::FirstSignInSettings>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.FirstSignInSettings" };
-    };
-    template <> struct name<Windows::System::UserProfile::GlobalizationPreferences>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.GlobalizationPreferences" };
-    };
-    template <> struct name<Windows::System::UserProfile::GlobalizationPreferencesForUser>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.GlobalizationPreferencesForUser" };
-    };
-    template <> struct name<Windows::System::UserProfile::LockScreen>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.LockScreen" };
-    };
-    template <> struct name<Windows::System::UserProfile::UserInformation>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.UserInformation" };
-    };
-    template <> struct name<Windows::System::UserProfile::UserProfilePersonalizationSettings>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.UserProfilePersonalizationSettings" };
-    };
-    template <> struct name<Windows::System::UserProfile::AccountPictureKind>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.AccountPictureKind" };
-    };
-    template <> struct name<Windows::System::UserProfile::SetAccountPictureResult>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.SetAccountPictureResult" };
-    };
-    template <> struct name<Windows::System::UserProfile::SetImageFeedResult>
-    {
-        static constexpr auto & value{ L"Windows.System.UserProfile.SetImageFeedResult" };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IAdvertisingManagerForUser>
-    {
-        static constexpr guid value{ 0x928BF3D0,0xCF7C,0x4AB0,{ 0xA7,0xDC,0x6D,0xC5,0xBC,0xD4,0x42,0x52 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IAdvertisingManagerStatics>
-    {
-        static constexpr guid value{ 0xADD3468C,0xA273,0x48CB,{ 0xB3,0x46,0x35,0x44,0x52,0x2D,0x55,0x81 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IAdvertisingManagerStatics2>
-    {
-        static constexpr guid value{ 0xDD0947AF,0x1A6D,0x46B0,{ 0x95,0xBC,0xF3,0xF9,0xD6,0xBE,0xB9,0xFB } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IAssignedAccessSettings>
-    {
-        static constexpr guid value{ 0x1BC57F1C,0xE971,0x5757,{ 0xB8,0xE0,0x51,0x2F,0x8B,0x8C,0x46,0xD2 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IAssignedAccessSettingsStatics>
-    {
-        static constexpr guid value{ 0x34A81D0D,0x8A29,0x5EF3,{ 0xA7,0xBE,0x61,0x8E,0x6A,0xC3,0xBD,0x01 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IDiagnosticsSettings>
-    {
-        static constexpr guid value{ 0xE5E9ECCD,0x2711,0x44E0,{ 0x97,0x3C,0x49,0x1D,0x78,0x04,0x8D,0x24 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IDiagnosticsSettingsStatics>
-    {
-        static constexpr guid value{ 0x72D2E80F,0x5390,0x4793,{ 0x99,0x0B,0x3C,0xCC,0x7D,0x6A,0xC9,0xC8 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IFirstSignInSettings>
-    {
-        static constexpr guid value{ 0x3E945153,0x3A5E,0x452E,{ 0xA6,0x01,0xF5,0xBA,0xAD,0x2A,0x48,0x70 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IFirstSignInSettingsStatics>
-    {
-        static constexpr guid value{ 0x1CE18F0F,0x1C41,0x4EA0,{ 0xB7,0xA2,0x6F,0x0C,0x1C,0x7E,0x84,0x38 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IGlobalizationPreferencesForUser>
-    {
-        static constexpr guid value{ 0x150F0795,0x4F6E,0x40BA,{ 0xA0,0x10,0xE2,0x7D,0x81,0xBD,0xA7,0xF5 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IGlobalizationPreferencesStatics>
-    {
-        static constexpr guid value{ 0x01BF4326,0xED37,0x4E96,{ 0xB0,0xE9,0xC1,0x34,0x0D,0x1E,0xA1,0x58 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IGlobalizationPreferencesStatics2>
-    {
-        static constexpr guid value{ 0xFCCE85F1,0x4300,0x4CD0,{ 0x9C,0xAC,0x1A,0x8E,0x7B,0x7E,0x18,0xF4 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IGlobalizationPreferencesStatics3>
-    {
-        static constexpr guid value{ 0x1E059733,0x35F5,0x40D8,{ 0xB9,0xE8,0xAE,0xF3,0xEF,0x85,0x6F,0xCE } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::ILockScreenImageFeedStatics>
-    {
-        static constexpr guid value{ 0x2C0D73F6,0x03A9,0x41A6,{ 0x9B,0x01,0x49,0x52,0x51,0xFF,0x51,0xD5 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::ILockScreenStatics>
-    {
-        static constexpr guid value{ 0x3EE9D3AD,0xB607,0x40AE,{ 0xB4,0x26,0x76,0x31,0xD9,0x82,0x12,0x69 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IUserInformationStatics>
-    {
-        static constexpr guid value{ 0x77F3A910,0x48FA,0x489C,{ 0x93,0x4E,0x2A,0xE8,0x5B,0xA8,0xF7,0x72 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IUserProfilePersonalizationSettings>
-    {
-        static constexpr guid value{ 0x8CEDDAB4,0x7998,0x46D5,{ 0x8D,0xD3,0x18,0x4F,0x1C,0x5F,0x9A,0xB9 } };
-    };
-    template <> struct guid_storage<Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics>
-    {
-        static constexpr guid value{ 0x91ACB841,0x5037,0x454B,{ 0x98,0x83,0xBB,0x77,0x2D,0x08,0xDD,0x16 } };
-    };
-    template <> struct default_interface<Windows::System::UserProfile::AdvertisingManagerForUser>
-    {
-        using type = Windows::System::UserProfile::IAdvertisingManagerForUser;
-    };
-    template <> struct default_interface<Windows::System::UserProfile::AssignedAccessSettings>
-    {
-        using type = Windows::System::UserProfile::IAssignedAccessSettings;
-    };
-    template <> struct default_interface<Windows::System::UserProfile::DiagnosticsSettings>
-    {
-        using type = Windows::System::UserProfile::IDiagnosticsSettings;
-    };
-    template <> struct default_interface<Windows::System::UserProfile::FirstSignInSettings>
-    {
-        using type = Windows::System::UserProfile::IFirstSignInSettings;
-    };
-    template <> struct default_interface<Windows::System::UserProfile::GlobalizationPreferencesForUser>
-    {
-        using type = Windows::System::UserProfile::IGlobalizationPreferencesForUser;
-    };
-    template <> struct default_interface<Windows::System::UserProfile::UserProfilePersonalizationSettings>
-    {
-        using type = Windows::System::UserProfile::IUserProfilePersonalizationSettings;
-    };
+    template <> struct category<Windows::System::UserProfile::IAdvertisingManagerForUser>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IAdvertisingManagerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IAdvertisingManagerStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IAssignedAccessSettings>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IAssignedAccessSettingsStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IDiagnosticsSettings>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IDiagnosticsSettingsStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IFirstSignInSettings>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IFirstSignInSettingsStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IGlobalizationPreferencesForUser>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IGlobalizationPreferencesStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IGlobalizationPreferencesStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IGlobalizationPreferencesStatics3>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::ILockScreenImageFeedStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::ILockScreenStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IUserInformationStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IUserProfilePersonalizationSettings>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::UserProfile::AdvertisingManager>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::AdvertisingManagerForUser>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::AssignedAccessSettings>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::DiagnosticsSettings>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::FirstSignInSettings>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::GlobalizationPreferences>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::GlobalizationPreferencesForUser>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::LockScreen>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::UserInformation>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::UserProfilePersonalizationSettings>{ using type = class_category; };
+    template <> struct category<Windows::System::UserProfile::AccountPictureKind>{ using type = enum_category; };
+    template <> struct category<Windows::System::UserProfile::SetAccountPictureResult>{ using type = enum_category; };
+    template <> struct category<Windows::System::UserProfile::SetImageFeedResult>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::AdvertisingManager> = L"Windows.System.UserProfile.AdvertisingManager";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::AdvertisingManagerForUser> = L"Windows.System.UserProfile.AdvertisingManagerForUser";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::AssignedAccessSettings> = L"Windows.System.UserProfile.AssignedAccessSettings";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::DiagnosticsSettings> = L"Windows.System.UserProfile.DiagnosticsSettings";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::FirstSignInSettings> = L"Windows.System.UserProfile.FirstSignInSettings";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::GlobalizationPreferences> = L"Windows.System.UserProfile.GlobalizationPreferences";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::GlobalizationPreferencesForUser> = L"Windows.System.UserProfile.GlobalizationPreferencesForUser";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::LockScreen> = L"Windows.System.UserProfile.LockScreen";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::UserInformation> = L"Windows.System.UserProfile.UserInformation";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::UserProfilePersonalizationSettings> = L"Windows.System.UserProfile.UserProfilePersonalizationSettings";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::AccountPictureKind> = L"Windows.System.UserProfile.AccountPictureKind";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::SetAccountPictureResult> = L"Windows.System.UserProfile.SetAccountPictureResult";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::SetImageFeedResult> = L"Windows.System.UserProfile.SetImageFeedResult";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IAdvertisingManagerForUser> = L"Windows.System.UserProfile.IAdvertisingManagerForUser";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IAdvertisingManagerStatics> = L"Windows.System.UserProfile.IAdvertisingManagerStatics";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IAdvertisingManagerStatics2> = L"Windows.System.UserProfile.IAdvertisingManagerStatics2";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IAssignedAccessSettings> = L"Windows.System.UserProfile.IAssignedAccessSettings";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IAssignedAccessSettingsStatics> = L"Windows.System.UserProfile.IAssignedAccessSettingsStatics";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IDiagnosticsSettings> = L"Windows.System.UserProfile.IDiagnosticsSettings";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IDiagnosticsSettingsStatics> = L"Windows.System.UserProfile.IDiagnosticsSettingsStatics";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IFirstSignInSettings> = L"Windows.System.UserProfile.IFirstSignInSettings";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IFirstSignInSettingsStatics> = L"Windows.System.UserProfile.IFirstSignInSettingsStatics";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IGlobalizationPreferencesForUser> = L"Windows.System.UserProfile.IGlobalizationPreferencesForUser";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IGlobalizationPreferencesStatics> = L"Windows.System.UserProfile.IGlobalizationPreferencesStatics";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IGlobalizationPreferencesStatics2> = L"Windows.System.UserProfile.IGlobalizationPreferencesStatics2";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IGlobalizationPreferencesStatics3> = L"Windows.System.UserProfile.IGlobalizationPreferencesStatics3";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::ILockScreenImageFeedStatics> = L"Windows.System.UserProfile.ILockScreenImageFeedStatics";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::ILockScreenStatics> = L"Windows.System.UserProfile.ILockScreenStatics";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IUserInformationStatics> = L"Windows.System.UserProfile.IUserInformationStatics";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IUserProfilePersonalizationSettings> = L"Windows.System.UserProfile.IUserProfilePersonalizationSettings";
+    template <> inline constexpr auto& name_v<Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics> = L"Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics";
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IAdvertisingManagerForUser>{ 0x928BF3D0,0xCF7C,0x4AB0,{ 0xA7,0xDC,0x6D,0xC5,0xBC,0xD4,0x42,0x52 } }; // 928BF3D0-CF7C-4AB0-A7DC-6DC5BCD44252
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IAdvertisingManagerStatics>{ 0xADD3468C,0xA273,0x48CB,{ 0xB3,0x46,0x35,0x44,0x52,0x2D,0x55,0x81 } }; // ADD3468C-A273-48CB-B346-3544522D5581
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IAdvertisingManagerStatics2>{ 0xDD0947AF,0x1A6D,0x46B0,{ 0x95,0xBC,0xF3,0xF9,0xD6,0xBE,0xB9,0xFB } }; // DD0947AF-1A6D-46B0-95BC-F3F9D6BEB9FB
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IAssignedAccessSettings>{ 0x1BC57F1C,0xE971,0x5757,{ 0xB8,0xE0,0x51,0x2F,0x8B,0x8C,0x46,0xD2 } }; // 1BC57F1C-E971-5757-B8E0-512F8B8C46D2
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IAssignedAccessSettingsStatics>{ 0x34A81D0D,0x8A29,0x5EF3,{ 0xA7,0xBE,0x61,0x8E,0x6A,0xC3,0xBD,0x01 } }; // 34A81D0D-8A29-5EF3-A7BE-618E6AC3BD01
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IDiagnosticsSettings>{ 0xE5E9ECCD,0x2711,0x44E0,{ 0x97,0x3C,0x49,0x1D,0x78,0x04,0x8D,0x24 } }; // E5E9ECCD-2711-44E0-973C-491D78048D24
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IDiagnosticsSettingsStatics>{ 0x72D2E80F,0x5390,0x4793,{ 0x99,0x0B,0x3C,0xCC,0x7D,0x6A,0xC9,0xC8 } }; // 72D2E80F-5390-4793-990B-3CCC7D6AC9C8
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IFirstSignInSettings>{ 0x3E945153,0x3A5E,0x452E,{ 0xA6,0x01,0xF5,0xBA,0xAD,0x2A,0x48,0x70 } }; // 3E945153-3A5E-452E-A601-F5BAAD2A4870
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IFirstSignInSettingsStatics>{ 0x1CE18F0F,0x1C41,0x4EA0,{ 0xB7,0xA2,0x6F,0x0C,0x1C,0x7E,0x84,0x38 } }; // 1CE18F0F-1C41-4EA0-B7A2-6F0C1C7E8438
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IGlobalizationPreferencesForUser>{ 0x150F0795,0x4F6E,0x40BA,{ 0xA0,0x10,0xE2,0x7D,0x81,0xBD,0xA7,0xF5 } }; // 150F0795-4F6E-40BA-A010-E27D81BDA7F5
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IGlobalizationPreferencesStatics>{ 0x01BF4326,0xED37,0x4E96,{ 0xB0,0xE9,0xC1,0x34,0x0D,0x1E,0xA1,0x58 } }; // 01BF4326-ED37-4E96-B0E9-C1340D1EA158
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IGlobalizationPreferencesStatics2>{ 0xFCCE85F1,0x4300,0x4CD0,{ 0x9C,0xAC,0x1A,0x8E,0x7B,0x7E,0x18,0xF4 } }; // FCCE85F1-4300-4CD0-9CAC-1A8E7B7E18F4
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IGlobalizationPreferencesStatics3>{ 0x1E059733,0x35F5,0x40D8,{ 0xB9,0xE8,0xAE,0xF3,0xEF,0x85,0x6F,0xCE } }; // 1E059733-35F5-40D8-B9E8-AEF3EF856FCE
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::ILockScreenImageFeedStatics>{ 0x2C0D73F6,0x03A9,0x41A6,{ 0x9B,0x01,0x49,0x52,0x51,0xFF,0x51,0xD5 } }; // 2C0D73F6-03A9-41A6-9B01-495251FF51D5
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::ILockScreenStatics>{ 0x3EE9D3AD,0xB607,0x40AE,{ 0xB4,0x26,0x76,0x31,0xD9,0x82,0x12,0x69 } }; // 3EE9D3AD-B607-40AE-B426-7631D9821269
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IUserInformationStatics>{ 0x77F3A910,0x48FA,0x489C,{ 0x93,0x4E,0x2A,0xE8,0x5B,0xA8,0xF7,0x72 } }; // 77F3A910-48FA-489C-934E-2AE85BA8F772
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IUserProfilePersonalizationSettings>{ 0x8CEDDAB4,0x7998,0x46D5,{ 0x8D,0xD3,0x18,0x4F,0x1C,0x5F,0x9A,0xB9 } }; // 8CEDDAB4-7998-46D5-8DD3-184F1C5F9AB9
+    template <> inline constexpr guid guid_v<Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics>{ 0x91ACB841,0x5037,0x454B,{ 0x98,0x83,0xBB,0x77,0x2D,0x08,0xDD,0x16 } }; // 91ACB841-5037-454B-9883-BB772D08DD16
+    template <> struct default_interface<Windows::System::UserProfile::AdvertisingManagerForUser>{ using type = Windows::System::UserProfile::IAdvertisingManagerForUser; };
+    template <> struct default_interface<Windows::System::UserProfile::AssignedAccessSettings>{ using type = Windows::System::UserProfile::IAssignedAccessSettings; };
+    template <> struct default_interface<Windows::System::UserProfile::DiagnosticsSettings>{ using type = Windows::System::UserProfile::IDiagnosticsSettings; };
+    template <> struct default_interface<Windows::System::UserProfile::FirstSignInSettings>{ using type = Windows::System::UserProfile::IFirstSignInSettings; };
+    template <> struct default_interface<Windows::System::UserProfile::GlobalizationPreferencesForUser>{ using type = Windows::System::UserProfile::IGlobalizationPreferencesForUser; };
+    template <> struct default_interface<Windows::System::UserProfile::UserProfilePersonalizationSettings>{ using type = Windows::System::UserProfile::IUserProfilePersonalizationSettings; };
     template <> struct abi<Windows::System::UserProfile::IAdvertisingManagerForUser>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -597,8 +341,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IAdvertisingManagerForUser
     {
-        [[nodiscard]] auto AdvertisingId() const;
-        [[nodiscard]] auto User() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AdvertisingId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::User) User() const;
     };
     template <> struct consume<Windows::System::UserProfile::IAdvertisingManagerForUser>
     {
@@ -607,7 +351,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IAdvertisingManagerStatics
     {
-        [[nodiscard]] auto AdvertisingId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AdvertisingId() const;
     };
     template <> struct consume<Windows::System::UserProfile::IAdvertisingManagerStatics>
     {
@@ -616,7 +360,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IAdvertisingManagerStatics2
     {
-        auto GetForUser(Windows::System::User const& user) const;
+        WINRT_IMPL_AUTO(Windows::System::UserProfile::AdvertisingManagerForUser) GetForUser(Windows::System::User const& user) const;
     };
     template <> struct consume<Windows::System::UserProfile::IAdvertisingManagerStatics2>
     {
@@ -625,9 +369,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IAssignedAccessSettings
     {
-        [[nodiscard]] auto IsEnabled() const;
-        [[nodiscard]] auto IsSingleAppKioskMode() const;
-        [[nodiscard]] auto User() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsSingleAppKioskMode() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::User) User() const;
     };
     template <> struct consume<Windows::System::UserProfile::IAssignedAccessSettings>
     {
@@ -636,8 +380,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IAssignedAccessSettingsStatics
     {
-        auto GetDefault() const;
-        auto GetForUser(Windows::System::User const& user) const;
+        WINRT_IMPL_AUTO(Windows::System::UserProfile::AssignedAccessSettings) GetDefault() const;
+        WINRT_IMPL_AUTO(Windows::System::UserProfile::AssignedAccessSettings) GetForUser(Windows::System::User const& user) const;
     };
     template <> struct consume<Windows::System::UserProfile::IAssignedAccessSettingsStatics>
     {
@@ -646,8 +390,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IDiagnosticsSettings
     {
-        [[nodiscard]] auto CanUseDiagnosticsToTailorExperiences() const;
-        [[nodiscard]] auto User() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanUseDiagnosticsToTailorExperiences() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::User) User() const;
     };
     template <> struct consume<Windows::System::UserProfile::IDiagnosticsSettings>
     {
@@ -656,8 +400,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IDiagnosticsSettingsStatics
     {
-        auto GetDefault() const;
-        auto GetForUser(Windows::System::User const& user) const;
+        WINRT_IMPL_AUTO(Windows::System::UserProfile::DiagnosticsSettings) GetDefault() const;
+        WINRT_IMPL_AUTO(Windows::System::UserProfile::DiagnosticsSettings) GetForUser(Windows::System::User const& user) const;
     };
     template <> struct consume<Windows::System::UserProfile::IDiagnosticsSettingsStatics>
     {
@@ -674,7 +418,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IFirstSignInSettingsStatics
     {
-        auto GetDefault() const;
+        WINRT_IMPL_AUTO(Windows::System::UserProfile::FirstSignInSettings) GetDefault() const;
     };
     template <> struct consume<Windows::System::UserProfile::IFirstSignInSettingsStatics>
     {
@@ -683,13 +427,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser
     {
-        [[nodiscard]] auto User() const;
-        [[nodiscard]] auto Calendars() const;
-        [[nodiscard]] auto Clocks() const;
-        [[nodiscard]] auto Currencies() const;
-        [[nodiscard]] auto Languages() const;
-        [[nodiscard]] auto HomeGeographicRegion() const;
-        [[nodiscard]] auto WeekStartsOn() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::User) User() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) Calendars() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) Clocks() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) Currencies() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) Languages() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HomeGeographicRegion() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Globalization::DayOfWeek) WeekStartsOn() const;
     };
     template <> struct consume<Windows::System::UserProfile::IGlobalizationPreferencesForUser>
     {
@@ -698,12 +442,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics
     {
-        [[nodiscard]] auto Calendars() const;
-        [[nodiscard]] auto Clocks() const;
-        [[nodiscard]] auto Currencies() const;
-        [[nodiscard]] auto Languages() const;
-        [[nodiscard]] auto HomeGeographicRegion() const;
-        [[nodiscard]] auto WeekStartsOn() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) Calendars() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) Clocks() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) Currencies() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) Languages() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HomeGeographicRegion() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Globalization::DayOfWeek) WeekStartsOn() const;
     };
     template <> struct consume<Windows::System::UserProfile::IGlobalizationPreferencesStatics>
     {
@@ -712,8 +456,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics2
     {
-        auto TrySetHomeGeographicRegion(param::hstring const& region) const;
-        auto TrySetLanguages(param::iterable<hstring> const& languageTags) const;
+        WINRT_IMPL_AUTO(bool) TrySetHomeGeographicRegion(param::hstring const& region) const;
+        WINRT_IMPL_AUTO(bool) TrySetLanguages(param::iterable<hstring> const& languageTags) const;
     };
     template <> struct consume<Windows::System::UserProfile::IGlobalizationPreferencesStatics2>
     {
@@ -722,7 +466,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics3
     {
-        auto GetForUser(Windows::System::User const& user) const;
+        WINRT_IMPL_AUTO(Windows::System::UserProfile::GlobalizationPreferencesForUser) GetForUser(Windows::System::User const& user) const;
     };
     template <> struct consume<Windows::System::UserProfile::IGlobalizationPreferencesStatics3>
     {
@@ -731,8 +475,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_ILockScreenImageFeedStatics
     {
-        auto RequestSetImageFeedAsync(Windows::Foundation::Uri const& syndicationFeedUri) const;
-        auto TryRemoveImageFeed() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetImageFeedResult>) RequestSetImageFeedAsync(Windows::Foundation::Uri const& syndicationFeedUri) const;
+        WINRT_IMPL_AUTO(bool) TryRemoveImageFeed() const;
     };
     template <> struct consume<Windows::System::UserProfile::ILockScreenImageFeedStatics>
     {
@@ -741,10 +485,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_ILockScreenStatics
     {
-        [[nodiscard]] auto OriginalImageFile() const;
-        auto GetImageStream() const;
-        auto SetImageFileAsync(Windows::Storage::IStorageFile const& value) const;
-        auto SetImageStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Uri) OriginalImageFile() const;
+        WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStream) GetImageStream() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) SetImageFileAsync(Windows::Storage::IStorageFile const& value) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) SetImageStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& value) const;
     };
     template <> struct consume<Windows::System::UserProfile::ILockScreenStatics>
     {
@@ -753,23 +497,23 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IUserInformationStatics
     {
-        [[nodiscard]] auto AccountPictureChangeEnabled() const;
-        [[nodiscard]] auto NameAccessAllowed() const;
-        auto GetAccountPicture(Windows::System::UserProfile::AccountPictureKind const& kind) const;
-        auto SetAccountPictureAsync(Windows::Storage::IStorageFile const& image) const;
-        auto SetAccountPicturesAsync(Windows::Storage::IStorageFile const& smallImage, Windows::Storage::IStorageFile const& largeImage, Windows::Storage::IStorageFile const& video) const;
-        auto SetAccountPictureFromStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& image) const;
-        auto SetAccountPicturesFromStreamsAsync(Windows::Storage::Streams::IRandomAccessStream const& smallImage, Windows::Storage::Streams::IRandomAccessStream const& largeImage, Windows::Storage::Streams::IRandomAccessStream const& video) const;
-        auto AccountPictureChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AccountPictureChangeEnabled() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) NameAccessAllowed() const;
+        WINRT_IMPL_AUTO(Windows::Storage::IStorageFile) GetAccountPicture(Windows::System::UserProfile::AccountPictureKind const& kind) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>) SetAccountPictureAsync(Windows::Storage::IStorageFile const& image) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>) SetAccountPicturesAsync(Windows::Storage::IStorageFile const& smallImage, Windows::Storage::IStorageFile const& largeImage, Windows::Storage::IStorageFile const& video) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>) SetAccountPictureFromStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& image) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>) SetAccountPicturesFromStreamsAsync(Windows::Storage::Streams::IRandomAccessStream const& smallImage, Windows::Storage::Streams::IRandomAccessStream const& largeImage, Windows::Storage::Streams::IRandomAccessStream const& video) const;
+        WINRT_IMPL_AUTO(winrt::event_token) AccountPictureChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler) const;
         using AccountPictureChanged_revoker = impl::event_revoker<Windows::System::UserProfile::IUserInformationStatics, &impl::abi_t<Windows::System::UserProfile::IUserInformationStatics>::remove_AccountPictureChanged>;
-        AccountPictureChanged_revoker AccountPictureChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler) const;
-        auto AccountPictureChanged(winrt::event_token const& token) const noexcept;
-        auto GetDisplayNameAsync() const;
-        auto GetFirstNameAsync() const;
-        auto GetLastNameAsync() const;
-        auto GetPrincipalNameAsync() const;
-        auto GetSessionInitiationProtocolUriAsync() const;
-        auto GetDomainNameAsync() const;
+        [[nodiscard]] AccountPictureChanged_revoker AccountPictureChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler) const;
+        WINRT_IMPL_AUTO(void) AccountPictureChanged(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetDisplayNameAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetFirstNameAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetLastNameAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetPrincipalNameAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Uri>) GetSessionInitiationProtocolUriAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetDomainNameAsync() const;
     };
     template <> struct consume<Windows::System::UserProfile::IUserInformationStatics>
     {
@@ -778,8 +522,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IUserProfilePersonalizationSettings
     {
-        auto TrySetLockScreenImageAsync(Windows::Storage::StorageFile const& imageFile) const;
-        auto TrySetWallpaperImageAsync(Windows::Storage::StorageFile const& imageFile) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) TrySetLockScreenImageAsync(Windows::Storage::StorageFile const& imageFile) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) TrySetWallpaperImageAsync(Windows::Storage::StorageFile const& imageFile) const;
     };
     template <> struct consume<Windows::System::UserProfile::IUserProfilePersonalizationSettings>
     {
@@ -788,8 +532,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_UserProfile_IUserProfilePersonalizationSettingsStatics
     {
-        [[nodiscard]] auto Current() const;
-        auto IsSupported() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::UserProfile::UserProfilePersonalizationSettings) Current() const;
+        WINRT_IMPL_AUTO(bool) IsSupported() const;
     };
     template <> struct consume<Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics>
     {

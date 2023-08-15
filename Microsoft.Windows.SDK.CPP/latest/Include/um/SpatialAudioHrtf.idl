@@ -11,8 +11,8 @@ import "hstring.idl";
 
 import "SpatialAudioClient.idl";
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application and Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 
 typedef enum SpatialAudioHrtfDirectivityType
@@ -155,4 +155,4 @@ interface ISpatialAudioObjectRenderStreamForHrtf : ISpatialAudioObjectRenderStre
 };
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")

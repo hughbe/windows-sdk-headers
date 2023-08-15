@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -293,27 +301,33 @@ EXTERN_C const IID IID_ICallFrame;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICallFrame * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICallFrame * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICallFrame * This);
         
+        DECLSPEC_XFGVIRT(ICallFrame, GetInfo)
         HRESULT ( STDMETHODCALLTYPE *GetInfo )( 
             ICallFrame * This,
             /* [out] */ CALLFRAMEINFO *pInfo);
         
+        DECLSPEC_XFGVIRT(ICallFrame, GetIIDAndMethod)
         HRESULT ( STDMETHODCALLTYPE *GetIIDAndMethod )( 
             ICallFrame * This,
             /* [out] */ IID *pIID,
             /* [out] */ ULONG *piMethod);
         
+        DECLSPEC_XFGVIRT(ICallFrame, GetNames)
         HRESULT ( STDMETHODCALLTYPE *GetNames )( 
             ICallFrame * This,
             /* [annotation][out] */ 
@@ -321,41 +335,50 @@ EXTERN_C const IID IID_ICallFrame;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPWSTR *pwszMethod);
         
+        DECLSPEC_XFGVIRT(ICallFrame, GetStackLocation)
         PVOID ( STDMETHODCALLTYPE *GetStackLocation )( 
             ICallFrame * This);
         
+        DECLSPEC_XFGVIRT(ICallFrame, SetStackLocation)
         void ( STDMETHODCALLTYPE *SetStackLocation )( 
             ICallFrame * This,
             /* [in] */ PVOID pvStack);
         
+        DECLSPEC_XFGVIRT(ICallFrame, SetReturnValue)
         void ( STDMETHODCALLTYPE *SetReturnValue )( 
             ICallFrame * This,
             /* [in] */ HRESULT hr);
         
+        DECLSPEC_XFGVIRT(ICallFrame, GetReturnValue)
         HRESULT ( STDMETHODCALLTYPE *GetReturnValue )( 
             ICallFrame * This);
         
+        DECLSPEC_XFGVIRT(ICallFrame, GetParamInfo)
         HRESULT ( STDMETHODCALLTYPE *GetParamInfo )( 
             ICallFrame * This,
             /* [in] */ ULONG iparam,
             /* [out] */ CALLFRAMEPARAMINFO *pInfo);
         
+        DECLSPEC_XFGVIRT(ICallFrame, SetParam)
         HRESULT ( STDMETHODCALLTYPE *SetParam )( 
             ICallFrame * This,
             /* [in] */ ULONG iparam,
             /* [in] */ VARIANT *pvar);
         
+        DECLSPEC_XFGVIRT(ICallFrame, GetParam)
         HRESULT ( STDMETHODCALLTYPE *GetParam )( 
             ICallFrame * This,
             /* [in] */ ULONG iparam,
             /* [out] */ VARIANT *pvar);
         
+        DECLSPEC_XFGVIRT(ICallFrame, Copy)
         HRESULT ( STDMETHODCALLTYPE *Copy )( 
             ICallFrame * This,
             /* [in] */ CALLFRAME_COPY copyControl,
             /* [in] */ ICallFrameWalker *pWalker,
             /* [out] */ ICallFrame **ppFrame);
         
+        DECLSPEC_XFGVIRT(ICallFrame, Free)
         HRESULT ( STDMETHODCALLTYPE *Free )( 
             ICallFrame * This,
             /* [in] */ ICallFrame *pframeArgsDest,
@@ -365,6 +388,7 @@ EXTERN_C const IID IID_ICallFrame;
             /* [in] */ ICallFrameWalker *pWalkerFree,
             /* [in] */ DWORD nullFlags);
         
+        DECLSPEC_XFGVIRT(ICallFrame, FreeParam)
         HRESULT ( STDMETHODCALLTYPE *FreeParam )( 
             ICallFrame * This,
             /* [in] */ ULONG iparam,
@@ -372,17 +396,20 @@ EXTERN_C const IID IID_ICallFrame;
             /* [in] */ ICallFrameWalker *pWalkerFree,
             /* [in] */ DWORD nullFlags);
         
+        DECLSPEC_XFGVIRT(ICallFrame, WalkFrame)
         HRESULT ( STDMETHODCALLTYPE *WalkFrame )( 
             ICallFrame * This,
             /* [in] */ DWORD walkWhat,
             /* [in] */ ICallFrameWalker *pWalker);
         
+        DECLSPEC_XFGVIRT(ICallFrame, GetMarshalSizeMax)
         HRESULT ( STDMETHODCALLTYPE *GetMarshalSizeMax )( 
             ICallFrame * This,
             /* [in] */ CALLFRAME_MARSHALCONTEXT *pmshlContext,
             /* [in] */ MSHLFLAGS mshlflags,
             /* [out] */ ULONG *pcbBufferNeeded);
         
+        DECLSPEC_XFGVIRT(ICallFrame, Marshal)
         HRESULT ( STDMETHODCALLTYPE *Marshal )( 
             ICallFrame * This,
             /* [in] */ CALLFRAME_MARSHALCONTEXT *pmshlContext,
@@ -393,6 +420,7 @@ EXTERN_C const IID IID_ICallFrame;
             /* [out] */ RPCOLEDATAREP *pdataRep,
             /* [out] */ ULONG *prpcFlags);
         
+        DECLSPEC_XFGVIRT(ICallFrame, Unmarshal)
         HRESULT ( STDMETHODCALLTYPE *Unmarshal )( 
             ICallFrame * This,
             /* [size_is][in] */ PVOID pBuffer,
@@ -401,6 +429,7 @@ EXTERN_C const IID IID_ICallFrame;
             /* [in] */ CALLFRAME_MARSHALCONTEXT *pcontext,
             /* [out] */ ULONG *pcbUnmarshalled);
         
+        DECLSPEC_XFGVIRT(ICallFrame, ReleaseMarshalData)
         HRESULT ( STDMETHODCALLTYPE *ReleaseMarshalData )( 
             ICallFrame * This,
             /* [size_is][in] */ PVOID pBuffer,
@@ -409,6 +438,7 @@ EXTERN_C const IID IID_ICallFrame;
             /* [in] */ RPCOLEDATAREP dataRep,
             /* [in] */ CALLFRAME_MARSHALCONTEXT *pcontext);
         
+        DECLSPEC_XFGVIRT(ICallFrame, Invoke)
         HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ICallFrame * This,
             /* [in] */ void *pvReceiver,
@@ -555,18 +585,22 @@ EXTERN_C const IID IID_ICallIndirect;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICallIndirect * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICallIndirect * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICallIndirect * This);
         
+        DECLSPEC_XFGVIRT(ICallIndirect, CallIndirect)
         HRESULT ( STDMETHODCALLTYPE *CallIndirect )( 
             ICallIndirect * This,
             /* [out] */ HRESULT *phrReturn,
@@ -574,6 +608,7 @@ EXTERN_C const IID IID_ICallIndirect;
             /* [in] */ void *pvArgs,
             /* [out] */ ULONG *cbArgs);
         
+        DECLSPEC_XFGVIRT(ICallIndirect, GetMethodInfo)
         HRESULT ( STDMETHODCALLTYPE *GetMethodInfo )( 
             ICallIndirect * This,
             /* [in] */ ULONG iMethod,
@@ -581,11 +616,13 @@ EXTERN_C const IID IID_ICallIndirect;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPWSTR *pwszMethod);
         
+        DECLSPEC_XFGVIRT(ICallIndirect, GetStackSize)
         HRESULT ( STDMETHODCALLTYPE *GetStackSize )( 
             ICallIndirect * This,
             /* [in] */ ULONG iMethod,
             /* [out] */ ULONG *cbArgs);
         
+        DECLSPEC_XFGVIRT(ICallIndirect, GetIID)
         HRESULT ( STDMETHODCALLTYPE *GetIID )( 
             ICallIndirect * This,
             /* [annotation][out] */ 
@@ -673,18 +710,22 @@ EXTERN_C const IID IID_ICallInterceptor;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICallInterceptor * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICallInterceptor * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICallInterceptor * This);
         
+        DECLSPEC_XFGVIRT(ICallIndirect, CallIndirect)
         HRESULT ( STDMETHODCALLTYPE *CallIndirect )( 
             ICallInterceptor * This,
             /* [out] */ HRESULT *phrReturn,
@@ -692,6 +733,7 @@ EXTERN_C const IID IID_ICallInterceptor;
             /* [in] */ void *pvArgs,
             /* [out] */ ULONG *cbArgs);
         
+        DECLSPEC_XFGVIRT(ICallIndirect, GetMethodInfo)
         HRESULT ( STDMETHODCALLTYPE *GetMethodInfo )( 
             ICallInterceptor * This,
             /* [in] */ ULONG iMethod,
@@ -699,11 +741,13 @@ EXTERN_C const IID IID_ICallInterceptor;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPWSTR *pwszMethod);
         
+        DECLSPEC_XFGVIRT(ICallIndirect, GetStackSize)
         HRESULT ( STDMETHODCALLTYPE *GetStackSize )( 
             ICallInterceptor * This,
             /* [in] */ ULONG iMethod,
             /* [out] */ ULONG *cbArgs);
         
+        DECLSPEC_XFGVIRT(ICallIndirect, GetIID)
         HRESULT ( STDMETHODCALLTYPE *GetIID )( 
             ICallInterceptor * This,
             /* [annotation][out] */ 
@@ -715,10 +759,12 @@ EXTERN_C const IID IID_ICallInterceptor;
             /* [annotation][out] */ 
             _Outptr_result_maybenull_  LPWSTR *pwszInterface);
         
+        DECLSPEC_XFGVIRT(ICallInterceptor, RegisterSink)
         HRESULT ( STDMETHODCALLTYPE *RegisterSink )( 
             ICallInterceptor * This,
             /* [in] */ ICallFrameEvents *psink);
         
+        DECLSPEC_XFGVIRT(ICallInterceptor, GetRegisteredSink)
         HRESULT ( STDMETHODCALLTYPE *GetRegisteredSink )( 
             ICallInterceptor * This,
             /* [out] */ ICallFrameEvents **ppsink);
@@ -803,18 +849,22 @@ EXTERN_C const IID IID_ICallFrameEvents;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICallFrameEvents * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICallFrameEvents * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICallFrameEvents * This);
         
+        DECLSPEC_XFGVIRT(ICallFrameEvents, OnCall)
         HRESULT ( STDMETHODCALLTYPE *OnCall )( 
             ICallFrameEvents * This,
             /* [in] */ ICallFrame *pFrame);
@@ -898,18 +948,22 @@ EXTERN_C const IID IID_ICallUnmarshal;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICallUnmarshal * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICallUnmarshal * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICallUnmarshal * This);
         
+        DECLSPEC_XFGVIRT(ICallUnmarshal, Unmarshal)
         HRESULT ( STDMETHODCALLTYPE *Unmarshal )( 
             ICallUnmarshal * This,
             /* [in] */ ULONG iMethod,
@@ -921,6 +975,7 @@ EXTERN_C const IID IID_ICallUnmarshal;
             /* [out] */ ULONG *pcbUnmarshalled,
             /* [out] */ ICallFrame **ppFrame);
         
+        DECLSPEC_XFGVIRT(ICallUnmarshal, ReleaseMarshalData)
         HRESULT ( STDMETHODCALLTYPE *ReleaseMarshalData )( 
             ICallUnmarshal * This,
             /* [in] */ ULONG iMethod,
@@ -1000,18 +1055,22 @@ EXTERN_C const IID IID_ICallFrameWalker;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICallFrameWalker * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICallFrameWalker * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICallFrameWalker * This);
         
+        DECLSPEC_XFGVIRT(ICallFrameWalker, OnWalkInterface)
         HRESULT ( STDMETHODCALLTYPE *OnWalkInterface )( 
             ICallFrameWalker * This,
             /* [in] */ REFIID iid,
@@ -1086,22 +1145,27 @@ EXTERN_C const IID IID_IInterfaceRelated;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IInterfaceRelated * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IInterfaceRelated * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IInterfaceRelated * This);
         
+        DECLSPEC_XFGVIRT(IInterfaceRelated, SetIID)
         HRESULT ( STDMETHODCALLTYPE *SetIID )( 
             IInterfaceRelated * This,
             /* [in] */ REFIID iid);
         
+        DECLSPEC_XFGVIRT(IInterfaceRelated, GetIID)
         HRESULT ( STDMETHODCALLTYPE *GetIID )( 
             IInterfaceRelated * This,
             /* [out] */ IID *piid);

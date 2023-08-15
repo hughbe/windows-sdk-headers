@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -106,18 +114,22 @@ EXTERN_C const IID IID_IAdvancedMediaCaptureInitializationSettings;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IAdvancedMediaCaptureInitializationSettings * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IAdvancedMediaCaptureInitializationSettings * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IAdvancedMediaCaptureInitializationSettings * This);
         
+        DECLSPEC_XFGVIRT(IAdvancedMediaCaptureInitializationSettings, SetDirectxDeviceManager)
         HRESULT ( STDMETHODCALLTYPE *SetDirectxDeviceManager )( 
             IAdvancedMediaCaptureInitializationSettings * This,
             /* [in] */ IMFDXGIDeviceManager *value);
@@ -186,18 +198,22 @@ EXTERN_C const IID IID_IAdvancedMediaCaptureSettings;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IAdvancedMediaCaptureSettings * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IAdvancedMediaCaptureSettings * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IAdvancedMediaCaptureSettings * This);
         
+        DECLSPEC_XFGVIRT(IAdvancedMediaCaptureSettings, GetDirectxDeviceManager)
         HRESULT ( STDMETHODCALLTYPE *GetDirectxDeviceManager )( 
             IAdvancedMediaCaptureSettings * This,
             /* [out] */ IMFDXGIDeviceManager **value);
@@ -266,18 +282,22 @@ EXTERN_C const IID IID_IAdvancedMediaCapture;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAdvancedMediaCapture * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAdvancedMediaCapture * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAdvancedMediaCapture * This);
         
+        DECLSPEC_XFGVIRT(IAdvancedMediaCapture, GetAdvancedMediaCaptureSettings)
         HRESULT ( STDMETHODCALLTYPE *GetAdvancedMediaCaptureSettings )( 
             __RPC__in IAdvancedMediaCapture * This,
             /* [out] */ __RPC__deref_out_opt IAdvancedMediaCaptureSettings **value);

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,185 +6,186 @@
 #ifndef WINRT_Windows_Security_Credentials_UI_H
 #define WINRT_Windows_Security_Credentials_UI_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Security.Credentials.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Windows.Security.Credentials.UI.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::Caption(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::Caption(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_Caption(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::Caption() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::Caption() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_Caption(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::Message(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::Message(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_Message(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::Message() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::Message() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_Message(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::ErrorCode(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::ErrorCode(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_ErrorCode(value));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::ErrorCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_ErrorCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::TargetName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::TargetName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_TargetName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::TargetName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::TargetName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_TargetName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::AuthenticationProtocol(Windows::Security::Credentials::UI::AuthenticationProtocol const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::AuthenticationProtocol(Windows::Security::Credentials::UI::AuthenticationProtocol const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_AuthenticationProtocol(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::AuthenticationProtocol() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::UI::AuthenticationProtocol) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::AuthenticationProtocol() const
     {
-        Windows::Security::Credentials::UI::AuthenticationProtocol value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_AuthenticationProtocol(put_abi(value)));
+        Windows::Security::Credentials::UI::AuthenticationProtocol value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_AuthenticationProtocol(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CustomAuthenticationProtocol(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CustomAuthenticationProtocol(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_CustomAuthenticationProtocol(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CustomAuthenticationProtocol() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CustomAuthenticationProtocol() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_CustomAuthenticationProtocol(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::PreviousCredential(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::PreviousCredential(Windows::Storage::Streams::IBuffer const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_PreviousCredential(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::PreviousCredential() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::PreviousCredential() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_PreviousCredential(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::AlwaysDisplayDialog(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::AlwaysDisplayDialog(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_AlwaysDisplayDialog(value));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::AlwaysDisplayDialog() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::AlwaysDisplayDialog() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_AlwaysDisplayDialog(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CallerSavesCredential(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CallerSavesCredential(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_CallerSavesCredential(value));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CallerSavesCredential() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CallerSavesCredential() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_CallerSavesCredential(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CredentialSaveOption(Windows::Security::Credentials::UI::CredentialSaveOption const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CredentialSaveOption(Windows::Security::Credentials::UI::CredentialSaveOption const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->put_CredentialSaveOption(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CredentialSaveOption() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::UI::CredentialSaveOption) consume_Windows_Security_Credentials_UI_ICredentialPickerOptions<D>::CredentialSaveOption() const
     {
-        Windows::Security::Credentials::UI::CredentialSaveOption value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_CredentialSaveOption(put_abi(value)));
+        Windows::Security::Credentials::UI::CredentialSaveOption value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerOptions)->get_CredentialSaveOption(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::ErrorCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerResults)->get_ErrorCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialSaveOption() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::UI::CredentialSaveOption) consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialSaveOption() const
     {
-        Windows::Security::Credentials::UI::CredentialSaveOption value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerResults)->get_CredentialSaveOption(put_abi(value)));
+        Windows::Security::Credentials::UI::CredentialSaveOption value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerResults)->get_CredentialSaveOption(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialSaved() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialSaved() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerResults)->get_CredentialSaved(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::Credential() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::Credential() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerResults)->get_Credential(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialDomainName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialDomainName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerResults)->get_CredentialDomainName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialUserName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialUserName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerResults)->get_CredentialUserName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialPassword() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Credentials_UI_ICredentialPickerResults<D>::CredentialPassword() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerResults)->get_CredentialPassword(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerStatics<D>::PickAsync(Windows::Security::Credentials::UI::CredentialPickerOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::CredentialPickerResults>) consume_Windows_Security_Credentials_UI_ICredentialPickerStatics<D>::PickAsync(Windows::Security::Credentials::UI::CredentialPickerOptions const& options) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerStatics)->PickWithOptionsAsync(*(void**)(&options), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::CredentialPickerResults>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerStatics<D>::PickAsync(param::hstring const& targetName, param::hstring const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::CredentialPickerResults>) consume_Windows_Security_Credentials_UI_ICredentialPickerStatics<D>::PickAsync(param::hstring const& targetName, param::hstring const& message) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerStatics)->PickWithMessageAsync(*(void**)(&targetName), *(void**)(&message), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::CredentialPickerResults>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_ICredentialPickerStatics<D>::PickAsync(param::hstring const& targetName, param::hstring const& message, param::hstring const& caption) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::CredentialPickerResults>) consume_Windows_Security_Credentials_UI_ICredentialPickerStatics<D>::PickAsync(param::hstring const& targetName, param::hstring const& message, param::hstring const& caption) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::ICredentialPickerStatics)->PickWithCaptionAsync(*(void**)(&targetName), *(void**)(&message), *(void**)(&caption), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::CredentialPickerResults>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_IUserConsentVerifierStatics<D>::CheckAvailabilityAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::UserConsentVerifierAvailability>) consume_Windows_Security_Credentials_UI_IUserConsentVerifierStatics<D>::CheckAvailabilityAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::IUserConsentVerifierStatics)->CheckAvailabilityAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::UserConsentVerifierAvailability>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Credentials_UI_IUserConsentVerifierStatics<D>::RequestVerificationAsync(param::hstring const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::UserConsentVerificationResult>) consume_Windows_Security_Credentials_UI_IUserConsentVerifierStatics<D>::RequestVerificationAsync(param::hstring const& message) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Credentials::UI::IUserConsentVerifierStatics)->RequestVerificationAsync(*(void**)(&message), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::UserConsentVerificationResult>{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::UI::ICredentialPickerOptions> : produce_base<D, Windows::Security::Credentials::UI::ICredentialPickerOptions>
     {
@@ -334,6 +335,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::UI::ICredentialPickerResults> : produce_base<D, Windows::Security::Credentials::UI::ICredentialPickerResults>
     {
@@ -391,6 +394,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::UI::ICredentialPickerStatics> : produce_base<D, Windows::Security::Credentials::UI::ICredentialPickerStatics>
     {
@@ -419,6 +424,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Credentials::UI::IUserConsentVerifierStatics> : produce_base<D, Windows::Security::Credentials::UI::IUserConsentVerifierStatics>
     {
@@ -439,43 +446,46 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Security::Credentials::UI
+WINRT_EXPORT namespace winrt::Windows::Security::Credentials::UI
 {
     inline auto CredentialPicker::PickAsync(Windows::Security::Credentials::UI::CredentialPickerOptions const& options)
     {
-        return impl::call_factory<CredentialPicker, Windows::Security::Credentials::UI::ICredentialPickerStatics>([&](auto&& f) { return f.PickAsync(options); });
+        return impl::call_factory<CredentialPicker, ICredentialPickerStatics>([&](ICredentialPickerStatics const& f) { return f.PickAsync(options); });
     }
     inline auto CredentialPicker::PickAsync(param::hstring const& targetName, param::hstring const& message)
     {
-        return impl::call_factory<CredentialPicker, Windows::Security::Credentials::UI::ICredentialPickerStatics>([&](auto&& f) { return f.PickAsync(targetName, message); });
+        return impl::call_factory<CredentialPicker, ICredentialPickerStatics>([&](ICredentialPickerStatics const& f) { return f.PickAsync(targetName, message); });
     }
     inline auto CredentialPicker::PickAsync(param::hstring const& targetName, param::hstring const& message, param::hstring const& caption)
     {
-        return impl::call_factory<CredentialPicker, Windows::Security::Credentials::UI::ICredentialPickerStatics>([&](auto&& f) { return f.PickAsync(targetName, message, caption); });
+        return impl::call_factory<CredentialPicker, ICredentialPickerStatics>([&](ICredentialPickerStatics const& f) { return f.PickAsync(targetName, message, caption); });
     }
     inline CredentialPickerOptions::CredentialPickerOptions() :
-        CredentialPickerOptions(impl::call_factory<CredentialPickerOptions>([](auto&& f) { return f.template ActivateInstance<CredentialPickerOptions>(); }))
+        CredentialPickerOptions(impl::call_factory_cast<CredentialPickerOptions(*)(Windows::Foundation::IActivationFactory const&), CredentialPickerOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<CredentialPickerOptions>(); }))
     {
     }
     inline auto UserConsentVerifier::CheckAvailabilityAsync()
     {
-        return impl::call_factory<UserConsentVerifier, Windows::Security::Credentials::UI::IUserConsentVerifierStatics>([&](auto&& f) { return f.CheckAvailabilityAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Security::Credentials::UI::UserConsentVerifierAvailability>(*)(IUserConsentVerifierStatics const&), UserConsentVerifier, IUserConsentVerifierStatics>([](IUserConsentVerifierStatics const& f) { return f.CheckAvailabilityAsync(); });
     }
     inline auto UserConsentVerifier::RequestVerificationAsync(param::hstring const& message)
     {
-        return impl::call_factory<UserConsentVerifier, Windows::Security::Credentials::UI::IUserConsentVerifierStatics>([&](auto&& f) { return f.RequestVerificationAsync(message); });
+        return impl::call_factory<UserConsentVerifier, IUserConsentVerifierStatics>([&](IUserConsentVerifierStatics const& f) { return f.RequestVerificationAsync(message); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Security::Credentials::UI::ICredentialPickerOptions> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::UI::ICredentialPickerOptions> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::UI::ICredentialPickerResults> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::UI::ICredentialPickerResults> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::UI::ICredentialPickerStatics> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::UI::ICredentialPickerStatics> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::UI::IUserConsentVerifierStatics> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::UI::IUserConsentVerifierStatics> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::UI::CredentialPicker> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::UI::CredentialPicker> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::UI::CredentialPickerResults> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::UI::CredentialPickerResults> {};
-    template<> struct hash<winrt::Windows::Security::Credentials::UI::UserConsentVerifier> : winrt::impl::hash_base<winrt::Windows::Security::Credentials::UI::UserConsentVerifier> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Security::Credentials::UI::ICredentialPickerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::UI::ICredentialPickerResults> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::UI::ICredentialPickerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::UI::IUserConsentVerifierStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::UI::CredentialPicker> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::UI::CredentialPickerResults> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Credentials::UI::UserConsentVerifier> : winrt::impl::hash_base {};
+#endif
 }
 #endif

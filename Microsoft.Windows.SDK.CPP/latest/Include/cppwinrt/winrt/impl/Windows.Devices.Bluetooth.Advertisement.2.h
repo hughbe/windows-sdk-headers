@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Devices_Bluetooth_Advertisement_2_H
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Devices.Bluetooth.Advertisement.1.h"
-namespace winrt::Windows::Devices::Bluetooth::Advertisement
+WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth::Advertisement
 {
     struct __declspec(empty_bases) BluetoothLEAdvertisement : Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisement
     {
@@ -67,7 +67,7 @@ namespace winrt::Windows::Devices::Bluetooth::Advertisement
         BluetoothLEAdvertisementPublisher(std::nullptr_t) noexcept {}
         BluetoothLEAdvertisementPublisher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher(ptr, take_ownership_from_abi) {}
         BluetoothLEAdvertisementPublisher();
-        BluetoothLEAdvertisementPublisher(Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement const& advertisement);
+        explicit BluetoothLEAdvertisementPublisher(Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement const& advertisement);
     };
     struct __declspec(empty_bases) BluetoothLEAdvertisementPublisherStatusChangedEventArgs : Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisherStatusChangedEventArgs,
         impl::require<BluetoothLEAdvertisementPublisherStatusChangedEventArgs, Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisherStatusChangedEventArgs2>
@@ -87,7 +87,7 @@ namespace winrt::Windows::Devices::Bluetooth::Advertisement
         BluetoothLEAdvertisementWatcher(std::nullptr_t) noexcept {}
         BluetoothLEAdvertisementWatcher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcher(ptr, take_ownership_from_abi) {}
         BluetoothLEAdvertisementWatcher();
-        BluetoothLEAdvertisementWatcher(Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter const& advertisementFilter);
+        explicit BluetoothLEAdvertisementWatcher(Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter const& advertisementFilter);
     };
     struct __declspec(empty_bases) BluetoothLEAdvertisementWatcherStoppedEventArgs : Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementWatcherStoppedEventArgs
     {

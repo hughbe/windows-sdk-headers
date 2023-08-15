@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.UI.Core.1.h"
 #include "winrt/impl/Windows.UI.Popups.1.h"
 #include "winrt/impl/Windows.UI.ViewManagement.1.h"
-namespace winrt::Windows::UI::ViewManagement
+WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement
 {
     struct __declspec(empty_bases) AccessibilitySettings : Windows::UI::ViewManagement::IAccessibilitySettings
     {
@@ -105,7 +105,7 @@ namespace winrt::Windows::UI::ViewManagement
         [[nodiscard]] static auto ProjectionDisplayAvailable();
         static auto ProjectionDisplayAvailableChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using ProjectionDisplayAvailableChanged_revoker = impl::factory_event_revoker<Windows::UI::ViewManagement::IProjectionManagerStatics, &impl::abi_t<Windows::UI::ViewManagement::IProjectionManagerStatics>::remove_ProjectionDisplayAvailableChanged>;
-        static ProjectionDisplayAvailableChanged_revoker ProjectionDisplayAvailableChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static ProjectionDisplayAvailableChanged_revoker ProjectionDisplayAvailableChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto ProjectionDisplayAvailableChanged(winrt::event_token const& token);
         static auto StartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId, Windows::Devices::Enumeration::DeviceInformation const& displayDeviceInfo);
         static auto RequestStartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId, Windows::Foundation::Rect const& selection);

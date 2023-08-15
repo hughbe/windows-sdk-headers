@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Devices.Lights.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Devices.Lights.Effects.1.h"
-namespace winrt::Windows::Devices::Lights::Effects
+WINRT_EXPORT namespace winrt::Windows::Devices::Lights::Effects
 {
     struct __declspec(empty_bases) LampArrayBitmapEffect : Windows::Devices::Lights::Effects::ILampArrayBitmapEffect,
         impl::require<LampArrayBitmapEffect, Windows::Devices::Lights::Effects::ILampArrayEffect>

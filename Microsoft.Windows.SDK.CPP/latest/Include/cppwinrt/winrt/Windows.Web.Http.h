@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Web_Http_H
 #define WINRT_Windows_Web_Http_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Web.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -18,672 +18,673 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Web.Http.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Web_Http_IHttpBufferContentFactory<D>::CreateFromBuffer(Windows::Storage::Streams::IBuffer const& content) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpBufferContent) consume_Windows_Web_Http_IHttpBufferContentFactory<D>::CreateFromBuffer(Windows::Storage::Streams::IBuffer const& content) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpBufferContentFactory)->CreateFromBuffer(*(void**)(&content), &value));
         return Windows::Web::Http::HttpBufferContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpBufferContentFactory<D>::CreateFromBufferWithOffset(Windows::Storage::Streams::IBuffer const& content, uint32_t offset, uint32_t count) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpBufferContent) consume_Windows_Web_Http_IHttpBufferContentFactory<D>::CreateFromBufferWithOffset(Windows::Storage::Streams::IBuffer const& content, uint32_t offset, uint32_t count) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpBufferContentFactory)->CreateFromBufferWithOffset(*(void**)(&content), offset, count, &value));
         return Windows::Web::Http::HttpBufferContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::DeleteAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::DeleteAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->DeleteAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::GetAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::GetAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->GetAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::GetAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::HttpCompletionOption const& completionOption) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::GetAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::HttpCompletionOption const& completionOption) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->GetWithOptionAsync(*(void**)(&uri), static_cast<int32_t>(completionOption), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::GetBufferAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Storage::Streams::IBuffer, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::GetBufferAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->GetBufferAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Storage::Streams::IBuffer, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::GetInputStreamAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Storage::Streams::IInputStream, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::GetInputStreamAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->GetInputStreamAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Storage::Streams::IInputStream, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::GetStringAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<hstring, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::GetStringAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->GetStringAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<hstring, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::PostAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::IHttpContent const& content) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::PostAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::IHttpContent const& content) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->PostAsync(*(void**)(&uri), *(void**)(&content), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::PutAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::IHttpContent const& content) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::PutAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::IHttpContent const& content) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->PutAsync(*(void**)(&uri), *(void**)(&content), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::SendRequestAsync(Windows::Web::Http::HttpRequestMessage const& request) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::SendRequestAsync(Windows::Web::Http::HttpRequestMessage const& request) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->SendRequestAsync(*(void**)(&request), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::SendRequestAsync(Windows::Web::Http::HttpRequestMessage const& request, Windows::Web::Http::HttpCompletionOption const& completionOption) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient<D>::SendRequestAsync(Windows::Web::Http::HttpRequestMessage const& request, Windows::Web::Http::HttpCompletionOption const& completionOption) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->SendRequestWithOptionAsync(*(void**)(&request), static_cast<int32_t>(completionOption), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpResponseMessage, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient<D>::DefaultRequestHeaders() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::Headers::HttpRequestHeaderCollection) consume_Windows_Web_Http_IHttpClient<D>::DefaultRequestHeaders() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient)->get_DefaultRequestHeaders(&value));
         return Windows::Web::Http::Headers::HttpRequestHeaderCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TryDeleteAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TryDeleteAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TryDeleteAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TryGetAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TryGetAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TryGetAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TryGetAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::HttpCompletionOption const& completionOption) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TryGetAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::HttpCompletionOption const& completionOption) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TryGetAsync2(*(void**)(&uri), static_cast<int32_t>(completionOption), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TryGetBufferAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpGetBufferResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TryGetBufferAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TryGetBufferAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpGetBufferResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TryGetInputStreamAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpGetInputStreamResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TryGetInputStreamAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TryGetInputStreamAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpGetInputStreamResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TryGetStringAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpGetStringResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TryGetStringAsync(Windows::Foundation::Uri const& uri) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TryGetStringAsync(*(void**)(&uri), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpGetStringResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TryPostAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::IHttpContent const& content) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TryPostAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::IHttpContent const& content) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TryPostAsync(*(void**)(&uri), *(void**)(&content), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TryPutAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::IHttpContent const& content) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TryPutAsync(Windows::Foundation::Uri const& uri, Windows::Web::Http::IHttpContent const& content) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TryPutAsync(*(void**)(&uri), *(void**)(&content), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TrySendRequestAsync(Windows::Web::Http::HttpRequestMessage const& request) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TrySendRequestAsync(Windows::Web::Http::HttpRequestMessage const& request) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TrySendRequestAsync(*(void**)(&request), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClient2<D>::TrySendRequestAsync(Windows::Web::Http::HttpRequestMessage const& request, Windows::Web::Http::HttpCompletionOption const& completionOption) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>) consume_Windows_Web_Http_IHttpClient2<D>::TrySendRequestAsync(Windows::Web::Http::HttpRequestMessage const& request, Windows::Web::Http::HttpCompletionOption const& completionOption) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClient2)->TrySendRequestAsync2(*(void**)(&request), static_cast<int32_t>(completionOption), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Web::Http::HttpRequestResult, Windows::Web::Http::HttpProgress>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpClientFactory<D>::Create(Windows::Web::Http::Filters::IHttpFilter const& filter) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpClient) consume_Windows_Web_Http_IHttpClientFactory<D>::Create(Windows::Web::Http::Filters::IHttpFilter const& filter) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpClientFactory)->Create(*(void**)(&filter), &value));
         return Windows::Web::Http::HttpClient{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpContent<D>::Headers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::Headers::HttpContentHeaderCollection) consume_Windows_Web_Http_IHttpContent<D>::Headers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpContent)->get_Headers(&value));
         return Windows::Web::Http::Headers::HttpContentHeaderCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpContent<D>::BufferAllAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<uint64_t, uint64_t>) consume_Windows_Web_Http_IHttpContent<D>::BufferAllAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpContent)->BufferAllAsync(&operation));
         return Windows::Foundation::IAsyncOperationWithProgress<uint64_t, uint64_t>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpContent<D>::ReadAsBufferAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Storage::Streams::IBuffer, uint64_t>) consume_Windows_Web_Http_IHttpContent<D>::ReadAsBufferAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpContent)->ReadAsBufferAsync(&operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Storage::Streams::IBuffer, uint64_t>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpContent<D>::ReadAsInputStreamAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Storage::Streams::IInputStream, uint64_t>) consume_Windows_Web_Http_IHttpContent<D>::ReadAsInputStreamAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpContent)->ReadAsInputStreamAsync(&operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Storage::Streams::IInputStream, uint64_t>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpContent<D>::ReadAsStringAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<hstring, uint64_t>) consume_Windows_Web_Http_IHttpContent<D>::ReadAsStringAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpContent)->ReadAsStringAsync(&operation));
         return Windows::Foundation::IAsyncOperationWithProgress<hstring, uint64_t>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpContent<D>::TryComputeLength(uint64_t& length) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpContent<D>::TryComputeLength(uint64_t& length) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpContent)->TryComputeLength(&length, &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpContent<D>::WriteToStreamAsync(Windows::Storage::Streams::IOutputStream const& outputStream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<uint64_t, uint64_t>) consume_Windows_Web_Http_IHttpContent<D>::WriteToStreamAsync(Windows::Storage::Streams::IOutputStream const& outputStream) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpContent)->WriteToStreamAsync(*(void**)(&outputStream), &operation));
         return Windows::Foundation::IAsyncOperationWithProgress<uint64_t, uint64_t>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Http_IHttpCookie<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::Domain() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Http_IHttpCookie<D>::Domain() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->get_Domain(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::Path() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Http_IHttpCookie<D>::Path() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->get_Path(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::Expires() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_Web_Http_IHttpCookie<D>::Expires() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->get_Expires(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::Expires(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpCookie<D>::Expires(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->put_Expires(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::HttpOnly() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpCookie<D>::HttpOnly() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->get_HttpOnly(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::HttpOnly(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpCookie<D>::HttpOnly(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->put_HttpOnly(value));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::Secure() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpCookie<D>::Secure() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->get_Secure(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::Secure(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpCookie<D>::Secure(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->put_Secure(value));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Http_IHttpCookie<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->get_Value(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookie<D>::Value(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpCookie<D>::Value(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookie)->put_Value(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookieFactory<D>::Create(param::hstring const& name, param::hstring const& domain, param::hstring const& path) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpCookie) consume_Windows_Web_Http_IHttpCookieFactory<D>::Create(param::hstring const& name, param::hstring const& domain, param::hstring const& path) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookieFactory)->Create(*(void**)(&name), *(void**)(&domain), *(void**)(&path), &value));
         return Windows::Web::Http::HttpCookie{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookieManager<D>::SetCookie(Windows::Web::Http::HttpCookie const& cookie) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpCookieManager<D>::SetCookie(Windows::Web::Http::HttpCookie const& cookie) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookieManager)->SetCookie(*(void**)(&cookie), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookieManager<D>::SetCookie(Windows::Web::Http::HttpCookie const& cookie, bool thirdParty) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpCookieManager<D>::SetCookie(Windows::Web::Http::HttpCookie const& cookie, bool thirdParty) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookieManager)->SetCookieWithThirdParty(*(void**)(&cookie), thirdParty, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookieManager<D>::DeleteCookie(Windows::Web::Http::HttpCookie const& cookie) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpCookieManager<D>::DeleteCookie(Windows::Web::Http::HttpCookie const& cookie) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookieManager)->DeleteCookie(*(void**)(&cookie)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpCookieManager<D>::GetCookies(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpCookieCollection) consume_Windows_Web_Http_IHttpCookieManager<D>::GetCookies(Windows::Foundation::Uri const& uri) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpCookieManager)->GetCookies(*(void**)(&uri), &result));
         return Windows::Web::Http::HttpCookieCollection{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpFormUrlEncodedContentFactory<D>::Create(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& content) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpFormUrlEncodedContent) consume_Windows_Web_Http_IHttpFormUrlEncodedContentFactory<D>::Create(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& content) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpFormUrlEncodedContentFactory)->Create(*(void**)(&content), &value));
         return Windows::Web::Http::HttpFormUrlEncodedContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetBufferResult<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Web_Http_IHttpGetBufferResult<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetBufferResult)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetBufferResult<D>::RequestMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpRequestMessage) consume_Windows_Web_Http_IHttpGetBufferResult<D>::RequestMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetBufferResult)->get_RequestMessage(&value));
         return Windows::Web::Http::HttpRequestMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetBufferResult<D>::ResponseMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpResponseMessage) consume_Windows_Web_Http_IHttpGetBufferResult<D>::ResponseMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetBufferResult)->get_ResponseMessage(&value));
         return Windows::Web::Http::HttpResponseMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetBufferResult<D>::Succeeded() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpGetBufferResult<D>::Succeeded() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetBufferResult)->get_Succeeded(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetBufferResult<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Web_Http_IHttpGetBufferResult<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetBufferResult)->get_Value(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetInputStreamResult)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::RequestMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpRequestMessage) consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::RequestMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetInputStreamResult)->get_RequestMessage(&value));
         return Windows::Web::Http::HttpRequestMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::ResponseMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpResponseMessage) consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::ResponseMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetInputStreamResult)->get_ResponseMessage(&value));
         return Windows::Web::Http::HttpResponseMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::Succeeded() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::Succeeded() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetInputStreamResult)->get_Succeeded(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IInputStream) consume_Windows_Web_Http_IHttpGetInputStreamResult<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetInputStreamResult)->get_Value(&value));
         return Windows::Storage::Streams::IInputStream{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetStringResult<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Web_Http_IHttpGetStringResult<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetStringResult)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetStringResult<D>::RequestMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpRequestMessage) consume_Windows_Web_Http_IHttpGetStringResult<D>::RequestMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetStringResult)->get_RequestMessage(&value));
         return Windows::Web::Http::HttpRequestMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetStringResult<D>::ResponseMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpResponseMessage) consume_Windows_Web_Http_IHttpGetStringResult<D>::ResponseMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetStringResult)->get_ResponseMessage(&value));
         return Windows::Web::Http::HttpResponseMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetStringResult<D>::Succeeded() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpGetStringResult<D>::Succeeded() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetStringResult)->get_Succeeded(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpGetStringResult<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Http_IHttpGetStringResult<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpGetStringResult)->get_Value(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMethod<D>::Method() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Http_IHttpMethod<D>::Method() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMethod)->get_Method(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMethodFactory<D>::Create(param::hstring const& method) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMethod) consume_Windows_Web_Http_IHttpMethodFactory<D>::Create(param::hstring const& method) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMethodFactory)->Create(*(void**)(&method), &value));
         return Windows::Web::Http::HttpMethod{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMethodStatics<D>::Delete() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMethod) consume_Windows_Web_Http_IHttpMethodStatics<D>::Delete() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMethodStatics)->get_Delete(&value));
         return Windows::Web::Http::HttpMethod{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMethodStatics<D>::Get() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMethod) consume_Windows_Web_Http_IHttpMethodStatics<D>::Get() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMethodStatics)->get_Get(&value));
         return Windows::Web::Http::HttpMethod{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMethodStatics<D>::Head() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMethod) consume_Windows_Web_Http_IHttpMethodStatics<D>::Head() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMethodStatics)->get_Head(&value));
         return Windows::Web::Http::HttpMethod{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMethodStatics<D>::Options() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMethod) consume_Windows_Web_Http_IHttpMethodStatics<D>::Options() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMethodStatics)->get_Options(&value));
         return Windows::Web::Http::HttpMethod{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMethodStatics<D>::Patch() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMethod) consume_Windows_Web_Http_IHttpMethodStatics<D>::Patch() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMethodStatics)->get_Patch(&value));
         return Windows::Web::Http::HttpMethod{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMethodStatics<D>::Post() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMethod) consume_Windows_Web_Http_IHttpMethodStatics<D>::Post() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMethodStatics)->get_Post(&value));
         return Windows::Web::Http::HttpMethod{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMethodStatics<D>::Put() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMethod) consume_Windows_Web_Http_IHttpMethodStatics<D>::Put() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMethodStatics)->get_Put(&value));
         return Windows::Web::Http::HttpMethod{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMultipartContent<D>::Add(Windows::Web::Http::IHttpContent const& content) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpMultipartContent<D>::Add(Windows::Web::Http::IHttpContent const& content) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMultipartContent)->Add(*(void**)(&content)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMultipartContentFactory<D>::CreateWithSubtype(param::hstring const& subtype) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMultipartContent) consume_Windows_Web_Http_IHttpMultipartContentFactory<D>::CreateWithSubtype(param::hstring const& subtype) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMultipartContentFactory)->CreateWithSubtype(*(void**)(&subtype), &value));
         return Windows::Web::Http::HttpMultipartContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMultipartContentFactory<D>::CreateWithSubtypeAndBoundary(param::hstring const& subtype, param::hstring const& boundary) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMultipartContent) consume_Windows_Web_Http_IHttpMultipartContentFactory<D>::CreateWithSubtypeAndBoundary(param::hstring const& subtype, param::hstring const& boundary) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMultipartContentFactory)->CreateWithSubtypeAndBoundary(*(void**)(&subtype), *(void**)(&boundary), &value));
         return Windows::Web::Http::HttpMultipartContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMultipartFormDataContent<D>::Add(Windows::Web::Http::IHttpContent const& content) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpMultipartFormDataContent<D>::Add(Windows::Web::Http::IHttpContent const& content) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMultipartFormDataContent)->Add(*(void**)(&content)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMultipartFormDataContent<D>::Add(Windows::Web::Http::IHttpContent const& content, param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpMultipartFormDataContent<D>::Add(Windows::Web::Http::IHttpContent const& content, param::hstring const& name) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMultipartFormDataContent)->AddWithName(*(void**)(&content), *(void**)(&name)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMultipartFormDataContent<D>::Add(Windows::Web::Http::IHttpContent const& content, param::hstring const& name, param::hstring const& fileName) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpMultipartFormDataContent<D>::Add(Windows::Web::Http::IHttpContent const& content, param::hstring const& name, param::hstring const& fileName) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMultipartFormDataContent)->AddWithNameAndFileName(*(void**)(&content), *(void**)(&name), *(void**)(&fileName)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpMultipartFormDataContentFactory<D>::CreateWithBoundary(param::hstring const& boundary) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMultipartFormDataContent) consume_Windows_Web_Http_IHttpMultipartFormDataContentFactory<D>::CreateWithBoundary(param::hstring const& boundary) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpMultipartFormDataContentFactory)->CreateWithBoundary(*(void**)(&boundary), &value));
         return Windows::Web::Http::HttpMultipartFormDataContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessage<D>::Content() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::IHttpContent) consume_Windows_Web_Http_IHttpRequestMessage<D>::Content() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessage)->get_Content(&value));
         return Windows::Web::Http::IHttpContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessage<D>::Content(Windows::Web::Http::IHttpContent const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpRequestMessage<D>::Content(Windows::Web::Http::IHttpContent const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessage)->put_Content(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessage<D>::Headers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::Headers::HttpRequestHeaderCollection) consume_Windows_Web_Http_IHttpRequestMessage<D>::Headers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessage)->get_Headers(&value));
         return Windows::Web::Http::Headers::HttpRequestHeaderCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessage<D>::Method() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpMethod) consume_Windows_Web_Http_IHttpRequestMessage<D>::Method() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessage)->get_Method(&value));
         return Windows::Web::Http::HttpMethod{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessage<D>::Method(Windows::Web::Http::HttpMethod const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpRequestMessage<D>::Method(Windows::Web::Http::HttpMethod const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessage)->put_Method(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessage<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, Windows::Foundation::IInspectable>) consume_Windows_Web_Http_IHttpRequestMessage<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessage)->get_Properties(&value));
         return Windows::Foundation::Collections::IMap<hstring, Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessage<D>::RequestUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Web_Http_IHttpRequestMessage<D>::RequestUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessage)->get_RequestUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessage<D>::RequestUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpRequestMessage<D>::RequestUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessage)->put_RequestUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessage<D>::TransportInformation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpTransportInformation) consume_Windows_Web_Http_IHttpRequestMessage<D>::TransportInformation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessage)->get_TransportInformation(&value));
         return Windows::Web::Http::HttpTransportInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestMessageFactory<D>::Create(Windows::Web::Http::HttpMethod const& method, Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpRequestMessage) consume_Windows_Web_Http_IHttpRequestMessageFactory<D>::Create(Windows::Web::Http::HttpMethod const& method, Windows::Foundation::Uri const& uri) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestMessageFactory)->Create(*(void**)(&method), *(void**)(&uri), &value));
         return Windows::Web::Http::HttpRequestMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestResult<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Web_Http_IHttpRequestResult<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestResult)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestResult<D>::RequestMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpRequestMessage) consume_Windows_Web_Http_IHttpRequestResult<D>::RequestMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestResult)->get_RequestMessage(&value));
         return Windows::Web::Http::HttpRequestMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestResult<D>::ResponseMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpResponseMessage) consume_Windows_Web_Http_IHttpRequestResult<D>::ResponseMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestResult)->get_ResponseMessage(&value));
         return Windows::Web::Http::HttpResponseMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpRequestResult<D>::Succeeded() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpRequestResult<D>::Succeeded() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpRequestResult)->get_Succeeded(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::Content() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::IHttpContent) consume_Windows_Web_Http_IHttpResponseMessage<D>::Content() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_Content(&value));
         return Windows::Web::Http::IHttpContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::Content(Windows::Web::Http::IHttpContent const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpResponseMessage<D>::Content(Windows::Web::Http::IHttpContent const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->put_Content(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::Headers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::Headers::HttpResponseHeaderCollection) consume_Windows_Web_Http_IHttpResponseMessage<D>::Headers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_Headers(&value));
         return Windows::Web::Http::Headers::HttpResponseHeaderCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::IsSuccessStatusCode() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_Http_IHttpResponseMessage<D>::IsSuccessStatusCode() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_IsSuccessStatusCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::ReasonPhrase() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_Http_IHttpResponseMessage<D>::ReasonPhrase() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_ReasonPhrase(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::ReasonPhrase(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpResponseMessage<D>::ReasonPhrase(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->put_ReasonPhrase(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::RequestMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpRequestMessage) consume_Windows_Web_Http_IHttpResponseMessage<D>::RequestMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_RequestMessage(&value));
         return Windows::Web::Http::HttpRequestMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::RequestMessage(Windows::Web::Http::HttpRequestMessage const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpResponseMessage<D>::RequestMessage(Windows::Web::Http::HttpRequestMessage const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->put_RequestMessage(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::Source() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpResponseMessageSource) consume_Windows_Web_Http_IHttpResponseMessage<D>::Source() const
     {
-        Windows::Web::Http::HttpResponseMessageSource value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_Source(put_abi(value)));
+        Windows::Web::Http::HttpResponseMessageSource value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_Source(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::Source(Windows::Web::Http::HttpResponseMessageSource const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpResponseMessage<D>::Source(Windows::Web::Http::HttpResponseMessageSource const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->put_Source(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::StatusCode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpStatusCode) consume_Windows_Web_Http_IHttpResponseMessage<D>::StatusCode() const
     {
-        Windows::Web::Http::HttpStatusCode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_StatusCode(put_abi(value)));
+        Windows::Web::Http::HttpStatusCode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_StatusCode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::StatusCode(Windows::Web::Http::HttpStatusCode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpResponseMessage<D>::StatusCode(Windows::Web::Http::HttpStatusCode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->put_StatusCode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::Version() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpVersion) consume_Windows_Web_Http_IHttpResponseMessage<D>::Version() const
     {
-        Windows::Web::Http::HttpVersion value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_Version(put_abi(value)));
+        Windows::Web::Http::HttpVersion value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->get_Version(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::Version(Windows::Web::Http::HttpVersion const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_Http_IHttpResponseMessage<D>::Version(Windows::Web::Http::HttpVersion const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->put_Version(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessage<D>::EnsureSuccessStatusCode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpResponseMessage) consume_Windows_Web_Http_IHttpResponseMessage<D>::EnsureSuccessStatusCode() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessage)->EnsureSuccessStatusCode(&result));
         return Windows::Web::Http::HttpResponseMessage{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpResponseMessageFactory<D>::Create(Windows::Web::Http::HttpStatusCode const& statusCode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpResponseMessage) consume_Windows_Web_Http_IHttpResponseMessageFactory<D>::Create(Windows::Web::Http::HttpStatusCode const& statusCode) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpResponseMessageFactory)->Create(static_cast<int32_t>(statusCode), &value));
         return Windows::Web::Http::HttpResponseMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpStreamContentFactory<D>::CreateFromInputStream(Windows::Storage::Streams::IInputStream const& content) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpStreamContent) consume_Windows_Web_Http_IHttpStreamContentFactory<D>::CreateFromInputStream(Windows::Storage::Streams::IInputStream const& content) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpStreamContentFactory)->CreateFromInputStream(*(void**)(&content), &value));
         return Windows::Web::Http::HttpStreamContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpStringContentFactory<D>::CreateFromString(param::hstring const& content) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpStringContent) consume_Windows_Web_Http_IHttpStringContentFactory<D>::CreateFromString(param::hstring const& content) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpStringContentFactory)->CreateFromString(*(void**)(&content), &value));
         return Windows::Web::Http::HttpStringContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpStringContentFactory<D>::CreateFromStringWithEncoding(param::hstring const& content, Windows::Storage::Streams::UnicodeEncoding const& encoding) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpStringContent) consume_Windows_Web_Http_IHttpStringContentFactory<D>::CreateFromStringWithEncoding(param::hstring const& content, Windows::Storage::Streams::UnicodeEncoding const& encoding) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpStringContentFactory)->CreateFromStringWithEncoding(*(void**)(&content), static_cast<int32_t>(encoding), &value));
         return Windows::Web::Http::HttpStringContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpStringContentFactory<D>::CreateFromStringWithEncodingAndMediaType(param::hstring const& content, Windows::Storage::Streams::UnicodeEncoding const& encoding, param::hstring const& mediaType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::Http::HttpStringContent) consume_Windows_Web_Http_IHttpStringContentFactory<D>::CreateFromStringWithEncodingAndMediaType(param::hstring const& content, Windows::Storage::Streams::UnicodeEncoding const& encoding, param::hstring const& mediaType) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpStringContentFactory)->CreateFromStringWithEncodingAndMediaType(*(void**)(&content), static_cast<int32_t>(encoding), *(void**)(&mediaType), &value));
         return Windows::Web::Http::HttpStringContent{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpTransportInformation<D>::ServerCertificate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Certificates::Certificate) consume_Windows_Web_Http_IHttpTransportInformation<D>::ServerCertificate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpTransportInformation)->get_ServerCertificate(&value));
         return Windows::Security::Cryptography::Certificates::Certificate{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpTransportInformation<D>::ServerCertificateErrorSeverity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::Sockets::SocketSslErrorSeverity) consume_Windows_Web_Http_IHttpTransportInformation<D>::ServerCertificateErrorSeverity() const
     {
-        Windows::Networking::Sockets::SocketSslErrorSeverity value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpTransportInformation)->get_ServerCertificateErrorSeverity(put_abi(value)));
+        Windows::Networking::Sockets::SocketSslErrorSeverity value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpTransportInformation)->get_ServerCertificateErrorSeverity(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpTransportInformation<D>::ServerCertificateErrors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Cryptography::Certificates::ChainValidationResult>) consume_Windows_Web_Http_IHttpTransportInformation<D>::ServerCertificateErrors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpTransportInformation)->get_ServerCertificateErrors(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Security::Cryptography::Certificates::ChainValidationResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_Http_IHttpTransportInformation<D>::ServerIntermediateCertificates() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Cryptography::Certificates::Certificate>) consume_Windows_Web_Http_IHttpTransportInformation<D>::ServerIntermediateCertificates() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::Http::IHttpTransportInformation)->get_ServerIntermediateCertificates(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Security::Cryptography::Certificates::Certificate>{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpBufferContentFactory> : produce_base<D, Windows::Web::Http::IHttpBufferContentFactory>
     {
@@ -704,6 +705,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpClient> : produce_base<D, Windows::Web::Http::IHttpClient>
     {
@@ -796,6 +799,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpClient2> : produce_base<D, Windows::Web::Http::IHttpClient2>
     {
@@ -880,6 +885,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpClientFactory> : produce_base<D, Windows::Web::Http::IHttpClientFactory>
     {
@@ -892,6 +899,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpContent> : produce_base<D, Windows::Web::Http::IHttpContent>
     {
@@ -951,6 +959,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpCookie> : produce_base<D, Windows::Web::Http::IHttpCookie>
     {
@@ -1037,6 +1046,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpCookieFactory> : produce_base<D, Windows::Web::Http::IHttpCookieFactory>
     {
@@ -1049,6 +1060,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpCookieManager> : produce_base<D, Windows::Web::Http::IHttpCookieManager>
     {
@@ -1082,6 +1095,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpFormUrlEncodedContentFactory> : produce_base<D, Windows::Web::Http::IHttpFormUrlEncodedContentFactory>
     {
@@ -1094,6 +1109,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpGetBufferResult> : produce_base<D, Windows::Web::Http::IHttpGetBufferResult>
     {
@@ -1137,6 +1154,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpGetInputStreamResult> : produce_base<D, Windows::Web::Http::IHttpGetInputStreamResult>
     {
@@ -1180,6 +1199,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpGetStringResult> : produce_base<D, Windows::Web::Http::IHttpGetStringResult>
     {
@@ -1223,6 +1244,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpMethod> : produce_base<D, Windows::Web::Http::IHttpMethod>
     {
@@ -1235,6 +1258,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpMethodFactory> : produce_base<D, Windows::Web::Http::IHttpMethodFactory>
     {
@@ -1247,6 +1272,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpMethodStatics> : produce_base<D, Windows::Web::Http::IHttpMethodStatics>
     {
@@ -1307,6 +1334,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpMultipartContent> : produce_base<D, Windows::Web::Http::IHttpMultipartContent>
     {
@@ -1318,6 +1347,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpMultipartContentFactory> : produce_base<D, Windows::Web::Http::IHttpMultipartContentFactory>
     {
@@ -1338,6 +1369,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpMultipartFormDataContent> : produce_base<D, Windows::Web::Http::IHttpMultipartFormDataContent>
     {
@@ -1363,6 +1396,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpMultipartFormDataContentFactory> : produce_base<D, Windows::Web::Http::IHttpMultipartFormDataContentFactory>
     {
@@ -1375,6 +1410,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpRequestMessage> : produce_base<D, Windows::Web::Http::IHttpRequestMessage>
     {
@@ -1448,6 +1485,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpRequestMessageFactory> : produce_base<D, Windows::Web::Http::IHttpRequestMessageFactory>
     {
@@ -1460,6 +1499,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpRequestResult> : produce_base<D, Windows::Web::Http::IHttpRequestResult>
     {
@@ -1495,6 +1536,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpResponseMessage> : produce_base<D, Windows::Web::Http::IHttpResponseMessage>
     {
@@ -1609,6 +1652,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpResponseMessageFactory> : produce_base<D, Windows::Web::Http::IHttpResponseMessageFactory>
     {
@@ -1621,6 +1666,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpStreamContentFactory> : produce_base<D, Windows::Web::Http::IHttpStreamContentFactory>
     {
@@ -1633,6 +1680,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpStringContentFactory> : produce_base<D, Windows::Web::Http::IHttpStringContentFactory>
     {
@@ -1661,6 +1710,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::Http::IHttpTransportInformation> : produce_base<D, Windows::Web::Http::IHttpTransportInformation>
     {
@@ -1696,164 +1747,167 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Web::Http
+WINRT_EXPORT namespace winrt::Windows::Web::Http
 {
     inline HttpBufferContent::HttpBufferContent(Windows::Storage::Streams::IBuffer const& content) :
-        HttpBufferContent(impl::call_factory<HttpBufferContent, Windows::Web::Http::IHttpBufferContentFactory>([&](auto&& f) { return f.CreateFromBuffer(content); }))
+        HttpBufferContent(impl::call_factory<HttpBufferContent, IHttpBufferContentFactory>([&](IHttpBufferContentFactory const& f) { return f.CreateFromBuffer(content); }))
     {
     }
     inline HttpBufferContent::HttpBufferContent(Windows::Storage::Streams::IBuffer const& content, uint32_t offset, uint32_t count) :
-        HttpBufferContent(impl::call_factory<HttpBufferContent, Windows::Web::Http::IHttpBufferContentFactory>([&](auto&& f) { return f.CreateFromBufferWithOffset(content, offset, count); }))
+        HttpBufferContent(impl::call_factory<HttpBufferContent, IHttpBufferContentFactory>([&](IHttpBufferContentFactory const& f) { return f.CreateFromBufferWithOffset(content, offset, count); }))
     {
     }
     inline HttpClient::HttpClient() :
-        HttpClient(impl::call_factory<HttpClient>([](auto&& f) { return f.template ActivateInstance<HttpClient>(); }))
+        HttpClient(impl::call_factory_cast<HttpClient(*)(Windows::Foundation::IActivationFactory const&), HttpClient>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<HttpClient>(); }))
     {
     }
     inline HttpClient::HttpClient(Windows::Web::Http::Filters::IHttpFilter const& filter) :
-        HttpClient(impl::call_factory<HttpClient, Windows::Web::Http::IHttpClientFactory>([&](auto&& f) { return f.Create(filter); }))
+        HttpClient(impl::call_factory<HttpClient, IHttpClientFactory>([&](IHttpClientFactory const& f) { return f.Create(filter); }))
     {
     }
     inline HttpCookie::HttpCookie(param::hstring const& name, param::hstring const& domain, param::hstring const& path) :
-        HttpCookie(impl::call_factory<HttpCookie, Windows::Web::Http::IHttpCookieFactory>([&](auto&& f) { return f.Create(name, domain, path); }))
+        HttpCookie(impl::call_factory<HttpCookie, IHttpCookieFactory>([&](IHttpCookieFactory const& f) { return f.Create(name, domain, path); }))
     {
     }
     inline HttpFormUrlEncodedContent::HttpFormUrlEncodedContent(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& content) :
-        HttpFormUrlEncodedContent(impl::call_factory<HttpFormUrlEncodedContent, Windows::Web::Http::IHttpFormUrlEncodedContentFactory>([&](auto&& f) { return f.Create(content); }))
+        HttpFormUrlEncodedContent(impl::call_factory<HttpFormUrlEncodedContent, IHttpFormUrlEncodedContentFactory>([&](IHttpFormUrlEncodedContentFactory const& f) { return f.Create(content); }))
     {
     }
     inline HttpMethod::HttpMethod(param::hstring const& method) :
-        HttpMethod(impl::call_factory<HttpMethod, Windows::Web::Http::IHttpMethodFactory>([&](auto&& f) { return f.Create(method); }))
+        HttpMethod(impl::call_factory<HttpMethod, IHttpMethodFactory>([&](IHttpMethodFactory const& f) { return f.Create(method); }))
     {
     }
     inline auto HttpMethod::Delete()
     {
-        return impl::call_factory<HttpMethod, Windows::Web::Http::IHttpMethodStatics>([&](auto&& f) { return f.Delete(); });
+        return impl::call_factory_cast<Windows::Web::Http::HttpMethod(*)(IHttpMethodStatics const&), HttpMethod, IHttpMethodStatics>([](IHttpMethodStatics const& f) { return f.Delete(); });
     }
     inline auto HttpMethod::Get()
     {
-        return impl::call_factory<HttpMethod, Windows::Web::Http::IHttpMethodStatics>([&](auto&& f) { return f.Get(); });
+        return impl::call_factory_cast<Windows::Web::Http::HttpMethod(*)(IHttpMethodStatics const&), HttpMethod, IHttpMethodStatics>([](IHttpMethodStatics const& f) { return f.Get(); });
     }
     inline auto HttpMethod::Head()
     {
-        return impl::call_factory<HttpMethod, Windows::Web::Http::IHttpMethodStatics>([&](auto&& f) { return f.Head(); });
+        return impl::call_factory_cast<Windows::Web::Http::HttpMethod(*)(IHttpMethodStatics const&), HttpMethod, IHttpMethodStatics>([](IHttpMethodStatics const& f) { return f.Head(); });
     }
     inline auto HttpMethod::Options()
     {
-        return impl::call_factory<HttpMethod, Windows::Web::Http::IHttpMethodStatics>([&](auto&& f) { return f.Options(); });
+        return impl::call_factory_cast<Windows::Web::Http::HttpMethod(*)(IHttpMethodStatics const&), HttpMethod, IHttpMethodStatics>([](IHttpMethodStatics const& f) { return f.Options(); });
     }
     inline auto HttpMethod::Patch()
     {
-        return impl::call_factory<HttpMethod, Windows::Web::Http::IHttpMethodStatics>([&](auto&& f) { return f.Patch(); });
+        return impl::call_factory_cast<Windows::Web::Http::HttpMethod(*)(IHttpMethodStatics const&), HttpMethod, IHttpMethodStatics>([](IHttpMethodStatics const& f) { return f.Patch(); });
     }
     inline auto HttpMethod::Post()
     {
-        return impl::call_factory<HttpMethod, Windows::Web::Http::IHttpMethodStatics>([&](auto&& f) { return f.Post(); });
+        return impl::call_factory_cast<Windows::Web::Http::HttpMethod(*)(IHttpMethodStatics const&), HttpMethod, IHttpMethodStatics>([](IHttpMethodStatics const& f) { return f.Post(); });
     }
     inline auto HttpMethod::Put()
     {
-        return impl::call_factory<HttpMethod, Windows::Web::Http::IHttpMethodStatics>([&](auto&& f) { return f.Put(); });
+        return impl::call_factory_cast<Windows::Web::Http::HttpMethod(*)(IHttpMethodStatics const&), HttpMethod, IHttpMethodStatics>([](IHttpMethodStatics const& f) { return f.Put(); });
     }
     inline HttpMultipartContent::HttpMultipartContent() :
-        HttpMultipartContent(impl::call_factory<HttpMultipartContent>([](auto&& f) { return f.template ActivateInstance<HttpMultipartContent>(); }))
+        HttpMultipartContent(impl::call_factory_cast<HttpMultipartContent(*)(Windows::Foundation::IActivationFactory const&), HttpMultipartContent>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<HttpMultipartContent>(); }))
     {
     }
     inline HttpMultipartContent::HttpMultipartContent(param::hstring const& subtype) :
-        HttpMultipartContent(impl::call_factory<HttpMultipartContent, Windows::Web::Http::IHttpMultipartContentFactory>([&](auto&& f) { return f.CreateWithSubtype(subtype); }))
+        HttpMultipartContent(impl::call_factory<HttpMultipartContent, IHttpMultipartContentFactory>([&](IHttpMultipartContentFactory const& f) { return f.CreateWithSubtype(subtype); }))
     {
     }
     inline HttpMultipartContent::HttpMultipartContent(param::hstring const& subtype, param::hstring const& boundary) :
-        HttpMultipartContent(impl::call_factory<HttpMultipartContent, Windows::Web::Http::IHttpMultipartContentFactory>([&](auto&& f) { return f.CreateWithSubtypeAndBoundary(subtype, boundary); }))
+        HttpMultipartContent(impl::call_factory<HttpMultipartContent, IHttpMultipartContentFactory>([&](IHttpMultipartContentFactory const& f) { return f.CreateWithSubtypeAndBoundary(subtype, boundary); }))
     {
     }
     inline HttpMultipartFormDataContent::HttpMultipartFormDataContent() :
-        HttpMultipartFormDataContent(impl::call_factory<HttpMultipartFormDataContent>([](auto&& f) { return f.template ActivateInstance<HttpMultipartFormDataContent>(); }))
+        HttpMultipartFormDataContent(impl::call_factory_cast<HttpMultipartFormDataContent(*)(Windows::Foundation::IActivationFactory const&), HttpMultipartFormDataContent>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<HttpMultipartFormDataContent>(); }))
     {
     }
     inline HttpMultipartFormDataContent::HttpMultipartFormDataContent(param::hstring const& boundary) :
-        HttpMultipartFormDataContent(impl::call_factory<HttpMultipartFormDataContent, Windows::Web::Http::IHttpMultipartFormDataContentFactory>([&](auto&& f) { return f.CreateWithBoundary(boundary); }))
+        HttpMultipartFormDataContent(impl::call_factory<HttpMultipartFormDataContent, IHttpMultipartFormDataContentFactory>([&](IHttpMultipartFormDataContentFactory const& f) { return f.CreateWithBoundary(boundary); }))
     {
     }
     inline HttpRequestMessage::HttpRequestMessage() :
-        HttpRequestMessage(impl::call_factory<HttpRequestMessage>([](auto&& f) { return f.template ActivateInstance<HttpRequestMessage>(); }))
+        HttpRequestMessage(impl::call_factory_cast<HttpRequestMessage(*)(Windows::Foundation::IActivationFactory const&), HttpRequestMessage>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<HttpRequestMessage>(); }))
     {
     }
     inline HttpRequestMessage::HttpRequestMessage(Windows::Web::Http::HttpMethod const& method, Windows::Foundation::Uri const& uri) :
-        HttpRequestMessage(impl::call_factory<HttpRequestMessage, Windows::Web::Http::IHttpRequestMessageFactory>([&](auto&& f) { return f.Create(method, uri); }))
+        HttpRequestMessage(impl::call_factory<HttpRequestMessage, IHttpRequestMessageFactory>([&](IHttpRequestMessageFactory const& f) { return f.Create(method, uri); }))
     {
     }
     inline HttpResponseMessage::HttpResponseMessage() :
-        HttpResponseMessage(impl::call_factory<HttpResponseMessage>([](auto&& f) { return f.template ActivateInstance<HttpResponseMessage>(); }))
+        HttpResponseMessage(impl::call_factory_cast<HttpResponseMessage(*)(Windows::Foundation::IActivationFactory const&), HttpResponseMessage>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<HttpResponseMessage>(); }))
     {
     }
     inline HttpResponseMessage::HttpResponseMessage(Windows::Web::Http::HttpStatusCode const& statusCode) :
-        HttpResponseMessage(impl::call_factory<HttpResponseMessage, Windows::Web::Http::IHttpResponseMessageFactory>([&](auto&& f) { return f.Create(statusCode); }))
+        HttpResponseMessage(impl::call_factory<HttpResponseMessage, IHttpResponseMessageFactory>([&](IHttpResponseMessageFactory const& f) { return f.Create(statusCode); }))
     {
     }
     inline HttpStreamContent::HttpStreamContent(Windows::Storage::Streams::IInputStream const& content) :
-        HttpStreamContent(impl::call_factory<HttpStreamContent, Windows::Web::Http::IHttpStreamContentFactory>([&](auto&& f) { return f.CreateFromInputStream(content); }))
+        HttpStreamContent(impl::call_factory<HttpStreamContent, IHttpStreamContentFactory>([&](IHttpStreamContentFactory const& f) { return f.CreateFromInputStream(content); }))
     {
     }
     inline HttpStringContent::HttpStringContent(param::hstring const& content) :
-        HttpStringContent(impl::call_factory<HttpStringContent, Windows::Web::Http::IHttpStringContentFactory>([&](auto&& f) { return f.CreateFromString(content); }))
+        HttpStringContent(impl::call_factory<HttpStringContent, IHttpStringContentFactory>([&](IHttpStringContentFactory const& f) { return f.CreateFromString(content); }))
     {
     }
     inline HttpStringContent::HttpStringContent(param::hstring const& content, Windows::Storage::Streams::UnicodeEncoding const& encoding) :
-        HttpStringContent(impl::call_factory<HttpStringContent, Windows::Web::Http::IHttpStringContentFactory>([&](auto&& f) { return f.CreateFromStringWithEncoding(content, encoding); }))
+        HttpStringContent(impl::call_factory<HttpStringContent, IHttpStringContentFactory>([&](IHttpStringContentFactory const& f) { return f.CreateFromStringWithEncoding(content, encoding); }))
     {
     }
     inline HttpStringContent::HttpStringContent(param::hstring const& content, Windows::Storage::Streams::UnicodeEncoding const& encoding, param::hstring const& mediaType) :
-        HttpStringContent(impl::call_factory<HttpStringContent, Windows::Web::Http::IHttpStringContentFactory>([&](auto&& f) { return f.CreateFromStringWithEncodingAndMediaType(content, encoding, mediaType); }))
+        HttpStringContent(impl::call_factory<HttpStringContent, IHttpStringContentFactory>([&](IHttpStringContentFactory const& f) { return f.CreateFromStringWithEncodingAndMediaType(content, encoding, mediaType); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Web::Http::IHttpBufferContentFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpBufferContentFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpClient> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpClient> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpClient2> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpClient2> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpClientFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpClientFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpContent> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpContent> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpCookie> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpCookie> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpCookieFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpCookieFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpCookieManager> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpCookieManager> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpFormUrlEncodedContentFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpFormUrlEncodedContentFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpGetBufferResult> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpGetBufferResult> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpGetInputStreamResult> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpGetInputStreamResult> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpGetStringResult> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpGetStringResult> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpMethod> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpMethod> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpMethodFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpMethodFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpMethodStatics> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpMethodStatics> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartContent> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpMultipartContent> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartContentFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpMultipartContentFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartFormDataContent> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpMultipartFormDataContent> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartFormDataContentFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpMultipartFormDataContentFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpRequestMessage> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpRequestMessage> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpRequestMessageFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpRequestMessageFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpRequestResult> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpRequestResult> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpResponseMessage> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpResponseMessage> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpResponseMessageFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpResponseMessageFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpStreamContentFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpStreamContentFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpStringContentFactory> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpStringContentFactory> {};
-    template<> struct hash<winrt::Windows::Web::Http::IHttpTransportInformation> : winrt::impl::hash_base<winrt::Windows::Web::Http::IHttpTransportInformation> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpBufferContent> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpBufferContent> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpClient> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpClient> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpCookie> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpCookie> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpCookieCollection> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpCookieCollection> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpCookieManager> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpCookieManager> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpFormUrlEncodedContent> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpFormUrlEncodedContent> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpGetBufferResult> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpGetBufferResult> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpGetInputStreamResult> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpGetInputStreamResult> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpGetStringResult> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpGetStringResult> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpMethod> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpMethod> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpMultipartContent> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpMultipartContent> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpMultipartFormDataContent> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpMultipartFormDataContent> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpRequestMessage> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpRequestMessage> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpRequestResult> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpRequestResult> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpResponseMessage> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpResponseMessage> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpStreamContent> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpStreamContent> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpStringContent> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpStringContent> {};
-    template<> struct hash<winrt::Windows::Web::Http::HttpTransportInformation> : winrt::impl::hash_base<winrt::Windows::Web::Http::HttpTransportInformation> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Web::Http::IHttpBufferContentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpClient> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpClient2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpClientFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpCookie> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpCookieFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpCookieManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpFormUrlEncodedContentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpGetBufferResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpGetInputStreamResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpGetStringResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpMethod> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpMethodFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpMethodStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartContentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartFormDataContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpMultipartFormDataContentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpRequestMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpRequestMessageFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpRequestResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpResponseMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpResponseMessageFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpStreamContentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpStringContentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::IHttpTransportInformation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpBufferContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpClient> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpCookie> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpCookieCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpCookieManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpFormUrlEncodedContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpGetBufferResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpGetInputStreamResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpGetStringResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpMethod> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpMultipartContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpMultipartFormDataContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpRequestMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpRequestResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpResponseMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpStreamContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpStringContent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::Http::HttpTransportInformation> : winrt::impl::hash_base {};
+#endif
 }
 #endif

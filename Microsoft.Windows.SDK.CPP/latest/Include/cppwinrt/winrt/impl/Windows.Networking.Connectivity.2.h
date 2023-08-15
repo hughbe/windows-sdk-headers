@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Networking.1.h"
 #include "winrt/impl/Windows.Networking.Connectivity.1.h"
-namespace winrt::Windows::Networking::Connectivity
+WINRT_EXPORT namespace winrt::Windows::Networking::Connectivity
 {
     struct NetworkStatusChangedEventHandler : Windows::Foundation::IUnknown
     {
@@ -129,7 +129,7 @@ namespace winrt::Windows::Networking::Connectivity
         static auto GetSortedEndpointPairs(param::iterable<Windows::Networking::EndpointPair> const& destinationList, Windows::Networking::HostNameSortOptions const& sortOptions);
         static auto NetworkStatusChanged(Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler);
         using NetworkStatusChanged_revoker = impl::factory_event_revoker<Windows::Networking::Connectivity::INetworkInformationStatics, &impl::abi_t<Windows::Networking::Connectivity::INetworkInformationStatics>::remove_NetworkStatusChanged>;
-        static NetworkStatusChanged_revoker NetworkStatusChanged(auto_revoke_t, Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler);
+        [[nodiscard]] static NetworkStatusChanged_revoker NetworkStatusChanged(auto_revoke_t, Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler);
         static auto NetworkStatusChanged(winrt::event_token const& eventCookie);
         static auto FindConnectionProfilesAsync(Windows::Networking::Connectivity::ConnectionProfileFilter const& pProfileFilter);
     };

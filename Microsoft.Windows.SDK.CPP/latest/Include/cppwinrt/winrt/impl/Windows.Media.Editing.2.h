@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Windows.Media.Editing.1.h"
-namespace winrt::Windows::Media::Editing
+WINRT_EXPORT namespace winrt::Windows::Media::Editing
 {
     struct __declspec(empty_bases) BackgroundAudioTrack : Windows::Media::Editing::IBackgroundAudioTrack
     {
@@ -46,7 +46,7 @@ namespace winrt::Windows::Media::Editing
     {
         MediaOverlay(std::nullptr_t) noexcept {}
         MediaOverlay(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Editing::IMediaOverlay(ptr, take_ownership_from_abi) {}
-        MediaOverlay(Windows::Media::Editing::MediaClip const& clip);
+        explicit MediaOverlay(Windows::Media::Editing::MediaClip const& clip);
         MediaOverlay(Windows::Media::Editing::MediaClip const& clip, Windows::Foundation::Rect const& position, double opacity);
     };
     struct __declspec(empty_bases) MediaOverlayLayer : Windows::Media::Editing::IMediaOverlayLayer
@@ -54,7 +54,7 @@ namespace winrt::Windows::Media::Editing
         MediaOverlayLayer(std::nullptr_t) noexcept {}
         MediaOverlayLayer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Editing::IMediaOverlayLayer(ptr, take_ownership_from_abi) {}
         MediaOverlayLayer();
-        MediaOverlayLayer(Windows::Media::Effects::IVideoCompositorDefinition const& compositorDefinition);
+        explicit MediaOverlayLayer(Windows::Media::Effects::IVideoCompositorDefinition const& compositorDefinition);
     };
 }
 #endif

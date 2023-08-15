@@ -210,6 +210,8 @@ namespace Windows
 
                 interface IPenAndInkSettings;
 
+                interface IPenAndInkSettings2;
+
                 interface IPenAndInkSettingsStatics;
 
                 runtimeclass InkDrawingAttributes;
@@ -920,6 +922,14 @@ namespace Windows
                     [propget] HRESULT IsTouchHandwritingEnabled([out] [retval] boolean* value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 12.0)]
+                [exclusiveto(Windows.UI.Input.Inking.PenAndInkSettings)]
+                [uuid(3262DA53-1F44-55E2-9929-EBF77E5481B8)]
+                interface IPenAndInkSettings2 : IInspectable
+                {
+                    HRESULT SetPenHandedness([in] Windows.UI.Input.Inking.PenHandedness value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 [exclusiveto(Windows.UI.Input.Inking.PenAndInkSettings)]
                 [uuid(ED6DD036-5708-5C3C-96DB-F2F552EAB641)]
@@ -1124,6 +1134,7 @@ namespace Windows
                 runtimeclass PenAndInkSettings
                 {
                     [default] interface Windows.UI.Input.Inking.IPenAndInkSettings;
+                    [contract(Windows.Foundation.UniversalApiContract, 12.0)] interface Windows.UI.Input.Inking.IPenAndInkSettings2;
                 }
             }
         }

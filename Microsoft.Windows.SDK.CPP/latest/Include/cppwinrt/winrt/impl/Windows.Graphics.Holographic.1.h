@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Graphics_Holographic_1_H
 #include "winrt/impl/Windows.Foundation.0.h"
 #include "winrt/impl/Windows.Graphics.Holographic.0.h"
-namespace winrt::Windows::Graphics::Holographic
+WINRT_EXPORT namespace winrt::Windows::Graphics::Holographic
 {
     struct __declspec(empty_bases) IHolographicCamera :
         Windows::Foundation::IInspectable,
@@ -89,6 +89,13 @@ namespace winrt::Windows::Graphics::Holographic
     {
         IHolographicCameraRenderingParameters3(std::nullptr_t = nullptr) noexcept {}
         IHolographicCameraRenderingParameters3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IHolographicCameraRenderingParameters4 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IHolographicCameraRenderingParameters4>
+    {
+        IHolographicCameraRenderingParameters4(std::nullptr_t = nullptr) noexcept {}
+        IHolographicCameraRenderingParameters4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IHolographicCameraViewportParameters :
         Windows::Foundation::IInspectable,
@@ -281,6 +288,13 @@ namespace winrt::Windows::Graphics::Holographic
     {
         IHolographicViewConfiguration(std::nullptr_t = nullptr) noexcept {}
         IHolographicViewConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IHolographicViewConfiguration2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IHolographicViewConfiguration2>
+    {
+        IHolographicViewConfiguration2(std::nullptr_t = nullptr) noexcept {}
+        IHolographicViewConfiguration2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

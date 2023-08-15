@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.System.RemoteSystems.1.h"
 #include "winrt/impl/Windows.System.1.h"
-namespace winrt::Windows::System
+WINRT_EXPORT namespace winrt::Windows::System
 {
     struct DispatcherQueueHandler : Windows::Foundation::IUnknown
     {
@@ -107,7 +107,7 @@ namespace winrt::Windows::System
         AppUriHandlerHost(std::nullptr_t) noexcept {}
         AppUriHandlerHost(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppUriHandlerHost(ptr, take_ownership_from_abi) {}
         AppUriHandlerHost();
-        AppUriHandlerHost(param::hstring const& name);
+        explicit AppUriHandlerHost(param::hstring const& name);
     };
     struct __declspec(empty_bases) AppUriHandlerRegistration : Windows::System::IAppUriHandlerRegistration
     {
@@ -226,15 +226,15 @@ namespace winrt::Windows::System
         [[nodiscard]] static auto AppMemoryUsageLevel();
         static auto AppMemoryUsageIncreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using AppMemoryUsageIncreased_revoker = impl::factory_event_revoker<Windows::System::IMemoryManagerStatics, &impl::abi_t<Windows::System::IMemoryManagerStatics>::remove_AppMemoryUsageIncreased>;
-        static AppMemoryUsageIncreased_revoker AppMemoryUsageIncreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static AppMemoryUsageIncreased_revoker AppMemoryUsageIncreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto AppMemoryUsageIncreased(winrt::event_token const& token);
         static auto AppMemoryUsageDecreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using AppMemoryUsageDecreased_revoker = impl::factory_event_revoker<Windows::System::IMemoryManagerStatics, &impl::abi_t<Windows::System::IMemoryManagerStatics>::remove_AppMemoryUsageDecreased>;
-        static AppMemoryUsageDecreased_revoker AppMemoryUsageDecreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static AppMemoryUsageDecreased_revoker AppMemoryUsageDecreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto AppMemoryUsageDecreased(winrt::event_token const& token);
         static auto AppMemoryUsageLimitChanging(Windows::Foundation::EventHandler<Windows::System::AppMemoryUsageLimitChangingEventArgs> const& handler);
         using AppMemoryUsageLimitChanging_revoker = impl::factory_event_revoker<Windows::System::IMemoryManagerStatics, &impl::abi_t<Windows::System::IMemoryManagerStatics>::remove_AppMemoryUsageLimitChanging>;
-        static AppMemoryUsageLimitChanging_revoker AppMemoryUsageLimitChanging(auto_revoke_t, Windows::Foundation::EventHandler<Windows::System::AppMemoryUsageLimitChangingEventArgs> const& handler);
+        [[nodiscard]] static AppMemoryUsageLimitChanging_revoker AppMemoryUsageLimitChanging(auto_revoke_t, Windows::Foundation::EventHandler<Windows::System::AppMemoryUsageLimitChangingEventArgs> const& handler);
         static auto AppMemoryUsageLimitChanging(winrt::event_token const& token);
         static auto GetAppMemoryReport();
         static auto GetProcessMemoryReport();
@@ -308,6 +308,7 @@ namespace winrt::Windows::System
         static auto FindAllAsync(Windows::System::UserType const& type);
         static auto FindAllAsync(Windows::System::UserType const& type, Windows::System::UserAuthenticationStatus const& status);
         static auto GetFromId(param::hstring const& nonRoamableId);
+        static auto GetDefault();
     };
     struct __declspec(empty_bases) UserAuthenticationStatusChangeDeferral : Windows::System::IUserAuthenticationStatusChangeDeferral
     {
@@ -331,7 +332,7 @@ namespace winrt::Windows::System
         static auto FindUserFromDeviceId(param::hstring const& deviceId);
         static auto UserDeviceAssociationChanged(Windows::Foundation::EventHandler<Windows::System::UserDeviceAssociationChangedEventArgs> const& handler);
         using UserDeviceAssociationChanged_revoker = impl::factory_event_revoker<Windows::System::IUserDeviceAssociationStatics, &impl::abi_t<Windows::System::IUserDeviceAssociationStatics>::remove_UserDeviceAssociationChanged>;
-        static UserDeviceAssociationChanged_revoker UserDeviceAssociationChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::System::UserDeviceAssociationChangedEventArgs> const& handler);
+        [[nodiscard]] static UserDeviceAssociationChanged_revoker UserDeviceAssociationChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::System::UserDeviceAssociationChangedEventArgs> const& handler);
         static auto UserDeviceAssociationChanged(winrt::event_token const& token);
     };
     struct __declspec(empty_bases) UserDeviceAssociationChangedEventArgs : Windows::System::IUserDeviceAssociationChangedEventArgs

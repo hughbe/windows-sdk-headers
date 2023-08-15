@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Sensors_Custom_2_H
 #define WINRT_Windows_Devices_Sensors_Custom_2_H
 #include "winrt/impl/Windows.Devices.Sensors.Custom.1.h"
-namespace winrt::Windows::Devices::Sensors::Custom
+WINRT_EXPORT namespace winrt::Windows::Devices::Sensors::Custom
 {
     struct __declspec(empty_bases) CustomSensor : Windows::Devices::Sensors::Custom::ICustomSensor,
         impl::require<CustomSensor, Windows::Devices::Sensors::Custom::ICustomSensor2>

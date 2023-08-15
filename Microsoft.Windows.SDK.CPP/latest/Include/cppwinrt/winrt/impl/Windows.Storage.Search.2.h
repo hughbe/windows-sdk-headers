@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Storage_Search_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Storage.Search.1.h"
-namespace winrt::Windows::Storage::Search
+WINRT_EXPORT namespace winrt::Windows::Storage::Search
 {
     struct SortEntry
     {
@@ -48,7 +48,7 @@ namespace winrt::Windows::Storage::Search
         QueryOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::Search::IQueryOptions(ptr, take_ownership_from_abi) {}
         QueryOptions();
         QueryOptions(Windows::Storage::Search::CommonFileQuery const& query, param::iterable<hstring> const& fileTypeFilter);
-        QueryOptions(Windows::Storage::Search::CommonFolderQuery const& query);
+        explicit QueryOptions(Windows::Storage::Search::CommonFolderQuery const& query);
     };
     struct __declspec(empty_bases) SortEntryVector : Windows::Foundation::Collections::IVector<Windows::Storage::Search::SortEntry>
     {

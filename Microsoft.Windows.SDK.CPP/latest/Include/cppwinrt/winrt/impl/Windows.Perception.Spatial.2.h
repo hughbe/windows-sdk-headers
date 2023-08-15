@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Windows.System.RemoteSystems.2.h"
 #include "winrt/impl/Windows.Perception.Spatial.1.h"
-namespace winrt::Windows::Perception::Spatial
+WINRT_EXPORT namespace winrt::Windows::Perception::Spatial
 {
     struct SpatialBoundingBox
     {
@@ -144,7 +144,7 @@ namespace winrt::Windows::Perception::Spatial
     {
         SpatialEntity(std::nullptr_t) noexcept {}
         SpatialEntity(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Perception::Spatial::ISpatialEntity(ptr, take_ownership_from_abi) {}
-        SpatialEntity(Windows::Perception::Spatial::SpatialAnchor const& spatialAnchor);
+        explicit SpatialEntity(Windows::Perception::Spatial::SpatialAnchor const& spatialAnchor);
         SpatialEntity(Windows::Perception::Spatial::SpatialAnchor const& spatialAnchor, Windows::Foundation::Collections::ValueSet const& propertySet);
     };
     struct __declspec(empty_bases) SpatialEntityAddedEventArgs : Windows::Perception::Spatial::ISpatialEntityAddedEventArgs
@@ -203,7 +203,7 @@ namespace winrt::Windows::Perception::Spatial
         [[nodiscard]] static auto Current();
         static auto CurrentChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using CurrentChanged_revoker = impl::factory_event_revoker<Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics, &impl::abi_t<Windows::Perception::Spatial::ISpatialStageFrameOfReferenceStatics>::remove_CurrentChanged>;
-        static CurrentChanged_revoker CurrentChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static CurrentChanged_revoker CurrentChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto CurrentChanged(winrt::event_token const& cookie);
         static auto RequestNewStageAsync();
     };

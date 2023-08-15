@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -374,44 +382,53 @@ EXTERN_C const IID IID_IPortableDeviceManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceManager * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceManager, GetDevices)
         HRESULT ( STDMETHODCALLTYPE *GetDevices )( 
             __RPC__in IPortableDeviceManager * This,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt LPWSTR *pPnPDeviceIDs,
             /* [out][in] */ __RPC__inout DWORD *pcPnPDeviceIDs);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceManager, RefreshDeviceList)
         HRESULT ( STDMETHODCALLTYPE *RefreshDeviceList )( 
             __RPC__in IPortableDeviceManager * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceManager, GetDeviceFriendlyName)
         HRESULT ( STDMETHODCALLTYPE *GetDeviceFriendlyName )( 
             __RPC__in IPortableDeviceManager * This,
             /* [in] */ __RPC__in LPCWSTR pszPnPDeviceID,
             /* [unique][out][in] */ __RPC__inout_opt WCHAR *pDeviceFriendlyName,
             /* [out][in] */ __RPC__inout DWORD *pcchDeviceFriendlyName);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceManager, GetDeviceDescription)
         HRESULT ( STDMETHODCALLTYPE *GetDeviceDescription )( 
             __RPC__in IPortableDeviceManager * This,
             /* [in] */ __RPC__in LPCWSTR pszPnPDeviceID,
             /* [unique][out][in] */ __RPC__inout_opt WCHAR *pDeviceDescription,
             /* [out][in] */ __RPC__inout DWORD *pcchDeviceDescription);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceManager, GetDeviceManufacturer)
         HRESULT ( STDMETHODCALLTYPE *GetDeviceManufacturer )( 
             __RPC__in IPortableDeviceManager * This,
             /* [in] */ __RPC__in LPCWSTR pszPnPDeviceID,
             /* [unique][out][in] */ __RPC__inout_opt WCHAR *pDeviceManufacturer,
             /* [out][in] */ __RPC__inout DWORD *pcchDeviceManufacturer);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceManager, GetDeviceProperty)
         HRESULT ( STDMETHODCALLTYPE *GetDeviceProperty )( 
             __RPC__in IPortableDeviceManager * This,
             /* [in] */ __RPC__in LPCWSTR pszPnPDeviceID,
@@ -420,6 +437,7 @@ EXTERN_C const IID IID_IPortableDeviceManager;
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pcbData,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwType);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceManager, GetPrivateDevices)
         HRESULT ( STDMETHODCALLTYPE *GetPrivateDevices )( 
             __RPC__in IPortableDeviceManager * This,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt LPWSTR *pPnPDeviceIDs,
@@ -535,43 +553,53 @@ EXTERN_C const IID IID_IPortableDevice;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDevice * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDevice * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDevice * This);
         
+        DECLSPEC_XFGVIRT(IPortableDevice, Open)
         HRESULT ( STDMETHODCALLTYPE *Open )( 
             __RPC__in IPortableDevice * This,
             /* [in] */ __RPC__in LPCWSTR pszPnPDeviceID,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pClientInfo);
         
+        DECLSPEC_XFGVIRT(IPortableDevice, SendCommand)
         HRESULT ( STDMETHODCALLTYPE *SendCommand )( 
             __RPC__in IPortableDevice * This,
             /* [in] */ const DWORD dwFlags,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pParameters,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppResults);
         
+        DECLSPEC_XFGVIRT(IPortableDevice, Content)
         HRESULT ( STDMETHODCALLTYPE *Content )( 
             __RPC__in IPortableDevice * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceContent **ppContent);
         
+        DECLSPEC_XFGVIRT(IPortableDevice, Capabilities)
         HRESULT ( STDMETHODCALLTYPE *Capabilities )( 
             __RPC__in IPortableDevice * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceCapabilities **ppCapabilities);
         
+        DECLSPEC_XFGVIRT(IPortableDevice, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDevice * This);
         
+        DECLSPEC_XFGVIRT(IPortableDevice, Close)
         HRESULT ( STDMETHODCALLTYPE *Close )( 
             __RPC__in IPortableDevice * This);
         
+        DECLSPEC_XFGVIRT(IPortableDevice, Advise)
         HRESULT ( STDMETHODCALLTYPE *Advise )( 
             __RPC__in IPortableDevice * This,
             /* [in] */ const DWORD dwFlags,
@@ -579,10 +607,12 @@ EXTERN_C const IID IID_IPortableDevice;
             /* [unique][in] */ __RPC__in_opt IPortableDeviceValues *pParameters,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppszCookie);
         
+        DECLSPEC_XFGVIRT(IPortableDevice, Unadvise)
         HRESULT ( STDMETHODCALLTYPE *Unadvise )( 
             __RPC__in IPortableDevice * This,
             /* [in] */ __RPC__in LPCWSTR pszCookie);
         
+        DECLSPEC_XFGVIRT(IPortableDevice, GetPnPDeviceID)
         HRESULT ( STDMETHODCALLTYPE *GetPnPDeviceID )( 
             __RPC__in IPortableDevice * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppszPnPDeviceID);
@@ -715,18 +745,22 @@ EXTERN_C const IID IID_IPortableDeviceContent;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceContent * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceContent * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceContent * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, EnumObjects)
         HRESULT ( STDMETHODCALLTYPE *EnumObjects )( 
             __RPC__in IPortableDeviceContent * This,
             /* [in] */ const DWORD dwFlags,
@@ -734,19 +768,23 @@ EXTERN_C const IID IID_IPortableDeviceContent;
             /* [unique][in] */ __RPC__in_opt IPortableDeviceValues *pFilter,
             /* [out] */ __RPC__deref_out_opt IEnumPortableDeviceObjectIDs **ppEnum);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Properties)
         HRESULT ( STDMETHODCALLTYPE *Properties )( 
             __RPC__in IPortableDeviceContent * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceProperties **ppProperties);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Transfer)
         HRESULT ( STDMETHODCALLTYPE *Transfer )( 
             __RPC__in IPortableDeviceContent * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceResources **ppResources);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, CreateObjectWithPropertiesOnly)
         HRESULT ( STDMETHODCALLTYPE *CreateObjectWithPropertiesOnly )( 
             __RPC__in IPortableDeviceContent * This,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pValues,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt LPWSTR *ppszObjectID);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, CreateObjectWithPropertiesAndData)
         HRESULT ( STDMETHODCALLTYPE *CreateObjectWithPropertiesAndData )( 
             __RPC__in IPortableDeviceContent * This,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pValues,
@@ -754,26 +792,31 @@ EXTERN_C const IID IID_IPortableDeviceContent;
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwOptimalWriteBufferSize,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt LPWSTR *ppszCookie);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IPortableDeviceContent * This,
             /* [in] */ const DWORD dwOptions,
             /* [in] */ __RPC__in_opt IPortableDevicePropVariantCollection *pObjectIDs,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IPortableDevicePropVariantCollection **ppResults);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, GetObjectIDsFromPersistentUniqueIDs)
         HRESULT ( STDMETHODCALLTYPE *GetObjectIDsFromPersistentUniqueIDs )( 
             __RPC__in IPortableDeviceContent * This,
             /* [in] */ __RPC__in_opt IPortableDevicePropVariantCollection *pPersistentUniqueIDs,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppObjectIDs);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceContent * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Move)
         HRESULT ( STDMETHODCALLTYPE *Move )( 
             __RPC__in IPortableDeviceContent * This,
             /* [in] */ __RPC__in_opt IPortableDevicePropVariantCollection *pObjectIDs,
             /* [in] */ __RPC__in LPCWSTR pszDestinationFolderObjectID,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IPortableDevicePropVariantCollection **ppResults);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Copy)
         HRESULT ( STDMETHODCALLTYPE *Copy )( 
             __RPC__in IPortableDeviceContent * This,
             /* [in] */ __RPC__in_opt IPortableDevicePropVariantCollection *pObjectIDs,
@@ -874,18 +917,22 @@ EXTERN_C const IID IID_IPortableDeviceContent2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceContent2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceContent2 * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, EnumObjects)
         HRESULT ( STDMETHODCALLTYPE *EnumObjects )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [in] */ const DWORD dwFlags,
@@ -893,19 +940,23 @@ EXTERN_C const IID IID_IPortableDeviceContent2;
             /* [unique][in] */ __RPC__in_opt IPortableDeviceValues *pFilter,
             /* [out] */ __RPC__deref_out_opt IEnumPortableDeviceObjectIDs **ppEnum);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Properties)
         HRESULT ( STDMETHODCALLTYPE *Properties )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceProperties **ppProperties);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Transfer)
         HRESULT ( STDMETHODCALLTYPE *Transfer )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceResources **ppResources);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, CreateObjectWithPropertiesOnly)
         HRESULT ( STDMETHODCALLTYPE *CreateObjectWithPropertiesOnly )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pValues,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt LPWSTR *ppszObjectID);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, CreateObjectWithPropertiesAndData)
         HRESULT ( STDMETHODCALLTYPE *CreateObjectWithPropertiesAndData )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pValues,
@@ -913,32 +964,38 @@ EXTERN_C const IID IID_IPortableDeviceContent2;
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwOptimalWriteBufferSize,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt LPWSTR *ppszCookie);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [in] */ const DWORD dwOptions,
             /* [in] */ __RPC__in_opt IPortableDevicePropVariantCollection *pObjectIDs,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IPortableDevicePropVariantCollection **ppResults);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, GetObjectIDsFromPersistentUniqueIDs)
         HRESULT ( STDMETHODCALLTYPE *GetObjectIDsFromPersistentUniqueIDs )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [in] */ __RPC__in_opt IPortableDevicePropVariantCollection *pPersistentUniqueIDs,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppObjectIDs);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceContent2 * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Move)
         HRESULT ( STDMETHODCALLTYPE *Move )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [in] */ __RPC__in_opt IPortableDevicePropVariantCollection *pObjectIDs,
             /* [in] */ __RPC__in LPCWSTR pszDestinationFolderObjectID,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IPortableDevicePropVariantCollection **ppResults);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent, Copy)
         HRESULT ( STDMETHODCALLTYPE *Copy )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [in] */ __RPC__in_opt IPortableDevicePropVariantCollection *pObjectIDs,
             /* [in] */ __RPC__in LPCWSTR pszDestinationFolderObjectID,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IPortableDevicePropVariantCollection **ppResults);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceContent2, UpdateObjectWithPropertiesAndData)
         HRESULT ( STDMETHODCALLTYPE *UpdateObjectWithPropertiesAndData )( 
             __RPC__in IPortableDeviceContent2 * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
@@ -1053,35 +1110,43 @@ EXTERN_C const IID IID_IEnumPortableDeviceObjectIDs;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumPortableDeviceObjectIDs * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumPortableDeviceObjectIDs * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumPortableDeviceObjectIDs * This);
         
+        DECLSPEC_XFGVIRT(IEnumPortableDeviceObjectIDs, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumPortableDeviceObjectIDs * This,
             /* [in] */ ULONG cObjects,
             /* [length_is][size_is][out] */ __RPC__out_ecount_part(cObjects, *pcFetched) LPWSTR *pObjIDs,
             /* [unique][out][in] */ __RPC__inout_opt ULONG *pcFetched);
         
+        DECLSPEC_XFGVIRT(IEnumPortableDeviceObjectIDs, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumPortableDeviceObjectIDs * This,
             /* [in] */ ULONG cObjects);
         
+        DECLSPEC_XFGVIRT(IEnumPortableDeviceObjectIDs, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumPortableDeviceObjectIDs * This);
         
+        DECLSPEC_XFGVIRT(IEnumPortableDeviceObjectIDs, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumPortableDeviceObjectIDs * This,
             /* [out] */ __RPC__deref_out_opt IEnumPortableDeviceObjectIDs **ppEnum);
         
+        DECLSPEC_XFGVIRT(IEnumPortableDeviceObjectIDs, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IEnumPortableDeviceObjectIDs * This);
         
@@ -1183,46 +1248,55 @@ EXTERN_C const IID IID_IPortableDeviceProperties;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceProperties * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceProperties * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceProperties * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceProperties, GetSupportedProperties)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedProperties )( 
             __RPC__in IPortableDeviceProperties * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceKeyCollection **ppKeys);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceProperties, GetPropertyAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyAttributes )( 
             __RPC__in IPortableDeviceProperties * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
             /* [in] */ __RPC__in REFPROPERTYKEY Key,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppAttributes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceProperties, GetValues)
         HRESULT ( STDMETHODCALLTYPE *GetValues )( 
             __RPC__in IPortableDeviceProperties * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
             /* [unique][in] */ __RPC__in_opt IPortableDeviceKeyCollection *pKeys,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppValues);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceProperties, SetValues)
         HRESULT ( STDMETHODCALLTYPE *SetValues )( 
             __RPC__in IPortableDeviceProperties * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pValues,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppResults);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceProperties, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IPortableDeviceProperties * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
             /* [in] */ __RPC__in_opt IPortableDeviceKeyCollection *pKeys);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceProperties, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceProperties * This);
         
@@ -1330,29 +1404,35 @@ EXTERN_C const IID IID_IPortableDeviceResources;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceResources * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceResources * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceResources * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceResources, GetSupportedResources)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedResources )( 
             __RPC__in IPortableDeviceResources * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceKeyCollection **ppKeys);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceResources, GetResourceAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetResourceAttributes )( 
             __RPC__in IPortableDeviceResources * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
             /* [in] */ __RPC__in REFPROPERTYKEY Key,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppResourceAttributes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceResources, GetStream)
         HRESULT ( STDMETHODCALLTYPE *GetStream )( 
             __RPC__in IPortableDeviceResources * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
@@ -1361,14 +1441,17 @@ EXTERN_C const IID IID_IPortableDeviceResources;
             /* [unique][out][in] */ __RPC__inout_opt DWORD *pdwOptimalBufferSize,
             /* [out] */ __RPC__deref_out_opt IStream **ppStream);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceResources, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IPortableDeviceResources * This,
             /* [in] */ __RPC__in LPCWSTR pszObjectID,
             /* [in] */ __RPC__in_opt IPortableDeviceKeyCollection *pKeys);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceResources, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceResources * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceResources, CreateResource)
         HRESULT ( STDMETHODCALLTYPE *CreateResource )( 
             __RPC__in IPortableDeviceResources * This,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pResourceAttributes,
@@ -1492,64 +1575,78 @@ EXTERN_C const IID IID_IPortableDeviceCapabilities;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceCapabilities * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceCapabilities * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetSupportedCommands)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedCommands )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceKeyCollection **ppCommands);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetCommandOptions)
         HRESULT ( STDMETHODCALLTYPE *GetCommandOptions )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [in] */ __RPC__in REFPROPERTYKEY Command,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppOptions);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetFunctionalCategories)
         HRESULT ( STDMETHODCALLTYPE *GetFunctionalCategories )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppCategories);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetFunctionalObjects)
         HRESULT ( STDMETHODCALLTYPE *GetFunctionalObjects )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Category,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppObjectIDs);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetSupportedContentTypes)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedContentTypes )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Category,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppContentTypes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetSupportedFormats)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedFormats )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [in] */ __RPC__in REFGUID ContentType,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppFormats);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetSupportedFormatProperties)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedFormatProperties )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Format,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceKeyCollection **ppKeys);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetFixedPropertyAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetFixedPropertyAttributes )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Format,
             /* [in] */ __RPC__in REFPROPERTYKEY Key,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppAttributes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceCapabilities * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetSupportedEvents)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedEvents )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppEvents);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceCapabilities, GetEventOptions)
         HRESULT ( STDMETHODCALLTYPE *GetEventOptions )( 
             __RPC__in IPortableDeviceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Event,
@@ -1649,18 +1746,22 @@ EXTERN_C const IID IID_IPortableDeviceEventCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceEventCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceEventCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceEventCallback * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceEventCallback, OnEvent)
         HRESULT ( STDMETHODCALLTYPE *OnEvent )( 
             __RPC__in IPortableDeviceEventCallback * This,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pEventParameters);
@@ -1731,18 +1832,22 @@ EXTERN_C const IID IID_IPortableDeviceDataStream;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceDataStream * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceDataStream * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceDataStream * This);
         
+        DECLSPEC_XFGVIRT(ISequentialStream, Read)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Read )( 
             IPortableDeviceDataStream * This,
             /* [annotation] */ 
@@ -1752,6 +1857,7 @@ EXTERN_C const IID IID_IPortableDeviceDataStream;
             /* [annotation] */ 
             _Out_opt_  ULONG *pcbRead);
         
+        DECLSPEC_XFGVIRT(ISequentialStream, Write)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Write )( 
             IPortableDeviceDataStream * This,
             /* [annotation] */ 
@@ -1761,6 +1867,7 @@ EXTERN_C const IID IID_IPortableDeviceDataStream;
             /* [annotation] */ 
             _Out_opt_  ULONG *pcbWritten);
         
+        DECLSPEC_XFGVIRT(IStream, Seek)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Seek )( 
             IPortableDeviceDataStream * This,
             /* [in] */ LARGE_INTEGER dlibMove,
@@ -1768,10 +1875,12 @@ EXTERN_C const IID IID_IPortableDeviceDataStream;
             /* [annotation] */ 
             _Out_opt_  ULARGE_INTEGER *plibNewPosition);
         
+        DECLSPEC_XFGVIRT(IStream, SetSize)
         HRESULT ( STDMETHODCALLTYPE *SetSize )( 
             __RPC__in IPortableDeviceDataStream * This,
             /* [in] */ ULARGE_INTEGER libNewSize);
         
+        DECLSPEC_XFGVIRT(IStream, CopyTo)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *CopyTo )( 
             IPortableDeviceDataStream * This,
             /* [annotation][unique][in] */ 
@@ -1782,38 +1891,46 @@ EXTERN_C const IID IID_IPortableDeviceDataStream;
             /* [annotation] */ 
             _Out_opt_  ULARGE_INTEGER *pcbWritten);
         
+        DECLSPEC_XFGVIRT(IStream, Commit)
         HRESULT ( STDMETHODCALLTYPE *Commit )( 
             __RPC__in IPortableDeviceDataStream * This,
             /* [in] */ DWORD grfCommitFlags);
         
+        DECLSPEC_XFGVIRT(IStream, Revert)
         HRESULT ( STDMETHODCALLTYPE *Revert )( 
             __RPC__in IPortableDeviceDataStream * This);
         
+        DECLSPEC_XFGVIRT(IStream, LockRegion)
         HRESULT ( STDMETHODCALLTYPE *LockRegion )( 
             __RPC__in IPortableDeviceDataStream * This,
             /* [in] */ ULARGE_INTEGER libOffset,
             /* [in] */ ULARGE_INTEGER cb,
             /* [in] */ DWORD dwLockType);
         
+        DECLSPEC_XFGVIRT(IStream, UnlockRegion)
         HRESULT ( STDMETHODCALLTYPE *UnlockRegion )( 
             __RPC__in IPortableDeviceDataStream * This,
             /* [in] */ ULARGE_INTEGER libOffset,
             /* [in] */ ULARGE_INTEGER cb,
             /* [in] */ DWORD dwLockType);
         
+        DECLSPEC_XFGVIRT(IStream, Stat)
         HRESULT ( STDMETHODCALLTYPE *Stat )( 
             __RPC__in IPortableDeviceDataStream * This,
             /* [out] */ __RPC__out STATSTG *pstatstg,
             /* [in] */ DWORD grfStatFlag);
         
+        DECLSPEC_XFGVIRT(IStream, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IPortableDeviceDataStream * This,
             /* [out] */ __RPC__deref_out_opt IStream **ppstm);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceDataStream, GetObjectID)
         HRESULT ( STDMETHODCALLTYPE *GetObjectID )( 
             __RPC__in IPortableDeviceDataStream * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppszObjectID);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceDataStream, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceDataStream * This);
         
@@ -1925,18 +2042,22 @@ EXTERN_C const IID IID_IPortableDeviceUnitsStream;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceUnitsStream * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceUnitsStream * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceUnitsStream * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceUnitsStream, SeekInUnits)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *SeekInUnits )( 
             IPortableDeviceUnitsStream * This,
             /* [in] */ LARGE_INTEGER dlibMove,
@@ -1945,6 +2066,7 @@ EXTERN_C const IID IID_IPortableDeviceUnitsStream;
             /* [annotation] */ 
             _Out_opt_  ULARGE_INTEGER *plibNewPosition);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceUnitsStream, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceUnitsStream * This);
         
@@ -2052,18 +2174,22 @@ EXTERN_C const IID IID_IPortableDevicePropertiesBulk;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDevicePropertiesBulk * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDevicePropertiesBulk * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDevicePropertiesBulk * This);
         
+        DECLSPEC_XFGVIRT(IPortableDevicePropertiesBulk, QueueGetValuesByObjectList)
         HRESULT ( STDMETHODCALLTYPE *QueueGetValuesByObjectList )( 
             __RPC__in IPortableDevicePropertiesBulk * This,
             /* [in] */ __RPC__in_opt IPortableDevicePropVariantCollection *pObjectIDs,
@@ -2071,6 +2197,7 @@ EXTERN_C const IID IID_IPortableDevicePropertiesBulk;
             /* [in] */ __RPC__in_opt IPortableDevicePropertiesBulkCallback *pCallback,
             /* [out] */ __RPC__out GUID *pContext);
         
+        DECLSPEC_XFGVIRT(IPortableDevicePropertiesBulk, QueueGetValuesByObjectFormat)
         HRESULT ( STDMETHODCALLTYPE *QueueGetValuesByObjectFormat )( 
             __RPC__in IPortableDevicePropertiesBulk * This,
             /* [in] */ __RPC__in REFGUID pguidObjectFormat,
@@ -2080,16 +2207,19 @@ EXTERN_C const IID IID_IPortableDevicePropertiesBulk;
             /* [in] */ __RPC__in_opt IPortableDevicePropertiesBulkCallback *pCallback,
             /* [out] */ __RPC__out GUID *pContext);
         
+        DECLSPEC_XFGVIRT(IPortableDevicePropertiesBulk, QueueSetValuesByObjectList)
         HRESULT ( STDMETHODCALLTYPE *QueueSetValuesByObjectList )( 
             __RPC__in IPortableDevicePropertiesBulk * This,
             /* [in] */ __RPC__in_opt IPortableDeviceValuesCollection *pObjectValues,
             /* [in] */ __RPC__in_opt IPortableDevicePropertiesBulkCallback *pCallback,
             /* [out] */ __RPC__out GUID *pContext);
         
+        DECLSPEC_XFGVIRT(IPortableDevicePropertiesBulk, Start)
         HRESULT ( STDMETHODCALLTYPE *Start )( 
             __RPC__in IPortableDevicePropertiesBulk * This,
             /* [in] */ __RPC__in REFGUID pContext);
         
+        DECLSPEC_XFGVIRT(IPortableDevicePropertiesBulk, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDevicePropertiesBulk * This,
             /* [in] */ __RPC__in REFGUID pContext);
@@ -2178,27 +2308,33 @@ EXTERN_C const IID IID_IPortableDevicePropertiesBulkCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDevicePropertiesBulkCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDevicePropertiesBulkCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDevicePropertiesBulkCallback * This);
         
+        DECLSPEC_XFGVIRT(IPortableDevicePropertiesBulkCallback, OnStart)
         HRESULT ( STDMETHODCALLTYPE *OnStart )( 
             __RPC__in IPortableDevicePropertiesBulkCallback * This,
             /* [in] */ __RPC__in REFGUID pContext);
         
+        DECLSPEC_XFGVIRT(IPortableDevicePropertiesBulkCallback, OnProgress)
         HRESULT ( STDMETHODCALLTYPE *OnProgress )( 
             __RPC__in IPortableDevicePropertiesBulkCallback * This,
             /* [in] */ __RPC__in REFGUID pContext,
             /* [in] */ __RPC__in_opt IPortableDeviceValuesCollection *pResults);
         
+        DECLSPEC_XFGVIRT(IPortableDevicePropertiesBulkCallback, OnEnd)
         HRESULT ( STDMETHODCALLTYPE *OnEnd )( 
             __RPC__in IPortableDevicePropertiesBulkCallback * This,
             /* [in] */ __RPC__in REFGUID pContext,
@@ -2281,18 +2417,22 @@ EXTERN_C const IID IID_IPortableDeviceServiceManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceServiceManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceServiceManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceServiceManager * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceManager, GetDeviceServices)
         HRESULT ( STDMETHODCALLTYPE *GetDeviceServices )( 
             __RPC__in IPortableDeviceServiceManager * This,
             /* [in] */ __RPC__in LPCWSTR pszPnPDeviceID,
@@ -2300,6 +2440,7 @@ EXTERN_C const IID IID_IPortableDeviceServiceManager;
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt LPWSTR *pServices,
             /* [out][in] */ __RPC__inout DWORD *pcServices);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceManager, GetDeviceForService)
         HRESULT ( STDMETHODCALLTYPE *GetDeviceForService )( 
             __RPC__in IPortableDeviceServiceManager * This,
             /* [in] */ __RPC__in LPCWSTR pszPnPServiceID,
@@ -2406,49 +2547,61 @@ EXTERN_C const IID IID_IPortableDeviceService;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceService * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceService * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceService * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, Open)
         HRESULT ( STDMETHODCALLTYPE *Open )( 
             __RPC__in IPortableDeviceService * This,
             /* [in] */ __RPC__in LPCWSTR pszPnPServiceID,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pClientInfo);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, Capabilities)
         HRESULT ( STDMETHODCALLTYPE *Capabilities )( 
             __RPC__in IPortableDeviceService * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceServiceCapabilities **ppCapabilities);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, Content)
         HRESULT ( STDMETHODCALLTYPE *Content )( 
             __RPC__in IPortableDeviceService * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceContent2 **ppContent);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, Methods)
         HRESULT ( STDMETHODCALLTYPE *Methods )( 
             __RPC__in IPortableDeviceService * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceServiceMethods **ppMethods);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceService * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, Close)
         HRESULT ( STDMETHODCALLTYPE *Close )( 
             __RPC__in IPortableDeviceService * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, GetServiceObjectID)
         HRESULT ( STDMETHODCALLTYPE *GetServiceObjectID )( 
             __RPC__in IPortableDeviceService * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppszServiceObjectID);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, GetPnPServiceID)
         HRESULT ( STDMETHODCALLTYPE *GetPnPServiceID )( 
             __RPC__in IPortableDeviceService * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppszPnPServiceID);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, Advise)
         HRESULT ( STDMETHODCALLTYPE *Advise )( 
             __RPC__in IPortableDeviceService * This,
             /* [in] */ const DWORD dwFlags,
@@ -2456,10 +2609,12 @@ EXTERN_C const IID IID_IPortableDeviceService;
             /* [unique][in] */ __RPC__in_opt IPortableDeviceValues *pParameters,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppszCookie);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, Unadvise)
         HRESULT ( STDMETHODCALLTYPE *Unadvise )( 
             __RPC__in IPortableDeviceService * This,
             /* [in] */ __RPC__in LPCWSTR pszCookie);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceService, SendCommand)
         HRESULT ( STDMETHODCALLTYPE *SendCommand )( 
             __RPC__in IPortableDeviceService * This,
             /* [in] */ const DWORD dwFlags,
@@ -2618,92 +2773,111 @@ EXTERN_C const IID IID_IPortableDeviceServiceCapabilities;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceServiceCapabilities * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceServiceCapabilities * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetSupportedMethods)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedMethods )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppMethods);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetSupportedMethodsByFormat)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedMethodsByFormat )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Format,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppMethods);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetMethodAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetMethodAttributes )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Method,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppAttributes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetMethodParameterAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetMethodParameterAttributes )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Method,
             /* [in] */ __RPC__in REFPROPERTYKEY Parameter,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppAttributes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetSupportedFormats)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedFormats )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppFormats);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetFormatAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetFormatAttributes )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Format,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppAttributes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetSupportedFormatProperties)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedFormatProperties )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Format,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceKeyCollection **ppKeys);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetFormatPropertyAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetFormatPropertyAttributes )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Format,
             /* [in] */ __RPC__in REFPROPERTYKEY Property,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppAttributes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetSupportedEvents)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedEvents )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppEvents);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetEventAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetEventAttributes )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Event,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppAttributes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetEventParameterAttributes)
         HRESULT ( STDMETHODCALLTYPE *GetEventParameterAttributes )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Event,
             /* [in] */ __RPC__in REFPROPERTYKEY Parameter,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppAttributes);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetInheritedServices)
         HRESULT ( STDMETHODCALLTYPE *GetInheritedServices )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ const DWORD dwInheritanceType,
             /* [out] */ __RPC__deref_out_opt IPortableDevicePropVariantCollection **ppServices);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetFormatRenderingProfiles)
         HRESULT ( STDMETHODCALLTYPE *GetFormatRenderingProfiles )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFGUID Format,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValuesCollection **ppRenderingProfiles);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetSupportedCommands)
         HRESULT ( STDMETHODCALLTYPE *GetSupportedCommands )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceKeyCollection **ppCommands);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, GetCommandOptions)
         HRESULT ( STDMETHODCALLTYPE *GetCommandOptions )( 
             __RPC__in IPortableDeviceServiceCapabilities * This,
             /* [in] */ __RPC__in REFPROPERTYKEY Command,
             /* [out] */ __RPC__deref_out_opt IPortableDeviceValues **ppOptions);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceCapabilities, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceServiceCapabilities * This);
         
@@ -2826,30 +3000,36 @@ EXTERN_C const IID IID_IPortableDeviceServiceMethods;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceServiceMethods * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceServiceMethods * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceServiceMethods * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceMethods, Invoke)
         HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             __RPC__in IPortableDeviceServiceMethods * This,
             /* [in] */ __RPC__in REFGUID Method,
             /* [unique][in] */ __RPC__in_opt IPortableDeviceValues *pParameters,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IPortableDeviceValues **ppResults);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceMethods, InvokeAsync)
         HRESULT ( STDMETHODCALLTYPE *InvokeAsync )( 
             __RPC__in IPortableDeviceServiceMethods * This,
             /* [in] */ __RPC__in REFGUID Method,
             /* [unique][in] */ __RPC__in_opt IPortableDeviceValues *pParameters,
             /* [unique][in] */ __RPC__in_opt IPortableDeviceServiceMethodCallback *pCallback);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceMethods, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IPortableDeviceServiceMethods * This,
             /* [unique][in] */ __RPC__in_opt IPortableDeviceServiceMethodCallback *pCallback);
@@ -2925,18 +3105,22 @@ EXTERN_C const IID IID_IPortableDeviceServiceMethodCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceServiceMethodCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceServiceMethodCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceServiceMethodCallback * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceMethodCallback, OnComplete)
         HRESULT ( STDMETHODCALLTYPE *OnComplete )( 
             __RPC__in IPortableDeviceServiceMethodCallback * This,
             /* [in] */ HRESULT hrStatus,
@@ -3010,24 +3194,29 @@ EXTERN_C const IID IID_IPortableDeviceServiceActivation;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceServiceActivation * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceServiceActivation * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceServiceActivation * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceActivation, OpenAsync)
         HRESULT ( STDMETHODCALLTYPE *OpenAsync )( 
             __RPC__in IPortableDeviceServiceActivation * This,
             /* [in] */ __RPC__in LPCWSTR pszPnPServiceID,
             /* [in] */ __RPC__in_opt IPortableDeviceValues *pClientInfo,
             /* [in] */ __RPC__in_opt IPortableDeviceServiceOpenCallback *pCallback);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceActivation, CancelOpenAsync)
         HRESULT ( STDMETHODCALLTYPE *CancelOpenAsync )( 
             __RPC__in IPortableDeviceServiceActivation * This);
         
@@ -3098,18 +3287,22 @@ EXTERN_C const IID IID_IPortableDeviceServiceOpenCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPortableDeviceServiceOpenCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPortableDeviceServiceOpenCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPortableDeviceServiceOpenCallback * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceServiceOpenCallback, OnComplete)
         HRESULT ( STDMETHODCALLTYPE *OnComplete )( 
             __RPC__in IPortableDeviceServiceOpenCallback * This,
             /* [in] */ HRESULT hrStatus);
@@ -3179,18 +3372,22 @@ EXTERN_C const IID IID_IPortableDeviceDispatchFactory;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IPortableDeviceDispatchFactory * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IPortableDeviceDispatchFactory * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IPortableDeviceDispatchFactory * This);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceDispatchFactory, GetDeviceDispatch)
         HRESULT ( STDMETHODCALLTYPE *GetDeviceDispatch )( 
             IPortableDeviceDispatchFactory * This,
             /* [in] */ LPCWSTR pszPnPDeviceID,
@@ -3283,28 +3480,34 @@ EXTERN_C const IID IID_IPortableDeviceWebControl;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IPortableDeviceWebControl * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IPortableDeviceWebControl * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IPortableDeviceWebControl * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             IPortableDeviceWebControl * This,
             /* [out] */ UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             IPortableDeviceWebControl * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             IPortableDeviceWebControl * This,
             /* [in] */ REFIID riid,
@@ -3313,6 +3516,7 @@ EXTERN_C const IID IID_IPortableDeviceWebControl;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IPortableDeviceWebControl * This,
             /* [annotation][in] */ 
@@ -3332,6 +3536,7 @@ EXTERN_C const IID IID_IPortableDeviceWebControl;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceWebControl, GetDeviceFromId)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetDeviceFromId )( 
             IPortableDeviceWebControl * This,
             /* [annotation][in] */ 
@@ -3339,6 +3544,7 @@ EXTERN_C const IID IID_IPortableDeviceWebControl;
             /* [annotation][retval][out] */ 
             _COM_Outptr_  IDispatch **ppDevice);
         
+        DECLSPEC_XFGVIRT(IPortableDeviceWebControl, GetDeviceFromIdAsync)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetDeviceFromIdAsync )( 
             IPortableDeviceWebControl * This,
             /* [annotation][in] */ 

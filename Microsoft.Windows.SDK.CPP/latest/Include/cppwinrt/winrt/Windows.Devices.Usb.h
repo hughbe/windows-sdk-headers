@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Usb_H
 #define WINRT_Windows_Devices_Usb_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -14,641 +14,641 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.Usb.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInEndpointDescriptor<D>::MaxPacketSize() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbBulkInEndpointDescriptor<D>::MaxPacketSize() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInEndpointDescriptor)->get_MaxPacketSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInEndpointDescriptor<D>::EndpointNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbBulkInEndpointDescriptor<D>::EndpointNumber() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInEndpointDescriptor)->get_EndpointNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInEndpointDescriptor<D>::Pipe() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbBulkInPipe) consume_Windows_Devices_Usb_IUsbBulkInEndpointDescriptor<D>::Pipe() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInEndpointDescriptor)->get_Pipe(&value));
         return Windows::Devices::Usb::UsbBulkInPipe{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::MaxTransferSizeBytes() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::MaxTransferSizeBytes() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInPipe)->get_MaxTransferSizeBytes(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::EndpointDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbBulkInEndpointDescriptor) consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::EndpointDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInPipe)->get_EndpointDescriptor(&value));
         return Windows::Devices::Usb::UsbBulkInEndpointDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::ClearStallAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::ClearStallAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInPipe)->ClearStallAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::ReadOptions(Windows::Devices::Usb::UsbReadOptions const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::ReadOptions(Windows::Devices::Usb::UsbReadOptions const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInPipe)->put_ReadOptions(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::ReadOptions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbReadOptions) consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::ReadOptions() const
     {
-        Windows::Devices::Usb::UsbReadOptions value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInPipe)->get_ReadOptions(put_abi(value)));
+        Windows::Devices::Usb::UsbReadOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInPipe)->get_ReadOptions(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::FlushBuffer() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::FlushBuffer() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInPipe)->FlushBuffer());
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::InputStream() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IInputStream) consume_Windows_Devices_Usb_IUsbBulkInPipe<D>::InputStream() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkInPipe)->get_InputStream(&value));
         return Windows::Storage::Streams::IInputStream{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkOutEndpointDescriptor<D>::MaxPacketSize() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbBulkOutEndpointDescriptor<D>::MaxPacketSize() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor)->get_MaxPacketSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkOutEndpointDescriptor<D>::EndpointNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbBulkOutEndpointDescriptor<D>::EndpointNumber() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor)->get_EndpointNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkOutEndpointDescriptor<D>::Pipe() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbBulkOutPipe) consume_Windows_Devices_Usb_IUsbBulkOutEndpointDescriptor<D>::Pipe() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor)->get_Pipe(&value));
         return Windows::Devices::Usb::UsbBulkOutPipe{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::EndpointDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbBulkOutEndpointDescriptor) consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::EndpointDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkOutPipe)->get_EndpointDescriptor(&value));
         return Windows::Devices::Usb::UsbBulkOutEndpointDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::ClearStallAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::ClearStallAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkOutPipe)->ClearStallAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::WriteOptions(Windows::Devices::Usb::UsbWriteOptions const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::WriteOptions(Windows::Devices::Usb::UsbWriteOptions const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkOutPipe)->put_WriteOptions(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::WriteOptions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbWriteOptions) consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::WriteOptions() const
     {
-        Windows::Devices::Usb::UsbWriteOptions value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkOutPipe)->get_WriteOptions(put_abi(value)));
+        Windows::Devices::Usb::UsbWriteOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkOutPipe)->get_WriteOptions(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::OutputStream() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IOutputStream) consume_Windows_Devices_Usb_IUsbBulkOutPipe<D>::OutputStream() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbBulkOutPipe)->get_OutputStream(&value));
         return Windows::Storage::Streams::IOutputStream{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbConfiguration<D>::UsbInterfaces() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterface>) consume_Windows_Devices_Usb_IUsbConfiguration<D>::UsbInterfaces() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbConfiguration)->get_UsbInterfaces(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterface>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbConfiguration<D>::ConfigurationDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbConfigurationDescriptor) consume_Windows_Devices_Usb_IUsbConfiguration<D>::ConfigurationDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbConfiguration)->get_ConfigurationDescriptor(&value));
         return Windows::Devices::Usb::UsbConfigurationDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbConfiguration<D>::Descriptors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbDescriptor>) consume_Windows_Devices_Usb_IUsbConfiguration<D>::Descriptors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbConfiguration)->get_Descriptors(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbConfigurationDescriptor<D>::ConfigurationValue() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbConfigurationDescriptor<D>::ConfigurationValue() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbConfigurationDescriptor)->get_ConfigurationValue(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbConfigurationDescriptor<D>::MaxPowerMilliamps() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbConfigurationDescriptor<D>::MaxPowerMilliamps() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbConfigurationDescriptor)->get_MaxPowerMilliamps(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbConfigurationDescriptor<D>::SelfPowered() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Usb_IUsbConfigurationDescriptor<D>::SelfPowered() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbConfigurationDescriptor)->get_SelfPowered(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbConfigurationDescriptor<D>::RemoteWakeup() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Usb_IUsbConfigurationDescriptor<D>::RemoteWakeup() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbConfigurationDescriptor)->get_RemoteWakeup(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbConfigurationDescriptorStatics<D>::TryParse(Windows::Devices::Usb::UsbDescriptor const& descriptor, Windows::Devices::Usb::UsbConfigurationDescriptor& parsed) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Usb_IUsbConfigurationDescriptorStatics<D>::TryParse(Windows::Devices::Usb::UsbDescriptor const& descriptor, Windows::Devices::Usb::UsbConfigurationDescriptor& parsed) const
     {
-        bool success;
+        bool success{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbConfigurationDescriptorStatics)->TryParse(*(void**)(&descriptor), impl::bind_out(parsed), &success));
         return success;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbConfigurationDescriptorStatics<D>::Parse(Windows::Devices::Usb::UsbDescriptor const& descriptor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbConfigurationDescriptor) consume_Windows_Devices_Usb_IUsbConfigurationDescriptorStatics<D>::Parse(Windows::Devices::Usb::UsbDescriptor const& descriptor) const
     {
         void* parsed{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbConfigurationDescriptorStatics)->Parse(*(void**)(&descriptor), &parsed));
         return Windows::Devices::Usb::UsbConfigurationDescriptor{ parsed, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbControlRequestType<D>::Direction() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbTransferDirection) consume_Windows_Devices_Usb_IUsbControlRequestType<D>::Direction() const
     {
-        Windows::Devices::Usb::UsbTransferDirection value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->get_Direction(put_abi(value)));
+        Windows::Devices::Usb::UsbTransferDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->get_Direction(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbControlRequestType<D>::Direction(Windows::Devices::Usb::UsbTransferDirection const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbControlRequestType<D>::Direction(Windows::Devices::Usb::UsbTransferDirection const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->put_Direction(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbControlRequestType<D>::ControlTransferType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbControlTransferType) consume_Windows_Devices_Usb_IUsbControlRequestType<D>::ControlTransferType() const
     {
-        Windows::Devices::Usb::UsbControlTransferType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->get_ControlTransferType(put_abi(value)));
+        Windows::Devices::Usb::UsbControlTransferType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->get_ControlTransferType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbControlRequestType<D>::ControlTransferType(Windows::Devices::Usb::UsbControlTransferType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbControlRequestType<D>::ControlTransferType(Windows::Devices::Usb::UsbControlTransferType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->put_ControlTransferType(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbControlRequestType<D>::Recipient() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbControlRecipient) consume_Windows_Devices_Usb_IUsbControlRequestType<D>::Recipient() const
     {
-        Windows::Devices::Usb::UsbControlRecipient value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->get_Recipient(put_abi(value)));
+        Windows::Devices::Usb::UsbControlRecipient value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->get_Recipient(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbControlRequestType<D>::Recipient(Windows::Devices::Usb::UsbControlRecipient const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbControlRequestType<D>::Recipient(Windows::Devices::Usb::UsbControlRecipient const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->put_Recipient(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbControlRequestType<D>::AsByte() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbControlRequestType<D>::AsByte() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->get_AsByte(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbControlRequestType<D>::AsByte(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbControlRequestType<D>::AsByte(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbControlRequestType)->put_AsByte(value));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDescriptor<D>::Length() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbDescriptor<D>::Length() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDescriptor)->get_Length(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDescriptor<D>::DescriptorType() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbDescriptor<D>::DescriptorType() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDescriptor)->get_DescriptorType(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDescriptor<D>::ReadDescriptorBuffer(Windows::Storage::Streams::IBuffer const& buffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbDescriptor<D>::ReadDescriptorBuffer(Windows::Storage::Streams::IBuffer const& buffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDescriptor)->ReadDescriptorBuffer(*(void**)(&buffer)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDevice<D>::SendControlOutTransferAsync(Windows::Devices::Usb::UsbSetupPacket const& setupPacket, Windows::Storage::Streams::IBuffer const& buffer) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<uint32_t>) consume_Windows_Devices_Usb_IUsbDevice<D>::SendControlOutTransferAsync(Windows::Devices::Usb::UsbSetupPacket const& setupPacket, Windows::Storage::Streams::IBuffer const& buffer) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDevice)->SendControlOutTransferAsync(*(void**)(&setupPacket), *(void**)(&buffer), &operation));
         return Windows::Foundation::IAsyncOperation<uint32_t>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDevice<D>::SendControlOutTransferAsync(Windows::Devices::Usb::UsbSetupPacket const& setupPacket) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<uint32_t>) consume_Windows_Devices_Usb_IUsbDevice<D>::SendControlOutTransferAsync(Windows::Devices::Usb::UsbSetupPacket const& setupPacket) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDevice)->SendControlOutTransferAsyncNoBuffer(*(void**)(&setupPacket), &operation));
         return Windows::Foundation::IAsyncOperation<uint32_t>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDevice<D>::SendControlInTransferAsync(Windows::Devices::Usb::UsbSetupPacket const& setupPacket, Windows::Storage::Streams::IBuffer const& buffer) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) consume_Windows_Devices_Usb_IUsbDevice<D>::SendControlInTransferAsync(Windows::Devices::Usb::UsbSetupPacket const& setupPacket, Windows::Storage::Streams::IBuffer const& buffer) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDevice)->SendControlInTransferAsync(*(void**)(&setupPacket), *(void**)(&buffer), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDevice<D>::SendControlInTransferAsync(Windows::Devices::Usb::UsbSetupPacket const& setupPacket) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) consume_Windows_Devices_Usb_IUsbDevice<D>::SendControlInTransferAsync(Windows::Devices::Usb::UsbSetupPacket const& setupPacket) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDevice)->SendControlInTransferAsyncNoBuffer(*(void**)(&setupPacket), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDevice<D>::DefaultInterface() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbInterface) consume_Windows_Devices_Usb_IUsbDevice<D>::DefaultInterface() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDevice)->get_DefaultInterface(&value));
         return Windows::Devices::Usb::UsbInterface{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDevice<D>::DeviceDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceDescriptor) consume_Windows_Devices_Usb_IUsbDevice<D>::DeviceDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDevice)->get_DeviceDescriptor(&value));
         return Windows::Devices::Usb::UsbDeviceDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDevice<D>::Configuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbConfiguration) consume_Windows_Devices_Usb_IUsbDevice<D>::Configuration() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDevice)->get_Configuration(&value));
         return Windows::Devices::Usb::UsbConfiguration{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClass<D>::ClassCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbDeviceClass<D>::ClassCode() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClass)->get_ClassCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClass<D>::ClassCode(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbDeviceClass<D>::ClassCode(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClass)->put_ClassCode(value));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClass<D>::SubclassCode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint8_t>) consume_Windows_Devices_Usb_IUsbDeviceClass<D>::SubclassCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClass)->get_SubclassCode(&value));
         return Windows::Foundation::IReference<uint8_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClass<D>::SubclassCode(Windows::Foundation::IReference<uint8_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbDeviceClass<D>::SubclassCode(Windows::Foundation::IReference<uint8_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClass)->put_SubclassCode(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClass<D>::ProtocolCode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint8_t>) consume_Windows_Devices_Usb_IUsbDeviceClass<D>::ProtocolCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClass)->get_ProtocolCode(&value));
         return Windows::Foundation::IReference<uint8_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClass<D>::ProtocolCode(Windows::Foundation::IReference<uint8_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbDeviceClass<D>::ProtocolCode(Windows::Foundation::IReference<uint8_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClass)->put_ProtocolCode(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::CdcControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceClass) consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::CdcControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClassesStatics)->get_CdcControl(&value));
         return Windows::Devices::Usb::UsbDeviceClass{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::Physical() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceClass) consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::Physical() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClassesStatics)->get_Physical(&value));
         return Windows::Devices::Usb::UsbDeviceClass{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::PersonalHealthcare() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceClass) consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::PersonalHealthcare() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClassesStatics)->get_PersonalHealthcare(&value));
         return Windows::Devices::Usb::UsbDeviceClass{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::ActiveSync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceClass) consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::ActiveSync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClassesStatics)->get_ActiveSync(&value));
         return Windows::Devices::Usb::UsbDeviceClass{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::PalmSync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceClass) consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::PalmSync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClassesStatics)->get_PalmSync(&value));
         return Windows::Devices::Usb::UsbDeviceClass{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::DeviceFirmwareUpdate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceClass) consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::DeviceFirmwareUpdate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClassesStatics)->get_DeviceFirmwareUpdate(&value));
         return Windows::Devices::Usb::UsbDeviceClass{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::Irda() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceClass) consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::Irda() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClassesStatics)->get_Irda(&value));
         return Windows::Devices::Usb::UsbDeviceClass{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::Measurement() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceClass) consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::Measurement() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClassesStatics)->get_Measurement(&value));
         return Windows::Devices::Usb::UsbDeviceClass{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::VendorSpecific() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbDeviceClass) consume_Windows_Devices_Usb_IUsbDeviceClassesStatics<D>::VendorSpecific() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceClassesStatics)->get_VendorSpecific(&value));
         return Windows::Devices::Usb::UsbDeviceClass{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::BcdUsb() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::BcdUsb() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceDescriptor)->get_BcdUsb(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::MaxPacketSize0() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::MaxPacketSize0() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceDescriptor)->get_MaxPacketSize0(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::VendorId() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::VendorId() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceDescriptor)->get_VendorId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::ProductId() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::ProductId() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceDescriptor)->get_ProductId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::BcdDeviceRevision() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::BcdDeviceRevision() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceDescriptor)->get_BcdDeviceRevision(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::NumberOfConfigurations() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbDeviceDescriptor<D>::NumberOfConfigurations() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceDescriptor)->get_NumberOfConfigurations(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::GetDeviceSelector(uint32_t vendorId, uint32_t productId, winrt::guid const& winUsbInterfaceClass) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::GetDeviceSelector(uint32_t vendorId, uint32_t productId, winrt::guid const& winUsbInterfaceClass) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceStatics)->GetDeviceSelector(vendorId, productId, impl::bind_in(winUsbInterfaceClass), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::GetDeviceSelector(winrt::guid const& winUsbInterfaceClass) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::GetDeviceSelector(winrt::guid const& winUsbInterfaceClass) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceStatics)->GetDeviceSelectorGuidOnly(impl::bind_in(winUsbInterfaceClass), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::GetDeviceSelector(uint32_t vendorId, uint32_t productId) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::GetDeviceSelector(uint32_t vendorId, uint32_t productId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceStatics)->GetDeviceSelectorVidPidOnly(vendorId, productId, &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::GetDeviceClassSelector(Windows::Devices::Usb::UsbDeviceClass const& usbClass) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::GetDeviceClassSelector(Windows::Devices::Usb::UsbDeviceClass const& usbClass) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceStatics)->GetDeviceClassSelector(*(void**)(&usbClass), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Usb::UsbDevice>) consume_Windows_Devices_Usb_IUsbDeviceStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbDeviceStatics)->FromIdAsync(*(void**)(&deviceId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Usb::UsbDevice>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::EndpointNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::EndpointNumber() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptor)->get_EndpointNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::Direction() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbTransferDirection) consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::Direction() const
     {
-        Windows::Devices::Usb::UsbTransferDirection value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptor)->get_Direction(put_abi(value)));
+        Windows::Devices::Usb::UsbTransferDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptor)->get_Direction(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::EndpointType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbEndpointType) consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::EndpointType() const
     {
-        Windows::Devices::Usb::UsbEndpointType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptor)->get_EndpointType(put_abi(value)));
+        Windows::Devices::Usb::UsbEndpointType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptor)->get_EndpointType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::AsBulkInEndpointDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbBulkInEndpointDescriptor) consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::AsBulkInEndpointDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptor)->get_AsBulkInEndpointDescriptor(&value));
         return Windows::Devices::Usb::UsbBulkInEndpointDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::AsInterruptInEndpointDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbInterruptInEndpointDescriptor) consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::AsInterruptInEndpointDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptor)->get_AsInterruptInEndpointDescriptor(&value));
         return Windows::Devices::Usb::UsbInterruptInEndpointDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::AsBulkOutEndpointDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbBulkOutEndpointDescriptor) consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::AsBulkOutEndpointDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptor)->get_AsBulkOutEndpointDescriptor(&value));
         return Windows::Devices::Usb::UsbBulkOutEndpointDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::AsInterruptOutEndpointDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor) consume_Windows_Devices_Usb_IUsbEndpointDescriptor<D>::AsInterruptOutEndpointDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptor)->get_AsInterruptOutEndpointDescriptor(&value));
         return Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbEndpointDescriptorStatics<D>::TryParse(Windows::Devices::Usb::UsbDescriptor const& descriptor, Windows::Devices::Usb::UsbEndpointDescriptor& parsed) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Usb_IUsbEndpointDescriptorStatics<D>::TryParse(Windows::Devices::Usb::UsbDescriptor const& descriptor, Windows::Devices::Usb::UsbEndpointDescriptor& parsed) const
     {
-        bool success;
+        bool success{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptorStatics)->TryParse(*(void**)(&descriptor), impl::bind_out(parsed), &success));
         return success;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbEndpointDescriptorStatics<D>::Parse(Windows::Devices::Usb::UsbDescriptor const& descriptor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbEndpointDescriptor) consume_Windows_Devices_Usb_IUsbEndpointDescriptorStatics<D>::Parse(Windows::Devices::Usb::UsbDescriptor const& descriptor) const
     {
         void* parsed{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbEndpointDescriptorStatics)->Parse(*(void**)(&descriptor), &parsed));
         return Windows::Devices::Usb::UsbEndpointDescriptor{ parsed, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterface<D>::BulkInPipes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbBulkInPipe>) consume_Windows_Devices_Usb_IUsbInterface<D>::BulkInPipes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterface)->get_BulkInPipes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbBulkInPipe>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterface<D>::InterruptInPipes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterruptInPipe>) consume_Windows_Devices_Usb_IUsbInterface<D>::InterruptInPipes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterface)->get_InterruptInPipes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterruptInPipe>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterface<D>::BulkOutPipes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbBulkOutPipe>) consume_Windows_Devices_Usb_IUsbInterface<D>::BulkOutPipes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterface)->get_BulkOutPipes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbBulkOutPipe>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterface<D>::InterruptOutPipes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterruptOutPipe>) consume_Windows_Devices_Usb_IUsbInterface<D>::InterruptOutPipes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterface)->get_InterruptOutPipes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterruptOutPipe>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterface<D>::InterfaceSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterfaceSetting>) consume_Windows_Devices_Usb_IUsbInterface<D>::InterfaceSettings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterface)->get_InterfaceSettings(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterfaceSetting>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterface<D>::InterfaceNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbInterface<D>::InterfaceNumber() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterface)->get_InterfaceNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterface<D>::Descriptors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbDescriptor>) consume_Windows_Devices_Usb_IUsbInterface<D>::Descriptors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterface)->get_Descriptors(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::ClassCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::ClassCode() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceDescriptor)->get_ClassCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::SubclassCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::SubclassCode() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceDescriptor)->get_SubclassCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::ProtocolCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::ProtocolCode() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceDescriptor)->get_ProtocolCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::AlternateSettingNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::AlternateSettingNumber() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceDescriptor)->get_AlternateSettingNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::InterfaceNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbInterfaceDescriptor<D>::InterfaceNumber() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceDescriptor)->get_InterfaceNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceDescriptorStatics<D>::TryParse(Windows::Devices::Usb::UsbDescriptor const& descriptor, Windows::Devices::Usb::UsbInterfaceDescriptor& parsed) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Usb_IUsbInterfaceDescriptorStatics<D>::TryParse(Windows::Devices::Usb::UsbDescriptor const& descriptor, Windows::Devices::Usb::UsbInterfaceDescriptor& parsed) const
     {
-        bool success;
+        bool success{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceDescriptorStatics)->TryParse(*(void**)(&descriptor), impl::bind_out(parsed), &success));
         return success;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceDescriptorStatics<D>::Parse(Windows::Devices::Usb::UsbDescriptor const& descriptor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbInterfaceDescriptor) consume_Windows_Devices_Usb_IUsbInterfaceDescriptorStatics<D>::Parse(Windows::Devices::Usb::UsbDescriptor const& descriptor) const
     {
         void* parsed{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceDescriptorStatics)->Parse(*(void**)(&descriptor), &parsed));
         return Windows::Devices::Usb::UsbInterfaceDescriptor{ parsed, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::BulkInEndpoints() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbBulkInEndpointDescriptor>) consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::BulkInEndpoints() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceSetting)->get_BulkInEndpoints(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbBulkInEndpointDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::InterruptInEndpoints() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>) consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::InterruptInEndpoints() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceSetting)->get_InterruptInEndpoints(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::BulkOutEndpoints() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>) consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::BulkOutEndpoints() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceSetting)->get_BulkOutEndpoints(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::InterruptOutEndpoints() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>) consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::InterruptOutEndpoints() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceSetting)->get_InterruptOutEndpoints(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::Selected() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::Selected() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceSetting)->get_Selected(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::SelectSettingAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::SelectSettingAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceSetting)->SelectSettingAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::InterfaceDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbInterfaceDescriptor) consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::InterfaceDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceSetting)->get_InterfaceDescriptor(&value));
         return Windows::Devices::Usb::UsbInterfaceDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::Descriptors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbDescriptor>) consume_Windows_Devices_Usb_IUsbInterfaceSetting<D>::Descriptors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterfaceSetting)->get_Descriptors(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Usb::UsbDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptInEndpointDescriptor<D>::MaxPacketSize() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbInterruptInEndpointDescriptor<D>::MaxPacketSize() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor)->get_MaxPacketSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptInEndpointDescriptor<D>::EndpointNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbInterruptInEndpointDescriptor<D>::EndpointNumber() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor)->get_EndpointNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptInEndpointDescriptor<D>::Interval() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Usb_IUsbInterruptInEndpointDescriptor<D>::Interval() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor)->get_Interval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptInEndpointDescriptor<D>::Pipe() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbInterruptInPipe) consume_Windows_Devices_Usb_IUsbInterruptInEndpointDescriptor<D>::Pipe() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor)->get_Pipe(&value));
         return Windows::Devices::Usb::UsbInterruptInPipe{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptInEventArgs<D>::InterruptData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Usb_IUsbInterruptInEventArgs<D>::InterruptData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptInEventArgs)->get_InterruptData(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptInPipe<D>::EndpointDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbInterruptInEndpointDescriptor) consume_Windows_Devices_Usb_IUsbInterruptInPipe<D>::EndpointDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptInPipe)->get_EndpointDescriptor(&value));
         return Windows::Devices::Usb::UsbInterruptInEndpointDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptInPipe<D>::ClearStallAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_Usb_IUsbInterruptInPipe<D>::ClearStallAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptInPipe)->ClearStallAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptInPipe<D>::DataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::Usb::UsbInterruptInPipe, Windows::Devices::Usb::UsbInterruptInEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Usb_IUsbInterruptInPipe<D>::DataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::Usb::UsbInterruptInPipe, Windows::Devices::Usb::UsbInterruptInEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptInPipe)->add_DataReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -656,118 +656,119 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DataReceived_revoker>(this, DataReceived(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptInPipe<D>::DataReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbInterruptInPipe<D>::DataReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptInPipe)->remove_DataReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptOutEndpointDescriptor<D>::MaxPacketSize() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbInterruptOutEndpointDescriptor<D>::MaxPacketSize() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor)->get_MaxPacketSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptOutEndpointDescriptor<D>::EndpointNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbInterruptOutEndpointDescriptor<D>::EndpointNumber() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor)->get_EndpointNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptOutEndpointDescriptor<D>::Interval() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Usb_IUsbInterruptOutEndpointDescriptor<D>::Interval() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor)->get_Interval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptOutEndpointDescriptor<D>::Pipe() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbInterruptOutPipe) consume_Windows_Devices_Usb_IUsbInterruptOutEndpointDescriptor<D>::Pipe() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor)->get_Pipe(&value));
         return Windows::Devices::Usb::UsbInterruptOutPipe{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::EndpointDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor) consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::EndpointDescriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutPipe)->get_EndpointDescriptor(&value));
         return Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::ClearStallAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::ClearStallAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutPipe)->ClearStallAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::WriteOptions(Windows::Devices::Usb::UsbWriteOptions const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::WriteOptions(Windows::Devices::Usb::UsbWriteOptions const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutPipe)->put_WriteOptions(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::WriteOptions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbWriteOptions) consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::WriteOptions() const
     {
-        Windows::Devices::Usb::UsbWriteOptions value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutPipe)->get_WriteOptions(put_abi(value)));
+        Windows::Devices::Usb::UsbWriteOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutPipe)->get_WriteOptions(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::OutputStream() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IOutputStream) consume_Windows_Devices_Usb_IUsbInterruptOutPipe<D>::OutputStream() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbInterruptOutPipe)->get_OutputStream(&value));
         return Windows::Storage::Streams::IOutputStream{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::RequestType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbControlRequestType) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::RequestType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->get_RequestType(&value));
         return Windows::Devices::Usb::UsbControlRequestType{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::RequestType(Windows::Devices::Usb::UsbControlRequestType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::RequestType(Windows::Devices::Usb::UsbControlRequestType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->put_RequestType(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Request() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->get_Request(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Request(uint8_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Request(uint8_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->put_Request(value));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Value() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->get_Value(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Value(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Value(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->put_Value(value));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Index() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Index() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->get_Index(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Index(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Index(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->put_Index(value));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Length() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Length() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->get_Length(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Length(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Usb_IUsbSetupPacket<D>::Length(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacket)->put_Length(value));
     }
-    template <typename D> auto consume_Windows_Devices_Usb_IUsbSetupPacketFactory<D>::CreateWithEightByteBuffer(Windows::Storage::Streams::IBuffer const& eightByteBuffer) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Usb::UsbSetupPacket) consume_Windows_Devices_Usb_IUsbSetupPacketFactory<D>::CreateWithEightByteBuffer(Windows::Storage::Streams::IBuffer const& eightByteBuffer) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Usb::IUsbSetupPacketFactory)->CreateWithEightByteBuffer(*(void**)(&eightByteBuffer), &value));
         return Windows::Devices::Usb::UsbSetupPacket{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbBulkInEndpointDescriptor> : produce_base<D, Windows::Devices::Usb::IUsbBulkInEndpointDescriptor>
     {
@@ -794,6 +795,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbBulkInPipe> : produce_base<D, Windows::Devices::Usb::IUsbBulkInPipe>
     {
@@ -850,6 +853,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor> : produce_base<D, Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor>
     {
@@ -876,6 +881,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbBulkOutPipe> : produce_base<D, Windows::Devices::Usb::IUsbBulkOutPipe>
     {
@@ -918,6 +925,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbConfiguration> : produce_base<D, Windows::Devices::Usb::IUsbConfiguration>
     {
@@ -946,6 +955,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbConfigurationDescriptor> : produce_base<D, Windows::Devices::Usb::IUsbConfigurationDescriptor>
     {
@@ -978,6 +989,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbConfigurationDescriptorStatics> : produce_base<D, Windows::Devices::Usb::IUsbConfigurationDescriptorStatics>
     {
@@ -998,6 +1011,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbControlRequestType> : produce_base<D, Windows::Devices::Usb::IUsbControlRequestType>
     {
@@ -1058,6 +1073,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbDescriptor> : produce_base<D, Windows::Devices::Usb::IUsbDescriptor>
     {
@@ -1083,6 +1100,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbDevice> : produce_base<D, Windows::Devices::Usb::IUsbDevice>
     {
@@ -1143,6 +1162,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbDeviceClass> : produce_base<D, Windows::Devices::Usb::IUsbDeviceClass>
     {
@@ -1191,10 +1212,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbDeviceClasses> : produce_base<D, Windows::Devices::Usb::IUsbDeviceClasses>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbDeviceClassesStatics> : produce_base<D, Windows::Devices::Usb::IUsbDeviceClassesStatics>
     {
@@ -1271,6 +1296,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbDeviceDescriptor> : produce_base<D, Windows::Devices::Usb::IUsbDeviceDescriptor>
     {
@@ -1317,6 +1344,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbDeviceStatics> : produce_base<D, Windows::Devices::Usb::IUsbDeviceStatics>
     {
@@ -1361,6 +1390,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbEndpointDescriptor> : produce_base<D, Windows::Devices::Usb::IUsbEndpointDescriptor>
     {
@@ -1418,6 +1449,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbEndpointDescriptorStatics> : produce_base<D, Windows::Devices::Usb::IUsbEndpointDescriptorStatics>
     {
@@ -1438,6 +1471,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbInterface> : produce_base<D, Windows::Devices::Usb::IUsbInterface>
     {
@@ -1497,6 +1532,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbInterfaceDescriptor> : produce_base<D, Windows::Devices::Usb::IUsbInterfaceDescriptor>
     {
@@ -1536,6 +1573,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbInterfaceDescriptorStatics> : produce_base<D, Windows::Devices::Usb::IUsbInterfaceDescriptorStatics>
     {
@@ -1556,6 +1595,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbInterfaceSetting> : produce_base<D, Windows::Devices::Usb::IUsbInterfaceSetting>
     {
@@ -1623,6 +1664,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor> : produce_base<D, Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor>
     {
@@ -1657,6 +1700,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbInterruptInEventArgs> : produce_base<D, Windows::Devices::Usb::IUsbInterruptInEventArgs>
     {
@@ -1669,6 +1714,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbInterruptInPipe> : produce_base<D, Windows::Devices::Usb::IUsbInterruptInPipe>
     {
@@ -1703,6 +1750,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor> : produce_base<D, Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor>
     {
@@ -1737,6 +1786,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbInterruptOutPipe> : produce_base<D, Windows::Devices::Usb::IUsbInterruptOutPipe>
     {
@@ -1779,6 +1830,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbSetupPacket> : produce_base<D, Windows::Devices::Usb::IUsbSetupPacket>
     {
@@ -1854,6 +1907,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Usb::IUsbSetupPacketFactory> : produce_base<D, Windows::Devices::Usb::IUsbSetupPacketFactory>
     {
@@ -1866,8 +1921,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Usb
+WINRT_EXPORT namespace winrt::Windows::Devices::Usb
 {
     constexpr auto operator|(UsbReadOptions const left, UsbReadOptions const right) noexcept
     {
@@ -1933,152 +1989,154 @@ namespace winrt::Windows::Devices::Usb
     }
     inline auto UsbConfigurationDescriptor::TryParse(Windows::Devices::Usb::UsbDescriptor const& descriptor, Windows::Devices::Usb::UsbConfigurationDescriptor& parsed)
     {
-        return impl::call_factory<UsbConfigurationDescriptor, Windows::Devices::Usb::IUsbConfigurationDescriptorStatics>([&](auto&& f) { return f.TryParse(descriptor, parsed); });
+        return impl::call_factory<UsbConfigurationDescriptor, IUsbConfigurationDescriptorStatics>([&](IUsbConfigurationDescriptorStatics const& f) { return f.TryParse(descriptor, parsed); });
     }
     inline auto UsbConfigurationDescriptor::Parse(Windows::Devices::Usb::UsbDescriptor const& descriptor)
     {
-        return impl::call_factory<UsbConfigurationDescriptor, Windows::Devices::Usb::IUsbConfigurationDescriptorStatics>([&](auto&& f) { return f.Parse(descriptor); });
+        return impl::call_factory<UsbConfigurationDescriptor, IUsbConfigurationDescriptorStatics>([&](IUsbConfigurationDescriptorStatics const& f) { return f.Parse(descriptor); });
     }
     inline UsbControlRequestType::UsbControlRequestType() :
-        UsbControlRequestType(impl::call_factory<UsbControlRequestType>([](auto&& f) { return f.template ActivateInstance<UsbControlRequestType>(); }))
+        UsbControlRequestType(impl::call_factory_cast<UsbControlRequestType(*)(Windows::Foundation::IActivationFactory const&), UsbControlRequestType>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<UsbControlRequestType>(); }))
     {
     }
     inline auto UsbDevice::GetDeviceSelector(uint32_t vendorId, uint32_t productId, winrt::guid const& winUsbInterfaceClass)
     {
-        return impl::call_factory<UsbDevice, Windows::Devices::Usb::IUsbDeviceStatics>([&](auto&& f) { return f.GetDeviceSelector(vendorId, productId, winUsbInterfaceClass); });
+        return impl::call_factory<UsbDevice, IUsbDeviceStatics>([&](IUsbDeviceStatics const& f) { return f.GetDeviceSelector(vendorId, productId, winUsbInterfaceClass); });
     }
     inline auto UsbDevice::GetDeviceSelector(winrt::guid const& winUsbInterfaceClass)
     {
-        return impl::call_factory<UsbDevice, Windows::Devices::Usb::IUsbDeviceStatics>([&](auto&& f) { return f.GetDeviceSelector(winUsbInterfaceClass); });
+        return impl::call_factory<UsbDevice, IUsbDeviceStatics>([&](IUsbDeviceStatics const& f) { return f.GetDeviceSelector(winUsbInterfaceClass); });
     }
     inline auto UsbDevice::GetDeviceSelector(uint32_t vendorId, uint32_t productId)
     {
-        return impl::call_factory<UsbDevice, Windows::Devices::Usb::IUsbDeviceStatics>([&](auto&& f) { return f.GetDeviceSelector(vendorId, productId); });
+        return impl::call_factory<UsbDevice, IUsbDeviceStatics>([&](IUsbDeviceStatics const& f) { return f.GetDeviceSelector(vendorId, productId); });
     }
     inline auto UsbDevice::GetDeviceClassSelector(Windows::Devices::Usb::UsbDeviceClass const& usbClass)
     {
-        return impl::call_factory<UsbDevice, Windows::Devices::Usb::IUsbDeviceStatics>([&](auto&& f) { return f.GetDeviceClassSelector(usbClass); });
+        return impl::call_factory<UsbDevice, IUsbDeviceStatics>([&](IUsbDeviceStatics const& f) { return f.GetDeviceClassSelector(usbClass); });
     }
     inline auto UsbDevice::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<UsbDevice, Windows::Devices::Usb::IUsbDeviceStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<UsbDevice, IUsbDeviceStatics>([&](IUsbDeviceStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline UsbDeviceClass::UsbDeviceClass() :
-        UsbDeviceClass(impl::call_factory<UsbDeviceClass>([](auto&& f) { return f.template ActivateInstance<UsbDeviceClass>(); }))
+        UsbDeviceClass(impl::call_factory_cast<UsbDeviceClass(*)(Windows::Foundation::IActivationFactory const&), UsbDeviceClass>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<UsbDeviceClass>(); }))
     {
     }
     inline auto UsbDeviceClasses::CdcControl()
     {
-        return impl::call_factory<UsbDeviceClasses, Windows::Devices::Usb::IUsbDeviceClassesStatics>([&](auto&& f) { return f.CdcControl(); });
+        return impl::call_factory_cast<Windows::Devices::Usb::UsbDeviceClass(*)(IUsbDeviceClassesStatics const&), UsbDeviceClasses, IUsbDeviceClassesStatics>([](IUsbDeviceClassesStatics const& f) { return f.CdcControl(); });
     }
     inline auto UsbDeviceClasses::Physical()
     {
-        return impl::call_factory<UsbDeviceClasses, Windows::Devices::Usb::IUsbDeviceClassesStatics>([&](auto&& f) { return f.Physical(); });
+        return impl::call_factory_cast<Windows::Devices::Usb::UsbDeviceClass(*)(IUsbDeviceClassesStatics const&), UsbDeviceClasses, IUsbDeviceClassesStatics>([](IUsbDeviceClassesStatics const& f) { return f.Physical(); });
     }
     inline auto UsbDeviceClasses::PersonalHealthcare()
     {
-        return impl::call_factory<UsbDeviceClasses, Windows::Devices::Usb::IUsbDeviceClassesStatics>([&](auto&& f) { return f.PersonalHealthcare(); });
+        return impl::call_factory_cast<Windows::Devices::Usb::UsbDeviceClass(*)(IUsbDeviceClassesStatics const&), UsbDeviceClasses, IUsbDeviceClassesStatics>([](IUsbDeviceClassesStatics const& f) { return f.PersonalHealthcare(); });
     }
     inline auto UsbDeviceClasses::ActiveSync()
     {
-        return impl::call_factory<UsbDeviceClasses, Windows::Devices::Usb::IUsbDeviceClassesStatics>([&](auto&& f) { return f.ActiveSync(); });
+        return impl::call_factory_cast<Windows::Devices::Usb::UsbDeviceClass(*)(IUsbDeviceClassesStatics const&), UsbDeviceClasses, IUsbDeviceClassesStatics>([](IUsbDeviceClassesStatics const& f) { return f.ActiveSync(); });
     }
     inline auto UsbDeviceClasses::PalmSync()
     {
-        return impl::call_factory<UsbDeviceClasses, Windows::Devices::Usb::IUsbDeviceClassesStatics>([&](auto&& f) { return f.PalmSync(); });
+        return impl::call_factory_cast<Windows::Devices::Usb::UsbDeviceClass(*)(IUsbDeviceClassesStatics const&), UsbDeviceClasses, IUsbDeviceClassesStatics>([](IUsbDeviceClassesStatics const& f) { return f.PalmSync(); });
     }
     inline auto UsbDeviceClasses::DeviceFirmwareUpdate()
     {
-        return impl::call_factory<UsbDeviceClasses, Windows::Devices::Usb::IUsbDeviceClassesStatics>([&](auto&& f) { return f.DeviceFirmwareUpdate(); });
+        return impl::call_factory_cast<Windows::Devices::Usb::UsbDeviceClass(*)(IUsbDeviceClassesStatics const&), UsbDeviceClasses, IUsbDeviceClassesStatics>([](IUsbDeviceClassesStatics const& f) { return f.DeviceFirmwareUpdate(); });
     }
     inline auto UsbDeviceClasses::Irda()
     {
-        return impl::call_factory<UsbDeviceClasses, Windows::Devices::Usb::IUsbDeviceClassesStatics>([&](auto&& f) { return f.Irda(); });
+        return impl::call_factory_cast<Windows::Devices::Usb::UsbDeviceClass(*)(IUsbDeviceClassesStatics const&), UsbDeviceClasses, IUsbDeviceClassesStatics>([](IUsbDeviceClassesStatics const& f) { return f.Irda(); });
     }
     inline auto UsbDeviceClasses::Measurement()
     {
-        return impl::call_factory<UsbDeviceClasses, Windows::Devices::Usb::IUsbDeviceClassesStatics>([&](auto&& f) { return f.Measurement(); });
+        return impl::call_factory_cast<Windows::Devices::Usb::UsbDeviceClass(*)(IUsbDeviceClassesStatics const&), UsbDeviceClasses, IUsbDeviceClassesStatics>([](IUsbDeviceClassesStatics const& f) { return f.Measurement(); });
     }
     inline auto UsbDeviceClasses::VendorSpecific()
     {
-        return impl::call_factory<UsbDeviceClasses, Windows::Devices::Usb::IUsbDeviceClassesStatics>([&](auto&& f) { return f.VendorSpecific(); });
+        return impl::call_factory_cast<Windows::Devices::Usb::UsbDeviceClass(*)(IUsbDeviceClassesStatics const&), UsbDeviceClasses, IUsbDeviceClassesStatics>([](IUsbDeviceClassesStatics const& f) { return f.VendorSpecific(); });
     }
     inline auto UsbEndpointDescriptor::TryParse(Windows::Devices::Usb::UsbDescriptor const& descriptor, Windows::Devices::Usb::UsbEndpointDescriptor& parsed)
     {
-        return impl::call_factory<UsbEndpointDescriptor, Windows::Devices::Usb::IUsbEndpointDescriptorStatics>([&](auto&& f) { return f.TryParse(descriptor, parsed); });
+        return impl::call_factory<UsbEndpointDescriptor, IUsbEndpointDescriptorStatics>([&](IUsbEndpointDescriptorStatics const& f) { return f.TryParse(descriptor, parsed); });
     }
     inline auto UsbEndpointDescriptor::Parse(Windows::Devices::Usb::UsbDescriptor const& descriptor)
     {
-        return impl::call_factory<UsbEndpointDescriptor, Windows::Devices::Usb::IUsbEndpointDescriptorStatics>([&](auto&& f) { return f.Parse(descriptor); });
+        return impl::call_factory<UsbEndpointDescriptor, IUsbEndpointDescriptorStatics>([&](IUsbEndpointDescriptorStatics const& f) { return f.Parse(descriptor); });
     }
     inline auto UsbInterfaceDescriptor::TryParse(Windows::Devices::Usb::UsbDescriptor const& descriptor, Windows::Devices::Usb::UsbInterfaceDescriptor& parsed)
     {
-        return impl::call_factory<UsbInterfaceDescriptor, Windows::Devices::Usb::IUsbInterfaceDescriptorStatics>([&](auto&& f) { return f.TryParse(descriptor, parsed); });
+        return impl::call_factory<UsbInterfaceDescriptor, IUsbInterfaceDescriptorStatics>([&](IUsbInterfaceDescriptorStatics const& f) { return f.TryParse(descriptor, parsed); });
     }
     inline auto UsbInterfaceDescriptor::Parse(Windows::Devices::Usb::UsbDescriptor const& descriptor)
     {
-        return impl::call_factory<UsbInterfaceDescriptor, Windows::Devices::Usb::IUsbInterfaceDescriptorStatics>([&](auto&& f) { return f.Parse(descriptor); });
+        return impl::call_factory<UsbInterfaceDescriptor, IUsbInterfaceDescriptorStatics>([&](IUsbInterfaceDescriptorStatics const& f) { return f.Parse(descriptor); });
     }
     inline UsbSetupPacket::UsbSetupPacket() :
-        UsbSetupPacket(impl::call_factory<UsbSetupPacket>([](auto&& f) { return f.template ActivateInstance<UsbSetupPacket>(); }))
+        UsbSetupPacket(impl::call_factory_cast<UsbSetupPacket(*)(Windows::Foundation::IActivationFactory const&), UsbSetupPacket>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<UsbSetupPacket>(); }))
     {
     }
     inline UsbSetupPacket::UsbSetupPacket(Windows::Storage::Streams::IBuffer const& eightByteBuffer) :
-        UsbSetupPacket(impl::call_factory<UsbSetupPacket, Windows::Devices::Usb::IUsbSetupPacketFactory>([&](auto&& f) { return f.CreateWithEightByteBuffer(eightByteBuffer); }))
+        UsbSetupPacket(impl::call_factory<UsbSetupPacket, IUsbSetupPacketFactory>([&](IUsbSetupPacketFactory const& f) { return f.CreateWithEightByteBuffer(eightByteBuffer); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbBulkInEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbBulkInEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbBulkInPipe> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbBulkInPipe> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbBulkOutPipe> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbBulkOutPipe> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbConfigurationDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbConfigurationDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbConfigurationDescriptorStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbConfigurationDescriptorStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbControlRequestType> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbControlRequestType> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbDevice> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceClass> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbDeviceClass> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceClasses> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbDeviceClasses> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceClassesStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbDeviceClassesStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbDeviceDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbDeviceStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbEndpointDescriptorStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbEndpointDescriptorStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterface> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbInterface> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterfaceDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbInterfaceDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterfaceDescriptorStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbInterfaceDescriptorStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterfaceSetting> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbInterfaceSetting> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptInEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbInterruptInEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptInPipe> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbInterruptInPipe> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptOutPipe> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbInterruptOutPipe> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbSetupPacket> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbSetupPacket> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::IUsbSetupPacketFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::IUsbSetupPacketFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbBulkInPipe> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbBulkInPipe> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbBulkOutPipe> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbBulkOutPipe> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbControlRequestType> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbControlRequestType> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbDevice> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbDeviceClass> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbDeviceClass> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbDeviceClasses> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbDeviceClasses> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbDeviceDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbDeviceDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterface> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbInterface> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterfaceSetting> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbInterfaceSetting> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptInPipe> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbInterruptInPipe> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptOutPipe> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbInterruptOutPipe> {};
-    template<> struct hash<winrt::Windows::Devices::Usb::UsbSetupPacket> : winrt::impl::hash_base<winrt::Windows::Devices::Usb::UsbSetupPacket> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbBulkInEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbBulkInPipe> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbBulkOutEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbBulkOutPipe> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbConfigurationDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbConfigurationDescriptorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbControlRequestType> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDevice> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceClass> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceClasses> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceClassesStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbDeviceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbEndpointDescriptorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterface> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterfaceDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterfaceDescriptorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterfaceSetting> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptInEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptInEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptInPipe> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptOutEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbInterruptOutPipe> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbSetupPacket> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::IUsbSetupPacketFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbBulkInPipe> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbBulkOutPipe> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbControlRequestType> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbDevice> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbDeviceClass> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbDeviceClasses> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbDeviceDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterface> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterfaceSetting> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptInPipe> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbInterruptOutPipe> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Usb::UsbSetupPacket> : winrt::impl::hash_base {};
+#endif
 }
 #endif

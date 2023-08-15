@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -412,56 +420,67 @@ EXTERN_C const IID IID_IQueryParser;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IQueryParser * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IQueryParser * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IQueryParser * This);
         
+        DECLSPEC_XFGVIRT(IQueryParser, Parse)
         HRESULT ( STDMETHODCALLTYPE *Parse )( 
             __RPC__in IQueryParser * This,
             /* [in] */ __RPC__in LPCWSTR pszInputString,
             /* [in] */ __RPC__in_opt IEnumUnknown *pCustomProperties,
             /* [retval][out] */ __RPC__deref_out_opt IQuerySolution **ppSolution);
         
+        DECLSPEC_XFGVIRT(IQueryParser, SetOption)
         HRESULT ( STDMETHODCALLTYPE *SetOption )( 
             __RPC__in IQueryParser * This,
             /* [in] */ STRUCTURED_QUERY_SINGLE_OPTION option,
             /* [in] */ __RPC__in const PROPVARIANT *pOptionValue);
         
+        DECLSPEC_XFGVIRT(IQueryParser, GetOption)
         HRESULT ( STDMETHODCALLTYPE *GetOption )( 
             __RPC__in IQueryParser * This,
             /* [in] */ STRUCTURED_QUERY_SINGLE_OPTION option,
             /* [retval][out] */ __RPC__out PROPVARIANT *pOptionValue);
         
+        DECLSPEC_XFGVIRT(IQueryParser, SetMultiOption)
         HRESULT ( STDMETHODCALLTYPE *SetMultiOption )( 
             __RPC__in IQueryParser * This,
             /* [in] */ STRUCTURED_QUERY_MULTIOPTION option,
             /* [in] */ __RPC__in LPCWSTR pszOptionKey,
             /* [in] */ __RPC__in const PROPVARIANT *pOptionValue);
         
+        DECLSPEC_XFGVIRT(IQueryParser, GetSchemaProvider)
         HRESULT ( STDMETHODCALLTYPE *GetSchemaProvider )( 
             __RPC__in IQueryParser * This,
             /* [retval][out] */ __RPC__deref_out_opt ISchemaProvider **ppSchemaProvider);
         
+        DECLSPEC_XFGVIRT(IQueryParser, RestateToString)
         HRESULT ( STDMETHODCALLTYPE *RestateToString )( 
             __RPC__in IQueryParser * This,
             /* [in] */ __RPC__in_opt ICondition *pCondition,
             /* [in] */ BOOL fUseEnglish,
             /* [out] */ __RPC__deref_out_opt LPWSTR *ppszQueryString);
         
+        DECLSPEC_XFGVIRT(IQueryParser, ParsePropertyValue)
         HRESULT ( STDMETHODCALLTYPE *ParsePropertyValue )( 
             __RPC__in IQueryParser * This,
             /* [in] */ __RPC__in LPCWSTR pszPropertyName,
             /* [in] */ __RPC__in LPCWSTR pszInputString,
             /* [retval][out] */ __RPC__deref_out_opt IQuerySolution **ppSolution);
         
+        DECLSPEC_XFGVIRT(IQueryParser, RestatePropertyValueToString)
         HRESULT ( STDMETHODCALLTYPE *RestatePropertyValueToString )( 
             __RPC__in IQueryParser * This,
             /* [in] */ __RPC__in_opt ICondition *pCondition,
@@ -583,24 +602,29 @@ EXTERN_C const IID IID_IConditionFactory;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IConditionFactory * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IConditionFactory * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IConditionFactory * This);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, MakeNot)
         HRESULT ( STDMETHODCALLTYPE *MakeNot )( 
             __RPC__in IConditionFactory * This,
             /* [in] */ __RPC__in_opt ICondition *pcSub,
             /* [in] */ BOOL fSimplify,
             /* [retval][out] */ __RPC__deref_out_opt ICondition **ppcResult);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, MakeAndOr)
         HRESULT ( STDMETHODCALLTYPE *MakeAndOr )( 
             __RPC__in IConditionFactory * This,
             /* [in] */ CONDITION_TYPE ct,
@@ -608,6 +632,7 @@ EXTERN_C const IID IID_IConditionFactory;
             /* [in] */ BOOL fSimplify,
             /* [retval][out] */ __RPC__deref_out_opt ICondition **ppcResult);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, MakeLeaf)
         HRESULT ( STDMETHODCALLTYPE *MakeLeaf )( 
             __RPC__in IConditionFactory * This,
             /* [unique][in] */ __RPC__in_opt LPCWSTR pszPropertyName,
@@ -620,6 +645,7 @@ EXTERN_C const IID IID_IConditionFactory;
             /* [in] */ BOOL fExpand,
             /* [retval][out] */ __RPC__deref_out_opt ICondition **ppcResult);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, Resolve)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Resolve )( 
             IConditionFactory * This,
             /* [annotation][in] */ 
@@ -721,24 +747,29 @@ EXTERN_C const IID IID_IQuerySolution;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IQuerySolution * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IQuerySolution * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IQuerySolution * This);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, MakeNot)
         HRESULT ( STDMETHODCALLTYPE *MakeNot )( 
             __RPC__in IQuerySolution * This,
             /* [in] */ __RPC__in_opt ICondition *pcSub,
             /* [in] */ BOOL fSimplify,
             /* [retval][out] */ __RPC__deref_out_opt ICondition **ppcResult);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, MakeAndOr)
         HRESULT ( STDMETHODCALLTYPE *MakeAndOr )( 
             __RPC__in IQuerySolution * This,
             /* [in] */ CONDITION_TYPE ct,
@@ -746,6 +777,7 @@ EXTERN_C const IID IID_IQuerySolution;
             /* [in] */ BOOL fSimplify,
             /* [retval][out] */ __RPC__deref_out_opt ICondition **ppcResult);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, MakeLeaf)
         HRESULT ( STDMETHODCALLTYPE *MakeLeaf )( 
             __RPC__in IQuerySolution * This,
             /* [unique][in] */ __RPC__in_opt LPCWSTR pszPropertyName,
@@ -758,6 +790,7 @@ EXTERN_C const IID IID_IQuerySolution;
             /* [in] */ BOOL fExpand,
             /* [retval][out] */ __RPC__deref_out_opt ICondition **ppcResult);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, Resolve)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Resolve )( 
             IQuerySolution * This,
             /* [annotation][in] */ 
@@ -769,6 +802,7 @@ EXTERN_C const IID IID_IQuerySolution;
             /* [annotation][retval][out] */ 
             _Out_  ICondition **ppcResolved);
         
+        DECLSPEC_XFGVIRT(IQuerySolution, GetQuery)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetQuery )( 
             IQuerySolution * This,
             /* [annotation][out] */ 
@@ -776,11 +810,13 @@ EXTERN_C const IID IID_IQuerySolution;
             /* [annotation][out] */ 
             _Out_opt_  IEntity **ppMainType);
         
+        DECLSPEC_XFGVIRT(IQuerySolution, GetErrors)
         HRESULT ( STDMETHODCALLTYPE *GetErrors )( 
             __RPC__in IQuerySolution * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][retval][out] */ __RPC__deref_out_opt void **ppParseErrors);
         
+        DECLSPEC_XFGVIRT(IQuerySolution, GetLexicalData)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetLexicalData )( 
             IQuerySolution * This,
             /* [annotation][out] */ 
@@ -973,24 +1009,29 @@ EXTERN_C const IID IID_IConditionFactory2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IConditionFactory2 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IConditionFactory2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IConditionFactory2 * This);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, MakeNot)
         HRESULT ( STDMETHODCALLTYPE *MakeNot )( 
             IConditionFactory2 * This,
             /* [in] */ ICondition *pcSub,
             /* [in] */ BOOL fSimplify,
             /* [retval][out] */ ICondition **ppcResult);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, MakeAndOr)
         HRESULT ( STDMETHODCALLTYPE *MakeAndOr )( 
             IConditionFactory2 * This,
             /* [in] */ CONDITION_TYPE ct,
@@ -998,6 +1039,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ BOOL fSimplify,
             /* [retval][out] */ ICondition **ppcResult);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, MakeLeaf)
         HRESULT ( STDMETHODCALLTYPE *MakeLeaf )( 
             IConditionFactory2 * This,
             /* [unique][in] */ LPCWSTR pszPropertyName,
@@ -1010,6 +1052,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ BOOL fExpand,
             /* [retval][out] */ ICondition **ppcResult);
         
+        DECLSPEC_XFGVIRT(IConditionFactory, Resolve)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Resolve )( 
             IConditionFactory2 * This,
             /* [annotation][in] */ 
@@ -1021,6 +1064,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [annotation][retval][out] */ 
             _Out_  ICondition **ppcResolved);
         
+        DECLSPEC_XFGVIRT(IConditionFactory2, CreateTrueFalse)
         HRESULT ( STDMETHODCALLTYPE *CreateTrueFalse )( 
             IConditionFactory2 * This,
             /* [in] */ BOOL fVal,
@@ -1028,6 +1072,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ REFIID riid,
             /* [iid_is][out] */ void **ppv);
         
+        DECLSPEC_XFGVIRT(IConditionFactory2, CreateNegation)
         HRESULT ( STDMETHODCALLTYPE *CreateNegation )( 
             IConditionFactory2 * This,
             /* [in] */ ICondition *pcSub,
@@ -1035,6 +1080,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ REFIID riid,
             /* [iid_is][out] */ void **ppv);
         
+        DECLSPEC_XFGVIRT(IConditionFactory2, CreateCompoundFromObjectArray)
         HRESULT ( STDMETHODCALLTYPE *CreateCompoundFromObjectArray )( 
             IConditionFactory2 * This,
             /* [in] */ CONDITION_TYPE ct,
@@ -1044,6 +1090,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ REFIID riid,
             /* [iid_is][out] */ void **ppv);
         
+        DECLSPEC_XFGVIRT(IConditionFactory2, CreateCompoundFromArray)
         HRESULT ( STDMETHODCALLTYPE *CreateCompoundFromArray )( 
             IConditionFactory2 * This,
             /* [in] */ CONDITION_TYPE ct,
@@ -1053,6 +1100,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ REFIID riid,
             /* [iid_is][out] */ void **ppv);
         
+        DECLSPEC_XFGVIRT(IConditionFactory2, CreateStringLeaf)
         HRESULT ( STDMETHODCALLTYPE *CreateStringLeaf )( 
             IConditionFactory2 * This,
             /* [in] */ REFPROPERTYKEY propkey,
@@ -1064,6 +1112,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ REFIID riid,
             /* [iid_is][out] */ void **ppv);
         
+        DECLSPEC_XFGVIRT(IConditionFactory2, CreateIntegerLeaf)
         HRESULT ( STDMETHODCALLTYPE *CreateIntegerLeaf )( 
             IConditionFactory2 * This,
             /* [in] */ REFPROPERTYKEY propkey,
@@ -1073,6 +1122,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ REFIID riid,
             /* [iid_is][out] */ void **ppv);
         
+        DECLSPEC_XFGVIRT(IConditionFactory2, CreateBooleanLeaf)
         HRESULT ( STDMETHODCALLTYPE *CreateBooleanLeaf )( 
             IConditionFactory2 * This,
             /* [in] */ REFPROPERTYKEY propkey,
@@ -1082,6 +1132,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ REFIID riid,
             /* [iid_is][out] */ void **ppv);
         
+        DECLSPEC_XFGVIRT(IConditionFactory2, CreateLeaf)
         HRESULT ( STDMETHODCALLTYPE *CreateLeaf )( 
             IConditionFactory2 * This,
             /* [in] */ REFPROPERTYKEY propkey,
@@ -1101,6 +1152,7 @@ EXTERN_C const IID IID_IConditionFactory2;
             /* [in] */ REFIID riid,
             /* [iid_is][out] */ void **ppv);
         
+        DECLSPEC_XFGVIRT(IConditionFactory2, ResolveCondition)
         HRESULT ( STDMETHODCALLTYPE *ResolveCondition )( 
             IConditionFactory2 * This,
             /* [in] */ ICondition *pc,
@@ -1238,22 +1290,27 @@ EXTERN_C const IID IID_IConditionGenerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IConditionGenerator * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IConditionGenerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IConditionGenerator * This);
         
+        DECLSPEC_XFGVIRT(IConditionGenerator, Initialize)
         HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             __RPC__in IConditionGenerator * This,
             /* [in] */ __RPC__in_opt ISchemaProvider *pSchemaProvider);
         
+        DECLSPEC_XFGVIRT(IConditionGenerator, RecognizeNamedEntities)
         HRESULT ( STDMETHODCALLTYPE *RecognizeNamedEntities )( 
             __RPC__in IConditionGenerator * This,
             /* [in] */ __RPC__in LPCWSTR pszInputString,
@@ -1261,6 +1318,7 @@ EXTERN_C const IID IID_IConditionGenerator;
             /* [in] */ __RPC__in_opt ITokenCollection *pTokenCollection,
             /* [out][in] */ __RPC__inout_opt INamedEntityCollector *pNamedEntities);
         
+        DECLSPEC_XFGVIRT(IConditionGenerator, GenerateForLeaf)
         HRESULT ( STDMETHODCALLTYPE *GenerateForLeaf )( 
             __RPC__in IConditionGenerator * This,
             /* [in] */ __RPC__in_opt IConditionFactory *pConditionFactory,
@@ -1276,6 +1334,7 @@ EXTERN_C const IID IID_IConditionGenerator;
             /* [out] */ __RPC__out BOOL *pNoStringQuery,
             /* [retval][out] */ __RPC__deref_out_opt ICondition **ppQueryExpression);
         
+        DECLSPEC_XFGVIRT(IConditionGenerator, DefaultPhrase)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *DefaultPhrase )( 
             IConditionGenerator * This,
             /* [unique][in] */ LPCWSTR pszValueType,
@@ -1360,18 +1419,22 @@ EXTERN_C const IID IID_IInterval;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInterval * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInterval * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInterval * This);
         
+        DECLSPEC_XFGVIRT(IInterval, GetLimits)
         HRESULT ( STDMETHODCALLTYPE *GetLimits )( 
             __RPC__in IInterval * This,
             /* [out] */ __RPC__out INTERVAL_LIMIT_KIND *pilkLower,
@@ -1446,18 +1509,22 @@ EXTERN_C const IID IID_IMetaData;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IMetaData * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IMetaData * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IMetaData * This);
         
+        DECLSPEC_XFGVIRT(IMetaData, GetData)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetData )( 
             IMetaData * This,
             /* [annotation][out] */ 
@@ -1566,52 +1633,63 @@ EXTERN_C const IID IID_IEntity;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEntity * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEntity * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEntity * This);
         
+        DECLSPEC_XFGVIRT(IEntity, Name)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Name )( 
             IEntity * This,
             /* [retval][annotation][out] */ 
             _Outptr_opt_  LPWSTR *ppszName);
         
+        DECLSPEC_XFGVIRT(IEntity, Base)
         HRESULT ( STDMETHODCALLTYPE *Base )( 
             __RPC__in IEntity * This,
             /* [retval][out] */ __RPC__deref_out_opt IEntity **pBaseEntity);
         
+        DECLSPEC_XFGVIRT(IEntity, Relationships)
         HRESULT ( STDMETHODCALLTYPE *Relationships )( 
             __RPC__in IEntity * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][retval][out] */ __RPC__deref_out_opt void **pRelationships);
         
+        DECLSPEC_XFGVIRT(IEntity, GetRelationship)
         HRESULT ( STDMETHODCALLTYPE *GetRelationship )( 
             __RPC__in IEntity * This,
             /* [in] */ __RPC__in LPCWSTR pszRelationName,
             /* [retval][out] */ __RPC__deref_out_opt IRelationship **pRelationship);
         
+        DECLSPEC_XFGVIRT(IEntity, MetaData)
         HRESULT ( STDMETHODCALLTYPE *MetaData )( 
             __RPC__in IEntity * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][retval][out] */ __RPC__deref_out_opt void **pMetaData);
         
+        DECLSPEC_XFGVIRT(IEntity, NamedEntities)
         HRESULT ( STDMETHODCALLTYPE *NamedEntities )( 
             __RPC__in IEntity * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][retval][out] */ __RPC__deref_out_opt void **pNamedEntities);
         
+        DECLSPEC_XFGVIRT(IEntity, GetNamedEntity)
         HRESULT ( STDMETHODCALLTYPE *GetNamedEntity )( 
             __RPC__in IEntity * This,
             /* [in] */ __RPC__in LPCWSTR pszValue,
             /* [retval][out] */ __RPC__deref_out_opt INamedEntity **ppNamedEntity);
         
+        DECLSPEC_XFGVIRT(IEntity, DefaultPhrase)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *DefaultPhrase )( 
             IEntity * This,
             /* [retval][annotation][out] */ 
@@ -1717,36 +1795,44 @@ EXTERN_C const IID IID_IRelationship;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IRelationship * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IRelationship * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IRelationship * This);
         
+        DECLSPEC_XFGVIRT(IRelationship, Name)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Name )( 
             IRelationship * This,
             /* [retval][annotation][out] */ 
             _Outptr_opt_  LPWSTR *ppszName);
         
+        DECLSPEC_XFGVIRT(IRelationship, IsReal)
         HRESULT ( STDMETHODCALLTYPE *IsReal )( 
             __RPC__in IRelationship * This,
             /* [retval][out] */ __RPC__out BOOL *pIsReal);
         
+        DECLSPEC_XFGVIRT(IRelationship, Destination)
         HRESULT ( STDMETHODCALLTYPE *Destination )( 
             __RPC__in IRelationship * This,
             /* [retval][out] */ __RPC__deref_out_opt IEntity **pDestinationEntity);
         
+        DECLSPEC_XFGVIRT(IRelationship, MetaData)
         HRESULT ( STDMETHODCALLTYPE *MetaData )( 
             __RPC__in IRelationship * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][retval][out] */ __RPC__deref_out_opt void **pMetaData);
         
+        DECLSPEC_XFGVIRT(IRelationship, DefaultPhrase)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *DefaultPhrase )( 
             IRelationship * This,
             /* [retval][annotation][out] */ 
@@ -1832,22 +1918,27 @@ EXTERN_C const IID IID_INamedEntity;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in INamedEntity * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in INamedEntity * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in INamedEntity * This);
         
+        DECLSPEC_XFGVIRT(INamedEntity, GetValue)
         HRESULT ( STDMETHODCALLTYPE *GetValue )( 
             __RPC__in INamedEntity * This,
             /* [retval][out] */ __RPC__deref_out_opt LPWSTR *ppszValue);
         
+        DECLSPEC_XFGVIRT(INamedEntity, DefaultPhrase)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *DefaultPhrase )( 
             INamedEntity * This,
             /* [retval][annotation][out] */ 
@@ -1947,46 +2038,56 @@ EXTERN_C const IID IID_ISchemaProvider;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISchemaProvider * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISchemaProvider * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISchemaProvider * This);
         
+        DECLSPEC_XFGVIRT(ISchemaProvider, Entities)
         HRESULT ( STDMETHODCALLTYPE *Entities )( 
             __RPC__in ISchemaProvider * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][retval][out] */ __RPC__deref_out_opt void **pEntities);
         
+        DECLSPEC_XFGVIRT(ISchemaProvider, RootEntity)
         HRESULT ( STDMETHODCALLTYPE *RootEntity )( 
             __RPC__in ISchemaProvider * This,
             /* [retval][out] */ __RPC__deref_out_opt IEntity **pRootEntity);
         
+        DECLSPEC_XFGVIRT(ISchemaProvider, GetEntity)
         HRESULT ( STDMETHODCALLTYPE *GetEntity )( 
             __RPC__in ISchemaProvider * This,
             /* [in] */ __RPC__in LPCWSTR pszEntityName,
             /* [retval][out] */ __RPC__deref_out_opt IEntity **pEntity);
         
+        DECLSPEC_XFGVIRT(ISchemaProvider, MetaData)
         HRESULT ( STDMETHODCALLTYPE *MetaData )( 
             __RPC__in ISchemaProvider * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][retval][out] */ __RPC__deref_out_opt void **pMetaData);
         
+        DECLSPEC_XFGVIRT(ISchemaProvider, Localize)
         HRESULT ( STDMETHODCALLTYPE *Localize )( 
             __RPC__in ISchemaProvider * This,
             /* [in] */ LCID lcid,
             /* [in] */ __RPC__in_opt ISchemaLocalizerSupport *pSchemaLocalizerSupport);
         
+        DECLSPEC_XFGVIRT(ISchemaProvider, SaveBinary)
         HRESULT ( STDMETHODCALLTYPE *SaveBinary )( 
             __RPC__in ISchemaProvider * This,
             /* [in] */ __RPC__in LPCWSTR pszSchemaBinaryPath);
         
+        DECLSPEC_XFGVIRT(ISchemaProvider, LookupAuthoredNamedEntity)
         HRESULT ( STDMETHODCALLTYPE *LookupAuthoredNamedEntity )( 
             __RPC__in ISchemaProvider * This,
             /* [in] */ __RPC__in_opt IEntity *pEntity,
@@ -2087,22 +2188,27 @@ EXTERN_C const IID IID_ITokenCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ITokenCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ITokenCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ITokenCollection * This);
         
+        DECLSPEC_XFGVIRT(ITokenCollection, NumberOfTokens)
         HRESULT ( STDMETHODCALLTYPE *NumberOfTokens )( 
             __RPC__in ITokenCollection * This,
             __RPC__in ULONG *pCount);
         
+        DECLSPEC_XFGVIRT(ITokenCollection, GetToken)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetToken )( 
             ITokenCollection * This,
             /* [in] */ ULONG i,
@@ -2202,18 +2308,22 @@ EXTERN_C const IID IID_INamedEntityCollector;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in INamedEntityCollector * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in INamedEntityCollector * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in INamedEntityCollector * This);
         
+        DECLSPEC_XFGVIRT(INamedEntityCollector, Add)
         HRESULT ( STDMETHODCALLTYPE *Add )( 
             __RPC__in INamedEntityCollector * This,
             /* [in] */ ULONG beginSpan,
@@ -2289,18 +2399,22 @@ EXTERN_C const IID IID_ISchemaLocalizerSupport;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISchemaLocalizerSupport * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISchemaLocalizerSupport * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISchemaLocalizerSupport * This);
         
+        DECLSPEC_XFGVIRT(ISchemaLocalizerSupport, Localize)
         HRESULT ( STDMETHODCALLTYPE *Localize )( 
             __RPC__in ISchemaLocalizerSupport * This,
             /* [in] */ __RPC__in LPCWSTR pszGlobalString,
@@ -2382,18 +2496,22 @@ EXTERN_C const IID IID_IQueryParserManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IQueryParserManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IQueryParserManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IQueryParserManager * This);
         
+        DECLSPEC_XFGVIRT(IQueryParserManager, CreateLoadedParser)
         HRESULT ( STDMETHODCALLTYPE *CreateLoadedParser )( 
             __RPC__in IQueryParserManager * This,
             /* [in] */ __RPC__in LPCWSTR pszCatalog,
@@ -2401,12 +2519,14 @@ EXTERN_C const IID IID_IQueryParserManager;
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][retval][out] */ __RPC__deref_out_opt void **ppQueryParser);
         
+        DECLSPEC_XFGVIRT(IQueryParserManager, InitializeOptions)
         HRESULT ( STDMETHODCALLTYPE *InitializeOptions )( 
             __RPC__in IQueryParserManager * This,
             /* [in] */ BOOL fUnderstandNQS,
             /* [in] */ BOOL fAutoWildCard,
             /* [in] */ __RPC__in_opt IQueryParser *pQueryParser);
         
+        DECLSPEC_XFGVIRT(IQueryParserManager, SetOption)
         HRESULT ( STDMETHODCALLTYPE *SetOption )( 
             __RPC__in IQueryParserManager * This,
             /* [in] */ QUERY_PARSER_MANAGER_OPTION option,

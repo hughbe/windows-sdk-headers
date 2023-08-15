@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,7 +13,7 @@
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Web.UI.1.h"
 #include "winrt/impl/Windows.UI.WebUI.1.h"
-namespace winrt::Windows::UI::WebUI
+WINRT_EXPORT namespace winrt::Windows::UI::WebUI
 {
     struct ActivatedEventHandler : Windows::Foundation::IUnknown
     {
@@ -148,38 +148,38 @@ namespace winrt::Windows::UI::WebUI
         WebUIApplication() = delete;
         static auto Activated(Windows::UI::WebUI::ActivatedEventHandler const& handler);
         using Activated_revoker = impl::factory_event_revoker<Windows::UI::WebUI::IWebUIActivationStatics, &impl::abi_t<Windows::UI::WebUI::IWebUIActivationStatics>::remove_Activated>;
-        static Activated_revoker Activated(auto_revoke_t, Windows::UI::WebUI::ActivatedEventHandler const& handler);
+        [[nodiscard]] static Activated_revoker Activated(auto_revoke_t, Windows::UI::WebUI::ActivatedEventHandler const& handler);
         static auto Activated(winrt::event_token const& token);
         static auto Suspending(Windows::UI::WebUI::SuspendingEventHandler const& handler);
         using Suspending_revoker = impl::factory_event_revoker<Windows::UI::WebUI::IWebUIActivationStatics, &impl::abi_t<Windows::UI::WebUI::IWebUIActivationStatics>::remove_Suspending>;
-        static Suspending_revoker Suspending(auto_revoke_t, Windows::UI::WebUI::SuspendingEventHandler const& handler);
+        [[nodiscard]] static Suspending_revoker Suspending(auto_revoke_t, Windows::UI::WebUI::SuspendingEventHandler const& handler);
         static auto Suspending(winrt::event_token const& token);
         static auto Resuming(Windows::UI::WebUI::ResumingEventHandler const& handler);
         using Resuming_revoker = impl::factory_event_revoker<Windows::UI::WebUI::IWebUIActivationStatics, &impl::abi_t<Windows::UI::WebUI::IWebUIActivationStatics>::remove_Resuming>;
-        static Resuming_revoker Resuming(auto_revoke_t, Windows::UI::WebUI::ResumingEventHandler const& handler);
+        [[nodiscard]] static Resuming_revoker Resuming(auto_revoke_t, Windows::UI::WebUI::ResumingEventHandler const& handler);
         static auto Resuming(winrt::event_token const& token);
         static auto Navigated(Windows::UI::WebUI::NavigatedEventHandler const& handler);
         using Navigated_revoker = impl::factory_event_revoker<Windows::UI::WebUI::IWebUIActivationStatics, &impl::abi_t<Windows::UI::WebUI::IWebUIActivationStatics>::remove_Navigated>;
-        static Navigated_revoker Navigated(auto_revoke_t, Windows::UI::WebUI::NavigatedEventHandler const& handler);
+        [[nodiscard]] static Navigated_revoker Navigated(auto_revoke_t, Windows::UI::WebUI::NavigatedEventHandler const& handler);
         static auto Navigated(winrt::event_token const& token);
         static auto LeavingBackground(Windows::UI::WebUI::LeavingBackgroundEventHandler const& handler);
         using LeavingBackground_revoker = impl::factory_event_revoker<Windows::UI::WebUI::IWebUIActivationStatics2, &impl::abi_t<Windows::UI::WebUI::IWebUIActivationStatics2>::remove_LeavingBackground>;
-        static LeavingBackground_revoker LeavingBackground(auto_revoke_t, Windows::UI::WebUI::LeavingBackgroundEventHandler const& handler);
+        [[nodiscard]] static LeavingBackground_revoker LeavingBackground(auto_revoke_t, Windows::UI::WebUI::LeavingBackgroundEventHandler const& handler);
         static auto LeavingBackground(winrt::event_token const& token);
         static auto EnteredBackground(Windows::UI::WebUI::EnteredBackgroundEventHandler const& handler);
         using EnteredBackground_revoker = impl::factory_event_revoker<Windows::UI::WebUI::IWebUIActivationStatics2, &impl::abi_t<Windows::UI::WebUI::IWebUIActivationStatics2>::remove_EnteredBackground>;
-        static EnteredBackground_revoker EnteredBackground(auto_revoke_t, Windows::UI::WebUI::EnteredBackgroundEventHandler const& handler);
+        [[nodiscard]] static EnteredBackground_revoker EnteredBackground(auto_revoke_t, Windows::UI::WebUI::EnteredBackgroundEventHandler const& handler);
         static auto EnteredBackground(winrt::event_token const& token);
         static auto EnablePrelaunch(bool value);
         static auto RequestRestartAsync(param::hstring const& launchArguments);
         static auto RequestRestartForUserAsync(Windows::System::User const& user, param::hstring const& launchArguments);
         static auto NewWebUIViewCreated(Windows::Foundation::EventHandler<Windows::UI::WebUI::NewWebUIViewCreatedEventArgs> const& handler);
         using NewWebUIViewCreated_revoker = impl::factory_event_revoker<Windows::UI::WebUI::IWebUIActivationStatics4, &impl::abi_t<Windows::UI::WebUI::IWebUIActivationStatics4>::remove_NewWebUIViewCreated>;
-        static NewWebUIViewCreated_revoker NewWebUIViewCreated(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::WebUI::NewWebUIViewCreatedEventArgs> const& handler);
+        [[nodiscard]] static NewWebUIViewCreated_revoker NewWebUIViewCreated(auto_revoke_t, Windows::Foundation::EventHandler<Windows::UI::WebUI::NewWebUIViewCreatedEventArgs> const& handler);
         static auto NewWebUIViewCreated(winrt::event_token const& token);
         static auto BackgroundActivated(Windows::UI::WebUI::BackgroundActivatedEventHandler const& handler);
         using BackgroundActivated_revoker = impl::factory_event_revoker<Windows::UI::WebUI::IWebUIActivationStatics4, &impl::abi_t<Windows::UI::WebUI::IWebUIActivationStatics4>::remove_BackgroundActivated>;
-        static BackgroundActivated_revoker BackgroundActivated(auto_revoke_t, Windows::UI::WebUI::BackgroundActivatedEventHandler const& handler);
+        [[nodiscard]] static BackgroundActivated_revoker BackgroundActivated(auto_revoke_t, Windows::UI::WebUI::BackgroundActivatedEventHandler const& handler);
         static auto BackgroundActivated(winrt::event_token const& token);
     };
     struct __declspec(empty_bases) WebUIAppointmentsProviderAddAppointmentActivatedEventArgs : Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs,

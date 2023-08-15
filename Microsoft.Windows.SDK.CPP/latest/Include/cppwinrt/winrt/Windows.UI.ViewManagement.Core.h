@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_ViewManagement_Core_H
 #define WINRT_Windows_UI_ViewManagement_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.ViewManagement.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -14,9 +14,9 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.UI.ViewManagement.Core.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::OcclusionsChanged(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::OcclusionsChanged(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView)->add_OcclusionsChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -24,31 +24,31 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, OcclusionsChanged_revoker>(this, OcclusionsChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::OcclusionsChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::OcclusionsChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView)->remove_OcclusionsChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::GetCoreInputViewOcclusions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>) consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::GetCoreInputViewOcclusions() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView)->GetCoreInputViewOcclusions(&result));
         return Windows::Foundation::Collections::IVectorView<Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::TryShowPrimaryView() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::TryShowPrimaryView() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView)->TryShowPrimaryView(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::TryHidePrimaryView() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::TryHidePrimaryView() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView)->TryHidePrimaryView(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferringFromPrimaryView(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferringFromPrimaryView(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView2)->add_XYFocusTransferringFromPrimaryView(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -56,13 +56,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, XYFocusTransferringFromPrimaryView_revoker>(this, XYFocusTransferringFromPrimaryView(handler));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferringFromPrimaryView(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferringFromPrimaryView(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView2)->remove_XYFocusTransferringFromPrimaryView(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferredToPrimaryView(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferredToPrimaryView(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView2)->add_XYFocusTransferredToPrimaryView(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -70,37 +70,37 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, XYFocusTransferredToPrimaryView_revoker>(this, XYFocusTransferredToPrimaryView(handler));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferredToPrimaryView(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferredToPrimaryView(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView2)->remove_XYFocusTransferredToPrimaryView(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::TryTransferXYFocusToPrimaryView(Windows::Foundation::Rect const& origin, Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection const& direction) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::TryTransferXYFocusToPrimaryView(Windows::Foundation::Rect const& origin, Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection const& direction) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView2)->TryTransferXYFocusToPrimaryView(impl::bind_in(origin), static_cast<int32_t>(direction), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView3<D>::TryShow() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputView3<D>::TryShow() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView3)->TryShow(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView3<D>::TryShow(Windows::UI::ViewManagement::Core::CoreInputViewKind const& type) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputView3<D>::TryShow(Windows::UI::ViewManagement::Core::CoreInputViewKind const& type) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView3)->TryShowWithKind(static_cast<int32_t>(type), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView3<D>::TryHide() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputView3<D>::TryHide() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView3)->TryHide(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewShowing(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewShowing(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView4)->add_PrimaryViewShowing(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -108,13 +108,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PrimaryViewShowing_revoker>(this, PrimaryViewShowing(handler));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewShowing(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewShowing(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView4)->remove_PrimaryViewShowing(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewHiding(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewHiding(Windows::Foundation::TypedEventHandler<Windows::UI::ViewManagement::Core::CoreInputView, Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView4)->add_PrimaryViewHiding(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -122,120 +122,121 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PrimaryViewHiding_revoker>(this, PrimaryViewHiding(handler));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewHiding(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewHiding(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputView4)->remove_PrimaryViewHiding(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewHidingEventArgs<D>::TryCancel() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputViewHidingEventArgs<D>::TryCancel() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewHidingEventArgs)->TryCancel(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusion<D>::OccludingRect() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusion<D>::OccludingRect() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion)->get_OccludingRect(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusion<D>::OcclusionKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::ViewManagement::Core::CoreInputViewOcclusionKind) consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusion<D>::OcclusionKind() const
     {
-        Windows::UI::ViewManagement::Core::CoreInputViewOcclusionKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion)->get_OcclusionKind(put_abi(value)));
+        Windows::UI::ViewManagement::Core::CoreInputViewOcclusionKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion)->get_OcclusionKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusionsChangedEventArgs<D>::Occlusions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>) consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusionsChangedEventArgs<D>::Occlusions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs)->get_Occlusions(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusionsChangedEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusionsChangedEventArgs<D>::Handled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs)->get_Handled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusionsChangedEventArgs<D>::Handled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputViewOcclusionsChangedEventArgs<D>::Handled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs)->put_Handled(value));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewShowingEventArgs<D>::TryCancel() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputViewShowingEventArgs<D>::TryCancel() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewShowingEventArgs)->TryCancel(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewStatics<D>::GetForCurrentView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::ViewManagement::Core::CoreInputView) consume_Windows_UI_ViewManagement_Core_ICoreInputViewStatics<D>::GetForCurrentView() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewStatics)->GetForCurrentView(&result));
         return Windows::UI::ViewManagement::Core::CoreInputView{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewStatics2<D>::GetForUIContext(Windows::UI::UIContext const& context) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::ViewManagement::Core::CoreInputView) consume_Windows_UI_ViewManagement_Core_ICoreInputViewStatics2<D>::GetForUIContext(Windows::UI::UIContext const& context) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewStatics2)->GetForUIContext(*(void**)(&context), &result));
         return Windows::UI::ViewManagement::Core::CoreInputView{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::Origin() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::Origin() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs)->get_Origin(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::Direction() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection) consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::Direction() const
     {
-        Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs)->get_Direction(put_abi(value)));
+        Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs)->get_Direction(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::TransferHandled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::TransferHandled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs)->put_TransferHandled(value));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::TransferHandled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::TransferHandled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs)->get_TransferHandled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::KeepPrimaryViewVisible(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::KeepPrimaryViewVisible(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs)->put_KeepPrimaryViewVisible(value));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::KeepPrimaryViewVisible() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputViewTransferringXYFocusEventArgs<D>::KeepPrimaryViewVisible() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs)->get_KeepPrimaryViewVisible(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetAdvancedEffectsEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetAdvancedEffectsEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::IUISettingsController)->SetAdvancedEffectsEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetAnimationsEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetAnimationsEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::IUISettingsController)->SetAnimationsEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetAutoHideScrollBars(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetAutoHideScrollBars(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::IUISettingsController)->SetAutoHideScrollBars(value));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetMessageDuration(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetMessageDuration(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::IUISettingsController)->SetMessageDuration(value));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetTextScaleFactor(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_IUISettingsController<D>::SetTextScaleFactor(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::IUISettingsController)->SetTextScaleFactor(value));
     }
-    template <typename D> auto consume_Windows_UI_ViewManagement_Core_IUISettingsControllerStatics<D>::RequestDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::UI::ViewManagement::Core::UISettingsController>) consume_Windows_UI_ViewManagement_Core_IUISettingsControllerStatics<D>::RequestDefaultAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::ViewManagement::Core::IUISettingsControllerStatics)->RequestDefaultAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::UI::ViewManagement::Core::UISettingsController>{ operation, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputView> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputView>
     {
@@ -276,6 +277,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputView2> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputView2>
     {
@@ -315,6 +318,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputView3> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputView3>
     {
@@ -340,6 +345,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputView4> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputView4>
     {
@@ -372,6 +379,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewHidingEventArgs> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputViewHidingEventArgs>
     {
@@ -383,6 +392,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion>
     {
@@ -402,6 +413,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs>
     {
@@ -428,6 +441,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewShowingEventArgs> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputViewShowingEventArgs>
     {
@@ -439,6 +454,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewStatics> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputViewStatics>
     {
@@ -451,6 +468,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewStatics2> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputViewStatics2>
     {
@@ -463,6 +482,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs> : produce_base<D, Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs>
     {
@@ -510,6 +531,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::IUISettingsController> : produce_base<D, Windows::UI::ViewManagement::Core::IUISettingsController>
     {
@@ -549,6 +572,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::ViewManagement::Core::IUISettingsControllerStatics> : produce_base<D, Windows::UI::ViewManagement::Core::IUISettingsControllerStatics>
     {
@@ -561,43 +586,46 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::UI::ViewManagement::Core
+WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement::Core
 {
     inline auto CoreInputView::GetForCurrentView()
     {
-        return impl::call_factory<CoreInputView, Windows::UI::ViewManagement::Core::ICoreInputViewStatics>([&](auto&& f) { return f.GetForCurrentView(); });
+        return impl::call_factory_cast<Windows::UI::ViewManagement::Core::CoreInputView(*)(ICoreInputViewStatics const&), CoreInputView, ICoreInputViewStatics>([](ICoreInputViewStatics const& f) { return f.GetForCurrentView(); });
     }
     inline auto CoreInputView::GetForUIContext(Windows::UI::UIContext const& context)
     {
-        return impl::call_factory<CoreInputView, Windows::UI::ViewManagement::Core::ICoreInputViewStatics2>([&](auto&& f) { return f.GetForUIContext(context); });
+        return impl::call_factory<CoreInputView, ICoreInputViewStatics2>([&](ICoreInputViewStatics2 const& f) { return f.GetForUIContext(context); });
     }
     inline auto UISettingsController::RequestDefaultAsync()
     {
-        return impl::call_factory<UISettingsController, Windows::UI::ViewManagement::Core::IUISettingsControllerStatics>([&](auto&& f) { return f.RequestDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::UI::ViewManagement::Core::UISettingsController>(*)(IUISettingsControllerStatics const&), UISettingsController, IUISettingsControllerStatics>([](IUISettingsControllerStatics const& f) { return f.RequestDefaultAsync(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputView> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputView> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputView2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputView2> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputView3> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputView3> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputView4> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputView4> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewHidingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewHidingEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewShowingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewShowingEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics2> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics2> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::IUISettingsController> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::IUISettingsController> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::IUISettingsControllerStatics> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::IUISettingsControllerStatics> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputView> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::CoreInputView> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::UISettingsController> : winrt::impl::hash_base<winrt::Windows::UI::ViewManagement::Core::UISettingsController> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputView2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputView3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputView4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewHidingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusion> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewOcclusionsChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewShowingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::IUISettingsController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::IUISettingsControllerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::ViewManagement::Core::UISettingsController> : winrt::impl::hash_base {};
+#endif
 }
 #endif

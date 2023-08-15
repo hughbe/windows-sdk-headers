@@ -892,6 +892,7 @@ _Check_return_ HRESULT STDAPICALLTYPE DLLGETCLASSOBJECT_ENTRY ( \
         }
 
 #define CSTDSTUBBUFFERRELEASE(pFactory)   \
+DECLSPEC_XFGVIRT(IUnknown, Release) \
 ULONG STDMETHODCALLTYPE CStdStubBuffer_Release(IRpcStubBuffer *This) \
     {   \
     return NdrCStdStubBuffer_Release(This,(IPSFactoryBuffer *)pFactory);   \
@@ -899,6 +900,7 @@ ULONG STDMETHODCALLTYPE CStdStubBuffer_Release(IRpcStubBuffer *This) \
 
 #ifdef PROXY_DELEGATION
 #define CSTDSTUBBUFFER2RELEASE(pFactory)   \
+DECLSPEC_XFGVIRT(IUnknown, Release) \
 ULONG STDMETHODCALLTYPE CStdStubBuffer2_Release(IRpcStubBuffer *This) \
     {   \
     return NdrCStdStubBuffer2_Release(This,(IPSFactoryBuffer *)pFactory);   \

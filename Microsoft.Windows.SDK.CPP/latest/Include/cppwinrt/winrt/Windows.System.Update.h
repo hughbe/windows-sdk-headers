@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,94 +6,94 @@
 #ifndef WINRT_Windows_System_Update_H
 #define WINRT_Windows_System_Update_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.System.Update.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateItem<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateItemState) consume_Windows_System_Update_ISystemUpdateItem<D>::State() const
     {
-        Windows::System::Update::SystemUpdateItemState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateItem)->get_State(put_abi(value)));
+        Windows::System::Update::SystemUpdateItemState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateItem)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateItem<D>::Title() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Update_ISystemUpdateItem<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateItem)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateItem<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Update_ISystemUpdateItem<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateItem)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateItem<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Update_ISystemUpdateItem<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateItem)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateItem<D>::Revision() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Update_ISystemUpdateItem<D>::Revision() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateItem)->get_Revision(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateItem<D>::DownloadProgress() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_System_Update_ISystemUpdateItem<D>::DownloadProgress() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateItem)->get_DownloadProgress(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateItem<D>::InstallProgress() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_System_Update_ISystemUpdateItem<D>::InstallProgress() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateItem)->get_InstallProgress(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateItem<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_System_Update_ISystemUpdateItem<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateItem)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateLastErrorInfo<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateManagerState) consume_Windows_System_Update_ISystemUpdateLastErrorInfo<D>::State() const
     {
-        Windows::System::Update::SystemUpdateManagerState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateLastErrorInfo)->get_State(put_abi(value)));
+        Windows::System::Update::SystemUpdateManagerState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateLastErrorInfo)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateLastErrorInfo<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_System_Update_ISystemUpdateLastErrorInfo<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateLastErrorInfo)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateLastErrorInfo<D>::IsInteractive() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_Update_ISystemUpdateLastErrorInfo<D>::IsInteractive() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateLastErrorInfo)->get_IsInteractive(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::IsSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::IsSupported() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->IsSupported(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateManagerState) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::State() const
     {
-        Windows::System::Update::SystemUpdateManagerState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_State(put_abi(value)));
+        Windows::System::Update::SystemUpdateManagerState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::StateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::StateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->add_StateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -101,124 +101,125 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(handler));
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::StateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->remove_StateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::DownloadProgress() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::DownloadProgress() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_DownloadProgress(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::InstallProgress() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::InstallProgress() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_InstallProgress(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::UserActiveHoursStart() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::UserActiveHoursStart() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_UserActiveHoursStart(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::UserActiveHoursEnd() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::UserActiveHoursEnd() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_UserActiveHoursEnd(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::UserActiveHoursMax() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::UserActiveHoursMax() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_UserActiveHoursMax(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::TrySetUserActiveHours(Windows::Foundation::TimeSpan const& start, Windows::Foundation::TimeSpan const& end) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::TrySetUserActiveHours(Windows::Foundation::TimeSpan const& start, Windows::Foundation::TimeSpan const& end) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->TrySetUserActiveHours(impl::bind_in(start), impl::bind_in(end), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::LastUpdateCheckTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::LastUpdateCheckTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_LastUpdateCheckTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::LastUpdateInstallTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::LastUpdateInstallTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_LastUpdateInstallTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::LastErrorInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateLastErrorInfo) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::LastErrorInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_LastErrorInfo(&value));
         return Windows::System::Update::SystemUpdateLastErrorInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::GetAutomaticRebootBlockIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::GetAutomaticRebootBlockIds() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->GetAutomaticRebootBlockIds(&result));
         return Windows::Foundation::Collections::IVectorView<hstring>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::BlockAutomaticRebootAsync(param::hstring const& lockId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::BlockAutomaticRebootAsync(param::hstring const& lockId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->BlockAutomaticRebootAsync(*(void**)(&lockId), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::UnblockAutomaticRebootAsync(param::hstring const& lockId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::UnblockAutomaticRebootAsync(param::hstring const& lockId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->UnblockAutomaticRebootAsync(*(void**)(&lockId), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::GetUpdateItems() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::System::Update::SystemUpdateItem>) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::GetUpdateItems() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->GetUpdateItems(&result));
         return Windows::Foundation::Collections::IVectorView<Windows::System::Update::SystemUpdateItem>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::AttentionRequiredReason() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateAttentionRequiredReason) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::AttentionRequiredReason() const
     {
-        Windows::System::Update::SystemUpdateAttentionRequiredReason value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_AttentionRequiredReason(put_abi(value)));
+        Windows::System::Update::SystemUpdateAttentionRequiredReason value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->get_AttentionRequiredReason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::SetFlightRing(param::hstring const& flightRing) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::SetFlightRing(param::hstring const& flightRing) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->SetFlightRing(*(void**)(&flightRing), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::GetFlightRing() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::GetFlightRing() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->GetFlightRing(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::StartInstall(Windows::System::Update::SystemUpdateStartInstallAction const& action) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::StartInstall(Windows::System::Update::SystemUpdateStartInstallAction const& action) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->StartInstall(static_cast<int32_t>(action)));
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::RebootToCompleteInstall() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::RebootToCompleteInstall() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->RebootToCompleteInstall());
     }
-    template <typename D> auto consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::StartCancelUpdates() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Update_ISystemUpdateManagerStatics<D>::StartCancelUpdates() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Update::ISystemUpdateManagerStatics)->StartCancelUpdates());
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::Update::ISystemUpdateItem> : produce_base<D, Windows::System::Update::ISystemUpdateItem>
     {
@@ -283,6 +284,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::Update::ISystemUpdateLastErrorInfo> : produce_base<D, Windows::System::Update::ISystemUpdateLastErrorInfo>
     {
@@ -309,6 +312,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::Update::ISystemUpdateManagerStatics> : produce_base<D, Windows::System::Update::ISystemUpdateManagerStatics>
     {
@@ -492,20 +497,21 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::System::Update
+WINRT_EXPORT namespace winrt::Windows::System::Update
 {
     inline auto SystemUpdateManager::IsSupported()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.IsSupported(); });
+        return impl::call_factory_cast<bool(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.IsSupported(); });
     }
     inline auto SystemUpdateManager::State()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.State(); });
+        return impl::call_factory_cast<Windows::System::Update::SystemUpdateManagerState(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.State(); });
     }
     inline auto SystemUpdateManager::StateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.StateChanged(handler); });
+        return impl::call_factory<SystemUpdateManager, ISystemUpdateManagerStatics>([&](ISystemUpdateManagerStatics const& f) { return f.StateChanged(handler); });
     }
     inline SystemUpdateManager::StateChanged_revoker SystemUpdateManager::StateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -514,96 +520,98 @@ namespace winrt::Windows::System::Update
     }
     inline auto SystemUpdateManager::StateChanged(winrt::event_token const& token)
     {
-        impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.StateChanged(token); });
+        impl::call_factory<SystemUpdateManager, ISystemUpdateManagerStatics>([&](ISystemUpdateManagerStatics const& f) { return f.StateChanged(token); });
     }
     inline auto SystemUpdateManager::DownloadProgress()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.DownloadProgress(); });
+        return impl::call_factory_cast<double(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.DownloadProgress(); });
     }
     inline auto SystemUpdateManager::InstallProgress()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.InstallProgress(); });
+        return impl::call_factory_cast<double(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.InstallProgress(); });
     }
     inline auto SystemUpdateManager::UserActiveHoursStart()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.UserActiveHoursStart(); });
+        return impl::call_factory_cast<Windows::Foundation::TimeSpan(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.UserActiveHoursStart(); });
     }
     inline auto SystemUpdateManager::UserActiveHoursEnd()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.UserActiveHoursEnd(); });
+        return impl::call_factory_cast<Windows::Foundation::TimeSpan(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.UserActiveHoursEnd(); });
     }
     inline auto SystemUpdateManager::UserActiveHoursMax()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.UserActiveHoursMax(); });
+        return impl::call_factory_cast<int32_t(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.UserActiveHoursMax(); });
     }
     inline auto SystemUpdateManager::TrySetUserActiveHours(Windows::Foundation::TimeSpan const& start, Windows::Foundation::TimeSpan const& end)
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.TrySetUserActiveHours(start, end); });
+        return impl::call_factory<SystemUpdateManager, ISystemUpdateManagerStatics>([&](ISystemUpdateManagerStatics const& f) { return f.TrySetUserActiveHours(start, end); });
     }
     inline auto SystemUpdateManager::LastUpdateCheckTime()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.LastUpdateCheckTime(); });
+        return impl::call_factory_cast<Windows::Foundation::DateTime(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.LastUpdateCheckTime(); });
     }
     inline auto SystemUpdateManager::LastUpdateInstallTime()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.LastUpdateInstallTime(); });
+        return impl::call_factory_cast<Windows::Foundation::DateTime(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.LastUpdateInstallTime(); });
     }
     inline auto SystemUpdateManager::LastErrorInfo()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.LastErrorInfo(); });
+        return impl::call_factory_cast<Windows::System::Update::SystemUpdateLastErrorInfo(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.LastErrorInfo(); });
     }
     inline auto SystemUpdateManager::GetAutomaticRebootBlockIds()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.GetAutomaticRebootBlockIds(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.GetAutomaticRebootBlockIds(); });
     }
     inline auto SystemUpdateManager::BlockAutomaticRebootAsync(param::hstring const& lockId)
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.BlockAutomaticRebootAsync(lockId); });
+        return impl::call_factory<SystemUpdateManager, ISystemUpdateManagerStatics>([&](ISystemUpdateManagerStatics const& f) { return f.BlockAutomaticRebootAsync(lockId); });
     }
     inline auto SystemUpdateManager::UnblockAutomaticRebootAsync(param::hstring const& lockId)
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.UnblockAutomaticRebootAsync(lockId); });
+        return impl::call_factory<SystemUpdateManager, ISystemUpdateManagerStatics>([&](ISystemUpdateManagerStatics const& f) { return f.UnblockAutomaticRebootAsync(lockId); });
     }
     inline auto SystemUpdateManager::ExtendedError()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.ExtendedError(); });
+        return impl::call_factory_cast<winrt::hresult(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.ExtendedError(); });
     }
     inline auto SystemUpdateManager::GetUpdateItems()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.GetUpdateItems(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<Windows::System::Update::SystemUpdateItem>(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.GetUpdateItems(); });
     }
     inline auto SystemUpdateManager::AttentionRequiredReason()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.AttentionRequiredReason(); });
+        return impl::call_factory_cast<Windows::System::Update::SystemUpdateAttentionRequiredReason(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.AttentionRequiredReason(); });
     }
     inline auto SystemUpdateManager::SetFlightRing(param::hstring const& flightRing)
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.SetFlightRing(flightRing); });
+        return impl::call_factory<SystemUpdateManager, ISystemUpdateManagerStatics>([&](ISystemUpdateManagerStatics const& f) { return f.SetFlightRing(flightRing); });
     }
     inline auto SystemUpdateManager::GetFlightRing()
     {
-        return impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.GetFlightRing(); });
+        return impl::call_factory_cast<hstring(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.GetFlightRing(); });
     }
     inline auto SystemUpdateManager::StartInstall(Windows::System::Update::SystemUpdateStartInstallAction const& action)
     {
-        impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.StartInstall(action); });
+        impl::call_factory<SystemUpdateManager, ISystemUpdateManagerStatics>([&](ISystemUpdateManagerStatics const& f) { return f.StartInstall(action); });
     }
     inline auto SystemUpdateManager::RebootToCompleteInstall()
     {
-        impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.RebootToCompleteInstall(); });
+        impl::call_factory_cast<void(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.RebootToCompleteInstall(); });
     }
     inline auto SystemUpdateManager::StartCancelUpdates()
     {
-        impl::call_factory<SystemUpdateManager, Windows::System::Update::ISystemUpdateManagerStatics>([&](auto&& f) { return f.StartCancelUpdates(); });
+        impl::call_factory_cast<void(*)(ISystemUpdateManagerStatics const&), SystemUpdateManager, ISystemUpdateManagerStatics>([](ISystemUpdateManagerStatics const& f) { return f.StartCancelUpdates(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::System::Update::ISystemUpdateItem> : winrt::impl::hash_base<winrt::Windows::System::Update::ISystemUpdateItem> {};
-    template<> struct hash<winrt::Windows::System::Update::ISystemUpdateLastErrorInfo> : winrt::impl::hash_base<winrt::Windows::System::Update::ISystemUpdateLastErrorInfo> {};
-    template<> struct hash<winrt::Windows::System::Update::ISystemUpdateManagerStatics> : winrt::impl::hash_base<winrt::Windows::System::Update::ISystemUpdateManagerStatics> {};
-    template<> struct hash<winrt::Windows::System::Update::SystemUpdateItem> : winrt::impl::hash_base<winrt::Windows::System::Update::SystemUpdateItem> {};
-    template<> struct hash<winrt::Windows::System::Update::SystemUpdateLastErrorInfo> : winrt::impl::hash_base<winrt::Windows::System::Update::SystemUpdateLastErrorInfo> {};
-    template<> struct hash<winrt::Windows::System::Update::SystemUpdateManager> : winrt::impl::hash_base<winrt::Windows::System::Update::SystemUpdateManager> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::System::Update::ISystemUpdateItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Update::ISystemUpdateLastErrorInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Update::ISystemUpdateManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Update::SystemUpdateItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Update::SystemUpdateLastErrorInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Update::SystemUpdateManager> : winrt::impl::hash_base {};
+#endif
 }
 #endif

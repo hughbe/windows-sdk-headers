@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Data_Xml_Xsl_1_H
 #define WINRT_Windows_Data_Xml_Xsl_1_H
 #include "winrt/impl/Windows.Data.Xml.Xsl.0.h"
-namespace winrt::Windows::Data::Xml::Xsl
+WINRT_EXPORT namespace winrt::Windows::Data::Xml::Xsl
 {
     struct __declspec(empty_bases) IXsltProcessor :
         Windows::Foundation::IInspectable,

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,88 +6,88 @@
 #ifndef WINRT_Windows_Devices_I2c_Provider_H
 #define WINRT_Windows_Devices_I2c_Provider_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.I2c.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Devices.I2c.Provider.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_II2cControllerProvider<D>::GetDeviceProvider(Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings const& settings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::I2c::Provider::II2cDeviceProvider) consume_Windows_Devices_I2c_Provider_II2cControllerProvider<D>::GetDeviceProvider(Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings const& settings) const
     {
         void* device{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::II2cControllerProvider)->GetDeviceProvider(*(void**)(&settings), &device));
         return Windows::Devices::I2c::Provider::II2cDeviceProvider{ device, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::II2cDeviceProvider)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::Write(array_view<uint8_t const> buffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::Write(array_view<uint8_t const> buffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::II2cDeviceProvider)->Write(buffer.size(), get_abi(buffer)));
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::WritePartial(array_view<uint8_t const> buffer) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::I2c::Provider::ProviderI2cTransferResult) consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::WritePartial(array_view<uint8_t const> buffer) const
     {
-        Windows::Devices::I2c::Provider::ProviderI2cTransferResult result;
+        Windows::Devices::I2c::Provider::ProviderI2cTransferResult result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::II2cDeviceProvider)->WritePartial(buffer.size(), get_abi(buffer), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::Read(array_view<uint8_t> buffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::Read(array_view<uint8_t> buffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::II2cDeviceProvider)->Read(buffer.size(), put_abi(buffer)));
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::ReadPartial(array_view<uint8_t> buffer) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::I2c::Provider::ProviderI2cTransferResult) consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::ReadPartial(array_view<uint8_t> buffer) const
     {
-        Windows::Devices::I2c::Provider::ProviderI2cTransferResult result;
+        Windows::Devices::I2c::Provider::ProviderI2cTransferResult result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::II2cDeviceProvider)->ReadPartial(buffer.size(), put_abi(buffer), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::WriteRead(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::WriteRead(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::II2cDeviceProvider)->WriteRead(writeBuffer.size(), get_abi(writeBuffer), readBuffer.size(), put_abi(readBuffer)));
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::WriteReadPartial(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::I2c::Provider::ProviderI2cTransferResult) consume_Windows_Devices_I2c_Provider_II2cDeviceProvider<D>::WriteReadPartial(array_view<uint8_t const> writeBuffer, array_view<uint8_t> readBuffer) const
     {
-        Windows::Devices::I2c::Provider::ProviderI2cTransferResult result;
+        Windows::Devices::I2c::Provider::ProviderI2cTransferResult result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::II2cDeviceProvider)->WriteReadPartial(writeBuffer.size(), get_abi(writeBuffer), readBuffer.size(), put_abi(readBuffer), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_II2cProvider<D>::GetControllersAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::I2c::Provider::II2cControllerProvider>>) consume_Windows_Devices_I2c_Provider_II2cProvider<D>::GetControllersAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::II2cProvider)->GetControllersAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::I2c::Provider::II2cControllerProvider>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::SlaveAddress() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::SlaveAddress() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings)->get_SlaveAddress(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::SlaveAddress(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::SlaveAddress(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings)->put_SlaveAddress(value));
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::BusSpeed() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::I2c::Provider::ProviderI2cBusSpeed) consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::BusSpeed() const
     {
-        Windows::Devices::I2c::Provider::ProviderI2cBusSpeed value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings)->get_BusSpeed(put_abi(value)));
+        Windows::Devices::I2c::Provider::ProviderI2cBusSpeed value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings)->get_BusSpeed(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::BusSpeed(Windows::Devices::I2c::Provider::ProviderI2cBusSpeed const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::BusSpeed(Windows::Devices::I2c::Provider::ProviderI2cBusSpeed const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings)->put_BusSpeed(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::SharingMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::I2c::Provider::ProviderI2cSharingMode) consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::SharingMode() const
     {
-        Windows::Devices::I2c::Provider::ProviderI2cSharingMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings)->get_SharingMode(put_abi(value)));
+        Windows::Devices::I2c::Provider::ProviderI2cSharingMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings)->get_SharingMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::SharingMode(Windows::Devices::I2c::Provider::ProviderI2cSharingMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_I2c_Provider_IProviderI2cConnectionSettings<D>::SharingMode(Windows::Devices::I2c::Provider::ProviderI2cSharingMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings)->put_SharingMode(static_cast<int32_t>(value)));
     }
@@ -172,6 +172,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings> : produce_base<D, Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings>
     {
@@ -218,16 +219,19 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::I2c::Provider
+WINRT_EXPORT namespace winrt::Windows::Devices::I2c::Provider
 {
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider> : winrt::impl::hash_base<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider> {};
-    template<> struct hash<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider> : winrt::impl::hash_base<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider> {};
-    template<> struct hash<winrt::Windows::Devices::I2c::Provider::II2cProvider> : winrt::impl::hash_base<winrt::Windows::Devices::I2c::Provider::II2cProvider> {};
-    template<> struct hash<winrt::Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings> : winrt::impl::hash_base<winrt::Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings> {};
-    template<> struct hash<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings> : winrt::impl::hash_base<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::I2c::Provider::II2cProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::I2c::Provider::IProviderI2cConnectionSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -1,18 +1,20 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Security_Authentication_Identity_Core_0_H
 #define WINRT_Windows_Security_Authentication_Identity_Core_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IIterable;
+    template <typename T> struct __declspec(empty_bases) IIterable;
+    template <typename T> struct __declspec(empty_bases) IVectorView;
 }
-namespace winrt::Windows::Security::Authentication::Identity::Core
+WINRT_EXPORT namespace winrt::Windows::Security::Authentication::Identity::Core
 {
     enum class MicrosoftAccountMultiFactorAuthenticationType : int32_t
     {
@@ -69,170 +71,47 @@ namespace winrt::Windows::Security::Authentication::Identity::Core
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticatorStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticatorStatics>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticatorStatics" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus" };
-    };
-    template <> struct name<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>
-    {
-        static constexpr auto & value{ L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus" };
-    };
-    template <> struct guid_storage<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager>
-    {
-        static constexpr guid value{ 0x0FD340A5,0xF574,0x4320,{ 0xA0,0x8E,0x0A,0x19,0xA8,0x23,0x22,0xAA } };
-    };
-    template <> struct guid_storage<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticatorStatics>
-    {
-        static constexpr guid value{ 0xD964C2E6,0xF446,0x4C71,{ 0x8B,0x79,0x6E,0xA4,0x02,0x4A,0xA9,0xB8 } };
-    };
-    template <> struct guid_storage<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult>
-    {
-        static constexpr guid value{ 0x4E23A9A0,0xE9FA,0x497A,{ 0x95,0xDE,0x6D,0x57,0x47,0xBF,0x97,0x4C } };
-    };
-    template <> struct guid_storage<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo>
-    {
-        static constexpr guid value{ 0x82BA264B,0xD87C,0x4668,{ 0xA9,0x76,0x40,0xCF,0xAE,0x54,0x7D,0x08 } };
-    };
-    template <> struct guid_storage<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo>
-    {
-        static constexpr guid value{ 0x5F7EABB4,0xA278,0x4635,{ 0xB7,0x65,0xB4,0x94,0xEB,0x26,0x0A,0xF4 } };
-    };
-    template <> struct guid_storage<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>
-    {
-        static constexpr guid value{ 0xAA7EC5FB,0xDA3F,0x4088,{ 0xA2,0x0D,0x56,0x18,0xAF,0xAD,0xB2,0xE5 } };
-    };
-    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>
-    {
-        using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager;
-    };
-    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>
-    {
-        using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult;
-    };
-    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>
-    {
-        using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo;
-    };
-    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>
-    {
-        using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo;
-    };
-    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>
-    {
-        using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
-    };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager>{ using type = interface_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticatorStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult>{ using type = interface_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>{ using type = class_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>{ using type = class_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>{ using type = class_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>{ using type = class_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>{ using type = class_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>{ using type = enum_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>{ using type = enum_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager> = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult> = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo> = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo> = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType> = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus> = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus> = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager> = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticatorStatics> = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticatorStatics";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult> = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo> = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo> = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo";
+    template <> inline constexpr auto& name_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo";
+    template <> inline constexpr guid guid_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager>{ 0x0FD340A5,0xF574,0x4320,{ 0xA0,0x8E,0x0A,0x19,0xA8,0x23,0x22,0xAA } }; // 0FD340A5-F574-4320-A08E-0A19A82322AA
+    template <> inline constexpr guid guid_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticatorStatics>{ 0xD964C2E6,0xF446,0x4C71,{ 0x8B,0x79,0x6E,0xA4,0x02,0x4A,0xA9,0xB8 } }; // D964C2E6-F446-4C71-8B79-6EA4024AA9B8
+    template <> inline constexpr guid guid_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult>{ 0x4E23A9A0,0xE9FA,0x497A,{ 0x95,0xDE,0x6D,0x57,0x47,0xBF,0x97,0x4C } }; // 4E23A9A0-E9FA-497A-95DE-6D5747BF974C
+    template <> inline constexpr guid guid_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo>{ 0x82BA264B,0xD87C,0x4668,{ 0xA9,0x76,0x40,0xCF,0xAE,0x54,0x7D,0x08 } }; // 82BA264B-D87C-4668-A976-40CFAE547D08
+    template <> inline constexpr guid guid_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo>{ 0x5F7EABB4,0xA278,0x4635,{ 0xB7,0x65,0xB4,0x94,0xEB,0x26,0x0A,0xF4 } }; // 5F7EABB4-A278-4635-B765-B494EB260AF4
+    template <> inline constexpr guid guid_v<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>{ 0xAA7EC5FB,0xDA3F,0x4088,{ 0xA2,0x0D,0x56,0x18,0xAF,0xAD,0xB2,0xE5 } }; // AA7EC5FB-DA3F-4088-A20D-5618AFADB2E5
+    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>{ using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager; };
+    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>{ using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult; };
+    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>{ using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo; };
+    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>{ using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo; };
+    template <> struct default_interface<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>{ using type = Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo; };
     template <> struct abi<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -299,16 +178,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorAuthenticationManager
     {
-        auto GetOneTimePassCodeAsync(param::hstring const& userAccountId, uint32_t codeLength) const;
-        auto AddDeviceAsync(param::hstring const& userAccountId, param::hstring const& authenticationToken, param::hstring const& wnsChannelId) const;
-        auto RemoveDeviceAsync(param::hstring const& userAccountId) const;
-        auto UpdateWnsChannelAsync(param::hstring const& userAccountId, param::hstring const& channelUri) const;
-        auto GetSessionsAsync(param::async_iterable<hstring> const& userAccountIdList) const;
-        auto GetSessionsAndUnregisteredAccountsAsync(param::async_iterable<hstring> const& userAccountIdList) const;
-        auto ApproveSessionAsync(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus const& sessionAuthentictionStatus, Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo const& authenticationSessionInfo) const;
-        auto ApproveSessionAsync(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus const& sessionAuthentictionStatus, param::hstring const& userAccountId, param::hstring const& sessionId, Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType const& sessionAuthenticationType) const;
-        auto DenySessionAsync(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo const& authenticationSessionInfo) const;
-        auto DenySessionAsync(param::hstring const& userAccountId, param::hstring const& sessionId, Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType const& sessionAuthenticationType) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>) GetOneTimePassCodeAsync(param::hstring const& userAccountId, uint32_t codeLength) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>) AddDeviceAsync(param::hstring const& userAccountId, param::hstring const& authenticationToken, param::hstring const& wnsChannelId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>) RemoveDeviceAsync(param::hstring const& userAccountId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>) UpdateWnsChannelAsync(param::hstring const& userAccountId, param::hstring const& channelUri) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>) GetSessionsAsync(param::async_iterable<hstring> const& userAccountIdList) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>) GetSessionsAndUnregisteredAccountsAsync(param::async_iterable<hstring> const& userAccountIdList) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>) ApproveSessionAsync(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus const& sessionAuthentictionStatus, Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo const& authenticationSessionInfo) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>) ApproveSessionAsync(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus const& sessionAuthentictionStatus, param::hstring const& userAccountId, param::hstring const& sessionId, Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType const& sessionAuthenticationType) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>) DenySessionAsync(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo const& authenticationSessionInfo) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>) DenySessionAsync(param::hstring const& userAccountId, param::hstring const& sessionId, Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType const& sessionAuthenticationType) const;
     };
     template <> struct consume<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager>
     {
@@ -317,7 +196,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorAuthenticatorStatics
     {
-        [[nodiscard]] auto Current() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager) Current() const;
     };
     template <> struct consume<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticatorStatics>
     {
@@ -326,8 +205,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorGetSessionsResult
     {
-        [[nodiscard]] auto Sessions() const;
-        [[nodiscard]] auto ServiceResponse() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>) Sessions() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse) ServiceResponse() const;
     };
     template <> struct consume<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult>
     {
@@ -336,10 +215,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorOneTimeCodedInfo
     {
-        [[nodiscard]] auto Code() const;
-        [[nodiscard]] auto TimeInterval() const;
-        [[nodiscard]] auto TimeToLive() const;
-        [[nodiscard]] auto ServiceResponse() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Code() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) TimeInterval() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) TimeToLive() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse) ServiceResponse() const;
     };
     template <> struct consume<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo>
     {
@@ -348,13 +227,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorSessionInfo
     {
-        [[nodiscard]] auto UserAccountId() const;
-        [[nodiscard]] auto SessionId() const;
-        [[nodiscard]] auto DisplaySessionId() const;
-        [[nodiscard]] auto ApprovalStatus() const;
-        [[nodiscard]] auto AuthenticationType() const;
-        [[nodiscard]] auto RequestTime() const;
-        [[nodiscard]] auto ExpirationTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserAccountId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SessionId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplaySessionId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus) ApprovalStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType) AuthenticationType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) RequestTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) ExpirationTime() const;
     };
     template <> struct consume<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo>
     {
@@ -363,9 +242,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
     {
-        [[nodiscard]] auto Sessions() const;
-        [[nodiscard]] auto UnregisteredAccounts() const;
-        [[nodiscard]] auto ServiceResponse() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>) Sessions() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) UnregisteredAccounts() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse) ServiceResponse() const;
     };
     template <> struct consume<Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>
     {

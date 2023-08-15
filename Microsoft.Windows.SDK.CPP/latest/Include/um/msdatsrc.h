@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -31,6 +31,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -130,26 +138,32 @@ EXTERN_C const IID IID_DataSourceListener;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in DataSourceListener * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in DataSourceListener * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in DataSourceListener * This);
         
+        DECLSPEC_XFGVIRT(DataSourceListener, dataMemberChanged)
         /* [hidden] */ HRESULT ( STDMETHODCALLTYPE *dataMemberChanged )( 
             __RPC__in DataSourceListener * This,
             /* [in] */ __RPC__in DataMember bstrDM);
         
+        DECLSPEC_XFGVIRT(DataSourceListener, dataMemberAdded)
         /* [hidden] */ HRESULT ( STDMETHODCALLTYPE *dataMemberAdded )( 
             __RPC__in DataSourceListener * This,
             /* [in] */ __RPC__in DataMember bstrDM);
         
+        DECLSPEC_XFGVIRT(DataSourceListener, dataMemberRemoved)
         /* [hidden] */ HRESULT ( STDMETHODCALLTYPE *dataMemberRemoved )( 
             __RPC__in DataSourceListener * This,
             /* [in] */ __RPC__in DataMember bstrDM);
@@ -239,37 +253,45 @@ EXTERN_C const IID IID_DataSource;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in DataSource * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in DataSource * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in DataSource * This);
         
+        DECLSPEC_XFGVIRT(DataSource, getDataMember)
         /* [restricted][hidden] */ HRESULT ( STDMETHODCALLTYPE *getDataMember )( 
             __RPC__in DataSource * This,
             /* [in] */ __RPC__in DataMember bstrDM,
             /* [in] */ __RPC__in REFIID riid,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **ppunk);
         
+        DECLSPEC_XFGVIRT(DataSource, getDataMemberName)
         /* [hidden] */ HRESULT ( STDMETHODCALLTYPE *getDataMemberName )( 
             __RPC__in DataSource * This,
             /* [in] */ long lIndex,
             /* [retval][out] */ __RPC__deref_out_opt DataMember *pbstrDM);
         
+        DECLSPEC_XFGVIRT(DataSource, getDataMemberCount)
         /* [hidden] */ HRESULT ( STDMETHODCALLTYPE *getDataMemberCount )( 
             __RPC__in DataSource * This,
             /* [retval][out] */ __RPC__out long *plCount);
         
+        DECLSPEC_XFGVIRT(DataSource, addDataSourceListener)
         /* [hidden] */ HRESULT ( STDMETHODCALLTYPE *addDataSourceListener )( 
             __RPC__in DataSource * This,
             /* [in] */ __RPC__in_opt DataSourceListener *pDSL);
         
+        DECLSPEC_XFGVIRT(DataSource, removeDataSourceListener)
         /* [hidden] */ HRESULT ( STDMETHODCALLTYPE *removeDataSourceListener )( 
             __RPC__in DataSource * This,
             /* [in] */ __RPC__in_opt DataSourceListener *pDSL);

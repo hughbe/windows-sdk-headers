@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,38 +13,146 @@
 #include <chrono>
 #include <cstddef>
 #include <iterator>
-#include <limits>
 #include <map>
 #include <memory>
-#include <new>
 #include <optional>
-#include <shared_mutex>
-#include <string>
-#include <string_view>
 #include <stdexcept>
+#include <string_view>
+#include <string>
 #include <tuple>
 #include <type_traits>
-#include <utility>
 #include <unordered_map>
+#include <utility>
 #include <vector>
-#include <experimental/coroutine>
 
 #if __has_include(<WindowsNumerics.impl.h>)
-#define WINRT_NUMERICS
+#define WINRT_IMPL_NUMERICS
 #include <directxmath.h>
-#define _WINDOWS_NUMERICS_NAMESPACE_ winrt::Windows::Foundation::Numerics
-#define _WINDOWS_NUMERICS_BEGIN_NAMESPACE_ namespace winrt::Windows::Foundation::Numerics
-#define _WINDOWS_NUMERICS_END_NAMESPACE_
-#ifdef __clang__
-#define _XM_NO_INTRINSICS_
 #endif
-#include <WindowsNumerics.impl.h>
-#ifdef __clang__
-#undef _XM_NO_INTRINSICS_
-#endif
-#undef _WINDOWS_NUMERICS_NAMESPACE_
-#undef _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
-#undef _WINDOWS_NUMERICS_END_NAMESPACE_
+
+#ifndef __clang__
+
+#include <experimental/coroutine>
+
+#else
+
+namespace std::experimental
+{
+    template <typename R, typename...> struct coroutine_traits
+    {
+        using promise_type = typename R::promise_type;
+    };
+
+    template <typename Promise = void> struct coroutine_handle;
+
+    template <> struct coroutine_handle<void>
+    {
+        coroutine_handle(decltype(nullptr)) noexcept
+        {
+        }
+
+        coroutine_handle() noexcept
+        {
+        }
+
+        static coroutine_handle from_address(void* address) noexcept
+        {
+            coroutine_handle result;
+            result.ptr = address;
+            return result;
+        }
+
+        coroutine_handle& operator=(decltype(nullptr)) noexcept
+        {
+            ptr = nullptr;
+            return *this;
+        }
+
+        explicit operator bool() const noexcept
+        {
+            return ptr;
+        }
+
+        void* address() const noexcept
+        {
+            return ptr;
+        }
+
+        void operator()() const
+        {
+            resume();
+        }
+
+        void resume() const
+        {
+            __builtin_coro_resume(ptr);
+        }
+
+        void destroy() const
+        {
+            __builtin_coro_destroy(ptr);
+        }
+
+        bool done() const
+        {
+            return __builtin_coro_done(ptr);
+        }
+
+    protected:
+        void* ptr{};
+    };
+
+    template <typename Promise> struct coroutine_handle : coroutine_handle<>
+    {
+        using coroutine_handle<>::operator=;
+
+        static coroutine_handle from_address(void* address) noexcept
+        {
+            coroutine_handle result;
+            result.ptr = address;
+            return result;
+        }
+
+        Promise& promise() const
+        {
+            return *reinterpret_cast<Promise*>(__builtin_coro_promise(ptr, alignof(Promise), false));
+        }
+
+        static coroutine_handle from_promise(Promise& promise)
+        {
+            coroutine_handle result;
+            result.ptr = __builtin_coro_promise(&promise, alignof(Promise), true);
+            return result;
+        }
+    };
+
+    template <typename Promise>
+    bool operator==(coroutine_handle<Promise> const& left, coroutine_handle<Promise> const& right) noexcept
+    {
+        return left.address() == right.address();
+    }
+
+    template <typename Promise>
+    bool operator!=(coroutine_handle<Promise> const& left, coroutine_handle<Promise> const& right) noexcept
+    {
+        return !(left == right);
+    }
+
+    struct suspend_always
+    {
+        bool await_ready() noexcept { return false; }
+        void await_suspend(coroutine_handle<>) noexcept {}
+        void await_resume() noexcept {}
+    };
+
+    struct suspend_never
+    {
+        bool await_ready() noexcept { return true; }
+        void await_suspend(coroutine_handle<>) noexcept {}
+        void await_resume() noexcept {}
+    };
+}
+
 #endif
 
 #ifdef _DEBUG
@@ -63,24 +171,42 @@
 
 #define WINRT_IMPL_SHIM(...) (*(abi_t<__VA_ARGS__>**)&static_cast<__VA_ARGS__ const&>(static_cast<D const&>(*this)))
 
-#ifndef WINRT_EXTERNAL_CATCH_CLAUSE
-#define WINRT_EXTERNAL_CATCH_CLAUSE
+#ifdef __INTELLISENSE__
+#define WINRT_IMPL_AUTO(...) __VA_ARGS__
+#else
+#define WINRT_IMPL_AUTO(...) auto
 #endif
 
 // Note: this is a workaround for a false-positive warning produced by the Visual C++ 15.9 compiler.
 #pragma warning(disable : 5046)
 
-namespace winrt::impl
-{
-#ifdef __IUnknown_INTERFACE_DEFINED__
-#define WINRT_WINDOWS_ABI
-    using hresult_type = long;
-    using ref_count_type = unsigned long;
-#else
-    using hresult_type = int32_t;
-    using ref_count_type = uint32_t;
+// Note: this is a workaround for a false-positive warning produced by the Visual C++ 16.3 compiler.
+#pragma warning(disable : 4268)
+
+#if defined(_RESUMABLE_FUNCTIONS_SUPPORTED) && !defined(__cpp_coroutines)
+#define __cpp_coroutines
 #endif
 
+#ifndef WINRT_EXPORT
+#define WINRT_EXPORT
+#endif
+
+#ifdef WINRT_IMPL_NUMERICS
+#define _WINDOWS_NUMERICS_NAMESPACE_ winrt::Windows::Foundation::Numerics
+#define _WINDOWS_NUMERICS_BEGIN_NAMESPACE_ WINRT_EXPORT namespace winrt::Windows::Foundation::Numerics
+#define _WINDOWS_NUMERICS_END_NAMESPACE_
+#include <WindowsNumerics.impl.h>
+#undef _WINDOWS_NUMERICS_NAMESPACE_
+#undef _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
+#undef _WINDOWS_NUMERICS_END_NAMESPACE_
+#endif
+
+#ifdef __IUnknown_INTERFACE_DEFINED__
+#define WINRT_IMPL_IUNKNOWN_DEFINED
+#endif
+
+namespace winrt::impl
+{
     using ptp_io = struct tp_io*;
     using ptp_timer = struct tp_timer*;
     using ptp_wait = struct tp_wait*;
@@ -88,10 +214,24 @@ namespace winrt::impl
     using srwlock = struct srwlock_*;
     using condition_variable = struct condition_variable_*;
     using bstr = wchar_t*;
+
+    using filetime_period = std::ratio_multiply<std::ratio<100>, std::nano>;
+    struct IAgileObject;
+
+    struct com_callback_args
+    {
+        uint32_t reserved1;
+        uint32_t reserved2;
+        void* data;
+    };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
+    struct event_token;
+    struct hstring;
+    struct clock;
+
     struct hresult
     {
         int32_t value{};
@@ -125,7 +265,7 @@ namespace winrt
         {
         }
 
-#ifdef WINRT_WINDOWS_ABI
+#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
 
         constexpr guid(GUID const& value) noexcept :
             Data1(value.Data1),
@@ -146,16 +286,21 @@ namespace winrt
 
     inline bool operator==(guid const& left, guid const& right) noexcept
     {
-        return !memcmp(&left, &right, sizeof(guid));
+        return !memcmp(&left, &right, sizeof(left));
     }
 
     inline bool operator!=(guid const& left, guid const& right) noexcept
     {
         return !(left == right);
     }
+    
+    inline bool operator<(guid const& left, guid const& right) noexcept
+    {
+        return memcmp(&left, &right, sizeof(left)) < 0;
+    }
 }
 
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     enum class TrustLevel : int32_t
     {
@@ -167,125 +312,148 @@ namespace winrt::Windows::Foundation
     struct IUnknown;
     struct IInspectable;
     struct IActivationFactory;
+    using TimeSpan = std::chrono::duration<int64_t, impl::filetime_period>;
+    using DateTime = std::chrono::time_point<clock, TimeSpan>;
 }
+
+namespace winrt::impl
+{
+#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
+    using hresult_type = long;
+    using count_type = unsigned long;
+    using guid_type = GUID;
+#else
+    using hresult_type = int32_t;
+    using count_type = uint32_t;
+    using guid_type = guid;
+#endif
+
+#ifdef __IInspectable_INTERFACE_DEFINED__
+    using hstring_type = HSTRING;
+    using trust_level_type = ::TrustLevel;
+#else
+    using hstring_type = void*;
+    using trust_level_type = Windows::Foundation::TrustLevel;
+#endif
+
+    constexpr hresult error_ok{ 0 }; // S_OK
+    constexpr hresult error_fail{ static_cast<hresult>(0x80004005) }; // E_FAIL
+    constexpr hresult error_access_denied{ static_cast<hresult>(0x80070005) }; // E_ACCESSDENIED
+    constexpr hresult error_wrong_thread{ static_cast<hresult>(0x8001010E) }; // RPC_E_WRONG_THREAD
+    constexpr hresult error_not_implemented{ static_cast<hresult>(0x80004001) }; // E_NOTIMPL
+    constexpr hresult error_invalid_argument{ static_cast<hresult>(0x80070057) }; // E_INVALIDARG
+    constexpr hresult error_out_of_bounds{ static_cast<hresult>(0x8000000B) }; // E_BOUNDS
+    constexpr hresult error_no_interface{ static_cast<hresult>(0x80004002) }; // E_NOINTERFACE
+    constexpr hresult error_class_not_available{ static_cast<hresult>(0x80040111) }; // CLASS_E_CLASSNOTAVAILABLE
+    constexpr hresult error_class_not_registered{ static_cast<hresult>(0x80040154) }; // REGDB_E_CLASSNOTREG
+    constexpr hresult error_changed_state{ static_cast<hresult>(0x8000000C) }; // E_CHANGED_STATE
+    constexpr hresult error_illegal_method_call{ static_cast<hresult>(0x8000000E) }; // E_ILLEGAL_METHOD_CALL
+    constexpr hresult error_illegal_state_change{ static_cast<hresult>(0x8000000D) }; // E_ILLEGAL_STATE_CHANGE
+    constexpr hresult error_illegal_delegate_assignment{ static_cast<hresult>(0x80000018) }; // E_ILLEGAL_DELEGATE_ASSIGNMENT
+    constexpr hresult error_canceled{ static_cast<hresult>(0x800704C7) }; // HRESULT_FROM_WIN32(ERROR_CANCELLED)
+    constexpr hresult error_bad_alloc{ static_cast<hresult>(0x8007000E) }; // E_OUTOFMEMORY
+    constexpr hresult error_not_initialized{ static_cast<hresult>(0x800401F0) }; // CO_E_NOTINITIALIZED
+}
+
+__declspec(selectany) int32_t(__stdcall* winrt_to_hresult_handler)(void* address) noexcept {};
+__declspec(selectany) void(__stdcall* winrt_suspend_handler)(void const* token) noexcept {};
+__declspec(selectany) void(__stdcall* winrt_resume_handler)(void const* token) noexcept {};
+__declspec(selectany) int32_t(__stdcall* winrt_activation_handler)(void* classId, winrt::guid const& iid, void** factory) noexcept {};
 
 extern "C"
 {
-    int32_t __stdcall WINRT_GetRestrictedErrorInfo(void** info) noexcept;
-    int32_t __stdcall WINRT_RoGetActivationFactory(void* classId, winrt::guid const& iid, void** factory) noexcept;
-    int32_t __stdcall WINRT_RoInitialize(uint32_t type) noexcept;
-    int32_t __stdcall WINRT_RoOriginateLanguageException(int32_t error, void* message, void* exception) noexcept;
-    void    __stdcall WINRT_RoUninitialize() noexcept;
-    int32_t __stdcall WINRT_SetRestrictedErrorInfo(void* info) noexcept;
-    int32_t __stdcall WINRT_RoGetAgileReference(uint32_t options, winrt::guid const& iid, void* object, void** reference) noexcept;
-    int32_t __stdcall WINRT_CoIncrementMTAUsage(void** cookie) noexcept;
-    [[noreturn]] void __stdcall WINRT_RoFailFastWithErrorContext(int32_t error) noexcept;
-    int32_t __stdcall WINRT_RoTransformError(int32_t oldError, int32_t newError, void* message) noexcept;
+    void* __stdcall WINRT_IMPL_LoadLibraryW(wchar_t const* name) noexcept;
+    int32_t __stdcall WINRT_IMPL_FreeLibrary(void* library) noexcept;
+    void* __stdcall WINRT_IMPL_GetProcAddress(void* library, char const* name) noexcept;
 
-    int32_t __stdcall WINRT_WindowsCreateString(wchar_t const* sourceString, uint32_t length, void** string) noexcept;
-    int32_t __stdcall WINRT_WindowsCreateStringReference(wchar_t const* sourceString, uint32_t length, void* hstringHeader, void** string) noexcept;
-    int32_t __stdcall WINRT_WindowsDuplicateString(void* string, void** newString) noexcept;
-    int32_t __stdcall WINRT_WindowsDeleteString(void* string) noexcept;
-    int32_t __stdcall WINRT_WindowsStringHasEmbeddedNull(void* string, int* hasEmbedNull) noexcept;
-    int32_t __stdcall WINRT_WindowsPreallocateStringBuffer(uint32_t length, wchar_t** charBuffer, void** bufferHandle) noexcept;
-    int32_t __stdcall WINRT_WindowsDeleteStringBuffer(void* bufferHandle) noexcept;
-    int32_t __stdcall WINRT_WindowsPromoteStringBuffer(void* bufferHandle, void** string) noexcept;
-    int32_t __stdcall WINRT_WindowsConcatString(void* string1, void* string2, void** newString) noexcept;
-    wchar_t const* __stdcall WINRT_WindowsGetStringRawBuffer(void* string, uint32_t* length) noexcept;
-    uint32_t __stdcall WINRT_WindowsGetStringLen(void* string) noexcept;
+    int32_t __stdcall WINRT_IMPL_SetErrorInfo(uint32_t reserved, void* info) noexcept;
+    int32_t __stdcall WINRT_IMPL_GetErrorInfo(uint32_t reserved, void** info) noexcept;
+    int32_t __stdcall WINRT_IMPL_CoInitializeEx(void*, uint32_t type) noexcept;
+    void    __stdcall WINRT_IMPL_CoUninitialize() noexcept;
 
-    int32_t  __stdcall WINRT_CoCreateFreeThreadedMarshaler(void* outer, void** marshaler) noexcept;
-    int32_t  __stdcall WINRT_CoCreateInstance(winrt::guid const& clsid, void* outer, uint32_t context, winrt::guid const& iid, void** object) noexcept;
-    int32_t  __stdcall WINRT_CoGetCallContext(winrt::guid const& iid, void** object) noexcept;
-    int32_t  __stdcall WINRT_CoGetObjectContext(winrt::guid const& iid, void** object) noexcept;
-    int32_t  __stdcall WINRT_CoGetApartmentType(int32_t* type, int32_t* qualifier) noexcept;
-    void*    __stdcall WINRT_CoTaskMemAlloc(std::size_t size) noexcept;
-    void     __stdcall WINRT_CoTaskMemFree(void* ptr) noexcept;
-    void     __stdcall WINRT_SysFreeString(winrt::impl::bstr string) noexcept;
-    uint32_t __stdcall WINRT_SysStringLen(winrt::impl::bstr string) noexcept;
-    int32_t  __stdcall WINRT_IIDFromString(wchar_t const* string, winrt::guid* iid) noexcept;
-    int32_t  __stdcall WINRT_MultiByteToWideChar(uint32_t codepage, uint32_t flags, char const* in_string, int32_t in_size, wchar_t* out_string, int32_t out_size) noexcept;
-    int32_t  __stdcall WINRT_WideCharToMultiByte(uint32_t codepage, uint32_t flags, wchar_t const* int_string, int32_t in_size, char* out_string, int32_t out_size, char const* default_char, int32_t* default_used) noexcept;
-    int32_t  __stdcall WINRT_HeapFree(void* heap, uint32_t flags, void* value) noexcept;
-    void*    __stdcall WINRT_GetProcessHeap() noexcept;
-    uint32_t __stdcall WINRT_FormatMessageW(uint32_t flags, void const* source, uint32_t code, uint32_t language, wchar_t* buffer, uint32_t size, va_list* arguments) noexcept;
-    uint32_t __stdcall WINRT_GetLastError() noexcept;
-    void     __stdcall WINRT_GetSystemTimePreciseAsFileTime(void* result) noexcept;
+    int32_t  __stdcall WINRT_IMPL_CoCreateFreeThreadedMarshaler(void* outer, void** marshaler) noexcept;
+    int32_t  __stdcall WINRT_IMPL_CoCreateInstance(winrt::guid const& clsid, void* outer, uint32_t context, winrt::guid const& iid, void** object) noexcept;
+    int32_t  __stdcall WINRT_IMPL_CoGetCallContext(winrt::guid const& iid, void** object) noexcept;
+    int32_t  __stdcall WINRT_IMPL_CoGetObjectContext(winrt::guid const& iid, void** object) noexcept;
+    int32_t  __stdcall WINRT_IMPL_CoGetApartmentType(int32_t* type, int32_t* qualifier) noexcept;
+    void*    __stdcall WINRT_IMPL_CoTaskMemAlloc(std::size_t size) noexcept;
+    void     __stdcall WINRT_IMPL_CoTaskMemFree(void* ptr) noexcept;
+    winrt::impl::bstr __stdcall WINRT_IMPL_SysAllocString(wchar_t const* value) noexcept;
+    void     __stdcall WINRT_IMPL_SysFreeString(winrt::impl::bstr string) noexcept;
+    uint32_t __stdcall WINRT_IMPL_SysStringLen(winrt::impl::bstr string) noexcept;
+    int32_t  __stdcall WINRT_IMPL_IIDFromString(wchar_t const* string, winrt::guid* iid) noexcept;
+    int32_t  __stdcall WINRT_IMPL_MultiByteToWideChar(uint32_t codepage, uint32_t flags, char const* in_string, int32_t in_size, wchar_t* out_string, int32_t out_size) noexcept;
+    int32_t  __stdcall WINRT_IMPL_WideCharToMultiByte(uint32_t codepage, uint32_t flags, wchar_t const* int_string, int32_t in_size, char* out_string, int32_t out_size, char const* default_char, int32_t* default_used) noexcept;
+    void* __stdcall    WINRT_IMPL_HeapAlloc(void* heap, uint32_t flags, size_t bytes) noexcept;
+    int32_t  __stdcall WINRT_IMPL_HeapFree(void* heap, uint32_t flags, void* value) noexcept;
+    void*    __stdcall WINRT_IMPL_GetProcessHeap() noexcept;
+    uint32_t __stdcall WINRT_IMPL_FormatMessageW(uint32_t flags, void const* source, uint32_t code, uint32_t language, wchar_t* buffer, uint32_t size, va_list* arguments) noexcept;
+    uint32_t __stdcall WINRT_IMPL_GetLastError() noexcept;
+    void     __stdcall WINRT_IMPL_GetSystemTimePreciseAsFileTime(void* result) noexcept;
+    uintptr_t __stdcall WINRT_IMPL_VirtualQuery(void* address, void* buffer, uintptr_t length) noexcept;
+    void*    __stdcall WINRT_IMPL_EncodePointer(void* ptr) noexcept;
 
-    int32_t  __stdcall WINRT_OpenProcessToken(void* process, uint32_t access, void** token) noexcept;
-    void*    __stdcall WINRT_GetCurrentProcess() noexcept;
-    int32_t  __stdcall WINRT_DuplicateToken(void* existing, uint32_t level, void** duplicate) noexcept;
-    int32_t  __stdcall WINRT_OpenThreadToken(void* thread, uint32_t access, int32_t self, void** token) noexcept;
-    void*    __stdcall WINRT_GetCurrentThread() noexcept;
-    int32_t  __stdcall WINRT_SetThreadToken(void** thread, void* token) noexcept;
+    int32_t  __stdcall WINRT_IMPL_OpenProcessToken(void* process, uint32_t access, void** token) noexcept;
+    void*    __stdcall WINRT_IMPL_GetCurrentProcess() noexcept;
+    int32_t  __stdcall WINRT_IMPL_DuplicateToken(void* existing, uint32_t level, void** duplicate) noexcept;
+    int32_t  __stdcall WINRT_IMPL_OpenThreadToken(void* thread, uint32_t access, int32_t self, void** token) noexcept;
+    void*    __stdcall WINRT_IMPL_GetCurrentThread() noexcept;
+    int32_t  __stdcall WINRT_IMPL_SetThreadToken(void** thread, void* token) noexcept;
 
-    void    __stdcall WINRT_AcquireSRWLockExclusive(winrt::impl::srwlock* lock) noexcept;
-    void    __stdcall WINRT_AcquireSRWLockShared(winrt::impl::srwlock* lock) noexcept;
-    uint8_t __stdcall WINRT_TryAcquireSRWLockExclusive(winrt::impl::srwlock* lock) noexcept;
-    uint8_t __stdcall WINRT_TryAcquireSRWLockShared(winrt::impl::srwlock* lock) noexcept;
-    void    __stdcall WINRT_ReleaseSRWLockExclusive(winrt::impl::srwlock* lock) noexcept;
-    void    __stdcall WINRT_ReleaseSRWLockShared(winrt::impl::srwlock* lock) noexcept;
-    int32_t __stdcall WINRT_SleepConditionVariableSRW(winrt::impl::condition_variable* cv, winrt::impl::srwlock* lock, uint32_t milliseconds, uint32_t flags) noexcept;
-    void    __stdcall WINRT_WakeConditionVariable(winrt::impl::condition_variable* cv) noexcept;
-    void    __stdcall WINRT_WakeAllConditionVariable(winrt::impl::condition_variable* cv) noexcept;
-    void*   __stdcall WINRT_InterlockedPushEntrySList(void* head, void* entry) noexcept;
-    void*   __stdcall WINRT_InterlockedFlushSList(void* head) noexcept;
+    void    __stdcall WINRT_IMPL_AcquireSRWLockExclusive(winrt::impl::srwlock* lock) noexcept;
+    void    __stdcall WINRT_IMPL_AcquireSRWLockShared(winrt::impl::srwlock* lock) noexcept;
+    uint8_t __stdcall WINRT_IMPL_TryAcquireSRWLockExclusive(winrt::impl::srwlock* lock) noexcept;
+    uint8_t __stdcall WINRT_IMPL_TryAcquireSRWLockShared(winrt::impl::srwlock* lock) noexcept;
+    void    __stdcall WINRT_IMPL_ReleaseSRWLockExclusive(winrt::impl::srwlock* lock) noexcept;
+    void    __stdcall WINRT_IMPL_ReleaseSRWLockShared(winrt::impl::srwlock* lock) noexcept;
+    int32_t __stdcall WINRT_IMPL_SleepConditionVariableSRW(winrt::impl::condition_variable* cv, winrt::impl::srwlock* lock, uint32_t milliseconds, uint32_t flags) noexcept;
+    void    __stdcall WINRT_IMPL_WakeConditionVariable(winrt::impl::condition_variable* cv) noexcept;
+    void    __stdcall WINRT_IMPL_WakeAllConditionVariable(winrt::impl::condition_variable* cv) noexcept;
+    void*   __stdcall WINRT_IMPL_InterlockedPushEntrySList(void* head, void* entry) noexcept;
+    void*   __stdcall WINRT_IMPL_InterlockedFlushSList(void* head) noexcept;
 
-    void* __stdcall WINRT_CreateEventW(void*, int32_t, int32_t, void*) noexcept;
-    int32_t __stdcall WINRT_SetEvent(void*) noexcept;
-    int32_t  __stdcall WINRT_CloseHandle(void* hObject) noexcept;
-    uint32_t __stdcall WINRT_WaitForSingleObject(void* handle, uint32_t milliseconds) noexcept;
+    void* __stdcall WINRT_IMPL_CreateEventW(void*, int32_t, int32_t, void*) noexcept;
+    int32_t __stdcall WINRT_IMPL_SetEvent(void*) noexcept;
+    int32_t  __stdcall WINRT_IMPL_CloseHandle(void* hObject) noexcept;
+    uint32_t __stdcall WINRT_IMPL_WaitForSingleObject(void* handle, uint32_t milliseconds) noexcept;
 
-    int32_t  __stdcall WINRT_TrySubmitThreadpoolCallback(void(__stdcall *callback)(void*, void* context), void* context, void*) noexcept;
-    winrt::impl::ptp_timer __stdcall WINRT_CreateThreadpoolTimer(void(__stdcall *callback)(void*, void* context, void*), void* context, void*) noexcept;
-    void     __stdcall WINRT_SetThreadpoolTimer(winrt::impl::ptp_timer timer, void* time, uint32_t period, uint32_t window) noexcept;
-    void     __stdcall WINRT_CloseThreadpoolTimer(winrt::impl::ptp_timer timer) noexcept;
-    winrt::impl::ptp_wait __stdcall WINRT_CreateThreadpoolWait(void(__stdcall *callback)(void*, void* context, void*, uint32_t result), void* context, void*) noexcept;
-    void     __stdcall WINRT_SetThreadpoolWait(winrt::impl::ptp_wait wait, void* handle, void* timeout) noexcept;
-    void     __stdcall WINRT_CloseThreadpoolWait(winrt::impl::ptp_wait wait) noexcept;
-    winrt::impl::ptp_io __stdcall WINRT_CreateThreadpoolIo(void* object, void(__stdcall *callback)(void*, void* context, void* overlapped, uint32_t result, std::size_t bytes, void*) noexcept, void* context, void*) noexcept;
-    void     __stdcall WINRT_StartThreadpoolIo(winrt::impl::ptp_io io) noexcept;
-    void     __stdcall WINRT_CancelThreadpoolIo(winrt::impl::ptp_io io) noexcept;
-    void     __stdcall WINRT_CloseThreadpoolIo(winrt::impl::ptp_io io) noexcept;
-    winrt::impl::ptp_pool __stdcall WINRT_CreateThreadpool(void* reserved) noexcept;
-    void __stdcall WINRT_SetThreadpoolThreadMaximum(winrt::impl::ptp_pool pool, uint32_t value) noexcept;
-    int32_t __stdcall WINRT_SetThreadpoolThreadMinimum(winrt::impl::ptp_pool pool, uint32_t value) noexcept;
-    void     __stdcall WINRT_CloseThreadpool(winrt::impl::ptp_pool pool) noexcept;
+    int32_t  __stdcall WINRT_IMPL_TrySubmitThreadpoolCallback(void(__stdcall *callback)(void*, void* context), void* context, void*) noexcept;
+    winrt::impl::ptp_timer __stdcall WINRT_IMPL_CreateThreadpoolTimer(void(__stdcall *callback)(void*, void* context, void*), void* context, void*) noexcept;
+    void     __stdcall WINRT_IMPL_SetThreadpoolTimer(winrt::impl::ptp_timer timer, void* time, uint32_t period, uint32_t window) noexcept;
+    void     __stdcall WINRT_IMPL_CloseThreadpoolTimer(winrt::impl::ptp_timer timer) noexcept;
+    winrt::impl::ptp_wait __stdcall WINRT_IMPL_CreateThreadpoolWait(void(__stdcall *callback)(void*, void* context, void*, uint32_t result), void* context, void*) noexcept;
+    void     __stdcall WINRT_IMPL_SetThreadpoolWait(winrt::impl::ptp_wait wait, void* handle, void* timeout) noexcept;
+    void     __stdcall WINRT_IMPL_CloseThreadpoolWait(winrt::impl::ptp_wait wait) noexcept;
+    winrt::impl::ptp_io __stdcall WINRT_IMPL_CreateThreadpoolIo(void* object, void(__stdcall *callback)(void*, void* context, void* overlapped, uint32_t result, std::size_t bytes, void*) noexcept, void* context, void*) noexcept;
+    void     __stdcall WINRT_IMPL_StartThreadpoolIo(winrt::impl::ptp_io io) noexcept;
+    void     __stdcall WINRT_IMPL_CancelThreadpoolIo(winrt::impl::ptp_io io) noexcept;
+    void     __stdcall WINRT_IMPL_CloseThreadpoolIo(winrt::impl::ptp_io io) noexcept;
+    winrt::impl::ptp_pool __stdcall WINRT_IMPL_CreateThreadpool(void* reserved) noexcept;
+    void __stdcall WINRT_IMPL_SetThreadpoolThreadMaximum(winrt::impl::ptp_pool pool, uint32_t value) noexcept;
+    int32_t __stdcall WINRT_IMPL_SetThreadpoolThreadMinimum(winrt::impl::ptp_pool pool, uint32_t value) noexcept;
+    void     __stdcall WINRT_IMPL_CloseThreadpool(winrt::impl::ptp_pool pool) noexcept;
 
     int32_t __stdcall WINRT_CanUnloadNow() noexcept;
     int32_t __stdcall WINRT_GetActivationFactory(void* classId, void** factory) noexcept;
 }
 
 #ifdef _M_HYBRID
-#define WINRT_IMPL_LINK(function, count) __pragma(comment(linker, "/alternatename:#WINRT_" #function "@" #count "=#" #function "@" #count))
+#define WINRT_IMPL_LINK(function, count) __pragma(comment(linker, "/alternatename:#WINRT_IMPL_" #function "@" #count "=#" #function "@" #count))
+#elif _M_ARM64EC
+#define WINRT_IMPL_LINK(function, count) __pragma(comment(linker, "/alternatename:#WINRT_IMPL_" #function "=#" #function))
 #elif _M_IX86
-#define WINRT_IMPL_LINK(function, count) __pragma(comment(linker, "/alternatename:_WINRT_" #function "@" #count "=_" #function "@" #count))
+#define WINRT_IMPL_LINK(function, count) __pragma(comment(linker, "/alternatename:_WINRT_IMPL_" #function "@" #count "=_" #function "@" #count))
 #else
-#define WINRT_IMPL_LINK(function, count) __pragma(comment(linker, "/alternatename:WINRT_" #function "=" #function))
+#define WINRT_IMPL_LINK(function, count) __pragma(comment(linker, "/alternatename:WINRT_IMPL_" #function "=" #function))
 #endif
 
-WINRT_IMPL_LINK(GetRestrictedErrorInfo, 4)
-WINRT_IMPL_LINK(RoGetActivationFactory, 12)
-WINRT_IMPL_LINK(RoInitialize, 4)
-WINRT_IMPL_LINK(RoOriginateLanguageException, 12)
-WINRT_IMPL_LINK(RoUninitialize, 0)
-WINRT_IMPL_LINK(SetRestrictedErrorInfo, 4)
-WINRT_IMPL_LINK(RoGetAgileReference, 16)
-WINRT_IMPL_LINK(CoIncrementMTAUsage, 4)
-WINRT_IMPL_LINK(RoFailFastWithErrorContext, 4)
-WINRT_IMPL_LINK(RoTransformError, 12)
-
-WINRT_IMPL_LINK(WindowsCreateString, 12)
-WINRT_IMPL_LINK(WindowsCreateStringReference, 16)
-WINRT_IMPL_LINK(WindowsDuplicateString, 8)
-WINRT_IMPL_LINK(WindowsDeleteString, 4)
-WINRT_IMPL_LINK(WindowsStringHasEmbeddedNull, 8)
-WINRT_IMPL_LINK(WindowsPreallocateStringBuffer, 12)
-WINRT_IMPL_LINK(WindowsDeleteStringBuffer, 4)
-WINRT_IMPL_LINK(WindowsPromoteStringBuffer, 8)
-WINRT_IMPL_LINK(WindowsConcatString, 12)
-WINRT_IMPL_LINK(WindowsGetStringRawBuffer, 8)
-WINRT_IMPL_LINK(WindowsGetStringLen, 4)
+WINRT_IMPL_LINK(LoadLibraryW, 4)
+WINRT_IMPL_LINK(FreeLibrary, 4)
+WINRT_IMPL_LINK(GetProcAddress, 8)
+WINRT_IMPL_LINK(SetErrorInfo, 8)
+WINRT_IMPL_LINK(GetErrorInfo, 8)
+WINRT_IMPL_LINK(CoInitializeEx, 8)
+WINRT_IMPL_LINK(CoUninitialize, 0)
 
 WINRT_IMPL_LINK(CoCreateFreeThreadedMarshaler, 8)
 WINRT_IMPL_LINK(CoCreateInstance, 20)
@@ -294,16 +462,20 @@ WINRT_IMPL_LINK(CoGetObjectContext, 8)
 WINRT_IMPL_LINK(CoGetApartmentType, 8)
 WINRT_IMPL_LINK(CoTaskMemAlloc, 4)
 WINRT_IMPL_LINK(CoTaskMemFree, 4)
+WINRT_IMPL_LINK(SysAllocString, 4)
 WINRT_IMPL_LINK(SysFreeString, 4)
 WINRT_IMPL_LINK(SysStringLen, 4)
 WINRT_IMPL_LINK(IIDFromString, 8)
 WINRT_IMPL_LINK(MultiByteToWideChar, 24)
 WINRT_IMPL_LINK(WideCharToMultiByte, 32)
+WINRT_IMPL_LINK(HeapAlloc, 12)
 WINRT_IMPL_LINK(HeapFree, 12)
 WINRT_IMPL_LINK(GetProcessHeap, 0)
 WINRT_IMPL_LINK(FormatMessageW, 28)
 WINRT_IMPL_LINK(GetLastError, 0)
 WINRT_IMPL_LINK(GetSystemTimePreciseAsFileTime, 4)
+WINRT_IMPL_LINK(VirtualQuery, 12)
+WINRT_IMPL_LINK(EncodePointer, 4)
 
 WINRT_IMPL_LINK(OpenProcessToken, 12)
 WINRT_IMPL_LINK(GetCurrentProcess, 0)
@@ -347,7 +519,7 @@ WINRT_IMPL_LINK(CloseThreadpool, 4)
 
 #undef WINRT_IMPL_LINK
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     void check_hresult(hresult const result);
     hresult to_hresult() noexcept;
@@ -392,9 +564,6 @@ namespace winrt
 namespace winrt::impl
 {
     using namespace std::literals;
-
-    template <typename Async>
-    void blocking_suspend(Async const& async);
 
     template <typename T>
     struct reference_traits;
@@ -454,7 +623,7 @@ namespace winrt::impl
     inline constexpr bool has_category_v = !std::is_same_v<category_t<T>, void>;
 
     template <typename... Args>
-    struct pinterface_category;
+    struct generic_category;
 
     template <typename... Fields>
     struct struct_category;
@@ -465,30 +634,18 @@ namespace winrt::impl
     template <typename T>
     struct signature
     {
-        static constexpr auto data{ category_signature<typename category<T>::type, T>::data };
+        static constexpr auto data{ category_signature<category_t<T>, T>::data };
     };
 
     template <typename T>
-    struct missing_guid_of
-    {
-        static constexpr bool value{};
-    };
-
-    template <typename T>
-    struct missing_guid
-    {
-        static_assert(missing_guid_of<T>::value, "Support for non-WinRT interfaces is disabled. To enable, simply #include <unknwn.h> before any C++/WinRT headers.");
-    };
-
-#ifdef WINRT_WINDOWS_ABI
-    template <typename T>
-    struct guid_storage
-    {
-        static constexpr guid value{ __uuidof(T) };
-    };
+#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
+#ifdef __clang__
+    inline const guid guid_v{ __uuidof(T) };
 #else
-    template <typename T>
-    struct guid_storage : missing_guid<T> {};
+    inline constexpr guid guid_v{ __uuidof(T) };
+#endif
+#else
+    inline constexpr guid guid_v{};
 #endif
 
     template <typename T>
@@ -567,7 +724,10 @@ namespace winrt::impl
     struct produce_base;
 
     template <typename D, typename I>
-    struct produce : produce_base<D, I>
+    struct produce;
+
+    template <typename D>
+    struct produce<D, Windows::Foundation::IInspectable> : produce_base<D, Windows::Foundation::IInspectable>
     {
     };
 
@@ -639,7 +799,7 @@ namespace winrt::impl
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename T>
     using default_interface = typename impl::default_interface<T>::type;
@@ -647,7 +807,7 @@ namespace winrt
     template <typename T>
     constexpr guid const& guid_of() noexcept
     {
-        return impl::guid_storage<default_interface<T>>::value;
+        return impl::guid_v<default_interface<T>>;
     }
 
     template <typename... T>
@@ -655,8 +815,6 @@ namespace winrt
     {
         return ((id == guid_of<T>()) || ...);
     }
-
-    struct event_token;
 }
 
 namespace winrt::impl
@@ -861,23 +1019,6 @@ namespace winrt::impl
         };
     }
 
-    template <typename T>
-    struct name
-    {
-#pragma warning(suppress: 4307)
-        static constexpr auto value
-        {
-            combine
-            (
-                to_array<wchar_t>(guid_of<T>()),
-                std::array<wchar_t, 1>{ L'\0' }
-            )
-        };
-    };
-
-    template <typename T>
-    inline constexpr auto& name_v = name<T>::value;
-
     constexpr uint32_t endian_swap(uint32_t value) noexcept
     {
         return (value & 0xFF000000) >> 24 | (value & 0x00FF0000) >> 8 | (value & 0x0000FF00) << 8 | (value & 0x000000FF) << 24;
@@ -929,13 +1070,12 @@ namespace winrt::impl
         return (x & y) ^ (x & z) ^ (y & z);
     }
 
-    template <size_t Size>
-    constexpr std::array<uint32_t, 5> process_msg_block(std::array<uint8_t, Size> const& input, uint32_t start_pos, std::array<uint32_t, 5> const& intermediate_hash) noexcept
+    constexpr std::array<uint32_t, 5> process_msg_block(uint8_t const* input, size_t start_pos, std::array<uint32_t, 5> const& intermediate_hash) noexcept
     {
         uint32_t const K[4] = { 0x5A827999, 0x6ED9EBA1, 0x8F1BBCDC, 0xCA62C1D6 };
         std::array<uint32_t, 80> W = {};
 
-        int t = 0;
+        size_t t = 0;
         uint32_t temp = 0;
 
         for (t = 0; t < 16; t++)
@@ -1000,6 +1140,12 @@ namespace winrt::impl
         return { intermediate_hash[0] + A, intermediate_hash[1] + B, intermediate_hash[2] + C, intermediate_hash[3] + D, intermediate_hash[4] + E };
     }
 
+    template <size_t Size>
+    constexpr std::array<uint32_t, 5> process_msg_block(std::array<uint8_t, Size> const& input, size_t start_pos, std::array<uint32_t, 5> const& intermediate_hash) noexcept
+    {
+        return process_msg_block(input.data(), start_pos, intermediate_hash);
+    }
+
     constexpr std::array<uint8_t, 8> size_to_bytes(size_t size) noexcept
     {
         return
@@ -1016,13 +1162,13 @@ namespace winrt::impl
     }
 
     template <size_t Size, size_t RemainingSize, size_t... Index>
-    constexpr std::array<uint8_t, RemainingSize + 1> make_remaining([[maybe_unused]] std::array<uint8_t, Size> const& input, [[maybe_unused]] uint32_t start_pos, std::index_sequence<Index...>) noexcept
+    constexpr std::array<uint8_t, RemainingSize + 1> make_remaining([[maybe_unused]] std::array<uint8_t, Size> const& input, [[maybe_unused]] size_t start_pos, std::index_sequence<Index...>) noexcept
     {
         return { input[Index + start_pos]..., 0x80 };
     }
 
     template <size_t Size>
-    constexpr auto make_remaining(std::array<uint8_t, Size> const& input, uint32_t start_pos) noexcept
+    constexpr auto make_remaining(std::array<uint8_t, Size> const& input, size_t start_pos) noexcept
     {
         constexpr auto remaining_size = Size % 64;
         return make_remaining<Size, remaining_size>(input, start_pos, std::make_index_sequence<remaining_size>());
@@ -1068,7 +1214,7 @@ namespace winrt::impl
     constexpr auto calculate_sha1(std::array<uint8_t, Size> const& input) noexcept
     {
         std::array<uint32_t, 5> intermediate_hash{ 0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476, 0xC3D2E1F0 };
-        uint32_t i = 0;
+        size_t i = 0;
 
         while (i + 64 <= Size)
         {
@@ -1109,6 +1255,21 @@ namespace winrt::impl
     {
 #pragma warning(suppress: 4307)
         static constexpr guid value{ generate_guid(signature<T>::data) };
+    };
+
+    template <typename T>
+#ifdef __clang__
+    inline static const auto name_v
+#else
+#pragma warning(suppress: 4307)
+    inline constexpr auto name_v
+#endif
+    {
+        combine
+        (
+            to_array<wchar_t>(guid_of<T>()),
+            std::array<wchar_t, 1>{ L'\0' }
+        )
     };
 
     constexpr size_t to_utf8_size(wchar_t const value) noexcept
@@ -1176,203 +1337,72 @@ namespace winrt::impl
         return output;
     }
 
-    template <>
-    struct name<bool>
-    {
-        static constexpr auto & value{ L"Boolean" };
-        static constexpr auto & data{ "b1" };
-    };
+    template <typename T>
+    constexpr guid generic_guid_v{};
 
-    template <>
-    struct category<bool>
-    {
-        using type = basic_category;
-    };
+    template <typename T>
+    constexpr auto& basic_signature_v = "";
 
-    template <>
-    struct name<int8_t>
-    {
-        static constexpr auto & value{ L"Int8" };
-        static constexpr auto & data{ "i1" };
-    };
+    template <> inline constexpr auto& basic_signature_v<bool> = "b1";
+    template <> inline constexpr auto& basic_signature_v<int8_t> = "i1";
+    template <> inline constexpr auto& basic_signature_v<int16_t> = "i2";
+    template <> inline constexpr auto& basic_signature_v<int32_t> = "i4";
+    template <> inline constexpr auto& basic_signature_v<int64_t> = "i8";
+    template <> inline constexpr auto& basic_signature_v<uint8_t> = "u1";
+    template <> inline constexpr auto& basic_signature_v<uint16_t> = "u2";
+    template <> inline constexpr auto& basic_signature_v<uint32_t> = "u4";
+    template <> inline constexpr auto& basic_signature_v<uint64_t> = "u8";
+    template <> inline constexpr auto& basic_signature_v<float> = "f4";
+    template <> inline constexpr auto& basic_signature_v<double> = "f8";
+    template <> inline constexpr auto& basic_signature_v<char16_t> = "c2";
+    template <> inline constexpr auto& basic_signature_v<guid> = "g16";
+    template <> inline constexpr auto& basic_signature_v<hstring> = "string";
+    template <> inline constexpr auto& basic_signature_v<Windows::Foundation::IInspectable> = "cinterface(IInspectable)";
 
-    template <>
-    struct category<int8_t>
-    {
-        using type = basic_category;
-    };
+    template <> inline constexpr auto& name_v<bool> = L"Boolean";
+    template <> inline constexpr auto& name_v<int8_t> = L"Int8";
+    template <> inline constexpr auto& name_v<int16_t> = L"Int16";
+    template <> inline constexpr auto& name_v<int32_t> = L"Int32";
+    template <> inline constexpr auto& name_v<int64_t> = L"Int64";
+    template <> inline constexpr auto& name_v<uint8_t> = L"UInt8";
+    template <> inline constexpr auto& name_v<uint16_t> = L"UInt16";
+    template <> inline constexpr auto& name_v<uint32_t> = L"UInt32";
+    template <> inline constexpr auto& name_v<uint64_t> = L"UInt64";
+    template <> inline constexpr auto& name_v<float> = L"Single";
+    template <> inline constexpr auto& name_v<double> = L"Double";
+    template <> inline constexpr auto& name_v<char16_t> = L"Char16";
+    template <> inline constexpr auto& name_v<guid> = L"Guid";
+    template <> inline constexpr auto& name_v<hstring> = L"String";
+    template <> inline constexpr auto& name_v<hresult> = L"Windows.Foundation.HResult";
+    template <> inline constexpr auto& name_v<event_token> = L"Windows.Foundation.EventRegistrationToken";
+    template <> inline constexpr auto& name_v<Windows::Foundation::IInspectable> = L"Object";
+    template <> inline constexpr auto& name_v<Windows::Foundation::TimeSpan> = L"Windows.Foundation.TimeSpan";
+    template <> inline constexpr auto& name_v<Windows::Foundation::DateTime> = L"Windows.Foundation.DateTime";
+    template <> inline constexpr auto& name_v<IAgileObject> = L"IAgileObject";
 
-    template <>
-    struct name<int16_t>
-    {
-        static constexpr auto & value{ L"Int16" };
-        static constexpr auto & data{ "i2" };
-    };
-
-    template <>
-    struct category<int16_t>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<int32_t>
-    {
-        static constexpr auto & value{ L"Int32" };
-        static constexpr auto & data{ "i4" };
-    };
-
-    template <>
-    struct category<int32_t>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<int64_t>
-    {
-        static constexpr auto & value{ L"Int64" };
-        static constexpr auto & data{ "i8" };
-    };
-
-    template <>
-    struct category<int64_t>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<uint8_t>
-    {
-        static constexpr auto & value{ L"UInt8" };
-        static constexpr auto & data{ "u1" };
-    };
-
-    template <>
-    struct category<uint8_t>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<uint16_t>
-    {
-        static constexpr auto & value{ L"UInt16" };
-        static constexpr auto & data{ "u2" };
-    };
-
-    template <>
-    struct category<uint16_t>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<uint32_t>
-    {
-        static constexpr auto & value{ L"UInt32" };
-        static constexpr auto & data{ "u4" };
-    };
-
-    template <>
-    struct category<uint32_t>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<uint64_t>
-    {
-        static constexpr auto & value{ L"UInt64" };
-        static constexpr auto & data{ "u8" };
-    };
-
-    template <>
-    struct category<uint64_t>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<float>
-    {
-        static constexpr auto & value{ L"Single" };
-        static constexpr auto & data{ "f4" };
-    };
-
-    template <>
-    struct category<float>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<double>
-    {
-        static constexpr auto & value{ L"Double" };
-        static constexpr auto & data{ "f8" };
-    };
-
-    template <>
-    struct category<double>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<char16_t>
-    {
-        static constexpr auto & value{ L"Char16" };
-        static constexpr auto & data{ "c2" };
-    };
-
-    template <>
-    struct category<char16_t>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<guid>
-    {
-        static constexpr auto & value{ L"Guid" };
-        static constexpr auto & data{ "g16" };
-    };
-
-    template <>
-    struct category<guid>
-    {
-        using type = basic_category;
-    };
-
-    template <>
-    struct name<hresult>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.HResult" };
-    };
-
-    template <>
-    struct category<hresult>
-    {
-        using type = struct_category<int32_t>;
-    };
-
-    template <>
-    struct name<event_token>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.EventRegistrationToken" };
-    };
-
-    template <>
-    struct category<event_token>
-    {
-        using type = struct_category<int64_t>;
-    };
+    template <> struct category<bool> { using type = basic_category; };
+    template <> struct category<int8_t> { using type = basic_category; };
+    template <> struct category<int16_t> { using type = basic_category; };
+    template <> struct category<int32_t> { using type = basic_category; };
+    template <> struct category<int64_t> { using type = basic_category; };
+    template <> struct category<uint8_t> { using type = basic_category; };
+    template <> struct category<uint16_t> { using type = basic_category; };
+    template <> struct category<uint32_t> { using type = basic_category; };
+    template <> struct category<uint64_t> { using type = basic_category; };
+    template <> struct category<float> { using type = basic_category; };
+    template <> struct category<double> { using type = basic_category; };
+    template <> struct category<char16_t> { using type = basic_category; };
+    template <> struct category<guid> { using type = basic_category; };
+    template <> struct category<hresult> { using type = struct_category<int32_t>; };
+    template <> struct category<event_token> { using type = struct_category<int64_t>; };
+    template <> struct category<Windows::Foundation::IInspectable> { using type = basic_category; };
+    template <> struct category<Windows::Foundation::TimeSpan> { using type = struct_category<int64_t>; };
+    template <> struct category<Windows::Foundation::DateTime> { using type = struct_category<int64_t>; };
 
     template <typename T>
     struct category_signature<basic_category, T>
     {
-        constexpr static auto data{ to_array(name<T>::data) };
+        constexpr static auto data{ to_array(basic_signature_v<T>) };
     };
 
     template <typename T>
@@ -1395,9 +1425,9 @@ namespace winrt::impl
     };
 
     template <typename... Args, typename T>
-    struct category_signature<pinterface_category<Args...>, T>
+    struct category_signature<generic_category<Args...>, T>
     {
-        constexpr static auto data{ combine("pinterface(", to_array<char>(category<T>::value), ";", arg_collection<Args...>::data, ")") };
+        constexpr static auto data{ combine("pinterface(", to_array<char>(generic_guid_v<T>), ";", arg_collection<Args...>::data, ")") };
     };
 
     template <typename T>
@@ -1425,7 +1455,7 @@ namespace winrt::impl
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename T>
     constexpr auto name_of() noexcept
@@ -1434,7 +1464,7 @@ namespace winrt
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename T>
     struct handle_type
@@ -1520,7 +1550,7 @@ namespace winrt
 
         static void close(type value) noexcept
         {
-            WINRT_VERIFY_(1, WINRT_CloseHandle(value));
+            WINRT_VERIFY_(1, WINRT_IMPL_CloseHandle(value));
         }
 
         static constexpr type invalid() noexcept
@@ -1537,7 +1567,7 @@ namespace winrt
 
         static void close(type value) noexcept
         {
-            WINRT_VERIFY_(1, WINRT_CloseHandle(value));
+            WINRT_VERIFY_(1, WINRT_IMPL_CloseHandle(value));
         }
 
         static type invalid() noexcept
@@ -1549,7 +1579,7 @@ namespace winrt
     using file_handle = handle_type<file_handle_traits>;
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     struct slim_condition_variable;
 
@@ -1561,32 +1591,32 @@ namespace winrt
 
         void lock() noexcept
         {
-            WINRT_AcquireSRWLockExclusive(&m_lock);
+            WINRT_IMPL_AcquireSRWLockExclusive(&m_lock);
         }
 
         void lock_shared() noexcept
         {
-            WINRT_AcquireSRWLockShared(&m_lock);
+            WINRT_IMPL_AcquireSRWLockShared(&m_lock);
         }
 
         bool try_lock() noexcept
         {
-            return 0 != WINRT_TryAcquireSRWLockExclusive(&m_lock);
+            return 0 != WINRT_IMPL_TryAcquireSRWLockExclusive(&m_lock);
         }
 
         bool try_lock_shared() noexcept
         {
-            return 0 != WINRT_TryAcquireSRWLockShared(&m_lock);
+            return 0 != WINRT_IMPL_TryAcquireSRWLockShared(&m_lock);
         }
 
         void unlock() noexcept
         {
-            WINRT_ReleaseSRWLockExclusive(&m_lock);
+            WINRT_IMPL_ReleaseSRWLockExclusive(&m_lock);
         }
 
         void unlock_shared() noexcept
         {
-            WINRT_ReleaseSRWLockShared(&m_lock);
+            WINRT_IMPL_ReleaseSRWLockShared(&m_lock);
         }
 
     private:
@@ -1628,7 +1658,7 @@ namespace winrt
         {
             while (!predicate())
             {
-                WINRT_VERIFY(WINRT_SleepConditionVariableSRW(&m_cv, x.get(), 0xFFFFFFFF /*INFINITE*/, 0));
+                WINRT_VERIFY(WINRT_IMPL_SleepConditionVariableSRW(&m_cv, x.get(), 0xFFFFFFFF /*INFINITE*/, 0));
             }
         }
 
@@ -1646,7 +1676,7 @@ namespace winrt
                     return false;
                 }
 
-                if (!WINRT_SleepConditionVariableSRW(&m_cv, x.get(), static_cast<uint32_t>(milliseconds), 0))
+                if (!WINRT_IMPL_SleepConditionVariableSRW(&m_cv, x.get(), static_cast<uint32_t>(milliseconds), 0))
                 {
                     return predicate();
                 }
@@ -1657,12 +1687,12 @@ namespace winrt
 
         void notify_one() noexcept
         {
-            WINRT_WakeConditionVariable(&m_cv);
+            WINRT_IMPL_WakeConditionVariable(&m_cv);
         }
 
         void notify_all() noexcept
         {
-            WINRT_WakeAllConditionVariable(&m_cv);
+            WINRT_IMPL_WakeAllConditionVariable(&m_cv);
         }
 
     private:
@@ -1672,23 +1702,6 @@ namespace winrt
 
 namespace winrt::impl
 {
-    inline constexpr hresult error_ok{ 0 }; // S_OK
-    inline constexpr hresult error_fail{ static_cast<hresult>(0x80004005) }; // E_FAIL
-    inline constexpr hresult error_access_denied{ static_cast<hresult>(0x80070005) }; // E_ACCESSDENIED
-    inline constexpr hresult error_wrong_thread{ static_cast<hresult>(0x8001010E) }; // RPC_E_WRONG_THREAD
-    inline constexpr hresult error_not_implemented{ static_cast<hresult>(0x80004001) }; // E_NOTIMPL
-    inline constexpr hresult error_invalid_argument{ static_cast<hresult>(0x80070057) }; // E_INVALIDARG
-    inline constexpr hresult error_out_of_bounds{ static_cast<hresult>(0x8000000B) }; // E_BOUNDS
-    inline constexpr hresult error_no_interface{ static_cast<hresult>(0x80004002) }; // E_NOINTERFACE
-    inline constexpr hresult error_class_not_available{ static_cast<hresult>(0x80040111) }; // CLASS_E_CLASSNOTAVAILABLE
-    inline constexpr hresult error_changed_state{ static_cast<hresult>(0x8000000C) }; // E_CHANGED_STATE
-    inline constexpr hresult error_illegal_method_call{ static_cast<hresult>(0x8000000E) }; // E_ILLEGAL_METHOD_CALL
-    inline constexpr hresult error_illegal_state_change{ static_cast<hresult>(0x8000000D) }; // E_ILLEGAL_STATE_CHANGE
-    inline constexpr hresult error_illegal_delegate_assignment{ static_cast<hresult>(0x80000018) }; // E_ILLEGAL_DELEGATE_ASSIGNMENT
-    inline constexpr hresult error_canceled{ static_cast<hresult>(0x800704C7) }; // HRESULT_FROM_WIN32(ERROR_CANCELLED)
-    inline constexpr hresult error_bad_alloc{ static_cast<hresult>(0x8007000E) }; // E_OUTOFMEMORY
-    inline constexpr hresult error_not_initialized{ static_cast<hresult>(0x800401F0) }; // CO_E_NOTINITIALIZED
-
     template <> struct abi<Windows::Foundation::IUnknown>
     {
         struct __declspec(novtable) type
@@ -1698,10 +1711,7 @@ namespace winrt::impl
             virtual uint32_t __stdcall Release() noexcept = 0;
         };
     };
-    template <> struct guid_storage<Windows::Foundation::IUnknown>
-    {
-        static constexpr guid value{ 0x00000000,0x0000,0x0000,{ 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
-    };
+
     using unknown_abi = abi_t<Windows::Foundation::IUnknown>;
 
     template <> struct abi<Windows::Foundation::IInspectable>
@@ -1713,28 +1723,18 @@ namespace winrt::impl
             virtual int32_t __stdcall GetTrustLevel(Windows::Foundation::TrustLevel* level) noexcept = 0;
         };
     };
-    template <> struct guid_storage<Windows::Foundation::IInspectable>
-    {
-        static constexpr guid value{ 0xAF86E2E0,0xB12D,0x4C6A,{ 0x9C,0x5A,0xD7,0xAA,0x65,0x10,0x1E,0x90 } };
-    };
-    template <> struct name<Windows::Foundation::IInspectable>
-    {
-        static constexpr auto & value{ L"Object" };
-        static constexpr auto & data{ "cinterface(IInspectable)" };
-    };
-    template <> struct category<Windows::Foundation::IInspectable>
-    {
-        using type = basic_category;
-    };
+
     using inspectable_abi = abi_t<Windows::Foundation::IInspectable>;
 
-    struct __declspec(novtable) IAgileObject : unknown_abi
+    template <> struct abi<Windows::Foundation::IActivationFactory>
     {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall ActivateInstance(void** instance) noexcept = 0;
+        };
     };
-    template <> struct guid_storage<IAgileObject>
-    {
-        static constexpr guid value{ 0x94EA2B94,0xE9CC,0x49E0,{ 0xC0,0xFF,0xEE,0x64,0xCA,0x8F,0x5B,0x90 } };
-    };
+
+    struct __declspec(novtable) IAgileObject : unknown_abi {};
 
     struct __declspec(novtable) IAgileReference : unknown_abi
     {
@@ -1750,19 +1750,18 @@ namespace winrt::impl
         virtual int32_t __stdcall ReleaseMarshalData(void* pStm) noexcept = 0;
         virtual int32_t __stdcall DisconnectObject(uint32_t dwReserved) noexcept = 0;
     };
-    template <> struct guid_storage<IMarshal>
+
+    struct __declspec(novtable) IGlobalInterfaceTable : unknown_abi
     {
-        static constexpr guid value{ 0x00000003,0x0000,0x0000,{ 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+        virtual int32_t __stdcall RegisterInterfaceInGlobal(void* object, guid const& iid, uint32_t* cookie) noexcept = 0;
+        virtual int32_t __stdcall RevokeInterfaceFromGlobal(uint32_t cookie) noexcept = 0;
+        virtual int32_t __stdcall GetInterfaceFromGlobal(uint32_t cookie, guid const& iid, void** object) noexcept = 0;
     };
 
     struct __declspec(novtable) IStaticLifetime : inspectable_abi
     {
         virtual int32_t __stdcall unused() noexcept = 0;
         virtual int32_t __stdcall GetCollection(void** value) noexcept = 0;
-    };
-    template <> struct guid_storage<IStaticLifetime>
-    {
-        static constexpr guid value{ 0x17b0e613,0x942a,0x422d,{ 0x90,0x4c,0xf9,0x0d,0xc7,0x1a,0x7d,0xae } };
     };
 
     struct __declspec(novtable) IStaticLifetimeCollection : inspectable_abi
@@ -1772,36 +1771,33 @@ namespace winrt::impl
         virtual int32_t __stdcall unused2() noexcept = 0;
         virtual int32_t __stdcall unused3() noexcept = 0;
         virtual int32_t __stdcall Insert(void*, void*, bool*) noexcept = 0;
+        virtual int32_t __stdcall Remove(void*) noexcept = 0;
         virtual int32_t __stdcall unused4() noexcept = 0;
-        virtual int32_t __stdcall unused5() noexcept = 0;
-    };
-    template <> struct guid_storage<IStaticLifetimeCollection>
-    {
-        static constexpr guid value{ 0x1b0d3570,0x0877,0x5ec2,{ 0x8a,0x2c,0x3b,0x95,0x39,0x50,0x6a,0xca } };
     };
 
     struct __declspec(novtable) IWeakReference : unknown_abi
     {
         virtual int32_t __stdcall Resolve(guid const& iid, void** objectReference) noexcept = 0;
     };
-    template <> struct guid_storage<IWeakReference>
-    {
-        static constexpr guid value{ 0x00000037,0x0000,0x0000,{ 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
-    };
 
     struct __declspec(novtable) IWeakReferenceSource : unknown_abi
     {
         virtual int32_t __stdcall GetWeakReference(IWeakReference** weakReference) noexcept = 0;
-    };
-    template <> struct guid_storage<IWeakReferenceSource>
-    {
-        static constexpr guid value{ 0x00000038,0x0000,0x0000,{ 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
     };
 
     struct __declspec(novtable) IRestrictedErrorInfo : unknown_abi
     {
         virtual int32_t __stdcall GetErrorDetails(bstr* description, int32_t* error, bstr* restrictedDescription, bstr* capabilitySid) noexcept = 0;
         virtual int32_t __stdcall GetReference(bstr* reference) noexcept = 0;
+    };
+
+    struct __declspec(novtable) IErrorInfo : unknown_abi
+    {
+        virtual int32_t __stdcall GetGUID(guid* value) noexcept = 0;
+        virtual int32_t __stdcall GetSource(bstr* value) noexcept = 0;
+        virtual int32_t __stdcall GetDescription(bstr* value) noexcept = 0;
+        virtual int32_t __stdcall GetHelpFile(bstr* value) noexcept = 0;
+        virtual int32_t __stdcall GetHelpContext(uint32_t* value) noexcept = 0;
     };
 
     struct __declspec(novtable) ILanguageExceptionErrorInfo2 : unknown_abi
@@ -1811,31 +1807,12 @@ namespace winrt::impl
         virtual int32_t __stdcall CapturePropagationContext(void* exception) noexcept = 0;
         virtual int32_t __stdcall GetPropagationContextHead(ILanguageExceptionErrorInfo2** head) noexcept = 0;
     };
-    template <> struct guid_storage<ILanguageExceptionErrorInfo2>
-    {
-        static constexpr guid value{ 0x5746E5C4,0x5B97,0x424C,{ 0xB6,0x20,0x28,0x22,0x91,0x57,0x34,0xDD } };
-    };
-
-    struct com_callback_args
-    {
-        uint32_t reserved1;
-        uint32_t reserved2;
-        void* data;
-    };
 
     struct ICallbackWithNoReentrancyToApplicationSTA;
-    template <> struct guid_storage<ICallbackWithNoReentrancyToApplicationSTA>
-    {
-        static constexpr guid value{ 0x0A299774,0x3E4E,0xFC42,{ 0x1D,0x9D,0x72,0xCE,0xE1,0x05,0xCA,0x57 } };
-    };
 
     struct __declspec(novtable) IContextCallback : unknown_abi
     {
-        virtual int32_t __stdcall ContextCallback(int32_t(__stdcall *callback)(com_callback_args*), com_callback_args* args, guid const& iid, int method, void* reserved) noexcept = 0;
-    };
-    template <> struct guid_storage<IContextCallback>
-    {
-        static constexpr guid value{ 0x000001da,0x0000,0x0000,{ 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+        virtual int32_t __stdcall ContextCallback(int32_t(__stdcall* callback)(com_callback_args*), com_callback_args* args, guid const& iid, int method, void* reserved) noexcept = 0;
     };
 
     struct __declspec(novtable) IServerSecurity : unknown_abi
@@ -1845,19 +1822,40 @@ namespace winrt::impl
         virtual int32_t __stdcall RevertToSelf() noexcept = 0;
         virtual int32_t __stdcall IsImpersonating() noexcept = 0;
     };
-    template <> struct guid_storage<IServerSecurity>
-    {
-        static constexpr guid value{ 0x0000013E,0x0000,0x0000,{ 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
-    };
 
     struct __declspec(novtable) IBufferByteAccess : unknown_abi
     {
         virtual int32_t __stdcall Buffer(uint8_t** value) noexcept = 0;
     };
-    template <> struct guid_storage<IBufferByteAccess>
+
+    template <> struct abi<Windows::Foundation::TimeSpan>
     {
-        static constexpr guid value{ 0x905a0fef,0xbc53,0x11df,{ 0x8c,0x49,0x00,0x1e,0x4f,0xc6,0x86,0xda } };
+        using type = int64_t;
     };
+
+    template <> struct abi<Windows::Foundation::DateTime>
+    {
+        using type = int64_t;
+    };
+
+    template <> inline constexpr guid guid_v<Windows::Foundation::IUnknown>{ 0x00000000, 0x0000, 0x0000, { 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+    template <> inline constexpr guid guid_v<Windows::Foundation::IInspectable>{ 0xAF86E2E0, 0xB12D, 0x4C6A, { 0x9C,0x5A,0xD7,0xAA,0x65,0x10,0x1E,0x90 } };
+    template <> inline constexpr guid guid_v<Windows::Foundation::IActivationFactory>{ 0x00000035, 0x0000, 0x0000, { 0xc0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+    template <> inline constexpr guid guid_v<IAgileObject>{ 0x94EA2B94, 0xE9CC, 0x49E0, { 0xC0,0xFF,0xEE,0x64,0xCA,0x8F,0x5B,0x90 } };
+    template <> inline constexpr guid guid_v<IAgileReference>{ 0xC03F6A43, 0x65A4, 0x9818, { 0x98,0x7E,0xE0,0xB8,0x10,0xD2,0xA6,0xF2 } };
+    template <> inline constexpr guid guid_v<IMarshal>{ 0x00000003, 0x0000, 0x0000, { 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+    template <> inline constexpr guid guid_v<IGlobalInterfaceTable>{ 0x00000146, 0x0000, 0x0000, { 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+    template <> inline constexpr guid guid_v<IStaticLifetime>{ 0x17b0e613, 0x942a, 0x422d, { 0x90,0x4c,0xf9,0x0d,0xc7,0x1a,0x7d,0xae } };
+    template <> inline constexpr guid guid_v<IStaticLifetimeCollection>{ 0x1b0d3570, 0x0877, 0x5ec2, { 0x8a,0x2c,0x3b,0x95,0x39,0x50,0x6a,0xca } };
+    template <> inline constexpr guid guid_v<IWeakReference>{ 0x00000037, 0x0000, 0x0000, { 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+    template <> inline constexpr guid guid_v<IWeakReferenceSource>{ 0x00000038, 0x0000, 0x0000, { 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+    template <> inline constexpr guid guid_v<IRestrictedErrorInfo>{ 0x82BA7092, 0x4C88, 0x427D, { 0xA7,0xBC,0x16,0xDD,0x93,0xFE,0xB6,0x7E } };
+    template <> inline constexpr guid guid_v<IErrorInfo>{ 0x1CF2B120, 0x547D, 0x101B, { 0x8E,0x65,0x08,0x00,0x2B,0x2B,0xD1,0x19 } };
+    template <> inline constexpr guid guid_v<ILanguageExceptionErrorInfo2>{ 0x5746E5C4, 0x5B97, 0x424C, { 0xB6,0x20,0x28,0x22,0x91,0x57,0x34,0xDD } };
+    template <> inline constexpr guid guid_v<ICallbackWithNoReentrancyToApplicationSTA>{ 0x0A299774, 0x3E4E, 0xFC42, { 0x1D,0x9D,0x72,0xCE,0xE1,0x05,0xCA,0x57 } };
+    template <> inline constexpr guid guid_v<IContextCallback>{ 0x000001da, 0x0000, 0x0000, { 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+    template <> inline constexpr guid guid_v<IServerSecurity>{ 0x0000013E, 0x0000, 0x0000, { 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+    template <> inline constexpr guid guid_v<IBufferByteAccess>{ 0x905a0fef, 0xbc53, 0x11df, { 0x8c,0x49,0x00,0x1e,0x4f,0xc6,0x86,0xda } };
 }
 
 namespace winrt::impl
@@ -1977,7 +1975,7 @@ namespace winrt::impl
     }
 }
 
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct IUnknown
     {
@@ -2099,15 +2097,15 @@ namespace winrt::Windows::Foundation
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
-    template <typename T, typename = std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, T>>>
+    template <typename T, std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, T>, int> = 0>
     auto get_abi(T const& object) noexcept
     {
         return reinterpret_cast<impl::abi_t<T> const&>(object);
     }
 
-    template <typename T, typename = std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, T>>>
+    template <typename T, std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, T>, int> = 0>
     auto put_abi(T& object) noexcept
     {
         if constexpr (!std::is_trivially_destructible_v<T>)
@@ -2118,19 +2116,19 @@ namespace winrt
         return reinterpret_cast<impl::abi_t<T>*>(&object);
     }
 
-    template <typename T, typename V, typename = std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, T>>>
+    template <typename T, typename V, std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, T>, int> = 0>
     void copy_from_abi(T& object, V&& value)
     {
         object = reinterpret_cast<T const&>(value);
     }
 
-    template <typename T, typename V, typename = std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, T>>>
+    template <typename T, typename V, std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, T>, int> = 0>
     void copy_to_abi(T const& object, V& value)
     {
         reinterpret_cast<T&>(value) = object;
     }
 
-    template <typename T, typename = std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, std::decay_t<T>> && !std::is_convertible_v<T, std::wstring_view>>>
+    template <typename T, std::enable_if_t<!std::is_base_of_v<Windows::Foundation::IUnknown, std::decay_t<T>> && !std::is_convertible_v<T, std::wstring_view>, int> = 0>
     auto detach_abi(T&& object)
     {
         impl::abi_t<T> result{};
@@ -2196,7 +2194,7 @@ namespace winrt
         }
     }
 
-#ifdef WINRT_WINDOWS_ABI
+#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
 
     inline ::IUnknown* get_unknown(Windows::Foundation::IUnknown const& object) noexcept
     {
@@ -2206,7 +2204,7 @@ namespace winrt
 #endif
 }
 
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     inline bool operator==(IUnknown const& left, IUnknown const& right) noexcept
     {
@@ -2261,7 +2259,7 @@ namespace winrt::Windows::Foundation
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename T>
     struct com_ptr
@@ -2574,34 +2572,153 @@ void** IID_PPV_ARGS_Helper(winrt::com_ptr<T>* ptr) noexcept
 
 namespace winrt::impl
 {
-    inline void* duplicate_string(void* other)
+    struct atomic_ref_count
     {
-        void* result = nullptr;
-        check_hresult(WINRT_WindowsDuplicateString(other, &result));
-        return result;
+        atomic_ref_count() noexcept = default;
+
+        explicit atomic_ref_count(uint32_t count) noexcept : m_count(count)
+        {
+        }
+
+        uint32_t operator=(uint32_t count) noexcept
+        {
+            return m_count = count;
+        }
+
+        uint32_t operator++() noexcept
+        {
+            return m_count.fetch_add(1, std::memory_order_relaxed) + 1;
+        }
+
+        uint32_t operator--() noexcept
+        {
+            auto const remaining = m_count.fetch_sub(1, std::memory_order_release) - 1;
+
+            if (remaining == 0)
+            {
+                std::atomic_thread_fence(std::memory_order_acquire);
+            }
+            else if (remaining < 0)
+            {
+                std::terminate();
+            }
+
+            return remaining;
+        }
+
+        operator uint32_t() const noexcept
+        {
+            return m_count;
+        }
+
+    private:
+
+        std::atomic<int32_t> m_count;
+    };
+
+    constexpr uint32_t hstring_reference_flag{ 1 };
+
+    struct hstring_header
+    {
+        uint32_t flags;
+        uint32_t length;
+        uint32_t padding1;
+        uint32_t padding2;
+        wchar_t const* ptr;
+    };
+
+    struct shared_hstring_header : hstring_header
+    {
+        atomic_ref_count count;
+        wchar_t buffer[1];
+    };
+
+    inline void release_hstring(hstring_header* handle) noexcept
+    {
+        WINRT_ASSERT((handle->flags & hstring_reference_flag) == 0);
+
+        if (0 == --static_cast<shared_hstring_header*>(handle)->count)
+        {
+            WINRT_IMPL_HeapFree(WINRT_IMPL_GetProcessHeap(), 0, handle);
+        }
     }
 
-    inline void* create_string(wchar_t const* value, uint32_t const length)
+    inline shared_hstring_header* precreate_hstring_on_heap(uint32_t length)
     {
-        void* result = nullptr;
-        check_hresult(WINRT_WindowsCreateString(value, length, &result));
-        return result;
+        WINRT_ASSERT(length != 0);
+        uint64_t bytes_required = static_cast<uint64_t>(sizeof(shared_hstring_header)) + static_cast<uint64_t>(sizeof(wchar_t)) * static_cast<uint64_t>(length);
+
+        if (bytes_required > UINT_MAX)
+        {
+            throw std::invalid_argument("length");
+        }
+
+        auto header = static_cast<shared_hstring_header*>(WINRT_IMPL_HeapAlloc(WINRT_IMPL_GetProcessHeap(), 0, static_cast<std::size_t>(bytes_required)));
+
+        if (!header)
+        {
+            throw std::bad_alloc();
+        }
+
+        header->flags = 0;
+        header->length = length;
+        header->ptr = header->buffer;
+        header->count = 1;
+        header->buffer[length] = 0;
+        return header;
     }
 
-    inline bool embedded_null(void* value) noexcept
+    inline hstring_header* create_hstring_on_heap(wchar_t const* value, uint32_t length)
     {
-        int32_t result = 0;
-        WINRT_VERIFY_(error_ok, WINRT_WindowsStringHasEmbeddedNull(value, &result));
-        return 0 != result;
+        if (!length)
+        {
+            return nullptr;
+        }
+
+        auto header = precreate_hstring_on_heap(length);
+        memcpy_s(header->buffer, sizeof(wchar_t) * length, value, sizeof(wchar_t) * length);
+        return header;
+    }
+
+    inline void create_hstring_on_stack(hstring_header& header, wchar_t const* value, uint32_t length) noexcept
+    {
+        WINRT_ASSERT(value);
+        WINRT_ASSERT(length != 0);
+
+        if (value[length] != 0)
+        {
+            std::terminate();
+        }
+
+        header.flags = hstring_reference_flag;
+        header.length = length;
+        header.ptr = value;
+    }
+
+    inline hstring_header* duplicate_hstring(hstring_header* handle)
+    {
+        if (!handle)
+        {
+            return nullptr;
+        }
+        else if ((handle->flags & hstring_reference_flag) == 0)
+        {
+            ++static_cast<shared_hstring_header*>(handle)->count;
+            return handle;
+        }
+        else
+        {
+            return create_hstring_on_heap(handle->ptr, handle->length);
+        }
     }
 
     struct hstring_traits
     {
-        using type = void*;
+        using type = hstring_header*;
 
         static void close(type value) noexcept
         {
-            WINRT_VERIFY_(error_ok, WINRT_WindowsDeleteString(value));
+            release_hstring(value);
         }
 
         static constexpr type invalid() noexcept
@@ -2611,7 +2728,7 @@ namespace winrt::impl
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     struct hstring
     {
@@ -2625,23 +2742,24 @@ namespace winrt
 
         hstring() noexcept = default;
 
-        hstring(void* ptr, take_ownership_from_abi_t) noexcept : m_handle(ptr)
+        hstring(void* ptr, take_ownership_from_abi_t) noexcept : m_handle(static_cast<impl::hstring_header*>(ptr))
         {
         }
 
         hstring(hstring const& value) :
-            m_handle(impl::duplicate_string(value.m_handle.get()))
+            m_handle(impl::duplicate_hstring(value.m_handle.get()))
         {}
 
         hstring& operator=(hstring const& value)
         {
-            m_handle.attach(impl::duplicate_string(value.m_handle.get()));
+            m_handle.attach(impl::duplicate_hstring(value.m_handle.get()));
             return*this;
         }
 
         hstring(hstring&&) noexcept = default;
         hstring& operator=(hstring&&) = default;
         hstring(std::nullptr_t) = delete;
+        hstring& operator=(std::nullptr_t) = delete;
 
         hstring(std::initializer_list<wchar_t> value) :
             hstring(value.begin(), static_cast<uint32_t>(value.size()))
@@ -2652,7 +2770,7 @@ namespace winrt
         {}
 
         hstring(wchar_t const* value, size_type size) :
-            m_handle(impl::create_string(value, size))
+            m_handle(impl::create_hstring_on_heap(value, size))
         {}
 
         explicit hstring(std::wstring_view const& value) :
@@ -2681,9 +2799,14 @@ namespace winrt
 
         operator std::wstring_view() const noexcept
         {
-            uint32_t size;
-            wchar_t const* data = WINRT_WindowsGetStringRawBuffer(m_handle.get(), &size);
-            return std::wstring_view(data, size);
+            if (m_handle)
+            {
+                return{ m_handle.get()->ptr, m_handle.get()->length };
+            }
+            else
+            {
+                return { L"", 0 };
+            }
         }
 
         const_reference operator[](size_type pos) const noexcept
@@ -2706,17 +2829,31 @@ namespace winrt
 
         const_pointer data() const noexcept
         {
-            return begin();
+            return c_str();
         }
 
         const_pointer c_str() const noexcept
         {
-            return begin();
+            if (!empty())
+            {
+                return begin();
+            }
+            else
+            {
+                return L"";
+            }
         }
 
         const_iterator begin() const noexcept
         {
-            return WINRT_WindowsGetStringRawBuffer(m_handle.get(), nullptr);
+            if (m_handle)
+            {
+                return m_handle.get()->ptr;
+            }
+            else
+            {
+                return {};
+            }
         }
 
         const_iterator cbegin() const noexcept
@@ -2726,9 +2863,14 @@ namespace winrt
 
         const_iterator end() const noexcept
         {
-            uint32_t length = 0;
-            const_pointer buffer = WINRT_WindowsGetStringRawBuffer(m_handle.get(), &length);
-            return buffer + length;
+            if (m_handle)
+            {
+                return m_handle.get()->ptr + m_handle.get()->length;
+            }
+            else
+            {
+                return {};
+            }
         }
 
         const_iterator cend() const noexcept
@@ -2763,7 +2905,14 @@ namespace winrt
 
         size_type size() const noexcept
         {
-            return WINRT_WindowsGetStringLen(m_handle.get());
+            if (m_handle)
+            {
+                return m_handle.get()->length;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         friend void swap(hstring& left, hstring& right) noexcept
@@ -2807,23 +2956,23 @@ namespace winrt
 
     inline void copy_from_abi(hstring& object, void* value)
     {
-        attach_abi(object, impl::duplicate_string(value));
+        attach_abi(object, impl::duplicate_hstring(static_cast<impl::hstring_header*>(value)));
     }
 
     inline void copy_to_abi(hstring const& object, void*& value)
     {
         WINRT_ASSERT(value == nullptr);
-        value = impl::duplicate_string(get_abi(object));
+        value = impl::duplicate_hstring(static_cast<impl::hstring_header*>(get_abi(object)));
     }
 
     inline void* detach_abi(std::wstring_view const& value)
     {
-        return impl::create_string(value.data(), static_cast<uint32_t>(value.size()));
+        return impl::create_hstring_on_heap(value.data(), static_cast<uint32_t>(value.size()));
     }
 
     inline void* detach_abi(wchar_t const* const value)
     {
-        return impl::create_string(value, static_cast<uint32_t>(wcslen(value)));
+        return impl::create_hstring_on_heap(value, static_cast<uint32_t>(wcslen(value)));
     }
 }
 
@@ -2832,12 +2981,6 @@ namespace winrt::impl
     template <> struct abi<hstring>
     {
         using type = void*;
-    };
-
-    template <> struct name<hstring>
-    {
-        static constexpr auto & value{ L"String" };
-        static constexpr auto & data{ "string" };
     };
 
     template <> struct category<hstring>
@@ -2850,38 +2993,24 @@ namespace winrt::impl
         hstring_builder(hstring_builder const&) = delete;
         hstring_builder& operator=(hstring_builder const&) = delete;
 
-        explicit hstring_builder(uint32_t const size)
+        explicit hstring_builder(uint32_t const size) :
+            m_handle(impl::precreate_hstring_on_heap(size))
         {
-            check_hresult(WINRT_WindowsPreallocateStringBuffer(size, &m_data, &m_buffer));
-        }
-
-        ~hstring_builder() noexcept
-        {
-            if (m_buffer != nullptr)
-            {
-                WINRT_VERIFY_(error_ok, WINRT_WindowsDeleteStringBuffer(m_buffer));
-            }
         }
 
         wchar_t* data() noexcept
         {
-            WINRT_ASSERT(m_buffer != nullptr);
-            return m_data;
+            return const_cast<wchar_t*>(m_handle.get()->ptr);
         }
 
         hstring to_hstring()
         {
-            WINRT_ASSERT(m_buffer != nullptr);
-            void* result{};
-            check_hresult(WINRT_WindowsPromoteStringBuffer(m_buffer, &result));
-            m_buffer = nullptr;
-            return { result, take_ownership_from_abi };
+            return { m_handle.detach(), take_ownership_from_abi };
         }
 
     private:
 
-        wchar_t* m_data{ nullptr };
-        void* m_buffer{ nullptr };
+        handle_type<impl::hstring_traits> m_handle;
     };
 
     template <typename T>
@@ -2957,11 +3086,14 @@ namespace winrt::impl
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     inline bool embedded_null(hstring const& value) noexcept
     {
-        return impl::embedded_null(get_abi(value));
+        return std::any_of(value.begin(), value.end(), [](auto item)
+            {
+                return item == 0;
+            });
     }
 
     inline hstring to_hstring(uint8_t value)
@@ -3025,7 +3157,7 @@ namespace winrt
         return value;
     }
 
-    template <typename T, typename = std::enable_if_t<std::is_same_v<T, bool>>>
+    template <typename T, std::enable_if_t<std::is_same_v<T, bool>, int> = 0>
     hstring to_hstring(T const value)
     {
         if (value)
@@ -3048,11 +3180,11 @@ namespace winrt
         return hstring{ buffer };
     }
 
-    template <typename T, typename = std::enable_if_t<std::is_convertible_v<T, std::string_view>>>
+    template <typename T, std::enable_if_t<std::is_convertible_v<T, std::string_view>, int> = 0>
     hstring to_hstring(T const& value)
     {
         std::string_view const view(value);
-        int const size = WINRT_MultiByteToWideChar(65001 /*CP_UTF8*/, 0, view.data(), static_cast<int32_t>(view.size()), nullptr, 0);
+        int const size = WINRT_IMPL_MultiByteToWideChar(65001 /*CP_UTF8*/, 0, view.data(), static_cast<int32_t>(view.size()), nullptr, 0);
 
         if (size == 0)
         {
@@ -3060,13 +3192,13 @@ namespace winrt
         }
 
         impl::hstring_builder result(size);
-        WINRT_VERIFY_(size, WINRT_MultiByteToWideChar(65001 /*CP_UTF8*/, 0, view.data(), static_cast<int32_t>(view.size()), result.data(), size));
+        WINRT_VERIFY_(size, WINRT_IMPL_MultiByteToWideChar(65001 /*CP_UTF8*/, 0, view.data(), static_cast<int32_t>(view.size()), result.data(), size));
         return result.to_hstring();
     }
 
     inline std::string to_string(std::wstring_view value)
     {
-        int const size = WINRT_WideCharToMultiByte(65001 /*CP_UTF8*/, 0, value.data(), static_cast<int32_t>(value.size()), nullptr, 0, nullptr, nullptr);
+        int const size = WINRT_IMPL_WideCharToMultiByte(65001 /*CP_UTF8*/, 0, value.data(), static_cast<int32_t>(value.size()), nullptr, 0, nullptr, nullptr);
 
         if (size == 0)
         {
@@ -3074,40 +3206,39 @@ namespace winrt
         }
 
         std::string result(size, '?');
-        WINRT_VERIFY_(size, WINRT_WideCharToMultiByte(65001 /*CP_UTF8*/, 0, value.data(), static_cast<int32_t>(value.size()), result.data(), size, nullptr, nullptr));
+        WINRT_VERIFY_(size, WINRT_IMPL_WideCharToMultiByte(65001 /*CP_UTF8*/, 0, value.data(), static_cast<int32_t>(value.size()), result.data(), size, nullptr, nullptr));
         return result;
     }
 }
 
-namespace winrt::param
+WINRT_EXPORT namespace winrt::param
 {
     struct hstring
     {
+#pragma warning(suppress: 26495)
         hstring() noexcept : m_handle(nullptr) {}
         hstring(hstring const& values) = delete;
         hstring& operator=(hstring const& values) = delete;
         hstring(std::nullptr_t) = delete;
 
+#pragma warning(suppress: 26495)
         hstring(winrt::hstring const& value) noexcept : m_handle(get_abi(value))
         {
         }
 
         hstring(std::wstring_view const& value) noexcept
         {
-            if (impl::error_ok != WINRT_WindowsCreateStringReference(value.data(), static_cast<uint32_t>(value.size()), &m_header, &m_handle))
-            {
-                std::terminate();
-            }
+            create_string_reference(value.data(), value.size());
         }
 
         hstring(std::wstring const& value) noexcept
         {
-            WINRT_VERIFY_(impl::error_ok, WINRT_WindowsCreateStringReference(value.data(), static_cast<uint32_t>(value.size()), &m_header, &m_handle));
+            create_string_reference(value.data(), value.size());
         }
 
         hstring(wchar_t const* const value) noexcept
         {
-            WINRT_VERIFY_(impl::error_ok, WINRT_WindowsCreateStringReference(value, static_cast<uint32_t>(wcslen(value)), &m_header, &m_handle));
+            create_string_reference(value, wcslen(value));
         }
 
         operator winrt::hstring const&() const noexcept
@@ -3116,22 +3247,24 @@ namespace winrt::param
         }
 
     private:
-
-        struct header
+        void create_string_reference(wchar_t const* const data, size_t size) noexcept
         {
-            union
+            WINRT_ASSERT(size < UINT_MAX);
+            auto size32 = static_cast<uint32_t>(size);
+
+            if (size32 == 0)
             {
-                void* Reserved1;
-#ifdef _WIN64
-                char Reserved2[24];
-#else
-                char Reserved2[20];
-#endif
-            } Reserved;
-        };
-        
+                m_handle = nullptr;
+            }
+            else
+            {
+                impl::create_hstring_on_stack(m_header, data, size32);
+                m_handle = &m_header;
+            }
+        }
+
         void* m_handle;
-        header m_header;
+        impl::hstring_header m_header;
     };
 
     inline void* get_abi(hstring const& object) noexcept
@@ -3146,7 +3279,7 @@ namespace winrt::impl
     using param_type = std::conditional_t<std::is_same_v<T, hstring>, param::hstring, T>;
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     inline bool operator==(hstring const& left, hstring const& right) noexcept
     {
@@ -3252,7 +3385,7 @@ namespace winrt::impl
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     inline hstring operator+(hstring const& left, hstring const& right)
     {
@@ -3304,7 +3437,7 @@ namespace winrt
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename T>
     struct array_view
@@ -3338,22 +3471,30 @@ namespace winrt
 
         template <typename C>
         array_view(std::vector<C>& value) noexcept :
-            array_view(value.data(), static_cast<size_type>(value.size()))
-        {}
+            array_view(data(value), static_cast<size_type>(value.size()))
+        {
+        }
 
         template <typename C>
         array_view(std::vector<C> const& value) noexcept :
-            array_view(value.data(), static_cast<size_type>(value.size()))
-        {}
+            array_view(data(value), static_cast<size_type>(value.size()))
+        {
+        }
 
-        template <typename C, size_type N>
+        template <typename C, size_t N>
         array_view(std::array<C, N>& value) noexcept :
             array_view(value.data(), static_cast<size_type>(value.size()))
         {}
 
-        template <typename C, size_type N>
+        template <typename C, size_t N>
         array_view(std::array<C, N> const& value) noexcept :
             array_view(value.data(), static_cast<size_type>(value.size()))
+        {}
+
+        template <typename OtherType>
+        array_view(array_view<OtherType> const& other,
+            std::enable_if_t<std::is_convertible_v<OtherType(*)[], T(*)[]>, int> = 0) noexcept :
+            array_view(other.data(), other.size())
         {}
 
         reference operator[](size_type const pos) noexcept
@@ -3412,12 +3553,7 @@ namespace winrt
             return m_data[m_size - 1];
         }
 
-        pointer data() noexcept
-        {
-            return m_data;
-        }
-
-        const_pointer data() const noexcept
+        pointer data() const noexcept
         {
             return m_data;
         }
@@ -3501,7 +3637,29 @@ namespace winrt
 
         pointer m_data{ nullptr };
         size_type m_size{ 0 };
+
+    private:
+
+        template <typename C>
+        auto data(std::vector<C> const& value) noexcept
+        {
+            static_assert(!std::is_same_v<C, bool>, "Cannot use std::vector<bool> as an array_view. Consider std::array or std::unique_ptr<bool[]>.");
+            return value.data();
+        }
+
+        template <typename C>
+        auto data(std::vector<C>& value) noexcept
+        {
+            static_assert(!std::is_same_v<C, bool>, "Cannot use std::vector<bool> as an array_view. Consider std::array or std::unique_ptr<bool[]>.");
+            return value.data();
+        }
     };
+
+    template <typename C, size_t N> array_view(C(&value)[N]) -> array_view<C>;
+    template <typename C> array_view(std::vector<C>& value) -> array_view<C>;
+    template <typename C> array_view(std::vector<C> const& value) -> array_view<C const>;
+    template <typename C, size_t N> array_view(std::array<C, N>& value) -> array_view<C>;
+    template <typename C, size_t N> array_view(std::array<C, N> const& value) -> array_view<C const>;
 
     template <typename T>
     struct com_array : array_view<T>
@@ -3537,27 +3695,34 @@ namespace winrt
             std::uninitialized_fill_n(this->m_data, count, value);
         }
 
-        template <typename InIt> com_array(InIt first, InIt last)
+        template <typename InIt, typename = std::void_t<typename std::iterator_traits<InIt>::difference_type>>
+        com_array(InIt first, InIt last)
         {
             alloc(static_cast<size_type>(std::distance(first, last)));
             std::uninitialized_copy(first, last, this->begin());
         }
 
-        explicit com_array(std::vector<value_type> const& value) :
+        template <typename U>
+        explicit com_array(std::vector<U> const& value) :
             com_array(value.begin(), value.end())
         {}
 
-        template <size_type N>
-        explicit com_array(std::array<value_type, N> const& value) :
+        template <typename U, size_t N>
+        explicit com_array(std::array<U, N> const& value) :
             com_array(value.begin(), value.end())
         {}
 
-        template <size_type N>
-        explicit com_array(value_type const(&value)[N]) :
+        template <typename U, size_t N>
+        explicit com_array(U const(&value)[N]) :
             com_array(value, value + N)
         {}
 
         com_array(std::initializer_list<value_type> value) :
+            com_array(value.begin(), value.end())
+        {}
+
+        template <typename U, typename = std::enable_if_t<std::is_convertible_v<U, T>>>
+        com_array(std::initializer_list<U> value) :
             com_array(value.begin(), value.end())
         {}
 
@@ -3589,7 +3754,7 @@ namespace winrt
 
             std::destroy(this->begin(), this->end());
 
-            WINRT_CoTaskMemFree(this->m_data);
+            WINRT_IMPL_CoTaskMemFree(this->m_data);
             this->m_data = nullptr;
             this->m_size = 0;
         }
@@ -3608,7 +3773,7 @@ namespace winrt
 
             if (0 != size)
             {
-                this->m_data = static_cast<value_type*>(WINRT_CoTaskMemAlloc(size * sizeof(value_type)));
+                this->m_data = static_cast<value_type*>(WINRT_IMPL_CoTaskMemAlloc(size * sizeof(value_type)));
 
                 if (this->m_data == nullptr)
                 {
@@ -3620,33 +3785,55 @@ namespace winrt
         }
     };
 
-    template <typename T>
-    bool operator==(array_view<T> const& left, array_view<T> const& right) noexcept
+    template <typename C> com_array(uint32_t, C const&) -> com_array<std::decay_t<C>>;
+    template <typename InIt, typename = std::void_t<typename std::iterator_traits<InIt>::difference_type>>
+    com_array(InIt, InIt) -> com_array<std::decay_t<typename std::iterator_traits<InIt>::value_type>>;
+    template <typename C> com_array(std::vector<C> const&) -> com_array<std::decay_t<C>>;
+    template <size_t N, typename C> com_array(std::array<C, N> const&) -> com_array<std::decay_t<C>>;
+    template <size_t N, typename C> com_array(C const(&)[N]) -> com_array<std::decay_t<C>>;
+    template <typename C> com_array(std::initializer_list<C>) -> com_array<std::decay_t<C>>;
+
+    namespace impl
+    {
+        template <typename T, typename U>
+        inline constexpr bool array_comparable = std::is_same_v<std::remove_cv_t<T>, std::remove_cv_t<U>>;
+    }
+
+    template <typename T, typename U, 
+        std::enable_if_t<impl::array_comparable<T, U>, int> = 0>
+    bool operator==(array_view<T> const& left, array_view<U> const& right) noexcept
     {
         return std::equal(left.begin(), left.end(), right.begin(), right.end());
     }
 
-    template <typename T>
-    bool operator<(array_view<T> const& left, array_view<T> const& right) noexcept
+    template <typename T, typename U,
+        std::enable_if_t<impl::array_comparable<T, U>, int> = 0>
+    bool operator<(array_view<T> const& left, array_view<U> const& right) noexcept
     {
         return std::lexicographical_compare(left.begin(), left.end(), right.begin(), right.end());
     }
 
-    template <typename T> bool operator!=(array_view<T> const& left, array_view<T> const& right) noexcept { return !(left == right); }
-    template <typename T> bool operator>(array_view<T> const& left, array_view<T> const& right) noexcept { return right < left; }
-    template <typename T> bool operator<=(array_view<T> const& left, array_view<T> const& right) noexcept { return !(right < left); }
-    template <typename T> bool operator>=(array_view<T> const& left, array_view<T> const& right) noexcept { return !(left < right); }
+    template <typename T, typename U, std::enable_if_t<impl::array_comparable<T, U>, int> = 0>
+    bool operator!=(array_view<T> const& left, array_view<U> const& right) noexcept { return !(left == right); }
+    template <typename T, typename U,std::enable_if_t<impl::array_comparable<T, U>, int> = 0>
+    bool operator>(array_view<T> const& left, array_view<U> const& right) noexcept { return right < left; }
+    template <typename T, typename U,std::enable_if_t<impl::array_comparable<T, U>, int> = 0>
+    bool operator<=(array_view<T> const& left, array_view<U> const& right) noexcept { return !(right < left); }
+    template <typename T, typename U, std::enable_if_t<impl::array_comparable<T, U>, int> = 0>
+    bool operator>=(array_view<T> const& left, array_view<U> const& right) noexcept { return !(left < right); }
 
     template <typename T>
     auto get_abi(array_view<T> object) noexcept
     {
+        auto data = object.size() ? object.data() : (T*)alignof(T);
+
         if constexpr (std::is_base_of_v<Windows::Foundation::IUnknown, T>)
         {
-            return (void**)object.data();
+            return (void**)data;
         }
         else
         {
-            return reinterpret_cast<impl::arg_out<std::remove_const_t<T>>>(const_cast<std::remove_const_t<T>*>(object.data()));
+            return reinterpret_cast<impl::arg_out<std::remove_const_t<T>>>(const_cast<std::remove_const_t<T>*>(data));
         }
     }
 
@@ -3751,7 +3938,7 @@ namespace winrt::impl
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename T>
     auto detach_abi(uint32_t* __valueSize, impl::arg_out<T>* value) noexcept
@@ -3781,7 +3968,7 @@ namespace winrt
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename T>
     struct weak_ref
@@ -3798,7 +3985,9 @@ namespace winrt
                 }
                 else
                 {
-                    check_hresult(object.template as<impl::IWeakReferenceSource>()->GetWeakReference(m_ref.put()));
+                    // An access violation (crash) on the following line means that the object does not support weak references.
+                    // Avoid using weak_ref/auto_revoke with such objects.
+                    check_hresult(object.template try_as<impl::IWeakReferenceSource>()->GetWeakReference(m_ref.put()));
                 }
             }
         }
@@ -3841,6 +4030,47 @@ namespace winrt
         com_ptr<impl::IWeakReference> m_ref;
     };
 
+    template<typename T>
+    struct impl::abi<weak_ref<T>> : impl::abi<com_ptr<impl::IWeakReference>>
+    {
+    };
+
+    template <typename T>
+    inline bool operator==(weak_ref<T> const& left, weak_ref<T> const& right) noexcept
+    {
+        return get_abi(left) == get_abi(right);
+    }
+
+    template <typename T>
+    inline bool operator==(weak_ref<T> const& left, std::nullptr_t) noexcept
+    {
+        return get_abi(left) == nullptr;
+    }
+
+    template <typename T>
+    inline bool operator==(std::nullptr_t, weak_ref<T> const& right) noexcept
+    {
+        return nullptr == get_abi(right);
+    }
+
+    template <typename T>
+    inline bool operator!=(weak_ref<T> const& left, weak_ref<T> const& right) noexcept
+    {
+        return !(left == right);
+    }
+
+    template <typename T>
+    inline bool operator!=(weak_ref<T> const& left, std::nullptr_t) noexcept
+    {
+        return !(left == nullptr);
+    }
+
+    template <typename T>
+    inline bool operator!=(std::nullptr_t, weak_ref<T> const& right) noexcept
+    {
+        return !(nullptr == right);
+    }
+
     template <typename T>
     weak_ref<impl::wrapped_type_t<T>> make_weak(T const& object)
     {
@@ -3848,7 +4078,180 @@ namespace winrt
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
+{
+#if defined (WINRT_NO_MODULE_LOCK)
+
+    // Defining WINRT_NO_MODULE_LOCK is appropriate for apps (executables) that don't implement something like DllCanUnloadNow
+    // and can thus avoid the synchronization overhead imposed by the default module lock.
+
+    constexpr auto get_module_lock() noexcept
+    {
+        struct lock
+        {
+            constexpr uint32_t operator++() noexcept
+            {
+                return 1;
+            }
+
+            constexpr uint32_t operator--() noexcept
+            {
+                return 0;
+            }
+        };
+
+        return lock{};
+    }
+
+#elif defined (WINRT_CUSTOM_MODULE_LOCK)
+
+    // When WINRT_CUSTOM_MODULE_LOCK is defined, you must provide an implementation of winrt::get_module_lock()
+    // that returns an object that implements operator++ and operator--.
+
+#else
+
+    // This is the default implementation for use with DllCanUnloadNow.
+
+    inline impl::atomic_ref_count& get_module_lock() noexcept
+    {
+        static impl::atomic_ref_count s_lock;
+        return s_lock;
+    }
+
+#endif
+}
+
+namespace winrt::impl
+{
+    template<bool UseModuleLock>
+    struct module_lock_updater;
+
+    template<>
+    struct module_lock_updater<true>
+    {
+        module_lock_updater() noexcept
+        {
+            ++get_module_lock();
+        }
+
+        ~module_lock_updater() noexcept
+        {
+            --get_module_lock();
+        }
+    };
+
+    template<>
+    struct module_lock_updater<false> {};
+
+    using update_module_lock = module_lock_updater<true>;
+
+    struct agile_ref_fallback final : IAgileReference, update_module_lock
+    {
+        agile_ref_fallback(com_ptr<IGlobalInterfaceTable>&& git, uint32_t cookie) noexcept :
+            m_git(std::move(git)),
+            m_cookie(cookie)
+        {
+        }
+
+        ~agile_ref_fallback() noexcept
+        {
+            m_git->RevokeInterfaceFromGlobal(m_cookie);
+        }
+
+        int32_t __stdcall QueryInterface(guid const& id, void** object) noexcept final
+        {
+            if (is_guid_of<IAgileReference>(id) || is_guid_of<Windows::Foundation::IUnknown>(id) || is_guid_of<IAgileObject>(id))
+            {
+                *object = static_cast<IAgileReference*>(this);
+                AddRef();
+                return 0;
+            }
+
+            *object = nullptr;
+            return error_no_interface;
+        }
+
+        uint32_t __stdcall AddRef() noexcept final
+        {
+            return ++m_references;
+        }
+
+        uint32_t __stdcall Release() noexcept final
+        {
+            auto const remaining = --m_references;
+
+            if (remaining == 0)
+            {
+                delete this;
+            }
+
+            return remaining;
+        }
+
+        int32_t __stdcall Resolve(guid const& id, void** object) noexcept final
+        {
+            return m_git->GetInterfaceFromGlobal(m_cookie, id, object);
+        }
+
+    private:
+
+        com_ptr<IGlobalInterfaceTable> m_git;
+        uint32_t m_cookie{};
+        atomic_ref_count m_references{ 1 };
+    };
+
+    template <typename F, typename L>
+    void load_runtime_function(char const* name, F& result, L fallback) noexcept
+    {
+        if (result)
+        {
+            return;
+        }
+
+        result = reinterpret_cast<F>(WINRT_IMPL_GetProcAddress(WINRT_IMPL_LoadLibraryW(L"combase.dll"), name));
+
+        if (result)
+        {
+            return;
+        }
+
+        result = fallback;
+    }
+
+    inline int32_t __stdcall fallback_RoGetAgileReference(uint32_t, winrt::guid const& iid, void* object, void** reference) noexcept
+    {
+        *reference = nullptr;
+        static constexpr guid git_clsid{ 0x00000323, 0x0000, 0x0000, { 0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
+
+        com_ptr<IGlobalInterfaceTable> git;
+        hresult hr = WINRT_IMPL_CoCreateInstance(git_clsid, nullptr, 1 /*CLSCTX_INPROC_SERVER*/, guid_of<IGlobalInterfaceTable>(), git.put_void());
+
+        if (hr < 0)
+        {
+            return hr;
+        }
+
+        uint32_t cookie{};
+        hr = git->RegisterInterfaceInGlobal(object, iid, &cookie);
+
+        if (hr < 0)
+        {
+            return hr;
+        }
+
+        *reference = new agile_ref_fallback(std::move(git), cookie);
+        return 0;
+    }
+
+    inline hresult get_agile_reference(winrt::guid const& iid, void* object, void** reference) noexcept
+    {
+        static int32_t(__stdcall * handler)(uint32_t options, winrt::guid const& iid, void* object, void** reference) noexcept;
+        load_runtime_function("RoGetAgileReference", handler, fallback_RoGetAgileReference);
+        return handler(0, iid, object, reference);
+    }
+}
+
+WINRT_EXPORT namespace winrt
 {
     template <typename T>
     struct agile_ref
@@ -3859,7 +4262,7 @@ namespace winrt
         {
             if (object)
             {
-                check_hresult(WINRT_RoGetAgileReference(0, guid_of<T>(), winrt::get_abi(object), m_ref.put_void()));
+                check_hresult(impl::get_agile_reference(guid_of<T>(), winrt::get_abi(object), m_ref.put_void()));
             }
         }
 
@@ -3892,8 +4295,6 @@ namespace winrt
     }
 }
 
-__declspec(selectany) int32_t (__stdcall *winrt_to_hresult_handler)(void* address) noexcept{};
-
 namespace winrt::impl
 {
     struct heap_traits
@@ -3902,7 +4303,7 @@ namespace winrt::impl
 
         static void close(type value) noexcept
         {
-            WINRT_VERIFY(WINRT_HeapFree(WINRT_GetProcessHeap(), 0, value));
+            WINRT_VERIFY(WINRT_IMPL_HeapFree(WINRT_IMPL_GetProcessHeap(), 0, value));
         }
 
         static constexpr type invalid() noexcept
@@ -3917,7 +4318,7 @@ namespace winrt::impl
 
         static void close(type value) noexcept
         {
-            WINRT_SysFreeString(value);
+            WINRT_IMPL_SysFreeString(value);
         }
 
         static constexpr type invalid() noexcept
@@ -3950,9 +4351,111 @@ namespace winrt::impl
     {
         return ((int32_t)((x) | 0x10000000));
     }
+
+    struct error_info_fallback final : IErrorInfo, IRestrictedErrorInfo, update_module_lock
+    {
+        error_info_fallback(int32_t code, void* message) noexcept :
+            m_code(code),
+            m_message(*reinterpret_cast<winrt::hstring*>(&message))
+        {
+        }
+
+        int32_t __stdcall QueryInterface(guid const& id, void** object) noexcept final
+        {
+            if (is_guid_of<IRestrictedErrorInfo>(id) || is_guid_of<Windows::Foundation::IUnknown>(id) || is_guid_of<IAgileObject>(id))
+            {
+                *object = static_cast<IRestrictedErrorInfo*>(this);
+                AddRef();
+                return 0;
+            }
+
+            if (is_guid_of<IErrorInfo>(id))
+            {
+                *object = static_cast<IErrorInfo*>(this);
+                AddRef();
+                return 0;
+            }
+
+            *object = nullptr;
+            return error_no_interface;
+        }
+
+        uint32_t __stdcall AddRef() noexcept final
+        {
+            return ++m_references;
+        }
+
+        uint32_t __stdcall Release() noexcept final
+        {
+            auto const remaining = --m_references;
+
+            if (remaining == 0)
+            {
+                delete this;
+            }
+
+            return remaining;
+        }
+
+        int32_t __stdcall GetGUID(guid* value) noexcept final
+        {
+            *value = {};
+            return 0;
+        }
+
+        int32_t __stdcall GetSource(bstr* value) noexcept final
+        {
+            *value = nullptr;
+            return 0;
+        }
+
+        int32_t __stdcall GetDescription(bstr* value) noexcept final
+        {
+            *value = WINRT_IMPL_SysAllocString(m_message.c_str());
+            return *value ? error_ok : error_bad_alloc;
+        }
+
+        int32_t __stdcall GetHelpFile(bstr* value) noexcept final
+        {
+            *value = nullptr;
+            return 0;
+        }
+
+        int32_t __stdcall GetHelpContext(uint32_t* value) noexcept final
+        {
+            *value = 0;
+            return 0;
+        }
+
+        int32_t __stdcall GetErrorDetails(bstr* fallback, int32_t* error, bstr* message, bstr* capability) noexcept final
+        {
+            *fallback = nullptr;
+            *error = m_code;
+            *capability = nullptr;
+            *message = WINRT_IMPL_SysAllocString(m_message.c_str());
+            return *message ? error_ok : error_bad_alloc;
+        }
+
+        int32_t __stdcall GetReference(bstr* value) noexcept final
+        {
+            *value = nullptr;
+            return 0;
+        }
+
+    private:
+
+        hresult const m_code;
+        hstring const m_message;
+        atomic_ref_count m_references{ 1 };
+    };
+
+    [[noreturn]] inline void __stdcall fallback_RoFailFastWithErrorContext(int32_t) noexcept
+    {
+        std::terminate();
+    }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     struct hresult_error
     {
@@ -3988,20 +4491,35 @@ namespace winrt
 
         hresult_error(hresult const code, take_ownership_from_abi_t) noexcept : m_code(code)
         {
-            WINRT_GetRestrictedErrorInfo(m_info.put_void());
+            com_ptr<impl::IErrorInfo> info;
+            WINRT_IMPL_GetErrorInfo(0, info.put_void());
 
-            if (m_info == nullptr)
+            if ((m_info = info.try_as<impl::IRestrictedErrorInfo>()))
             {
-                originate(code, nullptr);
-            }
-            else
-            {
-                WINRT_VERIFY_(impl::error_ok, m_info->GetReference(m_debug_reference.put()));
+                WINRT_VERIFY_(0, m_info->GetReference(m_debug_reference.put()));
 
                 if (auto info2 = m_info.try_as<impl::ILanguageExceptionErrorInfo2>())
                 {
-                    WINRT_VERIFY_(impl::error_ok, info2->CapturePropagationContext(nullptr));
+                    WINRT_VERIFY_(0, info2->CapturePropagationContext(nullptr));
                 }
+            }
+            else
+            {
+                impl::bstr_handle legacy;
+
+                if (info)
+                {
+                    info->GetDescription(legacy.put());
+                }
+
+                hstring message;
+
+                if (legacy)
+                {
+                    message = impl::trim_hresult_message(legacy.get(), WINRT_IMPL_SysStringLen(legacy.get()));
+                }
+
+                originate(code, get_abi(message));
             }
         }
 
@@ -4019,17 +4537,17 @@ namespace winrt
                 impl::bstr_handle message;
                 impl::bstr_handle unused;
 
-                if (impl::error_ok == m_info->GetErrorDetails(fallback.put(), &code, message.put(), unused.put()))
+                if (0 == m_info->GetErrorDetails(fallback.put(), &code, message.put(), unused.put()))
                 {
                     if (code == m_code)
                     {
                         if (message)
                         {
-                            return impl::trim_hresult_message(message.get(), WINRT_SysStringLen(message.get()));
+                            return impl::trim_hresult_message(message.get(), WINRT_IMPL_SysStringLen(message.get()));
                         }
                         else
                         {
-                            return impl::trim_hresult_message(fallback.get(), WINRT_SysStringLen(fallback.get()));
+                            return impl::trim_hresult_message(fallback.get(), WINRT_IMPL_SysStringLen(fallback.get()));
                         }
                     }
                 }
@@ -4037,7 +4555,7 @@ namespace winrt
 
             handle_type<impl::heap_traits> message;
 
-            uint32_t const size = WINRT_FormatMessageW(0x00001300, // FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS
+            uint32_t const size = WINRT_IMPL_FormatMessageW(0x00001300, // FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS
                 nullptr,
                 m_code,
                 0x00000400, // MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT)
@@ -4058,7 +4576,7 @@ namespace winrt
         {
             if (m_info)
             {
-                WINRT_SetRestrictedErrorInfo(m_info.get());
+                WINRT_IMPL_SetErrorInfo(0, m_info.try_as<impl::IErrorInfo>().get());
             }
 
             return m_code;
@@ -4066,10 +4584,22 @@ namespace winrt
 
     private:
 
+        static int32_t __stdcall fallback_RoOriginateLanguageException(int32_t error, void* message, void*) noexcept
+        {
+            com_ptr<impl::IErrorInfo> info(new (std::nothrow) impl::error_info_fallback(error, message), take_ownership_from_abi);
+            WINRT_VERIFY_(0, WINRT_IMPL_SetErrorInfo(0, info.get()));
+            return 1;
+        }
+
         void originate(hresult const code, void* message) noexcept
         {
-            WINRT_VERIFY(WINRT_RoOriginateLanguageException(code, message, nullptr));
-            WINRT_VERIFY_(impl::error_ok, WINRT_GetRestrictedErrorInfo(m_info.put_void()));
+            static int32_t(__stdcall* handler)(int32_t error, void* message, void* exception) noexcept;
+            impl::load_runtime_function("RoOriginateLanguageException", handler, fallback_RoOriginateLanguageException);
+            WINRT_VERIFY(handler(code, message, nullptr));
+
+            com_ptr<impl::IErrorInfo> info;
+            WINRT_VERIFY_(0, WINRT_IMPL_GetErrorInfo(0, info.put_void()));
+            WINRT_VERIFY(info.try_as(m_info));
         }
 
 #ifdef __clang__
@@ -4078,7 +4608,7 @@ namespace winrt
 #endif
 
         impl::bstr_handle m_debug_reference;
-        uint32_t const m_debug_magic{ 0xAABBCCDD };
+        uint32_t m_debug_magic{ 0xAABBCCDD };
         hresult m_code{ impl::error_fail };
         com_ptr<impl::IRestrictedErrorInfo> m_info;
 
@@ -4134,6 +4664,13 @@ namespace winrt
         hresult_class_not_available() noexcept : hresult_error(impl::error_class_not_available) {}
         hresult_class_not_available(param::hstring const& message) noexcept : hresult_error(impl::error_class_not_available, message) {}
         hresult_class_not_available(take_ownership_from_abi_t) noexcept : hresult_error(impl::error_class_not_available, take_ownership_from_abi) {}
+    };
+
+    struct hresult_class_not_registered : hresult_error
+    {
+        hresult_class_not_registered() noexcept : hresult_error(impl::error_class_not_registered) {}
+        hresult_class_not_registered(param::hstring const& message) noexcept : hresult_error(impl::error_class_not_registered, message) {}
+        hresult_class_not_registered(take_ownership_from_abi_t) noexcept : hresult_error(impl::error_class_not_registered, take_ownership_from_abi) {}
     };
 
     struct hresult_changed_state : hresult_error
@@ -4213,6 +4750,11 @@ namespace winrt
             throw hresult_class_not_available(take_ownership_from_abi);
         }
 
+        if (result == impl::error_class_not_registered)
+        {
+            throw hresult_class_not_registered(take_ownership_from_abi);
+        }
+
         if (result == impl::error_changed_state)
         {
             throw hresult_changed_state(take_ownership_from_abi);
@@ -4256,7 +4798,6 @@ namespace winrt
         {
             return e.to_abi();
         }
-        WINRT_EXTERNAL_CATCH_CLAUSE
         catch (std::bad_alloc const&)
         {
             return impl::error_bad_alloc;
@@ -4277,7 +4818,7 @@ namespace winrt
 
     [[noreturn]] inline void throw_last_error()
     {
-        throw_hresult(impl::hresult_from_win32(WINRT_GetLastError()));
+        throw_hresult(impl::hresult_from_win32(WINRT_IMPL_GetLastError()));
     }
 
     inline void check_hresult(hresult const result)
@@ -4328,16 +4869,152 @@ namespace winrt
 
     [[noreturn]] inline void terminate() noexcept
     {
-        WINRT_RoFailFastWithErrorContext(to_hresult());
+        static void(__stdcall * handler)(int32_t) noexcept;
+        impl::load_runtime_function("RoFailFastWithErrorContext", handler, impl::fallback_RoFailFastWithErrorContext);
+        handler(to_hresult());
+        abort();
+    }
+}
+
+namespace winrt::impl
+{
+    inline hresult check_hresult_allow_bounds(hresult const result)
+    {
+        if (result != impl::error_out_of_bounds)
+        {
+            check_hresult(result);
+        }
+        return result;
+    }
+}
+namespace winrt::impl
+{
+    inline int32_t make_marshaler(unknown_abi* outer, void** result) noexcept
+    {
+        struct marshaler final : IMarshal
+        {
+            marshaler(unknown_abi* object) noexcept
+            {
+                m_object.copy_from(object);
+            }
+
+            int32_t __stdcall QueryInterface(guid const& id, void** object) noexcept final
+            {
+                if (is_guid_of<IMarshal>(id))
+                {
+                    *object = static_cast<IMarshal*>(this);
+                    AddRef();
+                    return 0;
+                }
+
+                return m_object->QueryInterface(id, object);
+            }
+
+            uint32_t __stdcall AddRef() noexcept final
+            {
+                return ++m_references;
+            }
+
+            uint32_t __stdcall Release() noexcept final
+            {
+                auto const remaining = --m_references;
+
+                if (remaining == 0)
+                {
+                    delete this;
+                }
+
+                return remaining;
+            }
+
+            int32_t __stdcall GetUnmarshalClass(guid const& riid, void* pv, uint32_t dwDestContext, void* pvDestContext, uint32_t mshlflags, guid* pCid) noexcept final
+            {
+                if (m_marshaler)
+                {
+                    return m_marshaler->GetUnmarshalClass(riid, pv, dwDestContext, pvDestContext, mshlflags, pCid);
+                }
+
+                return error_bad_alloc;
+            }
+
+            int32_t __stdcall GetMarshalSizeMax(guid const& riid, void* pv, uint32_t dwDestContext, void* pvDestContext, uint32_t mshlflags, uint32_t* pSize) noexcept final
+            {
+                if (m_marshaler)
+                {
+                    return m_marshaler->GetMarshalSizeMax(riid, pv, dwDestContext, pvDestContext, mshlflags, pSize);
+                }
+
+                return error_bad_alloc;
+            }
+
+            int32_t __stdcall MarshalInterface(void* pStm, guid const& riid, void* pv, uint32_t dwDestContext, void* pvDestContext, uint32_t mshlflags) noexcept final
+            {
+                if (m_marshaler)
+                {
+                    return m_marshaler->MarshalInterface(pStm, riid, pv, dwDestContext, pvDestContext, mshlflags);
+                }
+
+                return error_bad_alloc;
+            }
+
+            int32_t __stdcall UnmarshalInterface(void* pStm, guid const& riid, void** ppv) noexcept final
+            {
+                if (m_marshaler)
+                {
+                    return m_marshaler->UnmarshalInterface(pStm, riid, ppv);
+                }
+
+                *ppv = nullptr;
+                return error_bad_alloc;
+            }
+
+            int32_t __stdcall ReleaseMarshalData(void* pStm) noexcept final
+            {
+                if (m_marshaler)
+                {
+                    return m_marshaler->ReleaseMarshalData(pStm);
+                }
+
+                return error_bad_alloc;
+            }
+
+            int32_t __stdcall DisconnectObject(uint32_t dwReserved) noexcept final
+            {
+                if (m_marshaler)
+                {
+                    return m_marshaler->DisconnectObject(dwReserved);
+                }
+
+                return error_bad_alloc;
+            }
+
+        private:
+
+            static com_ptr<IMarshal> get_marshaler() noexcept
+            {
+                com_ptr<unknown_abi> unknown;
+                WINRT_VERIFY_(0, WINRT_IMPL_CoCreateFreeThreadedMarshaler(nullptr, unknown.put_void()));
+                return unknown ? unknown.try_as<IMarshal>() : nullptr;
+            }
+
+            com_ptr<unknown_abi> m_object;
+            com_ptr<IMarshal> m_marshaler{ get_marshaler() };
+            atomic_ref_count m_references{ 1 };
+        };
+
+        *result = new (std::nothrow) marshaler(outer);
+        return *result ? error_ok : error_bad_alloc;
     }
 }
 
 namespace winrt::impl
 {
     template <typename T, typename H>
-    struct implements_delegate : abi_t<T>, H
+    struct implements_delegate : abi_t<T>, H, update_module_lock
     {
-        implements_delegate(H&& handler) : H(std::forward<H>(handler)) {}
+        implements_delegate(H&& handler) : H(std::forward<H>(handler))
+        {
+        }
 
         int32_t __stdcall QueryInterface(guid const& id, void** result) noexcept final
         {
@@ -4345,7 +5022,7 @@ namespace winrt::impl
             {
                 *result = static_cast<abi_t<T>*>(this);
                 AddRef();
-                return error_ok;
+                return 0;
             }
 
             if (is_guid_of<IMarshal>(id))
@@ -4359,25 +5036,24 @@ namespace winrt::impl
 
         uint32_t __stdcall AddRef() noexcept final
         {
-            return 1 + m_references.fetch_add(1, std::memory_order_relaxed);
+            return ++m_references;
         }
 
         uint32_t __stdcall Release() noexcept final
         {
-            uint32_t const target = m_references.fetch_sub(1, std::memory_order_release) - 1;
+            auto const remaining = --m_references;
 
-            if (target == 0)
+            if (remaining == 0)
             {
-                std::atomic_thread_fence(std::memory_order_acquire);
                 delete static_cast<delegate<T, H>*>(this);
             }
 
-            return target;
+            return remaining;
         }
 
     private:
 
-        std::atomic<uint32_t> m_references{ 1 };
+        atomic_ref_count m_references{ 1 };
     };
 
     template <typename T, typename H>
@@ -4401,7 +5077,7 @@ namespace winrt::impl
             }
 
             com_ptr<IAgileReference> ref;
-            WINRT_RoGetAgileReference(0, guid_of<T>(), get_abi(delegate), ref.put_void());
+            get_agile_reference(guid_of<T>(), get_abi(delegate), ref.put_void());
 
             if (ref)
             {
@@ -4424,9 +5100,11 @@ namespace winrt::impl
     };
 
     template <typename H, typename R, typename... Args>
-    struct variadic_delegate final : variadic_delegate_abi<R, Args...>, H
+    struct variadic_delegate final : variadic_delegate_abi<R, Args...>, H, update_module_lock
     {
-        variadic_delegate(H&& handler) : H(std::forward<H>(handler)) {}
+        variadic_delegate(H&& handler) : H(std::forward<H>(handler))
+        {
+        }
 
         R invoke(Args const& ... args) final
         {
@@ -4446,7 +5124,7 @@ namespace winrt::impl
             {
                 *result = static_cast<unknown_abi*>(this);
                 AddRef();
-                return error_ok;
+                return 0;
             }
 
             *result = nullptr;
@@ -4455,25 +5133,24 @@ namespace winrt::impl
 
         uint32_t __stdcall AddRef() noexcept final
         {
-            return 1 + m_references.fetch_add(1, std::memory_order_relaxed);
+            return ++m_references;
         }
 
         uint32_t __stdcall Release() noexcept final
         {
-            uint32_t const target = m_references.fetch_sub(1, std::memory_order_release) - 1;
+            auto const remaining = --m_references;
 
-            if (target == 0)
+            if (remaining == 0)
             {
-                std::atomic_thread_fence(std::memory_order_acquire);
                 delete this;
             }
 
-            return target;
+            return remaining;
         }
 
     private:
 
-        std::atomic<uint32_t> m_references{ 1 };
+        atomic_ref_count m_references{ 1 };
     };
 
     template <typename R, typename... Args>
@@ -4520,22 +5197,22 @@ namespace winrt::impl
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename... Args>
-    struct __declspec(empty_bases)delegate : impl::delegate_base<void, Args...>
+    struct __declspec(empty_bases) delegate : impl::delegate_base<void, Args...>
     {
         using impl::delegate_base<void, Args...>::delegate_base;
     };
 
     template <typename R, typename... Args>
-    struct __declspec(empty_bases)delegate<R(Args...)> : impl::delegate_base<R, Args...>
+    struct __declspec(empty_bases) delegate<R(Args...)> : impl::delegate_base<R, Args...>
     {
         using impl::delegate_base<R, Args...>::delegate_base;
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     struct event_token
     {
@@ -4810,16 +5487,15 @@ namespace winrt::impl
 
         unsigned long AddRef() noexcept
         {
-            return 1 + m_references.fetch_add(1, std::memory_order_relaxed);
+            return ++m_references;
         }
 
         unsigned long Release() noexcept
         {
-            uint32_t const remaining = m_references.fetch_sub(1, std::memory_order_release) - 1;
+            auto const remaining = --m_references;
 
             if (remaining == 0)
             {
-                std::atomic_thread_fence(std::memory_order_acquire);
                 this->~event_array();
                 ::operator delete(static_cast<void*>(this));
             }
@@ -4860,7 +5536,7 @@ namespace winrt::impl
             return reinterpret_cast<pointer>(this + 1);
         }
 
-        std::atomic<uint32_t> m_references{ 1 };
+        atomic_ref_count m_references{ 1 };
         uint32_t m_size{ 0 };
     };
 
@@ -4870,6 +5546,11 @@ namespace winrt::impl
         void* raw = ::operator new(sizeof(event_array<T>) + (sizeof(T)* capacity));
 #pragma warning(suppress: 6386)
         return { new(raw) event_array<T>(capacity), take_ownership_from_abi };
+    }
+
+    inline int32_t __stdcall fallback_RoTransformError(int32_t, int32_t, void*) noexcept
+    {
+        return 1;
     }
 
     template <typename Delegate, typename... Arg>
@@ -4882,7 +5563,10 @@ namespace winrt::impl
         catch (...)
         {
             int32_t const code = to_hresult();
-            WINRT_RoTransformError(code, 0, nullptr);
+
+            static int32_t(__stdcall * handler)(int32_t, int32_t, void*) noexcept;
+            impl::load_runtime_function("RoTransformError", handler, fallback_RoTransformError);
+            handler(code, 0, nullptr);
 
             if (code == static_cast<int32_t>(0x80010108) || // RPC_E_DISCONNECTED
                 code == static_cast<int32_t>(0x800706BA) || // HRESULT_FROM_WIN32(RPC_S_SERVER_UNAVAILABLE)
@@ -4896,7 +5580,7 @@ namespace winrt::impl
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename Delegate>
     struct event
@@ -5021,7 +5705,7 @@ namespace winrt
 
         event_token get_token(delegate_type const& delegate) const noexcept
         {
-            return event_token{ reinterpret_cast<int64_t>(get_abi(delegate)) };
+            return event_token{ reinterpret_cast<int64_t>(WINRT_IMPL_EncodePointer(get_abi(delegate))) };
         }
 
         using delegate_array = com_ptr<impl::event_array<delegate_type>>;
@@ -5034,140 +5718,117 @@ namespace winrt
 
 namespace winrt::impl
 {
-    inline int32_t make_marshaler(unknown_abi* outer, void** result) noexcept
+    struct library_traits
     {
-        struct marshaler final : IMarshal
+        using type = void*;
+
+        static void close(type value) noexcept
         {
-            marshaler(unknown_abi* object) noexcept
+            WINRT_IMPL_FreeLibrary(value);
+        }
+
+        static constexpr type invalid() noexcept
+        {
+            return nullptr;
+        }
+    };
+
+    using library_handle = handle_type<library_traits>;
+
+    inline int32_t __stdcall fallback_RoGetActivationFactory(void*, guid const&, void** factory) noexcept
+    {
+        *factory = nullptr;
+        return error_class_not_available;
+    }
+
+    template <typename Interface>
+    hresult get_runtime_activation_factory(param::hstring const& name, void** result) noexcept
+    {
+        if (winrt_activation_handler)
+        {
+            return winrt_activation_handler(*(void**)(&name), guid_of<Interface>(), result);
+        }
+
+        static int32_t(__stdcall * handler)(void* classId, guid const& iid, void** factory) noexcept;
+        impl::load_runtime_function("RoGetActivationFactory", handler, fallback_RoGetActivationFactory);
+        hresult hr = handler(*(void**)(&name), guid_of<Interface>(), result);
+
+        if (hr == impl::error_not_initialized)
+        {
+            auto usage = reinterpret_cast<int32_t(__stdcall*)(void** cookie) noexcept>(WINRT_IMPL_GetProcAddress(WINRT_IMPL_LoadLibraryW(L"combase.dll"), "CoIncrementMTAUsage"));
+
+            if (!usage)
             {
-                m_object.copy_from(object);
+                return hr;
             }
 
-            int32_t __stdcall QueryInterface(guid const& id, void** object) noexcept final
-            {
-                if (is_guid_of<IMarshal>(id))
-                {
-                    *object = static_cast<IMarshal*>(this);
-                    AddRef();
-                    return error_ok;
-                }
+            void* cookie;
+            usage(&cookie);
+            hr = handler(*(void**)(&name), guid_of<Interface>(), result);
+        }
 
-                return m_object->QueryInterface(id, object);
+        if (hr == 0)
+        {
+            return 0;
+        }
+
+        com_ptr<IErrorInfo> error_info;
+        WINRT_IMPL_GetErrorInfo(0, error_info.put_void());
+
+        std::wstring path{ static_cast<hstring const&>(name) };
+        std::size_t count{};
+
+        while (std::wstring::npos != (count = path.rfind('.')))
+        {
+            path.resize(count);
+            path += L".dll";
+            library_handle library(WINRT_IMPL_LoadLibraryW(path.c_str()));
+            path.resize(path.size() - 4);
+
+            if (!library)
+            {
+                continue;
             }
 
-            uint32_t __stdcall AddRef() noexcept final
+            auto library_call = reinterpret_cast<int32_t(__stdcall*)(void* classId, void** factory)>(WINRT_IMPL_GetProcAddress(library.get(), "DllGetActivationFactory"));
+
+            if (!library_call)
             {
-                return 1 + m_references.fetch_add(1, std::memory_order_relaxed);
+                continue;
             }
 
-            uint32_t __stdcall Release() noexcept final
+            com_ptr<abi_t<Windows::Foundation::IActivationFactory>> library_factory;
+
+            if (0 != library_call(*(void**)(&name), library_factory.put_void()))
             {
-                uint32_t const remaining = m_references.fetch_sub(1, std::memory_order_relaxed) - 1;
-
-                if (remaining == 0)
-                {
-                    delete this;
-                }
-
-                return remaining;
+                continue;
             }
 
-            int32_t __stdcall GetUnmarshalClass(guid const& riid, void* pv, uint32_t dwDestContext, void* pvDestContext, uint32_t mshlflags, guid* pCid) noexcept final
+            if constexpr (std::is_same_v< Interface, Windows::Foundation::IActivationFactory>)
             {
-                if (m_marshaler)
-                {
-                    return m_marshaler->GetUnmarshalClass(riid, pv, dwDestContext, pvDestContext, mshlflags, pCid);
-                }
-
-                return error_bad_alloc;
+                *result = library_factory.detach();
+                library.detach();
+                return 0;
             }
-
-            int32_t __stdcall GetMarshalSizeMax(guid const& riid, void* pv, uint32_t dwDestContext, void* pvDestContext, uint32_t mshlflags, uint32_t* pSize) noexcept final
+            else if (0 == library_factory.as(guid_of<Interface>(), result))
             {
-                if (m_marshaler)
-                {
-                    return m_marshaler->GetMarshalSizeMax(riid, pv, dwDestContext, pvDestContext, mshlflags, pSize);
-                }
-
-                return error_bad_alloc;
+                library.detach();
+                return 0;
             }
+        }
 
-            int32_t __stdcall MarshalInterface(void* pStm, guid const& riid, void* pv, uint32_t dwDestContext, void* pvDestContext, uint32_t mshlflags) noexcept final
-            {
-                if (m_marshaler)
-                {
-                    return m_marshaler->MarshalInterface(pStm, riid, pv, dwDestContext, pvDestContext, mshlflags);
-                }
-
-                return error_bad_alloc;
-            }
-
-            int32_t __stdcall UnmarshalInterface(void* pStm, guid const& riid, void** ppv) noexcept final
-            {
-                if (m_marshaler)
-                {
-                    return m_marshaler->UnmarshalInterface(pStm, riid, ppv);
-                }
-
-                *ppv = nullptr;
-                return error_bad_alloc;
-            }
-
-            int32_t __stdcall ReleaseMarshalData(void* pStm) noexcept final
-            {
-                if (m_marshaler)
-                {
-                    return m_marshaler->ReleaseMarshalData(pStm);
-                }
-
-                return error_bad_alloc;
-            }
-
-            int32_t __stdcall DisconnectObject(uint32_t dwReserved) noexcept final
-            {
-                if (m_marshaler)
-                {
-                    return m_marshaler->DisconnectObject(dwReserved);
-                }
-
-                return error_bad_alloc;
-            }
-
-        private:
-
-            static com_ptr<IMarshal> get_marshaler() noexcept
-            {
-                com_ptr<unknown_abi> unknown;
-                WINRT_VERIFY_(error_ok, WINRT_CoCreateFreeThreadedMarshaler(nullptr, unknown.put_void()));
-                return unknown ? unknown.try_as<IMarshal>() : nullptr;
-            }
-
-            com_ptr<unknown_abi> m_object;
-            com_ptr<IMarshal> m_marshaler{ get_marshaler() };
-            std::atomic<uint32_t> m_references{ 1 };
-        };
-
-        *result = new (std::nothrow) marshaler(outer);
-        return *result ? error_ok : error_bad_alloc;
+        WINRT_IMPL_SetErrorInfo(0, error_info.get());
+        return hr;
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename Interface = Windows::Foundation::IActivationFactory>
     impl::com_ref<Interface> get_activation_factory(param::hstring const& name)
     {
         void* result{};
-        hresult hr = WINRT_RoGetActivationFactory(get_abi(name), guid_of<Interface>(), &result);
-
-        if (hr == impl::error_not_initialized)
-        {
-            void* cookie;
-            WINRT_CoIncrementMTAUsage(&cookie);
-            hr = WINRT_RoGetActivationFactory(get_abi(name), guid_of<Interface>(), &result);
-        }
-
-        check_hresult(hr);
+        check_hresult(impl::get_runtime_activation_factory<Interface>(name, &result));
         return { result, take_ownership_from_abi };
     }
 }
@@ -5275,20 +5936,48 @@ namespace winrt::impl
     };
 #endif
 
-    struct factory_cache_typeless_entry
+    struct factory_count_guard
+    {
+        factory_count_guard(factory_count_guard const&) = delete;
+        factory_count_guard& operator=(factory_count_guard const&) = delete;
+
+        explicit factory_count_guard(size_t& count) noexcept : m_count(count)
+        {
+#ifdef _WIN64
+            _InterlockedIncrement64((int64_t*)&m_count);
+#else
+            _InterlockedIncrement((long*)&m_count);
+#endif
+        }
+
+        ~factory_count_guard() noexcept
+        {
+#ifdef _WIN64
+            _InterlockedDecrement64((int64_t*)&m_count);
+#else
+            _InterlockedDecrement((long*)&m_count);
+#endif
+        }
+
+    private:
+
+        size_t& m_count;
+    };
+
+    struct factory_cache_entry_base
     {
         struct alignas(sizeof(void*) * 2) object_and_count
         {
-            unknown_abi* pointer;
+            unknown_abi* object;
             size_t count;
         };
 
-        object_and_count value;
-        alignas(memory_allocation_alignment) slist_entry next {};
+        object_and_count m_value;
+        alignas(memory_allocation_alignment) slist_entry m_next;
 
         void clear() noexcept
         {
-            unknown_abi* pointer_value = interlocked_read_pointer(&value.pointer);
+            unknown_abi* pointer_value = interlocked_read_pointer(&m_value.object);
 
             if (pointer_value == nullptr)
             {
@@ -5313,6 +6002,8 @@ namespace winrt::impl
         }
     };
 
+    static_assert(std::is_standard_layout_v<factory_cache_entry_base>);
+
 #if !defined _M_IX86 && !defined _M_X64 && !defined _M_ARM && !defined _M_ARM64
 #error Unsupported architecture: verify that zero-initialization of SLIST_HEADER is still safe
 #endif
@@ -5323,22 +6014,22 @@ namespace winrt::impl
         factory_cache& operator=(factory_cache const&) = delete;
         factory_cache() noexcept = default;
 
-        void add(factory_cache_typeless_entry* const entry) noexcept
+        void add(factory_cache_entry_base* const entry) noexcept
         {
             WINRT_ASSERT(entry);
-            WINRT_InterlockedPushEntrySList(&m_list, &entry->next);
+            WINRT_IMPL_InterlockedPushEntrySList(&m_list, &entry->m_next);
         }
 
         void clear() noexcept
         {
-            slist_entry* entry = static_cast<slist_entry*>(WINRT_InterlockedFlushSList(&m_list));
+            slist_entry* entry = static_cast<slist_entry*>(WINRT_IMPL_InterlockedFlushSList(&m_list));
 
             while (entry != nullptr)
             {
-                // entry->Next must be read before entry->clear() is called since the InterlockedCompareExchange
+                // entry->next must be read before entry->clear() is called since the InterlockedCompareExchange
                 // inside clear() will allow another thread to add the entry back to the cache.
                 slist_entry* next = entry->next;
-                reinterpret_cast<factory_cache_typeless_entry*>(reinterpret_cast<uint8_t*>(entry) - offsetof(factory_cache_typeless_entry, next))->clear();
+                reinterpret_cast<factory_cache_entry_base*>(reinterpret_cast<uint8_t*>(entry) - offsetof(factory_cache_entry_base, m_next))->clear();
                 entry = next;
             }
         }
@@ -5355,23 +6046,14 @@ namespace winrt::impl
     }
 
     template <typename Class, typename Interface>
-    struct factory_cache_entry
+    struct factory_cache_entry : factory_cache_entry_base
     {
         template <typename F>
-        auto call(F&& callback)
+        __declspec(noinline) auto call(F&& callback)
         {
 #ifdef WINRT_DIAGNOSTICS
             get_diagnostics_info().add_factory<Class>();
 #endif
-
-            {
-                count_guard const guard(m_value.count);
-
-                if (m_value.object)
-                {
-                    return callback(*reinterpret_cast<com_ref<Interface> const*>(&m_value.object));
-                }
-            }
 
             auto object = get_activation_factory<Interface>(name_of<Class>());
 
@@ -5385,77 +6067,62 @@ namespace winrt::impl
             }
 
             {
-                count_guard const guard(m_value.count);
+                factory_count_guard const guard(m_value.count);
 
-                if (nullptr == _InterlockedCompareExchangePointer((void**)&m_value.object, get_abi(object), nullptr))
+                if (nullptr == _InterlockedCompareExchangePointer(reinterpret_cast<void**>(&m_value.object), *reinterpret_cast<void**>(&object), nullptr))
                 {
-                    detach_abi(object);
-                    get_factory_cache().add(reinterpret_cast<factory_cache_typeless_entry*>(this));
+                    *reinterpret_cast<void**>(&object) = nullptr;
+                    get_factory_cache().add(this);
                 }
 
                 return callback(*reinterpret_cast<com_ref<Interface> const*>(&m_value.object));
             }
         }
-
-    private:
-
-        struct count_guard
-        {
-            count_guard(count_guard const&) = delete;
-            count_guard& operator=(count_guard const&) = delete;
-
-            explicit count_guard(size_t& count) noexcept : m_count(count)
-            {
-#ifdef _WIN64
-                _InterlockedIncrement64((int64_t*)&m_count);
-#else
-                _InterlockedIncrement((long*)&m_count);
-#endif
-            }
-
-            ~count_guard() noexcept
-            {
-#ifdef _WIN64
-                _InterlockedDecrement64((int64_t*)&m_count);
-#else
-                _InterlockedDecrement((long*)&m_count);
-#endif
-            }
-
-        private:
-
-            size_t& m_count;
-        };
-
-        struct alignas(sizeof(void*) * 2) object_and_count
-        {
-            void* object;
-            size_t count;
-        };
-
-        object_and_count m_value;
-        alignas(memory_allocation_alignment) slist_entry m_next;
     };
 
+    template <typename Class, typename Interface>
+    factory_cache_entry<Class, Interface> factory_cache_entry_v{};
 
     template <typename Class, typename Interface = Windows::Foundation::IActivationFactory, typename F>
     auto call_factory(F&& callback)
     {
-        static_assert(sizeof(factory_cache_typeless_entry) == sizeof(factory_cache_entry<Class, Interface>));
-        static_assert(std::alignment_of_v<factory_cache_typeless_entry> == std::alignment_of_v<factory_cache_entry<Class, Interface>>);
-        static_assert(std::is_standard_layout_v<factory_cache_typeless_entry>);
-        static_assert(std::is_standard_layout_v<factory_cache_entry<Class, Interface>>);
+        auto& factory = factory_cache_entry_v<Class, Interface>;
 
-        static factory_cache_entry<Class, Interface> factory;
+        {
+            factory_count_guard const guard(factory.m_value.count);
+
+            if (factory.m_value.object)
+            {
+                return callback(*reinterpret_cast<com_ref<Interface> const*>(&factory.m_value.object));
+            }
+        }
+
         return factory.call(callback);
     }
 
+    template <typename CastType, typename Class, typename Interface = Windows::Foundation::IActivationFactory, typename F>
+    auto call_factory_cast(F&& callback)
+    {
+        auto& factory = factory_cache_entry_v<Class, Interface>;
+
+        {
+            factory_count_guard const guard(factory.m_value.count);
+
+            if (factory.m_value.object)
+            {
+                return callback(*reinterpret_cast<com_ref<Interface> const*>(&factory.m_value.object));
+            }
+        }
+
+        return factory.call(static_cast<CastType>(callback));
+    }
+
     template <typename Class, typename Interface = Windows::Foundation::IActivationFactory>
-    impl::com_ref<Interface> try_get_activation_factory(hresult_error* exception = nullptr) noexcept
+    com_ref<Interface> try_get_activation_factory(hresult_error* exception = nullptr) noexcept
     {
         param::hstring const name{ name_of<Class>() };
         void* result{};
-        hresult const hr = WINRT_RoGetActivationFactory(get_abi(name), guid_of<Interface>(), &result);
+        hresult const hr = get_runtime_activation_factory<Interface>(name, &result);
 
         if (hr < 0)
         {
@@ -5472,19 +6139,6 @@ namespace winrt::impl
         return { result, take_ownership_from_abi };
     }
 
-    template <> struct abi<Windows::Foundation::IActivationFactory>
-    {
-        struct __declspec(novtable) type : inspectable_abi
-        {
-            virtual int32_t __stdcall ActivateInstance(void** instance) noexcept = 0;
-        };
-    };
-
-    template <> struct guid_storage<Windows::Foundation::IActivationFactory>
-    {
-        static constexpr guid value{ 0x00000035,0x0000,0x0000,{ 0xc0,0x00,0x00,0x00,0x00,0x00,0x00,0x46 } };
-    };
-
     template <typename D> struct produce<D, Windows::Foundation::IActivationFactory> : produce_base<D, Windows::Foundation::IActivationFactory>
     {
         int32_t __stdcall ActivateInstance(void** instance) noexcept final try
@@ -5492,23 +6146,23 @@ namespace winrt::impl
             *instance = nullptr;
             typename D::abi_guard guard(this->shim());
             *instance = detach_abi(this->shim().ActivateInstance());
-            return error_ok;
+            return 0;
         }
         catch (...) { return to_hresult(); }
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     enum class apartment_type : int32_t
     {
-        single_threaded,
-        multi_threaded
+        multi_threaded = 0,
+        single_threaded = 2,
     };
 
     inline void init_apartment(apartment_type const type = apartment_type::multi_threaded)
     {
-        hresult const result = WINRT_RoInitialize(static_cast<uint32_t>(type));
+        hresult const result = WINRT_IMPL_CoInitializeEx(nullptr, static_cast<uint32_t>(type));
 
         if (result < 0)
         {
@@ -5518,7 +6172,7 @@ namespace winrt
 
     inline void uninit_apartment() noexcept
     {
-        WINRT_RoUninitialize();
+        WINRT_IMPL_CoUninitialize();
     }
 
     template <typename Class, typename Interface = Windows::Foundation::IActivationFactory>
@@ -5553,7 +6207,7 @@ namespace winrt
     template <typename Interface>
     auto create_instance(guid const& clsid, uint32_t context = 0x1 /*CLSCTX_INPROC_SERVER*/, void* outer = nullptr)
     {
-        return capture<Interface>(WINRT_CoCreateInstance, clsid, outer, context);
+        return capture<Interface>(WINRT_IMPL_CoCreateInstance, clsid, outer, context);
     }
 
     namespace Windows::Foundation
@@ -5593,7 +6247,7 @@ namespace winrt::impl
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     struct non_agile : impl::marker {};
     struct no_weak_ref : impl::marker {};
@@ -5607,12 +6261,6 @@ namespace winrt
 
     template <typename D, typename... I>
     struct implements;
-
-    inline std::atomic<uint32_t>& get_module_lock() noexcept
-    {
-        static std::atomic<uint32_t> s_lock;
-        return s_lock;
-    }
 }
 
 namespace winrt::impl
@@ -5629,7 +6277,7 @@ namespace winrt::impl
     template <template <typename> typename Condition, typename T>
     using tuple_if = typename tuple_if_base<Condition, T>::type;
 
-#ifdef WINRT_WINDOWS_ABI
+#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
 
     template <typename T>
     struct is_interface : std::disjunction<std::is_base_of<Windows::Foundation::IInspectable, T>, std::conjunction<std::is_base_of<::IUnknown, T>, std::negation<is_implements<T>>>> {};
@@ -5813,7 +6461,7 @@ namespace winrt::impl
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename D, typename I>
     D* get_self(I const& from) noexcept
@@ -5822,7 +6470,7 @@ namespace winrt
     }
 
     template <typename D, typename I>
-    D* from_abi(I const& from) noexcept
+    [[deprecated]] D* from_abi(I const& from) noexcept
     {
         return get_self<D>(from);
     }
@@ -6007,7 +6655,7 @@ namespace winrt::impl
     };
 
     template <typename I>
-    struct runtime_class_name<I, std::void_t<decltype(name<I>::value)>>
+    struct runtime_class_name<I, std::void_t<decltype(name_v<I>)>>
     {
         static hstring get()
         {
@@ -6047,7 +6695,7 @@ namespace winrt::impl
 
         int32_t __stdcall GetIids(uint32_t* count, guid** array) noexcept override
         {
-            return shim().GetIids(count, array);
+            return shim().GetIids(reinterpret_cast<count_type*>(count), reinterpret_cast<guid_type**>(array));
         }
 
         int32_t __stdcall GetRuntimeClassName(void** name) noexcept override
@@ -6061,7 +6709,7 @@ namespace winrt::impl
         }
     };
 
-#ifdef WINRT_WINDOWS_ABI
+#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
 
     template <typename D, typename I>
     struct producer<D, I, std::enable_if_t<std::is_base_of_v< ::IUnknown, I> && !is_implements_v<I>>> : I
@@ -6114,59 +6762,59 @@ namespace winrt::impl
         }
     };
 
-    template <bool Agile>
+    template <bool Agile, bool UseModuleLock>
     struct weak_ref;
 
-    template <bool Agile>
+    template <bool Agile, bool UseModuleLock>
     struct weak_source_producer;
 
-    template <bool Agile>
-    struct weak_source : IWeakReferenceSource
+    template <bool Agile, bool UseModuleLock>
+    struct weak_source final : IWeakReferenceSource, module_lock_updater<UseModuleLock>
     {
-        weak_ref<Agile>* that() noexcept
+        weak_ref<Agile, UseModuleLock>* that() noexcept
         {
-            return static_cast<weak_ref<Agile>*>(reinterpret_cast<weak_source_producer<Agile>*>(this));
+            return static_cast<weak_ref<Agile, UseModuleLock>*>(reinterpret_cast<weak_source_producer<Agile, UseModuleLock>*>(this));
         }
 
-        int32_t __stdcall QueryInterface(guid const& id, void** object) noexcept override
+        int32_t __stdcall QueryInterface(guid const& id, void** object) noexcept final
         {
             if (is_guid_of<IWeakReferenceSource>(id))
             {
                 *object = static_cast<IWeakReferenceSource*>(this);
                 that()->increment_strong();
-                return error_ok;
+                return 0;
             }
 
             return that()->m_object->QueryInterface(id, object);
         }
 
-        uint32_t __stdcall AddRef() noexcept override
+        uint32_t __stdcall AddRef() noexcept final
         {
             return that()->increment_strong();
         }
 
-        uint32_t __stdcall Release() noexcept override
+        uint32_t __stdcall Release() noexcept final
         {
             return that()->m_object->Release();
         }
 
-        int32_t __stdcall GetWeakReference(IWeakReference** weakReference) noexcept override
+        int32_t __stdcall GetWeakReference(IWeakReference** weakReference) noexcept final
         {
             *weakReference = that();
             that()->AddRef();
-            return error_ok;
+            return 0;
         }
     };
 
-    template <bool Agile>
+    template <bool Agile, bool UseModuleLock>
     struct weak_source_producer
     {
     protected:
-        weak_source<Agile> m_source;
+        weak_source<Agile, UseModuleLock> m_source;
     };
 
-    template <bool Agile>
-    struct weak_ref : IWeakReference, weak_source_producer<Agile>
+    template <bool Agile, bool UseModuleLock>
+    struct weak_ref final : IWeakReference, weak_source_producer<Agile, UseModuleLock>
     {
         weak_ref(unknown_abi* object, uint32_t const strong) noexcept :
             m_object(object),
@@ -6175,13 +6823,13 @@ namespace winrt::impl
             WINRT_ASSERT(object);
         }
 
-        int32_t __stdcall QueryInterface(guid const& id, void** object) noexcept override
+        int32_t __stdcall QueryInterface(guid const& id, void** object) noexcept final
         {
             if (is_guid_of<IWeakReference>(id) || is_guid_of<Windows::Foundation::IUnknown>(id))
             {
                 *object = static_cast<IWeakReference*>(this);
                 AddRef();
-                return error_ok;
+                return 0;
             }
 
             if constexpr (Agile)
@@ -6190,7 +6838,7 @@ namespace winrt::impl
                 {
                     *object = static_cast<unknown_abi*>(this);
                     AddRef();
-                    return error_ok;
+                    return 0;
                 }
 
                 if (is_guid_of<IMarshal>(id))
@@ -6203,12 +6851,12 @@ namespace winrt::impl
             return error_no_interface;
         }
 
-        uint32_t __stdcall AddRef() noexcept override
+        uint32_t __stdcall AddRef() noexcept final
         {
             return 1 + m_weak.fetch_add(1, std::memory_order_relaxed);
         }
 
-        uint32_t __stdcall Release() noexcept override
+        uint32_t __stdcall Release() noexcept final
         {
             uint32_t const target = m_weak.fetch_sub(1, std::memory_order_relaxed) - 1;
 
@@ -6220,7 +6868,7 @@ namespace winrt::impl
             return target;
         }
 
-        int32_t __stdcall Resolve(guid const& id, void** objectReference) noexcept override
+        int32_t __stdcall Resolve(guid const& id, void** objectReference) noexcept final
         {
             uint32_t target = m_strong.load(std::memory_order_relaxed);
 
@@ -6229,7 +6877,7 @@ namespace winrt::impl
                 if (target == 0)
                 {
                     *objectReference = nullptr;
-                    return error_ok;
+                    return 0;
                 }
 
                 if (m_strong.compare_exchange_weak(target, target + 1, std::memory_order_acquire, std::memory_order_relaxed))
@@ -6270,10 +6918,10 @@ namespace winrt::impl
         }
 
     private:
-        template <bool T>
+        template <bool T, bool U>
         friend struct weak_source;
 
-        static_assert(sizeof(weak_source_producer<Agile>) == sizeof(weak_source<Agile>));
+        static_assert(sizeof(weak_source_producer<Agile, UseModuleLock>) == sizeof(weak_source<Agile, UseModuleLock>));
 
         unknown_abi* m_object{};
         std::atomic<uint32_t> m_strong{ 1 };
@@ -6335,6 +6983,7 @@ namespace winrt::impl
     struct __declspec(novtable) root_implements
         : root_implements_composing_outer<std::disjunction_v<std::is_same<composing, I>...>>
         , root_implements_composable_inner<D, std::disjunction_v<std::is_same<composable, I>...>>
+        , module_lock_updater<!std::disjunction_v<std::is_same<no_module_lock, I>...>>
     {
         using IInspectable = Windows::Foundation::IInspectable;
         using root_implements_type = root_implements;
@@ -6397,6 +7046,11 @@ namespace winrt::impl
         void abi_enter() const noexcept {}
         void abi_exit() const noexcept {}
 
+#if defined(_DEBUG) && !defined(WINRT_NO_MAKE_DETECTION)
+        // Please use winrt::make<T>(args...) to avoid allocating a C++/WinRT implementation type on the stack.
+        virtual void use_make_function_to_create_this_object() = 0;
+#endif
+
     protected:
 
         virtual int32_t query_interface_tearoff(guid const&, void**) const noexcept
@@ -6406,21 +7060,12 @@ namespace winrt::impl
 
         root_implements() noexcept
         {
-            if constexpr (use_module_lock::value)
-            {
-                ++get_module_lock();
-            }
         }
 
         virtual ~root_implements() noexcept
         {
             // If a weak reference is created during destruction, this ensures that it is also destroyed.
             subtract_reference();
-
-            if constexpr (use_module_lock::value)
-            {
-                --get_module_lock();
-            }
         }
 
         int32_t __stdcall GetIids(uint32_t* count, guid** array) noexcept
@@ -6510,7 +7155,7 @@ namespace winrt::impl
                 auto result = to_abi<INonDelegatingInspectable>(this);
                 NonDelegatingAddRef();
                 *object = result;
-                return error_ok;
+                return 0;
             }
 
             int32_t result = query_interface(id, object);
@@ -6533,7 +7178,7 @@ namespace winrt::impl
                 {
                     const com_array<guid>& inner_iids = get_interfaces(root_implements_type::m_inner);
                     *count = local_count + inner_iids.size();
-                    *array = static_cast<guid*>(WINRT_CoTaskMemAlloc(sizeof(guid)*(*count)));
+                    *array = static_cast<guid*>(WINRT_IMPL_CoTaskMemAlloc(sizeof(guid)*(*count)));
                     if (*array == nullptr)
                     {
                         return error_bad_alloc;
@@ -6551,7 +7196,7 @@ namespace winrt::impl
                 if (local_count > 0)
                 {
                     *count = local_count;
-                    *array = static_cast<guid*>(WINRT_CoTaskMemAlloc(sizeof(guid)*(*count)));
+                    *array = static_cast<guid*>(WINRT_IMPL_CoTaskMemAlloc(sizeof(guid)*(*count)));
                     if (*array == nullptr)
                     {
                         return error_bad_alloc;
@@ -6564,20 +7209,20 @@ namespace winrt::impl
                     *array = nullptr;
                 }
             }
-            return error_ok;
+            return 0;
         }
 
         int32_t __stdcall NonDelegatingGetRuntimeClassName(void** name) noexcept try
         {
             *name = detach_abi(static_cast<D*>(this)->GetRuntimeClassName());
-            return error_ok;
+            return 0;
         }
         catch (...) { return to_hresult(); }
 
         int32_t __stdcall NonDelegatingGetTrustLevel(Windows::Foundation::TrustLevel* trustLevel) noexcept try
         {
             *trustLevel = static_cast<D*>(this)->GetTrustLevel();
-            return error_ok;
+            return 0;
         }
         catch (...) { return to_hresult(); }
 
@@ -6624,6 +7269,11 @@ namespace winrt::impl
             return result;
         }
 
+        virtual Windows::Foundation::TrustLevel GetTrustLevel() const noexcept
+        {
+            return Windows::Foundation::TrustLevel::BaseTrust;
+        }
+
         using is_factory = std::disjunction<std::is_same<Windows::Foundation::IActivationFactory, I>...>;
 
     private:
@@ -6642,7 +7292,7 @@ namespace winrt::impl
         using is_inspectable = std::disjunction<std::is_base_of<Windows::Foundation::IInspectable, I>...>;
         using is_weak_ref_source = std::conjunction<is_inspectable, std::negation<is_factory>, std::negation<std::disjunction<std::is_same<no_weak_ref, I>...>>>;
         using use_module_lock = std::negation<std::disjunction<std::is_same<no_module_lock, I>...>>;
-        using weak_ref_t = impl::weak_ref<is_agile::value>;
+        using weak_ref_t = impl::weak_ref<is_agile::value, use_module_lock::value>;
 
         std::atomic<std::conditional_t<is_weak_ref_source::value, uintptr_t, uint32_t>> m_references{ 1 };
 
@@ -6653,7 +7303,7 @@ namespace winrt::impl
             if (*object != nullptr)
             {
                 AddRef();
-                return error_ok;
+                return 0;
             }
 
             if constexpr (is_agile::value)
@@ -6662,7 +7312,7 @@ namespace winrt::impl
                 {
                     *object = get_unknown();
                     AddRef();
-                    return error_ok;
+                    return 0;
                 }
 
                 if (is_guid_of<IMarshal>(id))
@@ -6677,7 +7327,7 @@ namespace winrt::impl
                 {
                     *object = find_inspectable();
                     AddRef();
-                    return error_ok;
+                    return 0;
                 }
             }
 
@@ -6685,7 +7335,7 @@ namespace winrt::impl
             {
                 *object = get_unknown();
                 AddRef();
-                return error_ok;
+                return 0;
             }
 
             if constexpr (is_weak_ref_source::value)
@@ -6764,11 +7414,6 @@ namespace winrt::impl
         virtual void* find_interface(guid const&) const noexcept = 0;
         virtual inspectable_abi* find_inspectable() const noexcept = 0;
 
-        virtual Windows::Foundation::TrustLevel GetTrustLevel() const noexcept
-        {
-            return Windows::Foundation::TrustLevel::BaseTrust;
-        }
-
         template <typename, typename, typename>
         friend struct impl::produce_base;
 
@@ -6793,6 +7438,14 @@ namespace winrt::impl
     };
 #endif
 
+    inline com_ptr<IStaticLifetimeCollection> get_static_lifetime_map()
+    {
+        auto const lifetime_factory = get_activation_factory<impl::IStaticLifetime>(L"Windows.ApplicationModel.Core.CoreApplication");
+        Windows::Foundation::IUnknown collection;
+        check_hresult(lifetime_factory->GetCollection(put_abi(collection)));
+        return collection.as<IStaticLifetimeCollection>();
+    }
+
     template <typename D>
     auto make_factory() -> typename impl::implements_default_interface<D>::type
     {
@@ -6804,16 +7457,20 @@ namespace winrt::impl
         }
         else
         {
-            auto const lifetime_factory = get_activation_factory<impl::IStaticLifetime>(L"Windows.ApplicationModel.Core.CoreApplication");
-            Windows::Foundation::IUnknown collection;
-            check_hresult(lifetime_factory->GetCollection(put_abi(collection)));
-            auto const map = collection.as<IStaticLifetimeCollection>();
+            auto const map = get_static_lifetime_map();
             param::hstring const name{ name_of<typename D::instance_type>() };
+            void* result{};
+            map->Lookup(get_abi(name), &result);
+
+            if (result)
+            {
+                return { result, take_ownership_from_abi };
+            }
+
             result_type object{ to_abi<result_type>(new heap_implements<D>), take_ownership_from_abi };
 
             static slim_mutex lock;
             slim_lock_guard const guard{ lock };
-            void* result{};
             map->Lookup(get_abi(name), &result);
 
             if (result)
@@ -6836,7 +7493,7 @@ namespace winrt::impl
     }
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename D, typename... Args>
     auto make(Args&&... args)
@@ -6878,8 +7535,28 @@ namespace winrt
         static_assert(std::is_destructible_v<D>, "C++/WinRT implementation types must have a public destructor");
         static_assert(!std::is_final_v<D>, "C++/WinRT implementation types must not be final");
 #endif
+        if constexpr (std::is_same_v<typename impl::implements_default_interface<D>::type, Windows::Foundation::IActivationFactory>)
+        {
+            static_assert(sizeof...(args) == 0);
+            auto temp = impl::make_factory<D>();
+            void* result = get_self<D>(temp);
+            detach_abi(temp);
+            return { result, take_ownership_from_abi };
+        }
+        else
+        {
+            return { new impl::heap_implements<D>(std::forward<Args>(args)...), take_ownership_from_abi };
+        }
+    }
 
-        return { new impl::heap_implements<D>(std::forward<Args>(args)...), take_ownership_from_abi };
+    template <typename... FactoryClasses>
+    inline void clear_factory_static_lifetime()
+    {
+        auto unregister = [map = impl::get_static_lifetime_map()](param::hstring name)
+        {
+            map->Remove(get_abi(name));
+        };
+        ((unregister(name_of<typename FactoryClasses::instance_type>())), ...);
     }
 
     template <typename D, typename... I>
@@ -6897,11 +7574,6 @@ namespace winrt
 
         using implements_type = implements;
         using IInspectable = Windows::Foundation::IInspectable;
-
-#if defined(_DEBUG) && !defined(WINRT_NO_MAKE_DETECTION)
-        // Please use winrt::make<T>(args...) to avoid allocating a C++/WinRT implementation type on the stack.
-        virtual void use_make_function_to_create_this_object() = 0;
-#endif
 
         weak_ref<D> get_weak()
         {
@@ -6934,28 +7606,36 @@ namespace winrt
             return result;
         }
 
-        impl::hresult_type __stdcall QueryInterface(guid const& id, void** object) noexcept
-        {
-            return root_implements_type::QueryInterface(id, object);
-        }
-
-#ifdef WINRT_WINDOWS_ABI
-
-        impl::hresult_type __stdcall QueryInterface(GUID const& id, void** object) noexcept
+        impl::hresult_type __stdcall QueryInterface(impl::guid_type const& id, void** object) noexcept
         {
             return root_implements_type::QueryInterface(reinterpret_cast<guid const&>(id), object);
         }
 
-#endif
-
-        impl::ref_count_type __stdcall AddRef() noexcept
+        impl::count_type __stdcall AddRef() noexcept
         {
             return root_implements_type::AddRef();
         }
 
-        impl::ref_count_type __stdcall Release() noexcept
+        impl::count_type __stdcall Release() noexcept
         {
             return root_implements_type::Release();
+        }
+
+        impl::hresult_type __stdcall GetIids(impl::count_type* count, impl::guid_type** iids) noexcept
+        {
+            return root_implements_type::GetIids(reinterpret_cast<uint32_t*>(count), reinterpret_cast<guid**>(iids));
+        }
+
+        impl::hresult_type __stdcall GetRuntimeClassName(impl::hstring_type* value) noexcept
+        {
+            return root_implements_type::abi_GetRuntimeClassName(reinterpret_cast<void**>(value));
+        }
+
+        using root_implements_type::GetTrustLevel;
+
+        impl::hresult_type __stdcall GetTrustLevel(impl::trust_level_type* value) noexcept
+        {
+            return root_implements_type::abi_GetTrustLevel(reinterpret_cast<Windows::Foundation::TrustLevel*>(value));
         }
 
         void* find_interface(guid const& id) const noexcept override
@@ -7075,7 +7755,7 @@ namespace winrt::impl
     };
 }
 
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Point
     {
@@ -7088,7 +7768,7 @@ namespace winrt::Windows::Foundation
             : X(X), Y(Y)
         {}
 
-#ifdef WINRT_NUMERICS
+#ifdef WINRT_IMPL_NUMERICS
 
         constexpr Point(Numerics::float2 const& value) noexcept
             : X(value.x), Y(value.y)
@@ -7123,7 +7803,7 @@ namespace winrt::Windows::Foundation
             : Width(Width), Height(Height)
         {}
 
-#ifdef WINRT_NUMERICS
+#ifdef WINRT_IMPL_NUMERICS
 
         constexpr Size(Numerics::float2 const& value) noexcept
             : Width(value.x), Height(value.y)
@@ -7178,19 +7858,13 @@ namespace winrt::Windows::Foundation
 
 namespace winrt::impl
 {
-    template <> struct name<Windows::Foundation::Point>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Point" };
-    };
+    template <> inline constexpr auto& name_v<Windows::Foundation::Point> = L"Windows.Foundation.Point";
+    template <> inline constexpr auto& name_v<Windows::Foundation::Size> = L"Windows.Foundation.Size";
+    template <> inline constexpr auto& name_v<Windows::Foundation::Rect> = L"Windows.Foundation.Rect";
 
     template <> struct category<Windows::Foundation::Point>
     {
         using type = struct_category<float, float>;
-    };
-
-    template <> struct name<Windows::Foundation::Size>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Size" };
     };
 
     template <> struct category<Windows::Foundation::Size>
@@ -7198,31 +7872,24 @@ namespace winrt::impl
         using type = struct_category<float, float>;
     };
     
-    template <> struct name<Windows::Foundation::Rect>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Rect" };
-    };
-
     template <> struct category<Windows::Foundation::Rect>
     {
         using type = struct_category<float, float, float, float>;
     };
 
-#ifdef WINRT_NUMERICS
+#ifdef WINRT_IMPL_NUMERICS
 
-    template <> struct name<Windows::Foundation::Numerics::float2>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Numerics.Vector2" };
-    };
+    template <> inline constexpr auto& name_v<Windows::Foundation::Numerics::float2> = L"Windows.Foundation.Numerics.Vector2";
+    template <> inline constexpr auto& name_v<Windows::Foundation::Numerics::float3> = L"Windows.Foundation.Numerics.Vector3";
+    template <> inline constexpr auto& name_v<Windows::Foundation::Numerics::float4> = L"Windows.Foundation.Numerics.Vector4";
+    template <> inline constexpr auto& name_v<Windows::Foundation::Numerics::float3x2> = L"Windows.Foundation.Numerics.Matrix3x2";
+    template <> inline constexpr auto& name_v<Windows::Foundation::Numerics::float4x4> = L"Windows.Foundation.Numerics.Matrix4x4";
+    template <> inline constexpr auto& name_v<Windows::Foundation::Numerics::quaternion> = L"Windows.Foundation.Numerics.Quaternion";
+    template <> inline constexpr auto& name_v<Windows::Foundation::Numerics::plane> = L"Windows.Foundation.Numerics.Plane";
 
     template <> struct category<Windows::Foundation::Numerics::float2>
     {
         using type = struct_category<float, float>;
-    };
-
-    template <> struct name<Windows::Foundation::Numerics::float3>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Numerics.Vector3" };
     };
 
     template <> struct category<Windows::Foundation::Numerics::float3>
@@ -7230,29 +7897,14 @@ namespace winrt::impl
         using type = struct_category<float, float, float>;
     };
 
-    template <> struct name<Windows::Foundation::Numerics::float4>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Numerics.Vector4" };
-    };
-
     template <> struct category<Windows::Foundation::Numerics::float4>
     {
         using type = struct_category<float, float, float, float>;
     };
 
-    template <> struct name<Windows::Foundation::Numerics::float3x2>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Numerics.Matrix3x2" };
-    };
-
     template <> struct category<Windows::Foundation::Numerics::float3x2>
     {
         using type = struct_category<float, float, float, float, float, float>;
-    };
-
-    template <> struct name<Windows::Foundation::Numerics::float4x4>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Numerics.Matrix4x4" };
     };
 
     template <> struct category<Windows::Foundation::Numerics::float4x4>
@@ -7265,19 +7917,9 @@ namespace winrt::impl
         >;
     };
 
-    template <> struct name<Windows::Foundation::Numerics::quaternion>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Numerics.Quaternion" };
-    };
-
     template <> struct category<Windows::Foundation::Numerics::quaternion>
     {
         using type = struct_category<float, float, float, float>;
-    };
-
-    template <> struct name<Windows::Foundation::Numerics::plane>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.Numerics.Plane" };
     };
 
     template <> struct category<Windows::Foundation::Numerics::plane>
@@ -7288,56 +7930,7 @@ namespace winrt::impl
 #endif
 }
 
-namespace winrt::impl
-{
-    using filetime_period = std::ratio_multiply<std::ratio<100>, std::nano>;
-}
-
-namespace winrt
-{
-    struct clock;
-
-    namespace Windows::Foundation
-    {
-        using TimeSpan = std::chrono::duration<int64_t, impl::filetime_period>;
-        using DateTime = std::chrono::time_point<clock, TimeSpan>;
-    }
-}
-
-namespace winrt::impl
-{
-    template <> struct abi<Windows::Foundation::TimeSpan>
-    {
-        using type = int64_t;
-    };
-
-    template <> struct abi<Windows::Foundation::DateTime>
-    {
-        using type = int64_t;
-    };
-
-    template <> struct name<Windows::Foundation::TimeSpan>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.TimeSpan" };
-    };
-
-    template <> struct category<Windows::Foundation::TimeSpan>
-    {
-        using type = struct_category<int64_t>;
-    };
-
-    template <> struct name<Windows::Foundation::DateTime>
-    {
-        static constexpr auto & value{ L"Windows.Foundation.DateTime" };
-    };
-
-    template <> struct category<Windows::Foundation::DateTime>
-    {
-        using type = struct_category<int64_t>;
-    };
-}
-
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     struct file_time
     {
@@ -7374,7 +7967,7 @@ namespace winrt
         static time_point now() noexcept
         {
             file_time ft;
-            WINRT_GetSystemTimePreciseAsFileTime(&ft);
+            WINRT_IMPL_GetSystemTimePreciseAsFileTime(&ft);
             return from_file_time(ft);
         }
 
@@ -7416,16 +8009,16 @@ namespace winrt
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     struct access_token : handle
     {
         static access_token process()
         {
             access_token token;
-            check_bool(WINRT_OpenProcessToken(WINRT_GetCurrentProcess(), 0x0002 /*TOKEN_DUPLICATE*/, token.put()));
+            check_bool(WINRT_IMPL_OpenProcessToken(WINRT_IMPL_GetCurrentProcess(), 0x0002 /*TOKEN_DUPLICATE*/, token.put()));
             access_token duplicate;
-            check_bool(WINRT_DuplicateToken(token.get(), 2 /*SecurityImpersonation*/, duplicate.put()));
+            check_bool(WINRT_IMPL_DuplicateToken(token.get(), 2 /*SecurityImpersonation*/, duplicate.put()));
             return duplicate;
         }
 
@@ -7433,9 +8026,9 @@ namespace winrt
         {
             access_token token;
 
-            if (!WINRT_OpenThreadToken(WINRT_GetCurrentThread(), 0x0004 /*TOKEN_IMPERSONATE*/, 1, token.put()))
+            if (!WINRT_IMPL_OpenThreadToken(WINRT_IMPL_GetCurrentThread(), 0x0004 /*TOKEN_IMPERSONATE*/, 1, token.put()))
             {
-                uint32_t const error = WINRT_GetLastError();
+                uint32_t const error = WINRT_IMPL_GetLastError();
 
                 if (error != 1008 /*ERROR_NO_TOKEN*/)
                 {
@@ -7465,7 +8058,7 @@ namespace winrt
                 com_ptr<impl::IServerSecurity> const& m_server;
             };
 
-            auto server = capture<impl::IServerSecurity>(WINRT_CoGetCallContext);
+            auto server = capture<impl::IServerSecurity>(WINRT_IMPL_CoGetCallContext);
             impersonate_guard impersonate(server);
             return thread();
         }
@@ -7477,13 +8070,13 @@ namespace winrt
         access_token impersonate() const
         {
             auto previous = thread();
-            check_bool(WINRT_SetThreadToken(nullptr, get()));
+            check_bool(WINRT_IMPL_SetThreadToken(nullptr, get()));
             return previous;
         }
 
         void revert() const
         {
-            check_bool(WINRT_SetThreadToken(nullptr, get()));
+            check_bool(WINRT_IMPL_SetThreadToken(nullptr, get()));
         }
 
         auto operator()() const
@@ -7538,18 +8131,12 @@ namespace winrt::impl
         return result;
     }
 
-    inline size_t hash_unknown(Windows::Foundation::IUnknown const& value) noexcept
-    {
-        void* const abi_value = get_abi(value.try_as<Windows::Foundation::IUnknown>());
-        return std::hash<void*>{}(abi_value);
-    }
-
-    template<typename T>
     struct hash_base
     {
-        size_t operator()(T const& value) const noexcept
+        size_t operator()(Windows::Foundation::IUnknown const& value) const noexcept
         {
-            return hash_unknown(value);
+            void* const abi_value = get_abi(value.try_as<Windows::Foundation::IUnknown>());
+            return std::hash<void*>{}(abi_value);
         }
     };
 }
@@ -7560,18 +8147,235 @@ namespace std
     {
         size_t operator()(winrt::hstring const& value) const noexcept
         {
-            uint32_t length = 0;
-            const wchar_t* const buffer = WINRT_WindowsGetStringRawBuffer(get_abi(value), &length);
-            return winrt::impl::hash_data(buffer, length * sizeof(wchar_t));
+            return std::hash<std::wstring_view>{}(value);
         }
     };
 
-    template<> struct hash<winrt::Windows::Foundation::IUnknown> : winrt::impl::hash_base<winrt::Windows::Foundation::IUnknown> {};
-    template<> struct hash<winrt::Windows::Foundation::IInspectable> : winrt::impl::hash_base<winrt::Windows::Foundation::IInspectable> {};
-    template<> struct hash<winrt::Windows::Foundation::IActivationFactory> : winrt::impl::hash_base<winrt::Windows::Foundation::IActivationFactory> {};
+    template<> struct hash<winrt::Windows::Foundation::IUnknown> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Foundation::IInspectable> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Foundation::IActivationFactory> : winrt::impl::hash_base {};
+    
+    template<> struct hash<winrt::guid>
+    {
+        size_t operator()(winrt::guid const& value) const noexcept
+        {
+            return winrt::impl::hash_data(&value, sizeof(value));
+        }
+    };
 }
 
-namespace winrt
+namespace winrt::impl
+{
+    inline void __stdcall resume_background_callback(void*, void* context) noexcept
+    {
+        std::experimental::coroutine_handle<>::from_address(context)();
+    };
+
+    inline auto resume_background(std::experimental::coroutine_handle<> handle)
+    {
+        if (!WINRT_IMPL_TrySubmitThreadpoolCallback(resume_background_callback, handle.address(), nullptr))
+        {
+            throw_last_error();
+        }
+    }
+
+    inline bool is_sta() noexcept
+    {
+        int32_t aptType;
+        int32_t aptTypeQualifier;
+        return (0 == WINRT_IMPL_CoGetApartmentType(&aptType, &aptTypeQualifier)) && ((aptType == 0 /*APTTYPE_STA*/) || (aptType == 3 /*APTTYPE_MAINSTA*/));
+    }
+
+    inline bool requires_apartment_context() noexcept
+    {
+        int32_t aptType;
+        int32_t aptTypeQualifier;
+        return (0 == WINRT_IMPL_CoGetApartmentType(&aptType, &aptTypeQualifier)) && ((aptType == 0 /*APTTYPE_STA*/) || (aptType == 2 /*APTTYPE_NA*/) || (aptType == 3 /*APTTYPE_MAINSTA*/));
+    }
+
+    inline auto apartment_context()
+    {
+        return requires_apartment_context() ? capture<IContextCallback>(WINRT_IMPL_CoGetObjectContext) : nullptr;
+    }
+
+    inline int32_t __stdcall resume_apartment_callback(com_callback_args* args) noexcept
+    {
+        std::experimental::coroutine_handle<>::from_address(args->data)();
+        return 0;
+    };
+
+    inline auto resume_apartment(com_ptr<IContextCallback> const& context, std::experimental::coroutine_handle<> handle)
+    {
+        if (context)
+        {
+            com_callback_args args{};
+            args.data = handle.address();
+
+            check_hresult(context->ContextCallback(resume_apartment_callback, &args, guid_of<ICallbackWithNoReentrancyToApplicationSTA>(), 5, nullptr));
+        }
+        else
+        {
+            if (requires_apartment_context())
+            {
+                resume_background(handle);
+            }
+            else
+            {
+                handle();
+            }
+        }
+    }
+
+    template <typename T>
+    class has_awaitable_member
+    {
+        template <typename U, typename = decltype(std::declval<U>().await_ready())> static constexpr bool get_value(int) { return true; }
+        template <typename> static constexpr bool get_value(...) { return false; }
+
+    public:
+
+        static constexpr bool value = get_value<T>(0);
+    };
+
+    template <typename T>
+    class has_awaitable_free
+    {
+        template <typename U, typename = decltype(await_ready(std::declval<U>()))> static constexpr bool get_value(int) { return true; }
+        template <typename> static constexpr bool get_value(...) { return false; }
+
+    public:
+
+        static constexpr bool value = get_value<T>(0);
+    };
+
+    template <typename T>
+    struct free_await_adapter_impl
+    {
+        T&& awaitable;
+
+        bool ready()
+        {
+            return await_ready(awaitable);
+        }
+
+        template <typename U>
+        auto suspend(std::experimental::coroutine_handle<U> handle)
+        {
+            return await_suspend(awaitable, handle);
+        }
+
+        auto resume()
+        {
+            return await_resume(awaitable);
+        }
+    };
+
+    template <typename T>
+    struct free_await_adapter
+    {
+        T&& awaitable;
+
+        bool await_ready()
+        {
+            return free_await_adapter_impl<T>{ static_cast<T&&>(awaitable) }.ready();
+        }
+
+        template <typename U>
+        auto await_suspend(std::experimental::coroutine_handle<U> handle)
+        {
+            return free_await_adapter_impl<T>{ static_cast<T&&>(awaitable) }.suspend(handle);
+        }
+
+        auto await_resume()
+        {
+            return free_await_adapter_impl<T>{ static_cast<T&&>(awaitable) }.resume();
+        }
+    };
+
+    template <typename T>
+    struct member_await_adapter
+    {
+        T&& awaitable;
+
+        bool await_ready()
+        {
+            return awaitable.await_ready();
+        }
+
+        template <typename U>
+        auto await_suspend(std::experimental::coroutine_handle<U> handle)
+        {
+            return awaitable.await_suspend(handle);
+        }
+
+        auto await_resume()
+        {
+            return awaitable.await_resume();
+        }
+    };
+
+    template <typename T>
+    auto get_awaiter(T&& value) noexcept -> decltype(static_cast<T&&>(value).operator co_await())
+    {
+        return static_cast<T&&>(value).operator co_await();
+    }
+
+    template <typename T>
+    auto get_awaiter(T&& value) noexcept -> decltype(operator co_await(static_cast<T&&>(value)))
+    {
+        return operator co_await(static_cast<T&&>(value));
+    }
+
+    template <typename T, std::enable_if_t<has_awaitable_member<T>::value, int> = 0>
+    auto get_awaiter(T&& value) noexcept
+    {
+        return member_await_adapter<T>{ static_cast<T&&>(value) };
+    }
+
+    template <typename T, std::enable_if_t<has_awaitable_free<T>::value, int> = 0>
+    auto get_awaiter(T&& value) noexcept
+    {
+        return free_await_adapter<T>{ static_cast<T&&>(value) };
+    }
+
+    template <typename T>
+    struct notify_awaiter
+    {
+        decltype(get_awaiter(std::declval<T&&>())) awaitable;
+
+        notify_awaiter(T&& awaitable) : awaitable(get_awaiter(static_cast<T&&>(awaitable)))
+        {
+        }
+
+        bool await_ready()
+        {
+            if (winrt_suspend_handler)
+            {
+                winrt_suspend_handler(this);
+            }
+
+            return awaitable.await_ready();
+        }
+
+        template <typename U>
+        auto await_suspend(std::experimental::coroutine_handle<U> handle)
+        {
+            return awaitable.await_suspend(handle);
+        }
+
+        auto await_resume()
+        {
+            if (winrt_resume_handler)
+            {
+                winrt_resume_handler(this);
+            }
+
+            return awaitable.await_resume();
+        }
+    };
+}
+
+WINRT_EXPORT namespace winrt
 {
     [[nodiscard]] inline auto resume_background() noexcept
     {
@@ -7588,17 +8392,7 @@ namespace winrt
 
             void await_suspend(std::experimental::coroutine_handle<> handle) const
             {
-                if (!WINRT_TrySubmitThreadpoolCallback(callback, handle.address(), nullptr))
-                {
-                    throw_last_error();
-                }
-            }
-
-        private:
-
-            static void __stdcall callback(void*, void* context) noexcept
-            {
-                std::experimental::coroutine_handle<>::from_address(context)();
+                impl::resume_background(handle);
             }
         };
 
@@ -7627,7 +8421,7 @@ namespace winrt
             {
                 m_resume = resume;
 
-                if (!WINRT_TrySubmitThreadpoolCallback(callback, this, nullptr))
+                if (!WINRT_IMPL_TrySubmitThreadpoolCallback(callback, this, nullptr))
                 {
                     throw_last_error();
                 }
@@ -7651,11 +8445,6 @@ namespace winrt
 
     struct apartment_context
     {
-        apartment_context()
-        {
-            m_context.capture(WINRT_CoGetObjectContext);
-        }
-
         bool await_ready() const noexcept
         {
             return false;
@@ -7667,20 +8456,10 @@ namespace winrt
 
         void await_suspend(std::experimental::coroutine_handle<> handle) const
         {
-            impl::com_callback_args args{};
-            args.data = handle.address();
-            check_hresult(m_context->ContextCallback(callback, &args, guid_of<impl::ICallbackWithNoReentrancyToApplicationSTA>(), 5, nullptr));
+            impl::resume_apartment(context, handle);
         }
 
-    private:
-
-        static int32_t __stdcall callback(impl::com_callback_args* args) noexcept
-        {
-            std::experimental::coroutine_handle<>::from_address(args->data)();
-            return impl::error_ok;
-        }
-
-        com_ptr<impl::IContextCallback> m_context;
+        com_ptr<impl::IContextCallback> context = impl::apartment_context();
     };
 
     [[nodiscard]] inline auto resume_after(Windows::Foundation::TimeSpan duration) noexcept
@@ -7699,9 +8478,9 @@ namespace winrt
 
             void await_suspend(std::experimental::coroutine_handle<> handle)
             {
-                m_timer.attach(check_pointer(WINRT_CreateThreadpoolTimer(callback, handle.address(), nullptr)));
+                m_timer.attach(check_pointer(WINRT_IMPL_CreateThreadpoolTimer(callback, handle.address(), nullptr)));
                 int64_t relative_count = -m_duration.count();
-                WINRT_SetThreadpoolTimer(m_timer.get(), &relative_count, 0, 0);
+                WINRT_IMPL_SetThreadpoolTimer(m_timer.get(), &relative_count, 0, 0);
             }
 
             void await_resume() const noexcept
@@ -7721,7 +8500,7 @@ namespace winrt
 
                 static void close(type value) noexcept
                 {
-                    WINRT_CloseThreadpoolTimer(value);
+                    WINRT_IMPL_CloseThreadpoolTimer(value);
                 }
 
                 static constexpr type invalid() noexcept
@@ -7737,7 +8516,7 @@ namespace winrt
         return awaitable{ duration };
     }
 
-#ifdef _RESUMABLE_FUNCTIONS_SUPPORTED
+#ifdef __cpp_coroutines
     inline auto operator co_await(Windows::Foundation::TimeSpan duration)
     {
         return resume_after(duration);
@@ -7755,16 +8534,16 @@ namespace winrt
 
             bool await_ready() const noexcept
             {
-                return WINRT_WaitForSingleObject(m_handle, 0) == 0;
+                return WINRT_IMPL_WaitForSingleObject(m_handle, 0) == 0;
             }
 
             void await_suspend(std::experimental::coroutine_handle<> resume)
             {
                 m_resume = resume;
-                m_wait.attach(check_pointer(WINRT_CreateThreadpoolWait(callback, this, nullptr)));
+                m_wait.attach(check_pointer(WINRT_IMPL_CreateThreadpoolWait(callback, this, nullptr)));
                 int64_t relative_count = -m_timeout.count();
                 int64_t* file_time = relative_count != 0 ? &relative_count : nullptr;
-                WINRT_SetThreadpoolWait(m_wait.get(), m_handle, file_time);
+                WINRT_IMPL_SetThreadpoolWait(m_wait.get(), m_handle, file_time);
             }
 
             bool await_resume() const noexcept
@@ -7787,7 +8566,7 @@ namespace winrt
 
                 static void close(type value) noexcept
                 {
-                    WINRT_CloseThreadpoolWait(value);
+                    WINRT_IMPL_CloseThreadpoolWait(value);
                 }
 
                 static constexpr type invalid() noexcept
@@ -7809,15 +8588,15 @@ namespace winrt
     struct thread_pool
     {
         thread_pool() :
-            m_pool(check_pointer(WINRT_CreateThreadpool(nullptr)))
+            m_pool(check_pointer(WINRT_IMPL_CreateThreadpool(nullptr)))
         {
             m_environment.Pool = m_pool.get();
         }
 
         void thread_limits(uint32_t const high, uint32_t const low)
         {
-            WINRT_SetThreadpoolThreadMaximum(m_pool.get(), high);
-            check_bool(WINRT_SetThreadpoolThreadMinimum(m_pool.get(), low));
+            WINRT_IMPL_SetThreadpoolThreadMaximum(m_pool.get(), high);
+            check_bool(WINRT_IMPL_SetThreadpoolThreadMinimum(m_pool.get(), low));
         }
 
         bool await_ready() const noexcept
@@ -7831,7 +8610,7 @@ namespace winrt
 
         void await_suspend(std::experimental::coroutine_handle<> handle)
         {
-            if (!WINRT_TrySubmitThreadpoolCallback(callback, handle.address(), &m_environment))
+            if (!WINRT_IMPL_TrySubmitThreadpoolCallback(callback, handle.address(), &m_environment))
             {
                 throw_last_error();
             }
@@ -7850,7 +8629,7 @@ namespace winrt
 
             static void close(type value) noexcept
             {
-                WINRT_CloseThreadpool(value);
+                WINRT_IMPL_CloseThreadpool(value);
             }
 
             static constexpr type invalid() noexcept
@@ -7912,12 +8691,23 @@ namespace std::experimental
 
             suspend_never final_suspend() const noexcept
             {
+                if (winrt_suspend_handler)
+                {
+                    winrt_suspend_handler(this);
+                }
+
                 return{};
             }
 
             void unhandled_exception() const noexcept
             {
                 winrt::terminate();
+            }
+
+            template <typename Expression>
+            auto await_transform(Expression&& expression)
+            {
+                return winrt::impl::notify_awaiter<Expression>{ static_cast<Expression&&>(expression) };
             }
         };
     };
@@ -7953,25 +8743,55 @@ namespace winrt::impl
                 void* s;
                 uint8_t v[1024];
             }
-            value{};
-            guid iid{};
-            if (WINRT_IIDFromString(iid_str, &iid) == error_ok)
+            value;
+            value.s = 0;
+            guid iid;
+            if (WINRT_IMPL_IIDFromString(iid_str, &iid) == 0)
             {
-                inspectable_abi* pinsp;
-                typedef int32_t(__stdcall inspectable_abi::* PropertyAccessor)(void*);
-                if (((unknown_abi*)object)->QueryInterface(iid, reinterpret_cast<void**>(&pinsp)) == error_ok)
+                struct memory_basic_information
                 {
-                    auto vtbl = *(PropertyAccessor**)pinsp;
-                    static const int IInspectable_vtbl_size = 6;
-                    auto get_Property = vtbl[method + IInspectable_vtbl_size];
-                    (pinsp->*get_Property)(&value);
-                    pinsp->Release();
+                    void* base_address;
+                    void* allocation_base;
+                    uint32_t allocation_protect;
+#ifdef _WIN64
+                    uint32_t __alignment1;
+#endif
+                    uintptr_t region_size;
+                    uint32_t state;
+                    uint32_t protect;
+                    uint32_t type;
+#ifdef _WIN64
+                    uint32_t __alignment2;
+#endif
+                };
+                memory_basic_information info;
+                // validate object pointer is readable
+                if ((WINRT_IMPL_VirtualQuery(object, &info, sizeof(info)) != 0) && ((info.protect & 0xEE) != 0))
+                {
+                    inspectable_abi* pinsp;
+                    if (((unknown_abi*)object)->QueryInterface(iid, reinterpret_cast<void**>(&pinsp)) == 0)
+                    {
+                        static const int IInspectable_vtbl_size = 6;
+                        auto vtbl = *(void***)pinsp;
+                        // validate vtbl pointer is readable
+                        if ((WINRT_IMPL_VirtualQuery(vtbl, &info, sizeof(info)) != 0) && ((info.protect & 0xEE) != 0))
+                        {
+                            auto vfunc = vtbl[method + IInspectable_vtbl_size];
+                            // validate method pointer is executable
+                            if ((WINRT_IMPL_VirtualQuery(vfunc, &info, sizeof(info)) != 0) && ((info.protect & 0xF0) != 0))
+                            {
+                                typedef int32_t(__stdcall inspectable_abi:: * PropertyAccessor)(void*);
+                                (pinsp->**(PropertyAccessor*)&vfunc)(&value);
+                                pinsp->Release();
+                            }
+                        }
+                    }
                 }
             }
             return value;
         }
 
-        static auto __stdcall get_val(winrt::Windows::Foundation::IInspectable* object, wchar_t const * iid_str, int method)
+        static auto __stdcall get_val(winrt::Windows::Foundation::IInspectable* object, wchar_t const* iid_str, int method)
         {
             return abi_val(static_cast<unknown_abi*>(get_abi(*object)), iid_str, method);
         }
@@ -7996,7 +8816,7 @@ decltype(winrt::impl::natvis::get_val) & WINRT_get_val = winrt::impl::natvis::ge
 
 #endif
 
-#define CPPWINRT_VERSION "2.0.190620.2"
+#define CPPWINRT_VERSION "2.0.200609.3"
 
 // WINRT_version is used by Microsoft to analyze C++/WinRT library adoption and inform future product decisions.
 extern "C"
@@ -8009,7 +8829,7 @@ char const * const WINRT_version = "C++/WinRT version:" CPPWINRT_VERSION;
 #pragma comment(linker, "/include:WINRT_version")
 #endif
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <size_t BaseSize, size_t ComponentSize>
     constexpr bool check_version(char const(&base)[BaseSize], char const(&component)[ComponentSize]) noexcept

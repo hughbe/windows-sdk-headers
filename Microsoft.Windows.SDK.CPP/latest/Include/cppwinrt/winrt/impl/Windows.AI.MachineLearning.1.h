@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_AI_MachineLearning_1_H
 #define WINRT_Windows_AI_MachineLearning_1_H
 #include "winrt/impl/Windows.AI.MachineLearning.0.h"
-namespace winrt::Windows::AI::MachineLearning
+WINRT_EXPORT namespace winrt::Windows::AI::MachineLearning
 {
     struct __declspec(empty_bases) IImageFeatureDescriptor :
         Windows::Foundation::IInspectable,
@@ -133,6 +133,13 @@ namespace winrt::Windows::AI::MachineLearning
     {
         ILearningModelSessionOptions2(std::nullptr_t = nullptr) noexcept {}
         ILearningModelSessionOptions2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ILearningModelSessionOptions3 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ILearningModelSessionOptions3>
+    {
+        ILearningModelSessionOptions3(std::nullptr_t = nullptr) noexcept {}
+        ILearningModelSessionOptions3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ILearningModelStatics :
         Windows::Foundation::IInspectable,

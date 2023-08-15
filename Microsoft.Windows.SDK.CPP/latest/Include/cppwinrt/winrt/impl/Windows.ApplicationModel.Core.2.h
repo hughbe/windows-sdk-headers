@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Core.1.h"
-namespace winrt::Windows::ApplicationModel::Core
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Core
 {
     struct __declspec(empty_bases) AppListEntry : Windows::ApplicationModel::Core::IAppListEntry,
-        impl::require<AppListEntry, Windows::ApplicationModel::Core::IAppListEntry2, Windows::ApplicationModel::Core::IAppListEntry3>
+        impl::require<AppListEntry, Windows::ApplicationModel::Core::IAppListEntry2, Windows::ApplicationModel::Core::IAppListEntry3, Windows::ApplicationModel::Core::IAppListEntry4>
     {
         AppListEntry(std::nullptr_t) noexcept {}
         AppListEntry(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Core::IAppListEntry(ptr, take_ownership_from_abi) {}
@@ -24,11 +24,11 @@ namespace winrt::Windows::ApplicationModel::Core
         [[nodiscard]] static auto Id();
         static auto Suspending(Windows::Foundation::EventHandler<Windows::ApplicationModel::SuspendingEventArgs> const& handler);
         using Suspending_revoker = impl::factory_event_revoker<Windows::ApplicationModel::Core::ICoreApplication, &impl::abi_t<Windows::ApplicationModel::Core::ICoreApplication>::remove_Suspending>;
-        static Suspending_revoker Suspending(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::SuspendingEventArgs> const& handler);
+        [[nodiscard]] static Suspending_revoker Suspending(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::SuspendingEventArgs> const& handler);
         static auto Suspending(winrt::event_token const& token);
         static auto Resuming(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using Resuming_revoker = impl::factory_event_revoker<Windows::ApplicationModel::Core::ICoreApplication, &impl::abi_t<Windows::ApplicationModel::Core::ICoreApplication>::remove_Resuming>;
-        static Resuming_revoker Resuming(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static Resuming_revoker Resuming(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto Resuming(winrt::event_token const& token);
         [[nodiscard]] static auto Properties();
         static auto GetCurrentView();
@@ -36,15 +36,15 @@ namespace winrt::Windows::ApplicationModel::Core
         static auto RunWithActivationFactories(Windows::Foundation::IGetActivationFactory const& activationFactoryCallback);
         static auto BackgroundActivated(Windows::Foundation::EventHandler<Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs> const& handler);
         using BackgroundActivated_revoker = impl::factory_event_revoker<Windows::ApplicationModel::Core::ICoreApplication2, &impl::abi_t<Windows::ApplicationModel::Core::ICoreApplication2>::remove_BackgroundActivated>;
-        static BackgroundActivated_revoker BackgroundActivated(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs> const& handler);
+        [[nodiscard]] static BackgroundActivated_revoker BackgroundActivated(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs> const& handler);
         static auto BackgroundActivated(winrt::event_token const& token);
         static auto LeavingBackground(Windows::Foundation::EventHandler<Windows::ApplicationModel::LeavingBackgroundEventArgs> const& handler);
         using LeavingBackground_revoker = impl::factory_event_revoker<Windows::ApplicationModel::Core::ICoreApplication2, &impl::abi_t<Windows::ApplicationModel::Core::ICoreApplication2>::remove_LeavingBackground>;
-        static LeavingBackground_revoker LeavingBackground(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::LeavingBackgroundEventArgs> const& handler);
+        [[nodiscard]] static LeavingBackground_revoker LeavingBackground(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::LeavingBackgroundEventArgs> const& handler);
         static auto LeavingBackground(winrt::event_token const& token);
         static auto EnteredBackground(Windows::Foundation::EventHandler<Windows::ApplicationModel::EnteredBackgroundEventArgs> const& handler);
         using EnteredBackground_revoker = impl::factory_event_revoker<Windows::ApplicationModel::Core::ICoreApplication2, &impl::abi_t<Windows::ApplicationModel::Core::ICoreApplication2>::remove_EnteredBackground>;
-        static EnteredBackground_revoker EnteredBackground(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::EnteredBackgroundEventArgs> const& handler);
+        [[nodiscard]] static EnteredBackground_revoker EnteredBackground(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::EnteredBackgroundEventArgs> const& handler);
         static auto EnteredBackground(winrt::event_token const& token);
         static auto EnablePrelaunch(bool value);
         static auto RequestRestartAsync(param::hstring const& launchArguments);
@@ -52,11 +52,11 @@ namespace winrt::Windows::ApplicationModel::Core
         static auto Exit();
         static auto Exiting(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using Exiting_revoker = impl::factory_event_revoker<Windows::ApplicationModel::Core::ICoreApplicationExit, &impl::abi_t<Windows::ApplicationModel::Core::ICoreApplicationExit>::remove_Exiting>;
-        static Exiting_revoker Exiting(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static Exiting_revoker Exiting(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto Exiting(winrt::event_token const& token);
         static auto UnhandledErrorDetected(Windows::Foundation::EventHandler<Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs> const& handler);
         using UnhandledErrorDetected_revoker = impl::factory_event_revoker<Windows::ApplicationModel::Core::ICoreApplicationUnhandledError, &impl::abi_t<Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>::remove_UnhandledErrorDetected>;
-        static UnhandledErrorDetected_revoker UnhandledErrorDetected(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs> const& handler);
+        [[nodiscard]] static UnhandledErrorDetected_revoker UnhandledErrorDetected(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs> const& handler);
         static auto UnhandledErrorDetected(winrt::event_token const& token);
         static auto IncrementApplicationUseCount();
         static auto DecrementApplicationUseCount();

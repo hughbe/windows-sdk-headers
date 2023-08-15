@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,6 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.UI.Composition.1.h"
+#include "winrt/impl/Windows.UI.Input.Inking.1.h"
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Automation.Peers.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Automation.Provider.1.h"
@@ -17,7 +18,7 @@
 #include "winrt/impl/Windows.UI.Xaml.Media.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Navigation.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.1.h"
-namespace winrt::Windows::UI::Xaml::Controls
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
 {
     struct BackClickEventHandler : Windows::Foundation::IUnknown
     {
@@ -934,7 +935,7 @@ namespace winrt::Windows::UI::Xaml::Controls
     {
         DropDownButtonAutomationPeer(std::nullptr_t) noexcept {}
         DropDownButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::IDropDownButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        DropDownButtonAutomationPeer(Windows::UI::Xaml::Controls::DropDownButton const& owner);
+        explicit DropDownButtonAutomationPeer(Windows::UI::Xaml::Controls::DropDownButton const& owner);
     };
     struct __declspec(empty_bases) DynamicOverflowItemsChangingEventArgs : Windows::UI::Xaml::Controls::IDynamicOverflowItemsChangingEventArgs
     {
@@ -1133,7 +1134,7 @@ namespace winrt::Windows::UI::Xaml::Controls
     };
     struct __declspec(empty_bases) HandwritingView : Windows::UI::Xaml::Controls::IHandwritingView,
         impl::base<HandwritingView, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
-        impl::require<HandwritingView, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+        impl::require<HandwritingView, Windows::UI::Xaml::Controls::IHandwritingView2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
     {
         HandwritingView(std::nullptr_t) noexcept {}
         HandwritingView(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::IHandwritingView(ptr, take_ownership_from_abi) {}
@@ -1142,6 +1143,18 @@ namespace winrt::Windows::UI::Xaml::Controls
         [[nodiscard]] static auto PlacementAlignmentProperty();
         [[nodiscard]] static auto IsOpenProperty();
         [[nodiscard]] static auto AreCandidatesEnabledProperty();
+        [[nodiscard]] static auto IsSwitchToKeyboardEnabledProperty();
+        [[nodiscard]] static auto IsCommandBarOpenProperty();
+    };
+    struct __declspec(empty_bases) HandwritingViewCandidatesChangedEventArgs : Windows::UI::Xaml::Controls::IHandwritingViewCandidatesChangedEventArgs
+    {
+        HandwritingViewCandidatesChangedEventArgs(std::nullptr_t) noexcept {}
+        HandwritingViewCandidatesChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::IHandwritingViewCandidatesChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) HandwritingViewTextSubmittedEventArgs : Windows::UI::Xaml::Controls::IHandwritingViewTextSubmittedEventArgs
+    {
+        HandwritingViewTextSubmittedEventArgs(std::nullptr_t) noexcept {}
+        HandwritingViewTextSubmittedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::IHandwritingViewTextSubmittedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) Hub : Windows::UI::Xaml::Controls::IHub,
         impl::base<Hub, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
@@ -2643,7 +2656,7 @@ namespace winrt::Windows::UI::Xaml::Controls
     {
         SplitButtonAutomationPeer(std::nullptr_t) noexcept {}
         SplitButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::ISplitButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        SplitButtonAutomationPeer(Windows::UI::Xaml::Controls::SplitButton const& owner);
+        explicit SplitButtonAutomationPeer(Windows::UI::Xaml::Controls::SplitButton const& owner);
     };
     struct __declspec(empty_bases) SplitButtonClickEventArgs : Windows::UI::Xaml::Controls::ISplitButtonClickEventArgs
     {
@@ -2762,7 +2775,7 @@ namespace winrt::Windows::UI::Xaml::Controls
         SymbolIcon(std::nullptr_t) noexcept {}
         SymbolIcon(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::ISymbolIcon(ptr, take_ownership_from_abi) {}
         SymbolIcon();
-        SymbolIcon(Windows::UI::Xaml::Controls::Symbol const& symbol);
+        explicit SymbolIcon(Windows::UI::Xaml::Controls::Symbol const& symbol);
         [[nodiscard]] static auto SymbolProperty();
     };
     struct __declspec(empty_bases) SymbolIconSource : Windows::UI::Xaml::Controls::ISymbolIconSource,
@@ -2986,7 +2999,7 @@ namespace winrt::Windows::UI::Xaml::Controls
     {
         ToggleSplitButtonAutomationPeer(std::nullptr_t) noexcept {}
         ToggleSplitButtonAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::IToggleSplitButtonAutomationPeer(ptr, take_ownership_from_abi) {}
-        ToggleSplitButtonAutomationPeer(Windows::UI::Xaml::Controls::ToggleSplitButton const& owner);
+        explicit ToggleSplitButtonAutomationPeer(Windows::UI::Xaml::Controls::ToggleSplitButton const& owner);
     };
     struct __declspec(empty_bases) ToggleSplitButtonIsCheckedChangedEventArgs : Windows::UI::Xaml::Controls::IToggleSplitButtonIsCheckedChangedEventArgs
     {
@@ -3221,7 +3234,7 @@ namespace winrt::Windows::UI::Xaml::Controls
         WebView(std::nullptr_t) noexcept {}
         WebView(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::IWebView(ptr, take_ownership_from_abi) {}
         WebView();
-        WebView(Windows::UI::Xaml::Controls::WebViewExecutionMode const& executionMode);
+        explicit WebView(Windows::UI::Xaml::Controls::WebViewExecutionMode const& executionMode);
         [[nodiscard]] static auto AnyScriptNotifyUri();
         [[nodiscard]] static auto SourceProperty();
         [[nodiscard]] static auto AllowedScriptNotifyUrisProperty();
@@ -3344,8 +3357,8 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAppBarOverrides = winrt::Windows::UI::Xaml::Controls::IAppBarOverrides;
-        auto OnClosed(Windows::Foundation::IInspectable const& e) const;
-        auto OnOpened(Windows::Foundation::IInspectable const& e) const;
+        WINRT_IMPL_AUTO(void) OnClosed(Windows::Foundation::IInspectable const& e) const;
+        WINRT_IMPL_AUTO(void) OnOpened(Windows::Foundation::IInspectable const& e) const;
     };
     template <typename D>
     class IAppBarOverrides3T
@@ -3354,8 +3367,8 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IAppBarOverrides3 = winrt::Windows::UI::Xaml::Controls::IAppBarOverrides3;
-        auto OnClosing(Windows::Foundation::IInspectable const& e) const;
-        auto OnOpening(Windows::Foundation::IInspectable const& e) const;
+        WINRT_IMPL_AUTO(void) OnClosing(Windows::Foundation::IInspectable const& e) const;
+        WINRT_IMPL_AUTO(void) OnOpening(Windows::Foundation::IInspectable const& e) const;
     };
     template <typename D>
     class IComboBoxOverridesT
@@ -3364,8 +3377,8 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IComboBoxOverrides = winrt::Windows::UI::Xaml::Controls::IComboBoxOverrides;
-        auto OnDropDownClosed(Windows::Foundation::IInspectable const& e) const;
-        auto OnDropDownOpened(Windows::Foundation::IInspectable const& e) const;
+        WINRT_IMPL_AUTO(void) OnDropDownClosed(Windows::Foundation::IInspectable const& e) const;
+        WINRT_IMPL_AUTO(void) OnDropDownOpened(Windows::Foundation::IInspectable const& e) const;
     };
     template <typename D>
     class IContentControlOverridesT
@@ -3374,9 +3387,9 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IContentControlOverrides = winrt::Windows::UI::Xaml::Controls::IContentControlOverrides;
-        auto OnContentChanged(Windows::Foundation::IInspectable const& oldContent, Windows::Foundation::IInspectable const& newContent) const;
-        auto OnContentTemplateChanged(Windows::UI::Xaml::DataTemplate const& oldContentTemplate, Windows::UI::Xaml::DataTemplate const& newContentTemplate) const;
-        auto OnContentTemplateSelectorChanged(Windows::UI::Xaml::Controls::DataTemplateSelector const& oldContentTemplateSelector, Windows::UI::Xaml::Controls::DataTemplateSelector const& newContentTemplateSelector) const;
+        WINRT_IMPL_AUTO(void) OnContentChanged(Windows::Foundation::IInspectable const& oldContent, Windows::Foundation::IInspectable const& newContent) const;
+        WINRT_IMPL_AUTO(void) OnContentTemplateChanged(Windows::UI::Xaml::DataTemplate const& oldContentTemplate, Windows::UI::Xaml::DataTemplate const& newContentTemplate) const;
+        WINRT_IMPL_AUTO(void) OnContentTemplateSelectorChanged(Windows::UI::Xaml::Controls::DataTemplateSelector const& oldContentTemplateSelector, Windows::UI::Xaml::Controls::DataTemplateSelector const& newContentTemplateSelector) const;
     };
     template <typename D>
     class IContentPresenterOverridesT
@@ -3385,8 +3398,8 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IContentPresenterOverrides = winrt::Windows::UI::Xaml::Controls::IContentPresenterOverrides;
-        auto OnContentTemplateChanged(Windows::UI::Xaml::DataTemplate const& oldContentTemplate, Windows::UI::Xaml::DataTemplate const& newContentTemplate) const;
-        auto OnContentTemplateSelectorChanged(Windows::UI::Xaml::Controls::DataTemplateSelector const& oldContentTemplateSelector, Windows::UI::Xaml::Controls::DataTemplateSelector const& newContentTemplateSelector) const;
+        WINRT_IMPL_AUTO(void) OnContentTemplateChanged(Windows::UI::Xaml::DataTemplate const& oldContentTemplate, Windows::UI::Xaml::DataTemplate const& newContentTemplate) const;
+        WINRT_IMPL_AUTO(void) OnContentTemplateSelectorChanged(Windows::UI::Xaml::Controls::DataTemplateSelector const& oldContentTemplateSelector, Windows::UI::Xaml::Controls::DataTemplateSelector const& newContentTemplateSelector) const;
     };
     template <typename D>
     class IControlOverridesT
@@ -3395,31 +3408,31 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IControlOverrides = winrt::Windows::UI::Xaml::Controls::IControlOverrides;
-        auto OnPointerEntered(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
-        auto OnPointerPressed(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
-        auto OnPointerMoved(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
-        auto OnPointerReleased(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
-        auto OnPointerExited(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
-        auto OnPointerCaptureLost(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
-        auto OnPointerCanceled(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
-        auto OnPointerWheelChanged(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
-        auto OnTapped(Windows::UI::Xaml::Input::TappedRoutedEventArgs const& e) const;
-        auto OnDoubleTapped(Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs const& e) const;
-        auto OnHolding(Windows::UI::Xaml::Input::HoldingRoutedEventArgs const& e) const;
-        auto OnRightTapped(Windows::UI::Xaml::Input::RightTappedRoutedEventArgs const& e) const;
-        auto OnManipulationStarting(Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs const& e) const;
-        auto OnManipulationInertiaStarting(Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs const& e) const;
-        auto OnManipulationStarted(Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs const& e) const;
-        auto OnManipulationDelta(Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs const& e) const;
-        auto OnManipulationCompleted(Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs const& e) const;
-        auto OnKeyUp(Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
-        auto OnKeyDown(Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
-        auto OnGotFocus(Windows::UI::Xaml::RoutedEventArgs const& e) const;
-        auto OnLostFocus(Windows::UI::Xaml::RoutedEventArgs const& e) const;
-        auto OnDragEnter(Windows::UI::Xaml::DragEventArgs const& e) const;
-        auto OnDragLeave(Windows::UI::Xaml::DragEventArgs const& e) const;
-        auto OnDragOver(Windows::UI::Xaml::DragEventArgs const& e) const;
-        auto OnDrop(Windows::UI::Xaml::DragEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPointerEntered(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPointerPressed(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPointerMoved(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPointerReleased(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPointerExited(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPointerCaptureLost(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPointerCanceled(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPointerWheelChanged(Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnTapped(Windows::UI::Xaml::Input::TappedRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnDoubleTapped(Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnHolding(Windows::UI::Xaml::Input::HoldingRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnRightTapped(Windows::UI::Xaml::Input::RightTappedRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnManipulationStarting(Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnManipulationInertiaStarting(Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnManipulationStarted(Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnManipulationDelta(Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnManipulationCompleted(Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnKeyUp(Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnKeyDown(Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnGotFocus(Windows::UI::Xaml::RoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnLostFocus(Windows::UI::Xaml::RoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnDragEnter(Windows::UI::Xaml::DragEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnDragLeave(Windows::UI::Xaml::DragEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnDragOver(Windows::UI::Xaml::DragEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnDrop(Windows::UI::Xaml::DragEventArgs const& e) const;
     };
     template <typename D>
     class IControlOverrides6T
@@ -3428,9 +3441,9 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IControlOverrides6 = winrt::Windows::UI::Xaml::Controls::IControlOverrides6;
-        auto OnPreviewKeyDown(Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
-        auto OnPreviewKeyUp(Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
-        auto OnCharacterReceived(Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPreviewKeyDown(Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnPreviewKeyUp(Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnCharacterReceived(Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs const& e) const;
     };
     template <typename D>
     class IDataTemplateSelectorOverridesT
@@ -3439,7 +3452,7 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IDataTemplateSelectorOverrides = winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverrides;
-        auto SelectTemplateCore(Windows::Foundation::IInspectable const& item, Windows::UI::Xaml::DependencyObject const& container) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::DataTemplate) SelectTemplateCore(Windows::Foundation::IInspectable const& item, Windows::UI::Xaml::DependencyObject const& container) const;
     };
     template <typename D>
     class IDataTemplateSelectorOverrides2T
@@ -3448,7 +3461,7 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IDataTemplateSelectorOverrides2 = winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverrides2;
-        auto SelectTemplateCore(Windows::Foundation::IInspectable const& item) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::DataTemplate) SelectTemplateCore(Windows::Foundation::IInspectable const& item) const;
     };
     template <typename D>
     class IGroupStyleSelectorOverridesT
@@ -3457,7 +3470,7 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IGroupStyleSelectorOverrides = winrt::Windows::UI::Xaml::Controls::IGroupStyleSelectorOverrides;
-        auto SelectGroupStyleCore(Windows::Foundation::IInspectable const& group, uint32_t level) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::GroupStyle) SelectGroupStyleCore(Windows::Foundation::IInspectable const& group, uint32_t level) const;
     };
     template <typename D>
     class IInkToolbarCustomPenOverridesT
@@ -3466,7 +3479,7 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IInkToolbarCustomPenOverrides = winrt::Windows::UI::Xaml::Controls::IInkToolbarCustomPenOverrides;
-        auto CreateInkDrawingAttributesCore(Windows::UI::Xaml::Media::Brush const& brush, double strokeWidth) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::Inking::InkDrawingAttributes) CreateInkDrawingAttributesCore(Windows::UI::Xaml::Media::Brush const& brush, double strokeWidth) const;
     };
     template <typename D>
     class IItemsControlOverridesT
@@ -3475,16 +3488,16 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IItemsControlOverrides = winrt::Windows::UI::Xaml::Controls::IItemsControlOverrides;
-        auto IsItemItsOwnContainerOverride(Windows::Foundation::IInspectable const& item) const;
-        auto GetContainerForItemOverride() const;
-        auto ClearContainerForItemOverride(Windows::UI::Xaml::DependencyObject const& element, Windows::Foundation::IInspectable const& item) const;
-        auto PrepareContainerForItemOverride(Windows::UI::Xaml::DependencyObject const& element, Windows::Foundation::IInspectable const& item) const;
-        auto OnItemsChanged(Windows::Foundation::IInspectable const& e) const;
-        auto OnItemContainerStyleChanged(Windows::UI::Xaml::Style const& oldItemContainerStyle, Windows::UI::Xaml::Style const& newItemContainerStyle) const;
-        auto OnItemContainerStyleSelectorChanged(Windows::UI::Xaml::Controls::StyleSelector const& oldItemContainerStyleSelector, Windows::UI::Xaml::Controls::StyleSelector const& newItemContainerStyleSelector) const;
-        auto OnItemTemplateChanged(Windows::UI::Xaml::DataTemplate const& oldItemTemplate, Windows::UI::Xaml::DataTemplate const& newItemTemplate) const;
-        auto OnItemTemplateSelectorChanged(Windows::UI::Xaml::Controls::DataTemplateSelector const& oldItemTemplateSelector, Windows::UI::Xaml::Controls::DataTemplateSelector const& newItemTemplateSelector) const;
-        auto OnGroupStyleSelectorChanged(Windows::UI::Xaml::Controls::GroupStyleSelector const& oldGroupStyleSelector, Windows::UI::Xaml::Controls::GroupStyleSelector const& newGroupStyleSelector) const;
+        WINRT_IMPL_AUTO(bool) IsItemItsOwnContainerOverride(Windows::Foundation::IInspectable const& item) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyObject) GetContainerForItemOverride() const;
+        WINRT_IMPL_AUTO(void) ClearContainerForItemOverride(Windows::UI::Xaml::DependencyObject const& element, Windows::Foundation::IInspectable const& item) const;
+        WINRT_IMPL_AUTO(void) PrepareContainerForItemOverride(Windows::UI::Xaml::DependencyObject const& element, Windows::Foundation::IInspectable const& item) const;
+        WINRT_IMPL_AUTO(void) OnItemsChanged(Windows::Foundation::IInspectable const& e) const;
+        WINRT_IMPL_AUTO(void) OnItemContainerStyleChanged(Windows::UI::Xaml::Style const& oldItemContainerStyle, Windows::UI::Xaml::Style const& newItemContainerStyle) const;
+        WINRT_IMPL_AUTO(void) OnItemContainerStyleSelectorChanged(Windows::UI::Xaml::Controls::StyleSelector const& oldItemContainerStyleSelector, Windows::UI::Xaml::Controls::StyleSelector const& newItemContainerStyleSelector) const;
+        WINRT_IMPL_AUTO(void) OnItemTemplateChanged(Windows::UI::Xaml::DataTemplate const& oldItemTemplate, Windows::UI::Xaml::DataTemplate const& newItemTemplate) const;
+        WINRT_IMPL_AUTO(void) OnItemTemplateSelectorChanged(Windows::UI::Xaml::Controls::DataTemplateSelector const& oldItemTemplateSelector, Windows::UI::Xaml::Controls::DataTemplateSelector const& newItemTemplateSelector) const;
+        WINRT_IMPL_AUTO(void) OnGroupStyleSelectorChanged(Windows::UI::Xaml::Controls::GroupStyleSelector const& oldGroupStyleSelector, Windows::UI::Xaml::Controls::GroupStyleSelector const& newGroupStyleSelector) const;
     };
     template <typename D>
     class IPageOverridesT
@@ -3493,9 +3506,9 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IPageOverrides = winrt::Windows::UI::Xaml::Controls::IPageOverrides;
-        auto OnNavigatedFrom(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
-        auto OnNavigatedTo(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
-        auto OnNavigatingFrom(Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnNavigatedFrom(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnNavigatedTo(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnNavigatingFrom(Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs const& e) const;
     };
     template <typename D>
     class IStyleSelectorOverridesT
@@ -3504,7 +3517,7 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IStyleSelectorOverrides = winrt::Windows::UI::Xaml::Controls::IStyleSelectorOverrides;
-        auto SelectStyleCore(Windows::Foundation::IInspectable const& item, Windows::UI::Xaml::DependencyObject const& container) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Style) SelectStyleCore(Windows::Foundation::IInspectable const& item, Windows::UI::Xaml::DependencyObject const& container) const;
     };
     template <typename D>
     class IToggleSwitchOverridesT
@@ -3513,10 +3526,10 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IToggleSwitchOverrides = winrt::Windows::UI::Xaml::Controls::IToggleSwitchOverrides;
-        auto OnToggled() const;
-        auto OnOnContentChanged(Windows::Foundation::IInspectable const& oldContent, Windows::Foundation::IInspectable const& newContent) const;
-        auto OnOffContentChanged(Windows::Foundation::IInspectable const& oldContent, Windows::Foundation::IInspectable const& newContent) const;
-        auto OnHeaderChanged(Windows::Foundation::IInspectable const& oldContent, Windows::Foundation::IInspectable const& newContent) const;
+        WINRT_IMPL_AUTO(void) OnToggled() const;
+        WINRT_IMPL_AUTO(void) OnOnContentChanged(Windows::Foundation::IInspectable const& oldContent, Windows::Foundation::IInspectable const& newContent) const;
+        WINRT_IMPL_AUTO(void) OnOffContentChanged(Windows::Foundation::IInspectable const& oldContent, Windows::Foundation::IInspectable const& newContent) const;
+        WINRT_IMPL_AUTO(void) OnHeaderChanged(Windows::Foundation::IInspectable const& oldContent, Windows::Foundation::IInspectable const& newContent) const;
     };
     template <typename D>
     class IVirtualizingPanelOverridesT
@@ -3525,9 +3538,9 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IVirtualizingPanelOverrides = winrt::Windows::UI::Xaml::Controls::IVirtualizingPanelOverrides;
-        auto OnItemsChanged(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs const& args) const;
-        auto OnClearChildren() const;
-        auto BringIndexIntoView(int32_t index) const;
+        WINRT_IMPL_AUTO(void) OnItemsChanged(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnClearChildren() const;
+        WINRT_IMPL_AUTO(void) BringIndexIntoView(int32_t index) const;
     };
     template <typename D>
     class IVirtualizingStackPanelOverridesT
@@ -3536,7 +3549,7 @@ namespace winrt::Windows::UI::Xaml::Controls
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IVirtualizingStackPanelOverrides = winrt::Windows::UI::Xaml::Controls::IVirtualizingStackPanelOverrides;
-        auto OnCleanUpVirtualizedItem(Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnCleanUpVirtualizedItem(Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs const& e) const;
     };
 }
 #endif

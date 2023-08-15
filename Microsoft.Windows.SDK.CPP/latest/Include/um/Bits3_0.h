@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -36,6 +36,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -231,41 +239,51 @@ EXTERN_C const IID IID_IBitsPeerCacheRecord;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBitsPeerCacheRecord * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBitsPeerCacheRecord * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBitsPeerCacheRecord * This);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheRecord, GetId)
         HRESULT ( STDMETHODCALLTYPE *GetId )( 
             __RPC__in IBitsPeerCacheRecord * This,
             /* [ref][out] */ __RPC__out GUID *pVal);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheRecord, GetOriginUrl)
         HRESULT ( STDMETHODCALLTYPE *GetOriginUrl )( 
             __RPC__in IBitsPeerCacheRecord * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheRecord, GetFileSize)
         HRESULT ( STDMETHODCALLTYPE *GetFileSize )( 
             __RPC__in IBitsPeerCacheRecord * This,
             /* [ref][out] */ __RPC__out UINT64 *pVal);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheRecord, GetFileModificationTime)
         HRESULT ( STDMETHODCALLTYPE *GetFileModificationTime )( 
             __RPC__in IBitsPeerCacheRecord * This,
             /* [ref][out] */ __RPC__out FILETIME *pVal);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheRecord, GetLastAccessTime)
         HRESULT ( STDMETHODCALLTYPE *GetLastAccessTime )( 
             __RPC__in IBitsPeerCacheRecord * This,
             /* [ref][out] */ __RPC__out FILETIME *pVal);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheRecord, IsFileValidated)
         HRESULT ( STDMETHODCALLTYPE *IsFileValidated )( 
             __RPC__in IBitsPeerCacheRecord * This);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheRecord, GetFileRanges)
         HRESULT ( STDMETHODCALLTYPE *GetFileRanges )( 
             __RPC__in IBitsPeerCacheRecord * This,
             /* [ref][out] */ __RPC__out DWORD *pRangeCount,
@@ -366,35 +384,43 @@ EXTERN_C const IID IID_IEnumBitsPeerCacheRecords;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumBitsPeerCacheRecords * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumBitsPeerCacheRecords * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumBitsPeerCacheRecords * This);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeerCacheRecords, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumBitsPeerCacheRecords * This,
             /* [in] */ ULONG celt,
             /* [length_is][size_is][out] */ __RPC__out_ecount_part(celt, pceltFetched ? *pceltFetched : celt) IBitsPeerCacheRecord **rgelt,
             /* [unique][out][in] */ __RPC__inout_opt ULONG *pceltFetched);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeerCacheRecords, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumBitsPeerCacheRecords * This,
             /* [in] */ ULONG celt);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeerCacheRecords, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumBitsPeerCacheRecords * This);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeerCacheRecords, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumBitsPeerCacheRecords * This,
             /* [out] */ __RPC__deref_out_opt IEnumBitsPeerCacheRecords **ppenum);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeerCacheRecords, GetCount)
         HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             __RPC__in IEnumBitsPeerCacheRecords * This,
             /* [out] */ __RPC__out ULONG *puCount);
@@ -481,26 +507,32 @@ EXTERN_C const IID IID_IBitsPeer;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBitsPeer * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBitsPeer * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBitsPeer * This);
         
+        DECLSPEC_XFGVIRT(IBitsPeer, GetPeerName)
         HRESULT ( STDMETHODCALLTYPE *GetPeerName )( 
             __RPC__in IBitsPeer * This,
             /* [ref][out] */ __RPC__deref_out_opt LPWSTR *pName);
         
+        DECLSPEC_XFGVIRT(IBitsPeer, IsAuthenticated)
         HRESULT ( STDMETHODCALLTYPE *IsAuthenticated )( 
             __RPC__in IBitsPeer * This,
             /* [ref][out] */ __RPC__out BOOL *pAuth);
         
+        DECLSPEC_XFGVIRT(IBitsPeer, IsAvailable)
         HRESULT ( STDMETHODCALLTYPE *IsAvailable )( 
             __RPC__in IBitsPeer * This,
             /* [ref][out] */ __RPC__out BOOL *pOnline);
@@ -588,35 +620,43 @@ EXTERN_C const IID IID_IEnumBitsPeers;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumBitsPeers * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumBitsPeers * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumBitsPeers * This);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeers, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumBitsPeers * This,
             /* [in] */ ULONG celt,
             /* [length_is][size_is][out] */ __RPC__out_ecount_part(celt, pceltFetched ? *pceltFetched : celt) IBitsPeer **rgelt,
             /* [unique][out][in] */ __RPC__inout_opt ULONG *pceltFetched);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeers, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumBitsPeers * This,
             /* [in] */ ULONG celt);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeers, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumBitsPeers * This);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeers, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumBitsPeers * This,
             /* [out] */ __RPC__deref_out_opt IEnumBitsPeers **ppenum);
         
+        DECLSPEC_XFGVIRT(IEnumBitsPeers, GetCount)
         HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             __RPC__in IEnumBitsPeers * This,
             /* [out] */ __RPC__out ULONG *puCount);
@@ -737,69 +777,86 @@ EXTERN_C const IID IID_IBitsPeerCacheAdministration;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBitsPeerCacheAdministration * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBitsPeerCacheAdministration * This);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, GetMaximumCacheSize)
         HRESULT ( STDMETHODCALLTYPE *GetMaximumCacheSize )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             /* [out][ref] */ __RPC__out DWORD *pBytes);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, SetMaximumCacheSize)
         HRESULT ( STDMETHODCALLTYPE *SetMaximumCacheSize )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             DWORD Bytes);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, GetMaximumContentAge)
         HRESULT ( STDMETHODCALLTYPE *GetMaximumContentAge )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             /* [out][ref] */ __RPC__out ULONG *pSeconds);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, SetMaximumContentAge)
         HRESULT ( STDMETHODCALLTYPE *SetMaximumContentAge )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             ULONG Seconds);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, GetConfigurationFlags)
         HRESULT ( STDMETHODCALLTYPE *GetConfigurationFlags )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             /* [out][ref] */ __RPC__out DWORD *pFlags);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, SetConfigurationFlags)
         HRESULT ( STDMETHODCALLTYPE *SetConfigurationFlags )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             DWORD Flags);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, EnumRecords)
         HRESULT ( STDMETHODCALLTYPE *EnumRecords )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             /* [out] */ __RPC__deref_out_opt IEnumBitsPeerCacheRecords **ppEnum);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, GetRecord)
         HRESULT ( STDMETHODCALLTYPE *GetRecord )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             /* [in] */ __RPC__in REFGUID id,
             /* [out] */ __RPC__deref_out_opt IBitsPeerCacheRecord **ppRecord);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, ClearRecords)
         HRESULT ( STDMETHODCALLTYPE *ClearRecords )( 
             __RPC__in IBitsPeerCacheAdministration * This);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, DeleteRecord)
         HRESULT ( STDMETHODCALLTYPE *DeleteRecord )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             /* [in] */ __RPC__in REFGUID id);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, DeleteUrl)
         HRESULT ( STDMETHODCALLTYPE *DeleteUrl )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             /* [ref][in] */ __RPC__in LPCWSTR url);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, EnumPeers)
         HRESULT ( STDMETHODCALLTYPE *EnumPeers )( 
             __RPC__in IBitsPeerCacheAdministration * This,
             /* [ref][out] */ __RPC__deref_out_opt IEnumBitsPeers **ppEnum);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, ClearPeers)
         HRESULT ( STDMETHODCALLTYPE *ClearPeers )( 
             __RPC__in IBitsPeerCacheAdministration * This);
         
+        DECLSPEC_XFGVIRT(IBitsPeerCacheAdministration, DiscoverPeers)
         HRESULT ( STDMETHODCALLTYPE *DiscoverPeers )( 
             __RPC__in IBitsPeerCacheAdministration * This);
         
@@ -924,188 +981,233 @@ EXTERN_C const IID IID_IBackgroundCopyJob4;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBackgroundCopyJob4 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBackgroundCopyJob4 * This);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, AddFileSet)
         HRESULT ( STDMETHODCALLTYPE *AddFileSet )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ ULONG cFileCount,
             /* [size_is][in] */ __RPC__in_ecount_full(cFileCount) BG_FILE_INFO *pFileSet);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, AddFile)
         HRESULT ( STDMETHODCALLTYPE *AddFile )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ __RPC__in LPCWSTR RemoteUrl,
             /* [in] */ __RPC__in LPCWSTR LocalName);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, EnumFiles)
         HRESULT ( STDMETHODCALLTYPE *EnumFiles )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__deref_out_opt IEnumBackgroundCopyFiles **pEnum);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, Suspend)
         HRESULT ( STDMETHODCALLTYPE *Suspend )( 
             __RPC__in IBackgroundCopyJob4 * This);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, Resume)
         HRESULT ( STDMETHODCALLTYPE *Resume )( 
             __RPC__in IBackgroundCopyJob4 * This);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, Cancel)
         HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IBackgroundCopyJob4 * This);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, Complete)
         HRESULT ( STDMETHODCALLTYPE *Complete )( 
             __RPC__in IBackgroundCopyJob4 * This);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetId)
         HRESULT ( STDMETHODCALLTYPE *GetId )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out GUID *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetType)
         HRESULT ( STDMETHODCALLTYPE *GetType )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out BG_JOB_TYPE *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetProgress)
         HRESULT ( STDMETHODCALLTYPE *GetProgress )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out BG_JOB_PROGRESS *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetTimes)
         HRESULT ( STDMETHODCALLTYPE *GetTimes )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out BG_JOB_TIMES *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetState)
         HRESULT ( STDMETHODCALLTYPE *GetState )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out BG_JOB_STATE *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetError)
         HRESULT ( STDMETHODCALLTYPE *GetError )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__deref_out_opt IBackgroundCopyError **ppError);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetOwner)
         HRESULT ( STDMETHODCALLTYPE *GetOwner )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, SetDisplayName)
         HRESULT ( STDMETHODCALLTYPE *SetDisplayName )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ __RPC__in LPCWSTR Val);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetDisplayName)
         HRESULT ( STDMETHODCALLTYPE *GetDisplayName )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, SetDescription)
         HRESULT ( STDMETHODCALLTYPE *SetDescription )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ __RPC__in LPCWSTR Val);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetDescription)
         HRESULT ( STDMETHODCALLTYPE *GetDescription )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, SetPriority)
         HRESULT ( STDMETHODCALLTYPE *SetPriority )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ BG_JOB_PRIORITY Val);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetPriority)
         HRESULT ( STDMETHODCALLTYPE *GetPriority )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out BG_JOB_PRIORITY *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, SetNotifyFlags)
         HRESULT ( STDMETHODCALLTYPE *SetNotifyFlags )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ ULONG Val);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetNotifyFlags)
         HRESULT ( STDMETHODCALLTYPE *GetNotifyFlags )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out ULONG *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, SetNotifyInterface)
         HRESULT ( STDMETHODCALLTYPE *SetNotifyInterface )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ __RPC__in_opt IUnknown *Val);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetNotifyInterface)
         HRESULT ( STDMETHODCALLTYPE *GetNotifyInterface )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__deref_out_opt IUnknown **pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, SetMinimumRetryDelay)
         HRESULT ( STDMETHODCALLTYPE *SetMinimumRetryDelay )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ ULONG Seconds);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetMinimumRetryDelay)
         HRESULT ( STDMETHODCALLTYPE *GetMinimumRetryDelay )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out ULONG *Seconds);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, SetNoProgressTimeout)
         HRESULT ( STDMETHODCALLTYPE *SetNoProgressTimeout )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ ULONG Seconds);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetNoProgressTimeout)
         HRESULT ( STDMETHODCALLTYPE *GetNoProgressTimeout )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out ULONG *Seconds);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetErrorCount)
         HRESULT ( STDMETHODCALLTYPE *GetErrorCount )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out ULONG *Errors);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, SetProxySettings)
         HRESULT ( STDMETHODCALLTYPE *SetProxySettings )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ BG_JOB_PROXY_USAGE ProxyUsage,
             /* [unique][string][in] */ __RPC__in_opt_string const WCHAR *ProxyList,
             /* [unique][string][in] */ __RPC__in_opt_string const WCHAR *ProxyBypassList);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, GetProxySettings)
         HRESULT ( STDMETHODCALLTYPE *GetProxySettings )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__out BG_JOB_PROXY_USAGE *pProxyUsage,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pProxyList,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pProxyBypassList);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob, TakeOwnership)
         HRESULT ( STDMETHODCALLTYPE *TakeOwnership )( 
             __RPC__in IBackgroundCopyJob4 * This);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob2, SetNotifyCmdLine)
         HRESULT ( STDMETHODCALLTYPE *SetNotifyCmdLine )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [unique][in] */ __RPC__in_opt LPCWSTR Program,
             /* [unique][in] */ __RPC__in_opt LPCWSTR Parameters);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob2, GetNotifyCmdLine)
         HRESULT ( STDMETHODCALLTYPE *GetNotifyCmdLine )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pProgram,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pParameters);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob2, GetReplyProgress)
         HRESULT ( STDMETHODCALLTYPE *GetReplyProgress )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out][in] */ __RPC__inout BG_JOB_REPLY_PROGRESS *pProgress);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob2, GetReplyData)
         HRESULT ( STDMETHODCALLTYPE *GetReplyData )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(( unsigned long  )*pLength) byte **ppBuffer,
             /* [unique][out][in] */ __RPC__inout_opt UINT64 *pLength);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob2, SetReplyFileName)
         HRESULT ( STDMETHODCALLTYPE *SetReplyFileName )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [unique][in] */ __RPC__in_opt LPCWSTR ReplyFileName);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob2, GetReplyFileName)
         HRESULT ( STDMETHODCALLTYPE *GetReplyFileName )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pReplyFileName);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob2, SetCredentials)
         HRESULT ( STDMETHODCALLTYPE *SetCredentials )( 
             __RPC__in IBackgroundCopyJob4 * This,
             __RPC__in BG_AUTH_CREDENTIALS *credentials);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob2, RemoveCredentials)
         HRESULT ( STDMETHODCALLTYPE *RemoveCredentials )( 
             __RPC__in IBackgroundCopyJob4 * This,
             BG_AUTH_TARGET Target,
             BG_AUTH_SCHEME Scheme);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob3, ReplaceRemotePrefix)
         HRESULT ( STDMETHODCALLTYPE *ReplaceRemotePrefix )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ __RPC__in LPCWSTR OldPrefix,
             /* [in] */ __RPC__in LPCWSTR NewPrefix);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob3, AddFileWithRanges)
         HRESULT ( STDMETHODCALLTYPE *AddFileWithRanges )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ __RPC__in LPCWSTR RemoteUrl,
@@ -1113,34 +1215,42 @@ EXTERN_C const IID IID_IBackgroundCopyJob4;
             /* [in] */ DWORD RangeCount,
             /* [size_is][in] */ __RPC__in_ecount_full(RangeCount) BG_FILE_RANGE Ranges[  ]);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob3, SetFileACLFlags)
         HRESULT ( STDMETHODCALLTYPE *SetFileACLFlags )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [in] */ DWORD Flags);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob3, GetFileACLFlags)
         HRESULT ( STDMETHODCALLTYPE *GetFileACLFlags )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [ref][out] */ __RPC__out DWORD *Flags);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob4, SetPeerCachingFlags)
         HRESULT ( STDMETHODCALLTYPE *SetPeerCachingFlags )( 
             __RPC__in IBackgroundCopyJob4 * This,
             DWORD Flags);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob4, GetPeerCachingFlags)
         HRESULT ( STDMETHODCALLTYPE *GetPeerCachingFlags )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [ref][out] */ __RPC__out DWORD *pFlags);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob4, GetOwnerIntegrityLevel)
         HRESULT ( STDMETHODCALLTYPE *GetOwnerIntegrityLevel )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [ref][out] */ __RPC__out ULONG *pLevel);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob4, GetOwnerElevationState)
         HRESULT ( STDMETHODCALLTYPE *GetOwnerElevationState )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [ref][out] */ __RPC__out BOOL *pElevated);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob4, SetMaximumDownloadTime)
         HRESULT ( STDMETHODCALLTYPE *SetMaximumDownloadTime )( 
             __RPC__in IBackgroundCopyJob4 * This,
             ULONG Timeout);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyJob4, GetMaximumDownloadTime)
         HRESULT ( STDMETHODCALLTYPE *GetMaximumDownloadTime )( 
             __RPC__in IBackgroundCopyJob4 * This,
             /* [ref][out] */ __RPC__out ULONG *pTimeout);
@@ -1368,51 +1478,63 @@ EXTERN_C const IID IID_IBackgroundCopyFile3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBackgroundCopyFile3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBackgroundCopyFile3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBackgroundCopyFile3 * This);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile, GetRemoteName)
         HRESULT ( STDMETHODCALLTYPE *GetRemoteName )( 
             __RPC__in IBackgroundCopyFile3 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile, GetLocalName)
         HRESULT ( STDMETHODCALLTYPE *GetLocalName )( 
             __RPC__in IBackgroundCopyFile3 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile, GetProgress)
         HRESULT ( STDMETHODCALLTYPE *GetProgress )( 
             __RPC__in IBackgroundCopyFile3 * This,
             /* [out] */ __RPC__out BG_FILE_PROGRESS *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile2, GetFileRanges)
         HRESULT ( STDMETHODCALLTYPE *GetFileRanges )( 
             __RPC__in IBackgroundCopyFile3 * This,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *RangeCount,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*RangeCount) BG_FILE_RANGE **Ranges);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile2, SetRemoteName)
         HRESULT ( STDMETHODCALLTYPE *SetRemoteName )( 
             __RPC__in IBackgroundCopyFile3 * This,
             __RPC__in LPCWSTR Val);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile3, GetTemporaryName)
         HRESULT ( STDMETHODCALLTYPE *GetTemporaryName )( 
             __RPC__in IBackgroundCopyFile3 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pFilename);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile3, SetValidationState)
         HRESULT ( STDMETHODCALLTYPE *SetValidationState )( 
             __RPC__in IBackgroundCopyFile3 * This,
             /* [in] */ BOOL state);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile3, GetValidationState)
         HRESULT ( STDMETHODCALLTYPE *GetValidationState )( 
             __RPC__in IBackgroundCopyFile3 * This,
             /* [out] */ __RPC__out BOOL *pState);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile3, IsDownloadedFromPeer)
         HRESULT ( STDMETHODCALLTYPE *IsDownloadedFromPeer )( 
             __RPC__in IBackgroundCopyFile3 * This,
             /* [out] */ __RPC__out BOOL *pVal);
@@ -1508,32 +1630,39 @@ EXTERN_C const IID IID_IBackgroundCopyCallback2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBackgroundCopyCallback2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBackgroundCopyCallback2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBackgroundCopyCallback2 * This);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyCallback, JobTransferred)
         HRESULT ( STDMETHODCALLTYPE *JobTransferred )( 
             __RPC__in IBackgroundCopyCallback2 * This,
             /* [in] */ __RPC__in_opt IBackgroundCopyJob *pJob);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyCallback, JobError)
         HRESULT ( STDMETHODCALLTYPE *JobError )( 
             __RPC__in IBackgroundCopyCallback2 * This,
             /* [in] */ __RPC__in_opt IBackgroundCopyJob *pJob,
             /* [in] */ __RPC__in_opt IBackgroundCopyError *pError);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyCallback, JobModification)
         HRESULT ( STDMETHODCALLTYPE *JobModification )( 
             __RPC__in IBackgroundCopyCallback2 * This,
             /* [in] */ __RPC__in_opt IBackgroundCopyJob *pJob,
             /* [in] */ DWORD dwReserved);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyCallback2, FileTransferred)
         HRESULT ( STDMETHODCALLTYPE *FileTransferred )( 
             __RPC__in IBackgroundCopyCallback2 * This,
             /* [in] */ __RPC__in_opt IBackgroundCopyJob *pJob,

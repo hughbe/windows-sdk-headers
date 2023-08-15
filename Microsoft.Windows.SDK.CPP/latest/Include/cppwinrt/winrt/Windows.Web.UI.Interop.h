@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Web_UI_Interop_H
 #define WINRT_Windows_Web_UI_Interop_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Web.UI.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -16,83 +16,83 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Web.UI.Interop.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::EventType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreAcceleratorKeyEventType) consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::EventType() const
     {
-        Windows::UI::Core::CoreAcceleratorKeyEventType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs)->get_EventType(put_abi(value)));
+        Windows::UI::Core::CoreAcceleratorKeyEventType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs)->get_EventType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::VirtualKey() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::VirtualKey) consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::VirtualKey() const
     {
-        Windows::System::VirtualKey value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs)->get_VirtualKey(put_abi(value)));
+        Windows::System::VirtualKey value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs)->get_VirtualKey(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::KeyStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CorePhysicalKeyStatus) consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::KeyStatus() const
     {
-        Windows::UI::Core::CorePhysicalKeyStatus value;
+        Windows::UI::Core::CorePhysicalKeyStatus value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs)->get_KeyStatus(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::RoutingStage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage) consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::RoutingStage() const
     {
-        Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs)->get_RoutingStage(put_abi(value)));
+        Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs)->get_RoutingStage(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::Handled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs)->get_Handled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::Handled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlAcceleratorKeyPressedEventArgs<D>::Handled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs)->put_Handled(value));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlMoveFocusRequestedEventArgs<D>::Reason() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::UI::Interop::WebViewControlMoveFocusReason) consume_Windows_Web_UI_Interop_IWebViewControlMoveFocusRequestedEventArgs<D>::Reason() const
     {
-        Windows::Web::UI::Interop::WebViewControlMoveFocusReason value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlMoveFocusRequestedEventArgs)->get_Reason(put_abi(value)));
+        Windows::Web::UI::Interop::WebViewControlMoveFocusReason value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlMoveFocusRequestedEventArgs)->get_Reason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::ProcessId() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::ProcessId() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcess)->get_ProcessId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::EnterpriseId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::EnterpriseId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcess)->get_EnterpriseId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::IsPrivateNetworkClientServerCapabilityEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::IsPrivateNetworkClientServerCapabilityEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcess)->get_IsPrivateNetworkClientServerCapabilityEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::CreateWebViewControlAsync(int64_t hostWindowHandle, Windows::Foundation::Rect const& bounds) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Web::UI::Interop::WebViewControl>) consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::CreateWebViewControlAsync(int64_t hostWindowHandle, Windows::Foundation::Rect const& bounds) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcess)->CreateWebViewControlAsync(hostWindowHandle, impl::bind_in(bounds), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Web::UI::Interop::WebViewControl>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::GetWebViewControls() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Web::UI::Interop::WebViewControl>) consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::GetWebViewControls() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcess)->GetWebViewControls(&result));
         return Windows::Foundation::Collections::IVectorView<Windows::Web::UI::Interop::WebViewControl>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::Terminate() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::Terminate() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcess)->Terminate());
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::ProcessExited(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControlProcess, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::ProcessExited(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControlProcess, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcess)->add_ProcessExited(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -100,83 +100,83 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ProcessExited_revoker>(this, ProcessExited(handler));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::ProcessExited(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::ProcessExited(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcess)->remove_ProcessExited(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcessFactory<D>::CreateWithOptions(Windows::Web::UI::Interop::WebViewControlProcessOptions const& processOptions) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::UI::Interop::WebViewControlProcess) consume_Windows_Web_UI_Interop_IWebViewControlProcessFactory<D>::CreateWithOptions(Windows::Web::UI::Interop::WebViewControlProcessOptions const& processOptions) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcessFactory)->CreateWithOptions(*(void**)(&processOptions), &result));
         return Windows::Web::UI::Interop::WebViewControlProcess{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcessOptions<D>::EnterpriseId(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlProcessOptions<D>::EnterpriseId(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcessOptions)->put_EnterpriseId(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcessOptions<D>::EnterpriseId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Web_UI_Interop_IWebViewControlProcessOptions<D>::EnterpriseId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcessOptions)->get_EnterpriseId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcessOptions<D>::PrivateNetworkClientServerCapability(Windows::Web::UI::Interop::WebViewControlProcessCapabilityState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlProcessOptions<D>::PrivateNetworkClientServerCapability(Windows::Web::UI::Interop::WebViewControlProcessCapabilityState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcessOptions)->put_PrivateNetworkClientServerCapability(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlProcessOptions<D>::PrivateNetworkClientServerCapability() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::UI::Interop::WebViewControlProcessCapabilityState) consume_Windows_Web_UI_Interop_IWebViewControlProcessOptions<D>::PrivateNetworkClientServerCapability() const
     {
-        Windows::Web::UI::Interop::WebViewControlProcessCapabilityState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcessOptions)->get_PrivateNetworkClientServerCapability(put_abi(value)));
+        Windows::Web::UI::Interop::WebViewControlProcessCapabilityState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlProcessOptions)->get_PrivateNetworkClientServerCapability(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Process() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::UI::Interop::WebViewControlProcess) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Process() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->get_Process(&value));
         return Windows::Web::UI::Interop::WebViewControlProcess{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Scale(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Scale(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->put_Scale(value));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Scale() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Scale() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->get_Scale(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Bounds(Windows::Foundation::Rect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Bounds(Windows::Foundation::Rect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->put_Bounds(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Bounds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Bounds() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->get_Bounds(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::IsVisible(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::IsVisible(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->put_IsVisible(value));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::IsVisible() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::IsVisible() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->get_IsVisible(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Close() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::Close() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->Close());
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::MoveFocus(Windows::Web::UI::Interop::WebViewControlMoveFocusReason const& reason) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::MoveFocus(Windows::Web::UI::Interop::WebViewControlMoveFocusReason const& reason) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->MoveFocus(static_cast<int32_t>(reason)));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::MoveFocusRequested(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControl, Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::MoveFocusRequested(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControl, Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->add_MoveFocusRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -184,13 +184,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MoveFocusRequested_revoker>(this, MoveFocusRequested(handler));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::MoveFocusRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::MoveFocusRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->remove_MoveFocusRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::AcceleratorKeyPressed(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControl, Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::AcceleratorKeyPressed(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControl, Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->add_AcceleratorKeyPressed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -198,13 +198,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AcceleratorKeyPressed_revoker>(this, AcceleratorKeyPressed(handler));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::AcceleratorKeyPressed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::AcceleratorKeyPressed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite)->remove_AcceleratorKeyPressed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::GotFocus(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControl, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::GotFocus(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControl, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite2)->add_GotFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -212,13 +212,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, GotFocus_revoker>(this, GotFocus(handler));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::GotFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::GotFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite2)->remove_GotFocus(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::LostFocus(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControl, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::LostFocus(Windows::Foundation::TypedEventHandler<Windows::Web::UI::Interop::WebViewControl, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite2)->add_LostFocus(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -226,10 +226,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, LostFocus_revoker>(this, LostFocus(handler));
     }
-    template <typename D> auto consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::LostFocus(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::LostFocus(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Web::UI::Interop::IWebViewControlSite2)->remove_LostFocus(impl::bind_in(token)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs> : produce_base<D, Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs>
     {
@@ -277,6 +278,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::UI::Interop::IWebViewControlMoveFocusRequestedEventArgs> : produce_base<D, Windows::Web::UI::Interop::IWebViewControlMoveFocusRequestedEventArgs>
     {
@@ -288,6 +291,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::UI::Interop::IWebViewControlProcess> : produce_base<D, Windows::Web::UI::Interop::IWebViewControlProcess>
     {
@@ -351,6 +356,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::UI::Interop::IWebViewControlProcessFactory> : produce_base<D, Windows::Web::UI::Interop::IWebViewControlProcessFactory>
     {
@@ -363,6 +370,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::UI::Interop::IWebViewControlProcessOptions> : produce_base<D, Windows::Web::UI::Interop::IWebViewControlProcessOptions>
     {
@@ -396,6 +405,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::UI::Interop::IWebViewControlSite> : produce_base<D, Windows::Web::UI::Interop::IWebViewControlSite>
     {
@@ -493,6 +504,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Web::UI::Interop::IWebViewControlSite2> : produce_base<D, Windows::Web::UI::Interop::IWebViewControlSite2>
     {
@@ -525,35 +538,38 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
 }
-namespace winrt::Windows::Web::UI::Interop
+WINRT_EXPORT namespace winrt::Windows::Web::UI::Interop
 {
     inline WebViewControlProcess::WebViewControlProcess() :
-        WebViewControlProcess(impl::call_factory<WebViewControlProcess>([](auto&& f) { return f.template ActivateInstance<WebViewControlProcess>(); }))
+        WebViewControlProcess(impl::call_factory_cast<WebViewControlProcess(*)(Windows::Foundation::IActivationFactory const&), WebViewControlProcess>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WebViewControlProcess>(); }))
     {
     }
     inline WebViewControlProcess::WebViewControlProcess(Windows::Web::UI::Interop::WebViewControlProcessOptions const& processOptions) :
-        WebViewControlProcess(impl::call_factory<WebViewControlProcess, Windows::Web::UI::Interop::IWebViewControlProcessFactory>([&](auto&& f) { return f.CreateWithOptions(processOptions); }))
+        WebViewControlProcess(impl::call_factory<WebViewControlProcess, IWebViewControlProcessFactory>([&](IWebViewControlProcessFactory const& f) { return f.CreateWithOptions(processOptions); }))
     {
     }
     inline WebViewControlProcessOptions::WebViewControlProcessOptions() :
-        WebViewControlProcessOptions(impl::call_factory<WebViewControlProcessOptions>([](auto&& f) { return f.template ActivateInstance<WebViewControlProcessOptions>(); }))
+        WebViewControlProcessOptions(impl::call_factory_cast<WebViewControlProcessOptions(*)(Windows::Foundation::IActivationFactory const&), WebViewControlProcessOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WebViewControlProcessOptions>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlMoveFocusRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::IWebViewControlMoveFocusRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlProcess> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::IWebViewControlProcess> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlProcessFactory> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::IWebViewControlProcessFactory> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlProcessOptions> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::IWebViewControlProcessOptions> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlSite> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::IWebViewControlSite> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlSite2> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::IWebViewControlSite2> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControl> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::WebViewControl> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlProcess> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::WebViewControlProcess> {};
-    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions> : winrt::impl::hash_base<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlMoveFocusRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlProcess> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlProcessFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlProcessOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlSite> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::IWebViewControlSite2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlProcess> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Graphics.DirectX.2.h"
 #include "winrt/impl/Windows.UI.Core.2.h"
 #include "winrt/impl/Windows.Graphics.Holographic.1.h"
-namespace winrt::Windows::Graphics::Holographic
+WINRT_EXPORT namespace winrt::Windows::Graphics::Holographic
 {
     struct HolographicAdapterId
     {
@@ -63,7 +63,7 @@ namespace winrt::Windows::Graphics::Holographic
         HolographicCameraPose(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Holographic::IHolographicCameraPose(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) HolographicCameraRenderingParameters : Windows::Graphics::Holographic::IHolographicCameraRenderingParameters,
-        impl::require<HolographicCameraRenderingParameters, Windows::Graphics::Holographic::IHolographicCameraRenderingParameters2, Windows::Graphics::Holographic::IHolographicCameraRenderingParameters3>
+        impl::require<HolographicCameraRenderingParameters, Windows::Graphics::Holographic::IHolographicCameraRenderingParameters2, Windows::Graphics::Holographic::IHolographicCameraRenderingParameters3, Windows::Graphics::Holographic::IHolographicCameraRenderingParameters4>
     {
         HolographicCameraRenderingParameters(std::nullptr_t) noexcept {}
         HolographicCameraRenderingParameters(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Holographic::IHolographicCameraRenderingParameters(ptr, take_ownership_from_abi) {}
@@ -121,7 +121,7 @@ namespace winrt::Windows::Graphics::Holographic
     {
         HolographicQuadLayer(std::nullptr_t) noexcept {}
         HolographicQuadLayer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Holographic::IHolographicQuadLayer(ptr, take_ownership_from_abi) {}
-        HolographicQuadLayer(Windows::Foundation::Size const& size);
+        explicit HolographicQuadLayer(Windows::Foundation::Size const& size);
         HolographicQuadLayer(Windows::Foundation::Size const& size, Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat);
     };
     struct __declspec(empty_bases) HolographicQuadLayerUpdateParameters : Windows::Graphics::Holographic::IHolographicQuadLayerUpdateParameters,
@@ -140,7 +140,7 @@ namespace winrt::Windows::Graphics::Holographic
         [[nodiscard]] static auto IsAvailable();
         static auto IsAvailableChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using IsAvailableChanged_revoker = impl::factory_event_revoker<Windows::Graphics::Holographic::IHolographicSpaceStatics2, &impl::abi_t<Windows::Graphics::Holographic::IHolographicSpaceStatics2>::remove_IsAvailableChanged>;
-        static IsAvailableChanged_revoker IsAvailableChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static IsAvailableChanged_revoker IsAvailableChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto IsAvailableChanged(winrt::event_token const& token);
         [[nodiscard]] static auto IsConfigured();
     };
@@ -154,7 +154,8 @@ namespace winrt::Windows::Graphics::Holographic
         HolographicSpaceCameraRemovedEventArgs(std::nullptr_t) noexcept {}
         HolographicSpaceCameraRemovedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Holographic::IHolographicSpaceCameraRemovedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) HolographicViewConfiguration : Windows::Graphics::Holographic::IHolographicViewConfiguration
+    struct __declspec(empty_bases) HolographicViewConfiguration : Windows::Graphics::Holographic::IHolographicViewConfiguration,
+        impl::require<HolographicViewConfiguration, Windows::Graphics::Holographic::IHolographicViewConfiguration2>
     {
         HolographicViewConfiguration(std::nullptr_t) noexcept {}
         HolographicViewConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Holographic::IHolographicViewConfiguration(ptr, take_ownership_from_abi) {}

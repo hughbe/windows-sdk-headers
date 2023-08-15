@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_UI_WebUI_1_H
 #include "winrt/impl/Windows.Graphics.Printing.0.h"
 #include "winrt/impl/Windows.UI.WebUI.0.h"
-namespace winrt::Windows::UI::WebUI
+WINRT_EXPORT namespace winrt::Windows::UI::WebUI
 {
     struct __declspec(empty_bases) IActivatedDeferral :
         Windows::Foundation::IInspectable,

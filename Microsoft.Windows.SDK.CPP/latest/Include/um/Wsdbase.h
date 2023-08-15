@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -260,18 +268,22 @@ EXTERN_C const IID IID_IWSDAddress;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWSDAddress * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWSDAddress * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWSDAddress * This);
         
+        DECLSPEC_XFGVIRT(IWSDAddress, Serialize)
         HRESULT ( STDMETHODCALLTYPE *Serialize )( 
             IWSDAddress * This,
             /* [annotation][size_is][out] */ 
@@ -279,6 +291,7 @@ EXTERN_C const IID IID_IWSDAddress;
             /* [in] */ DWORD cchLength,
             /* [in] */ BOOL fSafe);
         
+        DECLSPEC_XFGVIRT(IWSDAddress, Deserialize)
         HRESULT ( STDMETHODCALLTYPE *Deserialize )( 
             IWSDAddress * This,
             /* [annotation][in] */ 
@@ -368,18 +381,22 @@ EXTERN_C const IID IID_IWSDTransportAddress;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWSDTransportAddress * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWSDTransportAddress * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWSDTransportAddress * This);
         
+        DECLSPEC_XFGVIRT(IWSDAddress, Serialize)
         HRESULT ( STDMETHODCALLTYPE *Serialize )( 
             IWSDTransportAddress * This,
             /* [annotation][size_is][out] */ 
@@ -387,31 +404,37 @@ EXTERN_C const IID IID_IWSDTransportAddress;
             /* [in] */ DWORD cchLength,
             /* [in] */ BOOL fSafe);
         
+        DECLSPEC_XFGVIRT(IWSDAddress, Deserialize)
         HRESULT ( STDMETHODCALLTYPE *Deserialize )( 
             IWSDTransportAddress * This,
             /* [annotation][in] */ 
             _In_  LPCWSTR pszBuffer);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, GetPort)
         HRESULT ( STDMETHODCALLTYPE *GetPort )( 
             IWSDTransportAddress * This,
             /* [annotation][out] */ 
             _Out_  WORD *pwPort);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, SetPort)
         HRESULT ( STDMETHODCALLTYPE *SetPort )( 
             IWSDTransportAddress * This,
             /* [in] */ WORD wPort);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, GetTransportAddress)
         HRESULT ( STDMETHODCALLTYPE *GetTransportAddress )( 
             IWSDTransportAddress * This,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszAddress);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, GetTransportAddressEx)
         HRESULT ( STDMETHODCALLTYPE *GetTransportAddressEx )( 
             IWSDTransportAddress * This,
             /* [in] */ BOOL fSafe,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszAddress);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, SetTransportAddress)
         HRESULT ( STDMETHODCALLTYPE *SetTransportAddress )( 
             IWSDTransportAddress * This,
             /* [annotation][in] */ 
@@ -512,34 +535,42 @@ EXTERN_C const IID IID_IWSDMessageParameters;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWSDMessageParameters * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWSDMessageParameters * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWSDMessageParameters * This);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, GetLocalAddress)
         HRESULT ( STDMETHODCALLTYPE *GetLocalAddress )( 
             __RPC__in IWSDMessageParameters * This,
             /* [out] */ __RPC__deref_out_opt IWSDAddress **ppAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, SetLocalAddress)
         HRESULT ( STDMETHODCALLTYPE *SetLocalAddress )( 
             __RPC__in IWSDMessageParameters * This,
             /* [in] */ __RPC__in_opt IWSDAddress *pAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, GetRemoteAddress)
         HRESULT ( STDMETHODCALLTYPE *GetRemoteAddress )( 
             __RPC__in IWSDMessageParameters * This,
             /* [out] */ __RPC__deref_out_opt IWSDAddress **ppAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, SetRemoteAddress)
         HRESULT ( STDMETHODCALLTYPE *SetRemoteAddress )( 
             __RPC__in IWSDMessageParameters * This,
             /* [in] */ __RPC__in_opt IWSDAddress *pAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, GetLowerParameters)
         HRESULT ( STDMETHODCALLTYPE *GetLowerParameters )( 
             __RPC__in IWSDMessageParameters * This,
             /* [out] */ __RPC__deref_out_opt IWSDMessageParameters **ppTxParams);
@@ -643,42 +674,52 @@ EXTERN_C const IID IID_IWSDUdpMessageParameters;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWSDUdpMessageParameters * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWSDUdpMessageParameters * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWSDUdpMessageParameters * This);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, GetLocalAddress)
         HRESULT ( STDMETHODCALLTYPE *GetLocalAddress )( 
             __RPC__in IWSDUdpMessageParameters * This,
             /* [out] */ __RPC__deref_out_opt IWSDAddress **ppAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, SetLocalAddress)
         HRESULT ( STDMETHODCALLTYPE *SetLocalAddress )( 
             __RPC__in IWSDUdpMessageParameters * This,
             /* [in] */ __RPC__in_opt IWSDAddress *pAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, GetRemoteAddress)
         HRESULT ( STDMETHODCALLTYPE *GetRemoteAddress )( 
             __RPC__in IWSDUdpMessageParameters * This,
             /* [out] */ __RPC__deref_out_opt IWSDAddress **ppAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, SetRemoteAddress)
         HRESULT ( STDMETHODCALLTYPE *SetRemoteAddress )( 
             __RPC__in IWSDUdpMessageParameters * This,
             /* [in] */ __RPC__in_opt IWSDAddress *pAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, GetLowerParameters)
         HRESULT ( STDMETHODCALLTYPE *GetLowerParameters )( 
             __RPC__in IWSDUdpMessageParameters * This,
             /* [out] */ __RPC__deref_out_opt IWSDMessageParameters **ppTxParams);
         
+        DECLSPEC_XFGVIRT(IWSDUdpMessageParameters, SetRetransmitParams)
         HRESULT ( STDMETHODCALLTYPE *SetRetransmitParams )( 
             __RPC__in IWSDUdpMessageParameters * This,
             /* [in] */ __RPC__in const WSDUdpRetransmitParams *pParams);
         
+        DECLSPEC_XFGVIRT(IWSDUdpMessageParameters, GetRetransmitParams)
         HRESULT ( STDMETHODCALLTYPE *GetRetransmitParams )( 
             __RPC__in IWSDUdpMessageParameters * This,
             /* [out] */ __RPC__out WSDUdpRetransmitParams *pParams);
@@ -823,18 +864,22 @@ EXTERN_C const IID IID_IWSDUdpAddress;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWSDUdpAddress * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWSDUdpAddress * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWSDUdpAddress * This);
         
+        DECLSPEC_XFGVIRT(IWSDAddress, Serialize)
         HRESULT ( STDMETHODCALLTYPE *Serialize )( 
             IWSDUdpAddress * This,
             /* [annotation][size_is][out] */ 
@@ -842,74 +887,90 @@ EXTERN_C const IID IID_IWSDUdpAddress;
             /* [in] */ DWORD cchLength,
             /* [in] */ BOOL fSafe);
         
+        DECLSPEC_XFGVIRT(IWSDAddress, Deserialize)
         HRESULT ( STDMETHODCALLTYPE *Deserialize )( 
             IWSDUdpAddress * This,
             /* [annotation][in] */ 
             _In_  LPCWSTR pszBuffer);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, GetPort)
         HRESULT ( STDMETHODCALLTYPE *GetPort )( 
             IWSDUdpAddress * This,
             /* [annotation][out] */ 
             _Out_  WORD *pwPort);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, SetPort)
         HRESULT ( STDMETHODCALLTYPE *SetPort )( 
             IWSDUdpAddress * This,
             /* [in] */ WORD wPort);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, GetTransportAddress)
         HRESULT ( STDMETHODCALLTYPE *GetTransportAddress )( 
             IWSDUdpAddress * This,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszAddress);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, GetTransportAddressEx)
         HRESULT ( STDMETHODCALLTYPE *GetTransportAddressEx )( 
             IWSDUdpAddress * This,
             /* [in] */ BOOL fSafe,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszAddress);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, SetTransportAddress)
         HRESULT ( STDMETHODCALLTYPE *SetTransportAddress )( 
             IWSDUdpAddress * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pszAddress);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, SetSockaddr)
         HRESULT ( STDMETHODCALLTYPE *SetSockaddr )( 
             IWSDUdpAddress * This,
             /* [in] */ const SOCKADDR_STORAGE *pSockAddr);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, GetSockaddr)
         HRESULT ( STDMETHODCALLTYPE *GetSockaddr )( 
             IWSDUdpAddress * This,
             /* [annotation][out] */ 
             _Out_  SOCKADDR_STORAGE *pSockAddr);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, SetExclusive)
         HRESULT ( STDMETHODCALLTYPE *SetExclusive )( 
             IWSDUdpAddress * This,
             /* [in] */ BOOL fExclusive);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, GetExclusive)
         HRESULT ( STDMETHODCALLTYPE *GetExclusive )( 
             IWSDUdpAddress * This);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, SetMessageType)
         HRESULT ( STDMETHODCALLTYPE *SetMessageType )( 
             IWSDUdpAddress * This,
             /* [in] */ WSDUdpMessageType messageType);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, GetMessageType)
         HRESULT ( STDMETHODCALLTYPE *GetMessageType )( 
             IWSDUdpAddress * This,
             /* [annotation][out] */ 
             _Out_  WSDUdpMessageType *pMessageType);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, SetTTL)
         HRESULT ( STDMETHODCALLTYPE *SetTTL )( 
             IWSDUdpAddress * This,
             /* [in] */ DWORD dwTTL);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, GetTTL)
         HRESULT ( STDMETHODCALLTYPE *GetTTL )( 
             IWSDUdpAddress * This,
             /* [annotation][out] */ 
             _Out_  DWORD *pdwTTL);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, SetAlias)
         HRESULT ( STDMETHODCALLTYPE *SetAlias )( 
             IWSDUdpAddress * This,
             /* [in] */ const GUID *pAlias);
         
+        DECLSPEC_XFGVIRT(IWSDUdpAddress, GetAlias)
         HRESULT ( STDMETHODCALLTYPE *GetAlias )( 
             IWSDUdpAddress * This,
             /* [annotation][out] */ 
@@ -1070,77 +1131,94 @@ EXTERN_C const IID IID_IWSDHttpMessageParameters;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWSDHttpMessageParameters * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWSDHttpMessageParameters * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWSDHttpMessageParameters * This);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, GetLocalAddress)
         HRESULT ( STDMETHODCALLTYPE *GetLocalAddress )( 
             IWSDHttpMessageParameters * This,
             /* [out] */ IWSDAddress **ppAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, SetLocalAddress)
         HRESULT ( STDMETHODCALLTYPE *SetLocalAddress )( 
             IWSDHttpMessageParameters * This,
             /* [in] */ IWSDAddress *pAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, GetRemoteAddress)
         HRESULT ( STDMETHODCALLTYPE *GetRemoteAddress )( 
             IWSDHttpMessageParameters * This,
             /* [out] */ IWSDAddress **ppAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, SetRemoteAddress)
         HRESULT ( STDMETHODCALLTYPE *SetRemoteAddress )( 
             IWSDHttpMessageParameters * This,
             /* [in] */ IWSDAddress *pAddress);
         
+        DECLSPEC_XFGVIRT(IWSDMessageParameters, GetLowerParameters)
         HRESULT ( STDMETHODCALLTYPE *GetLowerParameters )( 
             IWSDHttpMessageParameters * This,
             /* [out] */ IWSDMessageParameters **ppTxParams);
         
+        DECLSPEC_XFGVIRT(IWSDHttpMessageParameters, SetInboundHttpHeaders)
         HRESULT ( STDMETHODCALLTYPE *SetInboundHttpHeaders )( 
             IWSDHttpMessageParameters * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pszHeaders);
         
+        DECLSPEC_XFGVIRT(IWSDHttpMessageParameters, GetInboundHttpHeaders)
         HRESULT ( STDMETHODCALLTYPE *GetInboundHttpHeaders )( 
             IWSDHttpMessageParameters * This,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszHeaders);
         
+        DECLSPEC_XFGVIRT(IWSDHttpMessageParameters, SetOutboundHttpHeaders)
         HRESULT ( STDMETHODCALLTYPE *SetOutboundHttpHeaders )( 
             IWSDHttpMessageParameters * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pszHeaders);
         
+        DECLSPEC_XFGVIRT(IWSDHttpMessageParameters, GetOutboundHttpHeaders)
         HRESULT ( STDMETHODCALLTYPE *GetOutboundHttpHeaders )( 
             IWSDHttpMessageParameters * This,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszHeaders);
         
+        DECLSPEC_XFGVIRT(IWSDHttpMessageParameters, SetID)
         HRESULT ( STDMETHODCALLTYPE *SetID )( 
             IWSDHttpMessageParameters * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pszId);
         
+        DECLSPEC_XFGVIRT(IWSDHttpMessageParameters, GetID)
         HRESULT ( STDMETHODCALLTYPE *GetID )( 
             IWSDHttpMessageParameters * This,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszId);
         
+        DECLSPEC_XFGVIRT(IWSDHttpMessageParameters, SetContext)
         HRESULT ( STDMETHODCALLTYPE *SetContext )( 
             IWSDHttpMessageParameters * This,
             /* [in] */ IUnknown *pContext);
         
+        DECLSPEC_XFGVIRT(IWSDHttpMessageParameters, GetContext)
         HRESULT ( STDMETHODCALLTYPE *GetContext )( 
             IWSDHttpMessageParameters * This,
             /* [annotation][out] */ 
             _Outptr_  IUnknown **ppContext);
         
+        DECLSPEC_XFGVIRT(IWSDHttpMessageParameters, Clear)
         HRESULT ( STDMETHODCALLTYPE *Clear )( 
             IWSDHttpMessageParameters * This);
         
@@ -1269,18 +1347,22 @@ EXTERN_C const IID IID_IWSDHttpAddress;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWSDHttpAddress * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWSDHttpAddress * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWSDHttpAddress * This);
         
+        DECLSPEC_XFGVIRT(IWSDAddress, Serialize)
         HRESULT ( STDMETHODCALLTYPE *Serialize )( 
             IWSDHttpAddress * This,
             /* [annotation][size_is][out] */ 
@@ -1288,48 +1370,58 @@ EXTERN_C const IID IID_IWSDHttpAddress;
             /* [in] */ DWORD cchLength,
             /* [in] */ BOOL fSafe);
         
+        DECLSPEC_XFGVIRT(IWSDAddress, Deserialize)
         HRESULT ( STDMETHODCALLTYPE *Deserialize )( 
             IWSDHttpAddress * This,
             /* [annotation][in] */ 
             _In_  LPCWSTR pszBuffer);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, GetPort)
         HRESULT ( STDMETHODCALLTYPE *GetPort )( 
             IWSDHttpAddress * This,
             /* [annotation][out] */ 
             _Out_  WORD *pwPort);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, SetPort)
         HRESULT ( STDMETHODCALLTYPE *SetPort )( 
             IWSDHttpAddress * This,
             /* [in] */ WORD wPort);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, GetTransportAddress)
         HRESULT ( STDMETHODCALLTYPE *GetTransportAddress )( 
             IWSDHttpAddress * This,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszAddress);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, GetTransportAddressEx)
         HRESULT ( STDMETHODCALLTYPE *GetTransportAddressEx )( 
             IWSDHttpAddress * This,
             /* [in] */ BOOL fSafe,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszAddress);
         
+        DECLSPEC_XFGVIRT(IWSDTransportAddress, SetTransportAddress)
         HRESULT ( STDMETHODCALLTYPE *SetTransportAddress )( 
             IWSDHttpAddress * This,
             /* [annotation][in] */ 
             _In_opt_  LPCWSTR pszAddress);
         
+        DECLSPEC_XFGVIRT(IWSDHttpAddress, GetSecure)
         HRESULT ( STDMETHODCALLTYPE *GetSecure )( 
             IWSDHttpAddress * This);
         
+        DECLSPEC_XFGVIRT(IWSDHttpAddress, SetSecure)
         HRESULT ( STDMETHODCALLTYPE *SetSecure )( 
             IWSDHttpAddress * This,
             /* [in] */ BOOL fSecure);
         
+        DECLSPEC_XFGVIRT(IWSDHttpAddress, GetPath)
         HRESULT ( STDMETHODCALLTYPE *GetPath )( 
             IWSDHttpAddress * This,
             /* [annotation][out] */ 
             _Outptr_  LPCWSTR *ppszPath);
         
+        DECLSPEC_XFGVIRT(IWSDHttpAddress, SetPath)
         HRESULT ( STDMETHODCALLTYPE *SetPath )( 
             IWSDHttpAddress * This,
             /* [annotation][in] */ 
@@ -1445,23 +1537,28 @@ EXTERN_C const IID IID_IWSDSSLClientCertificate;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWSDSSLClientCertificate * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWSDSSLClientCertificate * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWSDSSLClientCertificate * This);
         
+        DECLSPEC_XFGVIRT(IWSDSSLClientCertificate, GetClientCertificate)
         HRESULT ( STDMETHODCALLTYPE *GetClientCertificate )( 
             IWSDSSLClientCertificate * This,
             /* [annotation][out][in] */ 
             _Outptr_  PCCERT_CONTEXT *ppCertContext);
         
+        DECLSPEC_XFGVIRT(IWSDSSLClientCertificate, GetMappedAccessToken)
         HRESULT ( STDMETHODCALLTYPE *GetMappedAccessToken )( 
             IWSDSSLClientCertificate * This,
             /* [annotation][out][in] */ 
@@ -1539,23 +1636,28 @@ EXTERN_C const IID IID_IWSDHttpAuthParameters;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWSDHttpAuthParameters * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWSDHttpAuthParameters * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWSDHttpAuthParameters * This);
         
+        DECLSPEC_XFGVIRT(IWSDHttpAuthParameters, GetClientAccessToken)
         HRESULT ( STDMETHODCALLTYPE *GetClientAccessToken )( 
             IWSDHttpAuthParameters * This,
             /* [annotation][out] */ 
             _Out_  HANDLE *phToken);
         
+        DECLSPEC_XFGVIRT(IWSDHttpAuthParameters, GetAuthType)
         HRESULT ( STDMETHODCALLTYPE *GetAuthType )( 
             IWSDHttpAuthParameters * This,
             /* [annotation][out] */ 
@@ -1651,28 +1753,34 @@ EXTERN_C const IID IID_IWSDSignatureProperty;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IWSDSignatureProperty * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IWSDSignatureProperty * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IWSDSignatureProperty * This);
         
+        DECLSPEC_XFGVIRT(IWSDSignatureProperty, IsMessageSigned)
         HRESULT ( STDMETHODCALLTYPE *IsMessageSigned )( 
             IWSDSignatureProperty * This,
             /* [annotation][out] */ 
             _Out_  BOOL *pbSigned);
         
+        DECLSPEC_XFGVIRT(IWSDSignatureProperty, IsMessageSignatureTrusted)
         HRESULT ( STDMETHODCALLTYPE *IsMessageSignatureTrusted )( 
             IWSDSignatureProperty * This,
             /* [annotation][out] */ 
             _Out_  BOOL *pbSignatureTrusted);
         
+        DECLSPEC_XFGVIRT(IWSDSignatureProperty, GetKeyInfo)
         HRESULT ( STDMETHODCALLTYPE *GetKeyInfo )( 
             IWSDSignatureProperty * This,
             /* [annotation][size_is][out] */ 
@@ -1680,6 +1788,7 @@ EXTERN_C const IID IID_IWSDSignatureProperty;
             /* [annotation][out][in] */ 
             _Inout_  DWORD *pdwKeyInfoSize);
         
+        DECLSPEC_XFGVIRT(IWSDSignatureProperty, GetSignature)
         HRESULT ( STDMETHODCALLTYPE *GetSignature )( 
             IWSDSignatureProperty * This,
             /* [annotation][size_is][out] */ 
@@ -1687,6 +1796,7 @@ EXTERN_C const IID IID_IWSDSignatureProperty;
             /* [annotation][out][in] */ 
             _Inout_  DWORD *pdwSignatureSize);
         
+        DECLSPEC_XFGVIRT(IWSDSignatureProperty, GetSignedInfoHash)
         HRESULT ( STDMETHODCALLTYPE *GetSignedInfoHash )( 
             IWSDSignatureProperty * This,
             /* [annotation][size_is][out] */ 

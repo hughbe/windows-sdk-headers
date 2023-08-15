@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.UI.StartScreen.1.h"
-namespace winrt::Windows::UI::StartScreen
+WINRT_EXPORT namespace winrt::Windows::UI::StartScreen
 {
     struct __declspec(empty_bases) JumpList : Windows::UI::StartScreen::IJumpList
     {
@@ -32,7 +32,7 @@ namespace winrt::Windows::UI::StartScreen
         SecondaryTile();
         SecondaryTile(param::hstring const& tileId, param::hstring const& shortName, param::hstring const& displayName, param::hstring const& arguments, Windows::UI::StartScreen::TileOptions const& tileOptions, Windows::Foundation::Uri const& logoReference);
         SecondaryTile(param::hstring const& tileId, param::hstring const& shortName, param::hstring const& displayName, param::hstring const& arguments, Windows::UI::StartScreen::TileOptions const& tileOptions, Windows::Foundation::Uri const& logoReference, Windows::Foundation::Uri const& wideLogoReference);
-        SecondaryTile(param::hstring const& tileId);
+        explicit SecondaryTile(param::hstring const& tileId);
         SecondaryTile(param::hstring const& tileId, param::hstring const& displayName, param::hstring const& arguments, Windows::Foundation::Uri const& square150x150Logo, Windows::UI::StartScreen::TileSize const& desiredSize);
         static auto Exists(param::hstring const& tileId);
         static auto FindAllAsync();

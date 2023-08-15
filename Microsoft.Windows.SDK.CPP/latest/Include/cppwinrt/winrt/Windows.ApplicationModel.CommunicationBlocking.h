@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,61 +6,62 @@
 #ifndef WINRT_Windows_ApplicationModel_CommunicationBlocking_H
 #define WINRT_Windows_ApplicationModel_CommunicationBlocking_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.ApplicationModel.CommunicationBlocking.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::IsBlockingActive() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::IsBlockingActive() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics)->get_IsBlockingActive(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::IsBlockedNumberAsync(param::hstring const& number) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::IsBlockedNumberAsync(param::hstring const& number) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics)->IsBlockedNumberAsync(*(void**)(&number), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::ShowBlockNumbersUI(param::iterable<hstring> const& phoneNumbers) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::ShowBlockNumbersUI(param::iterable<hstring> const& phoneNumbers) const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics)->ShowBlockNumbersUI(*(void**)(&phoneNumbers), &value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::ShowUnblockNumbersUI(param::iterable<hstring> const& phoneNumbers) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::ShowUnblockNumbersUI(param::iterable<hstring> const& phoneNumbers) const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics)->ShowUnblockNumbersUI(*(void**)(&phoneNumbers), &value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::ShowBlockedCallsUI() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::ShowBlockedCallsUI() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics)->ShowBlockedCallsUI());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::ShowBlockedMessagesUI() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAccessManagerStatics<D>::ShowBlockedMessagesUI() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics)->ShowBlockedMessagesUI());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAppManagerStatics<D>::IsCurrentAppActiveBlockingApp() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAppManagerStatics<D>::IsCurrentAppActiveBlockingApp() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics)->get_IsCurrentAppActiveBlockingApp(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAppManagerStatics<D>::ShowCommunicationBlockingSettingsUI() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAppManagerStatics<D>::ShowCommunicationBlockingSettingsUI() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics)->ShowCommunicationBlockingSettingsUI());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAppManagerStatics2<D>::RequestSetAsActiveBlockingAppAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_CommunicationBlocking_ICommunicationBlockingAppManagerStatics2<D>::RequestSetAsActiveBlockingAppAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics2)->RequestSetAsActiveBlockingAppAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics> : produce_base<D, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics>
     {
@@ -108,6 +109,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics> : produce_base<D, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics>
     {
@@ -126,6 +129,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics2> : produce_base<D, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics2>
     {
@@ -138,52 +143,55 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::ApplicationModel::CommunicationBlocking
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::CommunicationBlocking
 {
     inline auto CommunicationBlockingAccessManager::IsBlockingActive()
     {
-        return impl::call_factory<CommunicationBlockingAccessManager, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics>([&](auto&& f) { return f.IsBlockingActive(); });
+        return impl::call_factory_cast<bool(*)(ICommunicationBlockingAccessManagerStatics const&), CommunicationBlockingAccessManager, ICommunicationBlockingAccessManagerStatics>([](ICommunicationBlockingAccessManagerStatics const& f) { return f.IsBlockingActive(); });
     }
     inline auto CommunicationBlockingAccessManager::IsBlockedNumberAsync(param::hstring const& number)
     {
-        return impl::call_factory<CommunicationBlockingAccessManager, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics>([&](auto&& f) { return f.IsBlockedNumberAsync(number); });
+        return impl::call_factory<CommunicationBlockingAccessManager, ICommunicationBlockingAccessManagerStatics>([&](ICommunicationBlockingAccessManagerStatics const& f) { return f.IsBlockedNumberAsync(number); });
     }
     inline auto CommunicationBlockingAccessManager::ShowBlockNumbersUI(param::iterable<hstring> const& phoneNumbers)
     {
-        return impl::call_factory<CommunicationBlockingAccessManager, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics>([&](auto&& f) { return f.ShowBlockNumbersUI(phoneNumbers); });
+        return impl::call_factory<CommunicationBlockingAccessManager, ICommunicationBlockingAccessManagerStatics>([&](ICommunicationBlockingAccessManagerStatics const& f) { return f.ShowBlockNumbersUI(phoneNumbers); });
     }
     inline auto CommunicationBlockingAccessManager::ShowUnblockNumbersUI(param::iterable<hstring> const& phoneNumbers)
     {
-        return impl::call_factory<CommunicationBlockingAccessManager, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics>([&](auto&& f) { return f.ShowUnblockNumbersUI(phoneNumbers); });
+        return impl::call_factory<CommunicationBlockingAccessManager, ICommunicationBlockingAccessManagerStatics>([&](ICommunicationBlockingAccessManagerStatics const& f) { return f.ShowUnblockNumbersUI(phoneNumbers); });
     }
     inline auto CommunicationBlockingAccessManager::ShowBlockedCallsUI()
     {
-        impl::call_factory<CommunicationBlockingAccessManager, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics>([&](auto&& f) { return f.ShowBlockedCallsUI(); });
+        impl::call_factory_cast<void(*)(ICommunicationBlockingAccessManagerStatics const&), CommunicationBlockingAccessManager, ICommunicationBlockingAccessManagerStatics>([](ICommunicationBlockingAccessManagerStatics const& f) { return f.ShowBlockedCallsUI(); });
     }
     inline auto CommunicationBlockingAccessManager::ShowBlockedMessagesUI()
     {
-        impl::call_factory<CommunicationBlockingAccessManager, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics>([&](auto&& f) { return f.ShowBlockedMessagesUI(); });
+        impl::call_factory_cast<void(*)(ICommunicationBlockingAccessManagerStatics const&), CommunicationBlockingAccessManager, ICommunicationBlockingAccessManagerStatics>([](ICommunicationBlockingAccessManagerStatics const& f) { return f.ShowBlockedMessagesUI(); });
     }
     inline auto CommunicationBlockingAppManager::IsCurrentAppActiveBlockingApp()
     {
-        return impl::call_factory<CommunicationBlockingAppManager, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics>([&](auto&& f) { return f.IsCurrentAppActiveBlockingApp(); });
+        return impl::call_factory_cast<bool(*)(ICommunicationBlockingAppManagerStatics const&), CommunicationBlockingAppManager, ICommunicationBlockingAppManagerStatics>([](ICommunicationBlockingAppManagerStatics const& f) { return f.IsCurrentAppActiveBlockingApp(); });
     }
     inline auto CommunicationBlockingAppManager::ShowCommunicationBlockingSettingsUI()
     {
-        impl::call_factory<CommunicationBlockingAppManager, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics>([&](auto&& f) { return f.ShowCommunicationBlockingSettingsUI(); });
+        impl::call_factory_cast<void(*)(ICommunicationBlockingAppManagerStatics const&), CommunicationBlockingAppManager, ICommunicationBlockingAppManagerStatics>([](ICommunicationBlockingAppManagerStatics const& f) { return f.ShowCommunicationBlockingSettingsUI(); });
     }
     inline auto CommunicationBlockingAppManager::RequestSetAsActiveBlockingAppAsync()
     {
-        return impl::call_factory<CommunicationBlockingAppManager, Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics2>([&](auto&& f) { return f.RequestSetAsActiveBlockingAppAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<bool>(*)(ICommunicationBlockingAppManagerStatics2 const&), CommunicationBlockingAppManager, ICommunicationBlockingAppManagerStatics2>([](ICommunicationBlockingAppManagerStatics2 const& f) { return f.RequestSetAsActiveBlockingAppAsync(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAccessManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::ICommunicationBlockingAppManagerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager> : winrt::impl::hash_base {};
+#endif
 }
 #endif

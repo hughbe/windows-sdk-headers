@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.Media.Effects.1.h"
 #include "winrt/impl/Windows.Media.Render.1.h"
 #include "winrt/impl/Windows.Media.Audio.1.h"
-namespace winrt::Windows::Media::Audio
+WINRT_EXPORT namespace winrt::Windows::Media::Audio
 {
     struct __declspec(empty_bases) AudioDeviceInputNode : Windows::Media::Audio::IAudioDeviceInputNode,
         impl::require<AudioDeviceInputNode, Windows::Media::Audio::IAudioInputNode2>
@@ -82,7 +82,7 @@ namespace winrt::Windows::Media::Audio
     {
         AudioGraphSettings(std::nullptr_t) noexcept {}
         AudioGraphSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Audio::IAudioGraphSettings(ptr, take_ownership_from_abi) {}
-        AudioGraphSettings(Windows::Media::Render::AudioRenderCategory const& audioRenderCategory);
+        explicit AudioGraphSettings(Windows::Media::Render::AudioRenderCategory const& audioRenderCategory);
     };
     struct __declspec(empty_bases) AudioGraphUnrecoverableErrorOccurredEventArgs : Windows::Media::Audio::IAudioGraphUnrecoverableErrorOccurredEventArgs
     {
@@ -199,7 +199,7 @@ namespace winrt::Windows::Media::Audio
     {
         EchoEffectDefinition(std::nullptr_t) noexcept {}
         EchoEffectDefinition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Audio::IEchoEffectDefinition(ptr, take_ownership_from_abi) {}
-        EchoEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph);
+        explicit EchoEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph);
     };
     struct __declspec(empty_bases) EqualizerBand : Windows::Media::Audio::IEqualizerBand
     {
@@ -210,7 +210,7 @@ namespace winrt::Windows::Media::Audio
     {
         EqualizerEffectDefinition(std::nullptr_t) noexcept {}
         EqualizerEffectDefinition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Audio::IEqualizerEffectDefinition(ptr, take_ownership_from_abi) {}
-        EqualizerEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph);
+        explicit EqualizerEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph);
     };
     struct __declspec(empty_bases) FrameInputNodeQuantumStartedEventArgs : Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs
     {
@@ -221,7 +221,7 @@ namespace winrt::Windows::Media::Audio
     {
         LimiterEffectDefinition(std::nullptr_t) noexcept {}
         LimiterEffectDefinition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Audio::ILimiterEffectDefinition(ptr, take_ownership_from_abi) {}
-        LimiterEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph);
+        explicit LimiterEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph);
     };
     struct __declspec(empty_bases) MediaSourceAudioInputNode : Windows::Media::Audio::IMediaSourceAudioInputNode
     {
@@ -232,7 +232,7 @@ namespace winrt::Windows::Media::Audio
     {
         ReverbEffectDefinition(std::nullptr_t) noexcept {}
         ReverbEffectDefinition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Audio::IReverbEffectDefinition(ptr, take_ownership_from_abi) {}
-        ReverbEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph);
+        explicit ReverbEffectDefinition(Windows::Media::Audio::AudioGraph const& audioGraph);
     };
     struct __declspec(empty_bases) SetDefaultSpatialAudioFormatResult : Windows::Media::Audio::ISetDefaultSpatialAudioFormatResult
     {
@@ -260,6 +260,7 @@ namespace winrt::Windows::Media::Audio
         [[nodiscard]] static auto DolbyAtmosForSpeakers();
         [[nodiscard]] static auto DTSHeadphoneX();
         [[nodiscard]] static auto DTSXUltra();
+        [[nodiscard]] static auto DTSXForHomeTheater();
     };
 }
 #endif

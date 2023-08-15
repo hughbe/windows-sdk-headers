@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Devices.Usb.1.h"
-namespace winrt::Windows::Devices::Usb
+WINRT_EXPORT namespace winrt::Windows::Devices::Usb
 {
     struct __declspec(empty_bases) UsbBulkInEndpointDescriptor : Windows::Devices::Usb::IUsbBulkInEndpointDescriptor
     {
@@ -142,7 +142,7 @@ namespace winrt::Windows::Devices::Usb
         UsbSetupPacket(std::nullptr_t) noexcept {}
         UsbSetupPacket(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Usb::IUsbSetupPacket(ptr, take_ownership_from_abi) {}
         UsbSetupPacket();
-        UsbSetupPacket(Windows::Storage::Streams::IBuffer const& eightByteBuffer);
+        explicit UsbSetupPacket(Windows::Storage::Streams::IBuffer const& eightByteBuffer);
     };
 }
 #endif

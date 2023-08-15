@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Media.Protection.1.h"
-namespace winrt::Windows::Media::Protection
+WINRT_EXPORT namespace winrt::Windows::Media::Protection
 {
     struct ComponentLoadFailedEventHandler : Windows::Foundation::IUnknown
     {
@@ -69,7 +69,7 @@ namespace winrt::Windows::Media::Protection
     {
         MediaProtectionPMPServer(std::nullptr_t) noexcept {}
         MediaProtectionPMPServer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Protection::IMediaProtectionPMPServer(ptr, take_ownership_from_abi) {}
-        MediaProtectionPMPServer(Windows::Foundation::Collections::IPropertySet const& pProperties);
+        explicit MediaProtectionPMPServer(Windows::Foundation::Collections::IPropertySet const& pProperties);
     };
     struct __declspec(empty_bases) MediaProtectionServiceCompletion : Windows::Media::Protection::IMediaProtectionServiceCompletion
     {

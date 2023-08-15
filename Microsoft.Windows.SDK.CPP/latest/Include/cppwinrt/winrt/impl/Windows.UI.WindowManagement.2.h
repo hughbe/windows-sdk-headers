@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_WindowManagement_2_H
 #define WINRT_Windows_UI_WindowManagement_2_H
 #include "winrt/impl/Windows.UI.WindowManagement.1.h"
-namespace winrt::Windows::UI::WindowManagement
+WINRT_EXPORT namespace winrt::Windows::UI::WindowManagement
 {
     struct __declspec(empty_bases) AppWindow : Windows::UI::WindowManagement::IAppWindow
     {
@@ -91,6 +91,11 @@ namespace winrt::Windows::UI::WindowManagement
         FullScreenPresentationConfiguration(std::nullptr_t) noexcept {}
         FullScreenPresentationConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::WindowManagement::IFullScreenPresentationConfiguration(ptr, take_ownership_from_abi) {}
         FullScreenPresentationConfiguration();
+    };
+    struct WindowServices
+    {
+        WindowServices() = delete;
+        static auto FindAllTopLevelWindowIds();
     };
     struct __declspec(empty_bases) WindowingEnvironment : Windows::UI::WindowManagement::IWindowingEnvironment
     {

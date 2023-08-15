@@ -134,7 +134,6 @@ DisableThreadLibraryCalls(
     _In_ HMODULE hLibModule
     );
 
-
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
@@ -151,7 +150,6 @@ FindResourceExW(
     _In_ LPCWSTR lpName,
     _In_ WORD wLanguage
     );
-
 
 #ifdef UNICODE
 #define FindResourceEx  FindResourceExW
@@ -177,7 +175,6 @@ FindStringOrdinal(
     _In_ BOOL bIgnoreCase
     );
 
-
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
 
 WINBASEAPI
@@ -187,7 +184,6 @@ FreeLibrary(
     _In_ HMODULE hLibModule
     );
 
-
 WINBASEAPI
 DECLSPEC_NORETURN
 VOID
@@ -196,7 +192,6 @@ FreeLibraryAndExitThread(
     _In_ HMODULE hLibModule,
     _In_ DWORD dwExitCode
     );
-
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
@@ -211,7 +206,6 @@ FreeResource(
     _In_ HGLOBAL hResData
     );
 
-    
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -239,7 +233,6 @@ GetModuleFileNameW(
     _Out_writes_to_(nSize,((return < nSize) ? (return + 1) : nSize)) LPWSTR lpFilename,
     _In_ DWORD nSize
     );
-
 #ifdef UNICODE
 #define GetModuleFileName  GetModuleFileNameW
 #else
@@ -269,7 +262,6 @@ WINAPI
 GetModuleHandleW(
     _In_opt_ LPCWSTR lpModuleName
     );
-
 #ifdef UNICODE
 #define GetModuleHandle  GetModuleHandleW
 #else
@@ -321,7 +313,6 @@ GetModuleHandleExW(
     _In_opt_ LPCWSTR lpModuleName,
     _Out_ HMODULE* phModule
     );
-
 #ifdef UNICODE
 #define GetModuleHandleEx  GetModuleHandleExW
 #else
@@ -343,7 +334,6 @@ GetProcAddress(
     _In_ HMODULE hModule,
     _In_ LPCSTR lpProcName
     );
-
 
 #define CURRENT_IMPORT_REDIRECTION_VERSION      1
 
@@ -388,7 +378,6 @@ LoadLibraryExW(
     _Reserved_ HANDLE hFile,
     _In_ DWORD dwFlags
     );
-
 #ifdef UNICODE
 #define LoadLibraryEx  LoadLibraryExW
 #else
@@ -441,7 +430,6 @@ LoadResource(
     _In_ HRSRC hResInfo
     );
 
-
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 #pragma endregion
 
@@ -467,7 +455,6 @@ LoadStringW(
     _Out_writes_to_(cchBufferMax,return + 1) LPWSTR lpBuffer,
     _In_ int cchBufferMax
     );
-
 #ifdef UNICODE
 #define LoadString  LoadStringW
 #else
@@ -487,7 +474,6 @@ LockResource(
     _In_ HGLOBAL hResData
     );
 
-
 WINBASEAPI
 DWORD
 WINAPI
@@ -495,7 +481,6 @@ SizeofResource(
     _In_opt_ HMODULE hModule,
     _In_ HRSRC hResInfo
     );
-
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 #pragma endregion
@@ -512,7 +497,6 @@ AddDllDirectory(
     _In_ PCWSTR NewDirectory
     );
 
-
 WINBASEAPI
 BOOL
 WINAPI
@@ -520,14 +504,12 @@ RemoveDllDirectory(
     _In_ DLL_DIRECTORY_COOKIE Cookie
     );
 
-
 WINBASEAPI
 BOOL
 WINAPI
 SetDefaultDllDirectories(
     _In_ DWORD DirectoryFlags
     );
-
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
@@ -562,7 +544,6 @@ EnumResourceLanguagesExW(
     DWORD dwFlags,
     LANGID LangId
     );
-
 #ifdef UNICODE
 #define EnumResourceLanguagesEx  EnumResourceLanguagesExW
 #else
@@ -592,7 +573,6 @@ EnumResourceNamesExW(
     DWORD dwFlags,
     LANGID LangId
     );
-
 #ifdef UNICODE
 #define EnumResourceNamesEx  EnumResourceNamesExW
 #else
@@ -620,7 +600,6 @@ EnumResourceTypesExW(
     DWORD dwFlags,
     LANGID LangId
     );
-
 #ifdef UNICODE
 #define EnumResourceTypesEx  EnumResourceTypesExW
 #else
@@ -645,7 +624,6 @@ FindResourceW(
     _In_ LPCWSTR lpType
     );
 
-
 #ifdef UNICODE
 #define FindResource  FindResourceW
 #endif
@@ -665,7 +643,6 @@ WINAPI
 LoadLibraryW(
     _In_ LPCWSTR lpLibFileName
     );
-
 #ifdef UNICODE
 #define LoadLibrary  LoadLibraryW
 #else
@@ -688,9 +665,20 @@ EnumResourceNamesW(
     _In_ LONG_PTR lParam
     );
 
+WINBASEAPI
+BOOL
+WINAPI
+EnumResourceNamesA(
+    _In_opt_ HMODULE hModule,
+    _In_ LPCSTR lpType,
+    _In_ ENUMRESNAMEPROCA lpEnumFunc,
+    _In_ LONG_PTR lParam
+    );
 
 #ifdef UNICODE
 #define EnumResourceNames  EnumResourceNamesW
+#else
+#define EnumResourceNames  EnumResourceNamesA
 #endif
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)

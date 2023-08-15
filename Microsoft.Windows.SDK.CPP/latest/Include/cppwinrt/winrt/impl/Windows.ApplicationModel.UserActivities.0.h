@@ -1,39 +1,42 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_ApplicationModel_UserActivities_0_H
 #define WINRT_Windows_ApplicationModel_UserActivities_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Deferral;
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+    template <typename T> struct __declspec(empty_bases) IReference;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IIterable;
+    template <typename T> struct __declspec(empty_bases) IIterable;
+    template <typename T> struct __declspec(empty_bases) IVector;
 }
-namespace winrt::Windows::Security::Credentials
+WINRT_EXPORT namespace winrt::Windows::Security::Credentials
 {
     struct WebAccount;
 }
-namespace winrt::Windows::System
+WINRT_EXPORT namespace winrt::Windows::System
 {
     struct User;
 }
-namespace winrt::Windows::UI
+WINRT_EXPORT namespace winrt::Windows::UI
 {
     struct Color;
 }
-namespace winrt::Windows::UI::Shell
+WINRT_EXPORT namespace winrt::Windows::UI::Shell
 {
     struct IAdaptiveCard;
 }
-namespace winrt::Windows::ApplicationModel::UserActivities
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserActivities
 {
     enum class UserActivityState : int32_t
     {
@@ -75,398 +78,104 @@ namespace winrt::Windows::ApplicationModel::UserActivities
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivity>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivity2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivity3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityAttribution>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannel>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannel2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityRequest>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityRequestManager>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivitySession>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivity>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityAttribution>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityChannel>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityContentInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityRequest>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityRequestManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivitySession>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityVisualElements>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityState>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivity>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivity" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivity2>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivity2" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivity3>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivity3" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityAttribution>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityAttribution" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityChannel>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityChannel" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityChannel2>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityChannel2" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityContentInfo" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityFactory>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityFactory" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityRequestManager>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityRequestManager" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivitySession>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivitySession" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityStatics>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityStatics" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityVisualElements" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivity>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivity" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivityAttribution>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivityAttribution" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivityChannel>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivityChannel" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivityContentInfo>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivityContentInfo" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivityRequest>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivityRequest" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivityRequestManager>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivityRequestManager" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivitySession>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivitySession" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivityVisualElements>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserActivities::UserActivityState>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserActivities.UserActivityState" };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivity>
-    {
-        static constexpr guid value{ 0xFC103E9E,0x2CAB,0x4D36,{ 0xAE,0xA2,0xB4,0xBB,0x55,0x6C,0xEF,0x0F } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivity2>
-    {
-        static constexpr guid value{ 0x9DC40C62,0x08C4,0x47AC,{ 0xAA,0x9C,0x2B,0xB2,0x22,0x1C,0x55,0xFD } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivity3>
-    {
-        static constexpr guid value{ 0xE7697744,0xE1A2,0x5147,{ 0x8E,0x06,0x55,0xF1,0xEE,0xEF,0x27,0x1C } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityAttribution>
-    {
-        static constexpr guid value{ 0x34A5C8B5,0x86DD,0x4AEC,{ 0xA4,0x91,0x6A,0x4F,0xAE,0xA5,0xD2,0x2E } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory>
-    {
-        static constexpr guid value{ 0xE62BD252,0xC566,0x4F42,{ 0x99,0x74,0x91,0x6C,0x4D,0x76,0x37,0x7E } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityChannel>
-    {
-        static constexpr guid value{ 0xBAC0F8B8,0xA0E4,0x483B,{ 0xB9,0x48,0x9C,0xBA,0xBD,0x06,0x07,0x0C } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityChannel2>
-    {
-        static constexpr guid value{ 0x1698E35B,0xEB7E,0x4EA0,{ 0xBF,0x17,0xA4,0x59,0xE8,0xBE,0x70,0x6C } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>
-    {
-        static constexpr guid value{ 0xC8C005AB,0x198D,0x4D80,{ 0xAB,0xB2,0xC9,0x77,0x5E,0xC4,0xA7,0x29 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>
-    {
-        static constexpr guid value{ 0x8E87DE30,0xAA4F,0x4624,{ 0x9A,0xD0,0xD4,0x0F,0x3B,0xA0,0x31,0x7C } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>
-    {
-        static constexpr guid value{ 0x53BC4DDB,0xBBDF,0x5984,{ 0x80,0x2A,0x53,0x05,0x87,0x4E,0x20,0x5C } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
-    {
-        static constexpr guid value{ 0xB399E5AD,0x137F,0x409D,{ 0x82,0x2D,0xE1,0xAF,0x27,0xCE,0x08,0xDC } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>
-    {
-        static constexpr guid value{ 0x9988C34B,0x0386,0x4BC9,{ 0x96,0x8A,0x82,0x00,0xB0,0x04,0x14,0x4F } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityFactory>
-    {
-        static constexpr guid value{ 0x7C385758,0x361D,0x4A67,{ 0x8A,0x3B,0x34,0xCA,0x29,0x78,0xF9,0xA3 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityRequest>
-    {
-        static constexpr guid value{ 0xA0EF6355,0xCF35,0x4FF0,{ 0x88,0x33,0x50,0xCB,0x4B,0x72,0xE0,0x6D } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityRequestManager>
-    {
-        static constexpr guid value{ 0x0C30BE4E,0x903D,0x48D6,{ 0x82,0xD4,0x40,0x43,0xED,0x57,0x79,0x1B } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics>
-    {
-        static constexpr guid value{ 0xC0392DF1,0x224A,0x432C,{ 0x81,0xE5,0x0C,0x76,0xB4,0xC4,0xCE,0xFA } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs>
-    {
-        static constexpr guid value{ 0xA4CC7A4C,0x8229,0x4CFD,{ 0xA3,0xBC,0xC6,0x1D,0x31,0x85,0x75,0xA4 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivitySession>
-    {
-        static constexpr guid value{ 0xAE434D78,0x24FA,0x44A3,{ 0xAD,0x48,0x6E,0xDA,0x61,0xAA,0x19,0x24 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem>
-    {
-        static constexpr guid value{ 0xE8D59BD3,0x3E5D,0x49FD,{ 0x98,0xD7,0x6D,0xA9,0x75,0x21,0xE2,0x55 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityStatics>
-    {
-        static constexpr guid value{ 0x8C8FD333,0x0E09,0x47F6,{ 0x9A,0xC7,0x95,0xCF,0x5C,0x39,0x36,0x7B } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements>
-    {
-        static constexpr guid value{ 0x94757513,0x262F,0x49EF,{ 0xBB,0xBF,0x9B,0x75,0xD2,0xE8,0x52,0x50 } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2>
-    {
-        static constexpr guid value{ 0xCAAE7FC7,0x3EEF,0x4359,{ 0x82,0x5C,0x9D,0x51,0xB9,0x22,0x0D,0xE3 } };
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivity>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivity;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityAttribution>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivityAttribution;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityChannel>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivityChannel;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityContentInfo>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivityContentInfo;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityRequest>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivityRequest;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityRequestManager>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivityRequestManager;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivitySession>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivitySession;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityVisualElements>
-    {
-        using type = Windows::ApplicationModel::UserActivities::IUserActivityVisualElements;
-    };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivity>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivity2>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivity3>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityAttribution>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannel>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannel2>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityFactory>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityRequest>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityRequestManager>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivitySession>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityStatics>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivity>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityAttribution>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityChannel>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityContentInfo>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityRequest>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityRequestManager>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivitySession>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityVisualElements>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserActivities::UserActivityState>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivity> = L"Windows.ApplicationModel.UserActivities.UserActivity";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivityAttribution> = L"Windows.ApplicationModel.UserActivities.UserActivityAttribution";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivityChannel> = L"Windows.ApplicationModel.UserActivities.UserActivityChannel";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivityContentInfo> = L"Windows.ApplicationModel.UserActivities.UserActivityContentInfo";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivityRequest> = L"Windows.ApplicationModel.UserActivities.UserActivityRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivityRequestManager> = L"Windows.ApplicationModel.UserActivities.UserActivityRequestManager";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> = L"Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivitySession> = L"Windows.ApplicationModel.UserActivities.UserActivitySession";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem> = L"Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivityVisualElements> = L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::UserActivityState> = L"Windows.ApplicationModel.UserActivities.UserActivityState";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivity> = L"Windows.ApplicationModel.UserActivities.IUserActivity";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivity2> = L"Windows.ApplicationModel.UserActivities.IUserActivity2";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivity3> = L"Windows.ApplicationModel.UserActivities.IUserActivity3";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityAttribution> = L"Windows.ApplicationModel.UserActivities.IUserActivityAttribution";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory> = L"Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityChannel> = L"Windows.ApplicationModel.UserActivities.IUserActivityChannel";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityChannel2> = L"Windows.ApplicationModel.UserActivities.IUserActivityChannel2";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics> = L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2> = L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3> = L"Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo> = L"Windows.ApplicationModel.UserActivities.IUserActivityContentInfo";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics> = L"Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityFactory> = L"Windows.ApplicationModel.UserActivities.IUserActivityFactory";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityRequest> = L"Windows.ApplicationModel.UserActivities.IUserActivityRequest";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityRequestManager> = L"Windows.ApplicationModel.UserActivities.IUserActivityRequestManager";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics> = L"Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs> = L"Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivitySession> = L"Windows.ApplicationModel.UserActivities.IUserActivitySession";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem> = L"Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityStatics> = L"Windows.ApplicationModel.UserActivities.IUserActivityStatics";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements> = L"Windows.ApplicationModel.UserActivities.IUserActivityVisualElements";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2> = L"Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2";
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivity>{ 0xFC103E9E,0x2CAB,0x4D36,{ 0xAE,0xA2,0xB4,0xBB,0x55,0x6C,0xEF,0x0F } }; // FC103E9E-2CAB-4D36-AEA2-B4BB556CEF0F
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivity2>{ 0x9DC40C62,0x08C4,0x47AC,{ 0xAA,0x9C,0x2B,0xB2,0x22,0x1C,0x55,0xFD } }; // 9DC40C62-08C4-47AC-AA9C-2BB2221C55FD
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivity3>{ 0xE7697744,0xE1A2,0x5147,{ 0x8E,0x06,0x55,0xF1,0xEE,0xEF,0x27,0x1C } }; // E7697744-E1A2-5147-8E06-55F1EEEF271C
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityAttribution>{ 0x34A5C8B5,0x86DD,0x4AEC,{ 0xA4,0x91,0x6A,0x4F,0xAE,0xA5,0xD2,0x2E } }; // 34A5C8B5-86DD-4AEC-A491-6A4FAEA5D22E
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory>{ 0xE62BD252,0xC566,0x4F42,{ 0x99,0x74,0x91,0x6C,0x4D,0x76,0x37,0x7E } }; // E62BD252-C566-4F42-9974-916C4D76377E
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityChannel>{ 0xBAC0F8B8,0xA0E4,0x483B,{ 0xB9,0x48,0x9C,0xBA,0xBD,0x06,0x07,0x0C } }; // BAC0F8B8-A0E4-483B-B948-9CBABD06070C
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityChannel2>{ 0x1698E35B,0xEB7E,0x4EA0,{ 0xBF,0x17,0xA4,0x59,0xE8,0xBE,0x70,0x6C } }; // 1698E35B-EB7E-4EA0-BF17-A459E8BE706C
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>{ 0xC8C005AB,0x198D,0x4D80,{ 0xAB,0xB2,0xC9,0x77,0x5E,0xC4,0xA7,0x29 } }; // C8C005AB-198D-4D80-ABB2-C9775EC4A729
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>{ 0x8E87DE30,0xAA4F,0x4624,{ 0x9A,0xD0,0xD4,0x0F,0x3B,0xA0,0x31,0x7C } }; // 8E87DE30-AA4F-4624-9AD0-D40F3BA0317C
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>{ 0x53BC4DDB,0xBBDF,0x5984,{ 0x80,0x2A,0x53,0x05,0x87,0x4E,0x20,0x5C } }; // 53BC4DDB-BBDF-5984-802A-5305874E205C
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>{ 0xB399E5AD,0x137F,0x409D,{ 0x82,0x2D,0xE1,0xAF,0x27,0xCE,0x08,0xDC } }; // B399E5AD-137F-409D-822D-E1AF27CE08DC
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>{ 0x9988C34B,0x0386,0x4BC9,{ 0x96,0x8A,0x82,0x00,0xB0,0x04,0x14,0x4F } }; // 9988C34B-0386-4BC9-968A-8200B004144F
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityFactory>{ 0x7C385758,0x361D,0x4A67,{ 0x8A,0x3B,0x34,0xCA,0x29,0x78,0xF9,0xA3 } }; // 7C385758-361D-4A67-8A3B-34CA2978F9A3
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityRequest>{ 0xA0EF6355,0xCF35,0x4FF0,{ 0x88,0x33,0x50,0xCB,0x4B,0x72,0xE0,0x6D } }; // A0EF6355-CF35-4FF0-8833-50CB4B72E06D
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityRequestManager>{ 0x0C30BE4E,0x903D,0x48D6,{ 0x82,0xD4,0x40,0x43,0xED,0x57,0x79,0x1B } }; // 0C30BE4E-903D-48D6-82D4-4043ED57791B
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics>{ 0xC0392DF1,0x224A,0x432C,{ 0x81,0xE5,0x0C,0x76,0xB4,0xC4,0xCE,0xFA } }; // C0392DF1-224A-432C-81E5-0C76B4C4CEFA
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs>{ 0xA4CC7A4C,0x8229,0x4CFD,{ 0xA3,0xBC,0xC6,0x1D,0x31,0x85,0x75,0xA4 } }; // A4CC7A4C-8229-4CFD-A3BC-C61D318575A4
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivitySession>{ 0xAE434D78,0x24FA,0x44A3,{ 0xAD,0x48,0x6E,0xDA,0x61,0xAA,0x19,0x24 } }; // AE434D78-24FA-44A3-AD48-6EDA61AA1924
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem>{ 0xE8D59BD3,0x3E5D,0x49FD,{ 0x98,0xD7,0x6D,0xA9,0x75,0x21,0xE2,0x55 } }; // E8D59BD3-3E5D-49FD-98D7-6DA97521E255
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityStatics>{ 0x8C8FD333,0x0E09,0x47F6,{ 0x9A,0xC7,0x95,0xCF,0x5C,0x39,0x36,0x7B } }; // 8C8FD333-0E09-47F6-9AC7-95CF5C39367B
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements>{ 0x94757513,0x262F,0x49EF,{ 0xBB,0xBF,0x9B,0x75,0xD2,0xE8,0x52,0x50 } }; // 94757513-262F-49EF-BBBF-9B75D2E85250
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2>{ 0xCAAE7FC7,0x3EEF,0x4359,{ 0x82,0x5C,0x9D,0x51,0xB9,0x22,0x0D,0xE3 } }; // CAAE7FC7-3EEF-4359-825C-9D51B9220DE3
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivity>{ using type = Windows::ApplicationModel::UserActivities::IUserActivity; };
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityAttribution>{ using type = Windows::ApplicationModel::UserActivities::IUserActivityAttribution; };
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityChannel>{ using type = Windows::ApplicationModel::UserActivities::IUserActivityChannel; };
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityContentInfo>{ using type = Windows::ApplicationModel::UserActivities::IUserActivityContentInfo; };
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityRequest>{ using type = Windows::ApplicationModel::UserActivities::IUserActivityRequest; };
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityRequestManager>{ using type = Windows::ApplicationModel::UserActivities::IUserActivityRequestManager; };
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>{ using type = Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs; };
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivitySession>{ using type = Windows::ApplicationModel::UserActivities::IUserActivitySession; };
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>{ using type = Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem; };
+    template <> struct default_interface<Windows::ApplicationModel::UserActivities::UserActivityVisualElements>{ using type = Windows::ApplicationModel::UserActivities::IUserActivityVisualElements; };
     template <> struct abi<Windows::ApplicationModel::UserActivities::IUserActivity>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -664,21 +373,21 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivity
     {
-        [[nodiscard]] auto State() const;
-        [[nodiscard]] auto ActivityId() const;
-        [[nodiscard]] auto VisualElements() const;
-        [[nodiscard]] auto ContentUri() const;
-        auto ContentUri(Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] auto ContentType() const;
-        auto ContentType(param::hstring const& value) const;
-        [[nodiscard]] auto FallbackUri() const;
-        auto FallbackUri(Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] auto ActivationUri() const;
-        auto ActivationUri(Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] auto ContentInfo() const;
-        auto ContentInfo(Windows::ApplicationModel::UserActivities::IUserActivityContentInfo const& value) const;
-        auto SaveAsync() const;
-        auto CreateSession() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityState) State() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ActivityId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityVisualElements) VisualElements() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Uri) ContentUri() const;
+        WINRT_IMPL_AUTO(void) ContentUri(Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ContentType() const;
+        WINRT_IMPL_AUTO(void) ContentType(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Uri) FallbackUri() const;
+        WINRT_IMPL_AUTO(void) FallbackUri(Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Uri) ActivationUri() const;
+        WINRT_IMPL_AUTO(void) ActivationUri(Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::IUserActivityContentInfo) ContentInfo() const;
+        WINRT_IMPL_AUTO(void) ContentInfo(Windows::ApplicationModel::UserActivities::IUserActivityContentInfo const& value) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) SaveAsync() const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivitySession) CreateSession() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivity>
     {
@@ -687,7 +396,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivity2
     {
-        auto ToJson() const;
+        WINRT_IMPL_AUTO(hstring) ToJson() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivity2>
     {
@@ -696,8 +405,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivity3
     {
-        [[nodiscard]] auto IsRoamable() const;
-        auto IsRoamable(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRoamable() const;
+        WINRT_IMPL_AUTO(void) IsRoamable(bool value) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivity3>
     {
@@ -706,12 +415,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution
     {
-        [[nodiscard]] auto IconUri() const;
-        auto IconUri(Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] auto AlternateText() const;
-        auto AlternateText(param::hstring const& value) const;
-        [[nodiscard]] auto AddImageQuery() const;
-        auto AddImageQuery(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Uri) IconUri() const;
+        WINRT_IMPL_AUTO(void) IconUri(Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AlternateText() const;
+        WINRT_IMPL_AUTO(void) AlternateText(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AddImageQuery() const;
+        WINRT_IMPL_AUTO(void) AddImageQuery(bool value) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityAttribution>
     {
@@ -720,7 +429,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityAttributionFactory
     {
-        auto CreateWithUri(Windows::Foundation::Uri const& iconUri) const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityAttribution) CreateWithUri(Windows::Foundation::Uri const& iconUri) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory>
     {
@@ -729,9 +438,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel
     {
-        auto GetOrCreateUserActivityAsync(param::hstring const& activityId) const;
-        auto DeleteActivityAsync(param::hstring const& activityId) const;
-        auto DeleteAllActivitiesAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserActivities::UserActivity>) GetOrCreateUserActivityAsync(param::hstring const& activityId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) DeleteActivityAsync(param::hstring const& activityId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) DeleteAllActivitiesAsync() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityChannel>
     {
@@ -740,8 +449,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel2
     {
-        auto GetRecentUserActivitiesAsync(int32_t maxUniqueActivities) const;
-        auto GetSessionHistoryItemsForUserActivityAsync(param::hstring const& activityId, Windows::Foundation::DateTime const& startTime) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>>) GetRecentUserActivitiesAsync(int32_t maxUniqueActivities) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>>) GetSessionHistoryItemsForUserActivityAsync(param::hstring const& activityId, Windows::Foundation::DateTime const& startTime) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityChannel2>
     {
@@ -750,7 +459,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics
     {
-        auto GetDefault() const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityChannel) GetDefault() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>
     {
@@ -759,8 +468,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics2
     {
-        auto DisableAutoSessionCreation() const;
-        auto TryGetForWebAccount(Windows::Security::Credentials::WebAccount const& account) const;
+        WINRT_IMPL_AUTO(void) DisableAutoSessionCreation() const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityChannel) TryGetForWebAccount(Windows::Security::Credentials::WebAccount const& account) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>
     {
@@ -769,7 +478,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics3
     {
-        auto GetForUser(Windows::System::User const& user) const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityChannel) GetForUser(Windows::System::User const& user) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>
     {
@@ -778,7 +487,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityContentInfo
     {
-        auto ToJson() const;
+        WINRT_IMPL_AUTO(hstring) ToJson() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
     {
@@ -787,7 +496,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityContentInfoStatics
     {
-        auto FromJson(param::hstring const& value) const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityContentInfo) FromJson(param::hstring const& value) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>
     {
@@ -796,7 +505,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityFactory
     {
-        auto CreateWithActivityId(param::hstring const& activityId) const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivity) CreateWithActivityId(param::hstring const& activityId) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityFactory>
     {
@@ -805,7 +514,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityRequest
     {
-        auto SetUserActivity(Windows::ApplicationModel::UserActivities::UserActivity const& activity) const;
+        WINRT_IMPL_AUTO(void) SetUserActivity(Windows::ApplicationModel::UserActivities::UserActivity const& activity) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityRequest>
     {
@@ -814,10 +523,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestManager
     {
-        auto UserActivityRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::UserActivities::UserActivityRequestManager, Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) UserActivityRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::UserActivities::UserActivityRequestManager, Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> const& handler) const;
         using UserActivityRequested_revoker = impl::event_revoker<Windows::ApplicationModel::UserActivities::IUserActivityRequestManager, &impl::abi_t<Windows::ApplicationModel::UserActivities::IUserActivityRequestManager>::remove_UserActivityRequested>;
-        UserActivityRequested_revoker UserActivityRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::UserActivities::UserActivityRequestManager, Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> const& handler) const;
-        auto UserActivityRequested(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] UserActivityRequested_revoker UserActivityRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::UserActivities::UserActivityRequestManager, Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) UserActivityRequested(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityRequestManager>
     {
@@ -826,7 +535,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestManagerStatics
     {
-        auto GetForCurrentView() const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityRequestManager) GetForCurrentView() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics>
     {
@@ -835,8 +544,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestedEventArgs
     {
-        [[nodiscard]] auto Request() const;
-        auto GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityRequest) Request() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs>
     {
@@ -845,7 +554,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivitySession
     {
-        [[nodiscard]] auto ActivityId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ActivityId() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivitySession>
     {
@@ -854,9 +563,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivitySessionHistoryItem
     {
-        [[nodiscard]] auto UserActivity() const;
-        [[nodiscard]] auto StartTime() const;
-        [[nodiscard]] auto EndTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivity) UserActivity() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) StartTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) EndTime() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem>
     {
@@ -865,9 +574,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityStatics
     {
-        auto TryParseFromJson(param::hstring const& json) const;
-        auto TryParseFromJsonArray(param::hstring const& json) const;
-        auto ToJsonArray(param::iterable<Windows::ApplicationModel::UserActivities::UserActivity> const& activities) const;
+        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivity) TryParseFromJson(param::hstring const& json) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::ApplicationModel::UserActivities::UserActivity>) TryParseFromJsonArray(param::hstring const& json) const;
+        WINRT_IMPL_AUTO(hstring) ToJsonArray(param::iterable<Windows::ApplicationModel::UserActivities::UserActivity> const& activities) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityStatics>
     {
@@ -876,16 +585,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements
     {
-        [[nodiscard]] auto DisplayText() const;
-        auto DisplayText(param::hstring const& value) const;
-        [[nodiscard]] auto Description() const;
-        auto Description(param::hstring const& value) const;
-        [[nodiscard]] auto BackgroundColor() const;
-        auto BackgroundColor(Windows::UI::Color const& value) const;
-        [[nodiscard]] auto Attribution() const;
-        auto Attribution(Windows::ApplicationModel::UserActivities::UserActivityAttribution const& value) const;
-        auto Content(Windows::UI::Shell::IAdaptiveCard const& value) const;
-        [[nodiscard]] auto Content() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayText() const;
+        WINRT_IMPL_AUTO(void) DisplayText(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) BackgroundColor() const;
+        WINRT_IMPL_AUTO(void) BackgroundColor(Windows::UI::Color const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityAttribution) Attribution() const;
+        WINRT_IMPL_AUTO(void) Attribution(Windows::ApplicationModel::UserActivities::UserActivityAttribution const& value) const;
+        WINRT_IMPL_AUTO(void) Content(Windows::UI::Shell::IAdaptiveCard const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Shell::IAdaptiveCard) Content() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements>
     {
@@ -894,8 +603,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements2
     {
-        [[nodiscard]] auto AttributionDisplayText() const;
-        auto AttributionDisplayText(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AttributionDisplayText() const;
+        WINRT_IMPL_AUTO(void) AttributionDisplayText(param::hstring const& value) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2>
     {

@@ -1,15 +1,19 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_Printers_0_H
 #define WINRT_Windows_Devices_Printers_0_H
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Foundation
+{
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+}
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IRandomAccessStreamWithContentType;
 }
-namespace winrt::Windows::Devices::Printers
+WINRT_EXPORT namespace winrt::Windows::Devices::Printers
 {
     struct IPrint3DDevice;
     struct IPrint3DDeviceStatics;
@@ -19,66 +23,21 @@ namespace winrt::Windows::Devices::Printers
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::Printers::IPrint3DDevice>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Printers::IPrint3DDeviceStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Printers::IPrintSchema>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Printers::Print3DDevice>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Printers::PrintSchema>
-    {
-        using type = class_category;
-    };
-    template <> struct name<Windows::Devices::Printers::IPrint3DDevice>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Printers.IPrint3DDevice" };
-    };
-    template <> struct name<Windows::Devices::Printers::IPrint3DDeviceStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Printers.IPrint3DDeviceStatics" };
-    };
-    template <> struct name<Windows::Devices::Printers::IPrintSchema>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Printers.IPrintSchema" };
-    };
-    template <> struct name<Windows::Devices::Printers::Print3DDevice>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Printers.Print3DDevice" };
-    };
-    template <> struct name<Windows::Devices::Printers::PrintSchema>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Printers.PrintSchema" };
-    };
-    template <> struct guid_storage<Windows::Devices::Printers::IPrint3DDevice>
-    {
-        static constexpr guid value{ 0x041C3D19,0x9713,0x42A2,{ 0x98,0x13,0x7D,0xC3,0x33,0x74,0x28,0xD3 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Printers::IPrint3DDeviceStatics>
-    {
-        static constexpr guid value{ 0xFDE3620A,0x67CD,0x41B7,{ 0xA3,0x44,0x51,0x50,0xA1,0xFD,0x75,0xB5 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Printers::IPrintSchema>
-    {
-        static constexpr guid value{ 0xC2B98316,0x26B8,0x4BFB,{ 0x81,0x38,0x9F,0x96,0x2C,0x22,0xA3,0x5B } };
-    };
-    template <> struct default_interface<Windows::Devices::Printers::Print3DDevice>
-    {
-        using type = Windows::Devices::Printers::IPrint3DDevice;
-    };
-    template <> struct default_interface<Windows::Devices::Printers::PrintSchema>
-    {
-        using type = Windows::Devices::Printers::IPrintSchema;
-    };
+    template <> struct category<Windows::Devices::Printers::IPrint3DDevice>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Printers::IPrint3DDeviceStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Printers::IPrintSchema>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Printers::Print3DDevice>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Printers::PrintSchema>{ using type = class_category; };
+    template <> inline constexpr auto& name_v<Windows::Devices::Printers::Print3DDevice> = L"Windows.Devices.Printers.Print3DDevice";
+    template <> inline constexpr auto& name_v<Windows::Devices::Printers::PrintSchema> = L"Windows.Devices.Printers.PrintSchema";
+    template <> inline constexpr auto& name_v<Windows::Devices::Printers::IPrint3DDevice> = L"Windows.Devices.Printers.IPrint3DDevice";
+    template <> inline constexpr auto& name_v<Windows::Devices::Printers::IPrint3DDeviceStatics> = L"Windows.Devices.Printers.IPrint3DDeviceStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::Printers::IPrintSchema> = L"Windows.Devices.Printers.IPrintSchema";
+    template <> inline constexpr guid guid_v<Windows::Devices::Printers::IPrint3DDevice>{ 0x041C3D19,0x9713,0x42A2,{ 0x98,0x13,0x7D,0xC3,0x33,0x74,0x28,0xD3 } }; // 041C3D19-9713-42A2-9813-7DC3337428D3
+    template <> inline constexpr guid guid_v<Windows::Devices::Printers::IPrint3DDeviceStatics>{ 0xFDE3620A,0x67CD,0x41B7,{ 0xA3,0x44,0x51,0x50,0xA1,0xFD,0x75,0xB5 } }; // FDE3620A-67CD-41B7-A344-5150A1FD75B5
+    template <> inline constexpr guid guid_v<Windows::Devices::Printers::IPrintSchema>{ 0xC2B98316,0x26B8,0x4BFB,{ 0x81,0x38,0x9F,0x96,0x2C,0x22,0xA3,0x5B } }; // C2B98316-26B8-4BFB-8138-9F962C22A35B
+    template <> struct default_interface<Windows::Devices::Printers::Print3DDevice>{ using type = Windows::Devices::Printers::IPrint3DDevice; };
+    template <> struct default_interface<Windows::Devices::Printers::PrintSchema>{ using type = Windows::Devices::Printers::IPrintSchema; };
     template <> struct abi<Windows::Devices::Printers::IPrint3DDevice>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -106,7 +65,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Printers_IPrint3DDevice
     {
-        [[nodiscard]] auto PrintSchema() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Printers::PrintSchema) PrintSchema() const;
     };
     template <> struct consume<Windows::Devices::Printers::IPrint3DDevice>
     {
@@ -115,8 +74,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Printers_IPrint3DDeviceStatics
     {
-        auto FromIdAsync(param::hstring const& deviceId) const;
-        auto GetDeviceSelector() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Printers::Print3DDevice>) FromIdAsync(param::hstring const& deviceId) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
     };
     template <> struct consume<Windows::Devices::Printers::IPrint3DDeviceStatics>
     {
@@ -125,9 +84,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Printers_IPrintSchema
     {
-        auto GetDefaultPrintTicketAsync() const;
-        auto GetCapabilitiesAsync(Windows::Storage::Streams::IRandomAccessStreamWithContentType const& constrainTicket) const;
-        auto MergeAndValidateWithDefaultPrintTicketAsync(Windows::Storage::Streams::IRandomAccessStreamWithContentType const& deltaTicket) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStreamWithContentType>) GetDefaultPrintTicketAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStreamWithContentType>) GetCapabilitiesAsync(Windows::Storage::Streams::IRandomAccessStreamWithContentType const& constrainTicket) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStreamWithContentType>) MergeAndValidateWithDefaultPrintTicketAsync(Windows::Storage::Streams::IRandomAccessStreamWithContentType const& deltaTicket) const;
     };
     template <> struct consume<Windows::Devices::Printers::IPrintSchema>
     {

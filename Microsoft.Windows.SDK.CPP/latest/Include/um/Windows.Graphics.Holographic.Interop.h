@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -140,37 +148,45 @@ EXTERN_C const IID IID_IHolographicCameraInterop;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IHolographicCameraInterop * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IHolographicCameraInterop * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IHolographicCameraInterop * This);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetIids)
         HRESULT ( STDMETHODCALLTYPE *GetIids )( 
             __RPC__in IHolographicCameraInterop * This,
             /* [out] */ __RPC__out ULONG *iidCount,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetRuntimeClassName)
         HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
             __RPC__in IHolographicCameraInterop * This,
             /* [out] */ __RPC__deref_out_opt HSTRING *className);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetTrustLevel)
         HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
             __RPC__in IHolographicCameraInterop * This,
             /* [out] */ __RPC__out TrustLevel *trustLevel);
         
+        DECLSPEC_XFGVIRT(IHolographicCameraInterop, CreateDirect3D12BackBufferResource)
         HRESULT ( STDMETHODCALLTYPE *CreateDirect3D12BackBufferResource )( 
             __RPC__in IHolographicCameraInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Device *pDevice,
             /* [in] */ __RPC__in D3D12_RESOURCE_DESC *pTexture2DDesc,
             /* [retval][out] */ __RPC__deref_out_opt ID3D12Resource **ppCreatedTexture2DResource);
         
+        DECLSPEC_XFGVIRT(IHolographicCameraInterop, CreateDirect3D12HardwareProtectedBackBufferResource)
         HRESULT ( STDMETHODCALLTYPE *CreateDirect3D12HardwareProtectedBackBufferResource )( 
             __RPC__in IHolographicCameraInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Device *pDevice,
@@ -178,17 +194,20 @@ EXTERN_C const IID IID_IHolographicCameraInterop;
             /* [in] */ __RPC__in_opt ID3D12ProtectedResourceSession *pProtectedResourceSession,
             /* [retval][out] */ __RPC__deref_out_opt ID3D12Resource **ppCreatedTexture2DResource);
         
+        DECLSPEC_XFGVIRT(IHolographicCameraInterop, AcquireDirect3D12BufferResource)
         HRESULT ( STDMETHODCALLTYPE *AcquireDirect3D12BufferResource )( 
             __RPC__in IHolographicCameraInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Resource *pResourceToAcquire,
             /* [in] */ __RPC__in_opt ID3D12CommandQueue *pCommandQueue);
         
+        DECLSPEC_XFGVIRT(IHolographicCameraInterop, AcquireDirect3D12BufferResourceWithTimeout)
         HRESULT ( STDMETHODCALLTYPE *AcquireDirect3D12BufferResourceWithTimeout )( 
             __RPC__in IHolographicCameraInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Resource *pResourceToAcquire,
             /* [in] */ __RPC__in_opt ID3D12CommandQueue *pCommandQueue,
             /* [in] */ UINT64 duration);
         
+        DECLSPEC_XFGVIRT(IHolographicCameraInterop, UnacquireDirect3D12BufferResource)
         HRESULT ( STDMETHODCALLTYPE *UnacquireDirect3D12BufferResource )( 
             __RPC__in IHolographicCameraInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Resource *pResourceToUnacquire);
@@ -289,37 +308,45 @@ EXTERN_C const IID IID_IHolographicCameraRenderingParametersInterop;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IHolographicCameraRenderingParametersInterop * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IHolographicCameraRenderingParametersInterop * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IHolographicCameraRenderingParametersInterop * This);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetIids)
         HRESULT ( STDMETHODCALLTYPE *GetIids )( 
             __RPC__in IHolographicCameraRenderingParametersInterop * This,
             /* [out] */ __RPC__out ULONG *iidCount,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetRuntimeClassName)
         HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
             __RPC__in IHolographicCameraRenderingParametersInterop * This,
             /* [out] */ __RPC__deref_out_opt HSTRING *className);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetTrustLevel)
         HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
             __RPC__in IHolographicCameraRenderingParametersInterop * This,
             /* [out] */ __RPC__out TrustLevel *trustLevel);
         
+        DECLSPEC_XFGVIRT(IHolographicCameraRenderingParametersInterop, CommitDirect3D12Resource)
         HRESULT ( STDMETHODCALLTYPE *CommitDirect3D12Resource )( 
             __RPC__in IHolographicCameraRenderingParametersInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Resource *pColorResourceToCommit,
             /* [in] */ __RPC__in_opt ID3D12Fence *pColorResourceFence,
             /* [in] */ UINT64 colorResourceFenceSignalValue);
         
+        DECLSPEC_XFGVIRT(IHolographicCameraRenderingParametersInterop, CommitDirect3D12ResourceWithDepthData)
         HRESULT ( STDMETHODCALLTYPE *CommitDirect3D12ResourceWithDepthData )( 
             __RPC__in IHolographicCameraRenderingParametersInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Resource *pColorResourceToCommit,
@@ -426,37 +453,45 @@ EXTERN_C const IID IID_IHolographicQuadLayerInterop;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IHolographicQuadLayerInterop * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IHolographicQuadLayerInterop * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IHolographicQuadLayerInterop * This);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetIids)
         HRESULT ( STDMETHODCALLTYPE *GetIids )( 
             __RPC__in IHolographicQuadLayerInterop * This,
             /* [out] */ __RPC__out ULONG *iidCount,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetRuntimeClassName)
         HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
             __RPC__in IHolographicQuadLayerInterop * This,
             /* [out] */ __RPC__deref_out_opt HSTRING *className);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetTrustLevel)
         HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
             __RPC__in IHolographicQuadLayerInterop * This,
             /* [out] */ __RPC__out TrustLevel *trustLevel);
         
+        DECLSPEC_XFGVIRT(IHolographicQuadLayerInterop, CreateDirect3D12ContentBufferResource)
         HRESULT ( STDMETHODCALLTYPE *CreateDirect3D12ContentBufferResource )( 
             __RPC__in IHolographicQuadLayerInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Device *pDevice,
             /* [in] */ __RPC__in D3D12_RESOURCE_DESC *pTexture2DDesc,
             /* [retval][out] */ __RPC__deref_out_opt ID3D12Resource **ppTexture2DResource);
         
+        DECLSPEC_XFGVIRT(IHolographicQuadLayerInterop, CreateDirect3D12HardwareProtectedContentBufferResource)
         HRESULT ( STDMETHODCALLTYPE *CreateDirect3D12HardwareProtectedContentBufferResource )( 
             __RPC__in IHolographicQuadLayerInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Device *pDevice,
@@ -464,17 +499,20 @@ EXTERN_C const IID IID_IHolographicQuadLayerInterop;
             /* [in] */ __RPC__in_opt ID3D12ProtectedResourceSession *pProtectedResourceSession,
             /* [retval][out] */ __RPC__deref_out_opt ID3D12Resource **ppCreatedTexture2DResource);
         
+        DECLSPEC_XFGVIRT(IHolographicQuadLayerInterop, AcquireDirect3D12BufferResource)
         HRESULT ( STDMETHODCALLTYPE *AcquireDirect3D12BufferResource )( 
             __RPC__in IHolographicQuadLayerInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Resource *pResourceToAcquire,
             /* [in] */ __RPC__in_opt ID3D12CommandQueue *pCommandQueue);
         
+        DECLSPEC_XFGVIRT(IHolographicQuadLayerInterop, AcquireDirect3D12BufferResourceWithTimeout)
         HRESULT ( STDMETHODCALLTYPE *AcquireDirect3D12BufferResourceWithTimeout )( 
             __RPC__in IHolographicQuadLayerInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Resource *pResourceToAcquire,
             /* [in] */ __RPC__in_opt ID3D12CommandQueue *pCommandQueue,
             /* [in] */ UINT64 duration);
         
+        DECLSPEC_XFGVIRT(IHolographicQuadLayerInterop, UnacquireDirect3D12BufferResource)
         HRESULT ( STDMETHODCALLTYPE *UnacquireDirect3D12BufferResource )( 
             __RPC__in IHolographicQuadLayerInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Resource *pResourceToUnacquire);
@@ -567,31 +605,38 @@ EXTERN_C const IID IID_IHolographicQuadLayerUpdateParametersInterop;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IHolographicQuadLayerUpdateParametersInterop * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IHolographicQuadLayerUpdateParametersInterop * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IHolographicQuadLayerUpdateParametersInterop * This);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetIids)
         HRESULT ( STDMETHODCALLTYPE *GetIids )( 
             __RPC__in IHolographicQuadLayerUpdateParametersInterop * This,
             /* [out] */ __RPC__out ULONG *iidCount,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetRuntimeClassName)
         HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
             __RPC__in IHolographicQuadLayerUpdateParametersInterop * This,
             /* [out] */ __RPC__deref_out_opt HSTRING *className);
         
+        DECLSPEC_XFGVIRT(IInspectable, GetTrustLevel)
         HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
             __RPC__in IHolographicQuadLayerUpdateParametersInterop * This,
             /* [out] */ __RPC__out TrustLevel *trustLevel);
         
+        DECLSPEC_XFGVIRT(IHolographicQuadLayerUpdateParametersInterop, CommitDirect3D12Resource)
         HRESULT ( STDMETHODCALLTYPE *CommitDirect3D12Resource )( 
             __RPC__in IHolographicQuadLayerUpdateParametersInterop * This,
             /* [in] */ __RPC__in_opt ID3D12Resource *pColorResourceToCommit,

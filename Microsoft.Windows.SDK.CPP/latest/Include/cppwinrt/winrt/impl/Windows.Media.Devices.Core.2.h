@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Foundation.Numerics.1.h"
 #include "winrt/impl/Windows.Media.Devices.Core.1.h"
-namespace winrt::Windows::Media::Devices::Core
+WINRT_EXPORT namespace winrt::Windows::Media::Devices::Core
 {
     struct __declspec(empty_bases) CameraIntrinsics : Windows::Media::Devices::Core::ICameraIntrinsics,
         impl::require<CameraIntrinsics, Windows::Media::Devices::Core::ICameraIntrinsics2>

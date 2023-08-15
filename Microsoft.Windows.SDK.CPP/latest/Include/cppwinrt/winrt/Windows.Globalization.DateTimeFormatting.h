@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,191 +6,192 @@
 #ifndef WINRT_Windows_Globalization_DateTimeFormatting_H
 #define WINRT_Windows_Globalization_DateTimeFormatting_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Globalization.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Globalization.DateTimeFormatting.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Languages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_Languages(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::GeographicRegion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::GeographicRegion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_GeographicRegion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Calendar() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Calendar() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_Calendar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Clock() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Clock() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_Clock(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::NumeralSystem() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::NumeralSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_NumeralSystem(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::NumeralSystem(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::NumeralSystem(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->put_NumeralSystem(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Patterns() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Patterns() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_Patterns(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Template() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Template() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_Template(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Format(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::Format(Windows::Foundation::DateTime const& value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->Format(impl::bind_in(value), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeYear() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::YearFormat) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeYear() const
     {
-        Windows::Globalization::DateTimeFormatting::YearFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeYear(put_abi(value)));
+        Windows::Globalization::DateTimeFormatting::YearFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeYear(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeMonth() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::MonthFormat) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeMonth() const
     {
-        Windows::Globalization::DateTimeFormatting::MonthFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeMonth(put_abi(value)));
+        Windows::Globalization::DateTimeFormatting::MonthFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeMonth(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeDayOfWeek() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DayOfWeekFormat) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeDayOfWeek() const
     {
-        Windows::Globalization::DateTimeFormatting::DayOfWeekFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeDayOfWeek(put_abi(value)));
+        Windows::Globalization::DateTimeFormatting::DayOfWeekFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeDayOfWeek(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeDay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DayFormat) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeDay() const
     {
-        Windows::Globalization::DateTimeFormatting::DayFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeDay(put_abi(value)));
+        Windows::Globalization::DateTimeFormatting::DayFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeDay(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeHour() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::HourFormat) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeHour() const
     {
-        Windows::Globalization::DateTimeFormatting::HourFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeHour(put_abi(value)));
+        Windows::Globalization::DateTimeFormatting::HourFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeHour(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeMinute() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::MinuteFormat) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeMinute() const
     {
-        Windows::Globalization::DateTimeFormatting::MinuteFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeMinute(put_abi(value)));
+        Windows::Globalization::DateTimeFormatting::MinuteFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeMinute(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeSecond() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::SecondFormat) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::IncludeSecond() const
     {
-        Windows::Globalization::DateTimeFormatting::SecondFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeSecond(put_abi(value)));
+        Windows::Globalization::DateTimeFormatting::SecondFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_IncludeSecond(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::ResolvedLanguage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::ResolvedLanguage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_ResolvedLanguage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::ResolvedGeographicRegion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter<D>::ResolvedGeographicRegion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter)->get_ResolvedGeographicRegion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter2<D>::Format(Windows::Foundation::DateTime const& datetime, param::hstring const& timeZoneId) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatter2<D>::Format(Windows::Foundation::DateTime const& datetime, param::hstring const& timeZoneId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatter2)->FormatUsingTimeZone(impl::bind_in(datetime), *(void**)(&timeZoneId), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatter(param::hstring const& formatTemplate) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatter(param::hstring const& formatTemplate) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory)->CreateDateTimeFormatter(*(void**)(&formatTemplate), &result));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterLanguages(param::hstring const& formatTemplate, param::iterable<hstring> const& languages) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterLanguages(param::hstring const& formatTemplate, param::iterable<hstring> const& languages) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory)->CreateDateTimeFormatterLanguages(*(void**)(&formatTemplate), *(void**)(&languages), &result));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterContext(param::hstring const& formatTemplate, param::iterable<hstring> const& languages, param::hstring const& geographicRegion, param::hstring const& calendar, param::hstring const& clock) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterContext(param::hstring const& formatTemplate, param::iterable<hstring> const& languages, param::hstring const& geographicRegion, param::hstring const& calendar, param::hstring const& clock) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory)->CreateDateTimeFormatterContext(*(void**)(&formatTemplate), *(void**)(&languages), *(void**)(&geographicRegion), *(void**)(&calendar), *(void**)(&clock), &result));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterDate(Windows::Globalization::DateTimeFormatting::YearFormat const& yearFormat, Windows::Globalization::DateTimeFormatting::MonthFormat const& monthFormat, Windows::Globalization::DateTimeFormatting::DayFormat const& dayFormat, Windows::Globalization::DateTimeFormatting::DayOfWeekFormat const& dayOfWeekFormat) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterDate(Windows::Globalization::DateTimeFormatting::YearFormat const& yearFormat, Windows::Globalization::DateTimeFormatting::MonthFormat const& monthFormat, Windows::Globalization::DateTimeFormatting::DayFormat const& dayFormat, Windows::Globalization::DateTimeFormatting::DayOfWeekFormat const& dayOfWeekFormat) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory)->CreateDateTimeFormatterDate(static_cast<int32_t>(yearFormat), static_cast<int32_t>(monthFormat), static_cast<int32_t>(dayFormat), static_cast<int32_t>(dayOfWeekFormat), &result));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterTime(Windows::Globalization::DateTimeFormatting::HourFormat const& hourFormat, Windows::Globalization::DateTimeFormatting::MinuteFormat const& minuteFormat, Windows::Globalization::DateTimeFormatting::SecondFormat const& secondFormat) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterTime(Windows::Globalization::DateTimeFormatting::HourFormat const& hourFormat, Windows::Globalization::DateTimeFormatting::MinuteFormat const& minuteFormat, Windows::Globalization::DateTimeFormatting::SecondFormat const& secondFormat) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory)->CreateDateTimeFormatterTime(static_cast<int32_t>(hourFormat), static_cast<int32_t>(minuteFormat), static_cast<int32_t>(secondFormat), &result));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterDateTimeLanguages(Windows::Globalization::DateTimeFormatting::YearFormat const& yearFormat, Windows::Globalization::DateTimeFormatting::MonthFormat const& monthFormat, Windows::Globalization::DateTimeFormatting::DayFormat const& dayFormat, Windows::Globalization::DateTimeFormatting::DayOfWeekFormat const& dayOfWeekFormat, Windows::Globalization::DateTimeFormatting::HourFormat const& hourFormat, Windows::Globalization::DateTimeFormatting::MinuteFormat const& minuteFormat, Windows::Globalization::DateTimeFormatting::SecondFormat const& secondFormat, param::iterable<hstring> const& languages) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterDateTimeLanguages(Windows::Globalization::DateTimeFormatting::YearFormat const& yearFormat, Windows::Globalization::DateTimeFormatting::MonthFormat const& monthFormat, Windows::Globalization::DateTimeFormatting::DayFormat const& dayFormat, Windows::Globalization::DateTimeFormatting::DayOfWeekFormat const& dayOfWeekFormat, Windows::Globalization::DateTimeFormatting::HourFormat const& hourFormat, Windows::Globalization::DateTimeFormatting::MinuteFormat const& minuteFormat, Windows::Globalization::DateTimeFormatting::SecondFormat const& secondFormat, param::iterable<hstring> const& languages) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory)->CreateDateTimeFormatterDateTimeLanguages(static_cast<int32_t>(yearFormat), static_cast<int32_t>(monthFormat), static_cast<int32_t>(dayFormat), static_cast<int32_t>(dayOfWeekFormat), static_cast<int32_t>(hourFormat), static_cast<int32_t>(minuteFormat), static_cast<int32_t>(secondFormat), *(void**)(&languages), &result));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterDateTimeContext(Windows::Globalization::DateTimeFormatting::YearFormat const& yearFormat, Windows::Globalization::DateTimeFormatting::MonthFormat const& monthFormat, Windows::Globalization::DateTimeFormatting::DayFormat const& dayFormat, Windows::Globalization::DateTimeFormatting::DayOfWeekFormat const& dayOfWeekFormat, Windows::Globalization::DateTimeFormatting::HourFormat const& hourFormat, Windows::Globalization::DateTimeFormatting::MinuteFormat const& minuteFormat, Windows::Globalization::DateTimeFormatting::SecondFormat const& secondFormat, param::iterable<hstring> const& languages, param::hstring const& geographicRegion, param::hstring const& calendar, param::hstring const& clock) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterFactory<D>::CreateDateTimeFormatterDateTimeContext(Windows::Globalization::DateTimeFormatting::YearFormat const& yearFormat, Windows::Globalization::DateTimeFormatting::MonthFormat const& monthFormat, Windows::Globalization::DateTimeFormatting::DayFormat const& dayFormat, Windows::Globalization::DateTimeFormatting::DayOfWeekFormat const& dayOfWeekFormat, Windows::Globalization::DateTimeFormatting::HourFormat const& hourFormat, Windows::Globalization::DateTimeFormatting::MinuteFormat const& minuteFormat, Windows::Globalization::DateTimeFormatting::SecondFormat const& secondFormat, param::iterable<hstring> const& languages, param::hstring const& geographicRegion, param::hstring const& calendar, param::hstring const& clock) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory)->CreateDateTimeFormatterDateTimeContext(static_cast<int32_t>(yearFormat), static_cast<int32_t>(monthFormat), static_cast<int32_t>(dayFormat), static_cast<int32_t>(dayOfWeekFormat), static_cast<int32_t>(hourFormat), static_cast<int32_t>(minuteFormat), static_cast<int32_t>(secondFormat), *(void**)(&languages), *(void**)(&geographicRegion), *(void**)(&calendar), *(void**)(&clock), &result));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterStatics<D>::LongDate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterStatics<D>::LongDate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics)->get_LongDate(&value));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterStatics<D>::LongTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterStatics<D>::LongTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics)->get_LongTime(&value));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterStatics<D>::ShortDate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterStatics<D>::ShortDate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics)->get_ShortDate(&value));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterStatics<D>::ShortTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DateTimeFormatting::DateTimeFormatter) consume_Windows_Globalization_DateTimeFormatting_IDateTimeFormatterStatics<D>::ShortTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics)->get_ShortTime(&value));
         return Windows::Globalization::DateTimeFormatting::DateTimeFormatter{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::DateTimeFormatting::IDateTimeFormatter> : produce_base<D, Windows::Globalization::DateTimeFormatting::IDateTimeFormatter>
     {
@@ -331,6 +332,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::DateTimeFormatting::IDateTimeFormatter2> : produce_base<D, Windows::Globalization::DateTimeFormatting::IDateTimeFormatter2>
     {
@@ -343,6 +346,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory> : produce_base<D, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory>
     {
@@ -403,6 +408,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics> : produce_base<D, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics>
     {
@@ -439,60 +446,63 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Globalization::DateTimeFormatting
+WINRT_EXPORT namespace winrt::Windows::Globalization::DateTimeFormatting
 {
     inline DateTimeFormatter::DateTimeFormatter(param::hstring const& formatTemplate) :
-        DateTimeFormatter(impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory>([&](auto&& f) { return f.CreateDateTimeFormatter(formatTemplate); }))
+        DateTimeFormatter(impl::call_factory<DateTimeFormatter, IDateTimeFormatterFactory>([&](IDateTimeFormatterFactory const& f) { return f.CreateDateTimeFormatter(formatTemplate); }))
     {
     }
     inline DateTimeFormatter::DateTimeFormatter(param::hstring const& formatTemplate, param::iterable<hstring> const& languages) :
-        DateTimeFormatter(impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory>([&](auto&& f) { return f.CreateDateTimeFormatterLanguages(formatTemplate, languages); }))
+        DateTimeFormatter(impl::call_factory<DateTimeFormatter, IDateTimeFormatterFactory>([&](IDateTimeFormatterFactory const& f) { return f.CreateDateTimeFormatterLanguages(formatTemplate, languages); }))
     {
     }
     inline DateTimeFormatter::DateTimeFormatter(param::hstring const& formatTemplate, param::iterable<hstring> const& languages, param::hstring const& geographicRegion, param::hstring const& calendar, param::hstring const& clock) :
-        DateTimeFormatter(impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory>([&](auto&& f) { return f.CreateDateTimeFormatterContext(formatTemplate, languages, geographicRegion, calendar, clock); }))
+        DateTimeFormatter(impl::call_factory<DateTimeFormatter, IDateTimeFormatterFactory>([&](IDateTimeFormatterFactory const& f) { return f.CreateDateTimeFormatterContext(formatTemplate, languages, geographicRegion, calendar, clock); }))
     {
     }
     inline DateTimeFormatter::DateTimeFormatter(Windows::Globalization::DateTimeFormatting::YearFormat const& yearFormat, Windows::Globalization::DateTimeFormatting::MonthFormat const& monthFormat, Windows::Globalization::DateTimeFormatting::DayFormat const& dayFormat, Windows::Globalization::DateTimeFormatting::DayOfWeekFormat const& dayOfWeekFormat) :
-        DateTimeFormatter(impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory>([&](auto&& f) { return f.CreateDateTimeFormatterDate(yearFormat, monthFormat, dayFormat, dayOfWeekFormat); }))
+        DateTimeFormatter(impl::call_factory<DateTimeFormatter, IDateTimeFormatterFactory>([&](IDateTimeFormatterFactory const& f) { return f.CreateDateTimeFormatterDate(yearFormat, monthFormat, dayFormat, dayOfWeekFormat); }))
     {
     }
     inline DateTimeFormatter::DateTimeFormatter(Windows::Globalization::DateTimeFormatting::HourFormat const& hourFormat, Windows::Globalization::DateTimeFormatting::MinuteFormat const& minuteFormat, Windows::Globalization::DateTimeFormatting::SecondFormat const& secondFormat) :
-        DateTimeFormatter(impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory>([&](auto&& f) { return f.CreateDateTimeFormatterTime(hourFormat, minuteFormat, secondFormat); }))
+        DateTimeFormatter(impl::call_factory<DateTimeFormatter, IDateTimeFormatterFactory>([&](IDateTimeFormatterFactory const& f) { return f.CreateDateTimeFormatterTime(hourFormat, minuteFormat, secondFormat); }))
     {
     }
     inline DateTimeFormatter::DateTimeFormatter(Windows::Globalization::DateTimeFormatting::YearFormat const& yearFormat, Windows::Globalization::DateTimeFormatting::MonthFormat const& monthFormat, Windows::Globalization::DateTimeFormatting::DayFormat const& dayFormat, Windows::Globalization::DateTimeFormatting::DayOfWeekFormat const& dayOfWeekFormat, Windows::Globalization::DateTimeFormatting::HourFormat const& hourFormat, Windows::Globalization::DateTimeFormatting::MinuteFormat const& minuteFormat, Windows::Globalization::DateTimeFormatting::SecondFormat const& secondFormat, param::iterable<hstring> const& languages) :
-        DateTimeFormatter(impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory>([&](auto&& f) { return f.CreateDateTimeFormatterDateTimeLanguages(yearFormat, monthFormat, dayFormat, dayOfWeekFormat, hourFormat, minuteFormat, secondFormat, languages); }))
+        DateTimeFormatter(impl::call_factory<DateTimeFormatter, IDateTimeFormatterFactory>([&](IDateTimeFormatterFactory const& f) { return f.CreateDateTimeFormatterDateTimeLanguages(yearFormat, monthFormat, dayFormat, dayOfWeekFormat, hourFormat, minuteFormat, secondFormat, languages); }))
     {
     }
     inline DateTimeFormatter::DateTimeFormatter(Windows::Globalization::DateTimeFormatting::YearFormat const& yearFormat, Windows::Globalization::DateTimeFormatting::MonthFormat const& monthFormat, Windows::Globalization::DateTimeFormatting::DayFormat const& dayFormat, Windows::Globalization::DateTimeFormatting::DayOfWeekFormat const& dayOfWeekFormat, Windows::Globalization::DateTimeFormatting::HourFormat const& hourFormat, Windows::Globalization::DateTimeFormatting::MinuteFormat const& minuteFormat, Windows::Globalization::DateTimeFormatting::SecondFormat const& secondFormat, param::iterable<hstring> const& languages, param::hstring const& geographicRegion, param::hstring const& calendar, param::hstring const& clock) :
-        DateTimeFormatter(impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory>([&](auto&& f) { return f.CreateDateTimeFormatterDateTimeContext(yearFormat, monthFormat, dayFormat, dayOfWeekFormat, hourFormat, minuteFormat, secondFormat, languages, geographicRegion, calendar, clock); }))
+        DateTimeFormatter(impl::call_factory<DateTimeFormatter, IDateTimeFormatterFactory>([&](IDateTimeFormatterFactory const& f) { return f.CreateDateTimeFormatterDateTimeContext(yearFormat, monthFormat, dayFormat, dayOfWeekFormat, hourFormat, minuteFormat, secondFormat, languages, geographicRegion, calendar, clock); }))
     {
     }
     inline auto DateTimeFormatter::LongDate()
     {
-        return impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics>([&](auto&& f) { return f.LongDate(); });
+        return impl::call_factory_cast<Windows::Globalization::DateTimeFormatting::DateTimeFormatter(*)(IDateTimeFormatterStatics const&), DateTimeFormatter, IDateTimeFormatterStatics>([](IDateTimeFormatterStatics const& f) { return f.LongDate(); });
     }
     inline auto DateTimeFormatter::LongTime()
     {
-        return impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics>([&](auto&& f) { return f.LongTime(); });
+        return impl::call_factory_cast<Windows::Globalization::DateTimeFormatting::DateTimeFormatter(*)(IDateTimeFormatterStatics const&), DateTimeFormatter, IDateTimeFormatterStatics>([](IDateTimeFormatterStatics const& f) { return f.LongTime(); });
     }
     inline auto DateTimeFormatter::ShortDate()
     {
-        return impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics>([&](auto&& f) { return f.ShortDate(); });
+        return impl::call_factory_cast<Windows::Globalization::DateTimeFormatting::DateTimeFormatter(*)(IDateTimeFormatterStatics const&), DateTimeFormatter, IDateTimeFormatterStatics>([](IDateTimeFormatterStatics const& f) { return f.ShortDate(); });
     }
     inline auto DateTimeFormatter::ShortTime()
     {
-        return impl::call_factory<DateTimeFormatter, Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics>([&](auto&& f) { return f.ShortTime(); });
+        return impl::call_factory_cast<Windows::Globalization::DateTimeFormatting::DateTimeFormatter(*)(IDateTimeFormatterStatics const&), DateTimeFormatter, IDateTimeFormatterStatics>([](IDateTimeFormatterStatics const& f) { return f.ShortTime(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatter> {};
-    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatter2> : winrt::impl::hash_base<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatter2> {};
-    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatter2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatterFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter> : winrt::impl::hash_base {};
+#endif
 }
 #endif

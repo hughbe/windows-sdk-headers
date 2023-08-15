@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Phone_StartScreen_1_H
 #define WINRT_Windows_Phone_StartScreen_1_H
 #include "winrt/impl/Windows.Phone.StartScreen.0.h"
-namespace winrt::Windows::Phone::StartScreen
+WINRT_EXPORT namespace winrt::Windows::Phone::StartScreen
 {
     struct __declspec(empty_bases) IDualSimTile :
         Windows::Foundation::IInspectable,

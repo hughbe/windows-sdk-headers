@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Media.Capture.1.h"
 #include "winrt/impl/Windows.Media.Render.1.h"
 #include "winrt/impl/Windows.Media.Effects.1.h"
-namespace winrt::Windows::Media::Effects
+WINRT_EXPORT namespace winrt::Windows::Media::Effects
 {
     struct __declspec(empty_bases) AudioCaptureEffectsManager : Windows::Media::Effects::IAudioCaptureEffectsManager
     {
@@ -26,7 +26,7 @@ namespace winrt::Windows::Media::Effects
     {
         AudioEffectDefinition(std::nullptr_t) noexcept {}
         AudioEffectDefinition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Effects::IAudioEffectDefinition(ptr, take_ownership_from_abi) {}
-        AudioEffectDefinition(param::hstring const& activatableClassId);
+        explicit AudioEffectDefinition(param::hstring const& activatableClassId);
         AudioEffectDefinition(param::hstring const& activatableClassId, Windows::Foundation::Collections::IPropertySet const& props);
     };
     struct AudioEffectsManager
@@ -62,14 +62,14 @@ namespace winrt::Windows::Media::Effects
     {
         VideoCompositorDefinition(std::nullptr_t) noexcept {}
         VideoCompositorDefinition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Effects::IVideoCompositorDefinition(ptr, take_ownership_from_abi) {}
-        VideoCompositorDefinition(param::hstring const& activatableClassId);
+        explicit VideoCompositorDefinition(param::hstring const& activatableClassId);
         VideoCompositorDefinition(param::hstring const& activatableClassId, Windows::Foundation::Collections::IPropertySet const& props);
     };
     struct __declspec(empty_bases) VideoEffectDefinition : Windows::Media::Effects::IVideoEffectDefinition
     {
         VideoEffectDefinition(std::nullptr_t) noexcept {}
         VideoEffectDefinition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Effects::IVideoEffectDefinition(ptr, take_ownership_from_abi) {}
-        VideoEffectDefinition(param::hstring const& activatableClassId);
+        explicit VideoEffectDefinition(param::hstring const& activatableClassId);
         VideoEffectDefinition(param::hstring const& activatableClassId, Windows::Foundation::Collections::IPropertySet const& props);
     };
     struct __declspec(empty_bases) VideoTransformEffectDefinition : Windows::Media::Effects::IVideoEffectDefinition,

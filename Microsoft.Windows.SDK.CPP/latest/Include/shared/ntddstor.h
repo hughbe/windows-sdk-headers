@@ -66,6 +66,7 @@ DEFINE_GUID(GUID_DEVINTERFACE_CDCHANGER,              0x53f56312L, 0xb6bf, 0x11d
 DEFINE_GUID(GUID_DEVINTERFACE_STORAGEPORT,            0x2accfe60L, 0xc130, 0x11d2, 0xb0, 0x82, 0x00, 0xa0, 0xc9, 0x1e, 0xfb, 0x8b);
 DEFINE_GUID(GUID_DEVINTERFACE_VMLUN,                  0x6f416619L, 0x9f29, 0x42a5, 0xb2, 0x0b, 0x37, 0xe2, 0x19, 0xca, 0x02, 0xb0);
 DEFINE_GUID(GUID_DEVINTERFACE_SES,                    0x1790c9ecL, 0x47d5, 0x4df3, 0xb5, 0xaf, 0x9a, 0xdf, 0x3c, 0xf2, 0x3e, 0x48);
+DEFINE_GUID(GUID_DEVINTERFACE_ZNSDISK,                0xb87941c5L, 0xffdb, 0x43c7, 0xb6, 0xb1, 0x20, 0xb6, 0x32, 0xf0, 0xb1, 0x09);
 
 #define  WDI_STORAGE_PREDICT_FAILURE_DPS_GUID        {0xe9f2d03aL, 0x747c, 0x41c2, {0xbb, 0x9a, 0x02, 0xc6, 0x2b, 0x6d, 0x5f, 0xcb}};
 
@@ -255,11 +256,11 @@ extern "C" {
 
 #define IOCTL_STORAGE_PROTOCOL_COMMAND              CTL_CODE(IOCTL_STORAGE_BASE, 0x04F0, METHOD_BUFFERED, FILE_READ_ACCESS | FILE_WRITE_ACCESS)
 
+
+#define IOCTL_STORAGE_SET_PROPERTY                  CTL_CODE(IOCTL_STORAGE_BASE, 0x04FF, METHOD_BUFFERED, FILE_WRITE_ACCESS)
 #define IOCTL_STORAGE_QUERY_PROPERTY                CTL_CODE(IOCTL_STORAGE_BASE, 0x0500, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define IOCTL_STORAGE_MANAGE_DATA_SET_ATTRIBUTES    CTL_CODE(IOCTL_STORAGE_BASE, 0x0501, METHOD_BUFFERED, FILE_WRITE_ACCESS)
 #define IOCTL_STORAGE_GET_LB_PROVISIONING_MAP_RESOURCES  CTL_CODE(IOCTL_STORAGE_BASE, 0x0502, METHOD_BUFFERED, FILE_READ_ACCESS)
-
-#define IOCTL_STORAGE_SET_PROPERTY                  CTL_CODE(IOCTL_STORAGE_BASE, 0x0503, METHOD_BUFFERED, FILE_WRITE_ACCESS)
 
 //
 // IOCTLs 0x0503 to 0x0580 reserved for Enhanced Storage devices.
@@ -270,9 +271,9 @@ extern "C" {
 // deletion or recoverability of the data on the storage device after command completion. This IOCTL is limited
 // to data disks in regular Windows. In WinPE, this IOCTL is supported for both boot and data disks.
 //
-// Initial implementation requires no input and returns no output other than status. Callers should first
-// call FSCTL_LOCK_VOLUME before calling this ioctl to flush out cached data in upper layers. No waiting of
-// outstanding request completion is done before issuing the command to the device.
+// This IOCTL has an optional input and returns no output other than status. Callers should first call
+// FSCTL_LOCK_VOLUME before calling this ioctl to flush out cached data in upper layers. No waiting of outstanding
+// request completion is done before issuing the command to the device.
 //
 #define IOCTL_STORAGE_REINITIALIZE_MEDIA    CTL_CODE(IOCTL_STORAGE_BASE, 0x0590, METHOD_BUFFERED, FILE_WRITE_ACCESS)
 
@@ -941,7 +942,7 @@ typedef enum __WRAPPED__ _STORAGE_PROPERTY_ID {
     StorageDeviceProperty = 0,
     StorageAdapterProperty,
     StorageDeviceIdProperty,
-    StorageDeviceUniqueIdProperty,              // See storduid.h for details
+    StorageDeviceUniqueIdProperty,                  // See storduid.h for details
     StorageDeviceWriteCacheProperty,
     StorageMiniportProperty,
     StorageAccessAlignmentProperty,
@@ -977,7 +978,11 @@ typedef enum __WRAPPED__ _STORAGE_PROPERTY_ID {
     StorageDeviceZonedDeviceProperty,
     StorageDeviceUnsafeShutdownCount,
     StorageDeviceEnduranceProperty,
+    StorageDeviceLedStateProperty,
+    StorageDeviceSelfEncryptionProperty = 64,
+    StorageFruIdProperty,
 } STORAGE_PROPERTY_ID, *PSTORAGE_PROPERTY_ID;
+
 
 //
 // Query structure - additional parameters for specific queries can follow
@@ -1530,7 +1535,10 @@ typedef struct __WRAPPED__ _DEVICE_LB_PROVISIONING_DESCRIPTOR {
     UCHAR UnmapGranularityAlignmentValid : 1;
 
     __WRAPPED__
-    UCHAR Reserved0 : 2;
+    UCHAR GetFreeSpaceSupported : 1;        // Supports DeviceDsmAction_GetFreeSpace
+
+    __WRAPPED__
+    UCHAR MapSupported : 1;                 // Supports DeviceDsmAction_Map
 
     __WRAPPED__
     UCHAR Reserved1[7];
@@ -2076,9 +2084,40 @@ typedef enum _STORAGE_PROTOCOL_ATA_DATA_TYPE {
 
 typedef enum _STORAGE_PROTOCOL_UFS_DATA_TYPE {
     UfsDataTypeUnknown = 0,
-    UfsDataTypeQueryDescriptor, // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryDescriptor,         // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryAttribute,          // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryFlag,               // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryDmeAttribute,       // Retrieved by command - QUERY UPIU
+    UfsDataTypeQueryDmePeerAttribute,   // Retrieved by command - QUERY UPIU
     UfsDataTypeMax,
 } STORAGE_PROTOCOL_UFS_DATA_TYPE, *PSTORAGE_PROTOCOL_UFS_DATA_TYPE;
+
+//
+// Below definition is used to specify particular command fields when querying
+// NVMeDataTypeLogPage, and this definition maps to ProtocolDataRequestSubValue4
+// field in STORAGE_PROTOCOL_SPECIFIC_DATA.
+//
+#pragma warning(push)
+#pragma warning(disable:4201) // nameless struct/unions
+#pragma warning(disable:4214) // bit fields other than int to disable this around the struct
+
+typedef union _STORAGE_PROTOCOL_DATA_SUBVALUE_GET_LOG_PAGE {
+
+    struct {
+
+        ULONG RetainAsynEvent : 1;
+
+        ULONG LogSpecificField : 4;
+
+        ULONG Reserved : 27;
+
+    } DUMMYSTRUCTNAME;
+
+    ULONG AsUlong;
+
+} STORAGE_PROTOCOL_DATA_SUBVALUE_GET_LOG_PAGE, *PSTORAGE_PROTOCOL_DATA_SUBVALUE_GET_LOG_PAGE;
+
+#pragma warning(pop)
 
 //
 // Protocol Data should follow this data structure in the same buffer.
@@ -2100,7 +2139,8 @@ typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA {
     ULONG   ProtocolDataRequestSubValue2; // First additional data sub request value
 
     ULONG   ProtocolDataRequestSubValue3; // Second additional data sub request value
-    ULONG   Reserved;
+    ULONG   ProtocolDataRequestSubValue4; // Third additional data sub request value
+
 } STORAGE_PROTOCOL_SPECIFIC_DATA, *PSTORAGE_PROTOCOL_SPECIFIC_DATA;
 
 //
@@ -2884,6 +2924,60 @@ typedef struct _STORAGE_HW_ENDURANCE_DATA_DESCRIPTOR {
 
 #pragma warning(pop)
 
+//
+// Output buffer for StorageDeviceLedStateProperty.
+//
+typedef struct _STORAGE_DEVICE_LED_STATE_DESCRIPTOR {
+
+    ULONG Version;
+
+    ULONG Size;
+
+    ULONGLONG State;
+
+} STORAGE_DEVICE_LED_STATE_DESCRIPTOR, *PSTORAGE_DEVICE_LED_STATE_DESCRIPTOR;
+
+//
+// Output buffer for StorageDeviceSelfEncryptionProperty.
+//
+typedef struct _STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY {
+
+    ULONG Version;
+
+    ULONG Size;
+
+    BOOLEAN SupportsSelfEncryption;
+
+} STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY, *PSTORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY;
+
+//
+// Output buffer for StorageFruIdProperty.
+//
+typedef struct _STORAGE_FRU_ID_DESCRIPTOR {
+
+    //
+    // Sizeof(STORAGE_FRU_ID_DESCRIPTOR)
+    //
+
+    ULONG Version;
+
+    //
+    // Total size of the data.
+    // Should be >= sizeof(STORAGE_FRU_ID_DESCRIPTOR)
+    //
+
+    ULONG Size;
+
+    //
+    // The identifier is a variable length array of bytes.
+    //
+
+    ULONG IdentifierSize;
+    UCHAR Identifier[ANYSIZE_ARRAY];
+
+} STORAGE_FRU_ID_DESCRIPTOR, *PSTORAGE_FRU_ID_DESCRIPTOR;
+
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // IOCTL_STORAGE_MANAGE_DATA_SET_ATTRIBUTES
@@ -3568,6 +3662,8 @@ typedef struct _DEVICE_DATA_SET_SCRUB_EX_OUTPUT {
     //
 
     DEVICE_DSM_RANGE ParityExtent;
+
+    ULONGLONG BytesScrubbed;
 
 } DEVICE_DATA_SET_SCRUB_EX_OUTPUT, *PDEVICE_DATA_SET_SCRUB_EX_OUTPUT,
   DEVICE_DSM_SCRUB_OUTPUT2, *PDEVICE_DSM_SCRUB_OUTPUT2;
@@ -5094,6 +5190,12 @@ typedef enum _STORAGE_DIAGNOSTIC_TARGET_TYPE {
 } STORAGE_DIAGNOSTIC_TARGET_TYPE, *PSTORAGE_DIAGNOSTIC_TARGET_TYPE;
 
 //
+// Indicate the target of the request other than the device handle/object itself.
+// This is used in "Flags" field of data structures.
+//
+#define STORAGE_DIAGNOSTIC_FLAG_ADAPTER_REQUEST     0x00000001
+
+//
 // STORAGE_DIAGNOSTIC_REQUEST
 //
 
@@ -5106,8 +5208,8 @@ typedef struct _STORAGE_DIAGNOSTIC_REQUEST {
     // (In case adding variable-sized buffer in future.)
     ULONG Size;
 
-    // Reserved for future use.
-    ULONG Reserved;
+    // Request flag.
+    ULONG Flags;
 
     // Request target type. See definitions for STORAGE_DIAGNOSTIC_TARGET_TYPE.
     STORAGE_DIAGNOSTIC_TARGET_TYPE TargetType;
@@ -5233,7 +5335,9 @@ typedef struct _REMOVE_ELEMENT_AND_TRUNCATE_REQUEST {
 typedef enum _DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE {
     DeviceInternalStatusDataRequestTypeUndefined = 0,
     DeviceCurrentInternalStatusDataHeader,
-    DeviceCurrentInternalStatusData
+    DeviceCurrentInternalStatusData,
+    DeviceSavedInternalStatusDataHeader,
+    DeviceSavedInternalStatusData
 } DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE, *PDEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE;
 
 typedef enum _DEVICE_INTERNAL_STATUS_DATA_SET {
@@ -5277,6 +5381,55 @@ typedef struct _DEVICE_INTERNAL_STATUS_DATA {
     UCHAR StatusData[ANYSIZE_ARRAY];
 
 } DEVICE_INTERNAL_STATUS_DATA, *PDEVICE_INTERNAL_STATUS_DATA;
+
+//
+// IOCTL_STORAGE_REINITIALIZE_MEDIA
+//
+// Input Buffer :
+//      STORAGE_REINITIALIZE_MEDIA - Optional
+// Output Buffer :
+//      None
+//
+
+typedef enum _STORAGE_SANITIZE_METHOD {
+    StorageSanitizeMethodDefault = 0,
+    StorageSanitizeMethodBlockErase,
+    StorageSanitizeMethodCryptoErase
+} STORAGE_SANITIZE_METHOD, *PSTORAGE_SANITIZE_METHOD;
+
+#pragma warning(push)
+#pragma warning(disable:4214) // bit fields other than int to disable this around the struct
+
+typedef struct _STORAGE_REINITIALIZE_MEDIA {
+
+    ULONG Version;
+
+    ULONG Size;
+
+    ULONG TimeoutInSeconds;
+
+    //
+    // The SanitizeOption field is only applicable to NVMe devices.
+    //
+    struct {
+
+        //
+        // This field specifies the sanitize method defined in STORAGE_SANITIZE_METHOD enum.
+        //
+        ULONG SanitizeMethod : 4;
+
+        //
+        // This field specifies if unrestricted sanitize exit is allowed or not.
+        // By default unrestricted sanitize exit is allowed.
+        //
+        ULONG DisallowUnrestrictedSanitizeExit : 1;
+
+        ULONG Reserved : 27;
+    } SanitizeOption;
+
+} STORAGE_REINITIALIZE_MEDIA, *PSTORAGE_REINITIALIZE_MEDIA;
+
+#pragma warning(pop)
 
 
 #pragma warning(push)

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Security_Cryptography_Certificates_1_H
 #define WINRT_Windows_Security_Cryptography_Certificates_1_H
 #include "winrt/impl/Windows.Security.Cryptography.Certificates.0.h"
-namespace winrt::Windows::Security::Cryptography::Certificates
+WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Certificates
 {
     struct __declspec(empty_bases) ICertificate :
         Windows::Foundation::IInspectable,

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Networking_Vpn_1_H
 #include "winrt/impl/Windows.Foundation.Collections.0.h"
 #include "winrt/impl/Windows.Networking.Vpn.0.h"
-namespace winrt::Windows::Networking::Vpn
+WINRT_EXPORT namespace winrt::Windows::Networking::Vpn
 {
     struct __declspec(empty_bases) IVpnAppId :
         Windows::Foundation::IInspectable,
@@ -43,6 +43,13 @@ namespace winrt::Windows::Networking::Vpn
     {
         IVpnChannel4(std::nullptr_t = nullptr) noexcept {}
         IVpnChannel4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IVpnChannel5 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IVpnChannel5>
+    {
+        IVpnChannel5(std::nullptr_t = nullptr) noexcept {}
+        IVpnChannel5(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IVpnChannelActivityEventArgs :
         Windows::Foundation::IInspectable,

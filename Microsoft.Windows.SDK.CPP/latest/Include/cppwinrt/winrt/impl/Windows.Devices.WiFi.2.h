@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_WiFi_2_H
 #define WINRT_Windows_Devices_WiFi_2_H
 #include "winrt/impl/Windows.Devices.WiFi.1.h"
-namespace winrt::Windows::Devices::WiFi
+WINRT_EXPORT namespace winrt::Windows::Devices::WiFi
 {
     struct __declspec(empty_bases) WiFiAdapter : Windows::Devices::WiFi::IWiFiAdapter,
         impl::require<WiFiAdapter, Windows::Devices::WiFi::IWiFiAdapter2>

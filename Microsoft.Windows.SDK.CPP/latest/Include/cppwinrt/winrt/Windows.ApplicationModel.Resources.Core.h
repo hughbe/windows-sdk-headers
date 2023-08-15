@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_Resources_Core_H
 #define WINRT_Windows_ApplicationModel_Resources_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.ApplicationModel.Resources.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -16,274 +16,275 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.Resources.Core.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::Uri() const
     {
         void* uri{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::INamedResource)->get_Uri(&uri));
         return Windows::Foundation::Uri{ uri, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::Candidates() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceCandidate>) consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::Candidates() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::INamedResource)->get_Candidates(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceCandidate>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::Resolve() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceCandidate) consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::Resolve() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::INamedResource)->Resolve(&result));
         return Windows::ApplicationModel::Resources::Core::ResourceCandidate{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::Resolve(Windows::ApplicationModel::Resources::Core::ResourceContext const& resourceContext) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceCandidate) consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::Resolve(Windows::ApplicationModel::Resources::Core::ResourceContext const& resourceContext) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::INamedResource)->ResolveForContext(*(void**)(&resourceContext), &result));
         return Windows::ApplicationModel::Resources::Core::ResourceCandidate{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::ResolveAll() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceCandidate>) consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::ResolveAll() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::INamedResource)->ResolveAll(&result));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceCandidate>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::ResolveAll(Windows::ApplicationModel::Resources::Core::ResourceContext const& resourceContext) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceCandidate>) consume_Windows_ApplicationModel_Resources_Core_INamedResource<D>::ResolveAll(Windows::ApplicationModel::Resources::Core::ResourceContext const& resourceContext) const
     {
         void* instances{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::INamedResource)->ResolveAllForContext(*(void**)(&resourceContext), &instances));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceCandidate>{ instances, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::Qualifiers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceQualifier>) consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::Qualifiers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate)->get_Qualifiers(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceQualifier>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::IsMatch() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::IsMatch() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate)->get_IsMatch(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::IsMatchAsDefault() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::IsMatchAsDefault() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate)->get_IsMatchAsDefault(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::IsDefault() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::IsDefault() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate)->get_IsDefault(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::ValueAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::ValueAsString() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate)->get_ValueAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::GetValueAsFileAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>) consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::GetValueAsFileAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate)->GetValueAsFileAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFile>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::GetQualifierValue(param::hstring const& qualifierName) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate<D>::GetQualifierValue(param::hstring const& qualifierName) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate)->GetQualifierValue(*(void**)(&qualifierName), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate2<D>::GetValueAsStreamAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStream>) consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate2<D>::GetValueAsStreamAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate2)->GetValueAsStreamAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStream>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate3<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceCandidateKind) consume_Windows_ApplicationModel_Resources_Core_IResourceCandidate3<D>::Kind() const
     {
-        Windows::ApplicationModel::Resources::Core::ResourceCandidateKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate3)->get_Kind(put_abi(value)));
+        Windows::ApplicationModel::Resources::Core::ResourceCandidateKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceCandidate3)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::QualifierValues() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IObservableMap<hstring, hstring>) consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::QualifierValues() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContext)->get_QualifierValues(&value));
         return Windows::Foundation::Collections::IObservableMap<hstring, hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Reset() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Reset() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContext)->Reset());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Reset(param::iterable<hstring> const& qualifierNames) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Reset(param::iterable<hstring> const& qualifierNames) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContext)->ResetQualifierValues(*(void**)(&qualifierNames)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::OverrideToMatch(param::iterable<Windows::ApplicationModel::Resources::Core::ResourceQualifier> const& result) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::OverrideToMatch(param::iterable<Windows::ApplicationModel::Resources::Core::ResourceQualifier> const& result) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContext)->OverrideToMatch(*(void**)(&result)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Clone() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceContext) consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Clone() const
     {
         void* clone{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContext)->Clone(&clone));
         return Windows::ApplicationModel::Resources::Core::ResourceContext{ clone, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Languages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContext)->get_Languages(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Languages(param::async_vector_view<hstring> const& languages) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceContext<D>::Languages(param::async_vector_view<hstring> const& languages) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContext)->put_Languages(*(void**)(&languages)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics<D>::CreateMatchingContext(param::iterable<Windows::ApplicationModel::Resources::Core::ResourceQualifier> const& result) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceContext) consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics<D>::CreateMatchingContext(param::iterable<Windows::ApplicationModel::Resources::Core::ResourceQualifier> const& result) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics)->CreateMatchingContext(*(void**)(&result), &value));
         return Windows::ApplicationModel::Resources::Core::ResourceContext{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::GetForCurrentView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceContext) consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::GetForCurrentView() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics2)->GetForCurrentView(&value));
         return Windows::ApplicationModel::Resources::Core::ResourceContext{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics2)->SetGlobalQualifierValue(*(void**)(&key), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::ResetGlobalQualifierValues() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::ResetGlobalQualifierValues() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics2)->ResetGlobalQualifierValues());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::ResetGlobalQualifierValues(param::iterable<hstring> const& qualifierNames) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::ResetGlobalQualifierValues(param::iterable<hstring> const& qualifierNames) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics2)->ResetGlobalQualifierValuesForSpecifiedQualifiers(*(void**)(&qualifierNames)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::GetForViewIndependentUse() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceContext) consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics2<D>::GetForViewIndependentUse() const
     {
         void* loader{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics2)->GetForViewIndependentUse(&loader));
         return Windows::ApplicationModel::Resources::Core::ResourceContext{ loader, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics3<D>::SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value, Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const& persistence) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics3<D>::SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value, Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const& persistence) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics3)->SetGlobalQualifierValueWithPersistence(*(void**)(&key), *(void**)(&value), static_cast<int32_t>(persistence)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics4<D>::GetForUIContext(Windows::UI::UIContext const& context) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceContext) consume_Windows_ApplicationModel_Resources_Core_IResourceContextStatics4<D>::GetForUIContext(Windows::UI::UIContext const& context) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceContextStatics4)->GetForUIContext(*(void**)(&context), &value));
         return Windows::ApplicationModel::Resources::Core::ResourceContext{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::MainResourceMap() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceMap) consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::MainResourceMap() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceManager)->get_MainResourceMap(&value));
         return Windows::ApplicationModel::Resources::Core::ResourceMap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::AllResourceMaps() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::ApplicationModel::Resources::Core::ResourceMap>) consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::AllResourceMaps() const
     {
         void* maps{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceManager)->get_AllResourceMaps(&maps));
         return Windows::Foundation::Collections::IMapView<hstring, Windows::ApplicationModel::Resources::Core::ResourceMap>{ maps, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::DefaultContext() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceContext) consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::DefaultContext() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceManager)->get_DefaultContext(&value));
         return Windows::ApplicationModel::Resources::Core::ResourceContext{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::LoadPriFiles(param::iterable<Windows::Storage::IStorageFile> const& files) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::LoadPriFiles(param::iterable<Windows::Storage::IStorageFile> const& files) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceManager)->LoadPriFiles(*(void**)(&files)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::UnloadPriFiles(param::iterable<Windows::Storage::IStorageFile> const& files) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Resources_Core_IResourceManager<D>::UnloadPriFiles(param::iterable<Windows::Storage::IStorageFile> const& files) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceManager)->UnloadPriFiles(*(void**)(&files)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceManager2<D>::GetAllNamedResourcesForPackage(param::hstring const& packageName, Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo const& resourceLayoutInfo) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::NamedResource>) consume_Windows_ApplicationModel_Resources_Core_IResourceManager2<D>::GetAllNamedResourcesForPackage(param::hstring const& packageName, Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo const& resourceLayoutInfo) const
     {
         void* table{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceManager2)->GetAllNamedResourcesForPackage(*(void**)(&packageName), impl::bind_in(resourceLayoutInfo), &table));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::NamedResource>{ table, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceManager2<D>::GetAllSubtreesForPackage(param::hstring const& packageName, Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo const& resourceLayoutInfo) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceMap>) consume_Windows_ApplicationModel_Resources_Core_IResourceManager2<D>::GetAllSubtreesForPackage(param::hstring const& packageName, Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo const& resourceLayoutInfo) const
     {
         void* table{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceManager2)->GetAllSubtreesForPackage(*(void**)(&packageName), impl::bind_in(resourceLayoutInfo), &table));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Resources::Core::ResourceMap>{ table, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceManagerStatics<D>::Current() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceManager) consume_Windows_ApplicationModel_Resources_Core_IResourceManagerStatics<D>::Current() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceManagerStatics)->get_Current(&value));
         return Windows::ApplicationModel::Resources::Core::ResourceManager{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceManagerStatics<D>::IsResourceReference(param::hstring const& resourceReference) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Resources_Core_IResourceManagerStatics<D>::IsResourceReference(param::hstring const& resourceReference) const
     {
-        bool isReference;
+        bool isReference{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceManagerStatics)->IsResourceReference(*(void**)(&resourceReference), &isReference));
         return isReference;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceMap<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_ApplicationModel_Resources_Core_IResourceMap<D>::Uri() const
     {
         void* uri{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceMap)->get_Uri(&uri));
         return Windows::Foundation::Uri{ uri, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceMap<D>::GetValue(param::hstring const& resource) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceCandidate) consume_Windows_ApplicationModel_Resources_Core_IResourceMap<D>::GetValue(param::hstring const& resource) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceMap)->GetValue(*(void**)(&resource), &value));
         return Windows::ApplicationModel::Resources::Core::ResourceCandidate{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceMap<D>::GetValue(param::hstring const& resource, Windows::ApplicationModel::Resources::Core::ResourceContext const& context) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceCandidate) consume_Windows_ApplicationModel_Resources_Core_IResourceMap<D>::GetValue(param::hstring const& resource, Windows::ApplicationModel::Resources::Core::ResourceContext const& context) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceMap)->GetValueForContext(*(void**)(&resource), *(void**)(&context), &value));
         return Windows::ApplicationModel::Resources::Core::ResourceCandidate{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceMap<D>::GetSubtree(param::hstring const& reference) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Resources::Core::ResourceMap) consume_Windows_ApplicationModel_Resources_Core_IResourceMap<D>::GetSubtree(param::hstring const& reference) const
     {
         void* map{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceMap)->GetSubtree(*(void**)(&reference), &map));
         return Windows::ApplicationModel::Resources::Core::ResourceMap{ map, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::QualifierName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::QualifierName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceQualifier)->get_QualifierName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::QualifierValue() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::QualifierValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceQualifier)->get_QualifierValue(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::IsDefault() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::IsDefault() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceQualifier)->get_IsDefault(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::IsMatch() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::IsMatch() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceQualifier)->get_IsMatch(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::Score() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_ApplicationModel_Resources_Core_IResourceQualifier<D>::Score() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Resources::Core::IResourceQualifier)->get_Score(&value));
         return value;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::INamedResource> : produce_base<D, Windows::ApplicationModel::Resources::Core::INamedResource>
     {
@@ -336,6 +337,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceCandidate> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceCandidate>
     {
@@ -393,6 +396,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceCandidate2> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceCandidate2>
     {
@@ -405,6 +410,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceCandidate3> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceCandidate3>
     {
@@ -416,6 +423,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceContext> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceContext>
     {
@@ -472,6 +481,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics>
     {
@@ -484,6 +495,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics2> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>
     {
@@ -525,6 +538,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics3> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics3>
     {
@@ -536,6 +551,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics4> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceContextStatics4>
     {
@@ -548,6 +565,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceManager> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceManager>
     {
@@ -590,6 +609,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceManager2> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceManager2>
     {
@@ -610,6 +631,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceManagerStatics> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceManagerStatics>
     {
@@ -629,6 +652,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceMap> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceMap>
     {
@@ -665,6 +690,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Resources::Core::IResourceQualifier> : produce_base<D, Windows::ApplicationModel::Resources::Core::IResourceQualifier>
     {
@@ -706,83 +733,86 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::ApplicationModel::Resources::Core
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Resources::Core
 {
     inline ResourceContext::ResourceContext() :
-        ResourceContext(impl::call_factory<ResourceContext>([](auto&& f) { return f.template ActivateInstance<ResourceContext>(); }))
+        ResourceContext(impl::call_factory_cast<ResourceContext(*)(Windows::Foundation::IActivationFactory const&), ResourceContext>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ResourceContext>(); }))
     {
     }
     inline auto ResourceContext::CreateMatchingContext(param::iterable<Windows::ApplicationModel::Resources::Core::ResourceQualifier> const& result)
     {
-        return impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics>([&](auto&& f) { return f.CreateMatchingContext(result); });
+        return impl::call_factory<ResourceContext, IResourceContextStatics>([&](IResourceContextStatics const& f) { return f.CreateMatchingContext(result); });
     }
     inline auto ResourceContext::GetForCurrentView()
     {
-        return impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>([&](auto&& f) { return f.GetForCurrentView(); });
+        return impl::call_factory_cast<Windows::ApplicationModel::Resources::Core::ResourceContext(*)(IResourceContextStatics2 const&), ResourceContext, IResourceContextStatics2>([](IResourceContextStatics2 const& f) { return f.GetForCurrentView(); });
     }
     inline auto ResourceContext::SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value)
     {
-        impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>([&](auto&& f) { return f.SetGlobalQualifierValue(key, value); });
+        impl::call_factory<ResourceContext, IResourceContextStatics2>([&](IResourceContextStatics2 const& f) { return f.SetGlobalQualifierValue(key, value); });
     }
     inline auto ResourceContext::ResetGlobalQualifierValues()
     {
-        impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>([&](auto&& f) { return f.ResetGlobalQualifierValues(); });
+        impl::call_factory_cast<void(*)(IResourceContextStatics2 const&), ResourceContext, IResourceContextStatics2>([](IResourceContextStatics2 const& f) { return f.ResetGlobalQualifierValues(); });
     }
     inline auto ResourceContext::ResetGlobalQualifierValues(param::iterable<hstring> const& qualifierNames)
     {
-        impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>([&](auto&& f) { return f.ResetGlobalQualifierValues(qualifierNames); });
+        impl::call_factory<ResourceContext, IResourceContextStatics2>([&](IResourceContextStatics2 const& f) { return f.ResetGlobalQualifierValues(qualifierNames); });
     }
     inline auto ResourceContext::GetForViewIndependentUse()
     {
-        return impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics2>([&](auto&& f) { return f.GetForViewIndependentUse(); });
+        return impl::call_factory_cast<Windows::ApplicationModel::Resources::Core::ResourceContext(*)(IResourceContextStatics2 const&), ResourceContext, IResourceContextStatics2>([](IResourceContextStatics2 const& f) { return f.GetForViewIndependentUse(); });
     }
     inline auto ResourceContext::SetGlobalQualifierValue(param::hstring const& key, param::hstring const& value, Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence const& persistence)
     {
-        impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics3>([&](auto&& f) { return f.SetGlobalQualifierValue(key, value, persistence); });
+        impl::call_factory<ResourceContext, IResourceContextStatics3>([&](IResourceContextStatics3 const& f) { return f.SetGlobalQualifierValue(key, value, persistence); });
     }
     inline auto ResourceContext::GetForUIContext(Windows::UI::UIContext const& context)
     {
-        return impl::call_factory<ResourceContext, Windows::ApplicationModel::Resources::Core::IResourceContextStatics4>([&](auto&& f) { return f.GetForUIContext(context); });
+        return impl::call_factory<ResourceContext, IResourceContextStatics4>([&](IResourceContextStatics4 const& f) { return f.GetForUIContext(context); });
     }
     inline auto ResourceManager::Current()
     {
-        return impl::call_factory<ResourceManager, Windows::ApplicationModel::Resources::Core::IResourceManagerStatics>([&](auto&& f) { return f.Current(); });
+        return impl::call_factory_cast<Windows::ApplicationModel::Resources::Core::ResourceManager(*)(IResourceManagerStatics const&), ResourceManager, IResourceManagerStatics>([](IResourceManagerStatics const& f) { return f.Current(); });
     }
     inline auto ResourceManager::IsResourceReference(param::hstring const& resourceReference)
     {
-        return impl::call_factory<ResourceManager, Windows::ApplicationModel::Resources::Core::IResourceManagerStatics>([&](auto&& f) { return f.IsResourceReference(resourceReference); });
+        return impl::call_factory<ResourceManager, IResourceManagerStatics>([&](IResourceManagerStatics const& f) { return f.IsResourceReference(resourceReference); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::INamedResource> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::INamedResource> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContext> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContext> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics4> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics4> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceManagerStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceManagerStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceMap> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceMap> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceQualifier> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::IResourceQualifier> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::NamedResource> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::NamedResource> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::INamedResource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceCandidate3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContext> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceManager2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceMap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::IResourceQualifier> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::NamedResource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView> : winrt::impl::hash_base {};
+#endif
 }
 #endif

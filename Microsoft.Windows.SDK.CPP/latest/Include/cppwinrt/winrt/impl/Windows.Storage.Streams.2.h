@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,13 +9,13 @@
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct __declspec(empty_bases) Buffer : Windows::Storage::Streams::IBuffer
     {
         Buffer(std::nullptr_t) noexcept {}
         Buffer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::Streams::IBuffer(ptr, take_ownership_from_abi) {}
-        Buffer(uint32_t capacity);
+        explicit Buffer(uint32_t capacity);
         static auto CreateCopyFromMemoryBuffer(Windows::Foundation::IMemoryBuffer const& input);
         static auto CreateMemoryBufferOverIBuffer(Windows::Storage::Streams::IBuffer const& input);
     };
@@ -24,7 +24,7 @@ namespace winrt::Windows::Storage::Streams
     {
         DataReader(std::nullptr_t) noexcept {}
         DataReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::Streams::IDataReader(ptr, take_ownership_from_abi) {}
-        DataReader(Windows::Storage::Streams::IInputStream const& inputStream);
+        explicit DataReader(Windows::Storage::Streams::IInputStream const& inputStream);
         static auto FromBuffer(Windows::Storage::Streams::IBuffer const& buffer);
     };
     struct __declspec(empty_bases) DataReaderLoadOperation : Windows::Foundation::IAsyncOperation<uint32_t>
@@ -38,7 +38,7 @@ namespace winrt::Windows::Storage::Streams
         DataWriter(std::nullptr_t) noexcept {}
         DataWriter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::Streams::IDataWriter(ptr, take_ownership_from_abi) {}
         DataWriter();
-        DataWriter(Windows::Storage::Streams::IOutputStream const& outputStream);
+        explicit DataWriter(Windows::Storage::Streams::IOutputStream const& outputStream);
     };
     struct __declspec(empty_bases) DataWriterStoreOperation : Windows::Foundation::IAsyncOperation<uint32_t>
     {

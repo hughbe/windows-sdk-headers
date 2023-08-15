@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,12 +12,13 @@
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.UI.Composition.2.h"
 #include "winrt/impl/Windows.UI.Core.2.h"
+#include "winrt/impl/Windows.UI.Xaml.Automation.Peers.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.Primitives.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Input.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Interop.2.h"
 #include "winrt/impl/Windows.UI.Xaml.1.h"
-namespace winrt::Windows::UI::Xaml
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml
 {
     struct ApplicationInitializationCallback : Windows::Foundation::IUnknown
     {
@@ -371,7 +372,7 @@ namespace winrt::Windows::UI::Xaml
         DataTemplateKey(std::nullptr_t) noexcept {}
         DataTemplateKey(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::IDataTemplateKey(ptr, take_ownership_from_abi) {}
         DataTemplateKey();
-        DataTemplateKey(Windows::Foundation::IInspectable const& dataType);
+        explicit DataTemplateKey(Windows::Foundation::IInspectable const& dataType);
     };
     struct __declspec(empty_bases) DebugSettings : Windows::UI::Xaml::IDebugSettings,
         impl::require<DebugSettings, Windows::UI::Xaml::IDebugSettings2, Windows::UI::Xaml::IDebugSettings3, Windows::UI::Xaml::IDebugSettings4>
@@ -589,7 +590,7 @@ namespace winrt::Windows::UI::Xaml
     {
         PropertyMetadata(std::nullptr_t) noexcept {}
         PropertyMetadata(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::IPropertyMetadata(ptr, take_ownership_from_abi) {}
-        PropertyMetadata(Windows::Foundation::IInspectable const& defaultValue);
+        explicit PropertyMetadata(Windows::Foundation::IInspectable const& defaultValue);
         PropertyMetadata(Windows::Foundation::IInspectable const& defaultValue, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback);
         static auto Create(Windows::Foundation::IInspectable const& defaultValue);
         static auto Create(Windows::Foundation::IInspectable const& defaultValue, Windows::UI::Xaml::PropertyChangedCallback const& propertyChangedCallback);
@@ -602,7 +603,7 @@ namespace winrt::Windows::UI::Xaml
     {
         PropertyPath(std::nullptr_t) noexcept {}
         PropertyPath(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::IPropertyPath(ptr, take_ownership_from_abi) {}
-        PropertyPath(param::hstring const& path);
+        explicit PropertyPath(param::hstring const& path);
     };
     struct __declspec(empty_bases) RectHelper : Windows::UI::Xaml::IRectHelper
     {
@@ -710,14 +711,14 @@ namespace winrt::Windows::UI::Xaml
         Style(std::nullptr_t) noexcept {}
         Style(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::IStyle(ptr, take_ownership_from_abi) {}
         Style();
-        Style(Windows::UI::Xaml::Interop::TypeName const& targetType);
+        explicit Style(Windows::UI::Xaml::Interop::TypeName const& targetType);
     };
     struct __declspec(empty_bases) TargetPropertyPath : Windows::UI::Xaml::ITargetPropertyPath
     {
         TargetPropertyPath(std::nullptr_t) noexcept {}
         TargetPropertyPath(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::ITargetPropertyPath(ptr, take_ownership_from_abi) {}
         TargetPropertyPath();
-        TargetPropertyPath(Windows::UI::Xaml::DependencyProperty const& targetProperty);
+        explicit TargetPropertyPath(Windows::UI::Xaml::DependencyProperty const& targetProperty);
     };
     struct __declspec(empty_bases) ThicknessHelper : Windows::UI::Xaml::IThicknessHelper
     {
@@ -922,15 +923,15 @@ namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IApplicationOverrides = winrt::Windows::UI::Xaml::IApplicationOverrides;
-        auto OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs const& args) const;
-        auto OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const& args) const;
-        auto OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEventArgs const& args) const;
-        auto OnSearchActivated(Windows::ApplicationModel::Activation::SearchActivatedEventArgs const& args) const;
-        auto OnShareTargetActivated(Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs const& args) const;
-        auto OnFileOpenPickerActivated(Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs const& args) const;
-        auto OnFileSavePickerActivated(Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs const& args) const;
-        auto OnCachedFileUpdaterActivated(Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs const& args) const;
-        auto OnWindowCreated(Windows::UI::Xaml::WindowCreatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnSearchActivated(Windows::ApplicationModel::Activation::SearchActivatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnShareTargetActivated(Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnFileOpenPickerActivated(Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnFileSavePickerActivated(Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnCachedFileUpdaterActivated(Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnWindowCreated(Windows::UI::Xaml::WindowCreatedEventArgs const& args) const;
     };
     template <typename D>
     class IApplicationOverrides2T
@@ -939,7 +940,7 @@ namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IApplicationOverrides2 = winrt::Windows::UI::Xaml::IApplicationOverrides2;
-        auto OnBackgroundActivated(Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnBackgroundActivated(Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs const& args) const;
     };
     template <typename D>
     class IFrameworkElementOverridesT
@@ -948,9 +949,9 @@ namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IFrameworkElementOverrides = winrt::Windows::UI::Xaml::IFrameworkElementOverrides;
-        auto MeasureOverride(Windows::Foundation::Size const& availableSize) const;
-        auto ArrangeOverride(Windows::Foundation::Size const& finalSize) const;
-        auto OnApplyTemplate() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Size) MeasureOverride(Windows::Foundation::Size const& availableSize) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Size) ArrangeOverride(Windows::Foundation::Size const& finalSize) const;
+        WINRT_IMPL_AUTO(void) OnApplyTemplate() const;
     };
     template <typename D>
     class IFrameworkElementOverrides2T
@@ -959,7 +960,7 @@ namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IFrameworkElementOverrides2 = winrt::Windows::UI::Xaml::IFrameworkElementOverrides2;
-        auto GoToElementStateCore(param::hstring const& stateName, bool useTransitions) const;
+        WINRT_IMPL_AUTO(bool) GoToElementStateCore(param::hstring const& stateName, bool useTransitions) const;
     };
     template <typename D>
     class IUIElementOverridesT
@@ -968,9 +969,9 @@ namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IUIElementOverrides = winrt::Windows::UI::Xaml::IUIElementOverrides;
-        auto OnCreateAutomationPeer() const;
-        auto OnDisconnectVisualChildren() const;
-        auto FindSubElementsForTouchTargeting(Windows::Foundation::Point const& point, Windows::Foundation::Rect const& boundingRect) const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationPeer) OnCreateAutomationPeer() const;
+        WINRT_IMPL_AUTO(void) OnDisconnectVisualChildren() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IIterable<Windows::Foundation::Point>>) FindSubElementsForTouchTargeting(Windows::Foundation::Point const& point, Windows::Foundation::Rect const& boundingRect) const;
     };
     template <typename D>
     class IUIElementOverrides7T
@@ -979,8 +980,8 @@ namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IUIElementOverrides7 = winrt::Windows::UI::Xaml::IUIElementOverrides7;
-        auto GetChildrenInTabFocusOrder() const;
-        auto OnProcessKeyboardAccelerators(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::DependencyObject>) GetChildrenInTabFocusOrder() const;
+        WINRT_IMPL_AUTO(void) OnProcessKeyboardAccelerators(Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const;
     };
     template <typename D>
     class IUIElementOverrides8T
@@ -989,8 +990,8 @@ namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IUIElementOverrides8 = winrt::Windows::UI::Xaml::IUIElementOverrides8;
-        auto OnKeyboardAcceleratorInvoked(Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args) const;
-        auto OnBringIntoViewRequested(Windows::UI::Xaml::BringIntoViewRequestedEventArgs const& e) const;
+        WINRT_IMPL_AUTO(void) OnKeyboardAcceleratorInvoked(Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args) const;
+        WINRT_IMPL_AUTO(void) OnBringIntoViewRequested(Windows::UI::Xaml::BringIntoViewRequestedEventArgs const& e) const;
     };
     template <typename D>
     class IUIElementOverrides9T
@@ -999,7 +1000,7 @@ namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IUIElementOverrides9 = winrt::Windows::UI::Xaml::IUIElementOverrides9;
-        auto PopulatePropertyInfoOverride(param::hstring const& propertyName, Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const;
+        WINRT_IMPL_AUTO(void) PopulatePropertyInfoOverride(param::hstring const& propertyName, Windows::UI::Composition::AnimationPropertyInfo const& animationPropertyInfo) const;
     };
     template <typename D>
     class IVisualStateManagerOverridesT
@@ -1008,7 +1009,7 @@ namespace winrt::Windows::UI::Xaml
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IVisualStateManagerOverrides = winrt::Windows::UI::Xaml::IVisualStateManagerOverrides;
-        auto GoToStateCore(Windows::UI::Xaml::Controls::Control const& control, Windows::UI::Xaml::FrameworkElement const& templateRoot, param::hstring const& stateName, Windows::UI::Xaml::VisualStateGroup const& group, Windows::UI::Xaml::VisualState const& state, bool useTransitions) const;
+        WINRT_IMPL_AUTO(bool) GoToStateCore(Windows::UI::Xaml::Controls::Control const& control, Windows::UI::Xaml::FrameworkElement const& templateRoot, param::hstring const& stateName, Windows::UI::Xaml::VisualStateGroup const& group, Windows::UI::Xaml::VisualState const& state, bool useTransitions) const;
     };
 }
 #endif

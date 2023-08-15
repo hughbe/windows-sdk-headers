@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Web_UI_Interop_2_H
 #include "winrt/impl/Windows.Web.UI.1.h"
 #include "winrt/impl/Windows.Web.UI.Interop.1.h"
-namespace winrt::Windows::Web::UI::Interop
+WINRT_EXPORT namespace winrt::Windows::Web::UI::Interop
 {
     struct __declspec(empty_bases) WebViewControl : Windows::Web::UI::IWebViewControl,
         impl::require<WebViewControl, Windows::Web::UI::Interop::IWebViewControlSite, Windows::Web::UI::IWebViewControl2, Windows::Web::UI::Interop::IWebViewControlSite2>
@@ -30,7 +30,7 @@ namespace winrt::Windows::Web::UI::Interop
         WebViewControlProcess(std::nullptr_t) noexcept {}
         WebViewControlProcess(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::UI::Interop::IWebViewControlProcess(ptr, take_ownership_from_abi) {}
         WebViewControlProcess();
-        WebViewControlProcess(Windows::Web::UI::Interop::WebViewControlProcessOptions const& processOptions);
+        explicit WebViewControlProcess(Windows::Web::UI::Interop::WebViewControlProcessOptions const& processOptions);
     };
     struct __declspec(empty_bases) WebViewControlProcessOptions : Windows::Web::UI::Interop::IWebViewControlProcessOptions
     {

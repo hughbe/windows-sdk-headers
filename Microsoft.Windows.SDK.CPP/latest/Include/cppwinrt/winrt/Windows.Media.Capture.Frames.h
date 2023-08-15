@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_Capture_Frames_H
 #define WINRT_Windows_Media_Capture_Frames_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Media.Capture.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -24,141 +24,141 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Media.Capture.Frames.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IAudioMediaFrame<D>::FrameReference() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameReference) consume_Windows_Media_Capture_Frames_IAudioMediaFrame<D>::FrameReference() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IAudioMediaFrame)->get_FrameReference(&value));
         return Windows::Media::Capture::Frames::MediaFrameReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IAudioMediaFrame<D>::AudioEncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Capture_Frames_IAudioMediaFrame<D>::AudioEncodingProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IAudioMediaFrame)->get_AudioEncodingProperties(&value));
         return Windows::Media::MediaProperties::AudioEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IAudioMediaFrame<D>::GetAudioFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AudioFrame) consume_Windows_Media_Capture_Frames_IAudioMediaFrame<D>::GetAudioFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IAudioMediaFrame)->GetAudioFrame(&value));
         return Windows::Media::AudioFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IBufferMediaFrame<D>::FrameReference() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameReference) consume_Windows_Media_Capture_Frames_IBufferMediaFrame<D>::FrameReference() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IBufferMediaFrame)->get_FrameReference(&value));
         return Windows::Media::Capture::Frames::MediaFrameReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IBufferMediaFrame<D>::Buffer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Media_Capture_Frames_IBufferMediaFrame<D>::Buffer() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IBufferMediaFrame)->get_Buffer(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IDepthMediaFrame<D>::FrameReference() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameReference) consume_Windows_Media_Capture_Frames_IDepthMediaFrame<D>::FrameReference() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IDepthMediaFrame)->get_FrameReference(&value));
         return Windows::Media::Capture::Frames::MediaFrameReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IDepthMediaFrame<D>::VideoMediaFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::VideoMediaFrame) consume_Windows_Media_Capture_Frames_IDepthMediaFrame<D>::VideoMediaFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IDepthMediaFrame)->get_VideoMediaFrame(&value));
         return Windows::Media::Capture::Frames::VideoMediaFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IDepthMediaFrame<D>::DepthFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::DepthMediaFrameFormat) consume_Windows_Media_Capture_Frames_IDepthMediaFrame<D>::DepthFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IDepthMediaFrame)->get_DepthFormat(&value));
         return Windows::Media::Capture::Frames::DepthMediaFrameFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IDepthMediaFrame<D>::TryCreateCoordinateMapper(Windows::Media::Devices::Core::CameraIntrinsics const& cameraIntrinsics, Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper) consume_Windows_Media_Capture_Frames_IDepthMediaFrame<D>::TryCreateCoordinateMapper(Windows::Media::Devices::Core::CameraIntrinsics const& cameraIntrinsics, Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IDepthMediaFrame)->TryCreateCoordinateMapper(*(void**)(&cameraIntrinsics), *(void**)(&coordinateSystem), &value));
         return Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IDepthMediaFrame2<D>::MaxReliableDepth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_Frames_IDepthMediaFrame2<D>::MaxReliableDepth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IDepthMediaFrame2)->get_MaxReliableDepth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IDepthMediaFrame2<D>::MinReliableDepth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_Frames_IDepthMediaFrame2<D>::MinReliableDepth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IDepthMediaFrame2)->get_MinReliableDepth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IDepthMediaFrameFormat<D>::VideoFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::VideoMediaFrameFormat) consume_Windows_Media_Capture_Frames_IDepthMediaFrameFormat<D>::VideoFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IDepthMediaFrameFormat)->get_VideoFormat(&value));
         return Windows::Media::Capture::Frames::VideoMediaFrameFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IDepthMediaFrameFormat<D>::DepthScaleInMeters() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Capture_Frames_IDepthMediaFrameFormat<D>::DepthScaleInMeters() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IDepthMediaFrameFormat)->get_DepthScaleInMeters(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IInfraredMediaFrame<D>::FrameReference() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameReference) consume_Windows_Media_Capture_Frames_IInfraredMediaFrame<D>::FrameReference() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IInfraredMediaFrame)->get_FrameReference(&value));
         return Windows::Media::Capture::Frames::MediaFrameReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IInfraredMediaFrame<D>::VideoMediaFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::VideoMediaFrame) consume_Windows_Media_Capture_Frames_IInfraredMediaFrame<D>::VideoMediaFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IInfraredMediaFrame)->get_VideoMediaFrame(&value));
         return Windows::Media::Capture::Frames::VideoMediaFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IInfraredMediaFrame<D>::IsIlluminated() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_Frames_IInfraredMediaFrame<D>::IsIlluminated() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IInfraredMediaFrame)->get_IsIlluminated(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::MajorType() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::MajorType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameFormat)->get_MajorType(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::Subtype() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::Subtype() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameFormat)->get_Subtype(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::FrameRate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaRatio) consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::FrameRate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameFormat)->get_FrameRate(&value));
         return Windows::Media::MediaProperties::MediaRatio{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>) consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameFormat)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::VideoFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::VideoMediaFrameFormat) consume_Windows_Media_Capture_Frames_IMediaFrameFormat<D>::VideoFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameFormat)->get_VideoFormat(&value));
         return Windows::Media::Capture::Frames::VideoMediaFrameFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameFormat2<D>::AudioEncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Capture_Frames_IMediaFrameFormat2<D>::AudioEncodingProperties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameFormat2)->get_AudioEncodingProperties(&value));
         return Windows::Media::MediaProperties::AudioEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::FrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::Frames::MediaFrameReader, Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::FrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::Frames::MediaFrameReader, Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReader)->add_FrameArrived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -166,125 +166,125 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, FrameArrived_revoker>(this, FrameArrived(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReader)->remove_FrameArrived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::TryAcquireLatestFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameReference) consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::TryAcquireLatestFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReader)->TryAcquireLatestFrame(&value));
         return Windows::Media::Capture::Frames::MediaFrameReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameReaderStartStatus>) consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::StartAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReader)->StartAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameReaderStartStatus>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::StopAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::StopAsync() const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReader)->StopAsync(&action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReader2<D>::AcquisitionMode(Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_Frames_IMediaFrameReader2<D>::AcquisitionMode(Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReader2)->put_AcquisitionMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReader2<D>::AcquisitionMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode) consume_Windows_Media_Capture_Frames_IMediaFrameReader2<D>::AcquisitionMode() const
     {
-        Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReader2)->get_AcquisitionMode(put_abi(value)));
+        Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReader2)->get_AcquisitionMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::SourceKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameSourceKind) consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::SourceKind() const
     {
-        Windows::Media::Capture::Frames::MediaFrameSourceKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference)->get_SourceKind(put_abi(value)));
+        Windows::Media::Capture::Frames::MediaFrameSourceKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference)->get_SourceKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::Format() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameFormat) consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::Format() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference)->get_Format(&value));
         return Windows::Media::Capture::Frames::MediaFrameFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::SystemRelativeTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::SystemRelativeTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference)->get_SystemRelativeTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>) consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::BufferMediaFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::BufferMediaFrame) consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::BufferMediaFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference)->get_BufferMediaFrame(&value));
         return Windows::Media::Capture::Frames::BufferMediaFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::VideoMediaFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::VideoMediaFrame) consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::VideoMediaFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference)->get_VideoMediaFrame(&value));
         return Windows::Media::Capture::Frames::VideoMediaFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::CoordinateSystem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialCoordinateSystem) consume_Windows_Media_Capture_Frames_IMediaFrameReference<D>::CoordinateSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference)->get_CoordinateSystem(&value));
         return Windows::Perception::Spatial::SpatialCoordinateSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameReference2<D>::AudioMediaFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::AudioMediaFrame) consume_Windows_Media_Capture_Frames_IMediaFrameReference2<D>::AudioMediaFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameReference2)->get_AudioMediaFrame(&value));
         return Windows::Media::Capture::Frames::AudioMediaFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::Info() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameSourceInfo) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::Info() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSource)->get_Info(&value));
         return Windows::Media::Capture::Frames::MediaFrameSourceInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::Controller() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameSourceController) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::Controller() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSource)->get_Controller(&value));
         return Windows::Media::Capture::Frames::MediaFrameSourceController{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::SupportedFormats() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::Frames::MediaFrameFormat>) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::SupportedFormats() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSource)->get_SupportedFormats(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::Frames::MediaFrameFormat>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::CurrentFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameFormat) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::CurrentFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSource)->get_CurrentFormat(&value));
         return Windows::Media::Capture::Frames::MediaFrameFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::SetFormatAsync(Windows::Media::Capture::Frames::MediaFrameFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::SetFormatAsync(Windows::Media::Capture::Frames::MediaFrameFormat const& format) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSource)->SetFormatAsync(*(void**)(&format), &value));
         return Windows::Foundation::IAsyncAction{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::FormatChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::Frames::MediaFrameSource, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::FormatChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::Frames::MediaFrameSource, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSource)->add_FormatChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -292,163 +292,163 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, FormatChanged_revoker>(this, FormatChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::FormatChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::FormatChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSource)->remove_FormatChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::TryGetCameraIntrinsics(Windows::Media::Capture::Frames::MediaFrameFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::CameraIntrinsics) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::TryGetCameraIntrinsics(Windows::Media::Capture::Frames::MediaFrameFormat const& format) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSource)->TryGetCameraIntrinsics(*(void**)(&format), &value));
         return Windows::Media::Devices::Core::CameraIntrinsics{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceController<D>::GetPropertyAsync(param::hstring const& propertyId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>) consume_Windows_Media_Capture_Frames_IMediaFrameSourceController<D>::GetPropertyAsync(param::hstring const& propertyId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceController)->GetPropertyAsync(*(void**)(&propertyId), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceController<D>::SetPropertyAsync(param::hstring const& propertyId, Windows::Foundation::IInspectable const& propertyValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>) consume_Windows_Media_Capture_Frames_IMediaFrameSourceController<D>::SetPropertyAsync(param::hstring const& propertyId, Windows::Foundation::IInspectable const& propertyValue) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceController)->SetPropertyAsync(*(void**)(&propertyId), *(void**)(&propertyValue), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceController<D>::VideoDeviceController() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::VideoDeviceController) consume_Windows_Media_Capture_Frames_IMediaFrameSourceController<D>::VideoDeviceController() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceController)->get_VideoDeviceController(&value));
         return Windows::Media::Devices::VideoDeviceController{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceController2<D>::GetPropertyByExtendedIdAsync(array_view<uint8_t const> extendedPropertyId, Windows::Foundation::IReference<uint32_t> const& maxPropertyValueSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>) consume_Windows_Media_Capture_Frames_IMediaFrameSourceController2<D>::GetPropertyByExtendedIdAsync(array_view<uint8_t const> extendedPropertyId, Windows::Foundation::IReference<uint32_t> const& maxPropertyValueSize) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceController2)->GetPropertyByExtendedIdAsync(extendedPropertyId.size(), get_abi(extendedPropertyId), *(void**)(&maxPropertyValueSize), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceController2<D>::SetPropertyByExtendedIdAsync(array_view<uint8_t const> extendedPropertyId, array_view<uint8_t const> propertyValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>) consume_Windows_Media_Capture_Frames_IMediaFrameSourceController2<D>::SetPropertyByExtendedIdAsync(array_view<uint8_t const> extendedPropertyId, array_view<uint8_t const> propertyValue) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceController2)->SetPropertyByExtendedIdAsync(extendedPropertyId.size(), get_abi(extendedPropertyId), propertyValue.size(), get_abi(propertyValue), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceController3<D>::AudioDeviceController() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::AudioDeviceController) consume_Windows_Media_Capture_Frames_IMediaFrameSourceController3<D>::AudioDeviceController() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceController3)->get_AudioDeviceController(&value));
         return Windows::Media::Devices::AudioDeviceController{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceGetPropertyResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyStatus) consume_Windows_Media_Capture_Frames_IMediaFrameSourceGetPropertyResult<D>::Status() const
     {
-        Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult)->get_Status(put_abi(value)));
+        Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceGetPropertyResult<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Media_Capture_Frames_IMediaFrameSourceGetPropertyResult<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult)->get_Value(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroup<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroup<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceGroup)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroup<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroup<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceGroup)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroup<D>::SourceInfos() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::Frames::MediaFrameSourceInfo>) consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroup<D>::SourceInfos() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceGroup)->get_SourceInfos(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::Frames::MediaFrameSourceInfo>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroupStatics<D>::FindAllAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::Frames::MediaFrameSourceGroup>>) consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroupStatics<D>::FindAllAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics)->FindAllAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::Frames::MediaFrameSourceGroup>>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroupStatics<D>::FromIdAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceGroup>) consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroupStatics<D>::FromIdAsync(param::hstring const& id) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics)->FromIdAsync(*(void**)(&id), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MediaFrameSourceGroup>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroupStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_Frames_IMediaFrameSourceGroupStatics<D>::GetDeviceSelector() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics)->GetDeviceSelector(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::MediaStreamType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::MediaStreamType) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::MediaStreamType() const
     {
-        Windows::Media::Capture::MediaStreamType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo)->get_MediaStreamType(put_abi(value)));
+        Windows::Media::Capture::MediaStreamType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo)->get_MediaStreamType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::SourceKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameSourceKind) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::SourceKind() const
     {
-        Windows::Media::Capture::Frames::MediaFrameSourceKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo)->get_SourceKind(put_abi(value)));
+        Windows::Media::Capture::Frames::MediaFrameSourceKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo)->get_SourceKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::SourceGroup() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameSourceGroup) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::SourceGroup() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo)->get_SourceGroup(&value));
         return Windows::Media::Capture::Frames::MediaFrameSourceGroup{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::DeviceInformation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DeviceInformation) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::DeviceInformation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo)->get_DeviceInformation(&value));
         return Windows::Devices::Enumeration::DeviceInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::CoordinateSystem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialCoordinateSystem) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo<D>::CoordinateSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo)->get_CoordinateSystem(&value));
         return Windows::Perception::Spatial::SpatialCoordinateSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo2<D>::ProfileId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo2<D>::ProfileId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo2)->get_ProfileId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo2<D>::VideoProfileMediaDescription() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo2<D>::VideoProfileMediaDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo2)->get_VideoProfileMediaDescription(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo3<D>::GetRelativePanel(Windows::UI::WindowManagement::DisplayRegion const& displayRegion) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Enumeration::Panel) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo3<D>::GetRelativePanel(Windows::UI::WindowManagement::DisplayRegion const& displayRegion) const
     {
-        Windows::Devices::Enumeration::Panel result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo3)->GetRelativePanel(*(void**)(&displayRegion), put_abi(result)));
+        Windows::Devices::Enumeration::Panel result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMediaFrameSourceInfo3)->GetRelativePanel(*(void**)(&displayRegion), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::FrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::Frames::MultiSourceMediaFrameReader, Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::FrameArrived(Windows::Foundation::TypedEventHandler<Windows::Media::Capture::Frames::MultiSourceMediaFrameReader, Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader)->add_FrameArrived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -456,116 +456,117 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, FrameArrived_revoker>(this, FrameArrived(handler));
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader)->remove_FrameArrived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::TryAcquireLatestFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MultiSourceMediaFrameReference) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::TryAcquireLatestFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader)->TryAcquireLatestFrame(&value));
         return Windows::Media::Capture::Frames::MultiSourceMediaFrameReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus>) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::StartAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader)->StartAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::StopAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::StopAsync() const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader)->StopAsync(&action));
         return Windows::Foundation::IAsyncAction{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader2<D>::AcquisitionMode(Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader2<D>::AcquisitionMode(Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2)->put_AcquisitionMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader2<D>::AcquisitionMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader2<D>::AcquisitionMode() const
     {
-        Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2)->get_AcquisitionMode(put_abi(value)));
+        Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2)->get_AcquisitionMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReference<D>::TryGetFrameReferenceBySourceId(param::hstring const& sourceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameReference) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReference<D>::TryGetFrameReferenceBySourceId(param::hstring const& sourceId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IMultiSourceMediaFrameReference)->TryGetFrameReferenceBySourceId(*(void**)(&sourceId), &value));
         return Windows::Media::Capture::Frames::MediaFrameReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::FrameReference() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameReference) consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::FrameReference() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrame)->get_FrameReference(&value));
         return Windows::Media::Capture::Frames::MediaFrameReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::VideoFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::VideoMediaFrameFormat) consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::VideoFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrame)->get_VideoFormat(&value));
         return Windows::Media::Capture::Frames::VideoMediaFrameFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::SoftwareBitmap() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::SoftwareBitmap() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrame)->get_SoftwareBitmap(&value));
         return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::Direct3DSurface() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface) consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::Direct3DSurface() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrame)->get_Direct3DSurface(&value));
         return Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::CameraIntrinsics() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::CameraIntrinsics) consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::CameraIntrinsics() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrame)->get_CameraIntrinsics(&value));
         return Windows::Media::Devices::Core::CameraIntrinsics{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::InfraredMediaFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::InfraredMediaFrame) consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::InfraredMediaFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrame)->get_InfraredMediaFrame(&value));
         return Windows::Media::Capture::Frames::InfraredMediaFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::DepthMediaFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::DepthMediaFrame) consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::DepthMediaFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrame)->get_DepthMediaFrame(&value));
         return Windows::Media::Capture::Frames::DepthMediaFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::GetVideoFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::VideoFrame) consume_Windows_Media_Capture_Frames_IVideoMediaFrame<D>::GetVideoFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrame)->GetVideoFrame(&value));
         return Windows::Media::VideoFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrameFormat<D>::MediaFrameFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::MediaFrameFormat) consume_Windows_Media_Capture_Frames_IVideoMediaFrameFormat<D>::MediaFrameFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrameFormat)->get_MediaFrameFormat(&value));
         return Windows::Media::Capture::Frames::MediaFrameFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrameFormat<D>::DepthFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::Frames::DepthMediaFrameFormat) consume_Windows_Media_Capture_Frames_IVideoMediaFrameFormat<D>::DepthFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrameFormat)->get_DepthFormat(&value));
         return Windows::Media::Capture::Frames::DepthMediaFrameFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrameFormat<D>::Width() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_Frames_IVideoMediaFrameFormat<D>::Width() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrameFormat)->get_Width(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Capture_Frames_IVideoMediaFrameFormat<D>::Height() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Capture_Frames_IVideoMediaFrameFormat<D>::Height() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Capture::Frames::IVideoMediaFrameFormat)->get_Height(&value));
         return value;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IAudioMediaFrame> : produce_base<D, Windows::Media::Capture::Frames::IAudioMediaFrame>
     {
@@ -594,6 +595,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IBufferMediaFrame> : produce_base<D, Windows::Media::Capture::Frames::IBufferMediaFrame>
     {
@@ -614,6 +617,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IDepthMediaFrame> : produce_base<D, Windows::Media::Capture::Frames::IDepthMediaFrame>
     {
@@ -650,6 +655,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IDepthMediaFrame2> : produce_base<D, Windows::Media::Capture::Frames::IDepthMediaFrame2>
     {
@@ -668,6 +675,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IDepthMediaFrameFormat> : produce_base<D, Windows::Media::Capture::Frames::IDepthMediaFrameFormat>
     {
@@ -687,6 +696,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IInfraredMediaFrame> : produce_base<D, Windows::Media::Capture::Frames::IInfraredMediaFrame>
     {
@@ -714,10 +725,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameArrivedEventArgs> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameArrivedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameFormat> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameFormat>
     {
@@ -762,6 +777,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameFormat2> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameFormat2>
     {
@@ -774,6 +791,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameReader> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameReader>
     {
@@ -816,6 +835,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameReader2> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameReader2>
     {
@@ -834,6 +855,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameReference> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameReference>
     {
@@ -901,6 +924,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameReference2> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameReference2>
     {
@@ -913,6 +938,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSource> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSource>
     {
@@ -979,6 +1006,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSourceController> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSourceController>
     {
@@ -1007,6 +1036,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSourceController2> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSourceController2>
     {
@@ -1027,6 +1058,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSourceController3> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSourceController3>
     {
@@ -1039,6 +1072,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult>
     {
@@ -1058,6 +1093,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSourceGroup> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSourceGroup>
     {
@@ -1086,6 +1123,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics>
     {
@@ -1114,6 +1153,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSourceInfo> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSourceInfo>
     {
@@ -1172,6 +1213,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSourceInfo2> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSourceInfo2>
     {
@@ -1192,6 +1235,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMediaFrameSourceInfo3> : produce_base<D, Windows::Media::Capture::Frames::IMediaFrameSourceInfo3>
     {
@@ -1203,10 +1248,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs> : produce_base<D, Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader> : produce_base<D, Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader>
     {
@@ -1249,6 +1298,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2> : produce_base<D, Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2>
     {
@@ -1267,6 +1318,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IMultiSourceMediaFrameReference> : produce_base<D, Windows::Media::Capture::Frames::IMultiSourceMediaFrameReference>
     {
@@ -1279,6 +1332,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IVideoMediaFrame> : produce_base<D, Windows::Media::Capture::Frames::IVideoMediaFrame>
     {
@@ -1347,6 +1402,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Capture::Frames::IVideoMediaFrameFormat> : produce_base<D, Windows::Media::Capture::Frames::IVideoMediaFrameFormat>
     {
@@ -1381,71 +1438,74 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Media::Capture::Frames
+WINRT_EXPORT namespace winrt::Windows::Media::Capture::Frames
 {
     inline auto MediaFrameSourceGroup::FindAllAsync()
     {
-        return impl::call_factory<MediaFrameSourceGroup, Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics>([&](auto&& f) { return f.FindAllAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Media::Capture::Frames::MediaFrameSourceGroup>>(*)(IMediaFrameSourceGroupStatics const&), MediaFrameSourceGroup, IMediaFrameSourceGroupStatics>([](IMediaFrameSourceGroupStatics const& f) { return f.FindAllAsync(); });
     }
     inline auto MediaFrameSourceGroup::FromIdAsync(param::hstring const& id)
     {
-        return impl::call_factory<MediaFrameSourceGroup, Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics>([&](auto&& f) { return f.FromIdAsync(id); });
+        return impl::call_factory<MediaFrameSourceGroup, IMediaFrameSourceGroupStatics>([&](IMediaFrameSourceGroupStatics const& f) { return f.FromIdAsync(id); });
     }
     inline auto MediaFrameSourceGroup::GetDeviceSelector()
     {
-        return impl::call_factory<MediaFrameSourceGroup, Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(IMediaFrameSourceGroupStatics const&), MediaFrameSourceGroup, IMediaFrameSourceGroupStatics>([](IMediaFrameSourceGroupStatics const& f) { return f.GetDeviceSelector(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IAudioMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IAudioMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IBufferMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IBufferMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IDepthMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IDepthMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IDepthMediaFrame2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IDepthMediaFrame2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IDepthMediaFrameFormat> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IDepthMediaFrameFormat> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IInfraredMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IInfraredMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameArrivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameArrivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameFormat> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameFormat> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameFormat2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameFormat2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameReader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameReader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameReader2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameReader2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameReference> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameReference> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameReference2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameReference2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSource> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSource> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController3> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController3> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGroup> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGroup> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo3> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo3> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReference> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReference> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IVideoMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IVideoMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::IVideoMediaFrameFormat> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::IVideoMediaFrameFormat> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::AudioMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::AudioMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::BufferMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::BufferMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::DepthMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::DepthMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameFormat> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MediaFrameFormat> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameReader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MediaFrameReader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameReference> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MediaFrameReference> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSource> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MediaFrameSource> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::VideoMediaFrame> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::VideoMediaFrame> {};
-    template<> struct hash<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat> : winrt::impl::hash_base<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IAudioMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IBufferMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IDepthMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IDepthMediaFrame2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IDepthMediaFrameFormat> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IInfraredMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameArrivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameFormat> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameFormat2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameReader2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameReference> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameReference2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceController3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGetPropertyResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceGroupStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReference> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IVideoMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IVideoMediaFrameFormat> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::AudioMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::BufferMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::DepthMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameFormat> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameReference> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::VideoMediaFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat> : winrt::impl::hash_base {};
+#endif
 }
 #endif

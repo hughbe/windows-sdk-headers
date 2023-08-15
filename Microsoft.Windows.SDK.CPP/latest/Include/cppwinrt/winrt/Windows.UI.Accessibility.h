@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,33 +6,33 @@
 #ifndef WINRT_Windows_UI_Accessibility_H
 #define WINRT_Windows_UI_Accessibility_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.UI.Accessibility.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Accessibility_IScreenReaderPositionChangedEventArgs<D>::ScreenPositionInRawPixels() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Accessibility_IScreenReaderPositionChangedEventArgs<D>::ScreenPositionInRawPixels() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs)->get_ScreenPositionInRawPixels(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Accessibility_IScreenReaderPositionChangedEventArgs<D>::IsReadingText() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Accessibility_IScreenReaderPositionChangedEventArgs<D>::IsReadingText() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs)->get_IsReadingText(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Accessibility_IScreenReaderService<D>::CurrentScreenReaderPosition() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs) consume_Windows_UI_Accessibility_IScreenReaderService<D>::CurrentScreenReaderPosition() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Accessibility::IScreenReaderService)->get_CurrentScreenReaderPosition(&value));
         return Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Accessibility_IScreenReaderService<D>::ScreenReaderPositionChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Accessibility::ScreenReaderService, Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Accessibility_IScreenReaderService<D>::ScreenReaderPositionChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Accessibility::ScreenReaderService, Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Accessibility::IScreenReaderService)->add_ScreenReaderPositionChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -40,10 +40,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ScreenReaderPositionChanged_revoker>(this, ScreenReaderPositionChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Accessibility_IScreenReaderService<D>::ScreenReaderPositionChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Accessibility_IScreenReaderService<D>::ScreenReaderPositionChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Accessibility::IScreenReaderService)->remove_ScreenReaderPositionChanged(impl::bind_in(token)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs> : produce_base<D, Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs>
     {
@@ -63,6 +64,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Accessibility::IScreenReaderService> : produce_base<D, Windows::UI::Accessibility::IScreenReaderService>
     {
@@ -89,19 +92,22 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
 }
-namespace winrt::Windows::UI::Accessibility
+WINRT_EXPORT namespace winrt::Windows::UI::Accessibility
 {
     inline ScreenReaderService::ScreenReaderService() :
-        ScreenReaderService(impl::call_factory<ScreenReaderService>([](auto&& f) { return f.template ActivateInstance<ScreenReaderService>(); }))
+        ScreenReaderService(impl::call_factory_cast<ScreenReaderService(*)(Windows::Foundation::IActivationFactory const&), ScreenReaderService>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ScreenReaderService>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Accessibility::IScreenReaderService> : winrt::impl::hash_base<winrt::Windows::UI::Accessibility::IScreenReaderService> {};
-    template<> struct hash<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Accessibility::ScreenReaderService> : winrt::impl::hash_base<winrt::Windows::UI::Accessibility::ScreenReaderService> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Accessibility::IScreenReaderPositionChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Accessibility::IScreenReaderService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Accessibility::ScreenReaderService> : winrt::impl::hash_base {};
+#endif
 }
 #endif

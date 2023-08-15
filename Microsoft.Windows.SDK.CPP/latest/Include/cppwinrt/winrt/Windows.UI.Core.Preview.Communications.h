@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,131 +6,131 @@
 #ifndef WINRT_Windows_UI_Core_Preview_Communications_H
 #define WINRT_Windows_UI_Core_Preview_Communications_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.Core.Preview.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.UI.Core.Preview.Communications.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamCleanupRequestedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamCleanupRequestedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamCleanupRequestedEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamCommandInvokedEventArgs<D>::Command() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::Preview::Communications::PreviewTeamViewCommand) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamCommandInvokedEventArgs<D>::Command() const
     {
-        Windows::UI::Core::Preview::Communications::PreviewTeamViewCommand value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamCommandInvokedEventArgs)->get_Command(put_abi(value)));
+        Windows::UI::Core::Preview::Communications::PreviewTeamViewCommand value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamCommandInvokedEventArgs)->get_Command(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamDeviceCredentials<D>::UserPrincipalName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamDeviceCredentials<D>::UserPrincipalName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamDeviceCredentials)->get_UserPrincipalName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamDeviceCredentials<D>::DomainUserName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamDeviceCredentials<D>::DomainUserName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamDeviceCredentials)->get_DomainUserName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamDeviceCredentials<D>::Password() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamDeviceCredentials<D>::Password() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamDeviceCredentials)->get_Password(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamEndMeetingRequestedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamEndMeetingRequestedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamEndMeetingRequestedEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamJoinMeetingRequestedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamJoinMeetingRequestedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamJoinMeetingRequestedEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamJoinMeetingRequestedEventArgs<D>::MeetingUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamJoinMeetingRequestedEventArgs<D>::MeetingUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamJoinMeetingRequestedEventArgs)->get_MeetingUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SetTitle(param::hstring const& title) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SetTitle(param::hstring const& title) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->SetTitle(*(void**)(&title)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::EnterFullScreen() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::EnterFullScreen() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->EnterFullScreen());
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::LeaveFullScreen() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::LeaveFullScreen() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->LeaveFullScreen());
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::RequestForeground() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::RequestForeground() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->RequestForeground());
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::StartSharingScreen() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::StartSharingScreen() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->StartSharingScreen());
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::StopSharingScreen() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::StopSharingScreen() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->StopSharingScreen());
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::NotifyMeetingEnded(Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingKind const& kind) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::NotifyMeetingEnded(Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingKind const& kind) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->NotifyMeetingEnded(static_cast<int32_t>(kind)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::JoinMeetingWithUri(Windows::Foundation::Uri const& meetingUri) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::JoinMeetingWithUri(Windows::Foundation::Uri const& meetingUri) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->JoinMeetingWithUri(*(void**)(&meetingUri)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::MeetingUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::MeetingUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->get_MeetingUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SharingScreenBounds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SharingScreenBounds() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->get_SharingScreenBounds(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsScreenSharing() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsScreenSharing() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->get_IsScreenSharing(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsFullScreen() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsFullScreen() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->get_IsFullScreen(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SystemState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::Preview::Communications::PreviewSystemState) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SystemState() const
     {
-        Windows::UI::Core::Preview::Communications::PreviewSystemState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->get_SystemState(put_abi(value)));
+        Windows::UI::Core::Preview::Communications::PreviewSystemState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->get_SystemState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::MeetingInfoDisplayType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::Preview::Communications::PreviewMeetingInfoDisplayKind) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::MeetingInfoDisplayType() const
     {
-        Windows::UI::Core::Preview::Communications::PreviewMeetingInfoDisplayKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->get_MeetingInfoDisplayType(put_abi(value)));
+        Windows::UI::Core::Preview::Communications::PreviewMeetingInfoDisplayKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->get_MeetingInfoDisplayType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::JoinMeetingRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::JoinMeetingRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->add_JoinMeetingRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -138,13 +138,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, JoinMeetingRequested_revoker>(this, JoinMeetingRequested(handler));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::JoinMeetingRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::JoinMeetingRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->remove_JoinMeetingRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::EndMeetingRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::EndMeetingRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->add_EndMeetingRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -152,13 +152,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, EndMeetingRequested_revoker>(this, EndMeetingRequested(handler));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::EndMeetingRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::EndMeetingRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->remove_EndMeetingRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::CleanupRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::CleanupRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->add_CleanupRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -166,13 +166,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CleanupRequested_revoker>(this, CleanupRequested(handler));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::CleanupRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::CleanupRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->remove_CleanupRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SharingScreenBoundsChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SharingScreenBoundsChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->add_SharingScreenBoundsChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -180,13 +180,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SharingScreenBoundsChanged_revoker>(this, SharingScreenBoundsChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SharingScreenBoundsChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SharingScreenBoundsChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->remove_SharingScreenBoundsChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsScreenSharingChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsScreenSharingChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->add_IsScreenSharingChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -194,13 +194,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, IsScreenSharingChanged_revoker>(this, IsScreenSharingChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsScreenSharingChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsScreenSharingChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->remove_IsScreenSharingChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsFullScreenChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsFullScreenChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->add_IsFullScreenChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -208,13 +208,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, IsFullScreenChanged_revoker>(this, IsFullScreenChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsFullScreenChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::IsFullScreenChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->remove_IsFullScreenChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::CommandInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::CommandInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->add_CommandInvoked(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -222,13 +222,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CommandInvoked_revoker>(this, CommandInvoked(handler));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::CommandInvoked(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::CommandInvoked(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->remove_CommandInvoked(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SystemStateChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SystemStateChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Core::Preview::Communications::PreviewTeamView, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->add_SystemStateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -236,20 +236,21 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SystemStateChanged_revoker>(this, SystemStateChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SystemStateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView<D>::SystemStateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView)->remove_SystemStateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView2<D>::SetButtonLabel(param::hstring const& label) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamView2<D>::SetButtonLabel(param::hstring const& label) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamView2)->SetButtonLabel(*(void**)(&label)));
     }
-    template <typename D> auto consume_Windows_UI_Core_Preview_Communications_IPreviewTeamViewStatics<D>::GetForCurrentView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::Preview::Communications::PreviewTeamView) consume_Windows_UI_Core_Preview_Communications_IPreviewTeamViewStatics<D>::GetForCurrentView() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::Preview::Communications::IPreviewTeamViewStatics)->GetForCurrentView(&result));
         return Windows::UI::Core::Preview::Communications::PreviewTeamView{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::Preview::Communications::IPreviewTeamCleanupRequestedEventArgs> : produce_base<D, Windows::UI::Core::Preview::Communications::IPreviewTeamCleanupRequestedEventArgs>
     {
@@ -262,6 +263,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::Preview::Communications::IPreviewTeamCommandInvokedEventArgs> : produce_base<D, Windows::UI::Core::Preview::Communications::IPreviewTeamCommandInvokedEventArgs>
     {
@@ -273,6 +276,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::Preview::Communications::IPreviewTeamDeviceCredentials> : produce_base<D, Windows::UI::Core::Preview::Communications::IPreviewTeamDeviceCredentials>
     {
@@ -301,6 +306,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::Preview::Communications::IPreviewTeamEndMeetingRequestedEventArgs> : produce_base<D, Windows::UI::Core::Preview::Communications::IPreviewTeamEndMeetingRequestedEventArgs>
     {
@@ -313,6 +320,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::Preview::Communications::IPreviewTeamJoinMeetingRequestedEventArgs> : produce_base<D, Windows::UI::Core::Preview::Communications::IPreviewTeamJoinMeetingRequestedEventArgs>
     {
@@ -333,6 +342,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::Preview::Communications::IPreviewTeamView> : produce_base<D, Windows::UI::Core::Preview::Communications::IPreviewTeamView>
     {
@@ -549,6 +560,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::Preview::Communications::IPreviewTeamView2> : produce_base<D, Windows::UI::Core::Preview::Communications::IPreviewTeamView2>
     {
@@ -560,6 +573,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Core::Preview::Communications::IPreviewTeamViewStatics> : produce_base<D, Windows::UI::Core::Preview::Communications::IPreviewTeamViewStatics>
     {
@@ -572,33 +587,36 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::UI::Core::Preview::Communications
+WINRT_EXPORT namespace winrt::Windows::UI::Core::Preview::Communications
 {
     inline PreviewTeamDeviceCredentials::PreviewTeamDeviceCredentials() :
-        PreviewTeamDeviceCredentials(impl::call_factory<PreviewTeamDeviceCredentials>([](auto&& f) { return f.template ActivateInstance<PreviewTeamDeviceCredentials>(); }))
+        PreviewTeamDeviceCredentials(impl::call_factory_cast<PreviewTeamDeviceCredentials(*)(Windows::Foundation::IActivationFactory const&), PreviewTeamDeviceCredentials>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PreviewTeamDeviceCredentials>(); }))
     {
     }
     inline auto PreviewTeamView::GetForCurrentView()
     {
-        return impl::call_factory<PreviewTeamView, Windows::UI::Core::Preview::Communications::IPreviewTeamViewStatics>([&](auto&& f) { return f.GetForCurrentView(); });
+        return impl::call_factory_cast<Windows::UI::Core::Preview::Communications::PreviewTeamView(*)(IPreviewTeamViewStatics const&), PreviewTeamView, IPreviewTeamViewStatics>([](IPreviewTeamViewStatics const& f) { return f.GetForCurrentView(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamCleanupRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamCleanupRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamCommandInvokedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamCommandInvokedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamDeviceCredentials> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamDeviceCredentials> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamEndMeetingRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamEndMeetingRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamJoinMeetingRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamJoinMeetingRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamView> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamView> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamView2> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamView2> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamViewStatics> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamViewStatics> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView> : winrt::impl::hash_base<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamCleanupRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamCommandInvokedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamDeviceCredentials> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamEndMeetingRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamJoinMeetingRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamView2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::IPreviewTeamViewStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView> : winrt::impl::hash_base {};
+#endif
 }
 #endif

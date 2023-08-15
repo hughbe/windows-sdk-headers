@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_WebUI_Core_H
 #define WINRT_Windows_UI_WebUI_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.WebUI.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -14,87 +14,87 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.UI.WebUI.Core.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Visible() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Visible() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_Visible(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Visible(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Visible(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->put_Visible(value));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Opacity() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Opacity() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_Opacity(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Opacity(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Opacity(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->put_Opacity(value));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::ForegroundColor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::ForegroundColor() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_ForegroundColor(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::ForegroundColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::ForegroundColor(Windows::UI::Color const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->put_ForegroundColor(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::BackgroundColor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::BackgroundColor() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_BackgroundColor(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::BackgroundColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::BackgroundColor(Windows::UI::Color const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->put_BackgroundColor(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::ClosedDisplayMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::ClosedDisplayMode() const
     {
-        Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_ClosedDisplayMode(put_abi(value)));
+        Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_ClosedDisplayMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::ClosedDisplayMode(Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::ClosedDisplayMode(Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->put_ClosedDisplayMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::IsOpen() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::IsOpen() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_IsOpen(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::IsOpen(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::IsOpen(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->put_IsOpen(value));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Size() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::Size() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_Size(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::PrimaryCommands() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IObservableVector<Windows::UI::WebUI::Core::IWebUICommandBarElement>) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::PrimaryCommands() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_PrimaryCommands(&value));
         return Windows::Foundation::Collections::IObservableVector<Windows::UI::WebUI::Core::IWebUICommandBarElement>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::SecondaryCommands() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IObservableVector<Windows::UI::WebUI::Core::IWebUICommandBarElement>) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::SecondaryCommands() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->get_SecondaryCommands(&value));
         return Windows::Foundation::Collections::IObservableVector<Windows::UI::WebUI::Core::IWebUICommandBarElement>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::MenuOpened(Windows::UI::WebUI::Core::MenuOpenedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::MenuOpened(Windows::UI::WebUI::Core::MenuOpenedEventHandler const& handler) const
     {
-        winrt::event_token value;
+        winrt::event_token value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->add_MenuOpened(*(void**)(&handler), put_abi(value)));
         return value;
     }
@@ -102,13 +102,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MenuOpened_revoker>(this, MenuOpened(handler));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::MenuOpened(winrt::event_token const& value) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::MenuOpened(winrt::event_token const& value) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->remove_MenuOpened(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::MenuClosed(Windows::UI::WebUI::Core::MenuClosedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::MenuClosed(Windows::UI::WebUI::Core::MenuClosedEventHandler const& handler) const
     {
-        winrt::event_token value;
+        winrt::event_token value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->add_MenuClosed(*(void**)(&handler), put_abi(value)));
         return value;
     }
@@ -116,13 +116,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MenuClosed_revoker>(this, MenuClosed(handler));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::MenuClosed(winrt::event_token const& value) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::MenuClosed(winrt::event_token const& value) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->remove_MenuClosed(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::SizeChanged(Windows::UI::WebUI::Core::SizeChangedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::SizeChanged(Windows::UI::WebUI::Core::SizeChangedEventHandler const& handler) const
     {
-        winrt::event_token value;
+        winrt::event_token value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->add_SizeChanged(*(void**)(&handler), put_abi(value)));
         return value;
     }
@@ -130,39 +130,39 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SizeChanged_revoker>(this, SizeChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::SizeChanged(winrt::event_token const& value) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBar<D>::SizeChanged(winrt::event_token const& value) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBar)->remove_SizeChanged(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarBitmapIcon<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_UI_WebUI_Core_IWebUICommandBarBitmapIcon<D>::Uri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon)->get_Uri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarBitmapIcon<D>::Uri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarBitmapIcon<D>::Uri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon)->put_Uri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarBitmapIconFactory<D>::Create(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon) consume_Windows_UI_WebUI_Core_IWebUICommandBarBitmapIconFactory<D>::Create(Windows::Foundation::Uri const& uri) const
     {
         void* instance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarBitmapIconFactory)->Create(*(void**)(&uri), &instance));
         return Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon{ instance, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarConfirmationButton<D>::Text() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_WebUI_Core_IWebUICommandBarConfirmationButton<D>::Text() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarConfirmationButton<D>::Text(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarConfirmationButton<D>::Text(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton)->put_Text(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarConfirmationButton<D>::ItemInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton, Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_Core_IWebUICommandBarConfirmationButton<D>::ItemInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton, Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton)->add_ItemInvoked(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -170,63 +170,63 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ItemInvoked_revoker>(this, ItemInvoked(handler));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarConfirmationButton<D>::ItemInvoked(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarConfirmationButton<D>::ItemInvoked(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton)->remove_ItemInvoked(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Enabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Enabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->get_Enabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Enabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Enabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->put_Enabled(value));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Label() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Label() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->get_Label(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Label(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Label(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->put_Label(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::IsToggleButton() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::IsToggleButton() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->get_IsToggleButton(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::IsToggleButton(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::IsToggleButton(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->put_IsToggleButton(value));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::IsChecked() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::IsChecked() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->get_IsChecked(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::IsChecked(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::IsChecked(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->put_IsChecked(value));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Icon() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::WebUI::Core::IWebUICommandBarIcon) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Icon() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->get_Icon(&value));
         return Windows::UI::WebUI::Core::IWebUICommandBarIcon{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Icon(Windows::UI::WebUI::Core::IWebUICommandBarIcon const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::Icon(Windows::UI::WebUI::Core::IWebUICommandBarIcon const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->put_Icon(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::ItemInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::WebUI::Core::WebUICommandBarIconButton, Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::ItemInvoked(Windows::Foundation::TypedEventHandler<Windows::UI::WebUI::Core::WebUICommandBarIconButton, Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->add_ItemInvoked(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -234,45 +234,45 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ItemInvoked_revoker>(this, ItemInvoked(handler));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::ItemInvoked(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarIconButton<D>::ItemInvoked(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarIconButton)->remove_ItemInvoked(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarItemInvokedEventArgs<D>::IsPrimaryCommand() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WebUI_Core_IWebUICommandBarItemInvokedEventArgs<D>::IsPrimaryCommand() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs)->get_IsPrimaryCommand(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarSizeChangedEventArgs<D>::Size() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_UI_WebUI_Core_IWebUICommandBarSizeChangedEventArgs<D>::Size() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs)->get_Size(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarStatics<D>::GetForCurrentView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::WebUI::Core::WebUICommandBar) consume_Windows_UI_WebUI_Core_IWebUICommandBarStatics<D>::GetForCurrentView() const
     {
         void* commandBar{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarStatics)->GetForCurrentView(&commandBar));
         return Windows::UI::WebUI::Core::WebUICommandBar{ commandBar, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarSymbolIcon<D>::Symbol() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_WebUI_Core_IWebUICommandBarSymbolIcon<D>::Symbol() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon)->get_Symbol(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarSymbolIcon<D>::Symbol(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_Core_IWebUICommandBarSymbolIcon<D>::Symbol(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon)->put_Symbol(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_WebUI_Core_IWebUICommandBarSymbolIconFactory<D>::Create(param::hstring const& symbol) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon) consume_Windows_UI_WebUI_Core_IWebUICommandBarSymbolIconFactory<D>::Create(param::hstring const& symbol) const
     {
         void* instance{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::WebUI::Core::IWebUICommandBarSymbolIconFactory)->Create(*(void**)(&symbol), &instance));
         return Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon{ instance, take_ownership_from_abi };
     }
-    template <typename H> struct delegate<Windows::UI::WebUI::Core::MenuClosedEventHandler, H> : implements_delegate<Windows::UI::WebUI::Core::MenuClosedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::WebUI::Core::MenuClosedEventHandler, H> final : implements_delegate<Windows::UI::WebUI::Core::MenuClosedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::WebUI::Core::MenuClosedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -283,7 +283,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::WebUI::Core::MenuOpenedEventHandler, H> : implements_delegate<Windows::UI::WebUI::Core::MenuOpenedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::WebUI::Core::MenuOpenedEventHandler, H> final : implements_delegate<Windows::UI::WebUI::Core::MenuOpenedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::WebUI::Core::MenuOpenedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -294,7 +294,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::WebUI::Core::SizeChangedEventHandler, H> : implements_delegate<Windows::UI::WebUI::Core::SizeChangedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::WebUI::Core::SizeChangedEventHandler, H> final : implements_delegate<Windows::UI::WebUI::Core::SizeChangedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::WebUI::Core::SizeChangedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -305,6 +305,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBar> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBar>
     {
@@ -461,6 +462,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon>
     {
@@ -480,6 +483,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarBitmapIconFactory> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarBitmapIconFactory>
     {
@@ -492,6 +497,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton>
     {
@@ -525,6 +532,7 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarElement> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarElement>
     {
@@ -533,6 +541,7 @@ namespace winrt::impl
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarIcon> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarIcon>
     {
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarIconButton> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarIconButton>
     {
@@ -623,6 +632,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs>
     {
@@ -634,6 +645,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs>
     {
@@ -646,6 +659,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarStatics> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarStatics>
     {
@@ -658,6 +673,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon>
     {
@@ -677,6 +694,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::WebUI::Core::IWebUICommandBarSymbolIconFactory> : produce_base<D, Windows::UI::WebUI::Core::IWebUICommandBarSymbolIconFactory>
     {
@@ -689,35 +708,36 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::UI::WebUI::Core
+WINRT_EXPORT namespace winrt::Windows::UI::WebUI::Core
 {
     inline auto WebUICommandBar::GetForCurrentView()
     {
-        return impl::call_factory<WebUICommandBar, Windows::UI::WebUI::Core::IWebUICommandBarStatics>([&](auto&& f) { return f.GetForCurrentView(); });
+        return impl::call_factory_cast<Windows::UI::WebUI::Core::WebUICommandBar(*)(IWebUICommandBarStatics const&), WebUICommandBar, IWebUICommandBarStatics>([](IWebUICommandBarStatics const& f) { return f.GetForCurrentView(); });
     }
     inline WebUICommandBarBitmapIcon::WebUICommandBarBitmapIcon() :
-        WebUICommandBarBitmapIcon(impl::call_factory<WebUICommandBarBitmapIcon>([](auto&& f) { return f.template ActivateInstance<WebUICommandBarBitmapIcon>(); }))
+        WebUICommandBarBitmapIcon(impl::call_factory_cast<WebUICommandBarBitmapIcon(*)(Windows::Foundation::IActivationFactory const&), WebUICommandBarBitmapIcon>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WebUICommandBarBitmapIcon>(); }))
     {
     }
     inline WebUICommandBarBitmapIcon::WebUICommandBarBitmapIcon(Windows::Foundation::Uri const& uri) :
-        WebUICommandBarBitmapIcon(impl::call_factory<WebUICommandBarBitmapIcon, Windows::UI::WebUI::Core::IWebUICommandBarBitmapIconFactory>([&](auto&& f) { return f.Create(uri); }))
+        WebUICommandBarBitmapIcon(impl::call_factory<WebUICommandBarBitmapIcon, IWebUICommandBarBitmapIconFactory>([&](IWebUICommandBarBitmapIconFactory const& f) { return f.Create(uri); }))
     {
     }
     inline WebUICommandBarConfirmationButton::WebUICommandBarConfirmationButton() :
-        WebUICommandBarConfirmationButton(impl::call_factory<WebUICommandBarConfirmationButton>([](auto&& f) { return f.template ActivateInstance<WebUICommandBarConfirmationButton>(); }))
+        WebUICommandBarConfirmationButton(impl::call_factory_cast<WebUICommandBarConfirmationButton(*)(Windows::Foundation::IActivationFactory const&), WebUICommandBarConfirmationButton>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WebUICommandBarConfirmationButton>(); }))
     {
     }
     inline WebUICommandBarIconButton::WebUICommandBarIconButton() :
-        WebUICommandBarIconButton(impl::call_factory<WebUICommandBarIconButton>([](auto&& f) { return f.template ActivateInstance<WebUICommandBarIconButton>(); }))
+        WebUICommandBarIconButton(impl::call_factory_cast<WebUICommandBarIconButton(*)(Windows::Foundation::IActivationFactory const&), WebUICommandBarIconButton>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WebUICommandBarIconButton>(); }))
     {
     }
     inline WebUICommandBarSymbolIcon::WebUICommandBarSymbolIcon() :
-        WebUICommandBarSymbolIcon(impl::call_factory<WebUICommandBarSymbolIcon>([](auto&& f) { return f.template ActivateInstance<WebUICommandBarSymbolIcon>(); }))
+        WebUICommandBarSymbolIcon(impl::call_factory_cast<WebUICommandBarSymbolIcon(*)(Windows::Foundation::IActivationFactory const&), WebUICommandBarSymbolIcon>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WebUICommandBarSymbolIcon>(); }))
     {
     }
     inline WebUICommandBarSymbolIcon::WebUICommandBarSymbolIcon(param::hstring const& symbol) :
-        WebUICommandBarSymbolIcon(impl::call_factory<WebUICommandBarSymbolIcon, Windows::UI::WebUI::Core::IWebUICommandBarSymbolIconFactory>([&](auto&& f) { return f.Create(symbol); }))
+        WebUICommandBarSymbolIcon(impl::call_factory<WebUICommandBarSymbolIcon, IWebUICommandBarSymbolIconFactory>([&](IWebUICommandBarSymbolIconFactory const& f) { return f.Create(symbol); }))
     {
     }
     template <typename L> MenuClosedEventHandler::MenuClosedEventHandler(L handler) :
@@ -795,24 +815,26 @@ namespace winrt::Windows::UI::WebUI::Core
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBar> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBar> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarBitmapIconFactory> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarBitmapIconFactory> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIconButton> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIconButton> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarStatics> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarStatics> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarSymbolIconFactory> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::IWebUICommandBarSymbolIconFactory> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBar> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::WebUICommandBar> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon> : winrt::impl::hash_base<winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBar> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarBitmapIconFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIconButton> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::IWebUICommandBarSymbolIconFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBar> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon> : winrt::impl::hash_base {};
+#endif
 }
 #endif

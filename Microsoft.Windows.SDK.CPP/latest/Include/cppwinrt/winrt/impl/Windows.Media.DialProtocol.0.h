@@ -1,36 +1,39 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Media_DialProtocol_0_H
 #define WINRT_Windows_Media_DialProtocol_0_H
-namespace winrt::Windows::Devices::Enumeration
+WINRT_EXPORT namespace winrt::Windows::Devices::Enumeration
 {
     struct DeviceInformation;
     struct DevicePickerAppearance;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
     struct Rect;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IIterable;
-    template <typename K, typename V> struct IKeyValuePair;
+    template <typename T> struct __declspec(empty_bases) IIterable;
+    template <typename K, typename V> struct __declspec(empty_bases) IKeyValuePair;
+    template <typename K, typename V> struct __declspec(empty_bases) IMap;
+    template <typename T> struct __declspec(empty_bases) IVector;
 }
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IRandomAccessStreamReference;
 }
-namespace winrt::Windows::UI::Popups
+WINRT_EXPORT namespace winrt::Windows::UI::Popups
 {
     enum class Placement : int32_t;
 }
-namespace winrt::Windows::Media::DialProtocol
+WINRT_EXPORT namespace winrt::Windows::Media::DialProtocol
 {
     enum class DialAppLaunchResult : int32_t
     {
@@ -85,278 +88,74 @@ namespace winrt::Windows::Media::DialProtocol
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Media::DialProtocol::IDialApp>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialAppStateDetails>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialDevice>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialDevice2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialDevicePicker>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialDevicePickerFilter>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialDeviceStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialReceiverApp>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialReceiverApp2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::IDialReceiverAppStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialApp>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialAppStateDetails>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialDevice>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialDevicePicker>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialDevicePickerFilter>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialReceiverApp>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialAppLaunchResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialAppState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialAppStopResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Media::DialProtocol::DialDeviceDisplayStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialApp>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialApp" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialAppStateDetails>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialAppStateDetails" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialDevice>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialDevice" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialDevice2>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialDevice2" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialDevicePicker>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialDevicePicker" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialDevicePickerFilter>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialDevicePickerFilter" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialDeviceSelectedEventArgs" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialDeviceStatics>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialDeviceStatics" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialDisconnectButtonClickedEventArgs" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialReceiverApp>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialReceiverApp" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialReceiverApp2>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialReceiverApp2" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::IDialReceiverAppStatics>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.IDialReceiverAppStatics" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialApp>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialApp" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialAppStateDetails>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialAppStateDetails" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialDevice>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialDevice" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialDevicePicker>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialDevicePicker" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialDevicePickerFilter>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialDevicePickerFilter" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialDeviceSelectedEventArgs" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialReceiverApp>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialReceiverApp" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialAppLaunchResult>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialAppLaunchResult" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialAppState>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialAppState" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialAppStopResult>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialAppStopResult" };
-    };
-    template <> struct name<Windows::Media::DialProtocol::DialDeviceDisplayStatus>
-    {
-        static constexpr auto & value{ L"Windows.Media.DialProtocol.DialDeviceDisplayStatus" };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialApp>
-    {
-        static constexpr guid value{ 0x555FFBD3,0x45B7,0x49F3,{ 0xBB,0xD7,0x30,0x2D,0xB6,0x08,0x46,0x46 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialAppStateDetails>
-    {
-        static constexpr guid value{ 0xDDC4A4A1,0xF5DE,0x400D,{ 0xBE,0xA4,0x8C,0x84,0x66,0xBB,0x29,0x61 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialDevice>
-    {
-        static constexpr guid value{ 0xFFF0EDAF,0x759F,0x41D2,{ 0xA2,0x0A,0x7F,0x29,0xCE,0x0B,0x37,0x84 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialDevice2>
-    {
-        static constexpr guid value{ 0xBAB7F3D5,0x5BFB,0x4EBA,{ 0x8B,0x32,0xB5,0x7C,0x5C,0x5E,0xE5,0xC9 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialDevicePicker>
-    {
-        static constexpr guid value{ 0xBA7E520A,0xFF59,0x4F4B,{ 0xBD,0xAC,0xD8,0x9F,0x49,0x5A,0xD6,0xE1 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialDevicePickerFilter>
-    {
-        static constexpr guid value{ 0xC17C93BA,0x86C0,0x485D,{ 0xB8,0xD6,0x0F,0x9A,0x8F,0x64,0x15,0x90 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs>
-    {
-        static constexpr guid value{ 0x480B92AD,0xAC76,0x47EB,{ 0x9C,0x06,0xA1,0x93,0x04,0xDA,0x02,0x47 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialDeviceStatics>
-    {
-        static constexpr guid value{ 0xAA69CC95,0x01F8,0x4758,{ 0x84,0x61,0x2B,0xBD,0x1C,0xDC,0x3C,0xF3 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs>
-    {
-        static constexpr guid value{ 0x52765152,0x9C81,0x4E55,{ 0xAD,0xC2,0x0E,0xBE,0x99,0xCD,0xE3,0xB6 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialReceiverApp>
-    {
-        static constexpr guid value{ 0xFD3E7C57,0x5045,0x470E,{ 0xB3,0x04,0x4D,0xD9,0xB1,0x3E,0x7D,0x11 } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialReceiverApp2>
-    {
-        static constexpr guid value{ 0x530C5805,0x9130,0x42AC,{ 0xA5,0x04,0x19,0x77,0xDC,0xB2,0xEA,0x8A } };
-    };
-    template <> struct guid_storage<Windows::Media::DialProtocol::IDialReceiverAppStatics>
-    {
-        static constexpr guid value{ 0x53183A3C,0x4C36,0x4D02,{ 0xB2,0x8A,0xF2,0xA9,0xDA,0x38,0xEC,0x52 } };
-    };
-    template <> struct default_interface<Windows::Media::DialProtocol::DialApp>
-    {
-        using type = Windows::Media::DialProtocol::IDialApp;
-    };
-    template <> struct default_interface<Windows::Media::DialProtocol::DialAppStateDetails>
-    {
-        using type = Windows::Media::DialProtocol::IDialAppStateDetails;
-    };
-    template <> struct default_interface<Windows::Media::DialProtocol::DialDevice>
-    {
-        using type = Windows::Media::DialProtocol::IDialDevice;
-    };
-    template <> struct default_interface<Windows::Media::DialProtocol::DialDevicePicker>
-    {
-        using type = Windows::Media::DialProtocol::IDialDevicePicker;
-    };
-    template <> struct default_interface<Windows::Media::DialProtocol::DialDevicePickerFilter>
-    {
-        using type = Windows::Media::DialProtocol::IDialDevicePickerFilter;
-    };
-    template <> struct default_interface<Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>
-    {
-        using type = Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs;
-    };
-    template <> struct default_interface<Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>
-    {
-        using type = Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs;
-    };
-    template <> struct default_interface<Windows::Media::DialProtocol::DialReceiverApp>
-    {
-        using type = Windows::Media::DialProtocol::IDialReceiverApp;
-    };
+    template <> struct category<Windows::Media::DialProtocol::IDialApp>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialAppStateDetails>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialDevice>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialDevice2>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialDevicePicker>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialDevicePickerFilter>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialDeviceStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialReceiverApp>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialReceiverApp2>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::IDialReceiverAppStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialApp>{ using type = class_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialAppStateDetails>{ using type = class_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialDevice>{ using type = class_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialDevicePicker>{ using type = class_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialDevicePickerFilter>{ using type = class_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialReceiverApp>{ using type = class_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialAppLaunchResult>{ using type = enum_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialAppState>{ using type = enum_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialAppStopResult>{ using type = enum_category; };
+    template <> struct category<Windows::Media::DialProtocol::DialDeviceDisplayStatus>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialApp> = L"Windows.Media.DialProtocol.DialApp";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialAppStateDetails> = L"Windows.Media.DialProtocol.DialAppStateDetails";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialDevice> = L"Windows.Media.DialProtocol.DialDevice";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialDevicePicker> = L"Windows.Media.DialProtocol.DialDevicePicker";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialDevicePickerFilter> = L"Windows.Media.DialProtocol.DialDevicePickerFilter";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialDeviceSelectedEventArgs> = L"Windows.Media.DialProtocol.DialDeviceSelectedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs> = L"Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialReceiverApp> = L"Windows.Media.DialProtocol.DialReceiverApp";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialAppLaunchResult> = L"Windows.Media.DialProtocol.DialAppLaunchResult";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialAppState> = L"Windows.Media.DialProtocol.DialAppState";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialAppStopResult> = L"Windows.Media.DialProtocol.DialAppStopResult";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::DialDeviceDisplayStatus> = L"Windows.Media.DialProtocol.DialDeviceDisplayStatus";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialApp> = L"Windows.Media.DialProtocol.IDialApp";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialAppStateDetails> = L"Windows.Media.DialProtocol.IDialAppStateDetails";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialDevice> = L"Windows.Media.DialProtocol.IDialDevice";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialDevice2> = L"Windows.Media.DialProtocol.IDialDevice2";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialDevicePicker> = L"Windows.Media.DialProtocol.IDialDevicePicker";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialDevicePickerFilter> = L"Windows.Media.DialProtocol.IDialDevicePickerFilter";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs> = L"Windows.Media.DialProtocol.IDialDeviceSelectedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialDeviceStatics> = L"Windows.Media.DialProtocol.IDialDeviceStatics";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs> = L"Windows.Media.DialProtocol.IDialDisconnectButtonClickedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialReceiverApp> = L"Windows.Media.DialProtocol.IDialReceiverApp";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialReceiverApp2> = L"Windows.Media.DialProtocol.IDialReceiverApp2";
+    template <> inline constexpr auto& name_v<Windows::Media::DialProtocol::IDialReceiverAppStatics> = L"Windows.Media.DialProtocol.IDialReceiverAppStatics";
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialApp>{ 0x555FFBD3,0x45B7,0x49F3,{ 0xBB,0xD7,0x30,0x2D,0xB6,0x08,0x46,0x46 } }; // 555FFBD3-45B7-49F3-BBD7-302DB6084646
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialAppStateDetails>{ 0xDDC4A4A1,0xF5DE,0x400D,{ 0xBE,0xA4,0x8C,0x84,0x66,0xBB,0x29,0x61 } }; // DDC4A4A1-F5DE-400D-BEA4-8C8466BB2961
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialDevice>{ 0xFFF0EDAF,0x759F,0x41D2,{ 0xA2,0x0A,0x7F,0x29,0xCE,0x0B,0x37,0x84 } }; // FFF0EDAF-759F-41D2-A20A-7F29CE0B3784
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialDevice2>{ 0xBAB7F3D5,0x5BFB,0x4EBA,{ 0x8B,0x32,0xB5,0x7C,0x5C,0x5E,0xE5,0xC9 } }; // BAB7F3D5-5BFB-4EBA-8B32-B57C5C5EE5C9
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialDevicePicker>{ 0xBA7E520A,0xFF59,0x4F4B,{ 0xBD,0xAC,0xD8,0x9F,0x49,0x5A,0xD6,0xE1 } }; // BA7E520A-FF59-4F4B-BDAC-D89F495AD6E1
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialDevicePickerFilter>{ 0xC17C93BA,0x86C0,0x485D,{ 0xB8,0xD6,0x0F,0x9A,0x8F,0x64,0x15,0x90 } }; // C17C93BA-86C0-485D-B8D6-0F9A8F641590
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs>{ 0x480B92AD,0xAC76,0x47EB,{ 0x9C,0x06,0xA1,0x93,0x04,0xDA,0x02,0x47 } }; // 480B92AD-AC76-47EB-9C06-A19304DA0247
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialDeviceStatics>{ 0xAA69CC95,0x01F8,0x4758,{ 0x84,0x61,0x2B,0xBD,0x1C,0xDC,0x3C,0xF3 } }; // AA69CC95-01F8-4758-8461-2BBD1CDC3CF3
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs>{ 0x52765152,0x9C81,0x4E55,{ 0xAD,0xC2,0x0E,0xBE,0x99,0xCD,0xE3,0xB6 } }; // 52765152-9C81-4E55-ADC2-0EBE99CDE3B6
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialReceiverApp>{ 0xFD3E7C57,0x5045,0x470E,{ 0xB3,0x04,0x4D,0xD9,0xB1,0x3E,0x7D,0x11 } }; // FD3E7C57-5045-470E-B304-4DD9B13E7D11
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialReceiverApp2>{ 0x530C5805,0x9130,0x42AC,{ 0xA5,0x04,0x19,0x77,0xDC,0xB2,0xEA,0x8A } }; // 530C5805-9130-42AC-A504-1977DCB2EA8A
+    template <> inline constexpr guid guid_v<Windows::Media::DialProtocol::IDialReceiverAppStatics>{ 0x53183A3C,0x4C36,0x4D02,{ 0xB2,0x8A,0xF2,0xA9,0xDA,0x38,0xEC,0x52 } }; // 53183A3C-4C36-4D02-B28A-F2A9DA38EC52
+    template <> struct default_interface<Windows::Media::DialProtocol::DialApp>{ using type = Windows::Media::DialProtocol::IDialApp; };
+    template <> struct default_interface<Windows::Media::DialProtocol::DialAppStateDetails>{ using type = Windows::Media::DialProtocol::IDialAppStateDetails; };
+    template <> struct default_interface<Windows::Media::DialProtocol::DialDevice>{ using type = Windows::Media::DialProtocol::IDialDevice; };
+    template <> struct default_interface<Windows::Media::DialProtocol::DialDevicePicker>{ using type = Windows::Media::DialProtocol::IDialDevicePicker; };
+    template <> struct default_interface<Windows::Media::DialProtocol::DialDevicePickerFilter>{ using type = Windows::Media::DialProtocol::IDialDevicePickerFilter; };
+    template <> struct default_interface<Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>{ using type = Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs; };
+    template <> struct default_interface<Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>{ using type = Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs; };
+    template <> struct default_interface<Windows::Media::DialProtocol::DialReceiverApp>{ using type = Windows::Media::DialProtocol::IDialReceiverApp; };
     template <> struct abi<Windows::Media::DialProtocol::IDialApp>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -466,10 +265,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialApp
     {
-        [[nodiscard]] auto AppName() const;
-        auto RequestLaunchAsync(param::hstring const& appArgument) const;
-        auto StopAsync() const;
-        auto GetAppStateAsync() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppName() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::DialProtocol::DialAppLaunchResult>) RequestLaunchAsync(param::hstring const& appArgument) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::DialProtocol::DialAppStopResult>) StopAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::DialProtocol::DialAppStateDetails>) GetAppStateAsync() const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialApp>
     {
@@ -478,8 +277,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialAppStateDetails
     {
-        [[nodiscard]] auto State() const;
-        [[nodiscard]] auto FullXml() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::DialProtocol::DialAppState) State() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FullXml() const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialAppStateDetails>
     {
@@ -488,8 +287,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialDevice
     {
-        [[nodiscard]] auto Id() const;
-        auto GetDialApp(param::hstring const& appName) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
+        WINRT_IMPL_AUTO(Windows::Media::DialProtocol::DialApp) GetDialApp(param::hstring const& appName) const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialDevice>
     {
@@ -498,8 +297,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialDevice2
     {
-        [[nodiscard]] auto FriendlyName() const;
-        [[nodiscard]] auto Thumbnail() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FriendlyName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) Thumbnail() const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialDevice2>
     {
@@ -508,26 +307,26 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialDevicePicker
     {
-        [[nodiscard]] auto Filter() const;
-        [[nodiscard]] auto Appearance() const;
-        auto DialDeviceSelected(Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Media::DialProtocol::DialDeviceSelectedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::DialProtocol::DialDevicePickerFilter) Filter() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DevicePickerAppearance) Appearance() const;
+        WINRT_IMPL_AUTO(winrt::event_token) DialDeviceSelected(Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Media::DialProtocol::DialDeviceSelectedEventArgs> const& handler) const;
         using DialDeviceSelected_revoker = impl::event_revoker<Windows::Media::DialProtocol::IDialDevicePicker, &impl::abi_t<Windows::Media::DialProtocol::IDialDevicePicker>::remove_DialDeviceSelected>;
-        DialDeviceSelected_revoker DialDeviceSelected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Media::DialProtocol::DialDeviceSelectedEventArgs> const& handler) const;
-        auto DialDeviceSelected(winrt::event_token const& token) const noexcept;
-        auto DisconnectButtonClicked(Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs> const& handler) const;
+        [[nodiscard]] DialDeviceSelected_revoker DialDeviceSelected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Media::DialProtocol::DialDeviceSelectedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) DialDeviceSelected(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) DisconnectButtonClicked(Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs> const& handler) const;
         using DisconnectButtonClicked_revoker = impl::event_revoker<Windows::Media::DialProtocol::IDialDevicePicker, &impl::abi_t<Windows::Media::DialProtocol::IDialDevicePicker>::remove_DisconnectButtonClicked>;
-        DisconnectButtonClicked_revoker DisconnectButtonClicked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs> const& handler) const;
-        auto DisconnectButtonClicked(winrt::event_token const& token) const noexcept;
-        auto DialDevicePickerDismissed(Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] DisconnectButtonClicked_revoker DisconnectButtonClicked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) DisconnectButtonClicked(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) DialDevicePickerDismissed(Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Foundation::IInspectable> const& handler) const;
         using DialDevicePickerDismissed_revoker = impl::event_revoker<Windows::Media::DialProtocol::IDialDevicePicker, &impl::abi_t<Windows::Media::DialProtocol::IDialDevicePicker>::remove_DialDevicePickerDismissed>;
-        DialDevicePickerDismissed_revoker DialDevicePickerDismissed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Foundation::IInspectable> const& handler) const;
-        auto DialDevicePickerDismissed(winrt::event_token const& token) const noexcept;
-        auto Show(Windows::Foundation::Rect const& selection) const;
-        auto Show(Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement) const;
-        auto PickSingleDialDeviceAsync(Windows::Foundation::Rect const& selection) const;
-        auto PickSingleDialDeviceAsync(Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement) const;
-        auto Hide() const;
-        auto SetDisplayStatus(Windows::Media::DialProtocol::DialDevice const& device, Windows::Media::DialProtocol::DialDeviceDisplayStatus const& status) const;
+        [[nodiscard]] DialDevicePickerDismissed_revoker DialDevicePickerDismissed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::DialProtocol::DialDevicePicker, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) DialDevicePickerDismissed(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(void) Show(Windows::Foundation::Rect const& selection) const;
+        WINRT_IMPL_AUTO(void) Show(Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::DialProtocol::DialDevice>) PickSingleDialDeviceAsync(Windows::Foundation::Rect const& selection) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::DialProtocol::DialDevice>) PickSingleDialDeviceAsync(Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement) const;
+        WINRT_IMPL_AUTO(void) Hide() const;
+        WINRT_IMPL_AUTO(void) SetDisplayStatus(Windows::Media::DialProtocol::DialDevice const& device, Windows::Media::DialProtocol::DialDeviceDisplayStatus const& status) const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialDevicePicker>
     {
@@ -536,7 +335,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialDevicePickerFilter
     {
-        [[nodiscard]] auto SupportedAppNames() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) SupportedAppNames() const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialDevicePickerFilter>
     {
@@ -545,7 +344,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialDeviceSelectedEventArgs
     {
-        [[nodiscard]] auto SelectedDialDevice() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::DialProtocol::DialDevice) SelectedDialDevice() const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialDeviceSelectedEventArgs>
     {
@@ -554,9 +353,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialDeviceStatics
     {
-        auto GetDeviceSelector(param::hstring const& appName) const;
-        auto FromIdAsync(param::hstring const& value) const;
-        auto DeviceInfoSupportsDialAsync(Windows::Devices::Enumeration::DeviceInformation const& device) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(param::hstring const& appName) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::DialProtocol::DialDevice>) FromIdAsync(param::hstring const& value) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) DeviceInfoSupportsDialAsync(Windows::Devices::Enumeration::DeviceInformation const& device) const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialDeviceStatics>
     {
@@ -565,7 +364,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialDisconnectButtonClickedEventArgs
     {
-        [[nodiscard]] auto Device() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::DialProtocol::DialDevice) Device() const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialDisconnectButtonClickedEventArgs>
     {
@@ -574,8 +373,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialReceiverApp
     {
-        auto GetAdditionalDataAsync() const;
-        auto SetAdditionalDataAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& additionalData) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMap<hstring, hstring>>) GetAdditionalDataAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) SetAdditionalDataAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& additionalData) const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialReceiverApp>
     {
@@ -584,7 +383,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialReceiverApp2
     {
-        auto GetUniqueDeviceNameAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetUniqueDeviceNameAsync() const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialReceiverApp2>
     {
@@ -593,7 +392,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_DialProtocol_IDialReceiverAppStatics
     {
-        [[nodiscard]] auto Current() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::DialProtocol::DialReceiverApp) Current() const;
     };
     template <> struct consume<Windows::Media::DialProtocol::IDialReceiverAppStatics>
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.UI.Popups.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Contacts.1.h"
-namespace winrt::Windows::ApplicationModel::Contacts
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Contacts
 {
     struct __declspec(empty_bases) AggregateContactManager : Windows::ApplicationModel::Contacts::IAggregateContactManager,
         impl::require<AggregateContactManager, Windows::ApplicationModel::Contacts::IAggregateContactManager2>
@@ -139,7 +139,7 @@ namespace winrt::Windows::ApplicationModel::Contacts
     {
         ContactInstantMessageField(std::nullptr_t) noexcept {}
         ContactInstantMessageField(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Contacts::IContactInstantMessageField(ptr, take_ownership_from_abi) {}
-        ContactInstantMessageField(param::hstring const& userName);
+        explicit ContactInstantMessageField(param::hstring const& userName);
         ContactInstantMessageField(param::hstring const& userName, Windows::ApplicationModel::Contacts::ContactFieldCategory const& category);
         ContactInstantMessageField(param::hstring const& userName, Windows::ApplicationModel::Contacts::ContactFieldCategory const& category, param::hstring const& service, param::hstring const& displayText, Windows::Foundation::Uri const& verb);
     };
@@ -192,7 +192,7 @@ namespace winrt::Windows::ApplicationModel::Contacts
     {
         ContactLocationField(std::nullptr_t) noexcept {}
         ContactLocationField(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Contacts::IContactLocationField(ptr, take_ownership_from_abi) {}
-        ContactLocationField(param::hstring const& unstructuredAddress);
+        explicit ContactLocationField(param::hstring const& unstructuredAddress);
         ContactLocationField(param::hstring const& unstructuredAddress, Windows::ApplicationModel::Contacts::ContactFieldCategory const& category);
         ContactLocationField(param::hstring const& unstructuredAddress, Windows::ApplicationModel::Contacts::ContactFieldCategory const& category, param::hstring const& street, param::hstring const& city, param::hstring const& region, param::hstring const& country, param::hstring const& postalCode);
     };
@@ -268,7 +268,7 @@ namespace winrt::Windows::ApplicationModel::Contacts
         ContactQueryOptions(std::nullptr_t) noexcept {}
         ContactQueryOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Contacts::IContactQueryOptions(ptr, take_ownership_from_abi) {}
         ContactQueryOptions();
-        ContactQueryOptions(param::hstring const& text);
+        explicit ContactQueryOptions(param::hstring const& text);
         ContactQueryOptions(param::hstring const& text, Windows::ApplicationModel::Contacts::ContactQuerySearchFields const& fields);
     };
     struct __declspec(empty_bases) ContactQueryTextSearch : Windows::ApplicationModel::Contacts::IContactQueryTextSearch

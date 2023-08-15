@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.UI.Xaml.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Media.Animation.1.h"
-namespace winrt::Windows::UI::Xaml::Media::Animation
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media::Animation
 {
     struct KeyTime
     {
@@ -855,8 +855,8 @@ namespace winrt::Windows::UI::Xaml::Media::Animation
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using INavigationTransitionInfoOverrides = winrt::Windows::UI::Xaml::Media::Animation::INavigationTransitionInfoOverrides;
-        auto GetNavigationStateCore() const;
-        auto SetNavigationStateCore(param::hstring const& navigationState) const;
+        WINRT_IMPL_AUTO(hstring) GetNavigationStateCore() const;
+        WINRT_IMPL_AUTO(void) SetNavigationStateCore(param::hstring const& navigationState) const;
     };
 }
 #endif

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,22 +6,22 @@
 #ifndef WINRT_Windows_Media_Core_Preview_H
 #define WINRT_Windows_Media_Core_Preview_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Media.Core.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Media.2.h"
 #include "winrt/impl/Windows.Media.Core.Preview.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::SoundLevel) consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevel() const
     {
-        Windows::Media::SoundLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::Preview::ISoundLevelBrokerStatics)->get_SoundLevel(put_abi(value)));
+        Windows::Media::SoundLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::Preview::ISoundLevelBrokerStatics)->get_SoundLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevelChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevelChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::Preview::ISoundLevelBrokerStatics)->add_SoundLevelChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -29,10 +29,11 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SoundLevelChanged_revoker>(this, SoundLevelChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevelChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_Preview_ISoundLevelBrokerStatics<D>::SoundLevelChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::Preview::ISoundLevelBrokerStatics)->remove_SoundLevelChanged(impl::bind_in(token)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Core::Preview::ISoundLevelBrokerStatics> : produce_base<D, Windows::Media::Core::Preview::ISoundLevelBrokerStatics>
     {
@@ -58,16 +59,17 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
 }
-namespace winrt::Windows::Media::Core::Preview
+WINRT_EXPORT namespace winrt::Windows::Media::Core::Preview
 {
     inline auto SoundLevelBroker::SoundLevel()
     {
-        return impl::call_factory<SoundLevelBroker, Windows::Media::Core::Preview::ISoundLevelBrokerStatics>([&](auto&& f) { return f.SoundLevel(); });
+        return impl::call_factory_cast<Windows::Media::SoundLevel(*)(ISoundLevelBrokerStatics const&), SoundLevelBroker, ISoundLevelBrokerStatics>([](ISoundLevelBrokerStatics const& f) { return f.SoundLevel(); });
     }
     inline auto SoundLevelBroker::SoundLevelChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
-        return impl::call_factory<SoundLevelBroker, Windows::Media::Core::Preview::ISoundLevelBrokerStatics>([&](auto&& f) { return f.SoundLevelChanged(handler); });
+        return impl::call_factory<SoundLevelBroker, ISoundLevelBrokerStatics>([&](ISoundLevelBrokerStatics const& f) { return f.SoundLevelChanged(handler); });
     }
     inline SoundLevelBroker::SoundLevelChanged_revoker SoundLevelBroker::SoundLevelChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
     {
@@ -76,12 +78,14 @@ namespace winrt::Windows::Media::Core::Preview
     }
     inline auto SoundLevelBroker::SoundLevelChanged(winrt::event_token const& token)
     {
-        impl::call_factory<SoundLevelBroker, Windows::Media::Core::Preview::ISoundLevelBrokerStatics>([&](auto&& f) { return f.SoundLevelChanged(token); });
+        impl::call_factory<SoundLevelBroker, ISoundLevelBrokerStatics>([&](ISoundLevelBrokerStatics const& f) { return f.SoundLevelChanged(token); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Media::Core::Preview::ISoundLevelBrokerStatics> : winrt::impl::hash_base<winrt::Windows::Media::Core::Preview::ISoundLevelBrokerStatics> {};
-    template<> struct hash<winrt::Windows::Media::Core::Preview::SoundLevelBroker> : winrt::impl::hash_base<winrt::Windows::Media::Core::Preview::SoundLevelBroker> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Media::Core::Preview::ISoundLevelBrokerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Core::Preview::SoundLevelBroker> : winrt::impl::hash_base {};
+#endif
 }
 #endif

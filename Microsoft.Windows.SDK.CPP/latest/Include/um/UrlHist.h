@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -183,35 +191,43 @@ EXTERN_C const IID IID_IEnumSTATURL;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumSTATURL * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumSTATURL * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumSTATURL * This);
         
+        DECLSPEC_XFGVIRT(IEnumSTATURL, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumSTATURL * This,
             /* [in] */ ULONG celt,
             /* [out][in] */ __RPC__inout LPSTATURL rgelt,
             /* [out][in] */ __RPC__inout ULONG *pceltFetched);
         
+        DECLSPEC_XFGVIRT(IEnumSTATURL, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumSTATURL * This,
             /* [in] */ ULONG celt);
         
+        DECLSPEC_XFGVIRT(IEnumSTATURL, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumSTATURL * This);
         
+        DECLSPEC_XFGVIRT(IEnumSTATURL, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumSTATURL * This,
             /* [out] */ __RPC__deref_out_opt IEnumSTATURL **ppenum);
         
+        DECLSPEC_XFGVIRT(IEnumSTATURL, SetFilter)
         HRESULT ( STDMETHODCALLTYPE *SetFilter )( 
             __RPC__in IEnumSTATURL * This,
             /* [unique][in] */ __RPC__in_opt LPCOLESTR poszFilter,
@@ -325,41 +341,49 @@ EXTERN_C const IID IID_IUrlHistoryStg;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUrlHistoryStg * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUrlHistoryStg * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUrlHistoryStg * This);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, AddUrl)
         HRESULT ( STDMETHODCALLTYPE *AddUrl )( 
             __RPC__in IUrlHistoryStg * This,
             /* [in] */ __RPC__in LPCOLESTR pocsUrl,
             /* [unique][in] */ __RPC__in_opt LPCOLESTR pocsTitle,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, DeleteUrl)
         HRESULT ( STDMETHODCALLTYPE *DeleteUrl )( 
             __RPC__in IUrlHistoryStg * This,
             /* [in] */ __RPC__in LPCOLESTR pocsUrl,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, QueryUrl)
         HRESULT ( STDMETHODCALLTYPE *QueryUrl )( 
             __RPC__in IUrlHistoryStg * This,
             /* [in] */ __RPC__in LPCOLESTR pocsUrl,
             /* [in] */ DWORD dwFlags,
             /* [unique][out][in] */ __RPC__inout_opt LPSTATURL lpSTATURL);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, BindToObject)
         HRESULT ( STDMETHODCALLTYPE *BindToObject )( 
             __RPC__in IUrlHistoryStg * This,
             /* [in] */ __RPC__in LPCOLESTR pocsUrl,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][out] */ __RPC__deref_out_opt void **ppvOut);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, EnumUrls)
         HRESULT ( STDMETHODCALLTYPE *EnumUrls )( 
             __RPC__in IUrlHistoryStg * This,
             /* [out] */ __RPC__deref_out_opt IEnumSTATURL **ppEnum);
@@ -460,45 +484,54 @@ EXTERN_C const IID IID_IUrlHistoryStg2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUrlHistoryStg2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUrlHistoryStg2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUrlHistoryStg2 * This);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, AddUrl)
         HRESULT ( STDMETHODCALLTYPE *AddUrl )( 
             __RPC__in IUrlHistoryStg2 * This,
             /* [in] */ __RPC__in LPCOLESTR pocsUrl,
             /* [unique][in] */ __RPC__in_opt LPCOLESTR pocsTitle,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, DeleteUrl)
         HRESULT ( STDMETHODCALLTYPE *DeleteUrl )( 
             __RPC__in IUrlHistoryStg2 * This,
             /* [in] */ __RPC__in LPCOLESTR pocsUrl,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, QueryUrl)
         HRESULT ( STDMETHODCALLTYPE *QueryUrl )( 
             __RPC__in IUrlHistoryStg2 * This,
             /* [in] */ __RPC__in LPCOLESTR pocsUrl,
             /* [in] */ DWORD dwFlags,
             /* [unique][out][in] */ __RPC__inout_opt LPSTATURL lpSTATURL);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, BindToObject)
         HRESULT ( STDMETHODCALLTYPE *BindToObject )( 
             __RPC__in IUrlHistoryStg2 * This,
             /* [in] */ __RPC__in LPCOLESTR pocsUrl,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][out] */ __RPC__deref_out_opt void **ppvOut);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg, EnumUrls)
         HRESULT ( STDMETHODCALLTYPE *EnumUrls )( 
             __RPC__in IUrlHistoryStg2 * This,
             /* [out] */ __RPC__deref_out_opt IEnumSTATURL **ppEnum);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg2, AddUrlAndNotify)
         HRESULT ( STDMETHODCALLTYPE *AddUrlAndNotify )( 
             __RPC__in IUrlHistoryStg2 * This,
             /* [in] */ __RPC__in LPCOLESTR pocsUrl,
@@ -508,6 +541,7 @@ EXTERN_C const IID IID_IUrlHistoryStg2;
             /* [in] */ __RPC__in_opt IOleCommandTarget *poctNotify,
             /* [unique][in] */ __RPC__in_opt IUnknown *punkISFolder);
         
+        DECLSPEC_XFGVIRT(IUrlHistoryStg2, ClearHistory)
         HRESULT ( STDMETHODCALLTYPE *ClearHistory )( 
             __RPC__in IUrlHistoryStg2 * This);
         
@@ -604,18 +638,22 @@ EXTERN_C const IID IID_IUrlHistoryNotify;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUrlHistoryNotify * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUrlHistoryNotify * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUrlHistoryNotify * This);
         
+        DECLSPEC_XFGVIRT(IOleCommandTarget, QueryStatus)
         /* [input_sync] */ HRESULT ( STDMETHODCALLTYPE *QueryStatus )( 
             __RPC__in IUrlHistoryNotify * This,
             /* [unique][in] */ __RPC__in_opt const GUID *pguidCmdGroup,
@@ -623,6 +661,7 @@ EXTERN_C const IID IID_IUrlHistoryNotify;
             /* [out][in][size_is] */ __RPC__inout_ecount_full(cCmds) OLECMD prgCmds[  ],
             /* [unique][out][in] */ __RPC__inout_opt OLECMDTEXT *pCmdText);
         
+        DECLSPEC_XFGVIRT(IOleCommandTarget, Exec)
         HRESULT ( STDMETHODCALLTYPE *Exec )( 
             __RPC__in IUrlHistoryNotify * This,
             /* [unique][in] */ __RPC__in_opt const GUID *pguidCmdGroup,

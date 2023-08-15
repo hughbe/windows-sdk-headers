@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Bluetooth_Background_2_H
 #define WINRT_Windows_Devices_Bluetooth_Background_2_H
 #include "winrt/impl/Windows.Devices.Bluetooth.Background.1.h"
-namespace winrt::Windows::Devices::Bluetooth::Background
+WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth::Background
 {
     struct __declspec(empty_bases) BluetoothLEAdvertisementPublisherTriggerDetails : Windows::Devices::Bluetooth::Background::IBluetoothLEAdvertisementPublisherTriggerDetails,
         impl::require<BluetoothLEAdvertisementPublisherTriggerDetails, Windows::Devices::Bluetooth::Background::IBluetoothLEAdvertisementPublisherTriggerDetails2>

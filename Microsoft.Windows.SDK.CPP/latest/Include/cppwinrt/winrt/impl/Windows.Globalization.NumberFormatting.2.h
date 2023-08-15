@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,14 +7,14 @@
 #define WINRT_Windows_Globalization_NumberFormatting_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Globalization.NumberFormatting.1.h"
-namespace winrt::Windows::Globalization::NumberFormatting
+WINRT_EXPORT namespace winrt::Windows::Globalization::NumberFormatting
 {
     struct __declspec(empty_bases) CurrencyFormatter : Windows::Globalization::NumberFormatting::ICurrencyFormatter,
         impl::require<CurrencyFormatter, Windows::Globalization::NumberFormatting::ICurrencyFormatter2, Windows::Globalization::NumberFormatting::ISignificantDigitsOption, Windows::Globalization::NumberFormatting::INumberRounderOption, Windows::Globalization::NumberFormatting::ISignedZeroOption>
     {
         CurrencyFormatter(std::nullptr_t) noexcept {}
         CurrencyFormatter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::NumberFormatting::ICurrencyFormatter(ptr, take_ownership_from_abi) {}
-        CurrencyFormatter(param::hstring const& currencyCode);
+        explicit CurrencyFormatter(param::hstring const& currencyCode);
         CurrencyFormatter(param::hstring const& currencyCode, param::iterable<hstring> const& languages, param::hstring const& geographicRegion);
     };
     struct __declspec(empty_bases) DecimalFormatter : Windows::Globalization::NumberFormatting::INumberFormatter,
@@ -37,7 +37,7 @@ namespace winrt::Windows::Globalization::NumberFormatting
         NumeralSystemTranslator(std::nullptr_t) noexcept {}
         NumeralSystemTranslator(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::NumberFormatting::INumeralSystemTranslator(ptr, take_ownership_from_abi) {}
         NumeralSystemTranslator();
-        NumeralSystemTranslator(param::iterable<hstring> const& languages);
+        explicit NumeralSystemTranslator(param::iterable<hstring> const& languages);
     };
     struct __declspec(empty_bases) PercentFormatter : Windows::Globalization::NumberFormatting::INumberFormatter,
         impl::require<PercentFormatter, Windows::Globalization::NumberFormatting::INumberFormatterOptions, Windows::Globalization::NumberFormatting::INumberFormatter2, Windows::Globalization::NumberFormatting::INumberParser, Windows::Globalization::NumberFormatting::ISignificantDigitsOption, Windows::Globalization::NumberFormatting::INumberRounderOption, Windows::Globalization::NumberFormatting::ISignedZeroOption>

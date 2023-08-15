@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -715,18 +723,22 @@ EXTERN_C const IID IID_IDirect3DDeviceManager9;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDirect3DDeviceManager9 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDirect3DDeviceManager9 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDirect3DDeviceManager9 * This);
         
+        DECLSPEC_XFGVIRT(IDirect3DDeviceManager9, ResetDevice)
         HRESULT ( STDMETHODCALLTYPE *ResetDevice )( 
             IDirect3DDeviceManager9 * This,
             /* [annotation][in] */ 
@@ -734,21 +746,25 @@ EXTERN_C const IID IID_IDirect3DDeviceManager9;
             /* [annotation][in] */ 
             _In_  UINT resetToken);
         
+        DECLSPEC_XFGVIRT(IDirect3DDeviceManager9, OpenDeviceHandle)
         HRESULT ( STDMETHODCALLTYPE *OpenDeviceHandle )( 
             IDirect3DDeviceManager9 * This,
             /* [annotation][out] */ 
             _Out_  HANDLE *phDevice);
         
+        DECLSPEC_XFGVIRT(IDirect3DDeviceManager9, CloseDeviceHandle)
         HRESULT ( STDMETHODCALLTYPE *CloseDeviceHandle )( 
             IDirect3DDeviceManager9 * This,
             /* [annotation][in] */ 
             _In_  HANDLE hDevice);
         
+        DECLSPEC_XFGVIRT(IDirect3DDeviceManager9, TestDevice)
         HRESULT ( STDMETHODCALLTYPE *TestDevice )( 
             IDirect3DDeviceManager9 * This,
             /* [annotation][in] */ 
             _In_  HANDLE hDevice);
         
+        DECLSPEC_XFGVIRT(IDirect3DDeviceManager9, LockDevice)
         HRESULT ( STDMETHODCALLTYPE *LockDevice )( 
             IDirect3DDeviceManager9 * This,
             /* [annotation][in] */ 
@@ -758,6 +774,7 @@ EXTERN_C const IID IID_IDirect3DDeviceManager9;
             /* [annotation][in] */ 
             _In_  BOOL fBlock);
         
+        DECLSPEC_XFGVIRT(IDirect3DDeviceManager9, UnlockDevice)
         HRESULT ( STDMETHODCALLTYPE *UnlockDevice )( 
             IDirect3DDeviceManager9 * This,
             /* [annotation][in] */ 
@@ -765,6 +782,7 @@ EXTERN_C const IID IID_IDirect3DDeviceManager9;
             /* [annotation][in] */ 
             _In_  BOOL fSaveState);
         
+        DECLSPEC_XFGVIRT(IDirect3DDeviceManager9, GetVideoService)
         HRESULT ( STDMETHODCALLTYPE *GetVideoService )( 
             IDirect3DDeviceManager9 * This,
             /* [annotation][in] */ 
@@ -873,18 +891,22 @@ EXTERN_C const IID IID_IDirectXVideoAccelerationService;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDirectXVideoAccelerationService * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDirectXVideoAccelerationService * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDirectXVideoAccelerationService * This);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoAccelerationService, CreateSurface)
         HRESULT ( STDMETHODCALLTYPE *CreateSurface )( 
             IDirectXVideoAccelerationService * This,
             /* [annotation][in] */ 
@@ -1007,18 +1029,22 @@ EXTERN_C const IID IID_IDirectXVideoDecoderService;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDirectXVideoDecoderService * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDirectXVideoDecoderService * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDirectXVideoDecoderService * This);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoAccelerationService, CreateSurface)
         HRESULT ( STDMETHODCALLTYPE *CreateSurface )( 
             IDirectXVideoDecoderService * This,
             /* [annotation][in] */ 
@@ -1040,6 +1066,7 @@ EXTERN_C const IID IID_IDirectXVideoDecoderService;
             /* [annotation][out][in] */ 
             _Inout_opt_  HANDLE *pSharedHandle);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoderService, GetDecoderDeviceGuids)
         HRESULT ( STDMETHODCALLTYPE *GetDecoderDeviceGuids )( 
             IDirectXVideoDecoderService * This,
             /* [annotation][out] */ 
@@ -1047,6 +1074,7 @@ EXTERN_C const IID IID_IDirectXVideoDecoderService;
             /* [annotation][size_is][unique][out] */ 
             _Outptr_result_buffer_maybenull_(*pCount)  GUID **pGuids);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoderService, GetDecoderRenderTargets)
         HRESULT ( STDMETHODCALLTYPE *GetDecoderRenderTargets )( 
             IDirectXVideoDecoderService * This,
             /* [annotation][in] */ 
@@ -1056,6 +1084,7 @@ EXTERN_C const IID IID_IDirectXVideoDecoderService;
             /* [annotation][size_is][unique][out] */ 
             _Outptr_result_buffer_maybenull_(*pCount)  D3DFORMAT **pFormats);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoderService, GetDecoderConfigurations)
         HRESULT ( STDMETHODCALLTYPE *GetDecoderConfigurations )( 
             IDirectXVideoDecoderService * This,
             /* [annotation][in] */ 
@@ -1069,6 +1098,7 @@ EXTERN_C const IID IID_IDirectXVideoDecoderService;
             /* [annotation][size_is][unique][out] */ 
             _Outptr_result_buffer_maybenull_(*pCount)  DXVA2_ConfigPictureDecode **ppConfigs);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoderService, CreateVideoDecoder)
         HRESULT ( STDMETHODCALLTYPE *CreateVideoDecoder )( 
             IDirectXVideoDecoderService * This,
             /* [annotation][in] */ 
@@ -1238,18 +1268,22 @@ EXTERN_C const IID IID_IDirectXVideoProcessorService;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDirectXVideoProcessorService * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDirectXVideoProcessorService * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDirectXVideoProcessorService * This);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoAccelerationService, CreateSurface)
         HRESULT ( STDMETHODCALLTYPE *CreateSurface )( 
             IDirectXVideoProcessorService * This,
             /* [annotation][in] */ 
@@ -1271,11 +1305,13 @@ EXTERN_C const IID IID_IDirectXVideoProcessorService;
             /* [annotation][out][in] */ 
             _Inout_opt_  HANDLE *pSharedHandle);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessorService, RegisterVideoProcessorSoftwareDevice)
         HRESULT ( STDMETHODCALLTYPE *RegisterVideoProcessorSoftwareDevice )( 
             IDirectXVideoProcessorService * This,
             /* [annotation][in] */ 
             _In_  void *pCallbacks);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessorService, GetVideoProcessorDeviceGuids)
         HRESULT ( STDMETHODCALLTYPE *GetVideoProcessorDeviceGuids )( 
             IDirectXVideoProcessorService * This,
             /* [annotation][in] */ 
@@ -1285,6 +1321,7 @@ EXTERN_C const IID IID_IDirectXVideoProcessorService;
             /* [annotation][size_is][unique][out] */ 
             _Outptr_result_buffer_maybenull_(*pCount)  GUID **pGuids);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessorService, GetVideoProcessorRenderTargets)
         HRESULT ( STDMETHODCALLTYPE *GetVideoProcessorRenderTargets )( 
             IDirectXVideoProcessorService * This,
             /* [annotation][in] */ 
@@ -1296,6 +1333,7 @@ EXTERN_C const IID IID_IDirectXVideoProcessorService;
             /* [annotation][size_is][unique][out] */ 
             _Outptr_result_buffer_maybenull_(*pCount)  D3DFORMAT **pFormats);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessorService, GetVideoProcessorSubStreamFormats)
         HRESULT ( STDMETHODCALLTYPE *GetVideoProcessorSubStreamFormats )( 
             IDirectXVideoProcessorService * This,
             /* [annotation][in] */ 
@@ -1309,6 +1347,7 @@ EXTERN_C const IID IID_IDirectXVideoProcessorService;
             /* [annotation][size_is][unique][out] */ 
             _Outptr_result_buffer_maybenull_(*pCount)  D3DFORMAT **pFormats);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessorService, GetVideoProcessorCaps)
         HRESULT ( STDMETHODCALLTYPE *GetVideoProcessorCaps )( 
             IDirectXVideoProcessorService * This,
             /* [annotation][in] */ 
@@ -1320,6 +1359,7 @@ EXTERN_C const IID IID_IDirectXVideoProcessorService;
             /* [annotation][out] */ 
             _Out_  DXVA2_VideoProcessorCaps *pCaps);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessorService, GetProcAmpRange)
         HRESULT ( STDMETHODCALLTYPE *GetProcAmpRange )( 
             IDirectXVideoProcessorService * This,
             /* [annotation][in] */ 
@@ -1333,6 +1373,7 @@ EXTERN_C const IID IID_IDirectXVideoProcessorService;
             /* [annotation][out] */ 
             _Out_  DXVA2_ValueRange *pRange);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessorService, GetFilterPropertyRange)
         HRESULT ( STDMETHODCALLTYPE *GetFilterPropertyRange )( 
             IDirectXVideoProcessorService * This,
             /* [annotation][in] */ 
@@ -1346,6 +1387,7 @@ EXTERN_C const IID IID_IDirectXVideoProcessorService;
             /* [annotation][out] */ 
             _Out_  DXVA2_ValueRange *pRange);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessorService, CreateVideoProcessor)
         HRESULT ( STDMETHODCALLTYPE *CreateVideoProcessor )( 
             IDirectXVideoProcessorService * This,
             /* [annotation][in] */ 
@@ -1487,23 +1529,28 @@ EXTERN_C const IID IID_IDirectXVideoDecoder;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDirectXVideoDecoder * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDirectXVideoDecoder * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDirectXVideoDecoder * This);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoder, GetVideoDecoderService)
         HRESULT ( STDMETHODCALLTYPE *GetVideoDecoderService )( 
             IDirectXVideoDecoder * This,
             /* [annotation][out] */ 
             _Outptr_  IDirectXVideoDecoderService **ppService);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoder, GetCreationParameters)
         HRESULT ( STDMETHODCALLTYPE *GetCreationParameters )( 
             IDirectXVideoDecoder * This,
             /* [annotation][out] */ 
@@ -1517,6 +1564,7 @@ EXTERN_C const IID IID_IDirectXVideoDecoder;
             /* [annotation][out] */ 
             _Out_opt_  UINT *pNumSurfaces);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoder, GetBuffer)
         HRESULT ( STDMETHODCALLTYPE *GetBuffer )( 
             IDirectXVideoDecoder * This,
             /* [annotation][in] */ 
@@ -1526,11 +1574,13 @@ EXTERN_C const IID IID_IDirectXVideoDecoder;
             /* [annotation][out] */ 
             _Out_  UINT *pBufferSize);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoder, ReleaseBuffer)
         HRESULT ( STDMETHODCALLTYPE *ReleaseBuffer )( 
             IDirectXVideoDecoder * This,
             /* [annotation][in] */ 
             _In_  UINT BufferType);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoder, BeginFrame)
         HRESULT ( STDMETHODCALLTYPE *BeginFrame )( 
             IDirectXVideoDecoder * This,
             /* [annotation][in] */ 
@@ -1538,11 +1588,13 @@ EXTERN_C const IID IID_IDirectXVideoDecoder;
             /* [annotation][in] */ 
             _In_opt_  void *pvPVPData);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoder, EndFrame)
         HRESULT ( STDMETHODCALLTYPE *EndFrame )( 
             IDirectXVideoDecoder * This,
             /* [annotation][out] */ 
             _Inout_opt_  HANDLE *pHandleComplete);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoDecoder, Execute)
         HRESULT ( STDMETHODCALLTYPE *Execute )( 
             IDirectXVideoDecoder * This,
             /* [annotation][in] */ 
@@ -1669,23 +1721,28 @@ EXTERN_C const IID IID_IDirectXVideoProcessor;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDirectXVideoProcessor * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDirectXVideoProcessor * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDirectXVideoProcessor * This);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessor, GetVideoProcessorService)
         HRESULT ( STDMETHODCALLTYPE *GetVideoProcessorService )( 
             IDirectXVideoProcessor * This,
             /* [annotation][out] */ 
             _Outptr_  IDirectXVideoProcessorService **ppService);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessor, GetCreationParameters)
         HRESULT ( STDMETHODCALLTYPE *GetCreationParameters )( 
             IDirectXVideoProcessor * This,
             /* [annotation][out] */ 
@@ -1697,11 +1754,13 @@ EXTERN_C const IID IID_IDirectXVideoProcessor;
             /* [annotation][out] */ 
             _Out_opt_  UINT *pMaxNumSubStreams);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessor, GetVideoProcessorCaps)
         HRESULT ( STDMETHODCALLTYPE *GetVideoProcessorCaps )( 
             IDirectXVideoProcessor * This,
             /* [annotation][out] */ 
             _Out_  DXVA2_VideoProcessorCaps *pCaps);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessor, GetProcAmpRange)
         HRESULT ( STDMETHODCALLTYPE *GetProcAmpRange )( 
             IDirectXVideoProcessor * This,
             /* [annotation][in] */ 
@@ -1709,6 +1768,7 @@ EXTERN_C const IID IID_IDirectXVideoProcessor;
             /* [annotation][out] */ 
             _Out_  DXVA2_ValueRange *pRange);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessor, GetFilterPropertyRange)
         HRESULT ( STDMETHODCALLTYPE *GetFilterPropertyRange )( 
             IDirectXVideoProcessor * This,
             /* [annotation][in] */ 
@@ -1716,6 +1776,7 @@ EXTERN_C const IID IID_IDirectXVideoProcessor;
             /* [annotation][out] */ 
             _Out_  DXVA2_ValueRange *pRange);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoProcessor, VideoProcessBlt)
         HRESULT ( STDMETHODCALLTYPE *VideoProcessBlt )( 
             IDirectXVideoProcessor * This,
             /* [annotation][in] */ 
@@ -1831,18 +1892,22 @@ EXTERN_C const IID IID_IDirectXVideoMemoryConfiguration;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDirectXVideoMemoryConfiguration * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDirectXVideoMemoryConfiguration * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDirectXVideoMemoryConfiguration * This);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoMemoryConfiguration, GetAvailableSurfaceTypeByIndex)
         HRESULT ( STDMETHODCALLTYPE *GetAvailableSurfaceTypeByIndex )( 
             IDirectXVideoMemoryConfiguration * This,
             /* [annotation][in] */ 
@@ -1850,6 +1915,7 @@ EXTERN_C const IID IID_IDirectXVideoMemoryConfiguration;
             /* [annotation][out] */ 
             _Out_  DXVA2_SurfaceType *pdwType);
         
+        DECLSPEC_XFGVIRT(IDirectXVideoMemoryConfiguration, SetSurfaceType)
         HRESULT ( STDMETHODCALLTYPE *SetSurfaceType )( 
             IDirectXVideoMemoryConfiguration * This,
             /* [annotation][in] */ 

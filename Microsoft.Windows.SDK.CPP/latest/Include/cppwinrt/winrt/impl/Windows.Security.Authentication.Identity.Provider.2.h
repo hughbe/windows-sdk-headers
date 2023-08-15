@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Security.Authentication.Identity.Provider.1.h"
-namespace winrt::Windows::Security::Authentication::Identity::Provider
+WINRT_EXPORT namespace winrt::Windows::Security::Authentication::Identity::Provider
 {
     struct __declspec(empty_bases) SecondaryAuthenticationFactorAuthentication : Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthentication
     {
@@ -18,7 +18,7 @@ namespace winrt::Windows::Security::Authentication::Identity::Provider
         static auto StartAuthenticationAsync(param::hstring const& deviceId, Windows::Storage::Streams::IBuffer const& serviceAuthenticationNonce);
         static auto AuthenticationStageChanged(Windows::Foundation::EventHandler<Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs> const& handler);
         using AuthenticationStageChanged_revoker = impl::factory_event_revoker<Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationStatics, &impl::abi_t<Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationStatics>::remove_AuthenticationStageChanged>;
-        static AuthenticationStageChanged_revoker AuthenticationStageChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs> const& handler);
+        [[nodiscard]] static AuthenticationStageChanged_revoker AuthenticationStageChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs> const& handler);
         static auto AuthenticationStageChanged(winrt::event_token const& token);
         static auto GetAuthenticationStageInfoAsync();
     };

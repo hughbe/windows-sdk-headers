@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Text_H
 #define WINRT_Windows_UI_Text_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
@@ -14,1158 +14,1159 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.UI.Text.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_UI_Text_IContentLinkInfo<D>::Id() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->get_Id(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::Id(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_IContentLinkInfo<D>::Id(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->put_Id(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::DisplayText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Text_IContentLinkInfo<D>::DisplayText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->get_DisplayText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::DisplayText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_IContentLinkInfo<D>::DisplayText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->put_DisplayText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::SecondaryText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Text_IContentLinkInfo<D>::SecondaryText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->get_SecondaryText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::SecondaryText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_IContentLinkInfo<D>::SecondaryText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->put_SecondaryText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_UI_Text_IContentLinkInfo<D>::Uri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->get_Uri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::Uri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_IContentLinkInfo<D>::Uri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->put_Uri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::LinkContentKind() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Text_IContentLinkInfo<D>::LinkContentKind() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->get_LinkContentKind(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_IContentLinkInfo<D>::LinkContentKind(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_IContentLinkInfo<D>::LinkContentKind(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IContentLinkInfo)->put_LinkContentKind(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::Black() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::Black() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_Black(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::Bold() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::Bold() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_Bold(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::ExtraBlack() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::ExtraBlack() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_ExtraBlack(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::ExtraBold() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::ExtraBold() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_ExtraBold(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::ExtraLight() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::ExtraLight() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_ExtraLight(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::Light() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::Light() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_Light(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::Medium() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::Medium() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_Medium(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::Normal() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::Normal() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_Normal(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::SemiBold() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::SemiBold() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_SemiBold(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::SemiLight() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::SemiLight() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_SemiLight(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IFontWeightsStatics<D>::Thin() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_UI_Text_IFontWeightsStatics<D>::Thin() const
     {
-        Windows::UI::Text::FontWeight value;
+        Windows::UI::Text::FontWeight value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IFontWeightsStatics)->get_Thin(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_IRichEditTextRange<D>::ContentLinkInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ContentLinkInfo) consume_Windows_UI_Text_IRichEditTextRange<D>::ContentLinkInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IRichEditTextRange)->get_ContentLinkInfo(&value));
         return Windows::UI::Text::ContentLinkInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_IRichEditTextRange<D>::ContentLinkInfo(Windows::UI::Text::ContentLinkInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_IRichEditTextRange<D>::ContentLinkInfo(Windows::UI::Text::ContentLinkInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::IRichEditTextRange)->put_ContentLinkInfo(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::AllCaps() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::AllCaps() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_AllCaps(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_AllCaps(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::AllCaps(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::AllCaps(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_AllCaps(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::BackgroundColor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_UI_Text_ITextCharacterFormat<D>::BackgroundColor() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_BackgroundColor(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::BackgroundColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::BackgroundColor(Windows::UI::Color const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_BackgroundColor(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Bold() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::Bold() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Bold(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Bold(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Bold(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Bold(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Bold(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::FontStretch() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontStretch) consume_Windows_UI_Text_ITextCharacterFormat<D>::FontStretch() const
     {
-        Windows::UI::Text::FontStretch value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_FontStretch(put_abi(value)));
+        Windows::UI::Text::FontStretch value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_FontStretch(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::FontStretch(Windows::UI::Text::FontStretch const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::FontStretch(Windows::UI::Text::FontStretch const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_FontStretch(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::FontStyle() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontStyle) consume_Windows_UI_Text_ITextCharacterFormat<D>::FontStyle() const
     {
-        Windows::UI::Text::FontStyle value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_FontStyle(put_abi(value)));
+        Windows::UI::Text::FontStyle value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_FontStyle(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::FontStyle(Windows::UI::Text::FontStyle const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::FontStyle(Windows::UI::Text::FontStyle const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_FontStyle(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::ForegroundColor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_UI_Text_ITextCharacterFormat<D>::ForegroundColor() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_ForegroundColor(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::ForegroundColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::ForegroundColor(Windows::UI::Color const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_ForegroundColor(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Hidden() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::Hidden() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Hidden(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Hidden(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Hidden(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Hidden(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Hidden(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Italic() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::Italic() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Italic(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Italic(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Italic(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Italic(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Italic(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Kerning() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextCharacterFormat<D>::Kerning() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Kerning(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Kerning(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Kerning(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Kerning(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::LanguageTag() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Text_ITextCharacterFormat<D>::LanguageTag() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_LanguageTag(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::LanguageTag(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::LanguageTag(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_LanguageTag(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::LinkType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::LinkType) consume_Windows_UI_Text_ITextCharacterFormat<D>::LinkType() const
     {
-        Windows::UI::Text::LinkType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_LinkType(put_abi(value)));
+        Windows::UI::Text::LinkType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_LinkType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Text_ITextCharacterFormat<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Name(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Name(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Name(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Outline() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::Outline() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Outline(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Outline(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Outline(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Outline(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Outline(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextCharacterFormat<D>::Position() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Position(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Position(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Position(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Position(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::ProtectedText() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::ProtectedText() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_ProtectedText(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_ProtectedText(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::ProtectedText(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::ProtectedText(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_ProtectedText(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Size() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextCharacterFormat<D>::Size() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Size(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Size(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Size(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Size(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::SmallCaps() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::SmallCaps() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_SmallCaps(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_SmallCaps(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::SmallCaps(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::SmallCaps(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_SmallCaps(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Spacing() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextCharacterFormat<D>::Spacing() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Spacing(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Spacing(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Spacing(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Spacing(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Strikethrough() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::Strikethrough() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Strikethrough(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Strikethrough(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Strikethrough(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Strikethrough(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Strikethrough(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Subscript() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::Subscript() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Subscript(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Subscript(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Subscript(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Subscript(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Subscript(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Superscript() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextCharacterFormat<D>::Superscript() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Superscript(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Superscript(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Superscript(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Superscript(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Superscript(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::TextScript() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::TextScript) consume_Windows_UI_Text_ITextCharacterFormat<D>::TextScript() const
     {
-        Windows::UI::Text::TextScript value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_TextScript(put_abi(value)));
+        Windows::UI::Text::TextScript value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_TextScript(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::TextScript(Windows::UI::Text::TextScript const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::TextScript(Windows::UI::Text::TextScript const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_TextScript(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Underline() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::UnderlineType) consume_Windows_UI_Text_ITextCharacterFormat<D>::Underline() const
     {
-        Windows::UI::Text::UnderlineType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Underline(put_abi(value)));
+        Windows::UI::Text::UnderlineType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Underline(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Underline(Windows::UI::Text::UnderlineType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Underline(Windows::UI::Text::UnderlineType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Underline(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Weight() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextCharacterFormat<D>::Weight() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->get_Weight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::Weight(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::Weight(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->put_Weight(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::SetClone(Windows::UI::Text::ITextCharacterFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextCharacterFormat<D>::SetClone(Windows::UI::Text::ITextCharacterFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->SetClone(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::GetClone() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextCharacterFormat) consume_Windows_UI_Text_ITextCharacterFormat<D>::GetClone() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->GetClone(&result));
         return Windows::UI::Text::ITextCharacterFormat{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextCharacterFormat<D>::IsEqual(Windows::UI::Text::ITextCharacterFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextCharacterFormat<D>::IsEqual(Windows::UI::Text::ITextCharacterFormat const& format) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextCharacterFormat)->IsEqual(*(void**)(&format), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextConstantsStatics<D>::AutoColor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_UI_Text_ITextConstantsStatics<D>::AutoColor() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_AutoColor(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextConstantsStatics<D>::MinUnitCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextConstantsStatics<D>::MinUnitCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_MinUnitCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextConstantsStatics<D>::MaxUnitCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextConstantsStatics<D>::MaxUnitCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_MaxUnitCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedColor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedColor() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_UndefinedColor(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedFloatValue() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedFloatValue() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_UndefinedFloatValue(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedInt32Value() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedInt32Value() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_UndefinedInt32Value(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedFontStretch() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontStretch) consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedFontStretch() const
     {
-        Windows::UI::Text::FontStretch value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_UndefinedFontStretch(put_abi(value)));
+        Windows::UI::Text::FontStretch value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_UndefinedFontStretch(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedFontStyle() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontStyle) consume_Windows_UI_Text_ITextConstantsStatics<D>::UndefinedFontStyle() const
     {
-        Windows::UI::Text::FontStyle value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_UndefinedFontStyle(put_abi(value)));
+        Windows::UI::Text::FontStyle value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextConstantsStatics)->get_UndefinedFontStyle(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::CaretType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::CaretType) consume_Windows_UI_Text_ITextDocument<D>::CaretType() const
     {
-        Windows::UI::Text::CaretType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->get_CaretType(put_abi(value)));
+        Windows::UI::Text::CaretType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->get_CaretType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::CaretType(Windows::UI::Text::CaretType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::CaretType(Windows::UI::Text::CaretType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->put_CaretType(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::DefaultTabStop() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextDocument<D>::DefaultTabStop() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->get_DefaultTabStop(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::DefaultTabStop(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::DefaultTabStop(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->put_DefaultTabStop(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::Selection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextSelection) consume_Windows_UI_Text_ITextDocument<D>::Selection() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->get_Selection(&value));
         return Windows::UI::Text::ITextSelection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::UndoLimit() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_UI_Text_ITextDocument<D>::UndoLimit() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->get_UndoLimit(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::UndoLimit(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::UndoLimit(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->put_UndoLimit(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::CanCopy() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextDocument<D>::CanCopy() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->CanCopy(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::CanPaste() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextDocument<D>::CanPaste() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->CanPaste(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::CanRedo() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextDocument<D>::CanRedo() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->CanRedo(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::CanUndo() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextDocument<D>::CanUndo() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->CanUndo(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::ApplyDisplayUpdates() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextDocument<D>::ApplyDisplayUpdates() const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->ApplyDisplayUpdates(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::BatchDisplayUpdates() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextDocument<D>::BatchDisplayUpdates() const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->BatchDisplayUpdates(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::BeginUndoGroup() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::BeginUndoGroup() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->BeginUndoGroup());
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::EndUndoGroup() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::EndUndoGroup() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->EndUndoGroup());
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::GetDefaultCharacterFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextCharacterFormat) consume_Windows_UI_Text_ITextDocument<D>::GetDefaultCharacterFormat() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->GetDefaultCharacterFormat(&result));
         return Windows::UI::Text::ITextCharacterFormat{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::GetDefaultParagraphFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextParagraphFormat) consume_Windows_UI_Text_ITextDocument<D>::GetDefaultParagraphFormat() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->GetDefaultParagraphFormat(&result));
         return Windows::UI::Text::ITextParagraphFormat{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::GetRange(int32_t startPosition, int32_t endPosition) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextRange) consume_Windows_UI_Text_ITextDocument<D>::GetRange(int32_t startPosition, int32_t endPosition) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->GetRange(startPosition, endPosition, &result));
         return Windows::UI::Text::ITextRange{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::GetRangeFromPoint(Windows::Foundation::Point const& point, Windows::UI::Text::PointOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextRange) consume_Windows_UI_Text_ITextDocument<D>::GetRangeFromPoint(Windows::Foundation::Point const& point, Windows::UI::Text::PointOptions const& options) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->GetRangeFromPoint(impl::bind_in(point), static_cast<uint32_t>(options), &result));
         return Windows::UI::Text::ITextRange{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::GetText(Windows::UI::Text::TextGetOptions const& options, hstring& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::GetText(Windows::UI::Text::TextGetOptions const& options, hstring& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->GetText(static_cast<uint32_t>(options), impl::bind_out(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::LoadFromStream(Windows::UI::Text::TextSetOptions const& options, Windows::Storage::Streams::IRandomAccessStream const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::LoadFromStream(Windows::UI::Text::TextSetOptions const& options, Windows::Storage::Streams::IRandomAccessStream const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->LoadFromStream(static_cast<uint32_t>(options), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::Redo() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::Redo() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->Redo());
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::SaveToStream(Windows::UI::Text::TextGetOptions const& options, Windows::Storage::Streams::IRandomAccessStream const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::SaveToStream(Windows::UI::Text::TextGetOptions const& options, Windows::Storage::Streams::IRandomAccessStream const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->SaveToStream(static_cast<uint32_t>(options), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::SetDefaultCharacterFormat(Windows::UI::Text::ITextCharacterFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::SetDefaultCharacterFormat(Windows::UI::Text::ITextCharacterFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->SetDefaultCharacterFormat(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::SetDefaultParagraphFormat(Windows::UI::Text::ITextParagraphFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::SetDefaultParagraphFormat(Windows::UI::Text::ITextParagraphFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->SetDefaultParagraphFormat(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::SetText(Windows::UI::Text::TextSetOptions const& options, param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::SetText(Windows::UI::Text::TextSetOptions const& options, param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->SetText(static_cast<uint32_t>(options), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument<D>::Undo() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument<D>::Undo() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument)->Undo());
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument2<D>::AlignmentIncludesTrailingWhitespace() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextDocument2<D>::AlignmentIncludesTrailingWhitespace() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument2)->get_AlignmentIncludesTrailingWhitespace(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument2<D>::AlignmentIncludesTrailingWhitespace(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument2<D>::AlignmentIncludesTrailingWhitespace(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument2)->put_AlignmentIncludesTrailingWhitespace(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument2<D>::IgnoreTrailingCharacterSpacing() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextDocument2<D>::IgnoreTrailingCharacterSpacing() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument2)->get_IgnoreTrailingCharacterSpacing(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument2<D>::IgnoreTrailingCharacterSpacing(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument2<D>::IgnoreTrailingCharacterSpacing(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument2)->put_IgnoreTrailingCharacterSpacing(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument3<D>::ClearUndoRedoHistory() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument3<D>::ClearUndoRedoHistory() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument3)->ClearUndoRedoHistory());
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument4<D>::SetMath(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument4<D>::SetMath(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument4)->SetMath(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument4<D>::GetMath(hstring& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument4<D>::GetMath(hstring& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument4)->GetMath(impl::bind_out(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextDocument4<D>::SetMathMode(Windows::UI::Text::RichEditMathMode const& mode) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextDocument4<D>::SetMathMode(Windows::UI::Text::RichEditMathMode const& mode) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextDocument4)->SetMathMode(static_cast<int32_t>(mode)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::Alignment() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ParagraphAlignment) consume_Windows_UI_Text_ITextParagraphFormat<D>::Alignment() const
     {
-        Windows::UI::Text::ParagraphAlignment value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_Alignment(put_abi(value)));
+        Windows::UI::Text::ParagraphAlignment value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_Alignment(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::Alignment(Windows::UI::Text::ParagraphAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::Alignment(Windows::UI::Text::ParagraphAlignment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_Alignment(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::FirstLineIndent() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextParagraphFormat<D>::FirstLineIndent() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_FirstLineIndent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::KeepTogether() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextParagraphFormat<D>::KeepTogether() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_KeepTogether(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_KeepTogether(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::KeepTogether(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::KeepTogether(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_KeepTogether(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::KeepWithNext() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextParagraphFormat<D>::KeepWithNext() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_KeepWithNext(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_KeepWithNext(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::KeepWithNext(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::KeepWithNext(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_KeepWithNext(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::LeftIndent() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextParagraphFormat<D>::LeftIndent() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_LeftIndent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::LineSpacing() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextParagraphFormat<D>::LineSpacing() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_LineSpacing(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::LineSpacingRule() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::LineSpacingRule) consume_Windows_UI_Text_ITextParagraphFormat<D>::LineSpacingRule() const
     {
-        Windows::UI::Text::LineSpacingRule value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_LineSpacingRule(put_abi(value)));
+        Windows::UI::Text::LineSpacingRule value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_LineSpacingRule(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListAlignment() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::MarkerAlignment) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListAlignment() const
     {
-        Windows::UI::Text::MarkerAlignment value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_ListAlignment(put_abi(value)));
+        Windows::UI::Text::MarkerAlignment value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_ListAlignment(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListAlignment(Windows::UI::Text::MarkerAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListAlignment(Windows::UI::Text::MarkerAlignment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_ListAlignment(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListLevelIndex() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListLevelIndex() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_ListLevelIndex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListLevelIndex(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListLevelIndex(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_ListLevelIndex(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListStart() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListStart() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_ListStart(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListStart(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListStart(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_ListStart(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListStyle() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::MarkerStyle) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListStyle() const
     {
-        Windows::UI::Text::MarkerStyle value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_ListStyle(put_abi(value)));
+        Windows::UI::Text::MarkerStyle value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_ListStyle(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListStyle(Windows::UI::Text::MarkerStyle const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListStyle(Windows::UI::Text::MarkerStyle const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_ListStyle(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListTab() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListTab() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_ListTab(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListTab(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListTab(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_ListTab(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::MarkerType) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListType() const
     {
-        Windows::UI::Text::MarkerType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_ListType(put_abi(value)));
+        Windows::UI::Text::MarkerType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_ListType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ListType(Windows::UI::Text::MarkerType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::ListType(Windows::UI::Text::MarkerType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_ListType(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::NoLineNumber() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextParagraphFormat<D>::NoLineNumber() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_NoLineNumber(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_NoLineNumber(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::NoLineNumber(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::NoLineNumber(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_NoLineNumber(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::PageBreakBefore() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextParagraphFormat<D>::PageBreakBefore() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_PageBreakBefore(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_PageBreakBefore(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::PageBreakBefore(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::PageBreakBefore(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_PageBreakBefore(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::RightIndent() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextParagraphFormat<D>::RightIndent() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_RightIndent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::RightIndent(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::RightIndent(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_RightIndent(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::RightToLeft() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextParagraphFormat<D>::RightToLeft() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_RightToLeft(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_RightToLeft(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::RightToLeft(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::RightToLeft(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_RightToLeft(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::Style() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ParagraphStyle) consume_Windows_UI_Text_ITextParagraphFormat<D>::Style() const
     {
-        Windows::UI::Text::ParagraphStyle value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_Style(put_abi(value)));
+        Windows::UI::Text::ParagraphStyle value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_Style(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::Style(Windows::UI::Text::ParagraphStyle const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::Style(Windows::UI::Text::ParagraphStyle const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_Style(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::SpaceAfter() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextParagraphFormat<D>::SpaceAfter() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_SpaceAfter(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::SpaceAfter(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::SpaceAfter(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_SpaceAfter(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::SpaceBefore() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Text_ITextParagraphFormat<D>::SpaceBefore() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_SpaceBefore(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::SpaceBefore(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::SpaceBefore(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_SpaceBefore(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::WidowControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FormatEffect) consume_Windows_UI_Text_ITextParagraphFormat<D>::WidowControl() const
     {
-        Windows::UI::Text::FormatEffect value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_WidowControl(put_abi(value)));
+        Windows::UI::Text::FormatEffect value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_WidowControl(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::WidowControl(Windows::UI::Text::FormatEffect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::WidowControl(Windows::UI::Text::FormatEffect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->put_WidowControl(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::TabCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextParagraphFormat<D>::TabCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->get_TabCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::AddTab(float position, Windows::UI::Text::TabAlignment const& align, Windows::UI::Text::TabLeader const& leader) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::AddTab(float position, Windows::UI::Text::TabAlignment const& align, Windows::UI::Text::TabLeader const& leader) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->AddTab(position, static_cast<int32_t>(align), static_cast<int32_t>(leader)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::ClearAllTabs() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::ClearAllTabs() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->ClearAllTabs());
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::DeleteTab(float position) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::DeleteTab(float position) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->DeleteTab(position));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::GetClone() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextParagraphFormat) consume_Windows_UI_Text_ITextParagraphFormat<D>::GetClone() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->GetClone(&result));
         return Windows::UI::Text::ITextParagraphFormat{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::GetTab(int32_t index, float& position, Windows::UI::Text::TabAlignment& align, Windows::UI::Text::TabLeader& leader) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::GetTab(int32_t index, float& position, Windows::UI::Text::TabAlignment& align, Windows::UI::Text::TabLeader& leader) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->GetTab(index, &position, impl::bind_out(align), impl::bind_out(leader)));
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->GetTab(index, &position, reinterpret_cast<int32_t*>(&align), reinterpret_cast<int32_t*>(&leader)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::IsEqual(Windows::UI::Text::ITextParagraphFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextParagraphFormat<D>::IsEqual(Windows::UI::Text::ITextParagraphFormat const& format) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->IsEqual(*(void**)(&format), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::SetClone(Windows::UI::Text::ITextParagraphFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::SetClone(Windows::UI::Text::ITextParagraphFormat const& format) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->SetClone(*(void**)(&format)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::SetIndents(float start, float left, float right) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::SetIndents(float start, float left, float right) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->SetIndents(start, left, right));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextParagraphFormat<D>::SetLineSpacing(Windows::UI::Text::LineSpacingRule const& rule, float spacing) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextParagraphFormat<D>::SetLineSpacing(Windows::UI::Text::LineSpacingRule const& rule, float spacing) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextParagraphFormat)->SetLineSpacing(static_cast<int32_t>(rule), spacing));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Character() const
+    template <typename D> WINRT_IMPL_AUTO(char16_t) consume_Windows_UI_Text_ITextRange<D>::Character() const
     {
-        char16_t value;
+        char16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_Character(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Character(char16_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::Character(char16_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->put_Character(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::CharacterFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextCharacterFormat) consume_Windows_UI_Text_ITextRange<D>::CharacterFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_CharacterFormat(&value));
         return Windows::UI::Text::ITextCharacterFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::CharacterFormat(Windows::UI::Text::ITextCharacterFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::CharacterFormat(Windows::UI::Text::ITextCharacterFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->put_CharacterFormat(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::FormattedText() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextRange) consume_Windows_UI_Text_ITextRange<D>::FormattedText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_FormattedText(&value));
         return Windows::UI::Text::ITextRange{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::FormattedText(Windows::UI::Text::ITextRange const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::FormattedText(Windows::UI::Text::ITextRange const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->put_FormattedText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::EndPosition() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::EndPosition() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_EndPosition(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::EndPosition(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::EndPosition(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->put_EndPosition(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Gravity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::RangeGravity) consume_Windows_UI_Text_ITextRange<D>::Gravity() const
     {
-        Windows::UI::Text::RangeGravity value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_Gravity(put_abi(value)));
+        Windows::UI::Text::RangeGravity value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_Gravity(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Gravity(Windows::UI::Text::RangeGravity const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::Gravity(Windows::UI::Text::RangeGravity const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->put_Gravity(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Length() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::Length() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_Length(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Link() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Text_ITextRange<D>::Link() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_Link(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Link(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::Link(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->put_Link(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::ParagraphFormat() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextParagraphFormat) consume_Windows_UI_Text_ITextRange<D>::ParagraphFormat() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_ParagraphFormat(&value));
         return Windows::UI::Text::ITextParagraphFormat{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::ParagraphFormat(Windows::UI::Text::ITextParagraphFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::ParagraphFormat(Windows::UI::Text::ITextParagraphFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->put_ParagraphFormat(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::StartPosition() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::StartPosition() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_StartPosition(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::StartPosition(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::StartPosition(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->put_StartPosition(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::StoryLength() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::StoryLength() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_StoryLength(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Text() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_Text_ITextRange<D>::Text() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Text(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::Text(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->put_Text(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::CanPaste(int32_t format) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextRange<D>::CanPaste(int32_t format) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->CanPaste(format, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::ChangeCase(Windows::UI::Text::LetterCase const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::ChangeCase(Windows::UI::Text::LetterCase const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->ChangeCase(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Collapse(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::Collapse(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->Collapse(value));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Copy() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::Copy() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->Copy());
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Cut() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::Cut() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->Cut());
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Delete(Windows::UI::Text::TextRangeUnit const& unit, int32_t count) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::Delete(Windows::UI::Text::TextRangeUnit const& unit, int32_t count) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->Delete(static_cast<int32_t>(unit), count, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::EndOf(Windows::UI::Text::TextRangeUnit const& unit, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::EndOf(Windows::UI::Text::TextRangeUnit const& unit, bool extend) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->EndOf(static_cast<int32_t>(unit), extend, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Expand(Windows::UI::Text::TextRangeUnit const& unit) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::Expand(Windows::UI::Text::TextRangeUnit const& unit) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->Expand(static_cast<int32_t>(unit), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::FindText(param::hstring const& value, int32_t scanLength, Windows::UI::Text::FindOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::FindText(param::hstring const& value, int32_t scanLength, Windows::UI::Text::FindOptions const& options) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->FindText(*(void**)(&value), scanLength, static_cast<uint32_t>(options), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::GetCharacterUtf32(uint32_t& value, int32_t offset) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::GetCharacterUtf32(uint32_t& value, int32_t offset) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->GetCharacterUtf32(&value, offset));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::GetClone() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::ITextRange) consume_Windows_UI_Text_ITextRange<D>::GetClone() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->GetClone(&result));
         return Windows::UI::Text::ITextRange{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::GetIndex(Windows::UI::Text::TextRangeUnit const& unit) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::GetIndex(Windows::UI::Text::TextRangeUnit const& unit) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->GetIndex(static_cast<int32_t>(unit), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::GetPoint(Windows::UI::Text::HorizontalCharacterAlignment const& horizontalAlign, Windows::UI::Text::VerticalCharacterAlignment const& verticalAlign, Windows::UI::Text::PointOptions const& options, Windows::Foundation::Point& point) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::GetPoint(Windows::UI::Text::HorizontalCharacterAlignment const& horizontalAlign, Windows::UI::Text::VerticalCharacterAlignment const& verticalAlign, Windows::UI::Text::PointOptions const& options, Windows::Foundation::Point& point) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->GetPoint(static_cast<int32_t>(horizontalAlign), static_cast<int32_t>(verticalAlign), static_cast<uint32_t>(options), impl::bind_out(point)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::GetRect(Windows::UI::Text::PointOptions const& options, Windows::Foundation::Rect& rect, int32_t& hit) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::GetRect(Windows::UI::Text::PointOptions const& options, Windows::Foundation::Rect& rect, int32_t& hit) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->GetRect(static_cast<uint32_t>(options), impl::bind_out(rect), &hit));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::GetText(Windows::UI::Text::TextGetOptions const& options, hstring& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::GetText(Windows::UI::Text::TextGetOptions const& options, hstring& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->GetText(static_cast<uint32_t>(options), impl::bind_out(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::GetTextViaStream(Windows::UI::Text::TextGetOptions const& options, Windows::Storage::Streams::IRandomAccessStream const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::GetTextViaStream(Windows::UI::Text::TextGetOptions const& options, Windows::Storage::Streams::IRandomAccessStream const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->GetTextViaStream(static_cast<uint32_t>(options), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::InRange(Windows::UI::Text::ITextRange const& range) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextRange<D>::InRange(Windows::UI::Text::ITextRange const& range) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->InRange(*(void**)(&range), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::InsertImage(int32_t width, int32_t height, int32_t ascent, Windows::UI::Text::VerticalCharacterAlignment const& verticalAlign, param::hstring const& alternateText, Windows::Storage::Streams::IRandomAccessStream const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::InsertImage(int32_t width, int32_t height, int32_t ascent, Windows::UI::Text::VerticalCharacterAlignment const& verticalAlign, param::hstring const& alternateText, Windows::Storage::Streams::IRandomAccessStream const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->InsertImage(width, height, ascent, static_cast<int32_t>(verticalAlign), *(void**)(&alternateText), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::InStory(Windows::UI::Text::ITextRange const& range) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextRange<D>::InStory(Windows::UI::Text::ITextRange const& range) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->InStory(*(void**)(&range), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::IsEqual(Windows::UI::Text::ITextRange const& range) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Text_ITextRange<D>::IsEqual(Windows::UI::Text::ITextRange const& range) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->IsEqual(*(void**)(&range), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Move(Windows::UI::Text::TextRangeUnit const& unit, int32_t count) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::Move(Windows::UI::Text::TextRangeUnit const& unit, int32_t count) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->Move(static_cast<int32_t>(unit), count, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::MoveEnd(Windows::UI::Text::TextRangeUnit const& unit, int32_t count) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::MoveEnd(Windows::UI::Text::TextRangeUnit const& unit, int32_t count) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->MoveEnd(static_cast<int32_t>(unit), count, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::MoveStart(Windows::UI::Text::TextRangeUnit const& unit, int32_t count) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::MoveStart(Windows::UI::Text::TextRangeUnit const& unit, int32_t count) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->MoveStart(static_cast<int32_t>(unit), count, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::Paste(int32_t format) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::Paste(int32_t format) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->Paste(format));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::ScrollIntoView(Windows::UI::Text::PointOptions const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::ScrollIntoView(Windows::UI::Text::PointOptions const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->ScrollIntoView(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::MatchSelection() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::MatchSelection() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->MatchSelection());
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::SetIndex(Windows::UI::Text::TextRangeUnit const& unit, int32_t index, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::SetIndex(Windows::UI::Text::TextRangeUnit const& unit, int32_t index, bool extend) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->SetIndex(static_cast<int32_t>(unit), index, extend));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::SetPoint(Windows::Foundation::Point const& point, Windows::UI::Text::PointOptions const& options, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::SetPoint(Windows::Foundation::Point const& point, Windows::UI::Text::PointOptions const& options, bool extend) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->SetPoint(impl::bind_in(point), static_cast<uint32_t>(options), extend));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::SetRange(int32_t startPosition, int32_t endPosition) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::SetRange(int32_t startPosition, int32_t endPosition) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->SetRange(startPosition, endPosition));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::SetText(Windows::UI::Text::TextSetOptions const& options, param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::SetText(Windows::UI::Text::TextSetOptions const& options, param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->SetText(static_cast<uint32_t>(options), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::SetTextViaStream(Windows::UI::Text::TextSetOptions const& options, Windows::Storage::Streams::IRandomAccessStream const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextRange<D>::SetTextViaStream(Windows::UI::Text::TextSetOptions const& options, Windows::Storage::Streams::IRandomAccessStream const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->SetTextViaStream(static_cast<uint32_t>(options), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextRange<D>::StartOf(Windows::UI::Text::TextRangeUnit const& unit, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextRange<D>::StartOf(Windows::UI::Text::TextRangeUnit const& unit, bool extend) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextRange)->StartOf(static_cast<int32_t>(unit), extend, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::Options() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::SelectionOptions) consume_Windows_UI_Text_ITextSelection<D>::Options() const
     {
-        Windows::UI::Text::SelectionOptions value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->get_Options(put_abi(value)));
+        Windows::UI::Text::SelectionOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->get_Options(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::Options(Windows::UI::Text::SelectionOptions const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextSelection<D>::Options(Windows::UI::Text::SelectionOptions const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->put_Options(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::SelectionType) consume_Windows_UI_Text_ITextSelection<D>::Type() const
     {
-        Windows::UI::Text::SelectionType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->get_Type(put_abi(value)));
+        Windows::UI::Text::SelectionType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->get_Type(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::EndKey(Windows::UI::Text::TextRangeUnit const& unit, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextSelection<D>::EndKey(Windows::UI::Text::TextRangeUnit const& unit, bool extend) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->EndKey(static_cast<int32_t>(unit), extend, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::HomeKey(Windows::UI::Text::TextRangeUnit const& unit, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextSelection<D>::HomeKey(Windows::UI::Text::TextRangeUnit const& unit, bool extend) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->HomeKey(static_cast<int32_t>(unit), extend, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::MoveDown(Windows::UI::Text::TextRangeUnit const& unit, int32_t count, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextSelection<D>::MoveDown(Windows::UI::Text::TextRangeUnit const& unit, int32_t count, bool extend) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->MoveDown(static_cast<int32_t>(unit), count, extend, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::MoveLeft(Windows::UI::Text::TextRangeUnit const& unit, int32_t count, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextSelection<D>::MoveLeft(Windows::UI::Text::TextRangeUnit const& unit, int32_t count, bool extend) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->MoveLeft(static_cast<int32_t>(unit), count, extend, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::MoveRight(Windows::UI::Text::TextRangeUnit const& unit, int32_t count, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextSelection<D>::MoveRight(Windows::UI::Text::TextRangeUnit const& unit, int32_t count, bool extend) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->MoveRight(static_cast<int32_t>(unit), count, extend, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::MoveUp(Windows::UI::Text::TextRangeUnit const& unit, int32_t count, bool extend) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Text_ITextSelection<D>::MoveUp(Windows::UI::Text::TextRangeUnit const& unit, int32_t count, bool extend) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->MoveUp(static_cast<int32_t>(unit), count, extend, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Text_ITextSelection<D>::TypeText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_ITextSelection<D>::TypeText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Text::ITextSelection)->TypeText(*(void**)(&value)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Text::IContentLinkInfo> : produce_base<D, Windows::UI::Text::IContentLinkInfo>
     {
@@ -1244,10 +1245,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Text::IFontWeights> : produce_base<D, Windows::UI::Text::IFontWeights>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Text::IFontWeightsStatics> : produce_base<D, Windows::UI::Text::IFontWeightsStatics>
     {
@@ -1340,6 +1345,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Text::IRichEditTextRange> : produce_base<D, Windows::UI::Text::IRichEditTextRange>
     {
@@ -1359,6 +1366,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Text::ITextCharacterFormat> : produce_base<D, Windows::UI::Text::ITextCharacterFormat>
     {
@@ -1718,6 +1726,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Text::ITextConstantsStatics> : produce_base<D, Windows::UI::Text::ITextConstantsStatics>
     {
@@ -1780,6 +1789,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Text::ITextDocument> : produce_base<D, Windows::UI::Text::ITextDocument>
     {
@@ -1979,6 +1989,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Text::ITextDocument2> : produce_base<D, Windows::UI::Text::ITextDocument2>
     {
@@ -2011,6 +2022,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Text::ITextDocument3> : produce_base<D, Windows::UI::Text::ITextDocument3>
     {
@@ -2022,6 +2035,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Text::ITextDocument4> : produce_base<D, Windows::UI::Text::ITextDocument4>
     {
@@ -2048,6 +2063,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::UI::Text::ITextParagraphFormat> : produce_base<D, Windows::UI::Text::ITextParagraphFormat>
     {
@@ -2841,7 +2857,7 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 }
-namespace winrt::Windows::UI::Text
+WINRT_EXPORT namespace winrt::Windows::UI::Text
 {
     constexpr auto operator|(FindOptions const left, FindOptions const right) noexcept
     {
@@ -3030,105 +3046,107 @@ namespace winrt::Windows::UI::Text
         return left;
     }
     inline ContentLinkInfo::ContentLinkInfo() :
-        ContentLinkInfo(impl::call_factory<ContentLinkInfo>([](auto&& f) { return f.template ActivateInstance<ContentLinkInfo>(); }))
+        ContentLinkInfo(impl::call_factory_cast<ContentLinkInfo(*)(Windows::Foundation::IActivationFactory const&), ContentLinkInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ContentLinkInfo>(); }))
     {
     }
     inline auto FontWeights::Black()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.Black(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.Black(); });
     }
     inline auto FontWeights::Bold()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.Bold(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.Bold(); });
     }
     inline auto FontWeights::ExtraBlack()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.ExtraBlack(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.ExtraBlack(); });
     }
     inline auto FontWeights::ExtraBold()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.ExtraBold(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.ExtraBold(); });
     }
     inline auto FontWeights::ExtraLight()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.ExtraLight(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.ExtraLight(); });
     }
     inline auto FontWeights::Light()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.Light(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.Light(); });
     }
     inline auto FontWeights::Medium()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.Medium(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.Medium(); });
     }
     inline auto FontWeights::Normal()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.Normal(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.Normal(); });
     }
     inline auto FontWeights::SemiBold()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.SemiBold(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.SemiBold(); });
     }
     inline auto FontWeights::SemiLight()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.SemiLight(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.SemiLight(); });
     }
     inline auto FontWeights::Thin()
     {
-        return impl::call_factory<FontWeights, Windows::UI::Text::IFontWeightsStatics>([&](auto&& f) { return f.Thin(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontWeight(*)(IFontWeightsStatics const&), FontWeights, IFontWeightsStatics>([](IFontWeightsStatics const& f) { return f.Thin(); });
     }
     inline auto TextConstants::AutoColor()
     {
-        return impl::call_factory<TextConstants, Windows::UI::Text::ITextConstantsStatics>([&](auto&& f) { return f.AutoColor(); });
+        return impl::call_factory_cast<Windows::UI::Color(*)(ITextConstantsStatics const&), TextConstants, ITextConstantsStatics>([](ITextConstantsStatics const& f) { return f.AutoColor(); });
     }
     inline auto TextConstants::MinUnitCount()
     {
-        return impl::call_factory<TextConstants, Windows::UI::Text::ITextConstantsStatics>([&](auto&& f) { return f.MinUnitCount(); });
+        return impl::call_factory_cast<int32_t(*)(ITextConstantsStatics const&), TextConstants, ITextConstantsStatics>([](ITextConstantsStatics const& f) { return f.MinUnitCount(); });
     }
     inline auto TextConstants::MaxUnitCount()
     {
-        return impl::call_factory<TextConstants, Windows::UI::Text::ITextConstantsStatics>([&](auto&& f) { return f.MaxUnitCount(); });
+        return impl::call_factory_cast<int32_t(*)(ITextConstantsStatics const&), TextConstants, ITextConstantsStatics>([](ITextConstantsStatics const& f) { return f.MaxUnitCount(); });
     }
     inline auto TextConstants::UndefinedColor()
     {
-        return impl::call_factory<TextConstants, Windows::UI::Text::ITextConstantsStatics>([&](auto&& f) { return f.UndefinedColor(); });
+        return impl::call_factory_cast<Windows::UI::Color(*)(ITextConstantsStatics const&), TextConstants, ITextConstantsStatics>([](ITextConstantsStatics const& f) { return f.UndefinedColor(); });
     }
     inline auto TextConstants::UndefinedFloatValue()
     {
-        return impl::call_factory<TextConstants, Windows::UI::Text::ITextConstantsStatics>([&](auto&& f) { return f.UndefinedFloatValue(); });
+        return impl::call_factory_cast<float(*)(ITextConstantsStatics const&), TextConstants, ITextConstantsStatics>([](ITextConstantsStatics const& f) { return f.UndefinedFloatValue(); });
     }
     inline auto TextConstants::UndefinedInt32Value()
     {
-        return impl::call_factory<TextConstants, Windows::UI::Text::ITextConstantsStatics>([&](auto&& f) { return f.UndefinedInt32Value(); });
+        return impl::call_factory_cast<int32_t(*)(ITextConstantsStatics const&), TextConstants, ITextConstantsStatics>([](ITextConstantsStatics const& f) { return f.UndefinedInt32Value(); });
     }
     inline auto TextConstants::UndefinedFontStretch()
     {
-        return impl::call_factory<TextConstants, Windows::UI::Text::ITextConstantsStatics>([&](auto&& f) { return f.UndefinedFontStretch(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontStretch(*)(ITextConstantsStatics const&), TextConstants, ITextConstantsStatics>([](ITextConstantsStatics const& f) { return f.UndefinedFontStretch(); });
     }
     inline auto TextConstants::UndefinedFontStyle()
     {
-        return impl::call_factory<TextConstants, Windows::UI::Text::ITextConstantsStatics>([&](auto&& f) { return f.UndefinedFontStyle(); });
+        return impl::call_factory_cast<Windows::UI::Text::FontStyle(*)(ITextConstantsStatics const&), TextConstants, ITextConstantsStatics>([](ITextConstantsStatics const& f) { return f.UndefinedFontStyle(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Text::IContentLinkInfo> : winrt::impl::hash_base<winrt::Windows::UI::Text::IContentLinkInfo> {};
-    template<> struct hash<winrt::Windows::UI::Text::IFontWeights> : winrt::impl::hash_base<winrt::Windows::UI::Text::IFontWeights> {};
-    template<> struct hash<winrt::Windows::UI::Text::IFontWeightsStatics> : winrt::impl::hash_base<winrt::Windows::UI::Text::IFontWeightsStatics> {};
-    template<> struct hash<winrt::Windows::UI::Text::IRichEditTextRange> : winrt::impl::hash_base<winrt::Windows::UI::Text::IRichEditTextRange> {};
-    template<> struct hash<winrt::Windows::UI::Text::ITextCharacterFormat> : winrt::impl::hash_base<winrt::Windows::UI::Text::ITextCharacterFormat> {};
-    template<> struct hash<winrt::Windows::UI::Text::ITextConstantsStatics> : winrt::impl::hash_base<winrt::Windows::UI::Text::ITextConstantsStatics> {};
-    template<> struct hash<winrt::Windows::UI::Text::ITextDocument> : winrt::impl::hash_base<winrt::Windows::UI::Text::ITextDocument> {};
-    template<> struct hash<winrt::Windows::UI::Text::ITextDocument2> : winrt::impl::hash_base<winrt::Windows::UI::Text::ITextDocument2> {};
-    template<> struct hash<winrt::Windows::UI::Text::ITextDocument3> : winrt::impl::hash_base<winrt::Windows::UI::Text::ITextDocument3> {};
-    template<> struct hash<winrt::Windows::UI::Text::ITextDocument4> : winrt::impl::hash_base<winrt::Windows::UI::Text::ITextDocument4> {};
-    template<> struct hash<winrt::Windows::UI::Text::ITextParagraphFormat> : winrt::impl::hash_base<winrt::Windows::UI::Text::ITextParagraphFormat> {};
-    template<> struct hash<winrt::Windows::UI::Text::ITextRange> : winrt::impl::hash_base<winrt::Windows::UI::Text::ITextRange> {};
-    template<> struct hash<winrt::Windows::UI::Text::ITextSelection> : winrt::impl::hash_base<winrt::Windows::UI::Text::ITextSelection> {};
-    template<> struct hash<winrt::Windows::UI::Text::ContentLinkInfo> : winrt::impl::hash_base<winrt::Windows::UI::Text::ContentLinkInfo> {};
-    template<> struct hash<winrt::Windows::UI::Text::FontWeights> : winrt::impl::hash_base<winrt::Windows::UI::Text::FontWeights> {};
-    template<> struct hash<winrt::Windows::UI::Text::RichEditTextDocument> : winrt::impl::hash_base<winrt::Windows::UI::Text::RichEditTextDocument> {};
-    template<> struct hash<winrt::Windows::UI::Text::RichEditTextRange> : winrt::impl::hash_base<winrt::Windows::UI::Text::RichEditTextRange> {};
-    template<> struct hash<winrt::Windows::UI::Text::TextConstants> : winrt::impl::hash_base<winrt::Windows::UI::Text::TextConstants> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Text::IContentLinkInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::IFontWeights> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::IFontWeightsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::IRichEditTextRange> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ITextCharacterFormat> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ITextConstantsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ITextDocument> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ITextDocument2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ITextDocument3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ITextDocument4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ITextParagraphFormat> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ITextRange> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ITextSelection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::ContentLinkInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::FontWeights> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::RichEditTextDocument> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::RichEditTextRange> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Text::TextConstants> : winrt::impl::hash_base {};
+#endif
 }
 #endif

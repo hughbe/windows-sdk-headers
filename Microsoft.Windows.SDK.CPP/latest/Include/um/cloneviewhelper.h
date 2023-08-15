@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -164,18 +172,22 @@ EXTERN_C const IID IID_ICloneViewHelper;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ICloneViewHelper * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ICloneViewHelper * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ICloneViewHelper * This);
         
+        DECLSPEC_XFGVIRT(ICloneViewHelper, GetConnectedIDs)
         HRESULT ( STDMETHODCALLTYPE *GetConnectedIDs )( 
             __RPC__in ICloneViewHelper * This,
             /* [in] */ __RPC__in LPCWSTR wszAdaptorName,
@@ -183,6 +195,7 @@ EXTERN_C const IID IID_ICloneViewHelper;
             /* [out][in] */ __RPC__inout ULONG *pulID,
             /* [in] */ ULONG ulFlags);
         
+        DECLSPEC_XFGVIRT(ICloneViewHelper, GetActiveTopology)
         HRESULT ( STDMETHODCALLTYPE *GetActiveTopology )( 
             __RPC__in ICloneViewHelper * This,
             /* [in] */ __RPC__in LPCWSTR wszAdaptorName,
@@ -190,6 +203,7 @@ EXTERN_C const IID IID_ICloneViewHelper;
             /* [out][in] */ __RPC__inout ULONG *pulCount,
             /* [out][in] */ __RPC__inout ULONG *pulTargetID);
         
+        DECLSPEC_XFGVIRT(ICloneViewHelper, SetActiveTopology)
         HRESULT ( STDMETHODCALLTYPE *SetActiveTopology )( 
             __RPC__in ICloneViewHelper * This,
             /* [in] */ __RPC__in LPCWSTR wszAdaptorName,
@@ -197,6 +211,7 @@ EXTERN_C const IID IID_ICloneViewHelper;
             /* [in] */ ULONG ulCount,
             /* [in] */ __RPC__in ULONG *pulTargetID);
         
+        DECLSPEC_XFGVIRT(ICloneViewHelper, Commit)
         HRESULT ( STDMETHODCALLTYPE *Commit )( 
             __RPC__in ICloneViewHelper * This,
             /* [in] */ BOOL fFinalCall);
@@ -297,18 +312,22 @@ EXTERN_C const IID IID_IViewHelper;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IViewHelper * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IViewHelper * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IViewHelper * This);
         
+        DECLSPEC_XFGVIRT(IViewHelper, GetConnectedIDs)
         HRESULT ( STDMETHODCALLTYPE *GetConnectedIDs )( 
             __RPC__in IViewHelper * This,
             /* [in] */ __RPC__in LPCWSTR wszAdaptorName,
@@ -316,6 +335,7 @@ EXTERN_C const IID IID_IViewHelper;
             /* [out][in] */ __RPC__inout ULONG *pulID,
             /* [in] */ ULONG ulFlags);
         
+        DECLSPEC_XFGVIRT(IViewHelper, GetActiveTopology)
         HRESULT ( STDMETHODCALLTYPE *GetActiveTopology )( 
             __RPC__in IViewHelper * This,
             /* [in] */ __RPC__in LPCWSTR wszAdaptorName,
@@ -323,6 +343,7 @@ EXTERN_C const IID IID_IViewHelper;
             /* [out][in] */ __RPC__inout ULONG *pulCount,
             /* [out][in] */ __RPC__inout ULONG *pulTargetID);
         
+        DECLSPEC_XFGVIRT(IViewHelper, SetActiveTopology)
         HRESULT ( STDMETHODCALLTYPE *SetActiveTopology )( 
             __RPC__in IViewHelper * This,
             /* [in] */ __RPC__in LPCWSTR wszAdaptorName,
@@ -330,14 +351,17 @@ EXTERN_C const IID IID_IViewHelper;
             /* [in] */ ULONG ulCount,
             /* [in] */ __RPC__in ULONG *pulTargetID);
         
+        DECLSPEC_XFGVIRT(IViewHelper, Commit)
         HRESULT ( STDMETHODCALLTYPE *Commit )( 
             __RPC__in IViewHelper * This);
         
+        DECLSPEC_XFGVIRT(IViewHelper, SetConfiguration)
         HRESULT ( STDMETHODCALLTYPE *SetConfiguration )( 
             __RPC__in IViewHelper * This,
             /* [in] */ __RPC__in_opt IStream *pIStream,
             /* [out] */ __RPC__out ULONG *pulStatus);
         
+        DECLSPEC_XFGVIRT(IViewHelper, GetProceedOnNewConfiguration)
         HRESULT ( STDMETHODCALLTYPE *GetProceedOnNewConfiguration )( 
             __RPC__in IViewHelper * This);
         

@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -122,24 +130,29 @@ EXTERN_C const IID IID_IDiagnosticsScriptEngineSite;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDiagnosticsScriptEngineSite * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDiagnosticsScriptEngineSite * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDiagnosticsScriptEngineSite * This);
         
+        DECLSPEC_XFGVIRT(IDiagnosticsScriptEngineSite, OnMessage)
         HRESULT ( STDMETHODCALLTYPE *OnMessage )( 
             IDiagnosticsScriptEngineSite * This,
             /* [annotation][size_is][in] */ 
             _In_reads_(ulDataCount)  LPCWSTR *pszData,
             /* [in] */ ULONG ulDataCount);
         
+        DECLSPEC_XFGVIRT(IDiagnosticsScriptEngineSite, OnScriptError)
         HRESULT ( STDMETHODCALLTYPE *OnScriptError )( 
             IDiagnosticsScriptEngineSite * This,
             /* [annotation][in] */ 
@@ -224,18 +237,22 @@ EXTERN_C const IID IID_IDiagnosticsScriptEngine;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDiagnosticsScriptEngine * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDiagnosticsScriptEngine * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDiagnosticsScriptEngine * This);
         
+        DECLSPEC_XFGVIRT(IDiagnosticsScriptEngine, EvaluateScript)
         HRESULT ( STDMETHODCALLTYPE *EvaluateScript )( 
             IDiagnosticsScriptEngine * This,
             /* [annotation][in] */ 
@@ -243,6 +260,7 @@ EXTERN_C const IID IID_IDiagnosticsScriptEngine;
             /* [annotation][in] */ 
             _In_  LPCWSTR pszScriptName);
         
+        DECLSPEC_XFGVIRT(IDiagnosticsScriptEngine, FireScriptMessageEvent)
         HRESULT ( STDMETHODCALLTYPE *FireScriptMessageEvent )( 
             IDiagnosticsScriptEngine * This,
             /* [annotation][size_is][in] */ 
@@ -251,6 +269,7 @@ EXTERN_C const IID IID_IDiagnosticsScriptEngine;
             _In_reads_(ulPropertyCount)  LPCWSTR *pszValues,
             ULONG ulPropertyCount);
         
+        DECLSPEC_XFGVIRT(IDiagnosticsScriptEngine, Detach)
         HRESULT ( STDMETHODCALLTYPE *Detach )( 
             IDiagnosticsScriptEngine * This);
         
@@ -329,18 +348,22 @@ EXTERN_C const IID IID_IDiagnosticsScriptEngineProvider;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IDiagnosticsScriptEngineProvider * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IDiagnosticsScriptEngineProvider * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IDiagnosticsScriptEngineProvider * This);
         
+        DECLSPEC_XFGVIRT(IDiagnosticsScriptEngineProvider, CreateDiagnosticsScriptEngine)
         HRESULT ( STDMETHODCALLTYPE *CreateDiagnosticsScriptEngine )( 
             IDiagnosticsScriptEngineProvider * This,
             /* [annotation][in] */ 

@@ -4129,6 +4129,7 @@ WINGDIAPI HMETAFILE   WINAPI GetMetaFileW( _In_ LPCWSTR lpName);
 #endif // !UNICODE
 WINGDIAPI COLORREF WINAPI GetNearestColor( _In_ HDC hdc, _In_ COLORREF color);
 WINGDIAPI UINT  WINAPI GetNearestPaletteIndex( _In_ HPALETTE h, _In_ COLORREF color);
+_Post_satisfies_((return == 0) || (return >= MIN_OBJ_TYPE && return <= MAX_OBJ_TYPE))
 WINGDIAPI DWORD WINAPI GetObjectType( _In_ HGDIOBJ h);
 
 #ifndef NOTEXTMETRIC

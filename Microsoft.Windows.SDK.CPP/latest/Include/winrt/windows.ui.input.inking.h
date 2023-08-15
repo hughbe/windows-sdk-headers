@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
@@ -865,6 +865,23 @@ namespace ABI {
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings ABI::Windows::UI::Input::Inking::IPenAndInkSettings
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Inking {
+                    interface IPenAndInkSettings2;
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2 ABI::Windows::UI::Input::Inking::IPenAndInkSettings2
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettingsStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettingsStatics_FWD_DEFINED__
@@ -4808,6 +4825,44 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings;
 
 /*
  *
+ * Interface Windows.UI.Input.Inking.IPenAndInkSettings2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Inking.PenAndInkSettings
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_IPenAndInkSettings2[] = L"Windows.UI.Input.Inking.IPenAndInkSettings2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Inking {
+                    MIDL_INTERFACE("3262da53-1f44-55e2-9929-ebf77e5481b8")
+                    IPenAndInkSettings2 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE SetPenHandedness(
+                            ABI::Windows::UI::Input::Inking::PenHandedness value
+                            ) = 0;
+                    };
+
+                    extern MIDL_CONST_ID IID& IID_IPenAndInkSettings2 = _uuidof(IPenAndInkSettings2);
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
  * Interface Windows.UI.Input.Inking.IPenAndInkSettingsStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
@@ -5332,6 +5387,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.IPenAndInkSettings ** Default Interface **
+ *    Windows.UI.Input.Inking.IPenAndInkSettings2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5610,6 +5666,12 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkUnprocessedInput __x_
 typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings;
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2 __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettingsStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettingsStatics_FWD_DEFINED__
@@ -12038,6 +12100,75 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings;
 
 /*
  *
+ * Interface Windows.UI.Input.Inking.IPenAndInkSettings2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Inking.PenAndInkSettings
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_IPenAndInkSettings2[] = L"Windows.UI.Input.Inking.IPenAndInkSettings2";
+typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* SetPenHandedness)(__x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2* This,
+        enum __x_ABI_CWindows_CUI_CInput_CInking_CPenHandedness value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_SetPenHandedness(This, value) \
+    ((This)->lpVtbl->SetPenHandedness(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIPenAndInkSettings2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
  * Interface Windows.UI.Input.Inking.IPenAndInkSettingsStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
@@ -12593,6 +12724,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.IPenAndInkSettings ** Default Interface **
+ *    Windows.UI.Input.Inking.IPenAndInkSettings2
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

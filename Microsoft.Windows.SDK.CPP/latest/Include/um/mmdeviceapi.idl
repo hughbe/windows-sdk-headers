@@ -609,8 +609,8 @@ cpp_quote("/* IMMDeviceActivator is reserved for system use */")
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 interface IActivateAudioInterfaceAsyncOperation;
 
@@ -658,7 +658,10 @@ cpp_quote("    _In_ IActivateAudioInterfaceCompletionHandler *completionHandler,
 cpp_quote("    _COM_Outptr_ IActivateAudioInterfaceAsyncOperation **activationOperation")
 cpp_quote("    );")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("// The AUDIOCLIENT_ACTIVATION_PARAMS structure can be used when creating an IAudioClient.")
+cpp_quote("// It is defined in AudioClientActivationParams.h")
+
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Desktop Family

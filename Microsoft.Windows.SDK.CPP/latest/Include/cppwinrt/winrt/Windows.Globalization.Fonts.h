@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,114 +6,115 @@
 #ifndef WINRT_Windows_Globalization_Fonts_H
 #define WINRT_Windows_Globalization_Fonts_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Globalization.h"
 #include "winrt/impl/Windows.UI.Text.2.h"
 #include "winrt/impl/Windows.Globalization.Fonts.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFont<D>::FontFamily() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_Fonts_ILanguageFont<D>::FontFamily() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFont)->get_FontFamily(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFont<D>::FontWeight() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontWeight) consume_Windows_Globalization_Fonts_ILanguageFont<D>::FontWeight() const
     {
-        Windows::UI::Text::FontWeight weight;
+        Windows::UI::Text::FontWeight weight{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFont)->get_FontWeight(put_abi(weight)));
         return weight;
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFont<D>::FontStretch() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontStretch) consume_Windows_Globalization_Fonts_ILanguageFont<D>::FontStretch() const
     {
-        Windows::UI::Text::FontStretch stretch;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFont)->get_FontStretch(put_abi(stretch)));
+        Windows::UI::Text::FontStretch stretch{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFont)->get_FontStretch(reinterpret_cast<int32_t*>(&stretch)));
         return stretch;
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFont<D>::FontStyle() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Text::FontStyle) consume_Windows_Globalization_Fonts_ILanguageFont<D>::FontStyle() const
     {
-        Windows::UI::Text::FontStyle style;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFont)->get_FontStyle(put_abi(style)));
+        Windows::UI::Text::FontStyle style{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFont)->get_FontStyle(reinterpret_cast<int32_t*>(&style)));
         return style;
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFont<D>::ScaleFactor() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Globalization_Fonts_ILanguageFont<D>::ScaleFactor() const
     {
-        double scale;
+        double scale{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFont)->get_ScaleFactor(&scale));
         return scale;
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UITextFont() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UITextFont() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_UITextFont(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UIHeadingFont() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UIHeadingFont() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_UIHeadingFont(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UITitleFont() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UITitleFont() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_UITitleFont(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UICaptionFont() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UICaptionFont() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_UICaptionFont(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UINotificationHeadingFont() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::UINotificationHeadingFont() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_UINotificationHeadingFont(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::TraditionalDocumentFont() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::TraditionalDocumentFont() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_TraditionalDocumentFont(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::ModernDocumentFont() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::ModernDocumentFont() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_ModernDocumentFont(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::DocumentHeadingFont() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::DocumentHeadingFont() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_DocumentHeadingFont(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::FixedWidthTextFont() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::FixedWidthTextFont() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_FixedWidthTextFont(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::DocumentAlternate1Font() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::DocumentAlternate1Font() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_DocumentAlternate1Font(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::DocumentAlternate2Font() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFont) consume_Windows_Globalization_Fonts_ILanguageFontGroup<D>::DocumentAlternate2Font() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroup)->get_DocumentAlternate2Font(&value));
         return Windows::Globalization::Fonts::LanguageFont{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_Fonts_ILanguageFontGroupFactory<D>::CreateLanguageFontGroup(param::hstring const& languageTag) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Fonts::LanguageFontGroup) consume_Windows_Globalization_Fonts_ILanguageFontGroupFactory<D>::CreateLanguageFontGroup(param::hstring const& languageTag) const
     {
         void* recommendedFonts{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::Fonts::ILanguageFontGroupFactory)->CreateLanguageFontGroup(*(void**)(&languageTag), &recommendedFonts));
         return Windows::Globalization::Fonts::LanguageFontGroup{ recommendedFonts, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::Fonts::ILanguageFont> : produce_base<D, Windows::Globalization::Fonts::ILanguageFont>
     {
@@ -155,6 +156,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::Fonts::ILanguageFontGroup> : produce_base<D, Windows::Globalization::Fonts::ILanguageFontGroup>
     {
@@ -247,6 +250,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::Fonts::ILanguageFontGroupFactory> : produce_base<D, Windows::Globalization::Fonts::ILanguageFontGroupFactory>
     {
@@ -259,20 +264,23 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Globalization::Fonts
+WINRT_EXPORT namespace winrt::Windows::Globalization::Fonts
 {
     inline LanguageFontGroup::LanguageFontGroup(param::hstring const& languageTag) :
-        LanguageFontGroup(impl::call_factory<LanguageFontGroup, Windows::Globalization::Fonts::ILanguageFontGroupFactory>([&](auto&& f) { return f.CreateLanguageFontGroup(languageTag); }))
+        LanguageFontGroup(impl::call_factory<LanguageFontGroup, ILanguageFontGroupFactory>([&](ILanguageFontGroupFactory const& f) { return f.CreateLanguageFontGroup(languageTag); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Globalization::Fonts::ILanguageFont> : winrt::impl::hash_base<winrt::Windows::Globalization::Fonts::ILanguageFont> {};
-    template<> struct hash<winrt::Windows::Globalization::Fonts::ILanguageFontGroup> : winrt::impl::hash_base<winrt::Windows::Globalization::Fonts::ILanguageFontGroup> {};
-    template<> struct hash<winrt::Windows::Globalization::Fonts::ILanguageFontGroupFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::Fonts::ILanguageFontGroupFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::Fonts::LanguageFont> : winrt::impl::hash_base<winrt::Windows::Globalization::Fonts::LanguageFont> {};
-    template<> struct hash<winrt::Windows::Globalization::Fonts::LanguageFontGroup> : winrt::impl::hash_base<winrt::Windows::Globalization::Fonts::LanguageFontGroup> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Globalization::Fonts::ILanguageFont> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Fonts::ILanguageFontGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Fonts::ILanguageFontGroupFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Fonts::LanguageFont> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::Fonts::LanguageFontGroup> : winrt::impl::hash_base {};
+#endif
 }
 #endif

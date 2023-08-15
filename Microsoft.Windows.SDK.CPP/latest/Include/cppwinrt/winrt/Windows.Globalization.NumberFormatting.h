@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,335 +6,336 @@
 #ifndef WINRT_Windows_Globalization_NumberFormatting_H
 #define WINRT_Windows_Globalization_NumberFormatting_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Globalization.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Globalization.NumberFormatting.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter<D>::Currency() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter<D>::Currency() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ICurrencyFormatter)->get_Currency(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter<D>::Currency(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter<D>::Currency(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ICurrencyFormatter)->put_Currency(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter2<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::CurrencyFormatterMode) consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter2<D>::Mode() const
     {
-        Windows::Globalization::NumberFormatting::CurrencyFormatterMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ICurrencyFormatter2)->get_Mode(put_abi(value)));
+        Windows::Globalization::NumberFormatting::CurrencyFormatterMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ICurrencyFormatter2)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter2<D>::Mode(Windows::Globalization::NumberFormatting::CurrencyFormatterMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter2<D>::Mode(Windows::Globalization::NumberFormatting::CurrencyFormatterMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ICurrencyFormatter2)->put_Mode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter2<D>::ApplyRoundingForCurrency(Windows::Globalization::NumberFormatting::RoundingAlgorithm const& roundingAlgorithm) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_ICurrencyFormatter2<D>::ApplyRoundingForCurrency(Windows::Globalization::NumberFormatting::RoundingAlgorithm const& roundingAlgorithm) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ICurrencyFormatter2)->ApplyRoundingForCurrency(static_cast<int32_t>(roundingAlgorithm)));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ICurrencyFormatterFactory<D>::CreateCurrencyFormatterCode(param::hstring const& currencyCode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::CurrencyFormatter) consume_Windows_Globalization_NumberFormatting_ICurrencyFormatterFactory<D>::CreateCurrencyFormatterCode(param::hstring const& currencyCode) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory)->CreateCurrencyFormatterCode(*(void**)(&currencyCode), &result));
         return Windows::Globalization::NumberFormatting::CurrencyFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ICurrencyFormatterFactory<D>::CreateCurrencyFormatterCodeContext(param::hstring const& currencyCode, param::iterable<hstring> const& languages, param::hstring const& geographicRegion) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::CurrencyFormatter) consume_Windows_Globalization_NumberFormatting_ICurrencyFormatterFactory<D>::CreateCurrencyFormatterCodeContext(param::hstring const& currencyCode, param::iterable<hstring> const& languages, param::hstring const& geographicRegion) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory)->CreateCurrencyFormatterCodeContext(*(void**)(&currencyCode), *(void**)(&languages), *(void**)(&geographicRegion), &result));
         return Windows::Globalization::NumberFormatting::CurrencyFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_IDecimalFormatterFactory<D>::CreateDecimalFormatter(param::iterable<hstring> const& languages, param::hstring const& geographicRegion) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::DecimalFormatter) consume_Windows_Globalization_NumberFormatting_IDecimalFormatterFactory<D>::CreateDecimalFormatter(param::iterable<hstring> const& languages, param::hstring const& geographicRegion) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::IDecimalFormatterFactory)->CreateDecimalFormatter(*(void**)(&languages), *(void**)(&geographicRegion), &result));
         return Windows::Globalization::NumberFormatting::DecimalFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_IIncrementNumberRounder<D>::RoundingAlgorithm() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::RoundingAlgorithm) consume_Windows_Globalization_NumberFormatting_IIncrementNumberRounder<D>::RoundingAlgorithm() const
     {
-        Windows::Globalization::NumberFormatting::RoundingAlgorithm value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::IIncrementNumberRounder)->get_RoundingAlgorithm(put_abi(value)));
+        Windows::Globalization::NumberFormatting::RoundingAlgorithm value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::IIncrementNumberRounder)->get_RoundingAlgorithm(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_IIncrementNumberRounder<D>::RoundingAlgorithm(Windows::Globalization::NumberFormatting::RoundingAlgorithm const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_IIncrementNumberRounder<D>::RoundingAlgorithm(Windows::Globalization::NumberFormatting::RoundingAlgorithm const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::IIncrementNumberRounder)->put_RoundingAlgorithm(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_IIncrementNumberRounder<D>::Increment() const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Globalization_NumberFormatting_IIncrementNumberRounder<D>::Increment() const
     {
-        double value;
+        double value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::IIncrementNumberRounder)->get_Increment(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_IIncrementNumberRounder<D>::Increment(double value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_IIncrementNumberRounder<D>::Increment(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::IIncrementNumberRounder)->put_Increment(value));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatter<D>::Format(int64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatter<D>::Format(int64_t value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatter)->FormatInt(value, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatter<D>::Format(uint64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatter<D>::Format(uint64_t value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatter)->FormatUInt(value, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatter<D>::Format(double value) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatter<D>::Format(double value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatter)->FormatDouble(value, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatter2<D>::FormatInt(int64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatter2<D>::FormatInt(int64_t value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatter2)->FormatInt(value, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatter2<D>::FormatUInt(uint64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatter2<D>::FormatUInt(uint64_t value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatter2)->FormatUInt(value, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatter2<D>::FormatDouble(double value) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatter2<D>::FormatDouble(double value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatter2)->FormatDouble(value, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::Languages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->get_Languages(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::GeographicRegion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::GeographicRegion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->get_GeographicRegion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IntegerDigits() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IntegerDigits() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->get_IntegerDigits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IntegerDigits(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IntegerDigits(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->put_IntegerDigits(value));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::FractionDigits() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::FractionDigits() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->get_FractionDigits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::FractionDigits(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::FractionDigits(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->put_FractionDigits(value));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IsGrouped() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IsGrouped() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->get_IsGrouped(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IsGrouped(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IsGrouped(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->put_IsGrouped(value));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IsDecimalPointAlwaysDisplayed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IsDecimalPointAlwaysDisplayed() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->get_IsDecimalPointAlwaysDisplayed(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IsDecimalPointAlwaysDisplayed(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::IsDecimalPointAlwaysDisplayed(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->put_IsDecimalPointAlwaysDisplayed(value));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::NumeralSystem() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::NumeralSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->get_NumeralSystem(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::NumeralSystem(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::NumeralSystem(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->put_NumeralSystem(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::ResolvedLanguage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::ResolvedLanguage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->get_ResolvedLanguage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::ResolvedGeographicRegion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumberFormatterOptions<D>::ResolvedGeographicRegion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberFormatterOptions)->get_ResolvedGeographicRegion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberParser<D>::ParseInt(param::hstring const& text) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<int64_t>) consume_Windows_Globalization_NumberFormatting_INumberParser<D>::ParseInt(param::hstring const& text) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberParser)->ParseInt(*(void**)(&text), &result));
         return Windows::Foundation::IReference<int64_t>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberParser<D>::ParseUInt(param::hstring const& text) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint64_t>) consume_Windows_Globalization_NumberFormatting_INumberParser<D>::ParseUInt(param::hstring const& text) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberParser)->ParseUInt(*(void**)(&text), &result));
         return Windows::Foundation::IReference<uint64_t>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberParser<D>::ParseDouble(param::hstring const& text) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<double>) consume_Windows_Globalization_NumberFormatting_INumberParser<D>::ParseDouble(param::hstring const& text) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberParser)->ParseDouble(*(void**)(&text), &result));
         return Windows::Foundation::IReference<double>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundInt32(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundInt32(int32_t value) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberRounder)->RoundInt32(value, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundUInt32(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundUInt32(uint32_t value) const
     {
-        uint32_t result;
+        uint32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberRounder)->RoundUInt32(value, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundInt64(int64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(int64_t) consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundInt64(int64_t value) const
     {
-        int64_t result;
+        int64_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberRounder)->RoundInt64(value, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundUInt64(uint64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundUInt64(uint64_t value) const
     {
-        uint64_t result;
+        uint64_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberRounder)->RoundUInt64(value, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundSingle(float value) const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundSingle(float value) const
     {
-        float result;
+        float result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberRounder)->RoundSingle(value, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundDouble(double value) const
+    template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Globalization_NumberFormatting_INumberRounder<D>::RoundDouble(double value) const
     {
-        double result;
+        double result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberRounder)->RoundDouble(value, &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberRounderOption<D>::NumberRounder() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::INumberRounder) consume_Windows_Globalization_NumberFormatting_INumberRounderOption<D>::NumberRounder() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberRounderOption)->get_NumberRounder(&value));
         return Windows::Globalization::NumberFormatting::INumberRounder{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumberRounderOption<D>::NumberRounder(Windows::Globalization::NumberFormatting::INumberRounder const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_INumberRounderOption<D>::NumberRounder(Windows::Globalization::NumberFormatting::INumberRounder const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumberRounderOption)->put_NumberRounder(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::Languages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumeralSystemTranslator)->get_Languages(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::ResolvedLanguage() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::ResolvedLanguage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumeralSystemTranslator)->get_ResolvedLanguage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::NumeralSystem() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::NumeralSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumeralSystemTranslator)->get_NumeralSystem(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::NumeralSystem(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::NumeralSystem(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumeralSystemTranslator)->put_NumeralSystem(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::TranslateNumerals(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslator<D>::TranslateNumerals(param::hstring const& value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumeralSystemTranslator)->TranslateNumerals(*(void**)(&value), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslatorFactory<D>::Create(param::iterable<hstring> const& languages) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::NumeralSystemTranslator) consume_Windows_Globalization_NumberFormatting_INumeralSystemTranslatorFactory<D>::Create(param::iterable<hstring> const& languages) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::INumeralSystemTranslatorFactory)->Create(*(void**)(&languages), &result));
         return Windows::Globalization::NumberFormatting::NumeralSystemTranslator{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_IPercentFormatterFactory<D>::CreatePercentFormatter(param::iterable<hstring> const& languages, param::hstring const& geographicRegion) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::PercentFormatter) consume_Windows_Globalization_NumberFormatting_IPercentFormatterFactory<D>::CreatePercentFormatter(param::iterable<hstring> const& languages, param::hstring const& geographicRegion) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::IPercentFormatterFactory)->CreatePercentFormatter(*(void**)(&languages), *(void**)(&geographicRegion), &result));
         return Windows::Globalization::NumberFormatting::PercentFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_IPermilleFormatterFactory<D>::CreatePermilleFormatter(param::iterable<hstring> const& languages, param::hstring const& geographicRegion) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::PermilleFormatter) consume_Windows_Globalization_NumberFormatting_IPermilleFormatterFactory<D>::CreatePermilleFormatter(param::iterable<hstring> const& languages, param::hstring const& geographicRegion) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::IPermilleFormatterFactory)->CreatePermilleFormatter(*(void**)(&languages), *(void**)(&geographicRegion), &result));
         return Windows::Globalization::NumberFormatting::PermilleFormatter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ISignedZeroOption<D>::IsZeroSigned() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_NumberFormatting_ISignedZeroOption<D>::IsZeroSigned() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ISignedZeroOption)->get_IsZeroSigned(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ISignedZeroOption<D>::IsZeroSigned(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_ISignedZeroOption<D>::IsZeroSigned(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ISignedZeroOption)->put_IsZeroSigned(value));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ISignificantDigitsNumberRounder<D>::RoundingAlgorithm() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::NumberFormatting::RoundingAlgorithm) consume_Windows_Globalization_NumberFormatting_ISignificantDigitsNumberRounder<D>::RoundingAlgorithm() const
     {
-        Windows::Globalization::NumberFormatting::RoundingAlgorithm value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder)->get_RoundingAlgorithm(put_abi(value)));
+        Windows::Globalization::NumberFormatting::RoundingAlgorithm value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder)->get_RoundingAlgorithm(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ISignificantDigitsNumberRounder<D>::RoundingAlgorithm(Windows::Globalization::NumberFormatting::RoundingAlgorithm const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_ISignificantDigitsNumberRounder<D>::RoundingAlgorithm(Windows::Globalization::NumberFormatting::RoundingAlgorithm const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder)->put_RoundingAlgorithm(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ISignificantDigitsNumberRounder<D>::SignificantDigits() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Globalization_NumberFormatting_ISignificantDigitsNumberRounder<D>::SignificantDigits() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder)->get_SignificantDigits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ISignificantDigitsNumberRounder<D>::SignificantDigits(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_ISignificantDigitsNumberRounder<D>::SignificantDigits(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder)->put_SignificantDigits(value));
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ISignificantDigitsOption<D>::SignificantDigits() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_NumberFormatting_ISignificantDigitsOption<D>::SignificantDigits() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ISignificantDigitsOption)->get_SignificantDigits(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_NumberFormatting_ISignificantDigitsOption<D>::SignificantDigits(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_NumberFormatting_ISignificantDigitsOption<D>::SignificantDigits(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::NumberFormatting::ISignificantDigitsOption)->put_SignificantDigits(value));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::ICurrencyFormatter> : produce_base<D, Windows::Globalization::NumberFormatting::ICurrencyFormatter>
     {
@@ -354,6 +355,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::ICurrencyFormatter2> : produce_base<D, Windows::Globalization::NumberFormatting::ICurrencyFormatter2>
     {
@@ -379,6 +382,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory> : produce_base<D, Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory>
     {
@@ -399,6 +404,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::IDecimalFormatterFactory> : produce_base<D, Windows::Globalization::NumberFormatting::IDecimalFormatterFactory>
     {
@@ -411,6 +418,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::IIncrementNumberRounder> : produce_base<D, Windows::Globalization::NumberFormatting::IIncrementNumberRounder>
     {
@@ -443,6 +452,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::INumberFormatter> : produce_base<D, Windows::Globalization::NumberFormatting::INumberFormatter>
     {
@@ -699,6 +709,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::INumeralSystemTranslator> : produce_base<D, Windows::Globalization::NumberFormatting::INumeralSystemTranslator>
     {
@@ -742,6 +753,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::INumeralSystemTranslatorFactory> : produce_base<D, Windows::Globalization::NumberFormatting::INumeralSystemTranslatorFactory>
     {
@@ -754,6 +767,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::IPercentFormatterFactory> : produce_base<D, Windows::Globalization::NumberFormatting::IPercentFormatterFactory>
     {
@@ -766,6 +781,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::IPermilleFormatterFactory> : produce_base<D, Windows::Globalization::NumberFormatting::IPermilleFormatterFactory>
     {
@@ -778,6 +795,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::ISignedZeroOption> : produce_base<D, Windows::Globalization::NumberFormatting::ISignedZeroOption>
     {
@@ -796,6 +814,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder> : produce_base<D, Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder>
     {
@@ -828,6 +847,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Globalization::NumberFormatting::ISignificantDigitsOption> : produce_base<D, Windows::Globalization::NumberFormatting::ISignificantDigitsOption>
     {
@@ -847,83 +867,85 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 }
-namespace winrt::Windows::Globalization::NumberFormatting
+WINRT_EXPORT namespace winrt::Windows::Globalization::NumberFormatting
 {
     inline CurrencyFormatter::CurrencyFormatter(param::hstring const& currencyCode) :
-        CurrencyFormatter(impl::call_factory<CurrencyFormatter, Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory>([&](auto&& f) { return f.CreateCurrencyFormatterCode(currencyCode); }))
+        CurrencyFormatter(impl::call_factory<CurrencyFormatter, ICurrencyFormatterFactory>([&](ICurrencyFormatterFactory const& f) { return f.CreateCurrencyFormatterCode(currencyCode); }))
     {
     }
     inline CurrencyFormatter::CurrencyFormatter(param::hstring const& currencyCode, param::iterable<hstring> const& languages, param::hstring const& geographicRegion) :
-        CurrencyFormatter(impl::call_factory<CurrencyFormatter, Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory>([&](auto&& f) { return f.CreateCurrencyFormatterCodeContext(currencyCode, languages, geographicRegion); }))
+        CurrencyFormatter(impl::call_factory<CurrencyFormatter, ICurrencyFormatterFactory>([&](ICurrencyFormatterFactory const& f) { return f.CreateCurrencyFormatterCodeContext(currencyCode, languages, geographicRegion); }))
     {
     }
     inline DecimalFormatter::DecimalFormatter() :
-        DecimalFormatter(impl::call_factory<DecimalFormatter>([](auto&& f) { return f.template ActivateInstance<DecimalFormatter>(); }))
+        DecimalFormatter(impl::call_factory_cast<DecimalFormatter(*)(Windows::Foundation::IActivationFactory const&), DecimalFormatter>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<DecimalFormatter>(); }))
     {
     }
     inline DecimalFormatter::DecimalFormatter(param::iterable<hstring> const& languages, param::hstring const& geographicRegion) :
-        DecimalFormatter(impl::call_factory<DecimalFormatter, Windows::Globalization::NumberFormatting::IDecimalFormatterFactory>([&](auto&& f) { return f.CreateDecimalFormatter(languages, geographicRegion); }))
+        DecimalFormatter(impl::call_factory<DecimalFormatter, IDecimalFormatterFactory>([&](IDecimalFormatterFactory const& f) { return f.CreateDecimalFormatter(languages, geographicRegion); }))
     {
     }
     inline IncrementNumberRounder::IncrementNumberRounder() :
-        IncrementNumberRounder(impl::call_factory<IncrementNumberRounder>([](auto&& f) { return f.template ActivateInstance<IncrementNumberRounder>(); }))
+        IncrementNumberRounder(impl::call_factory_cast<IncrementNumberRounder(*)(Windows::Foundation::IActivationFactory const&), IncrementNumberRounder>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<IncrementNumberRounder>(); }))
     {
     }
     inline NumeralSystemTranslator::NumeralSystemTranslator() :
-        NumeralSystemTranslator(impl::call_factory<NumeralSystemTranslator>([](auto&& f) { return f.template ActivateInstance<NumeralSystemTranslator>(); }))
+        NumeralSystemTranslator(impl::call_factory_cast<NumeralSystemTranslator(*)(Windows::Foundation::IActivationFactory const&), NumeralSystemTranslator>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<NumeralSystemTranslator>(); }))
     {
     }
     inline NumeralSystemTranslator::NumeralSystemTranslator(param::iterable<hstring> const& languages) :
-        NumeralSystemTranslator(impl::call_factory<NumeralSystemTranslator, Windows::Globalization::NumberFormatting::INumeralSystemTranslatorFactory>([&](auto&& f) { return f.Create(languages); }))
+        NumeralSystemTranslator(impl::call_factory<NumeralSystemTranslator, INumeralSystemTranslatorFactory>([&](INumeralSystemTranslatorFactory const& f) { return f.Create(languages); }))
     {
     }
     inline PercentFormatter::PercentFormatter() :
-        PercentFormatter(impl::call_factory<PercentFormatter>([](auto&& f) { return f.template ActivateInstance<PercentFormatter>(); }))
+        PercentFormatter(impl::call_factory_cast<PercentFormatter(*)(Windows::Foundation::IActivationFactory const&), PercentFormatter>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PercentFormatter>(); }))
     {
     }
     inline PercentFormatter::PercentFormatter(param::iterable<hstring> const& languages, param::hstring const& geographicRegion) :
-        PercentFormatter(impl::call_factory<PercentFormatter, Windows::Globalization::NumberFormatting::IPercentFormatterFactory>([&](auto&& f) { return f.CreatePercentFormatter(languages, geographicRegion); }))
+        PercentFormatter(impl::call_factory<PercentFormatter, IPercentFormatterFactory>([&](IPercentFormatterFactory const& f) { return f.CreatePercentFormatter(languages, geographicRegion); }))
     {
     }
     inline PermilleFormatter::PermilleFormatter() :
-        PermilleFormatter(impl::call_factory<PermilleFormatter>([](auto&& f) { return f.template ActivateInstance<PermilleFormatter>(); }))
+        PermilleFormatter(impl::call_factory_cast<PermilleFormatter(*)(Windows::Foundation::IActivationFactory const&), PermilleFormatter>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PermilleFormatter>(); }))
     {
     }
     inline PermilleFormatter::PermilleFormatter(param::iterable<hstring> const& languages, param::hstring const& geographicRegion) :
-        PermilleFormatter(impl::call_factory<PermilleFormatter, Windows::Globalization::NumberFormatting::IPermilleFormatterFactory>([&](auto&& f) { return f.CreatePermilleFormatter(languages, geographicRegion); }))
+        PermilleFormatter(impl::call_factory<PermilleFormatter, IPermilleFormatterFactory>([&](IPermilleFormatterFactory const& f) { return f.CreatePermilleFormatter(languages, geographicRegion); }))
     {
     }
     inline SignificantDigitsNumberRounder::SignificantDigitsNumberRounder() :
-        SignificantDigitsNumberRounder(impl::call_factory<SignificantDigitsNumberRounder>([](auto&& f) { return f.template ActivateInstance<SignificantDigitsNumberRounder>(); }))
+        SignificantDigitsNumberRounder(impl::call_factory_cast<SignificantDigitsNumberRounder(*)(Windows::Foundation::IActivationFactory const&), SignificantDigitsNumberRounder>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SignificantDigitsNumberRounder>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatter> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatter2> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatter2> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IDecimalFormatterFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::IDecimalFormatterFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IIncrementNumberRounder> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::IIncrementNumberRounder> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::INumberFormatter> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberParser> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::INumberParser> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberRounder> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::INumberRounder> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumeralSystemTranslator> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::INumeralSystemTranslator> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumeralSystemTranslatorFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::INumeralSystemTranslatorFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IPercentFormatterFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::IPercentFormatterFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IPermilleFormatterFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::IPermilleFormatterFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::DecimalFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::DecimalFormatter> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::PercentFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::PercentFormatter> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::PermilleFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::PermilleFormatter> {};
-    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder> : winrt::impl::hash_base<winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatter2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IDecimalFormatterFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IIncrementNumberRounder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberFormatter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberParser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberRounder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumeralSystemTranslator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::INumeralSystemTranslatorFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IPercentFormatterFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IPermilleFormatterFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsNumberRounder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::DecimalFormatter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::PercentFormatter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::PermilleFormatter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder> : winrt::impl::hash_base {};
+#endif
 }
 #endif

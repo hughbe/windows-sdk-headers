@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_Search_Core_H
 #define WINRT_Windows_ApplicationModel_Search_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.ApplicationModel.Search.h"
 #include "winrt/impl/Windows.ApplicationModel.Search.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -15,99 +15,99 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.Search.Core.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Search::Core::SearchSuggestionKind) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::Kind() const
     {
-        Windows::ApplicationModel::Search::Core::SearchSuggestionKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestion)->get_Kind(put_abi(value)));
+        Windows::ApplicationModel::Search::Core::SearchSuggestionKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestion)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::Text() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::Text() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestion)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::Tag() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::Tag() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestion)->get_Tag(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::DetailText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::DetailText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestion)->get_DetailText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::Image() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::Image() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestion)->get_Image(&value));
         return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::ImageAlternateText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestion<D>::ImageAlternateText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestion)->get_ImageAlternateText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SearchHistoryEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SearchHistoryEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->get_SearchHistoryEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SearchHistoryEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SearchHistoryEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->put_SearchHistoryEnabled(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SearchHistoryContext() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SearchHistoryContext() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->get_SearchHistoryContext(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SearchHistoryContext(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SearchHistoryContext(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->put_SearchHistoryContext(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SetLocalContentSuggestionSettings(Windows::ApplicationModel::Search::LocalContentSuggestionSettings const& settings) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SetLocalContentSuggestionSettings(Windows::ApplicationModel::Search::LocalContentSuggestionSettings const& settings) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->SetLocalContentSuggestionSettings(*(void**)(&settings)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SetQuery(param::hstring const& queryText) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SetQuery(param::hstring const& queryText) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->SetQuery(*(void**)(&queryText)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SetQuery(param::hstring const& queryText, param::hstring const& language) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SetQuery(param::hstring const& queryText, param::hstring const& language) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->SetQueryWithLanguage(*(void**)(&queryText), *(void**)(&language)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SetQuery(param::hstring const& queryText, param::hstring const& language, Windows::ApplicationModel::Search::SearchQueryLinguisticDetails const& linguisticDetails) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SetQuery(param::hstring const& queryText, param::hstring const& language, Windows::ApplicationModel::Search::SearchQueryLinguisticDetails const& linguisticDetails) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->SetQueryWithSearchQueryLinguisticDetails(*(void**)(&queryText), *(void**)(&language), *(void**)(&linguisticDetails)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::Suggestions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IObservableVector<Windows::ApplicationModel::Search::Core::SearchSuggestion>) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::Suggestions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->get_Suggestions(&value));
         return Windows::Foundation::Collections::IObservableVector<Windows::ApplicationModel::Search::Core::SearchSuggestion>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::AddToHistory(param::hstring const& queryText) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::AddToHistory(param::hstring const& queryText) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->AddToHistory(*(void**)(&queryText)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::AddToHistory(param::hstring const& queryText, param::hstring const& language) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::AddToHistory(param::hstring const& queryText, param::hstring const& language) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->AddToHistoryWithLanguage(*(void**)(&queryText), *(void**)(&language)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::ClearHistory() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::ClearHistory() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->ClearHistory());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SuggestionsRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Search::Core::SearchSuggestionManager, Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SuggestionsRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Search::Core::SearchSuggestionManager, Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->add_SuggestionsRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -115,13 +115,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SuggestionsRequested_revoker>(this, SuggestionsRequested(handler));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SuggestionsRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::SuggestionsRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->remove_SuggestionsRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::RequestingFocusOnKeyboardInput(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Search::Core::SearchSuggestionManager, Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::RequestingFocusOnKeyboardInput(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Search::Core::SearchSuggestionManager, Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->add_RequestingFocusOnKeyboardInput(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -129,38 +129,41 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RequestingFocusOnKeyboardInput_revoker>(this, RequestingFocusOnKeyboardInput(handler));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::RequestingFocusOnKeyboardInput(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionManager<D>::RequestingFocusOnKeyboardInput(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionManager)->remove_RequestingFocusOnKeyboardInput(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionsRequestedEventArgs<D>::QueryText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionsRequestedEventArgs<D>::QueryText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs)->get_QueryText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionsRequestedEventArgs<D>::Language() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionsRequestedEventArgs<D>::Language() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs)->get_Language(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionsRequestedEventArgs<D>::LinguisticDetails() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Search::SearchQueryLinguisticDetails) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionsRequestedEventArgs<D>::LinguisticDetails() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs)->get_LinguisticDetails(&value));
         return Windows::ApplicationModel::Search::SearchQueryLinguisticDetails{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionsRequestedEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Search::SearchSuggestionsRequest) consume_Windows_ApplicationModel_Search_Core_ISearchSuggestionsRequestedEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs)->get_Request(&value));
         return Windows::ApplicationModel::Search::SearchSuggestionsRequest{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Search::Core::IRequestingFocusOnKeyboardInputEventArgs> : produce_base<D, Windows::ApplicationModel::Search::Core::IRequestingFocusOnKeyboardInputEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Search::Core::ISearchSuggestion> : produce_base<D, Windows::ApplicationModel::Search::Core::ISearchSuggestion>
     {
@@ -212,6 +215,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Search::Core::ISearchSuggestionManager> : produce_base<D, Windows::ApplicationModel::Search::Core::ISearchSuggestionManager>
     {
@@ -330,6 +335,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs> : produce_base<D, Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs>
     {
@@ -366,23 +373,26 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::ApplicationModel::Search::Core
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Search::Core
 {
     inline SearchSuggestionManager::SearchSuggestionManager() :
-        SearchSuggestionManager(impl::call_factory<SearchSuggestionManager>([](auto&& f) { return f.template ActivateInstance<SearchSuggestionManager>(); }))
+        SearchSuggestionManager(impl::call_factory_cast<SearchSuggestionManager(*)(Windows::Foundation::IActivationFactory const&), SearchSuggestionManager>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SearchSuggestionManager>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::IRequestingFocusOnKeyboardInputEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Search::Core::IRequestingFocusOnKeyboardInputEventArgs> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestion> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestion> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::IRequestingFocusOnKeyboardInputEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestion> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::ISearchSuggestionsRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs> : winrt::impl::hash_base {};
+#endif
 }
 #endif

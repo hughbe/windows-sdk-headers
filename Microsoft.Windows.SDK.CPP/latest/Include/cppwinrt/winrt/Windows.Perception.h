@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,41 +6,42 @@
 #ifndef WINRT_Windows_Perception_H
 #define WINRT_Windows_Perception_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Perception.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Perception_IPerceptionTimestamp<D>::TargetTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Perception_IPerceptionTimestamp<D>::TargetTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::IPerceptionTimestamp)->get_TargetTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_IPerceptionTimestamp<D>::PredictionAmount() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Perception_IPerceptionTimestamp<D>::PredictionAmount() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::IPerceptionTimestamp)->get_PredictionAmount(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_IPerceptionTimestamp2<D>::SystemRelativeTargetTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Perception_IPerceptionTimestamp2<D>::SystemRelativeTargetTime() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::IPerceptionTimestamp2)->get_SystemRelativeTargetTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_IPerceptionTimestampHelperStatics<D>::FromHistoricalTargetTime(Windows::Foundation::DateTime const& targetTime) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::PerceptionTimestamp) consume_Windows_Perception_IPerceptionTimestampHelperStatics<D>::FromHistoricalTargetTime(Windows::Foundation::DateTime const& targetTime) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::IPerceptionTimestampHelperStatics)->FromHistoricalTargetTime(impl::bind_in(targetTime), &value));
         return Windows::Perception::PerceptionTimestamp{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_IPerceptionTimestampHelperStatics2<D>::FromSystemRelativeTargetTime(Windows::Foundation::TimeSpan const& targetTime) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::PerceptionTimestamp) consume_Windows_Perception_IPerceptionTimestampHelperStatics2<D>::FromSystemRelativeTargetTime(Windows::Foundation::TimeSpan const& targetTime) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::IPerceptionTimestampHelperStatics2)->FromSystemRelativeTargetTime(impl::bind_in(targetTime), &value));
         return Windows::Perception::PerceptionTimestamp{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::IPerceptionTimestamp> : produce_base<D, Windows::Perception::IPerceptionTimestamp>
     {
@@ -61,6 +62,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::IPerceptionTimestamp2> : produce_base<D, Windows::Perception::IPerceptionTimestamp2>
     {
@@ -73,6 +76,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::IPerceptionTimestampHelperStatics> : produce_base<D, Windows::Perception::IPerceptionTimestampHelperStatics>
     {
@@ -85,6 +90,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::IPerceptionTimestampHelperStatics2> : produce_base<D, Windows::Perception::IPerceptionTimestampHelperStatics2>
     {
@@ -97,25 +104,28 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Perception
+WINRT_EXPORT namespace winrt::Windows::Perception
 {
     inline auto PerceptionTimestampHelper::FromHistoricalTargetTime(Windows::Foundation::DateTime const& targetTime)
     {
-        return impl::call_factory<PerceptionTimestampHelper, Windows::Perception::IPerceptionTimestampHelperStatics>([&](auto&& f) { return f.FromHistoricalTargetTime(targetTime); });
+        return impl::call_factory<PerceptionTimestampHelper, IPerceptionTimestampHelperStatics>([&](IPerceptionTimestampHelperStatics const& f) { return f.FromHistoricalTargetTime(targetTime); });
     }
     inline auto PerceptionTimestampHelper::FromSystemRelativeTargetTime(Windows::Foundation::TimeSpan const& targetTime)
     {
-        return impl::call_factory<PerceptionTimestampHelper, Windows::Perception::IPerceptionTimestampHelperStatics2>([&](auto&& f) { return f.FromSystemRelativeTargetTime(targetTime); });
+        return impl::call_factory<PerceptionTimestampHelper, IPerceptionTimestampHelperStatics2>([&](IPerceptionTimestampHelperStatics2 const& f) { return f.FromSystemRelativeTargetTime(targetTime); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Perception::IPerceptionTimestamp> : winrt::impl::hash_base<winrt::Windows::Perception::IPerceptionTimestamp> {};
-    template<> struct hash<winrt::Windows::Perception::IPerceptionTimestamp2> : winrt::impl::hash_base<winrt::Windows::Perception::IPerceptionTimestamp2> {};
-    template<> struct hash<winrt::Windows::Perception::IPerceptionTimestampHelperStatics> : winrt::impl::hash_base<winrt::Windows::Perception::IPerceptionTimestampHelperStatics> {};
-    template<> struct hash<winrt::Windows::Perception::IPerceptionTimestampHelperStatics2> : winrt::impl::hash_base<winrt::Windows::Perception::IPerceptionTimestampHelperStatics2> {};
-    template<> struct hash<winrt::Windows::Perception::PerceptionTimestamp> : winrt::impl::hash_base<winrt::Windows::Perception::PerceptionTimestamp> {};
-    template<> struct hash<winrt::Windows::Perception::PerceptionTimestampHelper> : winrt::impl::hash_base<winrt::Windows::Perception::PerceptionTimestampHelper> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Perception::IPerceptionTimestamp> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::IPerceptionTimestamp2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::IPerceptionTimestampHelperStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::IPerceptionTimestampHelperStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::PerceptionTimestamp> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::PerceptionTimestampHelper> : winrt::impl::hash_base {};
+#endif
 }
 #endif

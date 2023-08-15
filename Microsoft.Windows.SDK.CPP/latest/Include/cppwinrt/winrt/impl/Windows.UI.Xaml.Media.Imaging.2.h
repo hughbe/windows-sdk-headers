@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Media.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Media.Imaging.1.h"
-namespace winrt::Windows::UI::Xaml::Media::Imaging
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media::Imaging
 {
     struct DownloadProgressEventHandler : Windows::Foundation::IUnknown
     {
@@ -30,7 +30,7 @@ namespace winrt::Windows::UI::Xaml::Media::Imaging
         BitmapImage(std::nullptr_t) noexcept {}
         BitmapImage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Media::Imaging::IBitmapImage(ptr, take_ownership_from_abi) {}
         BitmapImage();
-        BitmapImage(Windows::Foundation::Uri const& uriSource);
+        explicit BitmapImage(Windows::Foundation::Uri const& uriSource);
         [[nodiscard]] static auto CreateOptionsProperty();
         [[nodiscard]] static auto UriSourceProperty();
         [[nodiscard]] static auto DecodePixelWidthProperty();
@@ -88,7 +88,7 @@ namespace winrt::Windows::UI::Xaml::Media::Imaging
         SvgImageSource(std::nullptr_t) noexcept {}
         SvgImageSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Media::Imaging::ISvgImageSource(ptr, take_ownership_from_abi) {}
         SvgImageSource();
-        SvgImageSource(Windows::Foundation::Uri const& uriSource);
+        explicit SvgImageSource(Windows::Foundation::Uri const& uriSource);
         [[nodiscard]] static auto UriSourceProperty();
         [[nodiscard]] static auto RasterizePixelWidthProperty();
         [[nodiscard]] static auto RasterizePixelHeightProperty();
@@ -133,7 +133,7 @@ namespace winrt::Windows::UI::Xaml::Media::Imaging
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IXamlRenderingBackgroundTaskOverrides = winrt::Windows::UI::Xaml::Media::Imaging::IXamlRenderingBackgroundTaskOverrides;
-        auto OnRun(Windows::ApplicationModel::Background::IBackgroundTaskInstance const& taskInstance) const;
+        WINRT_IMPL_AUTO(void) OnRun(Windows::ApplicationModel::Background::IBackgroundTaskInstance const& taskInstance) const;
     };
 }
 #endif

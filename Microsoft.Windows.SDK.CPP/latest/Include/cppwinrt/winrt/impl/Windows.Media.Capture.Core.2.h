@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_Capture_Core_2_H
 #define WINRT_Windows_Media_Capture_Core_2_H
 #include "winrt/impl/Windows.Media.Capture.Core.1.h"
-namespace winrt::Windows::Media::Capture::Core
+WINRT_EXPORT namespace winrt::Windows::Media::Capture::Core
 {
     struct __declspec(empty_bases) VariablePhotoCapturedEventArgs : Windows::Media::Capture::Core::IVariablePhotoCapturedEventArgs
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Xaml_Navigation_H
 #define WINRT_Windows_UI_Xaml_Navigation_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.Xaml.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.UI.Xaml.2.h"
@@ -15,159 +15,159 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.UI.Xaml.Navigation.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptions<D>::IsNavigationStackEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptions<D>::IsNavigationStackEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IFrameNavigationOptions)->get_IsNavigationStackEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptions<D>::IsNavigationStackEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptions<D>::IsNavigationStackEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IFrameNavigationOptions)->put_IsNavigationStackEnabled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptions<D>::TransitionInfoOverride() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo) consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptions<D>::TransitionInfoOverride() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IFrameNavigationOptions)->get_TransitionInfoOverride(&value));
         return Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptions<D>::TransitionInfoOverride(Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptions<D>::TransitionInfoOverride(Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IFrameNavigationOptions)->put_TransitionInfoOverride(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptionsFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Navigation::FrameNavigationOptions) consume_Windows_UI_Xaml_Navigation_IFrameNavigationOptionsFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::Navigation::FrameNavigationOptions{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs<D>::Cancel() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs<D>::Cancel() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs)->get_Cancel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs<D>::Cancel(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs<D>::Cancel(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs)->put_Cancel(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs<D>::NavigationMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Navigation::NavigationMode) consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs<D>::NavigationMode() const
     {
-        Windows::UI::Xaml::Navigation::NavigationMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs)->get_NavigationMode(put_abi(value)));
+        Windows::UI::Xaml::Navigation::NavigationMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs)->get_NavigationMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs<D>::SourcePageType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::TypeName) consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs<D>::SourcePageType() const
     {
-        Windows::UI::Xaml::Interop::TypeName value;
+        Windows::UI::Xaml::Interop::TypeName value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs)->get_SourcePageType(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs2<D>::Parameter() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs2<D>::Parameter() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2)->get_Parameter(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs2<D>::NavigationTransitionInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo) consume_Windows_UI_Xaml_Navigation_INavigatingCancelEventArgs2<D>::NavigationTransitionInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2)->get_NavigationTransitionInfo(&value));
         return Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::Content() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::Content() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationEventArgs)->get_Content(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::Parameter() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::Parameter() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationEventArgs)->get_Parameter(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::SourcePageType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::TypeName) consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::SourcePageType() const
     {
-        Windows::UI::Xaml::Interop::TypeName value;
+        Windows::UI::Xaml::Interop::TypeName value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationEventArgs)->get_SourcePageType(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::NavigationMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Navigation::NavigationMode) consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::NavigationMode() const
     {
-        Windows::UI::Xaml::Navigation::NavigationMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationEventArgs)->get_NavigationMode(put_abi(value)));
+        Windows::UI::Xaml::Navigation::NavigationMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationEventArgs)->get_NavigationMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::Uri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationEventArgs)->get_Uri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::Uri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Navigation_INavigationEventArgs<D>::Uri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationEventArgs)->put_Uri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationEventArgs2<D>::NavigationTransitionInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo) consume_Windows_UI_Xaml_Navigation_INavigationEventArgs2<D>::NavigationTransitionInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationEventArgs2)->get_NavigationTransitionInfo(&value));
         return Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationFailedEventArgs<D>::Exception() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_UI_Xaml_Navigation_INavigationFailedEventArgs<D>::Exception() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationFailedEventArgs)->get_Exception(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationFailedEventArgs<D>::Handled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Navigation_INavigationFailedEventArgs<D>::Handled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationFailedEventArgs)->get_Handled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationFailedEventArgs<D>::Handled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Navigation_INavigationFailedEventArgs<D>::Handled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationFailedEventArgs)->put_Handled(value));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_INavigationFailedEventArgs<D>::SourcePageType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::TypeName) consume_Windows_UI_Xaml_Navigation_INavigationFailedEventArgs<D>::SourcePageType() const
     {
-        Windows::UI::Xaml::Interop::TypeName value;
+        Windows::UI::Xaml::Interop::TypeName value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::INavigationFailedEventArgs)->get_SourcePageType(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IPageStackEntry<D>::SourcePageType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::TypeName) consume_Windows_UI_Xaml_Navigation_IPageStackEntry<D>::SourcePageType() const
     {
-        Windows::UI::Xaml::Interop::TypeName value;
+        Windows::UI::Xaml::Interop::TypeName value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IPageStackEntry)->get_SourcePageType(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IPageStackEntry<D>::Parameter() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_Navigation_IPageStackEntry<D>::Parameter() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IPageStackEntry)->get_Parameter(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IPageStackEntry<D>::NavigationTransitionInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo) consume_Windows_UI_Xaml_Navigation_IPageStackEntry<D>::NavigationTransitionInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IPageStackEntry)->get_NavigationTransitionInfo(&value));
         return Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IPageStackEntryFactory<D>::CreateInstance(Windows::UI::Xaml::Interop::TypeName const& sourcePageType, Windows::Foundation::IInspectable const& parameter, Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& navigationTransitionInfo) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Navigation::PageStackEntry) consume_Windows_UI_Xaml_Navigation_IPageStackEntryFactory<D>::CreateInstance(Windows::UI::Xaml::Interop::TypeName const& sourcePageType, Windows::Foundation::IInspectable const& parameter, Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& navigationTransitionInfo) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IPageStackEntryFactory)->CreateInstance(impl::bind_in(sourcePageType), *(void**)(&parameter), *(void**)(&navigationTransitionInfo), &value));
         return Windows::UI::Xaml::Navigation::PageStackEntry{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Navigation_IPageStackEntryStatics<D>::SourcePageTypeProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Navigation_IPageStackEntryStatics<D>::SourcePageTypeProperty() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Navigation::IPageStackEntryStatics)->get_SourcePageTypeProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
-    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::LoadCompletedEventHandler, H> : implements_delegate<Windows::UI::Xaml::Navigation::LoadCompletedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::LoadCompletedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::Navigation::LoadCompletedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::Navigation::LoadCompletedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -178,7 +178,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::NavigatedEventHandler, H> : implements_delegate<Windows::UI::Xaml::Navigation::NavigatedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::NavigatedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::Navigation::NavigatedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::Navigation::NavigatedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -189,7 +189,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::NavigatingCancelEventHandler, H> : implements_delegate<Windows::UI::Xaml::Navigation::NavigatingCancelEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::NavigatingCancelEventHandler, H> final : implements_delegate<Windows::UI::Xaml::Navigation::NavigatingCancelEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::Navigation::NavigatingCancelEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -200,7 +200,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::NavigationFailedEventHandler, H> : implements_delegate<Windows::UI::Xaml::Navigation::NavigationFailedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::NavigationFailedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::Navigation::NavigationFailedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::Navigation::NavigationFailedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -211,7 +211,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::NavigationStoppedEventHandler, H> : implements_delegate<Windows::UI::Xaml::Navigation::NavigationStoppedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::Navigation::NavigationStoppedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::Navigation::NavigationStoppedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::Navigation::NavigationStoppedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -222,6 +222,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::IFrameNavigationOptions> : produce_base<D, Windows::UI::Xaml::Navigation::IFrameNavigationOptions>
     {
@@ -255,6 +256,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory> : produce_base<D, Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory>
     {
@@ -270,6 +273,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs> : produce_base<D, Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs>
     {
@@ -303,6 +308,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2> : produce_base<D, Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2>
     {
@@ -323,6 +330,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::INavigationEventArgs> : produce_base<D, Windows::UI::Xaml::Navigation::INavigationEventArgs>
     {
@@ -373,6 +382,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::INavigationEventArgs2> : produce_base<D, Windows::UI::Xaml::Navigation::INavigationEventArgs2>
     {
@@ -385,6 +396,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::INavigationFailedEventArgs> : produce_base<D, Windows::UI::Xaml::Navigation::INavigationFailedEventArgs>
     {
@@ -419,6 +432,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::IPageStackEntry> : produce_base<D, Windows::UI::Xaml::Navigation::IPageStackEntry>
     {
@@ -447,6 +462,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::IPageStackEntryFactory> : produce_base<D, Windows::UI::Xaml::Navigation::IPageStackEntryFactory>
     {
@@ -459,6 +476,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Navigation::IPageStackEntryStatics> : produce_base<D, Windows::UI::Xaml::Navigation::IPageStackEntryStatics>
     {
@@ -471,21 +490,22 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::UI::Xaml::Navigation
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
 {
     inline FrameNavigationOptions::FrameNavigationOptions()
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<FrameNavigationOptions, Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory>([&](auto&& f) { return f.CreateInstance(baseInterface, innerInterface); });
+        *this = impl::call_factory<FrameNavigationOptions, IFrameNavigationOptionsFactory>([&](IFrameNavigationOptionsFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
     }
     inline PageStackEntry::PageStackEntry(Windows::UI::Xaml::Interop::TypeName const& sourcePageType, Windows::Foundation::IInspectable const& parameter, Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& navigationTransitionInfo) :
-        PageStackEntry(impl::call_factory<PageStackEntry, Windows::UI::Xaml::Navigation::IPageStackEntryFactory>([&](auto&& f) { return f.CreateInstance(sourcePageType, parameter, navigationTransitionInfo); }))
+        PageStackEntry(impl::call_factory<PageStackEntry, IPageStackEntryFactory>([&](IPageStackEntryFactory const& f) { return f.CreateInstance(sourcePageType, parameter, navigationTransitionInfo); }))
     {
     }
     inline auto PageStackEntry::SourcePageTypeProperty()
     {
-        return impl::call_factory<PageStackEntry, Windows::UI::Xaml::Navigation::IPageStackEntryStatics>([&](auto&& f) { return f.SourcePageTypeProperty(); });
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IPageStackEntryStatics const&), PageStackEntry, IPageStackEntryStatics>([](IPageStackEntryStatics const& f) { return f.SourcePageTypeProperty(); });
     }
     template <typename L> LoadCompletedEventHandler::LoadCompletedEventHandler(L handler) :
         LoadCompletedEventHandler(impl::make_delegate<LoadCompletedEventHandler>(std::forward<L>(handler)))
@@ -617,26 +637,28 @@ namespace winrt::Windows::UI::Xaml::Navigation
     protected:
         FrameNavigationOptionsT()
         {
-            impl::call_factory<FrameNavigationOptions, Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory>([&](auto&& f) { f.CreateInstance(*this, this->m_inner); });
+            impl::call_factory<FrameNavigationOptions, IFrameNavigationOptionsFactory>([&](IFrameNavigationOptionsFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs2> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs2> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigationFailedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::INavigationFailedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IPageStackEntry> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::IPageStackEntry> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IPageStackEntryFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::IPageStackEntryFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IPageStackEntryStatics> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::IPageStackEntryStatics> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::PageStackEntry> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Navigation::PageStackEntry> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptionsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::INavigationFailedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IPageStackEntry> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IPageStackEntryFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::IPageStackEntryStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Navigation::PageStackEntry> : winrt::impl::hash_base {};
+#endif
 }
 #endif

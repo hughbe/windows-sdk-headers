@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Xaml_Controls_1_H
 #define WINRT_Windows_UI_Xaml_Controls_1_H
 #include "winrt/impl/Windows.UI.Xaml.Controls.0.h"
-namespace winrt::Windows::UI::Xaml::Controls
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
 {
     struct __declspec(empty_bases) IAnchorRequestedEventArgs :
         Windows::Foundation::IInspectable,
@@ -1877,6 +1877,20 @@ namespace winrt::Windows::UI::Xaml::Controls
         IHandwritingView(std::nullptr_t = nullptr) noexcept {}
         IHandwritingView(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IHandwritingView2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IHandwritingView2>
+    {
+        IHandwritingView2(std::nullptr_t = nullptr) noexcept {}
+        IHandwritingView2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IHandwritingViewCandidatesChangedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IHandwritingViewCandidatesChangedEventArgs>
+    {
+        IHandwritingViewCandidatesChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IHandwritingViewCandidatesChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IHandwritingViewFactory :
         Windows::Foundation::IInspectable,
         impl::consume_t<IHandwritingViewFactory>
@@ -1890,6 +1904,20 @@ namespace winrt::Windows::UI::Xaml::Controls
     {
         IHandwritingViewStatics(std::nullptr_t = nullptr) noexcept {}
         IHandwritingViewStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IHandwritingViewStatics2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IHandwritingViewStatics2>
+    {
+        IHandwritingViewStatics2(std::nullptr_t = nullptr) noexcept {}
+        IHandwritingViewStatics2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IHandwritingViewTextSubmittedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IHandwritingViewTextSubmittedEventArgs>
+    {
+        IHandwritingViewTextSubmittedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IHandwritingViewTextSubmittedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IHub :
         Windows::Foundation::IInspectable,

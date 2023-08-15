@@ -1,21 +1,26 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_Geolocation_Geofencing_0_H
 #define WINRT_Windows_Devices_Geolocation_Geofencing_0_H
-namespace winrt::Windows::Devices::Geolocation
+WINRT_EXPORT namespace winrt::Windows::Devices::Geolocation
 {
     struct Geoposition;
     struct IGeoshape;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Devices::Geolocation::Geofencing
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+    template <typename T> struct __declspec(empty_bases) IVector;
+}
+WINRT_EXPORT namespace winrt::Windows::Devices::Geolocation::Geofencing
 {
     enum class GeofenceMonitorStatus : int32_t
     {
@@ -56,134 +61,38 @@ namespace winrt::Windows::Devices::Geolocation::Geofencing
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofence>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofenceFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitorStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::Geofence>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::IGeofence>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.IGeofence" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::IGeofenceFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.IGeofenceFactory" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitorStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.IGeofenceMonitorStatics" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::Geofence>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.Geofence" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitorStatus" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.GeofenceRemovalReason" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::GeofenceState>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.GeofenceState" };
-    };
-    template <> struct name<Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Geolocation.Geofencing.MonitoredGeofenceStates" };
-    };
-    template <> struct guid_storage<Windows::Devices::Geolocation::Geofencing::IGeofence>
-    {
-        static constexpr guid value{ 0x9C090823,0xEDB8,0x47E0,{ 0x82,0x45,0x5B,0xF6,0x1D,0x32,0x1F,0x2D } };
-    };
-    template <> struct guid_storage<Windows::Devices::Geolocation::Geofencing::IGeofenceFactory>
-    {
-        static constexpr guid value{ 0x841F624B,0x325F,0x4B90,{ 0xBC,0xA7,0x2B,0x80,0x22,0xA9,0x37,0x96 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor>
-    {
-        static constexpr guid value{ 0x4C0F5F78,0x1C1F,0x4621,{ 0xBB,0xBD,0x83,0x3B,0x92,0x24,0x72,0x26 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitorStatics>
-    {
-        static constexpr guid value{ 0x2DD32FCF,0x7E75,0x4899,{ 0xAC,0xE3,0x2B,0xD0,0xA6,0x5C,0xCE,0x06 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport>
-    {
-        static constexpr guid value{ 0x9A243C18,0x2464,0x4C89,{ 0xBE,0x05,0xB3,0xFF,0xFF,0x5B,0xAB,0xC5 } };
-    };
-    template <> struct default_interface<Windows::Devices::Geolocation::Geofencing::Geofence>
-    {
-        using type = Windows::Devices::Geolocation::Geofencing::IGeofence;
-    };
-    template <> struct default_interface<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor>
-    {
-        using type = Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor;
-    };
-    template <> struct default_interface<Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>
-    {
-        using type = Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport;
-    };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofence>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofenceFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitorStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::Geofence>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::GeofenceState>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::Geofence> = L"Windows.Devices.Geolocation.Geofencing.Geofence";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor> = L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport> = L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus> = L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitorStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason> = L"Windows.Devices.Geolocation.Geofencing.GeofenceRemovalReason";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::GeofenceState> = L"Windows.Devices.Geolocation.Geofencing.GeofenceState";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates> = L"Windows.Devices.Geolocation.Geofencing.MonitoredGeofenceStates";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::IGeofence> = L"Windows.Devices.Geolocation.Geofencing.IGeofence";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::IGeofenceFactory> = L"Windows.Devices.Geolocation.Geofencing.IGeofenceFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor> = L"Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitorStatics> = L"Windows.Devices.Geolocation.Geofencing.IGeofenceMonitorStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport> = L"Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport";
+    template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::Geofencing::IGeofence>{ 0x9C090823,0xEDB8,0x47E0,{ 0x82,0x45,0x5B,0xF6,0x1D,0x32,0x1F,0x2D } }; // 9C090823-EDB8-47E0-8245-5BF61D321F2D
+    template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::Geofencing::IGeofenceFactory>{ 0x841F624B,0x325F,0x4B90,{ 0xBC,0xA7,0x2B,0x80,0x22,0xA9,0x37,0x96 } }; // 841F624B-325F-4B90-BCA7-2B8022A93796
+    template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor>{ 0x4C0F5F78,0x1C1F,0x4621,{ 0xBB,0xBD,0x83,0x3B,0x92,0x24,0x72,0x26 } }; // 4C0F5F78-1C1F-4621-BBBD-833B92247226
+    template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitorStatics>{ 0x2DD32FCF,0x7E75,0x4899,{ 0xAC,0xE3,0x2B,0xD0,0xA6,0x5C,0xCE,0x06 } }; // 2DD32FCF-7E75-4899-ACE3-2BD0A65CCE06
+    template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport>{ 0x9A243C18,0x2464,0x4C89,{ 0xBE,0x05,0xB3,0xFF,0xFF,0x5B,0xAB,0xC5 } }; // 9A243C18-2464-4C89-BE05-B3FFFF5BABC5
+    template <> struct default_interface<Windows::Devices::Geolocation::Geofencing::Geofence>{ using type = Windows::Devices::Geolocation::Geofencing::IGeofence; };
+    template <> struct default_interface<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor>{ using type = Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor; };
+    template <> struct default_interface<Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>{ using type = Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport; };
     template <> struct abi<Windows::Devices::Geolocation::Geofencing::IGeofence>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -241,13 +150,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Geolocation_Geofencing_IGeofence
     {
-        [[nodiscard]] auto StartTime() const;
-        [[nodiscard]] auto Duration() const;
-        [[nodiscard]] auto DwellTime() const;
-        [[nodiscard]] auto Id() const;
-        [[nodiscard]] auto MonitoredStates() const;
-        [[nodiscard]] auto Geoshape() const;
-        [[nodiscard]] auto SingleUse() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) StartTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) Duration() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) DwellTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates) MonitoredStates() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::IGeoshape) Geoshape() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) SingleUse() const;
     };
     template <> struct consume<Windows::Devices::Geolocation::Geofencing::IGeofence>
     {
@@ -256,10 +165,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Geolocation_Geofencing_IGeofenceFactory
     {
-        auto Create(param::hstring const& id, Windows::Devices::Geolocation::IGeoshape const& geoshape) const;
-        auto CreateWithMonitorStates(param::hstring const& id, Windows::Devices::Geolocation::IGeoshape const& geoshape, Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates const& monitoredStates, bool singleUse) const;
-        auto CreateWithMonitorStatesAndDwellTime(param::hstring const& id, Windows::Devices::Geolocation::IGeoshape const& geoshape, Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates const& monitoredStates, bool singleUse, Windows::Foundation::TimeSpan const& dwellTime) const;
-        auto CreateWithMonitorStatesDwellTimeStartTimeAndDuration(param::hstring const& id, Windows::Devices::Geolocation::IGeoshape const& geoshape, Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates const& monitoredStates, bool singleUse, Windows::Foundation::TimeSpan const& dwellTime, Windows::Foundation::DateTime const& startTime, Windows::Foundation::TimeSpan const& duration) const;
+        WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::Geofence) Create(param::hstring const& id, Windows::Devices::Geolocation::IGeoshape const& geoshape) const;
+        WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::Geofence) CreateWithMonitorStates(param::hstring const& id, Windows::Devices::Geolocation::IGeoshape const& geoshape, Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates const& monitoredStates, bool singleUse) const;
+        WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::Geofence) CreateWithMonitorStatesAndDwellTime(param::hstring const& id, Windows::Devices::Geolocation::IGeoshape const& geoshape, Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates const& monitoredStates, bool singleUse, Windows::Foundation::TimeSpan const& dwellTime) const;
+        WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::Geofence) CreateWithMonitorStatesDwellTimeStartTimeAndDuration(param::hstring const& id, Windows::Devices::Geolocation::IGeoshape const& geoshape, Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates const& monitoredStates, bool singleUse, Windows::Foundation::TimeSpan const& dwellTime, Windows::Foundation::DateTime const& startTime, Windows::Foundation::TimeSpan const& duration) const;
     };
     template <> struct consume<Windows::Devices::Geolocation::Geofencing::IGeofenceFactory>
     {
@@ -268,18 +177,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Geolocation_Geofencing_IGeofenceMonitor
     {
-        [[nodiscard]] auto Status() const;
-        [[nodiscard]] auto Geofences() const;
-        [[nodiscard]] auto LastKnownGeoposition() const;
-        auto GeofenceStateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, Windows::Foundation::IInspectable> const& eventHandler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus) Status() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::Geolocation::Geofencing::Geofence>) Geofences() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geoposition) LastKnownGeoposition() const;
+        WINRT_IMPL_AUTO(winrt::event_token) GeofenceStateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, Windows::Foundation::IInspectable> const& eventHandler) const;
         using GeofenceStateChanged_revoker = impl::event_revoker<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor, &impl::abi_t<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor>::remove_GeofenceStateChanged>;
-        GeofenceStateChanged_revoker GeofenceStateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, Windows::Foundation::IInspectable> const& eventHandler) const;
-        auto GeofenceStateChanged(winrt::event_token const& token) const noexcept;
-        auto ReadReports() const;
-        auto StatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, Windows::Foundation::IInspectable> const& eventHandler) const;
+        [[nodiscard]] GeofenceStateChanged_revoker GeofenceStateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, Windows::Foundation::IInspectable> const& eventHandler) const;
+        WINRT_IMPL_AUTO(void) GeofenceStateChanged(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>) ReadReports() const;
+        WINRT_IMPL_AUTO(winrt::event_token) StatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, Windows::Foundation::IInspectable> const& eventHandler) const;
         using StatusChanged_revoker = impl::event_revoker<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor, &impl::abi_t<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor>::remove_StatusChanged>;
-        StatusChanged_revoker StatusChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, Windows::Foundation::IInspectable> const& eventHandler) const;
-        auto StatusChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] StatusChanged_revoker StatusChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, Windows::Foundation::IInspectable> const& eventHandler) const;
+        WINRT_IMPL_AUTO(void) StatusChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitor>
     {
@@ -288,7 +197,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Geolocation_Geofencing_IGeofenceMonitorStatics
     {
-        [[nodiscard]] auto Current() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::GeofenceMonitor) Current() const;
     };
     template <> struct consume<Windows::Devices::Geolocation::Geofencing::IGeofenceMonitorStatics>
     {
@@ -297,10 +206,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Geolocation_Geofencing_IGeofenceStateChangeReport
     {
-        [[nodiscard]] auto NewState() const;
-        [[nodiscard]] auto Geofence() const;
-        [[nodiscard]] auto Geoposition() const;
-        [[nodiscard]] auto RemovalReason() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::GeofenceState) NewState() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::Geofence) Geofence() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geoposition) Geoposition() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason) RemovalReason() const;
     };
     template <> struct consume<Windows::Devices::Geolocation::Geofencing::IGeofenceStateChangeReport>
     {

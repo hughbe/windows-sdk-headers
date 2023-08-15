@@ -1,20 +1,22 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_Power_0_H
 #define WINRT_Windows_Devices_Power_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+    template <typename T> struct __declspec(empty_bases) IReference;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::System::Power
+WINRT_EXPORT namespace winrt::Windows::System::Power
 {
     enum class BatteryStatus : int32_t;
 }
-namespace winrt::Windows::Devices::Power
+WINRT_EXPORT namespace winrt::Windows::Devices::Power
 {
     struct IBattery;
     struct IBatteryReport;
@@ -24,66 +26,21 @@ namespace winrt::Windows::Devices::Power
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::Power::IBattery>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Power::IBatteryReport>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Power::IBatteryStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Power::Battery>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Power::BatteryReport>
-    {
-        using type = class_category;
-    };
-    template <> struct name<Windows::Devices::Power::IBattery>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Power.IBattery" };
-    };
-    template <> struct name<Windows::Devices::Power::IBatteryReport>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Power.IBatteryReport" };
-    };
-    template <> struct name<Windows::Devices::Power::IBatteryStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Power.IBatteryStatics" };
-    };
-    template <> struct name<Windows::Devices::Power::Battery>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Power.Battery" };
-    };
-    template <> struct name<Windows::Devices::Power::BatteryReport>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Power.BatteryReport" };
-    };
-    template <> struct guid_storage<Windows::Devices::Power::IBattery>
-    {
-        static constexpr guid value{ 0xBC894FC6,0x0072,0x47C8,{ 0x8B,0x5D,0x61,0x4A,0xAA,0x7A,0x43,0x7E } };
-    };
-    template <> struct guid_storage<Windows::Devices::Power::IBatteryReport>
-    {
-        static constexpr guid value{ 0xC9858C3A,0x4E13,0x420A,{ 0xA8,0xD0,0x24,0xF1,0x8F,0x39,0x54,0x01 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Power::IBatteryStatics>
-    {
-        static constexpr guid value{ 0x79CD72B6,0x9E5E,0x4452,{ 0xBE,0xA6,0xDF,0xCD,0x54,0x1E,0x59,0x7F } };
-    };
-    template <> struct default_interface<Windows::Devices::Power::Battery>
-    {
-        using type = Windows::Devices::Power::IBattery;
-    };
-    template <> struct default_interface<Windows::Devices::Power::BatteryReport>
-    {
-        using type = Windows::Devices::Power::IBatteryReport;
-    };
+    template <> struct category<Windows::Devices::Power::IBattery>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Power::IBatteryReport>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Power::IBatteryStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Power::Battery>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Power::BatteryReport>{ using type = class_category; };
+    template <> inline constexpr auto& name_v<Windows::Devices::Power::Battery> = L"Windows.Devices.Power.Battery";
+    template <> inline constexpr auto& name_v<Windows::Devices::Power::BatteryReport> = L"Windows.Devices.Power.BatteryReport";
+    template <> inline constexpr auto& name_v<Windows::Devices::Power::IBattery> = L"Windows.Devices.Power.IBattery";
+    template <> inline constexpr auto& name_v<Windows::Devices::Power::IBatteryReport> = L"Windows.Devices.Power.IBatteryReport";
+    template <> inline constexpr auto& name_v<Windows::Devices::Power::IBatteryStatics> = L"Windows.Devices.Power.IBatteryStatics";
+    template <> inline constexpr guid guid_v<Windows::Devices::Power::IBattery>{ 0xBC894FC6,0x0072,0x47C8,{ 0x8B,0x5D,0x61,0x4A,0xAA,0x7A,0x43,0x7E } }; // BC894FC6-0072-47C8-8B5D-614AAA7A437E
+    template <> inline constexpr guid guid_v<Windows::Devices::Power::IBatteryReport>{ 0xC9858C3A,0x4E13,0x420A,{ 0xA8,0xD0,0x24,0xF1,0x8F,0x39,0x54,0x01 } }; // C9858C3A-4E13-420A-A8D0-24F18F395401
+    template <> inline constexpr guid guid_v<Windows::Devices::Power::IBatteryStatics>{ 0x79CD72B6,0x9E5E,0x4452,{ 0xBE,0xA6,0xDF,0xCD,0x54,0x1E,0x59,0x7F } }; // 79CD72B6-9E5E-4452-BEA6-DFCD541E597F
+    template <> struct default_interface<Windows::Devices::Power::Battery>{ using type = Windows::Devices::Power::IBattery; };
+    template <> struct default_interface<Windows::Devices::Power::BatteryReport>{ using type = Windows::Devices::Power::IBatteryReport; };
     template <> struct abi<Windows::Devices::Power::IBattery>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -117,12 +74,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Power_IBattery
     {
-        [[nodiscard]] auto DeviceId() const;
-        auto GetReport() const;
-        auto ReportUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::Power::Battery, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
+        WINRT_IMPL_AUTO(Windows::Devices::Power::BatteryReport) GetReport() const;
+        WINRT_IMPL_AUTO(winrt::event_token) ReportUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::Power::Battery, Windows::Foundation::IInspectable> const& handler) const;
         using ReportUpdated_revoker = impl::event_revoker<Windows::Devices::Power::IBattery, &impl::abi_t<Windows::Devices::Power::IBattery>::remove_ReportUpdated>;
-        ReportUpdated_revoker ReportUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Power::Battery, Windows::Foundation::IInspectable> const& handler) const;
-        auto ReportUpdated(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] ReportUpdated_revoker ReportUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Power::Battery, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) ReportUpdated(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::Devices::Power::IBattery>
     {
@@ -131,11 +88,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Power_IBatteryReport
     {
-        [[nodiscard]] auto ChargeRateInMilliwatts() const;
-        [[nodiscard]] auto DesignCapacityInMilliwattHours() const;
-        [[nodiscard]] auto FullChargeCapacityInMilliwattHours() const;
-        [[nodiscard]] auto RemainingCapacityInMilliwattHours() const;
-        [[nodiscard]] auto Status() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) ChargeRateInMilliwatts() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) DesignCapacityInMilliwattHours() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) FullChargeCapacityInMilliwattHours() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) RemainingCapacityInMilliwattHours() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::Power::BatteryStatus) Status() const;
     };
     template <> struct consume<Windows::Devices::Power::IBatteryReport>
     {
@@ -144,9 +101,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Power_IBatteryStatics
     {
-        [[nodiscard]] auto AggregateBattery() const;
-        auto FromIdAsync(param::hstring const& deviceId) const;
-        auto GetDeviceSelector() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Power::Battery) AggregateBattery() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Power::Battery>) FromIdAsync(param::hstring const& deviceId) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
     };
     template <> struct consume<Windows::Devices::Power::IBatteryStatics>
     {

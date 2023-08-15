@@ -90,6 +90,8 @@ namespace Windows
 
         typedef enum AddResourcePackageOptions AddResourcePackageOptions;
 
+        typedef enum AppExecutionContext AppExecutionContext;
+
         typedef enum LimitedAccessFeatureStatus LimitedAccessFeatureStatus;
 
         typedef enum PackageContentGroupState PackageContentGroupState;
@@ -109,6 +111,10 @@ namespace Windows
         interface IAppInfo;
 
         interface IAppInfo2;
+
+        interface IAppInfo3;
+
+        interface IAppInfo4;
 
         interface IAppInfoStatics;
 
@@ -378,6 +384,14 @@ namespace Windows
             ApplyUpdateIfAvailable = 0x2
         };
 
+        [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+        enum AppExecutionContext
+        {
+            Unknown = 0,
+            Host    = 1,
+            Guest   = 2
+        };
+
         [contract(Windows.Foundation.UniversalApiContract, 7.0)]
         enum LimitedAccessFeatureStatus
         {
@@ -472,7 +486,24 @@ namespace Windows
             [propget] HRESULT Package([out] [retval] Windows.ApplicationModel.Package** value);
         }
 
+        [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+        [exclusiveto(Windows.ApplicationModel.AppInfo)]
+        [uuid(09A78E46-93A4-46DE-9397-0843B57115EA)]
+        interface IAppInfo3 : IInspectable
+        {
+            [propget] HRESULT ExecutionContext([out] [retval] Windows.ApplicationModel.AppExecutionContext* value);
+        }
+
+        [contract(Windows.Foundation.UniversalApiContract, 11.0)]
+        [exclusiveto(Windows.ApplicationModel.AppInfo)]
+        [uuid(2F34BDEB-1609-4554-9F33-12E1E803E0D4)]
+        interface IAppInfo4 : IInspectable
+        {
+            [propget] HRESULT SupportedFileExtensions([out] UINT32* __valueSize, [out] [retval] [size_is(, *__valueSize)] HSTRING** value);
+        }
+
         [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+        [exclusiveto(Windows.ApplicationModel.AppInfo)]
         [uuid(CF1F782A-E48B-4F0C-9B0B-79C3F8957DD7)]
         interface IAppInfoStatics : IInspectable
         {
@@ -980,6 +1011,8 @@ namespace Windows
         {
             [default] interface Windows.ApplicationModel.IAppInfo;
             [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.ApplicationModel.IAppInfo2;
+            [contract(Windows.Foundation.UniversalApiContract, 11.0)] interface Windows.ApplicationModel.IAppInfo3;
+            [contract(Windows.Foundation.UniversalApiContract, 11.0)] interface Windows.ApplicationModel.IAppInfo4;
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 7.0)]

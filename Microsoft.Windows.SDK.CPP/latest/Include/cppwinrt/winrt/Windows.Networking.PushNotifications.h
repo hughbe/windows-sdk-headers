@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Networking_PushNotifications_H
 #define WINRT_Windows_Networking_PushNotifications_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Networking.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -16,25 +16,25 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Networking.PushNotifications.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::Uri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannel)->get_Uri(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::ExpirationTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::ExpirationTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannel)->get_ExpirationTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::Close() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::Close() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannel)->Close());
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::PushNotificationReceived(Windows::Foundation::TypedEventHandler<Windows::Networking::PushNotifications::PushNotificationChannel, Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::PushNotificationReceived(Windows::Foundation::TypedEventHandler<Windows::Networking::PushNotifications::PushNotificationChannel, Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannel)->add_PushNotificationReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -42,79 +42,79 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PushNotificationReceived_revoker>(this, PushNotificationReceived(handler));
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::PushNotificationReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_PushNotifications_IPushNotificationChannel<D>::PushNotificationReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannel)->remove_PushNotificationReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser<D>::CreatePushNotificationChannelForApplicationAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser<D>::CreatePushNotificationChannelForApplicationAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser)->CreatePushNotificationChannelForApplicationAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser<D>::CreatePushNotificationChannelForApplicationAsync(param::hstring const& applicationId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser<D>::CreatePushNotificationChannelForApplicationAsync(param::hstring const& applicationId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser)->CreatePushNotificationChannelForApplicationAsyncWithId(*(void**)(&applicationId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser<D>::CreatePushNotificationChannelForSecondaryTileAsync(param::hstring const& tileId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser<D>::CreatePushNotificationChannelForSecondaryTileAsync(param::hstring const& tileId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser)->CreatePushNotificationChannelForSecondaryTileAsync(*(void**)(&tileId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser<D>::User() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser)->get_User(&value));
         return Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser2<D>::CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(Windows::Storage::Streams::IBuffer const& appServerKey, param::hstring const& channelId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser2<D>::CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(Windows::Storage::Streams::IBuffer const& appServerKey, param::hstring const& channelId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2)->CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(*(void**)(&appServerKey), *(void**)(&channelId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser2<D>::CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(Windows::Storage::Streams::IBuffer const& appServerKey, param::hstring const& channelId, param::hstring const& appId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerForUser2<D>::CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(Windows::Storage::Streams::IBuffer const& appServerKey, param::hstring const& channelId, param::hstring const& appId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2)->CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(*(void**)(&appServerKey), *(void**)(&channelId), *(void**)(&appId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics<D>::CreatePushNotificationChannelForApplicationAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics<D>::CreatePushNotificationChannelForApplicationAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics)->CreatePushNotificationChannelForApplicationAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics<D>::CreatePushNotificationChannelForApplicationAsync(param::hstring const& applicationId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics<D>::CreatePushNotificationChannelForApplicationAsync(param::hstring const& applicationId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics)->CreatePushNotificationChannelForApplicationAsyncWithId(*(void**)(&applicationId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics<D>::CreatePushNotificationChannelForSecondaryTileAsync(param::hstring const& tileId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics<D>::CreatePushNotificationChannelForSecondaryTileAsync(param::hstring const& tileId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics)->CreatePushNotificationChannelForSecondaryTileAsync(*(void**)(&tileId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics2<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics2<D>::GetForUser(Windows::System::User const& user) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics2)->GetForUser(*(void**)(&user), &result));
         return Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics3<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics3<D>::GetDefault() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3)->GetDefault(&result));
         return Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics4<D>::ChannelsRevoked(Windows::Foundation::EventHandler<Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics4<D>::ChannelsRevoked(Windows::Foundation::EventHandler<Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4)->add_ChannelsRevoked(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -122,74 +122,75 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ChannelsRevoked_revoker>(this, ChannelsRevoked(handler));
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics4<D>::ChannelsRevoked(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_PushNotifications_IPushNotificationChannelManagerStatics4<D>::ChannelsRevoked(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4)->remove_ChannelsRevoked(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::Cancel(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::Cancel(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs)->put_Cancel(value));
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::Cancel() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::Cancel() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs)->get_Cancel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::NotificationType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::PushNotifications::PushNotificationType) consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::NotificationType() const
     {
-        Windows::Networking::PushNotifications::PushNotificationType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs)->get_NotificationType(put_abi(value)));
+        Windows::Networking::PushNotifications::PushNotificationType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs)->get_NotificationType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::ToastNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::ToastNotification) consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::ToastNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs)->get_ToastNotification(&value));
         return Windows::UI::Notifications::ToastNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::TileNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::TileNotification) consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::TileNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs)->get_TileNotification(&value));
         return Windows::UI::Notifications::TileNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::BadgeNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::BadgeNotification) consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::BadgeNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs)->get_BadgeNotification(&value));
         return Windows::UI::Notifications::BadgeNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::RawNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::PushNotifications::RawNotification) consume_Windows_Networking_PushNotifications_IPushNotificationReceivedEventArgs<D>::RawNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs)->get_RawNotification(&value));
         return Windows::Networking::PushNotifications::RawNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IRawNotification<D>::Content() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_PushNotifications_IRawNotification<D>::Content() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IRawNotification)->get_Content(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IRawNotification2<D>::Headers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, hstring>) consume_Windows_Networking_PushNotifications_IRawNotification2<D>::Headers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IRawNotification2)->get_Headers(&value));
         return Windows::Foundation::Collections::IMapView<hstring, hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IRawNotification2<D>::ChannelId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_PushNotifications_IRawNotification2<D>::ChannelId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IRawNotification2)->get_ChannelId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_PushNotifications_IRawNotification3<D>::ContentBytes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Networking_PushNotifications_IRawNotification3<D>::ContentBytes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::PushNotifications::IRawNotification3)->get_ContentBytes(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChannel> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationChannel>
     {
@@ -231,6 +232,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser>
     {
@@ -267,6 +270,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2>
     {
@@ -287,6 +292,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics>
     {
@@ -315,6 +322,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics2> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics2>
     {
@@ -327,6 +336,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3>
     {
@@ -339,6 +350,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4>
     {
@@ -357,10 +370,14 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IPushNotificationChannelsRevokedEventArgs> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationChannelsRevokedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs> : produce_base<D, Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs>
     {
@@ -418,6 +435,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IRawNotification> : produce_base<D, Windows::Networking::PushNotifications::IRawNotification>
     {
@@ -430,6 +449,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IRawNotification2> : produce_base<D, Windows::Networking::PushNotifications::IRawNotification2>
     {
@@ -450,6 +471,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::PushNotifications::IRawNotification3> : produce_base<D, Windows::Networking::PushNotifications::IRawNotification3>
     {
@@ -462,32 +485,33 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Networking::PushNotifications
+WINRT_EXPORT namespace winrt::Windows::Networking::PushNotifications
 {
     inline auto PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync()
     {
-        return impl::call_factory<PushNotificationChannelManager, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics>([&](auto&& f) { return f.CreatePushNotificationChannelForApplicationAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Networking::PushNotifications::PushNotificationChannel>(*)(IPushNotificationChannelManagerStatics const&), PushNotificationChannelManager, IPushNotificationChannelManagerStatics>([](IPushNotificationChannelManagerStatics const& f) { return f.CreatePushNotificationChannelForApplicationAsync(); });
     }
     inline auto PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync(param::hstring const& applicationId)
     {
-        return impl::call_factory<PushNotificationChannelManager, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics>([&](auto&& f) { return f.CreatePushNotificationChannelForApplicationAsync(applicationId); });
+        return impl::call_factory<PushNotificationChannelManager, IPushNotificationChannelManagerStatics>([&](IPushNotificationChannelManagerStatics const& f) { return f.CreatePushNotificationChannelForApplicationAsync(applicationId); });
     }
     inline auto PushNotificationChannelManager::CreatePushNotificationChannelForSecondaryTileAsync(param::hstring const& tileId)
     {
-        return impl::call_factory<PushNotificationChannelManager, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics>([&](auto&& f) { return f.CreatePushNotificationChannelForSecondaryTileAsync(tileId); });
+        return impl::call_factory<PushNotificationChannelManager, IPushNotificationChannelManagerStatics>([&](IPushNotificationChannelManagerStatics const& f) { return f.CreatePushNotificationChannelForSecondaryTileAsync(tileId); });
     }
     inline auto PushNotificationChannelManager::GetForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<PushNotificationChannelManager, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics2>([&](auto&& f) { return f.GetForUser(user); });
+        return impl::call_factory<PushNotificationChannelManager, IPushNotificationChannelManagerStatics2>([&](IPushNotificationChannelManagerStatics2 const& f) { return f.GetForUser(user); });
     }
     inline auto PushNotificationChannelManager::GetDefault()
     {
-        return impl::call_factory<PushNotificationChannelManager, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser(*)(IPushNotificationChannelManagerStatics3 const&), PushNotificationChannelManager, IPushNotificationChannelManagerStatics3>([](IPushNotificationChannelManagerStatics3 const& f) { return f.GetDefault(); });
     }
     inline auto PushNotificationChannelManager::ChannelsRevoked(Windows::Foundation::EventHandler<Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> const& handler)
     {
-        return impl::call_factory<PushNotificationChannelManager, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4>([&](auto&& f) { return f.ChannelsRevoked(handler); });
+        return impl::call_factory<PushNotificationChannelManager, IPushNotificationChannelManagerStatics4>([&](IPushNotificationChannelManagerStatics4 const& f) { return f.ChannelsRevoked(handler); });
     }
     inline PushNotificationChannelManager::ChannelsRevoked_revoker PushNotificationChannelManager::ChannelsRevoked(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> const& handler)
     {
@@ -496,28 +520,30 @@ namespace winrt::Windows::Networking::PushNotifications
     }
     inline auto PushNotificationChannelManager::ChannelsRevoked(winrt::event_token const& token)
     {
-        impl::call_factory<PushNotificationChannelManager, Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4>([&](auto&& f) { return f.ChannelsRevoked(token); });
+        impl::call_factory<PushNotificationChannelManager, IPushNotificationChannelManagerStatics4>([&](IPushNotificationChannelManagerStatics4 const& f) { return f.ChannelsRevoked(token); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannel> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IPushNotificationChannel> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics2> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics2> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelsRevokedEventArgs> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelsRevokedEventArgs> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IRawNotification> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IRawNotification> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IRawNotification2> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IRawNotification2> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::IRawNotification3> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::IRawNotification3> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationChannel> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::PushNotificationChannel> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Networking::PushNotifications::RawNotification> : winrt::impl::hash_base<winrt::Windows::Networking::PushNotifications::RawNotification> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannel> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationChannelsRevokedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IPushNotificationReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IRawNotification> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IRawNotification2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::IRawNotification3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationChannel> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::PushNotifications::RawNotification> : winrt::impl::hash_base {};
+#endif
 }
 #endif

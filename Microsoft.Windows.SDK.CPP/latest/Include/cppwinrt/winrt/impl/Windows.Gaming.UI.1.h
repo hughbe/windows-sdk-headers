@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Gaming_UI_1_H
 #include "winrt/impl/Windows.ApplicationModel.Activation.0.h"
 #include "winrt/impl/Windows.Gaming.UI.0.h"
-namespace winrt::Windows::Gaming::UI
+WINRT_EXPORT namespace winrt::Windows::Gaming::UI
 {
     struct __declspec(empty_bases) IGameBarStatics :
         Windows::Foundation::IInspectable,

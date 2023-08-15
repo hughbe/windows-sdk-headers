@@ -498,19 +498,12 @@ wsprintfW(
 #define VK_KANA           0x15
 #define VK_HANGEUL        0x15  /* old name - should be here for compatibility */
 #define VK_HANGUL         0x15
-
-/*
- * 0x16 : unassigned
- */
-
+#define VK_IME_ON         0x16
 #define VK_JUNJA          0x17
 #define VK_FINAL          0x18
 #define VK_HANJA          0x19
 #define VK_KANJI          0x19
-
-/*
- * 0x1A : unassigned
- */
+#define VK_IME_OFF        0x1A
 
 #define VK_ESCAPE         0x1B
 
@@ -3620,6 +3613,7 @@ UnregisterHotKey(
 #define EWX_HYBRID_SHUTDOWN         0x00400000
 #define EWX_BOOTOPTIONS             0x01000000
 #define EWX_ARSO                    0x04000000
+#define EWX_CHECK_SAFE_FOR_SERVER   0x08000000
 
 
 #pragma region Desktop Family
@@ -6295,7 +6289,7 @@ typedef UINT32 POINTER_FLAGS;
 #define POINTER_FLAG_THIRDBUTTON        0x00000040 // Third button
 #define POINTER_FLAG_FOURTHBUTTON       0x00000080 // Fourth button
 #define POINTER_FLAG_FIFTHBUTTON        0x00000100 // Fifth button
-#define POINTER_FLAG_PRIMARY            0x00002000 // Pointer is primary
+#define POINTER_FLAG_PRIMARY            0x00002000 // Pointer is primary for system
 #define POINTER_FLAG_CONFIDENCE         0x00004000 // Pointer is considered unlikely to be accidental
 #define POINTER_FLAG_CANCELED           0x00008000 // Pointer is departing in an abnormal manner
 #define POINTER_FLAG_DOWN               0x00010000 // Pointer transitioned to down state (made contact)
@@ -10322,6 +10316,7 @@ SetWindowsHookExW(
 #define SetWindowsHookEx  SetWindowsHookExA
 #endif // !UNICODE
 
+
 WINUSERAPI
 BOOL
 WINAPI
@@ -11039,9 +11034,9 @@ GetIconInfoExW(
 
 #endif /* OEMRESOURCE */
 
-#define ORD_LANGDRIVER    1     /* The ordinal number for the entry point of
-                                ** language drivers.
-                                */
+
+// The ordinal number for the entry point of language drivers.
+#define ORD_LANGDRIVER    1
 
 #ifndef NOICONS
 
@@ -14635,6 +14630,7 @@ typedef struct tagMENUBARINFO
     HWND hwndMenu;       // hwnd of item submenu if one
     BOOL fBarFocused:1;  // bar, popup has the focus
     BOOL fFocused:1;     // item has the focus
+    BOOL fUnused:30;     // reserved
 } MENUBARINFO, *PMENUBARINFO, *LPMENUBARINFO;
 
 WINUSERAPI

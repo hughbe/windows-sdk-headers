@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Input_Core_H
 #define WINRT_Windows_UI_Input_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.Input.h"
 #include "winrt/impl/Windows.ApplicationModel.Core.2.h"
 #include "winrt/impl/Windows.System.2.h"
@@ -15,30 +15,31 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.UI.Input.Core.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSource<D>::Controller() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::RadialController) consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSource<D>::Controller() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Core::IRadialControllerIndependentInputSource)->get_Controller(&value));
         return Windows::UI::Input::RadialController{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSource<D>::Dispatcher() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreDispatcher) consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSource<D>::Dispatcher() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Core::IRadialControllerIndependentInputSource)->get_Dispatcher(&value));
         return Windows::UI::Core::CoreDispatcher{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSource2<D>::DispatcherQueue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::DispatcherQueue) consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSource2<D>::DispatcherQueue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Core::IRadialControllerIndependentInputSource2)->get_DispatcherQueue(&value));
         return Windows::System::DispatcherQueue{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSourceStatics<D>::CreateForView(Windows::ApplicationModel::Core::CoreApplicationView const& view) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Core::RadialControllerIndependentInputSource) consume_Windows_UI_Input_Core_IRadialControllerIndependentInputSourceStatics<D>::CreateForView(Windows::ApplicationModel::Core::CoreApplicationView const& view) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics)->CreateForView(*(void**)(&view), &result));
         return Windows::UI::Input::Core::RadialControllerIndependentInputSource{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Core::IRadialControllerIndependentInputSource> : produce_base<D, Windows::UI::Input::Core::IRadialControllerIndependentInputSource>
     {
@@ -59,6 +60,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Core::IRadialControllerIndependentInputSource2> : produce_base<D, Windows::UI::Input::Core::IRadialControllerIndependentInputSource2>
     {
@@ -71,6 +74,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics> : produce_base<D, Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics>
     {
@@ -83,19 +88,22 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::UI::Input::Core
+WINRT_EXPORT namespace winrt::Windows::UI::Input::Core
 {
     inline auto RadialControllerIndependentInputSource::CreateForView(Windows::ApplicationModel::Core::CoreApplicationView const& view)
     {
-        return impl::call_factory<RadialControllerIndependentInputSource, Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics>([&](auto&& f) { return f.CreateForView(view); });
+        return impl::call_factory<RadialControllerIndependentInputSource, IRadialControllerIndependentInputSourceStatics>([&](IRadialControllerIndependentInputSourceStatics const& f) { return f.CreateForView(view); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSource> : winrt::impl::hash_base<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSource> {};
-    template<> struct hash<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSource2> : winrt::impl::hash_base<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSource2> {};
-    template<> struct hash<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics> : winrt::impl::hash_base<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics> {};
-    template<> struct hash<winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource> : winrt::impl::hash_base<winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSource2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource> : winrt::impl::hash_base {};
+#endif
 }
 #endif

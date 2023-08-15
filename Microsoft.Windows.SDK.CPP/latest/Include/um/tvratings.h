@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -131,28 +139,34 @@ EXTERN_C const IID IID_IXDSToRat;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IXDSToRat * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IXDSToRat * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IXDSToRat * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IXDSToRat * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IXDSToRat * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IXDSToRat * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -161,6 +175,7 @@ EXTERN_C const IID IID_IXDSToRat;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IXDSToRat * This,
             /* [annotation][in] */ 
@@ -180,9 +195,11 @@ EXTERN_C const IID IID_IXDSToRat;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IXDSToRat, Init)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Init )( 
             __RPC__in IXDSToRat * This);
         
+        DECLSPEC_XFGVIRT(IXDSToRat, ParseXDSBytePair)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ParseXDSBytePair )( 
             __RPC__in IXDSToRat * This,
             /* [in] */ BYTE byte1,
@@ -300,28 +317,34 @@ EXTERN_C const IID IID_IEvalRat;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEvalRat * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEvalRat * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEvalRat * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IEvalRat * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IEvalRat * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IEvalRat * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -330,6 +353,7 @@ EXTERN_C const IID IID_IEvalRat;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IEvalRat * This,
             /* [annotation][in] */ 
@@ -349,26 +373,31 @@ EXTERN_C const IID IID_IEvalRat;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IEvalRat, get_BlockedRatingAttributes)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockedRatingAttributes )( 
             __RPC__in IEvalRat * This,
             /* [in] */ EnTvRat_System enSystem,
             /* [in] */ EnTvRat_GenericLevel enLevel,
             /* [retval][out] */ __RPC__out LONG *plbfAttrs);
         
+        DECLSPEC_XFGVIRT(IEvalRat, put_BlockedRatingAttributes)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockedRatingAttributes )( 
             __RPC__in IEvalRat * This,
             /* [in] */ EnTvRat_System enSystem,
             /* [in] */ EnTvRat_GenericLevel enLevel,
             /* [in] */ LONG lbfAttrs);
         
+        DECLSPEC_XFGVIRT(IEvalRat, get_BlockUnRated)
         /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BlockUnRated )( 
             __RPC__in IEvalRat * This,
             /* [retval][out] */ __RPC__out BOOL *pfBlockUnRatedShows);
         
+        DECLSPEC_XFGVIRT(IEvalRat, put_BlockUnRated)
         /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BlockUnRated )( 
             __RPC__in IEvalRat * This,
             /* [in] */ BOOL fBlockUnRatedShows);
         
+        DECLSPEC_XFGVIRT(IEvalRat, MostRestrictiveRating)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *MostRestrictiveRating )( 
             __RPC__in IEvalRat * This,
             /* [in] */ EnTvRat_System enSystem1,
@@ -381,6 +410,7 @@ EXTERN_C const IID IID_IEvalRat;
             /* [out] */ __RPC__out EnTvRat_GenericLevel *penEnLevel,
             /* [out] */ __RPC__out LONG *plbfEnAttr);
         
+        DECLSPEC_XFGVIRT(IEvalRat, TestRating)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *TestRating )( 
             __RPC__in IEvalRat * This,
             /* [in] */ EnTvRat_System enShowSystem,

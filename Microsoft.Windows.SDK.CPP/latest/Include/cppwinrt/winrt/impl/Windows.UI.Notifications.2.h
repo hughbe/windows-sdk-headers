@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,7 +10,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.UI.Notifications.1.h"
-namespace winrt::Windows::UI::Notifications
+WINRT_EXPORT namespace winrt::Windows::UI::Notifications
 {
     struct __declspec(empty_bases) AdaptiveNotificationText : Windows::UI::Notifications::IAdaptiveNotificationText,
         impl::require<AdaptiveNotificationText, Windows::UI::Notifications::IAdaptiveNotificationContent>
@@ -23,7 +23,7 @@ namespace winrt::Windows::UI::Notifications
     {
         BadgeNotification(std::nullptr_t) noexcept {}
         BadgeNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IBadgeNotification(ptr, take_ownership_from_abi) {}
-        BadgeNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
+        explicit BadgeNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
     };
     struct BadgeUpdateManager
     {
@@ -99,7 +99,7 @@ namespace winrt::Windows::UI::Notifications
         NotificationData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::INotificationData(ptr, take_ownership_from_abi) {}
         NotificationData();
         NotificationData(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues, uint32_t sequenceNumber);
-        NotificationData(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues);
+        explicit NotificationData(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues);
     };
     struct __declspec(empty_bases) NotificationVisual : Windows::UI::Notifications::INotificationVisual
     {
@@ -134,7 +134,7 @@ namespace winrt::Windows::UI::Notifications
     {
         TileFlyoutNotification(std::nullptr_t) noexcept {}
         TileFlyoutNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::ITileFlyoutNotification(ptr, take_ownership_from_abi) {}
-        TileFlyoutNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
+        explicit TileFlyoutNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
     };
     struct TileFlyoutUpdateManager
     {
@@ -153,7 +153,7 @@ namespace winrt::Windows::UI::Notifications
     {
         TileNotification(std::nullptr_t) noexcept {}
         TileNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::ITileNotification(ptr, take_ownership_from_abi) {}
-        TileNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
+        explicit TileNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
     };
     struct TileUpdateManager
     {
@@ -207,7 +207,7 @@ namespace winrt::Windows::UI::Notifications
     {
         ToastNotification(std::nullptr_t) noexcept {}
         ToastNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastNotification(ptr, take_ownership_from_abi) {}
-        ToastNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
+        explicit ToastNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
     };
     struct __declspec(empty_bases) ToastNotificationActionTriggerDetail : Windows::UI::Notifications::IToastNotificationActionTriggerDetail
     {

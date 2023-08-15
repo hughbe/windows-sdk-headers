@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_System_Diagnostics_DevicePortal_2_H
 #include "winrt/impl/Windows.ApplicationModel.AppService.1.h"
 #include "winrt/impl/Windows.System.Diagnostics.DevicePortal.1.h"
-namespace winrt::Windows::System::Diagnostics::DevicePortal
+WINRT_EXPORT namespace winrt::Windows::System::Diagnostics::DevicePortal
 {
     struct __declspec(empty_bases) DevicePortalConnection : Windows::System::Diagnostics::DevicePortal::IDevicePortalConnection,
         impl::require<DevicePortalConnection, Windows::System::Diagnostics::DevicePortal::IDevicePortalWebSocketConnection>

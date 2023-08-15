@@ -298,6 +298,20 @@ typedef struct _ERASE_BAND_PARAMETERS
 #define ERASEBAND_AUTHKEY_CACHING_ENABLED   0x00000001
 
 //
+// IOCTL_EHSTOR_BANDMGMT_SET_SID parameters.
+//
+typedef struct _SET_SID_PARAMETERS
+{
+    ULONG   StructSize;
+    ULONG   CurrentSidPinOffset;
+    ULONG   NewSidPinOffset;
+    //
+    // This structure is followed by two variable-length AUTH_KEY structures
+    // referenced by CurrentSidPinOffset and NewSidPinOffset fields.
+    //
+} SET_SID_PARAMETERS, *PSET_SID_PARAMETERS;
+
+//
 // Band Control IOCTLs
 //
 #define IOCTL_EHSTOR_BANDMGMT_QUERY_CAPABILITIES \
@@ -332,6 +346,9 @@ typedef struct _ERASE_BAND_PARAMETERS
                      FILE_READ_ACCESS | FILE_WRITE_ACCESS)
 #define IOCTL_EHSTOR_BANDMGMT_ERASE_BAND        \
             CTL_CODE(IOCTL_STORAGE_BASE, 0x52a, METHOD_BUFFERED, \
+                     FILE_READ_ACCESS | FILE_WRITE_ACCESS)
+#define IOCTL_EHSTOR_BANDMGMT_SET_SID           \
+            CTL_CODE(IOCTL_STORAGE_BASE, 0x52b, METHOD_BUFFERED, \
                      FILE_READ_ACCESS | FILE_WRITE_ACCESS)
 
 //

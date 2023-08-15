@@ -1,20 +1,30 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_Input_Preview_0_H
 #define WINRT_Windows_Devices_Input_Preview_0_H
-namespace winrt::Windows::Devices::HumanInterfaceDevice
+WINRT_EXPORT namespace winrt::Windows::Devices::HumanInterfaceDevice
 {
+    struct HidBooleanControlDescription;
     struct HidInputReport;
+    struct HidNumericControlDescription;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+    template <typename T> struct __declspec(empty_bases) IReference;
+    struct Point;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Devices::Input::Preview
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+    template <typename T> struct __declspec(empty_bases) IVector;
+}
+WINRT_EXPORT namespace winrt::Windows::Devices::Input::Preview
 {
     enum class GazeDeviceConfigurationStatePreview : int32_t
     {
@@ -48,266 +58,71 @@ namespace winrt::Windows::Devices::Input::Preview
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::Input::Preview::IGazeDevicePreview>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazeInputSourcePreview>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazeInputSourcePreviewStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::IGazePointPreview>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeDevicePreview>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeInputSourcePreview>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazePointPreview>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeDevicePreview>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeDevicePreview" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeDeviceWatcherAddedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeDeviceWatcherRemovedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeDeviceWatcherUpdatedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeInputSourcePreview>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeInputSourcePreview" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeInputSourcePreviewStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::IGazePointPreview>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.IGazePointPreview" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeDevicePreview>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeDevicePreview" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeInputSourcePreview>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeInputSourcePreview" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazePointPreview>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazePointPreview" };
-    };
-    template <> struct name<Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Input.Preview.GazeDeviceConfigurationStatePreview" };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeDevicePreview>
-    {
-        static constexpr guid value{ 0xE79E7EE9,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs>
-    {
-        static constexpr guid value{ 0xE79E7EED,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>
-    {
-        static constexpr guid value{ 0xE79E7EE7,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs>
-    {
-        static constexpr guid value{ 0xF2631F08,0x0E3F,0x431F,{ 0xA6,0x06,0x50,0xB3,0x5A,0xF9,0x4A,0x1C } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs>
-    {
-        static constexpr guid value{ 0x7FE830EF,0x7F08,0x4737,{ 0x88,0xE1,0x4A,0x83,0xAE,0x4E,0x48,0x85 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs>
-    {
-        static constexpr guid value{ 0x2567BF43,0x1225,0x489F,{ 0x9D,0xD1,0xDA,0xA7,0xC5,0x0F,0xBF,0x4B } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs>
-    {
-        static constexpr guid value{ 0x5D0AF07E,0x7D83,0x40EF,{ 0x9F,0x0A,0xFB,0xC1,0xBB,0xDC,0xC5,0xAC } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeInputSourcePreview>
-    {
-        static constexpr guid value{ 0xE79E7EE8,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeInputSourcePreviewStatics>
-    {
-        static constexpr guid value{ 0xE79E7EE6,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs>
-    {
-        static constexpr guid value{ 0xE79E7EEB,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Input::Preview::IGazePointPreview>
-    {
-        static constexpr guid value{ 0xE79E7EEA,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } };
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDevicePreview>
-    {
-        using type = Windows::Devices::Input::Preview::IGazeDevicePreview;
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>
-    {
-        using type = Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>
-    {
-        using type = Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview;
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>
-    {
-        using type = Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>
-    {
-        using type = Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>
-    {
-        using type = Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>
-    {
-        using type = Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazeInputSourcePreview>
-    {
-        using type = Windows::Devices::Input::Preview::IGazeInputSourcePreview;
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>
-    {
-        using type = Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::Input::Preview::GazePointPreview>
-    {
-        using type = Windows::Devices::Input::Preview::IGazePointPreview;
-    };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeDevicePreview>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeInputSourcePreview>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeInputSourcePreviewStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::IGazePointPreview>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeDevicePreview>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeInputSourcePreview>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazePointPreview>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeDevicePreview> = L"Windows.Devices.Input.Preview.GazeDevicePreview";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs> = L"Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview> = L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs> = L"Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs> = L"Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs> = L"Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs> = L"Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeInputSourcePreview> = L"Windows.Devices.Input.Preview.GazeInputSourcePreview";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs> = L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazePointPreview> = L"Windows.Devices.Input.Preview.GazePointPreview";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview> = L"Windows.Devices.Input.Preview.GazeDeviceConfigurationStatePreview";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeDevicePreview> = L"Windows.Devices.Input.Preview.IGazeDevicePreview";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs> = L"Windows.Devices.Input.Preview.IGazeDeviceWatcherAddedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview> = L"Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs> = L"Windows.Devices.Input.Preview.IGazeDeviceWatcherRemovedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs> = L"Windows.Devices.Input.Preview.IGazeDeviceWatcherUpdatedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs> = L"Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs> = L"Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeInputSourcePreview> = L"Windows.Devices.Input.Preview.IGazeInputSourcePreview";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeInputSourcePreviewStatics> = L"Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs> = L"Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::Preview::IGazePointPreview> = L"Windows.Devices.Input.Preview.IGazePointPreview";
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeDevicePreview>{ 0xE79E7EE9,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } }; // E79E7EE9-B389-11E7-B201-C8D3FFB75721
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs>{ 0xE79E7EED,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } }; // E79E7EED-B389-11E7-B201-C8D3FFB75721
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>{ 0xE79E7EE7,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } }; // E79E7EE7-B389-11E7-B201-C8D3FFB75721
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs>{ 0xF2631F08,0x0E3F,0x431F,{ 0xA6,0x06,0x50,0xB3,0x5A,0xF9,0x4A,0x1C } }; // F2631F08-0E3F-431F-A606-50B35AF94A1C
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs>{ 0x7FE830EF,0x7F08,0x4737,{ 0x88,0xE1,0x4A,0x83,0xAE,0x4E,0x48,0x85 } }; // 7FE830EF-7F08-4737-88E1-4A83AE4E4885
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs>{ 0x2567BF43,0x1225,0x489F,{ 0x9D,0xD1,0xDA,0xA7,0xC5,0x0F,0xBF,0x4B } }; // 2567BF43-1225-489F-9DD1-DAA7C50FBF4B
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs>{ 0x5D0AF07E,0x7D83,0x40EF,{ 0x9F,0x0A,0xFB,0xC1,0xBB,0xDC,0xC5,0xAC } }; // 5D0AF07E-7D83-40EF-9F0A-FBC1BBDCC5AC
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeInputSourcePreview>{ 0xE79E7EE8,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } }; // E79E7EE8-B389-11E7-B201-C8D3FFB75721
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeInputSourcePreviewStatics>{ 0xE79E7EE6,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } }; // E79E7EE6-B389-11E7-B201-C8D3FFB75721
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs>{ 0xE79E7EEB,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } }; // E79E7EEB-B389-11E7-B201-C8D3FFB75721
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::Preview::IGazePointPreview>{ 0xE79E7EEA,0xB389,0x11E7,{ 0xB2,0x01,0xC8,0xD3,0xFF,0xB7,0x57,0x21 } }; // E79E7EEA-B389-11E7-B201-C8D3FFB75721
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDevicePreview>{ using type = Windows::Devices::Input::Preview::IGazeDevicePreview; };
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>{ using type = Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs; };
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>{ using type = Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview; };
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>{ using type = Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs; };
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>{ using type = Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs; };
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>{ using type = Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs; };
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>{ using type = Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs; };
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazeInputSourcePreview>{ using type = Windows::Devices::Input::Preview::IGazeInputSourcePreview; };
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>{ using type = Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs; };
+    template <> struct default_interface<Windows::Devices::Input::Preview::GazePointPreview>{ using type = Windows::Devices::Input::Preview::IGazePointPreview; };
     template <> struct abi<Windows::Devices::Input::Preview::IGazeDevicePreview>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -420,13 +235,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeDevicePreview
     {
-        [[nodiscard]] auto Id() const;
-        [[nodiscard]] auto CanTrackEyes() const;
-        [[nodiscard]] auto CanTrackHead() const;
-        [[nodiscard]] auto ConfigurationState() const;
-        auto RequestCalibrationAsync() const;
-        auto GetNumericControlDescriptions(uint16_t usagePage, uint16_t usageId) const;
-        auto GetBooleanControlDescriptions(uint16_t usagePage, uint16_t usageId) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Id() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanTrackEyes() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanTrackHead() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazeDeviceConfigurationStatePreview) ConfigurationState() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) RequestCalibrationAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>) GetNumericControlDescriptions(uint16_t usagePage, uint16_t usageId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>) GetBooleanControlDescriptions(uint16_t usagePage, uint16_t usageId) const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeDevicePreview>
     {
@@ -435,7 +250,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherAddedPreviewEventArgs
     {
-        [[nodiscard]] auto Device() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazeDevicePreview) Device() const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeDeviceWatcherAddedPreviewEventArgs>
     {
@@ -444,24 +259,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherPreview
     {
-        auto Added(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) Added(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs> const& handler) const;
         using Added_revoker = impl::event_revoker<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview, &impl::abi_t<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>::remove_Added>;
-        Added_revoker Added(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs> const& handler) const;
-        auto Added(winrt::event_token const& token) const noexcept;
-        auto Removed(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs> const& handler) const;
+        [[nodiscard]] Added_revoker Added(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Added(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Removed(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs> const& handler) const;
         using Removed_revoker = impl::event_revoker<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview, &impl::abi_t<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>::remove_Removed>;
-        Removed_revoker Removed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs> const& handler) const;
-        auto Removed(winrt::event_token const& token) const noexcept;
-        auto Updated(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs> const& handler) const;
+        [[nodiscard]] Removed_revoker Removed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Removed(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Updated(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs> const& handler) const;
         using Updated_revoker = impl::event_revoker<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview, &impl::abi_t<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>::remove_Updated>;
-        Updated_revoker Updated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs> const& handler) const;
-        auto Updated(winrt::event_token const& token) const noexcept;
-        auto EnumerationCompleted(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] Updated_revoker Updated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Updated(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) EnumerationCompleted(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Foundation::IInspectable> const& handler) const;
         using EnumerationCompleted_revoker = impl::event_revoker<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview, &impl::abi_t<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>::remove_EnumerationCompleted>;
-        EnumerationCompleted_revoker EnumerationCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Foundation::IInspectable> const& handler) const;
-        auto EnumerationCompleted(winrt::event_token const& token) const noexcept;
-        auto Start() const;
-        auto Stop() const;
+        [[nodiscard]] EnumerationCompleted_revoker EnumerationCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) EnumerationCompleted(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(void) Start() const;
+        WINRT_IMPL_AUTO(void) Stop() const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview>
     {
@@ -470,7 +285,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherRemovedPreviewEventArgs
     {
-        [[nodiscard]] auto Device() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazeDevicePreview) Device() const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeDeviceWatcherRemovedPreviewEventArgs>
     {
@@ -479,7 +294,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherUpdatedPreviewEventArgs
     {
-        [[nodiscard]] auto Device() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazeDevicePreview) Device() const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeDeviceWatcherUpdatedPreviewEventArgs>
     {
@@ -488,9 +303,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeEnteredPreviewEventArgs
     {
-        [[nodiscard]] auto Handled() const;
-        auto Handled(bool value) const;
-        [[nodiscard]] auto CurrentPoint() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
+        WINRT_IMPL_AUTO(void) Handled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazePointPreview) CurrentPoint() const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeEnteredPreviewEventArgs>
     {
@@ -499,9 +314,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeExitedPreviewEventArgs
     {
-        [[nodiscard]] auto Handled() const;
-        auto Handled(bool value) const;
-        [[nodiscard]] auto CurrentPoint() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
+        WINRT_IMPL_AUTO(void) Handled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazePointPreview) CurrentPoint() const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeExitedPreviewEventArgs>
     {
@@ -510,18 +325,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeInputSourcePreview
     {
-        auto GazeMoved(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) GazeMoved(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs> const& handler) const;
         using GazeMoved_revoker = impl::event_revoker<Windows::Devices::Input::Preview::IGazeInputSourcePreview, &impl::abi_t<Windows::Devices::Input::Preview::IGazeInputSourcePreview>::remove_GazeMoved>;
-        GazeMoved_revoker GazeMoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs> const& handler) const;
-        auto GazeMoved(winrt::event_token const& token) const noexcept;
-        auto GazeEntered(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs> const& handler) const;
+        [[nodiscard]] GazeMoved_revoker GazeMoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) GazeMoved(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) GazeEntered(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs> const& handler) const;
         using GazeEntered_revoker = impl::event_revoker<Windows::Devices::Input::Preview::IGazeInputSourcePreview, &impl::abi_t<Windows::Devices::Input::Preview::IGazeInputSourcePreview>::remove_GazeEntered>;
-        GazeEntered_revoker GazeEntered(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs> const& handler) const;
-        auto GazeEntered(winrt::event_token const& token) const noexcept;
-        auto GazeExited(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs> const& handler) const;
+        [[nodiscard]] GazeEntered_revoker GazeEntered(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) GazeEntered(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) GazeExited(Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs> const& handler) const;
         using GazeExited_revoker = impl::event_revoker<Windows::Devices::Input::Preview::IGazeInputSourcePreview, &impl::abi_t<Windows::Devices::Input::Preview::IGazeInputSourcePreview>::remove_GazeExited>;
-        GazeExited_revoker GazeExited(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs> const& handler) const;
-        auto GazeExited(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] GazeExited_revoker GazeExited(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Input::Preview::GazeInputSourcePreview, Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) GazeExited(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeInputSourcePreview>
     {
@@ -530,8 +345,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeInputSourcePreviewStatics
     {
-        auto GetForCurrentView() const;
-        auto CreateWatcher() const;
+        WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazeInputSourcePreview) GetForCurrentView() const;
+        WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazeDeviceWatcherPreview) CreateWatcher() const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeInputSourcePreviewStatics>
     {
@@ -540,10 +355,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazeMovedPreviewEventArgs
     {
-        [[nodiscard]] auto Handled() const;
-        auto Handled(bool value) const;
-        [[nodiscard]] auto CurrentPoint() const;
-        auto GetIntermediatePoints() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
+        WINRT_IMPL_AUTO(void) Handled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazePointPreview) CurrentPoint() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::Input::Preview::GazePointPreview>) GetIntermediatePoints() const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazeMovedPreviewEventArgs>
     {
@@ -552,11 +367,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Input_Preview_IGazePointPreview
     {
-        [[nodiscard]] auto SourceDevice() const;
-        [[nodiscard]] auto EyeGazePosition() const;
-        [[nodiscard]] auto HeadGazePosition() const;
-        [[nodiscard]] auto Timestamp() const;
-        [[nodiscard]] auto HidInputReport() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::Preview::GazeDevicePreview) SourceDevice() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::Point>) EyeGazePosition() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::Point>) HeadGazePosition() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Timestamp() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::HumanInterfaceDevice::HidInputReport) HidInputReport() const;
     };
     template <> struct consume<Windows::Devices::Input::Preview::IGazePointPreview>
     {

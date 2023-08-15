@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_ApplicationModel_Preview_Holographic_2_H
 #include "winrt/impl/Windows.ApplicationModel.Activation.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Preview.Holographic.1.h"
-namespace winrt::Windows::ApplicationModel::Preview::Holographic
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Preview::Holographic
 {
     struct HolographicApplicationPreview
     {

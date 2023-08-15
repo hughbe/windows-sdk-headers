@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Networking.PushNotifications.1.h"
-namespace winrt::Windows::Networking::PushNotifications
+WINRT_EXPORT namespace winrt::Windows::Networking::PushNotifications
 {
     struct __declspec(empty_bases) PushNotificationChannel : Windows::Networking::PushNotifications::IPushNotificationChannel
     {
@@ -25,7 +25,7 @@ namespace winrt::Windows::Networking::PushNotifications
         static auto GetDefault();
         static auto ChannelsRevoked(Windows::Foundation::EventHandler<Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> const& handler);
         using ChannelsRevoked_revoker = impl::factory_event_revoker<Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4, &impl::abi_t<Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics4>::remove_ChannelsRevoked>;
-        static ChannelsRevoked_revoker ChannelsRevoked(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> const& handler);
+        [[nodiscard]] static ChannelsRevoked_revoker ChannelsRevoked(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs> const& handler);
         static auto ChannelsRevoked(winrt::event_token const& token);
     };
     struct __declspec(empty_bases) PushNotificationChannelManagerForUser : Windows::Networking::PushNotifications::IPushNotificationChannelManagerForUser,

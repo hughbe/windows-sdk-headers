@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_Core_1_H
 #define WINRT_Windows_ApplicationModel_Core_1_H
 #include "winrt/impl/Windows.ApplicationModel.Core.0.h"
-namespace winrt::Windows::ApplicationModel::Core
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Core
 {
     struct __declspec(empty_bases) IAppListEntry :
         Windows::Foundation::IInspectable,
@@ -28,6 +28,13 @@ namespace winrt::Windows::ApplicationModel::Core
     {
         IAppListEntry3(std::nullptr_t = nullptr) noexcept {}
         IAppListEntry3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IAppListEntry4 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAppListEntry4>
+    {
+        IAppListEntry4(std::nullptr_t = nullptr) noexcept {}
+        IAppListEntry4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreApplication :
         Windows::Foundation::IInspectable,

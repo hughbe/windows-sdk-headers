@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_ApplicationModel_SocialInfo_Provider_2_H
 #include "winrt/impl/Windows.ApplicationModel.SocialInfo.1.h"
 #include "winrt/impl/Windows.ApplicationModel.SocialInfo.Provider.1.h"
-namespace winrt::Windows::ApplicationModel::SocialInfo::Provider
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::SocialInfo::Provider
 {
     struct __declspec(empty_bases) SocialDashboardItemUpdater : Windows::ApplicationModel::SocialInfo::Provider::ISocialDashboardItemUpdater
     {

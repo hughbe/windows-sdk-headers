@@ -1,43 +1,49 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_AllJoyn_0_H
 #define WINRT_Windows_Devices_AllJoyn_0_H
-namespace winrt::Windows::Devices::Enumeration
+WINRT_EXPORT namespace winrt::Windows::Devices::Enumeration
 {
     struct DeviceWatcher;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct Deferral;
     struct EventRegistrationToken;
-    template <typename T> struct IReference;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+    template <typename T> struct __declspec(empty_bases) IReference;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IIterable;
+    template <typename T> struct __declspec(empty_bases) IIterable;
+    template <typename K, typename V> struct __declspec(empty_bases) IMapView;
+    template <typename K, typename V> struct __declspec(empty_bases) IMap;
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+    template <typename T> struct __declspec(empty_bases) IVector;
 }
-namespace winrt::Windows::Globalization
+WINRT_EXPORT namespace winrt::Windows::Globalization
 {
     struct Language;
 }
-namespace winrt::Windows::Networking::Sockets
+WINRT_EXPORT namespace winrt::Windows::Networking::Sockets
 {
     enum class SocketSslErrorSeverity : int32_t;
 }
-namespace winrt::Windows::Security::Credentials
+WINRT_EXPORT namespace winrt::Windows::Security::Credentials
 {
     struct PasswordCredential;
 }
-namespace winrt::Windows::Security::Cryptography::Certificates
+WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Certificates
 {
     struct Certificate;
+    enum class ChainValidationResult : int32_t;
 }
-namespace winrt::Windows::Devices::AllJoyn
+WINRT_EXPORT namespace winrt::Windows::Devices::AllJoyn
 {
     enum class AllJoynAuthenticationMechanism : int32_t
     {
@@ -139,802 +145,205 @@ namespace winrt::Windows::Devices::AllJoyn
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAboutData>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAboutDataView>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAboutDataViewStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgsFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachment>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachment2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachmentFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusObject>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusObjectFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgsFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynCredentials>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynMessageInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynMessageInfoFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynProducer>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgsFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfoFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgsFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfoStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSession>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgsFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgsFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgsFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgsFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynStatusStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgsFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynAboutData>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynAboutDataView>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusAttachment>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusObject>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynCredentials>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynMessageInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynServiceInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynSession>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynStatus>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusAttachmentState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionLostReason>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::AllJoyn::AllJoynTrafficType>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynAboutData>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynAboutData" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynAboutDataView>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynAboutDataView" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynAboutDataViewStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynAboutDataViewStatics" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynAcceptSessionJoiner" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynAcceptSessionJoinerEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgsFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynAcceptSessionJoinerEventArgsFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynAuthenticationCompleteEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynBusAttachment>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynBusAttachment" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynBusAttachment2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynBusAttachment2" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynBusAttachmentFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynBusAttachmentFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynBusAttachmentStateChangedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynBusAttachmentStatics" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynBusObject>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynBusObject" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynBusObjectFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynBusObjectFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynBusObjectStoppedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgsFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynBusObjectStoppedEventArgsFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynCredentials>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynCredentials" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynCredentialsRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynCredentialsVerificationRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynMessageInfo>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynMessageInfo" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynMessageInfoFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynMessageInfoFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynProducer>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynProducer" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynProducerStoppedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgsFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynProducerStoppedEventArgsFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynServiceInfo>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynServiceInfo" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynServiceInfoFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynServiceInfoFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynServiceInfoRemovedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgsFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynServiceInfoRemovedEventArgsFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynServiceInfoStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynServiceInfoStatics" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSession>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSession" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSessionJoinedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgsFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSessionJoinedEventArgsFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSessionLostEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgsFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSessionLostEventArgsFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSessionMemberAddedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgsFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSessionMemberAddedEventArgsFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSessionMemberRemovedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgsFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSessionMemberRemovedEventArgsFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynSessionStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynSessionStatics" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynStatusStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynStatusStatics" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynWatcherStoppedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgsFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.IAllJoynWatcherStoppedEventArgsFactory" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynAboutData>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynAboutData" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynAboutDataView>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynAboutDataView" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynAuthenticationCompleteEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynBusAttachment>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynBusAttachment" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynBusAttachmentStateChangedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynBusObject>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynBusObject" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynBusObjectStoppedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynCredentials>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynCredentials" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynMessageInfo>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynMessageInfo" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynProducerStoppedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynServiceInfo>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynServiceInfo" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynServiceInfoRemovedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynSession>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynSession" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynSessionJoinedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynSessionLostEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynSessionMemberAddedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynSessionMemberRemovedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynStatus" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynWatcherStoppedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynAuthenticationMechanism" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynBusAttachmentState>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynBusAttachmentState" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynSessionLostReason>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynSessionLostReason" };
-    };
-    template <> struct name<Windows::Devices::AllJoyn::AllJoynTrafficType>
-    {
-        static constexpr auto & value{ L"Windows.Devices.AllJoyn.AllJoynTrafficType" };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynAboutData>
-    {
-        static constexpr guid value{ 0xE5A9BF00,0x1FA2,0x4839,{ 0x93,0xEF,0xF9,0xDF,0x40,0x48,0x90,0xF7 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynAboutDataView>
-    {
-        static constexpr guid value{ 0x6823111F,0x6212,0x4934,{ 0x9C,0x48,0xE1,0x9C,0xA4,0x98,0x42,0x88 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynAboutDataViewStatics>
-    {
-        static constexpr guid value{ 0x57EDB688,0x0C5E,0x416E,{ 0x88,0xB5,0x39,0xB3,0x2D,0x25,0xC4,0x7D } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>
-    {
-        static constexpr guid value{ 0x4DA817D2,0xCD1D,0x4023,{ 0xA7,0xC4,0x16,0xDE,0xF8,0x9C,0x28,0xDF } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs>
-    {
-        static constexpr guid value{ 0x4EFB5365,0x3E8A,0x4257,{ 0x8F,0x10,0x53,0x9C,0xE0,0xD5,0x6C,0x0F } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgsFactory>
-    {
-        static constexpr guid value{ 0xB4435BC0,0x6145,0x429E,{ 0x84,0xDB,0xD5,0xBF,0xE7,0x72,0xB1,0x4F } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs>
-    {
-        static constexpr guid value{ 0x97B4701C,0x15DC,0x4B53,{ 0xB6,0xA4,0x7D,0x13,0x43,0x00,0xD7,0xBF } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynBusAttachment>
-    {
-        static constexpr guid value{ 0xF309F153,0x1EED,0x42C3,{ 0xA2,0x0E,0x43,0x6D,0x41,0xFE,0x62,0xF6 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynBusAttachment2>
-    {
-        static constexpr guid value{ 0x3474CB1E,0x2368,0x43B2,{ 0xB4,0x3E,0x6A,0x3A,0xC1,0x27,0x8D,0x98 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynBusAttachmentFactory>
-    {
-        static constexpr guid value{ 0x642EF1A4,0xAD85,0x4DDF,{ 0x90,0xAE,0x60,0x44,0x52,0xB2,0x22,0x88 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs>
-    {
-        static constexpr guid value{ 0xD82E75F4,0xC02A,0x41EC,{ 0xA8,0xD5,0xEA,0xB1,0x55,0x89,0x53,0xAA } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStatics>
-    {
-        static constexpr guid value{ 0x839D4D3D,0x1051,0x40D7,{ 0x87,0x2A,0x8D,0x01,0x41,0x11,0x5B,0x1F } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynBusObject>
-    {
-        static constexpr guid value{ 0xE8FD825E,0xF73A,0x490C,{ 0x88,0x04,0x04,0xE0,0x26,0x64,0x30,0x47 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynBusObjectFactory>
-    {
-        static constexpr guid value{ 0x2C2F9F0B,0x8E02,0x4F9C,{ 0xAC,0x27,0xEA,0x6D,0xAD,0x5D,0x3B,0x50 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs>
-    {
-        static constexpr guid value{ 0xDE102115,0xEF8E,0x4D42,{ 0xB9,0x3B,0xA2,0xAE,0x74,0x51,0x97,0x66 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgsFactory>
-    {
-        static constexpr guid value{ 0x6B22FD48,0xD0A3,0x4255,{ 0x95,0x3A,0x47,0x72,0xB4,0x02,0x80,0x73 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynCredentials>
-    {
-        static constexpr guid value{ 0x824650F2,0xA190,0x40B1,{ 0xAB,0xAB,0x34,0x9E,0xC2,0x44,0xDF,0xAA } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs>
-    {
-        static constexpr guid value{ 0x6A87E34E,0xB069,0x4B80,{ 0x9E,0x1A,0x41,0xBC,0x83,0x7C,0x65,0xD2 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs>
-    {
-        static constexpr guid value{ 0x800A7612,0xB805,0x44AF,{ 0xA2,0xE1,0x79,0x2A,0xB6,0x55,0xA2,0xD0 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynMessageInfo>
-    {
-        static constexpr guid value{ 0xFF2B0127,0x2C12,0x4859,{ 0xAA,0x3A,0xC7,0x44,0x61,0xEE,0x81,0x4C } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynMessageInfoFactory>
-    {
-        static constexpr guid value{ 0x34664C2A,0x8289,0x43D4,{ 0xB4,0xA8,0x3F,0x4D,0xE3,0x59,0xF0,0x43 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynProducer>
-    {
-        static constexpr guid value{ 0x9D084679,0x469B,0x495A,{ 0xA7,0x10,0xAC,0x50,0xF1,0x23,0x06,0x9F } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs>
-    {
-        static constexpr guid value{ 0x51309770,0x4937,0x492D,{ 0x80,0x80,0x23,0x64,0x39,0x98,0x7C,0xEB } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgsFactory>
-    {
-        static constexpr guid value{ 0x56529961,0xB219,0x4D6E,{ 0x9F,0x78,0xFA,0x3F,0x99,0xFA,0x8F,0xE5 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynServiceInfo>
-    {
-        static constexpr guid value{ 0x4CBE8209,0xB93E,0x4182,{ 0x99,0x9B,0xDD,0xD0,0x00,0xF9,0xC5,0x75 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynServiceInfoFactory>
-    {
-        static constexpr guid value{ 0x7581DABD,0xFE03,0x4F4B,{ 0x94,0xA4,0xF0,0x2F,0xDC,0xBD,0x11,0xB8 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs>
-    {
-        static constexpr guid value{ 0x3057A95F,0x1D3F,0x41F3,{ 0x89,0x69,0xE3,0x27,0x92,0x62,0x73,0x96 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgsFactory>
-    {
-        static constexpr guid value{ 0x0DBF8627,0x9AFF,0x4955,{ 0x92,0x27,0x69,0x53,0xBA,0xF4,0x15,0x69 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynServiceInfoStatics>
-    {
-        static constexpr guid value{ 0x5678570A,0x603A,0x49FC,{ 0xB7,0x50,0x0E,0xF1,0x36,0x09,0x21,0x3C } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSession>
-    {
-        static constexpr guid value{ 0xE8D11B0C,0xC0D4,0x406C,{ 0x88,0xA9,0xA9,0x3E,0xFA,0x85,0xD4,0xB1 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs>
-    {
-        static constexpr guid value{ 0x9E9F5BD0,0xB5D7,0x47C5,{ 0x8D,0xAB,0xB0,0x40,0xCC,0x19,0x28,0x71 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgsFactory>
-    {
-        static constexpr guid value{ 0x6824D689,0xD6CB,0x4D9E,{ 0xA0,0x9E,0x35,0x80,0x68,0x70,0xB1,0x7F } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs>
-    {
-        static constexpr guid value{ 0xE766A48A,0x8BB8,0x4954,{ 0xAE,0x67,0xD2,0xFA,0x43,0xD1,0xF9,0x6B } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgsFactory>
-    {
-        static constexpr guid value{ 0x13BBFD32,0xD2F4,0x49C9,{ 0x98,0x0E,0x28,0x05,0xE1,0x35,0x86,0xB1 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs>
-    {
-        static constexpr guid value{ 0x49A2798A,0x0DD1,0x46C1,{ 0x9C,0xD6,0x27,0x19,0x0E,0x50,0x3A,0x5E } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgsFactory>
-    {
-        static constexpr guid value{ 0x341DE352,0x1D33,0x40A1,{ 0xA1,0xD3,0xE5,0x77,0x70,0x20,0xE1,0xF1 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs>
-    {
-        static constexpr guid value{ 0x409A219F,0xAA4A,0x4893,{ 0xB4,0x30,0xBA,0xA1,0xB6,0x3C,0x62,0x19 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgsFactory>
-    {
-        static constexpr guid value{ 0xC4D355E8,0x42B8,0x4B67,{ 0xB7,0x57,0xD0,0xCF,0xCA,0xD5,0x92,0x80 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynSessionStatics>
-    {
-        static constexpr guid value{ 0x9E05D604,0xA06C,0x46D4,{ 0xB4,0x6C,0x0B,0x0B,0x54,0x10,0x5B,0x44 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynStatusStatics>
-    {
-        static constexpr guid value{ 0xD0B7A17E,0x0D29,0x4DA9,{ 0x8A,0xC6,0x54,0xC5,0x54,0xBE,0xDB,0xC5 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs>
-    {
-        static constexpr guid value{ 0xC9FCA03B,0x701D,0x4AA8,{ 0x97,0xDD,0xA2,0xBB,0x0A,0x8F,0x5F,0xA3 } };
-    };
-    template <> struct guid_storage<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgsFactory>
-    {
-        static constexpr guid value{ 0x878FA5A8,0x2D50,0x47E1,{ 0x90,0x4A,0x20,0xBF,0x0D,0x48,0xC7,0x82 } };
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynAboutData>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynAboutData;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynAboutDataView>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynAboutDataView;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynBusAttachment>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynBusAttachment;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynBusObject>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynBusObject;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynCredentials>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynCredentials;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynMessageInfo>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynMessageInfo;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynServiceInfo>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynServiceInfo;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSession>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynSession;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs>
-    {
-        using type = Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs;
-    };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAboutData>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAboutDataView>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAboutDataViewStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachment>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachment2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachmentFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusObject>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusObjectFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynCredentials>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynMessageInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynMessageInfoFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynProducer>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfoFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynServiceInfoStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSession>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynSessionStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynStatusStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynAboutData>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynAboutDataView>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusAttachment>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusObject>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynCredentials>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynMessageInfo>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynServiceInfo>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynSession>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynStatus>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynBusAttachmentState>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynSessionLostReason>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::AllJoyn::AllJoynTrafficType>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynAboutData> = L"Windows.Devices.AllJoyn.AllJoynAboutData";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynAboutDataView> = L"Windows.Devices.AllJoyn.AllJoynAboutDataView";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs> = L"Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs> = L"Windows.Devices.AllJoyn.AllJoynAuthenticationCompleteEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynBusAttachment> = L"Windows.Devices.AllJoyn.AllJoynBusAttachment";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynBusAttachmentStateChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynBusObject> = L"Windows.Devices.AllJoyn.AllJoynBusObject";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynBusObjectStoppedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynCredentials> = L"Windows.Devices.AllJoyn.AllJoynCredentials";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynCredentialsRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynCredentialsVerificationRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynMessageInfo> = L"Windows.Devices.AllJoyn.AllJoynMessageInfo";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynProducerStoppedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynServiceInfo> = L"Windows.Devices.AllJoyn.AllJoynServiceInfo";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynServiceInfoRemovedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynSession> = L"Windows.Devices.AllJoyn.AllJoynSession";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynSessionJoinedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs> = L"Windows.Devices.AllJoyn.AllJoynSessionLostEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynSessionMemberAddedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynSessionMemberRemovedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynStatus> = L"Windows.Devices.AllJoyn.AllJoynStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs> = L"Windows.Devices.AllJoyn.AllJoynWatcherStoppedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism> = L"Windows.Devices.AllJoyn.AllJoynAuthenticationMechanism";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynBusAttachmentState> = L"Windows.Devices.AllJoyn.AllJoynBusAttachmentState";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynSessionLostReason> = L"Windows.Devices.AllJoyn.AllJoynSessionLostReason";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::AllJoynTrafficType> = L"Windows.Devices.AllJoyn.AllJoynTrafficType";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynAboutData> = L"Windows.Devices.AllJoyn.IAllJoynAboutData";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynAboutDataView> = L"Windows.Devices.AllJoyn.IAllJoynAboutDataView";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynAboutDataViewStatics> = L"Windows.Devices.AllJoyn.IAllJoynAboutDataViewStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner> = L"Windows.Devices.AllJoyn.IAllJoynAcceptSessionJoiner";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynAcceptSessionJoinerEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgsFactory> = L"Windows.Devices.AllJoyn.IAllJoynAcceptSessionJoinerEventArgsFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynAuthenticationCompleteEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynBusAttachment> = L"Windows.Devices.AllJoyn.IAllJoynBusAttachment";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynBusAttachment2> = L"Windows.Devices.AllJoyn.IAllJoynBusAttachment2";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynBusAttachmentFactory> = L"Windows.Devices.AllJoyn.IAllJoynBusAttachmentFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynBusAttachmentStateChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStatics> = L"Windows.Devices.AllJoyn.IAllJoynBusAttachmentStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynBusObject> = L"Windows.Devices.AllJoyn.IAllJoynBusObject";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynBusObjectFactory> = L"Windows.Devices.AllJoyn.IAllJoynBusObjectFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynBusObjectStoppedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgsFactory> = L"Windows.Devices.AllJoyn.IAllJoynBusObjectStoppedEventArgsFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynCredentials> = L"Windows.Devices.AllJoyn.IAllJoynCredentials";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynCredentialsRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynCredentialsVerificationRequestedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynMessageInfo> = L"Windows.Devices.AllJoyn.IAllJoynMessageInfo";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynMessageInfoFactory> = L"Windows.Devices.AllJoyn.IAllJoynMessageInfoFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynProducer> = L"Windows.Devices.AllJoyn.IAllJoynProducer";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynProducerStoppedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgsFactory> = L"Windows.Devices.AllJoyn.IAllJoynProducerStoppedEventArgsFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynServiceInfo> = L"Windows.Devices.AllJoyn.IAllJoynServiceInfo";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynServiceInfoFactory> = L"Windows.Devices.AllJoyn.IAllJoynServiceInfoFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynServiceInfoRemovedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgsFactory> = L"Windows.Devices.AllJoyn.IAllJoynServiceInfoRemovedEventArgsFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynServiceInfoStatics> = L"Windows.Devices.AllJoyn.IAllJoynServiceInfoStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSession> = L"Windows.Devices.AllJoyn.IAllJoynSession";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynSessionJoinedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgsFactory> = L"Windows.Devices.AllJoyn.IAllJoynSessionJoinedEventArgsFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynSessionLostEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgsFactory> = L"Windows.Devices.AllJoyn.IAllJoynSessionLostEventArgsFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynSessionMemberAddedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgsFactory> = L"Windows.Devices.AllJoyn.IAllJoynSessionMemberAddedEventArgsFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynSessionMemberRemovedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgsFactory> = L"Windows.Devices.AllJoyn.IAllJoynSessionMemberRemovedEventArgsFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynSessionStatics> = L"Windows.Devices.AllJoyn.IAllJoynSessionStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynStatusStatics> = L"Windows.Devices.AllJoyn.IAllJoynStatusStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs> = L"Windows.Devices.AllJoyn.IAllJoynWatcherStoppedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgsFactory> = L"Windows.Devices.AllJoyn.IAllJoynWatcherStoppedEventArgsFactory";
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynAboutData>{ 0xE5A9BF00,0x1FA2,0x4839,{ 0x93,0xEF,0xF9,0xDF,0x40,0x48,0x90,0xF7 } }; // E5A9BF00-1FA2-4839-93EF-F9DF404890F7
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynAboutDataView>{ 0x6823111F,0x6212,0x4934,{ 0x9C,0x48,0xE1,0x9C,0xA4,0x98,0x42,0x88 } }; // 6823111F-6212-4934-9C48-E19CA4984288
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynAboutDataViewStatics>{ 0x57EDB688,0x0C5E,0x416E,{ 0x88,0xB5,0x39,0xB3,0x2D,0x25,0xC4,0x7D } }; // 57EDB688-0C5E-416E-88B5-39B32D25C47D
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>{ 0x4DA817D2,0xCD1D,0x4023,{ 0xA7,0xC4,0x16,0xDE,0xF8,0x9C,0x28,0xDF } }; // 4DA817D2-CD1D-4023-A7C4-16DEF89C28DF
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs>{ 0x4EFB5365,0x3E8A,0x4257,{ 0x8F,0x10,0x53,0x9C,0xE0,0xD5,0x6C,0x0F } }; // 4EFB5365-3E8A-4257-8F10-539CE0D56C0F
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgsFactory>{ 0xB4435BC0,0x6145,0x429E,{ 0x84,0xDB,0xD5,0xBF,0xE7,0x72,0xB1,0x4F } }; // B4435BC0-6145-429E-84DB-D5BFE772B14F
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs>{ 0x97B4701C,0x15DC,0x4B53,{ 0xB6,0xA4,0x7D,0x13,0x43,0x00,0xD7,0xBF } }; // 97B4701C-15DC-4B53-B6A4-7D134300D7BF
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynBusAttachment>{ 0xF309F153,0x1EED,0x42C3,{ 0xA2,0x0E,0x43,0x6D,0x41,0xFE,0x62,0xF6 } }; // F309F153-1EED-42C3-A20E-436D41FE62F6
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynBusAttachment2>{ 0x3474CB1E,0x2368,0x43B2,{ 0xB4,0x3E,0x6A,0x3A,0xC1,0x27,0x8D,0x98 } }; // 3474CB1E-2368-43B2-B43E-6A3AC1278D98
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynBusAttachmentFactory>{ 0x642EF1A4,0xAD85,0x4DDF,{ 0x90,0xAE,0x60,0x44,0x52,0xB2,0x22,0x88 } }; // 642EF1A4-AD85-4DDF-90AE-604452B22288
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs>{ 0xD82E75F4,0xC02A,0x41EC,{ 0xA8,0xD5,0xEA,0xB1,0x55,0x89,0x53,0xAA } }; // D82E75F4-C02A-41EC-A8D5-EAB1558953AA
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStatics>{ 0x839D4D3D,0x1051,0x40D7,{ 0x87,0x2A,0x8D,0x01,0x41,0x11,0x5B,0x1F } }; // 839D4D3D-1051-40D7-872A-8D0141115B1F
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynBusObject>{ 0xE8FD825E,0xF73A,0x490C,{ 0x88,0x04,0x04,0xE0,0x26,0x64,0x30,0x47 } }; // E8FD825E-F73A-490C-8804-04E026643047
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynBusObjectFactory>{ 0x2C2F9F0B,0x8E02,0x4F9C,{ 0xAC,0x27,0xEA,0x6D,0xAD,0x5D,0x3B,0x50 } }; // 2C2F9F0B-8E02-4F9C-AC27-EA6DAD5D3B50
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs>{ 0xDE102115,0xEF8E,0x4D42,{ 0xB9,0x3B,0xA2,0xAE,0x74,0x51,0x97,0x66 } }; // DE102115-EF8E-4D42-B93B-A2AE74519766
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgsFactory>{ 0x6B22FD48,0xD0A3,0x4255,{ 0x95,0x3A,0x47,0x72,0xB4,0x02,0x80,0x73 } }; // 6B22FD48-D0A3-4255-953A-4772B4028073
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynCredentials>{ 0x824650F2,0xA190,0x40B1,{ 0xAB,0xAB,0x34,0x9E,0xC2,0x44,0xDF,0xAA } }; // 824650F2-A190-40B1-ABAB-349EC244DFAA
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs>{ 0x6A87E34E,0xB069,0x4B80,{ 0x9E,0x1A,0x41,0xBC,0x83,0x7C,0x65,0xD2 } }; // 6A87E34E-B069-4B80-9E1A-41BC837C65D2
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs>{ 0x800A7612,0xB805,0x44AF,{ 0xA2,0xE1,0x79,0x2A,0xB6,0x55,0xA2,0xD0 } }; // 800A7612-B805-44AF-A2E1-792AB655A2D0
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynMessageInfo>{ 0xFF2B0127,0x2C12,0x4859,{ 0xAA,0x3A,0xC7,0x44,0x61,0xEE,0x81,0x4C } }; // FF2B0127-2C12-4859-AA3A-C74461EE814C
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynMessageInfoFactory>{ 0x34664C2A,0x8289,0x43D4,{ 0xB4,0xA8,0x3F,0x4D,0xE3,0x59,0xF0,0x43 } }; // 34664C2A-8289-43D4-B4A8-3F4DE359F043
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynProducer>{ 0x9D084679,0x469B,0x495A,{ 0xA7,0x10,0xAC,0x50,0xF1,0x23,0x06,0x9F } }; // 9D084679-469B-495A-A710-AC50F123069F
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs>{ 0x51309770,0x4937,0x492D,{ 0x80,0x80,0x23,0x64,0x39,0x98,0x7C,0xEB } }; // 51309770-4937-492D-8080-236439987CEB
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgsFactory>{ 0x56529961,0xB219,0x4D6E,{ 0x9F,0x78,0xFA,0x3F,0x99,0xFA,0x8F,0xE5 } }; // 56529961-B219-4D6E-9F78-FA3F99FA8FE5
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynServiceInfo>{ 0x4CBE8209,0xB93E,0x4182,{ 0x99,0x9B,0xDD,0xD0,0x00,0xF9,0xC5,0x75 } }; // 4CBE8209-B93E-4182-999B-DDD000F9C575
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynServiceInfoFactory>{ 0x7581DABD,0xFE03,0x4F4B,{ 0x94,0xA4,0xF0,0x2F,0xDC,0xBD,0x11,0xB8 } }; // 7581DABD-FE03-4F4B-94A4-F02FDCBD11B8
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs>{ 0x3057A95F,0x1D3F,0x41F3,{ 0x89,0x69,0xE3,0x27,0x92,0x62,0x73,0x96 } }; // 3057A95F-1D3F-41F3-8969-E32792627396
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgsFactory>{ 0x0DBF8627,0x9AFF,0x4955,{ 0x92,0x27,0x69,0x53,0xBA,0xF4,0x15,0x69 } }; // 0DBF8627-9AFF-4955-9227-6953BAF41569
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynServiceInfoStatics>{ 0x5678570A,0x603A,0x49FC,{ 0xB7,0x50,0x0E,0xF1,0x36,0x09,0x21,0x3C } }; // 5678570A-603A-49FC-B750-0EF13609213C
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSession>{ 0xE8D11B0C,0xC0D4,0x406C,{ 0x88,0xA9,0xA9,0x3E,0xFA,0x85,0xD4,0xB1 } }; // E8D11B0C-C0D4-406C-88A9-A93EFA85D4B1
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs>{ 0x9E9F5BD0,0xB5D7,0x47C5,{ 0x8D,0xAB,0xB0,0x40,0xCC,0x19,0x28,0x71 } }; // 9E9F5BD0-B5D7-47C5-8DAB-B040CC192871
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgsFactory>{ 0x6824D689,0xD6CB,0x4D9E,{ 0xA0,0x9E,0x35,0x80,0x68,0x70,0xB1,0x7F } }; // 6824D689-D6CB-4D9E-A09E-35806870B17F
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs>{ 0xE766A48A,0x8BB8,0x4954,{ 0xAE,0x67,0xD2,0xFA,0x43,0xD1,0xF9,0x6B } }; // E766A48A-8BB8-4954-AE67-D2FA43D1F96B
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgsFactory>{ 0x13BBFD32,0xD2F4,0x49C9,{ 0x98,0x0E,0x28,0x05,0xE1,0x35,0x86,0xB1 } }; // 13BBFD32-D2F4-49C9-980E-2805E13586B1
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs>{ 0x49A2798A,0x0DD1,0x46C1,{ 0x9C,0xD6,0x27,0x19,0x0E,0x50,0x3A,0x5E } }; // 49A2798A-0DD1-46C1-9CD6-27190E503A5E
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgsFactory>{ 0x341DE352,0x1D33,0x40A1,{ 0xA1,0xD3,0xE5,0x77,0x70,0x20,0xE1,0xF1 } }; // 341DE352-1D33-40A1-A1D3-E5777020E1F1
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs>{ 0x409A219F,0xAA4A,0x4893,{ 0xB4,0x30,0xBA,0xA1,0xB6,0x3C,0x62,0x19 } }; // 409A219F-AA4A-4893-B430-BAA1B63C6219
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgsFactory>{ 0xC4D355E8,0x42B8,0x4B67,{ 0xB7,0x57,0xD0,0xCF,0xCA,0xD5,0x92,0x80 } }; // C4D355E8-42B8-4B67-B757-D0CFCAD59280
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynSessionStatics>{ 0x9E05D604,0xA06C,0x46D4,{ 0xB4,0x6C,0x0B,0x0B,0x54,0x10,0x5B,0x44 } }; // 9E05D604-A06C-46D4-B46C-0B0B54105B44
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynStatusStatics>{ 0xD0B7A17E,0x0D29,0x4DA9,{ 0x8A,0xC6,0x54,0xC5,0x54,0xBE,0xDB,0xC5 } }; // D0B7A17E-0D29-4DA9-8AC6-54C554BEDBC5
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs>{ 0xC9FCA03B,0x701D,0x4AA8,{ 0x97,0xDD,0xA2,0xBB,0x0A,0x8F,0x5F,0xA3 } }; // C9FCA03B-701D-4AA8-97DD-A2BB0A8F5FA3
+    template <> inline constexpr guid guid_v<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgsFactory>{ 0x878FA5A8,0x2D50,0x47E1,{ 0x90,0x4A,0x20,0xBF,0x0D,0x48,0xC7,0x82 } }; // 878FA5A8-2D50-47E1-904A-20BF0D48C782
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynAboutData>{ using type = Windows::Devices::AllJoyn::IAllJoynAboutData; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynAboutDataView>{ using type = Windows::Devices::AllJoyn::IAllJoynAboutDataView; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynBusAttachment>{ using type = Windows::Devices::AllJoyn::IAllJoynBusAttachment; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynBusObject>{ using type = Windows::Devices::AllJoyn::IAllJoynBusObject; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynCredentials>{ using type = Windows::Devices::AllJoyn::IAllJoynCredentials; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynMessageInfo>{ using type = Windows::Devices::AllJoyn::IAllJoynMessageInfo; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynServiceInfo>{ using type = Windows::Devices::AllJoyn::IAllJoynServiceInfo; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSession>{ using type = Windows::Devices::AllJoyn::IAllJoynSession; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs; };
+    template <> struct default_interface<Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs>{ using type = Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs; };
     template <> struct abi<Windows::Devices::AllJoyn::IAllJoynAboutData>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -1349,27 +758,27 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynAboutData
     {
-        [[nodiscard]] auto IsEnabled() const;
-        auto IsEnabled(bool value) const;
-        [[nodiscard]] auto DefaultAppName() const;
-        auto DefaultAppName(param::hstring const& value) const;
-        [[nodiscard]] auto AppNames() const;
-        [[nodiscard]] auto DateOfManufacture() const;
-        auto DateOfManufacture(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const;
-        [[nodiscard]] auto DefaultDescription() const;
-        auto DefaultDescription(param::hstring const& value) const;
-        [[nodiscard]] auto Descriptions() const;
-        [[nodiscard]] auto DefaultManufacturer() const;
-        auto DefaultManufacturer(param::hstring const& value) const;
-        [[nodiscard]] auto Manufacturers() const;
-        [[nodiscard]] auto ModelNumber() const;
-        auto ModelNumber(param::hstring const& value) const;
-        [[nodiscard]] auto SoftwareVersion() const;
-        auto SoftwareVersion(param::hstring const& value) const;
-        [[nodiscard]] auto SupportUrl() const;
-        auto SupportUrl(Windows::Foundation::Uri const& value) const;
-        [[nodiscard]] auto AppId() const;
-        auto AppId(winrt::guid const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
+        WINRT_IMPL_AUTO(void) IsEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DefaultAppName() const;
+        WINRT_IMPL_AUTO(void) DefaultAppName(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, hstring>) AppNames() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) DateOfManufacture() const;
+        WINRT_IMPL_AUTO(void) DateOfManufacture(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DefaultDescription() const;
+        WINRT_IMPL_AUTO(void) DefaultDescription(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, hstring>) Descriptions() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DefaultManufacturer() const;
+        WINRT_IMPL_AUTO(void) DefaultManufacturer(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, hstring>) Manufacturers() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ModelNumber() const;
+        WINRT_IMPL_AUTO(void) ModelNumber(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SoftwareVersion() const;
+        WINRT_IMPL_AUTO(void) SoftwareVersion(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Uri) SupportUrl() const;
+        WINRT_IMPL_AUTO(void) SupportUrl(Windows::Foundation::Uri const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) AppId() const;
+        WINRT_IMPL_AUTO(void) AppId(winrt::guid const& value) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynAboutData>
     {
@@ -1378,22 +787,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynAboutDataView
     {
-        [[nodiscard]] auto Status() const;
-        [[nodiscard]] auto Properties() const;
-        [[nodiscard]] auto AJSoftwareVersion() const;
-        [[nodiscard]] auto AppId() const;
-        [[nodiscard]] auto DateOfManufacture() const;
-        [[nodiscard]] auto DefaultLanguage() const;
-        [[nodiscard]] auto DeviceId() const;
-        [[nodiscard]] auto HardwareVersion() const;
-        [[nodiscard]] auto ModelNumber() const;
-        [[nodiscard]] auto SoftwareVersion() const;
-        [[nodiscard]] auto SupportedLanguages() const;
-        [[nodiscard]] auto SupportUrl() const;
-        [[nodiscard]] auto AppName() const;
-        [[nodiscard]] auto Description() const;
-        [[nodiscard]] auto DeviceName() const;
-        [[nodiscard]] auto Manufacturer() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Status() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::Foundation::IInspectable>) Properties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AJSoftwareVersion() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) AppId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) DateOfManufacture() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Globalization::Language) DefaultLanguage() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) HardwareVersion() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ModelNumber() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SoftwareVersion() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Globalization::Language>) SupportedLanguages() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Uri) SupportUrl() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AppName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Manufacturer() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynAboutDataView>
     {
@@ -1402,8 +811,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynAboutDataViewStatics
     {
-        auto GetDataBySessionPortAsync(param::hstring const& uniqueName, Windows::Devices::AllJoyn::AllJoynBusAttachment const& busAttachment, uint16_t sessionPort) const;
-        auto GetDataBySessionPortAsync(param::hstring const& uniqueName, Windows::Devices::AllJoyn::AllJoynBusAttachment const& busAttachment, uint16_t sessionPort, Windows::Globalization::Language const& language) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::AllJoyn::AllJoynAboutDataView>) GetDataBySessionPortAsync(param::hstring const& uniqueName, Windows::Devices::AllJoyn::AllJoynBusAttachment const& busAttachment, uint16_t sessionPort) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::AllJoyn::AllJoynAboutDataView>) GetDataBySessionPortAsync(param::hstring const& uniqueName, Windows::Devices::AllJoyn::AllJoynBusAttachment const& busAttachment, uint16_t sessionPort, Windows::Globalization::Language const& language) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynAboutDataViewStatics>
     {
@@ -1412,7 +821,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynAcceptSessionJoiner
     {
-        auto Accept() const;
+        WINRT_IMPL_AUTO(void) Accept() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>
     {
@@ -1421,12 +830,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynAcceptSessionJoinerEventArgs
     {
-        [[nodiscard]] auto UniqueName() const;
-        [[nodiscard]] auto SessionPort() const;
-        [[nodiscard]] auto TrafficType() const;
-        [[nodiscard]] auto SamePhysicalNode() const;
-        [[nodiscard]] auto SameNetwork() const;
-        auto Accept() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UniqueName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) SessionPort() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynTrafficType) TrafficType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) SamePhysicalNode() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) SameNetwork() const;
+        WINRT_IMPL_AUTO(void) Accept() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgs>
     {
@@ -1435,7 +844,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynAcceptSessionJoinerEventArgsFactory
     {
-        auto Create(param::hstring const& uniqueName, uint16_t sessionPort, Windows::Devices::AllJoyn::AllJoynTrafficType const& trafficType, uint8_t proximity, Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner const& acceptSessionJoiner) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs) Create(param::hstring const& uniqueName, uint16_t sessionPort, Windows::Devices::AllJoyn::AllJoynTrafficType const& trafficType, uint8_t proximity, Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner const& acceptSessionJoiner) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgsFactory>
     {
@@ -1444,9 +853,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynAuthenticationCompleteEventArgs
     {
-        [[nodiscard]] auto AuthenticationMechanism() const;
-        [[nodiscard]] auto PeerUniqueName() const;
-        [[nodiscard]] auto Succeeded() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism) AuthenticationMechanism() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PeerUniqueName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Succeeded() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynAuthenticationCompleteEventArgs>
     {
@@ -1455,30 +864,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynBusAttachment
     {
-        [[nodiscard]] auto AboutData() const;
-        [[nodiscard]] auto ConnectionSpecification() const;
-        [[nodiscard]] auto State() const;
-        [[nodiscard]] auto UniqueName() const;
-        auto PingAsync(param::hstring const& uniqueName) const;
-        auto Connect() const;
-        auto Disconnect() const;
-        auto StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynAboutData) AboutData() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ConnectionSpecification() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynBusAttachmentState) State() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UniqueName() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<int32_t>) PingAsync(param::hstring const& uniqueName) const;
+        WINRT_IMPL_AUTO(void) Connect() const;
+        WINRT_IMPL_AUTO(void) Disconnect() const;
+        WINRT_IMPL_AUTO(winrt::event_token) StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs> const& handler) const;
         using StateChanged_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynBusAttachment, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynBusAttachment>::remove_StateChanged>;
-        StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs> const& handler) const;
-        auto StateChanged(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto AuthenticationMechanisms() const;
-        auto CredentialsRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs> const& handler) const;
+        [[nodiscard]] StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) StateChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>) AuthenticationMechanisms() const;
+        WINRT_IMPL_AUTO(winrt::event_token) CredentialsRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs> const& handler) const;
         using CredentialsRequested_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynBusAttachment, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynBusAttachment>::remove_CredentialsRequested>;
-        CredentialsRequested_revoker CredentialsRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs> const& handler) const;
-        auto CredentialsRequested(winrt::event_token const& token) const noexcept;
-        auto CredentialsVerificationRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs> const& handler) const;
+        [[nodiscard]] CredentialsRequested_revoker CredentialsRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) CredentialsRequested(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) CredentialsVerificationRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs> const& handler) const;
         using CredentialsVerificationRequested_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynBusAttachment, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynBusAttachment>::remove_CredentialsVerificationRequested>;
-        CredentialsVerificationRequested_revoker CredentialsVerificationRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs> const& handler) const;
-        auto CredentialsVerificationRequested(winrt::event_token const& token) const noexcept;
-        auto AuthenticationComplete(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs> const& handler) const;
+        [[nodiscard]] CredentialsVerificationRequested_revoker CredentialsVerificationRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) CredentialsVerificationRequested(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) AuthenticationComplete(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs> const& handler) const;
         using AuthenticationComplete_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynBusAttachment, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynBusAttachment>::remove_AuthenticationComplete>;
-        AuthenticationComplete_revoker AuthenticationComplete(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs> const& handler) const;
-        auto AuthenticationComplete(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] AuthenticationComplete_revoker AuthenticationComplete(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) AuthenticationComplete(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynBusAttachment>
     {
@@ -1487,16 +896,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynBusAttachment2
     {
-        auto GetAboutDataAsync(Windows::Devices::AllJoyn::AllJoynServiceInfo const& serviceInfo) const;
-        auto GetAboutDataAsync(Windows::Devices::AllJoyn::AllJoynServiceInfo const& serviceInfo, Windows::Globalization::Language const& language) const;
-        auto AcceptSessionJoinerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::AllJoyn::AllJoynAboutDataView>) GetAboutDataAsync(Windows::Devices::AllJoyn::AllJoynServiceInfo const& serviceInfo) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::AllJoyn::AllJoynAboutDataView>) GetAboutDataAsync(Windows::Devices::AllJoyn::AllJoynServiceInfo const& serviceInfo, Windows::Globalization::Language const& language) const;
+        WINRT_IMPL_AUTO(winrt::event_token) AcceptSessionJoinerRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs> const& handler) const;
         using AcceptSessionJoinerRequested_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynBusAttachment2, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynBusAttachment2>::remove_AcceptSessionJoinerRequested>;
-        AcceptSessionJoinerRequested_revoker AcceptSessionJoinerRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs> const& handler) const;
-        auto AcceptSessionJoinerRequested(winrt::event_token const& token) const noexcept;
-        auto SessionJoined(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs> const& handler) const;
+        [[nodiscard]] AcceptSessionJoinerRequested_revoker AcceptSessionJoinerRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) AcceptSessionJoinerRequested(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) SessionJoined(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs> const& handler) const;
         using SessionJoined_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynBusAttachment2, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynBusAttachment2>::remove_SessionJoined>;
-        SessionJoined_revoker SessionJoined(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs> const& handler) const;
-        auto SessionJoined(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] SessionJoined_revoker SessionJoined(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusAttachment, Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SessionJoined(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynBusAttachment2>
     {
@@ -1505,7 +914,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynBusAttachmentFactory
     {
-        auto Create(param::hstring const& connectionSpecification) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynBusAttachment) Create(param::hstring const& connectionSpecification) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynBusAttachmentFactory>
     {
@@ -1514,8 +923,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynBusAttachmentStateChangedEventArgs
     {
-        [[nodiscard]] auto State() const;
-        [[nodiscard]] auto Status() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynBusAttachmentState) State() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Status() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStateChangedEventArgs>
     {
@@ -1524,8 +933,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynBusAttachmentStatics
     {
-        auto GetDefault() const;
-        auto GetWatcher(param::iterable<hstring> const& requiredInterfaces) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynBusAttachment) GetDefault() const;
+        WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DeviceWatcher) GetWatcher(param::iterable<hstring> const& requiredInterfaces) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynBusAttachmentStatics>
     {
@@ -1534,15 +943,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynBusObject
     {
-        auto Start() const;
-        auto Stop() const;
-        auto AddProducer(Windows::Devices::AllJoyn::IAllJoynProducer const& producer) const;
-        [[nodiscard]] auto BusAttachment() const;
-        [[nodiscard]] auto Session() const;
-        auto Stopped(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusObject, Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Start() const;
+        WINRT_IMPL_AUTO(void) Stop() const;
+        WINRT_IMPL_AUTO(void) AddProducer(Windows::Devices::AllJoyn::IAllJoynProducer const& producer) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynBusAttachment) BusAttachment() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynSession) Session() const;
+        WINRT_IMPL_AUTO(winrt::event_token) Stopped(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusObject, Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs> const& handler) const;
         using Stopped_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynBusObject, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynBusObject>::remove_Stopped>;
-        Stopped_revoker Stopped(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusObject, Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs> const& handler) const;
-        auto Stopped(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] Stopped_revoker Stopped(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynBusObject, Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Stopped(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynBusObject>
     {
@@ -1551,8 +960,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynBusObjectFactory
     {
-        auto Create(param::hstring const& objectPath) const;
-        auto CreateWithBusAttachment(param::hstring const& objectPath, Windows::Devices::AllJoyn::AllJoynBusAttachment const& busAttachment) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynBusObject) Create(param::hstring const& objectPath) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynBusObject) CreateWithBusAttachment(param::hstring const& objectPath, Windows::Devices::AllJoyn::AllJoynBusAttachment const& busAttachment) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynBusObjectFactory>
     {
@@ -1561,7 +970,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynBusObjectStoppedEventArgs
     {
-        [[nodiscard]] auto Status() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Status() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgs>
     {
@@ -1570,7 +979,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynBusObjectStoppedEventArgsFactory
     {
-        auto Create(int32_t status) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs) Create(int32_t status) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgsFactory>
     {
@@ -1579,13 +988,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynCredentials
     {
-        [[nodiscard]] auto AuthenticationMechanism() const;
-        [[nodiscard]] auto Certificate() const;
-        auto Certificate(Windows::Security::Cryptography::Certificates::Certificate const& value) const;
-        [[nodiscard]] auto PasswordCredential() const;
-        auto PasswordCredential(Windows::Security::Credentials::PasswordCredential const& value) const;
-        [[nodiscard]] auto Timeout() const;
-        auto Timeout(Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism) AuthenticationMechanism() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Cryptography::Certificates::Certificate) Certificate() const;
+        WINRT_IMPL_AUTO(void) Certificate(Windows::Security::Cryptography::Certificates::Certificate const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) PasswordCredential() const;
+        WINRT_IMPL_AUTO(void) PasswordCredential(Windows::Security::Credentials::PasswordCredential const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) Timeout() const;
+        WINRT_IMPL_AUTO(void) Timeout(Windows::Foundation::TimeSpan const& value) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynCredentials>
     {
@@ -1594,11 +1003,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynCredentialsRequestedEventArgs
     {
-        [[nodiscard]] auto AttemptCount() const;
-        [[nodiscard]] auto Credentials() const;
-        [[nodiscard]] auto PeerUniqueName() const;
-        [[nodiscard]] auto RequestedUserName() const;
-        auto GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) AttemptCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynCredentials) Credentials() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PeerUniqueName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RequestedUserName() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs>
     {
@@ -1607,14 +1016,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynCredentialsVerificationRequestedEventArgs
     {
-        [[nodiscard]] auto AuthenticationMechanism() const;
-        [[nodiscard]] auto PeerUniqueName() const;
-        [[nodiscard]] auto PeerCertificate() const;
-        [[nodiscard]] auto PeerCertificateErrorSeverity() const;
-        [[nodiscard]] auto PeerCertificateErrors() const;
-        [[nodiscard]] auto PeerIntermediateCertificates() const;
-        auto Accept() const;
-        auto GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism) AuthenticationMechanism() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PeerUniqueName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Cryptography::Certificates::Certificate) PeerCertificate() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Networking::Sockets::SocketSslErrorSeverity) PeerCertificateErrorSeverity() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Cryptography::Certificates::ChainValidationResult>) PeerCertificateErrors() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Cryptography::Certificates::Certificate>) PeerIntermediateCertificates() const;
+        WINRT_IMPL_AUTO(void) Accept() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynCredentialsVerificationRequestedEventArgs>
     {
@@ -1623,7 +1032,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynMessageInfo
     {
-        [[nodiscard]] auto SenderUniqueName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SenderUniqueName() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynMessageInfo>
     {
@@ -1632,7 +1041,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynMessageInfoFactory
     {
-        auto Create(param::hstring const& senderUniqueName) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynMessageInfo) Create(param::hstring const& senderUniqueName) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynMessageInfoFactory>
     {
@@ -1641,7 +1050,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynProducer
     {
-        auto SetBusObject(Windows::Devices::AllJoyn::AllJoynBusObject const& busObject) const;
+        WINRT_IMPL_AUTO(void) SetBusObject(Windows::Devices::AllJoyn::AllJoynBusObject const& busObject) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynProducer>
     {
@@ -1650,7 +1059,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynProducerStoppedEventArgs
     {
-        [[nodiscard]] auto Status() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Status() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgs>
     {
@@ -1659,7 +1068,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynProducerStoppedEventArgsFactory
     {
-        auto Create(int32_t status) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs) Create(int32_t status) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynProducerStoppedEventArgsFactory>
     {
@@ -1668,9 +1077,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynServiceInfo
     {
-        [[nodiscard]] auto UniqueName() const;
-        [[nodiscard]] auto ObjectPath() const;
-        [[nodiscard]] auto SessionPort() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UniqueName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) ObjectPath() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) SessionPort() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynServiceInfo>
     {
@@ -1679,7 +1088,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynServiceInfoFactory
     {
-        auto Create(param::hstring const& uniqueName, param::hstring const& objectPath, uint16_t sessionPort) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynServiceInfo) Create(param::hstring const& uniqueName, param::hstring const& objectPath, uint16_t sessionPort) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynServiceInfoFactory>
     {
@@ -1688,7 +1097,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynServiceInfoRemovedEventArgs
     {
-        [[nodiscard]] auto UniqueName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UniqueName() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgs>
     {
@@ -1697,7 +1106,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynServiceInfoRemovedEventArgsFactory
     {
-        auto Create(param::hstring const& uniqueName) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs) Create(param::hstring const& uniqueName) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynServiceInfoRemovedEventArgsFactory>
     {
@@ -1706,7 +1115,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynServiceInfoStatics
     {
-        auto FromIdAsync(param::hstring const& deviceId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::AllJoyn::AllJoynServiceInfo>) FromIdAsync(param::hstring const& deviceId) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynServiceInfoStatics>
     {
@@ -1715,21 +1124,21 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSession
     {
-        [[nodiscard]] auto Id() const;
-        [[nodiscard]] auto Status() const;
-        auto RemoveMemberAsync(param::hstring const& uniqueName) const;
-        auto MemberAdded(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Id() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Status() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<int32_t>) RemoveMemberAsync(param::hstring const& uniqueName) const;
+        WINRT_IMPL_AUTO(winrt::event_token) MemberAdded(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs> const& handler) const;
         using MemberAdded_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynSession, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynSession>::remove_MemberAdded>;
-        MemberAdded_revoker MemberAdded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs> const& handler) const;
-        auto MemberAdded(winrt::event_token const& token) const noexcept;
-        auto MemberRemoved(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs> const& handler) const;
+        [[nodiscard]] MemberAdded_revoker MemberAdded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) MemberAdded(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) MemberRemoved(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs> const& handler) const;
         using MemberRemoved_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynSession, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynSession>::remove_MemberRemoved>;
-        MemberRemoved_revoker MemberRemoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs> const& handler) const;
-        auto MemberRemoved(winrt::event_token const& token) const noexcept;
-        auto Lost(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs> const& handler) const;
+        [[nodiscard]] MemberRemoved_revoker MemberRemoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) MemberRemoved(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Lost(Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs> const& handler) const;
         using Lost_revoker = impl::event_revoker<Windows::Devices::AllJoyn::IAllJoynSession, &impl::abi_t<Windows::Devices::AllJoyn::IAllJoynSession>::remove_Lost>;
-        Lost_revoker Lost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs> const& handler) const;
-        auto Lost(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] Lost_revoker Lost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::AllJoyn::AllJoynSession, Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Lost(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSession>
     {
@@ -1738,7 +1147,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSessionJoinedEventArgs
     {
-        [[nodiscard]] auto Session() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynSession) Session() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgs>
     {
@@ -1747,7 +1156,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSessionJoinedEventArgsFactory
     {
-        auto Create(Windows::Devices::AllJoyn::AllJoynSession const& session) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs) Create(Windows::Devices::AllJoyn::AllJoynSession const& session) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgsFactory>
     {
@@ -1756,7 +1165,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSessionLostEventArgs
     {
-        [[nodiscard]] auto Reason() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynSessionLostReason) Reason() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgs>
     {
@@ -1765,7 +1174,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSessionLostEventArgsFactory
     {
-        auto Create(Windows::Devices::AllJoyn::AllJoynSessionLostReason const& reason) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs) Create(Windows::Devices::AllJoyn::AllJoynSessionLostReason const& reason) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgsFactory>
     {
@@ -1774,7 +1183,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSessionMemberAddedEventArgs
     {
-        [[nodiscard]] auto UniqueName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UniqueName() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgs>
     {
@@ -1783,7 +1192,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSessionMemberAddedEventArgsFactory
     {
-        auto Create(param::hstring const& uniqueName) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs) Create(param::hstring const& uniqueName) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSessionMemberAddedEventArgsFactory>
     {
@@ -1792,7 +1201,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSessionMemberRemovedEventArgs
     {
-        [[nodiscard]] auto UniqueName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UniqueName() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgs>
     {
@@ -1801,7 +1210,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSessionMemberRemovedEventArgsFactory
     {
-        auto Create(param::hstring const& uniqueName) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs) Create(param::hstring const& uniqueName) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgsFactory>
     {
@@ -1810,8 +1219,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynSessionStatics
     {
-        auto GetFromServiceInfoAsync(Windows::Devices::AllJoyn::AllJoynServiceInfo const& serviceInfo) const;
-        auto GetFromServiceInfoAsync(Windows::Devices::AllJoyn::AllJoynServiceInfo const& serviceInfo, Windows::Devices::AllJoyn::AllJoynBusAttachment const& busAttachment) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::AllJoyn::AllJoynSession>) GetFromServiceInfoAsync(Windows::Devices::AllJoyn::AllJoynServiceInfo const& serviceInfo) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::AllJoyn::AllJoynSession>) GetFromServiceInfoAsync(Windows::Devices::AllJoyn::AllJoynServiceInfo const& serviceInfo, Windows::Devices::AllJoyn::AllJoynBusAttachment const& busAttachment) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynSessionStatics>
     {
@@ -1820,24 +1229,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynStatusStatics
     {
-        [[nodiscard]] auto Ok() const;
-        [[nodiscard]] auto Fail() const;
-        [[nodiscard]] auto OperationTimedOut() const;
-        [[nodiscard]] auto OtherEndClosed() const;
-        [[nodiscard]] auto ConnectionRefused() const;
-        [[nodiscard]] auto AuthenticationFailed() const;
-        [[nodiscard]] auto AuthenticationRejectedByUser() const;
-        [[nodiscard]] auto SslConnectFailed() const;
-        [[nodiscard]] auto SslIdentityVerificationFailed() const;
-        [[nodiscard]] auto InsufficientSecurity() const;
-        [[nodiscard]] auto InvalidArgument1() const;
-        [[nodiscard]] auto InvalidArgument2() const;
-        [[nodiscard]] auto InvalidArgument3() const;
-        [[nodiscard]] auto InvalidArgument4() const;
-        [[nodiscard]] auto InvalidArgument5() const;
-        [[nodiscard]] auto InvalidArgument6() const;
-        [[nodiscard]] auto InvalidArgument7() const;
-        [[nodiscard]] auto InvalidArgument8() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Ok() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Fail() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) OperationTimedOut() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) OtherEndClosed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ConnectionRefused() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) AuthenticationFailed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) AuthenticationRejectedByUser() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) SslConnectFailed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) SslIdentityVerificationFailed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InsufficientSecurity() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InvalidArgument1() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InvalidArgument2() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InvalidArgument3() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InvalidArgument4() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InvalidArgument5() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InvalidArgument6() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InvalidArgument7() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) InvalidArgument8() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynStatusStatics>
     {
@@ -1846,7 +1255,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynWatcherStoppedEventArgs
     {
-        [[nodiscard]] auto Status() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Status() const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs>
     {
@@ -1855,7 +1264,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_AllJoyn_IAllJoynWatcherStoppedEventArgsFactory
     {
-        auto Create(int32_t status) const;
+        WINRT_IMPL_AUTO(Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs) Create(int32_t status) const;
     };
     template <> struct consume<Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgsFactory>
     {

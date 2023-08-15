@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_UI_ViewManagement_Core_2_H
 #include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Windows.UI.ViewManagement.Core.1.h"
-namespace winrt::Windows::UI::ViewManagement::Core
+WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement::Core
 {
     struct __declspec(empty_bases) CoreInputView : Windows::UI::ViewManagement::Core::ICoreInputView,
         impl::require<CoreInputView, Windows::UI::ViewManagement::Core::ICoreInputView2, Windows::UI::ViewManagement::Core::ICoreInputView3, Windows::UI::ViewManagement::Core::ICoreInputView4>

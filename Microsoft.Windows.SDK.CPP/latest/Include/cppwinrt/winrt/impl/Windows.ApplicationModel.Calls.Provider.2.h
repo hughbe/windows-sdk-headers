@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_Calls_Provider_2_H
 #define WINRT_Windows_ApplicationModel_Calls_Provider_2_H
 #include "winrt/impl/Windows.ApplicationModel.Calls.Provider.1.h"
-namespace winrt::Windows::ApplicationModel::Calls::Provider
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls::Provider
 {
     struct __declspec(empty_bases) PhoneCallOrigin : Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin,
         impl::require<PhoneCallOrigin, Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin2, Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin3>

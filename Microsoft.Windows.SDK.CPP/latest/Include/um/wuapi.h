@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -1403,18 +1411,22 @@ EXTERN_C const IID IID_IUpdateLockdown;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateLockdown * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateLockdown * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateLockdown * This);
         
+        DECLSPEC_XFGVIRT(IUpdateLockdown, LockDown)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *LockDown )( 
             __RPC__in IUpdateLockdown * This,
             /* [in] */ LONG flags);
@@ -1513,28 +1525,34 @@ EXTERN_C const IID IID_IStringCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IStringCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IStringCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IStringCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IStringCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IStringCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IStringCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1543,6 +1561,7 @@ EXTERN_C const IID IID_IStringCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IStringCollection * This,
             /* [annotation][in] */ 
@@ -1562,45 +1581,55 @@ EXTERN_C const IID IID_IStringCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IStringCollection, get_Item)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in IStringCollection * This,
             /* [in] */ LONG index,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IStringCollection, put_Item)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Item )( 
             __RPC__in IStringCollection * This,
             /* [in] */ LONG index,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IStringCollection, get__NewEnum)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in IStringCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IStringCollection, get_Count)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in IStringCollection * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IStringCollection, get_ReadOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
             __RPC__in IStringCollection * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IStringCollection, Add)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Add )( 
             __RPC__in IStringCollection * This,
             /* [in] */ __RPC__in BSTR value,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IStringCollection, Clear)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Clear )( 
             __RPC__in IStringCollection * This);
         
+        DECLSPEC_XFGVIRT(IStringCollection, Copy)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Copy )( 
             __RPC__in IStringCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IStringCollection, Insert)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Insert )( 
             __RPC__in IStringCollection * This,
             /* [in] */ LONG index,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IStringCollection, RemoveAt)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RemoveAt )( 
             __RPC__in IStringCollection * This,
             /* [in] */ LONG index);
@@ -1750,28 +1779,34 @@ EXTERN_C const IID IID_IWebProxy;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWebProxy * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWebProxy * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWebProxy * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWebProxy * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWebProxy * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWebProxy * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -1780,6 +1815,7 @@ EXTERN_C const IID IID_IWebProxy;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWebProxy * This,
             /* [annotation][in] */ 
@@ -1799,60 +1835,74 @@ EXTERN_C const IID IID_IWebProxy;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IWebProxy, get_Address)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Address )( 
             __RPC__in IWebProxy * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWebProxy, put_Address)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Address )( 
             __RPC__in IWebProxy * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IWebProxy, get_BypassList)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BypassList )( 
             __RPC__in IWebProxy * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWebProxy, put_BypassList)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_BypassList )( 
             __RPC__in IWebProxy * This,
             /* [in] */ __RPC__in_opt IStringCollection *value);
         
+        DECLSPEC_XFGVIRT(IWebProxy, get_BypassProxyOnLocal)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BypassProxyOnLocal )( 
             __RPC__in IWebProxy * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWebProxy, put_BypassProxyOnLocal)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_BypassProxyOnLocal )( 
             __RPC__in IWebProxy * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IWebProxy, get_ReadOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
             __RPC__in IWebProxy * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWebProxy, get_UserName)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UserName )( 
             __RPC__in IWebProxy * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWebProxy, put_UserName)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_UserName )( 
             __RPC__in IWebProxy * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IWebProxy, SetPassword)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetPassword )( 
             __RPC__in IWebProxy * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IWebProxy, PromptForCredentials)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *PromptForCredentials )( 
             __RPC__in IWebProxy * This,
             /* [unique][in] */ __RPC__in_opt IUnknown *parentWindow,
             /* [in] */ __RPC__in BSTR title);
         
+        DECLSPEC_XFGVIRT(IWebProxy, PromptForCredentialsFromHwnd)
         /* [helpstring][restricted][id] */ HRESULT ( STDMETHODCALLTYPE *PromptForCredentialsFromHwnd )( 
             __RPC__in IWebProxy * This,
             /* [unique][in] */ __RPC__in_opt HWND parentWindow,
             /* [in] */ __RPC__in BSTR title);
         
+        DECLSPEC_XFGVIRT(IWebProxy, get_AutoDetect)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoDetect )( 
             __RPC__in IWebProxy * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWebProxy, put_AutoDetect)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AutoDetect )( 
             __RPC__in IWebProxy * This,
             /* [in] */ VARIANT_BOOL value);
@@ -1976,28 +2026,34 @@ EXTERN_C const IID IID_ISystemInformation;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISystemInformation * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISystemInformation * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISystemInformation * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in ISystemInformation * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in ISystemInformation * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in ISystemInformation * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -2006,6 +2062,7 @@ EXTERN_C const IID IID_ISystemInformation;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISystemInformation * This,
             /* [annotation][in] */ 
@@ -2025,10 +2082,12 @@ EXTERN_C const IID IID_ISystemInformation;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(ISystemInformation, get_OemHardwareSupportLink)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_OemHardwareSupportLink )( 
             __RPC__in ISystemInformation * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(ISystemInformation, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in ISystemInformation * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
@@ -2114,28 +2173,34 @@ EXTERN_C const IID IID_IWindowsUpdateAgentInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWindowsUpdateAgentInfo * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWindowsUpdateAgentInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWindowsUpdateAgentInfo * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWindowsUpdateAgentInfo * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWindowsUpdateAgentInfo * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWindowsUpdateAgentInfo * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -2144,6 +2209,7 @@ EXTERN_C const IID IID_IWindowsUpdateAgentInfo;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWindowsUpdateAgentInfo * This,
             /* [annotation][in] */ 
@@ -2163,6 +2229,7 @@ EXTERN_C const IID IID_IWindowsUpdateAgentInfo;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IWindowsUpdateAgentInfo, GetInfo)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetInfo )( 
             __RPC__in IWindowsUpdateAgentInfo * This,
             /* [in] */ VARIANT varInfoIdentifier,
@@ -2248,28 +2315,34 @@ EXTERN_C const IID IID_IAutomaticUpdatesResults;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAutomaticUpdatesResults * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAutomaticUpdatesResults * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAutomaticUpdatesResults * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IAutomaticUpdatesResults * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IAutomaticUpdatesResults * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IAutomaticUpdatesResults * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -2278,6 +2351,7 @@ EXTERN_C const IID IID_IAutomaticUpdatesResults;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IAutomaticUpdatesResults * This,
             /* [annotation][in] */ 
@@ -2297,10 +2371,12 @@ EXTERN_C const IID IID_IAutomaticUpdatesResults;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesResults, get_LastSearchSuccessDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastSearchSuccessDate )( 
             __RPC__in IAutomaticUpdatesResults * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesResults, get_LastInstallationSuccessDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastInstallationSuccessDate )( 
             __RPC__in IAutomaticUpdatesResults * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
@@ -2410,28 +2486,34 @@ EXTERN_C const IID IID_IAutomaticUpdatesSettings;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAutomaticUpdatesSettings * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAutomaticUpdatesSettings * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -2440,6 +2522,7 @@ EXTERN_C const IID IID_IAutomaticUpdatesSettings;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IAutomaticUpdatesSettings * This,
             /* [annotation][in] */ 
@@ -2459,41 +2542,51 @@ EXTERN_C const IID IID_IAutomaticUpdatesSettings;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_NotificationLevel)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NotificationLevel )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [retval][out] */ __RPC__out AutomaticUpdatesNotificationLevel *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, put_NotificationLevel)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_NotificationLevel )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [in] */ AutomaticUpdatesNotificationLevel value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_ReadOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_Required)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Required )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_ScheduledInstallationDay)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScheduledInstallationDay )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [retval][out] */ __RPC__out AutomaticUpdatesScheduledInstallationDay *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, put_ScheduledInstallationDay)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ScheduledInstallationDay )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [in] */ AutomaticUpdatesScheduledInstallationDay value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_ScheduledInstallationTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScheduledInstallationTime )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, put_ScheduledInstallationTime)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ScheduledInstallationTime )( 
             __RPC__in IAutomaticUpdatesSettings * This,
             /* [in] */ LONG value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, Refresh)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Refresh )( 
             __RPC__in IAutomaticUpdatesSettings * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, Save)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Save )( 
             __RPC__in IAutomaticUpdatesSettings * This);
         
@@ -2609,28 +2702,34 @@ EXTERN_C const IID IID_IAutomaticUpdatesSettings2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAutomaticUpdatesSettings2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAutomaticUpdatesSettings2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -2639,6 +2738,7 @@ EXTERN_C const IID IID_IAutomaticUpdatesSettings2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IAutomaticUpdatesSettings2 * This,
             /* [annotation][in] */ 
@@ -2658,52 +2758,65 @@ EXTERN_C const IID IID_IAutomaticUpdatesSettings2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_NotificationLevel)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NotificationLevel )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [retval][out] */ __RPC__out AutomaticUpdatesNotificationLevel *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, put_NotificationLevel)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_NotificationLevel )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [in] */ AutomaticUpdatesNotificationLevel value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_ReadOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_Required)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Required )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_ScheduledInstallationDay)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScheduledInstallationDay )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [retval][out] */ __RPC__out AutomaticUpdatesScheduledInstallationDay *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, put_ScheduledInstallationDay)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ScheduledInstallationDay )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [in] */ AutomaticUpdatesScheduledInstallationDay value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_ScheduledInstallationTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScheduledInstallationTime )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, put_ScheduledInstallationTime)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ScheduledInstallationTime )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [in] */ LONG value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, Refresh)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Refresh )( 
             __RPC__in IAutomaticUpdatesSettings2 * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, Save)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Save )( 
             __RPC__in IAutomaticUpdatesSettings2 * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings2, get_IncludeRecommendedUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IncludeRecommendedUpdates )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings2, put_IncludeRecommendedUpdates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IncludeRecommendedUpdates )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings2, CheckPermission)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CheckPermission )( 
             __RPC__in IAutomaticUpdatesSettings2 * This,
             /* [in] */ AutomaticUpdatesUserType userType,
@@ -2833,28 +2946,34 @@ EXTERN_C const IID IID_IAutomaticUpdatesSettings3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAutomaticUpdatesSettings3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAutomaticUpdatesSettings3 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -2863,6 +2982,7 @@ EXTERN_C const IID IID_IAutomaticUpdatesSettings3;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IAutomaticUpdatesSettings3 * This,
             /* [annotation][in] */ 
@@ -2882,70 +3002,87 @@ EXTERN_C const IID IID_IAutomaticUpdatesSettings3;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_NotificationLevel)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NotificationLevel )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [retval][out] */ __RPC__out AutomaticUpdatesNotificationLevel *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, put_NotificationLevel)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_NotificationLevel )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ AutomaticUpdatesNotificationLevel value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_ReadOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_Required)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Required )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_ScheduledInstallationDay)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScheduledInstallationDay )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [retval][out] */ __RPC__out AutomaticUpdatesScheduledInstallationDay *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, put_ScheduledInstallationDay)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ScheduledInstallationDay )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ AutomaticUpdatesScheduledInstallationDay value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, get_ScheduledInstallationTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ScheduledInstallationTime )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, put_ScheduledInstallationTime)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ScheduledInstallationTime )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ LONG value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, Refresh)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Refresh )( 
             __RPC__in IAutomaticUpdatesSettings3 * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings, Save)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Save )( 
             __RPC__in IAutomaticUpdatesSettings3 * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings2, get_IncludeRecommendedUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IncludeRecommendedUpdates )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings2, put_IncludeRecommendedUpdates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IncludeRecommendedUpdates )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings2, CheckPermission)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CheckPermission )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ AutomaticUpdatesUserType userType,
             /* [in] */ AutomaticUpdatesPermissionType permissionType,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *userHasPermission);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings3, get_NonAdministratorsElevated)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_NonAdministratorsElevated )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings3, put_NonAdministratorsElevated)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_NonAdministratorsElevated )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings3, get_FeaturedUpdatesEnabled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_FeaturedUpdatesEnabled )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdatesSettings3, put_FeaturedUpdatesEnabled)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_FeaturedUpdatesEnabled )( 
             __RPC__in IAutomaticUpdatesSettings3 * This,
             /* [in] */ VARIANT_BOOL value);
@@ -3090,28 +3227,34 @@ EXTERN_C const IID IID_IAutomaticUpdates;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAutomaticUpdates * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAutomaticUpdates * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAutomaticUpdates * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IAutomaticUpdates * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IAutomaticUpdates * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IAutomaticUpdates * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -3120,6 +3263,7 @@ EXTERN_C const IID IID_IAutomaticUpdates;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IAutomaticUpdates * This,
             /* [annotation][in] */ 
@@ -3139,26 +3283,33 @@ EXTERN_C const IID IID_IAutomaticUpdates;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, DetectNow)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *DetectNow )( 
             __RPC__in IAutomaticUpdates * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, Pause)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Pause )( 
             __RPC__in IAutomaticUpdates * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, Resume)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Resume )( 
             __RPC__in IAutomaticUpdates * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, ShowSettingsDialog)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ShowSettingsDialog )( 
             __RPC__in IAutomaticUpdates * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, get_Settings)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Settings )( 
             __RPC__in IAutomaticUpdates * This,
             /* [retval][out] */ __RPC__deref_out_opt IAutomaticUpdatesSettings **retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, get_ServiceEnabled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceEnabled )( 
             __RPC__in IAutomaticUpdates * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, EnableService)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EnableService )( 
             __RPC__in IAutomaticUpdates * This);
         
@@ -3257,28 +3408,34 @@ EXTERN_C const IID IID_IAutomaticUpdates2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IAutomaticUpdates2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IAutomaticUpdates2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IAutomaticUpdates2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IAutomaticUpdates2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IAutomaticUpdates2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IAutomaticUpdates2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -3287,6 +3444,7 @@ EXTERN_C const IID IID_IAutomaticUpdates2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IAutomaticUpdates2 * This,
             /* [annotation][in] */ 
@@ -3306,29 +3464,37 @@ EXTERN_C const IID IID_IAutomaticUpdates2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, DetectNow)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *DetectNow )( 
             __RPC__in IAutomaticUpdates2 * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, Pause)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Pause )( 
             __RPC__in IAutomaticUpdates2 * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, Resume)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Resume )( 
             __RPC__in IAutomaticUpdates2 * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, ShowSettingsDialog)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ShowSettingsDialog )( 
             __RPC__in IAutomaticUpdates2 * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, get_Settings)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Settings )( 
             __RPC__in IAutomaticUpdates2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IAutomaticUpdatesSettings **retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, get_ServiceEnabled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceEnabled )( 
             __RPC__in IAutomaticUpdates2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates, EnableService)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EnableService )( 
             __RPC__in IAutomaticUpdates2 * This);
         
+        DECLSPEC_XFGVIRT(IAutomaticUpdates2, get_Results)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Results )( 
             __RPC__in IAutomaticUpdates2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IAutomaticUpdatesResults **retval);
@@ -3435,28 +3601,34 @@ EXTERN_C const IID IID_IUpdateIdentity;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateIdentity * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateIdentity * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateIdentity * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateIdentity * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateIdentity * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateIdentity * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -3465,6 +3637,7 @@ EXTERN_C const IID IID_IUpdateIdentity;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateIdentity * This,
             /* [annotation][in] */ 
@@ -3484,10 +3657,12 @@ EXTERN_C const IID IID_IUpdateIdentity;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateIdentity, get_RevisionNumber)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RevisionNumber )( 
             __RPC__in IUpdateIdentity * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateIdentity, get_UpdateID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UpdateID )( 
             __RPC__in IUpdateIdentity * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
@@ -3581,28 +3756,34 @@ EXTERN_C const IID IID_IImageInformation;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IImageInformation * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IImageInformation * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IImageInformation * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IImageInformation * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IImageInformation * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IImageInformation * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -3611,6 +3792,7 @@ EXTERN_C const IID IID_IImageInformation;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IImageInformation * This,
             /* [annotation][in] */ 
@@ -3630,18 +3812,22 @@ EXTERN_C const IID IID_IImageInformation;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IImageInformation, get_AltText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AltText )( 
             __RPC__in IImageInformation * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IImageInformation, get_Height)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Height )( 
             __RPC__in IImageInformation * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IImageInformation, get_Source)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Source )( 
             __RPC__in IImageInformation * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IImageInformation, get_Width)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Width )( 
             __RPC__in IImageInformation * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -3756,28 +3942,34 @@ EXTERN_C const IID IID_ICategory;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ICategory * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ICategory * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ICategory * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in ICategory * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in ICategory * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in ICategory * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -3786,6 +3978,7 @@ EXTERN_C const IID IID_ICategory;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ICategory * This,
             /* [annotation][in] */ 
@@ -3805,38 +3998,47 @@ EXTERN_C const IID IID_ICategory;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(ICategory, get_Name)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Name )( 
             __RPC__in ICategory * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(ICategory, get_CategoryID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CategoryID )( 
             __RPC__in ICategory * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(ICategory, get_Children)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Children )( 
             __RPC__in ICategory * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(ICategory, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in ICategory * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(ICategory, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in ICategory * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(ICategory, get_Order)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Order )( 
             __RPC__in ICategory * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(ICategory, get_Parent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
             __RPC__in ICategory * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategory **retval);
         
+        DECLSPEC_XFGVIRT(ICategory, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in ICategory * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(ICategory, get_Updates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Updates )( 
             __RPC__in ICategory * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
@@ -3949,28 +4151,34 @@ EXTERN_C const IID IID_ICategoryCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ICategoryCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ICategoryCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ICategoryCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in ICategoryCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in ICategoryCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in ICategoryCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -3979,6 +4187,7 @@ EXTERN_C const IID IID_ICategoryCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ICategoryCollection * This,
             /* [annotation][in] */ 
@@ -3998,15 +4207,18 @@ EXTERN_C const IID IID_ICategoryCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(ICategoryCollection, get_Item)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in ICategoryCollection * This,
             /* [in] */ LONG index,
             /* [retval][out] */ __RPC__deref_out_opt ICategory **retval);
         
+        DECLSPEC_XFGVIRT(ICategoryCollection, get__NewEnum)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in ICategoryCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(ICategoryCollection, get_Count)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in ICategoryCollection * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -4103,28 +4315,34 @@ EXTERN_C const IID IID_IInstallationBehavior;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInstallationBehavior * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInstallationBehavior * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInstallationBehavior * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IInstallationBehavior * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IInstallationBehavior * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IInstallationBehavior * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -4133,6 +4351,7 @@ EXTERN_C const IID IID_IInstallationBehavior;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IInstallationBehavior * This,
             /* [annotation][in] */ 
@@ -4152,18 +4371,22 @@ EXTERN_C const IID IID_IInstallationBehavior;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IInstallationBehavior, get_CanRequestUserInput)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequestUserInput )( 
             __RPC__in IInstallationBehavior * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationBehavior, get_Impact)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Impact )( 
             __RPC__in IInstallationBehavior * This,
             /* [retval][out] */ __RPC__out InstallationImpact *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationBehavior, get_RebootBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootBehavior )( 
             __RPC__in IInstallationBehavior * This,
             /* [retval][out] */ __RPC__out InstallationRebootBehavior *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationBehavior, get_RequiresNetworkConnectivity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RequiresNetworkConnectivity )( 
             __RPC__in IInstallationBehavior * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
@@ -4254,28 +4477,34 @@ EXTERN_C const IID IID_IUpdateDownloadContent;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateDownloadContent * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateDownloadContent * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateDownloadContent * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateDownloadContent * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateDownloadContent * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateDownloadContent * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -4284,6 +4513,7 @@ EXTERN_C const IID IID_IUpdateDownloadContent;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateDownloadContent * This,
             /* [annotation][in] */ 
@@ -4303,6 +4533,7 @@ EXTERN_C const IID IID_IUpdateDownloadContent;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloadContent, get_DownloadUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadUrl )( 
             __RPC__in IUpdateDownloadContent * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
@@ -4384,28 +4615,34 @@ EXTERN_C const IID IID_IUpdateDownloadContent2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateDownloadContent2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateDownloadContent2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateDownloadContent2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateDownloadContent2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateDownloadContent2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateDownloadContent2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -4414,6 +4651,7 @@ EXTERN_C const IID IID_IUpdateDownloadContent2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateDownloadContent2 * This,
             /* [annotation][in] */ 
@@ -4433,10 +4671,12 @@ EXTERN_C const IID IID_IUpdateDownloadContent2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloadContent, get_DownloadUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadUrl )( 
             __RPC__in IUpdateDownloadContent2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloadContent2, get_IsDeltaCompressedContent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDeltaCompressedContent )( 
             __RPC__in IUpdateDownloadContent2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
@@ -4529,28 +4769,34 @@ EXTERN_C const IID IID_IUpdateDownloadContentCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateDownloadContentCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateDownloadContentCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateDownloadContentCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateDownloadContentCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateDownloadContentCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateDownloadContentCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -4559,6 +4805,7 @@ EXTERN_C const IID IID_IUpdateDownloadContentCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateDownloadContentCollection * This,
             /* [annotation][in] */ 
@@ -4578,15 +4825,18 @@ EXTERN_C const IID IID_IUpdateDownloadContentCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloadContentCollection, get_Item)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in IUpdateDownloadContentCollection * This,
             /* [in] */ LONG index,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContent **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloadContentCollection, get__NewEnum)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in IUpdateDownloadContentCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloadContentCollection, get_Count)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in IUpdateDownloadContentCollection * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -4806,28 +5056,34 @@ EXTERN_C const IID IID_IUpdate;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdate * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdate * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdate * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdate * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdate * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdate * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -4836,6 +5092,7 @@ EXTERN_C const IID IID_IUpdate;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdate * This,
             /* [annotation][in] */ 
@@ -4855,182 +5112,227 @@ EXTERN_C const IID IID_IUpdate;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IUpdate * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IUpdate * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IUpdate * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
@@ -5265,28 +5567,34 @@ EXTERN_C const IID IID_IWindowsDriverUpdate;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWindowsDriverUpdate * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWindowsDriverUpdate * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -5295,6 +5603,7 @@ EXTERN_C const IID IID_IWindowsDriverUpdate;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWindowsDriverUpdate * This,
             /* [annotation][in] */ 
@@ -5314,214 +5623,267 @@ EXTERN_C const IID IID_IWindowsDriverUpdate;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IWindowsDriverUpdate * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverClass)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverClass )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverHardwareID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverHardwareID )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverManufacturer)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverManufacturer )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverModel)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverModel )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverProvider)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverProvider )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverVerDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverVerDate )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceProblemNumber)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceProblemNumber )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceStatus)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceStatus )( 
             __RPC__in IWindowsDriverUpdate * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -5769,28 +6131,34 @@ EXTERN_C const IID IID_IUpdate2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdate2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdate2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdate2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdate2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdate2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdate2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -5799,6 +6167,7 @@ EXTERN_C const IID IID_IUpdate2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdate2 * This,
             /* [annotation][in] */ 
@@ -5818,198 +6187,247 @@ EXTERN_C const IID IID_IUpdate2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IUpdate2 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IUpdate2 * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IUpdate2 * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_IsPresent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsPresent )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_CveIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CveIDs )( 
             __RPC__in IUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, CopyToCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyToCache )( 
             __RPC__in IUpdate2 * This,
             /* [in] */ __RPC__in_opt IStringCollection *pFiles);
@@ -6236,28 +6654,34 @@ EXTERN_C const IID IID_IUpdate3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdate3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdate3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdate3 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdate3 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdate3 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdate3 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -6266,6 +6690,7 @@ EXTERN_C const IID IID_IUpdate3;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdate3 * This,
             /* [annotation][in] */ 
@@ -6285,202 +6710,252 @@ EXTERN_C const IID IID_IUpdate3;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IUpdate3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IUpdate3 * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IUpdate3 * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_IsPresent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsPresent )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_CveIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CveIDs )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, CopyToCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyToCache )( 
             __RPC__in IUpdate3 * This,
             /* [in] */ __RPC__in_opt IStringCollection *pFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate3, get_BrowseOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BrowseOnly )( 
             __RPC__in IUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
@@ -6711,28 +7186,34 @@ EXTERN_C const IID IID_IUpdate4;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdate4 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdate4 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdate4 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdate4 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdate4 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdate4 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -6741,6 +7222,7 @@ EXTERN_C const IID IID_IUpdate4;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdate4 * This,
             /* [annotation][in] */ 
@@ -6760,206 +7242,257 @@ EXTERN_C const IID IID_IUpdate4;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IUpdate4 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IUpdate4 * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IUpdate4 * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_IsPresent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsPresent )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_CveIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CveIDs )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, CopyToCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyToCache )( 
             __RPC__in IUpdate4 * This,
             /* [in] */ __RPC__in_opt IStringCollection *pFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate3, get_BrowseOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BrowseOnly )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate4, get_PerUser)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PerUser )( 
             __RPC__in IUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
@@ -7197,28 +7730,34 @@ EXTERN_C const IID IID_IUpdate5;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdate5 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdate5 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdate5 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdate5 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdate5 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdate5 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -7227,6 +7766,7 @@ EXTERN_C const IID IID_IUpdate5;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdate5 * This,
             /* [annotation][in] */ 
@@ -7246,214 +7786,267 @@ EXTERN_C const IID IID_IUpdate5;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IUpdate5 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IUpdate5 * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IUpdate5 * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_IsPresent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsPresent )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, get_CveIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CveIDs )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate2, CopyToCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyToCache )( 
             __RPC__in IUpdate5 * This,
             /* [in] */ __RPC__in_opt IStringCollection *pFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate3, get_BrowseOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BrowseOnly )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate4, get_PerUser)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PerUser )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate5, get_AutoSelection)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelection )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out AutoSelectionMode *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate5, get_AutoDownload)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoDownload )( 
             __RPC__in IUpdate5 * This,
             /* [retval][out] */ __RPC__out AutoDownloadMode *retval);
@@ -7704,28 +8297,34 @@ EXTERN_C const IID IID_IWindowsDriverUpdate2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWindowsDriverUpdate2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWindowsDriverUpdate2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -7734,6 +8333,7 @@ EXTERN_C const IID IID_IWindowsDriverUpdate2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWindowsDriverUpdate2 * This,
             /* [annotation][in] */ 
@@ -7753,230 +8353,287 @@ EXTERN_C const IID IID_IWindowsDriverUpdate2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IWindowsDriverUpdate2 * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverClass)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverClass )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverHardwareID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverHardwareID )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverManufacturer)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverManufacturer )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverModel)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverModel )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverProvider)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverProvider )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverVerDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverVerDate )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceProblemNumber)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceProblemNumber )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceStatus)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceStatus )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_IsPresent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsPresent )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_CveIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CveIDs )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, CopyToCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyToCache )( 
             __RPC__in IWindowsDriverUpdate2 * This,
             /* [in] */ __RPC__in_opt IStringCollection *pFiles);
@@ -8228,28 +8885,34 @@ EXTERN_C const IID IID_IWindowsDriverUpdate3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWindowsDriverUpdate3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWindowsDriverUpdate3 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -8258,6 +8921,7 @@ EXTERN_C const IID IID_IWindowsDriverUpdate3;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWindowsDriverUpdate3 * This,
             /* [annotation][in] */ 
@@ -8277,234 +8941,292 @@ EXTERN_C const IID IID_IWindowsDriverUpdate3;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IWindowsDriverUpdate3 * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverClass)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverClass )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverHardwareID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverHardwareID )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverManufacturer)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverManufacturer )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverModel)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverModel )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverProvider)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverProvider )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverVerDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverVerDate )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceProblemNumber)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceProblemNumber )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceStatus)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceStatus )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_IsPresent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsPresent )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_CveIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CveIDs )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, CopyToCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyToCache )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [in] */ __RPC__in_opt IStringCollection *pFiles);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate3, get_BrowseOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BrowseOnly )( 
             __RPC__in IWindowsDriverUpdate3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
@@ -8781,28 +9503,34 @@ EXTERN_C const IID IID_IWindowsDriverUpdateEntry;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWindowsDriverUpdateEntry * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWindowsDriverUpdateEntry * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -8811,6 +9539,7 @@ EXTERN_C const IID IID_IWindowsDriverUpdateEntry;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWindowsDriverUpdateEntry * This,
             /* [annotation][in] */ 
@@ -8830,34 +9559,42 @@ EXTERN_C const IID IID_IWindowsDriverUpdateEntry;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntry, get_DriverClass)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverClass )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntry, get_DriverHardwareID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverHardwareID )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntry, get_DriverManufacturer)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverManufacturer )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntry, get_DriverModel)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverModel )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntry, get_DriverProvider)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverProvider )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntry, get_DriverVerDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverVerDate )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntry, get_DeviceProblemNumber)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceProblemNumber )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntry, get_DeviceStatus)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceStatus )( 
             __RPC__in IWindowsDriverUpdateEntry * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -8967,28 +9704,34 @@ EXTERN_C const IID IID_IWindowsDriverUpdateEntryCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWindowsDriverUpdateEntryCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWindowsDriverUpdateEntryCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWindowsDriverUpdateEntryCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWindowsDriverUpdateEntryCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWindowsDriverUpdateEntryCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWindowsDriverUpdateEntryCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -8997,6 +9740,7 @@ EXTERN_C const IID IID_IWindowsDriverUpdateEntryCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWindowsDriverUpdateEntryCollection * This,
             /* [annotation][in] */ 
@@ -9016,15 +9760,18 @@ EXTERN_C const IID IID_IWindowsDriverUpdateEntryCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntryCollection, get_Item)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in IWindowsDriverUpdateEntryCollection * This,
             /* [in] */ LONG index,
             /* [retval][out] */ __RPC__deref_out_opt IWindowsDriverUpdateEntry **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntryCollection, get__NewEnum)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in IWindowsDriverUpdateEntryCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdateEntryCollection, get_Count)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in IWindowsDriverUpdateEntryCollection * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -9115,28 +9862,34 @@ EXTERN_C const IID IID_IWindowsDriverUpdate4;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWindowsDriverUpdate4 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWindowsDriverUpdate4 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -9145,6 +9898,7 @@ EXTERN_C const IID IID_IWindowsDriverUpdate4;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWindowsDriverUpdate4 * This,
             /* [annotation][in] */ 
@@ -9164,242 +9918,302 @@ EXTERN_C const IID IID_IWindowsDriverUpdate4;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IWindowsDriverUpdate4 * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverClass)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverClass )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverHardwareID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverHardwareID )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverManufacturer)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverManufacturer )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverModel)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverModel )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverProvider)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverProvider )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverVerDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverVerDate )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceProblemNumber)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceProblemNumber )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceStatus)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceStatus )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_IsPresent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsPresent )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_CveIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CveIDs )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, CopyToCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyToCache )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [in] */ __RPC__in_opt IStringCollection *pFiles);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate3, get_BrowseOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BrowseOnly )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate4, get_WindowsDriverUpdateEntries)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WindowsDriverUpdateEntries )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IWindowsDriverUpdateEntryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate4, get_PerUser)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PerUser )( 
             __RPC__in IWindowsDriverUpdate4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
@@ -9665,28 +10479,34 @@ EXTERN_C const IID IID_IWindowsDriverUpdate5;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWindowsDriverUpdate5 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWindowsDriverUpdate5 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -9695,6 +10515,7 @@ EXTERN_C const IID IID_IWindowsDriverUpdate5;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IWindowsDriverUpdate5 * This,
             /* [annotation][in] */ 
@@ -9714,250 +10535,312 @@ EXTERN_C const IID IID_IWindowsDriverUpdate5;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_AutoSelectOnWebSites)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelectOnWebSites )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_BundledUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BundledUpdates )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_CanRequireSource)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRequireSource )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Deadline)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Deadline )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentAvailable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentAvailable )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeltaCompressedContentPreferred)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeltaCompressedContentPreferred )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaAccepted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaAccepted )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_EulaText)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_EulaText )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_HandlerID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HandlerID )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Identity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Identity )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Image)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Image )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IImageInformation **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_InstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_InstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsBeta)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBeta )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDownloaded )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsHidden)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsHidden )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, put_IsHidden)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsHidden )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsInstalled)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsInstalled )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsMandatory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsMandatory )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_IsUninstallable)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsUninstallable )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Languages)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Languages )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_LastDeploymentChangeTime)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_LastDeploymentChangeTime )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MaxDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MaxDownloadSize )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MinDownloadSize)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MinDownloadSize )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MoreInfoUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MoreInfoUrls )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_MsrcSeverity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_MsrcSeverity )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedCpuSpeed)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedCpuSpeed )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedHardDiskSpace)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedHardDiskSpace )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_RecommendedMemory)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RecommendedMemory )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_ReleaseNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReleaseNotes )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SecurityBulletinIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SecurityBulletinIDs )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupersededUpdateIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupersededUpdateIDs )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_Type)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Type )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out UpdateType *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationBehavior)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationBehavior )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationBehavior **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_KBArticleIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_KBArticleIDs )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, AcceptEula)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AcceptEula )( 
             __RPC__in IWindowsDriverUpdate5 * This);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DeploymentAction)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeploymentAction )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out DeploymentAction *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, CopyFromCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyFromCache )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [ref][in] */ __RPC__in BSTR path,
             /* [in] */ VARIANT_BOOL toExtractCabFiles);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadPriority )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdate, get_DownloadContents)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DownloadContents )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadContentCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverClass)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverClass )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverHardwareID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverHardwareID )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverManufacturer)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverManufacturer )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverModel)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverModel )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverProvider)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverProvider )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DriverVerDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DriverVerDate )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceProblemNumber)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceProblemNumber )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate, get_DeviceStatus)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_DeviceStatus )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_IsPresent)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsPresent )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, get_CveIDs)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CveIDs )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate2, CopyToCache)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CopyToCache )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [in] */ __RPC__in_opt IStringCollection *pFiles);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate3, get_BrowseOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_BrowseOnly )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate4, get_WindowsDriverUpdateEntries)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WindowsDriverUpdateEntries )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__deref_out_opt IWindowsDriverUpdateEntryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate4, get_PerUser)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PerUser )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate5, get_AutoSelection)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSelection )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out AutoSelectionMode *retval);
         
+        DECLSPEC_XFGVIRT(IWindowsDriverUpdate5, get_AutoDownload)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AutoDownload )( 
             __RPC__in IWindowsDriverUpdate5 * This,
             /* [retval][out] */ __RPC__out AutoDownloadMode *retval);
@@ -10257,28 +11140,34 @@ EXTERN_C const IID IID_IUpdateCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -10287,6 +11176,7 @@ EXTERN_C const IID IID_IUpdateCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateCollection * This,
             /* [annotation][in] */ 
@@ -10306,45 +11196,55 @@ EXTERN_C const IID IID_IUpdateCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, get_Item)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in IUpdateCollection * This,
             /* [in] */ LONG index,
             /* [retval][out] */ __RPC__deref_out_opt IUpdate **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, put_Item)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Item )( 
             __RPC__in IUpdateCollection * This,
             /* [in] */ LONG index,
             /* [in] */ __RPC__in_opt IUpdate *value);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, get__NewEnum)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in IUpdateCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, get_Count)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in IUpdateCollection * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, get_ReadOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
             __RPC__in IUpdateCollection * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, Add)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Add )( 
             __RPC__in IUpdateCollection * This,
             /* [in] */ __RPC__in_opt IUpdate *value,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, Clear)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Clear )( 
             __RPC__in IUpdateCollection * This);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, Copy)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Copy )( 
             __RPC__in IUpdateCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, Insert)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Insert )( 
             __RPC__in IUpdateCollection * This,
             /* [in] */ LONG index,
             /* [in] */ __RPC__in_opt IUpdate *value);
         
+        DECLSPEC_XFGVIRT(IUpdateCollection, RemoveAt)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RemoveAt )( 
             __RPC__in IUpdateCollection * This,
             /* [in] */ LONG index);
@@ -10459,28 +11359,34 @@ EXTERN_C const IID IID_IUpdateException;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateException * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateException * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateException * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateException * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateException * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateException * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -10489,6 +11395,7 @@ EXTERN_C const IID IID_IUpdateException;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateException * This,
             /* [annotation][in] */ 
@@ -10508,14 +11415,17 @@ EXTERN_C const IID IID_IUpdateException;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateException, get_Message)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Message )( 
             __RPC__in IUpdateException * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateException, get_HResult)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HResult )( 
             __RPC__in IUpdateException * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateException, get_Context)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Context )( 
             __RPC__in IUpdateException * This,
             /* [retval][out] */ __RPC__out UpdateExceptionContext *retval);
@@ -10603,28 +11513,34 @@ EXTERN_C const IID IID_IInvalidProductLicenseException;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInvalidProductLicenseException * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInvalidProductLicenseException * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInvalidProductLicenseException * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IInvalidProductLicenseException * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IInvalidProductLicenseException * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IInvalidProductLicenseException * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -10633,6 +11549,7 @@ EXTERN_C const IID IID_IInvalidProductLicenseException;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IInvalidProductLicenseException * This,
             /* [annotation][in] */ 
@@ -10652,18 +11569,22 @@ EXTERN_C const IID IID_IInvalidProductLicenseException;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateException, get_Message)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Message )( 
             __RPC__in IInvalidProductLicenseException * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateException, get_HResult)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HResult )( 
             __RPC__in IInvalidProductLicenseException * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateException, get_Context)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Context )( 
             __RPC__in IInvalidProductLicenseException * This,
             /* [retval][out] */ __RPC__out UpdateExceptionContext *retval);
         
+        DECLSPEC_XFGVIRT(IInvalidProductLicenseException, get_Product)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Product )( 
             __RPC__in IInvalidProductLicenseException * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
@@ -10762,28 +11683,34 @@ EXTERN_C const IID IID_IUpdateExceptionCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateExceptionCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateExceptionCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateExceptionCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateExceptionCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateExceptionCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateExceptionCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -10792,6 +11719,7 @@ EXTERN_C const IID IID_IUpdateExceptionCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateExceptionCollection * This,
             /* [annotation][in] */ 
@@ -10811,15 +11739,18 @@ EXTERN_C const IID IID_IUpdateExceptionCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateExceptionCollection, get_Item)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in IUpdateExceptionCollection * This,
             /* [in] */ LONG index,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateException **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateExceptionCollection, get__NewEnum)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in IUpdateExceptionCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateExceptionCollection, get_Count)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in IUpdateExceptionCollection * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -10916,28 +11847,34 @@ EXTERN_C const IID IID_ISearchResult;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISearchResult * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISearchResult * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISearchResult * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in ISearchResult * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in ISearchResult * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in ISearchResult * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -10946,6 +11883,7 @@ EXTERN_C const IID IID_ISearchResult;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISearchResult * This,
             /* [annotation][in] */ 
@@ -10965,18 +11903,22 @@ EXTERN_C const IID IID_ISearchResult;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(ISearchResult, get_ResultCode)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ResultCode )( 
             __RPC__in ISearchResult * This,
             /* [retval][out] */ __RPC__out OperationResultCode *retval);
         
+        DECLSPEC_XFGVIRT(ISearchResult, get_RootCategories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RootCategories )( 
             __RPC__in ISearchResult * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
         
+        DECLSPEC_XFGVIRT(ISearchResult, get_Updates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Updates )( 
             __RPC__in ISearchResult * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(ISearchResult, get_Warnings)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Warnings )( 
             __RPC__in ISearchResult * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateExceptionCollection **retval);
@@ -11074,28 +12016,34 @@ EXTERN_C const IID IID_ISearchJob;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISearchJob * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISearchJob * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISearchJob * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in ISearchJob * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in ISearchJob * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in ISearchJob * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -11104,6 +12052,7 @@ EXTERN_C const IID IID_ISearchJob;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISearchJob * This,
             /* [annotation][in] */ 
@@ -11123,17 +12072,21 @@ EXTERN_C const IID IID_ISearchJob;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(ISearchJob, get_AsyncState)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AsyncState )( 
             __RPC__in ISearchJob * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(ISearchJob, get_IsCompleted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsCompleted )( 
             __RPC__in ISearchJob * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(ISearchJob, CleanUp)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CleanUp )( 
             __RPC__in ISearchJob * This);
         
+        DECLSPEC_XFGVIRT(ISearchJob, RequestAbort)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RequestAbort )( 
             __RPC__in ISearchJob * This);
         
@@ -11220,28 +12173,34 @@ EXTERN_C const IID IID_ISearchCompletedCallbackArgs;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISearchCompletedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISearchCompletedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISearchCompletedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in ISearchCompletedCallbackArgs * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in ISearchCompletedCallbackArgs * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in ISearchCompletedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -11250,6 +12209,7 @@ EXTERN_C const IID IID_ISearchCompletedCallbackArgs;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ISearchCompletedCallbackArgs * This,
             /* [annotation][in] */ 
@@ -11344,18 +12304,22 @@ EXTERN_C const IID IID_ISearchCompletedCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ISearchCompletedCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ISearchCompletedCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ISearchCompletedCallback * This);
         
+        DECLSPEC_XFGVIRT(ISearchCompletedCallback, Invoke)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             __RPC__in ISearchCompletedCallback * This,
             /* [in] */ __RPC__in_opt ISearchJob *searchJob,
@@ -11464,28 +12428,34 @@ EXTERN_C const IID IID_IUpdateHistoryEntry;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateHistoryEntry * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateHistoryEntry * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -11494,6 +12464,7 @@ EXTERN_C const IID IID_IUpdateHistoryEntry;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateHistoryEntry * This,
             /* [annotation][in] */ 
@@ -11513,58 +12484,72 @@ EXTERN_C const IID IID_IUpdateHistoryEntry;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_Operation)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Operation )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__out enum tagUpdateOperation *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_ResultCode)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ResultCode )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__out OperationResultCode *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_HResult)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HResult )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_Date)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Date )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_UpdateIdentity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UpdateIdentity )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_UnmappedResultCode)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UnmappedResultCode )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_ServerSelection)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServerSelection )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__out ServerSelection *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_ServiceID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceID )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IUpdateHistoryEntry * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
@@ -11685,28 +12670,34 @@ EXTERN_C const IID IID_IUpdateHistoryEntry2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateHistoryEntry2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateHistoryEntry2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -11715,6 +12706,7 @@ EXTERN_C const IID IID_IUpdateHistoryEntry2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateHistoryEntry2 * This,
             /* [annotation][in] */ 
@@ -11734,62 +12726,77 @@ EXTERN_C const IID IID_IUpdateHistoryEntry2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_Operation)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Operation )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__out enum tagUpdateOperation *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_ResultCode)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ResultCode )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__out OperationResultCode *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_HResult)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HResult )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_Date)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Date )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_UpdateIdentity)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UpdateIdentity )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateIdentity **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_Title)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_Description)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Description )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_UnmappedResultCode)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UnmappedResultCode )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_ServerSelection)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServerSelection )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__out ServerSelection *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_ServiceID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceID )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_UninstallationSteps)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationSteps )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_UninstallationNotes)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UninstallationNotes )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry, get_SupportUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SupportUrl )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntry2, get_Categories)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Categories )( 
             __RPC__in IUpdateHistoryEntry2 * This,
             /* [retval][out] */ __RPC__deref_out_opt ICategoryCollection **retval);
@@ -11921,28 +12928,34 @@ EXTERN_C const IID IID_IUpdateHistoryEntryCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateHistoryEntryCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateHistoryEntryCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateHistoryEntryCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateHistoryEntryCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateHistoryEntryCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateHistoryEntryCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -11951,6 +12964,7 @@ EXTERN_C const IID IID_IUpdateHistoryEntryCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateHistoryEntryCollection * This,
             /* [annotation][in] */ 
@@ -11970,15 +12984,18 @@ EXTERN_C const IID IID_IUpdateHistoryEntryCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntryCollection, get_Item)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in IUpdateHistoryEntryCollection * This,
             /* [in] */ LONG index,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateHistoryEntry **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntryCollection, get__NewEnum)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in IUpdateHistoryEntryCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateHistoryEntryCollection, get_Count)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in IUpdateHistoryEntryCollection * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -12125,28 +13142,34 @@ EXTERN_C const IID IID_IUpdateSearcher;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateSearcher * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateSearcher * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateSearcher * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -12155,6 +13178,7 @@ EXTERN_C const IID IID_IUpdateSearcher;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateSearcher * This,
             /* [annotation][in] */ 
@@ -12174,38 +13198,47 @@ EXTERN_C const IID IID_IUpdateSearcher;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_CanAutomaticallyUpgradeService)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanAutomaticallyUpgradeService )( 
             __RPC__in IUpdateSearcher * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_CanAutomaticallyUpgradeService)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_CanAutomaticallyUpgradeService )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateSearcher * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_IncludePotentiallySupersededUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IncludePotentiallySupersededUpdates )( 
             __RPC__in IUpdateSearcher * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_IncludePotentiallySupersededUpdates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IncludePotentiallySupersededUpdates )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_ServerSelection)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServerSelection )( 
             __RPC__in IUpdateSearcher * This,
             /* [retval][out] */ __RPC__out ServerSelection *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_ServerSelection)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ServerSelection )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ ServerSelection value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, BeginSearch)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginSearch )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ __RPC__in BSTR criteria,
@@ -12213,43 +13246,52 @@ EXTERN_C const IID IID_IUpdateSearcher;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt ISearchJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, EndSearch)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndSearch )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ __RPC__in_opt ISearchJob *searchJob,
             /* [retval][out] */ __RPC__deref_out_opt ISearchResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, EscapeString)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EscapeString )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ __RPC__in BSTR unescaped,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, QueryHistory)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *QueryHistory )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ LONG startIndex,
             /* [in] */ LONG count,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateHistoryEntryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, Search)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Search )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ __RPC__in BSTR criteria,
             /* [retval][out] */ __RPC__deref_out_opt ISearchResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_Online)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Online )( 
             __RPC__in IUpdateSearcher * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_Online)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Online )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, GetTotalHistoryCount)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetTotalHistoryCount )( 
             __RPC__in IUpdateSearcher * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_ServiceID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceID )( 
             __RPC__in IUpdateSearcher * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_ServiceID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ServiceID )( 
             __RPC__in IUpdateSearcher * This,
             /* [in] */ __RPC__in BSTR value);
@@ -12385,28 +13427,34 @@ EXTERN_C const IID IID_IUpdateSearcher2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateSearcher2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateSearcher2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -12415,6 +13463,7 @@ EXTERN_C const IID IID_IUpdateSearcher2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateSearcher2 * This,
             /* [annotation][in] */ 
@@ -12434,38 +13483,47 @@ EXTERN_C const IID IID_IUpdateSearcher2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_CanAutomaticallyUpgradeService)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanAutomaticallyUpgradeService )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_CanAutomaticallyUpgradeService)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_CanAutomaticallyUpgradeService )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_IncludePotentiallySupersededUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IncludePotentiallySupersededUpdates )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_IncludePotentiallySupersededUpdates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IncludePotentiallySupersededUpdates )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_ServerSelection)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServerSelection )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [retval][out] */ __RPC__out ServerSelection *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_ServerSelection)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ServerSelection )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ ServerSelection value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, BeginSearch)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginSearch )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ __RPC__in BSTR criteria,
@@ -12473,51 +13531,62 @@ EXTERN_C const IID IID_IUpdateSearcher2;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt ISearchJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, EndSearch)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndSearch )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ __RPC__in_opt ISearchJob *searchJob,
             /* [retval][out] */ __RPC__deref_out_opt ISearchResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, EscapeString)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EscapeString )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ __RPC__in BSTR unescaped,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, QueryHistory)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *QueryHistory )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ LONG startIndex,
             /* [in] */ LONG count,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateHistoryEntryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, Search)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Search )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ __RPC__in BSTR criteria,
             /* [retval][out] */ __RPC__deref_out_opt ISearchResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_Online)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Online )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_Online)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Online )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, GetTotalHistoryCount)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetTotalHistoryCount )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_ServiceID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceID )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_ServiceID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ServiceID )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher2, get_IgnoreDownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IgnoreDownloadPriority )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher2, put_IgnoreDownloadPriority)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IgnoreDownloadPriority )( 
             __RPC__in IUpdateSearcher2 * This,
             /* [in] */ VARIANT_BOOL value);
@@ -12660,28 +13729,34 @@ EXTERN_C const IID IID_IUpdateSearcher3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateSearcher3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateSearcher3 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -12690,6 +13765,7 @@ EXTERN_C const IID IID_IUpdateSearcher3;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateSearcher3 * This,
             /* [annotation][in] */ 
@@ -12709,38 +13785,47 @@ EXTERN_C const IID IID_IUpdateSearcher3;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_CanAutomaticallyUpgradeService)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanAutomaticallyUpgradeService )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_CanAutomaticallyUpgradeService)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_CanAutomaticallyUpgradeService )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_IncludePotentiallySupersededUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IncludePotentiallySupersededUpdates )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_IncludePotentiallySupersededUpdates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IncludePotentiallySupersededUpdates )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_ServerSelection)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServerSelection )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [retval][out] */ __RPC__out ServerSelection *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_ServerSelection)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ServerSelection )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ ServerSelection value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, BeginSearch)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginSearch )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ __RPC__in BSTR criteria,
@@ -12748,59 +13833,72 @@ EXTERN_C const IID IID_IUpdateSearcher3;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt ISearchJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, EndSearch)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndSearch )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ __RPC__in_opt ISearchJob *searchJob,
             /* [retval][out] */ __RPC__deref_out_opt ISearchResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, EscapeString)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EscapeString )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ __RPC__in BSTR unescaped,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, QueryHistory)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *QueryHistory )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ LONG startIndex,
             /* [in] */ LONG count,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateHistoryEntryCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, Search)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Search )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ __RPC__in BSTR criteria,
             /* [retval][out] */ __RPC__deref_out_opt ISearchResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_Online)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Online )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_Online)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Online )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, GetTotalHistoryCount)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetTotalHistoryCount )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, get_ServiceID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceID )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher, put_ServiceID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ServiceID )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher2, get_IgnoreDownloadPriority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IgnoreDownloadPriority )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher2, put_IgnoreDownloadPriority)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IgnoreDownloadPriority )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher3, get_SearchScope)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SearchScope )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [retval][out] */ __RPC__out SearchScope *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSearcher3, put_SearchScope)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_SearchScope )( 
             __RPC__in IUpdateSearcher3 * This,
             /* [in] */ SearchScope value);
@@ -12950,28 +14048,34 @@ EXTERN_C const IID IID_IUpdateDownloadResult;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateDownloadResult * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateDownloadResult * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateDownloadResult * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateDownloadResult * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateDownloadResult * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateDownloadResult * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -12980,6 +14084,7 @@ EXTERN_C const IID IID_IUpdateDownloadResult;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateDownloadResult * This,
             /* [annotation][in] */ 
@@ -12999,10 +14104,12 @@ EXTERN_C const IID IID_IUpdateDownloadResult;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloadResult, get_HResult)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HResult )( 
             __RPC__in IUpdateDownloadResult * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloadResult, get_ResultCode)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ResultCode )( 
             __RPC__in IUpdateDownloadResult * This,
             /* [retval][out] */ __RPC__out OperationResultCode *retval);
@@ -13094,28 +14201,34 @@ EXTERN_C const IID IID_IDownloadResult;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDownloadResult * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDownloadResult * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDownloadResult * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IDownloadResult * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IDownloadResult * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IDownloadResult * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -13124,6 +14237,7 @@ EXTERN_C const IID IID_IDownloadResult;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDownloadResult * This,
             /* [annotation][in] */ 
@@ -13143,14 +14257,17 @@ EXTERN_C const IID IID_IDownloadResult;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IDownloadResult, get_HResult)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HResult )( 
             __RPC__in IDownloadResult * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadResult, get_ResultCode)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ResultCode )( 
             __RPC__in IDownloadResult * This,
             /* [retval][out] */ __RPC__out OperationResultCode *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadResult, GetUpdateResult)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetUpdateResult )( 
             __RPC__in IDownloadResult * This,
             /* [in] */ LONG updateIndex,
@@ -13264,28 +14381,34 @@ EXTERN_C const IID IID_IDownloadProgress;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDownloadProgress * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDownloadProgress * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDownloadProgress * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IDownloadProgress * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IDownloadProgress * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IDownloadProgress * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -13294,6 +14417,7 @@ EXTERN_C const IID IID_IDownloadProgress;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDownloadProgress * This,
             /* [annotation][in] */ 
@@ -13313,39 +14437,48 @@ EXTERN_C const IID IID_IDownloadProgress;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IDownloadProgress, get_CurrentUpdateBytesDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentUpdateBytesDownloaded )( 
             __RPC__in IDownloadProgress * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadProgress, get_CurrentUpdateBytesToDownload)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentUpdateBytesToDownload )( 
             __RPC__in IDownloadProgress * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadProgress, get_CurrentUpdateIndex)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentUpdateIndex )( 
             __RPC__in IDownloadProgress * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadProgress, get_PercentComplete)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PercentComplete )( 
             __RPC__in IDownloadProgress * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadProgress, get_TotalBytesDownloaded)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TotalBytesDownloaded )( 
             __RPC__in IDownloadProgress * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadProgress, get_TotalBytesToDownload)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_TotalBytesToDownload )( 
             __RPC__in IDownloadProgress * This,
             /* [retval][out] */ __RPC__out DECIMAL *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadProgress, GetUpdateResult)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetUpdateResult )( 
             __RPC__in IDownloadProgress * This,
             /* [in] */ LONG updateIndex,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloadResult **retval);
         
+        DECLSPEC_XFGVIRT(IDownloadProgress, get_CurrentUpdateDownloadPhase)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentUpdateDownloadPhase )( 
             __RPC__in IDownloadProgress * This,
             /* [retval][out] */ __RPC__out DownloadPhase *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadProgress, get_CurrentUpdatePercentComplete)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentUpdatePercentComplete )( 
             __RPC__in IDownloadProgress * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -13464,28 +14597,34 @@ EXTERN_C const IID IID_IDownloadJob;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDownloadJob * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDownloadJob * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDownloadJob * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IDownloadJob * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IDownloadJob * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IDownloadJob * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -13494,6 +14633,7 @@ EXTERN_C const IID IID_IDownloadJob;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDownloadJob * This,
             /* [annotation][in] */ 
@@ -13513,25 +14653,31 @@ EXTERN_C const IID IID_IDownloadJob;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IDownloadJob, get_AsyncState)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AsyncState )( 
             __RPC__in IDownloadJob * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadJob, get_IsCompleted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsCompleted )( 
             __RPC__in IDownloadJob * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IDownloadJob, get_Updates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Updates )( 
             __RPC__in IDownloadJob * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IDownloadJob, CleanUp)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CleanUp )( 
             __RPC__in IDownloadJob * This);
         
+        DECLSPEC_XFGVIRT(IDownloadJob, GetProgress)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetProgress )( 
             __RPC__in IDownloadJob * This,
             /* [retval][out] */ __RPC__deref_out_opt IDownloadProgress **retval);
         
+        DECLSPEC_XFGVIRT(IDownloadJob, RequestAbort)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RequestAbort )( 
             __RPC__in IDownloadJob * This);
         
@@ -13624,28 +14770,34 @@ EXTERN_C const IID IID_IDownloadCompletedCallbackArgs;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDownloadCompletedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDownloadCompletedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDownloadCompletedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IDownloadCompletedCallbackArgs * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IDownloadCompletedCallbackArgs * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IDownloadCompletedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -13654,6 +14806,7 @@ EXTERN_C const IID IID_IDownloadCompletedCallbackArgs;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDownloadCompletedCallbackArgs * This,
             /* [annotation][in] */ 
@@ -13748,18 +14901,22 @@ EXTERN_C const IID IID_IDownloadCompletedCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDownloadCompletedCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDownloadCompletedCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDownloadCompletedCallback * This);
         
+        DECLSPEC_XFGVIRT(IDownloadCompletedCallback, Invoke)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             __RPC__in IDownloadCompletedCallback * This,
             /* [in] */ __RPC__in_opt IDownloadJob *downloadJob,
@@ -13829,28 +14986,34 @@ EXTERN_C const IID IID_IDownloadProgressChangedCallbackArgs;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDownloadProgressChangedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDownloadProgressChangedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDownloadProgressChangedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IDownloadProgressChangedCallbackArgs * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IDownloadProgressChangedCallbackArgs * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IDownloadProgressChangedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -13859,6 +15022,7 @@ EXTERN_C const IID IID_IDownloadProgressChangedCallbackArgs;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IDownloadProgressChangedCallbackArgs * This,
             /* [annotation][in] */ 
@@ -13878,6 +15042,7 @@ EXTERN_C const IID IID_IDownloadProgressChangedCallbackArgs;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IDownloadProgressChangedCallbackArgs, get_Progress)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )( 
             __RPC__in IDownloadProgressChangedCallbackArgs * This,
             /* [retval][out] */ __RPC__deref_out_opt IDownloadProgress **retval);
@@ -13960,18 +15125,22 @@ EXTERN_C const IID IID_IDownloadProgressChangedCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDownloadProgressChangedCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDownloadProgressChangedCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDownloadProgressChangedCallback * This);
         
+        DECLSPEC_XFGVIRT(IDownloadProgressChangedCallback, Invoke)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             __RPC__in IDownloadProgressChangedCallback * This,
             /* [in] */ __RPC__in_opt IDownloadJob *downloadJob,
@@ -14075,28 +15244,34 @@ EXTERN_C const IID IID_IUpdateDownloader;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateDownloader * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateDownloader * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateDownloader * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateDownloader * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateDownloader * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateDownloader * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -14105,6 +15280,7 @@ EXTERN_C const IID IID_IUpdateDownloader;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateDownloader * This,
             /* [annotation][in] */ 
@@ -14124,38 +15300,47 @@ EXTERN_C const IID IID_IUpdateDownloader;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateDownloader * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateDownloader * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, get_IsForced)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsForced )( 
             __RPC__in IUpdateDownloader * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, put_IsForced)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsForced )( 
             __RPC__in IUpdateDownloader * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, get_Priority)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Priority )( 
             __RPC__in IUpdateDownloader * This,
             /* [retval][out] */ __RPC__out DownloadPriority *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, put_Priority)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Priority )( 
             __RPC__in IUpdateDownloader * This,
             /* [in] */ DownloadPriority value);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, get_Updates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Updates )( 
             __RPC__in IUpdateDownloader * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, put_Updates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Updates )( 
             __RPC__in IUpdateDownloader * This,
             /* [in] */ __RPC__in_opt IUpdateCollection *value);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, BeginDownload)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginDownload )( 
             __RPC__in IUpdateDownloader * This,
             /* [in] */ __RPC__in_opt IUnknown *onProgressChanged,
@@ -14163,10 +15348,12 @@ EXTERN_C const IID IID_IUpdateDownloader;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt IDownloadJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, Download)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Download )( 
             __RPC__in IUpdateDownloader * This,
             /* [retval][out] */ __RPC__deref_out_opt IDownloadResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateDownloader, EndDownload)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndDownload )( 
             __RPC__in IUpdateDownloader * This,
             /* [in] */ __RPC__in_opt IDownloadJob *value,
@@ -14285,28 +15472,34 @@ EXTERN_C const IID IID_IUpdateInstallationResult;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateInstallationResult * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateInstallationResult * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateInstallationResult * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateInstallationResult * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateInstallationResult * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateInstallationResult * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -14315,6 +15508,7 @@ EXTERN_C const IID IID_IUpdateInstallationResult;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateInstallationResult * This,
             /* [annotation][in] */ 
@@ -14334,14 +15528,17 @@ EXTERN_C const IID IID_IUpdateInstallationResult;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateInstallationResult, get_HResult)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HResult )( 
             __RPC__in IUpdateInstallationResult * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstallationResult, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IUpdateInstallationResult * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstallationResult, get_ResultCode)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ResultCode )( 
             __RPC__in IUpdateInstallationResult * This,
             /* [retval][out] */ __RPC__out OperationResultCode *retval);
@@ -14439,28 +15636,34 @@ EXTERN_C const IID IID_IInstallationResult;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInstallationResult * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInstallationResult * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInstallationResult * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IInstallationResult * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IInstallationResult * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IInstallationResult * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -14469,6 +15672,7 @@ EXTERN_C const IID IID_IInstallationResult;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IInstallationResult * This,
             /* [annotation][in] */ 
@@ -14488,18 +15692,22 @@ EXTERN_C const IID IID_IInstallationResult;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IInstallationResult, get_HResult)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_HResult )( 
             __RPC__in IInstallationResult * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationResult, get_RebootRequired)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequired )( 
             __RPC__in IInstallationResult * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationResult, get_ResultCode)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ResultCode )( 
             __RPC__in IInstallationResult * This,
             /* [retval][out] */ __RPC__out OperationResultCode *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationResult, GetUpdateResult)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetUpdateResult )( 
             __RPC__in IInstallationResult * This,
             /* [in] */ LONG updateIndex,
@@ -14601,28 +15809,34 @@ EXTERN_C const IID IID_IInstallationProgress;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInstallationProgress * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInstallationProgress * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInstallationProgress * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IInstallationProgress * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IInstallationProgress * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IInstallationProgress * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -14631,6 +15845,7 @@ EXTERN_C const IID IID_IInstallationProgress;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IInstallationProgress * This,
             /* [annotation][in] */ 
@@ -14650,18 +15865,22 @@ EXTERN_C const IID IID_IInstallationProgress;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IInstallationProgress, get_CurrentUpdateIndex)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentUpdateIndex )( 
             __RPC__in IInstallationProgress * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationProgress, get_CurrentUpdatePercentComplete)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CurrentUpdatePercentComplete )( 
             __RPC__in IInstallationProgress * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationProgress, get_PercentComplete)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_PercentComplete )( 
             __RPC__in IInstallationProgress * This,
             /* [retval][out] */ __RPC__out LONG *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationProgress, GetUpdateResult)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetUpdateResult )( 
             __RPC__in IInstallationProgress * This,
             /* [in] */ LONG updateIndex,
@@ -14766,28 +15985,34 @@ EXTERN_C const IID IID_IInstallationJob;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInstallationJob * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInstallationJob * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInstallationJob * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IInstallationJob * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IInstallationJob * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IInstallationJob * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -14796,6 +16021,7 @@ EXTERN_C const IID IID_IInstallationJob;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IInstallationJob * This,
             /* [annotation][in] */ 
@@ -14815,25 +16041,31 @@ EXTERN_C const IID IID_IInstallationJob;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IInstallationJob, get_AsyncState)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AsyncState )( 
             __RPC__in IInstallationJob * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationJob, get_IsCompleted)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsCompleted )( 
             __RPC__in IInstallationJob * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IInstallationJob, get_Updates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Updates )( 
             __RPC__in IInstallationJob * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IInstallationJob, CleanUp)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CleanUp )( 
             __RPC__in IInstallationJob * This);
         
+        DECLSPEC_XFGVIRT(IInstallationJob, GetProgress)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetProgress )( 
             __RPC__in IInstallationJob * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationProgress **retval);
         
+        DECLSPEC_XFGVIRT(IInstallationJob, RequestAbort)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RequestAbort )( 
             __RPC__in IInstallationJob * This);
         
@@ -14926,28 +16158,34 @@ EXTERN_C const IID IID_IInstallationCompletedCallbackArgs;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInstallationCompletedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInstallationCompletedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInstallationCompletedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IInstallationCompletedCallbackArgs * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IInstallationCompletedCallbackArgs * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IInstallationCompletedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -14956,6 +16194,7 @@ EXTERN_C const IID IID_IInstallationCompletedCallbackArgs;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IInstallationCompletedCallbackArgs * This,
             /* [annotation][in] */ 
@@ -15050,18 +16289,22 @@ EXTERN_C const IID IID_IInstallationCompletedCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInstallationCompletedCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInstallationCompletedCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInstallationCompletedCallback * This);
         
+        DECLSPEC_XFGVIRT(IInstallationCompletedCallback, Invoke)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             __RPC__in IInstallationCompletedCallback * This,
             /* [in] */ __RPC__in_opt IInstallationJob *installationJob,
@@ -15131,28 +16374,34 @@ EXTERN_C const IID IID_IInstallationProgressChangedCallbackArgs;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInstallationProgressChangedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInstallationProgressChangedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInstallationProgressChangedCallbackArgs * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IInstallationProgressChangedCallbackArgs * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IInstallationProgressChangedCallbackArgs * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IInstallationProgressChangedCallbackArgs * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -15161,6 +16410,7 @@ EXTERN_C const IID IID_IInstallationProgressChangedCallbackArgs;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IInstallationProgressChangedCallbackArgs * This,
             /* [annotation][in] */ 
@@ -15180,6 +16430,7 @@ EXTERN_C const IID IID_IInstallationProgressChangedCallbackArgs;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IInstallationProgressChangedCallbackArgs, get_Progress)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )( 
             __RPC__in IInstallationProgressChangedCallbackArgs * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationProgress **retval);
@@ -15262,18 +16513,22 @@ EXTERN_C const IID IID_IInstallationProgressChangedCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInstallationProgressChangedCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInstallationProgressChangedCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInstallationProgressChangedCallback * This);
         
+        DECLSPEC_XFGVIRT(IInstallationProgressChangedCallback, Invoke)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             __RPC__in IInstallationProgressChangedCallback * This,
             /* [in] */ __RPC__in_opt IInstallationJob *installationJob,
@@ -15412,28 +16667,34 @@ EXTERN_C const IID IID_IUpdateInstaller;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateInstaller * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateInstaller * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateInstaller * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -15442,6 +16703,7 @@ EXTERN_C const IID IID_IUpdateInstaller;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateInstaller * This,
             /* [annotation][in] */ 
@@ -15461,46 +16723,57 @@ EXTERN_C const IID IID_IUpdateInstaller;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_IsForced)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsForced )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_IsForced)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsForced )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ParentHwnd)
         /* [helpstring][restricted][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ParentHwnd )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__deref_out_opt HWND *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ParentHwnd)
         /* [helpstring][restricted][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ParentHwnd )( 
             __RPC__in IUpdateInstaller * This,
             /* [unique][in] */ __RPC__in_opt HWND value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ParentWindow)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ParentWindow )( 
             __RPC__in IUpdateInstaller * This,
             /* [unique][in] */ __RPC__in_opt IUnknown *value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ParentWindow)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ParentWindow )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_Updates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Updates )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_Updates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Updates )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ __RPC__in_opt IUpdateCollection *value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, BeginInstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginInstall )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ __RPC__in_opt IUnknown *onProgressChanged,
@@ -15508,6 +16781,7 @@ EXTERN_C const IID IID_IUpdateInstaller;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, BeginUninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginUninstall )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ __RPC__in_opt IUnknown *onProgressChanged,
@@ -15515,41 +16789,50 @@ EXTERN_C const IID IID_IUpdateInstaller;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, EndInstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndInstall )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ __RPC__in_opt IInstallationJob *value,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, EndUninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndUninstall )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ __RPC__in_opt IInstallationJob *value,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, Install)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Install )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, RunWizard)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RunWizard )( 
             __RPC__in IUpdateInstaller * This,
             /* [defaultvalue][unique][in] */ __RPC__in_opt BSTR dialogTitle,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_IsBusy)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBusy )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, Uninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Uninstall )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_AllowSourcePrompts)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AllowSourcePrompts )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_AllowSourcePrompts)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AllowSourcePrompts )( 
             __RPC__in IUpdateInstaller * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_RebootRequiredBeforeInstallation)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequiredBeforeInstallation )( 
             __RPC__in IUpdateInstaller * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
@@ -15694,28 +16977,34 @@ EXTERN_C const IID IID_IUpdateInstaller2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateInstaller2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateInstaller2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -15724,6 +17013,7 @@ EXTERN_C const IID IID_IUpdateInstaller2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateInstaller2 * This,
             /* [annotation][in] */ 
@@ -15743,46 +17033,57 @@ EXTERN_C const IID IID_IUpdateInstaller2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_IsForced)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsForced )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_IsForced)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsForced )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ParentHwnd)
         /* [helpstring][restricted][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ParentHwnd )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__deref_out_opt HWND *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ParentHwnd)
         /* [helpstring][restricted][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ParentHwnd )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [unique][in] */ __RPC__in_opt HWND value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ParentWindow)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ParentWindow )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [unique][in] */ __RPC__in_opt IUnknown *value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ParentWindow)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ParentWindow )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_Updates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Updates )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_Updates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Updates )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ __RPC__in_opt IUpdateCollection *value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, BeginInstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginInstall )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ __RPC__in_opt IUnknown *onProgressChanged,
@@ -15790,6 +17091,7 @@ EXTERN_C const IID IID_IUpdateInstaller2;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, BeginUninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginUninstall )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ __RPC__in_opt IUnknown *onProgressChanged,
@@ -15797,49 +17099,60 @@ EXTERN_C const IID IID_IUpdateInstaller2;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, EndInstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndInstall )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ __RPC__in_opt IInstallationJob *value,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, EndUninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndUninstall )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ __RPC__in_opt IInstallationJob *value,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, Install)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Install )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, RunWizard)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RunWizard )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [defaultvalue][unique][in] */ __RPC__in_opt BSTR dialogTitle,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_IsBusy)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBusy )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, Uninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Uninstall )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_AllowSourcePrompts)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AllowSourcePrompts )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_AllowSourcePrompts)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AllowSourcePrompts )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_RebootRequiredBeforeInstallation)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequiredBeforeInstallation )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller2, get_ForceQuiet)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ForceQuiet )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller2, put_ForceQuiet)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ForceQuiet )( 
             __RPC__in IUpdateInstaller2 * This,
             /* [in] */ VARIANT_BOOL value);
@@ -15991,28 +17304,34 @@ EXTERN_C const IID IID_IUpdateInstaller3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateInstaller3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateInstaller3 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -16021,6 +17340,7 @@ EXTERN_C const IID IID_IUpdateInstaller3;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateInstaller3 * This,
             /* [annotation][in] */ 
@@ -16040,46 +17360,57 @@ EXTERN_C const IID IID_IUpdateInstaller3;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_IsForced)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsForced )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_IsForced)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsForced )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ParentHwnd)
         /* [helpstring][restricted][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ParentHwnd )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__deref_out_opt HWND *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ParentHwnd)
         /* [helpstring][restricted][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ParentHwnd )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [unique][in] */ __RPC__in_opt HWND value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ParentWindow)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ParentWindow )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [unique][in] */ __RPC__in_opt IUnknown *value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ParentWindow)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ParentWindow )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_Updates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Updates )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_Updates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Updates )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ __RPC__in_opt IUpdateCollection *value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, BeginInstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginInstall )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ __RPC__in_opt IUnknown *onProgressChanged,
@@ -16087,6 +17418,7 @@ EXTERN_C const IID IID_IUpdateInstaller3;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, BeginUninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginUninstall )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ __RPC__in_opt IUnknown *onProgressChanged,
@@ -16094,57 +17426,70 @@ EXTERN_C const IID IID_IUpdateInstaller3;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, EndInstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndInstall )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ __RPC__in_opt IInstallationJob *value,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, EndUninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndUninstall )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ __RPC__in_opt IInstallationJob *value,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, Install)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Install )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, RunWizard)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RunWizard )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [defaultvalue][unique][in] */ __RPC__in_opt BSTR dialogTitle,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_IsBusy)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBusy )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, Uninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Uninstall )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_AllowSourcePrompts)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AllowSourcePrompts )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_AllowSourcePrompts)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AllowSourcePrompts )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_RebootRequiredBeforeInstallation)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequiredBeforeInstallation )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller2, get_ForceQuiet)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ForceQuiet )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller2, put_ForceQuiet)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ForceQuiet )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller3, get_AttemptCloseAppsIfNecessary)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AttemptCloseAppsIfNecessary )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller3, put_AttemptCloseAppsIfNecessary)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AttemptCloseAppsIfNecessary )( 
             __RPC__in IUpdateInstaller3 * This,
             /* [in] */ VARIANT_BOOL value);
@@ -16300,28 +17645,34 @@ EXTERN_C const IID IID_IUpdateInstaller4;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateInstaller4 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateInstaller4 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -16330,6 +17681,7 @@ EXTERN_C const IID IID_IUpdateInstaller4;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateInstaller4 * This,
             /* [annotation][in] */ 
@@ -16349,46 +17701,57 @@ EXTERN_C const IID IID_IUpdateInstaller4;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_IsForced)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsForced )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_IsForced)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_IsForced )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ParentHwnd)
         /* [helpstring][restricted][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ParentHwnd )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__deref_out_opt HWND *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ParentHwnd)
         /* [helpstring][restricted][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ParentHwnd )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [unique][in] */ __RPC__in_opt HWND value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_ParentWindow)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ParentWindow )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [unique][in] */ __RPC__in_opt IUnknown *value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_ParentWindow)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ParentWindow )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_Updates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Updates )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_Updates)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_Updates )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ __RPC__in_opt IUpdateCollection *value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, BeginInstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginInstall )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ __RPC__in_opt IUnknown *onProgressChanged,
@@ -16396,6 +17759,7 @@ EXTERN_C const IID IID_IUpdateInstaller4;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, BeginUninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *BeginUninstall )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ __RPC__in_opt IUnknown *onProgressChanged,
@@ -16403,61 +17767,75 @@ EXTERN_C const IID IID_IUpdateInstaller4;
             /* [in] */ VARIANT state,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationJob **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, EndInstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndInstall )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ __RPC__in_opt IInstallationJob *value,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, EndUninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EndUninstall )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ __RPC__in_opt IInstallationJob *value,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, Install)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Install )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, RunWizard)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RunWizard )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [defaultvalue][unique][in] */ __RPC__in_opt BSTR dialogTitle,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_IsBusy)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsBusy )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, Uninstall)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Uninstall )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__deref_out_opt IInstallationResult **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_AllowSourcePrompts)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AllowSourcePrompts )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, put_AllowSourcePrompts)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AllowSourcePrompts )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller, get_RebootRequiredBeforeInstallation)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RebootRequiredBeforeInstallation )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller2, get_ForceQuiet)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ForceQuiet )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller2, put_ForceQuiet)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ForceQuiet )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller3, get_AttemptCloseAppsIfNecessary)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_AttemptCloseAppsIfNecessary )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller3, put_AttemptCloseAppsIfNecessary)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_AttemptCloseAppsIfNecessary )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ VARIANT_BOOL value);
         
+        DECLSPEC_XFGVIRT(IUpdateInstaller4, Commit)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Commit )( 
             __RPC__in IUpdateInstaller4 * This,
             /* [in] */ DWORD dwFlags);
@@ -16638,28 +18016,34 @@ EXTERN_C const IID IID_IUpdateSession;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateSession * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateSession * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateSession * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateSession * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateSession * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateSession * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -16668,6 +18052,7 @@ EXTERN_C const IID IID_IUpdateSession;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateSession * This,
             /* [annotation][in] */ 
@@ -16687,34 +18072,42 @@ EXTERN_C const IID IID_IUpdateSession;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateSession * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateSession * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, get_ReadOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
             __RPC__in IUpdateSession * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, get_WebProxy)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WebProxy )( 
             __RPC__in IUpdateSession * This,
             /* [retval][out] */ __RPC__deref_out_opt IWebProxy **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, put_WebProxy)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_WebProxy )( 
             __RPC__in IUpdateSession * This,
             /* [unique][in] */ __RPC__in_opt IWebProxy *value);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, CreateUpdateSearcher)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateSearcher )( 
             __RPC__in IUpdateSession * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateSearcher **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, CreateUpdateDownloader)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateDownloader )( 
             __RPC__in IUpdateSession * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloader **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, CreateUpdateInstaller)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateInstaller )( 
             __RPC__in IUpdateSession * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateInstaller **retval);
@@ -16820,28 +18213,34 @@ EXTERN_C const IID IID_IUpdateSession2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateSession2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateSession2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateSession2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateSession2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateSession2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateSession2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -16850,6 +18249,7 @@ EXTERN_C const IID IID_IUpdateSession2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateSession2 * This,
             /* [annotation][in] */ 
@@ -16869,42 +18269,52 @@ EXTERN_C const IID IID_IUpdateSession2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateSession2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateSession2 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, get_ReadOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
             __RPC__in IUpdateSession2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, get_WebProxy)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WebProxy )( 
             __RPC__in IUpdateSession2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IWebProxy **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, put_WebProxy)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_WebProxy )( 
             __RPC__in IUpdateSession2 * This,
             /* [unique][in] */ __RPC__in_opt IWebProxy *value);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, CreateUpdateSearcher)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateSearcher )( 
             __RPC__in IUpdateSession2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateSearcher **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, CreateUpdateDownloader)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateDownloader )( 
             __RPC__in IUpdateSession2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloader **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, CreateUpdateInstaller)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateInstaller )( 
             __RPC__in IUpdateSession2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateInstaller **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession2, get_UserLocale)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UserLocale )( 
             __RPC__in IUpdateSession2 * This,
             /* [retval][out] */ __RPC__out LCID *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession2, put_UserLocale)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_UserLocale )( 
             __RPC__in IUpdateSession2 * This,
             /* [in] */ LCID lcid);
@@ -17020,28 +18430,34 @@ EXTERN_C const IID IID_IUpdateSession3;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateSession3 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateSession3 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateSession3 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateSession3 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateSession3 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateSession3 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -17050,6 +18466,7 @@ EXTERN_C const IID IID_IUpdateSession3;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateSession3 * This,
             /* [annotation][in] */ 
@@ -17069,50 +18486,62 @@ EXTERN_C const IID IID_IUpdateSession3;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateSession3 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateSession3 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, get_ReadOnly)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ReadOnly )( 
             __RPC__in IUpdateSession3 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, get_WebProxy)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_WebProxy )( 
             __RPC__in IUpdateSession3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IWebProxy **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, put_WebProxy)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_WebProxy )( 
             __RPC__in IUpdateSession3 * This,
             /* [unique][in] */ __RPC__in_opt IWebProxy *value);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, CreateUpdateSearcher)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateSearcher )( 
             __RPC__in IUpdateSession3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateSearcher **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, CreateUpdateDownloader)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateDownloader )( 
             __RPC__in IUpdateSession3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateDownloader **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession, CreateUpdateInstaller)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateInstaller )( 
             __RPC__in IUpdateSession3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateInstaller **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession2, get_UserLocale)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_UserLocale )( 
             __RPC__in IUpdateSession3 * This,
             /* [retval][out] */ __RPC__out LCID *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession2, put_UserLocale)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_UserLocale )( 
             __RPC__in IUpdateSession3 * This,
             /* [in] */ LCID lcid);
         
+        DECLSPEC_XFGVIRT(IUpdateSession3, CreateUpdateServiceManager)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *CreateUpdateServiceManager )( 
             __RPC__in IUpdateSession3 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateServiceManager2 **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateSession3, QueryHistory)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *QueryHistory )( 
             __RPC__in IUpdateSession3 * This,
             /* [in] */ __RPC__in BSTR criteria,
@@ -17268,28 +18697,34 @@ EXTERN_C const IID IID_IUpdateService;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateService * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateService * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateService * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateService * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateService * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateService * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -17298,6 +18733,7 @@ EXTERN_C const IID IID_IUpdateService;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateService * This,
             /* [annotation][in] */ 
@@ -17317,54 +18753,67 @@ EXTERN_C const IID IID_IUpdateService;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_Name)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Name )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_ContentValidationCert)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ContentValidationCert )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_ExpirationDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ExpirationDate )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_IsManaged)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsManaged )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_IsRegisteredWithAU)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsRegisteredWithAU )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_IssueDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IssueDate )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_OffersWindowsUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_OffersWindowsUpdates )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_RedirectUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RedirectUrls )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_ServiceID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceID )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_IsScanPackageService)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsScanPackageService )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_CanRegisterWithAU)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRegisterWithAU )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_ServiceUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceUrl )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_SetupPrefix)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SetupPrefix )( 
             __RPC__in IUpdateService * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
@@ -17482,28 +18931,34 @@ EXTERN_C const IID IID_IUpdateService2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateService2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateService2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateService2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateService2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateService2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateService2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -17512,6 +18967,7 @@ EXTERN_C const IID IID_IUpdateService2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateService2 * This,
             /* [annotation][in] */ 
@@ -17531,58 +18987,72 @@ EXTERN_C const IID IID_IUpdateService2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_Name)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Name )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_ContentValidationCert)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ContentValidationCert )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__out VARIANT *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_ExpirationDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ExpirationDate )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_IsManaged)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsManaged )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_IsRegisteredWithAU)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsRegisteredWithAU )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_IssueDate)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IssueDate )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__out DATE *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_OffersWindowsUpdates)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_OffersWindowsUpdates )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_RedirectUrls)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RedirectUrls )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IStringCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_ServiceID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceID )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_IsScanPackageService)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsScanPackageService )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_CanRegisterWithAU)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_CanRegisterWithAU )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_ServiceUrl)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceUrl )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService, get_SetupPrefix)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_SetupPrefix )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateService2, get_IsDefaultAUService)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsDefaultAUService )( 
             __RPC__in IUpdateService2 * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
@@ -17711,28 +19181,34 @@ EXTERN_C const IID IID_IUpdateServiceCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateServiceCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateServiceCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateServiceCollection * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateServiceCollection * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateServiceCollection * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateServiceCollection * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -17741,6 +19217,7 @@ EXTERN_C const IID IID_IUpdateServiceCollection;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateServiceCollection * This,
             /* [annotation][in] */ 
@@ -17760,15 +19237,18 @@ EXTERN_C const IID IID_IUpdateServiceCollection;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceCollection, get_Item)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Item )( 
             __RPC__in IUpdateServiceCollection * This,
             /* [in] */ LONG index,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateService **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceCollection, get__NewEnum)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get__NewEnum )( 
             __RPC__in IUpdateServiceCollection * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceCollection, get_Count)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Count )( 
             __RPC__in IUpdateServiceCollection * This,
             /* [retval][out] */ __RPC__out LONG *retval);
@@ -17865,28 +19345,34 @@ EXTERN_C const IID IID_IUpdateServiceRegistration;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateServiceRegistration * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateServiceRegistration * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateServiceRegistration * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateServiceRegistration * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateServiceRegistration * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateServiceRegistration * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -17895,6 +19381,7 @@ EXTERN_C const IID IID_IUpdateServiceRegistration;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateServiceRegistration * This,
             /* [annotation][in] */ 
@@ -17914,18 +19401,22 @@ EXTERN_C const IID IID_IUpdateServiceRegistration;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceRegistration, get_RegistrationState)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_RegistrationState )( 
             __RPC__in IUpdateServiceRegistration * This,
             /* [retval][out] */ __RPC__out UpdateServiceRegistrationState *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceRegistration, get_ServiceID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ServiceID )( 
             __RPC__in IUpdateServiceRegistration * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceRegistration, get_IsPendingRegistrationWithAU)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_IsPendingRegistrationWithAU )( 
             __RPC__in IUpdateServiceRegistration * This,
             /* [retval][out] */ __RPC__out VARIANT_BOOL *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceRegistration, get_Service)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Service )( 
             __RPC__in IUpdateServiceRegistration * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateService2 **retval);
@@ -18040,28 +19531,34 @@ EXTERN_C const IID IID_IUpdateServiceManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateServiceManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateServiceManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateServiceManager * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateServiceManager * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateServiceManager * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateServiceManager * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -18070,6 +19567,7 @@ EXTERN_C const IID IID_IUpdateServiceManager;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateServiceManager * This,
             /* [annotation][in] */ 
@@ -18089,28 +19587,34 @@ EXTERN_C const IID IID_IUpdateServiceManager;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, get_Services)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Services )( 
             __RPC__in IUpdateServiceManager * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateServiceCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, AddService)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddService )( 
             __RPC__in IUpdateServiceManager * This,
             /* [in] */ __RPC__in BSTR serviceID,
             /* [in] */ __RPC__in BSTR authorizationCabPath,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateService **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, RegisterServiceWithAU)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RegisterServiceWithAU )( 
             __RPC__in IUpdateServiceManager * This,
             /* [in] */ __RPC__in BSTR serviceID);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, RemoveService)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RemoveService )( 
             __RPC__in IUpdateServiceManager * This,
             /* [in] */ __RPC__in BSTR serviceID);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, UnregisterServiceWithAU)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *UnregisterServiceWithAU )( 
             __RPC__in IUpdateServiceManager * This,
             /* [in] */ __RPC__in BSTR serviceID);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, AddScanPackageService)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddScanPackageService )( 
             __RPC__in IUpdateServiceManager * This,
             /* [in] */ __RPC__in BSTR serviceName,
@@ -18118,6 +19622,7 @@ EXTERN_C const IID IID_IUpdateServiceManager;
             /* [defaultvalue][in] */ LONG flags,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateService **ppService);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, SetOption)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetOption )( 
             __RPC__in IUpdateServiceManager * This,
             /* [in] */ __RPC__in BSTR optionName,
@@ -18231,28 +19736,34 @@ EXTERN_C const IID IID_IUpdateServiceManager2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IUpdateServiceManager2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IUpdateServiceManager2 * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -18261,6 +19772,7 @@ EXTERN_C const IID IID_IUpdateServiceManager2;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IUpdateServiceManager2 * This,
             /* [annotation][in] */ 
@@ -18280,28 +19792,34 @@ EXTERN_C const IID IID_IUpdateServiceManager2;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, get_Services)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Services )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateServiceCollection **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, AddService)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddService )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in BSTR serviceID,
             /* [in] */ __RPC__in BSTR authorizationCabPath,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateService **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, RegisterServiceWithAU)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RegisterServiceWithAU )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in BSTR serviceID);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, RemoveService)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RemoveService )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in BSTR serviceID);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, UnregisterServiceWithAU)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *UnregisterServiceWithAU )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in BSTR serviceID);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, AddScanPackageService)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddScanPackageService )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in BSTR serviceName,
@@ -18309,24 +19827,29 @@ EXTERN_C const IID IID_IUpdateServiceManager2;
             /* [defaultvalue][in] */ LONG flags,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateService **ppService);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager, SetOption)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetOption )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in BSTR optionName,
             /* [in] */ VARIANT optionValue);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager2, get_ClientApplicationID)
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ClientApplicationID )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [retval][out] */ __RPC__deref_out_opt BSTR *retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager2, put_ClientApplicationID)
         /* [helpstring][propput][id] */ HRESULT ( STDMETHODCALLTYPE *put_ClientApplicationID )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in BSTR value);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager2, QueryServiceRegistration)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *QueryServiceRegistration )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in BSTR serviceID,
             /* [retval][out] */ __RPC__deref_out_opt IUpdateServiceRegistration **retval);
         
+        DECLSPEC_XFGVIRT(IUpdateServiceManager2, AddService2)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *AddService2 )( 
             __RPC__in IUpdateServiceManager2 * This,
             /* [in] */ __RPC__in BSTR serviceID,
@@ -18444,28 +19967,34 @@ EXTERN_C const IID IID_IInstallationAgent;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IInstallationAgent * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IInstallationAgent * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IInstallationAgent * This);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfoCount)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
             __RPC__in IInstallationAgent * This,
             /* [out] */ __RPC__out UINT *pctinfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetTypeInfo)
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
             __RPC__in IInstallationAgent * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
         
+        DECLSPEC_XFGVIRT(IDispatch, GetIDsOfNames)
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
             __RPC__in IInstallationAgent * This,
             /* [in] */ __RPC__in REFIID riid,
@@ -18474,6 +20003,7 @@ EXTERN_C const IID IID_IInstallationAgent;
             /* [in] */ LCID lcid,
             /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
         
+        DECLSPEC_XFGVIRT(IDispatch, Invoke)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IInstallationAgent * This,
             /* [annotation][in] */ 
@@ -18493,6 +20023,7 @@ EXTERN_C const IID IID_IInstallationAgent;
             /* [annotation][out] */ 
             _Out_opt_  UINT *puArgErr);
         
+        DECLSPEC_XFGVIRT(IInstallationAgent, RecordInstallationResult)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RecordInstallationResult )( 
             __RPC__in IInstallationAgent * This,
             /* [in] */ __RPC__in BSTR installationResultCookie,

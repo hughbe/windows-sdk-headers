@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_System_Profile_1_H
 #define WINRT_Windows_System_Profile_1_H
 #include "winrt/impl/Windows.System.Profile.0.h"
-namespace winrt::Windows::System::Profile
+WINRT_EXPORT namespace winrt::Windows::System::Profile
 {
     struct __declspec(empty_bases) IAnalyticsInfoStatics :
         Windows::Foundation::IInspectable,
@@ -28,6 +28,13 @@ namespace winrt::Windows::System::Profile
     {
         IAnalyticsVersionInfo(std::nullptr_t = nullptr) noexcept {}
         IAnalyticsVersionInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IAnalyticsVersionInfo2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAnalyticsVersionInfo2>
+    {
+        IAnalyticsVersionInfo2(std::nullptr_t = nullptr) noexcept {}
+        IAnalyticsVersionInfo2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IAppApplicabilityStatics :
         Windows::Foundation::IInspectable,

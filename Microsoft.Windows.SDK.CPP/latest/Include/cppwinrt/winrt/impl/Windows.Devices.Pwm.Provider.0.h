@@ -1,41 +1,27 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_Pwm_Provider_0_H
 #define WINRT_Windows_Devices_Pwm_Provider_0_H
-namespace winrt::Windows::Devices::Pwm::Provider
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+}
+WINRT_EXPORT namespace winrt::Windows::Devices::Pwm::Provider
 {
     struct IPwmControllerProvider;
     struct IPwmProvider;
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::Pwm::Provider::IPwmControllerProvider>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::Pwm::Provider::IPwmProvider>
-    {
-        using type = interface_category;
-    };
-    template <> struct name<Windows::Devices::Pwm::Provider::IPwmControllerProvider>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Pwm.Provider.IPwmControllerProvider" };
-    };
-    template <> struct name<Windows::Devices::Pwm::Provider::IPwmProvider>
-    {
-        static constexpr auto & value{ L"Windows.Devices.Pwm.Provider.IPwmProvider" };
-    };
-    template <> struct guid_storage<Windows::Devices::Pwm::Provider::IPwmControllerProvider>
-    {
-        static constexpr guid value{ 0x1300593B,0xE2E3,0x40A4,{ 0xB7,0xD9,0x48,0xDF,0xF0,0x37,0x7A,0x52 } };
-    };
-    template <> struct guid_storage<Windows::Devices::Pwm::Provider::IPwmProvider>
-    {
-        static constexpr guid value{ 0xA3301228,0x52F1,0x47B0,{ 0x93,0x49,0x66,0xBA,0x43,0xD2,0x59,0x02 } };
-    };
+    template <> struct category<Windows::Devices::Pwm::Provider::IPwmControllerProvider>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Pwm::Provider::IPwmProvider>{ using type = interface_category; };
+    template <> inline constexpr auto& name_v<Windows::Devices::Pwm::Provider::IPwmControllerProvider> = L"Windows.Devices.Pwm.Provider.IPwmControllerProvider";
+    template <> inline constexpr auto& name_v<Windows::Devices::Pwm::Provider::IPwmProvider> = L"Windows.Devices.Pwm.Provider.IPwmProvider";
+    template <> inline constexpr guid guid_v<Windows::Devices::Pwm::Provider::IPwmControllerProvider>{ 0x1300593B,0xE2E3,0x40A4,{ 0xB7,0xD9,0x48,0xDF,0xF0,0x37,0x7A,0x52 } }; // 1300593B-E2E3-40A4-B7D9-48DFF0377A52
+    template <> inline constexpr guid guid_v<Windows::Devices::Pwm::Provider::IPwmProvider>{ 0xA3301228,0x52F1,0x47B0,{ 0x93,0x49,0x66,0xBA,0x43,0xD2,0x59,0x02 } }; // A3301228-52F1-47B0-9349-66BA43D25902
     template <> struct abi<Windows::Devices::Pwm::Provider::IPwmControllerProvider>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -62,16 +48,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Pwm_Provider_IPwmControllerProvider
     {
-        [[nodiscard]] auto PinCount() const;
-        [[nodiscard]] auto ActualFrequency() const;
-        auto SetDesiredFrequency(double frequency) const;
-        [[nodiscard]] auto MaxFrequency() const;
-        [[nodiscard]] auto MinFrequency() const;
-        auto AcquirePin(int32_t pin) const;
-        auto ReleasePin(int32_t pin) const;
-        auto EnablePin(int32_t pin) const;
-        auto DisablePin(int32_t pin) const;
-        auto SetPulseParameters(int32_t pin, double dutyCycle, bool invertPolarity) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) PinCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) ActualFrequency() const;
+        WINRT_IMPL_AUTO(double) SetDesiredFrequency(double frequency) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) MaxFrequency() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) MinFrequency() const;
+        WINRT_IMPL_AUTO(void) AcquirePin(int32_t pin) const;
+        WINRT_IMPL_AUTO(void) ReleasePin(int32_t pin) const;
+        WINRT_IMPL_AUTO(void) EnablePin(int32_t pin) const;
+        WINRT_IMPL_AUTO(void) DisablePin(int32_t pin) const;
+        WINRT_IMPL_AUTO(void) SetPulseParameters(int32_t pin, double dutyCycle, bool invertPolarity) const;
     };
     template <> struct consume<Windows::Devices::Pwm::Provider::IPwmControllerProvider>
     {
@@ -80,7 +66,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Pwm_Provider_IPwmProvider
     {
-        auto GetControllers() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Pwm::Provider::IPwmControllerProvider>) GetControllers() const;
     };
     template <> struct consume<Windows::Devices::Pwm::Provider::IPwmProvider>
     {

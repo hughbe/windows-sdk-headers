@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,39 +6,39 @@
 #ifndef WINRT_Windows_UI_Xaml_Interop_H
 #define WINRT_Windows_UI_Xaml_Interop_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.Xaml.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.UI.Xaml.Interop.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableIterable<D>::First() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::IBindableIterator) consume_Windows_UI_Xaml_Interop_IBindableIterable<D>::First() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableIterable)->First(&result));
         return Windows::UI::Xaml::Interop::IBindableIterator{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableIterator<D>::Current() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_Interop_IBindableIterator<D>::Current() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableIterator)->get_Current(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableIterator<D>::HasCurrent() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Interop_IBindableIterator<D>::HasCurrent() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableIterator)->get_HasCurrent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableIterator<D>::MoveNext() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Interop_IBindableIterator<D>::MoveNext() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableIterator)->MoveNext(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableObservableVector<D>::VectorChanged(Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Interop_IBindableObservableVector<D>::VectorChanged(Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableObservableVector)->add_VectorChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -46,79 +46,79 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, VectorChanged_revoker>(this, VectorChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableObservableVector<D>::VectorChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Interop_IBindableObservableVector<D>::VectorChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableObservableVector)->remove_VectorChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::GetAt(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::GetAt(uint32_t index) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->GetAt(index, &result));
         return Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::Size() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::Size() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->get_Size(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::GetView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::IBindableVectorView) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::GetView() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->GetView(&result));
         return Windows::UI::Xaml::Interop::IBindableVectorView{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::IndexOf(Windows::Foundation::IInspectable const& value, uint32_t& index) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::IndexOf(Windows::Foundation::IInspectable const& value, uint32_t& index) const
     {
-        bool returnValue;
+        bool returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->IndexOf(*(void**)(&value), &index, &returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::SetAt(uint32_t index, Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::SetAt(uint32_t index, Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->SetAt(index, *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::InsertAt(uint32_t index, Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::InsertAt(uint32_t index, Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->InsertAt(index, *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::RemoveAt(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::RemoveAt(uint32_t index) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->RemoveAt(index));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::Append(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::Append(Windows::Foundation::IInspectable const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->Append(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::RemoveAtEnd() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::RemoveAtEnd() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->RemoveAtEnd());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVector<D>::Clear() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Interop_IBindableVector<D>::Clear() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVector)->Clear());
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVectorView<D>::GetAt(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_Interop_IBindableVectorView<D>::GetAt(uint32_t index) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVectorView)->GetAt(index, &result));
         return Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVectorView<D>::Size() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_UI_Xaml_Interop_IBindableVectorView<D>::Size() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVectorView)->get_Size(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_IBindableVectorView<D>::IndexOf(Windows::Foundation::IInspectable const& value, uint32_t& index) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Interop_IBindableVectorView<D>::IndexOf(Windows::Foundation::IInspectable const& value, uint32_t& index) const
     {
-        bool returnValue;
+        bool returnValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::IBindableVectorView)->IndexOf(*(void**)(&value), &index, &returnValue));
         return returnValue;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_INotifyCollectionChanged<D>::CollectionChanged(Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Interop_INotifyCollectionChanged<D>::CollectionChanged(Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::INotifyCollectionChanged)->add_CollectionChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -126,47 +126,47 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, CollectionChanged_revoker>(this, CollectionChanged(handler));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_INotifyCollectionChanged<D>::CollectionChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Interop_INotifyCollectionChanged<D>::CollectionChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::INotifyCollectionChanged)->remove_CollectionChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::Action() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::NotifyCollectionChangedAction) consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::Action() const
     {
-        Windows::UI::Xaml::Interop::NotifyCollectionChangedAction value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs)->get_Action(put_abi(value)));
+        Windows::UI::Xaml::Interop::NotifyCollectionChangedAction value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs)->get_Action(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::NewItems() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::IBindableVector) consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::NewItems() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs)->get_NewItems(&value));
         return Windows::UI::Xaml::Interop::IBindableVector{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::OldItems() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::IBindableVector) consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::OldItems() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs)->get_OldItems(&value));
         return Windows::UI::Xaml::Interop::IBindableVector{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::NewStartingIndex() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::NewStartingIndex() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs)->get_NewStartingIndex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::OldStartingIndex() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgs<D>::OldStartingIndex() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs)->get_OldStartingIndex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgsFactory<D>::CreateInstanceWithAllParameters(Windows::UI::Xaml::Interop::NotifyCollectionChangedAction const& action, Windows::UI::Xaml::Interop::IBindableVector const& newItems, Windows::UI::Xaml::Interop::IBindableVector const& oldItems, int32_t newIndex, int32_t oldIndex, Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs) consume_Windows_UI_Xaml_Interop_INotifyCollectionChangedEventArgsFactory<D>::CreateInstanceWithAllParameters(Windows::UI::Xaml::Interop::NotifyCollectionChangedAction const& action, Windows::UI::Xaml::Interop::IBindableVector const& newItems, Windows::UI::Xaml::Interop::IBindableVector const& oldItems, int32_t newIndex, int32_t oldIndex, Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory)->CreateInstanceWithAllParameters(static_cast<int32_t>(action), *(void**)(&newItems), *(void**)(&oldItems), newIndex, oldIndex, *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs{ value, take_ownership_from_abi };
     }
-    template <typename H> struct delegate<Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler, H> : implements_delegate<Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::Interop::BindableVectorChangedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -177,7 +177,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler, H> : implements_delegate<Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler, H>
+    template <typename H> struct delegate<Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler, H> final : implements_delegate<Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::UI::Xaml::Interop::NotifyCollectionChangedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -364,6 +364,7 @@ namespace winrt::impl
             return 0;
         }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs> : produce_base<D, Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs>
     {
@@ -405,6 +406,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory> : produce_base<D, Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory>
     {
@@ -420,13 +423,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::UI::Xaml::Interop
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Interop
 {
     inline NotifyCollectionChangedEventArgs::NotifyCollectionChangedEventArgs(Windows::UI::Xaml::Interop::NotifyCollectionChangedAction const& action, Windows::UI::Xaml::Interop::IBindableVector const& newItems, Windows::UI::Xaml::Interop::IBindableVector const& oldItems, int32_t newIndex, int32_t oldIndex)
     {
         Windows::Foundation::IInspectable baseInterface, innerInterface;
-        *this = impl::call_factory<NotifyCollectionChangedEventArgs, Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory>([&](auto&& f) { return f.CreateInstanceWithAllParameters(action, newItems, oldItems, newIndex, oldIndex, baseInterface, innerInterface); });
+        *this = impl::call_factory<NotifyCollectionChangedEventArgs, INotifyCollectionChangedEventArgsFactory>([&](INotifyCollectionChangedEventArgsFactory const& f) { return f.CreateInstanceWithAllParameters(action, newItems, oldItems, newIndex, oldIndex, baseInterface, innerInterface); });
     }
     template <typename L> BindableVectorChangedEventHandler::BindableVectorChangedEventHandler(L handler) :
         BindableVectorChangedEventHandler(impl::make_delegate<BindableVectorChangedEventHandler>(std::forward<L>(handler)))
@@ -486,21 +490,23 @@ namespace winrt::Windows::UI::Xaml::Interop
     protected:
         NotifyCollectionChangedEventArgsT(Windows::UI::Xaml::Interop::NotifyCollectionChangedAction const& action, Windows::UI::Xaml::Interop::IBindableVector const& newItems, Windows::UI::Xaml::Interop::IBindableVector const& oldItems, int32_t newIndex, int32_t oldIndex)
         {
-            impl::call_factory<NotifyCollectionChangedEventArgs, Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory>([&](auto&& f) { f.CreateInstanceWithAllParameters(action, newItems, oldItems, newIndex, oldIndex, *this, this->m_inner); });
+            impl::call_factory<NotifyCollectionChangedEventArgs, INotifyCollectionChangedEventArgsFactory>([&](INotifyCollectionChangedEventArgsFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstanceWithAllParameters(action, newItems, oldItems, newIndex, oldIndex, *this, this->m_inner); });
         }
     };
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableIterable> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Interop::IBindableIterable> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableIterator> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Interop::IBindableIterator> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableVector> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Interop::IBindableVector> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableVectorView> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Interop::IBindableVectorView> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory> {};
-    template<> struct hash<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableIterable> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableIterator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableVector> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Interop::IBindableVectorView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChangedEventArgsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs> : winrt::impl::hash_base {};
+#endif
 }
 
 namespace winrt::impl
@@ -631,7 +637,7 @@ namespace winrt::impl
     };
 }
 
-namespace winrt
+WINRT_EXPORT namespace winrt
 {
     template <typename T>
     inline Windows::UI::Xaml::Interop::TypeName xaml_typename()

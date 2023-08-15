@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_System_UserProfile_H
 #define WINRT_Windows_System_UserProfile_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -17,267 +17,267 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.System.UserProfile.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_System_UserProfile_IAdvertisingManagerForUser<D>::AdvertisingId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_UserProfile_IAdvertisingManagerForUser<D>::AdvertisingId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IAdvertisingManagerForUser)->get_AdvertisingId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IAdvertisingManagerForUser<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_System_UserProfile_IAdvertisingManagerForUser<D>::User() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IAdvertisingManagerForUser)->get_User(&value));
         return Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IAdvertisingManagerStatics<D>::AdvertisingId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_UserProfile_IAdvertisingManagerStatics<D>::AdvertisingId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IAdvertisingManagerStatics)->get_AdvertisingId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IAdvertisingManagerStatics2<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::UserProfile::AdvertisingManagerForUser) consume_Windows_System_UserProfile_IAdvertisingManagerStatics2<D>::GetForUser(Windows::System::User const& user) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IAdvertisingManagerStatics2)->GetForUser(*(void**)(&user), &value));
         return Windows::System::UserProfile::AdvertisingManagerForUser{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IAssignedAccessSettings<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_UserProfile_IAssignedAccessSettings<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IAssignedAccessSettings)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IAssignedAccessSettings<D>::IsSingleAppKioskMode() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_UserProfile_IAssignedAccessSettings<D>::IsSingleAppKioskMode() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IAssignedAccessSettings)->get_IsSingleAppKioskMode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IAssignedAccessSettings<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_System_UserProfile_IAssignedAccessSettings<D>::User() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IAssignedAccessSettings)->get_User(&value));
         return Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IAssignedAccessSettingsStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::UserProfile::AssignedAccessSettings) consume_Windows_System_UserProfile_IAssignedAccessSettingsStatics<D>::GetDefault() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IAssignedAccessSettingsStatics)->GetDefault(&result));
         return Windows::System::UserProfile::AssignedAccessSettings{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IAssignedAccessSettingsStatics<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::UserProfile::AssignedAccessSettings) consume_Windows_System_UserProfile_IAssignedAccessSettingsStatics<D>::GetForUser(Windows::System::User const& user) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IAssignedAccessSettingsStatics)->GetForUser(*(void**)(&user), &result));
         return Windows::System::UserProfile::AssignedAccessSettings{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IDiagnosticsSettings<D>::CanUseDiagnosticsToTailorExperiences() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_UserProfile_IDiagnosticsSettings<D>::CanUseDiagnosticsToTailorExperiences() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IDiagnosticsSettings)->get_CanUseDiagnosticsToTailorExperiences(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IDiagnosticsSettings<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_System_UserProfile_IDiagnosticsSettings<D>::User() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IDiagnosticsSettings)->get_User(&value));
         return Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IDiagnosticsSettingsStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::UserProfile::DiagnosticsSettings) consume_Windows_System_UserProfile_IDiagnosticsSettingsStatics<D>::GetDefault() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IDiagnosticsSettingsStatics)->GetDefault(&value));
         return Windows::System::UserProfile::DiagnosticsSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IDiagnosticsSettingsStatics<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::UserProfile::DiagnosticsSettings) consume_Windows_System_UserProfile_IDiagnosticsSettingsStatics<D>::GetForUser(Windows::System::User const& user) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IDiagnosticsSettingsStatics)->GetForUser(*(void**)(&user), &value));
         return Windows::System::UserProfile::DiagnosticsSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IFirstSignInSettingsStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::UserProfile::FirstSignInSettings) consume_Windows_System_UserProfile_IFirstSignInSettingsStatics<D>::GetDefault() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IFirstSignInSettingsStatics)->GetDefault(&result));
         return Windows::System::UserProfile::FirstSignInSettings{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::User() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesForUser)->get_User(&value));
         return Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::Calendars() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::Calendars() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesForUser)->get_Calendars(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::Clocks() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::Clocks() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesForUser)->get_Clocks(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::Currencies() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::Currencies() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesForUser)->get_Currencies(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::Languages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesForUser)->get_Languages(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::HomeGeographicRegion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::HomeGeographicRegion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesForUser)->get_HomeGeographicRegion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::WeekStartsOn() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DayOfWeek) consume_Windows_System_UserProfile_IGlobalizationPreferencesForUser<D>::WeekStartsOn() const
     {
-        Windows::Globalization::DayOfWeek value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesForUser)->get_WeekStartsOn(put_abi(value)));
+        Windows::Globalization::DayOfWeek value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesForUser)->get_WeekStartsOn(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::Calendars() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::Calendars() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics)->get_Calendars(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::Clocks() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::Clocks() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics)->get_Clocks(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::Currencies() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::Currencies() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics)->get_Currencies(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::Languages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics)->get_Languages(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::HomeGeographicRegion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::HomeGeographicRegion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics)->get_HomeGeographicRegion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::WeekStartsOn() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DayOfWeek) consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics<D>::WeekStartsOn() const
     {
-        Windows::Globalization::DayOfWeek value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics)->get_WeekStartsOn(put_abi(value)));
+        Windows::Globalization::DayOfWeek value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics)->get_WeekStartsOn(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics2<D>::TrySetHomeGeographicRegion(param::hstring const& region) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics2<D>::TrySetHomeGeographicRegion(param::hstring const& region) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics2)->TrySetHomeGeographicRegion(*(void**)(&region), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics2<D>::TrySetLanguages(param::iterable<hstring> const& languageTags) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics2<D>::TrySetLanguages(param::iterable<hstring> const& languageTags) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics2)->TrySetLanguages(*(void**)(&languageTags), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics3<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::UserProfile::GlobalizationPreferencesForUser) consume_Windows_System_UserProfile_IGlobalizationPreferencesStatics3<D>::GetForUser(Windows::System::User const& user) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IGlobalizationPreferencesStatics3)->GetForUser(*(void**)(&user), &value));
         return Windows::System::UserProfile::GlobalizationPreferencesForUser{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_ILockScreenImageFeedStatics<D>::RequestSetImageFeedAsync(Windows::Foundation::Uri const& syndicationFeedUri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetImageFeedResult>) consume_Windows_System_UserProfile_ILockScreenImageFeedStatics<D>::RequestSetImageFeedAsync(Windows::Foundation::Uri const& syndicationFeedUri) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::ILockScreenImageFeedStatics)->RequestSetImageFeedAsync(*(void**)(&syndicationFeedUri), &value));
         return Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetImageFeedResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_ILockScreenImageFeedStatics<D>::TryRemoveImageFeed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_UserProfile_ILockScreenImageFeedStatics<D>::TryRemoveImageFeed() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::ILockScreenImageFeedStatics)->TryRemoveImageFeed(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_ILockScreenStatics<D>::OriginalImageFile() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_System_UserProfile_ILockScreenStatics<D>::OriginalImageFile() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::ILockScreenStatics)->get_OriginalImageFile(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_ILockScreenStatics<D>::GetImageStream() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStream) consume_Windows_System_UserProfile_ILockScreenStatics<D>::GetImageStream() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::ILockScreenStatics)->GetImageStream(&value));
         return Windows::Storage::Streams::IRandomAccessStream{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_ILockScreenStatics<D>::SetImageFileAsync(Windows::Storage::IStorageFile const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_System_UserProfile_ILockScreenStatics<D>::SetImageFileAsync(Windows::Storage::IStorageFile const& value) const
     {
         void* Operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::ILockScreenStatics)->SetImageFileAsync(*(void**)(&value), &Operation));
         return Windows::Foundation::IAsyncAction{ Operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_ILockScreenStatics<D>::SetImageStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_System_UserProfile_ILockScreenStatics<D>::SetImageStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& value) const
     {
         void* Operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::ILockScreenStatics)->SetImageStreamAsync(*(void**)(&value), &Operation));
         return Windows::Foundation::IAsyncAction{ Operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::AccountPictureChangeEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_UserProfile_IUserInformationStatics<D>::AccountPictureChangeEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->get_AccountPictureChangeEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::NameAccessAllowed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_UserProfile_IUserInformationStatics<D>::NameAccessAllowed() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->get_NameAccessAllowed(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetAccountPicture(Windows::System::UserProfile::AccountPictureKind const& kind) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::IStorageFile) consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetAccountPicture(Windows::System::UserProfile::AccountPictureKind const& kind) const
     {
         void* storageFile{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->GetAccountPicture(static_cast<int32_t>(kind), &storageFile));
         return Windows::Storage::IStorageFile{ storageFile, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::SetAccountPictureAsync(Windows::Storage::IStorageFile const& image) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::SetAccountPictureAsync(Windows::Storage::IStorageFile const& image) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->SetAccountPictureAsync(*(void**)(&image), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::SetAccountPicturesAsync(Windows::Storage::IStorageFile const& smallImage, Windows::Storage::IStorageFile const& largeImage, Windows::Storage::IStorageFile const& video) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::SetAccountPicturesAsync(Windows::Storage::IStorageFile const& smallImage, Windows::Storage::IStorageFile const& largeImage, Windows::Storage::IStorageFile const& video) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->SetAccountPicturesAsync(*(void**)(&smallImage), *(void**)(&largeImage), *(void**)(&video), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::SetAccountPictureFromStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& image) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::SetAccountPictureFromStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& image) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->SetAccountPictureFromStreamAsync(*(void**)(&image), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::SetAccountPicturesFromStreamsAsync(Windows::Storage::Streams::IRandomAccessStream const& smallImage, Windows::Storage::Streams::IRandomAccessStream const& largeImage, Windows::Storage::Streams::IRandomAccessStream const& video) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::SetAccountPicturesFromStreamsAsync(Windows::Storage::Streams::IRandomAccessStream const& smallImage, Windows::Storage::Streams::IRandomAccessStream const& largeImage, Windows::Storage::Streams::IRandomAccessStream const& video) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->SetAccountPicturesFromStreamsAsync(*(void**)(&smallImage), *(void**)(&largeImage), *(void**)(&video), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::AccountPictureChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_UserProfile_IUserInformationStatics<D>::AccountPictureChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->add_AccountPictureChanged(*(void**)(&changeHandler), put_abi(token)));
         return token;
     }
@@ -285,70 +285,71 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AccountPictureChanged_revoker>(this, AccountPictureChanged(changeHandler));
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::AccountPictureChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_UserProfile_IUserInformationStatics<D>::AccountPictureChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->remove_AccountPictureChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetDisplayNameAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetDisplayNameAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->GetDisplayNameAsync(&operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetFirstNameAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetFirstNameAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->GetFirstNameAsync(&operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetLastNameAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetLastNameAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->GetLastNameAsync(&operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetPrincipalNameAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetPrincipalNameAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->GetPrincipalNameAsync(&operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetSessionInitiationProtocolUriAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Uri>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetSessionInitiationProtocolUriAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->GetSessionInitiationProtocolUriAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Uri>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetDomainNameAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_System_UserProfile_IUserInformationStatics<D>::GetDomainNameAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserInformationStatics)->GetDomainNameAsync(&operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserProfilePersonalizationSettings<D>::TrySetLockScreenImageAsync(Windows::Storage::StorageFile const& imageFile) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_UserProfile_IUserProfilePersonalizationSettings<D>::TrySetLockScreenImageAsync(Windows::Storage::StorageFile const& imageFile) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserProfilePersonalizationSettings)->TrySetLockScreenImageAsync(*(void**)(&imageFile), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserProfilePersonalizationSettings<D>::TrySetWallpaperImageAsync(Windows::Storage::StorageFile const& imageFile) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_UserProfile_IUserProfilePersonalizationSettings<D>::TrySetWallpaperImageAsync(Windows::Storage::StorageFile const& imageFile) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserProfilePersonalizationSettings)->TrySetWallpaperImageAsync(*(void**)(&imageFile), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserProfilePersonalizationSettingsStatics<D>::Current() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::UserProfile::UserProfilePersonalizationSettings) consume_Windows_System_UserProfile_IUserProfilePersonalizationSettingsStatics<D>::Current() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics)->get_Current(&value));
         return Windows::System::UserProfile::UserProfilePersonalizationSettings{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_UserProfile_IUserProfilePersonalizationSettingsStatics<D>::IsSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_UserProfile_IUserProfilePersonalizationSettingsStatics<D>::IsSupported() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics)->IsSupported(&result));
         return result;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IAdvertisingManagerForUser> : produce_base<D, Windows::System::UserProfile::IAdvertisingManagerForUser>
     {
@@ -369,6 +370,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IAdvertisingManagerStatics> : produce_base<D, Windows::System::UserProfile::IAdvertisingManagerStatics>
     {
@@ -381,6 +384,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IAdvertisingManagerStatics2> : produce_base<D, Windows::System::UserProfile::IAdvertisingManagerStatics2>
     {
@@ -393,6 +398,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IAssignedAccessSettings> : produce_base<D, Windows::System::UserProfile::IAssignedAccessSettings>
     {
@@ -419,6 +426,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IAssignedAccessSettingsStatics> : produce_base<D, Windows::System::UserProfile::IAssignedAccessSettingsStatics>
     {
@@ -439,6 +448,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IDiagnosticsSettings> : produce_base<D, Windows::System::UserProfile::IDiagnosticsSettings>
     {
@@ -458,6 +469,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IDiagnosticsSettingsStatics> : produce_base<D, Windows::System::UserProfile::IDiagnosticsSettingsStatics>
     {
@@ -478,10 +491,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IFirstSignInSettings> : produce_base<D, Windows::System::UserProfile::IFirstSignInSettings>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IFirstSignInSettingsStatics> : produce_base<D, Windows::System::UserProfile::IFirstSignInSettingsStatics>
     {
@@ -494,6 +511,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IGlobalizationPreferencesForUser> : produce_base<D, Windows::System::UserProfile::IGlobalizationPreferencesForUser>
     {
@@ -553,6 +572,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IGlobalizationPreferencesStatics> : produce_base<D, Windows::System::UserProfile::IGlobalizationPreferencesStatics>
     {
@@ -604,6 +625,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IGlobalizationPreferencesStatics2> : produce_base<D, Windows::System::UserProfile::IGlobalizationPreferencesStatics2>
     {
@@ -622,6 +645,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IGlobalizationPreferencesStatics3> : produce_base<D, Windows::System::UserProfile::IGlobalizationPreferencesStatics3>
     {
@@ -634,6 +659,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::ILockScreenImageFeedStatics> : produce_base<D, Windows::System::UserProfile::ILockScreenImageFeedStatics>
     {
@@ -653,6 +680,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::ILockScreenStatics> : produce_base<D, Windows::System::UserProfile::ILockScreenStatics>
     {
@@ -689,6 +718,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IUserInformationStatics> : produce_base<D, Windows::System::UserProfile::IUserInformationStatics>
     {
@@ -809,6 +840,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IUserProfilePersonalizationSettings> : produce_base<D, Windows::System::UserProfile::IUserProfilePersonalizationSettings>
     {
@@ -829,6 +862,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics> : produce_base<D, Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics>
     {
@@ -848,128 +883,129 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::System::UserProfile
+WINRT_EXPORT namespace winrt::Windows::System::UserProfile
 {
     inline auto AdvertisingManager::AdvertisingId()
     {
-        return impl::call_factory<AdvertisingManager, Windows::System::UserProfile::IAdvertisingManagerStatics>([&](auto&& f) { return f.AdvertisingId(); });
+        return impl::call_factory_cast<hstring(*)(IAdvertisingManagerStatics const&), AdvertisingManager, IAdvertisingManagerStatics>([](IAdvertisingManagerStatics const& f) { return f.AdvertisingId(); });
     }
     inline auto AdvertisingManager::GetForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<AdvertisingManager, Windows::System::UserProfile::IAdvertisingManagerStatics2>([&](auto&& f) { return f.GetForUser(user); });
+        return impl::call_factory<AdvertisingManager, IAdvertisingManagerStatics2>([&](IAdvertisingManagerStatics2 const& f) { return f.GetForUser(user); });
     }
     inline auto AssignedAccessSettings::GetDefault()
     {
-        return impl::call_factory<AssignedAccessSettings, Windows::System::UserProfile::IAssignedAccessSettingsStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::System::UserProfile::AssignedAccessSettings(*)(IAssignedAccessSettingsStatics const&), AssignedAccessSettings, IAssignedAccessSettingsStatics>([](IAssignedAccessSettingsStatics const& f) { return f.GetDefault(); });
     }
     inline auto AssignedAccessSettings::GetForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<AssignedAccessSettings, Windows::System::UserProfile::IAssignedAccessSettingsStatics>([&](auto&& f) { return f.GetForUser(user); });
+        return impl::call_factory<AssignedAccessSettings, IAssignedAccessSettingsStatics>([&](IAssignedAccessSettingsStatics const& f) { return f.GetForUser(user); });
     }
     inline auto DiagnosticsSettings::GetDefault()
     {
-        return impl::call_factory<DiagnosticsSettings, Windows::System::UserProfile::IDiagnosticsSettingsStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::System::UserProfile::DiagnosticsSettings(*)(IDiagnosticsSettingsStatics const&), DiagnosticsSettings, IDiagnosticsSettingsStatics>([](IDiagnosticsSettingsStatics const& f) { return f.GetDefault(); });
     }
     inline auto DiagnosticsSettings::GetForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<DiagnosticsSettings, Windows::System::UserProfile::IDiagnosticsSettingsStatics>([&](auto&& f) { return f.GetForUser(user); });
+        return impl::call_factory<DiagnosticsSettings, IDiagnosticsSettingsStatics>([&](IDiagnosticsSettingsStatics const& f) { return f.GetForUser(user); });
     }
     inline auto FirstSignInSettings::GetDefault()
     {
-        return impl::call_factory<FirstSignInSettings, Windows::System::UserProfile::IFirstSignInSettingsStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::System::UserProfile::FirstSignInSettings(*)(IFirstSignInSettingsStatics const&), FirstSignInSettings, IFirstSignInSettingsStatics>([](IFirstSignInSettingsStatics const& f) { return f.GetDefault(); });
     }
     inline auto GlobalizationPreferences::Calendars()
     {
-        return impl::call_factory<GlobalizationPreferences, Windows::System::UserProfile::IGlobalizationPreferencesStatics>([&](auto&& f) { return f.Calendars(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IGlobalizationPreferencesStatics const&), GlobalizationPreferences, IGlobalizationPreferencesStatics>([](IGlobalizationPreferencesStatics const& f) { return f.Calendars(); });
     }
     inline auto GlobalizationPreferences::Clocks()
     {
-        return impl::call_factory<GlobalizationPreferences, Windows::System::UserProfile::IGlobalizationPreferencesStatics>([&](auto&& f) { return f.Clocks(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IGlobalizationPreferencesStatics const&), GlobalizationPreferences, IGlobalizationPreferencesStatics>([](IGlobalizationPreferencesStatics const& f) { return f.Clocks(); });
     }
     inline auto GlobalizationPreferences::Currencies()
     {
-        return impl::call_factory<GlobalizationPreferences, Windows::System::UserProfile::IGlobalizationPreferencesStatics>([&](auto&& f) { return f.Currencies(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IGlobalizationPreferencesStatics const&), GlobalizationPreferences, IGlobalizationPreferencesStatics>([](IGlobalizationPreferencesStatics const& f) { return f.Currencies(); });
     }
     inline auto GlobalizationPreferences::Languages()
     {
-        return impl::call_factory<GlobalizationPreferences, Windows::System::UserProfile::IGlobalizationPreferencesStatics>([&](auto&& f) { return f.Languages(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IGlobalizationPreferencesStatics const&), GlobalizationPreferences, IGlobalizationPreferencesStatics>([](IGlobalizationPreferencesStatics const& f) { return f.Languages(); });
     }
     inline auto GlobalizationPreferences::HomeGeographicRegion()
     {
-        return impl::call_factory<GlobalizationPreferences, Windows::System::UserProfile::IGlobalizationPreferencesStatics>([&](auto&& f) { return f.HomeGeographicRegion(); });
+        return impl::call_factory_cast<hstring(*)(IGlobalizationPreferencesStatics const&), GlobalizationPreferences, IGlobalizationPreferencesStatics>([](IGlobalizationPreferencesStatics const& f) { return f.HomeGeographicRegion(); });
     }
     inline auto GlobalizationPreferences::WeekStartsOn()
     {
-        return impl::call_factory<GlobalizationPreferences, Windows::System::UserProfile::IGlobalizationPreferencesStatics>([&](auto&& f) { return f.WeekStartsOn(); });
+        return impl::call_factory_cast<Windows::Globalization::DayOfWeek(*)(IGlobalizationPreferencesStatics const&), GlobalizationPreferences, IGlobalizationPreferencesStatics>([](IGlobalizationPreferencesStatics const& f) { return f.WeekStartsOn(); });
     }
     inline auto GlobalizationPreferences::TrySetHomeGeographicRegion(param::hstring const& region)
     {
-        return impl::call_factory<GlobalizationPreferences, Windows::System::UserProfile::IGlobalizationPreferencesStatics2>([&](auto&& f) { return f.TrySetHomeGeographicRegion(region); });
+        return impl::call_factory<GlobalizationPreferences, IGlobalizationPreferencesStatics2>([&](IGlobalizationPreferencesStatics2 const& f) { return f.TrySetHomeGeographicRegion(region); });
     }
     inline auto GlobalizationPreferences::TrySetLanguages(param::iterable<hstring> const& languageTags)
     {
-        return impl::call_factory<GlobalizationPreferences, Windows::System::UserProfile::IGlobalizationPreferencesStatics2>([&](auto&& f) { return f.TrySetLanguages(languageTags); });
+        return impl::call_factory<GlobalizationPreferences, IGlobalizationPreferencesStatics2>([&](IGlobalizationPreferencesStatics2 const& f) { return f.TrySetLanguages(languageTags); });
     }
     inline auto GlobalizationPreferences::GetForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<GlobalizationPreferences, Windows::System::UserProfile::IGlobalizationPreferencesStatics3>([&](auto&& f) { return f.GetForUser(user); });
+        return impl::call_factory<GlobalizationPreferences, IGlobalizationPreferencesStatics3>([&](IGlobalizationPreferencesStatics3 const& f) { return f.GetForUser(user); });
     }
     inline auto LockScreen::RequestSetImageFeedAsync(Windows::Foundation::Uri const& syndicationFeedUri)
     {
-        return impl::call_factory<LockScreen, Windows::System::UserProfile::ILockScreenImageFeedStatics>([&](auto&& f) { return f.RequestSetImageFeedAsync(syndicationFeedUri); });
+        return impl::call_factory<LockScreen, ILockScreenImageFeedStatics>([&](ILockScreenImageFeedStatics const& f) { return f.RequestSetImageFeedAsync(syndicationFeedUri); });
     }
     inline auto LockScreen::TryRemoveImageFeed()
     {
-        return impl::call_factory<LockScreen, Windows::System::UserProfile::ILockScreenImageFeedStatics>([&](auto&& f) { return f.TryRemoveImageFeed(); });
+        return impl::call_factory_cast<bool(*)(ILockScreenImageFeedStatics const&), LockScreen, ILockScreenImageFeedStatics>([](ILockScreenImageFeedStatics const& f) { return f.TryRemoveImageFeed(); });
     }
     inline auto LockScreen::OriginalImageFile()
     {
-        return impl::call_factory<LockScreen, Windows::System::UserProfile::ILockScreenStatics>([&](auto&& f) { return f.OriginalImageFile(); });
+        return impl::call_factory_cast<Windows::Foundation::Uri(*)(ILockScreenStatics const&), LockScreen, ILockScreenStatics>([](ILockScreenStatics const& f) { return f.OriginalImageFile(); });
     }
     inline auto LockScreen::GetImageStream()
     {
-        return impl::call_factory<LockScreen, Windows::System::UserProfile::ILockScreenStatics>([&](auto&& f) { return f.GetImageStream(); });
+        return impl::call_factory_cast<Windows::Storage::Streams::IRandomAccessStream(*)(ILockScreenStatics const&), LockScreen, ILockScreenStatics>([](ILockScreenStatics const& f) { return f.GetImageStream(); });
     }
     inline auto LockScreen::SetImageFileAsync(Windows::Storage::IStorageFile const& value)
     {
-        return impl::call_factory<LockScreen, Windows::System::UserProfile::ILockScreenStatics>([&](auto&& f) { return f.SetImageFileAsync(value); });
+        return impl::call_factory<LockScreen, ILockScreenStatics>([&](ILockScreenStatics const& f) { return f.SetImageFileAsync(value); });
     }
     inline auto LockScreen::SetImageStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& value)
     {
-        return impl::call_factory<LockScreen, Windows::System::UserProfile::ILockScreenStatics>([&](auto&& f) { return f.SetImageStreamAsync(value); });
+        return impl::call_factory<LockScreen, ILockScreenStatics>([&](ILockScreenStatics const& f) { return f.SetImageStreamAsync(value); });
     }
     inline auto UserInformation::AccountPictureChangeEnabled()
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.AccountPictureChangeEnabled(); });
+        return impl::call_factory_cast<bool(*)(IUserInformationStatics const&), UserInformation, IUserInformationStatics>([](IUserInformationStatics const& f) { return f.AccountPictureChangeEnabled(); });
     }
     inline auto UserInformation::NameAccessAllowed()
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.NameAccessAllowed(); });
+        return impl::call_factory_cast<bool(*)(IUserInformationStatics const&), UserInformation, IUserInformationStatics>([](IUserInformationStatics const& f) { return f.NameAccessAllowed(); });
     }
     inline auto UserInformation::GetAccountPicture(Windows::System::UserProfile::AccountPictureKind const& kind)
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.GetAccountPicture(kind); });
+        return impl::call_factory<UserInformation, IUserInformationStatics>([&](IUserInformationStatics const& f) { return f.GetAccountPicture(kind); });
     }
     inline auto UserInformation::SetAccountPictureAsync(Windows::Storage::IStorageFile const& image)
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.SetAccountPictureAsync(image); });
+        return impl::call_factory<UserInformation, IUserInformationStatics>([&](IUserInformationStatics const& f) { return f.SetAccountPictureAsync(image); });
     }
     inline auto UserInformation::SetAccountPicturesAsync(Windows::Storage::IStorageFile const& smallImage, Windows::Storage::IStorageFile const& largeImage, Windows::Storage::IStorageFile const& video)
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.SetAccountPicturesAsync(smallImage, largeImage, video); });
+        return impl::call_factory<UserInformation, IUserInformationStatics>([&](IUserInformationStatics const& f) { return f.SetAccountPicturesAsync(smallImage, largeImage, video); });
     }
     inline auto UserInformation::SetAccountPictureFromStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& image)
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.SetAccountPictureFromStreamAsync(image); });
+        return impl::call_factory<UserInformation, IUserInformationStatics>([&](IUserInformationStatics const& f) { return f.SetAccountPictureFromStreamAsync(image); });
     }
     inline auto UserInformation::SetAccountPicturesFromStreamsAsync(Windows::Storage::Streams::IRandomAccessStream const& smallImage, Windows::Storage::Streams::IRandomAccessStream const& largeImage, Windows::Storage::Streams::IRandomAccessStream const& video)
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.SetAccountPicturesFromStreamsAsync(smallImage, largeImage, video); });
+        return impl::call_factory<UserInformation, IUserInformationStatics>([&](IUserInformationStatics const& f) { return f.SetAccountPicturesFromStreamsAsync(smallImage, largeImage, video); });
     }
     inline auto UserInformation::AccountPictureChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler)
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.AccountPictureChanged(changeHandler); });
+        return impl::call_factory<UserInformation, IUserInformationStatics>([&](IUserInformationStatics const& f) { return f.AccountPictureChanged(changeHandler); });
     }
     inline UserInformation::AccountPictureChanged_revoker UserInformation::AccountPictureChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler)
     {
@@ -978,70 +1014,72 @@ namespace winrt::Windows::System::UserProfile
     }
     inline auto UserInformation::AccountPictureChanged(winrt::event_token const& token)
     {
-        impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.AccountPictureChanged(token); });
+        impl::call_factory<UserInformation, IUserInformationStatics>([&](IUserInformationStatics const& f) { return f.AccountPictureChanged(token); });
     }
     inline auto UserInformation::GetDisplayNameAsync()
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.GetDisplayNameAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<hstring>(*)(IUserInformationStatics const&), UserInformation, IUserInformationStatics>([](IUserInformationStatics const& f) { return f.GetDisplayNameAsync(); });
     }
     inline auto UserInformation::GetFirstNameAsync()
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.GetFirstNameAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<hstring>(*)(IUserInformationStatics const&), UserInformation, IUserInformationStatics>([](IUserInformationStatics const& f) { return f.GetFirstNameAsync(); });
     }
     inline auto UserInformation::GetLastNameAsync()
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.GetLastNameAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<hstring>(*)(IUserInformationStatics const&), UserInformation, IUserInformationStatics>([](IUserInformationStatics const& f) { return f.GetLastNameAsync(); });
     }
     inline auto UserInformation::GetPrincipalNameAsync()
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.GetPrincipalNameAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<hstring>(*)(IUserInformationStatics const&), UserInformation, IUserInformationStatics>([](IUserInformationStatics const& f) { return f.GetPrincipalNameAsync(); });
     }
     inline auto UserInformation::GetSessionInitiationProtocolUriAsync()
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.GetSessionInitiationProtocolUriAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Foundation::Uri>(*)(IUserInformationStatics const&), UserInformation, IUserInformationStatics>([](IUserInformationStatics const& f) { return f.GetSessionInitiationProtocolUriAsync(); });
     }
     inline auto UserInformation::GetDomainNameAsync()
     {
-        return impl::call_factory<UserInformation, Windows::System::UserProfile::IUserInformationStatics>([&](auto&& f) { return f.GetDomainNameAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<hstring>(*)(IUserInformationStatics const&), UserInformation, IUserInformationStatics>([](IUserInformationStatics const& f) { return f.GetDomainNameAsync(); });
     }
     inline auto UserProfilePersonalizationSettings::Current()
     {
-        return impl::call_factory<UserProfilePersonalizationSettings, Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics>([&](auto&& f) { return f.Current(); });
+        return impl::call_factory_cast<Windows::System::UserProfile::UserProfilePersonalizationSettings(*)(IUserProfilePersonalizationSettingsStatics const&), UserProfilePersonalizationSettings, IUserProfilePersonalizationSettingsStatics>([](IUserProfilePersonalizationSettingsStatics const& f) { return f.Current(); });
     }
     inline auto UserProfilePersonalizationSettings::IsSupported()
     {
-        return impl::call_factory<UserProfilePersonalizationSettings, Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics>([&](auto&& f) { return f.IsSupported(); });
+        return impl::call_factory_cast<bool(*)(IUserProfilePersonalizationSettingsStatics const&), UserProfilePersonalizationSettings, IUserProfilePersonalizationSettingsStatics>([](IUserProfilePersonalizationSettingsStatics const& f) { return f.IsSupported(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::System::UserProfile::IAdvertisingManagerForUser> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IAdvertisingManagerForUser> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IAdvertisingManagerStatics> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IAdvertisingManagerStatics> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IAdvertisingManagerStatics2> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IAdvertisingManagerStatics2> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IAssignedAccessSettings> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IAssignedAccessSettings> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IAssignedAccessSettingsStatics> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IAssignedAccessSettingsStatics> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IDiagnosticsSettings> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IDiagnosticsSettings> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IDiagnosticsSettingsStatics> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IDiagnosticsSettingsStatics> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IFirstSignInSettings> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IFirstSignInSettings> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IFirstSignInSettingsStatics> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IFirstSignInSettingsStatics> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IGlobalizationPreferencesForUser> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IGlobalizationPreferencesForUser> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics2> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics2> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics3> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics3> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::ILockScreenImageFeedStatics> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::ILockScreenImageFeedStatics> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::ILockScreenStatics> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::ILockScreenStatics> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IUserInformationStatics> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IUserInformationStatics> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IUserProfilePersonalizationSettings> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IUserProfilePersonalizationSettings> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::AdvertisingManager> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::AdvertisingManager> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::AdvertisingManagerForUser> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::AdvertisingManagerForUser> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::AssignedAccessSettings> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::AssignedAccessSettings> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::DiagnosticsSettings> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::DiagnosticsSettings> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::FirstSignInSettings> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::FirstSignInSettings> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::GlobalizationPreferences> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::GlobalizationPreferences> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::LockScreen> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::LockScreen> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::UserInformation> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::UserInformation> {};
-    template<> struct hash<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings> : winrt::impl::hash_base<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::System::UserProfile::IAdvertisingManagerForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IAdvertisingManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IAdvertisingManagerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IAssignedAccessSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IAssignedAccessSettingsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IDiagnosticsSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IDiagnosticsSettingsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IFirstSignInSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IFirstSignInSettingsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IGlobalizationPreferencesForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::ILockScreenImageFeedStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::ILockScreenStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IUserInformationStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IUserProfilePersonalizationSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::AdvertisingManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::AdvertisingManagerForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::AssignedAccessSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::DiagnosticsSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::FirstSignInSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::GlobalizationPreferences> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::LockScreen> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::UserInformation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings> : winrt::impl::hash_base {};
+#endif
 }
 #endif

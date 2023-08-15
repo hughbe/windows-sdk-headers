@@ -1875,6 +1875,17 @@ Notes:
 #define STATUS_RETURN_ADDRESS_HIJACK_ATTEMPT ((NTSTATUS)0x80000033L)
 
 //
+// MessageId: STATUS_RECOVERABLE_BUGCHECK
+//
+// MessageText:
+//
+// {EXCEPTION}
+// Recoverable Bugcheck Exception
+// A bugcheck was re-raised as an exception.
+//
+#define STATUS_RECOVERABLE_BUGCHECK      ((NTSTATUS)0x80000034L)
+
+//
 // MessageId: DBG_EXCEPTION_NOT_HANDLED
 //
 // MessageText:
@@ -5969,6 +5980,33 @@ Notes:
 #define STATUS_CONTROL_STACK_VIOLATION   ((NTSTATUS)0xC00001B2L)    //winnt
 
 //
+// MessageId: STATUS_WEAK_WHFBKEY_BLOCKED
+//
+// MessageText:
+//
+// The Security Account Manager blocked the use of a weak Windows Hello for Business key.
+//
+#define STATUS_WEAK_WHFBKEY_BLOCKED      ((NTSTATUS)0xC00001B3L)
+
+//
+// MessageId: STATUS_SERVER_TRANSPORT_CONFLICT
+//
+// MessageText:
+//
+// Multiple mappings to shared resource(s) on a server, using more than one transport, are not allowed. Use a single transport for all mappings to a server and try again.
+//
+#define STATUS_SERVER_TRANSPORT_CONFLICT ((NTSTATUS)0xC00001B4L)
+
+//
+// MessageId: STATUS_CERTIFICATE_VALIDATION_PREFERENCE_CONFLICT
+//
+// MessageText:
+//
+// Multiple mappings to shared resource(s) on a server, using different certificate validation preferences, are not allowed. Use the same preference for all mappings to a server and try again.
+//
+#define STATUS_CERTIFICATE_VALIDATION_PREFERENCE_CONFLICT ((NTSTATUS)0xC00001B5L)
+
+//
 //  Available range of NTSTATUS codes
 //
 //
@@ -9952,15 +9990,6 @@ Notes:
 #define STATUS_STORAGE_LOST_DATA_PERSISTENCE ((NTSTATUS)0xC000049EL)
 
 //
-// MessageId: STATUS_VRF_CFG_AND_IO_ENABLED
-//
-// MessageText:
-//
-// Driver Verifier Volatile settings cannot be set when CFG and IO are enabled.
-//
-#define STATUS_VRF_CFG_AND_IO_ENABLED    ((NTSTATUS)0xC000049FL)
-
-//
 // MessageId: STATUS_PARTITION_TERMINATING
 //
 // MessageText:
@@ -10203,6 +10232,87 @@ Notes:
 //
 #define STATUS_CASE_SENSITIVE_PATH       ((NTSTATUS)0xC00004BAL)
 
+//
+// MessageId: STATUS_UNSUPPORTED_PAGING_MODE
+//
+// MessageText:
+//
+// The currently selected address translation mode is not supported.
+//
+#define STATUS_UNSUPPORTED_PAGING_MODE   ((NTSTATUS)0xC00004BBL)
+
+//
+// MessageId: STATUS_UNTRUSTED_MOUNT_POINT
+//
+// MessageText:
+//
+// The path cannot be traversed because it contains an untrusted mount point.
+//
+#define STATUS_UNTRUSTED_MOUNT_POINT     ((NTSTATUS)0xC00004BCL)
+
+//
+// MessageId: STATUS_HAS_SYSTEM_CRITICAL_FILES
+//
+// MessageText:
+//
+// The volume contains paging, crash dump or other system critical files.
+//
+#define STATUS_HAS_SYSTEM_CRITICAL_FILES ((NTSTATUS)0xC00004BDL)
+
+//
+// MessageId: STATUS_OBJECT_IS_IMMUTABLE
+//
+// MessageText:
+//
+// The request cannot be completed as it requires modifying an immutable object.
+//
+#define STATUS_OBJECT_IS_IMMUTABLE       ((NTSTATUS)0xC00004BEL)
+
+//
+// MessageId: STATUS_FT_READ_FROM_COPY_FAILURE
+//
+// MessageText:
+//
+// The specified copy of the requested data could not be read.
+//
+#define STATUS_FT_READ_FROM_COPY_FAILURE ((NTSTATUS)0xC00004BFL)
+
+//
+// MessageId: STATUS_IMAGE_LOADED_AS_PATCH_IMAGE
+//
+// MessageText:
+//
+// This image cannot be loaded because it has already been loaded as a hot patch image.
+//
+#define STATUS_IMAGE_LOADED_AS_PATCH_IMAGE ((NTSTATUS)0xC00004C0L)
+
+//
+// MessageId: STATUS_STORAGE_STACK_ACCESS_DENIED
+//
+// MessageText:
+//
+// The storage stack returned STATUS_ACCESS_DENEID for the current operation.
+//
+#define STATUS_STORAGE_STACK_ACCESS_DENIED ((NTSTATUS)0xC00004C1L)
+
+//
+// MessageId: STATUS_INSUFFICIENT_VIRTUAL_ADDR_RESOURCES
+//
+// MessageText:
+//
+// Insufficient Virtual Address resources to complete the operation.
+//
+#define STATUS_INSUFFICIENT_VIRTUAL_ADDR_RESOURCES ((NTSTATUS)0xC00004C2L)
+
+//
+// MessageId: STATUS_PATCH_NOT_REGISTERED
+//
+// MessageText:
+//
+// The patch is not currently registered for the corresponding base image.
+//
+#define STATUS_PATCH_NOT_REGISTERED      ((NTSTATUS)0xC00004D4L)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 
@@ -10413,6 +10523,15 @@ Notes:
 // The target thread is not currently running.
 //
 #define STATUS_THREAD_NOT_RUNNING        ((NTSTATUS)0xC0000516L)    // winnt
+
+//
+// MessageId: STATUS_SESSION_KEY_TOO_SHORT
+//
+// MessageText:
+//
+// The negotiated session key does not meet the minimum length requirement.
+//
+#define STATUS_SESSION_KEY_TOO_SHORT     ((NTSTATUS)0xC0000517L)
 
 
 //     **** New SYSTEM error codes can be inserted here ****
@@ -11125,6 +11244,174 @@ Notes:
 #define STATUS_FILE_HANDLE_REVOKED       ((NTSTATUS)0xC0000910L)
 
 //
+// MessageId: STATUS_SECTION_DIRECT_MAP_ONLY
+//
+// MessageText:
+//
+// The specified section is supported by direct map technology but the caller specifically does not want that.
+//
+#define STATUS_SECTION_DIRECT_MAP_ONLY   ((NTSTATUS)0xC0000911L)
+
+/*++
+
+ MessageId's 0xc08 - 0xc7f (inclusive) are reserved for Verifier errors.
+
+--*/
+//
+// MessageId: STATUS_VRF_VOLATILE_CFG_AND_IO_ENABLED
+//
+// MessageText:
+//
+// Enabling driver verification from volatile command is currently not supported when both CFG and IO are enabled.
+//
+#define STATUS_VRF_VOLATILE_CFG_AND_IO_ENABLED ((NTSTATUS)0xC0000C08L)
+
+//
+// MessageId: STATUS_VRF_VOLATILE_NOT_STOPPABLE
+//
+// MessageText:
+//
+// Removal of current driver verification is not supported from volatile command.
+//
+#define STATUS_VRF_VOLATILE_NOT_STOPPABLE ((NTSTATUS)0xC0000C09L)
+
+//
+// MessageId: STATUS_VRF_VOLATILE_SAFE_MODE
+//
+// MessageText:
+//
+// Enabling driver verification is not supported in safe mode.
+//
+#define STATUS_VRF_VOLATILE_SAFE_MODE    ((NTSTATUS)0xC0000C0AL)
+
+//
+// MessageId: STATUS_VRF_VOLATILE_NOT_RUNNABLE_SYSTEM
+//
+// MessageText:
+//
+// Enabling driver verification is not supported from volatile mode in current system.
+//
+#define STATUS_VRF_VOLATILE_NOT_RUNNABLE_SYSTEM ((NTSTATUS)0xC0000C0BL)
+
+//
+// MessageId: STATUS_VRF_VOLATILE_NOT_SUPPORTED_RULECLASS
+//
+// MessageText:
+//
+// The specified rule class (a.k.a. flag) is not supported from volatile mode.
+//
+#define STATUS_VRF_VOLATILE_NOT_SUPPORTED_RULECLASS ((NTSTATUS)0xC0000C0CL)
+
+//
+// MessageId: STATUS_VRF_VOLATILE_PROTECTED_DRIVER
+//
+// MessageText:
+//
+// The specified driver is protected and volatile verification is currently not supported.
+//
+#define STATUS_VRF_VOLATILE_PROTECTED_DRIVER ((NTSTATUS)0xC0000C0DL)
+
+//
+// MessageId: STATUS_VRF_VOLATILE_NMI_REGISTERED
+//
+// MessageText:
+//
+// Enabling driver verification is not supported for a driver with  NMI callback(s) registered.
+//
+#define STATUS_VRF_VOLATILE_NMI_REGISTERED ((NTSTATUS)0xC0000C0EL)
+
+//
+// MessageId: STATUS_VRF_VOLATILE_SETTINGS_CONFLICT
+//
+// MessageText:
+//
+// Volatile verification settings cannot be changed when verification is enabled from boot or DIF volatile verification is enabled.
+//
+#define STATUS_VRF_VOLATILE_SETTINGS_CONFLICT ((NTSTATUS)0xC0000C0FL)
+
+//
+// MessageId: STATUS_DIF_LIVEDUMP_LIMIT_EXCEEDED
+//
+// MessageText:
+//
+// Verifier's internal data size exceeds the limit of live dump secondary data.
+//
+#define STATUS_DIF_LIVEDUMP_LIMIT_EXCEEDED ((NTSTATUS)0xC0000C77L)
+
+//
+// MessageId: STATUS_DIF_VOLATILE_SECTION_NOT_LOCKED
+//
+// MessageText:
+//
+// Verification cannot start because an attempt to lock code or data section failed.
+//
+#define STATUS_DIF_VOLATILE_SECTION_NOT_LOCKED ((NTSTATUS)0xC0000C78L)
+
+//
+// MessageId: STATUS_DIF_VOLATILE_DRIVER_HOTPATCHED
+//
+// MessageText:
+//
+// DIF volatile verification is not supported for hotpatched driver.
+//
+#define STATUS_DIF_VOLATILE_DRIVER_HOTPATCHED ((NTSTATUS)0xC0000C79L)
+
+//
+// MessageId: STATUS_DIF_VOLATILE_INVALID_INFO
+//
+// MessageText:
+//
+// The passed system DIF information is invalid.
+//
+#define STATUS_DIF_VOLATILE_INVALID_INFO ((NTSTATUS)0xC0000C7AL)
+
+//
+// MessageId: STATUS_DIF_VOLATILE_DRIVER_IS_NOT_RUNNING
+//
+// MessageText:
+//
+// DIF volatile only supports on loaded drivers.
+//
+#define STATUS_DIF_VOLATILE_DRIVER_IS_NOT_RUNNING ((NTSTATUS)0xC0000C7BL)
+
+//
+// MessageId: STATUS_DIF_VOLATILE_PLUGIN_IS_NOT_RUNNING
+//
+// MessageText:
+//
+// Currently no plugin is running.
+//
+#define STATUS_DIF_VOLATILE_PLUGIN_IS_NOT_RUNNING ((NTSTATUS)0xC0000C7CL)
+
+//
+// MessageId: STATUS_DIF_VOLATILE_PLUGIN_CHANGE_NOT_ALLOWED
+//
+// MessageText:
+//
+// Currently running plugin must be removed before applying a new plugin.
+//
+#define STATUS_DIF_VOLATILE_PLUGIN_CHANGE_NOT_ALLOWED ((NTSTATUS)0xC0000C7DL)
+
+//
+// MessageId: STATUS_DIF_VOLATILE_NOT_ALLOWED
+//
+// MessageText:
+//
+// The plugin is not allowed to run in volatile mode.
+//
+#define STATUS_DIF_VOLATILE_NOT_ALLOWED  ((NTSTATUS)0xC0000C7EL)
+
+//
+// MessageId: STATUS_DIF_BINDING_API_NOT_FOUND
+//
+// MessageText:
+//
+// One or more DDI is not yet supported by DIF.
+//
+#define STATUS_DIF_BINDING_API_NOT_FOUND ((NTSTATUS)0xC0000C7FL)
+
+// End of Verifier Errors
+//
 // MessageId: STATUS_WOW_ASSERTION
 //
 // MessageText:
@@ -11699,6 +11986,15 @@ Notes:
 // The CimFS image is corrupted.
 //
 #define STATUS_CIMFS_IMAGE_CORRUPT       ((NTSTATUS)0xC000C001L)
+
+//
+// MessageId: STATUS_CIMFS_IMAGE_VERSION_NOT_SUPPORTED
+//
+// MessageText:
+//
+// The system does not support this version of the CimFS image.
+//
+#define STATUS_CIMFS_IMAGE_VERSION_NOT_SUPPORTED ((NTSTATUS)0xC000C002L)
 
 /*++
 
@@ -14199,6 +14495,15 @@ Notes:
 // The filesystem database resource is in use. Registration cannot complete at this time.
 //
 #define STATUS_FLT_REGISTRATION_BUSY     ((NTSTATUS)0xC01C0023L)
+
+//
+// MessageId: STATUS_FLT_WCOS_NOT_SUPPORTED
+//
+// MessageText:
+//
+// The filter is not allowed to attach because it has not declared compability with WCOS.
+//
+#define STATUS_FLT_WCOS_NOT_SUPPORTED    ((NTSTATUS)0xC01C0024L)
 
 
 //
@@ -18509,6 +18814,15 @@ Notes:
 //
 #define STATUS_FVE_OSV_KSR_NOT_ALLOWED   ((NTSTATUS)0xC0210040L)
 
+//
+// MessageId: STATUS_FVE_EDRIVE_BAND_ENUMERATION_FAILED
+//
+// MessageText:
+//
+// BitLocker can't enable encryption on this hardware encrypting drive volume because the drive bands couldn't be enumerated.
+//
+#define STATUS_FVE_EDRIVE_BAND_ENUMERATION_FAILED ((NTSTATUS)0xC0210041L)
+
 
 //
 // FWP error codes (fwpkclnt.sys)
@@ -20124,7 +20438,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The TPM is attempting to execute a command only available when in FIPS mode.
+// TPM 1.2: The TPM is attempting to execute a command that is not allowed when in FIPS mode.
 //
 #define STATUS_TPM_NOTFIPS               ((NTSTATUS)0xC0290036L)
 
@@ -22119,6 +22433,42 @@ Notes:
 // There is not enough contiguous memory in the partition's pool to complete the operation.
 //
 #define STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY ((NTSTATUS)0xC0350075L)
+
+//
+// MessageId: STATUS_HV_DEVICE_NOT_IN_DOMAIN
+//
+// MessageText:
+//
+// The device is not in a device domain.
+//
+#define STATUS_HV_DEVICE_NOT_IN_DOMAIN   ((NTSTATUS)0xC0350076L)
+
+//
+// MessageId: STATUS_HV_NESTED_VM_EXIT
+//
+// MessageText:
+//
+// The requested operation would result in a nested vm-exit.
+//
+#define STATUS_HV_NESTED_VM_EXIT         ((NTSTATUS)0xC0350077L)
+
+//
+// MessageId: STATUS_HV_CALL_PENDING
+//
+// MessageText:
+//
+// The operation that was requested is pending completion.
+//
+#define STATUS_HV_CALL_PENDING           ((NTSTATUS)0xC0350079L)
+
+//
+// MessageId: STATUS_HV_MSR_ACCESS_FAILED
+//
+// MessageText:
+//
+// The requested access to the model specific register failed.
+//
+#define STATUS_HV_MSR_ACCESS_FAILED      ((NTSTATUS)0xC0350080L)
 
 //
 // MessageId: STATUS_HV_NOT_PRESENT
@@ -24521,6 +24871,42 @@ Notes:
 #define STATUS_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED ((NTSTATUS)0xC0E90006L)
 
 //
+// MessageId: STATUS_SYSTEM_INTEGRITY_REPUTATION_MALICIOUS
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Malicious binary reputation.
+//
+#define STATUS_SYSTEM_INTEGRITY_REPUTATION_MALICIOUS ((NTSTATUS)0xC0E90007L)
+
+//
+// MessageId: STATUS_SYSTEM_INTEGRITY_REPUTATION_PUA
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Potentially unwanted application.
+//
+#define STATUS_SYSTEM_INTEGRITY_REPUTATION_PUA ((NTSTATUS)0xC0E90008L)
+
+//
+// MessageId: STATUS_SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Dangerous file extension from the web.
+//
+#define STATUS_SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT ((NTSTATUS)0xC0E90009L)
+
+//
+// MessageId: STATUS_SYSTEM_INTEGRITY_REPUTATION_OFFLINE
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Unable to contact reputation service for unknown file.
+//
+#define STATUS_SYSTEM_INTEGRITY_REPUTATION_OFFLINE ((NTSTATUS)0xC0E9000AL)
+
+//
 // Clip modern app and windows licensing error messages.
 //
 //
@@ -24965,6 +25351,60 @@ Notes:
 #define STATUS_SPACES_MARK_DIRTY         ((NTSTATUS)0xC0E70020L)
 
 //
+// MessageId: STATUS_SPACES_PD_NOT_FOUND
+//
+// MessageText:
+//
+// A persisted memory buffer was not found.
+//
+#define STATUS_SPACES_PD_NOT_FOUND       ((NTSTATUS)0xC0E70021L)
+
+//
+// MessageId: STATUS_SPACES_PD_LENGTH_MISMATCH
+//
+// MessageText:
+//
+// A persisted memory buffer is too small.
+//
+#define STATUS_SPACES_PD_LENGTH_MISMATCH ((NTSTATUS)0xC0E70022L)
+
+//
+// MessageId: STATUS_SPACES_PD_UNSUPPORTED_VERSION
+//
+// MessageText:
+//
+// A persisted memory buffer has an unsupported version.
+//
+#define STATUS_SPACES_PD_UNSUPPORTED_VERSION ((NTSTATUS)0xC0E70023L)
+
+//
+// MessageId: STATUS_SPACES_PD_INVALID_DATA
+//
+// MessageText:
+//
+// A persisted memory buffer contains invalid data.
+//
+#define STATUS_SPACES_PD_INVALID_DATA    ((NTSTATUS)0xC0E70024L)
+
+//
+// MessageId: STATUS_SPACES_FLUSH_METADATA
+//
+// MessageText:
+//
+// The cache metadata needs to be written and flushed.
+//
+#define STATUS_SPACES_FLUSH_METADATA     ((NTSTATUS)0xC0E70025L)
+
+//
+// MessageId: STATUS_SPACES_CACHE_FULL
+//
+// MessageText:
+//
+// The cache is full.
+//
+#define STATUS_SPACES_CACHE_FULL         ((NTSTATUS)0xC0E70026L)
+
+//
 // Volsnap status codes (volsnap.sys)
 //
 //
@@ -25157,6 +25597,15 @@ Notes:
 #define STATUS_SMB_GUEST_LOGON_BLOCKED   ((NTSTATUS)0xC05D0002L)
 
 //
+// MessageId: STATUS_SMB_NO_SIGNING_ALGORITHM_OVERLAP
+//
+// MessageText:
+//
+// Failed to negotiate a signing hash function.
+//
+#define STATUS_SMB_NO_SIGNING_ALGORITHM_OVERLAP ((NTSTATUS)0xC05D0003L)
+
+//
 // Embedded Security Core
 //
 // Reserved id values 0x0001 - 0x00FF
@@ -25267,6 +25716,51 @@ Notes:
 //
 #define STATUS_APPEXEC_UNKNOWN_USER      ((NTSTATUS)0xC0EC0007L)
 
+//
+// MessageId: STATUS_APPEXEC_APP_COMPAT_BLOCK
+//
+// MessageText:
+//
+// The application is blocked by app compat policy.
+//
+#define STATUS_APPEXEC_APP_COMPAT_BLOCK  ((NTSTATUS)0xC0EC0008L)
+
+//
+// MessageId: STATUS_APPEXEC_CALLER_WAIT_TIMEOUT
+//
+// MessageText:
+//
+// The caller specified wait timed out before the operation completed.
+//
+#define STATUS_APPEXEC_CALLER_WAIT_TIMEOUT ((NTSTATUS)0xC0EC0009L)
+
+//
+// MessageId: STATUS_APPEXEC_CALLER_WAIT_TIMEOUT_TERMINATION
+//
+// MessageText:
+//
+// The caller specified wait timed out before the operation completed because a host termination is in queued.
+//
+#define STATUS_APPEXEC_CALLER_WAIT_TIMEOUT_TERMINATION ((NTSTATUS)0xC0EC000AL)
+
+//
+// MessageId: STATUS_APPEXEC_CALLER_WAIT_TIMEOUT_LICENSING
+//
+// MessageText:
+//
+// The caller specified wait timed out before the operation completed because a licensing operation is being performed.
+//
+#define STATUS_APPEXEC_CALLER_WAIT_TIMEOUT_LICENSING ((NTSTATUS)0xC0EC000BL)
+
+//
+// MessageId: STATUS_APPEXEC_CALLER_WAIT_TIMEOUT_RESOURCES
+//
+// MessageText:
+//
+// The caller specified wait timed out before the operation completed because resources are being acquired.
+//
+#define STATUS_APPEXEC_CALLER_WAIT_TIMEOUT_RESOURCES ((NTSTATUS)0xC0EC000CL)
+
 
 //
 // QUIC
@@ -25289,6 +25783,60 @@ Notes:
 // The QUIC connection failed to negotiate a compatible protocol version.
 //
 #define STATUS_QUIC_VER_NEG_FAILURE      ((NTSTATUS)0xC0240001L)
+
+//
+// MessageId: STATUS_QUIC_USER_CANCELED
+//
+// MessageText:
+//
+// The QUIC connection was canceled by the user.
+//
+#define STATUS_QUIC_USER_CANCELED        ((NTSTATUS)0xC0240002L)
+
+//
+// MessageId: STATUS_QUIC_INTERNAL_ERROR
+//
+// MessageText:
+//
+// The QUIC connection encountered an internal error.
+//
+#define STATUS_QUIC_INTERNAL_ERROR       ((NTSTATUS)0xC0240003L)
+
+//
+// MessageId: STATUS_QUIC_PROTOCOL_VIOLATION
+//
+// MessageText:
+//
+// The QUIC connection encountered a protocol violation.
+//
+#define STATUS_QUIC_PROTOCOL_VIOLATION   ((NTSTATUS)0xC0240004L)
+
+//
+// MessageId: STATUS_QUIC_CONNECTION_IDLE
+//
+// MessageText:
+//
+// The QUIC connection was idle.
+//
+#define STATUS_QUIC_CONNECTION_IDLE      ((NTSTATUS)0xC0240005L)
+
+//
+// MessageId: STATUS_QUIC_CONNECTION_TIMEOUT
+//
+// MessageText:
+//
+// The QUIC connection timed out while trying to contact the peer.
+//
+#define STATUS_QUIC_CONNECTION_TIMEOUT   ((NTSTATUS)0xC0240006L)
+
+//
+// MessageId: STATUS_QUIC_ALPN_NEG_FAILURE
+//
+// MessageText:
+//
+// The QUIC connection failed to negotiate a compatible ALPN.
+//
+#define STATUS_QUIC_ALPN_NEG_FAILURE     ((NTSTATUS)0xC0240007L)
 
 //
 // Map a WIN32 error value into an NTSTATUS

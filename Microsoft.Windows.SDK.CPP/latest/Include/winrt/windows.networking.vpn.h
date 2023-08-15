@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -192,6 +192,21 @@ namespace ABI {
 #define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4 ABI::Windows::Networking::Vpn::IVpnChannel4
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace Vpn {
+                interface IVpnChannel5;
+            } /* Vpn */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5 ABI::Windows::Networking::Vpn::IVpnChannel5
+
+#endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs_FWD_DEFINED__
@@ -3487,6 +3502,47 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4;
 
 /*
  *
+ * Interface Windows.Networking.Vpn.IVpnChannel5
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Networking.Vpn.VpnChannel
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_Vpn_IVpnChannel5[] = L"Windows.Networking.Vpn.IVpnChannel5";
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace Vpn {
+                MIDL_INTERFACE("de7a0992-8384-4fbc-882c-1fd23124cd3b")
+                IVpnChannel5 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE AppendVpnReceivePacketBuffer(
+                        ABI::Windows::Networking::Vpn::IVpnPacketBuffer* decapsulatedPacketBuffer
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE AppendVpnSendPacketBuffer(
+                        ABI::Windows::Networking::Vpn::IVpnPacketBuffer* encapsulatedPacketBuffer
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE FlushVpnReceivePacketBuffers(void) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE FlushVpnSendPacketBuffers(void) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IVpnChannel5 = _uuidof(IVpnChannel5);
+            } /* Vpn */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
  * Interface Windows.Networking.Vpn.IVpnChannelActivityEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -5648,6 +5704,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Networking.Vpn.IVpnChannel ** Default Interface **
  *    Windows.Networking.Vpn.IVpnChannel2
  *    Windows.Networking.Vpn.IVpnChannel4
+ *    Windows.Networking.Vpn.IVpnChannel5
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
@@ -6385,6 +6442,12 @@ typedef interface __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel2 __x_ABI_CWindo
 typedef interface __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4 __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4;
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5 __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5;
+
+#endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs_FWD_DEFINED__
@@ -11864,6 +11927,88 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel4;
 
 /*
  *
+ * Interface Windows.Networking.Vpn.IVpnChannel5
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 12.0
+ *
+ * Interface is a part of the implementation of type Windows.Networking.Vpn.VpnChannel
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+#if !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_Vpn_IVpnChannel5[] = L"Windows.Networking.Vpn.IVpnChannel5";
+typedef struct __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* AppendVpnReceivePacketBuffer)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This,
+        __x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer* decapsulatedPacketBuffer);
+    HRESULT (STDMETHODCALLTYPE* AppendVpnSendPacketBuffer)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This,
+        __x_ABI_CWindows_CNetworking_CVpn_CIVpnPacketBuffer* encapsulatedPacketBuffer);
+    HRESULT (STDMETHODCALLTYPE* FlushVpnReceivePacketBuffers)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This);
+    HRESULT (STDMETHODCALLTYPE* FlushVpnSendPacketBuffers)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5* This);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5Vtbl;
+
+interface __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5
+{
+    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_AppendVpnReceivePacketBuffer(This, decapsulatedPacketBuffer) \
+    ((This)->lpVtbl->AppendVpnReceivePacketBuffer(This, decapsulatedPacketBuffer))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_AppendVpnSendPacketBuffer(This, encapsulatedPacketBuffer) \
+    ((This)->lpVtbl->AppendVpnSendPacketBuffer(This, encapsulatedPacketBuffer))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_FlushVpnReceivePacketBuffers(This) \
+    ((This)->lpVtbl->FlushVpnReceivePacketBuffers(This))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_FlushVpnSendPacketBuffers(This) \
+    ((This)->lpVtbl->FlushVpnSendPacketBuffers(This))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel5_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+
+/*
+ *
  * Interface Windows.Networking.Vpn.IVpnChannelActivityEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -15833,6 +15978,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Networking.Vpn.IVpnChannel ** Default Interface **
  *    Windows.Networking.Vpn.IVpnChannel2
  *    Windows.Networking.Vpn.IVpnChannel4
+ *    Windows.Networking.Vpn.IVpnChannel5
  *
  * Class Threading Model:  Multi Threaded Apartment
  *

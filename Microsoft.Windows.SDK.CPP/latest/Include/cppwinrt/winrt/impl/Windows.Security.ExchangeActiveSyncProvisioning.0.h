@@ -1,14 +1,15 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Security_ExchangeActiveSyncProvisioning_0_H
 #define WINRT_Windows_Security_ExchangeActiveSyncProvisioning_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
 }
-namespace winrt::Windows::Security::ExchangeActiveSyncProvisioning
+WINRT_EXPORT namespace winrt::Windows::Security::ExchangeActiveSyncProvisioning
 {
     enum class EasDisallowConvenienceLogonResult : int32_t
     {
@@ -128,174 +129,48 @@ namespace winrt::Windows::Security::ExchangeActiveSyncProvisioning
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasDisallowConvenienceLogonResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasEncryptionProviderType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasMaxInactivityTimeLockResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasMaxPasswordFailedAttemptsResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordComplexCharactersResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordLengthResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordExpirationResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordHistoryResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasRequireEncryptionResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation2" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults2" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasDisallowConvenienceLogonResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasEncryptionProviderType>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasMaxInactivityTimeLockResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasMaxPasswordFailedAttemptsResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordComplexCharactersResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordLengthResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordExpirationResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordHistoryResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult" };
-    };
-    template <> struct name<Windows::Security::ExchangeActiveSyncProvisioning::EasRequireEncryptionResult>
-    {
-        static constexpr auto & value{ L"Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult" };
-    };
-    template <> struct guid_storage<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation>
-    {
-        static constexpr guid value{ 0x54DFD981,0x1968,0x4CA3,{ 0xB9,0x58,0xE5,0x95,0xD1,0x65,0x05,0xEB } };
-    };
-    template <> struct guid_storage<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2>
-    {
-        static constexpr guid value{ 0xFFB35923,0xBB26,0x4D6A,{ 0x81,0xBC,0x16,0x5A,0xEE,0x0A,0xD7,0x54 } };
-    };
-    template <> struct guid_storage<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy>
-    {
-        static constexpr guid value{ 0x45B72362,0xDFBA,0x4A9B,{ 0xAC,0xED,0x6F,0xE2,0xAD,0xCB,0x64,0x20 } };
-    };
-    template <> struct guid_storage<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults>
-    {
-        static constexpr guid value{ 0x463C299C,0x7F19,0x4C66,{ 0xB4,0x03,0xCB,0x45,0xDD,0x57,0xA2,0xB3 } };
-    };
-    template <> struct guid_storage<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2>
-    {
-        static constexpr guid value{ 0x2FBE60C9,0x1AA8,0x47F5,{ 0x88,0xBB,0xCB,0x3E,0xF0,0xBF,0xFB,0x15 } };
-    };
-    template <> struct default_interface<Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>
-    {
-        using type = Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation;
-    };
-    template <> struct default_interface<Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>
-    {
-        using type = Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy;
-    };
-    template <> struct default_interface<Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>
-    {
-        using type = Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults;
-    };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation>{ using type = interface_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2>{ using type = interface_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy>{ using type = interface_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults>{ using type = interface_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2>{ using type = interface_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>{ using type = class_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>{ using type = class_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>{ using type = class_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasDisallowConvenienceLogonResult>{ using type = enum_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasEncryptionProviderType>{ using type = enum_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasMaxInactivityTimeLockResult>{ using type = enum_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasMaxPasswordFailedAttemptsResult>{ using type = enum_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordComplexCharactersResult>{ using type = enum_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordLengthResult>{ using type = enum_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordExpirationResult>{ using type = enum_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordHistoryResult>{ using type = enum_category; };
+    template <> struct category<Windows::Security::ExchangeActiveSyncProvisioning::EasRequireEncryptionResult>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasDisallowConvenienceLogonResult> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasEncryptionProviderType> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasMaxInactivityTimeLockResult> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasMaxPasswordFailedAttemptsResult> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordComplexCharactersResult> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordLengthResult> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordExpirationResult> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordHistoryResult> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::EasRequireEncryptionResult> = L"Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation> = L"Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2> = L"Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation2";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy> = L"Windows.Security.ExchangeActiveSyncProvisioning.IEasClientSecurityPolicy";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults> = L"Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults";
+    template <> inline constexpr auto& name_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2> = L"Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults2";
+    template <> inline constexpr guid guid_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation>{ 0x54DFD981,0x1968,0x4CA3,{ 0xB9,0x58,0xE5,0x95,0xD1,0x65,0x05,0xEB } }; // 54DFD981-1968-4CA3-B958-E595D16505EB
+    template <> inline constexpr guid guid_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2>{ 0xFFB35923,0xBB26,0x4D6A,{ 0x81,0xBC,0x16,0x5A,0xEE,0x0A,0xD7,0x54 } }; // FFB35923-BB26-4D6A-81BC-165AEE0AD754
+    template <> inline constexpr guid guid_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy>{ 0x45B72362,0xDFBA,0x4A9B,{ 0xAC,0xED,0x6F,0xE2,0xAD,0xCB,0x64,0x20 } }; // 45B72362-DFBA-4A9B-ACED-6FE2ADCB6420
+    template <> inline constexpr guid guid_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults>{ 0x463C299C,0x7F19,0x4C66,{ 0xB4,0x03,0xCB,0x45,0xDD,0x57,0xA2,0xB3 } }; // 463C299C-7F19-4C66-B403-CB45DD57A2B3
+    template <> inline constexpr guid guid_v<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2>{ 0x2FBE60C9,0x1AA8,0x47F5,{ 0x88,0xBB,0xCB,0x3E,0xF0,0xBF,0xFB,0x15 } }; // 2FBE60C9-1AA8-47F5-88BB-CB3EF0BFFB15
+    template <> struct default_interface<Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>{ using type = Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation; };
+    template <> struct default_interface<Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>{ using type = Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy; };
+    template <> struct default_interface<Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>{ using type = Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults; };
     template <> struct abi<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -365,12 +240,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_ExchangeActiveSyncProvisioning_IEasClientDeviceInformation
     {
-        [[nodiscard]] auto Id() const;
-        [[nodiscard]] auto OperatingSystem() const;
-        [[nodiscard]] auto FriendlyName() const;
-        [[nodiscard]] auto SystemManufacturer() const;
-        [[nodiscard]] auto SystemProductName() const;
-        [[nodiscard]] auto SystemSku() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) Id() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OperatingSystem() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) FriendlyName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemManufacturer() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemProductName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemSku() const;
     };
     template <> struct consume<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation>
     {
@@ -379,8 +254,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_ExchangeActiveSyncProvisioning_IEasClientDeviceInformation2
     {
-        [[nodiscard]] auto SystemHardwareVersion() const;
-        [[nodiscard]] auto SystemFirmwareVersion() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemHardwareVersion() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SystemFirmwareVersion() const;
     };
     template <> struct consume<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2>
     {
@@ -389,24 +264,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_ExchangeActiveSyncProvisioning_IEasClientSecurityPolicy
     {
-        [[nodiscard]] auto RequireEncryption() const;
-        auto RequireEncryption(bool value) const;
-        [[nodiscard]] auto MinPasswordLength() const;
-        auto MinPasswordLength(uint8_t value) const;
-        [[nodiscard]] auto DisallowConvenienceLogon() const;
-        auto DisallowConvenienceLogon(bool value) const;
-        [[nodiscard]] auto MinPasswordComplexCharacters() const;
-        auto MinPasswordComplexCharacters(uint8_t value) const;
-        [[nodiscard]] auto PasswordExpiration() const;
-        auto PasswordExpiration(Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] auto PasswordHistory() const;
-        auto PasswordHistory(uint32_t value) const;
-        [[nodiscard]] auto MaxPasswordFailedAttempts() const;
-        auto MaxPasswordFailedAttempts(uint8_t value) const;
-        [[nodiscard]] auto MaxInactivityTimeLock() const;
-        auto MaxInactivityTimeLock(Windows::Foundation::TimeSpan const& value) const;
-        auto CheckCompliance() const;
-        auto ApplyAsync() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) RequireEncryption() const;
+        WINRT_IMPL_AUTO(void) RequireEncryption(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) MinPasswordLength() const;
+        WINRT_IMPL_AUTO(void) MinPasswordLength(uint8_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) DisallowConvenienceLogon() const;
+        WINRT_IMPL_AUTO(void) DisallowConvenienceLogon(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) MinPasswordComplexCharacters() const;
+        WINRT_IMPL_AUTO(void) MinPasswordComplexCharacters(uint8_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) PasswordExpiration() const;
+        WINRT_IMPL_AUTO(void) PasswordExpiration(Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) PasswordHistory() const;
+        WINRT_IMPL_AUTO(void) PasswordHistory(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint8_t) MaxPasswordFailedAttempts() const;
+        WINRT_IMPL_AUTO(void) MaxPasswordFailedAttempts(uint8_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) MaxInactivityTimeLock() const;
+        WINRT_IMPL_AUTO(void) MaxInactivityTimeLock(Windows::Foundation::TimeSpan const& value) const;
+        WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults) CheckCompliance() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>) ApplyAsync() const;
     };
     template <> struct consume<Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy>
     {
@@ -415,15 +290,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_ExchangeActiveSyncProvisioning_IEasComplianceResults
     {
-        [[nodiscard]] auto Compliant() const;
-        [[nodiscard]] auto RequireEncryptionResult() const;
-        [[nodiscard]] auto MinPasswordLengthResult() const;
-        [[nodiscard]] auto DisallowConvenienceLogonResult() const;
-        [[nodiscard]] auto MinPasswordComplexCharactersResult() const;
-        [[nodiscard]] auto PasswordExpirationResult() const;
-        [[nodiscard]] auto PasswordHistoryResult() const;
-        [[nodiscard]] auto MaxPasswordFailedAttemptsResult() const;
-        [[nodiscard]] auto MaxInactivityTimeLockResult() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Compliant() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasRequireEncryptionResult) RequireEncryptionResult() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordLengthResult) MinPasswordLengthResult() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasDisallowConvenienceLogonResult) DisallowConvenienceLogonResult() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordComplexCharactersResult) MinPasswordComplexCharactersResult() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordExpirationResult) PasswordExpirationResult() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordHistoryResult) PasswordHistoryResult() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasMaxPasswordFailedAttemptsResult) MaxPasswordFailedAttemptsResult() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasMaxInactivityTimeLockResult) MaxInactivityTimeLockResult() const;
     };
     template <> struct consume<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults>
     {
@@ -432,7 +307,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Security_ExchangeActiveSyncProvisioning_IEasComplianceResults2
     {
-        [[nodiscard]] auto EncryptionProviderType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::ExchangeActiveSyncProvisioning::EasEncryptionProviderType) EncryptionProviderType() const;
     };
     template <> struct consume<Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2>
     {

@@ -282,6 +282,14 @@ The following would be ok:
   #endif // __cplusplus
 #endif
 
+#ifndef TLG_NULL
+  #ifndef __cplusplus
+    #define TLG_NULL NULL
+  #else
+    #define TLG_NULL nullptr
+  #endif // __cplusplus
+#endif // TLG_NULL
+
 #ifndef TLG_DEBUG
   #if (DBG || defined(DEBUG) || defined(_DEBUG)) && !defined(NDEBUG)
     #define TLG_DEBUG 1
@@ -791,7 +799,7 @@ TraceLoggingWriteActivity(hProvider, eventName, NULL, NULL, args...).
     _tlgWrite_imp(_tlgWriteTransfer, \
     hProvider, eventName, \
     (LPCGUID, LPCGUID), \
-    (NULL, NULL), \
+    (TLG_NULL, TLG_NULL), \
     __VA_ARGS__)
 
 /*
@@ -1977,6 +1985,16 @@ memory.
   #define _tlg_ASSERT(exp, str) ((void)0)
 #endif // TLG_DEBUG
 
+#ifndef _tlg_FASTFAIL
+  #if defined(_M_CEE)
+    // Not for use outside of TraceLoggingProvider.h.
+    #define _tlg_FASTFAIL(code) __debugbreak()
+  #else
+    // Not for use outside of TraceLoggingProvider.h.
+    #define _tlg_FASTFAIL(code) __fastfail(code)
+  #endif
+#endif // _tlg_FASTFAIL
+
 #ifndef _tlg_CASSERT
   #if defined(__cplusplus)
     // Not for use outside of TraceLoggingProvider.h.
@@ -2694,7 +2712,7 @@ TraceLoggingRegister(
     TraceLoggingHProvider _Inout_ hProvider)
 {
     TLG_PAGED_CODE();
-    return TraceLoggingRegisterEx(hProvider, NULL, NULL);
+    return TraceLoggingRegisterEx(hProvider, TLG_NULL, TLG_NULL);
 }
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
@@ -2709,9 +2727,16 @@ TraceLoggingRegisterEx(
     struct _tlgProvider_t* pProvider = (struct _tlgProvider_t*)hProvider;
     GUID const providerId = TraceLoggingProviderId(pProvider);
     TLG_PAGED_CODE();
-    _tlg_ASSERT(
-        pProvider->RegHandle == 0,
-        "TraceLoggingRegister called with already-registered handle");
+
+    if (pProvider->RegHandle != 0)
+    {
+        // TraceLoggingRegister[Ex] was called with an hProvider that is
+        // currently registered. This leaks the provider registration and can
+        // cause memory corruption during provider callback. This is a serious
+        // bug in the code that called TraceLoggingRegister[Ex].
+        _tlg_FASTFAIL(5); // 5 = FAST_FAIL_INVALID_ARG
+    }
+
     pProvider->EnableCallback = pEnableCallback;
     pProvider->CallbackContext = pCallbackContext;
     status = TLG_EVENT_REGISTER(
@@ -3882,7 +3907,7 @@ Note: Using pragma(comment /include AnnotationFunction) to ensure the
 annotation is included into the PDB. Alternative would be taking the
 function's address, but that interferes with control flow graph data.
 */
-#if defined(_M_HYBRID)
+#if defined(_M_HYBRID) || defined(_M_ARM64EC)
 #define _tlgAnnotationFunc_imp1(storageVariable) __pragma(comment(linker, "/include:#" _tlg_STRINGIZE(_tlg_PASTE2(_tlgDefineProvider_annotation_, storageVariable)))) //
 #elif defined(_M_IX86) || defined(_X86_) // x86 requires leading underscore
 #define _tlgAnnotationFunc_imp1(storageVariable) __pragma(comment(linker, "/include:_" _tlg_STRINGIZE(_tlg_PASTE2(_tlgDefineProvider_annotation_, storageVariable))))

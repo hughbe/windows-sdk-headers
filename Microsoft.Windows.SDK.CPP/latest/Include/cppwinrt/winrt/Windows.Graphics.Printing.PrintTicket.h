@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Graphics_Printing_PrintTicket_H
 #define WINRT_Windows_Graphics_Printing_PrintTicket_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Graphics.Printing.h"
 #include "winrt/impl/Windows.Data.Xml.Dom.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -14,482 +14,483 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Graphics.Printing.PrintTicket.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::XmlNamespace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::XmlNamespace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_XmlNamespace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::XmlNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::XmlNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_XmlNode(&value));
         return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentBindingFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentBindingFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_DocumentBindingFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentCollateFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentCollateFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_DocumentCollateFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentDuplexFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentDuplexFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_DocumentDuplexFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentHolePunchFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentHolePunchFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_DocumentHolePunchFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentInputBinFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentInputBinFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_DocumentInputBinFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentNUpFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentNUpFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_DocumentNUpFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentStapleFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::DocumentStapleFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_DocumentStapleFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::JobPasscodeFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::JobPasscodeFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_JobPasscodeFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageBorderlessFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageBorderlessFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_PageBorderlessFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageMediaSizeFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageMediaSizeFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_PageMediaSizeFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageMediaTypeFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageMediaTypeFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_PageMediaTypeFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageOrientationFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageOrientationFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_PageOrientationFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageOutputColorFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageOutputColorFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_PageOutputColorFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageOutputQualityFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageOutputQualityFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_PageOutputQualityFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageResolutionFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::PageResolutionFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->get_PageResolutionFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::GetFeature(param::hstring const& name, param::hstring const& xmlNamespace) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::GetFeature(param::hstring const& name, param::hstring const& xmlNamespace) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->GetFeature(*(void**)(&name), *(void**)(&xmlNamespace), &result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::GetParameterDefinition(param::hstring const& name, param::hstring const& xmlNamespace) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketCapabilities<D>::GetParameterDefinition(param::hstring const& name, param::hstring const& xmlNamespace) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities)->GetParameterDefinition(*(void**)(&name), *(void**)(&xmlNamespace), &result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::XmlNamespace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::XmlNamespace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->get_XmlNamespace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::XmlNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::XmlNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->get_XmlNode(&value));
         return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::GetOption(param::hstring const& name, param::hstring const& xmlNamespace) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketOption) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::GetOption(param::hstring const& name, param::hstring const& xmlNamespace) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->GetOption(*(void**)(&name), *(void**)(&xmlNamespace), &result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketOption{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::Options() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Graphics::Printing::PrintTicket::PrintTicketOption>) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::Options() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->get_Options(&result));
         return Windows::Foundation::Collections::IVectorView<Windows::Graphics::Printing::PrintTicket::PrintTicketOption>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::GetSelectedOption() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketOption) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::GetSelectedOption() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->GetSelectedOption(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketOption{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::SetSelectedOption(Windows::Graphics::Printing::PrintTicket::PrintTicketOption const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::SetSelectedOption(Windows::Graphics::Printing::PrintTicket::PrintTicketOption const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->SetSelectedOption(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::SelectionType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeatureSelectionType) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketFeature<D>::SelectionType() const
     {
-        Windows::Graphics::Printing::PrintTicket::PrintTicketFeatureSelectionType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->get_SelectionType(put_abi(value)));
+        Windows::Graphics::Printing::PrintTicket::PrintTicketFeatureSelectionType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature)->get_SelectionType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketOption)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::XmlNamespace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::XmlNamespace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketOption)->get_XmlNamespace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::XmlNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::XmlNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketOption)->get_XmlNode(&value));
         return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketOption)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::GetPropertyNode(param::hstring const& name, param::hstring const& xmlNamespace) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::GetPropertyNode(param::hstring const& name, param::hstring const& xmlNamespace) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketOption)->GetPropertyNode(*(void**)(&name), *(void**)(&xmlNamespace), &result));
         return Windows::Data::Xml::Dom::IXmlNode{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::GetScoredPropertyNode(param::hstring const& name, param::hstring const& xmlNamespace) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::GetScoredPropertyNode(param::hstring const& name, param::hstring const& xmlNamespace) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketOption)->GetScoredPropertyNode(*(void**)(&name), *(void**)(&xmlNamespace), &result));
         return Windows::Data::Xml::Dom::IXmlNode{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::GetPropertyValue(param::hstring const& name, param::hstring const& xmlNamespace) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketValue) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::GetPropertyValue(param::hstring const& name, param::hstring const& xmlNamespace) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketOption)->GetPropertyValue(*(void**)(&name), *(void**)(&xmlNamespace), &result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketValue{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::GetScoredPropertyValue(param::hstring const& name, param::hstring const& xmlNamespace) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketValue) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketOption<D>::GetScoredPropertyValue(param::hstring const& name, param::hstring const& xmlNamespace) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketOption)->GetScoredPropertyValue(*(void**)(&name), *(void**)(&xmlNamespace), &result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketValue{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::XmlNamespace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::XmlNamespace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition)->get_XmlNamespace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::XmlNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::XmlNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition)->get_XmlNode(&value));
         return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::DataType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDataType) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::DataType() const
     {
-        Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDataType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition)->get_DataType(put_abi(value)));
+        Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDataType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition)->get_DataType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::UnitType() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::UnitType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition)->get_UnitType(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::RangeMin() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::RangeMin() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition)->get_RangeMin(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::RangeMax() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterDefinition<D>::RangeMax() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition)->get_RangeMax(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::XmlNamespace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::XmlNamespace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer)->get_XmlNamespace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::XmlNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::XmlNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer)->get_XmlNode(&value));
         return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::Value(Windows::Graphics::Printing::PrintTicket::PrintTicketValue const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::Value(Windows::Graphics::Printing::PrintTicket::PrintTicketValue const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer)->put_Value(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketValue) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketParameterInitializer<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer)->get_Value(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketValue{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketValue<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketValueType) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketValue<D>::Type() const
     {
-        Windows::Graphics::Printing::PrintTicket::PrintTicketValueType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketValue)->get_Type(put_abi(value)));
+        Windows::Graphics::Printing::PrintTicket::PrintTicketValueType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketValue)->get_Type(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketValue<D>::GetValueAsInteger() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketValue<D>::GetValueAsInteger() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketValue)->GetValueAsInteger(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketValue<D>::GetValueAsString() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IPrintTicketValue<D>::GetValueAsString() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IPrintTicketValue)->GetValueAsString(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::XmlNamespace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::XmlNamespace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_XmlNamespace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::XmlNode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::XmlNode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_XmlNode(&value));
         return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::GetCapabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::GetCapabilities() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->GetCapabilities(&result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentBindingFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentBindingFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_DocumentBindingFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentCollateFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentCollateFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_DocumentCollateFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentDuplexFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentDuplexFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_DocumentDuplexFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentHolePunchFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentHolePunchFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_DocumentHolePunchFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentInputBinFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentInputBinFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_DocumentInputBinFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentNUpFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentNUpFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_DocumentNUpFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentStapleFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::DocumentStapleFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_DocumentStapleFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::JobPasscodeFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::JobPasscodeFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_JobPasscodeFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageBorderlessFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageBorderlessFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_PageBorderlessFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageMediaSizeFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageMediaSizeFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_PageMediaSizeFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageMediaTypeFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageMediaTypeFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_PageMediaTypeFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageOrientationFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageOrientationFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_PageOrientationFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageOutputColorFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageOutputColorFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_PageOutputColorFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageOutputQualityFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageOutputQualityFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_PageOutputQualityFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageResolutionFeature() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::PageResolutionFeature() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->get_PageResolutionFeature(&value));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::GetFeature(param::hstring const& name, param::hstring const& xmlNamespace) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketFeature) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::GetFeature(param::hstring const& name, param::hstring const& xmlNamespace) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->GetFeature(*(void**)(&name), *(void**)(&xmlNamespace), &result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketFeature{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::NotifyXmlChangedAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::NotifyXmlChangedAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->NotifyXmlChangedAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::ValidateAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::ValidateAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->ValidateAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::GetParameterInitializer(param::hstring const& name, param::hstring const& xmlNamespace) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::GetParameterInitializer(param::hstring const& name, param::hstring const& xmlNamespace) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->GetParameterInitializer(*(void**)(&name), *(void**)(&xmlNamespace), &result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::SetParameterInitializerAsInteger(param::hstring const& name, param::hstring const& xmlNamespace, int32_t integerValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::SetParameterInitializerAsInteger(param::hstring const& name, param::hstring const& xmlNamespace, int32_t integerValue) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->SetParameterInitializerAsInteger(*(void**)(&name), *(void**)(&xmlNamespace), integerValue, &result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::SetParameterInitializerAsString(param::hstring const& name, param::hstring const& xmlNamespace, param::hstring const& stringValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::SetParameterInitializerAsString(param::hstring const& name, param::hstring const& xmlNamespace, param::hstring const& stringValue) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->SetParameterInitializerAsString(*(void**)(&name), *(void**)(&xmlNamespace), *(void**)(&stringValue), &result));
         return Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::MergeAndValidateTicket(Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& deltaShemaTicket) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicket<D>::MergeAndValidateTicket(Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& deltaShemaTicket) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket)->MergeAndValidateTicket(*(void**)(&deltaShemaTicket), &result));
         return Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicketValidationResult<D>::Validated() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicketValidationResult<D>::Validated() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult)->get_Validated(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicketValidationResult<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Graphics_Printing_PrintTicket_IWorkflowPrintTicketValidationResult<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult)->get_ExtendedError(put_abi(value)));
         return value;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities> : produce_base<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities>
     {
@@ -654,6 +655,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature> : produce_base<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature>
     {
@@ -728,6 +731,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketOption> : produce_base<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketOption>
     {
@@ -796,6 +801,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition> : produce_base<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition>
     {
@@ -853,6 +860,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer> : produce_base<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer>
     {
@@ -896,6 +905,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketValue> : produce_base<D, Windows::Graphics::Printing::PrintTicket::IPrintTicketValue>
     {
@@ -922,6 +933,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket> : produce_base<D, Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket>
     {
@@ -1134,6 +1147,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult> : produce_base<D, Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult>
     {
@@ -1153,27 +1168,30 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Graphics::Printing::PrintTicket
+WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::PrintTicket
 {
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketOption> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketOption> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketValue> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketValue> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketFeature> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketOption> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketParameterInitializer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IPrintTicketValue> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicket> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::IWorkflowPrintTicketValidationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult> : winrt::impl::hash_base {};
+#endif
 }
 #endif

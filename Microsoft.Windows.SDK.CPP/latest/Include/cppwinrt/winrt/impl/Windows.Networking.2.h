@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Networking_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Networking.1.h"
-namespace winrt::Windows::Networking
+WINRT_EXPORT namespace winrt::Windows::Networking
 {
     struct __declspec(empty_bases) EndpointPair : Windows::Networking::IEndpointPair
     {
@@ -20,7 +20,7 @@ namespace winrt::Windows::Networking
     {
         HostName(std::nullptr_t) noexcept {}
         HostName(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::IHostName(ptr, take_ownership_from_abi) {}
-        HostName(param::hstring const& hostName);
+        explicit HostName(param::hstring const& hostName);
         static auto Compare(param::hstring const& value1, param::hstring const& value2);
     };
 }

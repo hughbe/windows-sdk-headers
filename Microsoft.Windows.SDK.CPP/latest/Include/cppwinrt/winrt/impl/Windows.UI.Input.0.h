@@ -1,45 +1,46 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_UI_Input_0_H
 #define WINRT_Windows_UI_Input_0_H
-namespace winrt::Windows::Devices::Haptics
+WINRT_EXPORT namespace winrt::Windows::Devices::Haptics
 {
     struct SimpleHapticsController;
 }
-namespace winrt::Windows::Devices::Input
+WINRT_EXPORT namespace winrt::Windows::Devices::Input
 {
     struct PointerDevice;
     enum class PointerDeviceType : int32_t;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
+    template <typename T> struct __declspec(empty_bases) IReference;
     struct Point;
     struct Rect;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IIterable;
-    template <typename T> struct IVector;
+    template <typename T> struct __declspec(empty_bases) IIterable;
+    template <typename T> struct __declspec(empty_bases) IVector;
 }
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct RandomAccessStreamReference;
 }
-namespace winrt::Windows::System
+WINRT_EXPORT namespace winrt::Windows::System
 {
     struct DispatcherQueue;
 }
-namespace winrt::Windows::UI::Core
+WINRT_EXPORT namespace winrt::Windows::UI::Core
 {
     struct KeyEventArgs;
 }
-namespace winrt::Windows::UI::Input
+WINRT_EXPORT namespace winrt::Windows::UI::Input
 {
     enum class CrossSlidingState : int32_t
     {
@@ -250,1382 +251,350 @@ namespace winrt::Windows::UI::Input
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::Input::IAttachableInputObject>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IAttachableInputObjectFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::ICrossSlidingEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::ICrossSlidingEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IDraggingEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IDraggingEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IEdgeGesture>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IEdgeGestureEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IEdgeGestureStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IGestureRecognizer>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IGestureRecognizer2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IHoldingEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IHoldingEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IInputActivationListener>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IKeyboardDeliveryInterceptor>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IManipulationCompletedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IManipulationCompletedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IManipulationInertiaStartingEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IManipulationInertiaStartingEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IManipulationStartedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IManipulationStartedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IManipulationUpdatedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IManipulationUpdatedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IMouseWheelParameters>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IPointerPoint>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IPointerPointProperties>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IPointerPointProperties2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IPointerPointStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IPointerPointTransform>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IPointerVisualizationSettings>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IPointerVisualizationSettingsStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialController>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialController2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerButtonClickedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerButtonClickedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerButtonHoldingEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerButtonPressedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerButtonReleasedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerConfiguration>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerConfiguration2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerConfigurationStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerConfigurationStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerMenu>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerMenuItem>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerMenuItemStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerMenuItemStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerRotationChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerRotationChangedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerScreenContact>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRadialControllerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRightTappedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::IRightTappedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::ISystemButtonEventController>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::ISystemButtonEventControllerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::ISystemFunctionButtonEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::ISystemFunctionLockChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::ITappedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::ITappedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::UI::Input::AttachableInputObject>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::CrossSlidingEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::DraggingEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::EdgeGesture>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::EdgeGestureEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::GestureRecognizer>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::HoldingEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::InputActivationListener>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::KeyboardDeliveryInterceptor>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::ManipulationCompletedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::ManipulationInertiaStartingEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::ManipulationStartedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::ManipulationUpdatedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::MouseWheelParameters>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::PointerPoint>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::PointerPointProperties>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::PointerVisualizationSettings>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialController>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerButtonClickedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerButtonHoldingEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerButtonPressedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerButtonReleasedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerConfiguration>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerControlAcquiredEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerMenu>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerMenuItem>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerRotationChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerScreenContact>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::RightTappedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::SystemButtonEventController>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::SystemFunctionButtonEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::SystemFunctionLockChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::TappedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::UI::Input::CrossSlidingState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::DraggingState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::EdgeGestureKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::GazeInputAccessStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::GestureSettings>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::HoldingState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::InputActivationState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::PointerUpdateKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerMenuKnownIcon>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::RadialControllerSystemMenuItemKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::UI::Input::CrossSlideThresholds>
-    {
-        using type = struct_category<float, float, float, float>;
-    };
-    template <> struct category<Windows::UI::Input::ManipulationDelta>
-    {
-        using type = struct_category<Windows::Foundation::Point, float, float, float>;
-    };
-    template <> struct category<Windows::UI::Input::ManipulationVelocities>
-    {
-        using type = struct_category<Windows::Foundation::Point, float, float>;
-    };
-    template <> struct name<Windows::UI::Input::IAttachableInputObject>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IAttachableInputObject" };
-    };
-    template <> struct name<Windows::UI::Input::IAttachableInputObjectFactory>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IAttachableInputObjectFactory" };
-    };
-    template <> struct name<Windows::UI::Input::ICrossSlidingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ICrossSlidingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::ICrossSlidingEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ICrossSlidingEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IDraggingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IDraggingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IDraggingEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IDraggingEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IEdgeGesture>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IEdgeGesture" };
-    };
-    template <> struct name<Windows::UI::Input::IEdgeGestureEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IEdgeGestureEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IEdgeGestureStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IEdgeGestureStatics" };
-    };
-    template <> struct name<Windows::UI::Input::IGestureRecognizer>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IGestureRecognizer" };
-    };
-    template <> struct name<Windows::UI::Input::IGestureRecognizer2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IGestureRecognizer2" };
-    };
-    template <> struct name<Windows::UI::Input::IHoldingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IHoldingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IHoldingEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IHoldingEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IInputActivationListener>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IInputActivationListener" };
-    };
-    template <> struct name<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IKeyboardDeliveryInterceptor>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IKeyboardDeliveryInterceptor" };
-    };
-    template <> struct name<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IKeyboardDeliveryInterceptorStatics" };
-    };
-    template <> struct name<Windows::UI::Input::IManipulationCompletedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IManipulationCompletedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IManipulationCompletedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IManipulationCompletedEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IManipulationInertiaStartingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IManipulationInertiaStartingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IManipulationInertiaStartingEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IManipulationInertiaStartingEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IManipulationStartedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IManipulationStartedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IManipulationStartedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IManipulationStartedEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IManipulationUpdatedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IManipulationUpdatedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IManipulationUpdatedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IManipulationUpdatedEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IMouseWheelParameters>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IMouseWheelParameters" };
-    };
-    template <> struct name<Windows::UI::Input::IPointerPoint>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IPointerPoint" };
-    };
-    template <> struct name<Windows::UI::Input::IPointerPointProperties>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IPointerPointProperties" };
-    };
-    template <> struct name<Windows::UI::Input::IPointerPointProperties2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IPointerPointProperties2" };
-    };
-    template <> struct name<Windows::UI::Input::IPointerPointStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IPointerPointStatics" };
-    };
-    template <> struct name<Windows::UI::Input::IPointerPointTransform>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IPointerPointTransform" };
-    };
-    template <> struct name<Windows::UI::Input::IPointerVisualizationSettings>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IPointerVisualizationSettings" };
-    };
-    template <> struct name<Windows::UI::Input::IPointerVisualizationSettingsStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IPointerVisualizationSettingsStatics" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialController>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialController" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialController2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialController2" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerButtonClickedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerButtonClickedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerButtonClickedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerButtonClickedEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerButtonHoldingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerButtonHoldingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerButtonPressedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerButtonPressedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerButtonReleasedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerButtonReleasedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerConfiguration" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerConfiguration2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerConfiguration2" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerConfigurationStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerConfigurationStatics" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerConfigurationStatics2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerConfigurationStatics2" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerControlAcquiredEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerControlAcquiredEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerMenu>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerMenu" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerMenuItem>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerMenuItem" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerMenuItemStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerMenuItemStatics" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerMenuItemStatics2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerMenuItemStatics2" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerRotationChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerRotationChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerRotationChangedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerRotationChangedEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerScreenContact>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerScreenContact" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerScreenContactEndedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::IRadialControllerStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRadialControllerStatics" };
-    };
-    template <> struct name<Windows::UI::Input::IRightTappedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRightTappedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::IRightTappedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.IRightTappedEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::ISystemButtonEventController>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ISystemButtonEventController" };
-    };
-    template <> struct name<Windows::UI::Input::ISystemButtonEventControllerStatics>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ISystemButtonEventControllerStatics" };
-    };
-    template <> struct name<Windows::UI::Input::ISystemFunctionButtonEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ISystemFunctionButtonEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::ISystemFunctionLockChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ISystemFunctionLockChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::ITappedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ITappedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::ITappedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ITappedEventArgs2" };
-    };
-    template <> struct name<Windows::UI::Input::AttachableInputObject>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.AttachableInputObject" };
-    };
-    template <> struct name<Windows::UI::Input::CrossSlidingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.CrossSlidingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::DraggingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.DraggingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::EdgeGesture>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.EdgeGesture" };
-    };
-    template <> struct name<Windows::UI::Input::EdgeGestureEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.EdgeGestureEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::GestureRecognizer>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.GestureRecognizer" };
-    };
-    template <> struct name<Windows::UI::Input::HoldingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.HoldingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::InputActivationListener>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.InputActivationListener" };
-    };
-    template <> struct name<Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.InputActivationListenerActivationChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::KeyboardDeliveryInterceptor>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.KeyboardDeliveryInterceptor" };
-    };
-    template <> struct name<Windows::UI::Input::ManipulationCompletedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ManipulationCompletedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::ManipulationInertiaStartingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ManipulationInertiaStartingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::ManipulationStartedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ManipulationStartedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::ManipulationUpdatedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ManipulationUpdatedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::MouseWheelParameters>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.MouseWheelParameters" };
-    };
-    template <> struct name<Windows::UI::Input::PointerPoint>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.PointerPoint" };
-    };
-    template <> struct name<Windows::UI::Input::PointerPointProperties>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.PointerPointProperties" };
-    };
-    template <> struct name<Windows::UI::Input::PointerVisualizationSettings>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.PointerVisualizationSettings" };
-    };
-    template <> struct name<Windows::UI::Input::RadialController>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialController" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerButtonClickedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerButtonClickedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerButtonHoldingEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerButtonHoldingEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerButtonPressedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerButtonPressedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerButtonReleasedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerButtonReleasedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerConfiguration>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerConfiguration" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerControlAcquiredEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerControlAcquiredEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerMenu>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerMenu" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerMenuItem>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerMenuItem" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerRotationChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerRotationChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerScreenContact>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerScreenContact" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerScreenContactEndedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerScreenContactStartedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::RightTappedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RightTappedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::SystemButtonEventController>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.SystemButtonEventController" };
-    };
-    template <> struct name<Windows::UI::Input::SystemFunctionButtonEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.SystemFunctionButtonEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::SystemFunctionLockChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.SystemFunctionLockChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::TappedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.TappedEventArgs" };
-    };
-    template <> struct name<Windows::UI::Input::CrossSlidingState>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.CrossSlidingState" };
-    };
-    template <> struct name<Windows::UI::Input::DraggingState>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.DraggingState" };
-    };
-    template <> struct name<Windows::UI::Input::EdgeGestureKind>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.EdgeGestureKind" };
-    };
-    template <> struct name<Windows::UI::Input::GazeInputAccessStatus>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.GazeInputAccessStatus" };
-    };
-    template <> struct name<Windows::UI::Input::GestureSettings>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.GestureSettings" };
-    };
-    template <> struct name<Windows::UI::Input::HoldingState>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.HoldingState" };
-    };
-    template <> struct name<Windows::UI::Input::InputActivationState>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.InputActivationState" };
-    };
-    template <> struct name<Windows::UI::Input::PointerUpdateKind>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.PointerUpdateKind" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerMenuKnownIcon>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerMenuKnownIcon" };
-    };
-    template <> struct name<Windows::UI::Input::RadialControllerSystemMenuItemKind>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.RadialControllerSystemMenuItemKind" };
-    };
-    template <> struct name<Windows::UI::Input::CrossSlideThresholds>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.CrossSlideThresholds" };
-    };
-    template <> struct name<Windows::UI::Input::ManipulationDelta>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ManipulationDelta" };
-    };
-    template <> struct name<Windows::UI::Input::ManipulationVelocities>
-    {
-        static constexpr auto & value{ L"Windows.UI.Input.ManipulationVelocities" };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IAttachableInputObject>
-    {
-        static constexpr guid value{ 0x9B822734,0xA3C1,0x542A,{ 0xB2,0xF4,0x0E,0x32,0xB7,0x73,0xFB,0x07 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IAttachableInputObjectFactory>
-    {
-        static constexpr guid value{ 0xA4C54C4E,0x42BC,0x58FA,{ 0xA6,0x40,0xEA,0x15,0x16,0xF4,0xC0,0x6B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::ICrossSlidingEventArgs>
-    {
-        static constexpr guid value{ 0xE9374738,0x6F88,0x41D9,{ 0x87,0x20,0x78,0xE0,0x8E,0x39,0x83,0x49 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::ICrossSlidingEventArgs2>
-    {
-        static constexpr guid value{ 0xEEFB7D48,0xC070,0x59F3,{ 0x8D,0xAB,0xBC,0xAF,0x62,0x1D,0x86,0x87 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IDraggingEventArgs>
-    {
-        static constexpr guid value{ 0x1C905384,0x083C,0x4BD3,{ 0xB5,0x59,0x17,0x9C,0xDD,0xEB,0x33,0xEC } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IDraggingEventArgs2>
-    {
-        static constexpr guid value{ 0x71EFDBF9,0x382A,0x55CA,{ 0xB4,0xB9,0x00,0x81,0x23,0xC1,0xBF,0x1A } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IEdgeGesture>
-    {
-        static constexpr guid value{ 0x580D5292,0x2AB1,0x49AA,{ 0xA7,0xF0,0x33,0xBD,0x3F,0x8D,0xF9,0xF1 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IEdgeGestureEventArgs>
-    {
-        static constexpr guid value{ 0x44FA4A24,0x2D09,0x42E1,{ 0x8B,0x5E,0x36,0x82,0x08,0x79,0x6A,0x4C } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IEdgeGestureStatics>
-    {
-        static constexpr guid value{ 0xBC6A8519,0x18EE,0x4043,{ 0x98,0x39,0x4F,0xC5,0x84,0xD6,0x0A,0x14 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IGestureRecognizer>
-    {
-        static constexpr guid value{ 0xB47A37BF,0x3D6B,0x4F88,{ 0x83,0xE8,0x6D,0xCB,0x40,0x12,0xFF,0xB0 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IGestureRecognizer2>
-    {
-        static constexpr guid value{ 0xD646097F,0x6EF7,0x5746,{ 0x8B,0xA8,0x8F,0xF2,0x20,0x6E,0x6F,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IHoldingEventArgs>
-    {
-        static constexpr guid value{ 0x2BF755C5,0xE799,0x41B4,{ 0xBB,0x40,0x24,0x2F,0x40,0x95,0x9B,0x71 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IHoldingEventArgs2>
-    {
-        static constexpr guid value{ 0x141DA9EA,0x4C79,0x5674,{ 0xAF,0xEA,0x49,0x3F,0xDE,0xB9,0x1F,0x19 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IInputActivationListener>
-    {
-        static constexpr guid value{ 0x5D6D4ED2,0x28C7,0x5AE3,{ 0xAA,0x74,0xC9,0x18,0xA9,0xF2,0x43,0xCA } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>
-    {
-        static constexpr guid value{ 0x7699B465,0x1DCF,0x5791,{ 0xB4,0xB9,0x6C,0xAF,0xBE,0xED,0x20,0x56 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IKeyboardDeliveryInterceptor>
-    {
-        static constexpr guid value{ 0xB4BAF068,0x8F49,0x446C,{ 0x8D,0xB5,0x8C,0x0F,0xFE,0x85,0xCC,0x9E } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>
-    {
-        static constexpr guid value{ 0xF9F63BA2,0xCEBA,0x4755,{ 0x8A,0x7E,0x14,0xC0,0xFF,0xEC,0xD2,0x39 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IManipulationCompletedEventArgs>
-    {
-        static constexpr guid value{ 0xB34AB22B,0xD19B,0x46FF,{ 0x9F,0x38,0xDE,0xC7,0x75,0x4B,0xB9,0xE7 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IManipulationCompletedEventArgs2>
-    {
-        static constexpr guid value{ 0xF0C0DCE7,0x30A9,0x5B96,{ 0x88,0x6F,0x65,0x60,0xA8,0x5E,0x47,0x57 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IManipulationInertiaStartingEventArgs>
-    {
-        static constexpr guid value{ 0xDD37A898,0x26BF,0x467A,{ 0x9C,0xE5,0xCC,0xF3,0xFB,0x11,0x37,0x1E } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IManipulationInertiaStartingEventArgs2>
-    {
-        static constexpr guid value{ 0xC25409B8,0xF9FA,0x5A45,{ 0xBD,0x97,0xDC,0xBB,0xB2,0x20,0x18,0x60 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IManipulationStartedEventArgs>
-    {
-        static constexpr guid value{ 0xDDEC873E,0xCFCE,0x4932,{ 0x8C,0x1D,0x3C,0x3D,0x01,0x1A,0x34,0xC0 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IManipulationStartedEventArgs2>
-    {
-        static constexpr guid value{ 0x2DA3DB4E,0xE583,0x5055,{ 0xAF,0xAA,0x16,0xFD,0x98,0x65,0x31,0xA6 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IManipulationUpdatedEventArgs>
-    {
-        static constexpr guid value{ 0xCB354CE5,0xABB8,0x4F9F,{ 0xB3,0xCE,0x81,0x81,0xAA,0x61,0xAD,0x82 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IManipulationUpdatedEventArgs2>
-    {
-        static constexpr guid value{ 0xF3DFB96A,0x3306,0x5903,{ 0xA1,0xC5,0xFF,0x97,0x57,0xA8,0x68,0x9E } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IMouseWheelParameters>
-    {
-        static constexpr guid value{ 0xEAD0CA44,0x9DED,0x4037,{ 0x81,0x49,0x5E,0x4C,0xC2,0x56,0x44,0x68 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IPointerPoint>
-    {
-        static constexpr guid value{ 0xE995317D,0x7296,0x42D9,{ 0x82,0x33,0xC5,0xBE,0x73,0xB7,0x4A,0x4A } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IPointerPointProperties>
-    {
-        static constexpr guid value{ 0xC79D8A4B,0xC163,0x4EE7,{ 0x80,0x3F,0x67,0xCE,0x79,0xF9,0x97,0x2D } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IPointerPointProperties2>
-    {
-        static constexpr guid value{ 0x22C3433A,0xC83B,0x41C0,{ 0xA2,0x96,0x5E,0x23,0x2D,0x64,0xD6,0xAF } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IPointerPointStatics>
-    {
-        static constexpr guid value{ 0xA506638D,0x2A1A,0x413E,{ 0xBC,0x75,0x9F,0x38,0x38,0x1C,0xC0,0x69 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IPointerPointTransform>
-    {
-        static constexpr guid value{ 0x4D5FE14F,0xB87C,0x4028,{ 0xBC,0x9C,0x59,0xE9,0x94,0x7F,0xB0,0x56 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IPointerVisualizationSettings>
-    {
-        static constexpr guid value{ 0x4D1E6461,0x84F7,0x499D,{ 0xBD,0x91,0x2A,0x36,0xE2,0xB7,0xAA,0xA2 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IPointerVisualizationSettingsStatics>
-    {
-        static constexpr guid value{ 0x68870EDB,0x165B,0x4214,{ 0xB4,0xF3,0x58,0x4E,0xCA,0x8C,0x8A,0x69 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialController>
-    {
-        static constexpr guid value{ 0x3055D1C8,0xDF51,0x43D4,{ 0xB2,0x3B,0x0E,0x10,0x37,0x46,0x7A,0x09 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialController2>
-    {
-        static constexpr guid value{ 0x3D577EFF,0x4CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerButtonClickedEventArgs>
-    {
-        static constexpr guid value{ 0x206AA438,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerButtonClickedEventArgs2>
-    {
-        static constexpr guid value{ 0x3D577EF3,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerButtonHoldingEventArgs>
-    {
-        static constexpr guid value{ 0x3D577EEE,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerButtonPressedEventArgs>
-    {
-        static constexpr guid value{ 0x3D577EED,0x4CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerButtonReleasedEventArgs>
-    {
-        static constexpr guid value{ 0x3D577EEF,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerConfiguration>
-    {
-        static constexpr guid value{ 0xA6B79ECB,0x6A52,0x4430,{ 0x91,0x0C,0x56,0x37,0x0A,0x9D,0x6B,0x42 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerConfiguration2>
-    {
-        static constexpr guid value{ 0x3D577EF7,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerConfigurationStatics>
-    {
-        static constexpr guid value{ 0x79B6B0E5,0x069A,0x4486,{ 0xA9,0x9D,0x8D,0xB7,0x72,0xB9,0x64,0x2F } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerConfigurationStatics2>
-    {
-        static constexpr guid value{ 0x53E08B17,0xE205,0x48D3,{ 0x9C,0xAF,0x80,0xFF,0x47,0xC4,0xD7,0xC7 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs>
-    {
-        static constexpr guid value{ 0x206AA439,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs2>
-    {
-        static constexpr guid value{ 0x3D577EF4,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerMenu>
-    {
-        static constexpr guid value{ 0x8506B35D,0xF640,0x4412,{ 0xAB,0xA0,0xBA,0xD0,0x77,0xE5,0xEA,0x8A } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerMenuItem>
-    {
-        static constexpr guid value{ 0xC80FC98D,0xAD0B,0x4C9C,{ 0x8F,0x2F,0x13,0x6A,0x23,0x73,0xA6,0xBA } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerMenuItemStatics>
-    {
-        static constexpr guid value{ 0x249E0887,0xD842,0x4524,{ 0x9D,0xF8,0xE0,0xD6,0x47,0xED,0xC8,0x87 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerMenuItemStatics2>
-    {
-        static constexpr guid value{ 0x0CBB70BE,0x7E3E,0x48BD,{ 0xBE,0x04,0x2C,0x7F,0xCA,0xA9,0xC1,0xFF } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerRotationChangedEventArgs>
-    {
-        static constexpr guid value{ 0x206AA435,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerRotationChangedEventArgs2>
-    {
-        static constexpr guid value{ 0x3D577EEC,0x4CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerScreenContact>
-    {
-        static constexpr guid value{ 0x206AA434,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs>
-    {
-        static constexpr guid value{ 0x206AA437,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs2>
-    {
-        static constexpr guid value{ 0x3D577EF1,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs>
-    {
-        static constexpr guid value{ 0x3D577EF2,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs>
-    {
-        static constexpr guid value{ 0x206AA436,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs2>
-    {
-        static constexpr guid value{ 0x3D577EF0,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRadialControllerStatics>
-    {
-        static constexpr guid value{ 0xFADED0B7,0xB84C,0x4894,{ 0x87,0xAA,0x8F,0x25,0xAA,0x5F,0x28,0x8B } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRightTappedEventArgs>
-    {
-        static constexpr guid value{ 0x4CBF40BD,0xAF7A,0x4A36,{ 0x94,0x76,0xB1,0xDC,0xE1,0x41,0x70,0x9A } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::IRightTappedEventArgs2>
-    {
-        static constexpr guid value{ 0x61C7B7BB,0x9F57,0x5857,{ 0xA3,0x3C,0xC5,0x8C,0x3D,0xFA,0x95,0x9E } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::ISystemButtonEventController>
-    {
-        static constexpr guid value{ 0x59B893A9,0x73BC,0x52B5,{ 0xBA,0x41,0x82,0x51,0x1B,0x2C,0xB4,0x6C } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::ISystemButtonEventControllerStatics>
-    {
-        static constexpr guid value{ 0x632FB07B,0x20BD,0x5E15,{ 0xAF,0x4A,0x00,0xDB,0xF2,0x06,0x4F,0xFA } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::ISystemFunctionButtonEventArgs>
-    {
-        static constexpr guid value{ 0x4833896F,0x80D1,0x5DD6,{ 0x92,0xA7,0x62,0xA5,0x08,0xFF,0xEF,0x5A } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::ISystemFunctionLockChangedEventArgs>
-    {
-        static constexpr guid value{ 0xCD040608,0xFCF9,0x585C,{ 0xBE,0xAB,0xF1,0xD2,0xEA,0xF3,0x64,0xAB } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs>
-    {
-        static constexpr guid value{ 0xB212B94E,0x7A6F,0x58AE,{ 0xB3,0x04,0xBA,0xE6,0x1D,0x03,0x71,0xB9 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::ITappedEventArgs>
-    {
-        static constexpr guid value{ 0xCFA126E4,0x253A,0x4C3C,{ 0x95,0x3B,0x39,0x5C,0x37,0xAE,0xD3,0x09 } };
-    };
-    template <> struct guid_storage<Windows::UI::Input::ITappedEventArgs2>
-    {
-        static constexpr guid value{ 0x294388F2,0x177E,0x51D5,{ 0xBE,0x56,0xEE,0x08,0x66,0xFA,0x96,0x8C } };
-    };
-    template <> struct default_interface<Windows::UI::Input::AttachableInputObject>
-    {
-        using type = Windows::UI::Input::IAttachableInputObject;
-    };
-    template <> struct default_interface<Windows::UI::Input::CrossSlidingEventArgs>
-    {
-        using type = Windows::UI::Input::ICrossSlidingEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::DraggingEventArgs>
-    {
-        using type = Windows::UI::Input::IDraggingEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::EdgeGesture>
-    {
-        using type = Windows::UI::Input::IEdgeGesture;
-    };
-    template <> struct default_interface<Windows::UI::Input::EdgeGestureEventArgs>
-    {
-        using type = Windows::UI::Input::IEdgeGestureEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::GestureRecognizer>
-    {
-        using type = Windows::UI::Input::IGestureRecognizer;
-    };
-    template <> struct default_interface<Windows::UI::Input::HoldingEventArgs>
-    {
-        using type = Windows::UI::Input::IHoldingEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::InputActivationListener>
-    {
-        using type = Windows::UI::Input::IInputActivationListener;
-    };
-    template <> struct default_interface<Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>
-    {
-        using type = Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::KeyboardDeliveryInterceptor>
-    {
-        using type = Windows::UI::Input::IKeyboardDeliveryInterceptor;
-    };
-    template <> struct default_interface<Windows::UI::Input::ManipulationCompletedEventArgs>
-    {
-        using type = Windows::UI::Input::IManipulationCompletedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::ManipulationInertiaStartingEventArgs>
-    {
-        using type = Windows::UI::Input::IManipulationInertiaStartingEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::ManipulationStartedEventArgs>
-    {
-        using type = Windows::UI::Input::IManipulationStartedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::ManipulationUpdatedEventArgs>
-    {
-        using type = Windows::UI::Input::IManipulationUpdatedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::MouseWheelParameters>
-    {
-        using type = Windows::UI::Input::IMouseWheelParameters;
-    };
-    template <> struct default_interface<Windows::UI::Input::PointerPoint>
-    {
-        using type = Windows::UI::Input::IPointerPoint;
-    };
-    template <> struct default_interface<Windows::UI::Input::PointerPointProperties>
-    {
-        using type = Windows::UI::Input::IPointerPointProperties;
-    };
-    template <> struct default_interface<Windows::UI::Input::PointerVisualizationSettings>
-    {
-        using type = Windows::UI::Input::IPointerVisualizationSettings;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialController>
-    {
-        using type = Windows::UI::Input::IRadialController;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerButtonClickedEventArgs>
-    {
-        using type = Windows::UI::Input::IRadialControllerButtonClickedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerButtonHoldingEventArgs>
-    {
-        using type = Windows::UI::Input::IRadialControllerButtonHoldingEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerButtonPressedEventArgs>
-    {
-        using type = Windows::UI::Input::IRadialControllerButtonPressedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerButtonReleasedEventArgs>
-    {
-        using type = Windows::UI::Input::IRadialControllerButtonReleasedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerConfiguration>
-    {
-        using type = Windows::UI::Input::IRadialControllerConfiguration;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerControlAcquiredEventArgs>
-    {
-        using type = Windows::UI::Input::IRadialControllerControlAcquiredEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerMenu>
-    {
-        using type = Windows::UI::Input::IRadialControllerMenu;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerMenuItem>
-    {
-        using type = Windows::UI::Input::IRadialControllerMenuItem;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerRotationChangedEventArgs>
-    {
-        using type = Windows::UI::Input::IRadialControllerRotationChangedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerScreenContact>
-    {
-        using type = Windows::UI::Input::IRadialControllerScreenContact;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>
-    {
-        using type = Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>
-    {
-        using type = Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>
-    {
-        using type = Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::RightTappedEventArgs>
-    {
-        using type = Windows::UI::Input::IRightTappedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::SystemButtonEventController>
-    {
-        using type = Windows::UI::Input::ISystemButtonEventController;
-    };
-    template <> struct default_interface<Windows::UI::Input::SystemFunctionButtonEventArgs>
-    {
-        using type = Windows::UI::Input::ISystemFunctionButtonEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::SystemFunctionLockChangedEventArgs>
-    {
-        using type = Windows::UI::Input::ISystemFunctionLockChangedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>
-    {
-        using type = Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs;
-    };
-    template <> struct default_interface<Windows::UI::Input::TappedEventArgs>
-    {
-        using type = Windows::UI::Input::ITappedEventArgs;
-    };
+    template <> struct category<Windows::UI::Input::IAttachableInputObject>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IAttachableInputObjectFactory>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::ICrossSlidingEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::ICrossSlidingEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IDraggingEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IDraggingEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IEdgeGesture>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IEdgeGestureEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IEdgeGestureStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IGestureRecognizer>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IGestureRecognizer2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IHoldingEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IHoldingEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IInputActivationListener>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IKeyboardDeliveryInterceptor>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IManipulationCompletedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IManipulationCompletedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IManipulationInertiaStartingEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IManipulationInertiaStartingEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IManipulationStartedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IManipulationStartedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IManipulationUpdatedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IManipulationUpdatedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IMouseWheelParameters>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IPointerPoint>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IPointerPointProperties>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IPointerPointProperties2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IPointerPointStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IPointerPointTransform>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IPointerVisualizationSettings>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IPointerVisualizationSettingsStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialController>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialController2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerButtonClickedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerButtonClickedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerButtonHoldingEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerButtonPressedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerButtonReleasedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerConfiguration>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerConfiguration2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerConfigurationStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerConfigurationStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerMenu>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerMenuItem>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerMenuItemStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerMenuItemStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerRotationChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerRotationChangedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerScreenContact>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRadialControllerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRightTappedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::IRightTappedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::ISystemButtonEventController>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::ISystemButtonEventControllerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::ISystemFunctionButtonEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::ISystemFunctionLockChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::ITappedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::ITappedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::AttachableInputObject>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::CrossSlidingEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::DraggingEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::EdgeGesture>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::EdgeGestureEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::GestureRecognizer>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::HoldingEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::InputActivationListener>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::KeyboardDeliveryInterceptor>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::ManipulationCompletedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::ManipulationInertiaStartingEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::ManipulationStartedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::ManipulationUpdatedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::MouseWheelParameters>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::PointerPoint>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::PointerPointProperties>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::PointerVisualizationSettings>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialController>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerButtonClickedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerButtonHoldingEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerButtonPressedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerButtonReleasedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerConfiguration>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerControlAcquiredEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerMenu>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerMenuItem>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerRotationChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerScreenContact>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::RightTappedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::SystemButtonEventController>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::SystemFunctionButtonEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::SystemFunctionLockChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::TappedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::UI::Input::CrossSlidingState>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::DraggingState>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::EdgeGestureKind>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::GazeInputAccessStatus>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::GestureSettings>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::HoldingState>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::InputActivationState>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::PointerUpdateKind>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerMenuKnownIcon>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::RadialControllerSystemMenuItemKind>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Input::CrossSlideThresholds>{ using type = struct_category<float, float, float, float>; };
+    template <> struct category<Windows::UI::Input::ManipulationDelta>{ using type = struct_category<Windows::Foundation::Point, float, float, float>; };
+    template <> struct category<Windows::UI::Input::ManipulationVelocities>{ using type = struct_category<Windows::Foundation::Point, float, float>; };
+    template <> inline constexpr auto& name_v<Windows::UI::Input::AttachableInputObject> = L"Windows.UI.Input.AttachableInputObject";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::CrossSlidingEventArgs> = L"Windows.UI.Input.CrossSlidingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::DraggingEventArgs> = L"Windows.UI.Input.DraggingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::EdgeGesture> = L"Windows.UI.Input.EdgeGesture";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::EdgeGestureEventArgs> = L"Windows.UI.Input.EdgeGestureEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::GestureRecognizer> = L"Windows.UI.Input.GestureRecognizer";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::HoldingEventArgs> = L"Windows.UI.Input.HoldingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::InputActivationListener> = L"Windows.UI.Input.InputActivationListener";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> = L"Windows.UI.Input.InputActivationListenerActivationChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::KeyboardDeliveryInterceptor> = L"Windows.UI.Input.KeyboardDeliveryInterceptor";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ManipulationCompletedEventArgs> = L"Windows.UI.Input.ManipulationCompletedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ManipulationInertiaStartingEventArgs> = L"Windows.UI.Input.ManipulationInertiaStartingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ManipulationStartedEventArgs> = L"Windows.UI.Input.ManipulationStartedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ManipulationUpdatedEventArgs> = L"Windows.UI.Input.ManipulationUpdatedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::MouseWheelParameters> = L"Windows.UI.Input.MouseWheelParameters";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::PointerPoint> = L"Windows.UI.Input.PointerPoint";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::PointerPointProperties> = L"Windows.UI.Input.PointerPointProperties";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::PointerVisualizationSettings> = L"Windows.UI.Input.PointerVisualizationSettings";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialController> = L"Windows.UI.Input.RadialController";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerButtonClickedEventArgs> = L"Windows.UI.Input.RadialControllerButtonClickedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerButtonHoldingEventArgs> = L"Windows.UI.Input.RadialControllerButtonHoldingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerButtonPressedEventArgs> = L"Windows.UI.Input.RadialControllerButtonPressedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerButtonReleasedEventArgs> = L"Windows.UI.Input.RadialControllerButtonReleasedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerConfiguration> = L"Windows.UI.Input.RadialControllerConfiguration";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerControlAcquiredEventArgs> = L"Windows.UI.Input.RadialControllerControlAcquiredEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerMenu> = L"Windows.UI.Input.RadialControllerMenu";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerMenuItem> = L"Windows.UI.Input.RadialControllerMenuItem";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerRotationChangedEventArgs> = L"Windows.UI.Input.RadialControllerRotationChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerScreenContact> = L"Windows.UI.Input.RadialControllerScreenContact";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs> = L"Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerScreenContactEndedEventArgs> = L"Windows.UI.Input.RadialControllerScreenContactEndedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerScreenContactStartedEventArgs> = L"Windows.UI.Input.RadialControllerScreenContactStartedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RightTappedEventArgs> = L"Windows.UI.Input.RightTappedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::SystemButtonEventController> = L"Windows.UI.Input.SystemButtonEventController";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::SystemFunctionButtonEventArgs> = L"Windows.UI.Input.SystemFunctionButtonEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::SystemFunctionLockChangedEventArgs> = L"Windows.UI.Input.SystemFunctionLockChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs> = L"Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::TappedEventArgs> = L"Windows.UI.Input.TappedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::CrossSlidingState> = L"Windows.UI.Input.CrossSlidingState";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::DraggingState> = L"Windows.UI.Input.DraggingState";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::EdgeGestureKind> = L"Windows.UI.Input.EdgeGestureKind";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::GazeInputAccessStatus> = L"Windows.UI.Input.GazeInputAccessStatus";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::GestureSettings> = L"Windows.UI.Input.GestureSettings";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::HoldingState> = L"Windows.UI.Input.HoldingState";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::InputActivationState> = L"Windows.UI.Input.InputActivationState";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::PointerUpdateKind> = L"Windows.UI.Input.PointerUpdateKind";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerMenuKnownIcon> = L"Windows.UI.Input.RadialControllerMenuKnownIcon";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::RadialControllerSystemMenuItemKind> = L"Windows.UI.Input.RadialControllerSystemMenuItemKind";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::CrossSlideThresholds> = L"Windows.UI.Input.CrossSlideThresholds";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ManipulationDelta> = L"Windows.UI.Input.ManipulationDelta";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ManipulationVelocities> = L"Windows.UI.Input.ManipulationVelocities";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IAttachableInputObject> = L"Windows.UI.Input.IAttachableInputObject";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IAttachableInputObjectFactory> = L"Windows.UI.Input.IAttachableInputObjectFactory";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ICrossSlidingEventArgs> = L"Windows.UI.Input.ICrossSlidingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ICrossSlidingEventArgs2> = L"Windows.UI.Input.ICrossSlidingEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IDraggingEventArgs> = L"Windows.UI.Input.IDraggingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IDraggingEventArgs2> = L"Windows.UI.Input.IDraggingEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IEdgeGesture> = L"Windows.UI.Input.IEdgeGesture";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IEdgeGestureEventArgs> = L"Windows.UI.Input.IEdgeGestureEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IEdgeGestureStatics> = L"Windows.UI.Input.IEdgeGestureStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IGestureRecognizer> = L"Windows.UI.Input.IGestureRecognizer";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IGestureRecognizer2> = L"Windows.UI.Input.IGestureRecognizer2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IHoldingEventArgs> = L"Windows.UI.Input.IHoldingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IHoldingEventArgs2> = L"Windows.UI.Input.IHoldingEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IInputActivationListener> = L"Windows.UI.Input.IInputActivationListener";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs> = L"Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IKeyboardDeliveryInterceptor> = L"Windows.UI.Input.IKeyboardDeliveryInterceptor";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics> = L"Windows.UI.Input.IKeyboardDeliveryInterceptorStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IManipulationCompletedEventArgs> = L"Windows.UI.Input.IManipulationCompletedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IManipulationCompletedEventArgs2> = L"Windows.UI.Input.IManipulationCompletedEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IManipulationInertiaStartingEventArgs> = L"Windows.UI.Input.IManipulationInertiaStartingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IManipulationInertiaStartingEventArgs2> = L"Windows.UI.Input.IManipulationInertiaStartingEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IManipulationStartedEventArgs> = L"Windows.UI.Input.IManipulationStartedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IManipulationStartedEventArgs2> = L"Windows.UI.Input.IManipulationStartedEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IManipulationUpdatedEventArgs> = L"Windows.UI.Input.IManipulationUpdatedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IManipulationUpdatedEventArgs2> = L"Windows.UI.Input.IManipulationUpdatedEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IMouseWheelParameters> = L"Windows.UI.Input.IMouseWheelParameters";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IPointerPoint> = L"Windows.UI.Input.IPointerPoint";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IPointerPointProperties> = L"Windows.UI.Input.IPointerPointProperties";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IPointerPointProperties2> = L"Windows.UI.Input.IPointerPointProperties2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IPointerPointStatics> = L"Windows.UI.Input.IPointerPointStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IPointerPointTransform> = L"Windows.UI.Input.IPointerPointTransform";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IPointerVisualizationSettings> = L"Windows.UI.Input.IPointerVisualizationSettings";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IPointerVisualizationSettingsStatics> = L"Windows.UI.Input.IPointerVisualizationSettingsStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialController> = L"Windows.UI.Input.IRadialController";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialController2> = L"Windows.UI.Input.IRadialController2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerButtonClickedEventArgs> = L"Windows.UI.Input.IRadialControllerButtonClickedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerButtonClickedEventArgs2> = L"Windows.UI.Input.IRadialControllerButtonClickedEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerButtonHoldingEventArgs> = L"Windows.UI.Input.IRadialControllerButtonHoldingEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerButtonPressedEventArgs> = L"Windows.UI.Input.IRadialControllerButtonPressedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerButtonReleasedEventArgs> = L"Windows.UI.Input.IRadialControllerButtonReleasedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerConfiguration> = L"Windows.UI.Input.IRadialControllerConfiguration";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerConfiguration2> = L"Windows.UI.Input.IRadialControllerConfiguration2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerConfigurationStatics> = L"Windows.UI.Input.IRadialControllerConfigurationStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerConfigurationStatics2> = L"Windows.UI.Input.IRadialControllerConfigurationStatics2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs> = L"Windows.UI.Input.IRadialControllerControlAcquiredEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs2> = L"Windows.UI.Input.IRadialControllerControlAcquiredEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerMenu> = L"Windows.UI.Input.IRadialControllerMenu";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerMenuItem> = L"Windows.UI.Input.IRadialControllerMenuItem";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerMenuItemStatics> = L"Windows.UI.Input.IRadialControllerMenuItemStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerMenuItemStatics2> = L"Windows.UI.Input.IRadialControllerMenuItemStatics2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerRotationChangedEventArgs> = L"Windows.UI.Input.IRadialControllerRotationChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerRotationChangedEventArgs2> = L"Windows.UI.Input.IRadialControllerRotationChangedEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerScreenContact> = L"Windows.UI.Input.IRadialControllerScreenContact";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs> = L"Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs2> = L"Windows.UI.Input.IRadialControllerScreenContactContinuedEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs> = L"Windows.UI.Input.IRadialControllerScreenContactEndedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs> = L"Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs2> = L"Windows.UI.Input.IRadialControllerScreenContactStartedEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRadialControllerStatics> = L"Windows.UI.Input.IRadialControllerStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRightTappedEventArgs> = L"Windows.UI.Input.IRightTappedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::IRightTappedEventArgs2> = L"Windows.UI.Input.IRightTappedEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ISystemButtonEventController> = L"Windows.UI.Input.ISystemButtonEventController";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ISystemButtonEventControllerStatics> = L"Windows.UI.Input.ISystemButtonEventControllerStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ISystemFunctionButtonEventArgs> = L"Windows.UI.Input.ISystemFunctionButtonEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ISystemFunctionLockChangedEventArgs> = L"Windows.UI.Input.ISystemFunctionLockChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs> = L"Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ITappedEventArgs> = L"Windows.UI.Input.ITappedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::ITappedEventArgs2> = L"Windows.UI.Input.ITappedEventArgs2";
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IAttachableInputObject>{ 0x9B822734,0xA3C1,0x542A,{ 0xB2,0xF4,0x0E,0x32,0xB7,0x73,0xFB,0x07 } }; // 9B822734-A3C1-542A-B2F4-0E32B773FB07
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IAttachableInputObjectFactory>{ 0xA4C54C4E,0x42BC,0x58FA,{ 0xA6,0x40,0xEA,0x15,0x16,0xF4,0xC0,0x6B } }; // A4C54C4E-42BC-58FA-A640-EA1516F4C06B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::ICrossSlidingEventArgs>{ 0xE9374738,0x6F88,0x41D9,{ 0x87,0x20,0x78,0xE0,0x8E,0x39,0x83,0x49 } }; // E9374738-6F88-41D9-8720-78E08E398349
+    template <> inline constexpr guid guid_v<Windows::UI::Input::ICrossSlidingEventArgs2>{ 0xEEFB7D48,0xC070,0x59F3,{ 0x8D,0xAB,0xBC,0xAF,0x62,0x1D,0x86,0x87 } }; // EEFB7D48-C070-59F3-8DAB-BCAF621D8687
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IDraggingEventArgs>{ 0x1C905384,0x083C,0x4BD3,{ 0xB5,0x59,0x17,0x9C,0xDD,0xEB,0x33,0xEC } }; // 1C905384-083C-4BD3-B559-179CDDEB33EC
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IDraggingEventArgs2>{ 0x71EFDBF9,0x382A,0x55CA,{ 0xB4,0xB9,0x00,0x81,0x23,0xC1,0xBF,0x1A } }; // 71EFDBF9-382A-55CA-B4B9-008123C1BF1A
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IEdgeGesture>{ 0x580D5292,0x2AB1,0x49AA,{ 0xA7,0xF0,0x33,0xBD,0x3F,0x8D,0xF9,0xF1 } }; // 580D5292-2AB1-49AA-A7F0-33BD3F8DF9F1
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IEdgeGestureEventArgs>{ 0x44FA4A24,0x2D09,0x42E1,{ 0x8B,0x5E,0x36,0x82,0x08,0x79,0x6A,0x4C } }; // 44FA4A24-2D09-42E1-8B5E-368208796A4C
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IEdgeGestureStatics>{ 0xBC6A8519,0x18EE,0x4043,{ 0x98,0x39,0x4F,0xC5,0x84,0xD6,0x0A,0x14 } }; // BC6A8519-18EE-4043-9839-4FC584D60A14
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IGestureRecognizer>{ 0xB47A37BF,0x3D6B,0x4F88,{ 0x83,0xE8,0x6D,0xCB,0x40,0x12,0xFF,0xB0 } }; // B47A37BF-3D6B-4F88-83E8-6DCB4012FFB0
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IGestureRecognizer2>{ 0xD646097F,0x6EF7,0x5746,{ 0x8B,0xA8,0x8F,0xF2,0x20,0x6E,0x6F,0x3B } }; // D646097F-6EF7-5746-8BA8-8FF2206E6F3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IHoldingEventArgs>{ 0x2BF755C5,0xE799,0x41B4,{ 0xBB,0x40,0x24,0x2F,0x40,0x95,0x9B,0x71 } }; // 2BF755C5-E799-41B4-BB40-242F40959B71
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IHoldingEventArgs2>{ 0x141DA9EA,0x4C79,0x5674,{ 0xAF,0xEA,0x49,0x3F,0xDE,0xB9,0x1F,0x19 } }; // 141DA9EA-4C79-5674-AFEA-493FDEB91F19
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IInputActivationListener>{ 0x5D6D4ED2,0x28C7,0x5AE3,{ 0xAA,0x74,0xC9,0x18,0xA9,0xF2,0x43,0xCA } }; // 5D6D4ED2-28C7-5AE3-AA74-C918A9F243CA
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>{ 0x7699B465,0x1DCF,0x5791,{ 0xB4,0xB9,0x6C,0xAF,0xBE,0xED,0x20,0x56 } }; // 7699B465-1DCF-5791-B4B9-6CAFBEED2056
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IKeyboardDeliveryInterceptor>{ 0xB4BAF068,0x8F49,0x446C,{ 0x8D,0xB5,0x8C,0x0F,0xFE,0x85,0xCC,0x9E } }; // B4BAF068-8F49-446C-8DB5-8C0FFE85CC9E
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>{ 0xF9F63BA2,0xCEBA,0x4755,{ 0x8A,0x7E,0x14,0xC0,0xFF,0xEC,0xD2,0x39 } }; // F9F63BA2-CEBA-4755-8A7E-14C0FFECD239
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IManipulationCompletedEventArgs>{ 0xB34AB22B,0xD19B,0x46FF,{ 0x9F,0x38,0xDE,0xC7,0x75,0x4B,0xB9,0xE7 } }; // B34AB22B-D19B-46FF-9F38-DEC7754BB9E7
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IManipulationCompletedEventArgs2>{ 0xF0C0DCE7,0x30A9,0x5B96,{ 0x88,0x6F,0x65,0x60,0xA8,0x5E,0x47,0x57 } }; // F0C0DCE7-30A9-5B96-886F-6560A85E4757
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IManipulationInertiaStartingEventArgs>{ 0xDD37A898,0x26BF,0x467A,{ 0x9C,0xE5,0xCC,0xF3,0xFB,0x11,0x37,0x1E } }; // DD37A898-26BF-467A-9CE5-CCF3FB11371E
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IManipulationInertiaStartingEventArgs2>{ 0xC25409B8,0xF9FA,0x5A45,{ 0xBD,0x97,0xDC,0xBB,0xB2,0x20,0x18,0x60 } }; // C25409B8-F9FA-5A45-BD97-DCBBB2201860
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IManipulationStartedEventArgs>{ 0xDDEC873E,0xCFCE,0x4932,{ 0x8C,0x1D,0x3C,0x3D,0x01,0x1A,0x34,0xC0 } }; // DDEC873E-CFCE-4932-8C1D-3C3D011A34C0
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IManipulationStartedEventArgs2>{ 0x2DA3DB4E,0xE583,0x5055,{ 0xAF,0xAA,0x16,0xFD,0x98,0x65,0x31,0xA6 } }; // 2DA3DB4E-E583-5055-AFAA-16FD986531A6
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IManipulationUpdatedEventArgs>{ 0xCB354CE5,0xABB8,0x4F9F,{ 0xB3,0xCE,0x81,0x81,0xAA,0x61,0xAD,0x82 } }; // CB354CE5-ABB8-4F9F-B3CE-8181AA61AD82
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IManipulationUpdatedEventArgs2>{ 0xF3DFB96A,0x3306,0x5903,{ 0xA1,0xC5,0xFF,0x97,0x57,0xA8,0x68,0x9E } }; // F3DFB96A-3306-5903-A1C5-FF9757A8689E
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IMouseWheelParameters>{ 0xEAD0CA44,0x9DED,0x4037,{ 0x81,0x49,0x5E,0x4C,0xC2,0x56,0x44,0x68 } }; // EAD0CA44-9DED-4037-8149-5E4CC2564468
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IPointerPoint>{ 0xE995317D,0x7296,0x42D9,{ 0x82,0x33,0xC5,0xBE,0x73,0xB7,0x4A,0x4A } }; // E995317D-7296-42D9-8233-C5BE73B74A4A
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IPointerPointProperties>{ 0xC79D8A4B,0xC163,0x4EE7,{ 0x80,0x3F,0x67,0xCE,0x79,0xF9,0x97,0x2D } }; // C79D8A4B-C163-4EE7-803F-67CE79F9972D
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IPointerPointProperties2>{ 0x22C3433A,0xC83B,0x41C0,{ 0xA2,0x96,0x5E,0x23,0x2D,0x64,0xD6,0xAF } }; // 22C3433A-C83B-41C0-A296-5E232D64D6AF
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IPointerPointStatics>{ 0xA506638D,0x2A1A,0x413E,{ 0xBC,0x75,0x9F,0x38,0x38,0x1C,0xC0,0x69 } }; // A506638D-2A1A-413E-BC75-9F38381CC069
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IPointerPointTransform>{ 0x4D5FE14F,0xB87C,0x4028,{ 0xBC,0x9C,0x59,0xE9,0x94,0x7F,0xB0,0x56 } }; // 4D5FE14F-B87C-4028-BC9C-59E9947FB056
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IPointerVisualizationSettings>{ 0x4D1E6461,0x84F7,0x499D,{ 0xBD,0x91,0x2A,0x36,0xE2,0xB7,0xAA,0xA2 } }; // 4D1E6461-84F7-499D-BD91-2A36E2B7AAA2
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IPointerVisualizationSettingsStatics>{ 0x68870EDB,0x165B,0x4214,{ 0xB4,0xF3,0x58,0x4E,0xCA,0x8C,0x8A,0x69 } }; // 68870EDB-165B-4214-B4F3-584ECA8C8A69
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialController>{ 0x3055D1C8,0xDF51,0x43D4,{ 0xB2,0x3B,0x0E,0x10,0x37,0x46,0x7A,0x09 } }; // 3055D1C8-DF51-43D4-B23B-0E1037467A09
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialController2>{ 0x3D577EFF,0x4CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EFF-4CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerButtonClickedEventArgs>{ 0x206AA438,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } }; // 206AA438-E651-11E5-BF62-2C27D7404E85
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerButtonClickedEventArgs2>{ 0x3D577EF3,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EF3-3CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerButtonHoldingEventArgs>{ 0x3D577EEE,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EEE-3CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerButtonPressedEventArgs>{ 0x3D577EED,0x4CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EED-4CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerButtonReleasedEventArgs>{ 0x3D577EEF,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EEF-3CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerConfiguration>{ 0xA6B79ECB,0x6A52,0x4430,{ 0x91,0x0C,0x56,0x37,0x0A,0x9D,0x6B,0x42 } }; // A6B79ECB-6A52-4430-910C-56370A9D6B42
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerConfiguration2>{ 0x3D577EF7,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EF7-3CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerConfigurationStatics>{ 0x79B6B0E5,0x069A,0x4486,{ 0xA9,0x9D,0x8D,0xB7,0x72,0xB9,0x64,0x2F } }; // 79B6B0E5-069A-4486-A99D-8DB772B9642F
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerConfigurationStatics2>{ 0x53E08B17,0xE205,0x48D3,{ 0x9C,0xAF,0x80,0xFF,0x47,0xC4,0xD7,0xC7 } }; // 53E08B17-E205-48D3-9CAF-80FF47C4D7C7
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs>{ 0x206AA439,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } }; // 206AA439-E651-11E5-BF62-2C27D7404E85
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs2>{ 0x3D577EF4,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EF4-3CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerMenu>{ 0x8506B35D,0xF640,0x4412,{ 0xAB,0xA0,0xBA,0xD0,0x77,0xE5,0xEA,0x8A } }; // 8506B35D-F640-4412-ABA0-BAD077E5EA8A
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerMenuItem>{ 0xC80FC98D,0xAD0B,0x4C9C,{ 0x8F,0x2F,0x13,0x6A,0x23,0x73,0xA6,0xBA } }; // C80FC98D-AD0B-4C9C-8F2F-136A2373A6BA
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerMenuItemStatics>{ 0x249E0887,0xD842,0x4524,{ 0x9D,0xF8,0xE0,0xD6,0x47,0xED,0xC8,0x87 } }; // 249E0887-D842-4524-9DF8-E0D647EDC887
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerMenuItemStatics2>{ 0x0CBB70BE,0x7E3E,0x48BD,{ 0xBE,0x04,0x2C,0x7F,0xCA,0xA9,0xC1,0xFF } }; // 0CBB70BE-7E3E-48BD-BE04-2C7FCAA9C1FF
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerRotationChangedEventArgs>{ 0x206AA435,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } }; // 206AA435-E651-11E5-BF62-2C27D7404E85
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerRotationChangedEventArgs2>{ 0x3D577EEC,0x4CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EEC-4CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerScreenContact>{ 0x206AA434,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } }; // 206AA434-E651-11E5-BF62-2C27D7404E85
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs>{ 0x206AA437,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } }; // 206AA437-E651-11E5-BF62-2C27D7404E85
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs2>{ 0x3D577EF1,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EF1-3CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs>{ 0x3D577EF2,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EF2-3CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs>{ 0x206AA436,0xE651,0x11E5,{ 0xBF,0x62,0x2C,0x27,0xD7,0x40,0x4E,0x85 } }; // 206AA436-E651-11E5-BF62-2C27D7404E85
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs2>{ 0x3D577EF0,0x3CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EF0-3CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRadialControllerStatics>{ 0xFADED0B7,0xB84C,0x4894,{ 0x87,0xAA,0x8F,0x25,0xAA,0x5F,0x28,0x8B } }; // FADED0B7-B84C-4894-87AA-8F25AA5F288B
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRightTappedEventArgs>{ 0x4CBF40BD,0xAF7A,0x4A36,{ 0x94,0x76,0xB1,0xDC,0xE1,0x41,0x70,0x9A } }; // 4CBF40BD-AF7A-4A36-9476-B1DCE141709A
+    template <> inline constexpr guid guid_v<Windows::UI::Input::IRightTappedEventArgs2>{ 0x61C7B7BB,0x9F57,0x5857,{ 0xA3,0x3C,0xC5,0x8C,0x3D,0xFA,0x95,0x9E } }; // 61C7B7BB-9F57-5857-A33C-C58C3DFA959E
+    template <> inline constexpr guid guid_v<Windows::UI::Input::ISystemButtonEventController>{ 0x59B893A9,0x73BC,0x52B5,{ 0xBA,0x41,0x82,0x51,0x1B,0x2C,0xB4,0x6C } }; // 59B893A9-73BC-52B5-BA41-82511B2CB46C
+    template <> inline constexpr guid guid_v<Windows::UI::Input::ISystemButtonEventControllerStatics>{ 0x632FB07B,0x20BD,0x5E15,{ 0xAF,0x4A,0x00,0xDB,0xF2,0x06,0x4F,0xFA } }; // 632FB07B-20BD-5E15-AF4A-00DBF2064FFA
+    template <> inline constexpr guid guid_v<Windows::UI::Input::ISystemFunctionButtonEventArgs>{ 0x4833896F,0x80D1,0x5DD6,{ 0x92,0xA7,0x62,0xA5,0x08,0xFF,0xEF,0x5A } }; // 4833896F-80D1-5DD6-92A7-62A508FFEF5A
+    template <> inline constexpr guid guid_v<Windows::UI::Input::ISystemFunctionLockChangedEventArgs>{ 0xCD040608,0xFCF9,0x585C,{ 0xBE,0xAB,0xF1,0xD2,0xEA,0xF3,0x64,0xAB } }; // CD040608-FCF9-585C-BEAB-F1D2EAF364AB
+    template <> inline constexpr guid guid_v<Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs>{ 0xB212B94E,0x7A6F,0x58AE,{ 0xB3,0x04,0xBA,0xE6,0x1D,0x03,0x71,0xB9 } }; // B212B94E-7A6F-58AE-B304-BAE61D0371B9
+    template <> inline constexpr guid guid_v<Windows::UI::Input::ITappedEventArgs>{ 0xCFA126E4,0x253A,0x4C3C,{ 0x95,0x3B,0x39,0x5C,0x37,0xAE,0xD3,0x09 } }; // CFA126E4-253A-4C3C-953B-395C37AED309
+    template <> inline constexpr guid guid_v<Windows::UI::Input::ITappedEventArgs2>{ 0x294388F2,0x177E,0x51D5,{ 0xBE,0x56,0xEE,0x08,0x66,0xFA,0x96,0x8C } }; // 294388F2-177E-51D5-BE56-EE0866FA968C
+    template <> struct default_interface<Windows::UI::Input::AttachableInputObject>{ using type = Windows::UI::Input::IAttachableInputObject; };
+    template <> struct default_interface<Windows::UI::Input::CrossSlidingEventArgs>{ using type = Windows::UI::Input::ICrossSlidingEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::DraggingEventArgs>{ using type = Windows::UI::Input::IDraggingEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::EdgeGesture>{ using type = Windows::UI::Input::IEdgeGesture; };
+    template <> struct default_interface<Windows::UI::Input::EdgeGestureEventArgs>{ using type = Windows::UI::Input::IEdgeGestureEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::GestureRecognizer>{ using type = Windows::UI::Input::IGestureRecognizer; };
+    template <> struct default_interface<Windows::UI::Input::HoldingEventArgs>{ using type = Windows::UI::Input::IHoldingEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::InputActivationListener>{ using type = Windows::UI::Input::IInputActivationListener; };
+    template <> struct default_interface<Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>{ using type = Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::KeyboardDeliveryInterceptor>{ using type = Windows::UI::Input::IKeyboardDeliveryInterceptor; };
+    template <> struct default_interface<Windows::UI::Input::ManipulationCompletedEventArgs>{ using type = Windows::UI::Input::IManipulationCompletedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::ManipulationInertiaStartingEventArgs>{ using type = Windows::UI::Input::IManipulationInertiaStartingEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::ManipulationStartedEventArgs>{ using type = Windows::UI::Input::IManipulationStartedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::ManipulationUpdatedEventArgs>{ using type = Windows::UI::Input::IManipulationUpdatedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::MouseWheelParameters>{ using type = Windows::UI::Input::IMouseWheelParameters; };
+    template <> struct default_interface<Windows::UI::Input::PointerPoint>{ using type = Windows::UI::Input::IPointerPoint; };
+    template <> struct default_interface<Windows::UI::Input::PointerPointProperties>{ using type = Windows::UI::Input::IPointerPointProperties; };
+    template <> struct default_interface<Windows::UI::Input::PointerVisualizationSettings>{ using type = Windows::UI::Input::IPointerVisualizationSettings; };
+    template <> struct default_interface<Windows::UI::Input::RadialController>{ using type = Windows::UI::Input::IRadialController; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerButtonClickedEventArgs>{ using type = Windows::UI::Input::IRadialControllerButtonClickedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerButtonHoldingEventArgs>{ using type = Windows::UI::Input::IRadialControllerButtonHoldingEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerButtonPressedEventArgs>{ using type = Windows::UI::Input::IRadialControllerButtonPressedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerButtonReleasedEventArgs>{ using type = Windows::UI::Input::IRadialControllerButtonReleasedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerConfiguration>{ using type = Windows::UI::Input::IRadialControllerConfiguration; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerControlAcquiredEventArgs>{ using type = Windows::UI::Input::IRadialControllerControlAcquiredEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerMenu>{ using type = Windows::UI::Input::IRadialControllerMenu; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerMenuItem>{ using type = Windows::UI::Input::IRadialControllerMenuItem; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerRotationChangedEventArgs>{ using type = Windows::UI::Input::IRadialControllerRotationChangedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerScreenContact>{ using type = Windows::UI::Input::IRadialControllerScreenContact; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>{ using type = Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>{ using type = Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>{ using type = Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::RightTappedEventArgs>{ using type = Windows::UI::Input::IRightTappedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::SystemButtonEventController>{ using type = Windows::UI::Input::ISystemButtonEventController; };
+    template <> struct default_interface<Windows::UI::Input::SystemFunctionButtonEventArgs>{ using type = Windows::UI::Input::ISystemFunctionButtonEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::SystemFunctionLockChangedEventArgs>{ using type = Windows::UI::Input::ISystemFunctionLockChangedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>{ using type = Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs; };
+    template <> struct default_interface<Windows::UI::Input::TappedEventArgs>{ using type = Windows::UI::Input::ITappedEventArgs; };
     template <> struct abi<Windows::UI::Input::IAttachableInputObject>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -2341,9 +1310,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ICrossSlidingEventArgs
     {
-        [[nodiscard]] auto PointerDeviceType() const;
-        [[nodiscard]] auto Position() const;
-        [[nodiscard]] auto CrossSlidingState() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::CrossSlidingState) CrossSlidingState() const;
     };
     template <> struct consume<Windows::UI::Input::ICrossSlidingEventArgs>
     {
@@ -2352,7 +1321,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ICrossSlidingEventArgs2
     {
-        [[nodiscard]] auto ContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
     };
     template <> struct consume<Windows::UI::Input::ICrossSlidingEventArgs2>
     {
@@ -2361,9 +1330,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IDraggingEventArgs
     {
-        [[nodiscard]] auto PointerDeviceType() const;
-        [[nodiscard]] auto Position() const;
-        [[nodiscard]] auto DraggingState() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::DraggingState) DraggingState() const;
     };
     template <> struct consume<Windows::UI::Input::IDraggingEventArgs>
     {
@@ -2372,7 +1341,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IDraggingEventArgs2
     {
-        [[nodiscard]] auto ContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
     };
     template <> struct consume<Windows::UI::Input::IDraggingEventArgs2>
     {
@@ -2381,18 +1350,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IEdgeGesture
     {
-        auto Starting(Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) Starting(Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
         using Starting_revoker = impl::event_revoker<Windows::UI::Input::IEdgeGesture, &impl::abi_t<Windows::UI::Input::IEdgeGesture>::remove_Starting>;
-        Starting_revoker Starting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
-        auto Starting(winrt::event_token const& token) const noexcept;
-        auto Completed(Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
+        [[nodiscard]] Starting_revoker Starting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Starting(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Completed(Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
         using Completed_revoker = impl::event_revoker<Windows::UI::Input::IEdgeGesture, &impl::abi_t<Windows::UI::Input::IEdgeGesture>::remove_Completed>;
-        Completed_revoker Completed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
-        auto Completed(winrt::event_token const& token) const noexcept;
-        auto Canceled(Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
+        [[nodiscard]] Completed_revoker Completed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Completed(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Canceled(Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
         using Canceled_revoker = impl::event_revoker<Windows::UI::Input::IEdgeGesture, &impl::abi_t<Windows::UI::Input::IEdgeGesture>::remove_Canceled>;
-        Canceled_revoker Canceled(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
-        auto Canceled(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] Canceled_revoker Canceled(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::EdgeGesture, Windows::UI::Input::EdgeGestureEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Canceled(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Input::IEdgeGesture>
     {
@@ -2401,7 +1370,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IEdgeGestureEventArgs
     {
-        [[nodiscard]] auto Kind() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::EdgeGestureKind) Kind() const;
     };
     template <> struct consume<Windows::UI::Input::IEdgeGestureEventArgs>
     {
@@ -2410,7 +1379,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IEdgeGestureStatics
     {
-        auto GetForCurrentView() const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::EdgeGesture) GetForCurrentView() const;
     };
     template <> struct consume<Windows::UI::Input::IEdgeGestureStatics>
     {
@@ -2419,82 +1388,82 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IGestureRecognizer
     {
-        [[nodiscard]] auto GestureSettings() const;
-        auto GestureSettings(Windows::UI::Input::GestureSettings const& value) const;
-        [[nodiscard]] auto IsInertial() const;
-        [[nodiscard]] auto IsActive() const;
-        [[nodiscard]] auto ShowGestureFeedback() const;
-        auto ShowGestureFeedback(bool value) const;
-        [[nodiscard]] auto PivotCenter() const;
-        auto PivotCenter(Windows::Foundation::Point const& value) const;
-        [[nodiscard]] auto PivotRadius() const;
-        auto PivotRadius(float value) const;
-        [[nodiscard]] auto InertiaTranslationDeceleration() const;
-        auto InertiaTranslationDeceleration(float value) const;
-        [[nodiscard]] auto InertiaRotationDeceleration() const;
-        auto InertiaRotationDeceleration(float value) const;
-        [[nodiscard]] auto InertiaExpansionDeceleration() const;
-        auto InertiaExpansionDeceleration(float value) const;
-        [[nodiscard]] auto InertiaTranslationDisplacement() const;
-        auto InertiaTranslationDisplacement(float value) const;
-        [[nodiscard]] auto InertiaRotationAngle() const;
-        auto InertiaRotationAngle(float value) const;
-        [[nodiscard]] auto InertiaExpansion() const;
-        auto InertiaExpansion(float value) const;
-        [[nodiscard]] auto ManipulationExact() const;
-        auto ManipulationExact(bool value) const;
-        [[nodiscard]] auto CrossSlideThresholds() const;
-        auto CrossSlideThresholds(Windows::UI::Input::CrossSlideThresholds const& value) const;
-        [[nodiscard]] auto CrossSlideHorizontally() const;
-        auto CrossSlideHorizontally(bool value) const;
-        [[nodiscard]] auto CrossSlideExact() const;
-        auto CrossSlideExact(bool value) const;
-        [[nodiscard]] auto AutoProcessInertia() const;
-        auto AutoProcessInertia(bool value) const;
-        [[nodiscard]] auto MouseWheelParameters() const;
-        auto CanBeDoubleTap(Windows::UI::Input::PointerPoint const& value) const;
-        auto ProcessDownEvent(Windows::UI::Input::PointerPoint const& value) const;
-        auto ProcessMoveEvents(param::vector<Windows::UI::Input::PointerPoint> const& value) const;
-        auto ProcessUpEvent(Windows::UI::Input::PointerPoint const& value) const;
-        auto ProcessMouseWheelEvent(Windows::UI::Input::PointerPoint const& value, bool isShiftKeyDown, bool isControlKeyDown) const;
-        auto ProcessInertia() const;
-        auto CompleteGesture() const;
-        auto Tapped(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::TappedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::GestureSettings) GestureSettings() const;
+        WINRT_IMPL_AUTO(void) GestureSettings(Windows::UI::Input::GestureSettings const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInertial() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsActive() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShowGestureFeedback() const;
+        WINRT_IMPL_AUTO(void) ShowGestureFeedback(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) PivotCenter() const;
+        WINRT_IMPL_AUTO(void) PivotCenter(Windows::Foundation::Point const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) PivotRadius() const;
+        WINRT_IMPL_AUTO(void) PivotRadius(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaTranslationDeceleration() const;
+        WINRT_IMPL_AUTO(void) InertiaTranslationDeceleration(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaRotationDeceleration() const;
+        WINRT_IMPL_AUTO(void) InertiaRotationDeceleration(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaExpansionDeceleration() const;
+        WINRT_IMPL_AUTO(void) InertiaExpansionDeceleration(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaTranslationDisplacement() const;
+        WINRT_IMPL_AUTO(void) InertiaTranslationDisplacement(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaRotationAngle() const;
+        WINRT_IMPL_AUTO(void) InertiaRotationAngle(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) InertiaExpansion() const;
+        WINRT_IMPL_AUTO(void) InertiaExpansion(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) ManipulationExact() const;
+        WINRT_IMPL_AUTO(void) ManipulationExact(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::CrossSlideThresholds) CrossSlideThresholds() const;
+        WINRT_IMPL_AUTO(void) CrossSlideThresholds(Windows::UI::Input::CrossSlideThresholds const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CrossSlideHorizontally() const;
+        WINRT_IMPL_AUTO(void) CrossSlideHorizontally(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CrossSlideExact() const;
+        WINRT_IMPL_AUTO(void) CrossSlideExact(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AutoProcessInertia() const;
+        WINRT_IMPL_AUTO(void) AutoProcessInertia(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::MouseWheelParameters) MouseWheelParameters() const;
+        WINRT_IMPL_AUTO(bool) CanBeDoubleTap(Windows::UI::Input::PointerPoint const& value) const;
+        WINRT_IMPL_AUTO(void) ProcessDownEvent(Windows::UI::Input::PointerPoint const& value) const;
+        WINRT_IMPL_AUTO(void) ProcessMoveEvents(param::vector<Windows::UI::Input::PointerPoint> const& value) const;
+        WINRT_IMPL_AUTO(void) ProcessUpEvent(Windows::UI::Input::PointerPoint const& value) const;
+        WINRT_IMPL_AUTO(void) ProcessMouseWheelEvent(Windows::UI::Input::PointerPoint const& value, bool isShiftKeyDown, bool isControlKeyDown) const;
+        WINRT_IMPL_AUTO(void) ProcessInertia() const;
+        WINRT_IMPL_AUTO(void) CompleteGesture() const;
+        WINRT_IMPL_AUTO(winrt::event_token) Tapped(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::TappedEventArgs> const& handler) const;
         using Tapped_revoker = impl::event_revoker<Windows::UI::Input::IGestureRecognizer, &impl::abi_t<Windows::UI::Input::IGestureRecognizer>::remove_Tapped>;
-        Tapped_revoker Tapped(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::TappedEventArgs> const& handler) const;
-        auto Tapped(winrt::event_token const& token) const noexcept;
-        auto RightTapped(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::RightTappedEventArgs> const& handler) const;
+        [[nodiscard]] Tapped_revoker Tapped(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::TappedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Tapped(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) RightTapped(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::RightTappedEventArgs> const& handler) const;
         using RightTapped_revoker = impl::event_revoker<Windows::UI::Input::IGestureRecognizer, &impl::abi_t<Windows::UI::Input::IGestureRecognizer>::remove_RightTapped>;
-        RightTapped_revoker RightTapped(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::RightTappedEventArgs> const& handler) const;
-        auto RightTapped(winrt::event_token const& token) const noexcept;
-        auto Holding(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::HoldingEventArgs> const& handler) const;
+        [[nodiscard]] RightTapped_revoker RightTapped(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::RightTappedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) RightTapped(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Holding(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::HoldingEventArgs> const& handler) const;
         using Holding_revoker = impl::event_revoker<Windows::UI::Input::IGestureRecognizer, &impl::abi_t<Windows::UI::Input::IGestureRecognizer>::remove_Holding>;
-        Holding_revoker Holding(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::HoldingEventArgs> const& handler) const;
-        auto Holding(winrt::event_token const& token) const noexcept;
-        auto Dragging(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::DraggingEventArgs> const& handler) const;
+        [[nodiscard]] Holding_revoker Holding(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::HoldingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Holding(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) Dragging(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::DraggingEventArgs> const& handler) const;
         using Dragging_revoker = impl::event_revoker<Windows::UI::Input::IGestureRecognizer, &impl::abi_t<Windows::UI::Input::IGestureRecognizer>::remove_Dragging>;
-        Dragging_revoker Dragging(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::DraggingEventArgs> const& handler) const;
-        auto Dragging(winrt::event_token const& token) const noexcept;
-        auto ManipulationStarted(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationStartedEventArgs> const& handler) const;
+        [[nodiscard]] Dragging_revoker Dragging(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::DraggingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) Dragging(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ManipulationStarted(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationStartedEventArgs> const& handler) const;
         using ManipulationStarted_revoker = impl::event_revoker<Windows::UI::Input::IGestureRecognizer, &impl::abi_t<Windows::UI::Input::IGestureRecognizer>::remove_ManipulationStarted>;
-        ManipulationStarted_revoker ManipulationStarted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationStartedEventArgs> const& handler) const;
-        auto ManipulationStarted(winrt::event_token const& token) const noexcept;
-        auto ManipulationUpdated(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationUpdatedEventArgs> const& handler) const;
+        [[nodiscard]] ManipulationStarted_revoker ManipulationStarted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationStartedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ManipulationStarted(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ManipulationUpdated(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationUpdatedEventArgs> const& handler) const;
         using ManipulationUpdated_revoker = impl::event_revoker<Windows::UI::Input::IGestureRecognizer, &impl::abi_t<Windows::UI::Input::IGestureRecognizer>::remove_ManipulationUpdated>;
-        ManipulationUpdated_revoker ManipulationUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationUpdatedEventArgs> const& handler) const;
-        auto ManipulationUpdated(winrt::event_token const& token) const noexcept;
-        auto ManipulationInertiaStarting(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationInertiaStartingEventArgs> const& handler) const;
+        [[nodiscard]] ManipulationUpdated_revoker ManipulationUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationUpdatedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ManipulationUpdated(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ManipulationInertiaStarting(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationInertiaStartingEventArgs> const& handler) const;
         using ManipulationInertiaStarting_revoker = impl::event_revoker<Windows::UI::Input::IGestureRecognizer, &impl::abi_t<Windows::UI::Input::IGestureRecognizer>::remove_ManipulationInertiaStarting>;
-        ManipulationInertiaStarting_revoker ManipulationInertiaStarting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationInertiaStartingEventArgs> const& handler) const;
-        auto ManipulationInertiaStarting(winrt::event_token const& token) const noexcept;
-        auto ManipulationCompleted(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationCompletedEventArgs> const& handler) const;
+        [[nodiscard]] ManipulationInertiaStarting_revoker ManipulationInertiaStarting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationInertiaStartingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ManipulationInertiaStarting(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ManipulationCompleted(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationCompletedEventArgs> const& handler) const;
         using ManipulationCompleted_revoker = impl::event_revoker<Windows::UI::Input::IGestureRecognizer, &impl::abi_t<Windows::UI::Input::IGestureRecognizer>::remove_ManipulationCompleted>;
-        ManipulationCompleted_revoker ManipulationCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationCompletedEventArgs> const& handler) const;
-        auto ManipulationCompleted(winrt::event_token const& token) const noexcept;
-        auto CrossSliding(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::CrossSlidingEventArgs> const& handler) const;
+        [[nodiscard]] ManipulationCompleted_revoker ManipulationCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::ManipulationCompletedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ManipulationCompleted(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) CrossSliding(Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::CrossSlidingEventArgs> const& handler) const;
         using CrossSliding_revoker = impl::event_revoker<Windows::UI::Input::IGestureRecognizer, &impl::abi_t<Windows::UI::Input::IGestureRecognizer>::remove_CrossSliding>;
-        CrossSliding_revoker CrossSliding(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::CrossSlidingEventArgs> const& handler) const;
-        auto CrossSliding(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] CrossSliding_revoker CrossSliding(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::GestureRecognizer, Windows::UI::Input::CrossSlidingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) CrossSliding(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Input::IGestureRecognizer>
     {
@@ -2503,22 +1472,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IGestureRecognizer2
     {
-        [[nodiscard]] auto TapMinContactCount() const;
-        auto TapMinContactCount(uint32_t value) const;
-        [[nodiscard]] auto TapMaxContactCount() const;
-        auto TapMaxContactCount(uint32_t value) const;
-        [[nodiscard]] auto HoldMinContactCount() const;
-        auto HoldMinContactCount(uint32_t value) const;
-        [[nodiscard]] auto HoldMaxContactCount() const;
-        auto HoldMaxContactCount(uint32_t value) const;
-        [[nodiscard]] auto HoldRadius() const;
-        auto HoldRadius(float value) const;
-        [[nodiscard]] auto HoldStartDelay() const;
-        auto HoldStartDelay(Windows::Foundation::TimeSpan const& value) const;
-        [[nodiscard]] auto TranslationMinContactCount() const;
-        auto TranslationMinContactCount(uint32_t value) const;
-        [[nodiscard]] auto TranslationMaxContactCount() const;
-        auto TranslationMaxContactCount(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TapMinContactCount() const;
+        WINRT_IMPL_AUTO(void) TapMinContactCount(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TapMaxContactCount() const;
+        WINRT_IMPL_AUTO(void) TapMaxContactCount(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) HoldMinContactCount() const;
+        WINRT_IMPL_AUTO(void) HoldMinContactCount(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) HoldMaxContactCount() const;
+        WINRT_IMPL_AUTO(void) HoldMaxContactCount(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) HoldRadius() const;
+        WINRT_IMPL_AUTO(void) HoldRadius(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) HoldStartDelay() const;
+        WINRT_IMPL_AUTO(void) HoldStartDelay(Windows::Foundation::TimeSpan const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TranslationMinContactCount() const;
+        WINRT_IMPL_AUTO(void) TranslationMinContactCount(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TranslationMaxContactCount() const;
+        WINRT_IMPL_AUTO(void) TranslationMaxContactCount(uint32_t value) const;
     };
     template <> struct consume<Windows::UI::Input::IGestureRecognizer2>
     {
@@ -2527,9 +1496,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IHoldingEventArgs
     {
-        [[nodiscard]] auto PointerDeviceType() const;
-        [[nodiscard]] auto Position() const;
-        [[nodiscard]] auto HoldingState() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::HoldingState) HoldingState() const;
     };
     template <> struct consume<Windows::UI::Input::IHoldingEventArgs>
     {
@@ -2538,8 +1507,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IHoldingEventArgs2
     {
-        [[nodiscard]] auto ContactCount() const;
-        [[nodiscard]] auto CurrentContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CurrentContactCount() const;
     };
     template <> struct consume<Windows::UI::Input::IHoldingEventArgs2>
     {
@@ -2548,11 +1517,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IInputActivationListener
     {
-        [[nodiscard]] auto State() const;
-        auto InputActivationChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::InputActivationState) State() const;
+        WINRT_IMPL_AUTO(winrt::event_token) InputActivationChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const;
         using InputActivationChanged_revoker = impl::event_revoker<Windows::UI::Input::IInputActivationListener, &impl::abi_t<Windows::UI::Input::IInputActivationListener>::remove_InputActivationChanged>;
-        InputActivationChanged_revoker InputActivationChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const;
-        auto InputActivationChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] InputActivationChanged_revoker InputActivationChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::InputActivationListener, Windows::UI::Input::InputActivationListenerActivationChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) InputActivationChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Input::IInputActivationListener>
     {
@@ -2561,7 +1530,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IInputActivationListenerActivationChangedEventArgs
     {
-        [[nodiscard]] auto State() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::InputActivationState) State() const;
     };
     template <> struct consume<Windows::UI::Input::IInputActivationListenerActivationChangedEventArgs>
     {
@@ -2570,16 +1539,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IKeyboardDeliveryInterceptor
     {
-        [[nodiscard]] auto IsInterceptionEnabledWhenInForeground() const;
-        auto IsInterceptionEnabledWhenInForeground(bool value) const;
-        auto KeyDown(Windows::Foundation::TypedEventHandler<Windows::UI::Input::KeyboardDeliveryInterceptor, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInterceptionEnabledWhenInForeground() const;
+        WINRT_IMPL_AUTO(void) IsInterceptionEnabledWhenInForeground(bool value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) KeyDown(Windows::Foundation::TypedEventHandler<Windows::UI::Input::KeyboardDeliveryInterceptor, Windows::UI::Core::KeyEventArgs> const& handler) const;
         using KeyDown_revoker = impl::event_revoker<Windows::UI::Input::IKeyboardDeliveryInterceptor, &impl::abi_t<Windows::UI::Input::IKeyboardDeliveryInterceptor>::remove_KeyDown>;
-        KeyDown_revoker KeyDown(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::KeyboardDeliveryInterceptor, Windows::UI::Core::KeyEventArgs> const& handler) const;
-        auto KeyDown(winrt::event_token const& token) const noexcept;
-        auto KeyUp(Windows::Foundation::TypedEventHandler<Windows::UI::Input::KeyboardDeliveryInterceptor, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        [[nodiscard]] KeyDown_revoker KeyDown(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::KeyboardDeliveryInterceptor, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) KeyDown(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) KeyUp(Windows::Foundation::TypedEventHandler<Windows::UI::Input::KeyboardDeliveryInterceptor, Windows::UI::Core::KeyEventArgs> const& handler) const;
         using KeyUp_revoker = impl::event_revoker<Windows::UI::Input::IKeyboardDeliveryInterceptor, &impl::abi_t<Windows::UI::Input::IKeyboardDeliveryInterceptor>::remove_KeyUp>;
-        KeyUp_revoker KeyUp(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::KeyboardDeliveryInterceptor, Windows::UI::Core::KeyEventArgs> const& handler) const;
-        auto KeyUp(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] KeyUp_revoker KeyUp(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::KeyboardDeliveryInterceptor, Windows::UI::Core::KeyEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) KeyUp(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Input::IKeyboardDeliveryInterceptor>
     {
@@ -2588,7 +1557,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IKeyboardDeliveryInterceptorStatics
     {
-        auto GetForCurrentView() const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::KeyboardDeliveryInterceptor) GetForCurrentView() const;
     };
     template <> struct consume<Windows::UI::Input::IKeyboardDeliveryInterceptorStatics>
     {
@@ -2597,10 +1566,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationCompletedEventArgs
     {
-        [[nodiscard]] auto PointerDeviceType() const;
-        [[nodiscard]] auto Position() const;
-        [[nodiscard]] auto Cumulative() const;
-        [[nodiscard]] auto Velocities() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::ManipulationDelta) Cumulative() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::ManipulationVelocities) Velocities() const;
     };
     template <> struct consume<Windows::UI::Input::IManipulationCompletedEventArgs>
     {
@@ -2609,8 +1578,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationCompletedEventArgs2
     {
-        [[nodiscard]] auto ContactCount() const;
-        [[nodiscard]] auto CurrentContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CurrentContactCount() const;
     };
     template <> struct consume<Windows::UI::Input::IManipulationCompletedEventArgs2>
     {
@@ -2619,11 +1588,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationInertiaStartingEventArgs
     {
-        [[nodiscard]] auto PointerDeviceType() const;
-        [[nodiscard]] auto Position() const;
-        [[nodiscard]] auto Delta() const;
-        [[nodiscard]] auto Cumulative() const;
-        [[nodiscard]] auto Velocities() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::ManipulationDelta) Delta() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::ManipulationDelta) Cumulative() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::ManipulationVelocities) Velocities() const;
     };
     template <> struct consume<Windows::UI::Input::IManipulationInertiaStartingEventArgs>
     {
@@ -2632,7 +1601,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationInertiaStartingEventArgs2
     {
-        [[nodiscard]] auto ContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
     };
     template <> struct consume<Windows::UI::Input::IManipulationInertiaStartingEventArgs2>
     {
@@ -2641,9 +1610,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationStartedEventArgs
     {
-        [[nodiscard]] auto PointerDeviceType() const;
-        [[nodiscard]] auto Position() const;
-        [[nodiscard]] auto Cumulative() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::ManipulationDelta) Cumulative() const;
     };
     template <> struct consume<Windows::UI::Input::IManipulationStartedEventArgs>
     {
@@ -2652,7 +1621,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationStartedEventArgs2
     {
-        [[nodiscard]] auto ContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
     };
     template <> struct consume<Windows::UI::Input::IManipulationStartedEventArgs2>
     {
@@ -2661,11 +1630,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationUpdatedEventArgs
     {
-        [[nodiscard]] auto PointerDeviceType() const;
-        [[nodiscard]] auto Position() const;
-        [[nodiscard]] auto Delta() const;
-        [[nodiscard]] auto Cumulative() const;
-        [[nodiscard]] auto Velocities() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::ManipulationDelta) Delta() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::ManipulationDelta) Cumulative() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::ManipulationVelocities) Velocities() const;
     };
     template <> struct consume<Windows::UI::Input::IManipulationUpdatedEventArgs>
     {
@@ -2674,8 +1643,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IManipulationUpdatedEventArgs2
     {
-        [[nodiscard]] auto ContactCount() const;
-        [[nodiscard]] auto CurrentContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) CurrentContactCount() const;
     };
     template <> struct consume<Windows::UI::Input::IManipulationUpdatedEventArgs2>
     {
@@ -2684,14 +1653,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IMouseWheelParameters
     {
-        [[nodiscard]] auto CharTranslation() const;
-        auto CharTranslation(Windows::Foundation::Point const& value) const;
-        [[nodiscard]] auto DeltaScale() const;
-        auto DeltaScale(float value) const;
-        [[nodiscard]] auto DeltaRotationAngle() const;
-        auto DeltaRotationAngle(float value) const;
-        [[nodiscard]] auto PageTranslation() const;
-        auto PageTranslation(Windows::Foundation::Point const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) CharTranslation() const;
+        WINRT_IMPL_AUTO(void) CharTranslation(Windows::Foundation::Point const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) DeltaScale() const;
+        WINRT_IMPL_AUTO(void) DeltaScale(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) DeltaRotationAngle() const;
+        WINRT_IMPL_AUTO(void) DeltaRotationAngle(float value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) PageTranslation() const;
+        WINRT_IMPL_AUTO(void) PageTranslation(Windows::Foundation::Point const& value) const;
     };
     template <> struct consume<Windows::UI::Input::IMouseWheelParameters>
     {
@@ -2700,14 +1669,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPoint
     {
-        [[nodiscard]] auto PointerDevice() const;
-        [[nodiscard]] auto Position() const;
-        [[nodiscard]] auto RawPosition() const;
-        [[nodiscard]] auto PointerId() const;
-        [[nodiscard]] auto FrameId() const;
-        [[nodiscard]] auto Timestamp() const;
-        [[nodiscard]] auto IsInContact() const;
-        [[nodiscard]] auto Properties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDevice) PointerDevice() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) RawPosition() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) PointerId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) FrameId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Timestamp() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInContact() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::PointerPointProperties) Properties() const;
     };
     template <> struct consume<Windows::UI::Input::IPointerPoint>
     {
@@ -2716,30 +1685,30 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPointProperties
     {
-        [[nodiscard]] auto Pressure() const;
-        [[nodiscard]] auto IsInverted() const;
-        [[nodiscard]] auto IsEraser() const;
-        [[nodiscard]] auto Orientation() const;
-        [[nodiscard]] auto XTilt() const;
-        [[nodiscard]] auto YTilt() const;
-        [[nodiscard]] auto Twist() const;
-        [[nodiscard]] auto ContactRect() const;
-        [[nodiscard]] auto ContactRectRaw() const;
-        [[nodiscard]] auto TouchConfidence() const;
-        [[nodiscard]] auto IsLeftButtonPressed() const;
-        [[nodiscard]] auto IsRightButtonPressed() const;
-        [[nodiscard]] auto IsMiddleButtonPressed() const;
-        [[nodiscard]] auto MouseWheelDelta() const;
-        [[nodiscard]] auto IsHorizontalMouseWheel() const;
-        [[nodiscard]] auto IsPrimary() const;
-        [[nodiscard]] auto IsInRange() const;
-        [[nodiscard]] auto IsCanceled() const;
-        [[nodiscard]] auto IsBarrelButtonPressed() const;
-        [[nodiscard]] auto IsXButton1Pressed() const;
-        [[nodiscard]] auto IsXButton2Pressed() const;
-        [[nodiscard]] auto PointerUpdateKind() const;
-        auto HasUsage(uint32_t usagePage, uint32_t usageId) const;
-        auto GetUsageValue(uint32_t usagePage, uint32_t usageId) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) Pressure() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInverted() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEraser() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) Orientation() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) XTilt() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) YTilt() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(float) Twist() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) ContactRect() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) ContactRectRaw() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) TouchConfidence() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsLeftButtonPressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRightButtonPressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMiddleButtonPressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MouseWheelDelta() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsHorizontalMouseWheel() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPrimary() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInRange() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsBarrelButtonPressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsXButton1Pressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsXButton2Pressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::PointerUpdateKind) PointerUpdateKind() const;
+        WINRT_IMPL_AUTO(bool) HasUsage(uint32_t usagePage, uint32_t usageId) const;
+        WINRT_IMPL_AUTO(int32_t) GetUsageValue(uint32_t usagePage, uint32_t usageId) const;
     };
     template <> struct consume<Windows::UI::Input::IPointerPointProperties>
     {
@@ -2748,7 +1717,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPointProperties2
     {
-        [[nodiscard]] auto ZDistance() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) ZDistance() const;
     };
     template <> struct consume<Windows::UI::Input::IPointerPointProperties2>
     {
@@ -2757,10 +1726,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPointStatics
     {
-        auto GetCurrentPoint(uint32_t pointerId) const;
-        auto GetIntermediatePoints(uint32_t pointerId) const;
-        auto GetCurrentPoint(uint32_t pointerId, Windows::UI::Input::IPointerPointTransform const& transform) const;
-        auto GetIntermediatePoints(uint32_t pointerId, Windows::UI::Input::IPointerPointTransform const& transform) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::PointerPoint) GetCurrentPoint(uint32_t pointerId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Input::PointerPoint>) GetIntermediatePoints(uint32_t pointerId) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::PointerPoint) GetCurrentPoint(uint32_t pointerId, Windows::UI::Input::IPointerPointTransform const& transform) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Input::PointerPoint>) GetIntermediatePoints(uint32_t pointerId, Windows::UI::Input::IPointerPointTransform const& transform) const;
     };
     template <> struct consume<Windows::UI::Input::IPointerPointStatics>
     {
@@ -2769,9 +1738,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerPointTransform
     {
-        [[nodiscard]] auto Inverse() const;
-        auto TryTransform(Windows::Foundation::Point const& inPoint, Windows::Foundation::Point& outPoint) const;
-        auto TransformBounds(Windows::Foundation::Rect const& rect) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::IPointerPointTransform) Inverse() const;
+        WINRT_IMPL_AUTO(bool) TryTransform(Windows::Foundation::Point const& inPoint, Windows::Foundation::Point& outPoint) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Rect) TransformBounds(Windows::Foundation::Rect const& rect) const;
     };
     template <> struct consume<Windows::UI::Input::IPointerPointTransform>
     {
@@ -2780,10 +1749,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerVisualizationSettings
     {
-        auto IsContactFeedbackEnabled(bool value) const;
-        [[nodiscard]] auto IsContactFeedbackEnabled() const;
-        auto IsBarrelButtonFeedbackEnabled(bool value) const;
-        [[nodiscard]] auto IsBarrelButtonFeedbackEnabled() const;
+        WINRT_IMPL_AUTO(void) IsContactFeedbackEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsContactFeedbackEnabled() const;
+        WINRT_IMPL_AUTO(void) IsBarrelButtonFeedbackEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsBarrelButtonFeedbackEnabled() const;
     };
     template <> struct consume<Windows::UI::Input::IPointerVisualizationSettings>
     {
@@ -2792,7 +1761,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPointerVisualizationSettingsStatics
     {
-        auto GetForCurrentView() const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::PointerVisualizationSettings) GetForCurrentView() const;
     };
     template <> struct consume<Windows::UI::Input::IPointerVisualizationSettingsStatics>
     {
@@ -2801,39 +1770,39 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialController
     {
-        [[nodiscard]] auto Menu() const;
-        [[nodiscard]] auto RotationResolutionInDegrees() const;
-        auto RotationResolutionInDegrees(double value) const;
-        [[nodiscard]] auto UseAutomaticHapticFeedback() const;
-        auto UseAutomaticHapticFeedback(bool value) const;
-        auto ScreenContactStarted(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerScreenContactStartedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerMenu) Menu() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) RotationResolutionInDegrees() const;
+        WINRT_IMPL_AUTO(void) RotationResolutionInDegrees(double value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) UseAutomaticHapticFeedback() const;
+        WINRT_IMPL_AUTO(void) UseAutomaticHapticFeedback(bool value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) ScreenContactStarted(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerScreenContactStartedEventArgs> const& handler) const;
         using ScreenContactStarted_revoker = impl::event_revoker<Windows::UI::Input::IRadialController, &impl::abi_t<Windows::UI::Input::IRadialController>::remove_ScreenContactStarted>;
-        ScreenContactStarted_revoker ScreenContactStarted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerScreenContactStartedEventArgs> const& handler) const;
-        auto ScreenContactStarted(winrt::event_token const& cookie) const noexcept;
-        auto ScreenContactEnded(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] ScreenContactStarted_revoker ScreenContactStarted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerScreenContactStartedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ScreenContactStarted(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ScreenContactEnded(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::Foundation::IInspectable> const& handler) const;
         using ScreenContactEnded_revoker = impl::event_revoker<Windows::UI::Input::IRadialController, &impl::abi_t<Windows::UI::Input::IRadialController>::remove_ScreenContactEnded>;
-        ScreenContactEnded_revoker ScreenContactEnded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::Foundation::IInspectable> const& handler) const;
-        auto ScreenContactEnded(winrt::event_token const& cookie) const noexcept;
-        auto ScreenContactContinued(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs> const& handler) const;
+        [[nodiscard]] ScreenContactEnded_revoker ScreenContactEnded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) ScreenContactEnded(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ScreenContactContinued(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs> const& handler) const;
         using ScreenContactContinued_revoker = impl::event_revoker<Windows::UI::Input::IRadialController, &impl::abi_t<Windows::UI::Input::IRadialController>::remove_ScreenContactContinued>;
-        ScreenContactContinued_revoker ScreenContactContinued(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs> const& handler) const;
-        auto ScreenContactContinued(winrt::event_token const& cookie) const noexcept;
-        auto ControlLost(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] ScreenContactContinued_revoker ScreenContactContinued(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ScreenContactContinued(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ControlLost(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::Foundation::IInspectable> const& handler) const;
         using ControlLost_revoker = impl::event_revoker<Windows::UI::Input::IRadialController, &impl::abi_t<Windows::UI::Input::IRadialController>::remove_ControlLost>;
-        ControlLost_revoker ControlLost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::Foundation::IInspectable> const& handler) const;
-        auto ControlLost(winrt::event_token const& cookie) const noexcept;
-        auto RotationChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerRotationChangedEventArgs> const& handler) const;
+        [[nodiscard]] ControlLost_revoker ControlLost(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) ControlLost(winrt::event_token const& cookie) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) RotationChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerRotationChangedEventArgs> const& handler) const;
         using RotationChanged_revoker = impl::event_revoker<Windows::UI::Input::IRadialController, &impl::abi_t<Windows::UI::Input::IRadialController>::remove_RotationChanged>;
-        RotationChanged_revoker RotationChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerRotationChangedEventArgs> const& handler) const;
-        auto RotationChanged(winrt::event_token const& token) const noexcept;
-        auto ButtonClicked(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonClickedEventArgs> const& handler) const;
+        [[nodiscard]] RotationChanged_revoker RotationChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerRotationChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) RotationChanged(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ButtonClicked(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonClickedEventArgs> const& handler) const;
         using ButtonClicked_revoker = impl::event_revoker<Windows::UI::Input::IRadialController, &impl::abi_t<Windows::UI::Input::IRadialController>::remove_ButtonClicked>;
-        ButtonClicked_revoker ButtonClicked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonClickedEventArgs> const& handler) const;
-        auto ButtonClicked(winrt::event_token const& token) const noexcept;
-        auto ControlAcquired(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerControlAcquiredEventArgs> const& handler) const;
+        [[nodiscard]] ButtonClicked_revoker ButtonClicked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonClickedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ButtonClicked(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ControlAcquired(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerControlAcquiredEventArgs> const& handler) const;
         using ControlAcquired_revoker = impl::event_revoker<Windows::UI::Input::IRadialController, &impl::abi_t<Windows::UI::Input::IRadialController>::remove_ControlAcquired>;
-        ControlAcquired_revoker ControlAcquired(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerControlAcquiredEventArgs> const& handler) const;
-        auto ControlAcquired(winrt::event_token const& cookie) const noexcept;
+        [[nodiscard]] ControlAcquired_revoker ControlAcquired(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerControlAcquiredEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ControlAcquired(winrt::event_token const& cookie) const noexcept;
     };
     template <> struct consume<Windows::UI::Input::IRadialController>
     {
@@ -2842,18 +1811,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialController2
     {
-        auto ButtonPressed(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonPressedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) ButtonPressed(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonPressedEventArgs> const& handler) const;
         using ButtonPressed_revoker = impl::event_revoker<Windows::UI::Input::IRadialController2, &impl::abi_t<Windows::UI::Input::IRadialController2>::remove_ButtonPressed>;
-        ButtonPressed_revoker ButtonPressed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonPressedEventArgs> const& handler) const;
-        auto ButtonPressed(winrt::event_token const& token) const noexcept;
-        auto ButtonHolding(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonHoldingEventArgs> const& handler) const;
+        [[nodiscard]] ButtonPressed_revoker ButtonPressed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonPressedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ButtonPressed(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ButtonHolding(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonHoldingEventArgs> const& handler) const;
         using ButtonHolding_revoker = impl::event_revoker<Windows::UI::Input::IRadialController2, &impl::abi_t<Windows::UI::Input::IRadialController2>::remove_ButtonHolding>;
-        ButtonHolding_revoker ButtonHolding(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonHoldingEventArgs> const& handler) const;
-        auto ButtonHolding(winrt::event_token const& token) const noexcept;
-        auto ButtonReleased(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonReleasedEventArgs> const& handler) const;
+        [[nodiscard]] ButtonHolding_revoker ButtonHolding(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonHoldingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ButtonHolding(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ButtonReleased(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonReleasedEventArgs> const& handler) const;
         using ButtonReleased_revoker = impl::event_revoker<Windows::UI::Input::IRadialController2, &impl::abi_t<Windows::UI::Input::IRadialController2>::remove_ButtonReleased>;
-        ButtonReleased_revoker ButtonReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonReleasedEventArgs> const& handler) const;
-        auto ButtonReleased(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] ButtonReleased_revoker ButtonReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialController, Windows::UI::Input::RadialControllerButtonReleasedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) ButtonReleased(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Input::IRadialController2>
     {
@@ -2862,7 +1831,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonClickedEventArgs
     {
-        [[nodiscard]] auto Contact() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerScreenContact) Contact() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerButtonClickedEventArgs>
     {
@@ -2871,7 +1840,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonClickedEventArgs2
     {
-        [[nodiscard]] auto SimpleHapticsController() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerButtonClickedEventArgs2>
     {
@@ -2880,8 +1849,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonHoldingEventArgs
     {
-        [[nodiscard]] auto Contact() const;
-        [[nodiscard]] auto SimpleHapticsController() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerScreenContact) Contact() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerButtonHoldingEventArgs>
     {
@@ -2890,8 +1859,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonPressedEventArgs
     {
-        [[nodiscard]] auto Contact() const;
-        [[nodiscard]] auto SimpleHapticsController() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerScreenContact) Contact() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerButtonPressedEventArgs>
     {
@@ -2900,8 +1869,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerButtonReleasedEventArgs
     {
-        [[nodiscard]] auto Contact() const;
-        [[nodiscard]] auto SimpleHapticsController() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerScreenContact) Contact() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerButtonReleasedEventArgs>
     {
@@ -2910,9 +1879,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerConfiguration
     {
-        auto SetDefaultMenuItems(param::iterable<Windows::UI::Input::RadialControllerSystemMenuItemKind> const& buttons) const;
-        auto ResetToDefaultMenuItems() const;
-        auto TrySelectDefaultMenuItem(Windows::UI::Input::RadialControllerSystemMenuItemKind const& type) const;
+        WINRT_IMPL_AUTO(void) SetDefaultMenuItems(param::iterable<Windows::UI::Input::RadialControllerSystemMenuItemKind> const& buttons) const;
+        WINRT_IMPL_AUTO(void) ResetToDefaultMenuItems() const;
+        WINRT_IMPL_AUTO(bool) TrySelectDefaultMenuItem(Windows::UI::Input::RadialControllerSystemMenuItemKind const& type) const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerConfiguration>
     {
@@ -2921,10 +1890,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerConfiguration2
     {
-        auto ActiveControllerWhenMenuIsSuppressed(Windows::UI::Input::RadialController const& value) const;
-        [[nodiscard]] auto ActiveControllerWhenMenuIsSuppressed() const;
-        auto IsMenuSuppressed(bool value) const;
-        [[nodiscard]] auto IsMenuSuppressed() const;
+        WINRT_IMPL_AUTO(void) ActiveControllerWhenMenuIsSuppressed(Windows::UI::Input::RadialController const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialController) ActiveControllerWhenMenuIsSuppressed() const;
+        WINRT_IMPL_AUTO(void) IsMenuSuppressed(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsMenuSuppressed() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerConfiguration2>
     {
@@ -2933,7 +1902,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerConfigurationStatics
     {
-        auto GetForCurrentView() const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerConfiguration) GetForCurrentView() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerConfigurationStatics>
     {
@@ -2942,10 +1911,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerConfigurationStatics2
     {
-        auto AppController(Windows::UI::Input::RadialController const& value) const;
-        [[nodiscard]] auto AppController() const;
-        auto IsAppControllerEnabled(bool value) const;
-        [[nodiscard]] auto IsAppControllerEnabled() const;
+        WINRT_IMPL_AUTO(void) AppController(Windows::UI::Input::RadialController const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialController) AppController() const;
+        WINRT_IMPL_AUTO(void) IsAppControllerEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsAppControllerEnabled() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerConfigurationStatics2>
     {
@@ -2954,7 +1923,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerControlAcquiredEventArgs
     {
-        [[nodiscard]] auto Contact() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerScreenContact) Contact() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs>
     {
@@ -2963,8 +1932,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerControlAcquiredEventArgs2
     {
-        [[nodiscard]] auto IsButtonPressed() const;
-        [[nodiscard]] auto SimpleHapticsController() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerControlAcquiredEventArgs2>
     {
@@ -2973,12 +1942,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerMenu
     {
-        [[nodiscard]] auto Items() const;
-        [[nodiscard]] auto IsEnabled() const;
-        auto IsEnabled(bool value) const;
-        auto GetSelectedMenuItem() const;
-        auto SelectMenuItem(Windows::UI::Input::RadialControllerMenuItem const& menuItem) const;
-        auto TrySelectPreviouslySelectedMenuItem() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::UI::Input::RadialControllerMenuItem>) Items() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
+        WINRT_IMPL_AUTO(void) IsEnabled(bool value) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerMenuItem) GetSelectedMenuItem() const;
+        WINRT_IMPL_AUTO(void) SelectMenuItem(Windows::UI::Input::RadialControllerMenuItem const& menuItem) const;
+        WINRT_IMPL_AUTO(bool) TrySelectPreviouslySelectedMenuItem() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerMenu>
     {
@@ -2987,13 +1956,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerMenuItem
     {
-        [[nodiscard]] auto DisplayText() const;
-        [[nodiscard]] auto Tag() const;
-        auto Tag(Windows::Foundation::IInspectable const& value) const;
-        auto Invoked(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialControllerMenuItem, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayText() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) Tag() const;
+        WINRT_IMPL_AUTO(void) Tag(Windows::Foundation::IInspectable const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) Invoked(Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialControllerMenuItem, Windows::Foundation::IInspectable> const& handler) const;
         using Invoked_revoker = impl::event_revoker<Windows::UI::Input::IRadialControllerMenuItem, &impl::abi_t<Windows::UI::Input::IRadialControllerMenuItem>::remove_Invoked>;
-        Invoked_revoker Invoked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialControllerMenuItem, Windows::Foundation::IInspectable> const& handler) const;
-        auto Invoked(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] Invoked_revoker Invoked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::RadialControllerMenuItem, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) Invoked(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerMenuItem>
     {
@@ -3002,8 +1971,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerMenuItemStatics
     {
-        auto CreateFromIcon(param::hstring const& displayText, Windows::Storage::Streams::RandomAccessStreamReference const& icon) const;
-        auto CreateFromKnownIcon(param::hstring const& displayText, Windows::UI::Input::RadialControllerMenuKnownIcon const& value) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerMenuItem) CreateFromIcon(param::hstring const& displayText, Windows::Storage::Streams::RandomAccessStreamReference const& icon) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerMenuItem) CreateFromKnownIcon(param::hstring const& displayText, Windows::UI::Input::RadialControllerMenuKnownIcon const& value) const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerMenuItemStatics>
     {
@@ -3012,8 +1981,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerMenuItemStatics2
     {
-        auto CreateFromFontGlyph(param::hstring const& displayText, param::hstring const& glyph, param::hstring const& fontFamily) const;
-        auto CreateFromFontGlyph(param::hstring const& displayText, param::hstring const& glyph, param::hstring const& fontFamily, Windows::Foundation::Uri const& fontUri) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerMenuItem) CreateFromFontGlyph(param::hstring const& displayText, param::hstring const& glyph, param::hstring const& fontFamily) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerMenuItem) CreateFromFontGlyph(param::hstring const& displayText, param::hstring const& glyph, param::hstring const& fontFamily, Windows::Foundation::Uri const& fontUri) const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerMenuItemStatics2>
     {
@@ -3022,8 +1991,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerRotationChangedEventArgs
     {
-        [[nodiscard]] auto RotationDeltaInDegrees() const;
-        [[nodiscard]] auto Contact() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) RotationDeltaInDegrees() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerScreenContact) Contact() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerRotationChangedEventArgs>
     {
@@ -3032,8 +2001,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerRotationChangedEventArgs2
     {
-        [[nodiscard]] auto IsButtonPressed() const;
-        [[nodiscard]] auto SimpleHapticsController() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerRotationChangedEventArgs2>
     {
@@ -3042,8 +2011,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContact
     {
-        [[nodiscard]] auto Bounds() const;
-        [[nodiscard]] auto Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) Bounds() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerScreenContact>
     {
@@ -3052,7 +2021,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactContinuedEventArgs
     {
-        [[nodiscard]] auto Contact() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerScreenContact) Contact() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs>
     {
@@ -3061,8 +2030,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactContinuedEventArgs2
     {
-        [[nodiscard]] auto IsButtonPressed() const;
-        [[nodiscard]] auto SimpleHapticsController() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerScreenContactContinuedEventArgs2>
     {
@@ -3071,8 +2040,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactEndedEventArgs
     {
-        [[nodiscard]] auto IsButtonPressed() const;
-        [[nodiscard]] auto SimpleHapticsController() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerScreenContactEndedEventArgs>
     {
@@ -3081,7 +2050,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactStartedEventArgs
     {
-        [[nodiscard]] auto Contact() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Input::RadialControllerScreenContact) Contact() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs>
     {
@@ -3090,8 +2059,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerScreenContactStartedEventArgs2
     {
-        [[nodiscard]] auto IsButtonPressed() const;
-        [[nodiscard]] auto SimpleHapticsController() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsButtonPressed() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerScreenContactStartedEventArgs2>
     {
@@ -3100,8 +2069,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRadialControllerStatics
     {
-        auto IsSupported() const;
-        auto CreateForCurrentView() const;
+        WINRT_IMPL_AUTO(bool) IsSupported() const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::RadialController) CreateForCurrentView() const;
     };
     template <> struct consume<Windows::UI::Input::IRadialControllerStatics>
     {
@@ -3110,8 +2079,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRightTappedEventArgs
     {
-        [[nodiscard]] auto PointerDeviceType() const;
-        [[nodiscard]] auto Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
     };
     template <> struct consume<Windows::UI::Input::IRightTappedEventArgs>
     {
@@ -3120,7 +2089,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IRightTappedEventArgs2
     {
-        [[nodiscard]] auto ContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
     };
     template <> struct consume<Windows::UI::Input::IRightTappedEventArgs2>
     {
@@ -3129,22 +2098,22 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemButtonEventController
     {
-        auto SystemFunctionButtonPressed(Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) SystemFunctionButtonPressed(Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
         using SystemFunctionButtonPressed_revoker = impl::event_revoker<Windows::UI::Input::ISystemButtonEventController, &impl::abi_t<Windows::UI::Input::ISystemButtonEventController>::remove_SystemFunctionButtonPressed>;
-        SystemFunctionButtonPressed_revoker SystemFunctionButtonPressed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
-        auto SystemFunctionButtonPressed(winrt::event_token const& token) const noexcept;
-        auto SystemFunctionButtonReleased(Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
+        [[nodiscard]] SystemFunctionButtonPressed_revoker SystemFunctionButtonPressed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SystemFunctionButtonPressed(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) SystemFunctionButtonReleased(Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
         using SystemFunctionButtonReleased_revoker = impl::event_revoker<Windows::UI::Input::ISystemButtonEventController, &impl::abi_t<Windows::UI::Input::ISystemButtonEventController>::remove_SystemFunctionButtonReleased>;
-        SystemFunctionButtonReleased_revoker SystemFunctionButtonReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
-        auto SystemFunctionButtonReleased(winrt::event_token const& token) const noexcept;
-        auto SystemFunctionLockChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionLockChangedEventArgs> const& handler) const;
+        [[nodiscard]] SystemFunctionButtonReleased_revoker SystemFunctionButtonReleased(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionButtonEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SystemFunctionButtonReleased(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) SystemFunctionLockChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionLockChangedEventArgs> const& handler) const;
         using SystemFunctionLockChanged_revoker = impl::event_revoker<Windows::UI::Input::ISystemButtonEventController, &impl::abi_t<Windows::UI::Input::ISystemButtonEventController>::remove_SystemFunctionLockChanged>;
-        SystemFunctionLockChanged_revoker SystemFunctionLockChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionLockChangedEventArgs> const& handler) const;
-        auto SystemFunctionLockChanged(winrt::event_token const& token) const noexcept;
-        auto SystemFunctionLockIndicatorChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs> const& handler) const;
+        [[nodiscard]] SystemFunctionLockChanged_revoker SystemFunctionLockChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionLockChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SystemFunctionLockChanged(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) SystemFunctionLockIndicatorChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs> const& handler) const;
         using SystemFunctionLockIndicatorChanged_revoker = impl::event_revoker<Windows::UI::Input::ISystemButtonEventController, &impl::abi_t<Windows::UI::Input::ISystemButtonEventController>::remove_SystemFunctionLockIndicatorChanged>;
-        SystemFunctionLockIndicatorChanged_revoker SystemFunctionLockIndicatorChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs> const& handler) const;
-        auto SystemFunctionLockIndicatorChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] SystemFunctionLockIndicatorChanged_revoker SystemFunctionLockIndicatorChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Input::SystemButtonEventController, Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) SystemFunctionLockIndicatorChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::UI::Input::ISystemButtonEventController>
     {
@@ -3153,7 +2122,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemButtonEventControllerStatics
     {
-        auto CreateForDispatcherQueue(Windows::System::DispatcherQueue const& queue) const;
+        WINRT_IMPL_AUTO(Windows::UI::Input::SystemButtonEventController) CreateForDispatcherQueue(Windows::System::DispatcherQueue const& queue) const;
     };
     template <> struct consume<Windows::UI::Input::ISystemButtonEventControllerStatics>
     {
@@ -3162,9 +2131,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemFunctionButtonEventArgs
     {
-        [[nodiscard]] auto Timestamp() const;
-        [[nodiscard]] auto Handled() const;
-        auto Handled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Timestamp() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
+        WINRT_IMPL_AUTO(void) Handled(bool value) const;
     };
     template <> struct consume<Windows::UI::Input::ISystemFunctionButtonEventArgs>
     {
@@ -3173,10 +2142,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemFunctionLockChangedEventArgs
     {
-        [[nodiscard]] auto Timestamp() const;
-        [[nodiscard]] auto IsLocked() const;
-        [[nodiscard]] auto Handled() const;
-        auto Handled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Timestamp() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsLocked() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
+        WINRT_IMPL_AUTO(void) Handled(bool value) const;
     };
     template <> struct consume<Windows::UI::Input::ISystemFunctionLockChangedEventArgs>
     {
@@ -3185,10 +2154,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ISystemFunctionLockIndicatorChangedEventArgs
     {
-        [[nodiscard]] auto Timestamp() const;
-        [[nodiscard]] auto IsIndicatorOn() const;
-        [[nodiscard]] auto Handled() const;
-        auto Handled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint64_t) Timestamp() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsIndicatorOn() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) Handled() const;
+        WINRT_IMPL_AUTO(void) Handled(bool value) const;
     };
     template <> struct consume<Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs>
     {
@@ -3197,9 +2166,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ITappedEventArgs
     {
-        [[nodiscard]] auto PointerDeviceType() const;
-        [[nodiscard]] auto Position() const;
-        [[nodiscard]] auto TapCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Input::PointerDeviceType) PointerDeviceType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Position() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) TapCount() const;
     };
     template <> struct consume<Windows::UI::Input::ITappedEventArgs>
     {
@@ -3208,7 +2177,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ITappedEventArgs2
     {
-        [[nodiscard]] auto ContactCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) ContactCount() const;
     };
     template <> struct consume<Windows::UI::Input::ITappedEventArgs2>
     {

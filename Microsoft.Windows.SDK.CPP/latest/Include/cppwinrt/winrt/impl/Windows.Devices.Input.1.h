@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Input_1_H
 #define WINRT_Windows_Devices_Input_1_H
 #include "winrt/impl/Windows.Devices.Input.0.h"
-namespace winrt::Windows::Devices::Input
+WINRT_EXPORT namespace winrt::Windows::Devices::Input
 {
     struct __declspec(empty_bases) IKeyboardCapabilities :
         Windows::Foundation::IInspectable,

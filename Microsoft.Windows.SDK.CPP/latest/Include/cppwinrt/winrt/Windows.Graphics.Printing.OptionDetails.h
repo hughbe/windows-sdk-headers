@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Graphics_Printing_OptionDetails_H
 #define WINRT_Windows_Graphics_Printing_OptionDetails_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Graphics.Printing.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -15,459 +15,459 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Graphics.Printing.OptionDetails.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintBindingOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintBindingOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintBindingOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintBindingOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintBindingOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintBindingOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintBindingOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintBindingOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintBorderingOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintBorderingOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintBorderingOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintBorderingOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintBorderingOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintBorderingOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintBorderingOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintBorderingOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCollationOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCollationOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCollationOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCollationOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCollationOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCollationOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCollationOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCollationOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintColorModeOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintColorModeOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintColorModeOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintColorModeOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintColorModeOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintColorModeOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintColorModeOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintColorModeOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCopiesOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCopiesOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCopiesOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCopiesOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCopiesOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCopiesOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCopiesOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCopiesOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemDetails<D>::ItemId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemDetails<D>::ItemId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomItemDetails)->get_ItemId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemDetails<D>::ItemDisplayName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemDetails<D>::ItemDisplayName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomItemDetails)->put_ItemDisplayName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemDetails<D>::ItemDisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemDetails<D>::ItemDisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomItemDetails)->get_ItemDisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails<D>::AddItem(param::hstring const& itemId, param::hstring const& displayName) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails<D>::AddItem(param::hstring const& itemId, param::hstring const& displayName) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails)->AddItem(*(void**)(&itemId), *(void**)(&displayName)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails2<D>::AddItem(param::hstring const& itemId, param::hstring const& displayName, param::hstring const& description, Windows::Storage::Streams::IRandomAccessStreamWithContentType const& icon) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails2<D>::AddItem(param::hstring const& itemId, param::hstring const& displayName, param::hstring const& description, Windows::Storage::Streams::IRandomAccessStreamWithContentType const& icon) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails2)->AddItem(*(void**)(&itemId), *(void**)(&displayName), *(void**)(&description), *(void**)(&icon)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails3<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails3<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails3<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails3<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails3<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails3<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails3<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomItemListOptionDetails3<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomOptionDetails<D>::DisplayName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomOptionDetails<D>::DisplayName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails)->put_DisplayName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomOptionDetails<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomOptionDetails<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails<D>::MaxCharacters(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails<D>::MaxCharacters(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails)->put_MaxCharacters(value));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails<D>::MaxCharacters() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails<D>::MaxCharacters() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails)->get_MaxCharacters(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails2<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails2<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails2<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails2<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails2<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails2<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails2<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomTextOptionDetails2<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomToggleOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomToggleOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomToggleOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomToggleOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomToggleOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomToggleOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomToggleOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintCustomToggleOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintDuplexOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintDuplexOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintDuplexOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintDuplexOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintDuplexOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintDuplexOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintDuplexOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintDuplexOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintHolePunchOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintHolePunchOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintHolePunchOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintHolePunchOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintHolePunchOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintHolePunchOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintHolePunchOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintHolePunchOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintItemListOptionDetails<D>::Items() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Foundation::IInspectable>) consume_Windows_Graphics_Printing_OptionDetails_IPrintItemListOptionDetails<D>::Items() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails)->get_Items(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaSizeOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaSizeOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaSizeOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaSizeOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaSizeOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaSizeOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaSizeOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaSizeOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaTypeOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaTypeOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaTypeOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaTypeOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaTypeOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaTypeOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaTypeOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintMediaTypeOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintNumberOptionDetails<D>::MinValue() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Printing_OptionDetails_IPrintNumberOptionDetails<D>::MinValue() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails)->get_MinValue(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintNumberOptionDetails<D>::MaxValue() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Printing_OptionDetails_IPrintNumberOptionDetails<D>::MaxValue() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails)->get_MaxValue(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::OptionId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::OptionId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->get_OptionId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::OptionType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::OptionDetails::PrintOptionType) consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::OptionType() const
     {
-        Windows::Graphics::Printing::OptionDetails::PrintOptionType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->get_OptionType(put_abi(value)));
+        Windows::Graphics::Printing::OptionDetails::PrintOptionType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->get_OptionType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::ErrorText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::ErrorText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->put_ErrorText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::ErrorText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::ErrorText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->get_ErrorText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::State(Windows::Graphics::Printing::OptionDetails::PrintOptionStates const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::State(Windows::Graphics::Printing::OptionDetails::PrintOptionStates const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->put_State(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::OptionDetails::PrintOptionStates) consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::State() const
     {
-        Windows::Graphics::Printing::OptionDetails::PrintOptionStates value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->get_State(put_abi(value)));
+        Windows::Graphics::Printing::OptionDetails::PrintOptionStates value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->get_State(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->get_Value(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::TrySetValue(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Graphics_Printing_OptionDetails_IPrintOptionDetails<D>::TrySetValue(Windows::Foundation::IInspectable const& value) const
     {
-        bool succeeded;
+        bool succeeded{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails)->TrySetValue(*(void**)(&value), &succeeded));
         return succeeded;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOrientationOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintOrientationOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOrientationOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintOrientationOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOrientationOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintOrientationOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintOrientationOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintOrientationOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintPageRangeOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintPageRangeOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintPageRangeOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintPageRangeOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintPageRangeOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintPageRangeOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintPageRangeOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintPageRangeOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintQualityOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintQualityOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintQualityOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintQualityOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintQualityOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintQualityOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintQualityOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintQualityOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintStapleOptionDetails<D>::WarningText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintStapleOptionDetails<D>::WarningText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails)->put_WarningText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintStapleOptionDetails<D>::WarningText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintStapleOptionDetails<D>::WarningText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails)->get_WarningText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintStapleOptionDetails<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintStapleOptionDetails<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintStapleOptionDetails<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Graphics_Printing_OptionDetails_IPrintStapleOptionDetails<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionChangedEventArgs<D>::OptionId() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionChangedEventArgs<D>::OptionId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionChangedEventArgs)->get_OptionId(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::Options() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::Options() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails)->get_Options(&value));
         return Windows::Foundation::Collections::IMapView<hstring, Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::CreateItemListOption(param::hstring const& optionId, param::hstring const& displayName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::CreateItemListOption(param::hstring const& optionId, param::hstring const& displayName) const
     {
         void* itemListOption{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails)->CreateItemListOption(*(void**)(&optionId), *(void**)(&displayName), &itemListOption));
         return Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails{ itemListOption, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::CreateTextOption(param::hstring const& optionId, param::hstring const& displayName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::CreateTextOption(param::hstring const& optionId, param::hstring const& displayName) const
     {
         void* textOption{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails)->CreateTextOption(*(void**)(&optionId), *(void**)(&displayName), &textOption));
         return Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails{ textOption, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::OptionChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs> const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::OptionChanged(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs> const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails)->add_OptionChanged(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -475,13 +475,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, OptionChanged_revoker>(this, OptionChanged(eventHandler));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::OptionChanged(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::OptionChanged(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails)->remove_OptionChanged(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::BeginValidation(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, Windows::Foundation::IInspectable> const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::BeginValidation(Windows::Foundation::TypedEventHandler<Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails, Windows::Foundation::IInspectable> const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails)->add_BeginValidation(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -489,28 +489,29 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BeginValidation_revoker>(this, BeginValidation(eventHandler));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::BeginValidation(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails<D>::BeginValidation(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails)->remove_BeginValidation(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails2<D>::CreateToggleOption(param::hstring const& optionId, param::hstring const& displayName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetails2<D>::CreateToggleOption(param::hstring const& optionId, param::hstring const& displayName) const
     {
         void* toggleOption{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails2)->CreateToggleOption(*(void**)(&optionId), *(void**)(&displayName), &toggleOption));
         return Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails{ toggleOption, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetailsStatic<D>::GetFromPrintTaskOptions(Windows::Graphics::Printing::PrintTaskOptions const& printTaskOptions) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails) consume_Windows_Graphics_Printing_OptionDetails_IPrintTaskOptionDetailsStatic<D>::GetFromPrintTaskOptions(Windows::Graphics::Printing::PrintTaskOptions const& printTaskOptions) const
     {
         void* printTaskOptionDetails{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetailsStatic)->GetFromPrintTaskOptions(*(void**)(&printTaskOptions), &printTaskOptionDetails));
         return Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails{ printTaskOptionDetails, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_OptionDetails_IPrintTextOptionDetails<D>::MaxCharacters() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Graphics_Printing_OptionDetails_IPrintTextOptionDetails<D>::MaxCharacters() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails)->get_MaxCharacters(&value));
         return value;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails>
     {
@@ -545,6 +546,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails>
     {
@@ -579,6 +582,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails>
     {
@@ -613,6 +618,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails>
     {
@@ -647,6 +654,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails>
     {
@@ -681,6 +690,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomItemDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomItemDetails>
     {
@@ -708,6 +719,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails>
     {
@@ -719,6 +732,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails2> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails2>
     {
@@ -730,6 +745,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3>
     {
@@ -764,6 +781,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>
     {
@@ -783,6 +801,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails>
     {
@@ -801,6 +820,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2>
     {
@@ -835,6 +856,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails>
     {
@@ -869,6 +892,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails>
     {
@@ -903,6 +928,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails>
     {
@@ -937,6 +964,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>
     {
@@ -949,6 +977,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails>
     {
@@ -983,6 +1012,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails>
     {
@@ -1017,6 +1048,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>
     {
@@ -1098,6 +1130,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails>
     {
@@ -1132,6 +1165,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails>
     {
@@ -1166,6 +1201,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails>
     {
@@ -1200,6 +1237,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails>
     {
@@ -1234,6 +1273,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionChangedEventArgs> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionChangedEventArgs>
     {
@@ -1246,6 +1287,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails>
     {
@@ -1302,6 +1345,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails2> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails2>
     {
@@ -1314,6 +1359,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetailsStatic> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetailsStatic>
     {
@@ -1326,6 +1373,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails> : produce_base<D, Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>
     {
@@ -1338,7 +1386,7 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 }
-namespace winrt::Windows::Graphics::Printing::OptionDetails
+WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::OptionDetails
 {
     constexpr auto operator|(PrintOptionStates const left, PrintOptionStates const right) noexcept
     {
@@ -1373,58 +1421,60 @@ namespace winrt::Windows::Graphics::Printing::OptionDetails
     }
     inline auto PrintTaskOptionDetails::GetFromPrintTaskOptions(Windows::Graphics::Printing::PrintTaskOptions const& printTaskOptions)
     {
-        return impl::call_factory<PrintTaskOptionDetails, Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetailsStatic>([&](auto&& f) { return f.GetFromPrintTaskOptions(printTaskOptions); });
+        return impl::call_factory<PrintTaskOptionDetails, IPrintTaskOptionDetailsStatic>([&](IPrintTaskOptionDetailsStatic const& f) { return f.GetFromPrintTaskOptions(printTaskOptions); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails2> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails2> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails2> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails2> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetailsStatic> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetailsStatic> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails> : winrt::impl::hash_base<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintBindingOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintBorderingOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCollationOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintColorModeOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCopiesOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomTextOptionDetails2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomToggleOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintDuplexOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintHolePunchOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintMediaSizeOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOrientationOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintPageRangeOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintQualityOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintStapleOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetailsStatic> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails> : winrt::impl::hash_base {};
+#endif
 }
 #endif

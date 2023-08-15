@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -105,24 +113,29 @@ EXTERN_C const IID IID_IStorageProviderPropertyHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IStorageProviderPropertyHandler * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IStorageProviderPropertyHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IStorageProviderPropertyHandler * This);
         
+        DECLSPEC_XFGVIRT(IStorageProviderPropertyHandler, RetrieveProperties)
         HRESULT ( STDMETHODCALLTYPE *RetrieveProperties )( 
             __RPC__in IStorageProviderPropertyHandler * This,
             /* [size_is][in] */ __RPC__in_ecount_full(propertiesToRetrieveCount) const PROPERTYKEY *propertiesToRetrieve,
             /* [in] */ ULONG propertiesToRetrieveCount,
             /* [out] */ __RPC__deref_out_opt IPropertyStore **retrievedProperties);
         
+        DECLSPEC_XFGVIRT(IStorageProviderPropertyHandler, SaveProperties)
         HRESULT ( STDMETHODCALLTYPE *SaveProperties )( 
             __RPC__in IStorageProviderPropertyHandler * This,
             /* [in] */ __RPC__in_opt IPropertyStore *propertiesToSave);
@@ -203,28 +216,34 @@ EXTERN_C const IID IID_IStorageProviderHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IStorageProviderHandler * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IStorageProviderHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IStorageProviderHandler * This);
         
+        DECLSPEC_XFGVIRT(IStorageProviderHandler, GetPropertyHandlerFromPath)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyHandlerFromPath )( 
             __RPC__in IStorageProviderHandler * This,
             /* [in] */ __RPC__in LPCWSTR path,
             /* [out] */ __RPC__deref_out_opt IStorageProviderPropertyHandler **propertyHandler);
         
+        DECLSPEC_XFGVIRT(IStorageProviderHandler, GetPropertyHandlerFromUri)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyHandlerFromUri )( 
             __RPC__in IStorageProviderHandler * This,
             /* [in] */ __RPC__in LPCWSTR uri,
             /* [out] */ __RPC__deref_out_opt IStorageProviderPropertyHandler **propertyHandler);
         
+        DECLSPEC_XFGVIRT(IStorageProviderHandler, GetPropertyHandlerFromFileId)
         HRESULT ( STDMETHODCALLTYPE *GetPropertyHandlerFromFileId )( 
             __RPC__in IStorageProviderHandler * This,
             /* [in] */ __RPC__in LPCWSTR fileId,

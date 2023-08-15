@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -173,29 +181,36 @@ EXTERN_C const IID IID_IWTSPlugin;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSPlugin * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSPlugin * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSPlugin * This);
         
+        DECLSPEC_XFGVIRT(IWTSPlugin, Initialize)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             __RPC__in IWTSPlugin * This,
             /* [in] */ __RPC__in_opt IWTSVirtualChannelManager *pChannelMgr);
         
+        DECLSPEC_XFGVIRT(IWTSPlugin, Connected)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Connected )( 
             __RPC__in IWTSPlugin * This);
         
+        DECLSPEC_XFGVIRT(IWTSPlugin, Disconnected)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Disconnected )( 
             __RPC__in IWTSPlugin * This,
             DWORD dwDisconnectCode);
         
+        DECLSPEC_XFGVIRT(IWTSPlugin, Terminated)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Terminated )( 
             __RPC__in IWTSPlugin * This);
         
@@ -281,18 +296,22 @@ EXTERN_C const IID IID_IWTSListener;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSListener * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSListener * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSListener * This);
         
+        DECLSPEC_XFGVIRT(IWTSListener, GetConfiguration)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetConfiguration )( 
             __RPC__in IWTSListener * This,
             /* [out] */ __RPC__deref_out_opt IPropertyBag **ppPropertyBag);
@@ -373,18 +392,22 @@ EXTERN_C const IID IID_IWTSListenerCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSListenerCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSListenerCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSListenerCallback * This);
         
+        DECLSPEC_XFGVIRT(IWTSListenerCallback, OnNewChannelConnection)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *OnNewChannelConnection )( 
             __RPC__in IWTSListenerCallback * This,
             /* [in] */ __RPC__in_opt IWTSVirtualChannel *pChannel,
@@ -468,23 +491,28 @@ EXTERN_C const IID IID_IWTSVirtualChannelCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSVirtualChannelCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSVirtualChannelCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSVirtualChannelCallback * This);
         
+        DECLSPEC_XFGVIRT(IWTSVirtualChannelCallback, OnDataReceived)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *OnDataReceived )( 
             __RPC__in IWTSVirtualChannelCallback * This,
             /* [in] */ ULONG cbSize,
             /* [size_is][in] */ __RPC__in_ecount_full(cbSize) BYTE *pBuffer);
         
+        DECLSPEC_XFGVIRT(IWTSVirtualChannelCallback, OnClose)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *OnClose )( 
             __RPC__in IWTSVirtualChannelCallback * This);
         
@@ -568,18 +596,22 @@ EXTERN_C const IID IID_IWTSVirtualChannelManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSVirtualChannelManager * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSVirtualChannelManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSVirtualChannelManager * This);
         
+        DECLSPEC_XFGVIRT(IWTSVirtualChannelManager, CreateListener)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *CreateListener )( 
             __RPC__in IWTSVirtualChannelManager * This,
             /* [string][in] */ __RPC__in_string const char *pszChannelName,
@@ -664,24 +696,29 @@ EXTERN_C const IID IID_IWTSVirtualChannel;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSVirtualChannel * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSVirtualChannel * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSVirtualChannel * This);
         
+        DECLSPEC_XFGVIRT(IWTSVirtualChannel, Write)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Write )( 
             __RPC__in IWTSVirtualChannel * This,
             /* [in] */ ULONG cbSize,
             /* [size_is][in] */ __RPC__in_ecount_full(cbSize) BYTE *pBuffer,
             /* [in] */ __RPC__in_opt IUnknown *pReserved);
         
+        DECLSPEC_XFGVIRT(IWTSVirtualChannel, Close)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Close )( 
             __RPC__in IWTSVirtualChannel * This);
         
@@ -763,18 +800,22 @@ EXTERN_C const IID IID_IWTSPluginServiceProvider;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSPluginServiceProvider * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSPluginServiceProvider * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSPluginServiceProvider * This);
         
+        DECLSPEC_XFGVIRT(IWTSPluginServiceProvider, GetService)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetService )( 
             __RPC__in IWTSPluginServiceProvider * This,
             /* [in] */ GUID ServiceId,
@@ -871,18 +912,22 @@ EXTERN_C const IID IID_IWTSBitmapRenderer;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSBitmapRenderer * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSBitmapRenderer * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSBitmapRenderer * This);
         
+        DECLSPEC_XFGVIRT(IWTSBitmapRenderer, Render)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Render )( 
             __RPC__in IWTSBitmapRenderer * This,
             /* [in] */ GUID imageFormat,
@@ -892,10 +937,12 @@ EXTERN_C const IID IID_IWTSBitmapRenderer;
             /* [in] */ DWORD cbImageBuffer,
             /* [size_is][in] */ __RPC__in_ecount_full(cbImageBuffer) BYTE *pImageBuffer);
         
+        DECLSPEC_XFGVIRT(IWTSBitmapRenderer, GetRendererStatistics)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetRendererStatistics )( 
             __RPC__in IWTSBitmapRenderer * This,
             /* [out] */ __RPC__out BITMAP_RENDERER_STATISTICS *pStatistics);
         
+        DECLSPEC_XFGVIRT(IWTSBitmapRenderer, RemoveMapping)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *RemoveMapping )( 
             __RPC__in IWTSBitmapRenderer * This);
         
@@ -978,18 +1025,22 @@ EXTERN_C const IID IID_IWTSBitmapRendererCallback;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSBitmapRendererCallback * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSBitmapRendererCallback * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSBitmapRendererCallback * This);
         
+        DECLSPEC_XFGVIRT(IWTSBitmapRendererCallback, OnTargetSizeChanged)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *OnTargetSizeChanged )( 
             __RPC__in IWTSBitmapRendererCallback * This,
             /* [in] */ RECT rcNewSize);
@@ -1069,18 +1120,22 @@ EXTERN_C const IID IID_IWTSBitmapRenderService;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWTSBitmapRenderService * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWTSBitmapRenderService * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWTSBitmapRenderService * This);
         
+        DECLSPEC_XFGVIRT(IWTSBitmapRenderService, GetMappedRenderer)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetMappedRenderer )( 
             __RPC__in IWTSBitmapRenderService * This,
             /* [in] */ UINT64 mappingId,

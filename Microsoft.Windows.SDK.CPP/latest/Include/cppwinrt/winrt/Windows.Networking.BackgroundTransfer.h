@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Networking_BackgroundTransfer_H
 #define WINRT_Windows_Networking_BackgroundTransfer_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Networking.h"
 #include "winrt/impl/Windows.ApplicationModel.Background.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -19,519 +19,519 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Networking.BackgroundTransfer.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader<D>::CreateDownload(Windows::Foundation::Uri const& uri, Windows::Storage::IStorageFile const& resultFile) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::DownloadOperation) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader<D>::CreateDownload(Windows::Foundation::Uri const& uri, Windows::Storage::IStorageFile const& resultFile) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader)->CreateDownload(*(void**)(&uri), *(void**)(&resultFile), &operation));
         return Windows::Networking::BackgroundTransfer::DownloadOperation{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader<D>::CreateDownload(Windows::Foundation::Uri const& uri, Windows::Storage::IStorageFile const& resultFile, Windows::Storage::IStorageFile const& requestBodyFile) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::DownloadOperation) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader<D>::CreateDownload(Windows::Foundation::Uri const& uri, Windows::Storage::IStorageFile const& resultFile, Windows::Storage::IStorageFile const& requestBodyFile) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader)->CreateDownloadFromFile(*(void**)(&uri), *(void**)(&resultFile), *(void**)(&requestBodyFile), &operation));
         return Windows::Networking::BackgroundTransfer::DownloadOperation{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader<D>::CreateDownloadAsync(Windows::Foundation::Uri const& uri, Windows::Storage::IStorageFile const& resultFile, Windows::Storage::Streams::IInputStream const& requestBodyStream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::DownloadOperation>) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader<D>::CreateDownloadAsync(Windows::Foundation::Uri const& uri, Windows::Storage::IStorageFile const& resultFile, Windows::Storage::Streams::IInputStream const& requestBodyStream) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader)->CreateDownloadAsync(*(void**)(&uri), *(void**)(&resultFile), *(void**)(&requestBodyStream), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::DownloadOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::TransferGroup() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::TransferGroup() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->get_TransferGroup(&value));
         return Windows::Networking::BackgroundTransfer::BackgroundTransferGroup{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::TransferGroup(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::TransferGroup(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->put_TransferGroup(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::SuccessToastNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::ToastNotification) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::SuccessToastNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->get_SuccessToastNotification(&value));
         return Windows::UI::Notifications::ToastNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::SuccessToastNotification(Windows::UI::Notifications::ToastNotification const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::SuccessToastNotification(Windows::UI::Notifications::ToastNotification const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->put_SuccessToastNotification(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::FailureToastNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::ToastNotification) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::FailureToastNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->get_FailureToastNotification(&value));
         return Windows::UI::Notifications::ToastNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::FailureToastNotification(Windows::UI::Notifications::ToastNotification const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::FailureToastNotification(Windows::UI::Notifications::ToastNotification const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->put_FailureToastNotification(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::SuccessTileNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::TileNotification) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::SuccessTileNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->get_SuccessTileNotification(&value));
         return Windows::UI::Notifications::TileNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::SuccessTileNotification(Windows::UI::Notifications::TileNotification const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::SuccessTileNotification(Windows::UI::Notifications::TileNotification const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->put_SuccessTileNotification(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::FailureTileNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::TileNotification) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::FailureTileNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->get_FailureTileNotification(&value));
         return Windows::UI::Notifications::TileNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::FailureTileNotification(Windows::UI::Notifications::TileNotification const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader2<D>::FailureTileNotification(Windows::UI::Notifications::TileNotification const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader2)->put_FailureTileNotification(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader3<D>::CompletionGroup() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloader3<D>::CompletionGroup() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloader3)->get_CompletionGroup(&value));
         return Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderFactory<D>::CreateWithCompletionGroup(Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundDownloader) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderFactory<D>::CreateWithCompletionGroup(Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) const
     {
         void* backgroundDownloader{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloaderFactory)->CreateWithCompletionGroup(*(void**)(&completionGroup), &backgroundDownloader));
         return Windows::Networking::BackgroundTransfer::BackgroundDownloader{ backgroundDownloader, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderStaticMethods<D>::GetCurrentDownloadsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::DownloadOperation>>) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderStaticMethods<D>::GetCurrentDownloadsAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods)->GetCurrentDownloadsAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::DownloadOperation>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderStaticMethods<D>::GetCurrentDownloadsAsync(param::hstring const& group) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::DownloadOperation>>) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderStaticMethods<D>::GetCurrentDownloadsAsync(param::hstring const& group) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods)->GetCurrentDownloadsForGroupAsync(*(void**)(&group), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::DownloadOperation>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderStaticMethods2<D>::GetCurrentDownloadsForTransferGroupAsync(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::DownloadOperation>>) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderStaticMethods2<D>::GetCurrentDownloadsForTransferGroupAsync(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods2)->GetCurrentDownloadsForTransferGroupAsync(*(void**)(&group), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::DownloadOperation>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderUserConsent<D>::RequestUnconstrainedDownloadsAsync(param::async_iterable<Windows::Networking::BackgroundTransfer::DownloadOperation> const& operations) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>) consume_Windows_Networking_BackgroundTransfer_IBackgroundDownloaderUserConsent<D>::RequestUnconstrainedDownloadsAsync(param::async_iterable<Windows::Networking::BackgroundTransfer::DownloadOperation> const& operations) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundDownloaderUserConsent)->RequestUnconstrainedDownloadsAsync(*(void**)(&operations), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->SetRequestHeader(*(void**)(&headerName), *(void**)(&headerValue)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::ServerCredential() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::ServerCredential() const
     {
         void* credential{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->get_ServerCredential(&credential));
         return Windows::Security::Credentials::PasswordCredential{ credential, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::ServerCredential(Windows::Security::Credentials::PasswordCredential const& credential) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::ServerCredential(Windows::Security::Credentials::PasswordCredential const& credential) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->put_ServerCredential(*(void**)(&credential)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::ProxyCredential() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::ProxyCredential() const
     {
         void* credential{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->get_ProxyCredential(&credential));
         return Windows::Security::Credentials::PasswordCredential{ credential, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::ProxyCredential(Windows::Security::Credentials::PasswordCredential const& credential) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::ProxyCredential(Windows::Security::Credentials::PasswordCredential const& credential) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->put_ProxyCredential(*(void**)(&credential)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::Method() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::Method() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->get_Method(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::Method(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::Method(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->put_Method(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::Group() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::Group() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->get_Group(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::Group(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::Group(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->put_Group(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::CostPolicy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::CostPolicy() const
     {
-        Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->get_CostPolicy(put_abi(value)));
+        Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->get_CostPolicy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::CostPolicy(Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferBase<D>::CostPolicy(Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferBase)->put_CostPolicy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroup<D>::Trigger() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Background::IBackgroundTrigger) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroup<D>::Trigger() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup)->get_Trigger(&value));
         return Windows::ApplicationModel::Background::IBackgroundTrigger{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroup<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroup<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroup<D>::Enable() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroup<D>::Enable() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup)->Enable());
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroupTriggerDetails<D>::Downloads() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::DownloadOperation>) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroupTriggerDetails<D>::Downloads() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroupTriggerDetails)->get_Downloads(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::DownloadOperation>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroupTriggerDetails<D>::Uploads() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::UploadOperation>) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferCompletionGroupTriggerDetails<D>::Uploads() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroupTriggerDetails)->get_Uploads(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::UploadOperation>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPart<D>::SetHeader(param::hstring const& headerName, param::hstring const& headerValue) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPart<D>::SetHeader(param::hstring const& headerName, param::hstring const& headerValue) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart)->SetHeader(*(void**)(&headerName), *(void**)(&headerValue)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPart<D>::SetText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPart<D>::SetText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart)->SetText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPart<D>::SetFile(Windows::Storage::IStorageFile const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPart<D>::SetFile(Windows::Storage::IStorageFile const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart)->SetFile(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPartFactory<D>::CreateWithName(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPartFactory<D>::CreateWithName(param::hstring const& name) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory)->CreateWithName(*(void**)(&name), &value));
         return Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPartFactory<D>::CreateWithNameAndFileName(param::hstring const& name, param::hstring const& fileName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferContentPartFactory<D>::CreateWithNameAndFileName(param::hstring const& name, param::hstring const& fileName) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory)->CreateWithNameAndFileName(*(void**)(&name), *(void**)(&fileName), &value));
         return Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferErrorStaticMethods<D>::GetStatus(int32_t hresult) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Web::WebErrorStatus) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferErrorStaticMethods<D>::GetStatus(int32_t hresult) const
     {
-        Windows::Web::WebErrorStatus status;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods)->GetStatus(hresult, put_abi(status)));
+        Windows::Web::WebErrorStatus status{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods)->GetStatus(hresult, reinterpret_cast<int32_t*>(&status)));
         return status;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroup<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroup<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroup<D>::TransferBehavior() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroup<D>::TransferBehavior() const
     {
-        Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup)->get_TransferBehavior(put_abi(value)));
+        Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup)->get_TransferBehavior(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroup<D>::TransferBehavior(Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroup<D>::TransferBehavior(Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup)->put_TransferBehavior(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroupStatics<D>::CreateGroup(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferGroupStatics<D>::CreateGroup(param::hstring const& name) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics)->CreateGroup(*(void**)(&name), &value));
         return Windows::Networking::BackgroundTransfer::BackgroundTransferGroup{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::Guid() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::Guid() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation)->get_Guid(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::RequestedUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::RequestedUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation)->get_RequestedUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::Method() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::Method() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation)->get_Method(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::Group() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::Group() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation)->get_Group(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::CostPolicy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::CostPolicy() const
     {
-        Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation)->get_CostPolicy(put_abi(value)));
+        Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation)->get_CostPolicy(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::CostPolicy(Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::CostPolicy(Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation)->put_CostPolicy(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::GetResultStreamAt(uint64_t position) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IInputStream) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::GetResultStreamAt(uint64_t position) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation)->GetResultStreamAt(position, &value));
         return Windows::Storage::Streams::IInputStream{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::GetResponseInformation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::ResponseInformation) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperation<D>::GetResponseInformation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation)->GetResponseInformation(&value));
         return Windows::Networking::BackgroundTransfer::ResponseInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperationPriority<D>::Priority() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferPriority) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperationPriority<D>::Priority() const
     {
-        Windows::Networking::BackgroundTransfer::BackgroundTransferPriority value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority)->get_Priority(put_abi(value)));
+        Windows::Networking::BackgroundTransfer::BackgroundTransferPriority value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority)->get_Priority(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperationPriority<D>::Priority(Windows::Networking::BackgroundTransfer::BackgroundTransferPriority const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferOperationPriority<D>::Priority(Windows::Networking::BackgroundTransfer::BackgroundTransferPriority const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority)->put_Priority(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferRangesDownloadedEventArgs<D>::WasDownloadRestarted() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferRangesDownloadedEventArgs<D>::WasDownloadRestarted() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs)->get_WasDownloadRestarted(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferRangesDownloadedEventArgs<D>::AddedRanges() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferRangesDownloadedEventArgs<D>::AddedRanges() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs)->get_AddedRanges(&value));
         return Windows::Foundation::Collections::IVector<Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferRangesDownloadedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Networking_BackgroundTransfer_IBackgroundTransferRangesDownloadedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUpload(Windows::Foundation::Uri const& uri, Windows::Storage::IStorageFile const& sourceFile) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::UploadOperation) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUpload(Windows::Foundation::Uri const& uri, Windows::Storage::IStorageFile const& sourceFile) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader)->CreateUpload(*(void**)(&uri), *(void**)(&sourceFile), &operation));
         return Windows::Networking::BackgroundTransfer::UploadOperation{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUploadFromStreamAsync(Windows::Foundation::Uri const& uri, Windows::Storage::Streams::IInputStream const& sourceStream) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UploadOperation>) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUploadFromStreamAsync(Windows::Foundation::Uri const& uri, Windows::Storage::Streams::IInputStream const& sourceStream) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader)->CreateUploadFromStreamAsync(*(void**)(&uri), *(void**)(&sourceStream), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UploadOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUploadAsync(Windows::Foundation::Uri const& uri, param::async_iterable<Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UploadOperation>) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUploadAsync(Windows::Foundation::Uri const& uri, param::async_iterable<Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader)->CreateUploadWithFormDataAndAutoBoundaryAsync(*(void**)(&uri), *(void**)(&parts), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UploadOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUploadAsync(Windows::Foundation::Uri const& uri, param::async_iterable<Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts, param::hstring const& subType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UploadOperation>) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUploadAsync(Windows::Foundation::Uri const& uri, param::async_iterable<Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts, param::hstring const& subType) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader)->CreateUploadWithSubTypeAsync(*(void**)(&uri), *(void**)(&parts), *(void**)(&subType), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UploadOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUploadAsync(Windows::Foundation::Uri const& uri, param::async_iterable<Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts, param::hstring const& subType, param::hstring const& boundary) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UploadOperation>) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader<D>::CreateUploadAsync(Windows::Foundation::Uri const& uri, param::async_iterable<Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> const& parts, param::hstring const& subType, param::hstring const& boundary) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader)->CreateUploadWithSubTypeAndBoundaryAsync(*(void**)(&uri), *(void**)(&parts), *(void**)(&subType), *(void**)(&boundary), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UploadOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::TransferGroup() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::TransferGroup() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->get_TransferGroup(&value));
         return Windows::Networking::BackgroundTransfer::BackgroundTransferGroup{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::TransferGroup(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::TransferGroup(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->put_TransferGroup(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::SuccessToastNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::ToastNotification) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::SuccessToastNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->get_SuccessToastNotification(&value));
         return Windows::UI::Notifications::ToastNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::SuccessToastNotification(Windows::UI::Notifications::ToastNotification const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::SuccessToastNotification(Windows::UI::Notifications::ToastNotification const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->put_SuccessToastNotification(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::FailureToastNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::ToastNotification) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::FailureToastNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->get_FailureToastNotification(&value));
         return Windows::UI::Notifications::ToastNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::FailureToastNotification(Windows::UI::Notifications::ToastNotification const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::FailureToastNotification(Windows::UI::Notifications::ToastNotification const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->put_FailureToastNotification(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::SuccessTileNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::TileNotification) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::SuccessTileNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->get_SuccessTileNotification(&value));
         return Windows::UI::Notifications::TileNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::SuccessTileNotification(Windows::UI::Notifications::TileNotification const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::SuccessTileNotification(Windows::UI::Notifications::TileNotification const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->put_SuccessTileNotification(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::FailureTileNotification() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Notifications::TileNotification) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::FailureTileNotification() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->get_FailureTileNotification(&value));
         return Windows::UI::Notifications::TileNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::FailureTileNotification(Windows::UI::Notifications::TileNotification const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader2<D>::FailureTileNotification(Windows::UI::Notifications::TileNotification const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader2)->put_FailureTileNotification(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader3<D>::CompletionGroup() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploader3<D>::CompletionGroup() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploader3)->get_CompletionGroup(&value));
         return Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderFactory<D>::CreateWithCompletionGroup(Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundUploader) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderFactory<D>::CreateWithCompletionGroup(Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) const
     {
         void* backgroundUploader{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory)->CreateWithCompletionGroup(*(void**)(&completionGroup), &backgroundUploader));
         return Windows::Networking::BackgroundTransfer::BackgroundUploader{ backgroundUploader, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderStaticMethods<D>::GetCurrentUploadsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::UploadOperation>>) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderStaticMethods<D>::GetCurrentUploadsAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods)->GetCurrentUploadsAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::UploadOperation>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderStaticMethods<D>::GetCurrentUploadsAsync(param::hstring const& group) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::UploadOperation>>) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderStaticMethods<D>::GetCurrentUploadsAsync(param::hstring const& group) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods)->GetCurrentUploadsForGroupAsync(*(void**)(&group), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::UploadOperation>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderStaticMethods2<D>::GetCurrentUploadsForTransferGroupAsync(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::UploadOperation>>) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderStaticMethods2<D>::GetCurrentUploadsForTransferGroupAsync(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods2)->GetCurrentUploadsForTransferGroupAsync(*(void**)(&group), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::UploadOperation>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderUserConsent<D>::RequestUnconstrainedUploadsAsync(param::async_iterable<Windows::Networking::BackgroundTransfer::UploadOperation> const& operations) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>) consume_Windows_Networking_BackgroundTransfer_IBackgroundUploaderUserConsent<D>::RequestUnconstrainedUploadsAsync(param::async_iterable<Windows::Networking::BackgroundTransfer::UploadOperation> const& operations) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IBackgroundUploaderUserConsent)->RequestUnconstrainedUploadsAsync(*(void**)(&operations), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IContentPrefetcher<D>::ContentUris() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>) consume_Windows_Networking_BackgroundTransfer_IContentPrefetcher<D>::ContentUris() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IContentPrefetcher)->get_ContentUris(&value));
         return Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IContentPrefetcher<D>::IndirectContentUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IContentPrefetcher<D>::IndirectContentUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IContentPrefetcher)->put_IndirectContentUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IContentPrefetcher<D>::IndirectContentUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Networking_BackgroundTransfer_IContentPrefetcher<D>::IndirectContentUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IContentPrefetcher)->get_IndirectContentUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IContentPrefetcherTime<D>::LastSuccessfulPrefetchTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_Networking_BackgroundTransfer_IContentPrefetcherTime<D>::LastSuccessfulPrefetchTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IContentPrefetcherTime)->get_LastSuccessfulPrefetchTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::ResultFile() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::IStorageFile) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::ResultFile() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation)->get_ResultFile(&value));
         return Windows::Storage::IStorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::Progress() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::Progress() const
     {
-        Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress value;
+        Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation)->get_Progress(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Networking::BackgroundTransfer::DownloadOperation, Windows::Networking::BackgroundTransfer::DownloadOperation>) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::StartAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation)->StartAsync(&operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Networking::BackgroundTransfer::DownloadOperation, Windows::Networking::BackgroundTransfer::DownloadOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::AttachAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Networking::BackgroundTransfer::DownloadOperation, Windows::Networking::BackgroundTransfer::DownloadOperation>) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::AttachAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation)->AttachAsync(&operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Networking::BackgroundTransfer::DownloadOperation, Windows::Networking::BackgroundTransfer::DownloadOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::Pause() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::Pause() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation)->Pause());
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::Resume() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation<D>::Resume() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation)->Resume());
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation2<D>::TransferGroup() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation2<D>::TransferGroup() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation2)->get_TransferGroup(&value));
         return Windows::Networking::BackgroundTransfer::BackgroundTransferGroup{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::IsRandomAccessRequired() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::IsRandomAccessRequired() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation3)->get_IsRandomAccessRequired(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::IsRandomAccessRequired(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::IsRandomAccessRequired(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation3)->put_IsRandomAccessRequired(value));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::GetResultRandomAccessStreamReference() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::GetResultRandomAccessStreamReference() const
     {
         void* stream{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation3)->GetResultRandomAccessStreamReference(&stream));
         return Windows::Storage::Streams::IRandomAccessStreamReference{ stream, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::GetDownloadedRanges() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::GetDownloadedRanges() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation3)->GetDownloadedRanges(&value));
         return Windows::Foundation::Collections::IVector<Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::RangesDownloaded(Windows::Foundation::TypedEventHandler<Windows::Networking::BackgroundTransfer::DownloadOperation, Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs> const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::RangesDownloaded(Windows::Foundation::TypedEventHandler<Windows::Networking::BackgroundTransfer::DownloadOperation, Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs> const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation3)->add_RangesDownloaded(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -539,110 +539,111 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, RangesDownloaded_revoker>(this, RangesDownloaded(eventHandler));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::RangesDownloaded(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::RangesDownloaded(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation3)->remove_RangesDownloaded(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::RequestedUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::RequestedUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation3)->put_RequestedUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::RecoverableWebErrorStatuses() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Web::WebErrorStatus>) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::RecoverableWebErrorStatuses() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation3)->get_RecoverableWebErrorStatuses(&value));
         return Windows::Foundation::Collections::IVector<Windows::Web::WebErrorStatus>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::CurrentWebErrorStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Web::WebErrorStatus>) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation3<D>::CurrentWebErrorStatus() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation3)->get_CurrentWebErrorStatus(&value));
         return Windows::Foundation::IReference<Windows::Web::WebErrorStatus>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation4<D>::MakeCurrentInTransferGroup() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation4<D>::MakeCurrentInTransferGroup() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation4)->MakeCurrentInTransferGroup());
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation5<D>::SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation5<D>::SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation5)->SetRequestHeader(*(void**)(&headerName), *(void**)(&headerValue)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IDownloadOperation5<D>::RemoveRequestHeader(param::hstring const& headerName) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IDownloadOperation5<D>::RemoveRequestHeader(param::hstring const& headerName) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IDownloadOperation5)->RemoveRequestHeader(*(void**)(&headerName)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IResponseInformation<D>::IsResumable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_BackgroundTransfer_IResponseInformation<D>::IsResumable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IResponseInformation)->get_IsResumable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IResponseInformation<D>::ActualUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Networking_BackgroundTransfer_IResponseInformation<D>::ActualUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IResponseInformation)->get_ActualUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IResponseInformation<D>::StatusCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Networking_BackgroundTransfer_IResponseInformation<D>::StatusCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IResponseInformation)->get_StatusCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IResponseInformation<D>::Headers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, hstring>) consume_Windows_Networking_BackgroundTransfer_IResponseInformation<D>::Headers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IResponseInformation)->get_Headers(&value));
         return Windows::Foundation::Collections::IMapView<hstring, hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IUnconstrainedTransferRequestResult<D>::IsUnconstrained() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_BackgroundTransfer_IUnconstrainedTransferRequestResult<D>::IsUnconstrained() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult)->get_IsUnconstrained(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IUploadOperation<D>::SourceFile() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::IStorageFile) consume_Windows_Networking_BackgroundTransfer_IUploadOperation<D>::SourceFile() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IUploadOperation)->get_SourceFile(&value));
         return Windows::Storage::IStorageFile{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IUploadOperation<D>::Progress() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundUploadProgress) consume_Windows_Networking_BackgroundTransfer_IUploadOperation<D>::Progress() const
     {
-        Windows::Networking::BackgroundTransfer::BackgroundUploadProgress value;
+        Windows::Networking::BackgroundTransfer::BackgroundUploadProgress value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IUploadOperation)->get_Progress(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IUploadOperation<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Networking::BackgroundTransfer::UploadOperation, Windows::Networking::BackgroundTransfer::UploadOperation>) consume_Windows_Networking_BackgroundTransfer_IUploadOperation<D>::StartAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IUploadOperation)->StartAsync(&operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Networking::BackgroundTransfer::UploadOperation, Windows::Networking::BackgroundTransfer::UploadOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IUploadOperation<D>::AttachAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Networking::BackgroundTransfer::UploadOperation, Windows::Networking::BackgroundTransfer::UploadOperation>) consume_Windows_Networking_BackgroundTransfer_IUploadOperation<D>::AttachAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IUploadOperation)->AttachAsync(&operation));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Networking::BackgroundTransfer::UploadOperation, Windows::Networking::BackgroundTransfer::UploadOperation>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IUploadOperation2<D>::TransferGroup() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup) consume_Windows_Networking_BackgroundTransfer_IUploadOperation2<D>::TransferGroup() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IUploadOperation2)->get_TransferGroup(&value));
         return Windows::Networking::BackgroundTransfer::BackgroundTransferGroup{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IUploadOperation3<D>::MakeCurrentInTransferGroup() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IUploadOperation3<D>::MakeCurrentInTransferGroup() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IUploadOperation3)->MakeCurrentInTransferGroup());
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IUploadOperation4<D>::SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IUploadOperation4<D>::SetRequestHeader(param::hstring const& headerName, param::hstring const& headerValue) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IUploadOperation4)->SetRequestHeader(*(void**)(&headerName), *(void**)(&headerValue)));
     }
-    template <typename D> auto consume_Windows_Networking_BackgroundTransfer_IUploadOperation4<D>::RemoveRequestHeader(param::hstring const& headerName) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_BackgroundTransfer_IUploadOperation4<D>::RemoveRequestHeader(param::hstring const& headerName) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::BackgroundTransfer::IUploadOperation4)->RemoveRequestHeader(*(void**)(&headerName)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloader> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloader>
     {
@@ -671,6 +672,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloader2> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloader2>
     {
@@ -750,6 +753,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloader3> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloader3>
     {
@@ -762,6 +767,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderFactory> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderFactory>
     {
@@ -774,6 +781,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods>
     {
@@ -794,6 +803,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods2> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods2>
     {
@@ -806,6 +817,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderUserConsent> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderUserConsent>
     {
@@ -818,6 +831,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferBase> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>
     {
@@ -903,6 +917,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup>
     {
@@ -929,6 +944,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroupTriggerDetails> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroupTriggerDetails>
     {
@@ -949,6 +966,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart>
     {
@@ -974,6 +993,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>
     {
@@ -994,6 +1014,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods>
     {
@@ -1005,6 +1026,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup>
     {
@@ -1031,6 +1054,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics>
     {
@@ -1043,6 +1068,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>
     {
@@ -1126,6 +1152,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs>
     {
@@ -1153,6 +1180,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundUploader> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundUploader>
     {
@@ -1197,6 +1226,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundUploader2> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundUploader2>
     {
@@ -1276,6 +1307,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundUploader3> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundUploader3>
     {
@@ -1288,6 +1321,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory>
     {
@@ -1300,6 +1335,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods>
     {
@@ -1320,6 +1357,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods2> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods2>
     {
@@ -1332,6 +1371,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IBackgroundUploaderUserConsent> : produce_base<D, Windows::Networking::BackgroundTransfer::IBackgroundUploaderUserConsent>
     {
@@ -1344,6 +1385,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IContentPrefetcher> : produce_base<D, Windows::Networking::BackgroundTransfer::IContentPrefetcher>
     {
@@ -1371,6 +1414,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IContentPrefetcherTime> : produce_base<D, Windows::Networking::BackgroundTransfer::IContentPrefetcherTime>
     {
@@ -1383,6 +1428,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IDownloadOperation> : produce_base<D, Windows::Networking::BackgroundTransfer::IDownloadOperation>
     {
@@ -1433,6 +1480,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IDownloadOperation2> : produce_base<D, Windows::Networking::BackgroundTransfer::IDownloadOperation2>
     {
@@ -1445,6 +1494,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IDownloadOperation3> : produce_base<D, Windows::Networking::BackgroundTransfer::IDownloadOperation3>
     {
@@ -1516,6 +1567,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IDownloadOperation4> : produce_base<D, Windows::Networking::BackgroundTransfer::IDownloadOperation4>
     {
@@ -1527,6 +1580,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IDownloadOperation5> : produce_base<D, Windows::Networking::BackgroundTransfer::IDownloadOperation5>
     {
@@ -1545,6 +1600,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IResponseInformation> : produce_base<D, Windows::Networking::BackgroundTransfer::IResponseInformation>
     {
@@ -1579,6 +1636,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult> : produce_base<D, Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult>
     {
@@ -1590,6 +1649,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IUploadOperation> : produce_base<D, Windows::Networking::BackgroundTransfer::IUploadOperation>
     {
@@ -1626,6 +1687,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IUploadOperation2> : produce_base<D, Windows::Networking::BackgroundTransfer::IUploadOperation2>
     {
@@ -1638,6 +1701,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IUploadOperation3> : produce_base<D, Windows::Networking::BackgroundTransfer::IUploadOperation3>
     {
@@ -1649,6 +1714,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::BackgroundTransfer::IUploadOperation4> : produce_base<D, Windows::Networking::BackgroundTransfer::IUploadOperation4>
     {
@@ -1667,150 +1734,153 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Networking::BackgroundTransfer
+WINRT_EXPORT namespace winrt::Windows::Networking::BackgroundTransfer
 {
     inline BackgroundDownloader::BackgroundDownloader() :
-        BackgroundDownloader(impl::call_factory<BackgroundDownloader>([](auto&& f) { return f.template ActivateInstance<BackgroundDownloader>(); }))
+        BackgroundDownloader(impl::call_factory_cast<BackgroundDownloader(*)(Windows::Foundation::IActivationFactory const&), BackgroundDownloader>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<BackgroundDownloader>(); }))
     {
     }
     inline BackgroundDownloader::BackgroundDownloader(Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) :
-        BackgroundDownloader(impl::call_factory<BackgroundDownloader, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderFactory>([&](auto&& f) { return f.CreateWithCompletionGroup(completionGroup); }))
+        BackgroundDownloader(impl::call_factory<BackgroundDownloader, IBackgroundDownloaderFactory>([&](IBackgroundDownloaderFactory const& f) { return f.CreateWithCompletionGroup(completionGroup); }))
     {
     }
     inline auto BackgroundDownloader::GetCurrentDownloadsAsync()
     {
-        return impl::call_factory<BackgroundDownloader, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods>([&](auto&& f) { return f.GetCurrentDownloadsAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::DownloadOperation>>(*)(IBackgroundDownloaderStaticMethods const&), BackgroundDownloader, IBackgroundDownloaderStaticMethods>([](IBackgroundDownloaderStaticMethods const& f) { return f.GetCurrentDownloadsAsync(); });
     }
     inline auto BackgroundDownloader::GetCurrentDownloadsAsync(param::hstring const& group)
     {
-        return impl::call_factory<BackgroundDownloader, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods>([&](auto&& f) { return f.GetCurrentDownloadsAsync(group); });
+        return impl::call_factory<BackgroundDownloader, IBackgroundDownloaderStaticMethods>([&](IBackgroundDownloaderStaticMethods const& f) { return f.GetCurrentDownloadsAsync(group); });
     }
     inline auto BackgroundDownloader::GetCurrentDownloadsForTransferGroupAsync(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group)
     {
-        return impl::call_factory<BackgroundDownloader, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods2>([&](auto&& f) { return f.GetCurrentDownloadsForTransferGroupAsync(group); });
+        return impl::call_factory<BackgroundDownloader, IBackgroundDownloaderStaticMethods2>([&](IBackgroundDownloaderStaticMethods2 const& f) { return f.GetCurrentDownloadsForTransferGroupAsync(group); });
     }
     inline auto BackgroundDownloader::RequestUnconstrainedDownloadsAsync(param::async_iterable<Windows::Networking::BackgroundTransfer::DownloadOperation> const& operations)
     {
-        return impl::call_factory<BackgroundDownloader, Windows::Networking::BackgroundTransfer::IBackgroundDownloaderUserConsent>([&](auto&& f) { return f.RequestUnconstrainedDownloadsAsync(operations); });
+        return impl::call_factory<BackgroundDownloader, IBackgroundDownloaderUserConsent>([&](IBackgroundDownloaderUserConsent const& f) { return f.RequestUnconstrainedDownloadsAsync(operations); });
     }
     inline BackgroundTransferCompletionGroup::BackgroundTransferCompletionGroup() :
-        BackgroundTransferCompletionGroup(impl::call_factory<BackgroundTransferCompletionGroup>([](auto&& f) { return f.template ActivateInstance<BackgroundTransferCompletionGroup>(); }))
+        BackgroundTransferCompletionGroup(impl::call_factory_cast<BackgroundTransferCompletionGroup(*)(Windows::Foundation::IActivationFactory const&), BackgroundTransferCompletionGroup>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<BackgroundTransferCompletionGroup>(); }))
     {
     }
     inline BackgroundTransferContentPart::BackgroundTransferContentPart() :
-        BackgroundTransferContentPart(impl::call_factory<BackgroundTransferContentPart>([](auto&& f) { return f.template ActivateInstance<BackgroundTransferContentPart>(); }))
+        BackgroundTransferContentPart(impl::call_factory_cast<BackgroundTransferContentPart(*)(Windows::Foundation::IActivationFactory const&), BackgroundTransferContentPart>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<BackgroundTransferContentPart>(); }))
     {
     }
     inline BackgroundTransferContentPart::BackgroundTransferContentPart(param::hstring const& name) :
-        BackgroundTransferContentPart(impl::call_factory<BackgroundTransferContentPart, Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>([&](auto&& f) { return f.CreateWithName(name); }))
+        BackgroundTransferContentPart(impl::call_factory<BackgroundTransferContentPart, IBackgroundTransferContentPartFactory>([&](IBackgroundTransferContentPartFactory const& f) { return f.CreateWithName(name); }))
     {
     }
     inline BackgroundTransferContentPart::BackgroundTransferContentPart(param::hstring const& name, param::hstring const& fileName) :
-        BackgroundTransferContentPart(impl::call_factory<BackgroundTransferContentPart, Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>([&](auto&& f) { return f.CreateWithNameAndFileName(name, fileName); }))
+        BackgroundTransferContentPart(impl::call_factory<BackgroundTransferContentPart, IBackgroundTransferContentPartFactory>([&](IBackgroundTransferContentPartFactory const& f) { return f.CreateWithNameAndFileName(name, fileName); }))
     {
     }
     inline auto BackgroundTransferError::GetStatus(int32_t hresult)
     {
-        return impl::call_factory<BackgroundTransferError, Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods>([&](auto&& f) { return f.GetStatus(hresult); });
+        return impl::call_factory<BackgroundTransferError, IBackgroundTransferErrorStaticMethods>([&](IBackgroundTransferErrorStaticMethods const& f) { return f.GetStatus(hresult); });
     }
     inline auto BackgroundTransferGroup::CreateGroup(param::hstring const& name)
     {
-        return impl::call_factory<BackgroundTransferGroup, Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics>([&](auto&& f) { return f.CreateGroup(name); });
+        return impl::call_factory<BackgroundTransferGroup, IBackgroundTransferGroupStatics>([&](IBackgroundTransferGroupStatics const& f) { return f.CreateGroup(name); });
     }
     inline BackgroundUploader::BackgroundUploader() :
-        BackgroundUploader(impl::call_factory<BackgroundUploader>([](auto&& f) { return f.template ActivateInstance<BackgroundUploader>(); }))
+        BackgroundUploader(impl::call_factory_cast<BackgroundUploader(*)(Windows::Foundation::IActivationFactory const&), BackgroundUploader>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<BackgroundUploader>(); }))
     {
     }
     inline BackgroundUploader::BackgroundUploader(Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup const& completionGroup) :
-        BackgroundUploader(impl::call_factory<BackgroundUploader, Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory>([&](auto&& f) { return f.CreateWithCompletionGroup(completionGroup); }))
+        BackgroundUploader(impl::call_factory<BackgroundUploader, IBackgroundUploaderFactory>([&](IBackgroundUploaderFactory const& f) { return f.CreateWithCompletionGroup(completionGroup); }))
     {
     }
     inline auto BackgroundUploader::GetCurrentUploadsAsync()
     {
-        return impl::call_factory<BackgroundUploader, Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods>([&](auto&& f) { return f.GetCurrentUploadsAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::BackgroundTransfer::UploadOperation>>(*)(IBackgroundUploaderStaticMethods const&), BackgroundUploader, IBackgroundUploaderStaticMethods>([](IBackgroundUploaderStaticMethods const& f) { return f.GetCurrentUploadsAsync(); });
     }
     inline auto BackgroundUploader::GetCurrentUploadsAsync(param::hstring const& group)
     {
-        return impl::call_factory<BackgroundUploader, Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods>([&](auto&& f) { return f.GetCurrentUploadsAsync(group); });
+        return impl::call_factory<BackgroundUploader, IBackgroundUploaderStaticMethods>([&](IBackgroundUploaderStaticMethods const& f) { return f.GetCurrentUploadsAsync(group); });
     }
     inline auto BackgroundUploader::GetCurrentUploadsForTransferGroupAsync(Windows::Networking::BackgroundTransfer::BackgroundTransferGroup const& group)
     {
-        return impl::call_factory<BackgroundUploader, Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods2>([&](auto&& f) { return f.GetCurrentUploadsForTransferGroupAsync(group); });
+        return impl::call_factory<BackgroundUploader, IBackgroundUploaderStaticMethods2>([&](IBackgroundUploaderStaticMethods2 const& f) { return f.GetCurrentUploadsForTransferGroupAsync(group); });
     }
     inline auto BackgroundUploader::RequestUnconstrainedUploadsAsync(param::async_iterable<Windows::Networking::BackgroundTransfer::UploadOperation> const& operations)
     {
-        return impl::call_factory<BackgroundUploader, Windows::Networking::BackgroundTransfer::IBackgroundUploaderUserConsent>([&](auto&& f) { return f.RequestUnconstrainedUploadsAsync(operations); });
+        return impl::call_factory<BackgroundUploader, IBackgroundUploaderUserConsent>([&](IBackgroundUploaderUserConsent const& f) { return f.RequestUnconstrainedUploadsAsync(operations); });
     }
     inline auto ContentPrefetcher::ContentUris()
     {
-        return impl::call_factory<ContentPrefetcher, Windows::Networking::BackgroundTransfer::IContentPrefetcher>([&](auto&& f) { return f.ContentUris(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>(*)(IContentPrefetcher const&), ContentPrefetcher, IContentPrefetcher>([](IContentPrefetcher const& f) { return f.ContentUris(); });
     }
     inline auto ContentPrefetcher::IndirectContentUri(Windows::Foundation::Uri const& value)
     {
-        impl::call_factory<ContentPrefetcher, Windows::Networking::BackgroundTransfer::IContentPrefetcher>([&](auto&& f) { return f.IndirectContentUri(value); });
+        impl::call_factory<ContentPrefetcher, IContentPrefetcher>([&](IContentPrefetcher const& f) { return f.IndirectContentUri(value); });
     }
     inline auto ContentPrefetcher::IndirectContentUri()
     {
-        return impl::call_factory<ContentPrefetcher, Windows::Networking::BackgroundTransfer::IContentPrefetcher>([&](auto&& f) { return f.IndirectContentUri(); });
+        return impl::call_factory_cast<Windows::Foundation::Uri(*)(IContentPrefetcher const&), ContentPrefetcher, IContentPrefetcher>([](IContentPrefetcher const& f) { return f.IndirectContentUri(); });
     }
     inline auto ContentPrefetcher::LastSuccessfulPrefetchTime()
     {
-        return impl::call_factory<ContentPrefetcher, Windows::Networking::BackgroundTransfer::IContentPrefetcherTime>([&](auto&& f) { return f.LastSuccessfulPrefetchTime(); });
+        return impl::call_factory_cast<Windows::Foundation::IReference<Windows::Foundation::DateTime>(*)(IContentPrefetcherTime const&), ContentPrefetcher, IContentPrefetcherTime>([](IContentPrefetcherTime const& f) { return f.LastSuccessfulPrefetchTime(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader2> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader2> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader3> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader3> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderFactory> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderFactory> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods2> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods2> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderUserConsent> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderUserConsent> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroupTriggerDetails> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroupTriggerDetails> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader2> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader2> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader3> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader3> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods2> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods2> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderUserConsent> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderUserConsent> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IContentPrefetcher> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IContentPrefetcher> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IContentPrefetcherTime> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IContentPrefetcherTime> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation2> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation2> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation3> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation3> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation4> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation4> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation5> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation5> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IResponseInformation> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IResponseInformation> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation2> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation2> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation3> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation3> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation4> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation4> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult> {};
-    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::UploadOperation> : winrt::impl::hash_base<winrt::Windows::Networking::BackgroundTransfer::UploadOperation> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloader3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderStaticMethods2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundDownloaderUserConsent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroupTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPart> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferErrorStaticMethods> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferRangesDownloadedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploader3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderStaticMethods2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderUserConsent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IContentPrefetcher> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IContentPrefetcherTime> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IResponseInformation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUnconstrainedTransferRequestResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::IUploadOperation4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::BackgroundTransfer::UploadOperation> : winrt::impl::hash_base {};
+#endif
 }
 #endif

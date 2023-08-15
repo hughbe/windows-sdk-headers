@@ -20,7 +20,7 @@ extern "C" {
 /////////////////////////////////////////////////////////////////////////
 /// Notifications
 
-/// Notifications indicated to callbacks 
+/// Notifications indicated to callbacks
 typedef enum HCN_NOTIFICATIONS
 {
        HcnNotificationInvalid                         = 0x00000000,
@@ -60,6 +60,7 @@ typedef void*           HCN_NETWORK;
 typedef HCN_NETWORK*    PHCN_NETWORK;
 
 /// Return a list of existing Networks
+
 HRESULT
 WINAPI
 HcnEnumerateNetworks(
@@ -68,8 +69,8 @@ HcnEnumerateNetworks(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Create a Network
+
 HRESULT
 WINAPI
 HcnCreateNetwork(
@@ -79,8 +80,8 @@ HcnCreateNetwork(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Lookup an existing network
+
 HRESULT
 WINAPI
 HcnOpenNetwork(
@@ -89,8 +90,8 @@ HcnOpenNetwork(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Modify the settings of a Network
+
 HRESULT
 WINAPI
 HcnModifyNetwork(
@@ -99,8 +100,8 @@ HcnModifyNetwork(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Query Network settings
+
 HRESULT
 WINAPI
 HcnQueryNetworkProperties(
@@ -110,8 +111,8 @@ HcnQueryNetworkProperties(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Delete a Network
+
 HRESULT
 WINAPI
 HcnDeleteNetwork(
@@ -119,14 +120,13 @@ HcnDeleteNetwork(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Close a handle to a Network
+
 HRESULT
 WINAPI
 HcnCloseNetwork(
     _In_ HCN_NETWORK Network
     );
-
 
 /////////////////////////////////////////////////////////////////////////
 /// Hcn Namespace
@@ -136,6 +136,7 @@ typedef void*           HCN_NAMESPACE;
 typedef HCN_NAMESPACE*  PHCN_NAMESPACE;
 
 /// Return a list of existing Namespaces
+
 HRESULT
 WINAPI
 HcnEnumerateNamespaces(
@@ -144,8 +145,8 @@ HcnEnumerateNamespaces(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Create a Namespace
+
 HRESULT
 WINAPI
 HcnCreateNamespace(
@@ -155,8 +156,8 @@ HcnCreateNamespace(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Lookup an existing Namespace
+
 HRESULT
 WINAPI
 HcnOpenNamespace(
@@ -165,8 +166,8 @@ HcnOpenNamespace(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Modify the settings of a Namespace
+
 HRESULT
 WINAPI
 HcnModifyNamespace(
@@ -175,8 +176,8 @@ HcnModifyNamespace(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Query Namespace settings
+
 HRESULT
 WINAPI
 HcnQueryNamespaceProperties(
@@ -186,8 +187,8 @@ HcnQueryNamespaceProperties(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Delete a Namespace
+
 HRESULT
 WINAPI
 HcnDeleteNamespace(
@@ -195,14 +196,13 @@ HcnDeleteNamespace(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Close a handle to a Namespace
+
 HRESULT
 WINAPI
 HcnCloseNamespace(
     _In_ HCN_NAMESPACE Namespace
     );
-
 
 /////////////////////////////////////////////////////////////////////////
 /// Hcn Endpoint
@@ -212,6 +212,7 @@ typedef void*           HCN_ENDPOINT;
 typedef HCN_ENDPOINT*   PHCN_ENDPOINT;
 
 /// Return a list of existing Endpoints
+
 HRESULT
 WINAPI
 HcnEnumerateEndpoints(
@@ -220,8 +221,8 @@ HcnEnumerateEndpoints(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Create an Endpoint
+
 HRESULT
 WINAPI
 HcnCreateEndpoint(
@@ -232,8 +233,8 @@ HcnCreateEndpoint(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Lookup an existing Endpoint
+
 HRESULT
 WINAPI
 HcnOpenEndpoint(
@@ -242,8 +243,8 @@ HcnOpenEndpoint(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Modify the settings of an Endpoint
+
 HRESULT
 WINAPI
 HcnModifyEndpoint(
@@ -252,8 +253,8 @@ HcnModifyEndpoint(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Query Endpoint properties
+
 HRESULT
 WINAPI
 HcnQueryEndpointProperties(
@@ -263,8 +264,8 @@ HcnQueryEndpointProperties(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Delete an Endpoint
+
 HRESULT
 WINAPI
 HcnDeleteEndpoint(
@@ -272,14 +273,13 @@ HcnDeleteEndpoint(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Close a handle to an Endpoint
+
 HRESULT
 WINAPI
 HcnCloseEndpoint(
     _In_ HCN_ENDPOINT Endpoint
     );
-
 
 /////////////////////////////////////////////////////////////////////////
 /// Hcn LoadBalancer
@@ -289,6 +289,7 @@ typedef void*               HCN_LOADBALANCER;
 typedef HCN_LOADBALANCER*     PHCN_LOADBALANCER;
 
 /// Return a list of existing LoadBalancers
+
 HRESULT
 WINAPI
 HcnEnumerateLoadBalancers(
@@ -297,8 +298,8 @@ HcnEnumerateLoadBalancers(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Create a LoadBalancer
+
 HRESULT
 WINAPI
 HcnCreateLoadBalancer(
@@ -308,8 +309,8 @@ HcnCreateLoadBalancer(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Lookup an existing LoadBalancer
+
 HRESULT
 WINAPI
 HcnOpenLoadBalancer(
@@ -318,8 +319,8 @@ HcnOpenLoadBalancer(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Modify the settings of a PolcyList
+
 HRESULT
 WINAPI
 HcnModifyLoadBalancer(
@@ -328,8 +329,8 @@ HcnModifyLoadBalancer(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Query PolcyList settings
+
 HRESULT
 WINAPI
 HcnQueryLoadBalancerProperties(
@@ -339,8 +340,8 @@ HcnQueryLoadBalancerProperties(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Delete a LoadBalancer
+
 HRESULT
 WINAPI
 HcnDeleteLoadBalancer(
@@ -348,14 +349,13 @@ HcnDeleteLoadBalancer(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
-
 /// Close a handle to a LoadBalancer
+
 HRESULT
 WINAPI
 HcnCloseLoadBalancer(
     _In_ HCN_LOADBALANCER LoadBalancer
     );
-
 
 /////////////////////////////////////////////////////////////////////////
 /// Hcn Service
@@ -365,6 +365,7 @@ typedef void* HCN_SERVICE;
 typedef HCN_SERVICE* PHCN_SERVICE;
 
 /// Registers a callback function to receive notifications of service-wide events
+
 HRESULT
 WINAPI
 HcnRegisterServiceCallback(
@@ -373,14 +374,13 @@ HcnRegisterServiceCallback(
     _Outptr_ HCN_CALLBACK* CallbackHandle
     );
 
-
 /// Unregisters from service-wide notifications
+
 HRESULT
 WINAPI
 HcnUnregisterServiceCallback(
     _In_ HCN_CALLBACK CallbackHandle
     );
-
 
 #ifdef __cplusplus
 }
@@ -391,11 +391,8 @@ HcnUnregisterServiceCallback(
 
 #endif
 
-
 #ifndef ext_ms_win_hyperv_computenetwork_l1_1_0_query_routines
 #define ext_ms_win_hyperv_computenetwork_l1_1_0_query_routines
-
-
 
 //
 //Private Extension API Query Routines

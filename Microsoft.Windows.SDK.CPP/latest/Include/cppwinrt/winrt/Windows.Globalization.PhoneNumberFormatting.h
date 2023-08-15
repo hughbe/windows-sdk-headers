@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,130 +6,131 @@
 #ifndef WINRT_Windows_Globalization_PhoneNumberFormatting_H
 #define WINRT_Windows_Globalization_PhoneNumberFormatting_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Globalization.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Globalization.PhoneNumberFormatting.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::Format(Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo const& number) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::Format(Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo const& number) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter)->Format(*(void**)(&number), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::Format(Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo const& number, Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat const& numberFormat) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::Format(Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo const& number, Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat const& numberFormat) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter)->FormatWithOutputFormat(*(void**)(&number), static_cast<int32_t>(numberFormat), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::FormatPartialString(param::hstring const& number) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::FormatPartialString(param::hstring const& number) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter)->FormatPartialString(*(void**)(&number), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::FormatString(param::hstring const& number) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::FormatString(param::hstring const& number) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter)->FormatString(*(void**)(&number), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::FormatStringWithLeftToRightMarkers(param::hstring const& number) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter<D>::FormatStringWithLeftToRightMarkers(param::hstring const& number) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter)->FormatStringWithLeftToRightMarkers(*(void**)(&number), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatterStatics<D>::TryCreate(param::hstring const& regionCode, Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter& phoneNumber) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatterStatics<D>::TryCreate(param::hstring const& regionCode, Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter& phoneNumber) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics)->TryCreate(*(void**)(&regionCode), impl::bind_out(phoneNumber)));
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatterStatics<D>::GetCountryCodeForRegion(param::hstring const& regionCode) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatterStatics<D>::GetCountryCodeForRegion(param::hstring const& regionCode) const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics)->GetCountryCodeForRegion(*(void**)(&regionCode), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatterStatics<D>::GetNationalDirectDialingPrefixForRegion(param::hstring const& regionCode, bool stripNonDigit) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatterStatics<D>::GetNationalDirectDialingPrefixForRegion(param::hstring const& regionCode, bool stripNonDigit) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics)->GetNationalDirectDialingPrefixForRegion(*(void**)(&regionCode), stripNonDigit, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatterStatics<D>::WrapWithLeftToRightMarkers(param::hstring const& number) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatterStatics<D>::WrapWithLeftToRightMarkers(param::hstring const& number) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics)->WrapWithLeftToRightMarkers(*(void**)(&number), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::CountryCode() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::CountryCode() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->get_CountryCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::PhoneNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::PhoneNumber() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->get_PhoneNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::GetLengthOfGeographicalAreaCode() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::GetLengthOfGeographicalAreaCode() const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->GetLengthOfGeographicalAreaCode(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::GetNationalSignificantNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::GetNationalSignificantNumber() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->GetNationalSignificantNumber(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::GetLengthOfNationalDestinationCode() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::GetLengthOfNationalDestinationCode() const
     {
-        int32_t result;
+        int32_t result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->GetLengthOfNationalDestinationCode(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::PredictNumberKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::PredictNumberKind() const
     {
-        Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->PredictNumberKind(put_abi(result)));
+        Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->PredictNumberKind(reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::GetGeographicRegionCode() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::GetGeographicRegionCode() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->GetGeographicRegionCode(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::CheckNumberMatch(Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo const& otherNumber) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo<D>::CheckNumberMatch(Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo const& otherNumber) const
     {
-        Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->CheckNumberMatch(*(void**)(&otherNumber), put_abi(result)));
+        Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo)->CheckNumberMatch(*(void**)(&otherNumber), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfoFactory<D>::Create(param::hstring const& number) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfoFactory<D>::Create(param::hstring const& number) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory)->Create(*(void**)(&number), &result));
         return Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfoStatics<D>::TryParse(param::hstring const& input, Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo& phoneNumber) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfoStatics<D>::TryParse(param::hstring const& input, Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo& phoneNumber) const
     {
-        Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics)->TryParse(*(void**)(&input), impl::bind_out(phoneNumber), put_abi(result)));
+        Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics)->TryParse(*(void**)(&input), impl::bind_out(phoneNumber), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfoStatics<D>::TryParse(param::hstring const& input, param::hstring const& regionCode, Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo& phoneNumber) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult) consume_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfoStatics<D>::TryParse(param::hstring const& input, param::hstring const& regionCode, Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo& phoneNumber) const
     {
-        Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult result;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics)->TryParseWithRegion(*(void**)(&input), *(void**)(&regionCode), impl::bind_out(phoneNumber), put_abi(result)));
+        Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics)->TryParseWithRegion(*(void**)(&input), *(void**)(&regionCode), impl::bind_out(phoneNumber), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter> : produce_base<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter>
     {
@@ -174,6 +175,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics> : produce_base<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics>
     {
@@ -209,6 +212,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo> : produce_base<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo>
     {
@@ -272,6 +277,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory> : produce_base<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory>
     {
@@ -284,6 +291,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics> : produce_base<D, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics>
     {
@@ -304,50 +313,53 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Globalization::PhoneNumberFormatting
+WINRT_EXPORT namespace winrt::Windows::Globalization::PhoneNumberFormatting
 {
     inline PhoneNumberFormatter::PhoneNumberFormatter() :
-        PhoneNumberFormatter(impl::call_factory<PhoneNumberFormatter>([](auto&& f) { return f.template ActivateInstance<PhoneNumberFormatter>(); }))
+        PhoneNumberFormatter(impl::call_factory_cast<PhoneNumberFormatter(*)(Windows::Foundation::IActivationFactory const&), PhoneNumberFormatter>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PhoneNumberFormatter>(); }))
     {
     }
     inline auto PhoneNumberFormatter::TryCreate(param::hstring const& regionCode, Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter& phoneNumber)
     {
-        impl::call_factory<PhoneNumberFormatter, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics>([&](auto&& f) { return f.TryCreate(regionCode, phoneNumber); });
+        impl::call_factory<PhoneNumberFormatter, IPhoneNumberFormatterStatics>([&](IPhoneNumberFormatterStatics const& f) { return f.TryCreate(regionCode, phoneNumber); });
     }
     inline auto PhoneNumberFormatter::GetCountryCodeForRegion(param::hstring const& regionCode)
     {
-        return impl::call_factory<PhoneNumberFormatter, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics>([&](auto&& f) { return f.GetCountryCodeForRegion(regionCode); });
+        return impl::call_factory<PhoneNumberFormatter, IPhoneNumberFormatterStatics>([&](IPhoneNumberFormatterStatics const& f) { return f.GetCountryCodeForRegion(regionCode); });
     }
     inline auto PhoneNumberFormatter::GetNationalDirectDialingPrefixForRegion(param::hstring const& regionCode, bool stripNonDigit)
     {
-        return impl::call_factory<PhoneNumberFormatter, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics>([&](auto&& f) { return f.GetNationalDirectDialingPrefixForRegion(regionCode, stripNonDigit); });
+        return impl::call_factory<PhoneNumberFormatter, IPhoneNumberFormatterStatics>([&](IPhoneNumberFormatterStatics const& f) { return f.GetNationalDirectDialingPrefixForRegion(regionCode, stripNonDigit); });
     }
     inline auto PhoneNumberFormatter::WrapWithLeftToRightMarkers(param::hstring const& number)
     {
-        return impl::call_factory<PhoneNumberFormatter, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics>([&](auto&& f) { return f.WrapWithLeftToRightMarkers(number); });
+        return impl::call_factory<PhoneNumberFormatter, IPhoneNumberFormatterStatics>([&](IPhoneNumberFormatterStatics const& f) { return f.WrapWithLeftToRightMarkers(number); });
     }
     inline PhoneNumberInfo::PhoneNumberInfo(param::hstring const& number) :
-        PhoneNumberInfo(impl::call_factory<PhoneNumberInfo, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory>([&](auto&& f) { return f.Create(number); }))
+        PhoneNumberInfo(impl::call_factory<PhoneNumberInfo, IPhoneNumberInfoFactory>([&](IPhoneNumberInfoFactory const& f) { return f.Create(number); }))
     {
     }
     inline auto PhoneNumberInfo::TryParse(param::hstring const& input, Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo& phoneNumber)
     {
-        return impl::call_factory<PhoneNumberInfo, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics>([&](auto&& f) { return f.TryParse(input, phoneNumber); });
+        return impl::call_factory<PhoneNumberInfo, IPhoneNumberInfoStatics>([&](IPhoneNumberInfoStatics const& f) { return f.TryParse(input, phoneNumber); });
     }
     inline auto PhoneNumberInfo::TryParse(param::hstring const& input, param::hstring const& regionCode, Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo& phoneNumber)
     {
-        return impl::call_factory<PhoneNumberInfo, Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics>([&](auto&& f) { return f.TryParse(input, regionCode, phoneNumber); });
+        return impl::call_factory<PhoneNumberInfo, IPhoneNumberInfoStatics>([&](IPhoneNumberInfoStatics const& f) { return f.TryParse(input, regionCode, phoneNumber); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter> {};
-    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo> : winrt::impl::hash_base<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo> {};
-    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory> : winrt::impl::hash_base<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory> {};
-    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics> : winrt::impl::hash_base<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics> {};
-    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter> : winrt::impl::hash_base<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter> {};
-    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo> : winrt::impl::hash_base<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo> : winrt::impl::hash_base {};
+#endif
 }
 #endif

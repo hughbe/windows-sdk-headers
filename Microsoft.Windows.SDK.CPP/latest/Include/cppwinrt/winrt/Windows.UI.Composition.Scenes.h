@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_UI_Composition_Scenes_H
 #define WINRT_Windows_UI_Composition_Scenes_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.UI.Composition.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -16,404 +16,405 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.UI.Composition.Scenes.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Center() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Center() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneBoundingBox)->get_Center(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Extents() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Extents() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneBoundingBox)->get_Extents(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Max() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneBoundingBox)->get_Max(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Min() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneBoundingBox)->get_Min(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Size() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Composition_Scenes_ISceneBoundingBox<D>::Size() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneBoundingBox)->get_Size(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneComponent<D>::ComponentType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneComponentType) consume_Windows_UI_Composition_Scenes_ISceneComponent<D>::ComponentType() const
     {
-        Windows::UI::Composition::Scenes::SceneComponentType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneComponent)->get_ComponentType(put_abi(value)));
+        Windows::UI::Composition::Scenes::SceneComponentType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneComponent)->get_ComponentType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMesh<D>::Bounds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneBoundingBox) consume_Windows_UI_Composition_Scenes_ISceneMesh<D>::Bounds() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMesh)->get_Bounds(&value));
         return Windows::UI::Composition::Scenes::SceneBoundingBox{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMesh<D>::PrimitiveTopology() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::DirectX::DirectXPrimitiveTopology) consume_Windows_UI_Composition_Scenes_ISceneMesh<D>::PrimitiveTopology() const
     {
-        Windows::Graphics::DirectX::DirectXPrimitiveTopology value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMesh)->get_PrimitiveTopology(put_abi(value)));
+        Windows::Graphics::DirectX::DirectXPrimitiveTopology value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMesh)->get_PrimitiveTopology(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMesh<D>::PrimitiveTopology(Windows::Graphics::DirectX::DirectXPrimitiveTopology const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneMesh<D>::PrimitiveTopology(Windows::Graphics::DirectX::DirectXPrimitiveTopology const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMesh)->put_PrimitiveTopology(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMesh<D>::FillMeshAttribute(Windows::UI::Composition::Scenes::SceneAttributeSemantic const& semantic, Windows::Graphics::DirectX::DirectXPixelFormat const& format, Windows::Foundation::MemoryBuffer const& memory) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneMesh<D>::FillMeshAttribute(Windows::UI::Composition::Scenes::SceneAttributeSemantic const& semantic, Windows::Graphics::DirectX::DirectXPixelFormat const& format, Windows::Foundation::MemoryBuffer const& memory) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMesh)->FillMeshAttribute(static_cast<int32_t>(semantic), static_cast<int32_t>(format), *(void**)(&memory)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::Material() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMaterial) consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::Material() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMeshRendererComponent)->get_Material(&value));
         return Windows::UI::Composition::Scenes::SceneMaterial{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::Material(Windows::UI::Composition::Scenes::SceneMaterial const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::Material(Windows::UI::Composition::Scenes::SceneMaterial const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMeshRendererComponent)->put_Material(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::Mesh() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMesh) consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::Mesh() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMeshRendererComponent)->get_Mesh(&value));
         return Windows::UI::Composition::Scenes::SceneMesh{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::Mesh(Windows::UI::Composition::Scenes::SceneMesh const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::Mesh(Windows::UI::Composition::Scenes::SceneMesh const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMeshRendererComponent)->put_Mesh(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::UVMappings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap) consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponent<D>::UVMappings() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMeshRendererComponent)->get_UVMappings(&value));
         return Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponentStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMeshRendererComponent) consume_Windows_UI_Composition_Scenes_ISceneMeshRendererComponentStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMeshRendererComponentStatics)->Create(*(void**)(&compositor), &result));
         return Windows::UI::Composition::Scenes::SceneMeshRendererComponent{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMeshStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMesh) consume_Windows_UI_Composition_Scenes_ISceneMeshStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMeshStatics)->Create(*(void**)(&compositor), &result));
         return Windows::UI::Composition::Scenes::SceneMesh{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::BaseColorInput() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMaterialInput) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::BaseColorInput() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->get_BaseColorInput(&value));
         return Windows::UI::Composition::Scenes::SceneMaterialInput{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::BaseColorInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::BaseColorInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->put_BaseColorInput(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::BaseColorFactor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float4) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::BaseColorFactor() const
     {
-        Windows::Foundation::Numerics::float4 value;
+        Windows::Foundation::Numerics::float4 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->get_BaseColorFactor(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::BaseColorFactor(Windows::Foundation::Numerics::float4 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::BaseColorFactor(Windows::Foundation::Numerics::float4 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->put_BaseColorFactor(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::MetallicFactor() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::MetallicFactor() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->get_MetallicFactor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::MetallicFactor(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::MetallicFactor(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->put_MetallicFactor(value));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::MetallicRoughnessInput() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMaterialInput) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::MetallicRoughnessInput() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->get_MetallicRoughnessInput(&value));
         return Windows::UI::Composition::Scenes::SceneMaterialInput{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::MetallicRoughnessInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::MetallicRoughnessInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->put_MetallicRoughnessInput(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::RoughnessFactor() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::RoughnessFactor() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->get_RoughnessFactor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::RoughnessFactor(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterial<D>::RoughnessFactor(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial)->put_RoughnessFactor(value));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterialStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial) consume_Windows_UI_Composition_Scenes_ISceneMetallicRoughnessMaterialStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterialStatics)->Create(*(void**)(&compositor), &result));
         return Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Orientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::quaternion) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Orientation() const
     {
-        Windows::Foundation::Numerics::quaternion value;
+        Windows::Foundation::Numerics::quaternion value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->get_Orientation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Orientation(Windows::Foundation::Numerics::quaternion const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Orientation(Windows::Foundation::Numerics::quaternion const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->put_Orientation(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAngle() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAngle() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->get_RotationAngle(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAngle(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAngle(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->put_RotationAngle(value));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAngleInDegrees() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAngleInDegrees() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->get_RotationAngleInDegrees(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAngleInDegrees(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAngleInDegrees(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->put_RotationAngleInDegrees(value));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAxis() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAxis() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->get_RotationAxis(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAxis(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::RotationAxis(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->put_RotationAxis(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Scale() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Scale() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->get_Scale(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Scale(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Scale(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->put_Scale(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Translation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Translation() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->get_Translation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Translation(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneModelTransform<D>::Translation(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneModelTransform)->put_Translation(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneNode<D>::Children() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneNodeCollection) consume_Windows_UI_Composition_Scenes_ISceneNode<D>::Children() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneNode)->get_Children(&value));
         return Windows::UI::Composition::Scenes::SceneNodeCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneNode<D>::Components() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneComponentCollection) consume_Windows_UI_Composition_Scenes_ISceneNode<D>::Components() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneNode)->get_Components(&value));
         return Windows::UI::Composition::Scenes::SceneComponentCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneNode<D>::Parent() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneNode) consume_Windows_UI_Composition_Scenes_ISceneNode<D>::Parent() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneNode)->get_Parent(&value));
         return Windows::UI::Composition::Scenes::SceneNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneNode<D>::Transform() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneModelTransform) consume_Windows_UI_Composition_Scenes_ISceneNode<D>::Transform() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneNode)->get_Transform(&value));
         return Windows::UI::Composition::Scenes::SceneModelTransform{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneNode<D>::FindFirstComponentOfType(Windows::UI::Composition::Scenes::SceneComponentType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneComponent) consume_Windows_UI_Composition_Scenes_ISceneNode<D>::FindFirstComponentOfType(Windows::UI::Composition::Scenes::SceneComponentType const& value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneNode)->FindFirstComponentOfType(static_cast<int32_t>(value), &result));
         return Windows::UI::Composition::Scenes::SceneComponent{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneNodeStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneNode) consume_Windows_UI_Composition_Scenes_ISceneNodeStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneNodeStatics)->Create(*(void**)(&compositor), &result));
         return Windows::UI::Composition::Scenes::SceneNode{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::AlphaCutoff() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::AlphaCutoff() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_AlphaCutoff(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::AlphaCutoff(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::AlphaCutoff(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->put_AlphaCutoff(value));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::AlphaMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneAlphaMode) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::AlphaMode() const
     {
-        Windows::UI::Composition::Scenes::SceneAlphaMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_AlphaMode(put_abi(value)));
+        Windows::UI::Composition::Scenes::SceneAlphaMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_AlphaMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::AlphaMode(Windows::UI::Composition::Scenes::SceneAlphaMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::AlphaMode(Windows::UI::Composition::Scenes::SceneAlphaMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->put_AlphaMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::EmissiveInput() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMaterialInput) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::EmissiveInput() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_EmissiveInput(&value));
         return Windows::UI::Composition::Scenes::SceneMaterialInput{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::EmissiveInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::EmissiveInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->put_EmissiveInput(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::EmissiveFactor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::EmissiveFactor() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_EmissiveFactor(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::EmissiveFactor(Windows::Foundation::Numerics::float3 const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::EmissiveFactor(Windows::Foundation::Numerics::float3 const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->put_EmissiveFactor(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::IsDoubleSided() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::IsDoubleSided() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_IsDoubleSided(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::IsDoubleSided(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::IsDoubleSided(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->put_IsDoubleSided(value));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::NormalInput() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMaterialInput) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::NormalInput() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_NormalInput(&value));
         return Windows::UI::Composition::Scenes::SceneMaterialInput{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::NormalInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::NormalInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->put_NormalInput(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::NormalScale() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::NormalScale() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_NormalScale(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::NormalScale(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::NormalScale(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->put_NormalScale(value));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::OcclusionInput() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneMaterialInput) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::OcclusionInput() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_OcclusionInput(&value));
         return Windows::UI::Composition::Scenes::SceneMaterialInput{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::OcclusionInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::OcclusionInput(Windows::UI::Composition::Scenes::SceneMaterialInput const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->put_OcclusionInput(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::OcclusionStrength() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::OcclusionStrength() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->get_OcclusionStrength(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::OcclusionStrength(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_IScenePbrMaterial<D>::OcclusionStrength(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::IScenePbrMaterial)->put_OcclusionStrength(value));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::BitmapInterpolationMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::CompositionBitmapInterpolationMode) consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::BitmapInterpolationMode() const
     {
-        Windows::UI::Composition::CompositionBitmapInterpolationMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->get_BitmapInterpolationMode(put_abi(value)));
+        Windows::UI::Composition::CompositionBitmapInterpolationMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->get_BitmapInterpolationMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::BitmapInterpolationMode(Windows::UI::Composition::CompositionBitmapInterpolationMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::BitmapInterpolationMode(Windows::UI::Composition::CompositionBitmapInterpolationMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->put_BitmapInterpolationMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::Surface() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::ICompositionSurface) consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::Surface() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->get_Surface(&value));
         return Windows::UI::Composition::ICompositionSurface{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::Surface(Windows::UI::Composition::ICompositionSurface const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::Surface(Windows::UI::Composition::ICompositionSurface const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->put_Surface(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::WrappingUMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneWrappingMode) consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::WrappingUMode() const
     {
-        Windows::UI::Composition::Scenes::SceneWrappingMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->get_WrappingUMode(put_abi(value)));
+        Windows::UI::Composition::Scenes::SceneWrappingMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->get_WrappingUMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::WrappingUMode(Windows::UI::Composition::Scenes::SceneWrappingMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::WrappingUMode(Windows::UI::Composition::Scenes::SceneWrappingMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->put_WrappingUMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::WrappingVMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneWrappingMode) consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::WrappingVMode() const
     {
-        Windows::UI::Composition::Scenes::SceneWrappingMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->get_WrappingVMode(put_abi(value)));
+        Windows::UI::Composition::Scenes::SceneWrappingMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->get_WrappingVMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::WrappingVMode(Windows::UI::Composition::Scenes::SceneWrappingMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInput<D>::WrappingVMode(Windows::UI::Composition::Scenes::SceneWrappingMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput)->put_WrappingVMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInputStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput) consume_Windows_UI_Composition_Scenes_ISceneSurfaceMaterialInputStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInputStatics)->Create(*(void**)(&compositor), &result));
         return Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneVisual<D>::Root() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneNode) consume_Windows_UI_Composition_Scenes_ISceneVisual<D>::Root() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneVisual)->get_Root(&value));
         return Windows::UI::Composition::Scenes::SceneNode{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneVisual<D>::Root(Windows::UI::Composition::Scenes::SceneNode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Scenes_ISceneVisual<D>::Root(Windows::UI::Composition::Scenes::SceneNode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneVisual)->put_Root(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Composition_Scenes_ISceneVisualStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Scenes::SceneVisual) consume_Windows_UI_Composition_Scenes_ISceneVisualStatics<D>::Create(Windows::UI::Composition::Compositor const& compositor) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Scenes::ISceneVisualStatics)->Create(*(void**)(&compositor), &result));
         return Windows::UI::Composition::Scenes::SceneVisual{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneBoundingBox> : produce_base<D, Windows::UI::Composition::Scenes::ISceneBoundingBox>
     {
@@ -458,6 +459,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneComponent> : produce_base<D, Windows::UI::Composition::Scenes::ISceneComponent>
     {
@@ -469,30 +472,44 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneComponentCollection> : produce_base<D, Windows::UI::Composition::Scenes::ISceneComponentCollection>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneComponentFactory> : produce_base<D, Windows::UI::Composition::Scenes::ISceneComponentFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMaterial> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMaterial>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMaterialFactory> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMaterialFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMaterialInput> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMaterialInput>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMaterialInputFactory> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMaterialInputFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMesh> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMesh>
     {
@@ -526,10 +543,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMeshMaterialAttributeMap> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMeshMaterialAttributeMap>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMeshRendererComponent> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMeshRendererComponent>
     {
@@ -572,6 +593,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMeshRendererComponentStatics> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMeshRendererComponentStatics>
     {
@@ -584,6 +607,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMeshStatics> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMeshStatics>
     {
@@ -596,6 +621,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial>
     {
@@ -673,6 +700,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterialStatics> : produce_base<D, Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterialStatics>
     {
@@ -685,6 +714,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneModelTransform> : produce_base<D, Windows::UI::Composition::Scenes::ISceneModelTransform>
     {
@@ -777,6 +808,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneNode> : produce_base<D, Windows::UI::Composition::Scenes::ISceneNode>
     {
@@ -821,10 +854,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneNodeCollection> : produce_base<D, Windows::UI::Composition::Scenes::ISceneNodeCollection>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneNodeStatics> : produce_base<D, Windows::UI::Composition::Scenes::ISceneNodeStatics>
     {
@@ -837,14 +874,20 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneObject> : produce_base<D, Windows::UI::Composition::Scenes::ISceneObject>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneObjectFactory> : produce_base<D, Windows::UI::Composition::Scenes::ISceneObjectFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::IScenePbrMaterial> : produce_base<D, Windows::UI::Composition::Scenes::IScenePbrMaterial>
     {
@@ -979,18 +1022,26 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::IScenePbrMaterialFactory> : produce_base<D, Windows::UI::Composition::Scenes::IScenePbrMaterialFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneRendererComponent> : produce_base<D, Windows::UI::Composition::Scenes::ISceneRendererComponent>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneRendererComponentFactory> : produce_base<D, Windows::UI::Composition::Scenes::ISceneRendererComponentFactory>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput> : produce_base<D, Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput>
     {
@@ -1052,6 +1103,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInputStatics> : produce_base<D, Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInputStatics>
     {
@@ -1064,6 +1117,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneVisual> : produce_base<D, Windows::UI::Composition::Scenes::ISceneVisual>
     {
@@ -1083,6 +1138,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::UI::Composition::Scenes::ISceneVisualStatics> : produce_base<D, Windows::UI::Composition::Scenes::ISceneVisualStatics>
     {
@@ -1095,81 +1152,84 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::UI::Composition::Scenes
+WINRT_EXPORT namespace winrt::Windows::UI::Composition::Scenes
 {
     inline auto SceneMesh::Create(Windows::UI::Composition::Compositor const& compositor)
     {
-        return impl::call_factory<SceneMesh, Windows::UI::Composition::Scenes::ISceneMeshStatics>([&](auto&& f) { return f.Create(compositor); });
+        return impl::call_factory<SceneMesh, ISceneMeshStatics>([&](ISceneMeshStatics const& f) { return f.Create(compositor); });
     }
     inline auto SceneMeshRendererComponent::Create(Windows::UI::Composition::Compositor const& compositor)
     {
-        return impl::call_factory<SceneMeshRendererComponent, Windows::UI::Composition::Scenes::ISceneMeshRendererComponentStatics>([&](auto&& f) { return f.Create(compositor); });
+        return impl::call_factory<SceneMeshRendererComponent, ISceneMeshRendererComponentStatics>([&](ISceneMeshRendererComponentStatics const& f) { return f.Create(compositor); });
     }
     inline auto SceneMetallicRoughnessMaterial::Create(Windows::UI::Composition::Compositor const& compositor)
     {
-        return impl::call_factory<SceneMetallicRoughnessMaterial, Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterialStatics>([&](auto&& f) { return f.Create(compositor); });
+        return impl::call_factory<SceneMetallicRoughnessMaterial, ISceneMetallicRoughnessMaterialStatics>([&](ISceneMetallicRoughnessMaterialStatics const& f) { return f.Create(compositor); });
     }
     inline auto SceneNode::Create(Windows::UI::Composition::Compositor const& compositor)
     {
-        return impl::call_factory<SceneNode, Windows::UI::Composition::Scenes::ISceneNodeStatics>([&](auto&& f) { return f.Create(compositor); });
+        return impl::call_factory<SceneNode, ISceneNodeStatics>([&](ISceneNodeStatics const& f) { return f.Create(compositor); });
     }
     inline auto SceneSurfaceMaterialInput::Create(Windows::UI::Composition::Compositor const& compositor)
     {
-        return impl::call_factory<SceneSurfaceMaterialInput, Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInputStatics>([&](auto&& f) { return f.Create(compositor); });
+        return impl::call_factory<SceneSurfaceMaterialInput, ISceneSurfaceMaterialInputStatics>([&](ISceneSurfaceMaterialInputStatics const& f) { return f.Create(compositor); });
     }
     inline auto SceneVisual::Create(Windows::UI::Composition::Compositor const& compositor)
     {
-        return impl::call_factory<SceneVisual, Windows::UI::Composition::Scenes::ISceneVisualStatics>([&](auto&& f) { return f.Create(compositor); });
+        return impl::call_factory<SceneVisual, ISceneVisualStatics>([&](ISceneVisualStatics const& f) { return f.Create(compositor); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneBoundingBox> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneBoundingBox> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneComponent> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneComponent> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneComponentCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneComponentCollection> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneComponentFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneComponentFactory> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMaterial> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMaterial> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMaterialFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMaterialFactory> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMaterialInput> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMaterialInput> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMaterialInputFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMaterialInputFactory> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMesh> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMesh> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMeshMaterialAttributeMap> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMeshMaterialAttributeMap> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMeshRendererComponent> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMeshRendererComponent> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMeshRendererComponentStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMeshRendererComponentStatics> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMeshStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMeshStatics> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterialStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterialStatics> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneModelTransform> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneModelTransform> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneNode> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneNode> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneNodeCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneNodeCollection> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneNodeStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneNodeStatics> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneObject> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneObject> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneObjectFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneObjectFactory> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::IScenePbrMaterial> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::IScenePbrMaterial> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::IScenePbrMaterialFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::IScenePbrMaterialFactory> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneRendererComponent> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneRendererComponent> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneRendererComponentFactory> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneRendererComponentFactory> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInputStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInputStatics> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneVisual> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneVisual> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneVisualStatics> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ISceneVisualStatics> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneBoundingBox> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneBoundingBox> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneComponent> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneComponent> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneComponentCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneComponentCollection> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMaterial> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneMaterial> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMesh> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneMesh> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneModelTransform> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneModelTransform> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneNode> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneNode> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneNodeCollection> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneNodeCollection> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneObject> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneObject> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneRendererComponent> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneRendererComponent> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput> {};
-    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneVisual> : winrt::impl::hash_base<winrt::Windows::UI::Composition::Scenes::SceneVisual> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneBoundingBox> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneComponent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneComponentCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneComponentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMaterial> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMaterialFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMaterialInput> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMaterialInputFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMesh> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMeshMaterialAttributeMap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMeshRendererComponent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMeshRendererComponentStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMeshStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterial> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterialStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneModelTransform> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneNodeCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneNodeStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneObject> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneObjectFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::IScenePbrMaterial> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::IScenePbrMaterialFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneRendererComponent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneRendererComponentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInput> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneSurfaceMaterialInputStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneVisual> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ISceneVisualStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneBoundingBox> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneComponent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneComponentCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMaterial> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMesh> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneModelTransform> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneNodeCollection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneObject> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneRendererComponent> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::Scenes::SceneVisual> : winrt::impl::hash_base {};
+#endif
 }
 #endif

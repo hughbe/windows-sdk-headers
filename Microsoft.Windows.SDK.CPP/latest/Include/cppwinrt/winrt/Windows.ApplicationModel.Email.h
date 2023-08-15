@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_Email_H
 #define WINRT_Windows_ApplicationModel_Email_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.ApplicationModel.Appointments.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -17,811 +17,811 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.Email.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment<D>::FileName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailAttachment<D>::FileName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment)->get_FileName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment<D>::FileName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailAttachment<D>::FileName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment)->put_FileName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment<D>::Data() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Email_IEmailAttachment<D>::Data() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment)->get_Data(&value));
         return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment<D>::Data(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailAttachment<D>::Data(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment)->put_Data(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::ContentId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::ContentId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->get_ContentId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::ContentId(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::ContentId(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->put_ContentId(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::ContentLocation() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::ContentLocation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->get_ContentLocation(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::ContentLocation(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::ContentLocation(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->put_ContentLocation(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::DownloadState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailAttachmentDownloadState) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::DownloadState() const
     {
-        Windows::ApplicationModel::Email::EmailAttachmentDownloadState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->get_DownloadState(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailAttachmentDownloadState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->get_DownloadState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::DownloadState(Windows::ApplicationModel::Email::EmailAttachmentDownloadState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::DownloadState(Windows::ApplicationModel::Email::EmailAttachmentDownloadState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->put_DownloadState(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::EstimatedDownloadSizeInBytes() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::EstimatedDownloadSizeInBytes() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->get_EstimatedDownloadSizeInBytes(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::EstimatedDownloadSizeInBytes(uint64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::EstimatedDownloadSizeInBytes(uint64_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->put_EstimatedDownloadSizeInBytes(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::IsFromBaseMessage() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::IsFromBaseMessage() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->get_IsFromBaseMessage(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::IsInline() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::IsInline() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->get_IsInline(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::IsInline(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::IsInline(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->put_IsInline(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::MimeType() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::MimeType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->get_MimeType(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::MimeType(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailAttachment2<D>::MimeType(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachment2)->put_MimeType(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachmentFactory<D>::Create(param::hstring const& fileName, Windows::Storage::Streams::IRandomAccessStreamReference const& data) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailAttachment) consume_Windows_ApplicationModel_Email_IEmailAttachmentFactory<D>::Create(param::hstring const& fileName, Windows::Storage::Streams::IRandomAccessStreamReference const& data) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachmentFactory)->Create(*(void**)(&fileName), *(void**)(&data), &result));
         return Windows::ApplicationModel::Email::EmailAttachment{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailAttachmentFactory2<D>::Create(param::hstring const& fileName, Windows::Storage::Streams::IRandomAccessStreamReference const& data, param::hstring const& mimeType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailAttachment) consume_Windows_ApplicationModel_Email_IEmailAttachmentFactory2<D>::Create(param::hstring const& fileName, Windows::Storage::Streams::IRandomAccessStreamReference const& data, param::hstring const& mimeType) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailAttachmentFactory2)->Create(*(void**)(&fileName), *(void**)(&data), *(void**)(&mimeType), &result));
         return Windows::ApplicationModel::Email::EmailAttachment{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::MailboxId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::MailboxId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_MailboxId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::FlagState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailFlagState) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::FlagState() const
     {
-        Windows::ApplicationModel::Email::EmailFlagState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_FlagState(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailFlagState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_FlagState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::HasAttachment() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::HasAttachment() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_HasAttachment(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::Importance() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailImportance) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::Importance() const
     {
-        Windows::ApplicationModel::Email::EmailImportance value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_Importance(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailImportance value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_Importance(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::LastEmailResponseKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageResponseKind) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::LastEmailResponseKind() const
     {
-        Windows::ApplicationModel::Email::EmailMessageResponseKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_LastEmailResponseKind(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMessageResponseKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_LastEmailResponseKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::MessageCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::MessageCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_MessageCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::MostRecentMessageId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::MostRecentMessageId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_MostRecentMessageId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::MostRecentMessageTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::MostRecentMessageTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_MostRecentMessageTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::Preview() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::Preview() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_Preview(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::LatestSender() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailRecipient) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::LatestSender() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_LatestSender(&value));
         return Windows::ApplicationModel::Email::EmailRecipient{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::Subject() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::Subject() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_Subject(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::UnreadMessageCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::UnreadMessageCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->get_UnreadMessageCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::FindMessagesAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMessage>>) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::FindMessagesAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->FindMessagesAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMessage>>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversation<D>::FindMessagesAsync(uint32_t count) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMessage>>) consume_Windows_ApplicationModel_Email_IEmailConversation<D>::FindMessagesAsync(uint32_t count) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversation)->FindMessagesWithCountAsync(count, &result));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMessage>>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversationBatch<D>::Conversations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailConversation>) consume_Windows_ApplicationModel_Email_IEmailConversationBatch<D>::Conversations() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversationBatch)->get_Conversations(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailConversation>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversationBatch<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailBatchStatus) consume_Windows_ApplicationModel_Email_IEmailConversationBatch<D>::Status() const
     {
-        Windows::ApplicationModel::Email::EmailBatchStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversationBatch)->get_Status(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailBatchStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversationBatch)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailConversationReader<D>::ReadBatchAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailConversationBatch>) consume_Windows_ApplicationModel_Email_IEmailConversationReader<D>::ReadBatchAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailConversationReader)->ReadBatchAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailConversationBatch>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::RemoteId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::RemoteId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->get_RemoteId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::RemoteId(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::RemoteId(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->put_RemoteId(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::MailboxId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::MailboxId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->get_MailboxId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::ParentFolderId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::ParentFolderId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->get_ParentFolderId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::DisplayName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::DisplayName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->put_DisplayName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::IsSyncEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::IsSyncEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->get_IsSyncEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::IsSyncEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::IsSyncEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->put_IsSyncEnabled(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::LastSuccessfulSyncTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::LastSuccessfulSyncTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->get_LastSuccessfulSyncTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::LastSuccessfulSyncTime(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::LastSuccessfulSyncTime(Windows::Foundation::DateTime const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->put_LastSuccessfulSyncTime(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailSpecialFolderKind) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::Kind() const
     {
-        Windows::ApplicationModel::Email::EmailSpecialFolderKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->get_Kind(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailSpecialFolderKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::CreateFolderAsync(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailFolder>) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::CreateFolderAsync(param::hstring const& name) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->CreateFolderAsync(*(void**)(&name), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailFolder>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::DeleteAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::DeleteAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->DeleteAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::FindChildFoldersAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailFolder>>) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::FindChildFoldersAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->FindChildFoldersAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailFolder>>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetConversationReader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailConversationReader) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetConversationReader() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->GetConversationReader(&result));
         return Windows::ApplicationModel::Email::EmailConversationReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetConversationReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailConversationReader) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetConversationReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->GetConversationReaderWithOptions(*(void**)(&options), &result));
         return Windows::ApplicationModel::Email::EmailConversationReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetMessageAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessage>) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetMessageAsync(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->GetMessageAsync(*(void**)(&id), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessage>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetMessageReader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageReader) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetMessageReader() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->GetMessageReader(&result));
         return Windows::ApplicationModel::Email::EmailMessageReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetMessageReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageReader) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetMessageReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->GetMessageReaderWithOptions(*(void**)(&options), &result));
         return Windows::ApplicationModel::Email::EmailMessageReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetMessageCountsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailItemCounts>) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::GetMessageCountsAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->GetMessageCountsAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailItemCounts>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::TryMoveAsync(Windows::ApplicationModel::Email::EmailFolder const& newParentFolder) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::TryMoveAsync(Windows::ApplicationModel::Email::EmailFolder const& newParentFolder) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->TryMoveAsync(*(void**)(&newParentFolder), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::TryMoveAsync(Windows::ApplicationModel::Email::EmailFolder const& newParentFolder, param::hstring const& newFolderName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::TryMoveAsync(Windows::ApplicationModel::Email::EmailFolder const& newParentFolder, param::hstring const& newFolderName) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->TryMoveWithNewNameAsync(*(void**)(&newParentFolder), *(void**)(&newFolderName), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::TrySaveAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::TrySaveAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->TrySaveAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailFolder<D>::SaveMessageAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailFolder<D>::SaveMessageAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailFolder)->SaveMessageAsync(*(void**)(&message), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanEdit() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanEdit() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_CanEdit(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanEdit(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanEdit(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_CanEdit(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanExtractData() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanExtractData() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_CanExtractData(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanExtractData(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanExtractData(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_CanExtractData(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanForward() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanForward() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_CanForward(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanForward(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanForward(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_CanForward(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanModifyRecipientsOnResponse() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanModifyRecipientsOnResponse() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_CanModifyRecipientsOnResponse(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanModifyRecipientsOnResponse(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanModifyRecipientsOnResponse(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_CanModifyRecipientsOnResponse(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanPrintData() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanPrintData() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_CanPrintData(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanPrintData(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanPrintData(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_CanPrintData(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanRemoveIrmOnResponse() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanRemoveIrmOnResponse() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_CanRemoveIrmOnResponse(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanRemoveIrmOnResponse(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanRemoveIrmOnResponse(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_CanRemoveIrmOnResponse(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanReply() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanReply() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_CanReply(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanReply(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanReply(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_CanReply(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanReplyAll() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanReplyAll() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_CanReplyAll(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanReplyAll(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::CanReplyAll(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_CanReplyAll(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::ExpirationDate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::ExpirationDate() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_ExpirationDate(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::ExpirationDate(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::ExpirationDate(Windows::Foundation::DateTime const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_ExpirationDate(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::IsIrmOriginator() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::IsIrmOriginator() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_IsIrmOriginator(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::IsIrmOriginator(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::IsIrmOriginator(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_IsIrmOriginator(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::IsProgramaticAccessAllowed() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::IsProgramaticAccessAllowed() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_IsProgramaticAccessAllowed(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::IsProgramaticAccessAllowed(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::IsProgramaticAccessAllowed(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_IsProgramaticAccessAllowed(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::Template() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailIrmTemplate) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::Template() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->get_Template(&value));
         return Windows::ApplicationModel::Email::EmailIrmTemplate{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::Template(Windows::ApplicationModel::Email::EmailIrmTemplate const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmInfo<D>::Template(Windows::ApplicationModel::Email::EmailIrmTemplate const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfo)->put_Template(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmInfoFactory<D>::Create(Windows::Foundation::DateTime const& expiration, Windows::ApplicationModel::Email::EmailIrmTemplate const& irmTemplate) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailIrmInfo) consume_Windows_ApplicationModel_Email_IEmailIrmInfoFactory<D>::Create(Windows::Foundation::DateTime const& expiration, Windows::ApplicationModel::Email::EmailIrmTemplate const& irmTemplate) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmInfoFactory)->Create(impl::bind_in(expiration), *(void**)(&irmTemplate), &result));
         return Windows::ApplicationModel::Email::EmailIrmInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmTemplate)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Id(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Id(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmTemplate)->put_Id(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmTemplate)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmTemplate)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmTemplate)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Name(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailIrmTemplate<D>::Name(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmTemplate)->put_Name(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailIrmTemplateFactory<D>::Create(param::hstring const& id, param::hstring const& name, param::hstring const& description) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailIrmTemplate) consume_Windows_ApplicationModel_Email_IEmailIrmTemplateFactory<D>::Create(param::hstring const& id, param::hstring const& name, param::hstring const& description) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailIrmTemplateFactory)->Create(*(void**)(&id), *(void**)(&name), *(void**)(&description), &result));
         return Windows::ApplicationModel::Email::EmailIrmTemplate{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailItemCounts<D>::Flagged() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_ApplicationModel_Email_IEmailItemCounts<D>::Flagged() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailItemCounts)->get_Flagged(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailItemCounts<D>::Important() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_ApplicationModel_Email_IEmailItemCounts<D>::Important() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailItemCounts)->get_Important(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailItemCounts<D>::Total() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_ApplicationModel_Email_IEmailItemCounts<D>::Total() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailItemCounts)->get_Total(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailItemCounts<D>::Unread() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_ApplicationModel_Email_IEmailItemCounts<D>::Unread() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailItemCounts)->get_Unread(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::Capabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxCapabilities) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::Capabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_Capabilities(&value));
         return Windows::ApplicationModel::Email::EmailMailboxCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::ChangeTracker() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxChangeTracker) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::ChangeTracker() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_ChangeTracker(&value));
         return Windows::ApplicationModel::Email::EmailMailboxChangeTracker{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DisplayName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DisplayName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->put_DisplayName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::IsOwnedByCurrentApp() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::IsOwnedByCurrentApp() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_IsOwnedByCurrentApp(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::IsDataEncryptedUnderLock() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::IsDataEncryptedUnderLock() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_IsDataEncryptedUnderLock(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailAddress() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailAddress() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_MailAddress(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailAddress(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailAddress(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->put_MailAddress(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailAddressAliases() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailAddressAliases() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_MailAddressAliases(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::OtherAppReadAccess() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::OtherAppReadAccess() const
     {
-        Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_OtherAppReadAccess(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_OtherAppReadAccess(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::OtherAppReadAccess(Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::OtherAppReadAccess(Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->put_OtherAppReadAccess(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::OtherAppWriteAccess() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxOtherAppWriteAccess) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::OtherAppWriteAccess() const
     {
-        Windows::ApplicationModel::Email::EmailMailboxOtherAppWriteAccess value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_OtherAppWriteAccess(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMailboxOtherAppWriteAccess value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_OtherAppWriteAccess(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::OtherAppWriteAccess(Windows::ApplicationModel::Email::EmailMailboxOtherAppWriteAccess const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::OtherAppWriteAccess(Windows::ApplicationModel::Email::EmailMailboxOtherAppWriteAccess const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->put_OtherAppWriteAccess(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::Policies() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxPolicies) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::Policies() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_Policies(&value));
         return Windows::ApplicationModel::Email::EmailMailboxPolicies{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SourceDisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SourceDisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_SourceDisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SyncManager() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxSyncManager) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SyncManager() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_SyncManager(&value));
         return Windows::ApplicationModel::Email::EmailMailboxSyncManager{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::UserDataAccountId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::UserDataAccountId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->get_UserDataAccountId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetConversationReader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailConversationReader) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetConversationReader() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->GetConversationReader(&result));
         return Windows::ApplicationModel::Email::EmailConversationReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetConversationReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailConversationReader) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetConversationReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->GetConversationReaderWithOptions(*(void**)(&options), &result));
         return Windows::ApplicationModel::Email::EmailConversationReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetMessageReader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageReader) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetMessageReader() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->GetMessageReader(&result));
         return Windows::ApplicationModel::Email::EmailMessageReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetMessageReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageReader) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetMessageReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->GetMessageReaderWithOptions(*(void**)(&options), &result));
         return Windows::ApplicationModel::Email::EmailMessageReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DeleteAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DeleteAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->DeleteAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetConversationAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailConversation>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetConversationAsync(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->GetConversationAsync(*(void**)(&id), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailConversation>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetFolderAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailFolder>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetFolderAsync(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->GetFolderAsync(*(void**)(&id), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailFolder>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetMessageAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessage>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetMessageAsync(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->GetMessageAsync(*(void**)(&id), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessage>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetSpecialFolderAsync(Windows::ApplicationModel::Email::EmailSpecialFolderKind const& folderType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailFolder>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::GetSpecialFolderAsync(Windows::ApplicationModel::Email::EmailSpecialFolderKind const& folderType) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->GetSpecialFolderAsync(static_cast<int32_t>(folderType), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailFolder>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SaveAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SaveAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->SaveAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MarkMessageAsSeenAsync(param::hstring const& messageId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MarkMessageAsSeenAsync(param::hstring const& messageId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->MarkMessageAsSeenAsync(*(void**)(&messageId), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MarkFolderAsSeenAsync(param::hstring const& folderId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MarkFolderAsSeenAsync(param::hstring const& folderId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->MarkFolderAsSeenAsync(*(void**)(&folderId), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MarkMessageReadAsync(param::hstring const& messageId, bool isRead) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MarkMessageReadAsync(param::hstring const& messageId, bool isRead) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->MarkMessageReadAsync(*(void**)(&messageId), isRead, &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::ChangeMessageFlagStateAsync(param::hstring const& messageId, Windows::ApplicationModel::Email::EmailFlagState const& flagState) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::ChangeMessageFlagStateAsync(param::hstring const& messageId, Windows::ApplicationModel::Email::EmailFlagState const& flagState) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->ChangeMessageFlagStateAsync(*(void**)(&messageId), static_cast<int32_t>(flagState), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryMoveMessageAsync(param::hstring const& messageId, param::hstring const& newParentFolderId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryMoveMessageAsync(param::hstring const& messageId, param::hstring const& newParentFolderId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->TryMoveMessageAsync(*(void**)(&messageId), *(void**)(&newParentFolderId), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryMoveFolderAsync(param::hstring const& folderId, param::hstring const& newParentFolderId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryMoveFolderAsync(param::hstring const& folderId, param::hstring const& newParentFolderId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->TryMoveFolderAsync(*(void**)(&folderId), *(void**)(&newParentFolderId), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryMoveFolderAsync(param::hstring const& folderId, param::hstring const& newParentFolderId, param::hstring const& newFolderName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryMoveFolderAsync(param::hstring const& folderId, param::hstring const& newParentFolderId, param::hstring const& newFolderName) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->TryMoveFolderWithNewNameAsync(*(void**)(&folderId), *(void**)(&newParentFolderId), *(void**)(&newFolderName), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DeleteMessageAsync(param::hstring const& messageId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DeleteMessageAsync(param::hstring const& messageId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->DeleteMessageAsync(*(void**)(&messageId), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MarkFolderSyncEnabledAsync(param::hstring const& folderId, bool isSyncEnabled) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MarkFolderSyncEnabledAsync(param::hstring const& folderId, bool isSyncEnabled) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->MarkFolderSyncEnabledAsync(*(void**)(&folderId), isSyncEnabled, &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SendMessageAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SendMessageAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->SendMessageAsync(*(void**)(&message), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SaveDraftAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SaveDraftAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->SaveDraftAsync(*(void**)(&message), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DownloadMessageAsync(param::hstring const& messageId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DownloadMessageAsync(param::hstring const& messageId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->DownloadMessageAsync(*(void**)(&messageId), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DownloadAttachmentAsync(param::hstring const& attachmentId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::DownloadAttachmentAsync(param::hstring const& attachmentId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->DownloadAttachmentAsync(*(void**)(&attachmentId), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::CreateResponseMessageAsync(param::hstring const& messageId, Windows::ApplicationModel::Email::EmailMessageResponseKind const& responseType, param::hstring const& subject, Windows::ApplicationModel::Email::EmailMessageBodyKind const& responseHeaderType, param::hstring const& responseHeader) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessage>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::CreateResponseMessageAsync(param::hstring const& messageId, Windows::ApplicationModel::Email::EmailMessageResponseKind const& responseType, param::hstring const& subject, Windows::ApplicationModel::Email::EmailMessageBodyKind const& responseHeaderType, param::hstring const& responseHeader) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->CreateResponseMessageAsync(*(void**)(&messageId), static_cast<int32_t>(responseType), *(void**)(&subject), static_cast<int32_t>(responseHeaderType), *(void**)(&responseHeader), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessage>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryUpdateMeetingResponseAsync(Windows::ApplicationModel::Email::EmailMessage const& meeting, Windows::ApplicationModel::Email::EmailMeetingResponseType const& response, param::hstring const& subject, param::hstring const& comment, bool sendUpdate) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryUpdateMeetingResponseAsync(Windows::ApplicationModel::Email::EmailMessage const& meeting, Windows::ApplicationModel::Email::EmailMeetingResponseType const& response, param::hstring const& subject, param::hstring const& comment, bool sendUpdate) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->TryUpdateMeetingResponseAsync(*(void**)(&meeting), static_cast<int32_t>(response), *(void**)(&subject), *(void**)(&comment), sendUpdate, &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryForwardMeetingAsync(Windows::ApplicationModel::Email::EmailMessage const& meeting, param::async_iterable<Windows::ApplicationModel::Email::EmailRecipient> const& recipients, param::hstring const& subject, Windows::ApplicationModel::Email::EmailMessageBodyKind const& forwardHeaderType, param::hstring const& forwardHeader, param::hstring const& comment) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryForwardMeetingAsync(Windows::ApplicationModel::Email::EmailMessage const& meeting, param::async_iterable<Windows::ApplicationModel::Email::EmailRecipient> const& recipients, param::hstring const& subject, Windows::ApplicationModel::Email::EmailMessageBodyKind const& forwardHeaderType, param::hstring const& forwardHeader, param::hstring const& comment) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->TryForwardMeetingAsync(*(void**)(&meeting), *(void**)(&recipients), *(void**)(&subject), static_cast<int32_t>(forwardHeaderType), *(void**)(&forwardHeader), *(void**)(&comment), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryProposeNewTimeForMeetingAsync(Windows::ApplicationModel::Email::EmailMessage const& meeting, Windows::Foundation::DateTime const& newStartTime, Windows::Foundation::TimeSpan const& newDuration, param::hstring const& subject, param::hstring const& comment) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryProposeNewTimeForMeetingAsync(Windows::ApplicationModel::Email::EmailMessage const& meeting, Windows::Foundation::DateTime const& newStartTime, Windows::Foundation::TimeSpan const& newDuration, param::hstring const& subject, param::hstring const& comment) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->TryProposeNewTimeForMeetingAsync(*(void**)(&meeting), impl::bind_in(newStartTime), impl::bind_in(newDuration), *(void**)(&subject), *(void**)(&comment), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailboxChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Email::EmailMailbox, Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs> const& pHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailboxChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Email::EmailMailbox, Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs> const& pHandler) const
     {
-        winrt::event_token pToken;
+        winrt::event_token pToken{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->add_MailboxChanged(*(void**)(&pHandler), put_abi(pToken)));
         return pToken;
     }
@@ -829,485 +829,485 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MailboxChanged_revoker>(this, MailboxChanged(pHandler));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailboxChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::MailboxChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->remove_MailboxChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SendMessageAsync(Windows::ApplicationModel::Email::EmailMessage const& message, bool smartSend) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::SendMessageAsync(Windows::ApplicationModel::Email::EmailMessage const& message, bool smartSend) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->SmartSendMessageAsync(*(void**)(&message), smartSend, &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TrySetAutoReplySettingsAsync(Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings const& autoReplySettings) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TrySetAutoReplySettingsAsync(Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings const& autoReplySettings) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->TrySetAutoReplySettingsAsync(*(void**)(&autoReplySettings), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryGetAutoReplySettingsAsync(Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind const& requestedFormat) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>) consume_Windows_ApplicationModel_Email_IEmailMailbox<D>::TryGetAutoReplySettingsAsync(Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind const& requestedFormat) const
     {
         void* autoReplySettings{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox)->TryGetAutoReplySettingsAsync(static_cast<int32_t>(requestedFormat), &autoReplySettings));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>{ autoReplySettings, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox2<D>::LinkedMailboxId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMailbox2<D>::LinkedMailboxId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox2)->get_LinkedMailboxId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox2<D>::NetworkAccountId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMailbox2<D>::NetworkAccountId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox2)->get_NetworkAccountId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox2<D>::NetworkId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMailbox2<D>::NetworkId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox2)->get_NetworkId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::ResolveRecipientsAsync(param::async_iterable<hstring> const& recipients) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailRecipientResolutionResult>>) consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::ResolveRecipientsAsync(param::async_iterable<hstring> const& recipients) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox3)->ResolveRecipientsAsync(*(void**)(&recipients), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailRecipientResolutionResult>>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::ValidateCertificatesAsync(param::async_iterable<Windows::Security::Cryptography::Certificates::Certificate> const& certificates) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailCertificateValidationStatus>>) consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::ValidateCertificatesAsync(param::async_iterable<Windows::Security::Cryptography::Certificates::Certificate> const& certificates) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox3)->ValidateCertificatesAsync(*(void**)(&certificates), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailCertificateValidationStatus>>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::TryEmptyFolderAsync(param::hstring const& folderId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus>) consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::TryEmptyFolderAsync(param::hstring const& folderId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox3)->TryEmptyFolderAsync(*(void**)(&folderId), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::TryCreateFolderAsync(param::hstring const& parentFolderId, param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult>) consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::TryCreateFolderAsync(param::hstring const& parentFolderId, param::hstring const& name) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox3)->TryCreateFolderAsync(*(void**)(&parentFolderId), *(void**)(&name), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::TryDeleteFolderAsync(param::hstring const& folderId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailboxDeleteFolderStatus>) consume_Windows_ApplicationModel_Email_IEmailMailbox3<D>::TryDeleteFolderAsync(param::hstring const& folderId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox3)->TryDeleteFolderAsync(*(void**)(&folderId), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailboxDeleteFolderStatus>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox4<D>::RegisterSyncManagerAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailMailbox4<D>::RegisterSyncManagerAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox4)->RegisterSyncManagerAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailbox5<D>::GetChangeTracker(param::hstring const& identity) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxChangeTracker) consume_Windows_ApplicationModel_Email_IEmailMailbox5<D>::GetChangeTracker(param::hstring const& identity) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailbox5)->GetChangeTracker(*(void**)(&identity), &result));
         return Windows::ApplicationModel::Email::EmailMailboxChangeTracker{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAction<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxActionKind) consume_Windows_ApplicationModel_Email_IEmailMailboxAction<D>::Kind() const
     {
-        Windows::ApplicationModel::Email::EmailMailboxActionKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAction)->get_Kind(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMailboxActionKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAction)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAction<D>::ChangeNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_ApplicationModel_Email_IEmailMailboxAction<D>::ChangeNumber() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAction)->get_ChangeNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReply<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReply<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReply)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReply<D>::IsEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReply<D>::IsEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReply)->put_IsEnabled(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReply<D>::Response() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReply<D>::Response() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReply)->get_Response(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReply<D>::Response(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReply<D>::Response(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReply)->put_Response(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::IsEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::IsEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->put_IsEnabled(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::ResponseKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::ResponseKind() const
     {
-        Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->get_ResponseKind(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->get_ResponseKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::ResponseKind(Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::ResponseKind(Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->put_ResponseKind(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::StartTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::StartTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->get_StartTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::StartTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::StartTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->put_StartTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::EndTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::EndTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->get_EndTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::EndTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::EndTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->put_EndTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::InternalReply() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxAutoReply) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::InternalReply() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->get_InternalReply(&value));
         return Windows::ApplicationModel::Email::EmailMailboxAutoReply{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::KnownExternalReply() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxAutoReply) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::KnownExternalReply() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->get_KnownExternalReply(&value));
         return Windows::ApplicationModel::Email::EmailMailboxAutoReply{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::UnknownExternalReply() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxAutoReply) consume_Windows_ApplicationModel_Email_IEmailMailboxAutoReplySettings<D>::UnknownExternalReply() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings)->get_UnknownExternalReply(&value));
         return Windows::ApplicationModel::Email::EmailMailboxAutoReply{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanForwardMeetings() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanForwardMeetings() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities)->get_CanForwardMeetings(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanGetAndSetExternalAutoReplies() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanGetAndSetExternalAutoReplies() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities)->get_CanGetAndSetExternalAutoReplies(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanGetAndSetInternalAutoReplies() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanGetAndSetInternalAutoReplies() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities)->get_CanGetAndSetInternalAutoReplies(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanUpdateMeetingResponses() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanUpdateMeetingResponses() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities)->get_CanUpdateMeetingResponses(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanServerSearchFolders() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanServerSearchFolders() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities)->get_CanServerSearchFolders(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanServerSearchMailbox() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanServerSearchMailbox() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities)->get_CanServerSearchMailbox(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanProposeNewTimeForMeetings() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanProposeNewTimeForMeetings() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities)->get_CanProposeNewTimeForMeetings(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanSmartSend() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities<D>::CanSmartSend() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities)->get_CanSmartSend(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanResolveRecipients() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanResolveRecipients() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities2)->get_CanResolveRecipients(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanValidateCertificates() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanValidateCertificates() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities2)->get_CanValidateCertificates(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanEmptyFolder() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanEmptyFolder() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities2)->get_CanEmptyFolder(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanCreateFolder() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanCreateFolder() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities2)->get_CanCreateFolder(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanDeleteFolder() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanDeleteFolder() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities2)->get_CanDeleteFolder(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanMoveFolder() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities2<D>::CanMoveFolder() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities2)->get_CanMoveFolder(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanForwardMeetings(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanForwardMeetings(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanForwardMeetings(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanGetAndSetExternalAutoReplies(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanGetAndSetExternalAutoReplies(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanGetAndSetExternalAutoReplies(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanGetAndSetInternalAutoReplies(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanGetAndSetInternalAutoReplies(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanGetAndSetInternalAutoReplies(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanUpdateMeetingResponses(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanUpdateMeetingResponses(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanUpdateMeetingResponses(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanServerSearchFolders(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanServerSearchFolders(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanServerSearchFolders(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanServerSearchMailbox(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanServerSearchMailbox(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanServerSearchMailbox(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanProposeNewTimeForMeetings(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanProposeNewTimeForMeetings(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanProposeNewTimeForMeetings(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanSmartSend(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanSmartSend(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanSmartSend(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanResolveRecipients(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanResolveRecipients(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanResolveRecipients(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanValidateCertificates(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanValidateCertificates(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanValidateCertificates(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanEmptyFolder(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanEmptyFolder(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanEmptyFolder(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanCreateFolder(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanCreateFolder(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanCreateFolder(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanDeleteFolder(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanDeleteFolder(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanDeleteFolder(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanMoveFolder(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxCapabilities3<D>::CanMoveFolder(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCapabilities3)->put_CanMoveFolder(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChange<D>::ChangeType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxChangeType) consume_Windows_ApplicationModel_Email_IEmailMailboxChange<D>::ChangeType() const
     {
-        Windows::ApplicationModel::Email::EmailMailboxChangeType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChange)->get_ChangeType(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMailboxChangeType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChange)->get_ChangeType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChange<D>::MailboxActions() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailMailboxAction>) consume_Windows_ApplicationModel_Email_IEmailMailboxChange<D>::MailboxActions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChange)->get_MailboxActions(&value));
         return Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailMailboxAction>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChange<D>::Message() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessage) consume_Windows_ApplicationModel_Email_IEmailMailboxChange<D>::Message() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChange)->get_Message(&value));
         return Windows::ApplicationModel::Email::EmailMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChange<D>::Folder() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailFolder) consume_Windows_ApplicationModel_Email_IEmailMailboxChange<D>::Folder() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChange)->get_Folder(&value));
         return Windows::ApplicationModel::Email::EmailFolder{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChangeReader<D>::AcceptChanges() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxChangeReader<D>::AcceptChanges() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChangeReader)->AcceptChanges());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChangeReader<D>::AcceptChangesThrough(Windows::ApplicationModel::Email::EmailMailboxChange const& lastChangeToAcknowledge) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxChangeReader<D>::AcceptChangesThrough(Windows::ApplicationModel::Email::EmailMailboxChange const& lastChangeToAcknowledge) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChangeReader)->AcceptChangesThrough(*(void**)(&lastChangeToAcknowledge)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChangeReader<D>::ReadBatchAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMailboxChange>>) consume_Windows_ApplicationModel_Email_IEmailMailboxChangeReader<D>::ReadBatchAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChangeReader)->ReadBatchAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMailboxChange>>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChangeTracker<D>::IsTracking() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxChangeTracker<D>::IsTracking() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChangeTracker)->get_IsTracking(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChangeTracker<D>::Enable() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxChangeTracker<D>::Enable() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChangeTracker)->Enable());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChangeTracker<D>::GetChangeReader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxChangeReader) consume_Windows_ApplicationModel_Email_IEmailMailboxChangeTracker<D>::GetChangeReader() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChangeTracker)->GetChangeReader(&value));
         return Windows::ApplicationModel::Email::EmailMailboxChangeReader{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChangeTracker<D>::Reset() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxChangeTracker<D>::Reset() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChangeTracker)->Reset());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChangedDeferral<D>::Complete() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxChangedDeferral<D>::Complete() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChangedDeferral)->Complete());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxChangedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxChangedDeferral) consume_Windows_ApplicationModel_Email_IEmailMailboxChangedEventArgs<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxChangedEventArgs)->GetDeferral(&result));
         return Windows::ApplicationModel::Email::EmailMailboxChangedDeferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCreateFolderResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxCreateFolderStatus) consume_Windows_ApplicationModel_Email_IEmailMailboxCreateFolderResult<D>::Status() const
     {
-        Windows::ApplicationModel::Email::EmailMailboxCreateFolderStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult)->get_Status(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMailboxCreateFolderStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxCreateFolderResult<D>::Folder() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailFolder) consume_Windows_ApplicationModel_Email_IEmailMailboxCreateFolderResult<D>::Folder() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult)->get_Folder(&value));
         return Windows::ApplicationModel::Email::EmailFolder{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies<D>::AllowedSmimeEncryptionAlgorithmNegotiation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies<D>::AllowedSmimeEncryptionAlgorithmNegotiation() const
     {
-        Windows::ApplicationModel::Email::EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies)->get_AllowedSmimeEncryptionAlgorithmNegotiation(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies)->get_AllowedSmimeEncryptionAlgorithmNegotiation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies<D>::AllowSmimeSoftCertificates() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies<D>::AllowSmimeSoftCertificates() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies)->get_AllowSmimeSoftCertificates(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies<D>::RequiredSmimeEncryptionAlgorithm() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::ApplicationModel::Email::EmailMailboxSmimeEncryptionAlgorithm>) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies<D>::RequiredSmimeEncryptionAlgorithm() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies)->get_RequiredSmimeEncryptionAlgorithm(&value));
         return Windows::Foundation::IReference<Windows::ApplicationModel::Email::EmailMailboxSmimeEncryptionAlgorithm>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies<D>::RequiredSmimeSigningAlgorithm() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::ApplicationModel::Email::EmailMailboxSmimeSigningAlgorithm>) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies<D>::RequiredSmimeSigningAlgorithm() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies)->get_RequiredSmimeSigningAlgorithm(&value));
         return Windows::Foundation::IReference<Windows::ApplicationModel::Email::EmailMailboxSmimeSigningAlgorithm>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies2<D>::MustEncryptSmimeMessages() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies2<D>::MustEncryptSmimeMessages() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies2)->get_MustEncryptSmimeMessages(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies2<D>::MustSignSmimeMessages() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies2<D>::MustSignSmimeMessages() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies2)->get_MustSignSmimeMessages(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::AllowedSmimeEncryptionAlgorithmNegotiation(Windows::ApplicationModel::Email::EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::AllowedSmimeEncryptionAlgorithmNegotiation(Windows::ApplicationModel::Email::EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies3)->put_AllowedSmimeEncryptionAlgorithmNegotiation(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::AllowSmimeSoftCertificates(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::AllowSmimeSoftCertificates(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies3)->put_AllowSmimeSoftCertificates(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::RequiredSmimeEncryptionAlgorithm(Windows::Foundation::IReference<Windows::ApplicationModel::Email::EmailMailboxSmimeEncryptionAlgorithm> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::RequiredSmimeEncryptionAlgorithm(Windows::Foundation::IReference<Windows::ApplicationModel::Email::EmailMailboxSmimeEncryptionAlgorithm> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies3)->put_RequiredSmimeEncryptionAlgorithm(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::RequiredSmimeSigningAlgorithm(Windows::Foundation::IReference<Windows::ApplicationModel::Email::EmailMailboxSmimeSigningAlgorithm> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::RequiredSmimeSigningAlgorithm(Windows::Foundation::IReference<Windows::ApplicationModel::Email::EmailMailboxSmimeSigningAlgorithm> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies3)->put_RequiredSmimeSigningAlgorithm(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::MustEncryptSmimeMessages(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::MustEncryptSmimeMessages(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies3)->put_MustEncryptSmimeMessages(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::MustSignSmimeMessages(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxPolicies3<D>::MustSignSmimeMessages(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxPolicies3)->put_MustSignSmimeMessages(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMailboxSyncStatus) consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::Status() const
     {
-        Windows::ApplicationModel::Email::EmailMailboxSyncStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager)->get_Status(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMailboxSyncStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::LastSuccessfulSyncTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::LastSuccessfulSyncTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager)->get_LastSuccessfulSyncTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::LastAttemptedSyncTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::LastAttemptedSyncTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager)->get_LastAttemptedSyncTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::SyncAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::SyncAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager)->SyncAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::SyncStatusChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Email::EmailMailboxSyncManager, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::SyncStatusChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Email::EmailMailboxSyncManager, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager)->add_SyncStatusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1315,730 +1315,731 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SyncStatusChanged_revoker>(this, SyncStatusChanged(handler));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::SyncStatusChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager<D>::SyncStatusChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager)->remove_SyncStatusChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager2<D>::Status(Windows::ApplicationModel::Email::EmailMailboxSyncStatus const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager2<D>::Status(Windows::ApplicationModel::Email::EmailMailboxSyncStatus const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager2)->put_Status(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager2<D>::LastSuccessfulSyncTime(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager2<D>::LastSuccessfulSyncTime(Windows::Foundation::DateTime const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager2)->put_LastSuccessfulSyncTime(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager2<D>::LastAttemptedSyncTime(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMailboxSyncManager2<D>::LastAttemptedSyncTime(Windows::Foundation::DateTime const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMailboxSyncManager2)->put_LastAttemptedSyncTime(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailManagerForUser<D>::ShowComposeNewEmailAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailManagerForUser<D>::ShowComposeNewEmailAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailManagerForUser)->ShowComposeNewEmailAsync(*(void**)(&message), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailManagerForUser<D>::RequestStoreAsync(Windows::ApplicationModel::Email::EmailStoreAccessType const& accessType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailStore>) consume_Windows_ApplicationModel_Email_IEmailManagerForUser<D>::RequestStoreAsync(Windows::ApplicationModel::Email::EmailStoreAccessType const& accessType) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailManagerForUser)->RequestStoreAsync(static_cast<int32_t>(accessType), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailStore>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailManagerForUser<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_ApplicationModel_Email_IEmailManagerForUser<D>::User() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailManagerForUser)->get_User(&value));
         return Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailManagerStatics<D>::ShowComposeNewEmailAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Email_IEmailManagerStatics<D>::ShowComposeNewEmailAsync(Windows::ApplicationModel::Email::EmailMessage const& message) const
     {
         void* asyncAction{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailManagerStatics)->ShowComposeNewEmailAsync(*(void**)(&message), &asyncAction));
         return Windows::Foundation::IAsyncAction{ asyncAction, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailManagerStatics2<D>::RequestStoreAsync(Windows::ApplicationModel::Email::EmailStoreAccessType const& accessType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailStore>) consume_Windows_ApplicationModel_Email_IEmailManagerStatics2<D>::RequestStoreAsync(Windows::ApplicationModel::Email::EmailStoreAccessType const& accessType) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailManagerStatics2)->RequestStoreAsync(static_cast<int32_t>(accessType), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailStore>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailManagerStatics3<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailManagerForUser) consume_Windows_ApplicationModel_Email_IEmailManagerStatics3<D>::GetForUser(Windows::System::User const& user) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailManagerStatics3)->GetForUser(*(void**)(&user), &result));
         return Windows::ApplicationModel::Email::EmailManagerForUser{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AllowNewTimeProposal() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AllowNewTimeProposal() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_AllowNewTimeProposal(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AllowNewTimeProposal(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AllowNewTimeProposal(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_AllowNewTimeProposal(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AppointmentRoamingId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AppointmentRoamingId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_AppointmentRoamingId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AppointmentRoamingId(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AppointmentRoamingId(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_AppointmentRoamingId(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AppointmentOriginalStartTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AppointmentOriginalStartTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_AppointmentOriginalStartTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AppointmentOriginalStartTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::AppointmentOriginalStartTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_AppointmentOriginalStartTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_Duration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Duration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::IsAllDay() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::IsAllDay() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_IsAllDay(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::IsAllDay(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::IsAllDay(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_IsAllDay(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::IsResponseRequested() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::IsResponseRequested() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_IsResponseRequested(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::IsResponseRequested(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::IsResponseRequested(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_IsResponseRequested(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Location() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Location() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_Location(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Location(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Location(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_Location(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::ProposedStartTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::ProposedStartTime() const
     {
         void* proposedStartTime{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_ProposedStartTime(&proposedStartTime));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ proposedStartTime, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::ProposedStartTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& proposedStartTime) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::ProposedStartTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& proposedStartTime) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_ProposedStartTime(*(void**)(&proposedStartTime)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::ProposedDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::ProposedDuration() const
     {
         void* duration{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_ProposedDuration(&duration));
         return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ duration, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::ProposedDuration(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& duration) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::ProposedDuration(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& duration) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_ProposedDuration(*(void**)(&duration)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::RecurrenceStartTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::RecurrenceStartTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_RecurrenceStartTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::RecurrenceStartTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::RecurrenceStartTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_RecurrenceStartTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Recurrence() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Appointments::AppointmentRecurrence) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Recurrence() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_Recurrence(&value));
         return Windows::ApplicationModel::Appointments::AppointmentRecurrence{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Recurrence(Windows::ApplicationModel::Appointments::AppointmentRecurrence const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::Recurrence(Windows::ApplicationModel::Appointments::AppointmentRecurrence const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_Recurrence(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::RemoteChangeNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::RemoteChangeNumber() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_RemoteChangeNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::RemoteChangeNumber(uint64_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::RemoteChangeNumber(uint64_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_RemoteChangeNumber(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::StartTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::StartTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->get_StartTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::StartTime(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo<D>::StartTime(Windows::Foundation::DateTime const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo)->put_StartTime(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMeetingInfo2<D>::IsReportedOutOfDateByServer() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMeetingInfo2<D>::IsReportedOutOfDateByServer() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMeetingInfo2)->get_IsReportedOutOfDateByServer(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Subject() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Subject() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage)->get_Subject(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Subject(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Subject(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage)->put_Subject(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Body() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Body() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage)->get_Body(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Body(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Body(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage)->put_Body(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage<D>::To() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailRecipient>) consume_Windows_ApplicationModel_Email_IEmailMessage<D>::To() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage)->get_To(&value));
         return Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailRecipient>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage<D>::CC() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailRecipient>) consume_Windows_ApplicationModel_Email_IEmailMessage<D>::CC() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage)->get_CC(&value));
         return Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailRecipient>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Bcc() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailRecipient>) consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Bcc() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage)->get_Bcc(&value));
         return Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailRecipient>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Attachments() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailAttachment>) consume_Windows_ApplicationModel_Email_IEmailMessage<D>::Attachments() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage)->get_Attachments(&value));
         return Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailAttachment>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::RemoteId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::RemoteId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_RemoteId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::RemoteId(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::RemoteId(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_RemoteId(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MailboxId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MailboxId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_MailboxId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::ConversationId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::ConversationId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_ConversationId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::FolderId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::FolderId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_FolderId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::AllowInternetImages() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::AllowInternetImages() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_AllowInternetImages(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::AllowInternetImages(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::AllowInternetImages(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_AllowInternetImages(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::ChangeNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::ChangeNumber() const
     {
-        uint64_t value;
+        uint64_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_ChangeNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::DownloadState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageDownloadState) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::DownloadState() const
     {
-        Windows::ApplicationModel::Email::EmailMessageDownloadState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_DownloadState(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMessageDownloadState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_DownloadState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::DownloadState(Windows::ApplicationModel::Email::EmailMessageDownloadState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::DownloadState(Windows::ApplicationModel::Email::EmailMessageDownloadState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_DownloadState(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::EstimatedDownloadSizeInBytes() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::EstimatedDownloadSizeInBytes() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_EstimatedDownloadSizeInBytes(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::EstimatedDownloadSizeInBytes(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::EstimatedDownloadSizeInBytes(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_EstimatedDownloadSizeInBytes(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::FlagState() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailFlagState) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::FlagState() const
     {
-        Windows::ApplicationModel::Email::EmailFlagState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_FlagState(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailFlagState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_FlagState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::FlagState(Windows::ApplicationModel::Email::EmailFlagState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::FlagState(Windows::ApplicationModel::Email::EmailFlagState const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_FlagState(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::HasPartialBodies() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::HasPartialBodies() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_HasPartialBodies(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Importance() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailImportance) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Importance() const
     {
-        Windows::ApplicationModel::Email::EmailImportance value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_Importance(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailImportance value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_Importance(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Importance(Windows::ApplicationModel::Email::EmailImportance const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Importance(Windows::ApplicationModel::Email::EmailImportance const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_Importance(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::InResponseToMessageId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::InResponseToMessageId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_InResponseToMessageId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IrmInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailIrmInfo) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IrmInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_IrmInfo(&value));
         return Windows::ApplicationModel::Email::EmailIrmInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IrmInfo(Windows::ApplicationModel::Email::EmailIrmInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IrmInfo(Windows::ApplicationModel::Email::EmailIrmInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_IrmInfo(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsDraftMessage() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsDraftMessage() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_IsDraftMessage(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsRead() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsRead() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_IsRead(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsRead(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsRead(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_IsRead(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsSeen() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsSeen() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_IsSeen(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsSeen(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsSeen(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_IsSeen(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsServerSearchMessage() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsServerSearchMessage() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_IsServerSearchMessage(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsSmartSendable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::IsSmartSendable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_IsSmartSendable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MessageClass() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MessageClass() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_MessageClass(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MessageClass(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MessageClass(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_MessageClass(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::NormalizedSubject() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::NormalizedSubject() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_NormalizedSubject(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::OriginalCodePage() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::OriginalCodePage() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_OriginalCodePage(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::OriginalCodePage(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::OriginalCodePage(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_OriginalCodePage(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Preview() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Preview() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_Preview(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Preview(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Preview(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_Preview(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::LastResponseKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageResponseKind) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::LastResponseKind() const
     {
-        Windows::ApplicationModel::Email::EmailMessageResponseKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_LastResponseKind(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMessageResponseKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_LastResponseKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::LastResponseKind(Windows::ApplicationModel::Email::EmailMessageResponseKind const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::LastResponseKind(Windows::ApplicationModel::Email::EmailMessageResponseKind const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_LastResponseKind(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Sender() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailRecipient) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Sender() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_Sender(&value));
         return Windows::ApplicationModel::Email::EmailRecipient{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Sender(Windows::ApplicationModel::Email::EmailRecipient const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::Sender(Windows::ApplicationModel::Email::EmailRecipient const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_Sender(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::SentTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::SentTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_SentTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::SentTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::SentTime(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_SentTime(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MeetingInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMeetingInfo) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MeetingInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->get_MeetingInfo(&value));
         return Windows::ApplicationModel::Email::EmailMeetingInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MeetingInfo(Windows::ApplicationModel::Email::EmailMeetingInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::MeetingInfo(Windows::ApplicationModel::Email::EmailMeetingInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->put_MeetingInfo(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::GetBodyStream(Windows::ApplicationModel::Email::EmailMessageBodyKind const& type) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::GetBodyStream(Windows::ApplicationModel::Email::EmailMessageBodyKind const& type) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->GetBodyStream(static_cast<int32_t>(type), &result));
         return Windows::Storage::Streams::IRandomAccessStreamReference{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::SetBodyStream(Windows::ApplicationModel::Email::EmailMessageBodyKind const& type, Windows::Storage::Streams::IRandomAccessStreamReference const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage2<D>::SetBodyStream(Windows::ApplicationModel::Email::EmailMessageBodyKind const& type, Windows::Storage::Streams::IRandomAccessStreamReference const& stream) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage2)->SetBodyStream(static_cast<int32_t>(type), *(void**)(&stream)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage3<D>::SmimeData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Email_IEmailMessage3<D>::SmimeData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage3)->get_SmimeData(&value));
         return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage3<D>::SmimeData(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage3<D>::SmimeData(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage3)->put_SmimeData(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage3<D>::SmimeKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageSmimeKind) consume_Windows_ApplicationModel_Email_IEmailMessage3<D>::SmimeKind() const
     {
-        Windows::ApplicationModel::Email::EmailMessageSmimeKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage3)->get_SmimeKind(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailMessageSmimeKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage3)->get_SmimeKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage3<D>::SmimeKind(Windows::ApplicationModel::Email::EmailMessageSmimeKind const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage3<D>::SmimeKind(Windows::ApplicationModel::Email::EmailMessageSmimeKind const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage3)->put_SmimeKind(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage4<D>::ReplyTo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailRecipient>) consume_Windows_ApplicationModel_Email_IEmailMessage4<D>::ReplyTo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage4)->get_ReplyTo(&value));
         return Windows::Foundation::Collections::IVector<Windows::ApplicationModel::Email::EmailRecipient>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage4<D>::SentRepresenting() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailRecipient) consume_Windows_ApplicationModel_Email_IEmailMessage4<D>::SentRepresenting() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage4)->get_SentRepresenting(&value));
         return Windows::ApplicationModel::Email::EmailRecipient{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessage4<D>::SentRepresenting(Windows::ApplicationModel::Email::EmailRecipient const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailMessage4<D>::SentRepresenting(Windows::ApplicationModel::Email::EmailRecipient const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessage4)->put_SentRepresenting(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessageBatch<D>::Messages() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMessage>) consume_Windows_ApplicationModel_Email_IEmailMessageBatch<D>::Messages() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessageBatch)->get_Messages(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMessage>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessageBatch<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailBatchStatus) consume_Windows_ApplicationModel_Email_IEmailMessageBatch<D>::Status() const
     {
-        Windows::ApplicationModel::Email::EmailBatchStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessageBatch)->get_Status(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailBatchStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessageBatch)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailMessageReader<D>::ReadBatchAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessageBatch>) consume_Windows_ApplicationModel_Email_IEmailMessageReader<D>::ReadBatchAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailMessageReader)->ReadBatchAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessageBatch>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::TextSearch() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailQueryTextSearch) consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::TextSearch() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->get_TextSearch(&value));
         return Windows::ApplicationModel::Email::EmailQueryTextSearch{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::SortDirection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailQuerySortDirection) consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::SortDirection() const
     {
-        Windows::ApplicationModel::Email::EmailQuerySortDirection value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->get_SortDirection(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailQuerySortDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->get_SortDirection(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::SortDirection(Windows::ApplicationModel::Email::EmailQuerySortDirection const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::SortDirection(Windows::ApplicationModel::Email::EmailQuerySortDirection const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->put_SortDirection(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::SortProperty() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailQuerySortProperty) consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::SortProperty() const
     {
-        Windows::ApplicationModel::Email::EmailQuerySortProperty value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->get_SortProperty(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailQuerySortProperty value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->get_SortProperty(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::SortProperty(Windows::ApplicationModel::Email::EmailQuerySortProperty const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::SortProperty(Windows::ApplicationModel::Email::EmailQuerySortProperty const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->put_SortProperty(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailQueryKind) consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::Kind() const
     {
-        Windows::ApplicationModel::Email::EmailQueryKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->get_Kind(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailQueryKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::Kind(Windows::ApplicationModel::Email::EmailQueryKind const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::Kind(Windows::ApplicationModel::Email::EmailQueryKind const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->put_Kind(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::FolderIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_ApplicationModel_Email_IEmailQueryOptions<D>::FolderIds() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptions)->get_FolderIds(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptionsFactory<D>::CreateWithText(param::hstring const& text) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailQueryOptions) consume_Windows_ApplicationModel_Email_IEmailQueryOptionsFactory<D>::CreateWithText(param::hstring const& text) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptionsFactory)->CreateWithText(*(void**)(&text), &result));
         return Windows::ApplicationModel::Email::EmailQueryOptions{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryOptionsFactory<D>::CreateWithTextAndFields(param::hstring const& text, Windows::ApplicationModel::Email::EmailQuerySearchFields const& fields) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailQueryOptions) consume_Windows_ApplicationModel_Email_IEmailQueryOptionsFactory<D>::CreateWithTextAndFields(param::hstring const& text, Windows::ApplicationModel::Email::EmailQuerySearchFields const& fields) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryOptionsFactory)->CreateWithTextAndFields(*(void**)(&text), static_cast<uint32_t>(fields), &result));
         return Windows::ApplicationModel::Email::EmailQueryOptions{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::Fields() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailQuerySearchFields) consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::Fields() const
     {
-        Windows::ApplicationModel::Email::EmailQuerySearchFields value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryTextSearch)->get_Fields(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailQuerySearchFields value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryTextSearch)->get_Fields(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::Fields(Windows::ApplicationModel::Email::EmailQuerySearchFields const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::Fields(Windows::ApplicationModel::Email::EmailQuerySearchFields const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryTextSearch)->put_Fields(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::SearchScope() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailQuerySearchScope) consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::SearchScope() const
     {
-        Windows::ApplicationModel::Email::EmailQuerySearchScope value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryTextSearch)->get_SearchScope(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailQuerySearchScope value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryTextSearch)->get_SearchScope(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::SearchScope(Windows::ApplicationModel::Email::EmailQuerySearchScope const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::SearchScope(Windows::ApplicationModel::Email::EmailQuerySearchScope const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryTextSearch)->put_SearchScope(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::Text() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::Text() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryTextSearch)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::Text(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailQueryTextSearch<D>::Text(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailQueryTextSearch)->put_Text(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipient<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailRecipient<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipient)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipient<D>::Name(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailRecipient<D>::Name(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipient)->put_Name(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipient<D>::Address() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Email_IEmailRecipient<D>::Address() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipient)->get_Address(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipient<D>::Address(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailRecipient<D>::Address(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipient)->put_Address(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipientFactory<D>::Create(param::hstring const& address) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailRecipient) consume_Windows_ApplicationModel_Email_IEmailRecipientFactory<D>::Create(param::hstring const& address) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipientFactory)->Create(*(void**)(&address), &result));
         return Windows::ApplicationModel::Email::EmailRecipient{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipientFactory<D>::CreateWithName(param::hstring const& address, param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailRecipient) consume_Windows_ApplicationModel_Email_IEmailRecipientFactory<D>::CreateWithName(param::hstring const& address, param::hstring const& name) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipientFactory)->CreateWithName(*(void**)(&address), *(void**)(&name), &result));
         return Windows::ApplicationModel::Email::EmailRecipient{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipientResolutionResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailRecipientResolutionStatus) consume_Windows_ApplicationModel_Email_IEmailRecipientResolutionResult<D>::Status() const
     {
-        Windows::ApplicationModel::Email::EmailRecipientResolutionStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipientResolutionResult)->get_Status(put_abi(value)));
+        Windows::ApplicationModel::Email::EmailRecipientResolutionStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipientResolutionResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipientResolutionResult<D>::PublicKeys() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Cryptography::Certificates::Certificate>) consume_Windows_ApplicationModel_Email_IEmailRecipientResolutionResult<D>::PublicKeys() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipientResolutionResult)->get_PublicKeys(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Security::Cryptography::Certificates::Certificate>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipientResolutionResult2<D>::Status(Windows::ApplicationModel::Email::EmailRecipientResolutionStatus const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailRecipientResolutionResult2<D>::Status(Windows::ApplicationModel::Email::EmailRecipientResolutionStatus const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2)->put_Status(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailRecipientResolutionResult2<D>::SetPublicKeys(param::iterable<Windows::Security::Cryptography::Certificates::Certificate> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Email_IEmailRecipientResolutionResult2<D>::SetPublicKeys(param::iterable<Windows::Security::Cryptography::Certificates::Certificate> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2)->SetPublicKeys(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::FindMailboxesAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMailbox>>) consume_Windows_ApplicationModel_Email_IEmailStore<D>::FindMailboxesAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->FindMailboxesAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMailbox>>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetConversationReader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailConversationReader) consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetConversationReader() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->GetConversationReader(&result));
         return Windows::ApplicationModel::Email::EmailConversationReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetConversationReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailConversationReader) consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetConversationReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->GetConversationReaderWithOptions(*(void**)(&options), &result));
         return Windows::ApplicationModel::Email::EmailConversationReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetMessageReader() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageReader) consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetMessageReader() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->GetMessageReader(&result));
         return Windows::ApplicationModel::Email::EmailMessageReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetMessageReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Email::EmailMessageReader) consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetMessageReader(Windows::ApplicationModel::Email::EmailQueryOptions const& options) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->GetMessageReaderWithOptions(*(void**)(&options), &result));
         return Windows::ApplicationModel::Email::EmailMessageReader{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetMailboxAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailbox>) consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetMailboxAsync(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->GetMailboxAsync(*(void**)(&id), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailbox>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetConversationAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailConversation>) consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetConversationAsync(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->GetConversationAsync(*(void**)(&id), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailConversation>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetFolderAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailFolder>) consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetFolderAsync(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->GetFolderAsync(*(void**)(&id), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailFolder>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetMessageAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessage>) consume_Windows_ApplicationModel_Email_IEmailStore<D>::GetMessageAsync(param::hstring const& id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->GetMessageAsync(*(void**)(&id), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMessage>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::CreateMailboxAsync(param::hstring const& accountName, param::hstring const& accountAddress) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailbox>) consume_Windows_ApplicationModel_Email_IEmailStore<D>::CreateMailboxAsync(param::hstring const& accountName, param::hstring const& accountAddress) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->CreateMailboxAsync(*(void**)(&accountName), *(void**)(&accountAddress), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailbox>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Email_IEmailStore<D>::CreateMailboxAsync(param::hstring const& accountName, param::hstring const& accountAddress, param::hstring const& userDataAccountId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailbox>) consume_Windows_ApplicationModel_Email_IEmailStore<D>::CreateMailboxAsync(param::hstring const& accountName, param::hstring const& accountAddress, param::hstring const& userDataAccountId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Email::IEmailStore)->CreateMailboxInAccountAsync(*(void**)(&accountName), *(void**)(&accountAddress), *(void**)(&userDataAccountId), &result));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Email::EmailMailbox>{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailAttachment> : produce_base<D, Windows::ApplicationModel::Email::IEmailAttachment>
     {
@@ -2073,6 +2074,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailAttachment2> : produce_base<D, Windows::ApplicationModel::Email::IEmailAttachment2>
     {
@@ -2179,6 +2182,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailAttachmentFactory> : produce_base<D, Windows::ApplicationModel::Email::IEmailAttachmentFactory>
     {
@@ -2191,6 +2196,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailAttachmentFactory2> : produce_base<D, Windows::ApplicationModel::Email::IEmailAttachmentFactory2>
     {
@@ -2203,6 +2210,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailConversation> : produce_base<D, Windows::ApplicationModel::Email::IEmailConversation>
     {
@@ -2321,6 +2330,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailConversationBatch> : produce_base<D, Windows::ApplicationModel::Email::IEmailConversationBatch>
     {
@@ -2340,6 +2351,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailConversationReader> : produce_base<D, Windows::ApplicationModel::Email::IEmailConversationReader>
     {
@@ -2352,6 +2365,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailFolder> : produce_base<D, Windows::ApplicationModel::Email::IEmailFolder>
     {
@@ -2550,6 +2565,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailIrmInfo> : produce_base<D, Windows::ApplicationModel::Email::IEmailIrmInfo>
     {
@@ -2724,6 +2741,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailIrmInfoFactory> : produce_base<D, Windows::ApplicationModel::Email::IEmailIrmInfoFactory>
     {
@@ -2736,6 +2755,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailIrmTemplate> : produce_base<D, Windows::ApplicationModel::Email::IEmailIrmTemplate>
     {
@@ -2785,6 +2806,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailIrmTemplateFactory> : produce_base<D, Windows::ApplicationModel::Email::IEmailIrmTemplateFactory>
     {
@@ -2797,6 +2820,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailItemCounts> : produce_base<D, Windows::ApplicationModel::Email::IEmailItemCounts>
     {
@@ -2829,6 +2854,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailbox> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailbox>
     {
@@ -3223,6 +3250,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailbox2> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailbox2>
     {
@@ -3251,6 +3280,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailbox3> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailbox3>
     {
@@ -3295,6 +3326,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailbox4> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailbox4>
     {
@@ -3307,6 +3340,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailbox5> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailbox5>
     {
@@ -3319,6 +3354,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxAction> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxAction>
     {
@@ -3337,6 +3374,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxAutoReply> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxAutoReply>
     {
@@ -3370,6 +3409,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings>
     {
@@ -3456,6 +3497,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxCapabilities> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxCapabilities>
     {
@@ -3516,6 +3559,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxCapabilities2> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxCapabilities2>
     {
@@ -3562,6 +3607,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxCapabilities3> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxCapabilities3>
     {
@@ -3664,6 +3711,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxChange> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxChange>
     {
@@ -3699,6 +3748,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxChangeReader> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxChangeReader>
     {
@@ -3725,6 +3776,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxChangeTracker> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxChangeTracker>
     {
@@ -3758,6 +3811,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxChangedDeferral> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxChangedDeferral>
     {
@@ -3769,6 +3824,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxChangedEventArgs> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxChangedEventArgs>
     {
@@ -3781,6 +3838,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult>
     {
@@ -3800,6 +3859,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxPolicies> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxPolicies>
     {
@@ -3834,6 +3895,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxPolicies2> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxPolicies2>
     {
@@ -3852,6 +3915,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxPolicies3> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxPolicies3>
     {
@@ -3898,6 +3963,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxSyncManager> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxSyncManager>
     {
@@ -3947,6 +4014,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMailboxSyncManager2> : produce_base<D, Windows::ApplicationModel::Email::IEmailMailboxSyncManager2>
     {
@@ -3972,6 +4041,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailManagerForUser> : produce_base<D, Windows::ApplicationModel::Email::IEmailManagerForUser>
     {
@@ -4000,6 +4071,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailManagerStatics> : produce_base<D, Windows::ApplicationModel::Email::IEmailManagerStatics>
     {
@@ -4012,6 +4085,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailManagerStatics2> : produce_base<D, Windows::ApplicationModel::Email::IEmailManagerStatics2>
     {
@@ -4024,6 +4099,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailManagerStatics3> : produce_base<D, Windows::ApplicationModel::Email::IEmailManagerStatics3>
     {
@@ -4036,6 +4113,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMeetingInfo> : produce_base<D, Windows::ApplicationModel::Email::IEmailMeetingInfo>
     {
@@ -4231,6 +4310,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMeetingInfo2> : produce_base<D, Windows::ApplicationModel::Email::IEmailMeetingInfo2>
     {
@@ -4242,6 +4323,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMessage> : produce_base<D, Windows::ApplicationModel::Email::IEmailMessage>
     {
@@ -4308,6 +4391,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMessage2> : produce_base<D, Windows::ApplicationModel::Email::IEmailMessage2>
     {
@@ -4641,6 +4726,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMessage3> : produce_base<D, Windows::ApplicationModel::Email::IEmailMessage3>
     {
@@ -4674,6 +4761,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMessage4> : produce_base<D, Windows::ApplicationModel::Email::IEmailMessage4>
     {
@@ -4701,6 +4790,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMessageBatch> : produce_base<D, Windows::ApplicationModel::Email::IEmailMessageBatch>
     {
@@ -4720,6 +4811,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailMessageReader> : produce_base<D, Windows::ApplicationModel::Email::IEmailMessageReader>
     {
@@ -4732,6 +4825,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailQueryOptions> : produce_base<D, Windows::ApplicationModel::Email::IEmailQueryOptions>
     {
@@ -4794,6 +4889,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailQueryOptionsFactory> : produce_base<D, Windows::ApplicationModel::Email::IEmailQueryOptionsFactory>
     {
@@ -4814,6 +4911,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailQueryTextSearch> : produce_base<D, Windows::ApplicationModel::Email::IEmailQueryTextSearch>
     {
@@ -4861,6 +4960,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailRecipient> : produce_base<D, Windows::ApplicationModel::Email::IEmailRecipient>
     {
@@ -4895,6 +4996,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailRecipientFactory> : produce_base<D, Windows::ApplicationModel::Email::IEmailRecipientFactory>
     {
@@ -4915,6 +5018,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailRecipientResolutionResult> : produce_base<D, Windows::ApplicationModel::Email::IEmailRecipientResolutionResult>
     {
@@ -4934,6 +5039,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2> : produce_base<D, Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2>
     {
@@ -4952,6 +5059,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailStore> : produce_base<D, Windows::ApplicationModel::Email::IEmailStore>
     {
@@ -5044,12 +5153,15 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Email::IEmailStoreNotificationTriggerDetails> : produce_base<D, Windows::ApplicationModel::Email::IEmailStoreNotificationTriggerDetails>
     {
     };
+#endif
 }
-namespace winrt::Windows::ApplicationModel::Email
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Email
 {
     constexpr auto operator|(EmailQuerySearchFields const left, EmailQuerySearchFields const right) noexcept
     {
@@ -5083,176 +5195,178 @@ namespace winrt::Windows::ApplicationModel::Email
         return left;
     }
     inline EmailAttachment::EmailAttachment() :
-        EmailAttachment(impl::call_factory<EmailAttachment>([](auto&& f) { return f.template ActivateInstance<EmailAttachment>(); }))
+        EmailAttachment(impl::call_factory_cast<EmailAttachment(*)(Windows::Foundation::IActivationFactory const&), EmailAttachment>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EmailAttachment>(); }))
     {
     }
     inline EmailAttachment::EmailAttachment(param::hstring const& fileName, Windows::Storage::Streams::IRandomAccessStreamReference const& data) :
-        EmailAttachment(impl::call_factory<EmailAttachment, Windows::ApplicationModel::Email::IEmailAttachmentFactory>([&](auto&& f) { return f.Create(fileName, data); }))
+        EmailAttachment(impl::call_factory<EmailAttachment, IEmailAttachmentFactory>([&](IEmailAttachmentFactory const& f) { return f.Create(fileName, data); }))
     {
     }
     inline EmailAttachment::EmailAttachment(param::hstring const& fileName, Windows::Storage::Streams::IRandomAccessStreamReference const& data, param::hstring const& mimeType) :
-        EmailAttachment(impl::call_factory<EmailAttachment, Windows::ApplicationModel::Email::IEmailAttachmentFactory2>([&](auto&& f) { return f.Create(fileName, data, mimeType); }))
+        EmailAttachment(impl::call_factory<EmailAttachment, IEmailAttachmentFactory2>([&](IEmailAttachmentFactory2 const& f) { return f.Create(fileName, data, mimeType); }))
     {
     }
     inline EmailIrmInfo::EmailIrmInfo() :
-        EmailIrmInfo(impl::call_factory<EmailIrmInfo>([](auto&& f) { return f.template ActivateInstance<EmailIrmInfo>(); }))
+        EmailIrmInfo(impl::call_factory_cast<EmailIrmInfo(*)(Windows::Foundation::IActivationFactory const&), EmailIrmInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EmailIrmInfo>(); }))
     {
     }
     inline EmailIrmInfo::EmailIrmInfo(Windows::Foundation::DateTime const& expiration, Windows::ApplicationModel::Email::EmailIrmTemplate const& irmTemplate) :
-        EmailIrmInfo(impl::call_factory<EmailIrmInfo, Windows::ApplicationModel::Email::IEmailIrmInfoFactory>([&](auto&& f) { return f.Create(expiration, irmTemplate); }))
+        EmailIrmInfo(impl::call_factory<EmailIrmInfo, IEmailIrmInfoFactory>([&](IEmailIrmInfoFactory const& f) { return f.Create(expiration, irmTemplate); }))
     {
     }
     inline EmailIrmTemplate::EmailIrmTemplate() :
-        EmailIrmTemplate(impl::call_factory<EmailIrmTemplate>([](auto&& f) { return f.template ActivateInstance<EmailIrmTemplate>(); }))
+        EmailIrmTemplate(impl::call_factory_cast<EmailIrmTemplate(*)(Windows::Foundation::IActivationFactory const&), EmailIrmTemplate>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EmailIrmTemplate>(); }))
     {
     }
     inline EmailIrmTemplate::EmailIrmTemplate(param::hstring const& id, param::hstring const& name, param::hstring const& description) :
-        EmailIrmTemplate(impl::call_factory<EmailIrmTemplate, Windows::ApplicationModel::Email::IEmailIrmTemplateFactory>([&](auto&& f) { return f.Create(id, name, description); }))
+        EmailIrmTemplate(impl::call_factory<EmailIrmTemplate, IEmailIrmTemplateFactory>([&](IEmailIrmTemplateFactory const& f) { return f.Create(id, name, description); }))
     {
     }
     inline EmailMailboxAutoReplySettings::EmailMailboxAutoReplySettings() :
-        EmailMailboxAutoReplySettings(impl::call_factory<EmailMailboxAutoReplySettings>([](auto&& f) { return f.template ActivateInstance<EmailMailboxAutoReplySettings>(); }))
+        EmailMailboxAutoReplySettings(impl::call_factory_cast<EmailMailboxAutoReplySettings(*)(Windows::Foundation::IActivationFactory const&), EmailMailboxAutoReplySettings>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EmailMailboxAutoReplySettings>(); }))
     {
     }
     inline auto EmailManager::ShowComposeNewEmailAsync(Windows::ApplicationModel::Email::EmailMessage const& message)
     {
-        return impl::call_factory<EmailManager, Windows::ApplicationModel::Email::IEmailManagerStatics>([&](auto&& f) { return f.ShowComposeNewEmailAsync(message); });
+        return impl::call_factory<EmailManager, IEmailManagerStatics>([&](IEmailManagerStatics const& f) { return f.ShowComposeNewEmailAsync(message); });
     }
     inline auto EmailManager::RequestStoreAsync(Windows::ApplicationModel::Email::EmailStoreAccessType const& accessType)
     {
-        return impl::call_factory<EmailManager, Windows::ApplicationModel::Email::IEmailManagerStatics2>([&](auto&& f) { return f.RequestStoreAsync(accessType); });
+        return impl::call_factory<EmailManager, IEmailManagerStatics2>([&](IEmailManagerStatics2 const& f) { return f.RequestStoreAsync(accessType); });
     }
     inline auto EmailManager::GetForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<EmailManager, Windows::ApplicationModel::Email::IEmailManagerStatics3>([&](auto&& f) { return f.GetForUser(user); });
+        return impl::call_factory<EmailManager, IEmailManagerStatics3>([&](IEmailManagerStatics3 const& f) { return f.GetForUser(user); });
     }
     inline EmailMeetingInfo::EmailMeetingInfo() :
-        EmailMeetingInfo(impl::call_factory<EmailMeetingInfo>([](auto&& f) { return f.template ActivateInstance<EmailMeetingInfo>(); }))
+        EmailMeetingInfo(impl::call_factory_cast<EmailMeetingInfo(*)(Windows::Foundation::IActivationFactory const&), EmailMeetingInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EmailMeetingInfo>(); }))
     {
     }
     inline EmailMessage::EmailMessage() :
-        EmailMessage(impl::call_factory<EmailMessage>([](auto&& f) { return f.template ActivateInstance<EmailMessage>(); }))
+        EmailMessage(impl::call_factory_cast<EmailMessage(*)(Windows::Foundation::IActivationFactory const&), EmailMessage>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EmailMessage>(); }))
     {
     }
     inline EmailQueryOptions::EmailQueryOptions() :
-        EmailQueryOptions(impl::call_factory<EmailQueryOptions>([](auto&& f) { return f.template ActivateInstance<EmailQueryOptions>(); }))
+        EmailQueryOptions(impl::call_factory_cast<EmailQueryOptions(*)(Windows::Foundation::IActivationFactory const&), EmailQueryOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EmailQueryOptions>(); }))
     {
     }
     inline EmailQueryOptions::EmailQueryOptions(param::hstring const& text) :
-        EmailQueryOptions(impl::call_factory<EmailQueryOptions, Windows::ApplicationModel::Email::IEmailQueryOptionsFactory>([&](auto&& f) { return f.CreateWithText(text); }))
+        EmailQueryOptions(impl::call_factory<EmailQueryOptions, IEmailQueryOptionsFactory>([&](IEmailQueryOptionsFactory const& f) { return f.CreateWithText(text); }))
     {
     }
     inline EmailQueryOptions::EmailQueryOptions(param::hstring const& text, Windows::ApplicationModel::Email::EmailQuerySearchFields const& fields) :
-        EmailQueryOptions(impl::call_factory<EmailQueryOptions, Windows::ApplicationModel::Email::IEmailQueryOptionsFactory>([&](auto&& f) { return f.CreateWithTextAndFields(text, fields); }))
+        EmailQueryOptions(impl::call_factory<EmailQueryOptions, IEmailQueryOptionsFactory>([&](IEmailQueryOptionsFactory const& f) { return f.CreateWithTextAndFields(text, fields); }))
     {
     }
     inline EmailRecipient::EmailRecipient() :
-        EmailRecipient(impl::call_factory<EmailRecipient>([](auto&& f) { return f.template ActivateInstance<EmailRecipient>(); }))
+        EmailRecipient(impl::call_factory_cast<EmailRecipient(*)(Windows::Foundation::IActivationFactory const&), EmailRecipient>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EmailRecipient>(); }))
     {
     }
     inline EmailRecipient::EmailRecipient(param::hstring const& address) :
-        EmailRecipient(impl::call_factory<EmailRecipient, Windows::ApplicationModel::Email::IEmailRecipientFactory>([&](auto&& f) { return f.Create(address); }))
+        EmailRecipient(impl::call_factory<EmailRecipient, IEmailRecipientFactory>([&](IEmailRecipientFactory const& f) { return f.Create(address); }))
     {
     }
     inline EmailRecipient::EmailRecipient(param::hstring const& address, param::hstring const& name) :
-        EmailRecipient(impl::call_factory<EmailRecipient, Windows::ApplicationModel::Email::IEmailRecipientFactory>([&](auto&& f) { return f.CreateWithName(address, name); }))
+        EmailRecipient(impl::call_factory<EmailRecipient, IEmailRecipientFactory>([&](IEmailRecipientFactory const& f) { return f.CreateWithName(address, name); }))
     {
     }
     inline EmailRecipientResolutionResult::EmailRecipientResolutionResult() :
-        EmailRecipientResolutionResult(impl::call_factory<EmailRecipientResolutionResult>([](auto&& f) { return f.template ActivateInstance<EmailRecipientResolutionResult>(); }))
+        EmailRecipientResolutionResult(impl::call_factory_cast<EmailRecipientResolutionResult(*)(Windows::Foundation::IActivationFactory const&), EmailRecipientResolutionResult>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<EmailRecipientResolutionResult>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailAttachment> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailAttachment> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailAttachment2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailAttachment2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailAttachmentFactory> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailAttachmentFactory> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailAttachmentFactory2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailAttachmentFactory2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailConversation> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailConversation> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailConversationBatch> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailConversationBatch> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailConversationReader> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailConversationReader> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailFolder> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailFolder> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailIrmInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailIrmInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailIrmInfoFactory> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailIrmInfoFactory> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailIrmTemplate> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailIrmTemplate> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailIrmTemplateFactory> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailIrmTemplateFactory> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailItemCounts> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailItemCounts> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailbox> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailbox2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailbox3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox4> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailbox4> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox5> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailbox5> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxAction> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxAction> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxAutoReply> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxAutoReply> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChange> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxChange> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangeReader> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangeReader> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangeTracker> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangeTracker> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangedDeferral> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangedDeferral> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxSyncManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxSyncManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxSyncManager2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMailboxSyncManager2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailManagerForUser> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailManagerForUser> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailManagerStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailManagerStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailManagerStatics2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailManagerStatics2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailManagerStatics3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailManagerStatics3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMeetingInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMeetingInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMeetingInfo2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMeetingInfo2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessage> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMessage> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessage2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMessage2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessage3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMessage3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessage4> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMessage4> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessageBatch> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMessageBatch> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessageReader> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailMessageReader> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailQueryOptions> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailQueryOptions> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailQueryOptionsFactory> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailQueryOptionsFactory> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailQueryTextSearch> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailQueryTextSearch> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailRecipient> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailRecipient> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailRecipientFactory> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailRecipientFactory> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailStore> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailStore> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailStoreNotificationTriggerDetails> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::IEmailStoreNotificationTriggerDetails> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailAttachment> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailAttachment> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailConversation> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailConversation> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailConversationBatch> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailConversationBatch> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailConversationReader> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailConversationReader> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailFolder> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailFolder> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailIrmInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailIrmInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailItemCounts> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailItemCounts> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailbox> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailbox> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxAction> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxAction> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChange> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxChange> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailManagerForUser> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailManagerForUser> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMeetingInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMeetingInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMessage> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMessage> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMessageBatch> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMessageBatch> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMessageReader> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailMessageReader> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailQueryOptions> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailQueryOptions> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailRecipient> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailRecipient> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailStore> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailStore> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailAttachment> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailAttachment2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailAttachmentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailAttachmentFactory2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailConversation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailConversationBatch> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailConversationReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailFolder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailIrmInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailIrmInfoFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailIrmTemplate> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailIrmTemplateFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailItemCounts> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailbox5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxAction> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxAutoReply> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxAutoReplySettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChange> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangeReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangeTracker> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangedDeferral> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxCreateFolderResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxPolicies3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxSyncManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMailboxSyncManager2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailManagerForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailManagerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailManagerStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMeetingInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMeetingInfo2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessage2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessage3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessage4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessageBatch> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailMessageReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailQueryOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailQueryOptionsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailQueryTextSearch> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailRecipient> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailRecipientFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailRecipientResolutionResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailStore> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::IEmailStoreNotificationTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailAttachment> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailConversation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailConversationBatch> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailConversationReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailFolder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailIrmInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailItemCounts> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailbox> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxAction> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChange> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailManagerForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMeetingInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMessageBatch> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailMessageReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailQueryOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailRecipient> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailStore> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails> : winrt::impl::hash_base {};
+#endif
 }
 #endif

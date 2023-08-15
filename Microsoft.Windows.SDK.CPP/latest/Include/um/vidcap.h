@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -165,36 +173,44 @@ EXTERN_C const IID IID_IKsTopologyInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IKsTopologyInfo * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IKsTopologyInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IKsTopologyInfo * This);
         
+        DECLSPEC_XFGVIRT(IKsTopologyInfo, get_NumCategories)
         HRESULT ( STDMETHODCALLTYPE *get_NumCategories )( 
             IKsTopologyInfo * This,
             /* [out] */ DWORD *pdwNumCategories);
         
+        DECLSPEC_XFGVIRT(IKsTopologyInfo, get_Category)
         HRESULT ( STDMETHODCALLTYPE *get_Category )( 
             IKsTopologyInfo * This,
             /* [in] */ DWORD dwIndex,
             /* [out] */ GUID *pCategory);
         
+        DECLSPEC_XFGVIRT(IKsTopologyInfo, get_NumConnections)
         HRESULT ( STDMETHODCALLTYPE *get_NumConnections )( 
             IKsTopologyInfo * This,
             /* [out] */ DWORD *pdwNumConnections);
         
+        DECLSPEC_XFGVIRT(IKsTopologyInfo, get_ConnectionInfo)
         HRESULT ( STDMETHODCALLTYPE *get_ConnectionInfo )( 
             IKsTopologyInfo * This,
             /* [in] */ DWORD dwIndex,
             /* [out] */ KSTOPOLOGY_CONNECTION *pConnectionInfo);
         
+        DECLSPEC_XFGVIRT(IKsTopologyInfo, get_NodeName)
         HRESULT ( STDMETHODCALLTYPE *get_NodeName )( 
             IKsTopologyInfo * This,
             /* [in] */ DWORD dwNodeId,
@@ -204,15 +220,18 @@ EXTERN_C const IID IID_IKsTopologyInfo;
             /* [annotation][out] */ 
             _Out_  DWORD *pdwNameLen);
         
+        DECLSPEC_XFGVIRT(IKsTopologyInfo, get_NumNodes)
         HRESULT ( STDMETHODCALLTYPE *get_NumNodes )( 
             IKsTopologyInfo * This,
             /* [out] */ DWORD *pdwNumNodes);
         
+        DECLSPEC_XFGVIRT(IKsTopologyInfo, get_NodeType)
         HRESULT ( STDMETHODCALLTYPE *get_NodeType )( 
             IKsTopologyInfo * This,
             /* [in] */ DWORD dwNodeId,
             /* [out] */ GUID *pNodeType);
         
+        DECLSPEC_XFGVIRT(IKsTopologyInfo, CreateNodeInstance)
         HRESULT ( STDMETHODCALLTYPE *CreateNodeInstance )( 
             IKsTopologyInfo * This,
             /* [in] */ DWORD dwNodeId,
@@ -310,26 +329,32 @@ EXTERN_C const IID IID_ISelector;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ISelector * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ISelector * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ISelector * This);
         
+        DECLSPEC_XFGVIRT(ISelector, get_NumSources)
         HRESULT ( STDMETHODCALLTYPE *get_NumSources )( 
             ISelector * This,
             /* [out] */ DWORD *pdwNumSources);
         
+        DECLSPEC_XFGVIRT(ISelector, get_SourceNodeId)
         HRESULT ( STDMETHODCALLTYPE *get_SourceNodeId )( 
             ISelector * This,
             /* [out] */ DWORD *pdwPinId);
         
+        DECLSPEC_XFGVIRT(ISelector, put_SourceNodeId)
         HRESULT ( STDMETHODCALLTYPE *put_SourceNodeId )( 
             ISelector * This,
             /* [in] */ DWORD dwPinId);
@@ -652,28 +677,34 @@ EXTERN_C const IID IID_ICameraControl;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ICameraControl * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ICameraControl * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ICameraControl * This);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_Exposure)
         HRESULT ( STDMETHODCALLTYPE *get_Exposure )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_Exposure)
         HRESULT ( STDMETHODCALLTYPE *put_Exposure )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_Exposure)
         HRESULT ( STDMETHODCALLTYPE *getRange_Exposure )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -682,16 +713,19 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_Focus)
         HRESULT ( STDMETHODCALLTYPE *get_Focus )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_Focus)
         HRESULT ( STDMETHODCALLTYPE *put_Focus )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_Focus)
         HRESULT ( STDMETHODCALLTYPE *getRange_Focus )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -700,16 +734,19 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_Iris)
         HRESULT ( STDMETHODCALLTYPE *get_Iris )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_Iris)
         HRESULT ( STDMETHODCALLTYPE *put_Iris )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_Iris)
         HRESULT ( STDMETHODCALLTYPE *getRange_Iris )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -718,16 +755,19 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_Zoom)
         HRESULT ( STDMETHODCALLTYPE *get_Zoom )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_Zoom)
         HRESULT ( STDMETHODCALLTYPE *put_Zoom )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_Zoom)
         HRESULT ( STDMETHODCALLTYPE *getRange_Zoom )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -736,22 +776,26 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_FocalLengths)
         HRESULT ( STDMETHODCALLTYPE *get_FocalLengths )( 
             ICameraControl * This,
             /* [out] */ long *plOcularFocalLength,
             /* [out] */ long *plObjectiveFocalLengthMin,
             /* [out] */ long *plObjectiveFocalLengthMax);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_Pan)
         HRESULT ( STDMETHODCALLTYPE *get_Pan )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_Pan)
         HRESULT ( STDMETHODCALLTYPE *put_Pan )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_Pan)
         HRESULT ( STDMETHODCALLTYPE *getRange_Pan )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -760,16 +804,19 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_Tilt)
         HRESULT ( STDMETHODCALLTYPE *get_Tilt )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_Tilt)
         HRESULT ( STDMETHODCALLTYPE *put_Tilt )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_Tilt)
         HRESULT ( STDMETHODCALLTYPE *getRange_Tilt )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -778,28 +825,33 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_PanTilt)
         HRESULT ( STDMETHODCALLTYPE *get_PanTilt )( 
             ICameraControl * This,
             /* [out] */ long *pPanValue,
             /* [out] */ long *pTiltValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_PanTilt)
         HRESULT ( STDMETHODCALLTYPE *put_PanTilt )( 
             ICameraControl * This,
             /* [in] */ long PanValue,
             /* [in] */ long TiltValue,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_Roll)
         HRESULT ( STDMETHODCALLTYPE *get_Roll )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_Roll)
         HRESULT ( STDMETHODCALLTYPE *put_Roll )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_Roll)
         HRESULT ( STDMETHODCALLTYPE *getRange_Roll )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -808,16 +860,19 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_ExposureRelative)
         HRESULT ( STDMETHODCALLTYPE *get_ExposureRelative )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_ExposureRelative)
         HRESULT ( STDMETHODCALLTYPE *put_ExposureRelative )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_ExposureRelative)
         HRESULT ( STDMETHODCALLTYPE *getRange_ExposureRelative )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -826,16 +881,19 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_FocusRelative)
         HRESULT ( STDMETHODCALLTYPE *get_FocusRelative )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_FocusRelative)
         HRESULT ( STDMETHODCALLTYPE *put_FocusRelative )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_FocusRelative)
         HRESULT ( STDMETHODCALLTYPE *getRange_FocusRelative )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -844,16 +902,19 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_IrisRelative)
         HRESULT ( STDMETHODCALLTYPE *get_IrisRelative )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_IrisRelative)
         HRESULT ( STDMETHODCALLTYPE *put_IrisRelative )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_IrisRelative)
         HRESULT ( STDMETHODCALLTYPE *getRange_IrisRelative )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -862,16 +923,19 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_ZoomRelative)
         HRESULT ( STDMETHODCALLTYPE *get_ZoomRelative )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_ZoomRelative)
         HRESULT ( STDMETHODCALLTYPE *put_ZoomRelative )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_ZoomRelative)
         HRESULT ( STDMETHODCALLTYPE *getRange_ZoomRelative )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -880,26 +944,31 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_PanRelative)
         HRESULT ( STDMETHODCALLTYPE *get_PanRelative )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_PanRelative)
         HRESULT ( STDMETHODCALLTYPE *put_PanRelative )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_TiltRelative)
         HRESULT ( STDMETHODCALLTYPE *get_TiltRelative )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_TiltRelative)
         HRESULT ( STDMETHODCALLTYPE *put_TiltRelative )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_TiltRelative)
         HRESULT ( STDMETHODCALLTYPE *getRange_TiltRelative )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -908,18 +977,21 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_PanTiltRelative)
         HRESULT ( STDMETHODCALLTYPE *get_PanTiltRelative )( 
             ICameraControl * This,
             /* [out] */ long *pPanValue,
             /* [out] */ long *pTiltValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_PanTiltRelative)
         HRESULT ( STDMETHODCALLTYPE *put_PanTiltRelative )( 
             ICameraControl * This,
             /* [in] */ long PanValue,
             /* [in] */ long TiltValue,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_PanRelative)
         HRESULT ( STDMETHODCALLTYPE *getRange_PanRelative )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -928,16 +1000,19 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_RollRelative)
         HRESULT ( STDMETHODCALLTYPE *get_RollRelative )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_RollRelative)
         HRESULT ( STDMETHODCALLTYPE *put_RollRelative )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, getRange_RollRelative)
         HRESULT ( STDMETHODCALLTYPE *getRange_RollRelative )( 
             ICameraControl * This,
             /* [out] */ long *pMin,
@@ -946,21 +1021,25 @@ EXTERN_C const IID IID_ICameraControl;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_ScanMode)
         HRESULT ( STDMETHODCALLTYPE *get_ScanMode )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_ScanMode)
         HRESULT ( STDMETHODCALLTYPE *put_ScanMode )( 
             ICameraControl * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, get_PrivacyMode)
         HRESULT ( STDMETHODCALLTYPE *get_PrivacyMode )( 
             ICameraControl * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(ICameraControl, put_PrivacyMode)
         HRESULT ( STDMETHODCALLTYPE *put_PrivacyMode )( 
             ICameraControl * This,
             /* [in] */ long Value,
@@ -1374,28 +1453,34 @@ EXTERN_C const IID IID_IVideoProcAmp;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IVideoProcAmp * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IVideoProcAmp * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IVideoProcAmp * This);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_BacklightCompensation)
         HRESULT ( STDMETHODCALLTYPE *get_BacklightCompensation )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_BacklightCompensation)
         HRESULT ( STDMETHODCALLTYPE *put_BacklightCompensation )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_BacklightCompensation)
         HRESULT ( STDMETHODCALLTYPE *getRange_BacklightCompensation )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1404,16 +1489,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_Brightness)
         HRESULT ( STDMETHODCALLTYPE *get_Brightness )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_Brightness)
         HRESULT ( STDMETHODCALLTYPE *put_Brightness )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_Brightness)
         HRESULT ( STDMETHODCALLTYPE *getRange_Brightness )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1422,16 +1510,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_ColorEnable)
         HRESULT ( STDMETHODCALLTYPE *get_ColorEnable )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_ColorEnable)
         HRESULT ( STDMETHODCALLTYPE *put_ColorEnable )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_ColorEnable)
         HRESULT ( STDMETHODCALLTYPE *getRange_ColorEnable )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1440,16 +1531,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_Contrast)
         HRESULT ( STDMETHODCALLTYPE *get_Contrast )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_Contrast)
         HRESULT ( STDMETHODCALLTYPE *put_Contrast )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_Contrast)
         HRESULT ( STDMETHODCALLTYPE *getRange_Contrast )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1458,16 +1552,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_Gamma)
         HRESULT ( STDMETHODCALLTYPE *get_Gamma )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_Gamma)
         HRESULT ( STDMETHODCALLTYPE *put_Gamma )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_Gamma)
         HRESULT ( STDMETHODCALLTYPE *getRange_Gamma )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1476,16 +1573,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_Saturation)
         HRESULT ( STDMETHODCALLTYPE *get_Saturation )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_Saturation)
         HRESULT ( STDMETHODCALLTYPE *put_Saturation )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_Saturation)
         HRESULT ( STDMETHODCALLTYPE *getRange_Saturation )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1494,16 +1594,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_Sharpness)
         HRESULT ( STDMETHODCALLTYPE *get_Sharpness )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_Sharpness)
         HRESULT ( STDMETHODCALLTYPE *put_Sharpness )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_Sharpness)
         HRESULT ( STDMETHODCALLTYPE *getRange_Sharpness )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1512,16 +1615,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_WhiteBalance)
         HRESULT ( STDMETHODCALLTYPE *get_WhiteBalance )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_WhiteBalance)
         HRESULT ( STDMETHODCALLTYPE *put_WhiteBalance )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_WhiteBalance)
         HRESULT ( STDMETHODCALLTYPE *getRange_WhiteBalance )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1530,16 +1636,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_Gain)
         HRESULT ( STDMETHODCALLTYPE *get_Gain )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_Gain)
         HRESULT ( STDMETHODCALLTYPE *put_Gain )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_Gain)
         HRESULT ( STDMETHODCALLTYPE *getRange_Gain )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1548,16 +1657,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_Hue)
         HRESULT ( STDMETHODCALLTYPE *get_Hue )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_Hue)
         HRESULT ( STDMETHODCALLTYPE *put_Hue )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_Hue)
         HRESULT ( STDMETHODCALLTYPE *getRange_Hue )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1566,16 +1678,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_DigitalMultiplier)
         HRESULT ( STDMETHODCALLTYPE *get_DigitalMultiplier )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_DigitalMultiplier)
         HRESULT ( STDMETHODCALLTYPE *put_DigitalMultiplier )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_DigitalMultiplier)
         HRESULT ( STDMETHODCALLTYPE *getRange_DigitalMultiplier )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1584,16 +1699,19 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_PowerlineFrequency)
         HRESULT ( STDMETHODCALLTYPE *get_PowerlineFrequency )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue,
             /* [out] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_PowerlineFrequency)
         HRESULT ( STDMETHODCALLTYPE *put_PowerlineFrequency )( 
             IVideoProcAmp * This,
             /* [in] */ long Value,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_PowerlineFrequency)
         HRESULT ( STDMETHODCALLTYPE *getRange_PowerlineFrequency )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1602,18 +1720,21 @@ EXTERN_C const IID IID_IVideoProcAmp;
             /* [out] */ long *pDefault,
             /* [out] */ long *pCapsFlag);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, get_WhiteBalanceComponent)
         HRESULT ( STDMETHODCALLTYPE *get_WhiteBalanceComponent )( 
             IVideoProcAmp * This,
             /* [out] */ long *pValue1,
             /* [out] */ long *pValue2,
             /* [out][in] */ long *pFlags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, put_WhiteBalanceComponent)
         HRESULT ( STDMETHODCALLTYPE *put_WhiteBalanceComponent )( 
             IVideoProcAmp * This,
             /* [in] */ long Value1,
             /* [in] */ long Value2,
             /* [in] */ long Flags);
         
+        DECLSPEC_XFGVIRT(IVideoProcAmp, getRange_WhiteBalanceComponent)
         HRESULT ( STDMETHODCALLTYPE *getRange_WhiteBalanceComponent )( 
             IVideoProcAmp * This,
             /* [out] */ long *pMin,
@@ -1803,22 +1924,27 @@ EXTERN_C const IID IID_IKsNodeControl;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IKsNodeControl * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IKsNodeControl * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IKsNodeControl * This);
         
+        DECLSPEC_XFGVIRT(IKsNodeControl, put_NodeId)
         HRESULT ( STDMETHODCALLTYPE *put_NodeId )( 
             IKsNodeControl * This,
             /* [in] */ DWORD dwNodeId);
         
+        DECLSPEC_XFGVIRT(IKsNodeControl, put_KsControl)
         HRESULT ( STDMETHODCALLTYPE *put_KsControl )( 
             IKsNodeControl * This,
             /* [in] */ PVOID pKsControl);

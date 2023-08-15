@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.System.UserProfile.1.h"
-namespace winrt::Windows::System::UserProfile
+WINRT_EXPORT namespace winrt::Windows::System::UserProfile
 {
     struct AdvertisingManager
     {
@@ -84,7 +84,7 @@ namespace winrt::Windows::System::UserProfile
         static auto SetAccountPicturesFromStreamsAsync(Windows::Storage::Streams::IRandomAccessStream const& smallImage, Windows::Storage::Streams::IRandomAccessStream const& largeImage, Windows::Storage::Streams::IRandomAccessStream const& video);
         static auto AccountPictureChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler);
         using AccountPictureChanged_revoker = impl::factory_event_revoker<Windows::System::UserProfile::IUserInformationStatics, &impl::abi_t<Windows::System::UserProfile::IUserInformationStatics>::remove_AccountPictureChanged>;
-        static AccountPictureChanged_revoker AccountPictureChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler);
+        [[nodiscard]] static AccountPictureChanged_revoker AccountPictureChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler);
         static auto AccountPictureChanged(winrt::event_token const& token);
         static auto GetDisplayNameAsync();
         static auto GetFirstNameAsync();

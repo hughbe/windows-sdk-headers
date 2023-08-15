@@ -1,15 +1,15 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Media_ClosedCaptioning_0_H
 #define WINRT_Windows_Media_ClosedCaptioning_0_H
-namespace winrt::Windows::UI
+WINRT_EXPORT namespace winrt::Windows::UI
 {
     struct Color;
 }
-namespace winrt::Windows::Media::ClosedCaptioning
+WINRT_EXPORT namespace winrt::Windows::Media::ClosedCaptioning
 {
     enum class ClosedCaptionColor : int32_t
     {
@@ -64,66 +64,21 @@ namespace winrt::Windows::Media::ClosedCaptioning
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionProperties>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionColor>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionOpacity>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionSize>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionStyle>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>
-    {
-        static constexpr auto & value{ L"Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics" };
-    };
-    template <> struct name<Windows::Media::ClosedCaptioning::ClosedCaptionProperties>
-    {
-        static constexpr auto & value{ L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties" };
-    };
-    template <> struct name<Windows::Media::ClosedCaptioning::ClosedCaptionColor>
-    {
-        static constexpr auto & value{ L"Windows.Media.ClosedCaptioning.ClosedCaptionColor" };
-    };
-    template <> struct name<Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect>
-    {
-        static constexpr auto & value{ L"Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect" };
-    };
-    template <> struct name<Windows::Media::ClosedCaptioning::ClosedCaptionOpacity>
-    {
-        static constexpr auto & value{ L"Windows.Media.ClosedCaptioning.ClosedCaptionOpacity" };
-    };
-    template <> struct name<Windows::Media::ClosedCaptioning::ClosedCaptionSize>
-    {
-        static constexpr auto & value{ L"Windows.Media.ClosedCaptioning.ClosedCaptionSize" };
-    };
-    template <> struct name<Windows::Media::ClosedCaptioning::ClosedCaptionStyle>
-    {
-        static constexpr auto & value{ L"Windows.Media.ClosedCaptioning.ClosedCaptionStyle" };
-    };
-    template <> struct guid_storage<Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>
-    {
-        static constexpr guid value{ 0x10AA1F84,0xCC30,0x4141,{ 0xB5,0x03,0x52,0x72,0x28,0x9E,0x0C,0x20 } };
-    };
+    template <> struct category<Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionProperties>{ using type = class_category; };
+    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionColor>{ using type = enum_category; };
+    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect>{ using type = enum_category; };
+    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionOpacity>{ using type = enum_category; };
+    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionSize>{ using type = enum_category; };
+    template <> struct category<Windows::Media::ClosedCaptioning::ClosedCaptionStyle>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Media::ClosedCaptioning::ClosedCaptionProperties> = L"Windows.Media.ClosedCaptioning.ClosedCaptionProperties";
+    template <> inline constexpr auto& name_v<Windows::Media::ClosedCaptioning::ClosedCaptionColor> = L"Windows.Media.ClosedCaptioning.ClosedCaptionColor";
+    template <> inline constexpr auto& name_v<Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect> = L"Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect";
+    template <> inline constexpr auto& name_v<Windows::Media::ClosedCaptioning::ClosedCaptionOpacity> = L"Windows.Media.ClosedCaptioning.ClosedCaptionOpacity";
+    template <> inline constexpr auto& name_v<Windows::Media::ClosedCaptioning::ClosedCaptionSize> = L"Windows.Media.ClosedCaptioning.ClosedCaptionSize";
+    template <> inline constexpr auto& name_v<Windows::Media::ClosedCaptioning::ClosedCaptionStyle> = L"Windows.Media.ClosedCaptioning.ClosedCaptionStyle";
+    template <> inline constexpr auto& name_v<Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics> = L"Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics";
+    template <> inline constexpr guid guid_v<Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>{ 0x10AA1F84,0xCC30,0x4141,{ 0xB5,0x03,0x52,0x72,0x28,0x9E,0x0C,0x20 } }; // 10AA1F84-CC30-4141-B503-5272289E0C20
     template <> struct abi<Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -145,18 +100,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_ClosedCaptioning_IClosedCaptionPropertiesStatics
     {
-        [[nodiscard]] auto FontColor() const;
-        [[nodiscard]] auto ComputedFontColor() const;
-        [[nodiscard]] auto FontOpacity() const;
-        [[nodiscard]] auto FontSize() const;
-        [[nodiscard]] auto FontStyle() const;
-        [[nodiscard]] auto FontEffect() const;
-        [[nodiscard]] auto BackgroundColor() const;
-        [[nodiscard]] auto ComputedBackgroundColor() const;
-        [[nodiscard]] auto BackgroundOpacity() const;
-        [[nodiscard]] auto RegionColor() const;
-        [[nodiscard]] auto ComputedRegionColor() const;
-        [[nodiscard]] auto RegionOpacity() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::ClosedCaptioning::ClosedCaptionColor) FontColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) ComputedFontColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::ClosedCaptioning::ClosedCaptionOpacity) FontOpacity() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::ClosedCaptioning::ClosedCaptionSize) FontSize() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::ClosedCaptioning::ClosedCaptionStyle) FontStyle() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect) FontEffect() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::ClosedCaptioning::ClosedCaptionColor) BackgroundColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) ComputedBackgroundColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::ClosedCaptioning::ClosedCaptionOpacity) BackgroundOpacity() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::ClosedCaptioning::ClosedCaptionColor) RegionColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Color) ComputedRegionColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::ClosedCaptioning::ClosedCaptionOpacity) RegionOpacity() const;
     };
     template <> struct consume<Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>
     {

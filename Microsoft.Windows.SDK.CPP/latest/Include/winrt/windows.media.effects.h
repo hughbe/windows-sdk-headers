@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
@@ -1293,6 +1293,9 @@ namespace ABI {
                     AudioEffectType_SpeakerProtection = 15,
                     AudioEffectType_SpeakerCompensation = 16,
                     AudioEffectType_DynamicRangeCompression = 17,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+                    AudioEffectType_FarFieldBeamForming = 18,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
                 };
             } /* Effects */
         } /* Media */
@@ -3794,6 +3797,9 @@ enum __x_ABI_CWindows_CMedia_CEffects_CAudioEffectType
     AudioEffectType_SpeakerProtection = 15,
     AudioEffectType_SpeakerCompensation = 16,
     AudioEffectType_DynamicRangeCompression = 17,
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
+    AudioEffectType_FarFieldBeamForming = 18,
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 

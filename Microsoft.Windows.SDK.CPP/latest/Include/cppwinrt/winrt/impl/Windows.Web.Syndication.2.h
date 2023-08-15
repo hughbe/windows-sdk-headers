@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Security.Credentials.1.h"
 #include "winrt/impl/Windows.Web.Syndication.1.h"
-namespace winrt::Windows::Web::Syndication
+WINRT_EXPORT namespace winrt::Windows::Web::Syndication
 {
     struct RetrievalProgress
     {
@@ -50,7 +50,7 @@ namespace winrt::Windows::Web::Syndication
         SyndicationCategory(std::nullptr_t) noexcept {}
         SyndicationCategory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Syndication::ISyndicationCategory(ptr, take_ownership_from_abi) {}
         SyndicationCategory();
-        SyndicationCategory(param::hstring const& term);
+        explicit SyndicationCategory(param::hstring const& term);
         SyndicationCategory(param::hstring const& term, param::hstring const& scheme, param::hstring const& label);
     };
     struct __declspec(empty_bases) SyndicationClient : Windows::Web::Syndication::ISyndicationClient
@@ -58,7 +58,7 @@ namespace winrt::Windows::Web::Syndication
         SyndicationClient(std::nullptr_t) noexcept {}
         SyndicationClient(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Syndication::ISyndicationClient(ptr, take_ownership_from_abi) {}
         SyndicationClient();
-        SyndicationClient(Windows::Security::Credentials::PasswordCredential const& serverCredential);
+        explicit SyndicationClient(Windows::Security::Credentials::PasswordCredential const& serverCredential);
     };
     struct __declspec(empty_bases) SyndicationContent : Windows::Web::Syndication::ISyndicationContent
     {
@@ -66,7 +66,7 @@ namespace winrt::Windows::Web::Syndication
         SyndicationContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Syndication::ISyndicationContent(ptr, take_ownership_from_abi) {}
         SyndicationContent();
         SyndicationContent(param::hstring const& text, Windows::Web::Syndication::SyndicationTextType const& type);
-        SyndicationContent(Windows::Foundation::Uri const& sourceUri);
+        explicit SyndicationContent(Windows::Foundation::Uri const& sourceUri);
     };
     struct SyndicationError
     {
@@ -86,7 +86,7 @@ namespace winrt::Windows::Web::Syndication
         SyndicationGenerator(std::nullptr_t) noexcept {}
         SyndicationGenerator(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Syndication::ISyndicationGenerator(ptr, take_ownership_from_abi) {}
         SyndicationGenerator();
-        SyndicationGenerator(param::hstring const& text);
+        explicit SyndicationGenerator(param::hstring const& text);
     };
     struct __declspec(empty_bases) SyndicationItem : Windows::Web::Syndication::ISyndicationItem
     {
@@ -100,7 +100,7 @@ namespace winrt::Windows::Web::Syndication
         SyndicationLink(std::nullptr_t) noexcept {}
         SyndicationLink(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Syndication::ISyndicationLink(ptr, take_ownership_from_abi) {}
         SyndicationLink();
-        SyndicationLink(Windows::Foundation::Uri const& uri);
+        explicit SyndicationLink(Windows::Foundation::Uri const& uri);
         SyndicationLink(Windows::Foundation::Uri const& uri, param::hstring const& relationship, param::hstring const& title, param::hstring const& mediaType, uint32_t length);
     };
     struct __declspec(empty_bases) SyndicationNode : Windows::Web::Syndication::ISyndicationNode
@@ -115,7 +115,7 @@ namespace winrt::Windows::Web::Syndication
         SyndicationPerson(std::nullptr_t) noexcept {}
         SyndicationPerson(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Syndication::ISyndicationPerson(ptr, take_ownership_from_abi) {}
         SyndicationPerson();
-        SyndicationPerson(param::hstring const& name);
+        explicit SyndicationPerson(param::hstring const& name);
         SyndicationPerson(param::hstring const& name, param::hstring const& email, Windows::Foundation::Uri const& uri);
     };
     struct __declspec(empty_bases) SyndicationText : Windows::Web::Syndication::ISyndicationText
@@ -123,7 +123,7 @@ namespace winrt::Windows::Web::Syndication
         SyndicationText(std::nullptr_t) noexcept {}
         SyndicationText(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Web::Syndication::ISyndicationText(ptr, take_ownership_from_abi) {}
         SyndicationText();
-        SyndicationText(param::hstring const& text);
+        explicit SyndicationText(param::hstring const& text);
         SyndicationText(param::hstring const& text, Windows::Web::Syndication::SyndicationTextType const& type);
     };
 }

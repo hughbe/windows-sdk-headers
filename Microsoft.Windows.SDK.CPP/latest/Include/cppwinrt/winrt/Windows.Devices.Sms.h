@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Sms_H
 #define WINRT_Windows_Devices_Sms_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -14,238 +14,238 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.Sms.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::Timestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Sms_ISmsAppMessage<D>::Timestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::To() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsAppMessage<D>::To() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_To(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::To(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::To(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_To(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::From() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsAppMessage<D>::From() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_From(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::Body() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsAppMessage<D>::Body() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_Body(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::Body(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::Body(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_Body(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::CallbackNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsAppMessage<D>::CallbackNumber() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_CallbackNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::CallbackNumber(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::CallbackNumber(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_CallbackNumber(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::IsDeliveryNotificationEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Sms_ISmsAppMessage<D>::IsDeliveryNotificationEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_IsDeliveryNotificationEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::IsDeliveryNotificationEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::IsDeliveryNotificationEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_IsDeliveryNotificationEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::RetryAttemptCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsAppMessage<D>::RetryAttemptCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_RetryAttemptCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::RetryAttemptCount(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::RetryAttemptCount(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_RetryAttemptCount(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::Encoding() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsEncoding) consume_Windows_Devices_Sms_ISmsAppMessage<D>::Encoding() const
     {
-        Windows::Devices::Sms::SmsEncoding value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_Encoding(put_abi(value)));
+        Windows::Devices::Sms::SmsEncoding value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_Encoding(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::Encoding(Windows::Devices::Sms::SmsEncoding const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::Encoding(Windows::Devices::Sms::SmsEncoding const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_Encoding(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::PortNumber() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsAppMessage<D>::PortNumber() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_PortNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::PortNumber(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::PortNumber(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_PortNumber(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::TeleserviceId() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsAppMessage<D>::TeleserviceId() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_TeleserviceId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::TeleserviceId(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::TeleserviceId(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_TeleserviceId(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::ProtocolId() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsAppMessage<D>::ProtocolId() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_ProtocolId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::ProtocolId(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::ProtocolId(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_ProtocolId(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::BinaryBody() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Sms_ISmsAppMessage<D>::BinaryBody() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->get_BinaryBody(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsAppMessage<D>::BinaryBody(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsAppMessage<D>::BinaryBody(Windows::Storage::Streams::IBuffer const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsAppMessage)->put_BinaryBody(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBinaryMessage<D>::Format() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsDataFormat) consume_Windows_Devices_Sms_ISmsBinaryMessage<D>::Format() const
     {
-        Windows::Devices::Sms::SmsDataFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBinaryMessage)->get_Format(put_abi(value)));
+        Windows::Devices::Sms::SmsDataFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBinaryMessage)->get_Format(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBinaryMessage<D>::Format(Windows::Devices::Sms::SmsDataFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsBinaryMessage<D>::Format(Windows::Devices::Sms::SmsDataFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBinaryMessage)->put_Format(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBinaryMessage<D>::GetData() const
+    template <typename D> WINRT_IMPL_AUTO(com_array<uint8_t>) consume_Windows_Devices_Sms_ISmsBinaryMessage<D>::GetData() const
     {
         uint32_t value_impl_size{};
         uint8_t* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBinaryMessage)->GetData(&value_impl_size, &value));
         return com_array<uint8_t>{ value, value_impl_size, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBinaryMessage<D>::SetData(array_view<uint8_t const> value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsBinaryMessage<D>::SetData(array_view<uint8_t const> value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBinaryMessage)->SetData(value.size(), get_abi(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::Timestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::Timestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::To() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::To() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_To(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::Body() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::Body() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_Body(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::Channel() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::Channel() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_Channel(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::GeographicalScope() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsGeographicalScope) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::GeographicalScope() const
     {
-        Windows::Devices::Sms::SmsGeographicalScope value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_GeographicalScope(put_abi(value)));
+        Windows::Devices::Sms::SmsGeographicalScope value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_GeographicalScope(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::MessageCode() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::MessageCode() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_MessageCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::UpdateNumber() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::UpdateNumber() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_UpdateNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::BroadcastType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsBroadcastType) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::BroadcastType() const
     {
-        Windows::Devices::Sms::SmsBroadcastType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_BroadcastType(put_abi(value)));
+        Windows::Devices::Sms::SmsBroadcastType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_BroadcastType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::IsEmergencyAlert() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::IsEmergencyAlert() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_IsEmergencyAlert(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::IsUserPopupRequested() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Sms_ISmsBroadcastMessage<D>::IsUserPopupRequested() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsBroadcastMessage)->get_IsUserPopupRequested(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::SendMessageAsync(Windows::Devices::Sms::ISmsMessage const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SendSmsMessageOperation) consume_Windows_Devices_Sms_ISmsDevice<D>::SendMessageAsync(Windows::Devices::Sms::ISmsMessage const& message) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->SendMessageAsync(*(void**)(&message), &asyncInfo));
         return Windows::Devices::Sms::SendSmsMessageOperation{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::CalculateLength(Windows::Devices::Sms::SmsTextMessage const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsEncodedLength) consume_Windows_Devices_Sms_ISmsDevice<D>::CalculateLength(Windows::Devices::Sms::SmsTextMessage const& message) const
     {
-        Windows::Devices::Sms::SmsEncodedLength encodedLength;
+        Windows::Devices::Sms::SmsEncodedLength encodedLength{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->CalculateLength(*(void**)(&message), put_abi(encodedLength)));
         return encodedLength;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::AccountPhoneNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsDevice<D>::AccountPhoneNumber() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->get_AccountPhoneNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::CellularClass() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::CellularClass) consume_Windows_Devices_Sms_ISmsDevice<D>::CellularClass() const
     {
-        Windows::Devices::Sms::CellularClass value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->get_CellularClass(put_abi(value)));
+        Windows::Devices::Sms::CellularClass value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->get_CellularClass(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::MessageStore() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsDeviceMessageStore) consume_Windows_Devices_Sms_ISmsDevice<D>::MessageStore() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->get_MessageStore(&value));
         return Windows::Devices::Sms::SmsDeviceMessageStore{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::DeviceStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsDeviceStatus) consume_Windows_Devices_Sms_ISmsDevice<D>::DeviceStatus() const
     {
-        Windows::Devices::Sms::SmsDeviceStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->get_DeviceStatus(put_abi(value)));
+        Windows::Devices::Sms::SmsDeviceStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->get_DeviceStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::SmsMessageReceived(Windows::Devices::Sms::SmsMessageReceivedEventHandler const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Sms_ISmsDevice<D>::SmsMessageReceived(Windows::Devices::Sms::SmsMessageReceivedEventHandler const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->add_SmsMessageReceived(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -253,13 +253,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SmsMessageReceived_revoker>(this, SmsMessageReceived(eventHandler));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::SmsMessageReceived(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsDevice<D>::SmsMessageReceived(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->remove_SmsMessageReceived(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::SmsDeviceStatusChanged(Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Sms_ISmsDevice<D>::SmsDeviceStatusChanged(Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->add_SmsDeviceStatusChanged(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -267,65 +267,65 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SmsDeviceStatusChanged_revoker>(this, SmsDeviceStatusChanged(eventHandler));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice<D>::SmsDeviceStatusChanged(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsDevice<D>::SmsDeviceStatusChanged(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice)->remove_SmsDeviceStatusChanged(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::SmscAddress() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsDevice2<D>::SmscAddress() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->get_SmscAddress(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::SmscAddress(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsDevice2<D>::SmscAddress(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->put_SmscAddress(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsDevice2<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::ParentDeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsDevice2<D>::ParentDeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->get_ParentDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::AccountPhoneNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsDevice2<D>::AccountPhoneNumber() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->get_AccountPhoneNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::CellularClass() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::CellularClass) consume_Windows_Devices_Sms_ISmsDevice2<D>::CellularClass() const
     {
-        Windows::Devices::Sms::CellularClass value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->get_CellularClass(put_abi(value)));
+        Windows::Devices::Sms::CellularClass value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->get_CellularClass(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::DeviceStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsDeviceStatus) consume_Windows_Devices_Sms_ISmsDevice2<D>::DeviceStatus() const
     {
-        Windows::Devices::Sms::SmsDeviceStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->get_DeviceStatus(put_abi(value)));
+        Windows::Devices::Sms::SmsDeviceStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->get_DeviceStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::CalculateLength(Windows::Devices::Sms::ISmsMessageBase const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsEncodedLength) consume_Windows_Devices_Sms_ISmsDevice2<D>::CalculateLength(Windows::Devices::Sms::ISmsMessageBase const& message) const
     {
-        Windows::Devices::Sms::SmsEncodedLength value;
+        Windows::Devices::Sms::SmsEncodedLength value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->CalculateLength(*(void**)(&message), put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::SendMessageAndGetResultAsync(Windows::Devices::Sms::ISmsMessageBase const& message) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::SmsSendMessageResult>) consume_Windows_Devices_Sms_ISmsDevice2<D>::SendMessageAndGetResultAsync(Windows::Devices::Sms::ISmsMessageBase const& message) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->SendMessageAndGetResultAsync(*(void**)(&message), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::SmsSendMessageResult>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::DeviceStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Sms::SmsDevice2, Windows::Foundation::IInspectable> const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Sms_ISmsDevice2<D>::DeviceStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Sms::SmsDevice2, Windows::Foundation::IInspectable> const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->add_DeviceStatusChanged(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -333,311 +333,311 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DeviceStatusChanged_revoker>(this, DeviceStatusChanged(eventHandler));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2<D>::DeviceStatusChanged(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsDevice2<D>::DeviceStatusChanged(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2)->remove_DeviceStatusChanged(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2Statics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsDevice2Statics<D>::GetDeviceSelector() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2Statics)->GetDeviceSelector(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2Statics<D>::FromId(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsDevice2) consume_Windows_Devices_Sms_ISmsDevice2Statics<D>::FromId(param::hstring const& deviceId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2Statics)->FromId(*(void**)(&deviceId), &value));
         return Windows::Devices::Sms::SmsDevice2{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2Statics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsDevice2) consume_Windows_Devices_Sms_ISmsDevice2Statics<D>::GetDefault() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2Statics)->GetDefault(&value));
         return Windows::Devices::Sms::SmsDevice2{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDevice2Statics<D>::FromParentId(param::hstring const& parentDeviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsDevice2) consume_Windows_Devices_Sms_ISmsDevice2Statics<D>::FromParentId(param::hstring const& parentDeviceId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDevice2Statics)->FromParentId(*(void**)(&parentDeviceId), &value));
         return Windows::Devices::Sms::SmsDevice2{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::DeleteMessageAsync(uint32_t messageId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::DeleteMessageAsync(uint32_t messageId) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDeviceMessageStore)->DeleteMessageAsync(messageId, &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::DeleteMessagesAsync(Windows::Devices::Sms::SmsMessageFilter const& messageFilter) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::DeleteMessagesAsync(Windows::Devices::Sms::SmsMessageFilter const& messageFilter) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDeviceMessageStore)->DeleteMessagesAsync(static_cast<int32_t>(messageFilter), &asyncInfo));
         return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::GetMessageAsync(uint32_t messageId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::ISmsMessage>) consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::GetMessageAsync(uint32_t messageId) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDeviceMessageStore)->GetMessageAsync(messageId, &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::ISmsMessage>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::GetMessagesAsync(Windows::Devices::Sms::SmsMessageFilter const& messageFilter) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Foundation::Collections::IVectorView<Windows::Devices::Sms::ISmsMessage>, int32_t>) consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::GetMessagesAsync(Windows::Devices::Sms::SmsMessageFilter const& messageFilter) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDeviceMessageStore)->GetMessagesAsync(static_cast<int32_t>(messageFilter), &asyncInfo));
         return Windows::Foundation::IAsyncOperationWithProgress<Windows::Foundation::Collections::IVectorView<Windows::Devices::Sms::ISmsMessage>, int32_t>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::MaxMessages() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Sms_ISmsDeviceMessageStore<D>::MaxMessages() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDeviceMessageStore)->get_MaxMessages(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDeviceStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsDeviceStatics<D>::GetDeviceSelector() const
     {
         void* phstrDeviceClassSelector{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDeviceStatics)->GetDeviceSelector(&phstrDeviceClassSelector));
         return hstring{ phstrDeviceClassSelector, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDeviceStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::SmsDevice>) consume_Windows_Devices_Sms_ISmsDeviceStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDeviceStatics)->FromIdAsync(*(void**)(&deviceId), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::SmsDevice>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDeviceStatics<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::SmsDevice>) consume_Windows_Devices_Sms_ISmsDeviceStatics<D>::GetDefaultAsync() const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDeviceStatics)->GetDefaultAsync(&asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::SmsDevice>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsDeviceStatics2<D>::FromNetworkAccountIdAsync(param::hstring const& networkAccountId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::SmsDevice>) consume_Windows_Devices_Sms_ISmsDeviceStatics2<D>::FromNetworkAccountIdAsync(param::hstring const& networkAccountId) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsDeviceStatics2)->FromNetworkAccountIdAsync(*(void**)(&networkAccountId), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::SmsDevice>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::MessageType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsMessageType) consume_Windows_Devices_Sms_ISmsFilterRule<D>::MessageType() const
     {
-        Windows::Devices::Sms::SmsMessageType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_MessageType(put_abi(value)));
+        Windows::Devices::Sms::SmsMessageType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_MessageType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::ImsiPrefixes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::ImsiPrefixes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_ImsiPrefixes(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::DeviceIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::DeviceIds() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_DeviceIds(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::SenderNumbers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::SenderNumbers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_SenderNumbers(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::TextMessagePrefixes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::TextMessagePrefixes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_TextMessagePrefixes(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::PortNumbers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<int32_t>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::PortNumbers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_PortNumbers(&value));
         return Windows::Foundation::Collections::IVector<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::CellularClass() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::CellularClass) consume_Windows_Devices_Sms_ISmsFilterRule<D>::CellularClass() const
     {
-        Windows::Devices::Sms::CellularClass value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_CellularClass(put_abi(value)));
+        Windows::Devices::Sms::CellularClass value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_CellularClass(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::CellularClass(Windows::Devices::Sms::CellularClass const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsFilterRule<D>::CellularClass(Windows::Devices::Sms::CellularClass const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->put_CellularClass(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::ProtocolIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<int32_t>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::ProtocolIds() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_ProtocolIds(&value));
         return Windows::Foundation::Collections::IVector<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::TeleserviceIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<int32_t>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::TeleserviceIds() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_TeleserviceIds(&value));
         return Windows::Foundation::Collections::IVector<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::WapApplicationIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::WapApplicationIds() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_WapApplicationIds(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::WapContentTypes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::WapContentTypes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_WapContentTypes(&value));
         return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::BroadcastTypes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::Sms::SmsBroadcastType>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::BroadcastTypes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_BroadcastTypes(&value));
         return Windows::Foundation::Collections::IVector<Windows::Devices::Sms::SmsBroadcastType>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRule<D>::BroadcastChannels() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<int32_t>) consume_Windows_Devices_Sms_ISmsFilterRule<D>::BroadcastChannels() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRule)->get_BroadcastChannels(&value));
         return Windows::Foundation::Collections::IVector<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRuleFactory<D>::CreateFilterRule(Windows::Devices::Sms::SmsMessageType const& messageType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsFilterRule) consume_Windows_Devices_Sms_ISmsFilterRuleFactory<D>::CreateFilterRule(Windows::Devices::Sms::SmsMessageType const& messageType) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRuleFactory)->CreateFilterRule(static_cast<int32_t>(messageType), &value));
         return Windows::Devices::Sms::SmsFilterRule{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRules<D>::ActionType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsFilterActionType) consume_Windows_Devices_Sms_ISmsFilterRules<D>::ActionType() const
     {
-        Windows::Devices::Sms::SmsFilterActionType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRules)->get_ActionType(put_abi(value)));
+        Windows::Devices::Sms::SmsFilterActionType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRules)->get_ActionType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRules<D>::Rules() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::Sms::SmsFilterRule>) consume_Windows_Devices_Sms_ISmsFilterRules<D>::Rules() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRules)->get_Rules(&value));
         return Windows::Foundation::Collections::IVector<Windows::Devices::Sms::SmsFilterRule>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsFilterRulesFactory<D>::CreateFilterRules(Windows::Devices::Sms::SmsFilterActionType const& actionType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsFilterRules) consume_Windows_Devices_Sms_ISmsFilterRulesFactory<D>::CreateFilterRules(Windows::Devices::Sms::SmsFilterActionType const& actionType) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsFilterRulesFactory)->CreateFilterRules(static_cast<int32_t>(actionType), &value));
         return Windows::Devices::Sms::SmsFilterRules{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessage<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Sms_ISmsMessage<D>::Id() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessage)->get_Id(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessage<D>::MessageClass() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsMessageClass) consume_Windows_Devices_Sms_ISmsMessage<D>::MessageClass() const
     {
-        Windows::Devices::Sms::SmsMessageClass value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessage)->get_MessageClass(put_abi(value)));
+        Windows::Devices::Sms::SmsMessageClass value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessage)->get_MessageClass(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageBase<D>::MessageType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsMessageType) consume_Windows_Devices_Sms_ISmsMessageBase<D>::MessageType() const
     {
-        Windows::Devices::Sms::SmsMessageType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageBase)->get_MessageType(put_abi(value)));
+        Windows::Devices::Sms::SmsMessageType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageBase)->get_MessageType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageBase<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsMessageBase<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageBase)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageBase<D>::CellularClass() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::CellularClass) consume_Windows_Devices_Sms_ISmsMessageBase<D>::CellularClass() const
     {
-        Windows::Devices::Sms::CellularClass value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageBase)->get_CellularClass(put_abi(value)));
+        Windows::Devices::Sms::CellularClass value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageBase)->get_CellularClass(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageBase<D>::MessageClass() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsMessageClass) consume_Windows_Devices_Sms_ISmsMessageBase<D>::MessageClass() const
     {
-        Windows::Devices::Sms::SmsMessageClass value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageBase)->get_MessageClass(put_abi(value)));
+        Windows::Devices::Sms::SmsMessageClass value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageBase)->get_MessageClass(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageBase<D>::SimIccId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsMessageBase<D>::SimIccId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageBase)->get_SimIccId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedEventArgs<D>::TextMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsTextMessage) consume_Windows_Devices_Sms_ISmsMessageReceivedEventArgs<D>::TextMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedEventArgs)->get_TextMessage(&value));
         return Windows::Devices::Sms::SmsTextMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedEventArgs<D>::BinaryMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsBinaryMessage) consume_Windows_Devices_Sms_ISmsMessageReceivedEventArgs<D>::BinaryMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedEventArgs)->get_BinaryMessage(&value));
         return Windows::Devices::Sms::SmsBinaryMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::MessageType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsMessageType) consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::MessageType() const
     {
-        Windows::Devices::Sms::SmsMessageType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->get_MessageType(put_abi(value)));
+        Windows::Devices::Sms::SmsMessageType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->get_MessageType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::TextMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsTextMessage2) consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::TextMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->get_TextMessage(&value));
         return Windows::Devices::Sms::SmsTextMessage2{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::WapMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsWapMessage) consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::WapMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->get_WapMessage(&value));
         return Windows::Devices::Sms::SmsWapMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::AppMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsAppMessage) consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::AppMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->get_AppMessage(&value));
         return Windows::Devices::Sms::SmsAppMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::BroadcastMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsBroadcastMessage) consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::BroadcastMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->get_BroadcastMessage(&value));
         return Windows::Devices::Sms::SmsBroadcastMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::VoicemailMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsVoicemailMessage) consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::VoicemailMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->get_VoicemailMessage(&value));
         return Windows::Devices::Sms::SmsVoicemailMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::StatusMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsStatusMessage) consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::StatusMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->get_StatusMessage(&value));
         return Windows::Devices::Sms::SmsStatusMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::Drop() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::Drop() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->Drop());
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::Accept() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsMessageReceivedTriggerDetails<D>::Accept() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails)->Accept());
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageRegistration<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsMessageRegistration<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageRegistration)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageRegistration<D>::Unregister() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsMessageRegistration<D>::Unregister() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageRegistration)->Unregister());
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageRegistration<D>::MessageReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::Sms::SmsMessageRegistration, Windows::Devices::Sms::SmsMessageReceivedTriggerDetails> const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Sms_ISmsMessageRegistration<D>::MessageReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::Sms::SmsMessageRegistration, Windows::Devices::Sms::SmsMessageReceivedTriggerDetails> const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageRegistration)->add_MessageReceived(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -645,363 +645,363 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MessageReceived_revoker>(this, MessageReceived(eventHandler));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageRegistration<D>::MessageReceived(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsMessageRegistration<D>::MessageReceived(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageRegistration)->remove_MessageReceived(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageRegistrationStatics<D>::AllRegistrations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Sms::SmsMessageRegistration>) consume_Windows_Devices_Sms_ISmsMessageRegistrationStatics<D>::AllRegistrations() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageRegistrationStatics)->get_AllRegistrations(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Sms::SmsMessageRegistration>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsMessageRegistrationStatics<D>::Register(param::hstring const& id, Windows::Devices::Sms::SmsFilterRules const& filterRules) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsMessageRegistration) consume_Windows_Devices_Sms_ISmsMessageRegistrationStatics<D>::Register(param::hstring const& id, Windows::Devices::Sms::SmsFilterRules const& filterRules) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsMessageRegistrationStatics)->Register(*(void**)(&id), *(void**)(&filterRules), &value));
         return Windows::Devices::Sms::SmsMessageRegistration{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsReceivedEventDetails<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsReceivedEventDetails<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsReceivedEventDetails)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsReceivedEventDetails<D>::MessageIndex() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Sms_ISmsReceivedEventDetails<D>::MessageIndex() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsReceivedEventDetails)->get_MessageIndex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsReceivedEventDetails2<D>::MessageClass() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsMessageClass) consume_Windows_Devices_Sms_ISmsReceivedEventDetails2<D>::MessageClass() const
     {
-        Windows::Devices::Sms::SmsMessageClass value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsReceivedEventDetails2)->get_MessageClass(put_abi(value)));
+        Windows::Devices::Sms::SmsMessageClass value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsReceivedEventDetails2)->get_MessageClass(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsReceivedEventDetails2<D>::BinaryMessage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsBinaryMessage) consume_Windows_Devices_Sms_ISmsReceivedEventDetails2<D>::BinaryMessage() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsReceivedEventDetails2)->get_BinaryMessage(&value));
         return Windows::Devices::Sms::SmsBinaryMessage{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::IsSuccessful() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::IsSuccessful() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsSendMessageResult)->get_IsSuccessful(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::MessageReferenceNumbers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<int32_t>) consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::MessageReferenceNumbers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsSendMessageResult)->get_MessageReferenceNumbers(&value));
         return Windows::Foundation::Collections::IVectorView<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::CellularClass() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::CellularClass) consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::CellularClass() const
     {
-        Windows::Devices::Sms::CellularClass value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsSendMessageResult)->get_CellularClass(put_abi(value)));
+        Windows::Devices::Sms::CellularClass value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsSendMessageResult)->get_CellularClass(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::ModemErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsModemErrorCode) consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::ModemErrorCode() const
     {
-        Windows::Devices::Sms::SmsModemErrorCode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsSendMessageResult)->get_ModemErrorCode(put_abi(value)));
+        Windows::Devices::Sms::SmsModemErrorCode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsSendMessageResult)->get_ModemErrorCode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::IsErrorTransient() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::IsErrorTransient() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsSendMessageResult)->get_IsErrorTransient(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::NetworkCauseCode() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::NetworkCauseCode() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsSendMessageResult)->get_NetworkCauseCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::TransportFailureCause() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsSendMessageResult<D>::TransportFailureCause() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsSendMessageResult)->get_TransportFailureCause(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsStatusMessage<D>::To() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsStatusMessage<D>::To() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsStatusMessage)->get_To(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsStatusMessage<D>::From() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsStatusMessage<D>::From() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsStatusMessage)->get_From(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsStatusMessage<D>::Body() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsStatusMessage<D>::Body() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsStatusMessage)->get_Body(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsStatusMessage<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsStatusMessage<D>::Status() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsStatusMessage)->get_Status(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsStatusMessage<D>::MessageReferenceNumber() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsStatusMessage<D>::MessageReferenceNumber() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsStatusMessage)->get_MessageReferenceNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsStatusMessage<D>::ServiceCenterTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Sms_ISmsStatusMessage<D>::ServiceCenterTimestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsStatusMessage)->get_ServiceCenterTimestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsStatusMessage<D>::DischargeTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Sms_ISmsStatusMessage<D>::DischargeTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsStatusMessage)->get_DischargeTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::Timestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Sms_ISmsTextMessage<D>::Timestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::PartReferenceId() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Sms_ISmsTextMessage<D>::PartReferenceId() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->get_PartReferenceId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::PartNumber() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Sms_ISmsTextMessage<D>::PartNumber() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->get_PartNumber(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::PartCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Sms_ISmsTextMessage<D>::PartCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->get_PartCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::To() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsTextMessage<D>::To() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->get_To(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::To(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage<D>::To(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->put_To(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::From() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsTextMessage<D>::From() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->get_From(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::From(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage<D>::From(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->put_From(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::Body() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsTextMessage<D>::Body() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->get_Body(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::Body(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage<D>::Body(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->put_Body(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::Encoding() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsEncoding) consume_Windows_Devices_Sms_ISmsTextMessage<D>::Encoding() const
     {
-        Windows::Devices::Sms::SmsEncoding value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->get_Encoding(put_abi(value)));
+        Windows::Devices::Sms::SmsEncoding value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->get_Encoding(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::Encoding(Windows::Devices::Sms::SmsEncoding const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage<D>::Encoding(Windows::Devices::Sms::SmsEncoding const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->put_Encoding(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage<D>::ToBinaryMessages(Windows::Devices::Sms::SmsDataFormat const& format) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Sms::ISmsBinaryMessage>) consume_Windows_Devices_Sms_ISmsTextMessage<D>::ToBinaryMessages(Windows::Devices::Sms::SmsDataFormat const& format) const
     {
         void* messages{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage)->ToBinaryMessages(static_cast<int32_t>(format), &messages));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Sms::ISmsBinaryMessage>{ messages, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Timestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Timestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::To() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::To() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_To(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::To(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::To(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->put_To(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::From() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::From() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_From(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Body() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Body() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_Body(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Body(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Body(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->put_Body(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Encoding() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsEncoding) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Encoding() const
     {
-        Windows::Devices::Sms::SmsEncoding value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_Encoding(put_abi(value)));
+        Windows::Devices::Sms::SmsEncoding value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_Encoding(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Encoding(Windows::Devices::Sms::SmsEncoding const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::Encoding(Windows::Devices::Sms::SmsEncoding const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->put_Encoding(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::CallbackNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::CallbackNumber() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_CallbackNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::CallbackNumber(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::CallbackNumber(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->put_CallbackNumber(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::IsDeliveryNotificationEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::IsDeliveryNotificationEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_IsDeliveryNotificationEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::IsDeliveryNotificationEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::IsDeliveryNotificationEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->put_IsDeliveryNotificationEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::RetryAttemptCount() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::RetryAttemptCount() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_RetryAttemptCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::RetryAttemptCount(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::RetryAttemptCount(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->put_RetryAttemptCount(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::TeleserviceId() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::TeleserviceId() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_TeleserviceId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessage2<D>::ProtocolId() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Sms_ISmsTextMessage2<D>::ProtocolId() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessage2)->get_ProtocolId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessageStatics<D>::FromBinaryMessage(Windows::Devices::Sms::SmsBinaryMessage const& binaryMessage) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsTextMessage) consume_Windows_Devices_Sms_ISmsTextMessageStatics<D>::FromBinaryMessage(Windows::Devices::Sms::SmsBinaryMessage const& binaryMessage) const
     {
         void* textMessage{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessageStatics)->FromBinaryMessage(*(void**)(&binaryMessage), &textMessage));
         return Windows::Devices::Sms::SmsTextMessage{ textMessage, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsTextMessageStatics<D>::FromBinaryData(Windows::Devices::Sms::SmsDataFormat const& format, array_view<uint8_t const> value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Sms::SmsTextMessage) consume_Windows_Devices_Sms_ISmsTextMessageStatics<D>::FromBinaryData(Windows::Devices::Sms::SmsDataFormat const& format, array_view<uint8_t const> value) const
     {
         void* textMessage{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsTextMessageStatics)->FromBinaryData(static_cast<int32_t>(format), value.size(), get_abi(value), &textMessage));
         return Windows::Devices::Sms::SmsTextMessage{ textMessage, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsVoicemailMessage<D>::Timestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Sms_ISmsVoicemailMessage<D>::Timestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsVoicemailMessage)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsVoicemailMessage<D>::To() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsVoicemailMessage<D>::To() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsVoicemailMessage)->get_To(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsVoicemailMessage<D>::Body() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsVoicemailMessage<D>::Body() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsVoicemailMessage)->get_Body(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsVoicemailMessage<D>::MessageCount() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) consume_Windows_Devices_Sms_ISmsVoicemailMessage<D>::MessageCount() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsVoicemailMessage)->get_MessageCount(&value));
         return Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsWapMessage<D>::Timestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Sms_ISmsWapMessage<D>::Timestamp() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsWapMessage)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsWapMessage<D>::To() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsWapMessage<D>::To() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsWapMessage)->get_To(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsWapMessage<D>::From() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsWapMessage<D>::From() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsWapMessage)->get_From(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsWapMessage<D>::ApplicationId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsWapMessage<D>::ApplicationId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsWapMessage)->get_ApplicationId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsWapMessage<D>::ContentType() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsWapMessage<D>::ContentType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsWapMessage)->get_ContentType(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsWapMessage<D>::BinaryBody() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Sms_ISmsWapMessage<D>::BinaryBody() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsWapMessage)->get_BinaryBody(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sms_ISmsWapMessage<D>::Headers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, hstring>) consume_Windows_Devices_Sms_ISmsWapMessage<D>::Headers() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Sms::ISmsWapMessage)->get_Headers(&value));
         return Windows::Foundation::Collections::IMap<hstring, hstring>{ value, take_ownership_from_abi };
     }
-    template <typename H> struct delegate<Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler, H> : implements_delegate<Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler, H>
+    template <typename H> struct delegate<Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler, H> final : implements_delegate<Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -1012,7 +1012,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::Devices::Sms::SmsMessageReceivedEventHandler, H> : implements_delegate<Windows::Devices::Sms::SmsMessageReceivedEventHandler, H>
+    template <typename H> struct delegate<Windows::Devices::Sms::SmsMessageReceivedEventHandler, H> final : implements_delegate<Windows::Devices::Sms::SmsMessageReceivedEventHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Devices::Sms::SmsMessageReceivedEventHandler, H>(std::forward<H>(handler)) {}
 
@@ -1023,6 +1023,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsAppMessage> : produce_base<D, Windows::Devices::Sms::ISmsAppMessage>
     {
@@ -1187,6 +1188,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsBinaryMessage> : produce_base<D, Windows::Devices::Sms::ISmsBinaryMessage>
     {
@@ -1220,6 +1222,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsBroadcastMessage> : produce_base<D, Windows::Devices::Sms::ISmsBroadcastMessage>
     {
@@ -1297,6 +1300,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsDevice> : produce_base<D, Windows::Devices::Sms::ISmsDevice>
     {
@@ -1375,6 +1379,7 @@ namespace winrt::impl
             return 0;
         }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsDevice2> : produce_base<D, Windows::Devices::Sms::ISmsDevice2>
     {
@@ -1462,6 +1467,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsDevice2Statics> : produce_base<D, Windows::Devices::Sms::ISmsDevice2Statics>
     {
@@ -1498,6 +1505,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsDeviceMessageStore> : produce_base<D, Windows::Devices::Sms::ISmsDeviceMessageStore>
     {
@@ -1541,6 +1550,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsDeviceStatics> : produce_base<D, Windows::Devices::Sms::ISmsDeviceStatics>
     {
@@ -1569,6 +1580,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsDeviceStatics2> : produce_base<D, Windows::Devices::Sms::ISmsDeviceStatics2>
     {
@@ -1581,6 +1594,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsFilterRule> : produce_base<D, Windows::Devices::Sms::ISmsFilterRule>
     {
@@ -1694,6 +1709,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsFilterRuleFactory> : produce_base<D, Windows::Devices::Sms::ISmsFilterRuleFactory>
     {
@@ -1706,6 +1723,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsFilterRules> : produce_base<D, Windows::Devices::Sms::ISmsFilterRules>
     {
@@ -1725,6 +1744,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsFilterRulesFactory> : produce_base<D, Windows::Devices::Sms::ISmsFilterRulesFactory>
     {
@@ -1737,6 +1758,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsMessage> : produce_base<D, Windows::Devices::Sms::ISmsMessage>
     {
@@ -1796,6 +1818,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsMessageReceivedEventArgs> : produce_base<D, Windows::Devices::Sms::ISmsMessageReceivedEventArgs>
     {
@@ -1816,6 +1839,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails> : produce_base<D, Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails>
     {
@@ -1889,6 +1914,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsMessageRegistration> : produce_base<D, Windows::Devices::Sms::ISmsMessageRegistration>
     {
@@ -1922,6 +1949,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsMessageRegistrationStatics> : produce_base<D, Windows::Devices::Sms::ISmsMessageRegistrationStatics>
     {
@@ -1942,6 +1971,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsReceivedEventDetails> : produce_base<D, Windows::Devices::Sms::ISmsReceivedEventDetails>
     {
@@ -1961,6 +1992,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsReceivedEventDetails2> : produce_base<D, Windows::Devices::Sms::ISmsReceivedEventDetails2>
     {
@@ -1980,6 +2013,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsSendMessageResult> : produce_base<D, Windows::Devices::Sms::ISmsSendMessageResult>
     {
@@ -2034,6 +2069,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsStatusMessage> : produce_base<D, Windows::Devices::Sms::ISmsStatusMessage>
     {
@@ -2092,6 +2129,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsTextMessage> : produce_base<D, Windows::Devices::Sms::ISmsTextMessage>
     {
@@ -2192,6 +2230,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsTextMessage2> : produce_base<D, Windows::Devices::Sms::ISmsTextMessage2>
     {
@@ -2313,6 +2352,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsTextMessageStatics> : produce_base<D, Windows::Devices::Sms::ISmsTextMessageStatics>
     {
@@ -2333,6 +2374,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsVoicemailMessage> : produce_base<D, Windows::Devices::Sms::ISmsVoicemailMessage>
     {
@@ -2369,6 +2412,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Sms::ISmsWapMessage> : produce_base<D, Windows::Devices::Sms::ISmsWapMessage>
     {
@@ -2429,79 +2474,80 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Sms
+WINRT_EXPORT namespace winrt::Windows::Devices::Sms
 {
     inline SmsAppMessage::SmsAppMessage() :
-        SmsAppMessage(impl::call_factory<SmsAppMessage>([](auto&& f) { return f.template ActivateInstance<SmsAppMessage>(); }))
+        SmsAppMessage(impl::call_factory_cast<SmsAppMessage(*)(Windows::Foundation::IActivationFactory const&), SmsAppMessage>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SmsAppMessage>(); }))
     {
     }
     inline SmsBinaryMessage::SmsBinaryMessage() :
-        SmsBinaryMessage(impl::call_factory<SmsBinaryMessage>([](auto&& f) { return f.template ActivateInstance<SmsBinaryMessage>(); }))
+        SmsBinaryMessage(impl::call_factory_cast<SmsBinaryMessage(*)(Windows::Foundation::IActivationFactory const&), SmsBinaryMessage>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SmsBinaryMessage>(); }))
     {
     }
     inline auto SmsDevice::GetDeviceSelector()
     {
-        return impl::call_factory<SmsDevice, Windows::Devices::Sms::ISmsDeviceStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(ISmsDeviceStatics const&), SmsDevice, ISmsDeviceStatics>([](ISmsDeviceStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto SmsDevice::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<SmsDevice, Windows::Devices::Sms::ISmsDeviceStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<SmsDevice, ISmsDeviceStatics>([&](ISmsDeviceStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto SmsDevice::GetDefaultAsync()
     {
-        return impl::call_factory<SmsDevice, Windows::Devices::Sms::ISmsDeviceStatics>([&](auto&& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::Sms::SmsDevice>(*)(ISmsDeviceStatics const&), SmsDevice, ISmsDeviceStatics>([](ISmsDeviceStatics const& f) { return f.GetDefaultAsync(); });
     }
     inline auto SmsDevice::FromNetworkAccountIdAsync(param::hstring const& networkAccountId)
     {
-        return impl::call_factory<SmsDevice, Windows::Devices::Sms::ISmsDeviceStatics2>([&](auto&& f) { return f.FromNetworkAccountIdAsync(networkAccountId); });
+        return impl::call_factory<SmsDevice, ISmsDeviceStatics2>([&](ISmsDeviceStatics2 const& f) { return f.FromNetworkAccountIdAsync(networkAccountId); });
     }
     inline auto SmsDevice2::GetDeviceSelector()
     {
-        return impl::call_factory<SmsDevice2, Windows::Devices::Sms::ISmsDevice2Statics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(ISmsDevice2Statics const&), SmsDevice2, ISmsDevice2Statics>([](ISmsDevice2Statics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto SmsDevice2::FromId(param::hstring const& deviceId)
     {
-        return impl::call_factory<SmsDevice2, Windows::Devices::Sms::ISmsDevice2Statics>([&](auto&& f) { return f.FromId(deviceId); });
+        return impl::call_factory<SmsDevice2, ISmsDevice2Statics>([&](ISmsDevice2Statics const& f) { return f.FromId(deviceId); });
     }
     inline auto SmsDevice2::GetDefault()
     {
-        return impl::call_factory<SmsDevice2, Windows::Devices::Sms::ISmsDevice2Statics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::Devices::Sms::SmsDevice2(*)(ISmsDevice2Statics const&), SmsDevice2, ISmsDevice2Statics>([](ISmsDevice2Statics const& f) { return f.GetDefault(); });
     }
     inline auto SmsDevice2::FromParentId(param::hstring const& parentDeviceId)
     {
-        return impl::call_factory<SmsDevice2, Windows::Devices::Sms::ISmsDevice2Statics>([&](auto&& f) { return f.FromParentId(parentDeviceId); });
+        return impl::call_factory<SmsDevice2, ISmsDevice2Statics>([&](ISmsDevice2Statics const& f) { return f.FromParentId(parentDeviceId); });
     }
     inline SmsFilterRule::SmsFilterRule(Windows::Devices::Sms::SmsMessageType const& messageType) :
-        SmsFilterRule(impl::call_factory<SmsFilterRule, Windows::Devices::Sms::ISmsFilterRuleFactory>([&](auto&& f) { return f.CreateFilterRule(messageType); }))
+        SmsFilterRule(impl::call_factory<SmsFilterRule, ISmsFilterRuleFactory>([&](ISmsFilterRuleFactory const& f) { return f.CreateFilterRule(messageType); }))
     {
     }
     inline SmsFilterRules::SmsFilterRules(Windows::Devices::Sms::SmsFilterActionType const& actionType) :
-        SmsFilterRules(impl::call_factory<SmsFilterRules, Windows::Devices::Sms::ISmsFilterRulesFactory>([&](auto&& f) { return f.CreateFilterRules(actionType); }))
+        SmsFilterRules(impl::call_factory<SmsFilterRules, ISmsFilterRulesFactory>([&](ISmsFilterRulesFactory const& f) { return f.CreateFilterRules(actionType); }))
     {
     }
     inline auto SmsMessageRegistration::AllRegistrations()
     {
-        return impl::call_factory<SmsMessageRegistration, Windows::Devices::Sms::ISmsMessageRegistrationStatics>([&](auto&& f) { return f.AllRegistrations(); });
+        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<Windows::Devices::Sms::SmsMessageRegistration>(*)(ISmsMessageRegistrationStatics const&), SmsMessageRegistration, ISmsMessageRegistrationStatics>([](ISmsMessageRegistrationStatics const& f) { return f.AllRegistrations(); });
     }
     inline auto SmsMessageRegistration::Register(param::hstring const& id, Windows::Devices::Sms::SmsFilterRules const& filterRules)
     {
-        return impl::call_factory<SmsMessageRegistration, Windows::Devices::Sms::ISmsMessageRegistrationStatics>([&](auto&& f) { return f.Register(id, filterRules); });
+        return impl::call_factory<SmsMessageRegistration, ISmsMessageRegistrationStatics>([&](ISmsMessageRegistrationStatics const& f) { return f.Register(id, filterRules); });
     }
     inline SmsTextMessage::SmsTextMessage() :
-        SmsTextMessage(impl::call_factory<SmsTextMessage>([](auto&& f) { return f.template ActivateInstance<SmsTextMessage>(); }))
+        SmsTextMessage(impl::call_factory_cast<SmsTextMessage(*)(Windows::Foundation::IActivationFactory const&), SmsTextMessage>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SmsTextMessage>(); }))
     {
     }
     inline auto SmsTextMessage::FromBinaryMessage(Windows::Devices::Sms::SmsBinaryMessage const& binaryMessage)
     {
-        return impl::call_factory<SmsTextMessage, Windows::Devices::Sms::ISmsTextMessageStatics>([&](auto&& f) { return f.FromBinaryMessage(binaryMessage); });
+        return impl::call_factory<SmsTextMessage, ISmsTextMessageStatics>([&](ISmsTextMessageStatics const& f) { return f.FromBinaryMessage(binaryMessage); });
     }
     inline auto SmsTextMessage::FromBinaryData(Windows::Devices::Sms::SmsDataFormat const& format, array_view<uint8_t const> value)
     {
-        return impl::call_factory<SmsTextMessage, Windows::Devices::Sms::ISmsTextMessageStatics>([&](auto&& f) { return f.FromBinaryData(format, value); });
+        return impl::call_factory<SmsTextMessage, ISmsTextMessageStatics>([&](ISmsTextMessageStatics const& f) { return f.FromBinaryData(format, value); });
     }
     inline SmsTextMessage2::SmsTextMessage2() :
-        SmsTextMessage2(impl::call_factory<SmsTextMessage2>([](auto&& f) { return f.template ActivateInstance<SmsTextMessage2>(); }))
+        SmsTextMessage2(impl::call_factory_cast<SmsTextMessage2(*)(Windows::Foundation::IActivationFactory const&), SmsTextMessage2>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SmsTextMessage2>(); }))
     {
     }
     template <typename L> SmsDeviceStatusChangedEventHandler::SmsDeviceStatusChangedEventHandler(L handler) :
@@ -2555,57 +2601,59 @@ namespace winrt::Windows::Devices::Sms
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsAppMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsAppMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsBinaryMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsBinaryMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsBroadcastMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsBroadcastMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsDevice> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDevice2> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsDevice2> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDevice2Statics> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsDevice2Statics> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDeviceMessageStore> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsDeviceMessageStore> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDeviceStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsDeviceStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDeviceStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsDeviceStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsFilterRule> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsFilterRule> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsFilterRuleFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsFilterRuleFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsFilterRules> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsFilterRules> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsFilterRulesFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsFilterRulesFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageBase> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsMessageBase> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsMessageReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageRegistration> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsMessageRegistration> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageRegistrationStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsMessageRegistrationStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsReceivedEventDetails> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsReceivedEventDetails> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsReceivedEventDetails2> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsReceivedEventDetails2> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsSendMessageResult> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsSendMessageResult> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsStatusMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsStatusMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsTextMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsTextMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsTextMessage2> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsTextMessage2> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsTextMessageStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsTextMessageStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsVoicemailMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsVoicemailMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::ISmsWapMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::ISmsWapMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::GetSmsDeviceOperation> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::GetSmsDeviceOperation> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::GetSmsMessageOperation> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::GetSmsMessageOperation> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::GetSmsMessagesOperation> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::GetSmsMessagesOperation> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SendSmsMessageOperation> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SendSmsMessageOperation> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsAppMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsAppMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsBinaryMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsBinaryMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsBroadcastMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsBroadcastMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsDevice> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsDevice> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsDevice2> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsDevice2> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsDeviceMessageStore> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsDeviceMessageStore> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsFilterRule> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsFilterRule> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsFilterRules> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsFilterRules> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsMessageRegistration> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsMessageRegistration> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsReceivedEventDetails> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsReceivedEventDetails> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsSendMessageResult> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsSendMessageResult> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsStatusMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsStatusMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsTextMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsTextMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsTextMessage2> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsTextMessage2> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsVoicemailMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsVoicemailMessage> {};
-    template<> struct hash<winrt::Windows::Devices::Sms::SmsWapMessage> : winrt::impl::hash_base<winrt::Windows::Devices::Sms::SmsWapMessage> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsAppMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsBinaryMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsBroadcastMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDevice> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDevice2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDevice2Statics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDeviceMessageStore> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDeviceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsDeviceStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsFilterRule> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsFilterRuleFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsFilterRules> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsFilterRulesFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageBase> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageReceivedTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageRegistration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsMessageRegistrationStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsReceivedEventDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsReceivedEventDetails2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsSendMessageResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsStatusMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsTextMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsTextMessage2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsTextMessageStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsVoicemailMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::ISmsWapMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::GetSmsDeviceOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::GetSmsMessageOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::GetSmsMessagesOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SendSmsMessageOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsAppMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsBinaryMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsBroadcastMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsDevice> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsDevice2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsDeviceMessageStore> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsFilterRule> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsFilterRules> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsMessageRegistration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsReceivedEventDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsSendMessageResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsStatusMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsTextMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsTextMessage2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsVoicemailMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sms::SmsWapMessage> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -1,11 +1,11 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Data_Json_0_H
 #define WINRT_Windows_Data_Json_0_H
-namespace winrt::Windows::Data::Json
+WINRT_EXPORT namespace winrt::Windows::Data::Json
 {
     enum class JsonErrorStatus : int32_t
     {
@@ -40,174 +40,48 @@ namespace winrt::Windows::Data::Json
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Data::Json::IJsonArray>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Data::Json::IJsonArrayStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Data::Json::IJsonErrorStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Data::Json::IJsonObject>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Data::Json::IJsonObjectStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Data::Json::IJsonObjectWithDefaultValues>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Data::Json::IJsonValue>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Data::Json::IJsonValueStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Data::Json::IJsonValueStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Data::Json::JsonArray>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Data::Json::JsonError>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Data::Json::JsonObject>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Data::Json::JsonValue>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Data::Json::JsonErrorStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Data::Json::JsonValueType>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::Data::Json::IJsonArray>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.IJsonArray" };
-    };
-    template <> struct name<Windows::Data::Json::IJsonArrayStatics>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.IJsonArrayStatics" };
-    };
-    template <> struct name<Windows::Data::Json::IJsonErrorStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.IJsonErrorStatics2" };
-    };
-    template <> struct name<Windows::Data::Json::IJsonObject>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.IJsonObject" };
-    };
-    template <> struct name<Windows::Data::Json::IJsonObjectStatics>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.IJsonObjectStatics" };
-    };
-    template <> struct name<Windows::Data::Json::IJsonObjectWithDefaultValues>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.IJsonObjectWithDefaultValues" };
-    };
-    template <> struct name<Windows::Data::Json::IJsonValue>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.IJsonValue" };
-    };
-    template <> struct name<Windows::Data::Json::IJsonValueStatics>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.IJsonValueStatics" };
-    };
-    template <> struct name<Windows::Data::Json::IJsonValueStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.IJsonValueStatics2" };
-    };
-    template <> struct name<Windows::Data::Json::JsonArray>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.JsonArray" };
-    };
-    template <> struct name<Windows::Data::Json::JsonError>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.JsonError" };
-    };
-    template <> struct name<Windows::Data::Json::JsonObject>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.JsonObject" };
-    };
-    template <> struct name<Windows::Data::Json::JsonValue>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.JsonValue" };
-    };
-    template <> struct name<Windows::Data::Json::JsonErrorStatus>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.JsonErrorStatus" };
-    };
-    template <> struct name<Windows::Data::Json::JsonValueType>
-    {
-        static constexpr auto & value{ L"Windows.Data.Json.JsonValueType" };
-    };
-    template <> struct guid_storage<Windows::Data::Json::IJsonArray>
-    {
-        static constexpr guid value{ 0x08C1DDB6,0x0CBD,0x4A9A,{ 0xB5,0xD3,0x2F,0x85,0x2D,0xC3,0x7E,0x81 } };
-    };
-    template <> struct guid_storage<Windows::Data::Json::IJsonArrayStatics>
-    {
-        static constexpr guid value{ 0xDB1434A9,0xE164,0x499F,{ 0x93,0xE2,0x8A,0x8F,0x49,0xBB,0x90,0xBA } };
-    };
-    template <> struct guid_storage<Windows::Data::Json::IJsonErrorStatics2>
-    {
-        static constexpr guid value{ 0x404030DA,0x87D0,0x436C,{ 0x83,0xAB,0xFC,0x7B,0x12,0xC0,0xCC,0x26 } };
-    };
-    template <> struct guid_storage<Windows::Data::Json::IJsonObject>
-    {
-        static constexpr guid value{ 0x064E24DD,0x29C2,0x4F83,{ 0x9A,0xC1,0x9E,0xE1,0x15,0x78,0xBE,0xB3 } };
-    };
-    template <> struct guid_storage<Windows::Data::Json::IJsonObjectStatics>
-    {
-        static constexpr guid value{ 0x2289F159,0x54DE,0x45D8,{ 0xAB,0xCC,0x22,0x60,0x3F,0xA0,0x66,0xA0 } };
-    };
-    template <> struct guid_storage<Windows::Data::Json::IJsonObjectWithDefaultValues>
-    {
-        static constexpr guid value{ 0xD960D2A2,0xB7F0,0x4F00,{ 0x8E,0x44,0xD8,0x2C,0xF4,0x15,0xEA,0x13 } };
-    };
-    template <> struct guid_storage<Windows::Data::Json::IJsonValue>
-    {
-        static constexpr guid value{ 0xA3219ECB,0xF0B3,0x4DCD,{ 0xBE,0xEE,0x19,0xD4,0x8C,0xD3,0xED,0x1E } };
-    };
-    template <> struct guid_storage<Windows::Data::Json::IJsonValueStatics>
-    {
-        static constexpr guid value{ 0x5F6B544A,0x2F53,0x48E1,{ 0x91,0xA3,0xF7,0x8B,0x50,0xA6,0x34,0x5C } };
-    };
-    template <> struct guid_storage<Windows::Data::Json::IJsonValueStatics2>
-    {
-        static constexpr guid value{ 0x1D9ECBE4,0x3FE8,0x4335,{ 0x83,0x92,0x93,0xD8,0xE3,0x68,0x65,0xF0 } };
-    };
-    template <> struct default_interface<Windows::Data::Json::JsonArray>
-    {
-        using type = Windows::Data::Json::IJsonArray;
-    };
-    template <> struct default_interface<Windows::Data::Json::JsonObject>
-    {
-        using type = Windows::Data::Json::IJsonObject;
-    };
-    template <> struct default_interface<Windows::Data::Json::JsonValue>
-    {
-        using type = Windows::Data::Json::IJsonValue;
-    };
+    template <> struct category<Windows::Data::Json::IJsonArray>{ using type = interface_category; };
+    template <> struct category<Windows::Data::Json::IJsonArrayStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Data::Json::IJsonErrorStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Data::Json::IJsonObject>{ using type = interface_category; };
+    template <> struct category<Windows::Data::Json::IJsonObjectStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Data::Json::IJsonObjectWithDefaultValues>{ using type = interface_category; };
+    template <> struct category<Windows::Data::Json::IJsonValue>{ using type = interface_category; };
+    template <> struct category<Windows::Data::Json::IJsonValueStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Data::Json::IJsonValueStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Data::Json::JsonArray>{ using type = class_category; };
+    template <> struct category<Windows::Data::Json::JsonError>{ using type = class_category; };
+    template <> struct category<Windows::Data::Json::JsonObject>{ using type = class_category; };
+    template <> struct category<Windows::Data::Json::JsonValue>{ using type = class_category; };
+    template <> struct category<Windows::Data::Json::JsonErrorStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Data::Json::JsonValueType>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::Data::Json::JsonArray> = L"Windows.Data.Json.JsonArray";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::JsonError> = L"Windows.Data.Json.JsonError";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::JsonObject> = L"Windows.Data.Json.JsonObject";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::JsonValue> = L"Windows.Data.Json.JsonValue";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::JsonErrorStatus> = L"Windows.Data.Json.JsonErrorStatus";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::JsonValueType> = L"Windows.Data.Json.JsonValueType";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::IJsonArray> = L"Windows.Data.Json.IJsonArray";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::IJsonArrayStatics> = L"Windows.Data.Json.IJsonArrayStatics";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::IJsonErrorStatics2> = L"Windows.Data.Json.IJsonErrorStatics2";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::IJsonObject> = L"Windows.Data.Json.IJsonObject";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::IJsonObjectStatics> = L"Windows.Data.Json.IJsonObjectStatics";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::IJsonObjectWithDefaultValues> = L"Windows.Data.Json.IJsonObjectWithDefaultValues";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::IJsonValue> = L"Windows.Data.Json.IJsonValue";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::IJsonValueStatics> = L"Windows.Data.Json.IJsonValueStatics";
+    template <> inline constexpr auto& name_v<Windows::Data::Json::IJsonValueStatics2> = L"Windows.Data.Json.IJsonValueStatics2";
+    template <> inline constexpr guid guid_v<Windows::Data::Json::IJsonArray>{ 0x08C1DDB6,0x0CBD,0x4A9A,{ 0xB5,0xD3,0x2F,0x85,0x2D,0xC3,0x7E,0x81 } }; // 08C1DDB6-0CBD-4A9A-B5D3-2F852DC37E81
+    template <> inline constexpr guid guid_v<Windows::Data::Json::IJsonArrayStatics>{ 0xDB1434A9,0xE164,0x499F,{ 0x93,0xE2,0x8A,0x8F,0x49,0xBB,0x90,0xBA } }; // DB1434A9-E164-499F-93E2-8A8F49BB90BA
+    template <> inline constexpr guid guid_v<Windows::Data::Json::IJsonErrorStatics2>{ 0x404030DA,0x87D0,0x436C,{ 0x83,0xAB,0xFC,0x7B,0x12,0xC0,0xCC,0x26 } }; // 404030DA-87D0-436C-83AB-FC7B12C0CC26
+    template <> inline constexpr guid guid_v<Windows::Data::Json::IJsonObject>{ 0x064E24DD,0x29C2,0x4F83,{ 0x9A,0xC1,0x9E,0xE1,0x15,0x78,0xBE,0xB3 } }; // 064E24DD-29C2-4F83-9AC1-9EE11578BEB3
+    template <> inline constexpr guid guid_v<Windows::Data::Json::IJsonObjectStatics>{ 0x2289F159,0x54DE,0x45D8,{ 0xAB,0xCC,0x22,0x60,0x3F,0xA0,0x66,0xA0 } }; // 2289F159-54DE-45D8-ABCC-22603FA066A0
+    template <> inline constexpr guid guid_v<Windows::Data::Json::IJsonObjectWithDefaultValues>{ 0xD960D2A2,0xB7F0,0x4F00,{ 0x8E,0x44,0xD8,0x2C,0xF4,0x15,0xEA,0x13 } }; // D960D2A2-B7F0-4F00-8E44-D82CF415EA13
+    template <> inline constexpr guid guid_v<Windows::Data::Json::IJsonValue>{ 0xA3219ECB,0xF0B3,0x4DCD,{ 0xBE,0xEE,0x19,0xD4,0x8C,0xD3,0xED,0x1E } }; // A3219ECB-F0B3-4DCD-BEEE-19D48CD3ED1E
+    template <> inline constexpr guid guid_v<Windows::Data::Json::IJsonValueStatics>{ 0x5F6B544A,0x2F53,0x48E1,{ 0x91,0xA3,0xF7,0x8B,0x50,0xA6,0x34,0x5C } }; // 5F6B544A-2F53-48E1-91A3-F78B50A6345C
+    template <> inline constexpr guid guid_v<Windows::Data::Json::IJsonValueStatics2>{ 0x1D9ECBE4,0x3FE8,0x4335,{ 0x83,0x92,0x93,0xD8,0xE3,0x68,0x65,0xF0 } }; // 1D9ECBE4-3FE8-4335-8392-93D8E36865F0
+    template <> struct default_interface<Windows::Data::Json::JsonArray>{ using type = Windows::Data::Json::IJsonArray; };
+    template <> struct default_interface<Windows::Data::Json::JsonObject>{ using type = Windows::Data::Json::IJsonObject; };
+    template <> struct default_interface<Windows::Data::Json::JsonValue>{ using type = Windows::Data::Json::IJsonValue; };
     template <> struct abi<Windows::Data::Json::IJsonArray>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -301,11 +175,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Json_IJsonArray
     {
-        auto GetObjectAt(uint32_t index) const;
-        auto GetArrayAt(uint32_t index) const;
-        auto GetStringAt(uint32_t index) const;
-        auto GetNumberAt(uint32_t index) const;
-        auto GetBooleanAt(uint32_t index) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) GetObjectAt(uint32_t index) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) GetArrayAt(uint32_t index) const;
+        WINRT_IMPL_AUTO(hstring) GetStringAt(uint32_t index) const;
+        WINRT_IMPL_AUTO(double) GetNumberAt(uint32_t index) const;
+        WINRT_IMPL_AUTO(bool) GetBooleanAt(uint32_t index) const;
     };
     template <> struct consume<Windows::Data::Json::IJsonArray>
     {
@@ -314,8 +188,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Json_IJsonArrayStatics
     {
-        auto Parse(param::hstring const& input) const;
-        auto TryParse(param::hstring const& input, Windows::Data::Json::JsonArray& result) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) Parse(param::hstring const& input) const;
+        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, Windows::Data::Json::JsonArray& result) const;
     };
     template <> struct consume<Windows::Data::Json::IJsonArrayStatics>
     {
@@ -324,7 +198,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Json_IJsonErrorStatics2
     {
-        auto GetJsonStatus(int32_t hresult) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonErrorStatus) GetJsonStatus(int32_t hresult) const;
     };
     template <> struct consume<Windows::Data::Json::IJsonErrorStatics2>
     {
@@ -333,13 +207,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Json_IJsonObject
     {
-        auto GetNamedValue(param::hstring const& name) const;
-        auto SetNamedValue(param::hstring const& name, Windows::Data::Json::IJsonValue const& value) const;
-        auto GetNamedObject(param::hstring const& name) const;
-        auto GetNamedArray(param::hstring const& name) const;
-        auto GetNamedString(param::hstring const& name) const;
-        auto GetNamedNumber(param::hstring const& name) const;
-        auto GetNamedBoolean(param::hstring const& name) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) GetNamedValue(param::hstring const& name) const;
+        WINRT_IMPL_AUTO(void) SetNamedValue(param::hstring const& name, Windows::Data::Json::IJsonValue const& value) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) GetNamedObject(param::hstring const& name) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) GetNamedArray(param::hstring const& name) const;
+        WINRT_IMPL_AUTO(hstring) GetNamedString(param::hstring const& name) const;
+        WINRT_IMPL_AUTO(double) GetNamedNumber(param::hstring const& name) const;
+        WINRT_IMPL_AUTO(bool) GetNamedBoolean(param::hstring const& name) const;
     };
     template <> struct consume<Windows::Data::Json::IJsonObject>
     {
@@ -348,8 +222,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Json_IJsonObjectStatics
     {
-        auto Parse(param::hstring const& input) const;
-        auto TryParse(param::hstring const& input, Windows::Data::Json::JsonObject& result) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) Parse(param::hstring const& input) const;
+        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, Windows::Data::Json::JsonObject& result) const;
     };
     template <> struct consume<Windows::Data::Json::IJsonObjectStatics>
     {
@@ -358,12 +232,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Json_IJsonObjectWithDefaultValues
     {
-        auto GetNamedValue(param::hstring const& name, Windows::Data::Json::JsonValue const& defaultValue) const;
-        auto GetNamedObject(param::hstring const& name, Windows::Data::Json::JsonObject const& defaultValue) const;
-        auto GetNamedString(param::hstring const& name, param::hstring const& defaultValue) const;
-        auto GetNamedArray(param::hstring const& name, Windows::Data::Json::JsonArray const& defaultValue) const;
-        auto GetNamedNumber(param::hstring const& name, double defaultValue) const;
-        auto GetNamedBoolean(param::hstring const& name, bool defaultValue) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) GetNamedValue(param::hstring const& name, Windows::Data::Json::JsonValue const& defaultValue) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) GetNamedObject(param::hstring const& name, Windows::Data::Json::JsonObject const& defaultValue) const;
+        WINRT_IMPL_AUTO(hstring) GetNamedString(param::hstring const& name, param::hstring const& defaultValue) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) GetNamedArray(param::hstring const& name, Windows::Data::Json::JsonArray const& defaultValue) const;
+        WINRT_IMPL_AUTO(double) GetNamedNumber(param::hstring const& name, double defaultValue) const;
+        WINRT_IMPL_AUTO(bool) GetNamedBoolean(param::hstring const& name, bool defaultValue) const;
     };
     template <> struct consume<Windows::Data::Json::IJsonObjectWithDefaultValues>
     {
@@ -372,13 +246,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Json_IJsonValue
     {
-        [[nodiscard]] auto ValueType() const;
-        auto Stringify() const;
-        auto GetString() const;
-        auto GetNumber() const;
-        auto GetBoolean() const;
-        auto GetArray() const;
-        auto GetObject() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Data::Json::JsonValueType) ValueType() const;
+        WINRT_IMPL_AUTO(hstring) Stringify() const;
+        WINRT_IMPL_AUTO(hstring) GetString() const;
+        WINRT_IMPL_AUTO(double) GetNumber() const;
+        WINRT_IMPL_AUTO(bool) GetBoolean() const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonArray) GetArray() const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonObject) GetObject() const;
     };
     template <> struct consume<Windows::Data::Json::IJsonValue>
     {
@@ -387,11 +261,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Json_IJsonValueStatics
     {
-        auto Parse(param::hstring const& input) const;
-        auto TryParse(param::hstring const& input, Windows::Data::Json::JsonValue& result) const;
-        auto CreateBooleanValue(bool input) const;
-        auto CreateNumberValue(double input) const;
-        auto CreateStringValue(param::hstring const& input) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) Parse(param::hstring const& input) const;
+        WINRT_IMPL_AUTO(bool) TryParse(param::hstring const& input, Windows::Data::Json::JsonValue& result) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) CreateBooleanValue(bool input) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) CreateNumberValue(double input) const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) CreateStringValue(param::hstring const& input) const;
     };
     template <> struct consume<Windows::Data::Json::IJsonValueStatics>
     {
@@ -400,7 +274,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Data_Json_IJsonValueStatics2
     {
-        auto CreateNullValue() const;
+        WINRT_IMPL_AUTO(Windows::Data::Json::JsonValue) CreateNullValue() const;
     };
     template <> struct consume<Windows::Data::Json::IJsonValueStatics2>
     {

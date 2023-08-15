@@ -551,9 +551,9 @@ typedef struct _D3DKMDT_VIDEO_SIGNAL_INFO
             D3DDDI_VIDEO_SIGNAL_SCANLINE_ORDERING ScanLineOrdering : 3;
 
             // Vertical refresh frequency divider
-            UINT VSyncFreqDivider : 6;
+            UINT VSyncFreqDivider               : 6;
 
-            UINT Reserved : 23;
+            UINT Reserved                       : 23;
 
         } AdditionalSignalInfo;
 #endif // DXGKDDI_INTERFACE_VERSION_WDDM1_3_M1
@@ -632,6 +632,12 @@ typedef struct _D3DKMDT_VIDPN_TARGET_MODE
     // the source of the respective present path.
     D3DKMDT_MODE_PREFERENCE  Preference;
 #endif // (DXGKDDI_INTERFACE_VERSION < DXGKDDI_INTERFACE_VERSION_WDDM2_2)
+
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_9)
+
+    D3DDDI_RATIONAL MinimumVSyncFreq;
+
+#endif // (DXGKDDI_INTERFACE_VERSION < DXGKDDI_INTERFACE_VERSION_WDDM2_9)
 
 }
 D3DKMDT_VIDPN_TARGET_MODE;
@@ -2123,6 +2129,43 @@ typedef struct _D3DKMT_WDDM_2_7_CAPS
 
 #endif
 
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_9)
+
+// DXGK_FEATURE_SUPPORT constants
+
+// When a driver doesn't support a feature, it doesn't call into QueryFeatureSupport with that feature ID.
+// This value is provided for implementation convenience of enumerating possible driver support states
+// for a particular feature.
+#define DXGK_FEATURE_SUPPORT_ALWAYS_OFF ((UINT)0)
+
+// Driver support for a feature is in the experimental state
+#define DXGK_FEATURE_SUPPORT_EXPERIMENTAL ((UINT)1)
+
+// Driver support for a feature is in the stable state
+#define DXGK_FEATURE_SUPPORT_STABLE ((UINT)2)
+
+// Driver support for a feature is in the always on state,
+// and it doesn't operate without this feature enabled.
+#define DXGK_FEATURE_SUPPORT_ALWAYS_ON ((UINT)3)
+
+typedef struct _D3DKMT_WDDM_2_9_CAPS
+{
+    union
+    {
+        struct
+        {
+            _Field_range_(DXGK_FEATURE_SUPPORT_ALWAYS_OFF, DXGK_FEATURE_SUPPORT_ALWAYS_ON)
+            UINT    HwSchSupportState           :  2;   // DXGK_FEATURE_SUPPORT_* value that specifies driver support state for GPU supports hardware scheduling
+            UINT    HwSchEnabled                :  1;   // Specifies whether the hardware scheduling is currently enabled for this GPU
+            UINT    SelfRefreshMemorySupported  :  1;   // Specifies whether Self Refresh Memory is supported for this GPU
+            UINT    Reserved                    : 28;
+        };
+        UINT Value;
+    };
+} D3DKMT_WDDM_2_9_CAPS;
+
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_9)
+
 typedef struct _D3DKMT_TRACKEDWORKLOAD_SUPPORT
 {
     _In_ UINT PhysicalAdapterIndex;
@@ -2323,6 +2366,26 @@ typedef BYTE DXGK_DISPLAY_DESCRIPTOR_TYPE;
 #endif // defined(__cplusplus) && !defined(SORTPP_PASS)
 
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_2)
+
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_5)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Capabilities, preferences and other information reported by display only capable adapters.
+
+typedef struct _D3DKMT_DISPLAY_CAPS
+{
+    union
+    {
+        struct
+        {
+            UINT64 PreferPhysicallyContiguous : 1;
+            UINT64 Reserved : 63;
+        };
+        UINT64 Value;
+    };
+} D3DKMT_DISPLAY_CAPS;
+
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_5)
 
 #pragma pack( pop )
 

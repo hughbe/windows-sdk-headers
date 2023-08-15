@@ -208,6 +208,7 @@
 #define PS_MITIGATION_OPTION_RETURN_FLOW_GUARD 0x10
 #define PS_MITIGATION_OPTION_RESTRICT_SET_THREAD_CONTEXT 0x13
 #define PS_MITIGATION_OPTION_CET_USER_SHADOW_STACKS 0x1f
+#define PsneKiUserCallbackDispatcher 0x30
 
 //
 // User Shared Data Structure Offset Definitions
@@ -368,7 +369,7 @@
 #define DpDpcData 0x38
 #define DpcObjectLength 0x40
 
-#define KI_DPC_ALL_FLAGS 0x3f
+#define KI_DPC_ALL_FLAGS 0xbf
 #define KI_DPC_ANY_DPC_ACTIVE 0x10001
 
 //
@@ -454,8 +455,9 @@
 #define PrKernelTime 0x384
 #define PrUserTime 0x388
 #define PrInstrumentationCallback 0x390
+#define PrMitigationFlags2 0xa94
 #define KernelProcessObjectLength 0x3f0
-#define ExecutiveProcessObjectLength 0xb00
+#define ExecutiveProcessObjectLength 0xc80
 #define Win32BatchFlushCallout 0x7
 
 //
@@ -472,9 +474,9 @@
 #define PfBuffer 0x38
 #define PfSegment 0x40
 #define PfAffinity 0x48
-#define PfSource 0xf0
-#define PfStarted 0xf2
-#define ProfileObjectLength 0xf8
+#define PfSource 0x158
+#define PfStarted 0x15a
+#define ProfileObjectLength 0x160
 
 //
 // Queue Object Structure Offset Definitions
@@ -491,8 +493,8 @@
 // Thread Object Structure Offset Definitions
 //
 
-#define EtCid 0x498
-#define EtPicoContext 0x600
+#define EtCid 0x4e8
+#define EtPicoContext 0x650
 
 #define ThType 0x0
 #define ThSize 0x2
@@ -505,9 +507,9 @@
 #define THREAD_FLAGS_COUNTER_PROFILING_LOCK 0x20000
 #define THREAD_FLAGS_GROUP_SCHEDULING 0x4
 #define THREAD_FLAGS_AFFINITY_SET 0x8
-#define THREAD_FLAGS_ACCOUNTING_CSWITCH 0x36
+#define THREAD_FLAGS_ACCOUNTING_CSWITCH 0xb6
 #define THREAD_FLAGS_ACCOUNTING_INTERRUPT 0x72
-#define THREAD_FLAGS_ACCOUNTING_ANY 0x3e
+#define THREAD_FLAGS_ACCOUNTING_ANY 0xbe
 #define ThDebugActive 0x3
 #define ThThreadControlFlags 0x2
 #define ThSignalState 0x4
@@ -541,6 +543,7 @@
 #define KTHREAD_QUEUE_DEFER_PREEMPTION_BIT 0xb
 #define KTHREAD_BAM_QOS_LEVEL_MASK 0xff
 #define KTHREAD_CET_USER_SHADOW_STACK_BIT 0x14
+#define KTHREAD_CET_KERNEL_SHADOW_STACK_BIT 0x16
 
 #define DEBUG_ACTIVE_ALT_SYSCALL_HANDLER 0x24
 #define PsSystemCallMapToSystem 0x1
@@ -558,8 +561,8 @@
 #define ThWin32Thread 0x1c0
 #define ThStackBase 0x38
 #define ThLegoData 0x2f0
-#define KernelThreadObjectLength 0x450
-#define ExecutiveThreadObjectLength 0x8b8
+#define KernelThreadObjectLength 0x4a0
+#define ExecutiveThreadObjectLength 0x910
 
 
 //
@@ -609,7 +612,7 @@
 #define PeBeingDebugged 0x2
 #define PeProcessParameters 0x20
 #define PeKernelCallbackTable 0x58
-#define ProcessEnvironmentBlockLength 0x7c8
+#define ProcessEnvironmentBlockLength 0x7d0
 
 //
 // Process Parameters Block Structure Offset Definitions
@@ -632,6 +635,28 @@
 #define SdLimit 0x10
 #define SdNumber 0x18
 #define SdLength 0x20
+
+//
+// CHPEV2 EC Code Range Bitmap
+//
+
+#define PeEcCodeBitMap 0x368
+
+//
+// CHPEV2 Per-Thread Emulation Structure Definitions
+//
+
+#define Cv2ciInSimulation 0x0
+#define Cv2ciInSyscallCallback 0x1
+#define Cv2ciEmulatorData 0x28
+#define Cv2ciEmulatorData2 0x30
+#define Cv2ciEmulatorData3 0x38
+#define Cv2ciEmulatorData4 0x40
+#define Cv2ciEmulatorDataInline 0x50
+#define Cv2ciEmulatorStackBase 0x8
+#define Cv2ciEmulatorStackLimit 0x10
+#define Cv2ciContextAmd64 0x18
+#define Cv2ciSuspendDoorbell 0x20
 
 //
 // Thread Environment Block Structure Offset Definitions
@@ -676,8 +701,9 @@
 #define TeInstrumentation 0x16b8
 #define TeGdiBatchCount 0x1740
 #define TeGuaranteedStackBytes 0x1748
+#define TeChpeV2CpuAreaInfo 0x1788
 #define TeFlsData 0x17c8
-#define ThreadEnvironmentBlockLength 0x1838
+#define ThreadEnvironmentBlockLength 0x1850
 #define CmThreadEnvironmentBlockOffset 0x2000
 #define TLS_MINIMUM_AVAILABLE 0x40
 #define TLS_EXPANSION_SLOTS 0x400
@@ -739,6 +765,8 @@
 #define CxxLegacyLength 0xc
 #define CxxXStateOffset 0x10
 #define CxxXStateLength 0x14
+#define CxxKernelCetOffset 0x18
+#define CxxKernelCetLength 0x1c
 
 //
 // KAFFINITY_EX offsets
@@ -826,8 +854,8 @@
 #define PcPrcbLock 0x9a8
 #define PcGroupSetMember 0x10e0
 #define PcFeatureBits 0x1214
-#define PcVirtualApicAssist 0x2098
-#define PcTrappedSecurityDomain 0x14a0
+#define PcVirtualApicAssist 0x2118
+#define PcTrappedSecurityDomain 0x1578
 #define TlThread 0x0
 #define TlCpuNumber 0x8
 #define TlTrapType 0x9
@@ -857,12 +885,12 @@
 #define PcDeferredReadyListHead 0x1388
 #define PcInterruptCount 0x1880
 #define PcSystemCalls 0x13b8
-#define PcDpcRoutineActive 0x148a
+#define PcDpcRoutineActive 0x149a
 #define PcDeferredReadyListHead 0x1388
 #define PcSkipTick 0x1898
 #define PcStartCycles 0x18c8
-#define PcSpBase 0x1470
-#define ProcessorControlRegisterLength 0x1d0c0
+#define PcSpBase 0x1480
+#define ProcessorControlRegisterLength 0x29f40
 
 //
 // Defines for user shared data
@@ -902,18 +930,18 @@
 #define PbPriorityState 0x30
 #define PbLockQueue 0x780
 #define PbPPLookasideList 0x900
-#define PbPPNPagedLookasideList 0x6700
-#define PbPPPagedLookasideList 0x7300
+#define PbPPNPagedLookasideList 0x6780
+#define PbPPPagedLookasideList 0x7380
 #define PbPacketBarrier 0xa00
 #define PbDeferredReadyListHead 0xa08
 #define PbLookasideIrpFloat 0xa58
-#define PbRequestMailbox 0x8700
+#define PbRequestMailbox 0x9580
 #define PbMailbox 0xa80
 #define PbDpcGate 0xb80
 #define PbWaitListHead 0xc00
 #define PbCcFastMdlReadNoWait 0x1180
 #define PbPowerState 0x1200
-#define PbSpinLockAcquireCount 0x1780
+#define PbSpinLockAcquireCount 0x1800
 #define PbSystemCalls 0xa38
 #define PbReadOperationCount 0xa5c
 #define PbWriteOperationCount 0xa60
@@ -926,17 +954,17 @@
 #define PbDpcList 0xa98
 #define PbDpcLock 0xaa8
 #define PbDpcCount 0xab4
-#define PbDpcStack 0xae8
-#define PbSpBase 0xaf0
-#define PbMaximumDpcQueueDepth 0xaf8
-#define PbDpcRequestRate 0xafc
-#define PbMinimumDpcRate 0xb00
-#define PbDpcRoutineActive 0xb0a
-#define PbDpcRequestSummary 0xb0c
-#define PbNormalDpcState 0xb0c
-#define PbDpcLastCount 0xb04
-#define PbQuantumEnd 0xb09
-#define PbIdleSchedule 0xb0b
+#define PbDpcStack 0xaf8
+#define PbSpBase 0xb00
+#define PbMaximumDpcQueueDepth 0xb08
+#define PbDpcRequestRate 0xb0c
+#define PbMinimumDpcRate 0xb10
+#define PbDpcRoutineActive 0xb1a
+#define PbDpcRequestSummary 0xb1c
+#define PbNormalDpcState 0xb1c
+#define PbDpcLastCount 0xb14
+#define PbQuantumEnd 0xb19
+#define PbIdleSchedule 0xb1b
 #define PbDispatcherReadyListHead 0xd00
 #define PbInterruptCount 0xf00
 #define PbKernelTime 0xf04
@@ -944,7 +972,6 @@
 #define PbDpcTime 0xf0c
 #define PbInterruptTime 0xf10
 #define PbAdjustDpcThreshold 0xf14
-#define PbParentNode 0xf38
 #define PbStartCycles 0xf48
 #define PbPageColor 0x10d0
 #define PbNodeColor 0x10d4
@@ -957,11 +984,11 @@
 #define PbCopyReadNoWait 0xa4c
 #define PbCopyReadWait 0xa50
 #define PbCopyReadNoWaitMiss 0xa54
-#define PbAlignmentFixupCount 0x1458
+#define PbAlignmentFixupCount 0x1470
 #define PbExceptionDispatchCount 0xf34
 #define PbProcessorVendorString 0x890
 #define PbFeatureBits 0x894
-#define PbPanicStackBase 0x1858
+#define PbPanicStackBase 0x18d8
 
 //
 // KTHREAD state
@@ -977,6 +1004,7 @@
 #define DeferredReady 0x7
 #define GateWaitObsolete 0x8
 #define THREAD_FLAGS_CYCLE_PROFILING_BIT 0x0
+#define DEBUG_ACTIVE_EMULATION_THREAD_BIT 0x6
 
 //
 // Immediate Interprocessor Command Definitions
@@ -999,6 +1027,9 @@
 //
 
 #define IPI_PACKET_READY 0x5
+#define KI_USER_PER_PROCESS_IP_AUTH_ENABLED_BIT 0x0
+#define KI_USER_GLOBAL_IP_AUTH_ENABLED_BIT 0x1
+#define KI_KERNEL_IP_AUTH_ENABLED_BIT 0x2
 
 //
 // Time Fields (TIME_FIELDS) Structure Offset Definitions
@@ -1221,6 +1252,7 @@
 //
 
 #define ARM64_TLBI_VMALLE1 0x438
+#define ARM64_TLBI_ALLE1 0x243c
 #define ARM64_TLBI_ALLE2 0x2438
 #define ARM64_TLBI_VAE1 0x439
 #define ARM64_TLBI_ASIDE1 0x43a
@@ -1386,6 +1418,13 @@
 #define ARM64_ICC_SRE_EL2 0x664d
 
 //
+// Pointer Authentication Key Registers
+//
+
+#define ARM64_APIBKeyHi_EL1 0x410b
+#define ARM64_APIBKeyLo_EL1 0x410a
+
+//
 // SCTLR bits
 //
 
@@ -1408,6 +1447,7 @@
 #define ARM64_SCTLR_E0E 0x1000000
 #define ARM64_SCTLR_EE 0x2000000
 #define ARM64_SCTLR_UCI 0x4000000
+#define ARM64_SCTLR_EnIB 0x40000000
 
 //
 // MDSCR bits
@@ -1452,6 +1492,7 @@
 //
 
 #define FAST_FAIL_GUARD_ICALL_CHECK_FAILURE 0xa
+#define FAST_FAIL_CONTROL_INVALID_RETURN_ADDRESS 0x39
 #define BASE_PRIORITY_THRESHOLD 0x8
 #define LOW_REALTIME_PRIORITY 0x10
 #define KERNEL_LARGE_STACK_COMMIT 0x8000
@@ -1475,7 +1516,7 @@
 #define KI_EXCEPTION_INVALID_OP 0x10000002
 #define KI_EXCEPTION_ACCESS_VIOLATION 0x10000004
 #define KI_EXCEPTION_HARDWARE_ERROR 0x10000005
-#define KI_DPC_INTERRUPT_FLAGS 0x2f
+#define KI_DPC_INTERRUPT_FLAGS 0xaf
 #define STATUS_UNSUCCESSFUL 0xc0000001
 #define SKCALL_MAXPARAMETERS 0xc
 
@@ -1647,6 +1688,79 @@
 #define DEBUG_ACTIVE_MINIMAL_THREAD_BIT 0x2
 
 //
+// ARM64EC Context Frame Offsets
+//
+
+#define EcContextFlags 0x30
+#define EcAMD64_MxCsr_copy 0x34
+#define EcAMD64_SegCs 0x38
+#define EcAMD64_SegDs 0x3a
+#define EcAMD64_SegEs 0x3c
+#define EcAMD64_SegFs 0x3e
+#define EcAMD64_SegGs 0x40
+#define EcAMD64_SegSs 0x42
+#define EcAMD64_EFlags 0x44
+#define EcAMD64_Dr0 0x48
+#define EcAMD64_Dr1 0x50
+#define EcAMD64_Dr2 0x58
+#define EcAMD64_Dr3 0x60
+#define EcAMD64_Dr6 0x68
+#define EcAMD64_Dr7 0x70
+#define EcX8 0x78
+#define EcX0 0x80
+#define EcX1 0x88
+#define EcX27 0x90
+#define EcSp 0x98
+#define EcFp 0xa0
+#define EcX25 0xa8
+#define EcX26 0xb0
+#define EcX2 0xb8
+#define EcX3 0xc0
+#define EcX4 0xc8
+#define EcX5 0xd0
+#define EcX19 0xd8
+#define EcX20 0xe0
+#define EcX21 0xe8
+#define EcX22 0xf0
+#define EcPc 0xf8
+#define EcAMD64_ControlWord 0x100
+#define EcAMD64_StatusWord 0x102
+#define EcAMD64_TagWord 0x104
+#define EcAMD64_ErrorOpcode 0x106
+#define EcAMD64_ErrorOffset 0x108
+#define EcAMD64_ErrorSelector 0x10c
+#define EcAMD64_DataOffset 0x110
+#define EcAMD64_DataSelector 0x114
+#define EcAMD64_DataSelector 0x114
+#define EcAMD64_MxCsr 0x118
+#define EcAMD64_MxCsr_Mask 0x11c
+#define EcLr 0x120
+#define EcX16_0 0x128
+#define EcX6 0x130
+#define EcX16_1 0x138
+#define EcX7 0x140
+#define EcX16_2 0x148
+#define EcX9 0x150
+#define EcX16_3 0x158
+#define EcX10 0x160
+#define EcX17_0 0x168
+#define EcX11 0x170
+#define EcX17_1 0x178
+#define EcX12 0x180
+#define EcX17_2 0x188
+#define EcX15 0x190
+#define EcX17_3 0x198
+#define EcV 0x1a0
+#define EcAMD64_VectorRegister 0x300
+#define EcAMD64_VectorControl 0x4a0
+#define EcAMD64_DebugControl 0x4a8
+#define EcAMD64_LastBranchToRip 0x4b0
+#define EcAMD64_LastBranchFromRip 0x4b8
+#define EcAMD64_LastExceptionToRip 0x4c0
+#define EcAMD64_LastExceptionFromRip 0x4c8
+#define ARM64EC_CONTEXT_LENGTH 0x4d0
+
+//
 // Dispatcher Context Structure Offset Definitions
 //
 
@@ -1716,6 +1830,13 @@
 
 #define EpDebugPort 0x530
 #define EpSecurityDomain 0xaa0
+#define EpPointerAuthUserIpKey 0xbe8
+
+//
+// EPROCESS MitigationFlags2
+//
+
+#define PS_PROCESS_MITIGATION_FLAGS2_POINTER_AUTH_USER_IP_BIT 0x1b
 
 //
 // KeFeatureBits defines
@@ -1739,6 +1860,6 @@
 // KAFFINITY_EX size
 //
 
-#define AffinityExLength 0xa8
+#define AffinityExLength 0x108
 #include "kxarm64.h"
 ;

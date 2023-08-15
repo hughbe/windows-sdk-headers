@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,207 +6,208 @@
 #ifndef WINRT_Windows_Security_Authentication_OnlineId_H
 #define WINRT_Windows_Security_Authentication_OnlineId_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.System.2.h"
 #include "winrt/impl/Windows.Security.Authentication.OnlineId.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::AuthenticateUserAsync(Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest const& request) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::UserAuthenticationOperation) consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::AuthenticateUserAsync(Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest const& request) const
     {
         void* authenticationOperation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator)->AuthenticateUserAsync(*(void**)(&request), &authenticationOperation));
         return Windows::Security::Authentication::OnlineId::UserAuthenticationOperation{ authenticationOperation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::AuthenticateUserAsync(param::iterable<Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest> const& requests, Windows::Security::Authentication::OnlineId::CredentialPromptType const& credentialPromptType) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::UserAuthenticationOperation) consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::AuthenticateUserAsync(param::iterable<Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest> const& requests, Windows::Security::Authentication::OnlineId::CredentialPromptType const& credentialPromptType) const
     {
         void* authenticationOperation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator)->AuthenticateUserAsyncAdvanced(*(void**)(&requests), static_cast<int32_t>(credentialPromptType), &authenticationOperation));
         return Windows::Security::Authentication::OnlineId::UserAuthenticationOperation{ authenticationOperation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::SignOutUserAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::SignOutUserOperation) consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::SignOutUserAsync() const
     {
         void* signOutUserOperation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator)->SignOutUserAsync(&signOutUserOperation));
         return Windows::Security::Authentication::OnlineId::SignOutUserOperation{ signOutUserOperation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::ApplicationId(winrt::guid const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::ApplicationId(winrt::guid const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator)->put_ApplicationId(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::ApplicationId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::ApplicationId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator)->get_ApplicationId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::CanSignOut() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::CanSignOut() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator)->get_CanSignOut(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::AuthenticatedSafeCustomerId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IOnlineIdAuthenticator<D>::AuthenticatedSafeCustomerId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator)->get_AuthenticatedSafeCustomerId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicket<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicket<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket)->get_Value(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicket<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest) consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicket<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket)->get_Request(&value));
         return Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicket<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicket<D>::ErrorCode() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket)->get_ErrorCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicketRequest<D>::Service() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicketRequest<D>::Service() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest)->get_Service(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicketRequest<D>::Policy() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicketRequest<D>::Policy() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest)->get_Policy(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicketRequestFactory<D>::CreateOnlineIdServiceTicketRequest(param::hstring const& service, param::hstring const& policy) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest) consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicketRequestFactory<D>::CreateOnlineIdServiceTicketRequest(param::hstring const& service, param::hstring const& policy) const
     {
         void* onlineIdServiceTicketRequest{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory)->CreateOnlineIdServiceTicketRequest(*(void**)(&service), *(void**)(&policy), &onlineIdServiceTicketRequest));
         return Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest{ onlineIdServiceTicketRequest, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicketRequestFactory<D>::CreateOnlineIdServiceTicketRequestAdvanced(param::hstring const& service) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest) consume_Windows_Security_Authentication_OnlineId_IOnlineIdServiceTicketRequestFactory<D>::CreateOnlineIdServiceTicketRequestAdvanced(param::hstring const& service) const
     {
         void* onlineIdServiceTicketRequest{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory)->CreateOnlineIdServiceTicketRequestAdvanced(*(void**)(&service), &onlineIdServiceTicketRequest));
         return Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest{ onlineIdServiceTicketRequest, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorForUser<D>::GetTicketAsync(Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest const& request) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorForUser<D>::GetTicketAsync(Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest const& request) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser)->GetTicketAsync(*(void**)(&request), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorForUser<D>::ApplicationId(winrt::guid const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorForUser<D>::ApplicationId(winrt::guid const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser)->put_ApplicationId(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorForUser<D>::ApplicationId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorForUser<D>::ApplicationId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser)->get_ApplicationId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorForUser<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorForUser<D>::User() const
     {
         void* user{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser)->get_User(&user));
         return Windows::System::User{ user, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorStatics<D>::Default() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorStatics<D>::Default() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics)->get_Default(&value));
         return Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorStatics<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemAuthenticatorStatics<D>::GetForUser(Windows::System::User const& user) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics)->GetForUser(*(void**)(&user), &value));
         return Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemIdentity<D>::Ticket() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemIdentity<D>::Ticket() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemIdentity)->get_Ticket(&value));
         return Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemIdentity<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemIdentity<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemIdentity)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemTicketResult<D>::Identity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemTicketResult<D>::Identity() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult)->get_Identity(&value));
         return Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemTicketResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketStatus) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemTicketResult<D>::Status() const
     {
-        Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult)->get_Status(put_abi(value)));
+        Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemTicketResult<D>::ExtendedError() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Security_Authentication_OnlineId_IOnlineIdSystemTicketResult<D>::ExtendedError() const
     {
-        winrt::hresult value;
+        winrt::hresult value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::Tickets() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>) consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::Tickets() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IUserIdentity)->get_Tickets(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IUserIdentity)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::SafeCustomerId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::SafeCustomerId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IUserIdentity)->get_SafeCustomerId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::SignInName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::SignInName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IUserIdentity)->get_SignInName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::FirstName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::FirstName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IUserIdentity)->get_FirstName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::LastName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::LastName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IUserIdentity)->get_LastName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::IsBetaAccount() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::IsBetaAccount() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IUserIdentity)->get_IsBetaAccount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::IsConfirmedPC() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Authentication_OnlineId_IUserIdentity<D>::IsConfirmedPC() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Security::Authentication::OnlineId::IUserIdentity)->get_IsConfirmedPC(&value));
         return value;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator> : produce_base<D, Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator>
     {
@@ -264,6 +265,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket> : produce_base<D, Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket>
     {
@@ -291,6 +294,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest> : produce_base<D, Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest>
     {
@@ -311,6 +316,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory> : produce_base<D, Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory>
     {
@@ -331,6 +338,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser> : produce_base<D, Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser>
     {
@@ -365,6 +374,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics> : produce_base<D, Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics>
     {
@@ -385,6 +396,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authentication::OnlineId::IOnlineIdSystemIdentity> : produce_base<D, Windows::Security::Authentication::OnlineId::IOnlineIdSystemIdentity>
     {
@@ -405,6 +418,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult> : produce_base<D, Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult>
     {
@@ -432,6 +447,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Security::Authentication::OnlineId::IUserIdentity> : produce_base<D, Windows::Security::Authentication::OnlineId::IUserIdentity>
     {
@@ -498,50 +515,53 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Security::Authentication::OnlineId
+WINRT_EXPORT namespace winrt::Windows::Security::Authentication::OnlineId
 {
     inline OnlineIdAuthenticator::OnlineIdAuthenticator() :
-        OnlineIdAuthenticator(impl::call_factory<OnlineIdAuthenticator>([](auto&& f) { return f.template ActivateInstance<OnlineIdAuthenticator>(); }))
+        OnlineIdAuthenticator(impl::call_factory_cast<OnlineIdAuthenticator(*)(Windows::Foundation::IActivationFactory const&), OnlineIdAuthenticator>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<OnlineIdAuthenticator>(); }))
     {
     }
     inline OnlineIdServiceTicketRequest::OnlineIdServiceTicketRequest(param::hstring const& service, param::hstring const& policy) :
-        OnlineIdServiceTicketRequest(impl::call_factory<OnlineIdServiceTicketRequest, Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory>([&](auto&& f) { return f.CreateOnlineIdServiceTicketRequest(service, policy); }))
+        OnlineIdServiceTicketRequest(impl::call_factory<OnlineIdServiceTicketRequest, IOnlineIdServiceTicketRequestFactory>([&](IOnlineIdServiceTicketRequestFactory const& f) { return f.CreateOnlineIdServiceTicketRequest(service, policy); }))
     {
     }
     inline OnlineIdServiceTicketRequest::OnlineIdServiceTicketRequest(param::hstring const& service) :
-        OnlineIdServiceTicketRequest(impl::call_factory<OnlineIdServiceTicketRequest, Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory>([&](auto&& f) { return f.CreateOnlineIdServiceTicketRequestAdvanced(service); }))
+        OnlineIdServiceTicketRequest(impl::call_factory<OnlineIdServiceTicketRequest, IOnlineIdServiceTicketRequestFactory>([&](IOnlineIdServiceTicketRequestFactory const& f) { return f.CreateOnlineIdServiceTicketRequestAdvanced(service); }))
     {
     }
     inline auto OnlineIdSystemAuthenticator::Default()
     {
-        return impl::call_factory<OnlineIdSystemAuthenticator, Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics>([&](auto&& f) { return f.Default(); });
+        return impl::call_factory_cast<Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser(*)(IOnlineIdSystemAuthenticatorStatics const&), OnlineIdSystemAuthenticator, IOnlineIdSystemAuthenticatorStatics>([](IOnlineIdSystemAuthenticatorStatics const& f) { return f.Default(); });
     }
     inline auto OnlineIdSystemAuthenticator::GetForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<OnlineIdSystemAuthenticator, Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics>([&](auto&& f) { return f.GetForUser(user); });
+        return impl::call_factory<OnlineIdSystemAuthenticator, IOnlineIdSystemAuthenticatorStatics>([&](IOnlineIdSystemAuthenticatorStatics const& f) { return f.GetForUser(user); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemIdentity> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemIdentity> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IUserIdentity> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::IUserIdentity> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation> {};
-    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::UserIdentity> : winrt::impl::hash_base<winrt::Windows::Security::Authentication::OnlineId::UserIdentity> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdAuthenticator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicket> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdServiceTicketRequestFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemAuthenticatorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemIdentity> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IOnlineIdSystemTicketResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::IUserIdentity> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authentication::OnlineId::UserIdentity> : winrt::impl::hash_base {};
+#endif
 }
 #endif

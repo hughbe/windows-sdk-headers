@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,22 +6,22 @@
 #ifndef WINRT_Windows_Devices_Radios_H
 #define WINRT_Windows_Devices_Radios_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Devices.Radios.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Radios_IRadio<D>::SetStateAsync(Windows::Devices::Radios::RadioState const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::RadioAccessStatus>) consume_Windows_Devices_Radios_IRadio<D>::SetStateAsync(Windows::Devices::Radios::RadioState const& value) const
     {
         void* retval{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadio)->SetStateAsync(static_cast<int32_t>(value), &retval));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::RadioAccessStatus>{ retval, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Radios_IRadio<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Radios::Radio, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Radios_IRadio<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Radios::Radio, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadio)->add_StateChanged(*(void**)(&handler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -29,52 +29,53 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Radios_IRadio<D>::StateChanged(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Radios_IRadio<D>::StateChanged(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadio)->remove_StateChanged(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Devices_Radios_IRadio<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Radios::RadioState) consume_Windows_Devices_Radios_IRadio<D>::State() const
     {
-        Windows::Devices::Radios::RadioState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadio)->get_State(put_abi(value)));
+        Windows::Devices::Radios::RadioState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadio)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Radios_IRadio<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Radios_IRadio<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadio)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Radios_IRadio<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Radios::RadioKind) consume_Windows_Devices_Radios_IRadio<D>::Kind() const
     {
-        Windows::Devices::Radios::RadioKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadio)->get_Kind(put_abi(value)));
+        Windows::Devices::Radios::RadioKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadio)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Radios_IRadioStatics<D>::GetRadiosAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Radios::Radio>>) consume_Windows_Devices_Radios_IRadioStatics<D>::GetRadiosAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadioStatics)->GetRadiosAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Radios::Radio>>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Radios_IRadioStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Radios_IRadioStatics<D>::GetDeviceSelector() const
     {
         void* deviceSelector{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadioStatics)->GetDeviceSelector(&deviceSelector));
         return hstring{ deviceSelector, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Radios_IRadioStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::Radio>) consume_Windows_Devices_Radios_IRadioStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadioStatics)->FromIdAsync(*(void**)(&deviceId), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::Radio>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Radios_IRadioStatics<D>::RequestAccessAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::RadioAccessStatus>) consume_Windows_Devices_Radios_IRadioStatics<D>::RequestAccessAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Radios::IRadioStatics)->RequestAccessAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::RadioAccessStatus>{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Radios::IRadio> : produce_base<D, Windows::Devices::Radios::IRadio>
     {
@@ -123,6 +124,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Radios::IRadioStatics> : produce_base<D, Windows::Devices::Radios::IRadioStatics>
     {
@@ -159,30 +162,33 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Radios
+WINRT_EXPORT namespace winrt::Windows::Devices::Radios
 {
     inline auto Radio::GetRadiosAsync()
     {
-        return impl::call_factory<Radio, Windows::Devices::Radios::IRadioStatics>([&](auto&& f) { return f.GetRadiosAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Radios::Radio>>(*)(IRadioStatics const&), Radio, IRadioStatics>([](IRadioStatics const& f) { return f.GetRadiosAsync(); });
     }
     inline auto Radio::GetDeviceSelector()
     {
-        return impl::call_factory<Radio, Windows::Devices::Radios::IRadioStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(IRadioStatics const&), Radio, IRadioStatics>([](IRadioStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto Radio::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<Radio, Windows::Devices::Radios::IRadioStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<Radio, IRadioStatics>([&](IRadioStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto Radio::RequestAccessAsync()
     {
-        return impl::call_factory<Radio, Windows::Devices::Radios::IRadioStatics>([&](auto&& f) { return f.RequestAccessAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::Radios::RadioAccessStatus>(*)(IRadioStatics const&), Radio, IRadioStatics>([](IRadioStatics const& f) { return f.RequestAccessAsync(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Radios::IRadio> : winrt::impl::hash_base<winrt::Windows::Devices::Radios::IRadio> {};
-    template<> struct hash<winrt::Windows::Devices::Radios::IRadioStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Radios::IRadioStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Radios::Radio> : winrt::impl::hash_base<winrt::Windows::Devices::Radios::Radio> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Radios::IRadio> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Radios::IRadioStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Radios::Radio> : winrt::impl::hash_base {};
+#endif
 }
 #endif

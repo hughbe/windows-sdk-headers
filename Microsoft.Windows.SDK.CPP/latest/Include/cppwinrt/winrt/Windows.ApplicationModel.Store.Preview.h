@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_Store_Preview_H
 #define WINRT_Windows_ApplicationModel_Store_Preview_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.ApplicationModel.Store.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -18,310 +18,311 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.Store.Preview.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IDeliveryOptimizationSettings<D>::DownloadMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode) consume_Windows_ApplicationModel_Store_Preview_IDeliveryOptimizationSettings<D>::DownloadMode() const
     {
-        Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings)->get_DownloadMode(put_abi(value)));
+        Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings)->get_DownloadMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IDeliveryOptimizationSettings<D>::DownloadModeSource() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource) consume_Windows_ApplicationModel_Store_Preview_IDeliveryOptimizationSettings<D>::DownloadModeSource() const
     {
-        Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings)->get_DownloadModeSource(put_abi(value)));
+        Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings)->get_DownloadModeSource(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IDeliveryOptimizationSettingsStatics<D>::GetCurrentSettings() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings) consume_Windows_ApplicationModel_Store_Preview_IDeliveryOptimizationSettingsStatics<D>::GetCurrentSettings() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettingsStatics)->GetCurrentSettings(&result));
         return Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::SetSystemConfiguration(param::hstring const& catalogHardwareManufacturerId, param::hstring const& catalogStoreContentModifierId, Windows::Foundation::DateTime const& systemConfigurationExpiration, param::hstring const& catalogHardwareDescriptor) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::SetSystemConfiguration(param::hstring const& catalogHardwareManufacturerId, param::hstring const& catalogStoreContentModifierId, Windows::Foundation::DateTime const& systemConfigurationExpiration, param::hstring const& catalogHardwareDescriptor) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics)->SetSystemConfiguration(*(void**)(&catalogHardwareManufacturerId), *(void**)(&catalogStoreContentModifierId), impl::bind_in(systemConfigurationExpiration), *(void**)(&catalogHardwareDescriptor)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::SetMobileOperatorConfiguration(param::hstring const& mobileOperatorId, uint32_t appDownloadLimitInMegabytes, uint32_t updateDownloadLimitInMegabytes) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::SetMobileOperatorConfiguration(param::hstring const& mobileOperatorId, uint32_t appDownloadLimitInMegabytes, uint32_t updateDownloadLimitInMegabytes) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics)->SetMobileOperatorConfiguration(*(void**)(&mobileOperatorId), appDownloadLimitInMegabytes, updateDownloadLimitInMegabytes));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::SetStoreWebAccountId(param::hstring const& webAccountId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::SetStoreWebAccountId(param::hstring const& webAccountId) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics)->SetStoreWebAccountId(*(void**)(&webAccountId)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::IsStoreWebAccountId(param::hstring const& webAccountId) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::IsStoreWebAccountId(param::hstring const& webAccountId) const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics)->IsStoreWebAccountId(*(void**)(&webAccountId), &value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::HardwareManufacturerInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::HardwareManufacturerInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics)->get_HardwareManufacturerInfo(&value));
         return Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::FilterUnsupportedSystemFeaturesAsync(param::async_iterable<Windows::ApplicationModel::Store::Preview::StoreSystemFeature> const& systemFeatures) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Store::Preview::StoreSystemFeature>>) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics<D>::FilterUnsupportedSystemFeaturesAsync(param::async_iterable<Windows::ApplicationModel::Store::Preview::StoreSystemFeature> const& systemFeatures) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics)->FilterUnsupportedSystemFeaturesAsync(*(void**)(&systemFeatures), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Store::Preview::StoreSystemFeature>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics2<D>::PurchasePromptingPolicy() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics2<D>::PurchasePromptingPolicy() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2)->get_PurchasePromptingPolicy(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics2<D>::PurchasePromptingPolicy(Windows::Foundation::IReference<uint32_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics2<D>::PurchasePromptingPolicy(Windows::Foundation::IReference<uint32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2)->put_PurchasePromptingPolicy(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::HasStoreWebAccount() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::HasStoreWebAccount() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3)->HasStoreWebAccount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::HasStoreWebAccountForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::HasStoreWebAccountForUser(Windows::System::User const& user) const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3)->HasStoreWebAccountForUser(*(void**)(&user), &value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::GetStoreLogDataAsync(Windows::ApplicationModel::Store::Preview::StoreLogOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStreamReference>) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::GetStoreLogDataAsync(Windows::ApplicationModel::Store::Preview::StoreLogOptions const& options) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3)->GetStoreLogDataAsync(static_cast<uint32_t>(options), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStreamReference>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::SetStoreWebAccountIdForUser(Windows::System::User const& user, param::hstring const& webAccountId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::SetStoreWebAccountIdForUser(Windows::System::User const& user, param::hstring const& webAccountId) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3)->SetStoreWebAccountIdForUser(*(void**)(&user), *(void**)(&webAccountId)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::IsStoreWebAccountIdForUser(Windows::System::User const& user, param::hstring const& webAccountId) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::IsStoreWebAccountIdForUser(Windows::System::User const& user, param::hstring const& webAccountId) const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3)->IsStoreWebAccountIdForUser(*(void**)(&user), *(void**)(&webAccountId), &value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::GetPurchasePromptingPolicyForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::GetPurchasePromptingPolicyForUser(Windows::System::User const& user) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3)->GetPurchasePromptingPolicyForUser(*(void**)(&user), &value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::SetPurchasePromptingPolicyForUser(Windows::System::User const& user, Windows::Foundation::IReference<uint32_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3<D>::SetPurchasePromptingPolicyForUser(Windows::System::User const& user, Windows::Foundation::IReference<uint32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3)->SetPurchasePromptingPolicyForUser(*(void**)(&user), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::GetStoreWebAccountId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::GetStoreWebAccountId() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4)->GetStoreWebAccountId(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::GetStoreWebAccountIdForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::GetStoreWebAccountIdForUser(Windows::System::User const& user) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4)->GetStoreWebAccountIdForUser(*(void**)(&user), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::SetEnterpriseStoreWebAccountId(param::hstring const& webAccountId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::SetEnterpriseStoreWebAccountId(param::hstring const& webAccountId) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4)->SetEnterpriseStoreWebAccountId(*(void**)(&webAccountId)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::SetEnterpriseStoreWebAccountIdForUser(Windows::System::User const& user, param::hstring const& webAccountId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::SetEnterpriseStoreWebAccountIdForUser(Windows::System::User const& user, param::hstring const& webAccountId) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4)->SetEnterpriseStoreWebAccountIdForUser(*(void**)(&user), *(void**)(&webAccountId)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::GetEnterpriseStoreWebAccountId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::GetEnterpriseStoreWebAccountId() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4)->GetEnterpriseStoreWebAccountId(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::GetEnterpriseStoreWebAccountIdForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::GetEnterpriseStoreWebAccountIdForUser(Windows::System::User const& user) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4)->GetEnterpriseStoreWebAccountIdForUser(*(void**)(&user), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::ShouldRestrictToEnterpriseStoreOnly() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::ShouldRestrictToEnterpriseStoreOnly() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4)->ShouldRestrictToEnterpriseStoreOnly(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::ShouldRestrictToEnterpriseStoreOnlyForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4<D>::ShouldRestrictToEnterpriseStoreOnlyForUser(Windows::System::User const& user) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4)->ShouldRestrictToEnterpriseStoreOnlyForUser(*(void**)(&user), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::IsPinToDesktopSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::IsPinToDesktopSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5)->IsPinToDesktopSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::IsPinToTaskbarSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::IsPinToTaskbarSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5)->IsPinToTaskbarSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::IsPinToStartSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::IsPinToStartSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5)->IsPinToStartSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::PinToDesktop(param::hstring const& appPackageFamilyName) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::PinToDesktop(param::hstring const& appPackageFamilyName) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5)->PinToDesktop(*(void**)(&appPackageFamilyName)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::PinToDesktopForUser(Windows::System::User const& user, param::hstring const& appPackageFamilyName) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5<D>::PinToDesktopForUser(Windows::System::User const& user, param::hstring const& appPackageFamilyName) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5)->PinToDesktopForUser(*(void**)(&user), *(void**)(&appPackageFamilyName)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreHardwareManufacturerInfo<D>::HardwareManufacturerId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStoreHardwareManufacturerInfo<D>::HardwareManufacturerId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo)->get_HardwareManufacturerId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreHardwareManufacturerInfo<D>::StoreContentModifierId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStoreHardwareManufacturerInfo<D>::StoreContentModifierId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo)->get_StoreContentModifierId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreHardwareManufacturerInfo<D>::ModelName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStoreHardwareManufacturerInfo<D>::ModelName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo)->get_ModelName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStoreHardwareManufacturerInfo<D>::ManufacturerName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStoreHardwareManufacturerInfo<D>::ManufacturerName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo)->get_ManufacturerName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreview<D>::RequestProductPurchaseByProductIdAndSkuIdAsync(param::hstring const& productId, param::hstring const& skuId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>) consume_Windows_ApplicationModel_Store_Preview_IStorePreview<D>::RequestProductPurchaseByProductIdAndSkuIdAsync(param::hstring const& productId, param::hstring const& skuId) const
     {
         void* requestPurchaseBySkuIdOperation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreview)->RequestProductPurchaseByProductIdAndSkuIdAsync(*(void**)(&productId), *(void**)(&skuId), &requestPurchaseBySkuIdOperation));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>{ requestPurchaseBySkuIdOperation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreview<D>::LoadAddOnProductInfosAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>>) consume_Windows_ApplicationModel_Store_Preview_IStorePreview<D>::LoadAddOnProductInfosAsync() const
     {
         void* loadAddOnProductInfosOperation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreview)->LoadAddOnProductInfosAsync(&loadAddOnProductInfosOperation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>>{ loadAddOnProductInfosOperation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::ProductId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::ProductId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo)->get_ProductId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::ProductType() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::ProductType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo)->get_ProductType(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::Title() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::SkuInfoList() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo<D>::SkuInfoList() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo)->get_SkuInfoList(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewPurchaseResults<D>::ProductPurchaseStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewPurchaseResults<D>::ProductPurchaseStatus() const
     {
-        Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults)->get_ProductPurchaseStatus(put_abi(value)));
+        Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults)->get_ProductPurchaseStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::ProductId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::ProductId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo)->get_ProductId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::SkuId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::SkuId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo)->get_SkuId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::SkuType() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::SkuType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo)->get_SkuType(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::Title() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::CustomDeveloperData() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::CustomDeveloperData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo)->get_CustomDeveloperData(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::CurrencyCode() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::CurrencyCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo)->get_CurrencyCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::FormattedListPrice() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::FormattedListPrice() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo)->get_FormattedListPrice(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::ExtendedData() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo<D>::ExtendedData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo)->get_ExtendedData(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IWebAuthenticationCoreManagerHelper<D>::RequestTokenWithUIElementHostingAsync(Windows::Security::Authentication::Web::Core::WebTokenRequest const& request, Windows::UI::Xaml::UIElement const& uiElement) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Web::Core::WebTokenRequestResult>) consume_Windows_ApplicationModel_Store_Preview_IWebAuthenticationCoreManagerHelper<D>::RequestTokenWithUIElementHostingAsync(Windows::Security::Authentication::Web::Core::WebTokenRequest const& request, Windows::UI::Xaml::UIElement const& uiElement) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper)->RequestTokenWithUIElementHostingAsync(*(void**)(&request), *(void**)(&uiElement), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Web::Core::WebTokenRequestResult>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_Store_Preview_IWebAuthenticationCoreManagerHelper<D>::RequestTokenWithUIElementHostingAsync(Windows::Security::Authentication::Web::Core::WebTokenRequest const& request, Windows::Security::Credentials::WebAccount const& webAccount, Windows::UI::Xaml::UIElement const& uiElement) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Web::Core::WebTokenRequestResult>) consume_Windows_ApplicationModel_Store_Preview_IWebAuthenticationCoreManagerHelper<D>::RequestTokenWithUIElementHostingAsync(Windows::Security::Authentication::Web::Core::WebTokenRequest const& request, Windows::Security::Credentials::WebAccount const& webAccount, Windows::UI::Xaml::UIElement const& uiElement) const
     {
         void* asyncInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper)->RequestTokenWithUIElementHostingAndWebAccountAsync(*(void**)(&request), *(void**)(&webAccount), *(void**)(&uiElement), &asyncInfo));
         return Windows::Foundation::IAsyncOperation<Windows::Security::Authentication::Web::Core::WebTokenRequestResult>{ asyncInfo, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings> : produce_base<D, Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings>
     {
@@ -340,6 +341,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettingsStatics> : produce_base<D, Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettingsStatics>
     {
@@ -352,6 +355,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics>
     {
@@ -400,6 +405,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2>
     {
@@ -419,6 +426,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3>
     {
@@ -474,6 +483,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4>
     {
@@ -538,6 +549,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5>
     {
@@ -577,6 +590,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo>
     {
@@ -613,6 +628,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStorePreview> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStorePreview>
     {
@@ -633,6 +650,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo>
     {
@@ -677,6 +696,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults>
     {
@@ -688,6 +709,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo> : produce_base<D, Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo>
     {
@@ -764,6 +787,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper> : produce_base<D, Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper>
     {
@@ -784,8 +809,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::ApplicationModel::Store::Preview
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Store::Preview
 {
     constexpr auto operator|(StoreLogOptions const left, StoreLogOptions const right) noexcept
     {
@@ -820,159 +846,161 @@ namespace winrt::Windows::ApplicationModel::Store::Preview
     }
     inline auto DeliveryOptimizationSettings::GetCurrentSettings()
     {
-        return impl::call_factory<DeliveryOptimizationSettings, Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettingsStatics>([&](auto&& f) { return f.GetCurrentSettings(); });
+        return impl::call_factory_cast<Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings(*)(IDeliveryOptimizationSettingsStatics const&), DeliveryOptimizationSettings, IDeliveryOptimizationSettingsStatics>([](IDeliveryOptimizationSettingsStatics const& f) { return f.GetCurrentSettings(); });
     }
     inline auto StoreConfiguration::SetSystemConfiguration(param::hstring const& catalogHardwareManufacturerId, param::hstring const& catalogStoreContentModifierId, Windows::Foundation::DateTime const& systemConfigurationExpiration, param::hstring const& catalogHardwareDescriptor)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics>([&](auto&& f) { return f.SetSystemConfiguration(catalogHardwareManufacturerId, catalogStoreContentModifierId, systemConfigurationExpiration, catalogHardwareDescriptor); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics>([&](IStoreConfigurationStatics const& f) { return f.SetSystemConfiguration(catalogHardwareManufacturerId, catalogStoreContentModifierId, systemConfigurationExpiration, catalogHardwareDescriptor); });
     }
     inline auto StoreConfiguration::SetMobileOperatorConfiguration(param::hstring const& mobileOperatorId, uint32_t appDownloadLimitInMegabytes, uint32_t updateDownloadLimitInMegabytes)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics>([&](auto&& f) { return f.SetMobileOperatorConfiguration(mobileOperatorId, appDownloadLimitInMegabytes, updateDownloadLimitInMegabytes); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics>([&](IStoreConfigurationStatics const& f) { return f.SetMobileOperatorConfiguration(mobileOperatorId, appDownloadLimitInMegabytes, updateDownloadLimitInMegabytes); });
     }
     inline auto StoreConfiguration::SetStoreWebAccountId(param::hstring const& webAccountId)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics>([&](auto&& f) { return f.SetStoreWebAccountId(webAccountId); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics>([&](IStoreConfigurationStatics const& f) { return f.SetStoreWebAccountId(webAccountId); });
     }
     inline auto StoreConfiguration::IsStoreWebAccountId(param::hstring const& webAccountId)
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics>([&](auto&& f) { return f.IsStoreWebAccountId(webAccountId); });
+        return impl::call_factory<StoreConfiguration, IStoreConfigurationStatics>([&](IStoreConfigurationStatics const& f) { return f.IsStoreWebAccountId(webAccountId); });
     }
     inline auto StoreConfiguration::HardwareManufacturerInfo()
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics>([&](auto&& f) { return f.HardwareManufacturerInfo(); });
+        return impl::call_factory_cast<Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo(*)(IStoreConfigurationStatics const&), StoreConfiguration, IStoreConfigurationStatics>([](IStoreConfigurationStatics const& f) { return f.HardwareManufacturerInfo(); });
     }
     inline auto StoreConfiguration::FilterUnsupportedSystemFeaturesAsync(param::async_iterable<Windows::ApplicationModel::Store::Preview::StoreSystemFeature> const& systemFeatures)
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics>([&](auto&& f) { return f.FilterUnsupportedSystemFeaturesAsync(systemFeatures); });
+        return impl::call_factory<StoreConfiguration, IStoreConfigurationStatics>([&](IStoreConfigurationStatics const& f) { return f.FilterUnsupportedSystemFeaturesAsync(systemFeatures); });
     }
     inline auto StoreConfiguration::PurchasePromptingPolicy()
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2>([&](auto&& f) { return f.PurchasePromptingPolicy(); });
+        return impl::call_factory_cast<Windows::Foundation::IReference<uint32_t>(*)(IStoreConfigurationStatics2 const&), StoreConfiguration, IStoreConfigurationStatics2>([](IStoreConfigurationStatics2 const& f) { return f.PurchasePromptingPolicy(); });
     }
     inline auto StoreConfiguration::PurchasePromptingPolicy(Windows::Foundation::IReference<uint32_t> const& value)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2>([&](auto&& f) { return f.PurchasePromptingPolicy(value); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics2>([&](IStoreConfigurationStatics2 const& f) { return f.PurchasePromptingPolicy(value); });
     }
     inline auto StoreConfiguration::HasStoreWebAccount()
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3>([&](auto&& f) { return f.HasStoreWebAccount(); });
+        return impl::call_factory_cast<bool(*)(IStoreConfigurationStatics3 const&), StoreConfiguration, IStoreConfigurationStatics3>([](IStoreConfigurationStatics3 const& f) { return f.HasStoreWebAccount(); });
     }
     inline auto StoreConfiguration::HasStoreWebAccountForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3>([&](auto&& f) { return f.HasStoreWebAccountForUser(user); });
+        return impl::call_factory<StoreConfiguration, IStoreConfigurationStatics3>([&](IStoreConfigurationStatics3 const& f) { return f.HasStoreWebAccountForUser(user); });
     }
     inline auto StoreConfiguration::GetStoreLogDataAsync(Windows::ApplicationModel::Store::Preview::StoreLogOptions const& options)
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3>([&](auto&& f) { return f.GetStoreLogDataAsync(options); });
+        return impl::call_factory<StoreConfiguration, IStoreConfigurationStatics3>([&](IStoreConfigurationStatics3 const& f) { return f.GetStoreLogDataAsync(options); });
     }
     inline auto StoreConfiguration::SetStoreWebAccountIdForUser(Windows::System::User const& user, param::hstring const& webAccountId)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3>([&](auto&& f) { return f.SetStoreWebAccountIdForUser(user, webAccountId); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics3>([&](IStoreConfigurationStatics3 const& f) { return f.SetStoreWebAccountIdForUser(user, webAccountId); });
     }
     inline auto StoreConfiguration::IsStoreWebAccountIdForUser(Windows::System::User const& user, param::hstring const& webAccountId)
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3>([&](auto&& f) { return f.IsStoreWebAccountIdForUser(user, webAccountId); });
+        return impl::call_factory<StoreConfiguration, IStoreConfigurationStatics3>([&](IStoreConfigurationStatics3 const& f) { return f.IsStoreWebAccountIdForUser(user, webAccountId); });
     }
     inline auto StoreConfiguration::GetPurchasePromptingPolicyForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3>([&](auto&& f) { return f.GetPurchasePromptingPolicyForUser(user); });
+        return impl::call_factory<StoreConfiguration, IStoreConfigurationStatics3>([&](IStoreConfigurationStatics3 const& f) { return f.GetPurchasePromptingPolicyForUser(user); });
     }
     inline auto StoreConfiguration::SetPurchasePromptingPolicyForUser(Windows::System::User const& user, Windows::Foundation::IReference<uint32_t> const& value)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3>([&](auto&& f) { return f.SetPurchasePromptingPolicyForUser(user, value); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics3>([&](IStoreConfigurationStatics3 const& f) { return f.SetPurchasePromptingPolicyForUser(user, value); });
     }
     inline auto StoreConfiguration::GetStoreWebAccountId()
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4>([&](auto&& f) { return f.GetStoreWebAccountId(); });
+        return impl::call_factory_cast<hstring(*)(IStoreConfigurationStatics4 const&), StoreConfiguration, IStoreConfigurationStatics4>([](IStoreConfigurationStatics4 const& f) { return f.GetStoreWebAccountId(); });
     }
     inline auto StoreConfiguration::GetStoreWebAccountIdForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4>([&](auto&& f) { return f.GetStoreWebAccountIdForUser(user); });
+        return impl::call_factory<StoreConfiguration, IStoreConfigurationStatics4>([&](IStoreConfigurationStatics4 const& f) { return f.GetStoreWebAccountIdForUser(user); });
     }
     inline auto StoreConfiguration::SetEnterpriseStoreWebAccountId(param::hstring const& webAccountId)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4>([&](auto&& f) { return f.SetEnterpriseStoreWebAccountId(webAccountId); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics4>([&](IStoreConfigurationStatics4 const& f) { return f.SetEnterpriseStoreWebAccountId(webAccountId); });
     }
     inline auto StoreConfiguration::SetEnterpriseStoreWebAccountIdForUser(Windows::System::User const& user, param::hstring const& webAccountId)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4>([&](auto&& f) { return f.SetEnterpriseStoreWebAccountIdForUser(user, webAccountId); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics4>([&](IStoreConfigurationStatics4 const& f) { return f.SetEnterpriseStoreWebAccountIdForUser(user, webAccountId); });
     }
     inline auto StoreConfiguration::GetEnterpriseStoreWebAccountId()
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4>([&](auto&& f) { return f.GetEnterpriseStoreWebAccountId(); });
+        return impl::call_factory_cast<hstring(*)(IStoreConfigurationStatics4 const&), StoreConfiguration, IStoreConfigurationStatics4>([](IStoreConfigurationStatics4 const& f) { return f.GetEnterpriseStoreWebAccountId(); });
     }
     inline auto StoreConfiguration::GetEnterpriseStoreWebAccountIdForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4>([&](auto&& f) { return f.GetEnterpriseStoreWebAccountIdForUser(user); });
+        return impl::call_factory<StoreConfiguration, IStoreConfigurationStatics4>([&](IStoreConfigurationStatics4 const& f) { return f.GetEnterpriseStoreWebAccountIdForUser(user); });
     }
     inline auto StoreConfiguration::ShouldRestrictToEnterpriseStoreOnly()
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4>([&](auto&& f) { return f.ShouldRestrictToEnterpriseStoreOnly(); });
+        return impl::call_factory_cast<bool(*)(IStoreConfigurationStatics4 const&), StoreConfiguration, IStoreConfigurationStatics4>([](IStoreConfigurationStatics4 const& f) { return f.ShouldRestrictToEnterpriseStoreOnly(); });
     }
     inline auto StoreConfiguration::ShouldRestrictToEnterpriseStoreOnlyForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4>([&](auto&& f) { return f.ShouldRestrictToEnterpriseStoreOnlyForUser(user); });
+        return impl::call_factory<StoreConfiguration, IStoreConfigurationStatics4>([&](IStoreConfigurationStatics4 const& f) { return f.ShouldRestrictToEnterpriseStoreOnlyForUser(user); });
     }
     inline auto StoreConfiguration::IsPinToDesktopSupported()
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5>([&](auto&& f) { return f.IsPinToDesktopSupported(); });
+        return impl::call_factory_cast<bool(*)(IStoreConfigurationStatics5 const&), StoreConfiguration, IStoreConfigurationStatics5>([](IStoreConfigurationStatics5 const& f) { return f.IsPinToDesktopSupported(); });
     }
     inline auto StoreConfiguration::IsPinToTaskbarSupported()
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5>([&](auto&& f) { return f.IsPinToTaskbarSupported(); });
+        return impl::call_factory_cast<bool(*)(IStoreConfigurationStatics5 const&), StoreConfiguration, IStoreConfigurationStatics5>([](IStoreConfigurationStatics5 const& f) { return f.IsPinToTaskbarSupported(); });
     }
     inline auto StoreConfiguration::IsPinToStartSupported()
     {
-        return impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5>([&](auto&& f) { return f.IsPinToStartSupported(); });
+        return impl::call_factory_cast<bool(*)(IStoreConfigurationStatics5 const&), StoreConfiguration, IStoreConfigurationStatics5>([](IStoreConfigurationStatics5 const& f) { return f.IsPinToStartSupported(); });
     }
     inline auto StoreConfiguration::PinToDesktop(param::hstring const& appPackageFamilyName)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5>([&](auto&& f) { return f.PinToDesktop(appPackageFamilyName); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics5>([&](IStoreConfigurationStatics5 const& f) { return f.PinToDesktop(appPackageFamilyName); });
     }
     inline auto StoreConfiguration::PinToDesktopForUser(Windows::System::User const& user, param::hstring const& appPackageFamilyName)
     {
-        impl::call_factory<StoreConfiguration, Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5>([&](auto&& f) { return f.PinToDesktopForUser(user, appPackageFamilyName); });
+        impl::call_factory<StoreConfiguration, IStoreConfigurationStatics5>([&](IStoreConfigurationStatics5 const& f) { return f.PinToDesktopForUser(user, appPackageFamilyName); });
     }
     inline auto StorePreview::RequestProductPurchaseByProductIdAndSkuIdAsync(param::hstring const& productId, param::hstring const& skuId)
     {
-        return impl::call_factory<StorePreview, Windows::ApplicationModel::Store::Preview::IStorePreview>([&](auto&& f) { return f.RequestProductPurchaseByProductIdAndSkuIdAsync(productId, skuId); });
+        return impl::call_factory<StorePreview, IStorePreview>([&](IStorePreview const& f) { return f.RequestProductPurchaseByProductIdAndSkuIdAsync(productId, skuId); });
     }
     inline auto StorePreview::LoadAddOnProductInfosAsync()
     {
-        return impl::call_factory<StorePreview, Windows::ApplicationModel::Store::Preview::IStorePreview>([&](auto&& f) { return f.LoadAddOnProductInfosAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>>(*)(IStorePreview const&), StorePreview, IStorePreview>([](IStorePreview const& f) { return f.LoadAddOnProductInfosAsync(); });
     }
     inline auto WebAuthenticationCoreManagerHelper::RequestTokenWithUIElementHostingAsync(Windows::Security::Authentication::Web::Core::WebTokenRequest const& request, Windows::UI::Xaml::UIElement const& uiElement)
     {
-        return impl::call_factory<WebAuthenticationCoreManagerHelper, Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper>([&](auto&& f) { return f.RequestTokenWithUIElementHostingAsync(request, uiElement); });
+        return impl::call_factory<WebAuthenticationCoreManagerHelper, IWebAuthenticationCoreManagerHelper>([&](IWebAuthenticationCoreManagerHelper const& f) { return f.RequestTokenWithUIElementHostingAsync(request, uiElement); });
     }
     inline auto WebAuthenticationCoreManagerHelper::RequestTokenWithUIElementHostingAsync(Windows::Security::Authentication::Web::Core::WebTokenRequest const& request, Windows::Security::Credentials::WebAccount const& webAccount, Windows::UI::Xaml::UIElement const& uiElement)
     {
-        return impl::call_factory<WebAuthenticationCoreManagerHelper, Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper>([&](auto&& f) { return f.RequestTokenWithUIElementHostingAsync(request, webAccount, uiElement); });
+        return impl::call_factory<WebAuthenticationCoreManagerHelper, IWebAuthenticationCoreManagerHelper>([&](IWebAuthenticationCoreManagerHelper const& f) { return f.RequestTokenWithUIElementHostingAsync(request, webAccount, uiElement); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettingsStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettingsStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStorePreview> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStorePreview> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StorePreview> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::StorePreview> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettingsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStorePreview> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StorePreview> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper> : winrt::impl::hash_base {};
+#endif
 }
 #endif

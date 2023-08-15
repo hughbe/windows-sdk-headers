@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,37 +6,37 @@
 #ifndef WINRT_Windows_Devices_Printers_Extensions_H
 #define WINRT_Windows_Devices_Printers_Extensions_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.Printers.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Devices.Printers.Extensions.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::DeviceID() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::DeviceID() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflow)->get_DeviceID(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::GetPrintModelPackage() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::GetPrintModelPackage() const
     {
         void* printModelPackage{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflow)->GetPrintModelPackage(&printModelPackage));
         return Windows::Foundation::IInspectable{ printModelPackage, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::IsPrintReady() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::IsPrintReady() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflow)->get_IsPrintReady(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::IsPrintReady(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::IsPrintReady(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflow)->put_IsPrintReady(value));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::PrintRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Printers::Extensions::Print3DWorkflow, Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs> const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::PrintRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Printers::Extensions::Print3DWorkflow, Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs> const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflow)->add_PrintRequested(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -44,13 +44,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PrintRequested_revoker>(this, PrintRequested(eventHandler));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::PrintRequested(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow<D>::PrintRequested(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflow)->remove_PrintRequested(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow2<D>::PrinterChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Printers::Extensions::Print3DWorkflow, Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs> const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow2<D>::PrinterChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Printers::Extensions::Print3DWorkflow, Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs> const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflow2)->add_PrinterChanged(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -58,65 +58,65 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, PrinterChanged_revoker>(this, PrinterChanged(eventHandler));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow2<D>::PrinterChanged(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflow2<D>::PrinterChanged(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflow2)->remove_PrinterChanged(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrintRequestedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Printers::Extensions::Print3DWorkflowStatus) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrintRequestedEventArgs<D>::Status() const
     {
-        Windows::Devices::Printers::Extensions::Print3DWorkflowStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs)->get_Status(put_abi(value)));
+        Windows::Devices::Printers::Extensions::Print3DWorkflowStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrintRequestedEventArgs<D>::SetExtendedStatus(Windows::Devices::Printers::Extensions::Print3DWorkflowDetail const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrintRequestedEventArgs<D>::SetExtendedStatus(Windows::Devices::Printers::Extensions::Print3DWorkflowDetail const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs)->SetExtendedStatus(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrintRequestedEventArgs<D>::SetSource(Windows::Foundation::IInspectable const& source) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrintRequestedEventArgs<D>::SetSource(Windows::Foundation::IInspectable const& source) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs)->SetSource(*(void**)(&source)));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrintRequestedEventArgs<D>::SetSourceChanged(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrintRequestedEventArgs<D>::SetSourceChanged(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs)->SetSourceChanged(value));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrinterChangedEventArgs<D>::NewDeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Printers_Extensions_IPrint3DWorkflowPrinterChangedEventArgs<D>::NewDeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrinterChangedEventArgs)->get_NewDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintExtensionContextStatic<D>::FromDeviceId(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Devices_Printers_Extensions_IPrintExtensionContextStatic<D>::FromDeviceId(param::hstring const& deviceId) const
     {
         void* context{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintExtensionContextStatic)->FromDeviceId(*(void**)(&deviceId), &context));
         return Windows::Foundation::IInspectable{ context, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintNotificationEventDetails<D>::PrinterName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Printers_Extensions_IPrintNotificationEventDetails<D>::PrinterName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintNotificationEventDetails)->get_PrinterName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintNotificationEventDetails<D>::EventData() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Printers_Extensions_IPrintNotificationEventDetails<D>::EventData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintNotificationEventDetails)->get_EventData(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintNotificationEventDetails<D>::EventData(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrintNotificationEventDetails<D>::EventData(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintNotificationEventDetails)->put_EventData(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintTaskConfiguration<D>::PrinterExtensionContext() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Devices_Printers_Extensions_IPrintTaskConfiguration<D>::PrinterExtensionContext() const
     {
         void* context{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintTaskConfiguration)->get_PrinterExtensionContext(&context));
         return Windows::Foundation::IInspectable{ context, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintTaskConfiguration<D>::SaveRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Printers::Extensions::PrintTaskConfiguration, Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs> const& eventHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Printers_Extensions_IPrintTaskConfiguration<D>::SaveRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Printers::Extensions::PrintTaskConfiguration, Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs> const& eventHandler) const
     {
-        winrt::event_token eventCookie;
+        winrt::event_token eventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintTaskConfiguration)->add_SaveRequested(*(void**)(&eventHandler), put_abi(eventCookie)));
         return eventCookie;
     }
@@ -124,40 +124,41 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SaveRequested_revoker>(this, SaveRequested(eventHandler));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintTaskConfiguration<D>::SaveRequested(winrt::event_token const& eventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrintTaskConfiguration<D>::SaveRequested(winrt::event_token const& eventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintTaskConfiguration)->remove_SaveRequested(impl::bind_in(eventCookie)));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequest<D>::Cancel() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequest<D>::Cancel() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest)->Cancel());
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequest<D>::Save(Windows::Foundation::IInspectable const& printerExtensionContext) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequest<D>::Save(Windows::Foundation::IInspectable const& printerExtensionContext) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest)->Save(*(void**)(&printerExtensionContext)));
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequest<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral) consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequest<D>::GetDeferral() const
     {
         void* deferral{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest)->GetDeferral(&deferral));
         return Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral{ deferral, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequest<D>::Deadline() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequest<D>::Deadline() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest)->get_Deadline(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequestedDeferral<D>::Complete() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequestedDeferral<D>::Complete() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedDeferral)->Complete());
     }
-    template <typename D> auto consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequestedEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest) consume_Windows_Devices_Printers_Extensions_IPrintTaskConfigurationSaveRequestedEventArgs<D>::Request() const
     {
         void* context{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedEventArgs)->get_Request(&context));
         return Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest{ context, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrint3DWorkflow> : produce_base<D, Windows::Devices::Printers::Extensions::IPrint3DWorkflow>
     {
@@ -206,6 +207,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrint3DWorkflow2> : produce_base<D, Windows::Devices::Printers::Extensions::IPrint3DWorkflow2>
     {
@@ -224,6 +227,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs> : produce_base<D, Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs>
     {
@@ -256,6 +261,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrinterChangedEventArgs> : produce_base<D, Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrinterChangedEventArgs>
     {
@@ -268,6 +275,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrintExtensionContextStatic> : produce_base<D, Windows::Devices::Printers::Extensions::IPrintExtensionContextStatic>
     {
@@ -280,6 +289,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrintNotificationEventDetails> : produce_base<D, Windows::Devices::Printers::Extensions::IPrintNotificationEventDetails>
     {
@@ -307,6 +318,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrintTaskConfiguration> : produce_base<D, Windows::Devices::Printers::Extensions::IPrintTaskConfiguration>
     {
@@ -333,6 +346,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest> : produce_base<D, Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest>
     {
@@ -367,6 +382,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedDeferral> : produce_base<D, Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedDeferral>
     {
@@ -378,6 +395,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedEventArgs> : produce_base<D, Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedEventArgs>
     {
@@ -390,34 +409,37 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Printers::Extensions
+WINRT_EXPORT namespace winrt::Windows::Devices::Printers::Extensions
 {
     inline auto PrintExtensionContext::FromDeviceId(param::hstring const& deviceId)
     {
-        return impl::call_factory<PrintExtensionContext, Windows::Devices::Printers::Extensions::IPrintExtensionContextStatic>([&](auto&& f) { return f.FromDeviceId(deviceId); });
+        return impl::call_factory<PrintExtensionContext, IPrintExtensionContextStatic>([&](IPrintExtensionContextStatic const& f) { return f.FromDeviceId(deviceId); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflow> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflow> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflow2> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflow2> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrinterChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrinterChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintExtensionContextStatic> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrintExtensionContextStatic> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintNotificationEventDetails> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrintNotificationEventDetails> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedDeferral> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedDeferral> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral> {};
-    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflow> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflow2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrintRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrint3DWorkflowPrinterChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintExtensionContextStatic> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintNotificationEventDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedDeferral> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::IPrintTaskConfigurationSaveRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs> : winrt::impl::hash_base {};
+#endif
 }
 #endif

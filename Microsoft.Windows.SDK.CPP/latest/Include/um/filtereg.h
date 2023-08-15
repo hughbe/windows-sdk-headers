@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -137,18 +145,22 @@ EXTERN_C const IID IID_ILoadFilter;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ILoadFilter * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ILoadFilter * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ILoadFilter * This);
         
+        DECLSPEC_XFGVIRT(ILoadFilter, LoadIFilter)
         HRESULT ( STDMETHODCALLTYPE *LoadIFilter )( 
             __RPC__in ILoadFilter * This,
             /* [unique][in] */ __RPC__in_opt LPCWSTR pwcsPath,
@@ -160,6 +172,7 @@ EXTERN_C const IID IID_ILoadFilter;
             /* [length_is][length_is][size_is][size_is][unique][out][in] */ __RPC__deref_opt_inout_ecount_part_opt(( *SearchDecSize + 1 ) , ( *SearchDecSize + 1 ) ) WCHAR **pwcsSearchDesc,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IFilter **ppIFilt);
         
+        DECLSPEC_XFGVIRT(ILoadFilter, LoadIFilterFromStorage)
         HRESULT ( STDMETHODCALLTYPE *LoadIFilterFromStorage )( 
             __RPC__in ILoadFilter * This,
             /* [in] */ __RPC__in_opt IStorage *pStg,
@@ -171,6 +184,7 @@ EXTERN_C const IID IID_ILoadFilter;
             /* [length_is][length_is][size_is][size_is][unique][out][in] */ __RPC__deref_opt_inout_ecount_part_opt(( *SearchDecSize + 1 ) , ( *SearchDecSize + 1 ) ) WCHAR **pwcsSearchDesc,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IFilter **ppIFilt);
         
+        DECLSPEC_XFGVIRT(ILoadFilter, LoadIFilterFromStream)
         HRESULT ( STDMETHODCALLTYPE *LoadIFilterFromStream )( 
             __RPC__in ILoadFilter * This,
             /* [in] */ __RPC__in_opt IStream *pStm,
@@ -256,18 +270,22 @@ EXTERN_C const IID IID_ILoadFilterWithPrivateComActivation;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in ILoadFilterWithPrivateComActivation * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in ILoadFilterWithPrivateComActivation * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in ILoadFilterWithPrivateComActivation * This);
         
+        DECLSPEC_XFGVIRT(ILoadFilter, LoadIFilter)
         HRESULT ( STDMETHODCALLTYPE *LoadIFilter )( 
             __RPC__in ILoadFilterWithPrivateComActivation * This,
             /* [unique][in] */ __RPC__in_opt LPCWSTR pwcsPath,
@@ -279,6 +297,7 @@ EXTERN_C const IID IID_ILoadFilterWithPrivateComActivation;
             /* [length_is][length_is][size_is][size_is][unique][out][in] */ __RPC__deref_opt_inout_ecount_part_opt(( *SearchDecSize + 1 ) , ( *SearchDecSize + 1 ) ) WCHAR **pwcsSearchDesc,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IFilter **ppIFilt);
         
+        DECLSPEC_XFGVIRT(ILoadFilter, LoadIFilterFromStorage)
         HRESULT ( STDMETHODCALLTYPE *LoadIFilterFromStorage )( 
             __RPC__in ILoadFilterWithPrivateComActivation * This,
             /* [in] */ __RPC__in_opt IStorage *pStg,
@@ -290,6 +309,7 @@ EXTERN_C const IID IID_ILoadFilterWithPrivateComActivation;
             /* [length_is][length_is][size_is][size_is][unique][out][in] */ __RPC__deref_opt_inout_ecount_part_opt(( *SearchDecSize + 1 ) , ( *SearchDecSize + 1 ) ) WCHAR **pwcsSearchDesc,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IFilter **ppIFilt);
         
+        DECLSPEC_XFGVIRT(ILoadFilter, LoadIFilterFromStream)
         HRESULT ( STDMETHODCALLTYPE *LoadIFilterFromStream )( 
             __RPC__in ILoadFilterWithPrivateComActivation * This,
             /* [in] */ __RPC__in_opt IStream *pStm,
@@ -301,6 +321,7 @@ EXTERN_C const IID IID_ILoadFilterWithPrivateComActivation;
             /* [length_is][length_is][size_is][size_is][unique][out][in] */ __RPC__deref_opt_inout_ecount_part_opt(( *SearchDecSize + 1 ) , ( *SearchDecSize + 1 ) ) WCHAR **pwcsSearchDesc,
             /* [unique][out][in] */ __RPC__deref_opt_inout_opt IFilter **ppIFilt);
         
+        DECLSPEC_XFGVIRT(ILoadFilterWithPrivateComActivation, LoadIFilterWithPrivateComActivation)
         HRESULT ( STDMETHODCALLTYPE *LoadIFilterWithPrivateComActivation )( 
             __RPC__in ILoadFilterWithPrivateComActivation * This,
             /* [unique][in] */ __RPC__in_opt FILTERED_DATA_SOURCES *filteredSources,

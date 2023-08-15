@@ -1,17 +1,22 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_System_Update_0_H
 #define WINRT_Windows_System_Update_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename T> struct EventHandler;
+    template <typename T> struct __declspec(empty_bases) EventHandler;
     struct EventRegistrationToken;
     struct HResult;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
 }
-namespace winrt::Windows::System::Update
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+}
+WINRT_EXPORT namespace winrt::Windows::System::Update
 {
     enum class SystemUpdateAttentionRequiredReason : int32_t
     {
@@ -62,106 +67,31 @@ namespace winrt::Windows::System::Update
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::System::Update::ISystemUpdateItem>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::Update::ISystemUpdateLastErrorInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::Update::ISystemUpdateManagerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::System::Update::SystemUpdateItem>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::Update::SystemUpdateLastErrorInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::Update::SystemUpdateManager>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::System::Update::SystemUpdateAttentionRequiredReason>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::Update::SystemUpdateItemState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::Update::SystemUpdateManagerState>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::System::Update::SystemUpdateStartInstallAction>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::System::Update::ISystemUpdateItem>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.ISystemUpdateItem" };
-    };
-    template <> struct name<Windows::System::Update::ISystemUpdateLastErrorInfo>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.ISystemUpdateLastErrorInfo" };
-    };
-    template <> struct name<Windows::System::Update::ISystemUpdateManagerStatics>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.ISystemUpdateManagerStatics" };
-    };
-    template <> struct name<Windows::System::Update::SystemUpdateItem>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.SystemUpdateItem" };
-    };
-    template <> struct name<Windows::System::Update::SystemUpdateLastErrorInfo>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.SystemUpdateLastErrorInfo" };
-    };
-    template <> struct name<Windows::System::Update::SystemUpdateManager>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.SystemUpdateManager" };
-    };
-    template <> struct name<Windows::System::Update::SystemUpdateAttentionRequiredReason>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.SystemUpdateAttentionRequiredReason" };
-    };
-    template <> struct name<Windows::System::Update::SystemUpdateItemState>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.SystemUpdateItemState" };
-    };
-    template <> struct name<Windows::System::Update::SystemUpdateManagerState>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.SystemUpdateManagerState" };
-    };
-    template <> struct name<Windows::System::Update::SystemUpdateStartInstallAction>
-    {
-        static constexpr auto & value{ L"Windows.System.Update.SystemUpdateStartInstallAction" };
-    };
-    template <> struct guid_storage<Windows::System::Update::ISystemUpdateItem>
-    {
-        static constexpr guid value{ 0x779740EB,0x5624,0x519E,{ 0xA8,0xE2,0x09,0xE9,0x17,0x3B,0x3F,0xB7 } };
-    };
-    template <> struct guid_storage<Windows::System::Update::ISystemUpdateLastErrorInfo>
-    {
-        static constexpr guid value{ 0x7EE887F7,0x8A44,0x5B6E,{ 0xBD,0x07,0x7A,0xEC,0xE4,0x11,0x6E,0xA9 } };
-    };
-    template <> struct guid_storage<Windows::System::Update::ISystemUpdateManagerStatics>
-    {
-        static constexpr guid value{ 0xB2D3FCEF,0x2971,0x51BE,{ 0xB4,0x1A,0x8B,0xD7,0x03,0xBB,0x70,0x1A } };
-    };
-    template <> struct default_interface<Windows::System::Update::SystemUpdateItem>
-    {
-        using type = Windows::System::Update::ISystemUpdateItem;
-    };
-    template <> struct default_interface<Windows::System::Update::SystemUpdateLastErrorInfo>
-    {
-        using type = Windows::System::Update::ISystemUpdateLastErrorInfo;
-    };
+    template <> struct category<Windows::System::Update::ISystemUpdateItem>{ using type = interface_category; };
+    template <> struct category<Windows::System::Update::ISystemUpdateLastErrorInfo>{ using type = interface_category; };
+    template <> struct category<Windows::System::Update::ISystemUpdateManagerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::Update::SystemUpdateItem>{ using type = class_category; };
+    template <> struct category<Windows::System::Update::SystemUpdateLastErrorInfo>{ using type = class_category; };
+    template <> struct category<Windows::System::Update::SystemUpdateManager>{ using type = class_category; };
+    template <> struct category<Windows::System::Update::SystemUpdateAttentionRequiredReason>{ using type = enum_category; };
+    template <> struct category<Windows::System::Update::SystemUpdateItemState>{ using type = enum_category; };
+    template <> struct category<Windows::System::Update::SystemUpdateManagerState>{ using type = enum_category; };
+    template <> struct category<Windows::System::Update::SystemUpdateStartInstallAction>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::System::Update::SystemUpdateItem> = L"Windows.System.Update.SystemUpdateItem";
+    template <> inline constexpr auto& name_v<Windows::System::Update::SystemUpdateLastErrorInfo> = L"Windows.System.Update.SystemUpdateLastErrorInfo";
+    template <> inline constexpr auto& name_v<Windows::System::Update::SystemUpdateManager> = L"Windows.System.Update.SystemUpdateManager";
+    template <> inline constexpr auto& name_v<Windows::System::Update::SystemUpdateAttentionRequiredReason> = L"Windows.System.Update.SystemUpdateAttentionRequiredReason";
+    template <> inline constexpr auto& name_v<Windows::System::Update::SystemUpdateItemState> = L"Windows.System.Update.SystemUpdateItemState";
+    template <> inline constexpr auto& name_v<Windows::System::Update::SystemUpdateManagerState> = L"Windows.System.Update.SystemUpdateManagerState";
+    template <> inline constexpr auto& name_v<Windows::System::Update::SystemUpdateStartInstallAction> = L"Windows.System.Update.SystemUpdateStartInstallAction";
+    template <> inline constexpr auto& name_v<Windows::System::Update::ISystemUpdateItem> = L"Windows.System.Update.ISystemUpdateItem";
+    template <> inline constexpr auto& name_v<Windows::System::Update::ISystemUpdateLastErrorInfo> = L"Windows.System.Update.ISystemUpdateLastErrorInfo";
+    template <> inline constexpr auto& name_v<Windows::System::Update::ISystemUpdateManagerStatics> = L"Windows.System.Update.ISystemUpdateManagerStatics";
+    template <> inline constexpr guid guid_v<Windows::System::Update::ISystemUpdateItem>{ 0x779740EB,0x5624,0x519E,{ 0xA8,0xE2,0x09,0xE9,0x17,0x3B,0x3F,0xB7 } }; // 779740EB-5624-519E-A8E2-09E9173B3FB7
+    template <> inline constexpr guid guid_v<Windows::System::Update::ISystemUpdateLastErrorInfo>{ 0x7EE887F7,0x8A44,0x5B6E,{ 0xBD,0x07,0x7A,0xEC,0xE4,0x11,0x6E,0xA9 } }; // 7EE887F7-8A44-5B6E-BD07-7AECE4116EA9
+    template <> inline constexpr guid guid_v<Windows::System::Update::ISystemUpdateManagerStatics>{ 0xB2D3FCEF,0x2971,0x51BE,{ 0xB4,0x1A,0x8B,0xD7,0x03,0xBB,0x70,0x1A } }; // B2D3FCEF-2971-51BE-B41A-8BD703BB701A
+    template <> struct default_interface<Windows::System::Update::SystemUpdateItem>{ using type = Windows::System::Update::ISystemUpdateItem; };
+    template <> struct default_interface<Windows::System::Update::SystemUpdateLastErrorInfo>{ using type = Windows::System::Update::ISystemUpdateLastErrorInfo; };
     template <> struct abi<Windows::System::Update::ISystemUpdateItem>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -218,14 +148,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Update_ISystemUpdateItem
     {
-        [[nodiscard]] auto State() const;
-        [[nodiscard]] auto Title() const;
-        [[nodiscard]] auto Description() const;
-        [[nodiscard]] auto Id() const;
-        [[nodiscard]] auto Revision() const;
-        [[nodiscard]] auto DownloadProgress() const;
-        [[nodiscard]] auto InstallProgress() const;
-        [[nodiscard]] auto ExtendedError() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateItemState) State() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Title() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Id() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Revision() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) DownloadProgress() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) InstallProgress() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
     };
     template <> struct consume<Windows::System::Update::ISystemUpdateItem>
     {
@@ -234,9 +164,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Update_ISystemUpdateLastErrorInfo
     {
-        [[nodiscard]] auto State() const;
-        [[nodiscard]] auto ExtendedError() const;
-        [[nodiscard]] auto IsInteractive() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateManagerState) State() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsInteractive() const;
     };
     template <> struct consume<Windows::System::Update::ISystemUpdateLastErrorInfo>
     {
@@ -245,32 +175,32 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_Update_ISystemUpdateManagerStatics
     {
-        auto IsSupported() const;
-        [[nodiscard]] auto State() const;
-        auto StateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(bool) IsSupported() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateManagerState) State() const;
+        WINRT_IMPL_AUTO(winrt::event_token) StateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const;
         using StateChanged_revoker = impl::event_revoker<Windows::System::Update::ISystemUpdateManagerStatics, &impl::abi_t<Windows::System::Update::ISystemUpdateManagerStatics>::remove_StateChanged>;
-        StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const;
-        auto StateChanged(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto DownloadProgress() const;
-        [[nodiscard]] auto InstallProgress() const;
-        [[nodiscard]] auto UserActiveHoursStart() const;
-        [[nodiscard]] auto UserActiveHoursEnd() const;
-        [[nodiscard]] auto UserActiveHoursMax() const;
-        auto TrySetUserActiveHours(Windows::Foundation::TimeSpan const& start, Windows::Foundation::TimeSpan const& end) const;
-        [[nodiscard]] auto LastUpdateCheckTime() const;
-        [[nodiscard]] auto LastUpdateInstallTime() const;
-        [[nodiscard]] auto LastErrorInfo() const;
-        auto GetAutomaticRebootBlockIds() const;
-        auto BlockAutomaticRebootAsync(param::hstring const& lockId) const;
-        auto UnblockAutomaticRebootAsync(param::hstring const& lockId) const;
-        [[nodiscard]] auto ExtendedError() const;
-        auto GetUpdateItems() const;
-        [[nodiscard]] auto AttentionRequiredReason() const;
-        auto SetFlightRing(param::hstring const& flightRing) const;
-        auto GetFlightRing() const;
-        auto StartInstall(Windows::System::Update::SystemUpdateStartInstallAction const& action) const;
-        auto RebootToCompleteInstall() const;
-        auto StartCancelUpdates() const;
+        [[nodiscard]] StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) StateChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) DownloadProgress() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) InstallProgress() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) UserActiveHoursStart() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) UserActiveHoursEnd() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) UserActiveHoursMax() const;
+        WINRT_IMPL_AUTO(bool) TrySetUserActiveHours(Windows::Foundation::TimeSpan const& start, Windows::Foundation::TimeSpan const& end) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) LastUpdateCheckTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) LastUpdateInstallTime() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateLastErrorInfo) LastErrorInfo() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) GetAutomaticRebootBlockIds() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) BlockAutomaticRebootAsync(param::hstring const& lockId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) UnblockAutomaticRebootAsync(param::hstring const& lockId) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::hresult) ExtendedError() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::System::Update::SystemUpdateItem>) GetUpdateItems() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::Update::SystemUpdateAttentionRequiredReason) AttentionRequiredReason() const;
+        WINRT_IMPL_AUTO(bool) SetFlightRing(param::hstring const& flightRing) const;
+        WINRT_IMPL_AUTO(hstring) GetFlightRing() const;
+        WINRT_IMPL_AUTO(void) StartInstall(Windows::System::Update::SystemUpdateStartInstallAction const& action) const;
+        WINRT_IMPL_AUTO(void) RebootToCompleteInstall() const;
+        WINRT_IMPL_AUTO(void) StartCancelUpdates() const;
     };
     template <> struct consume<Windows::System::Update::ISystemUpdateManagerStatics>
     {

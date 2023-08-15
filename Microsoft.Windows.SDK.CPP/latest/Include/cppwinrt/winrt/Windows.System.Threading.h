@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,71 +6,71 @@
 #ifndef WINRT_Windows_System_Threading_H
 #define WINRT_Windows_System_Threading_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.System.Threading.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolStatics<D>::RunAsync(Windows::System::Threading::WorkItemHandler const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_System_Threading_IThreadPoolStatics<D>::RunAsync(Windows::System::Threading::WorkItemHandler const& handler) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolStatics)->RunAsync(*(void**)(&handler), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolStatics<D>::RunAsync(Windows::System::Threading::WorkItemHandler const& handler, Windows::System::Threading::WorkItemPriority const& priority) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_System_Threading_IThreadPoolStatics<D>::RunAsync(Windows::System::Threading::WorkItemHandler const& handler, Windows::System::Threading::WorkItemPriority const& priority) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolStatics)->RunWithPriorityAsync(*(void**)(&handler), static_cast<int32_t>(priority), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolStatics<D>::RunAsync(Windows::System::Threading::WorkItemHandler const& handler, Windows::System::Threading::WorkItemPriority const& priority, Windows::System::Threading::WorkItemOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_System_Threading_IThreadPoolStatics<D>::RunAsync(Windows::System::Threading::WorkItemHandler const& handler, Windows::System::Threading::WorkItemPriority const& priority, Windows::System::Threading::WorkItemOptions const& options) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolStatics)->RunWithPriorityAndOptionsAsync(*(void**)(&handler), static_cast<int32_t>(priority), static_cast<uint32_t>(options), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolTimer<D>::Period() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_System_Threading_IThreadPoolTimer<D>::Period() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolTimer)->get_Period(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolTimer<D>::Delay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_System_Threading_IThreadPoolTimer<D>::Delay() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolTimer)->get_Delay(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolTimer<D>::Cancel() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Threading_IThreadPoolTimer<D>::Cancel() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolTimer)->Cancel());
     }
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolTimerStatics<D>::CreatePeriodicTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& period) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Threading::ThreadPoolTimer) consume_Windows_System_Threading_IThreadPoolTimerStatics<D>::CreatePeriodicTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& period) const
     {
         void* timer{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolTimerStatics)->CreatePeriodicTimer(*(void**)(&handler), impl::bind_in(period), &timer));
         return Windows::System::Threading::ThreadPoolTimer{ timer, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolTimerStatics<D>::CreateTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& delay) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Threading::ThreadPoolTimer) consume_Windows_System_Threading_IThreadPoolTimerStatics<D>::CreateTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& delay) const
     {
         void* timer{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolTimerStatics)->CreateTimer(*(void**)(&handler), impl::bind_in(delay), &timer));
         return Windows::System::Threading::ThreadPoolTimer{ timer, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolTimerStatics<D>::CreatePeriodicTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& period, Windows::System::Threading::TimerDestroyedHandler const& destroyed) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Threading::ThreadPoolTimer) consume_Windows_System_Threading_IThreadPoolTimerStatics<D>::CreatePeriodicTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& period, Windows::System::Threading::TimerDestroyedHandler const& destroyed) const
     {
         void* timer{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolTimerStatics)->CreatePeriodicTimerWithCompletion(*(void**)(&handler), impl::bind_in(period), *(void**)(&destroyed), &timer));
         return Windows::System::Threading::ThreadPoolTimer{ timer, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_System_Threading_IThreadPoolTimerStatics<D>::CreateTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& delay, Windows::System::Threading::TimerDestroyedHandler const& destroyed) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::System::Threading::ThreadPoolTimer) consume_Windows_System_Threading_IThreadPoolTimerStatics<D>::CreateTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& delay, Windows::System::Threading::TimerDestroyedHandler const& destroyed) const
     {
         void* timer{};
         check_hresult(WINRT_IMPL_SHIM(Windows::System::Threading::IThreadPoolTimerStatics)->CreateTimerWithCompletion(*(void**)(&handler), impl::bind_in(delay), *(void**)(&destroyed), &timer));
         return Windows::System::Threading::ThreadPoolTimer{ timer, take_ownership_from_abi };
     }
-    template <typename H> struct delegate<Windows::System::Threading::TimerDestroyedHandler, H> : implements_delegate<Windows::System::Threading::TimerDestroyedHandler, H>
+    template <typename H> struct delegate<Windows::System::Threading::TimerDestroyedHandler, H> final : implements_delegate<Windows::System::Threading::TimerDestroyedHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::System::Threading::TimerDestroyedHandler, H>(std::forward<H>(handler)) {}
 
@@ -81,7 +81,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::System::Threading::TimerElapsedHandler, H> : implements_delegate<Windows::System::Threading::TimerElapsedHandler, H>
+    template <typename H> struct delegate<Windows::System::Threading::TimerElapsedHandler, H> final : implements_delegate<Windows::System::Threading::TimerElapsedHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::System::Threading::TimerElapsedHandler, H>(std::forward<H>(handler)) {}
 
@@ -92,7 +92,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::System::Threading::WorkItemHandler, H> : implements_delegate<Windows::System::Threading::WorkItemHandler, H>
+    template <typename H> struct delegate<Windows::System::Threading::WorkItemHandler, H> final : implements_delegate<Windows::System::Threading::WorkItemHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::System::Threading::WorkItemHandler, H>(std::forward<H>(handler)) {}
 
@@ -103,6 +103,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::Threading::IThreadPoolStatics> : produce_base<D, Windows::System::Threading::IThreadPoolStatics>
     {
@@ -131,6 +132,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::Threading::IThreadPoolTimer> : produce_base<D, Windows::System::Threading::IThreadPoolTimer>
     {
@@ -158,6 +161,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::System::Threading::IThreadPoolTimerStatics> : produce_base<D, Windows::System::Threading::IThreadPoolTimerStatics>
     {
@@ -194,8 +199,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::System::Threading
+WINRT_EXPORT namespace winrt::Windows::System::Threading
 {
     constexpr auto operator|(WorkItemOptions const left, WorkItemOptions const right) noexcept
     {
@@ -230,31 +236,31 @@ namespace winrt::Windows::System::Threading
     }
     inline auto ThreadPool::RunAsync(Windows::System::Threading::WorkItemHandler const& handler)
     {
-        return impl::call_factory<ThreadPool, Windows::System::Threading::IThreadPoolStatics>([&](auto&& f) { return f.RunAsync(handler); });
+        return impl::call_factory<ThreadPool, IThreadPoolStatics>([&](IThreadPoolStatics const& f) { return f.RunAsync(handler); });
     }
     inline auto ThreadPool::RunAsync(Windows::System::Threading::WorkItemHandler const& handler, Windows::System::Threading::WorkItemPriority const& priority)
     {
-        return impl::call_factory<ThreadPool, Windows::System::Threading::IThreadPoolStatics>([&](auto&& f) { return f.RunAsync(handler, priority); });
+        return impl::call_factory<ThreadPool, IThreadPoolStatics>([&](IThreadPoolStatics const& f) { return f.RunAsync(handler, priority); });
     }
     inline auto ThreadPool::RunAsync(Windows::System::Threading::WorkItemHandler const& handler, Windows::System::Threading::WorkItemPriority const& priority, Windows::System::Threading::WorkItemOptions const& options)
     {
-        return impl::call_factory<ThreadPool, Windows::System::Threading::IThreadPoolStatics>([&](auto&& f) { return f.RunAsync(handler, priority, options); });
+        return impl::call_factory<ThreadPool, IThreadPoolStatics>([&](IThreadPoolStatics const& f) { return f.RunAsync(handler, priority, options); });
     }
     inline auto ThreadPoolTimer::CreatePeriodicTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& period)
     {
-        return impl::call_factory<ThreadPoolTimer, Windows::System::Threading::IThreadPoolTimerStatics>([&](auto&& f) { return f.CreatePeriodicTimer(handler, period); });
+        return impl::call_factory<ThreadPoolTimer, IThreadPoolTimerStatics>([&](IThreadPoolTimerStatics const& f) { return f.CreatePeriodicTimer(handler, period); });
     }
     inline auto ThreadPoolTimer::CreateTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& delay)
     {
-        return impl::call_factory<ThreadPoolTimer, Windows::System::Threading::IThreadPoolTimerStatics>([&](auto&& f) { return f.CreateTimer(handler, delay); });
+        return impl::call_factory<ThreadPoolTimer, IThreadPoolTimerStatics>([&](IThreadPoolTimerStatics const& f) { return f.CreateTimer(handler, delay); });
     }
     inline auto ThreadPoolTimer::CreatePeriodicTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& period, Windows::System::Threading::TimerDestroyedHandler const& destroyed)
     {
-        return impl::call_factory<ThreadPoolTimer, Windows::System::Threading::IThreadPoolTimerStatics>([&](auto&& f) { return f.CreatePeriodicTimer(handler, period, destroyed); });
+        return impl::call_factory<ThreadPoolTimer, IThreadPoolTimerStatics>([&](IThreadPoolTimerStatics const& f) { return f.CreatePeriodicTimer(handler, period, destroyed); });
     }
     inline auto ThreadPoolTimer::CreateTimer(Windows::System::Threading::TimerElapsedHandler const& handler, Windows::Foundation::TimeSpan const& delay, Windows::System::Threading::TimerDestroyedHandler const& destroyed)
     {
-        return impl::call_factory<ThreadPoolTimer, Windows::System::Threading::IThreadPoolTimerStatics>([&](auto&& f) { return f.CreateTimer(handler, delay, destroyed); });
+        return impl::call_factory<ThreadPoolTimer, IThreadPoolTimerStatics>([&](IThreadPoolTimerStatics const& f) { return f.CreateTimer(handler, delay, destroyed); });
     }
     template <typename L> TimerDestroyedHandler::TimerDestroyedHandler(L handler) :
         TimerDestroyedHandler(impl::make_delegate<TimerDestroyedHandler>(std::forward<L>(handler)))
@@ -331,10 +337,12 @@ namespace winrt::Windows::System::Threading
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::System::Threading::IThreadPoolStatics> : winrt::impl::hash_base<winrt::Windows::System::Threading::IThreadPoolStatics> {};
-    template<> struct hash<winrt::Windows::System::Threading::IThreadPoolTimer> : winrt::impl::hash_base<winrt::Windows::System::Threading::IThreadPoolTimer> {};
-    template<> struct hash<winrt::Windows::System::Threading::IThreadPoolTimerStatics> : winrt::impl::hash_base<winrt::Windows::System::Threading::IThreadPoolTimerStatics> {};
-    template<> struct hash<winrt::Windows::System::Threading::ThreadPool> : winrt::impl::hash_base<winrt::Windows::System::Threading::ThreadPool> {};
-    template<> struct hash<winrt::Windows::System::Threading::ThreadPoolTimer> : winrt::impl::hash_base<winrt::Windows::System::Threading::ThreadPoolTimer> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::System::Threading::IThreadPoolStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Threading::IThreadPoolTimer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Threading::IThreadPoolTimerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Threading::ThreadPool> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Threading::ThreadPoolTimer> : winrt::impl::hash_base {};
+#endif
 }
 #endif

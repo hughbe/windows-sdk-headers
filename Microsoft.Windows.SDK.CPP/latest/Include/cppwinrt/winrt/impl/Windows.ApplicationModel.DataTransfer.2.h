@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Windows.ApplicationModel.DataTransfer.1.h"
-namespace winrt::Windows::ApplicationModel::DataTransfer
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::DataTransfer
 {
     struct DataProviderHandler : Windows::Foundation::IUnknown
     {
@@ -44,7 +44,7 @@ namespace winrt::Windows::ApplicationModel::DataTransfer
         static auto Clear();
         static auto ContentChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using ContentChanged_revoker = impl::factory_event_revoker<Windows::ApplicationModel::DataTransfer::IClipboardStatics, &impl::abi_t<Windows::ApplicationModel::DataTransfer::IClipboardStatics>::remove_ContentChanged>;
-        static ContentChanged_revoker ContentChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static ContentChanged_revoker ContentChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto ContentChanged(winrt::event_token const& token);
         static auto GetHistoryItemsAsync();
         static auto ClearHistory();
@@ -55,15 +55,15 @@ namespace winrt::Windows::ApplicationModel::DataTransfer
         static auto SetContentWithOptions(Windows::ApplicationModel::DataTransfer::DataPackage const& content, Windows::ApplicationModel::DataTransfer::ClipboardContentOptions const& options);
         static auto HistoryChanged(Windows::Foundation::EventHandler<Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs> const& handler);
         using HistoryChanged_revoker = impl::factory_event_revoker<Windows::ApplicationModel::DataTransfer::IClipboardStatics2, &impl::abi_t<Windows::ApplicationModel::DataTransfer::IClipboardStatics2>::remove_HistoryChanged>;
-        static HistoryChanged_revoker HistoryChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs> const& handler);
+        [[nodiscard]] static HistoryChanged_revoker HistoryChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs> const& handler);
         static auto HistoryChanged(winrt::event_token const& token);
         static auto RoamingEnabledChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using RoamingEnabledChanged_revoker = impl::factory_event_revoker<Windows::ApplicationModel::DataTransfer::IClipboardStatics2, &impl::abi_t<Windows::ApplicationModel::DataTransfer::IClipboardStatics2>::remove_RoamingEnabledChanged>;
-        static RoamingEnabledChanged_revoker RoamingEnabledChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static RoamingEnabledChanged_revoker RoamingEnabledChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto RoamingEnabledChanged(winrt::event_token const& token);
         static auto HistoryEnabledChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         using HistoryEnabledChanged_revoker = impl::factory_event_revoker<Windows::ApplicationModel::DataTransfer::IClipboardStatics2, &impl::abi_t<Windows::ApplicationModel::DataTransfer::IClipboardStatics2>::remove_HistoryEnabledChanged>;
-        static HistoryEnabledChanged_revoker HistoryEnabledChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        [[nodiscard]] static HistoryEnabledChanged_revoker HistoryEnabledChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
         static auto HistoryEnabledChanged(winrt::event_token const& token);
     };
     struct __declspec(empty_bases) ClipboardContentOptions : Windows::ApplicationModel::DataTransfer::IClipboardContentOptions

@@ -58,6 +58,13 @@ enum MrmResourceIndexerMessageSeverity
     MrmResourceIndexerMessageSeverityError
 };
 
+enum MrmIndexerFlags
+{
+    MrmIndexerFlagsNone = 0x0,
+    MrmIndexerFlagsAutoMerge = 0x1,
+    MrmIndexerFlagsCreateContentChecksum = 0x2
+};
+
 struct MrmResourceIndexerMessage
 {
     MrmResourceIndexerMessageSeverity severity;
@@ -107,6 +114,15 @@ STDAPI MrmCreateResourceIndexerFromPreviousPriData(
     _In_ ULONG priSize,
     _Inout_ MrmResourceIndexerHandle* indexer);
 
+/* Create resource Indexer with flags, return handle. Example qualifiers string: L"Language-en-US_Scale-100_Contrast-standard" */
+STDAPI MrmCreateResourceIndexerWithFlags(
+    _In_opt_ PCWSTR packageFamilyName,
+    _In_ PCWSTR projectRoot,
+    _In_ MrmPlatformVersion platformVersion,
+    _In_opt_ PCWSTR defaultQualifiers,
+    _In_ MrmIndexerFlags flags,
+    _Inout_ MrmResourceIndexerHandle* indexer);
+
 /* Index a single string resource, with qualifiers string. Eg.: L"Language-en-US_Scale-100_Contrast-standard" */
 /* Empty string or nullptr for qualifiers indicate a neutral resource */
 STDAPI MrmIndexString(
@@ -148,6 +164,15 @@ STDAPI MrmCreateResourceFile(
     _In_ MrmResourceIndexerHandle indexer,
     _In_ MrmPackagingMode packagingMode,
     _In_ MrmPackagingOptions packagingOptions,
+    _In_ PCWSTR outputDirectory);
+
+/* Create the PRI file on disk to the given directory, output file name will be "resources.pri" */
+/* The PRI file will be stamped with the provided checksum */
+STDAPI MrmCreateResourceFileWithChecksum(
+    _In_ MrmResourceIndexerHandle indexer,
+    _In_ MrmPackagingMode packagingMode,
+    _In_ MrmPackagingOptions packagingOptions,
+    _In_ ULONG checksum,
     _In_ PCWSTR outputDirectory);
 
 /* Create the PRI file in memory, return data blob, does not support MrmPackagingModeAutoSplit */
@@ -216,6 +241,11 @@ STDAPI MrmCreateConfigInMemory(
     _In_opt_ PCWSTR defaultQualifiers,
     _Outptr_result_bytebuffer_(*outputXmlSize) BYTE** outputXmlData,
     _Out_ ULONG* outputXmlSize);
+
+/* Get content checksum of a PRI file */
+STDAPI MrmGetPriFileContentChecksum(
+    _In_ PCWSTR priFile,
+    _Out_ ULONG* checksum);
 
 #ifdef __cplusplus
 }

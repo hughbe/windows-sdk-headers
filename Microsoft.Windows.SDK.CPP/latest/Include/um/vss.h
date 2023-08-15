@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -439,31 +447,38 @@ EXTERN_C const IID IID_IVssEnumObject;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IVssEnumObject * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IVssEnumObject * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IVssEnumObject * This);
         
+        DECLSPEC_XFGVIRT(IVssEnumObject, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IVssEnumObject * This,
             /* [in] */ ULONG celt,
             /* [length_is][size_is][out] */ __RPC__out_ecount_part(celt, *pceltFetched) VSS_OBJECT_PROP *rgelt,
             /* [out] */ __RPC__out ULONG *pceltFetched);
         
+        DECLSPEC_XFGVIRT(IVssEnumObject, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IVssEnumObject * This,
             /* [in] */ ULONG celt);
         
+        DECLSPEC_XFGVIRT(IVssEnumObject, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IVssEnumObject * This);
         
+        DECLSPEC_XFGVIRT(IVssEnumObject, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IVssEnumObject * This,
             /* [out][in] */ __RPC__deref_inout_opt IVssEnumObject **ppenum);
@@ -547,25 +562,31 @@ EXTERN_C const IID IID_IVssAsync;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IVssAsync * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IVssAsync * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IVssAsync * This);
         
+        DECLSPEC_XFGVIRT(IVssAsync, Cancel)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Cancel )( 
             __RPC__in IVssAsync * This);
         
+        DECLSPEC_XFGVIRT(IVssAsync, Wait)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Wait )( 
             __RPC__in IVssAsync * This,
             /* [defaultvalue][in] */ DWORD dwMilliseconds);
         
+        DECLSPEC_XFGVIRT(IVssAsync, QueryStatus)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *QueryStatus )( 
             __RPC__in IVssAsync * This,
             /* [out] */ __RPC__out HRESULT *pHrResult,

@@ -1,33 +1,35 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_SmartCards_0_H
 #define WINRT_Windows_Devices_SmartCards_0_H
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
     struct IAsyncAction;
-    template <typename T> struct IReference;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TResult> struct __declspec(empty_bases) IAsyncOperation;
+    template <typename T> struct __declspec(empty_bases) IReference;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Foundation::Collections
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
-    template <typename T> struct IIterable;
-    template <typename T> struct IVector;
+    template <typename T> struct __declspec(empty_bases) IIterable;
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+    template <typename T> struct __declspec(empty_bases) IVector;
     struct ValueSet;
 }
-namespace winrt::Windows::Security::Cryptography::Core
+WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
 {
     enum class CryptographicPublicKeyBlobType : int32_t;
 }
-namespace winrt::Windows::Storage::Streams
+WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IBuffer;
     struct IRandomAccessStreamReference;
 }
-namespace winrt::Windows::Devices::SmartCards
+WINRT_EXPORT namespace winrt::Windows::Devices::SmartCards
 {
     enum class SmartCardActivationPolicyChangeResult : int32_t
     {
@@ -289,1198 +291,304 @@ namespace winrt::Windows::Devices::SmartCards
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::SmartCards::ICardAddedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ICardRemovedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::IKnownSmartCardAppletIds>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCard>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroup>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroupFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroupStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApduFactory>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardChallengeContext>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardConnect>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardConnection>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulator>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulator2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorStatics3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardPinPolicy>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardPinResetDeferral>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardPinResetRequest>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardProvisioning>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardProvisioning2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardProvisioningStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardProvisioningStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardReader>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardReaderStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardTriggerDetails>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardTriggerDetails2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::ISmartCardTriggerDetails3>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::CardAddedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::CardRemovedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::KnownSmartCardAppletIds>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCard>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardAppletIdGroup>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardChallengeContext>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardConnection>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGenerator>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulator>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardPinPolicy>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardPinResetDeferral>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardPinResetRequest>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardProvisioning>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardReader>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardTriggerDetails>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardAutomaticResponseStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialProtectionMethod>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptographicKeyAttestationStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulationCategory>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulationType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedReason>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorConnectionSource>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorEnablementPolicy>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardLaunchBehavior>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardReaderKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardReaderStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardStatus>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardTriggerType>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Devices::SmartCards::SmartCardPinResetHandler>
-    {
-        using type = delegate_category;
-    };
-    template <> struct name<Windows::Devices::SmartCards::ICardAddedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ICardAddedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ICardRemovedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ICardRemovedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::IKnownSmartCardAppletIds>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.IKnownSmartCardAppletIds" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCard>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCard" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAppletIdGroup>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAppletIdGroup" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAppletIdGroup2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAppletIdGroupFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAppletIdGroupStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApduFactory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardAutomaticResponseApduFactory" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardChallengeContext>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardChallengeContext" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardConnect>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardConnect" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardConnection>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardConnection" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramGenerator" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPossessionProof" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulator>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulator" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulator2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulator2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulatorConnectionDeactivatedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulatorConnectionProperties" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulatorStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulatorStatics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulatorStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulatorStatics2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardEmulatorStatics3>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardEmulatorStatics3" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardPinPolicy>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardPinPolicy" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardPinResetDeferral>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardPinResetDeferral" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardPinResetRequest>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardPinResetRequest" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardProvisioning>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardProvisioning" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardProvisioning2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardProvisioning2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardProvisioningStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardProvisioningStatics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardProvisioningStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardProvisioningStatics2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardReader>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardReader" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardReaderStatics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardReaderStatics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardTriggerDetails" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardTriggerDetails2>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardTriggerDetails2" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::ISmartCardTriggerDetails3>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.ISmartCardTriggerDetails3" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::CardAddedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.CardAddedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::CardRemovedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.CardRemovedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::KnownSmartCardAppletIds>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.KnownSmartCardAppletIds" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCard>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCard" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardAppletIdGroup>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardAppletIdGroup" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardChallengeContext>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardChallengeContext" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardConnection>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardConnection" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramGenerator>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardEmulator>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardEmulator" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardPinPolicy>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardPinPolicy" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardPinResetDeferral>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardPinResetDeferral" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardPinResetRequest>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardPinResetRequest" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardProvisioning>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardProvisioning" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardReader>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardReader" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardTriggerDetails>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardTriggerDetails" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardAppletIdGroupActivationPolicy" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardAutomaticResponseStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardAutomaticResponseStatus" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramMaterialProtectionMethod>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialProtectionMethod" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramMaterialType>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialType" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementOptions" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyAlgorithm" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardCryptographicKeyAttestationStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardCryptographicKeyAttestationStatus" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardEmulationCategory>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardEmulationCategory" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardEmulationType>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardEmulationType" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedReason>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedReason" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardEmulatorConnectionSource>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionSource" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardEmulatorEnablementPolicy>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardEmulatorEnablementPolicy" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardLaunchBehavior>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardLaunchBehavior" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardReaderKind>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardReaderKind" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardReaderStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardReaderStatus" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardStatus>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardStatus" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardTriggerType>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardTriggerType" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior" };
-    };
-    template <> struct name<Windows::Devices::SmartCards::SmartCardPinResetHandler>
-    {
-        static constexpr auto & value{ L"Windows.Devices.SmartCards.SmartCardPinResetHandler" };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ICardAddedEventArgs>
-    {
-        static constexpr guid value{ 0x18BBEF98,0xF18B,0x4DD3,{ 0xB1,0x18,0xDF,0xB2,0xC8,0xE2,0x3C,0xC6 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ICardRemovedEventArgs>
-    {
-        static constexpr guid value{ 0x15331AAF,0x22D7,0x4945,{ 0xAF,0xC9,0x03,0xB4,0x6F,0x42,0xA6,0xCD } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::IKnownSmartCardAppletIds>
-    {
-        static constexpr guid value{ 0x7B04D8D8,0x95B4,0x4C88,{ 0x8C,0xEA,0x41,0x1E,0x55,0x51,0x1E,0xFC } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCard>
-    {
-        static constexpr guid value{ 0x1B718871,0x6434,0x43F4,{ 0xB5,0x5A,0x6A,0x29,0x62,0x38,0x70,0xAA } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAppletIdGroup>
-    {
-        static constexpr guid value{ 0x7DB165E6,0x6264,0x56F4,{ 0x5E,0x03,0xC8,0x63,0x85,0x39,0x5E,0xB1 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>
-    {
-        static constexpr guid value{ 0x6B0EF9DC,0x9956,0x4A62,{ 0x8D,0x4E,0xD3,0x7A,0x68,0xEB,0xC3,0xA6 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAppletIdGroupFactory>
-    {
-        static constexpr guid value{ 0x9105EB4D,0x4A65,0x4E41,{ 0x80,0x61,0xCB,0xE8,0x3F,0x36,0x95,0xE5 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration>
-    {
-        static constexpr guid value{ 0xDF1208D1,0x31BB,0x5596,{ 0x43,0xB1,0x6D,0x69,0xA0,0x25,0x7B,0x3A } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2>
-    {
-        static constexpr guid value{ 0x5F5508D8,0x98A7,0x4F2E,{ 0x91,0xD9,0x6C,0xFC,0xCE,0xDA,0x40,0x7F } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAppletIdGroupStatics>
-    {
-        static constexpr guid value{ 0xAB2899A9,0xE76C,0x45CF,{ 0xBF,0x1D,0x90,0xEA,0xA6,0x20,0x59,0x27 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu>
-    {
-        static constexpr guid value{ 0x52152BAB,0xC63E,0x4531,{ 0xA8,0x57,0xD7,0x56,0xD9,0x9B,0x98,0x6A } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>
-    {
-        static constexpr guid value{ 0x44AEBB14,0x559D,0x4531,{ 0x4E,0x51,0x89,0xDB,0x6F,0xA8,0xA5,0x7A } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3>
-    {
-        static constexpr guid value{ 0xBF43DA74,0x6576,0x4392,{ 0x93,0x67,0xFE,0x3B,0xC9,0xE2,0xD4,0x96 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApduFactory>
-    {
-        static constexpr guid value{ 0xE97EA2FA,0xD02C,0x4C55,{ 0xB0,0x2A,0x8C,0xFF,0x7F,0xA9,0xF0,0x5B } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardChallengeContext>
-    {
-        static constexpr guid value{ 0x192A5319,0xC9C4,0x4947,{ 0x81,0xCC,0x44,0x79,0x4A,0x61,0xEF,0x91 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardConnect>
-    {
-        static constexpr guid value{ 0x2FDF87E5,0x028D,0x491E,{ 0xA0,0x58,0x33,0x82,0xC3,0x98,0x6F,0x40 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardConnection>
-    {
-        static constexpr guid value{ 0x7EDB991A,0xA81A,0x47BC,{ 0xA6,0x49,0x15,0x6B,0xE6,0xB7,0xF2,0x31 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator>
-    {
-        static constexpr guid value{ 0xE39F587B,0xEDD3,0x4E49,{ 0xB5,0x94,0x0F,0xF5,0xE4,0xD0,0xC7,0x6F } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>
-    {
-        static constexpr guid value{ 0x7116AA34,0x5D6D,0x4B4A,{ 0x96,0xA3,0xEF,0xA4,0x7D,0x2A,0x7E,0x25 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics>
-    {
-        static constexpr guid value{ 0x09933910,0xCB9C,0x4015,{ 0x96,0x7D,0x52,0x34,0xF3,0xB0,0x29,0x00 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics2>
-    {
-        static constexpr guid value{ 0x09BDF5E5,0xB4BD,0x4E23,{ 0xA5,0x88,0x74,0x46,0x92,0x04,0xC1,0x28 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>
-    {
-        static constexpr guid value{ 0x2798E029,0xD687,0x4C92,{ 0x86,0xC6,0x39,0x9E,0x9A,0x0E,0xCB,0x09 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>
-    {
-        static constexpr guid value{ 0x4E6A8A5C,0x9773,0x46C4,{ 0xA3,0x2F,0xB1,0xE5,0x43,0x15,0x9E,0x04 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>
-    {
-        static constexpr guid value{ 0x8C7CE857,0xA7E7,0x489D,{ 0xB9,0xD6,0x36,0x80,0x61,0x51,0x50,0x12 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics>
-    {
-        static constexpr guid value{ 0xFC9AC5CC,0xC1D7,0x4153,{ 0x92,0x3B,0xA2,0xD4,0x3C,0x6C,0x8D,0x49 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics>
-    {
-        static constexpr guid value{ 0xFFB58E1F,0x0692,0x4C47,{ 0x93,0xCF,0x34,0xD9,0x1F,0x9D,0xCD,0x00 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof>
-    {
-        static constexpr guid value{ 0xE5B9AB8C,0xA141,0x4135,{ 0x9A,0xDD,0xB0,0xD2,0xE3,0xAA,0x1F,0xC9 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep>
-    {
-        static constexpr guid value{ 0x947B03EB,0x8342,0x4792,{ 0xA2,0xE5,0x92,0x56,0x36,0x37,0x8A,0x53 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics>
-    {
-        static constexpr guid value{ 0x8552546E,0x4457,0x4825,{ 0xB4,0x64,0x63,0x54,0x71,0xA3,0x9F,0x5C } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo>
-    {
-        static constexpr guid value{ 0x77B0F00D,0xB097,0x4F61,{ 0xA2,0x6A,0x95,0x61,0x63,0x9C,0x9C,0x3A } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo2>
-    {
-        static constexpr guid value{ 0x000440F9,0xF7FD,0x417D,{ 0x89,0xE1,0xFB,0xB0,0x38,0x2A,0xDC,0x4D } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulator>
-    {
-        static constexpr guid value{ 0xDFB906B2,0x875E,0x47E5,{ 0x80,0x77,0xE8,0xBF,0xF1,0xB1,0xC6,0xFB } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulator2>
-    {
-        static constexpr guid value{ 0xFE3FC0B8,0x8529,0x411A,{ 0x80,0x7B,0x48,0xED,0xC2,0xA0,0xAB,0x44 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs>
-    {
-        static constexpr guid value{ 0xD55D1576,0x69D2,0x5333,{ 0x5B,0x5F,0xF8,0xC0,0xD6,0xE9,0xF0,0x9F } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2>
-    {
-        static constexpr guid value{ 0x8BF93DF0,0x22E1,0x4238,{ 0x86,0x10,0x94,0xCE,0x4A,0x96,0x54,0x25 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms>
-    {
-        static constexpr guid value{ 0xD550BAC7,0xB7BF,0x4E29,{ 0x92,0x94,0x0C,0x4A,0xC3,0xC9,0x41,0xBD } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs>
-    {
-        static constexpr guid value{ 0x2186D8D3,0xC5EB,0x5262,{ 0x43,0xDF,0x62,0xA0,0xA1,0xB5,0x55,0x57 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties>
-    {
-        static constexpr guid value{ 0x4E2CA5EE,0xF969,0x507D,{ 0x6C,0xF9,0x34,0xE2,0xD1,0x8D,0xF3,0x11 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulatorStatics>
-    {
-        static constexpr guid value{ 0x7A9BFC4B,0xC4D3,0x494F,{ 0xB8,0xA2,0x62,0x15,0xD8,0x1E,0x85,0xB2 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulatorStatics2>
-    {
-        static constexpr guid value{ 0x69AE9F8A,0xB775,0x488B,{ 0x84,0x36,0x6C,0x1E,0x28,0xED,0x73,0x1F } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardEmulatorStatics3>
-    {
-        static constexpr guid value{ 0x59EA142A,0x9F09,0x43F5,{ 0x85,0x65,0xCF,0xA8,0x14,0x8E,0x4C,0xB2 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardPinPolicy>
-    {
-        static constexpr guid value{ 0x183CE184,0x4DB6,0x4841,{ 0xAC,0x9E,0x2A,0xC1,0xF3,0x9B,0x73,0x04 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardPinResetDeferral>
-    {
-        static constexpr guid value{ 0x18C94AAC,0x7805,0x4004,{ 0x85,0xE4,0xBB,0xEF,0xAC,0x8F,0x68,0x84 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardPinResetRequest>
-    {
-        static constexpr guid value{ 0x12FE3C4D,0x5FB9,0x4E8E,{ 0x9F,0xF6,0x61,0xF4,0x75,0x12,0x4F,0xEF } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardProvisioning>
-    {
-        static constexpr guid value{ 0x19EEEDBD,0x1FAB,0x477C,{ 0xB7,0x12,0x1A,0x2C,0x5A,0xF1,0xFD,0x6E } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardProvisioning2>
-    {
-        static constexpr guid value{ 0x10FD28EB,0x3F79,0x4B66,{ 0x9B,0x7C,0x11,0xC1,0x49,0xB7,0xD0,0xBC } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardProvisioningStatics>
-    {
-        static constexpr guid value{ 0x13882848,0x0D13,0x4E70,{ 0x97,0x35,0x51,0xDA,0xEC,0xA5,0x25,0x4F } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardProvisioningStatics2>
-    {
-        static constexpr guid value{ 0x3447C6A8,0xC9A0,0x4BD6,{ 0xB5,0x0D,0x25,0x1F,0x4E,0x8D,0x3A,0x62 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardReader>
-    {
-        static constexpr guid value{ 0x1074B4E0,0x54C2,0x4DF0,{ 0x81,0x7A,0x14,0xC1,0x43,0x78,0xF0,0x6C } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardReaderStatics>
-    {
-        static constexpr guid value{ 0x103C04E1,0xA1CA,0x48F2,{ 0xA2,0x81,0x5B,0x6F,0x66,0x9A,0xF1,0x07 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardTriggerDetails>
-    {
-        static constexpr guid value{ 0x5F9BF11E,0x39EF,0x4F2B,{ 0xB4,0x4F,0x0A,0x91,0x55,0xB1,0x77,0xBC } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardTriggerDetails2>
-    {
-        static constexpr guid value{ 0x2945C569,0x8975,0x4A51,{ 0x9E,0x1A,0x5F,0x8A,0x76,0xEE,0x51,0xAF } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::ISmartCardTriggerDetails3>
-    {
-        static constexpr guid value{ 0xB3E2C27D,0x18C6,0x4BA8,{ 0x83,0x76,0xEF,0x03,0xD4,0x91,0x26,0x66 } };
-    };
-    template <> struct guid_storage<Windows::Devices::SmartCards::SmartCardPinResetHandler>
-    {
-        static constexpr guid value{ 0x138D5E40,0xF3BC,0x4A5C,{ 0xB4,0x1D,0x4B,0x4E,0xF6,0x84,0xE2,0x37 } };
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::CardAddedEventArgs>
-    {
-        using type = Windows::Devices::SmartCards::ICardAddedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::CardRemovedEventArgs>
-    {
-        using type = Windows::Devices::SmartCards::ICardRemovedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCard>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCard;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardAppletIdGroup>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardAppletIdGroup;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardChallengeContext>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardChallengeContext;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardConnection>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardConnection;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramGenerator>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramGenerator;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardEmulator>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardEmulator;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardPinPolicy>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardPinPolicy;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardPinResetDeferral>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardPinResetDeferral;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardPinResetRequest>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardPinResetRequest;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardProvisioning>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardProvisioning;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardReader>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardReader;
-    };
-    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardTriggerDetails>
-    {
-        using type = Windows::Devices::SmartCards::ISmartCardTriggerDetails;
-    };
+    template <> struct category<Windows::Devices::SmartCards::ICardAddedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ICardRemovedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::IKnownSmartCardAppletIds>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCard>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroup>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroupFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAppletIdGroupStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApduFactory>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardChallengeContext>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardConnect>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardConnection>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulator>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulator2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardEmulatorStatics3>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardPinPolicy>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardPinResetDeferral>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardPinResetRequest>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardProvisioning>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardProvisioning2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardProvisioningStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardProvisioningStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardReader>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardReaderStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardTriggerDetails>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardTriggerDetails2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::ISmartCardTriggerDetails3>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::SmartCards::CardAddedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::CardRemovedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::KnownSmartCardAppletIds>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCard>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardAppletIdGroup>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardChallengeContext>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardConnection>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGenerator>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulator>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardPinPolicy>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardPinResetDeferral>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardPinResetRequest>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardProvisioning>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardReader>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardTriggerDetails>{ using type = class_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardAutomaticResponseStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialProtectionMethod>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramMaterialType>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardCryptographicKeyAttestationStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulationCategory>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulationType>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedReason>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorConnectionSource>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardEmulatorEnablementPolicy>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardLaunchBehavior>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardReaderKind>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardReaderStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardStatus>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardTriggerType>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::SmartCards::SmartCardPinResetHandler>{ using type = delegate_category; };
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::CardAddedEventArgs> = L"Windows.Devices.SmartCards.CardAddedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::CardRemovedEventArgs> = L"Windows.Devices.SmartCards.CardRemovedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::KnownSmartCardAppletIds> = L"Windows.Devices.SmartCards.KnownSmartCardAppletIds";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCard> = L"Windows.Devices.SmartCards.SmartCard";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardAppletIdGroup> = L"Windows.Devices.SmartCards.SmartCardAppletIdGroup";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration> = L"Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu> = L"Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardChallengeContext> = L"Windows.Devices.SmartCards.SmartCardChallengeContext";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardConnection> = L"Windows.Devices.SmartCards.SmartCardConnection";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramGenerator> = L"Windows.Devices.SmartCards.SmartCardCryptogramGenerator";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> = L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> = L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> = L"Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics> = L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics> = L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof> = L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep> = L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics> = L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo> = L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardEmulator> = L"Windows.Devices.SmartCards.SmartCardEmulator";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs> = L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs> = L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties> = L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardPinPolicy> = L"Windows.Devices.SmartCards.SmartCardPinPolicy";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardPinResetDeferral> = L"Windows.Devices.SmartCards.SmartCardPinResetDeferral";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardPinResetRequest> = L"Windows.Devices.SmartCards.SmartCardPinResetRequest";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardProvisioning> = L"Windows.Devices.SmartCards.SmartCardProvisioning";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardReader> = L"Windows.Devices.SmartCards.SmartCardReader";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardTriggerDetails> = L"Windows.Devices.SmartCards.SmartCardTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult> = L"Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy> = L"Windows.Devices.SmartCards.SmartCardAppletIdGroupActivationPolicy";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardAutomaticResponseStatus> = L"Windows.Devices.SmartCards.SmartCardAutomaticResponseStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm> = L"Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus> = L"Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat> = L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat> = L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramMaterialProtectionMethod> = L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialProtectionMethod";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramMaterialType> = L"Windows.Devices.SmartCards.SmartCardCryptogramMaterialType";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions> = L"Windows.Devices.SmartCards.SmartCardCryptogramPlacementOptions";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm> = L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyAlgorithm";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities> = L"Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardCryptographicKeyAttestationStatus> = L"Windows.Devices.SmartCards.SmartCardCryptographicKeyAttestationStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardEmulationCategory> = L"Windows.Devices.SmartCards.SmartCardEmulationCategory";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardEmulationType> = L"Windows.Devices.SmartCards.SmartCardEmulationType";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedReason> = L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedReason";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardEmulatorConnectionSource> = L"Windows.Devices.SmartCards.SmartCardEmulatorConnectionSource";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardEmulatorEnablementPolicy> = L"Windows.Devices.SmartCards.SmartCardEmulatorEnablementPolicy";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardLaunchBehavior> = L"Windows.Devices.SmartCards.SmartCardLaunchBehavior";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption> = L"Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardReaderKind> = L"Windows.Devices.SmartCards.SmartCardReaderKind";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardReaderStatus> = L"Windows.Devices.SmartCards.SmartCardReaderStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardStatus> = L"Windows.Devices.SmartCards.SmartCardStatus";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardTriggerType> = L"Windows.Devices.SmartCards.SmartCardTriggerType";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior> = L"Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ICardAddedEventArgs> = L"Windows.Devices.SmartCards.ICardAddedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ICardRemovedEventArgs> = L"Windows.Devices.SmartCards.ICardRemovedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::IKnownSmartCardAppletIds> = L"Windows.Devices.SmartCards.IKnownSmartCardAppletIds";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCard> = L"Windows.Devices.SmartCards.ISmartCard";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroup> = L"Windows.Devices.SmartCards.ISmartCardAppletIdGroup";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroup2> = L"Windows.Devices.SmartCards.ISmartCardAppletIdGroup2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroupFactory> = L"Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration> = L"Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2> = L"Windows.Devices.SmartCards.ISmartCardAppletIdGroupRegistration2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroupStatics> = L"Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu> = L"Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2> = L"Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3> = L"Windows.Devices.SmartCards.ISmartCardAutomaticResponseApdu3";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApduFactory> = L"Windows.Devices.SmartCards.ISmartCardAutomaticResponseApduFactory";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardChallengeContext> = L"Windows.Devices.SmartCards.ISmartCardChallengeContext";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardConnect> = L"Windows.Devices.SmartCards.ISmartCardConnect";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardConnection> = L"Windows.Devices.SmartCards.ISmartCardConnection";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator> = L"Windows.Devices.SmartCards.ISmartCardCryptogramGenerator";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2> = L"Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics> = L"Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics2> = L"Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> = L"Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> = L"Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> = L"Windows.Devices.SmartCards.ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics> = L"Windows.Devices.SmartCards.ISmartCardCryptogramMaterialCharacteristics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics> = L"Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPackageCharacteristics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof> = L"Windows.Devices.SmartCards.ISmartCardCryptogramMaterialPossessionProof";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep> = L"Windows.Devices.SmartCards.ISmartCardCryptogramPlacementStep";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics> = L"Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyCharacteristics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo> = L"Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo2> = L"Windows.Devices.SmartCards.ISmartCardCryptogramStorageKeyInfo2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulator> = L"Windows.Devices.SmartCards.ISmartCardEmulator";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulator2> = L"Windows.Devices.SmartCards.ISmartCardEmulator2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs> = L"Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2> = L"Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgs2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms> = L"Windows.Devices.SmartCards.ISmartCardEmulatorApduReceivedEventArgsWithCryptograms";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs> = L"Windows.Devices.SmartCards.ISmartCardEmulatorConnectionDeactivatedEventArgs";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties> = L"Windows.Devices.SmartCards.ISmartCardEmulatorConnectionProperties";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulatorStatics> = L"Windows.Devices.SmartCards.ISmartCardEmulatorStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulatorStatics2> = L"Windows.Devices.SmartCards.ISmartCardEmulatorStatics2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardEmulatorStatics3> = L"Windows.Devices.SmartCards.ISmartCardEmulatorStatics3";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardPinPolicy> = L"Windows.Devices.SmartCards.ISmartCardPinPolicy";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardPinResetDeferral> = L"Windows.Devices.SmartCards.ISmartCardPinResetDeferral";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardPinResetRequest> = L"Windows.Devices.SmartCards.ISmartCardPinResetRequest";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardProvisioning> = L"Windows.Devices.SmartCards.ISmartCardProvisioning";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardProvisioning2> = L"Windows.Devices.SmartCards.ISmartCardProvisioning2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardProvisioningStatics> = L"Windows.Devices.SmartCards.ISmartCardProvisioningStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardProvisioningStatics2> = L"Windows.Devices.SmartCards.ISmartCardProvisioningStatics2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardReader> = L"Windows.Devices.SmartCards.ISmartCardReader";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardReaderStatics> = L"Windows.Devices.SmartCards.ISmartCardReaderStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardTriggerDetails> = L"Windows.Devices.SmartCards.ISmartCardTriggerDetails";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardTriggerDetails2> = L"Windows.Devices.SmartCards.ISmartCardTriggerDetails2";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::ISmartCardTriggerDetails3> = L"Windows.Devices.SmartCards.ISmartCardTriggerDetails3";
+    template <> inline constexpr auto& name_v<Windows::Devices::SmartCards::SmartCardPinResetHandler> = L"Windows.Devices.SmartCards.SmartCardPinResetHandler";
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ICardAddedEventArgs>{ 0x18BBEF98,0xF18B,0x4DD3,{ 0xB1,0x18,0xDF,0xB2,0xC8,0xE2,0x3C,0xC6 } }; // 18BBEF98-F18B-4DD3-B118-DFB2C8E23CC6
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ICardRemovedEventArgs>{ 0x15331AAF,0x22D7,0x4945,{ 0xAF,0xC9,0x03,0xB4,0x6F,0x42,0xA6,0xCD } }; // 15331AAF-22D7-4945-AFC9-03B46F42A6CD
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::IKnownSmartCardAppletIds>{ 0x7B04D8D8,0x95B4,0x4C88,{ 0x8C,0xEA,0x41,0x1E,0x55,0x51,0x1E,0xFC } }; // 7B04D8D8-95B4-4C88-8CEA-411E55511EFC
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCard>{ 0x1B718871,0x6434,0x43F4,{ 0xB5,0x5A,0x6A,0x29,0x62,0x38,0x70,0xAA } }; // 1B718871-6434-43F4-B55A-6A29623870AA
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroup>{ 0x7DB165E6,0x6264,0x56F4,{ 0x5E,0x03,0xC8,0x63,0x85,0x39,0x5E,0xB1 } }; // 7DB165E6-6264-56F4-5E03-C86385395EB1
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>{ 0x6B0EF9DC,0x9956,0x4A62,{ 0x8D,0x4E,0xD3,0x7A,0x68,0xEB,0xC3,0xA6 } }; // 6B0EF9DC-9956-4A62-8D4E-D37A68EBC3A6
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroupFactory>{ 0x9105EB4D,0x4A65,0x4E41,{ 0x80,0x61,0xCB,0xE8,0x3F,0x36,0x95,0xE5 } }; // 9105EB4D-4A65-4E41-8061-CBE83F3695E5
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration>{ 0xDF1208D1,0x31BB,0x5596,{ 0x43,0xB1,0x6D,0x69,0xA0,0x25,0x7B,0x3A } }; // DF1208D1-31BB-5596-43B1-6D69A0257B3A
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2>{ 0x5F5508D8,0x98A7,0x4F2E,{ 0x91,0xD9,0x6C,0xFC,0xCE,0xDA,0x40,0x7F } }; // 5F5508D8-98A7-4F2E-91D9-6CFCCEDA407F
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAppletIdGroupStatics>{ 0xAB2899A9,0xE76C,0x45CF,{ 0xBF,0x1D,0x90,0xEA,0xA6,0x20,0x59,0x27 } }; // AB2899A9-E76C-45CF-BF1D-90EAA6205927
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu>{ 0x52152BAB,0xC63E,0x4531,{ 0xA8,0x57,0xD7,0x56,0xD9,0x9B,0x98,0x6A } }; // 52152BAB-C63E-4531-A857-D756D99B986A
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>{ 0x44AEBB14,0x559D,0x4531,{ 0x4E,0x51,0x89,0xDB,0x6F,0xA8,0xA5,0x7A } }; // 44AEBB14-559D-4531-4E51-89DB6FA8A57A
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3>{ 0xBF43DA74,0x6576,0x4392,{ 0x93,0x67,0xFE,0x3B,0xC9,0xE2,0xD4,0x96 } }; // BF43DA74-6576-4392-9367-FE3BC9E2D496
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApduFactory>{ 0xE97EA2FA,0xD02C,0x4C55,{ 0xB0,0x2A,0x8C,0xFF,0x7F,0xA9,0xF0,0x5B } }; // E97EA2FA-D02C-4C55-B02A-8CFF7FA9F05B
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardChallengeContext>{ 0x192A5319,0xC9C4,0x4947,{ 0x81,0xCC,0x44,0x79,0x4A,0x61,0xEF,0x91 } }; // 192A5319-C9C4-4947-81CC-44794A61EF91
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardConnect>{ 0x2FDF87E5,0x028D,0x491E,{ 0xA0,0x58,0x33,0x82,0xC3,0x98,0x6F,0x40 } }; // 2FDF87E5-028D-491E-A058-3382C3986F40
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardConnection>{ 0x7EDB991A,0xA81A,0x47BC,{ 0xA6,0x49,0x15,0x6B,0xE6,0xB7,0xF2,0x31 } }; // 7EDB991A-A81A-47BC-A649-156BE6B7F231
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator>{ 0xE39F587B,0xEDD3,0x4E49,{ 0xB5,0x94,0x0F,0xF5,0xE4,0xD0,0xC7,0x6F } }; // E39F587B-EDD3-4E49-B594-0FF5E4D0C76F
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>{ 0x7116AA34,0x5D6D,0x4B4A,{ 0x96,0xA3,0xEF,0xA4,0x7D,0x2A,0x7E,0x25 } }; // 7116AA34-5D6D-4B4A-96A3-EFA47D2A7E25
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics>{ 0x09933910,0xCB9C,0x4015,{ 0x96,0x7D,0x52,0x34,0xF3,0xB0,0x29,0x00 } }; // 09933910-CB9C-4015-967D-5234F3B02900
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics2>{ 0x09BDF5E5,0xB4BD,0x4E23,{ 0xA5,0x88,0x74,0x46,0x92,0x04,0xC1,0x28 } }; // 09BDF5E5-B4BD-4E23-A588-74469204C128
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>{ 0x2798E029,0xD687,0x4C92,{ 0x86,0xC6,0x39,0x9E,0x9A,0x0E,0xCB,0x09 } }; // 2798E029-D687-4C92-86C6-399E9A0ECB09
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>{ 0x4E6A8A5C,0x9773,0x46C4,{ 0xA3,0x2F,0xB1,0xE5,0x43,0x15,0x9E,0x04 } }; // 4E6A8A5C-9773-46C4-A32F-B1E543159E04
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>{ 0x8C7CE857,0xA7E7,0x489D,{ 0xB9,0xD6,0x36,0x80,0x61,0x51,0x50,0x12 } }; // 8C7CE857-A7E7-489D-B9D6-368061515012
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics>{ 0xFC9AC5CC,0xC1D7,0x4153,{ 0x92,0x3B,0xA2,0xD4,0x3C,0x6C,0x8D,0x49 } }; // FC9AC5CC-C1D7-4153-923B-A2D43C6C8D49
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics>{ 0xFFB58E1F,0x0692,0x4C47,{ 0x93,0xCF,0x34,0xD9,0x1F,0x9D,0xCD,0x00 } }; // FFB58E1F-0692-4C47-93CF-34D91F9DCD00
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof>{ 0xE5B9AB8C,0xA141,0x4135,{ 0x9A,0xDD,0xB0,0xD2,0xE3,0xAA,0x1F,0xC9 } }; // E5B9AB8C-A141-4135-9ADD-B0D2E3AA1FC9
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep>{ 0x947B03EB,0x8342,0x4792,{ 0xA2,0xE5,0x92,0x56,0x36,0x37,0x8A,0x53 } }; // 947B03EB-8342-4792-A2E5-925636378A53
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics>{ 0x8552546E,0x4457,0x4825,{ 0xB4,0x64,0x63,0x54,0x71,0xA3,0x9F,0x5C } }; // 8552546E-4457-4825-B464-635471A39F5C
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo>{ 0x77B0F00D,0xB097,0x4F61,{ 0xA2,0x6A,0x95,0x61,0x63,0x9C,0x9C,0x3A } }; // 77B0F00D-B097-4F61-A26A-9561639C9C3A
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo2>{ 0x000440F9,0xF7FD,0x417D,{ 0x89,0xE1,0xFB,0xB0,0x38,0x2A,0xDC,0x4D } }; // 000440F9-F7FD-417D-89E1-FBB0382ADC4D
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulator>{ 0xDFB906B2,0x875E,0x47E5,{ 0x80,0x77,0xE8,0xBF,0xF1,0xB1,0xC6,0xFB } }; // DFB906B2-875E-47E5-8077-E8BFF1B1C6FB
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulator2>{ 0xFE3FC0B8,0x8529,0x411A,{ 0x80,0x7B,0x48,0xED,0xC2,0xA0,0xAB,0x44 } }; // FE3FC0B8-8529-411A-807B-48EDC2A0AB44
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs>{ 0xD55D1576,0x69D2,0x5333,{ 0x5B,0x5F,0xF8,0xC0,0xD6,0xE9,0xF0,0x9F } }; // D55D1576-69D2-5333-5B5F-F8C0D6E9F09F
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2>{ 0x8BF93DF0,0x22E1,0x4238,{ 0x86,0x10,0x94,0xCE,0x4A,0x96,0x54,0x25 } }; // 8BF93DF0-22E1-4238-8610-94CE4A965425
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms>{ 0xD550BAC7,0xB7BF,0x4E29,{ 0x92,0x94,0x0C,0x4A,0xC3,0xC9,0x41,0xBD } }; // D550BAC7-B7BF-4E29-9294-0C4AC3C941BD
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs>{ 0x2186D8D3,0xC5EB,0x5262,{ 0x43,0xDF,0x62,0xA0,0xA1,0xB5,0x55,0x57 } }; // 2186D8D3-C5EB-5262-43DF-62A0A1B55557
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties>{ 0x4E2CA5EE,0xF969,0x507D,{ 0x6C,0xF9,0x34,0xE2,0xD1,0x8D,0xF3,0x11 } }; // 4E2CA5EE-F969-507D-6CF9-34E2D18DF311
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulatorStatics>{ 0x7A9BFC4B,0xC4D3,0x494F,{ 0xB8,0xA2,0x62,0x15,0xD8,0x1E,0x85,0xB2 } }; // 7A9BFC4B-C4D3-494F-B8A2-6215D81E85B2
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulatorStatics2>{ 0x69AE9F8A,0xB775,0x488B,{ 0x84,0x36,0x6C,0x1E,0x28,0xED,0x73,0x1F } }; // 69AE9F8A-B775-488B-8436-6C1E28ED731F
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardEmulatorStatics3>{ 0x59EA142A,0x9F09,0x43F5,{ 0x85,0x65,0xCF,0xA8,0x14,0x8E,0x4C,0xB2 } }; // 59EA142A-9F09-43F5-8565-CFA8148E4CB2
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardPinPolicy>{ 0x183CE184,0x4DB6,0x4841,{ 0xAC,0x9E,0x2A,0xC1,0xF3,0x9B,0x73,0x04 } }; // 183CE184-4DB6-4841-AC9E-2AC1F39B7304
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardPinResetDeferral>{ 0x18C94AAC,0x7805,0x4004,{ 0x85,0xE4,0xBB,0xEF,0xAC,0x8F,0x68,0x84 } }; // 18C94AAC-7805-4004-85E4-BBEFAC8F6884
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardPinResetRequest>{ 0x12FE3C4D,0x5FB9,0x4E8E,{ 0x9F,0xF6,0x61,0xF4,0x75,0x12,0x4F,0xEF } }; // 12FE3C4D-5FB9-4E8E-9FF6-61F475124FEF
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardProvisioning>{ 0x19EEEDBD,0x1FAB,0x477C,{ 0xB7,0x12,0x1A,0x2C,0x5A,0xF1,0xFD,0x6E } }; // 19EEEDBD-1FAB-477C-B712-1A2C5AF1FD6E
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardProvisioning2>{ 0x10FD28EB,0x3F79,0x4B66,{ 0x9B,0x7C,0x11,0xC1,0x49,0xB7,0xD0,0xBC } }; // 10FD28EB-3F79-4B66-9B7C-11C149B7D0BC
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardProvisioningStatics>{ 0x13882848,0x0D13,0x4E70,{ 0x97,0x35,0x51,0xDA,0xEC,0xA5,0x25,0x4F } }; // 13882848-0D13-4E70-9735-51DAECA5254F
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardProvisioningStatics2>{ 0x3447C6A8,0xC9A0,0x4BD6,{ 0xB5,0x0D,0x25,0x1F,0x4E,0x8D,0x3A,0x62 } }; // 3447C6A8-C9A0-4BD6-B50D-251F4E8D3A62
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardReader>{ 0x1074B4E0,0x54C2,0x4DF0,{ 0x81,0x7A,0x14,0xC1,0x43,0x78,0xF0,0x6C } }; // 1074B4E0-54C2-4DF0-817A-14C14378F06C
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardReaderStatics>{ 0x103C04E1,0xA1CA,0x48F2,{ 0xA2,0x81,0x5B,0x6F,0x66,0x9A,0xF1,0x07 } }; // 103C04E1-A1CA-48F2-A281-5B6F669AF107
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardTriggerDetails>{ 0x5F9BF11E,0x39EF,0x4F2B,{ 0xB4,0x4F,0x0A,0x91,0x55,0xB1,0x77,0xBC } }; // 5F9BF11E-39EF-4F2B-B44F-0A9155B177BC
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardTriggerDetails2>{ 0x2945C569,0x8975,0x4A51,{ 0x9E,0x1A,0x5F,0x8A,0x76,0xEE,0x51,0xAF } }; // 2945C569-8975-4A51-9E1A-5F8A76EE51AF
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::ISmartCardTriggerDetails3>{ 0xB3E2C27D,0x18C6,0x4BA8,{ 0x83,0x76,0xEF,0x03,0xD4,0x91,0x26,0x66 } }; // B3E2C27D-18C6-4BA8-8376-EF03D4912666
+    template <> inline constexpr guid guid_v<Windows::Devices::SmartCards::SmartCardPinResetHandler>{ 0x138D5E40,0xF3BC,0x4A5C,{ 0xB4,0x1D,0x4B,0x4E,0xF6,0x84,0xE2,0x37 } }; // 138D5E40-F3BC-4A5C-B41D-4B4EF684E237
+    template <> struct default_interface<Windows::Devices::SmartCards::CardAddedEventArgs>{ using type = Windows::Devices::SmartCards::ICardAddedEventArgs; };
+    template <> struct default_interface<Windows::Devices::SmartCards::CardRemovedEventArgs>{ using type = Windows::Devices::SmartCards::ICardRemovedEventArgs; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCard>{ using type = Windows::Devices::SmartCards::ISmartCard; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardAppletIdGroup>{ using type = Windows::Devices::SmartCards::ISmartCardAppletIdGroup; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>{ using type = Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu>{ using type = Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardChallengeContext>{ using type = Windows::Devices::SmartCards::ISmartCardChallengeContext; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardConnection>{ using type = Windows::Devices::SmartCards::ISmartCardConnection; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramGenerator>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramGenerator; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>{ using type = Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardEmulator>{ using type = Windows::Devices::SmartCards::ISmartCardEmulator; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>{ using type = Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>{ using type = Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>{ using type = Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardPinPolicy>{ using type = Windows::Devices::SmartCards::ISmartCardPinPolicy; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardPinResetDeferral>{ using type = Windows::Devices::SmartCards::ISmartCardPinResetDeferral; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardPinResetRequest>{ using type = Windows::Devices::SmartCards::ISmartCardPinResetRequest; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardProvisioning>{ using type = Windows::Devices::SmartCards::ISmartCardProvisioning; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardReader>{ using type = Windows::Devices::SmartCards::ISmartCardReader; };
+    template <> struct default_interface<Windows::Devices::SmartCards::SmartCardTriggerDetails>{ using type = Windows::Devices::SmartCards::ISmartCardTriggerDetails; };
     template <> struct abi<Windows::Devices::SmartCards::ICardAddedEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -2008,7 +1116,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ICardAddedEventArgs
     {
-        [[nodiscard]] auto SmartCard() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCard) SmartCard() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ICardAddedEventArgs>
     {
@@ -2017,7 +1125,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ICardRemovedEventArgs
     {
-        [[nodiscard]] auto SmartCard() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCard) SmartCard() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ICardRemovedEventArgs>
     {
@@ -2026,8 +1134,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_IKnownSmartCardAppletIds
     {
-        [[nodiscard]] auto PaymentSystemEnvironment() const;
-        [[nodiscard]] auto ProximityPaymentSystemEnvironment() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) PaymentSystemEnvironment() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) ProximityPaymentSystemEnvironment() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::IKnownSmartCardAppletIds>
     {
@@ -2036,9 +1144,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCard
     {
-        [[nodiscard]] auto Reader() const;
-        auto GetStatusAsync() const;
-        auto GetAnswerToResetAsync() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardReader) Reader() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardStatus>) GetStatusAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) GetAnswerToResetAsync() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCard>
     {
@@ -2047,15 +1155,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAppletIdGroup
     {
-        [[nodiscard]] auto DisplayName() const;
-        auto DisplayName(param::hstring const& value) const;
-        [[nodiscard]] auto AppletIds() const;
-        [[nodiscard]] auto SmartCardEmulationCategory() const;
-        auto SmartCardEmulationCategory(Windows::Devices::SmartCards::SmartCardEmulationCategory const& value) const;
-        [[nodiscard]] auto SmartCardEmulationType() const;
-        auto SmartCardEmulationType(Windows::Devices::SmartCards::SmartCardEmulationType const& value) const;
-        [[nodiscard]] auto AutomaticEnablement() const;
-        auto AutomaticEnablement(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
+        WINRT_IMPL_AUTO(void) DisplayName(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Storage::Streams::IBuffer>) AppletIds() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardEmulationCategory) SmartCardEmulationCategory() const;
+        WINRT_IMPL_AUTO(void) SmartCardEmulationCategory(Windows::Devices::SmartCards::SmartCardEmulationCategory const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardEmulationType) SmartCardEmulationType() const;
+        WINRT_IMPL_AUTO(void) SmartCardEmulationType(Windows::Devices::SmartCards::SmartCardEmulationType const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AutomaticEnablement() const;
+        WINRT_IMPL_AUTO(void) AutomaticEnablement(bool value) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAppletIdGroup>
     {
@@ -2064,13 +1172,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAppletIdGroup2
     {
-        [[nodiscard]] auto Logo() const;
-        auto Logo(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
-        [[nodiscard]] auto Description() const;
-        auto Description(param::hstring const& value) const;
-        [[nodiscard]] auto Properties() const;
-        [[nodiscard]] auto SecureUserAuthenticationRequired() const;
-        auto SecureUserAuthenticationRequired(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) Logo() const;
+        WINRT_IMPL_AUTO(void) Logo(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
+        WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::ValueSet) Properties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) SecureUserAuthenticationRequired() const;
+        WINRT_IMPL_AUTO(void) SecureUserAuthenticationRequired(bool value) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAppletIdGroup2>
     {
@@ -2079,7 +1187,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAppletIdGroupFactory
     {
-        auto Create(param::hstring const& displayName, param::vector<Windows::Storage::Streams::IBuffer> const& appletIds, Windows::Devices::SmartCards::SmartCardEmulationCategory const& emulationCategory, Windows::Devices::SmartCards::SmartCardEmulationType const& emulationType) const;
+        WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardAppletIdGroup) Create(param::hstring const& displayName, param::vector<Windows::Storage::Streams::IBuffer> const& appletIds, Windows::Devices::SmartCards::SmartCardEmulationCategory const& emulationCategory, Windows::Devices::SmartCards::SmartCardEmulationType const& emulationType) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAppletIdGroupFactory>
     {
@@ -2088,11 +1196,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAppletIdGroupRegistration
     {
-        [[nodiscard]] auto ActivationPolicy() const;
-        [[nodiscard]] auto AppletIdGroup() const;
-        auto RequestActivationPolicyChangeAsync(Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy const& policy) const;
-        [[nodiscard]] auto Id() const;
-        auto SetAutomaticResponseApdusAsync(param::async_iterable<Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu> const& apdus) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy) ActivationPolicy() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardAppletIdGroup) AppletIdGroup() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult>) RequestActivationPolicyChangeAsync(Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy const& policy) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) Id() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) SetAutomaticResponseApdusAsync(param::async_iterable<Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu> const& apdus) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration>
     {
@@ -2101,8 +1209,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAppletIdGroupRegistration2
     {
-        [[nodiscard]] auto SmartCardReaderId() const;
-        auto SetPropertiesAsync(Windows::Foundation::Collections::ValueSet const& props) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SmartCardReaderId() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) SetPropertiesAsync(Windows::Foundation::Collections::ValueSet const& props) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAppletIdGroupRegistration2>
     {
@@ -2111,7 +1219,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAppletIdGroupStatics
     {
-        [[nodiscard]] auto MaxAppletIds() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) MaxAppletIds() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAppletIdGroupStatics>
     {
@@ -2120,16 +1228,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAutomaticResponseApdu
     {
-        [[nodiscard]] auto CommandApdu() const;
-        auto CommandApdu(Windows::Storage::Streams::IBuffer const& value) const;
-        [[nodiscard]] auto CommandApduBitMask() const;
-        auto CommandApduBitMask(Windows::Storage::Streams::IBuffer const& value) const;
-        [[nodiscard]] auto ShouldMatchLength() const;
-        auto ShouldMatchLength(bool value) const;
-        [[nodiscard]] auto AppletId() const;
-        auto AppletId(Windows::Storage::Streams::IBuffer const& value) const;
-        [[nodiscard]] auto ResponseApdu() const;
-        auto ResponseApdu(Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) CommandApdu() const;
+        WINRT_IMPL_AUTO(void) CommandApdu(Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) CommandApduBitMask() const;
+        WINRT_IMPL_AUTO(void) CommandApduBitMask(Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) ShouldMatchLength() const;
+        WINRT_IMPL_AUTO(void) ShouldMatchLength(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) AppletId() const;
+        WINRT_IMPL_AUTO(void) AppletId(Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) ResponseApdu() const;
+        WINRT_IMPL_AUTO(void) ResponseApdu(Windows::Storage::Streams::IBuffer const& value) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu>
     {
@@ -2138,10 +1246,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAutomaticResponseApdu2
     {
-        [[nodiscard]] auto InputState() const;
-        auto InputState(Windows::Foundation::IReference<uint32_t> const& value) const;
-        [[nodiscard]] auto OutputState() const;
-        auto OutputState(Windows::Foundation::IReference<uint32_t> const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) InputState() const;
+        WINRT_IMPL_AUTO(void) InputState(Windows::Foundation::IReference<uint32_t> const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) OutputState() const;
+        WINRT_IMPL_AUTO(void) OutputState(Windows::Foundation::IReference<uint32_t> const& value) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu2>
     {
@@ -2150,8 +1258,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAutomaticResponseApdu3
     {
-        [[nodiscard]] auto AllowWhenCryptogramGeneratorNotPrepared() const;
-        auto AllowWhenCryptogramGeneratorNotPrepared(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) AllowWhenCryptogramGeneratorNotPrepared() const;
+        WINRT_IMPL_AUTO(void) AllowWhenCryptogramGeneratorNotPrepared(bool value) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApdu3>
     {
@@ -2160,7 +1268,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardAutomaticResponseApduFactory
     {
-        auto Create(Windows::Storage::Streams::IBuffer const& commandApdu, Windows::Storage::Streams::IBuffer const& responseApdu) const;
+        WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu) Create(Windows::Storage::Streams::IBuffer const& commandApdu, Windows::Storage::Streams::IBuffer const& responseApdu) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardAutomaticResponseApduFactory>
     {
@@ -2169,11 +1277,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardChallengeContext
     {
-        [[nodiscard]] auto Challenge() const;
-        auto VerifyResponseAsync(Windows::Storage::Streams::IBuffer const& response) const;
-        auto ProvisionAsync(Windows::Storage::Streams::IBuffer const& response, bool formatCard) const;
-        auto ProvisionAsync(Windows::Storage::Streams::IBuffer const& response, bool formatCard, winrt::guid const& newCardId) const;
-        auto ChangeAdministrativeKeyAsync(Windows::Storage::Streams::IBuffer const& response, Windows::Storage::Streams::IBuffer const& newAdministrativeKey) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) Challenge() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) VerifyResponseAsync(Windows::Storage::Streams::IBuffer const& response) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ProvisionAsync(Windows::Storage::Streams::IBuffer const& response, bool formatCard) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ProvisionAsync(Windows::Storage::Streams::IBuffer const& response, bool formatCard, winrt::guid const& newCardId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) ChangeAdministrativeKeyAsync(Windows::Storage::Streams::IBuffer const& response, Windows::Storage::Streams::IBuffer const& newAdministrativeKey) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardChallengeContext>
     {
@@ -2182,7 +1290,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardConnect
     {
-        auto ConnectAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardConnection>) ConnectAsync() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardConnect>
     {
@@ -2191,7 +1299,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardConnection
     {
-        auto TransmitAsync(Windows::Storage::Streams::IBuffer const& command) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) TransmitAsync(Windows::Storage::Streams::IBuffer const& command) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardConnection>
     {
@@ -2200,18 +1308,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramGenerator
     {
-        [[nodiscard]] auto SupportedCryptogramMaterialTypes() const;
-        [[nodiscard]] auto SupportedCryptogramAlgorithms() const;
-        [[nodiscard]] auto SupportedCryptogramMaterialPackageFormats() const;
-        [[nodiscard]] auto SupportedCryptogramMaterialPackageConfirmationResponseFormats() const;
-        [[nodiscard]] auto SupportedSmartCardCryptogramStorageKeyCapabilities() const;
-        auto DeleteCryptogramMaterialStorageKeyAsync(param::hstring const& storageKeyName) const;
-        auto CreateCryptogramMaterialStorageKeyAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, param::hstring const& storageKeyName, Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm const& algorithm, Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities const& capabilities) const;
-        auto RequestCryptogramMaterialStorageKeyInfoAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, param::hstring const& storageKeyName, Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& format) const;
-        auto ImportCryptogramMaterialPackageAsync(Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat const& format, param::hstring const& storageKeyName, param::hstring const& materialPackageName, Windows::Storage::Streams::IBuffer const& cryptogramMaterialPackage) const;
-        auto TryProvePossessionOfCryptogramMaterialPackageAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat const& responseFormat, param::hstring const& materialPackageName, param::hstring const& materialName, Windows::Storage::Streams::IBuffer const& challenge) const;
-        auto RequestUnlockCryptogramMaterialForUseAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior) const;
-        auto DeleteCryptogramMaterialPackageAsync(param::hstring const& materialPackageName) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramMaterialType>) SupportedCryptogramMaterialTypes() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>) SupportedCryptogramAlgorithms() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>) SupportedCryptogramMaterialPackageFormats() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>) SupportedCryptogramMaterialPackageConfirmationResponseFormats() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>) SupportedSmartCardCryptogramStorageKeyCapabilities() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>) DeleteCryptogramMaterialStorageKeyAsync(param::hstring const& storageKeyName) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>) CreateCryptogramMaterialStorageKeyAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, param::hstring const& storageKeyName, Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm const& algorithm, Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities const& capabilities) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>) RequestCryptogramMaterialStorageKeyInfoAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, param::hstring const& storageKeyName, Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& format) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>) ImportCryptogramMaterialPackageAsync(Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat const& format, param::hstring const& storageKeyName, param::hstring const& materialPackageName, Windows::Storage::Streams::IBuffer const& cryptogramMaterialPackage) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>) TryProvePossessionOfCryptogramMaterialPackageAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat const& responseFormat, param::hstring const& materialPackageName, param::hstring const& materialName, Windows::Storage::Streams::IBuffer const& challenge) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>) RequestUnlockCryptogramMaterialForUseAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>) DeleteCryptogramMaterialPackageAsync(param::hstring const& materialPackageName) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator>
     {
@@ -2220,11 +1328,11 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramGenerator2
     {
-        auto ValidateRequestApduAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, Windows::Storage::Streams::IBuffer const& apduToValidate, param::async_iterable<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep> const& cryptogramPlacementSteps) const;
-        auto GetAllCryptogramStorageKeyCharacteristicsAsync() const;
-        auto GetAllCryptogramMaterialPackageCharacteristicsAsync() const;
-        auto GetAllCryptogramMaterialPackageCharacteristicsAsync(param::hstring const& storageKeyName) const;
-        auto GetAllCryptogramMaterialCharacteristicsAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, param::hstring const& materialPackageName) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>) ValidateRequestApduAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, Windows::Storage::Streams::IBuffer const& apduToValidate, param::async_iterable<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep> const& cryptogramPlacementSteps) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>) GetAllCryptogramStorageKeyCharacteristicsAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>) GetAllCryptogramMaterialPackageCharacteristicsAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>) GetAllCryptogramMaterialPackageCharacteristicsAsync(param::hstring const& storageKeyName) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>) GetAllCryptogramMaterialCharacteristicsAsync(Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior const& promptingBehavior, param::hstring const& materialPackageName) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramGenerator2>
     {
@@ -2233,7 +1341,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramGeneratorStatics
     {
-        auto GetSmartCardCryptogramGeneratorAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGenerator>) GetSmartCardCryptogramGeneratorAsync() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics>
     {
@@ -2242,7 +1350,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramGeneratorStatics2
     {
-        auto IsSupported() const;
+        WINRT_IMPL_AUTO(bool) IsSupported() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramGeneratorStatics2>
     {
@@ -2251,8 +1359,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
     {
-        [[nodiscard]] auto OperationStatus() const;
-        [[nodiscard]] auto Characteristics() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus) OperationStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics>) Characteristics() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>
     {
@@ -2261,8 +1369,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
     {
-        [[nodiscard]] auto OperationStatus() const;
-        [[nodiscard]] auto Characteristics() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus) OperationStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics>) Characteristics() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>
     {
@@ -2271,8 +1379,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
     {
-        [[nodiscard]] auto OperationStatus() const;
-        [[nodiscard]] auto Characteristics() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus) OperationStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics>) Characteristics() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>
     {
@@ -2281,14 +1389,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramMaterialCharacteristics
     {
-        [[nodiscard]] auto MaterialName() const;
-        [[nodiscard]] auto AllowedAlgorithms() const;
-        [[nodiscard]] auto AllowedProofOfPossessionAlgorithms() const;
-        [[nodiscard]] auto AllowedValidations() const;
-        [[nodiscard]] auto MaterialType() const;
-        [[nodiscard]] auto ProtectionMethod() const;
-        [[nodiscard]] auto ProtectionVersion() const;
-        [[nodiscard]] auto MaterialLength() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) MaterialName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>) AllowedAlgorithms() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>) AllowedProofOfPossessionAlgorithms() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>) AllowedValidations() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramMaterialType) MaterialType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramMaterialProtectionMethod) ProtectionMethod() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ProtectionVersion() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaterialLength() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialCharacteristics>
     {
@@ -2297,10 +1405,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramMaterialPackageCharacteristics
     {
-        [[nodiscard]] auto PackageName() const;
-        [[nodiscard]] auto StorageKeyName() const;
-        [[nodiscard]] auto DateImported() const;
-        [[nodiscard]] auto PackageFormat() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PackageName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) StorageKeyName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) DateImported() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat) PackageFormat() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPackageCharacteristics>
     {
@@ -2309,8 +1417,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramMaterialPossessionProof
     {
-        [[nodiscard]] auto OperationStatus() const;
-        [[nodiscard]] auto Proof() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus) OperationStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) Proof() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramMaterialPossessionProof>
     {
@@ -2319,24 +1427,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramPlacementStep
     {
-        [[nodiscard]] auto Algorithm() const;
-        auto Algorithm(Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm const& value) const;
-        [[nodiscard]] auto SourceData() const;
-        auto SourceData(Windows::Storage::Streams::IBuffer const& value) const;
-        [[nodiscard]] auto CryptogramMaterialPackageName() const;
-        auto CryptogramMaterialPackageName(param::hstring const& value) const;
-        [[nodiscard]] auto CryptogramMaterialName() const;
-        auto CryptogramMaterialName(param::hstring const& value) const;
-        [[nodiscard]] auto TemplateOffset() const;
-        auto TemplateOffset(int32_t value) const;
-        [[nodiscard]] auto CryptogramOffset() const;
-        auto CryptogramOffset(int32_t value) const;
-        [[nodiscard]] auto CryptogramLength() const;
-        auto CryptogramLength(int32_t value) const;
-        [[nodiscard]] auto CryptogramPlacementOptions() const;
-        auto CryptogramPlacementOptions(Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions const& value) const;
-        [[nodiscard]] auto ChainedOutputStep() const;
-        auto ChainedOutputStep(Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm) Algorithm() const;
+        WINRT_IMPL_AUTO(void) Algorithm(Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) SourceData() const;
+        WINRT_IMPL_AUTO(void) SourceData(Windows::Storage::Streams::IBuffer const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CryptogramMaterialPackageName() const;
+        WINRT_IMPL_AUTO(void) CryptogramMaterialPackageName(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CryptogramMaterialName() const;
+        WINRT_IMPL_AUTO(void) CryptogramMaterialName(param::hstring const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) TemplateOffset() const;
+        WINRT_IMPL_AUTO(void) TemplateOffset(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) CryptogramOffset() const;
+        WINRT_IMPL_AUTO(void) CryptogramOffset(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) CryptogramLength() const;
+        WINRT_IMPL_AUTO(void) CryptogramLength(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions) CryptogramPlacementOptions() const;
+        WINRT_IMPL_AUTO(void) CryptogramPlacementOptions(Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep) ChainedOutputStep() const;
+        WINRT_IMPL_AUTO(void) ChainedOutputStep(Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep const& value) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramPlacementStep>
     {
@@ -2345,10 +1453,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramStorageKeyCharacteristics
     {
-        [[nodiscard]] auto StorageKeyName() const;
-        [[nodiscard]] auto DateCreated() const;
-        [[nodiscard]] auto Algorithm() const;
-        [[nodiscard]] auto Capabilities() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) StorageKeyName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) DateCreated() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm) Algorithm() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities) Capabilities() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyCharacteristics>
     {
@@ -2357,13 +1465,13 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramStorageKeyInfo
     {
-        [[nodiscard]] auto OperationStatus() const;
-        [[nodiscard]] auto PublicKeyBlobType() const;
-        [[nodiscard]] auto PublicKey() const;
-        [[nodiscard]] auto AttestationStatus() const;
-        [[nodiscard]] auto Attestation() const;
-        [[nodiscard]] auto AttestationCertificateChain() const;
-        [[nodiscard]] auto Capabilities() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus) OperationStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType) PublicKeyBlobType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) PublicKey() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptographicKeyAttestationStatus) AttestationStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) Attestation() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) AttestationCertificateChain() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities) Capabilities() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo>
     {
@@ -2372,7 +1480,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardCryptogramStorageKeyInfo2
     {
-        [[nodiscard]] auto OperationalRequirements() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) OperationalRequirements() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardCryptogramStorageKeyInfo2>
     {
@@ -2381,7 +1489,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulator
     {
-        [[nodiscard]] auto EnablementPolicy() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardEmulatorEnablementPolicy) EnablementPolicy() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulator>
     {
@@ -2390,16 +1498,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulator2
     {
-        auto ApduReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardEmulator, Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs> const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) ApduReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardEmulator, Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs> const& value) const;
         using ApduReceived_revoker = impl::event_revoker<Windows::Devices::SmartCards::ISmartCardEmulator2, &impl::abi_t<Windows::Devices::SmartCards::ISmartCardEmulator2>::remove_ApduReceived>;
-        ApduReceived_revoker ApduReceived(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardEmulator, Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs> const& value) const;
-        auto ApduReceived(winrt::event_token const& value) const noexcept;
-        auto ConnectionDeactivated(Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardEmulator, Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs> const& value) const;
+        [[nodiscard]] ApduReceived_revoker ApduReceived(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardEmulator, Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs> const& value) const;
+        WINRT_IMPL_AUTO(void) ApduReceived(winrt::event_token const& value) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ConnectionDeactivated(Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardEmulator, Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs> const& value) const;
         using ConnectionDeactivated_revoker = impl::event_revoker<Windows::Devices::SmartCards::ISmartCardEmulator2, &impl::abi_t<Windows::Devices::SmartCards::ISmartCardEmulator2>::remove_ConnectionDeactivated>;
-        ConnectionDeactivated_revoker ConnectionDeactivated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardEmulator, Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs> const& value) const;
-        auto ConnectionDeactivated(winrt::event_token const& value) const noexcept;
-        auto Start() const;
-        auto IsHostCardEmulationSupported() const;
+        [[nodiscard]] ConnectionDeactivated_revoker ConnectionDeactivated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardEmulator, Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs> const& value) const;
+        WINRT_IMPL_AUTO(void) ConnectionDeactivated(winrt::event_token const& value) const noexcept;
+        WINRT_IMPL_AUTO(void) Start() const;
+        WINRT_IMPL_AUTO(bool) IsHostCardEmulationSupported() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulator2>
     {
@@ -2408,10 +1516,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulatorApduReceivedEventArgs
     {
-        [[nodiscard]] auto CommandApdu() const;
-        [[nodiscard]] auto ConnectionProperties() const;
-        auto TryRespondAsync(Windows::Storage::Streams::IBuffer const& responseApdu) const;
-        [[nodiscard]] auto AutomaticResponseStatus() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) CommandApdu() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties) ConnectionProperties() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) TryRespondAsync(Windows::Storage::Streams::IBuffer const& responseApdu) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardAutomaticResponseStatus) AutomaticResponseStatus() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs>
     {
@@ -2420,8 +1528,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulatorApduReceivedEventArgs2
     {
-        [[nodiscard]] auto State() const;
-        auto TryRespondAsync(Windows::Storage::Streams::IBuffer const& responseApdu, Windows::Foundation::IReference<uint32_t> const& nextState) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) State() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) TryRespondAsync(Windows::Storage::Streams::IBuffer const& responseApdu, Windows::Foundation::IReference<uint32_t> const& nextState) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2>
     {
@@ -2430,8 +1538,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulatorApduReceivedEventArgsWithCryptograms
     {
-        auto TryRespondWithCryptogramsAsync(Windows::Storage::Streams::IBuffer const& responseTemplate, param::async_iterable<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep> const& cryptogramPlacementSteps) const;
-        auto TryRespondWithCryptogramsAsync(Windows::Storage::Streams::IBuffer const& responseTemplate, param::async_iterable<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep> const& cryptogramPlacementSteps, Windows::Foundation::IReference<uint32_t> const& nextState) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>) TryRespondWithCryptogramsAsync(Windows::Storage::Streams::IBuffer const& responseTemplate, param::async_iterable<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep> const& cryptogramPlacementSteps) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>) TryRespondWithCryptogramsAsync(Windows::Storage::Streams::IBuffer const& responseTemplate, param::async_iterable<Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep> const& cryptogramPlacementSteps, Windows::Foundation::IReference<uint32_t> const& nextState) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgsWithCryptograms>
     {
@@ -2440,8 +1548,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulatorConnectionDeactivatedEventArgs
     {
-        [[nodiscard]] auto ConnectionProperties() const;
-        [[nodiscard]] auto Reason() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties) ConnectionProperties() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedReason) Reason() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionDeactivatedEventArgs>
     {
@@ -2450,8 +1558,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulatorConnectionProperties
     {
-        [[nodiscard]] auto Id() const;
-        [[nodiscard]] auto Source() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::guid) Id() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardEmulatorConnectionSource) Source() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulatorConnectionProperties>
     {
@@ -2460,7 +1568,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulatorStatics
     {
-        auto GetDefaultAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardEmulator>) GetDefaultAsync() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulatorStatics>
     {
@@ -2469,10 +1577,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulatorStatics2
     {
-        auto GetAppletIdGroupRegistrationsAsync() const;
-        auto RegisterAppletIdGroupAsync(Windows::Devices::SmartCards::SmartCardAppletIdGroup const& appletIdGroup) const;
-        auto UnregisterAppletIdGroupAsync(Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration const& registration) const;
-        [[nodiscard]] auto MaxAppletIdGroupRegistrations() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>>) GetAppletIdGroupRegistrationsAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>) RegisterAppletIdGroupAsync(Windows::Devices::SmartCards::SmartCardAppletIdGroup const& appletIdGroup) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) UnregisterAppletIdGroupAsync(Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration const& registration) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) MaxAppletIdGroupRegistrations() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulatorStatics2>
     {
@@ -2481,7 +1589,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardEmulatorStatics3
     {
-        auto IsSupported() const;
+        WINRT_IMPL_AUTO(bool) IsSupported() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardEmulatorStatics3>
     {
@@ -2490,18 +1598,18 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardPinPolicy
     {
-        [[nodiscard]] auto MinLength() const;
-        auto MinLength(uint32_t value) const;
-        [[nodiscard]] auto MaxLength() const;
-        auto MaxLength(uint32_t value) const;
-        [[nodiscard]] auto UppercaseLetters() const;
-        auto UppercaseLetters(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption const& value) const;
-        [[nodiscard]] auto LowercaseLetters() const;
-        auto LowercaseLetters(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption const& value) const;
-        [[nodiscard]] auto Digits() const;
-        auto Digits(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption const& value) const;
-        [[nodiscard]] auto SpecialCharacters() const;
-        auto SpecialCharacters(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MinLength() const;
+        WINRT_IMPL_AUTO(void) MinLength(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) MaxLength() const;
+        WINRT_IMPL_AUTO(void) MaxLength(uint32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption) UppercaseLetters() const;
+        WINRT_IMPL_AUTO(void) UppercaseLetters(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption) LowercaseLetters() const;
+        WINRT_IMPL_AUTO(void) LowercaseLetters(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption) Digits() const;
+        WINRT_IMPL_AUTO(void) Digits(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption) SpecialCharacters() const;
+        WINRT_IMPL_AUTO(void) SpecialCharacters(Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption const& value) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardPinPolicy>
     {
@@ -2510,7 +1618,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardPinResetDeferral
     {
-        auto Complete() const;
+        WINRT_IMPL_AUTO(void) Complete() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardPinResetDeferral>
     {
@@ -2519,10 +1627,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardPinResetRequest
     {
-        [[nodiscard]] auto Challenge() const;
-        [[nodiscard]] auto Deadline() const;
-        auto GetDeferral() const;
-        auto SetResponse(Windows::Storage::Streams::IBuffer const& response) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) Challenge() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::DateTime) Deadline() const;
+        WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardPinResetDeferral) GetDeferral() const;
+        WINRT_IMPL_AUTO(void) SetResponse(Windows::Storage::Streams::IBuffer const& response) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardPinResetRequest>
     {
@@ -2531,12 +1639,12 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardProvisioning
     {
-        [[nodiscard]] auto SmartCard() const;
-        auto GetIdAsync() const;
-        auto GetNameAsync() const;
-        auto GetChallengeContextAsync() const;
-        auto RequestPinChangeAsync() const;
-        auto RequestPinResetAsync(Windows::Devices::SmartCards::SmartCardPinResetHandler const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCard) SmartCard() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<winrt::guid>) GetIdAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetNameAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardChallengeContext>) GetChallengeContextAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) RequestPinChangeAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) RequestPinResetAsync(Windows::Devices::SmartCards::SmartCardPinResetHandler const& handler) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardProvisioning>
     {
@@ -2545,7 +1653,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardProvisioning2
     {
-        auto GetAuthorityKeyContainerNameAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) GetAuthorityKeyContainerNameAsync() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardProvisioning2>
     {
@@ -2554,10 +1662,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardProvisioningStatics
     {
-        auto FromSmartCardAsync(Windows::Devices::SmartCards::SmartCard const& card) const;
-        auto RequestVirtualSmartCardCreationAsync(param::hstring const& friendlyName, Windows::Storage::Streams::IBuffer const& administrativeKey, Windows::Devices::SmartCards::SmartCardPinPolicy const& pinPolicy) const;
-        auto RequestVirtualSmartCardCreationAsync(param::hstring const& friendlyName, Windows::Storage::Streams::IBuffer const& administrativeKey, Windows::Devices::SmartCards::SmartCardPinPolicy const& pinPolicy, winrt::guid const& cardId) const;
-        auto RequestVirtualSmartCardDeletionAsync(Windows::Devices::SmartCards::SmartCard const& card) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardProvisioning>) FromSmartCardAsync(Windows::Devices::SmartCards::SmartCard const& card) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardProvisioning>) RequestVirtualSmartCardCreationAsync(param::hstring const& friendlyName, Windows::Storage::Streams::IBuffer const& administrativeKey, Windows::Devices::SmartCards::SmartCardPinPolicy const& pinPolicy) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardProvisioning>) RequestVirtualSmartCardCreationAsync(param::hstring const& friendlyName, Windows::Storage::Streams::IBuffer const& administrativeKey, Windows::Devices::SmartCards::SmartCardPinPolicy const& pinPolicy, winrt::guid const& cardId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) RequestVirtualSmartCardDeletionAsync(Windows::Devices::SmartCards::SmartCard const& card) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardProvisioningStatics>
     {
@@ -2566,8 +1674,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardProvisioningStatics2
     {
-        auto RequestAttestedVirtualSmartCardCreationAsync(param::hstring const& friendlyName, Windows::Storage::Streams::IBuffer const& administrativeKey, Windows::Devices::SmartCards::SmartCardPinPolicy const& pinPolicy) const;
-        auto RequestAttestedVirtualSmartCardCreationAsync(param::hstring const& friendlyName, Windows::Storage::Streams::IBuffer const& administrativeKey, Windows::Devices::SmartCards::SmartCardPinPolicy const& pinPolicy, winrt::guid const& cardId) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardProvisioning>) RequestAttestedVirtualSmartCardCreationAsync(param::hstring const& friendlyName, Windows::Storage::Streams::IBuffer const& administrativeKey, Windows::Devices::SmartCards::SmartCardPinPolicy const& pinPolicy) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardProvisioning>) RequestAttestedVirtualSmartCardCreationAsync(param::hstring const& friendlyName, Windows::Storage::Streams::IBuffer const& administrativeKey, Windows::Devices::SmartCards::SmartCardPinPolicy const& pinPolicy, winrt::guid const& cardId) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardProvisioningStatics2>
     {
@@ -2576,19 +1684,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardReader
     {
-        [[nodiscard]] auto DeviceId() const;
-        [[nodiscard]] auto Name() const;
-        [[nodiscard]] auto Kind() const;
-        auto GetStatusAsync() const;
-        auto FindAllCardsAsync() const;
-        auto CardAdded(Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardReader, Windows::Devices::SmartCards::CardAddedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardReaderKind) Kind() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardReaderStatus>) GetStatusAsync() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::SmartCards::SmartCard>>) FindAllCardsAsync() const;
+        WINRT_IMPL_AUTO(winrt::event_token) CardAdded(Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardReader, Windows::Devices::SmartCards::CardAddedEventArgs> const& handler) const;
         using CardAdded_revoker = impl::event_revoker<Windows::Devices::SmartCards::ISmartCardReader, &impl::abi_t<Windows::Devices::SmartCards::ISmartCardReader>::remove_CardAdded>;
-        CardAdded_revoker CardAdded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardReader, Windows::Devices::SmartCards::CardAddedEventArgs> const& handler) const;
-        auto CardAdded(winrt::event_token const& token) const noexcept;
-        auto CardRemoved(Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardReader, Windows::Devices::SmartCards::CardRemovedEventArgs> const& handler) const;
+        [[nodiscard]] CardAdded_revoker CardAdded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardReader, Windows::Devices::SmartCards::CardAddedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) CardAdded(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) CardRemoved(Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardReader, Windows::Devices::SmartCards::CardRemovedEventArgs> const& handler) const;
         using CardRemoved_revoker = impl::event_revoker<Windows::Devices::SmartCards::ISmartCardReader, &impl::abi_t<Windows::Devices::SmartCards::ISmartCardReader>::remove_CardRemoved>;
-        CardRemoved_revoker CardRemoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardReader, Windows::Devices::SmartCards::CardRemovedEventArgs> const& handler) const;
-        auto CardRemoved(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] CardRemoved_revoker CardRemoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::SmartCards::SmartCardReader, Windows::Devices::SmartCards::CardRemovedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) CardRemoved(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardReader>
     {
@@ -2597,9 +1705,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardReaderStatics
     {
-        auto GetDeviceSelector() const;
-        auto GetDeviceSelector(Windows::Devices::SmartCards::SmartCardReaderKind const& kind) const;
-        auto FromIdAsync(param::hstring const& deviceId) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector() const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(Windows::Devices::SmartCards::SmartCardReaderKind const& kind) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::SmartCards::SmartCardReader>) FromIdAsync(param::hstring const& deviceId) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardReaderStatics>
     {
@@ -2608,9 +1716,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardTriggerDetails
     {
-        [[nodiscard]] auto TriggerType() const;
-        [[nodiscard]] auto SourceAppletId() const;
-        [[nodiscard]] auto TriggerData() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardTriggerType) TriggerType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) SourceAppletId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) TriggerData() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardTriggerDetails>
     {
@@ -2619,9 +1727,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardTriggerDetails2
     {
-        [[nodiscard]] auto Emulator() const;
-        auto TryLaunchCurrentAppAsync(param::hstring const& arguments) const;
-        auto TryLaunchCurrentAppAsync(param::hstring const& arguments, Windows::Devices::SmartCards::SmartCardLaunchBehavior const& behavior) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCardEmulator) Emulator() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) TryLaunchCurrentAppAsync(param::hstring const& arguments) const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) TryLaunchCurrentAppAsync(param::hstring const& arguments, Windows::Devices::SmartCards::SmartCardLaunchBehavior const& behavior) const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardTriggerDetails2>
     {
@@ -2630,7 +1738,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_SmartCards_ISmartCardTriggerDetails3
     {
-        [[nodiscard]] auto SmartCard() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::SmartCards::SmartCard) SmartCard() const;
     };
     template <> struct consume<Windows::Devices::SmartCards::ISmartCardTriggerDetails3>
     {

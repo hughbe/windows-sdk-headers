@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_ApplicationModel_Resources_Management_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Resources.Management.1.h"
-namespace winrt::Windows::ApplicationModel::Resources::Management
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Resources::Management
 {
     struct __declspec(empty_bases) IndexedResourceCandidate : Windows::ApplicationModel::Resources::Management::IIndexedResourceCandidate
     {
@@ -23,7 +23,7 @@ namespace winrt::Windows::ApplicationModel::Resources::Management
     {
         ResourceIndexer(std::nullptr_t) noexcept {}
         ResourceIndexer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Resources::Management::IResourceIndexer(ptr, take_ownership_from_abi) {}
-        ResourceIndexer(Windows::Foundation::Uri const& projectRoot);
+        explicit ResourceIndexer(Windows::Foundation::Uri const& projectRoot);
         ResourceIndexer(Windows::Foundation::Uri const& projectRoot, Windows::Foundation::Uri const& extensionDllPath);
     };
 }

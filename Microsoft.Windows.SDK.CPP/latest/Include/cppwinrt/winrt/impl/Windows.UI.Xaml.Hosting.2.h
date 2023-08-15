@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,7 +12,7 @@
 #include "winrt/impl/Windows.UI.Xaml.Controls.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Controls.Primitives.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Hosting.1.h"
-namespace winrt::Windows::UI::Xaml::Hosting
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Hosting
 {
     struct __declspec(empty_bases) DesignerAppExitedEventArgs : Windows::UI::Xaml::Hosting::IDesignerAppExitedEventArgs
     {
@@ -24,7 +24,7 @@ namespace winrt::Windows::UI::Xaml::Hosting
     {
         DesignerAppManager(std::nullptr_t) noexcept {}
         DesignerAppManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Hosting::IDesignerAppManager(ptr, take_ownership_from_abi) {}
-        DesignerAppManager(param::hstring const& appUserModelId);
+        explicit DesignerAppManager(param::hstring const& appUserModelId);
     };
     struct __declspec(empty_bases) DesignerAppView : Windows::UI::Xaml::Hosting::IDesignerAppView,
         impl::require<DesignerAppView, Windows::Foundation::IClosable>
@@ -75,7 +75,7 @@ namespace winrt::Windows::UI::Xaml::Hosting
     {
         XamlSourceFocusNavigationRequest(std::nullptr_t) noexcept {}
         XamlSourceFocusNavigationRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest(ptr, take_ownership_from_abi) {}
-        XamlSourceFocusNavigationRequest(Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason);
+        explicit XamlSourceFocusNavigationRequest(Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason);
         XamlSourceFocusNavigationRequest(Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason, Windows::Foundation::Rect const& hintRect);
         XamlSourceFocusNavigationRequest(Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason, Windows::Foundation::Rect const& hintRect, winrt::guid const& correlationId);
     };
@@ -83,7 +83,7 @@ namespace winrt::Windows::UI::Xaml::Hosting
     {
         XamlSourceFocusNavigationResult(std::nullptr_t) noexcept {}
         XamlSourceFocusNavigationResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Hosting::IXamlSourceFocusNavigationResult(ptr, take_ownership_from_abi) {}
-        XamlSourceFocusNavigationResult(bool focusMoved);
+        explicit XamlSourceFocusNavigationResult(bool focusMoved);
     };
     struct __declspec(empty_bases) XamlUIPresenter : Windows::UI::Xaml::Hosting::IXamlUIPresenter
     {

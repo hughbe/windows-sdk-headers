@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_UI_Input_Core_2_H
 #include "winrt/impl/Windows.ApplicationModel.Core.1.h"
 #include "winrt/impl/Windows.UI.Input.Core.1.h"
-namespace winrt::Windows::UI::Input::Core
+WINRT_EXPORT namespace winrt::Windows::UI::Input::Core
 {
     struct __declspec(empty_bases) RadialControllerIndependentInputSource : Windows::UI::Input::Core::IRadialControllerIndependentInputSource,
         impl::require<RadialControllerIndependentInputSource, Windows::UI::Input::Core::IRadialControllerIndependentInputSource2>

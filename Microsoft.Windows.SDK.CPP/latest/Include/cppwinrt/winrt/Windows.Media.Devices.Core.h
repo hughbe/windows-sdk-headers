@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Media_Devices_Core_H
 #define WINRT_Windows_Media_Devices_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Media.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -16,450 +16,451 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Media.Devices.Core.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::FocalLength() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float2) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::FocalLength() const
     {
-        Windows::Foundation::Numerics::float2 value;
+        Windows::Foundation::Numerics::float2 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->get_FocalLength(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::PrincipalPoint() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float2) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::PrincipalPoint() const
     {
-        Windows::Foundation::Numerics::float2 value;
+        Windows::Foundation::Numerics::float2 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->get_PrincipalPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::RadialDistortion() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::RadialDistortion() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->get_RadialDistortion(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::TangentialDistortion() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float2) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::TangentialDistortion() const
     {
-        Windows::Foundation::Numerics::float2 value;
+        Windows::Foundation::Numerics::float2 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->get_TangentialDistortion(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::ImageWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::ImageWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->get_ImageWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::ImageHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::ImageHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->get_ImageHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::ProjectOntoFrame(Windows::Foundation::Numerics::float3 const& coordinate) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::ProjectOntoFrame(Windows::Foundation::Numerics::float3 const& coordinate) const
     {
-        Windows::Foundation::Point result;
+        Windows::Foundation::Point result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->ProjectOntoFrame(impl::bind_in(coordinate), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::UnprojectAtUnitDepth(Windows::Foundation::Point const& pixelCoordinate) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float2) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::UnprojectAtUnitDepth(Windows::Foundation::Point const& pixelCoordinate) const
     {
-        Windows::Foundation::Numerics::float2 result;
+        Windows::Foundation::Numerics::float2 result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->UnprojectAtUnitDepth(impl::bind_in(pixelCoordinate), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::ProjectManyOntoFrame(array_view<Windows::Foundation::Numerics::float3 const> coordinates, array_view<Windows::Foundation::Point> results) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::ProjectManyOntoFrame(array_view<Windows::Foundation::Numerics::float3 const> coordinates, array_view<Windows::Foundation::Point> results) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->ProjectManyOntoFrame(coordinates.size(), get_abi(coordinates), results.size(), put_abi(results)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::UnprojectPixelsAtUnitDepth(array_view<Windows::Foundation::Point const> pixelCoordinates, array_view<Windows::Foundation::Numerics::float2> results) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_ICameraIntrinsics<D>::UnprojectPixelsAtUnitDepth(array_view<Windows::Foundation::Point const> pixelCoordinates, array_view<Windows::Foundation::Numerics::float2> results) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics)->UnprojectPixelsAtUnitDepth(pixelCoordinates.size(), get_abi(pixelCoordinates), results.size(), put_abi(results)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::UndistortedProjectionTransform() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float4x4) consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::UndistortedProjectionTransform() const
     {
-        Windows::Foundation::Numerics::float4x4 value;
+        Windows::Foundation::Numerics::float4x4 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics2)->get_UndistortedProjectionTransform(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::DistortPoint(Windows::Foundation::Point const& input) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::DistortPoint(Windows::Foundation::Point const& input) const
     {
-        Windows::Foundation::Point result;
+        Windows::Foundation::Point result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics2)->DistortPoint(impl::bind_in(input), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::DistortPoints(array_view<Windows::Foundation::Point const> inputs, array_view<Windows::Foundation::Point> results) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::DistortPoints(array_view<Windows::Foundation::Point const> inputs, array_view<Windows::Foundation::Point> results) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics2)->DistortPoints(inputs.size(), get_abi(inputs), results.size(), put_abi(results)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::UndistortPoint(Windows::Foundation::Point const& input) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::UndistortPoint(Windows::Foundation::Point const& input) const
     {
-        Windows::Foundation::Point result;
+        Windows::Foundation::Point result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics2)->UndistortPoint(impl::bind_in(input), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::UndistortPoints(array_view<Windows::Foundation::Point const> inputs, array_view<Windows::Foundation::Point> results) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_ICameraIntrinsics2<D>::UndistortPoints(array_view<Windows::Foundation::Point const> inputs, array_view<Windows::Foundation::Point> results) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsics2)->UndistortPoints(inputs.size(), get_abi(inputs), results.size(), put_abi(results)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_ICameraIntrinsicsFactory<D>::Create(Windows::Foundation::Numerics::float2 const& focalLength, Windows::Foundation::Numerics::float2 const& principalPoint, Windows::Foundation::Numerics::float3 const& radialDistortion, Windows::Foundation::Numerics::float2 const& tangentialDistortion, uint32_t imageWidth, uint32_t imageHeight) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::CameraIntrinsics) consume_Windows_Media_Devices_Core_ICameraIntrinsicsFactory<D>::Create(Windows::Foundation::Numerics::float2 const& focalLength, Windows::Foundation::Numerics::float2 const& principalPoint, Windows::Foundation::Numerics::float3 const& radialDistortion, Windows::Foundation::Numerics::float2 const& tangentialDistortion, uint32_t imageWidth, uint32_t imageHeight) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::ICameraIntrinsicsFactory)->Create(impl::bind_in(focalLength), impl::bind_in(principalPoint), impl::bind_in(radialDistortion), impl::bind_in(tangentialDistortion), imageWidth, imageHeight, &result));
         return Windows::Media::Devices::Core::CameraIntrinsics{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IDepthCorrelatedCoordinateMapper<D>::UnprojectPoint(Windows::Foundation::Point const& sourcePoint, Windows::Perception::Spatial::SpatialCoordinateSystem const& targetCoordinateSystem) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Media_Devices_Core_IDepthCorrelatedCoordinateMapper<D>::UnprojectPoint(Windows::Foundation::Point const& sourcePoint, Windows::Perception::Spatial::SpatialCoordinateSystem const& targetCoordinateSystem) const
     {
-        Windows::Foundation::Numerics::float3 result;
+        Windows::Foundation::Numerics::float3 result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper)->UnprojectPoint(impl::bind_in(sourcePoint), *(void**)(&targetCoordinateSystem), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IDepthCorrelatedCoordinateMapper<D>::UnprojectPoints(array_view<Windows::Foundation::Point const> sourcePoints, Windows::Perception::Spatial::SpatialCoordinateSystem const& targetCoordinateSystem, array_view<Windows::Foundation::Numerics::float3> results) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IDepthCorrelatedCoordinateMapper<D>::UnprojectPoints(array_view<Windows::Foundation::Point const> sourcePoints, Windows::Perception::Spatial::SpatialCoordinateSystem const& targetCoordinateSystem, array_view<Windows::Foundation::Numerics::float3> results) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper)->UnprojectPoints(sourcePoints.size(), get_abi(sourcePoints), *(void**)(&targetCoordinateSystem), results.size(), put_abi(results)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IDepthCorrelatedCoordinateMapper<D>::MapPoint(Windows::Foundation::Point const& sourcePoint, Windows::Perception::Spatial::SpatialCoordinateSystem const& targetCoordinateSystem, Windows::Media::Devices::Core::CameraIntrinsics const& targetCameraIntrinsics) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Media_Devices_Core_IDepthCorrelatedCoordinateMapper<D>::MapPoint(Windows::Foundation::Point const& sourcePoint, Windows::Perception::Spatial::SpatialCoordinateSystem const& targetCoordinateSystem, Windows::Media::Devices::Core::CameraIntrinsics const& targetCameraIntrinsics) const
     {
-        Windows::Foundation::Point result;
+        Windows::Foundation::Point result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper)->MapPoint(impl::bind_in(sourcePoint), *(void**)(&targetCoordinateSystem), *(void**)(&targetCameraIntrinsics), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IDepthCorrelatedCoordinateMapper<D>::MapPoints(array_view<Windows::Foundation::Point const> sourcePoints, Windows::Perception::Spatial::SpatialCoordinateSystem const& targetCoordinateSystem, Windows::Media::Devices::Core::CameraIntrinsics const& targetCameraIntrinsics, array_view<Windows::Foundation::Point> results) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IDepthCorrelatedCoordinateMapper<D>::MapPoints(array_view<Windows::Foundation::Point const> sourcePoints, Windows::Perception::Spatial::SpatialCoordinateSystem const& targetCoordinateSystem, Windows::Media::Devices::Core::CameraIntrinsics const& targetCameraIntrinsics, array_view<Windows::Foundation::Point> results) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper)->MapPoints(sourcePoints.size(), get_abi(sourcePoints), *(void**)(&targetCoordinateSystem), *(void**)(&targetCameraIntrinsics), results.size(), put_abi(results)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::Exposure() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameExposureCapabilities) consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::Exposure() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameControlCapabilities)->get_Exposure(&value));
         return Windows::Media::Devices::Core::FrameExposureCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::ExposureCompensation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameExposureCompensationCapabilities) consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::ExposureCompensation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameControlCapabilities)->get_ExposureCompensation(&value));
         return Windows::Media::Devices::Core::FrameExposureCompensationCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::IsoSpeed() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameIsoSpeedCapabilities) consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::IsoSpeed() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameControlCapabilities)->get_IsoSpeed(&value));
         return Windows::Media::Devices::Core::FrameIsoSpeedCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::Focus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameFocusCapabilities) consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::Focus() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameControlCapabilities)->get_Focus(&value));
         return Windows::Media::Devices::Core::FrameFocusCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::PhotoConfirmationSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameControlCapabilities<D>::PhotoConfirmationSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameControlCapabilities)->get_PhotoConfirmationSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameControlCapabilities2<D>::Flash() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameFlashCapabilities) consume_Windows_Media_Devices_Core_IFrameControlCapabilities2<D>::Flash() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameControlCapabilities2)->get_Flash(&value));
         return Windows::Media::Devices::Core::FrameFlashCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameController<D>::ExposureControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameExposureControl) consume_Windows_Media_Devices_Core_IFrameController<D>::ExposureControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameController)->get_ExposureControl(&value));
         return Windows::Media::Devices::Core::FrameExposureControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameController<D>::ExposureCompensationControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameExposureCompensationControl) consume_Windows_Media_Devices_Core_IFrameController<D>::ExposureCompensationControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameController)->get_ExposureCompensationControl(&value));
         return Windows::Media::Devices::Core::FrameExposureCompensationControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameController<D>::IsoSpeedControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameIsoSpeedControl) consume_Windows_Media_Devices_Core_IFrameController<D>::IsoSpeedControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameController)->get_IsoSpeedControl(&value));
         return Windows::Media::Devices::Core::FrameIsoSpeedControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameController<D>::FocusControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameFocusControl) consume_Windows_Media_Devices_Core_IFrameController<D>::FocusControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameController)->get_FocusControl(&value));
         return Windows::Media::Devices::Core::FrameFocusControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameController<D>::PhotoConfirmationEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<bool>) consume_Windows_Media_Devices_Core_IFrameController<D>::PhotoConfirmationEnabled() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameController)->get_PhotoConfirmationEnabled(&value));
         return Windows::Foundation::IReference<bool>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameController<D>::PhotoConfirmationEnabled(Windows::Foundation::IReference<bool> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameController<D>::PhotoConfirmationEnabled(Windows::Foundation::IReference<bool> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameController)->put_PhotoConfirmationEnabled(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameController2<D>::FlashControl() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameFlashControl) consume_Windows_Media_Devices_Core_IFrameController2<D>::FlashControl() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameController2)->get_FlashControl(&value));
         return Windows::Media::Devices::Core::FrameFlashControl{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCapabilities<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameExposureCapabilities<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCapabilities)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCapabilities<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Devices_Core_IFrameExposureCapabilities<D>::Min() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCapabilities)->get_Min(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCapabilities<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Devices_Core_IFrameExposureCapabilities<D>::Max() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCapabilities)->get_Max(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCapabilities<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Devices_Core_IFrameExposureCapabilities<D>::Step() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCapabilities)->get_Step(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCompensationCapabilities<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameExposureCompensationCapabilities<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCompensationCapabilities<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_Core_IFrameExposureCompensationCapabilities<D>::Min() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities)->get_Min(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCompensationCapabilities<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_Core_IFrameExposureCompensationCapabilities<D>::Max() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities)->get_Max(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCompensationCapabilities<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_Core_IFrameExposureCompensationCapabilities<D>::Step() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities)->get_Step(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCompensationControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) consume_Windows_Media_Devices_Core_IFrameExposureCompensationControl<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCompensationControl)->get_Value(&value));
         return Windows::Foundation::IReference<float>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureCompensationControl<D>::Value(Windows::Foundation::IReference<float> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameExposureCompensationControl<D>::Value(Windows::Foundation::IReference<float> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureCompensationControl)->put_Value(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureControl<D>::Auto() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameExposureControl<D>::Auto() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureControl)->get_Auto(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureControl<D>::Auto(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameExposureControl<D>::Auto(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureControl)->put_Auto(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Devices_Core_IFrameExposureControl<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureControl)->get_Value(&value));
         return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameExposureControl<D>::Value(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameExposureControl<D>::Value(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameExposureControl)->put_Value(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashCapabilities<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameFlashCapabilities<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashCapabilities)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashCapabilities<D>::RedEyeReductionSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameFlashCapabilities<D>::RedEyeReductionSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashCapabilities)->get_RedEyeReductionSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashCapabilities<D>::PowerSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameFlashCapabilities<D>::PowerSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashCapabilities)->get_PowerSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameFlashMode) consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::Mode() const
     {
-        Windows::Media::Devices::Core::FrameFlashMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashControl)->get_Mode(put_abi(value)));
+        Windows::Media::Devices::Core::FrameFlashMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashControl)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::Mode(Windows::Media::Devices::Core::FrameFlashMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::Mode(Windows::Media::Devices::Core::FrameFlashMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashControl)->put_Mode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::Auto() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::Auto() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashControl)->get_Auto(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::Auto(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::Auto(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashControl)->put_Auto(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::RedEyeReduction() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::RedEyeReduction() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashControl)->get_RedEyeReduction(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::RedEyeReduction(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::RedEyeReduction(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashControl)->put_RedEyeReduction(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::PowerPercent() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::PowerPercent() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashControl)->get_PowerPercent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::PowerPercent(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameFlashControl<D>::PowerPercent(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFlashControl)->put_PowerPercent(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFocusCapabilities<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameFocusCapabilities<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFocusCapabilities)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFocusCapabilities<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_Core_IFrameFocusCapabilities<D>::Min() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFocusCapabilities)->get_Min(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFocusCapabilities<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_Core_IFrameFocusCapabilities<D>::Max() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFocusCapabilities)->get_Max(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFocusCapabilities<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_Core_IFrameFocusCapabilities<D>::Step() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFocusCapabilities)->get_Step(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFocusControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Devices_Core_IFrameFocusControl<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFocusControl)->get_Value(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameFocusControl<D>::Value(Windows::Foundation::IReference<uint32_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameFocusControl<D>::Value(Windows::Foundation::IReference<uint32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameFocusControl)->put_Value(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameIsoSpeedCapabilities<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameIsoSpeedCapabilities<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameIsoSpeedCapabilities<D>::Min() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_Core_IFrameIsoSpeedCapabilities<D>::Min() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities)->get_Min(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameIsoSpeedCapabilities<D>::Max() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_Core_IFrameIsoSpeedCapabilities<D>::Max() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities)->get_Max(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameIsoSpeedCapabilities<D>::Step() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Media_Devices_Core_IFrameIsoSpeedCapabilities<D>::Step() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities)->get_Step(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameIsoSpeedControl<D>::Auto() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IFrameIsoSpeedControl<D>::Auto() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameIsoSpeedControl)->get_Auto(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameIsoSpeedControl<D>::Auto(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameIsoSpeedControl<D>::Auto(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameIsoSpeedControl)->put_Auto(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameIsoSpeedControl<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Devices_Core_IFrameIsoSpeedControl<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameIsoSpeedControl)->get_Value(&value));
         return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IFrameIsoSpeedControl<D>::Value(Windows::Foundation::IReference<uint32_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IFrameIsoSpeedControl<D>::Value(Windows::Foundation::IReference<uint32_t> const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IFrameIsoSpeedControl)->put_Value(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::Supported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::Supported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IVariablePhotoSequenceController)->get_Supported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::MaxPhotosPerSecond() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::MaxPhotosPerSecond() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IVariablePhotoSequenceController)->get_MaxPhotosPerSecond(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::PhotosPerSecondLimit() const
+    template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::PhotosPerSecondLimit() const
     {
-        float value;
+        float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IVariablePhotoSequenceController)->get_PhotosPerSecondLimit(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::PhotosPerSecondLimit(float value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::PhotosPerSecondLimit(float value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IVariablePhotoSequenceController)->put_PhotosPerSecondLimit(value));
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::GetHighestConcurrentFrameRate(Windows::Media::MediaProperties::IMediaEncodingProperties const& captureProperties) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaRatio) consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::GetHighestConcurrentFrameRate(Windows::Media::MediaProperties::IMediaEncodingProperties const& captureProperties) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IVariablePhotoSequenceController)->GetHighestConcurrentFrameRate(*(void**)(&captureProperties), &value));
         return Windows::Media::MediaProperties::MediaRatio{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::GetCurrentFrameRate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::MediaRatio) consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::GetCurrentFrameRate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IVariablePhotoSequenceController)->GetCurrentFrameRate(&value));
         return Windows::Media::MediaProperties::MediaRatio{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::FrameCapabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::Core::FrameControlCapabilities) consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::FrameCapabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IVariablePhotoSequenceController)->get_FrameCapabilities(&value));
         return Windows::Media::Devices::Core::FrameControlCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::DesiredFrameControllers() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Media::Devices::Core::FrameController>) consume_Windows_Media_Devices_Core_IVariablePhotoSequenceController<D>::DesiredFrameControllers() const
     {
         void* items{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::Core::IVariablePhotoSequenceController)->get_DesiredFrameControllers(&items));
         return Windows::Foundation::Collections::IVector<Windows::Media::Devices::Core::FrameController>{ items, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::ICameraIntrinsics> : produce_base<D, Windows::Media::Devices::Core::ICameraIntrinsics>
     {
@@ -542,6 +543,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::ICameraIntrinsics2> : produce_base<D, Windows::Media::Devices::Core::ICameraIntrinsics2>
     {
@@ -586,6 +589,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::ICameraIntrinsicsFactory> : produce_base<D, Windows::Media::Devices::Core::ICameraIntrinsicsFactory>
     {
@@ -598,6 +603,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper> : produce_base<D, Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper>
     {
@@ -634,6 +641,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameControlCapabilities> : produce_base<D, Windows::Media::Devices::Core::IFrameControlCapabilities>
     {
@@ -677,6 +686,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameControlCapabilities2> : produce_base<D, Windows::Media::Devices::Core::IFrameControlCapabilities2>
     {
@@ -689,6 +700,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameController> : produce_base<D, Windows::Media::Devices::Core::IFrameController>
     {
@@ -740,6 +753,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameController2> : produce_base<D, Windows::Media::Devices::Core::IFrameController2>
     {
@@ -752,6 +767,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameExposureCapabilities> : produce_base<D, Windows::Media::Devices::Core::IFrameExposureCapabilities>
     {
@@ -787,6 +804,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities> : produce_base<D, Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities>
     {
@@ -819,6 +838,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameExposureCompensationControl> : produce_base<D, Windows::Media::Devices::Core::IFrameExposureCompensationControl>
     {
@@ -838,6 +859,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameExposureControl> : produce_base<D, Windows::Media::Devices::Core::IFrameExposureControl>
     {
@@ -871,6 +894,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameFlashCapabilities> : produce_base<D, Windows::Media::Devices::Core::IFrameFlashCapabilities>
     {
@@ -896,6 +921,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameFlashControl> : produce_base<D, Windows::Media::Devices::Core::IFrameFlashControl>
     {
@@ -956,6 +983,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameFocusCapabilities> : produce_base<D, Windows::Media::Devices::Core::IFrameFocusCapabilities>
     {
@@ -988,6 +1017,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameFocusControl> : produce_base<D, Windows::Media::Devices::Core::IFrameFocusControl>
     {
@@ -1007,6 +1038,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities> : produce_base<D, Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities>
     {
@@ -1039,6 +1072,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IFrameIsoSpeedControl> : produce_base<D, Windows::Media::Devices::Core::IFrameIsoSpeedControl>
     {
@@ -1072,6 +1107,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Media::Devices::Core::IVariablePhotoSequenceController> : produce_base<D, Windows::Media::Devices::Core::IVariablePhotoSequenceController>
     {
@@ -1136,53 +1173,56 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Media::Devices::Core
+WINRT_EXPORT namespace winrt::Windows::Media::Devices::Core
 {
     inline CameraIntrinsics::CameraIntrinsics(Windows::Foundation::Numerics::float2 const& focalLength, Windows::Foundation::Numerics::float2 const& principalPoint, Windows::Foundation::Numerics::float3 const& radialDistortion, Windows::Foundation::Numerics::float2 const& tangentialDistortion, uint32_t imageWidth, uint32_t imageHeight) :
-        CameraIntrinsics(impl::call_factory<CameraIntrinsics, Windows::Media::Devices::Core::ICameraIntrinsicsFactory>([&](auto&& f) { return f.Create(focalLength, principalPoint, radialDistortion, tangentialDistortion, imageWidth, imageHeight); }))
+        CameraIntrinsics(impl::call_factory<CameraIntrinsics, ICameraIntrinsicsFactory>([&](ICameraIntrinsicsFactory const& f) { return f.Create(focalLength, principalPoint, radialDistortion, tangentialDistortion, imageWidth, imageHeight); }))
     {
     }
     inline FrameController::FrameController() :
-        FrameController(impl::call_factory<FrameController>([](auto&& f) { return f.template ActivateInstance<FrameController>(); }))
+        FrameController(impl::call_factory_cast<FrameController(*)(Windows::Foundation::IActivationFactory const&), FrameController>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<FrameController>(); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Media::Devices::Core::ICameraIntrinsics> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::ICameraIntrinsics> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::ICameraIntrinsics2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::ICameraIntrinsics2> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::ICameraIntrinsicsFactory> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::ICameraIntrinsicsFactory> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameControlCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameControlCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameControlCapabilities2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameControlCapabilities2> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameController> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameController2> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameController2> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameExposureCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameExposureCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameExposureCompensationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameExposureCompensationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameExposureControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameExposureControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameFlashCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameFlashCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameFlashControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameFlashControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameFocusCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameFocusCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameFocusControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameFocusControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameIsoSpeedControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IFrameIsoSpeedControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::IVariablePhotoSequenceController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::IVariablePhotoSequenceController> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::CameraIntrinsics> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::CameraIntrinsics> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameControlCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameControlCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameController> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameExposureControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameExposureControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameFlashControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameFlashControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameFocusControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameFocusControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl> {};
-    template<> struct hash<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController> : winrt::impl::hash_base<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Media::Devices::Core::ICameraIntrinsics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::ICameraIntrinsics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::ICameraIntrinsicsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IDepthCorrelatedCoordinateMapper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameControlCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameControlCapabilities2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameController2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameExposureCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameExposureCompensationCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameExposureCompensationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameExposureControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameFlashCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameFlashControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameFocusCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameFocusControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameIsoSpeedCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IFrameIsoSpeedControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::IVariablePhotoSequenceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::CameraIntrinsics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameControlCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameExposureControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameFlashControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameFocusControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -1,15 +1,19 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_ApplicationModel_UserDataAccounts_Provider_0_H
 #define WINRT_Windows_ApplicationModel_UserDataAccounts_Provider_0_H
-namespace winrt::Windows::ApplicationModel::UserDataAccounts
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataAccounts
 {
     enum class UserDataAccountContentKinds : uint32_t;
 }
-namespace winrt::Windows::ApplicationModel::UserDataAccounts::Provider
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+}
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataAccounts::Provider
 {
     enum class UserDataAccountProviderOperationKind : int32_t
     {
@@ -34,130 +38,37 @@ namespace winrt::Windows::ApplicationModel::UserDataAccounts::Provider
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderAddAccountOperation" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderResolveErrorsOperation" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderSettingsOperation" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind" };
-    };
-    template <> struct name<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind>
-    {
-        static constexpr auto & value{ L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind" };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo>
-    {
-        static constexpr guid value{ 0x5F200037,0xF6EF,0x4EC3,{ 0x86,0x30,0x01,0x2C,0x59,0xC1,0x14,0x9F } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation>
-    {
-        static constexpr guid value{ 0xB9C72530,0x3F84,0x4B5D,{ 0x8E,0xAA,0x45,0xE9,0x7A,0xA8,0x42,0xED } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
-    {
-        static constexpr guid value{ 0xA20AAD63,0x888C,0x4A62,{ 0xA3,0xDD,0x34,0xD0,0x7A,0x80,0x2B,0x2B } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation>
-    {
-        static constexpr guid value{ 0x6235DC15,0xBFCB,0x41E1,{ 0x99,0x57,0x97,0x59,0xA2,0x88,0x46,0xCC } };
-    };
-    template <> struct guid_storage<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation>
-    {
-        static constexpr guid value{ 0x92034DB7,0x8648,0x4F30,{ 0xAC,0xFA,0x30,0x02,0x65,0x8C,0xA8,0x0D } };
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>
-    {
-        using type = Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>
-    {
-        using type = Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>
-    {
-        using type = Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation;
-    };
-    template <> struct default_interface<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>
-    {
-        using type = Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation;
-    };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation>{ using type = interface_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>{ using type = class_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind>{ using type = enum_category; };
+    template <> struct category<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo> = L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation> = L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation> = L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation> = L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind> = L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind> = L"Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo> = L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountPartnerAccountInfo";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation> = L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderAddAccountOperation";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation> = L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation> = L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderResolveErrorsOperation";
+    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation> = L"Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderSettingsOperation";
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo>{ 0x5F200037,0xF6EF,0x4EC3,{ 0x86,0x30,0x01,0x2C,0x59,0xC1,0x14,0x9F } }; // 5F200037-F6EF-4EC3-8630-012C59C1149F
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation>{ 0xB9C72530,0x3F84,0x4B5D,{ 0x8E,0xAA,0x45,0xE9,0x7A,0xA8,0x42,0xED } }; // B9C72530-3F84-4B5D-8EAA-45E97AA842ED
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>{ 0xA20AAD63,0x888C,0x4A62,{ 0xA3,0xDD,0x34,0xD0,0x7A,0x80,0x2B,0x2B } }; // A20AAD63-888C-4A62-A3DD-34D07A802B2B
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation>{ 0x6235DC15,0xBFCB,0x41E1,{ 0x99,0x57,0x97,0x59,0xA2,0x88,0x46,0xCC } }; // 6235DC15-BFCB-41E1-9957-9759A28846CC
+    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation>{ 0x92034DB7,0x8648,0x4F30,{ 0xAC,0xFA,0x30,0x02,0x65,0x8C,0xA8,0x0D } }; // 92034DB7-8648-4F30-ACFA-3002658CA80D
+    template <> struct default_interface<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>{ using type = Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo; };
+    template <> struct default_interface<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>{ using type = Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation; };
+    template <> struct default_interface<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>{ using type = Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation; };
+    template <> struct default_interface<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>{ using type = Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation; };
     template <> struct abi<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -202,9 +113,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountPartnerAccountInfo
     {
-        [[nodiscard]] auto DisplayName() const;
-        [[nodiscard]] auto Priority() const;
-        [[nodiscard]] auto AccountKind() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) Priority() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind) AccountKind() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountPartnerAccountInfo>
     {
@@ -213,9 +124,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountProviderAddAccountOperation
     {
-        [[nodiscard]] auto ContentKinds() const;
-        [[nodiscard]] auto PartnerAccountInfos() const;
-        auto ReportCompleted(param::hstring const& userDataAccountId) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds) ContentKinds() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>) PartnerAccountInfos() const;
+        WINRT_IMPL_AUTO(void) ReportCompleted(param::hstring const& userDataAccountId) const;
     };
     template <> struct consume<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderAddAccountOperation>
     {
@@ -224,7 +135,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountProviderOperation
     {
-        [[nodiscard]] auto Kind() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind) Kind() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
     {
@@ -233,8 +144,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountProviderResolveErrorsOperation
     {
-        [[nodiscard]] auto UserDataAccountId() const;
-        auto ReportCompleted() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserDataAccountId() const;
+        WINRT_IMPL_AUTO(void) ReportCompleted() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderResolveErrorsOperation>
     {
@@ -243,8 +154,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserDataAccounts_Provider_IUserDataAccountProviderSettingsOperation
     {
-        [[nodiscard]] auto UserDataAccountId() const;
-        auto ReportCompleted() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) UserDataAccountId() const;
+        WINRT_IMPL_AUTO(void) ReportCompleted() const;
     };
     template <> struct consume<Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderSettingsOperation>
     {

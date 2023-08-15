@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Perception_Provider_H
 #define WINRT_Windows_Devices_Perception_Provider_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.Perception.h"
 #include "winrt/impl/Windows.Devices.Perception.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -17,279 +17,279 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.Perception.Provider.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IKnownPerceptionFrameKindStatics<D>::Color() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_Provider_IKnownPerceptionFrameKindStatics<D>::Color() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics)->get_Color(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IKnownPerceptionFrameKindStatics<D>::Depth() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_Provider_IKnownPerceptionFrameKindStatics<D>::Depth() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics)->get_Depth(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IKnownPerceptionFrameKindStatics<D>::Infrared() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_Provider_IKnownPerceptionFrameKindStatics<D>::Infrared() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics)->get_Infrared(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionControlGroup<D>::FrameProviderIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Devices_Perception_Provider_IPerceptionControlGroup<D>::FrameProviderIds() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionControlGroup)->get_FrameProviderIds(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionControlGroupFactory<D>::Create(param::iterable<hstring> const& ids) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::Provider::PerceptionControlGroup) consume_Windows_Devices_Perception_Provider_IPerceptionControlGroupFactory<D>::Create(param::iterable<hstring> const& ids) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionControlGroupFactory)->Create(*(void**)(&ids), &result));
         return Windows::Devices::Perception::Provider::PerceptionControlGroup{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionCorrelation<D>::TargetId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_Provider_IPerceptionCorrelation<D>::TargetId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionCorrelation)->get_TargetId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionCorrelation<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Devices_Perception_Provider_IPerceptionCorrelation<D>::Position() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionCorrelation)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionCorrelation<D>::Orientation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::quaternion) consume_Windows_Devices_Perception_Provider_IPerceptionCorrelation<D>::Orientation() const
     {
-        Windows::Foundation::Numerics::quaternion value;
+        Windows::Foundation::Numerics::quaternion value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionCorrelation)->get_Orientation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionCorrelationFactory<D>::Create(param::hstring const& targetId, Windows::Foundation::Numerics::float3 const& position, Windows::Foundation::Numerics::quaternion const& orientation) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::Provider::PerceptionCorrelation) consume_Windows_Devices_Perception_Provider_IPerceptionCorrelationFactory<D>::Create(param::hstring const& targetId, Windows::Foundation::Numerics::float3 const& position, Windows::Foundation::Numerics::quaternion const& orientation) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionCorrelationFactory)->Create(*(void**)(&targetId), impl::bind_in(position), impl::bind_in(orientation), &result));
         return Windows::Devices::Perception::Provider::PerceptionCorrelation{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionCorrelationGroup<D>::RelativeLocations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Perception::Provider::PerceptionCorrelation>) consume_Windows_Devices_Perception_Provider_IPerceptionCorrelationGroup<D>::RelativeLocations() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionCorrelationGroup)->get_RelativeLocations(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Perception::Provider::PerceptionCorrelation>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionCorrelationGroupFactory<D>::Create(param::iterable<Windows::Devices::Perception::Provider::PerceptionCorrelation> const& relativeLocations) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::Provider::PerceptionCorrelationGroup) consume_Windows_Devices_Perception_Provider_IPerceptionCorrelationGroupFactory<D>::Create(param::iterable<Windows::Devices::Perception::Provider::PerceptionCorrelation> const& relativeLocations) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionCorrelationGroupFactory)->Create(*(void**)(&relativeLocations), &result));
         return Windows::Devices::Perception::Provider::PerceptionCorrelationGroup{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFaceAuthenticationGroup<D>::FrameProviderIds() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Devices_Perception_Provider_IPerceptionFaceAuthenticationGroup<D>::FrameProviderIds() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroup)->get_FrameProviderIds(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFaceAuthenticationGroupFactory<D>::Create(param::iterable<hstring> const& ids, Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler const& startHandler, Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler const& stopHandler) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup) consume_Windows_Devices_Perception_Provider_IPerceptionFaceAuthenticationGroupFactory<D>::Create(param::iterable<hstring> const& ids, Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler const& startHandler, Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler const& stopHandler) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroupFactory)->Create(*(void**)(&ids), *(void**)(&startHandler), *(void**)(&stopHandler), &result));
         return Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrame<D>::RelativeTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Perception_Provider_IPerceptionFrame<D>::RelativeTime() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrame)->get_RelativeTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrame<D>::RelativeTime(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrame<D>::RelativeTime(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrame)->put_RelativeTime(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrame<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::ValueSet) consume_Windows_Devices_Perception_Provider_IPerceptionFrame<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrame)->get_Properties(&value));
         return Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrame<D>::FrameData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IMemoryBuffer) consume_Windows_Devices_Perception_Provider_IPerceptionFrame<D>::FrameData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrame)->get_FrameData(&value));
         return Windows::Foundation::IMemoryBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::FrameProviderInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::FrameProviderInfo() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProvider)->get_FrameProviderInfo(&result));
         return Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::Available() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::Available() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProvider)->get_Available(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IPropertySet) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProvider)->get_Properties(&value));
         return Windows::Foundation::Collections::IPropertySet{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::Start() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::Start() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProvider)->Start());
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::Stop() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::Stop() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProvider)->Stop());
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::SetProperty(Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProvider<D>::SetProperty(Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProvider)->SetProperty(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::Id() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::Id() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::Id(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::Id(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->put_Id(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::DisplayName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::DisplayName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::DisplayName(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::DisplayName(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->put_DisplayName(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::DeviceKind() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::DeviceKind() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->get_DeviceKind(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::DeviceKind(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::DeviceKind(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->put_DeviceKind(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::FrameKind() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::FrameKind() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->get_FrameKind(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::FrameKind(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::FrameKind(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->put_FrameKind(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::Hidden() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::Hidden() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->get_Hidden(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::Hidden(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderInfo<D>::Hidden(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo)->put_Hidden(value));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManager<D>::GetFrameProvider(Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo const& frameProviderInfo) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::Provider::IPerceptionFrameProvider) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManager<D>::GetFrameProvider(Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo const& frameProviderInfo) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager)->GetFrameProvider(*(void**)(&frameProviderInfo), &result));
         return Windows::Devices::Perception::Provider::IPerceptionFrameProvider{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::RegisterFrameProviderInfo(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo const& frameProviderInfo) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::RegisterFrameProviderInfo(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo const& frameProviderInfo) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->RegisterFrameProviderInfo(*(void**)(&manager), *(void**)(&frameProviderInfo)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UnregisterFrameProviderInfo(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo const& frameProviderInfo) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UnregisterFrameProviderInfo(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo const& frameProviderInfo) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->UnregisterFrameProviderInfo(*(void**)(&manager), *(void**)(&frameProviderInfo)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::RegisterFaceAuthenticationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& faceAuthenticationGroup) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::RegisterFaceAuthenticationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& faceAuthenticationGroup) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->RegisterFaceAuthenticationGroup(*(void**)(&manager), *(void**)(&faceAuthenticationGroup)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UnregisterFaceAuthenticationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& faceAuthenticationGroup) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UnregisterFaceAuthenticationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& faceAuthenticationGroup) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->UnregisterFaceAuthenticationGroup(*(void**)(&manager), *(void**)(&faceAuthenticationGroup)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::RegisterControlGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionControlGroup const& controlGroup) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::RegisterControlGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionControlGroup const& controlGroup) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->RegisterControlGroup(*(void**)(&manager), *(void**)(&controlGroup)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UnregisterControlGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionControlGroup const& controlGroup) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UnregisterControlGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionControlGroup const& controlGroup) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->UnregisterControlGroup(*(void**)(&manager), *(void**)(&controlGroup)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::RegisterCorrelationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionCorrelationGroup const& correlationGroup) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::RegisterCorrelationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionCorrelationGroup const& correlationGroup) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->RegisterCorrelationGroup(*(void**)(&manager), *(void**)(&correlationGroup)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UnregisterCorrelationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionCorrelationGroup const& correlationGroup) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UnregisterCorrelationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionCorrelationGroup const& correlationGroup) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->UnregisterCorrelationGroup(*(void**)(&manager), *(void**)(&correlationGroup)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UpdateAvailabilityForProvider(Windows::Devices::Perception::Provider::IPerceptionFrameProvider const& provider, bool available) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::UpdateAvailabilityForProvider(Windows::Devices::Perception::Provider::IPerceptionFrameProvider const& provider, bool available) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->UpdateAvailabilityForProvider(*(void**)(&provider), available));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::PublishFrameForProvider(Windows::Devices::Perception::Provider::IPerceptionFrameProvider const& provider, Windows::Devices::Perception::Provider::PerceptionFrame const& frame) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionFrameProviderManagerServiceStatics<D>::PublishFrameForProvider(Windows::Devices::Perception::Provider::IPerceptionFrameProvider const& provider, Windows::Devices::Perception::Provider::PerceptionFrame const& frame) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics)->PublishFrameForProvider(*(void**)(&provider), *(void**)(&frame)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::Name() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::Name() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest)->get_Value(&value));
         return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus) consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::Status() const
     {
-        Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest)->get_Status(put_abi(value)));
+        Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::Status(Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::Status(Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest)->put_Status(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_Perception_Provider_IPerceptionPropertyChangeRequest<D>::GetDeferral() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest)->GetDeferral(&result));
         return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionVideoFrameAllocator<D>::AllocateFrame() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::Provider::PerceptionFrame) consume_Windows_Devices_Perception_Provider_IPerceptionVideoFrameAllocator<D>::AllocateFrame() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocator)->AllocateFrame(&value));
         return Windows::Devices::Perception::Provider::PerceptionFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionVideoFrameAllocator<D>::CopyFromVideoFrame(Windows::Media::VideoFrame const& frame) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::Provider::PerceptionFrame) consume_Windows_Devices_Perception_Provider_IPerceptionVideoFrameAllocator<D>::CopyFromVideoFrame(Windows::Media::VideoFrame const& frame) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocator)->CopyFromVideoFrame(*(void**)(&frame), &value));
         return Windows::Devices::Perception::Provider::PerceptionFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Perception_Provider_IPerceptionVideoFrameAllocatorFactory<D>::Create(uint32_t maxOutstandingFrameCountForWrite, Windows::Graphics::Imaging::BitmapPixelFormat const& format, Windows::Foundation::Size const& resolution, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator) consume_Windows_Devices_Perception_Provider_IPerceptionVideoFrameAllocatorFactory<D>::Create(uint32_t maxOutstandingFrameCountForWrite, Windows::Graphics::Imaging::BitmapPixelFormat const& format, Windows::Foundation::Size const& resolution, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocatorFactory)->Create(maxOutstandingFrameCountForWrite, static_cast<int32_t>(format), impl::bind_in(resolution), static_cast<int32_t>(alpha), &result));
         return Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator{ result, take_ownership_from_abi };
     }
-    template <typename H> struct delegate<Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler, H> : implements_delegate<Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler, H>
+    template <typename H> struct delegate<Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler, H> final : implements_delegate<Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler, H>(std::forward<H>(handler)) {}
 
@@ -300,7 +300,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename H> struct delegate<Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler, H> : implements_delegate<Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler, H>
+    template <typename H> struct delegate<Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler, H> final : implements_delegate<Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler, H>
     {
         delegate(H&& handler) : implements_delegate<Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler, H>(std::forward<H>(handler)) {}
 
@@ -311,6 +311,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics> : produce_base<D, Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics>
     {
@@ -339,6 +340,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionControlGroup> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionControlGroup>
     {
@@ -351,6 +354,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionControlGroupFactory> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionControlGroupFactory>
     {
@@ -363,6 +368,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionCorrelation> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionCorrelation>
     {
@@ -391,6 +398,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionCorrelationFactory> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionCorrelationFactory>
     {
@@ -403,6 +412,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionCorrelationGroup> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionCorrelationGroup>
     {
@@ -415,6 +426,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionCorrelationGroupFactory> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionCorrelationGroupFactory>
     {
@@ -427,6 +440,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroup> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroup>
     {
@@ -439,6 +454,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroupFactory> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroupFactory>
     {
@@ -451,6 +468,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionFrame> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionFrame>
     {
@@ -486,6 +505,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionFrameProvider> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionFrameProvider>
     {
@@ -534,6 +554,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo>
     {
@@ -612,6 +633,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>
     {
@@ -624,6 +646,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>
     {
@@ -698,6 +721,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest>
     {
@@ -740,6 +765,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocator> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocator>
     {
@@ -760,6 +787,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocatorFactory> : produce_base<D, Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocatorFactory>
     {
@@ -772,83 +801,84 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Perception::Provider
+WINRT_EXPORT namespace winrt::Windows::Devices::Perception::Provider
 {
     inline auto KnownPerceptionFrameKind::Color()
     {
-        return impl::call_factory<KnownPerceptionFrameKind, Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics>([&](auto&& f) { return f.Color(); });
+        return impl::call_factory_cast<hstring(*)(IKnownPerceptionFrameKindStatics const&), KnownPerceptionFrameKind, IKnownPerceptionFrameKindStatics>([](IKnownPerceptionFrameKindStatics const& f) { return f.Color(); });
     }
     inline auto KnownPerceptionFrameKind::Depth()
     {
-        return impl::call_factory<KnownPerceptionFrameKind, Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics>([&](auto&& f) { return f.Depth(); });
+        return impl::call_factory_cast<hstring(*)(IKnownPerceptionFrameKindStatics const&), KnownPerceptionFrameKind, IKnownPerceptionFrameKindStatics>([](IKnownPerceptionFrameKindStatics const& f) { return f.Depth(); });
     }
     inline auto KnownPerceptionFrameKind::Infrared()
     {
-        return impl::call_factory<KnownPerceptionFrameKind, Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics>([&](auto&& f) { return f.Infrared(); });
+        return impl::call_factory_cast<hstring(*)(IKnownPerceptionFrameKindStatics const&), KnownPerceptionFrameKind, IKnownPerceptionFrameKindStatics>([](IKnownPerceptionFrameKindStatics const& f) { return f.Infrared(); });
     }
     inline PerceptionControlGroup::PerceptionControlGroup(param::iterable<hstring> const& ids) :
-        PerceptionControlGroup(impl::call_factory<PerceptionControlGroup, Windows::Devices::Perception::Provider::IPerceptionControlGroupFactory>([&](auto&& f) { return f.Create(ids); }))
+        PerceptionControlGroup(impl::call_factory<PerceptionControlGroup, IPerceptionControlGroupFactory>([&](IPerceptionControlGroupFactory const& f) { return f.Create(ids); }))
     {
     }
     inline PerceptionCorrelation::PerceptionCorrelation(param::hstring const& targetId, Windows::Foundation::Numerics::float3 const& position, Windows::Foundation::Numerics::quaternion const& orientation) :
-        PerceptionCorrelation(impl::call_factory<PerceptionCorrelation, Windows::Devices::Perception::Provider::IPerceptionCorrelationFactory>([&](auto&& f) { return f.Create(targetId, position, orientation); }))
+        PerceptionCorrelation(impl::call_factory<PerceptionCorrelation, IPerceptionCorrelationFactory>([&](IPerceptionCorrelationFactory const& f) { return f.Create(targetId, position, orientation); }))
     {
     }
     inline PerceptionCorrelationGroup::PerceptionCorrelationGroup(param::iterable<Windows::Devices::Perception::Provider::PerceptionCorrelation> const& relativeLocations) :
-        PerceptionCorrelationGroup(impl::call_factory<PerceptionCorrelationGroup, Windows::Devices::Perception::Provider::IPerceptionCorrelationGroupFactory>([&](auto&& f) { return f.Create(relativeLocations); }))
+        PerceptionCorrelationGroup(impl::call_factory<PerceptionCorrelationGroup, IPerceptionCorrelationGroupFactory>([&](IPerceptionCorrelationGroupFactory const& f) { return f.Create(relativeLocations); }))
     {
     }
     inline PerceptionFaceAuthenticationGroup::PerceptionFaceAuthenticationGroup(param::iterable<hstring> const& ids, Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler const& startHandler, Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler const& stopHandler) :
-        PerceptionFaceAuthenticationGroup(impl::call_factory<PerceptionFaceAuthenticationGroup, Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroupFactory>([&](auto&& f) { return f.Create(ids, startHandler, stopHandler); }))
+        PerceptionFaceAuthenticationGroup(impl::call_factory<PerceptionFaceAuthenticationGroup, IPerceptionFaceAuthenticationGroupFactory>([&](IPerceptionFaceAuthenticationGroupFactory const& f) { return f.Create(ids, startHandler, stopHandler); }))
     {
     }
     inline PerceptionFrameProviderInfo::PerceptionFrameProviderInfo() :
-        PerceptionFrameProviderInfo(impl::call_factory<PerceptionFrameProviderInfo>([](auto&& f) { return f.template ActivateInstance<PerceptionFrameProviderInfo>(); }))
+        PerceptionFrameProviderInfo(impl::call_factory_cast<PerceptionFrameProviderInfo(*)(Windows::Foundation::IActivationFactory const&), PerceptionFrameProviderInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PerceptionFrameProviderInfo>(); }))
     {
     }
     inline auto PerceptionFrameProviderManagerService::RegisterFrameProviderInfo(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo const& frameProviderInfo)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.RegisterFrameProviderInfo(manager, frameProviderInfo); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.RegisterFrameProviderInfo(manager, frameProviderInfo); });
     }
     inline auto PerceptionFrameProviderManagerService::UnregisterFrameProviderInfo(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo const& frameProviderInfo)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.UnregisterFrameProviderInfo(manager, frameProviderInfo); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.UnregisterFrameProviderInfo(manager, frameProviderInfo); });
     }
     inline auto PerceptionFrameProviderManagerService::RegisterFaceAuthenticationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& faceAuthenticationGroup)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.RegisterFaceAuthenticationGroup(manager, faceAuthenticationGroup); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.RegisterFaceAuthenticationGroup(manager, faceAuthenticationGroup); });
     }
     inline auto PerceptionFrameProviderManagerService::UnregisterFaceAuthenticationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& faceAuthenticationGroup)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.UnregisterFaceAuthenticationGroup(manager, faceAuthenticationGroup); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.UnregisterFaceAuthenticationGroup(manager, faceAuthenticationGroup); });
     }
     inline auto PerceptionFrameProviderManagerService::RegisterControlGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionControlGroup const& controlGroup)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.RegisterControlGroup(manager, controlGroup); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.RegisterControlGroup(manager, controlGroup); });
     }
     inline auto PerceptionFrameProviderManagerService::UnregisterControlGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionControlGroup const& controlGroup)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.UnregisterControlGroup(manager, controlGroup); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.UnregisterControlGroup(manager, controlGroup); });
     }
     inline auto PerceptionFrameProviderManagerService::RegisterCorrelationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionCorrelationGroup const& correlationGroup)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.RegisterCorrelationGroup(manager, correlationGroup); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.RegisterCorrelationGroup(manager, correlationGroup); });
     }
     inline auto PerceptionFrameProviderManagerService::UnregisterCorrelationGroup(Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager const& manager, Windows::Devices::Perception::Provider::PerceptionCorrelationGroup const& correlationGroup)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.UnregisterCorrelationGroup(manager, correlationGroup); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.UnregisterCorrelationGroup(manager, correlationGroup); });
     }
     inline auto PerceptionFrameProviderManagerService::UpdateAvailabilityForProvider(Windows::Devices::Perception::Provider::IPerceptionFrameProvider const& provider, bool available)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.UpdateAvailabilityForProvider(provider, available); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.UpdateAvailabilityForProvider(provider, available); });
     }
     inline auto PerceptionFrameProviderManagerService::PublishFrameForProvider(Windows::Devices::Perception::Provider::IPerceptionFrameProvider const& provider, Windows::Devices::Perception::Provider::PerceptionFrame const& frame)
     {
-        impl::call_factory<PerceptionFrameProviderManagerService, Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics>([&](auto&& f) { return f.PublishFrameForProvider(provider, frame); });
+        impl::call_factory<PerceptionFrameProviderManagerService, IPerceptionFrameProviderManagerServiceStatics>([&](IPerceptionFrameProviderManagerServiceStatics const& f) { return f.PublishFrameForProvider(provider, frame); });
     }
     inline PerceptionVideoFrameAllocator::PerceptionVideoFrameAllocator(uint32_t maxOutstandingFrameCountForWrite, Windows::Graphics::Imaging::BitmapPixelFormat const& format, Windows::Foundation::Size const& resolution, Windows::Graphics::Imaging::BitmapAlphaMode const& alpha) :
-        PerceptionVideoFrameAllocator(impl::call_factory<PerceptionVideoFrameAllocator, Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocatorFactory>([&](auto&& f) { return f.Create(maxOutstandingFrameCountForWrite, format, resolution, alpha); }))
+        PerceptionVideoFrameAllocator(impl::call_factory<PerceptionVideoFrameAllocator, IPerceptionVideoFrameAllocatorFactory>([&](IPerceptionVideoFrameAllocatorFactory const& f) { return f.Create(maxOutstandingFrameCountForWrite, format, resolution, alpha); }))
     {
     }
     template <typename L> PerceptionStartFaceAuthenticationHandler::PerceptionStartFaceAuthenticationHandler(L handler) :
@@ -873,7 +903,7 @@ namespace winrt::Windows::Devices::Perception::Provider
     }
     inline auto PerceptionStartFaceAuthenticationHandler::operator()(Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& sender) const
     {
-        bool result;
+        bool result{};
         check_hresult((*(impl::abi_t<PerceptionStartFaceAuthenticationHandler>**)this)->Invoke(*(void**)(&sender), &result));
         return result;
     }
@@ -904,32 +934,34 @@ namespace winrt::Windows::Devices::Perception::Provider
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionControlGroup> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionControlGroup> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionControlGroupFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionControlGroupFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelation> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelation> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationGroup> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationGroup> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationGroupFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationGroupFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroup> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroup> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroupFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroupFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrame> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionFrame> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocator> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocator> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocatorFactory> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocatorFactory> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionFrame> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::PerceptionFrame> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest> {};
-    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator> : winrt::impl::hash_base<winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IKnownPerceptionFrameKindStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionControlGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionControlGroupFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationGroupFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFaceAuthenticationGroupFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManagerServiceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionPropertyChangeRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocator> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocatorFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionFrame> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator> : winrt::impl::hash_base {};
+#endif
 }
 #endif

@@ -1,30 +1,38 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Gaming_Input_0_H
 #define WINRT_Windows_Gaming_Input_0_H
-namespace winrt::Windows::Devices::Power
+WINRT_EXPORT namespace winrt::Windows::Devices::Haptics
+{
+    struct SimpleHapticsController;
+}
+WINRT_EXPORT namespace winrt::Windows::Devices::Power
 {
     struct BatteryReport;
 }
-namespace winrt::Windows::Foundation
+WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    template <typename T> struct EventHandler;
+    template <typename T> struct __declspec(empty_bases) EventHandler;
     struct EventRegistrationToken;
-    template <typename TSender, typename TResult> struct TypedEventHandler;
+    template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
 }
-namespace winrt::Windows::Gaming::Input::ForceFeedback
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IVectorView;
+}
+WINRT_EXPORT namespace winrt::Windows::Gaming::Input::ForceFeedback
 {
     struct ForceFeedbackMotor;
 }
-namespace winrt::Windows::System
+WINRT_EXPORT namespace winrt::Windows::System
 {
     struct User;
     struct UserChangedEventArgs;
 }
-namespace winrt::Windows::Gaming::Input
+WINRT_EXPORT namespace winrt::Windows::Gaming::Input
 {
     enum class ArcadeStickButtons : uint32_t
     {
@@ -251,462 +259,120 @@ namespace winrt::Windows::Gaming::Input
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Gaming::Input::IArcadeStick>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IArcadeStickStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IArcadeStickStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IFlightStick>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IFlightStickStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IGameController>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IGameControllerBatteryInfo>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IGamepad>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IGamepad2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IGamepadStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IGamepadStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IHeadset>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IRacingWheel>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IRacingWheelStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IRacingWheelStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IRawGameController>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IRawGameController2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IRawGameControllerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IUINavigationController>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IUINavigationControllerStatics>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::IUINavigationControllerStatics2>
-    {
-        using type = interface_category;
-    };
-    template <> struct category<Windows::Gaming::Input::ArcadeStick>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Gaming::Input::FlightStick>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Gaming::Input::Gamepad>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Gaming::Input::Headset>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Gaming::Input::RacingWheel>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Gaming::Input::RawGameController>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Gaming::Input::UINavigationController>
-    {
-        using type = class_category;
-    };
-    template <> struct category<Windows::Gaming::Input::ArcadeStickButtons>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Gaming::Input::FlightStickButtons>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Gaming::Input::GameControllerButtonLabel>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Gaming::Input::GameControllerSwitchKind>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Gaming::Input::GameControllerSwitchPosition>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Gaming::Input::GamepadButtons>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Gaming::Input::OptionalUINavigationButtons>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Gaming::Input::RacingWheelButtons>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Gaming::Input::RequiredUINavigationButtons>
-    {
-        using type = enum_category;
-    };
-    template <> struct category<Windows::Gaming::Input::ArcadeStickReading>
-    {
-        using type = struct_category<uint64_t, Windows::Gaming::Input::ArcadeStickButtons>;
-    };
-    template <> struct category<Windows::Gaming::Input::FlightStickReading>
-    {
-        using type = struct_category<uint64_t, Windows::Gaming::Input::FlightStickButtons, Windows::Gaming::Input::GameControllerSwitchPosition, double, double, double, double>;
-    };
-    template <> struct category<Windows::Gaming::Input::GamepadReading>
-    {
-        using type = struct_category<uint64_t, Windows::Gaming::Input::GamepadButtons, double, double, double, double, double, double>;
-    };
-    template <> struct category<Windows::Gaming::Input::GamepadVibration>
-    {
-        using type = struct_category<double, double, double, double>;
-    };
-    template <> struct category<Windows::Gaming::Input::RacingWheelReading>
-    {
-        using type = struct_category<uint64_t, Windows::Gaming::Input::RacingWheelButtons, int32_t, double, double, double, double, double>;
-    };
-    template <> struct category<Windows::Gaming::Input::UINavigationReading>
-    {
-        using type = struct_category<uint64_t, Windows::Gaming::Input::RequiredUINavigationButtons, Windows::Gaming::Input::OptionalUINavigationButtons>;
-    };
-    template <> struct name<Windows::Gaming::Input::IArcadeStick>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IArcadeStick" };
-    };
-    template <> struct name<Windows::Gaming::Input::IArcadeStickStatics>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IArcadeStickStatics" };
-    };
-    template <> struct name<Windows::Gaming::Input::IArcadeStickStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IArcadeStickStatics2" };
-    };
-    template <> struct name<Windows::Gaming::Input::IFlightStick>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IFlightStick" };
-    };
-    template <> struct name<Windows::Gaming::Input::IFlightStickStatics>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IFlightStickStatics" };
-    };
-    template <> struct name<Windows::Gaming::Input::IGameController>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IGameController" };
-    };
-    template <> struct name<Windows::Gaming::Input::IGameControllerBatteryInfo>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IGameControllerBatteryInfo" };
-    };
-    template <> struct name<Windows::Gaming::Input::IGamepad>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IGamepad" };
-    };
-    template <> struct name<Windows::Gaming::Input::IGamepad2>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IGamepad2" };
-    };
-    template <> struct name<Windows::Gaming::Input::IGamepadStatics>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IGamepadStatics" };
-    };
-    template <> struct name<Windows::Gaming::Input::IGamepadStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IGamepadStatics2" };
-    };
-    template <> struct name<Windows::Gaming::Input::IHeadset>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IHeadset" };
-    };
-    template <> struct name<Windows::Gaming::Input::IRacingWheel>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IRacingWheel" };
-    };
-    template <> struct name<Windows::Gaming::Input::IRacingWheelStatics>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IRacingWheelStatics" };
-    };
-    template <> struct name<Windows::Gaming::Input::IRacingWheelStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IRacingWheelStatics2" };
-    };
-    template <> struct name<Windows::Gaming::Input::IRawGameController>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IRawGameController" };
-    };
-    template <> struct name<Windows::Gaming::Input::IRawGameController2>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IRawGameController2" };
-    };
-    template <> struct name<Windows::Gaming::Input::IRawGameControllerStatics>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IRawGameControllerStatics" };
-    };
-    template <> struct name<Windows::Gaming::Input::IUINavigationController>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IUINavigationController" };
-    };
-    template <> struct name<Windows::Gaming::Input::IUINavigationControllerStatics>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IUINavigationControllerStatics" };
-    };
-    template <> struct name<Windows::Gaming::Input::IUINavigationControllerStatics2>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.IUINavigationControllerStatics2" };
-    };
-    template <> struct name<Windows::Gaming::Input::ArcadeStick>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.ArcadeStick" };
-    };
-    template <> struct name<Windows::Gaming::Input::FlightStick>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.FlightStick" };
-    };
-    template <> struct name<Windows::Gaming::Input::Gamepad>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.Gamepad" };
-    };
-    template <> struct name<Windows::Gaming::Input::Headset>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.Headset" };
-    };
-    template <> struct name<Windows::Gaming::Input::RacingWheel>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.RacingWheel" };
-    };
-    template <> struct name<Windows::Gaming::Input::RawGameController>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.RawGameController" };
-    };
-    template <> struct name<Windows::Gaming::Input::UINavigationController>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.UINavigationController" };
-    };
-    template <> struct name<Windows::Gaming::Input::ArcadeStickButtons>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.ArcadeStickButtons" };
-    };
-    template <> struct name<Windows::Gaming::Input::FlightStickButtons>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.FlightStickButtons" };
-    };
-    template <> struct name<Windows::Gaming::Input::GameControllerButtonLabel>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.GameControllerButtonLabel" };
-    };
-    template <> struct name<Windows::Gaming::Input::GameControllerSwitchKind>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.GameControllerSwitchKind" };
-    };
-    template <> struct name<Windows::Gaming::Input::GameControllerSwitchPosition>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.GameControllerSwitchPosition" };
-    };
-    template <> struct name<Windows::Gaming::Input::GamepadButtons>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.GamepadButtons" };
-    };
-    template <> struct name<Windows::Gaming::Input::OptionalUINavigationButtons>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.OptionalUINavigationButtons" };
-    };
-    template <> struct name<Windows::Gaming::Input::RacingWheelButtons>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.RacingWheelButtons" };
-    };
-    template <> struct name<Windows::Gaming::Input::RequiredUINavigationButtons>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.RequiredUINavigationButtons" };
-    };
-    template <> struct name<Windows::Gaming::Input::ArcadeStickReading>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.ArcadeStickReading" };
-    };
-    template <> struct name<Windows::Gaming::Input::FlightStickReading>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.FlightStickReading" };
-    };
-    template <> struct name<Windows::Gaming::Input::GamepadReading>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.GamepadReading" };
-    };
-    template <> struct name<Windows::Gaming::Input::GamepadVibration>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.GamepadVibration" };
-    };
-    template <> struct name<Windows::Gaming::Input::RacingWheelReading>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.RacingWheelReading" };
-    };
-    template <> struct name<Windows::Gaming::Input::UINavigationReading>
-    {
-        static constexpr auto & value{ L"Windows.Gaming.Input.UINavigationReading" };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IArcadeStick>
-    {
-        static constexpr guid value{ 0xB14A539D,0xBEFB,0x4C81,{ 0x80,0x51,0x15,0xEC,0xF3,0xB1,0x30,0x36 } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IArcadeStickStatics>
-    {
-        static constexpr guid value{ 0x5C37B8C8,0x37B1,0x4AD8,{ 0x94,0x58,0x20,0x0F,0x1A,0x30,0x01,0x8E } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IArcadeStickStatics2>
-    {
-        static constexpr guid value{ 0x52B5D744,0xBB86,0x445A,{ 0xB5,0x9C,0x59,0x6F,0x0E,0x2A,0x49,0xDF } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IFlightStick>
-    {
-        static constexpr guid value{ 0xB4A2C01C,0xB83B,0x4459,{ 0xA1,0xA9,0x97,0xB0,0x3C,0x33,0xDA,0x7C } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IFlightStickStatics>
-    {
-        static constexpr guid value{ 0x5514924A,0xFECC,0x435E,{ 0x83,0xDC,0x5C,0xEC,0x8A,0x18,0xA5,0x20 } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IGameController>
-    {
-        static constexpr guid value{ 0x1BAF6522,0x5F64,0x42C5,{ 0x82,0x67,0xB9,0xFE,0x22,0x15,0xBF,0xBD } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IGameControllerBatteryInfo>
-    {
-        static constexpr guid value{ 0xDCECC681,0x3963,0x4DA6,{ 0x95,0x5D,0x55,0x3F,0x3B,0x6F,0x61,0x61 } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IGamepad>
-    {
-        static constexpr guid value{ 0xBC7BB43C,0x0A69,0x3903,{ 0x9E,0x9D,0xA5,0x0F,0x86,0xA4,0x5D,0xE5 } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IGamepad2>
-    {
-        static constexpr guid value{ 0x3C1689BD,0x5915,0x4245,{ 0xB0,0xC0,0xC8,0x9F,0xAE,0x03,0x08,0xFF } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IGamepadStatics>
-    {
-        static constexpr guid value{ 0x8BBCE529,0xD49C,0x39E9,{ 0x95,0x60,0xE4,0x7D,0xDE,0x96,0xB7,0xC8 } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IGamepadStatics2>
-    {
-        static constexpr guid value{ 0x42676DC5,0x0856,0x47C4,{ 0x92,0x13,0xB3,0x95,0x50,0x4C,0x3A,0x3C } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IHeadset>
-    {
-        static constexpr guid value{ 0x3FD156EF,0x6925,0x3FA8,{ 0x91,0x81,0x02,0x9C,0x52,0x23,0xAE,0x3B } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IRacingWheel>
-    {
-        static constexpr guid value{ 0xF546656F,0xE106,0x4C82,{ 0xA9,0x0F,0x55,0x40,0x12,0x90,0x4B,0x85 } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IRacingWheelStatics>
-    {
-        static constexpr guid value{ 0x3AC12CD5,0x581B,0x4936,{ 0x9F,0x94,0x69,0xF1,0xE6,0x51,0x4C,0x7D } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IRacingWheelStatics2>
-    {
-        static constexpr guid value{ 0xE666BCAA,0xEDFD,0x4323,{ 0xA9,0xF6,0x3C,0x38,0x40,0x48,0xD1,0xED } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IRawGameController>
-    {
-        static constexpr guid value{ 0x7CAD6D91,0xA7E1,0x4F71,{ 0x9A,0x78,0x33,0xE9,0xC5,0xDF,0xEA,0x62 } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IRawGameController2>
-    {
-        static constexpr guid value{ 0x43C0C035,0xBB73,0x4756,{ 0xA7,0x87,0x3E,0xD6,0xBE,0xA6,0x17,0xBD } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IRawGameControllerStatics>
-    {
-        static constexpr guid value{ 0xEB8D0792,0xE95A,0x4B19,{ 0xAF,0xC7,0x0A,0x59,0xF8,0xBF,0x75,0x9E } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IUINavigationController>
-    {
-        static constexpr guid value{ 0xE5AEEFDD,0xF50E,0x4A55,{ 0x8C,0xDC,0xD3,0x32,0x29,0x54,0x81,0x75 } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IUINavigationControllerStatics>
-    {
-        static constexpr guid value{ 0x2F14930A,0xF6F8,0x4A48,{ 0x8D,0x89,0x94,0x78,0x6C,0xCA,0x0C,0x2E } };
-    };
-    template <> struct guid_storage<Windows::Gaming::Input::IUINavigationControllerStatics2>
-    {
-        static constexpr guid value{ 0xE0CB28E3,0xB20B,0x4B0B,{ 0x9E,0xD4,0xF3,0xD5,0x3C,0xEC,0x0D,0xE4 } };
-    };
-    template <> struct default_interface<Windows::Gaming::Input::ArcadeStick>
-    {
-        using type = Windows::Gaming::Input::IArcadeStick;
-    };
-    template <> struct default_interface<Windows::Gaming::Input::FlightStick>
-    {
-        using type = Windows::Gaming::Input::IFlightStick;
-    };
-    template <> struct default_interface<Windows::Gaming::Input::Gamepad>
-    {
-        using type = Windows::Gaming::Input::IGamepad;
-    };
-    template <> struct default_interface<Windows::Gaming::Input::Headset>
-    {
-        using type = Windows::Gaming::Input::IHeadset;
-    };
-    template <> struct default_interface<Windows::Gaming::Input::RacingWheel>
-    {
-        using type = Windows::Gaming::Input::IRacingWheel;
-    };
-    template <> struct default_interface<Windows::Gaming::Input::RawGameController>
-    {
-        using type = Windows::Gaming::Input::IRawGameController;
-    };
-    template <> struct default_interface<Windows::Gaming::Input::UINavigationController>
-    {
-        using type = Windows::Gaming::Input::IUINavigationController;
-    };
+    template <> struct category<Windows::Gaming::Input::IArcadeStick>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IArcadeStickStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IArcadeStickStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IFlightStick>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IFlightStickStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IGameController>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IGameControllerBatteryInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IGamepad>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IGamepad2>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IGamepadStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IGamepadStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IHeadset>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IRacingWheel>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IRacingWheelStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IRacingWheelStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IRawGameController>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IRawGameController2>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IRawGameControllerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IUINavigationController>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IUINavigationControllerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::IUINavigationControllerStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Gaming::Input::ArcadeStick>{ using type = class_category; };
+    template <> struct category<Windows::Gaming::Input::FlightStick>{ using type = class_category; };
+    template <> struct category<Windows::Gaming::Input::Gamepad>{ using type = class_category; };
+    template <> struct category<Windows::Gaming::Input::Headset>{ using type = class_category; };
+    template <> struct category<Windows::Gaming::Input::RacingWheel>{ using type = class_category; };
+    template <> struct category<Windows::Gaming::Input::RawGameController>{ using type = class_category; };
+    template <> struct category<Windows::Gaming::Input::UINavigationController>{ using type = class_category; };
+    template <> struct category<Windows::Gaming::Input::ArcadeStickButtons>{ using type = enum_category; };
+    template <> struct category<Windows::Gaming::Input::FlightStickButtons>{ using type = enum_category; };
+    template <> struct category<Windows::Gaming::Input::GameControllerButtonLabel>{ using type = enum_category; };
+    template <> struct category<Windows::Gaming::Input::GameControllerSwitchKind>{ using type = enum_category; };
+    template <> struct category<Windows::Gaming::Input::GameControllerSwitchPosition>{ using type = enum_category; };
+    template <> struct category<Windows::Gaming::Input::GamepadButtons>{ using type = enum_category; };
+    template <> struct category<Windows::Gaming::Input::OptionalUINavigationButtons>{ using type = enum_category; };
+    template <> struct category<Windows::Gaming::Input::RacingWheelButtons>{ using type = enum_category; };
+    template <> struct category<Windows::Gaming::Input::RequiredUINavigationButtons>{ using type = enum_category; };
+    template <> struct category<Windows::Gaming::Input::ArcadeStickReading>{ using type = struct_category<uint64_t, Windows::Gaming::Input::ArcadeStickButtons>; };
+    template <> struct category<Windows::Gaming::Input::FlightStickReading>{ using type = struct_category<uint64_t, Windows::Gaming::Input::FlightStickButtons, Windows::Gaming::Input::GameControllerSwitchPosition, double, double, double, double>; };
+    template <> struct category<Windows::Gaming::Input::GamepadReading>{ using type = struct_category<uint64_t, Windows::Gaming::Input::GamepadButtons, double, double, double, double, double, double>; };
+    template <> struct category<Windows::Gaming::Input::GamepadVibration>{ using type = struct_category<double, double, double, double>; };
+    template <> struct category<Windows::Gaming::Input::RacingWheelReading>{ using type = struct_category<uint64_t, Windows::Gaming::Input::RacingWheelButtons, int32_t, double, double, double, double, double>; };
+    template <> struct category<Windows::Gaming::Input::UINavigationReading>{ using type = struct_category<uint64_t, Windows::Gaming::Input::RequiredUINavigationButtons, Windows::Gaming::Input::OptionalUINavigationButtons>; };
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::ArcadeStick> = L"Windows.Gaming.Input.ArcadeStick";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::FlightStick> = L"Windows.Gaming.Input.FlightStick";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::Gamepad> = L"Windows.Gaming.Input.Gamepad";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::Headset> = L"Windows.Gaming.Input.Headset";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::RacingWheel> = L"Windows.Gaming.Input.RacingWheel";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::RawGameController> = L"Windows.Gaming.Input.RawGameController";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::UINavigationController> = L"Windows.Gaming.Input.UINavigationController";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::ArcadeStickButtons> = L"Windows.Gaming.Input.ArcadeStickButtons";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::FlightStickButtons> = L"Windows.Gaming.Input.FlightStickButtons";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::GameControllerButtonLabel> = L"Windows.Gaming.Input.GameControllerButtonLabel";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::GameControllerSwitchKind> = L"Windows.Gaming.Input.GameControllerSwitchKind";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::GameControllerSwitchPosition> = L"Windows.Gaming.Input.GameControllerSwitchPosition";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::GamepadButtons> = L"Windows.Gaming.Input.GamepadButtons";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::OptionalUINavigationButtons> = L"Windows.Gaming.Input.OptionalUINavigationButtons";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::RacingWheelButtons> = L"Windows.Gaming.Input.RacingWheelButtons";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::RequiredUINavigationButtons> = L"Windows.Gaming.Input.RequiredUINavigationButtons";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::ArcadeStickReading> = L"Windows.Gaming.Input.ArcadeStickReading";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::FlightStickReading> = L"Windows.Gaming.Input.FlightStickReading";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::GamepadReading> = L"Windows.Gaming.Input.GamepadReading";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::GamepadVibration> = L"Windows.Gaming.Input.GamepadVibration";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::RacingWheelReading> = L"Windows.Gaming.Input.RacingWheelReading";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::UINavigationReading> = L"Windows.Gaming.Input.UINavigationReading";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IArcadeStick> = L"Windows.Gaming.Input.IArcadeStick";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IArcadeStickStatics> = L"Windows.Gaming.Input.IArcadeStickStatics";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IArcadeStickStatics2> = L"Windows.Gaming.Input.IArcadeStickStatics2";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IFlightStick> = L"Windows.Gaming.Input.IFlightStick";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IFlightStickStatics> = L"Windows.Gaming.Input.IFlightStickStatics";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IGameController> = L"Windows.Gaming.Input.IGameController";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IGameControllerBatteryInfo> = L"Windows.Gaming.Input.IGameControllerBatteryInfo";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IGamepad> = L"Windows.Gaming.Input.IGamepad";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IGamepad2> = L"Windows.Gaming.Input.IGamepad2";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IGamepadStatics> = L"Windows.Gaming.Input.IGamepadStatics";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IGamepadStatics2> = L"Windows.Gaming.Input.IGamepadStatics2";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IHeadset> = L"Windows.Gaming.Input.IHeadset";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IRacingWheel> = L"Windows.Gaming.Input.IRacingWheel";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IRacingWheelStatics> = L"Windows.Gaming.Input.IRacingWheelStatics";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IRacingWheelStatics2> = L"Windows.Gaming.Input.IRacingWheelStatics2";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IRawGameController> = L"Windows.Gaming.Input.IRawGameController";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IRawGameController2> = L"Windows.Gaming.Input.IRawGameController2";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IRawGameControllerStatics> = L"Windows.Gaming.Input.IRawGameControllerStatics";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IUINavigationController> = L"Windows.Gaming.Input.IUINavigationController";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IUINavigationControllerStatics> = L"Windows.Gaming.Input.IUINavigationControllerStatics";
+    template <> inline constexpr auto& name_v<Windows::Gaming::Input::IUINavigationControllerStatics2> = L"Windows.Gaming.Input.IUINavigationControllerStatics2";
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IArcadeStick>{ 0xB14A539D,0xBEFB,0x4C81,{ 0x80,0x51,0x15,0xEC,0xF3,0xB1,0x30,0x36 } }; // B14A539D-BEFB-4C81-8051-15ECF3B13036
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IArcadeStickStatics>{ 0x5C37B8C8,0x37B1,0x4AD8,{ 0x94,0x58,0x20,0x0F,0x1A,0x30,0x01,0x8E } }; // 5C37B8C8-37B1-4AD8-9458-200F1A30018E
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IArcadeStickStatics2>{ 0x52B5D744,0xBB86,0x445A,{ 0xB5,0x9C,0x59,0x6F,0x0E,0x2A,0x49,0xDF } }; // 52B5D744-BB86-445A-B59C-596F0E2A49DF
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IFlightStick>{ 0xB4A2C01C,0xB83B,0x4459,{ 0xA1,0xA9,0x97,0xB0,0x3C,0x33,0xDA,0x7C } }; // B4A2C01C-B83B-4459-A1A9-97B03C33DA7C
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IFlightStickStatics>{ 0x5514924A,0xFECC,0x435E,{ 0x83,0xDC,0x5C,0xEC,0x8A,0x18,0xA5,0x20 } }; // 5514924A-FECC-435E-83DC-5CEC8A18A520
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IGameController>{ 0x1BAF6522,0x5F64,0x42C5,{ 0x82,0x67,0xB9,0xFE,0x22,0x15,0xBF,0xBD } }; // 1BAF6522-5F64-42C5-8267-B9FE2215BFBD
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IGameControllerBatteryInfo>{ 0xDCECC681,0x3963,0x4DA6,{ 0x95,0x5D,0x55,0x3F,0x3B,0x6F,0x61,0x61 } }; // DCECC681-3963-4DA6-955D-553F3B6F6161
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IGamepad>{ 0xBC7BB43C,0x0A69,0x3903,{ 0x9E,0x9D,0xA5,0x0F,0x86,0xA4,0x5D,0xE5 } }; // BC7BB43C-0A69-3903-9E9D-A50F86A45DE5
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IGamepad2>{ 0x3C1689BD,0x5915,0x4245,{ 0xB0,0xC0,0xC8,0x9F,0xAE,0x03,0x08,0xFF } }; // 3C1689BD-5915-4245-B0C0-C89FAE0308FF
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IGamepadStatics>{ 0x8BBCE529,0xD49C,0x39E9,{ 0x95,0x60,0xE4,0x7D,0xDE,0x96,0xB7,0xC8 } }; // 8BBCE529-D49C-39E9-9560-E47DDE96B7C8
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IGamepadStatics2>{ 0x42676DC5,0x0856,0x47C4,{ 0x92,0x13,0xB3,0x95,0x50,0x4C,0x3A,0x3C } }; // 42676DC5-0856-47C4-9213-B395504C3A3C
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IHeadset>{ 0x3FD156EF,0x6925,0x3FA8,{ 0x91,0x81,0x02,0x9C,0x52,0x23,0xAE,0x3B } }; // 3FD156EF-6925-3FA8-9181-029C5223AE3B
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IRacingWheel>{ 0xF546656F,0xE106,0x4C82,{ 0xA9,0x0F,0x55,0x40,0x12,0x90,0x4B,0x85 } }; // F546656F-E106-4C82-A90F-554012904B85
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IRacingWheelStatics>{ 0x3AC12CD5,0x581B,0x4936,{ 0x9F,0x94,0x69,0xF1,0xE6,0x51,0x4C,0x7D } }; // 3AC12CD5-581B-4936-9F94-69F1E6514C7D
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IRacingWheelStatics2>{ 0xE666BCAA,0xEDFD,0x4323,{ 0xA9,0xF6,0x3C,0x38,0x40,0x48,0xD1,0xED } }; // E666BCAA-EDFD-4323-A9F6-3C384048D1ED
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IRawGameController>{ 0x7CAD6D91,0xA7E1,0x4F71,{ 0x9A,0x78,0x33,0xE9,0xC5,0xDF,0xEA,0x62 } }; // 7CAD6D91-A7E1-4F71-9A78-33E9C5DFEA62
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IRawGameController2>{ 0x43C0C035,0xBB73,0x4756,{ 0xA7,0x87,0x3E,0xD6,0xBE,0xA6,0x17,0xBD } }; // 43C0C035-BB73-4756-A787-3ED6BEA617BD
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IRawGameControllerStatics>{ 0xEB8D0792,0xE95A,0x4B19,{ 0xAF,0xC7,0x0A,0x59,0xF8,0xBF,0x75,0x9E } }; // EB8D0792-E95A-4B19-AFC7-0A59F8BF759E
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IUINavigationController>{ 0xE5AEEFDD,0xF50E,0x4A55,{ 0x8C,0xDC,0xD3,0x32,0x29,0x54,0x81,0x75 } }; // E5AEEFDD-F50E-4A55-8CDC-D33229548175
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IUINavigationControllerStatics>{ 0x2F14930A,0xF6F8,0x4A48,{ 0x8D,0x89,0x94,0x78,0x6C,0xCA,0x0C,0x2E } }; // 2F14930A-F6F8-4A48-8D89-94786CCA0C2E
+    template <> inline constexpr guid guid_v<Windows::Gaming::Input::IUINavigationControllerStatics2>{ 0xE0CB28E3,0xB20B,0x4B0B,{ 0x9E,0xD4,0xF3,0xD5,0x3C,0xEC,0x0D,0xE4 } }; // E0CB28E3-B20B-4B0B-9ED4-F3D53CEC0DE4
+    template <> struct default_interface<Windows::Gaming::Input::ArcadeStick>{ using type = Windows::Gaming::Input::IArcadeStick; };
+    template <> struct default_interface<Windows::Gaming::Input::FlightStick>{ using type = Windows::Gaming::Input::IFlightStick; };
+    template <> struct default_interface<Windows::Gaming::Input::Gamepad>{ using type = Windows::Gaming::Input::IGamepad; };
+    template <> struct default_interface<Windows::Gaming::Input::Headset>{ using type = Windows::Gaming::Input::IHeadset; };
+    template <> struct default_interface<Windows::Gaming::Input::RacingWheel>{ using type = Windows::Gaming::Input::IRacingWheel; };
+    template <> struct default_interface<Windows::Gaming::Input::RawGameController>{ using type = Windows::Gaming::Input::IRawGameController; };
+    template <> struct default_interface<Windows::Gaming::Input::UINavigationController>{ using type = Windows::Gaming::Input::IUINavigationController; };
     template <> struct abi<Windows::Gaming::Input::IArcadeStick>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -916,8 +582,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IArcadeStick
     {
-        auto GetButtonLabel(Windows::Gaming::Input::ArcadeStickButtons const& button) const;
-        auto GetCurrentReading() const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::GameControllerButtonLabel) GetButtonLabel(Windows::Gaming::Input::ArcadeStickButtons const& button) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::ArcadeStickReading) GetCurrentReading() const;
     };
     template <> struct consume<Windows::Gaming::Input::IArcadeStick>
     {
@@ -926,15 +592,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IArcadeStickStatics
     {
-        auto ArcadeStickAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::ArcadeStick> const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) ArcadeStickAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::ArcadeStick> const& value) const;
         using ArcadeStickAdded_revoker = impl::event_revoker<Windows::Gaming::Input::IArcadeStickStatics, &impl::abi_t<Windows::Gaming::Input::IArcadeStickStatics>::remove_ArcadeStickAdded>;
-        ArcadeStickAdded_revoker ArcadeStickAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::ArcadeStick> const& value) const;
-        auto ArcadeStickAdded(winrt::event_token const& token) const noexcept;
-        auto ArcadeStickRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::ArcadeStick> const& value) const;
+        [[nodiscard]] ArcadeStickAdded_revoker ArcadeStickAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::ArcadeStick> const& value) const;
+        WINRT_IMPL_AUTO(void) ArcadeStickAdded(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ArcadeStickRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::ArcadeStick> const& value) const;
         using ArcadeStickRemoved_revoker = impl::event_revoker<Windows::Gaming::Input::IArcadeStickStatics, &impl::abi_t<Windows::Gaming::Input::IArcadeStickStatics>::remove_ArcadeStickRemoved>;
-        ArcadeStickRemoved_revoker ArcadeStickRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::ArcadeStick> const& value) const;
-        auto ArcadeStickRemoved(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto ArcadeSticks() const;
+        [[nodiscard]] ArcadeStickRemoved_revoker ArcadeStickRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::ArcadeStick> const& value) const;
+        WINRT_IMPL_AUTO(void) ArcadeStickRemoved(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Gaming::Input::ArcadeStick>) ArcadeSticks() const;
     };
     template <> struct consume<Windows::Gaming::Input::IArcadeStickStatics>
     {
@@ -943,7 +609,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IArcadeStickStatics2
     {
-        auto FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::ArcadeStick) FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
     };
     template <> struct consume<Windows::Gaming::Input::IArcadeStickStatics2>
     {
@@ -952,9 +618,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IFlightStick
     {
-        [[nodiscard]] auto HatSwitchKind() const;
-        auto GetButtonLabel(Windows::Gaming::Input::FlightStickButtons const& button) const;
-        auto GetCurrentReading() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Gaming::Input::GameControllerSwitchKind) HatSwitchKind() const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::GameControllerButtonLabel) GetButtonLabel(Windows::Gaming::Input::FlightStickButtons const& button) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::FlightStickReading) GetCurrentReading() const;
     };
     template <> struct consume<Windows::Gaming::Input::IFlightStick>
     {
@@ -963,16 +629,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IFlightStickStatics
     {
-        auto FlightStickAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::FlightStick> const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) FlightStickAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::FlightStick> const& value) const;
         using FlightStickAdded_revoker = impl::event_revoker<Windows::Gaming::Input::IFlightStickStatics, &impl::abi_t<Windows::Gaming::Input::IFlightStickStatics>::remove_FlightStickAdded>;
-        FlightStickAdded_revoker FlightStickAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::FlightStick> const& value) const;
-        auto FlightStickAdded(winrt::event_token const& token) const noexcept;
-        auto FlightStickRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::FlightStick> const& value) const;
+        [[nodiscard]] FlightStickAdded_revoker FlightStickAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::FlightStick> const& value) const;
+        WINRT_IMPL_AUTO(void) FlightStickAdded(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) FlightStickRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::FlightStick> const& value) const;
         using FlightStickRemoved_revoker = impl::event_revoker<Windows::Gaming::Input::IFlightStickStatics, &impl::abi_t<Windows::Gaming::Input::IFlightStickStatics>::remove_FlightStickRemoved>;
-        FlightStickRemoved_revoker FlightStickRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::FlightStick> const& value) const;
-        auto FlightStickRemoved(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto FlightSticks() const;
-        auto FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
+        [[nodiscard]] FlightStickRemoved_revoker FlightStickRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::FlightStick> const& value) const;
+        WINRT_IMPL_AUTO(void) FlightStickRemoved(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Gaming::Input::FlightStick>) FlightSticks() const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::FlightStick) FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
     };
     template <> struct consume<Windows::Gaming::Input::IFlightStickStatics>
     {
@@ -981,21 +647,21 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IGameController
     {
-        auto HeadsetConnected(Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::Gaming::Input::Headset> const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) HeadsetConnected(Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::Gaming::Input::Headset> const& value) const;
         using HeadsetConnected_revoker = impl::event_revoker<Windows::Gaming::Input::IGameController, &impl::abi_t<Windows::Gaming::Input::IGameController>::remove_HeadsetConnected>;
-        HeadsetConnected_revoker HeadsetConnected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::Gaming::Input::Headset> const& value) const;
-        auto HeadsetConnected(winrt::event_token const& token) const noexcept;
-        auto HeadsetDisconnected(Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::Gaming::Input::Headset> const& value) const;
+        [[nodiscard]] HeadsetConnected_revoker HeadsetConnected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::Gaming::Input::Headset> const& value) const;
+        WINRT_IMPL_AUTO(void) HeadsetConnected(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) HeadsetDisconnected(Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::Gaming::Input::Headset> const& value) const;
         using HeadsetDisconnected_revoker = impl::event_revoker<Windows::Gaming::Input::IGameController, &impl::abi_t<Windows::Gaming::Input::IGameController>::remove_HeadsetDisconnected>;
-        HeadsetDisconnected_revoker HeadsetDisconnected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::Gaming::Input::Headset> const& value) const;
-        auto HeadsetDisconnected(winrt::event_token const& token) const noexcept;
-        auto UserChanged(Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::System::UserChangedEventArgs> const& value) const;
+        [[nodiscard]] HeadsetDisconnected_revoker HeadsetDisconnected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::Gaming::Input::Headset> const& value) const;
+        WINRT_IMPL_AUTO(void) HeadsetDisconnected(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) UserChanged(Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::System::UserChangedEventArgs> const& value) const;
         using UserChanged_revoker = impl::event_revoker<Windows::Gaming::Input::IGameController, &impl::abi_t<Windows::Gaming::Input::IGameController>::remove_UserChanged>;
-        UserChanged_revoker UserChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::System::UserChangedEventArgs> const& value) const;
-        auto UserChanged(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto Headset() const;
-        [[nodiscard]] auto IsWireless() const;
-        [[nodiscard]] auto User() const;
+        [[nodiscard]] UserChanged_revoker UserChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Gaming::Input::IGameController, Windows::System::UserChangedEventArgs> const& value) const;
+        WINRT_IMPL_AUTO(void) UserChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Gaming::Input::Headset) Headset() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsWireless() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::User) User() const;
     };
     template <> struct consume<Windows::Gaming::Input::IGameController>
     {
@@ -1004,7 +670,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IGameControllerBatteryInfo
     {
-        auto TryGetBatteryReport() const;
+        WINRT_IMPL_AUTO(Windows::Devices::Power::BatteryReport) TryGetBatteryReport() const;
     };
     template <> struct consume<Windows::Gaming::Input::IGameControllerBatteryInfo>
     {
@@ -1013,9 +679,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IGamepad
     {
-        [[nodiscard]] auto Vibration() const;
-        auto Vibration(Windows::Gaming::Input::GamepadVibration const& value) const;
-        auto GetCurrentReading() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Gaming::Input::GamepadVibration) Vibration() const;
+        WINRT_IMPL_AUTO(void) Vibration(Windows::Gaming::Input::GamepadVibration const& value) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::GamepadReading) GetCurrentReading() const;
     };
     template <> struct consume<Windows::Gaming::Input::IGamepad>
     {
@@ -1024,7 +690,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IGamepad2
     {
-        auto GetButtonLabel(Windows::Gaming::Input::GamepadButtons const& button) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::GameControllerButtonLabel) GetButtonLabel(Windows::Gaming::Input::GamepadButtons const& button) const;
     };
     template <> struct consume<Windows::Gaming::Input::IGamepad2>
     {
@@ -1033,15 +699,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IGamepadStatics
     {
-        auto GamepadAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::Gamepad> const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) GamepadAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::Gamepad> const& value) const;
         using GamepadAdded_revoker = impl::event_revoker<Windows::Gaming::Input::IGamepadStatics, &impl::abi_t<Windows::Gaming::Input::IGamepadStatics>::remove_GamepadAdded>;
-        GamepadAdded_revoker GamepadAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::Gamepad> const& value) const;
-        auto GamepadAdded(winrt::event_token const& token) const noexcept;
-        auto GamepadRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::Gamepad> const& value) const;
+        [[nodiscard]] GamepadAdded_revoker GamepadAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::Gamepad> const& value) const;
+        WINRT_IMPL_AUTO(void) GamepadAdded(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) GamepadRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::Gamepad> const& value) const;
         using GamepadRemoved_revoker = impl::event_revoker<Windows::Gaming::Input::IGamepadStatics, &impl::abi_t<Windows::Gaming::Input::IGamepadStatics>::remove_GamepadRemoved>;
-        GamepadRemoved_revoker GamepadRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::Gamepad> const& value) const;
-        auto GamepadRemoved(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto Gamepads() const;
+        [[nodiscard]] GamepadRemoved_revoker GamepadRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::Gamepad> const& value) const;
+        WINRT_IMPL_AUTO(void) GamepadRemoved(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Gaming::Input::Gamepad>) Gamepads() const;
     };
     template <> struct consume<Windows::Gaming::Input::IGamepadStatics>
     {
@@ -1050,7 +716,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IGamepadStatics2
     {
-        auto FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::Gamepad) FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
     };
     template <> struct consume<Windows::Gaming::Input::IGamepadStatics2>
     {
@@ -1059,8 +725,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IHeadset
     {
-        [[nodiscard]] auto CaptureDeviceId() const;
-        [[nodiscard]] auto RenderDeviceId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) CaptureDeviceId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) RenderDeviceId() const;
     };
     template <> struct consume<Windows::Gaming::Input::IHeadset>
     {
@@ -1069,14 +735,14 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IRacingWheel
     {
-        [[nodiscard]] auto HasClutch() const;
-        [[nodiscard]] auto HasHandbrake() const;
-        [[nodiscard]] auto HasPatternShifter() const;
-        [[nodiscard]] auto MaxPatternShifterGear() const;
-        [[nodiscard]] auto MaxWheelAngle() const;
-        [[nodiscard]] auto WheelMotor() const;
-        auto GetButtonLabel(Windows::Gaming::Input::RacingWheelButtons const& button) const;
-        auto GetCurrentReading() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasClutch() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasHandbrake() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) HasPatternShifter() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MaxPatternShifterGear() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(double) MaxWheelAngle() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor) WheelMotor() const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::GameControllerButtonLabel) GetButtonLabel(Windows::Gaming::Input::RacingWheelButtons const& button) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::RacingWheelReading) GetCurrentReading() const;
     };
     template <> struct consume<Windows::Gaming::Input::IRacingWheel>
     {
@@ -1085,15 +751,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IRacingWheelStatics
     {
-        auto RacingWheelAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::RacingWheel> const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) RacingWheelAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::RacingWheel> const& value) const;
         using RacingWheelAdded_revoker = impl::event_revoker<Windows::Gaming::Input::IRacingWheelStatics, &impl::abi_t<Windows::Gaming::Input::IRacingWheelStatics>::remove_RacingWheelAdded>;
-        RacingWheelAdded_revoker RacingWheelAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::RacingWheel> const& value) const;
-        auto RacingWheelAdded(winrt::event_token const& token) const noexcept;
-        auto RacingWheelRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::RacingWheel> const& value) const;
+        [[nodiscard]] RacingWheelAdded_revoker RacingWheelAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::RacingWheel> const& value) const;
+        WINRT_IMPL_AUTO(void) RacingWheelAdded(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) RacingWheelRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::RacingWheel> const& value) const;
         using RacingWheelRemoved_revoker = impl::event_revoker<Windows::Gaming::Input::IRacingWheelStatics, &impl::abi_t<Windows::Gaming::Input::IRacingWheelStatics>::remove_RacingWheelRemoved>;
-        RacingWheelRemoved_revoker RacingWheelRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::RacingWheel> const& value) const;
-        auto RacingWheelRemoved(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto RacingWheels() const;
+        [[nodiscard]] RacingWheelRemoved_revoker RacingWheelRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::RacingWheel> const& value) const;
+        WINRT_IMPL_AUTO(void) RacingWheelRemoved(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Gaming::Input::RacingWheel>) RacingWheels() const;
     };
     template <> struct consume<Windows::Gaming::Input::IRacingWheelStatics>
     {
@@ -1102,7 +768,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IRacingWheelStatics2
     {
-        auto FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::RacingWheel) FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
     };
     template <> struct consume<Windows::Gaming::Input::IRacingWheelStatics2>
     {
@@ -1111,15 +777,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IRawGameController
     {
-        [[nodiscard]] auto AxisCount() const;
-        [[nodiscard]] auto ButtonCount() const;
-        [[nodiscard]] auto ForceFeedbackMotors() const;
-        [[nodiscard]] auto HardwareProductId() const;
-        [[nodiscard]] auto HardwareVendorId() const;
-        [[nodiscard]] auto SwitchCount() const;
-        auto GetButtonLabel(int32_t buttonIndex) const;
-        auto GetCurrentReading(array_view<bool> buttonArray, array_view<Windows::Gaming::Input::GameControllerSwitchPosition> switchArray, array_view<double> axisArray) const;
-        auto GetSwitchKind(int32_t switchIndex) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) AxisCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ButtonCount() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor>) ForceFeedbackMotors() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) HardwareProductId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) HardwareVendorId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) SwitchCount() const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::GameControllerButtonLabel) GetButtonLabel(int32_t buttonIndex) const;
+        WINRT_IMPL_AUTO(uint64_t) GetCurrentReading(array_view<bool> buttonArray, array_view<Windows::Gaming::Input::GameControllerSwitchPosition> switchArray, array_view<double> axisArray) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::GameControllerSwitchKind) GetSwitchKind(int32_t switchIndex) const;
     };
     template <> struct consume<Windows::Gaming::Input::IRawGameController>
     {
@@ -1128,9 +794,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IRawGameController2
     {
-        [[nodiscard]] auto SimpleHapticsControllers() const;
-        [[nodiscard]] auto NonRoamableId() const;
-        [[nodiscard]] auto DisplayName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Haptics::SimpleHapticsController>) SimpleHapticsControllers() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) NonRoamableId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) DisplayName() const;
     };
     template <> struct consume<Windows::Gaming::Input::IRawGameController2>
     {
@@ -1139,16 +805,16 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IRawGameControllerStatics
     {
-        auto RawGameControllerAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::RawGameController> const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) RawGameControllerAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::RawGameController> const& value) const;
         using RawGameControllerAdded_revoker = impl::event_revoker<Windows::Gaming::Input::IRawGameControllerStatics, &impl::abi_t<Windows::Gaming::Input::IRawGameControllerStatics>::remove_RawGameControllerAdded>;
-        RawGameControllerAdded_revoker RawGameControllerAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::RawGameController> const& value) const;
-        auto RawGameControllerAdded(winrt::event_token const& token) const noexcept;
-        auto RawGameControllerRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::RawGameController> const& value) const;
+        [[nodiscard]] RawGameControllerAdded_revoker RawGameControllerAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::RawGameController> const& value) const;
+        WINRT_IMPL_AUTO(void) RawGameControllerAdded(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) RawGameControllerRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::RawGameController> const& value) const;
         using RawGameControllerRemoved_revoker = impl::event_revoker<Windows::Gaming::Input::IRawGameControllerStatics, &impl::abi_t<Windows::Gaming::Input::IRawGameControllerStatics>::remove_RawGameControllerRemoved>;
-        RawGameControllerRemoved_revoker RawGameControllerRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::RawGameController> const& value) const;
-        auto RawGameControllerRemoved(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto RawGameControllers() const;
-        auto FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
+        [[nodiscard]] RawGameControllerRemoved_revoker RawGameControllerRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::RawGameController> const& value) const;
+        WINRT_IMPL_AUTO(void) RawGameControllerRemoved(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Gaming::Input::RawGameController>) RawGameControllers() const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::RawGameController) FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
     };
     template <> struct consume<Windows::Gaming::Input::IRawGameControllerStatics>
     {
@@ -1157,9 +823,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IUINavigationController
     {
-        auto GetCurrentReading() const;
-        auto GetOptionalButtonLabel(Windows::Gaming::Input::OptionalUINavigationButtons const& button) const;
-        auto GetRequiredButtonLabel(Windows::Gaming::Input::RequiredUINavigationButtons const& button) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::UINavigationReading) GetCurrentReading() const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::GameControllerButtonLabel) GetOptionalButtonLabel(Windows::Gaming::Input::OptionalUINavigationButtons const& button) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::GameControllerButtonLabel) GetRequiredButtonLabel(Windows::Gaming::Input::RequiredUINavigationButtons const& button) const;
     };
     template <> struct consume<Windows::Gaming::Input::IUINavigationController>
     {
@@ -1168,15 +834,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IUINavigationControllerStatics
     {
-        auto UINavigationControllerAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::UINavigationController> const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) UINavigationControllerAdded(Windows::Foundation::EventHandler<Windows::Gaming::Input::UINavigationController> const& value) const;
         using UINavigationControllerAdded_revoker = impl::event_revoker<Windows::Gaming::Input::IUINavigationControllerStatics, &impl::abi_t<Windows::Gaming::Input::IUINavigationControllerStatics>::remove_UINavigationControllerAdded>;
-        UINavigationControllerAdded_revoker UINavigationControllerAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::UINavigationController> const& value) const;
-        auto UINavigationControllerAdded(winrt::event_token const& token) const noexcept;
-        auto UINavigationControllerRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::UINavigationController> const& value) const;
+        [[nodiscard]] UINavigationControllerAdded_revoker UINavigationControllerAdded(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::UINavigationController> const& value) const;
+        WINRT_IMPL_AUTO(void) UINavigationControllerAdded(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) UINavigationControllerRemoved(Windows::Foundation::EventHandler<Windows::Gaming::Input::UINavigationController> const& value) const;
         using UINavigationControllerRemoved_revoker = impl::event_revoker<Windows::Gaming::Input::IUINavigationControllerStatics, &impl::abi_t<Windows::Gaming::Input::IUINavigationControllerStatics>::remove_UINavigationControllerRemoved>;
-        UINavigationControllerRemoved_revoker UINavigationControllerRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::UINavigationController> const& value) const;
-        auto UINavigationControllerRemoved(winrt::event_token const& token) const noexcept;
-        [[nodiscard]] auto UINavigationControllers() const;
+        [[nodiscard]] UINavigationControllerRemoved_revoker UINavigationControllerRemoved(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Gaming::Input::UINavigationController> const& value) const;
+        WINRT_IMPL_AUTO(void) UINavigationControllerRemoved(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Gaming::Input::UINavigationController>) UINavigationControllers() const;
     };
     template <> struct consume<Windows::Gaming::Input::IUINavigationControllerStatics>
     {
@@ -1185,7 +851,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Gaming_Input_IUINavigationControllerStatics2
     {
-        auto FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
+        WINRT_IMPL_AUTO(Windows::Gaming::Input::UINavigationController) FromGameController(Windows::Gaming::Input::IGameController const& gameController) const;
     };
     template <> struct consume<Windows::Gaming::Input::IUINavigationControllerStatics2>
     {

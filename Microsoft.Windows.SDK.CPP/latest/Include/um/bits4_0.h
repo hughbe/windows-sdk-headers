@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -36,6 +36,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -142,32 +150,40 @@ EXTERN_C const IID IID_IBitsTokenOptions;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBitsTokenOptions * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBitsTokenOptions * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBitsTokenOptions * This);
         
+        DECLSPEC_XFGVIRT(IBitsTokenOptions, SetHelperTokenFlags)
         HRESULT ( STDMETHODCALLTYPE *SetHelperTokenFlags )( 
             __RPC__in IBitsTokenOptions * This,
             DWORD UsageFlags);
         
+        DECLSPEC_XFGVIRT(IBitsTokenOptions, GetHelperTokenFlags)
         HRESULT ( STDMETHODCALLTYPE *GetHelperTokenFlags )( 
             __RPC__in IBitsTokenOptions * This,
             /* [out] */ __RPC__out DWORD *pFlags);
         
+        DECLSPEC_XFGVIRT(IBitsTokenOptions, SetHelperToken)
         HRESULT ( STDMETHODCALLTYPE *SetHelperToken )( 
             __RPC__in IBitsTokenOptions * This);
         
+        DECLSPEC_XFGVIRT(IBitsTokenOptions, ClearHelperToken)
         HRESULT ( STDMETHODCALLTYPE *ClearHelperToken )( 
             __RPC__in IBitsTokenOptions * This);
         
+        DECLSPEC_XFGVIRT(IBitsTokenOptions, GetHelperTokenSid)
         HRESULT ( STDMETHODCALLTYPE *GetHelperTokenSid )( 
             __RPC__in IBitsTokenOptions * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pSid);
@@ -249,55 +265,68 @@ EXTERN_C const IID IID_IBackgroundCopyFile4;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IBackgroundCopyFile4 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IBackgroundCopyFile4 * This);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile, GetRemoteName)
         HRESULT ( STDMETHODCALLTYPE *GetRemoteName )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile, GetLocalName)
         HRESULT ( STDMETHODCALLTYPE *GetLocalName )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile, GetProgress)
         HRESULT ( STDMETHODCALLTYPE *GetProgress )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [out] */ __RPC__out BG_FILE_PROGRESS *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile2, GetFileRanges)
         HRESULT ( STDMETHODCALLTYPE *GetFileRanges )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [unique][out][in] */ __RPC__inout_opt DWORD *RangeCount,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*RangeCount) BG_FILE_RANGE **Ranges);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile2, SetRemoteName)
         HRESULT ( STDMETHODCALLTYPE *SetRemoteName )( 
             __RPC__in IBackgroundCopyFile4 * This,
             __RPC__in LPCWSTR Val);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile3, GetTemporaryName)
         HRESULT ( STDMETHODCALLTYPE *GetTemporaryName )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [out] */ __RPC__deref_out_opt LPWSTR *pFilename);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile3, SetValidationState)
         HRESULT ( STDMETHODCALLTYPE *SetValidationState )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [in] */ BOOL state);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile3, GetValidationState)
         HRESULT ( STDMETHODCALLTYPE *GetValidationState )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [out] */ __RPC__out BOOL *pState);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile3, IsDownloadedFromPeer)
         HRESULT ( STDMETHODCALLTYPE *IsDownloadedFromPeer )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [out] */ __RPC__out BOOL *pVal);
         
+        DECLSPEC_XFGVIRT(IBackgroundCopyFile4, GetPeerDownloadStats)
         HRESULT ( STDMETHODCALLTYPE *GetPeerDownloadStats )( 
             __RPC__in IBackgroundCopyFile4 * This,
             /* [out] */ __RPC__out PUINT64 pFromOrigin,

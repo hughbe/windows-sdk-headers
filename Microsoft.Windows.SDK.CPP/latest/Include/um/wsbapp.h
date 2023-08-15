@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -36,6 +36,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -115,18 +123,22 @@ EXTERN_C const IID IID_IWsbApplicationBackupSupport;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWsbApplicationBackupSupport * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWsbApplicationBackupSupport * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWsbApplicationBackupSupport * This);
         
+        DECLSPEC_XFGVIRT(IWsbApplicationBackupSupport, CheckConsistency)
         HRESULT ( STDMETHODCALLTYPE *CheckConsistency )( 
             __RPC__in IWsbApplicationBackupSupport * This,
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszWriterMetadata,
@@ -220,18 +232,22 @@ EXTERN_C const IID IID_IWsbApplicationRestoreSupport;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWsbApplicationRestoreSupport * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWsbApplicationRestoreSupport * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWsbApplicationRestoreSupport * This);
         
+        DECLSPEC_XFGVIRT(IWsbApplicationRestoreSupport, PreRestore)
         HRESULT ( STDMETHODCALLTYPE *PreRestore )( 
             __RPC__in IWsbApplicationRestoreSupport * This,
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszWriterMetadata,
@@ -239,6 +255,7 @@ EXTERN_C const IID IID_IWsbApplicationRestoreSupport;
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszComponentLogicalPath,
             /* [in] */ BOOLEAN bNoRollForward);
         
+        DECLSPEC_XFGVIRT(IWsbApplicationRestoreSupport, PostRestore)
         HRESULT ( STDMETHODCALLTYPE *PostRestore )( 
             __RPC__in IWsbApplicationRestoreSupport * This,
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszWriterMetadata,
@@ -246,6 +263,7 @@ EXTERN_C const IID IID_IWsbApplicationRestoreSupport;
             /* [string][unique][in] */ __RPC__in_opt_string LPWSTR wszComponentLogicalPath,
             /* [in] */ BOOLEAN bNoRollForward);
         
+        DECLSPEC_XFGVIRT(IWsbApplicationRestoreSupport, OrderComponents)
         HRESULT ( STDMETHODCALLTYPE *OrderComponents )( 
             __RPC__in IWsbApplicationRestoreSupport * This,
             /* [in][range] */ __RPC__in_range(0,10000) DWORD cComponents,
@@ -254,6 +272,7 @@ EXTERN_C const IID IID_IWsbApplicationRestoreSupport;
             /* [size_is][size_is][string][out] */ __RPC__deref_out_ecount_full_opt_string(cComponents) LPWSTR **prgComponentName,
             /* [size_is][size_is][string][out] */ __RPC__deref_out_ecount_full_opt_string(cComponents) LPWSTR **prgComponentLogicalPath);
         
+        DECLSPEC_XFGVIRT(IWsbApplicationRestoreSupport, IsRollForwardSupported)
         HRESULT ( STDMETHODCALLTYPE *IsRollForwardSupported )( 
             __RPC__in IWsbApplicationRestoreSupport * This,
             /* [out] */ __RPC__out BOOLEAN *pbRollForwardSupported);
@@ -333,22 +352,27 @@ EXTERN_C const IID IID_IWsbApplicationAsync;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IWsbApplicationAsync * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IWsbApplicationAsync * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IWsbApplicationAsync * This);
         
+        DECLSPEC_XFGVIRT(IWsbApplicationAsync, QueryStatus)
         HRESULT ( STDMETHODCALLTYPE *QueryStatus )( 
             __RPC__in IWsbApplicationAsync * This,
             /* [out] */ __RPC__out HRESULT *phrResult);
         
+        DECLSPEC_XFGVIRT(IWsbApplicationAsync, Abort)
         HRESULT ( STDMETHODCALLTYPE *Abort )( 
             __RPC__in IWsbApplicationAsync * This);
         

@@ -2556,22 +2556,24 @@ interface IShellBrowser : IOleWindow
 typedef IShellBrowser * LPSHELLBROWSER;
 
 
-[
-    uuid(cb728b20-f786-11ce-92ad-00aa00a74cd0), // IID_IProfferService
-    object,
-    pointer_default(unique)
-]
+[uuid(cb728b20-f786-11ce-92ad-00aa00a74cd0), object, pointer_default(unique)]
 interface IProfferService : IUnknown
 {
-    HRESULT ProfferService(
-        [in] REFGUID guidService,
-        [in] IServiceProvider *psp,
-        [out] DWORD *pdwCookie);
-
-    HRESULT RevokeService([in] DWORD dwCookie);
+    HRESULT ProfferService([in] REFGUID serviceId, [in] IServiceProvider* serviceProvider, [out] DWORD* cookie);
+    HRESULT RevokeService([in] DWORD cookie);
 }
 
 cpp_quote("#define SID_SProfferService IID_IProfferService    // nearest service that you can proffer to")
+
+// This can be implemented by components that implement IProfferService as a way to discover the set
+// of services that they provide. It can also be used in designs that identify objects using a GUID
+// like IObjectProvider.
+
+[uuid(4A073526-6103-4E21-B7BC-F519D1524E5D), object, pointer_default(unique)]
+interface IGetServiceIds : IUnknown
+{
+    HRESULT GetServiceIds([out] ULONG* serviceIdCount, [out, size_is(, *serviceIdCount)] GUID** serviceIds);
+}
 
 // Tells an IShellItem not to resolve the link target obtained
 // when using the BHID_LinkTargetItem GUID in BindToHandler.

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Web_AtomPub_1_H
 #include "winrt/impl/Windows.Web.Syndication.0.h"
 #include "winrt/impl/Windows.Web.AtomPub.0.h"
-namespace winrt::Windows::Web::AtomPub
+WINRT_EXPORT namespace winrt::Windows::Web::AtomPub
 {
     struct __declspec(empty_bases) IAtomPubClient :
         Windows::Foundation::IInspectable,

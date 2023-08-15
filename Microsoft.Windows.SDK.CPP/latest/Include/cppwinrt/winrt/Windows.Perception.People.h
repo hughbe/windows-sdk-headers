@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Perception_People_H
 #define WINRT_Windows_Perception_People_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Perception.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Numerics.2.h"
@@ -17,138 +17,139 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Perception.People.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Perception_People_IEyesPose<D>::IsCalibrationValid() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Perception_People_IEyesPose<D>::IsCalibrationValid() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IEyesPose)->get_IsCalibrationValid(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_People_IEyesPose<D>::Gaze() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Perception::Spatial::SpatialRay>) consume_Windows_Perception_People_IEyesPose<D>::Gaze() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IEyesPose)->get_Gaze(&value));
         return Windows::Foundation::IReference<Windows::Perception::Spatial::SpatialRay>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_People_IEyesPose<D>::UpdateTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::PerceptionTimestamp) consume_Windows_Perception_People_IEyesPose<D>::UpdateTimestamp() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IEyesPose)->get_UpdateTimestamp(&value));
         return Windows::Perception::PerceptionTimestamp{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_People_IEyesPoseStatics<D>::IsSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Perception_People_IEyesPoseStatics<D>::IsSupported() const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IEyesPoseStatics)->IsSupported(&result));
         return result;
     }
-    template <typename D> auto consume_Windows_Perception_People_IEyesPoseStatics<D>::RequestAccessAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::UI::Input::GazeInputAccessStatus>) consume_Windows_Perception_People_IEyesPoseStatics<D>::RequestAccessAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IEyesPoseStatics)->RequestAccessAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::UI::Input::GazeInputAccessStatus>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshObserver<D>::Source() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Input::Spatial::SpatialInteractionSource) consume_Windows_Perception_People_IHandMeshObserver<D>::Source() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshObserver)->get_Source(&value));
         return Windows::UI::Input::Spatial::SpatialInteractionSource{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshObserver<D>::TriangleIndexCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Perception_People_IHandMeshObserver<D>::TriangleIndexCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshObserver)->get_TriangleIndexCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshObserver<D>::VertexCount() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Perception_People_IHandMeshObserver<D>::VertexCount() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshObserver)->get_VertexCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshObserver<D>::GetTriangleIndices(array_view<uint16_t> indices) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_People_IHandMeshObserver<D>::GetTriangleIndices(array_view<uint16_t> indices) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshObserver)->GetTriangleIndices(indices.size(), put_abi(indices)));
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshObserver<D>::GetVertexStateForPose(Windows::Perception::People::HandPose const& handPose) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::People::HandMeshVertexState) consume_Windows_Perception_People_IHandMeshObserver<D>::GetVertexStateForPose(Windows::Perception::People::HandPose const& handPose) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshObserver)->GetVertexStateForPose(*(void**)(&handPose), &result));
         return Windows::Perception::People::HandMeshVertexState{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshObserver<D>::NeutralPose() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::People::HandPose) consume_Windows_Perception_People_IHandMeshObserver<D>::NeutralPose() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshObserver)->get_NeutralPose(&value));
         return Windows::Perception::People::HandPose{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshObserver<D>::NeutralPoseVersion() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Perception_People_IHandMeshObserver<D>::NeutralPoseVersion() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshObserver)->get_NeutralPoseVersion(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshObserver<D>::ModelId() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Perception_People_IHandMeshObserver<D>::ModelId() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshObserver)->get_ModelId(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshVertexState<D>::CoordinateSystem() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::Spatial::SpatialCoordinateSystem) consume_Windows_Perception_People_IHandMeshVertexState<D>::CoordinateSystem() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshVertexState)->get_CoordinateSystem(&value));
         return Windows::Perception::Spatial::SpatialCoordinateSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshVertexState<D>::GetVertices(array_view<Windows::Perception::People::HandMeshVertex> vertices) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_People_IHandMeshVertexState<D>::GetVertices(array_view<Windows::Perception::People::HandMeshVertex> vertices) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshVertexState)->GetVertices(vertices.size(), put_abi(vertices)));
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandMeshVertexState<D>::UpdateTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::PerceptionTimestamp) consume_Windows_Perception_People_IHandMeshVertexState<D>::UpdateTimestamp() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandMeshVertexState)->get_UpdateTimestamp(&value));
         return Windows::Perception::PerceptionTimestamp{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandPose<D>::TryGetJoint(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::People::HandJointKind const& joint, Windows::Perception::People::JointPose& jointPose) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Perception_People_IHandPose<D>::TryGetJoint(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, Windows::Perception::People::HandJointKind const& joint, Windows::Perception::People::JointPose& jointPose) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandPose)->TryGetJoint(*(void**)(&coordinateSystem), static_cast<int32_t>(joint), impl::bind_out(jointPose), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandPose<D>::TryGetJoints(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, array_view<Windows::Perception::People::HandJointKind const> joints, array_view<Windows::Perception::People::JointPose> jointPoses) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Perception_People_IHandPose<D>::TryGetJoints(Windows::Perception::Spatial::SpatialCoordinateSystem const& coordinateSystem, array_view<Windows::Perception::People::HandJointKind const> joints, array_view<Windows::Perception::People::JointPose> jointPoses) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandPose)->TryGetJoints(*(void**)(&coordinateSystem), joints.size(), get_abi(joints), jointPoses.size(), put_abi(jointPoses), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandPose<D>::GetRelativeJoint(Windows::Perception::People::HandJointKind const& joint, Windows::Perception::People::HandJointKind const& referenceJoint) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Perception::People::JointPose) consume_Windows_Perception_People_IHandPose<D>::GetRelativeJoint(Windows::Perception::People::HandJointKind const& joint, Windows::Perception::People::HandJointKind const& referenceJoint) const
     {
-        Windows::Perception::People::JointPose result;
+        Windows::Perception::People::JointPose result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandPose)->GetRelativeJoint(static_cast<int32_t>(joint), static_cast<int32_t>(referenceJoint), put_abi(result)));
         return result;
     }
-    template <typename D> auto consume_Windows_Perception_People_IHandPose<D>::GetRelativeJoints(array_view<Windows::Perception::People::HandJointKind const> joints, array_view<Windows::Perception::People::HandJointKind const> referenceJoints, array_view<Windows::Perception::People::JointPose> jointPoses) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Perception_People_IHandPose<D>::GetRelativeJoints(array_view<Windows::Perception::People::HandJointKind const> joints, array_view<Windows::Perception::People::HandJointKind const> referenceJoints, array_view<Windows::Perception::People::JointPose> jointPoses) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHandPose)->GetRelativeJoints(joints.size(), get_abi(joints), referenceJoints.size(), get_abi(referenceJoints), jointPoses.size(), put_abi(jointPoses)));
     }
-    template <typename D> auto consume_Windows_Perception_People_IHeadPose<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Perception_People_IHeadPose<D>::Position() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHeadPose)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_People_IHeadPose<D>::ForwardDirection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Perception_People_IHeadPose<D>::ForwardDirection() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHeadPose)->get_ForwardDirection(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Perception_People_IHeadPose<D>::UpDirection() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Numerics::float3) consume_Windows_Perception_People_IHeadPose<D>::UpDirection() const
     {
-        Windows::Foundation::Numerics::float3 value;
+        Windows::Foundation::Numerics::float3 value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Perception::People::IHeadPose)->get_UpDirection(put_abi(value)));
         return value;
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::People::IEyesPose> : produce_base<D, Windows::Perception::People::IEyesPose>
     {
@@ -176,6 +177,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::People::IEyesPoseStatics> : produce_base<D, Windows::Perception::People::IEyesPoseStatics>
     {
@@ -195,6 +198,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::People::IHandMeshObserver> : produce_base<D, Windows::Perception::People::IHandMeshObserver>
     {
@@ -258,6 +263,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::People::IHandMeshVertexState> : produce_base<D, Windows::Perception::People::IHandMeshVertexState>
     {
@@ -286,6 +293,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::People::IHandPose> : produce_base<D, Windows::Perception::People::IHandPose>
     {
@@ -322,6 +331,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Perception::People::IHeadPose> : produce_base<D, Windows::Perception::People::IHeadPose>
     {
@@ -350,30 +361,33 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Perception::People
+WINRT_EXPORT namespace winrt::Windows::Perception::People
 {
     inline auto EyesPose::IsSupported()
     {
-        return impl::call_factory<EyesPose, Windows::Perception::People::IEyesPoseStatics>([&](auto&& f) { return f.IsSupported(); });
+        return impl::call_factory_cast<bool(*)(IEyesPoseStatics const&), EyesPose, IEyesPoseStatics>([](IEyesPoseStatics const& f) { return f.IsSupported(); });
     }
     inline auto EyesPose::RequestAccessAsync()
     {
-        return impl::call_factory<EyesPose, Windows::Perception::People::IEyesPoseStatics>([&](auto&& f) { return f.RequestAccessAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::UI::Input::GazeInputAccessStatus>(*)(IEyesPoseStatics const&), EyesPose, IEyesPoseStatics>([](IEyesPoseStatics const& f) { return f.RequestAccessAsync(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Perception::People::IEyesPose> : winrt::impl::hash_base<winrt::Windows::Perception::People::IEyesPose> {};
-    template<> struct hash<winrt::Windows::Perception::People::IEyesPoseStatics> : winrt::impl::hash_base<winrt::Windows::Perception::People::IEyesPoseStatics> {};
-    template<> struct hash<winrt::Windows::Perception::People::IHandMeshObserver> : winrt::impl::hash_base<winrt::Windows::Perception::People::IHandMeshObserver> {};
-    template<> struct hash<winrt::Windows::Perception::People::IHandMeshVertexState> : winrt::impl::hash_base<winrt::Windows::Perception::People::IHandMeshVertexState> {};
-    template<> struct hash<winrt::Windows::Perception::People::IHandPose> : winrt::impl::hash_base<winrt::Windows::Perception::People::IHandPose> {};
-    template<> struct hash<winrt::Windows::Perception::People::IHeadPose> : winrt::impl::hash_base<winrt::Windows::Perception::People::IHeadPose> {};
-    template<> struct hash<winrt::Windows::Perception::People::EyesPose> : winrt::impl::hash_base<winrt::Windows::Perception::People::EyesPose> {};
-    template<> struct hash<winrt::Windows::Perception::People::HandMeshObserver> : winrt::impl::hash_base<winrt::Windows::Perception::People::HandMeshObserver> {};
-    template<> struct hash<winrt::Windows::Perception::People::HandMeshVertexState> : winrt::impl::hash_base<winrt::Windows::Perception::People::HandMeshVertexState> {};
-    template<> struct hash<winrt::Windows::Perception::People::HandPose> : winrt::impl::hash_base<winrt::Windows::Perception::People::HandPose> {};
-    template<> struct hash<winrt::Windows::Perception::People::HeadPose> : winrt::impl::hash_base<winrt::Windows::Perception::People::HeadPose> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Perception::People::IEyesPose> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::IEyesPoseStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::IHandMeshObserver> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::IHandMeshVertexState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::IHandPose> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::IHeadPose> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::EyesPose> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::HandMeshObserver> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::HandMeshVertexState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::HandPose> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Perception::People::HeadPose> : winrt::impl::hash_base {};
+#endif
 }
 #endif

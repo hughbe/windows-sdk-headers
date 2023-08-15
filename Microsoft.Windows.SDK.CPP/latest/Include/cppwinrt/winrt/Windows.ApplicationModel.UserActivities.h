@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_UserActivities_H
 #define WINRT_Windows_ApplicationModel_UserActivities_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -17,215 +17,215 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.UserActivities.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityState) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::State() const
     {
-        Windows::ApplicationModel::UserActivities::UserActivityState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->get_State(put_abi(value)));
+        Windows::ApplicationModel::UserActivities::UserActivityState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ActivityId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ActivityId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->get_ActivityId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::VisualElements() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityVisualElements) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::VisualElements() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->get_VisualElements(&value));
         return Windows::ApplicationModel::UserActivities::UserActivityVisualElements{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->get_ContentUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->put_ContentUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentType() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentType() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->get_ContentType(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentType(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentType(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->put_ContentType(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::FallbackUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::FallbackUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->get_FallbackUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::FallbackUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::FallbackUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->put_FallbackUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ActivationUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ActivationUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->get_ActivationUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ActivationUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ActivationUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->put_ActivationUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentInfo() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::IUserActivityContentInfo) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentInfo() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->get_ContentInfo(&value));
         return Windows::ApplicationModel::UserActivities::IUserActivityContentInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentInfo(Windows::ApplicationModel::UserActivities::IUserActivityContentInfo const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::ContentInfo(Windows::ApplicationModel::UserActivities::IUserActivityContentInfo const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->put_ContentInfo(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::SaveAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::SaveAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->SaveAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::CreateSession() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivitySession) consume_Windows_ApplicationModel_UserActivities_IUserActivity<D>::CreateSession() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity)->CreateSession(&result));
         return Windows::ApplicationModel::UserActivities::UserActivitySession{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity2<D>::ToJson() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivity2<D>::ToJson() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity2)->ToJson(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity3<D>::IsRoamable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserActivities_IUserActivity3<D>::IsRoamable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity3)->get_IsRoamable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivity3<D>::IsRoamable(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivity3<D>::IsRoamable(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivity3)->put_IsRoamable(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::IconUri() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::IconUri() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityAttribution)->get_IconUri(&value));
         return Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::IconUri(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::IconUri(Windows::Foundation::Uri const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityAttribution)->put_IconUri(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::AlternateText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::AlternateText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityAttribution)->get_AlternateText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::AlternateText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::AlternateText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityAttribution)->put_AlternateText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::AddImageQuery() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::AddImageQuery() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityAttribution)->get_AddImageQuery(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::AddImageQuery(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityAttribution<D>::AddImageQuery(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityAttribution)->put_AddImageQuery(value));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityAttributionFactory<D>::CreateWithUri(Windows::Foundation::Uri const& iconUri) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityAttribution) consume_Windows_ApplicationModel_UserActivities_IUserActivityAttributionFactory<D>::CreateWithUri(Windows::Foundation::Uri const& iconUri) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory)->CreateWithUri(*(void**)(&iconUri), &value));
         return Windows::ApplicationModel::UserActivities::UserActivityAttribution{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel<D>::GetOrCreateUserActivityAsync(param::hstring const& activityId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserActivities::UserActivity>) consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel<D>::GetOrCreateUserActivityAsync(param::hstring const& activityId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannel)->GetOrCreateUserActivityAsync(*(void**)(&activityId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserActivities::UserActivity>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel<D>::DeleteActivityAsync(param::hstring const& activityId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel<D>::DeleteActivityAsync(param::hstring const& activityId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannel)->DeleteActivityAsync(*(void**)(&activityId), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel<D>::DeleteAllActivitiesAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel<D>::DeleteAllActivitiesAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannel)->DeleteAllActivitiesAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel2<D>::GetRecentUserActivitiesAsync(int32_t maxUniqueActivities) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>>) consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel2<D>::GetRecentUserActivitiesAsync(int32_t maxUniqueActivities) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannel2)->GetRecentUserActivitiesAsync(maxUniqueActivities, &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel2<D>::GetSessionHistoryItemsForUserActivityAsync(param::hstring const& activityId, Windows::Foundation::DateTime const& startTime) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>>) consume_Windows_ApplicationModel_UserActivities_IUserActivityChannel2<D>::GetSessionHistoryItemsForUserActivityAsync(param::hstring const& activityId, Windows::Foundation::DateTime const& startTime) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannel2)->GetSessionHistoryItemsForUserActivityAsync(*(void**)(&activityId), impl::bind_in(startTime), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityChannel) consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics<D>::GetDefault() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics)->GetDefault(&result));
         return Windows::ApplicationModel::UserActivities::UserActivityChannel{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics2<D>::DisableAutoSessionCreation() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics2<D>::DisableAutoSessionCreation() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2)->DisableAutoSessionCreation());
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics2<D>::TryGetForWebAccount(Windows::Security::Credentials::WebAccount const& account) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityChannel) consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics2<D>::TryGetForWebAccount(Windows::Security::Credentials::WebAccount const& account) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2)->TryGetForWebAccount(*(void**)(&account), &result));
         return Windows::ApplicationModel::UserActivities::UserActivityChannel{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics3<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityChannel) consume_Windows_ApplicationModel_UserActivities_IUserActivityChannelStatics3<D>::GetForUser(Windows::System::User const& user) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3)->GetForUser(*(void**)(&user), &result));
         return Windows::ApplicationModel::UserActivities::UserActivityChannel{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityContentInfo<D>::ToJson() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivityContentInfo<D>::ToJson() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityContentInfo)->ToJson(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityContentInfoStatics<D>::FromJson(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityContentInfo) consume_Windows_ApplicationModel_UserActivities_IUserActivityContentInfoStatics<D>::FromJson(param::hstring const& value) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics)->FromJson(*(void**)(&value), &result));
         return Windows::ApplicationModel::UserActivities::UserActivityContentInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityFactory<D>::CreateWithActivityId(param::hstring const& activityId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivity) consume_Windows_ApplicationModel_UserActivities_IUserActivityFactory<D>::CreateWithActivityId(param::hstring const& activityId) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityFactory)->CreateWithActivityId(*(void**)(&activityId), &value));
         return Windows::ApplicationModel::UserActivities::UserActivity{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityRequest<D>::SetUserActivity(Windows::ApplicationModel::UserActivities::UserActivity const& activity) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityRequest<D>::SetUserActivity(Windows::ApplicationModel::UserActivities::UserActivity const& activity) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityRequest)->SetUserActivity(*(void**)(&activity)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestManager<D>::UserActivityRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::UserActivities::UserActivityRequestManager, Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestManager<D>::UserActivityRequested(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::UserActivities::UserActivityRequestManager, Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityRequestManager)->add_UserActivityRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -233,130 +233,131 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, UserActivityRequested_revoker>(this, UserActivityRequested(handler));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestManager<D>::UserActivityRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestManager<D>::UserActivityRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityRequestManager)->remove_UserActivityRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestManagerStatics<D>::GetForCurrentView() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityRequestManager) consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestManagerStatics<D>::GetForCurrentView() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics)->GetForCurrentView(&result));
         return Windows::ApplicationModel::UserActivities::UserActivityRequestManager{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestedEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityRequest) consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestedEventArgs<D>::Request() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs)->get_Request(&value));
         return Windows::ApplicationModel::UserActivities::UserActivityRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_ApplicationModel_UserActivities_IUserActivityRequestedEventArgs<D>::GetDeferral() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs)->GetDeferral(&value));
         return Windows::Foundation::Deferral{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivitySession<D>::ActivityId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivitySession<D>::ActivityId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivitySession)->get_ActivityId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivitySessionHistoryItem<D>::UserActivity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivity) consume_Windows_ApplicationModel_UserActivities_IUserActivitySessionHistoryItem<D>::UserActivity() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem)->get_UserActivity(&value));
         return Windows::ApplicationModel::UserActivities::UserActivity{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivitySessionHistoryItem<D>::StartTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_ApplicationModel_UserActivities_IUserActivitySessionHistoryItem<D>::StartTime() const
     {
-        Windows::Foundation::DateTime value;
+        Windows::Foundation::DateTime value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem)->get_StartTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivitySessionHistoryItem<D>::EndTime() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_UserActivities_IUserActivitySessionHistoryItem<D>::EndTime() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem)->get_EndTime(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityStatics<D>::TryParseFromJson(param::hstring const& json) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivity) consume_Windows_ApplicationModel_UserActivities_IUserActivityStatics<D>::TryParseFromJson(param::hstring const& json) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityStatics)->TryParseFromJson(*(void**)(&json), &result));
         return Windows::ApplicationModel::UserActivities::UserActivity{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityStatics<D>::TryParseFromJsonArray(param::hstring const& json) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::ApplicationModel::UserActivities::UserActivity>) consume_Windows_ApplicationModel_UserActivities_IUserActivityStatics<D>::TryParseFromJsonArray(param::hstring const& json) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityStatics)->TryParseFromJsonArray(*(void**)(&json), &result));
         return Windows::Foundation::Collections::IVector<Windows::ApplicationModel::UserActivities::UserActivity>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityStatics<D>::ToJsonArray(param::iterable<Windows::ApplicationModel::UserActivities::UserActivity> const& activities) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivityStatics<D>::ToJsonArray(param::iterable<Windows::ApplicationModel::UserActivities::UserActivity> const& activities) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityStatics)->ToJsonArray(*(void**)(&activities), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::DisplayText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::DisplayText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->get_DisplayText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::DisplayText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::DisplayText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->put_DisplayText(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Description() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Description(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Description(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->put_Description(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::BackgroundColor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::BackgroundColor() const
     {
-        Windows::UI::Color value;
+        Windows::UI::Color value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->get_BackgroundColor(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::BackgroundColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::BackgroundColor(Windows::UI::Color const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->put_BackgroundColor(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Attribution() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivityAttribution) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Attribution() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->get_Attribution(&value));
         return Windows::ApplicationModel::UserActivities::UserActivityAttribution{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Attribution(Windows::ApplicationModel::UserActivities::UserActivityAttribution const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Attribution(Windows::ApplicationModel::UserActivities::UserActivityAttribution const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->put_Attribution(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Content(Windows::UI::Shell::IAdaptiveCard const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Content(Windows::UI::Shell::IAdaptiveCard const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->put_Content(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Content() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Shell::IAdaptiveCard) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements<D>::Content() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements)->get_Content(&value));
         return Windows::UI::Shell::IAdaptiveCard{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements2<D>::AttributionDisplayText() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements2<D>::AttributionDisplayText() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2)->get_AttributionDisplayText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements2<D>::AttributionDisplayText(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserActivities_IUserActivityVisualElements2<D>::AttributionDisplayText(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2)->put_AttributionDisplayText(*(void**)(&value)));
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivity> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivity>
     {
@@ -475,6 +476,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivity2> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivity2>
     {
@@ -487,6 +490,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivity3> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivity3>
     {
@@ -505,6 +510,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityAttribution> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityAttribution>
     {
@@ -553,6 +560,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory>
     {
@@ -565,6 +574,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityChannel> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityChannel>
     {
@@ -593,6 +604,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityChannel2> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityChannel2>
     {
@@ -613,6 +626,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>
     {
@@ -625,6 +640,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>
     {
@@ -644,6 +661,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>
     {
@@ -656,6 +675,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityContentInfo> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
     {
@@ -668,6 +688,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>
     {
@@ -680,6 +701,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityFactory> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityFactory>
     {
@@ -692,6 +715,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityRequest> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityRequest>
     {
@@ -703,6 +728,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityRequestManager> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityRequestManager>
     {
@@ -721,6 +748,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics>
     {
@@ -733,6 +762,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs>
     {
@@ -753,6 +784,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivitySession> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivitySession>
     {
@@ -765,6 +798,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem>
     {
@@ -793,6 +828,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityStatics> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityStatics>
     {
@@ -821,6 +858,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityVisualElements> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityVisualElements>
     {
@@ -900,6 +939,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2> : produce_base<D, Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2>
     {
@@ -919,91 +960,94 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::ApplicationModel::UserActivities
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserActivities
 {
     inline UserActivity::UserActivity(param::hstring const& activityId) :
-        UserActivity(impl::call_factory<UserActivity, Windows::ApplicationModel::UserActivities::IUserActivityFactory>([&](auto&& f) { return f.CreateWithActivityId(activityId); }))
+        UserActivity(impl::call_factory<UserActivity, IUserActivityFactory>([&](IUserActivityFactory const& f) { return f.CreateWithActivityId(activityId); }))
     {
     }
     inline auto UserActivity::TryParseFromJson(param::hstring const& json)
     {
-        return impl::call_factory<UserActivity, Windows::ApplicationModel::UserActivities::IUserActivityStatics>([&](auto&& f) { return f.TryParseFromJson(json); });
+        return impl::call_factory<UserActivity, IUserActivityStatics>([&](IUserActivityStatics const& f) { return f.TryParseFromJson(json); });
     }
     inline auto UserActivity::TryParseFromJsonArray(param::hstring const& json)
     {
-        return impl::call_factory<UserActivity, Windows::ApplicationModel::UserActivities::IUserActivityStatics>([&](auto&& f) { return f.TryParseFromJsonArray(json); });
+        return impl::call_factory<UserActivity, IUserActivityStatics>([&](IUserActivityStatics const& f) { return f.TryParseFromJsonArray(json); });
     }
     inline auto UserActivity::ToJsonArray(param::iterable<Windows::ApplicationModel::UserActivities::UserActivity> const& activities)
     {
-        return impl::call_factory<UserActivity, Windows::ApplicationModel::UserActivities::IUserActivityStatics>([&](auto&& f) { return f.ToJsonArray(activities); });
+        return impl::call_factory<UserActivity, IUserActivityStatics>([&](IUserActivityStatics const& f) { return f.ToJsonArray(activities); });
     }
     inline UserActivityAttribution::UserActivityAttribution() :
-        UserActivityAttribution(impl::call_factory<UserActivityAttribution>([](auto&& f) { return f.template ActivateInstance<UserActivityAttribution>(); }))
+        UserActivityAttribution(impl::call_factory_cast<UserActivityAttribution(*)(Windows::Foundation::IActivationFactory const&), UserActivityAttribution>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<UserActivityAttribution>(); }))
     {
     }
     inline UserActivityAttribution::UserActivityAttribution(Windows::Foundation::Uri const& iconUri) :
-        UserActivityAttribution(impl::call_factory<UserActivityAttribution, Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory>([&](auto&& f) { return f.CreateWithUri(iconUri); }))
+        UserActivityAttribution(impl::call_factory<UserActivityAttribution, IUserActivityAttributionFactory>([&](IUserActivityAttributionFactory const& f) { return f.CreateWithUri(iconUri); }))
     {
     }
     inline auto UserActivityChannel::GetDefault()
     {
-        return impl::call_factory<UserActivityChannel, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics>([&](auto&& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<Windows::ApplicationModel::UserActivities::UserActivityChannel(*)(IUserActivityChannelStatics const&), UserActivityChannel, IUserActivityChannelStatics>([](IUserActivityChannelStatics const& f) { return f.GetDefault(); });
     }
     inline auto UserActivityChannel::DisableAutoSessionCreation()
     {
-        impl::call_factory<UserActivityChannel, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>([&](auto&& f) { return f.DisableAutoSessionCreation(); });
+        impl::call_factory_cast<void(*)(IUserActivityChannelStatics2 const&), UserActivityChannel, IUserActivityChannelStatics2>([](IUserActivityChannelStatics2 const& f) { return f.DisableAutoSessionCreation(); });
     }
     inline auto UserActivityChannel::TryGetForWebAccount(Windows::Security::Credentials::WebAccount const& account)
     {
-        return impl::call_factory<UserActivityChannel, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2>([&](auto&& f) { return f.TryGetForWebAccount(account); });
+        return impl::call_factory<UserActivityChannel, IUserActivityChannelStatics2>([&](IUserActivityChannelStatics2 const& f) { return f.TryGetForWebAccount(account); });
     }
     inline auto UserActivityChannel::GetForUser(Windows::System::User const& user)
     {
-        return impl::call_factory<UserActivityChannel, Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3>([&](auto&& f) { return f.GetForUser(user); });
+        return impl::call_factory<UserActivityChannel, IUserActivityChannelStatics3>([&](IUserActivityChannelStatics3 const& f) { return f.GetForUser(user); });
     }
     inline auto UserActivityContentInfo::FromJson(param::hstring const& value)
     {
-        return impl::call_factory<UserActivityContentInfo, Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics>([&](auto&& f) { return f.FromJson(value); });
+        return impl::call_factory<UserActivityContentInfo, IUserActivityContentInfoStatics>([&](IUserActivityContentInfoStatics const& f) { return f.FromJson(value); });
     }
     inline auto UserActivityRequestManager::GetForCurrentView()
     {
-        return impl::call_factory<UserActivityRequestManager, Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics>([&](auto&& f) { return f.GetForCurrentView(); });
+        return impl::call_factory_cast<Windows::ApplicationModel::UserActivities::UserActivityRequestManager(*)(IUserActivityRequestManagerStatics const&), UserActivityRequestManager, IUserActivityRequestManagerStatics>([](IUserActivityRequestManagerStatics const& f) { return f.GetForCurrentView(); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivity> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivity> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivity2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivity2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivity3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivity3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityAttribution> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityAttribution> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannel> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannel> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannel2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannel2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityFactory> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityFactory> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequest> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequest> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequestManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequestManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivitySession> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivitySession> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityStatics> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityStatics> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityVisualElements> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityVisualElements> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivity> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivity> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem> {};
-    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements> : winrt::impl::hash_base<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivity> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivity2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivity3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityAttribution> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannel> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannel2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfoStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequestManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequestManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivitySession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivitySessionHistoryItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityVisualElements> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::IUserActivityVisualElements2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivity> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements> : winrt::impl::hash_base {};
+#endif
 }
 #endif

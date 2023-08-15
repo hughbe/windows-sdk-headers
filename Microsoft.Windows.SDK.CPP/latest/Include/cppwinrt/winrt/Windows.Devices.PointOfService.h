@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_PointOfService_H
 #define WINRT_Windows_Devices_PointOfService_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -16,63 +16,63 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.PointOfService.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::Capabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::BarcodeScannerCapabilities) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::Capabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->get_Capabilities(&value));
         return Windows::Devices::PointOfService::BarcodeScannerCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::ClaimScannerAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedBarcodeScanner>) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::ClaimScannerAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->ClaimScannerAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedBarcodeScanner>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->CheckHealthAsync(static_cast<int32_t>(level), &operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::GetSupportedSymbologiesAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<uint32_t>>) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::GetSupportedSymbologiesAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->GetSupportedSymbologiesAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<uint32_t>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::IsSymbologySupportedAsync(uint32_t barcodeSymbology) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::IsSymbologySupportedAsync(uint32_t barcodeSymbology) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->IsSymbologySupportedAsync(barcodeSymbology, &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::RetrieveStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::RetrieveStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->RetrieveStatisticsAsync(*(void**)(&statisticsCategories), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::GetSupportedProfiles() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::GetSupportedProfiles() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->GetSupportedProfiles(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::IsProfileSupported(param::hstring const& profile) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::IsProfileSupported(param::hstring const& profile) const
     {
-        bool isSupported;
+        bool isSupported{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->IsProfileSupported(*(void**)(&profile), &isSupported));
         return isSupported;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::BarcodeScanner, Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::BarcodeScanner, Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->add_StatusUpdated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -80,831 +80,831 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StatusUpdated_revoker>(this, StatusUpdated(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::StatusUpdated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IBarcodeScanner<D>::StatusUpdated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner)->remove_StatusUpdated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScanner2<D>::VideoDeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IBarcodeScanner2<D>::VideoDeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScanner2)->get_VideoDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities<D>::PowerReportingType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosPowerReportingType) consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities<D>::PowerReportingType() const
     {
-        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerCapabilities)->get_PowerReportingType(put_abi(value)));
+        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerCapabilities)->get_PowerReportingType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities<D>::IsStatisticsReportingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities<D>::IsStatisticsReportingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerCapabilities)->get_IsStatisticsReportingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities<D>::IsStatisticsUpdatingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities<D>::IsStatisticsUpdatingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerCapabilities)->get_IsStatisticsUpdatingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities<D>::IsImagePreviewSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities<D>::IsImagePreviewSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerCapabilities)->get_IsImagePreviewSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities1<D>::IsSoftwareTriggerSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities1<D>::IsSoftwareTriggerSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerCapabilities1)->get_IsSoftwareTriggerSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities2<D>::IsVideoPreviewSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeScannerCapabilities2<D>::IsVideoPreviewSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerCapabilities2)->get_IsVideoPreviewSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerDataReceivedEventArgs<D>::Report() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::BarcodeScannerReport) consume_Windows_Devices_PointOfService_IBarcodeScannerDataReceivedEventArgs<D>::Report() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs)->get_Report(&value));
         return Windows::Devices::PointOfService::BarcodeScannerReport{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerErrorOccurredEventArgs<D>::PartialInputData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::BarcodeScannerReport) consume_Windows_Devices_PointOfService_IBarcodeScannerErrorOccurredEventArgs<D>::PartialInputData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs)->get_PartialInputData(&value));
         return Windows::Devices::PointOfService::BarcodeScannerReport{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerErrorOccurredEventArgs<D>::IsRetriable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeScannerErrorOccurredEventArgs<D>::IsRetriable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs)->get_IsRetriable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerErrorOccurredEventArgs<D>::ErrorData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosErrorData) consume_Windows_Devices_PointOfService_IBarcodeScannerErrorOccurredEventArgs<D>::ErrorData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs)->get_ErrorData(&value));
         return Windows::Devices::PointOfService::UnifiedPosErrorData{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerImagePreviewReceivedEventArgs<D>::Preview() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamWithContentType) consume_Windows_Devices_PointOfService_IBarcodeScannerImagePreviewReceivedEventArgs<D>::Preview() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs)->get_Preview(&value));
         return Windows::Storage::Streams::IRandomAccessStreamWithContentType{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerReport<D>::ScanDataType() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeScannerReport<D>::ScanDataType() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerReport)->get_ScanDataType(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerReport<D>::ScanData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_PointOfService_IBarcodeScannerReport<D>::ScanData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerReport)->get_ScanData(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerReport<D>::ScanDataLabel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_PointOfService_IBarcodeScannerReport<D>::ScanDataLabel() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerReport)->get_ScanDataLabel(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerReportFactory<D>::CreateInstance(uint32_t scanDataType, Windows::Storage::Streams::IBuffer const& scanData, Windows::Storage::Streams::IBuffer const& scanDataLabel) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::BarcodeScannerReport) consume_Windows_Devices_PointOfService_IBarcodeScannerReportFactory<D>::CreateInstance(uint32_t scanDataType, Windows::Storage::Streams::IBuffer const& scanData, Windows::Storage::Streams::IBuffer const& scanDataLabel) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerReportFactory)->CreateInstance(scanDataType, *(void**)(&scanData), *(void**)(&scanDataLabel), &result));
         return Windows::Devices::PointOfService::BarcodeScannerReport{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerStatics<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::BarcodeScanner>) consume_Windows_Devices_PointOfService_IBarcodeScannerStatics<D>::GetDefaultAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerStatics)->GetDefaultAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::BarcodeScanner>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::BarcodeScanner>) consume_Windows_Devices_PointOfService_IBarcodeScannerStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerStatics)->FromIdAsync(*(void**)(&deviceId), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::BarcodeScanner>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IBarcodeScannerStatics<D>::GetDeviceSelector() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerStatics)->GetDeviceSelector(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerStatics2<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IBarcodeScannerStatics2<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerStatics2)->GetDeviceSelectorWithConnectionTypes(static_cast<uint32_t>(connectionTypes), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerStatusUpdatedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::BarcodeScannerStatus) consume_Windows_Devices_PointOfService_IBarcodeScannerStatusUpdatedEventArgs<D>::Status() const
     {
-        Windows::Devices::PointOfService::BarcodeScannerStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs)->get_Status(put_abi(value)));
+        Windows::Devices::PointOfService::BarcodeScannerStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeScannerStatusUpdatedEventArgs<D>::ExtendedStatus() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeScannerStatusUpdatedEventArgs<D>::ExtendedStatus() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs)->get_ExtendedStatus(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Unknown() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Unknown() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Unknown(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean8() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean8() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ean8(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean8Add2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean8Add2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ean8Add2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean8Add5() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean8Add5() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ean8Add5(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Eanv() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Eanv() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Eanv(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::EanvAdd2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::EanvAdd2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_EanvAdd2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::EanvAdd5() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::EanvAdd5() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_EanvAdd5(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean13() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean13() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ean13(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean13Add2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean13Add2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ean13Add2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean13Add5() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean13Add5() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ean13Add5(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Isbn() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Isbn() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Isbn(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IsbnAdd5() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IsbnAdd5() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_IsbnAdd5(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ismn() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ismn() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ismn(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IsmnAdd2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IsmnAdd2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_IsmnAdd2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IsmnAdd5() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IsmnAdd5() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_IsmnAdd5(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Issn() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Issn() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Issn(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IssnAdd2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IssnAdd2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_IssnAdd2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IssnAdd5() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::IssnAdd5() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_IssnAdd5(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean99() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean99() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ean99(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean99Add2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean99Add2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ean99Add2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean99Add5() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ean99Add5() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ean99Add5(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Upca() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Upca() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Upca(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpcaAdd2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpcaAdd2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UpcaAdd2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpcaAdd5() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpcaAdd5() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UpcaAdd5(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Upce() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Upce() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Upce(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpceAdd2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpceAdd2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UpceAdd2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpceAdd5() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpceAdd5() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UpceAdd5(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpcCoupon() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UpcCoupon() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UpcCoupon(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfStd() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfStd() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_TfStd(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfDis() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfDis() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_TfDis(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfInt() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfInt() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_TfInt(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfInd() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfInd() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_TfInd(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfMat() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfMat() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_TfMat(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfIata() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::TfIata() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_TfIata(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1DatabarType1() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1DatabarType1() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Gs1DatabarType1(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1DatabarType2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1DatabarType2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Gs1DatabarType2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1DatabarType3() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1DatabarType3() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Gs1DatabarType3(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code39() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code39() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Code39(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code39Ex() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code39Ex() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Code39Ex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Trioptic39() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Trioptic39() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Trioptic39(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code32() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code32() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Code32(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Pzn() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Pzn() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Pzn(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code93() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code93() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Code93(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code93Ex() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code93Ex() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Code93Ex(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code128() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code128() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Code128(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1128() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1128() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Gs1128(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1128Coupon() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Gs1128Coupon() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Gs1128Coupon(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UccEan128() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UccEan128() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UccEan128(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Sisac() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Sisac() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Sisac(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Isbt() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Isbt() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Isbt(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Codabar() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Codabar() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Codabar(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code11() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code11() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Code11(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Msi() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Msi() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Msi(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Plessey() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Plessey() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Plessey(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Telepen() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Telepen() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Telepen(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code16k() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code16k() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Code16k(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::CodablockA() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::CodablockA() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_CodablockA(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::CodablockF() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::CodablockF() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_CodablockF(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Codablock128() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Codablock128() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Codablock128(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code49() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Code49() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Code49(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Aztec() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Aztec() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Aztec(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::DataCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::DataCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_DataCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::DataMatrix() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::DataMatrix() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_DataMatrix(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::HanXin() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::HanXin() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_HanXin(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Maxicode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Maxicode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Maxicode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::MicroPdf417() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::MicroPdf417() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_MicroPdf417(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::MicroQr() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::MicroQr() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_MicroQr(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Pdf417() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Pdf417() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Pdf417(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Qr() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Qr() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Qr(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::MsTag() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::MsTag() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_MsTag(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ccab() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ccab() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ccab(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ccc() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Ccc() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Ccc(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Tlc39() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Tlc39() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Tlc39(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::AusPost() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::AusPost() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_AusPost(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::CanPost() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::CanPost() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_CanPost(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::ChinaPost() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::ChinaPost() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_ChinaPost(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::DutchKix() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::DutchKix() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_DutchKix(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::InfoMail() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::InfoMail() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_InfoMail(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::ItalianPost25() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::ItalianPost25() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_ItalianPost25(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::ItalianPost39() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::ItalianPost39() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_ItalianPost39(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::JapanPost() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::JapanPost() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_JapanPost(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::KoreanPost() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::KoreanPost() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_KoreanPost(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::SwedenPost() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::SwedenPost() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_SwedenPost(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UkPost() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UkPost() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UkPost(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UsIntelligent() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UsIntelligent() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UsIntelligent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UsIntelligentPkg() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UsIntelligentPkg() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UsIntelligentPkg(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UsPlanet() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UsPlanet() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UsPlanet(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UsPostNet() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::UsPostNet() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_UsPostNet(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Us4StateFics() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Us4StateFics() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Us4StateFics(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::OcrA() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::OcrA() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_OcrA(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::OcrB() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::OcrB() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_OcrB(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Micr() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::Micr() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_Micr(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::ExtendedBase() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::ExtendedBase() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->get_ExtendedBase(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::GetName(uint32_t scanDataType) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics<D>::GetName(uint32_t scanDataType) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics)->GetName(scanDataType, &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics2<D>::Gs1DWCode() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologiesStatics2<D>::Gs1DWCode() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologiesStatics2)->get_Gs1DWCode(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitValidationEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitValidationEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->get_IsCheckDigitValidationEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitValidationEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitValidationEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->put_IsCheckDigitValidationEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitValidationSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitValidationSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->get_IsCheckDigitValidationSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitTransmissionEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitTransmissionEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->get_IsCheckDigitTransmissionEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitTransmissionEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitTransmissionEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->put_IsCheckDigitTransmissionEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitTransmissionSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsCheckDigitTransmissionSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->get_IsCheckDigitTransmissionSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLength1() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLength1() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->get_DecodeLength1(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLength1(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLength1(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->put_DecodeLength1(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLength2() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLength2() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->get_DecodeLength2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLength2(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLength2(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->put_DecodeLength2(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLengthKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::BarcodeSymbologyDecodeLengthKind) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLengthKind() const
     {
-        Windows::Devices::PointOfService::BarcodeSymbologyDecodeLengthKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->get_DecodeLengthKind(put_abi(value)));
+        Windows::Devices::PointOfService::BarcodeSymbologyDecodeLengthKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->get_DecodeLengthKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLengthKind(Windows::Devices::PointOfService::BarcodeSymbologyDecodeLengthKind const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::DecodeLengthKind(Windows::Devices::PointOfService::BarcodeSymbologyDecodeLengthKind const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->put_DecodeLengthKind(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsDecodeLengthSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IBarcodeSymbologyAttributes<D>::IsDecodeLengthSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IBarcodeSymbologyAttributes)->get_IsDecodeLengthSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ICashDrawer<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::Capabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::CashDrawerCapabilities) consume_Windows_Devices_PointOfService_ICashDrawer<D>::Capabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->get_Capabilities(&value));
         return Windows::Devices::PointOfService::CashDrawerCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::CashDrawerStatus) consume_Windows_Devices_PointOfService_ICashDrawer<D>::Status() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->get_Status(&value));
         return Windows::Devices::PointOfService::CashDrawerStatus{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::IsDrawerOpen() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICashDrawer<D>::IsDrawerOpen() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->get_IsDrawerOpen(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::DrawerEventSource() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::CashDrawerEventSource) consume_Windows_Devices_PointOfService_ICashDrawer<D>::DrawerEventSource() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->get_DrawerEventSource(&value));
         return Windows::Devices::PointOfService::CashDrawerEventSource{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::ClaimDrawerAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedCashDrawer>) consume_Windows_Devices_PointOfService_ICashDrawer<D>::ClaimDrawerAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->ClaimDrawerAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedCashDrawer>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_Devices_PointOfService_ICashDrawer<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->CheckHealthAsync(static_cast<int32_t>(level), &operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::GetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_Devices_PointOfService_ICashDrawer<D>::GetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->GetStatisticsAsync(*(void**)(&statisticsCategories), &operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::CashDrawer, Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_ICashDrawer<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::CashDrawer, Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->add_StatusUpdated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -912,89 +912,89 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StatusUpdated_revoker>(this, StatusUpdated(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawer<D>::StatusUpdated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICashDrawer<D>::StatusUpdated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawer)->remove_StatusUpdated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::PowerReportingType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosPowerReportingType) consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::PowerReportingType() const
     {
-        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCapabilities)->get_PowerReportingType(put_abi(value)));
+        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCapabilities)->get_PowerReportingType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsStatisticsReportingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsStatisticsReportingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCapabilities)->get_IsStatisticsReportingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsStatisticsUpdatingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsStatisticsUpdatingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCapabilities)->get_IsStatisticsUpdatingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsStatusReportingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsStatusReportingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCapabilities)->get_IsStatusReportingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsStatusMultiDrawerDetectSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsStatusMultiDrawerDetectSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCapabilities)->get_IsStatusMultiDrawerDetectSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsDrawerOpenSensorAvailable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICashDrawerCapabilities<D>::IsDrawerOpenSensorAvailable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCapabilities)->get_IsDrawerOpenSensorAvailable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::AlarmTimeout(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::AlarmTimeout(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->put_AlarmTimeout(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::AlarmTimeout() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::AlarmTimeout() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->get_AlarmTimeout(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepFrequency(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepFrequency(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->put_BeepFrequency(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepFrequency() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepFrequency() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->get_BeepFrequency(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepDuration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepDuration(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->put_BeepDuration(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepDuration() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepDuration() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->get_BeepDuration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepDelay(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepDelay(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->put_BeepDelay(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepDelay() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::BeepDelay() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->get_BeepDelay(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::AlarmTimeoutExpired(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::CashDrawerCloseAlarm, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::AlarmTimeoutExpired(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::CashDrawerCloseAlarm, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->add_AlarmTimeoutExpired(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1002,19 +1002,19 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AlarmTimeoutExpired_revoker>(this, AlarmTimeoutExpired(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::AlarmTimeoutExpired(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::AlarmTimeoutExpired(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->remove_AlarmTimeoutExpired(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::StartAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ICashDrawerCloseAlarm<D>::StartAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerCloseAlarm)->StartAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerEventSource<D>::DrawerClosed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::CashDrawerEventSource, Windows::Devices::PointOfService::CashDrawerClosedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_ICashDrawerEventSource<D>::DrawerClosed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::CashDrawerEventSource, Windows::Devices::PointOfService::CashDrawerClosedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerEventSource)->add_DrawerClosed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1022,13 +1022,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DrawerClosed_revoker>(this, DrawerClosed(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerEventSource<D>::DrawerClosed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICashDrawerEventSource<D>::DrawerClosed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerEventSource)->remove_DrawerClosed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerEventSource<D>::DrawerOpened(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::CashDrawerEventSource, Windows::Devices::PointOfService::CashDrawerOpenedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_ICashDrawerEventSource<D>::DrawerOpened(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::CashDrawerEventSource, Windows::Devices::PointOfService::CashDrawerOpenedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerEventSource)->add_DrawerOpened(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1036,133 +1036,133 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DrawerOpened_revoker>(this, DrawerOpened(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerEventSource<D>::DrawerOpened(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICashDrawerEventSource<D>::DrawerOpened(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerEventSource)->remove_DrawerOpened(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerEventSourceEventArgs<D>::CashDrawer() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::CashDrawer) consume_Windows_Devices_PointOfService_ICashDrawerEventSourceEventArgs<D>::CashDrawer() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs)->get_CashDrawer(&value));
         return Windows::Devices::PointOfService::CashDrawer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerStatics<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::CashDrawer>) consume_Windows_Devices_PointOfService_ICashDrawerStatics<D>::GetDefaultAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerStatics)->GetDefaultAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::CashDrawer>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::CashDrawer>) consume_Windows_Devices_PointOfService_ICashDrawerStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerStatics)->FromIdAsync(*(void**)(&deviceId), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::CashDrawer>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ICashDrawerStatics<D>::GetDeviceSelector() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerStatics)->GetDeviceSelector(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerStatics2<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ICashDrawerStatics2<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerStatics2)->GetDeviceSelectorWithConnectionTypes(static_cast<uint32_t>(connectionTypes), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerStatus<D>::StatusKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::CashDrawerStatusKind) consume_Windows_Devices_PointOfService_ICashDrawerStatus<D>::StatusKind() const
     {
-        Windows::Devices::PointOfService::CashDrawerStatusKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerStatus)->get_StatusKind(put_abi(value)));
+        Windows::Devices::PointOfService::CashDrawerStatusKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerStatus)->get_StatusKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerStatus<D>::ExtendedStatus() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_ICashDrawerStatus<D>::ExtendedStatus() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerStatus)->get_ExtendedStatus(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICashDrawerStatusUpdatedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::CashDrawerStatus) consume_Windows_Devices_PointOfService_ICashDrawerStatusUpdatedEventArgs<D>::Status() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs)->get_Status(&value));
         return Windows::Devices::PointOfService::CashDrawerStatus{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsDisabledOnDataReceived(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsDisabledOnDataReceived(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->put_IsDisabledOnDataReceived(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsDisabledOnDataReceived() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsDisabledOnDataReceived() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->get_IsDisabledOnDataReceived(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsDecodeDataEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsDecodeDataEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->put_IsDecodeDataEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsDecodeDataEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::IsDecodeDataEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->get_IsDecodeDataEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::EnableAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::EnableAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->EnableAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::DisableAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::DisableAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->DisableAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::RetainDevice() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::RetainDevice() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->RetainDevice());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::SetActiveSymbologiesAsync(param::async_iterable<uint32_t> const& symbologies) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::SetActiveSymbologiesAsync(param::async_iterable<uint32_t> const& symbologies) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->SetActiveSymbologiesAsync(*(void**)(&symbologies), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ResetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ResetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->ResetStatisticsAsync(*(void**)(&statisticsCategories), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::UpdateStatisticsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& statistics) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::UpdateStatisticsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& statistics) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->UpdateStatisticsAsync(*(void**)(&statistics), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::SetActiveProfileAsync(param::hstring const& profile) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::SetActiveProfileAsync(param::hstring const& profile) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->SetActiveProfileAsync(*(void**)(&profile), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::DataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner, Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::DataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner, Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->add_DataReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1170,13 +1170,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, DataReceived_revoker>(this, DataReceived(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::DataReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::DataReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->remove_DataReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::TriggerPressed(Windows::Foundation::EventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::TriggerPressed(Windows::Foundation::EventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->add_TriggerPressed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1184,13 +1184,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, TriggerPressed_revoker>(this, TriggerPressed(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::TriggerPressed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::TriggerPressed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->remove_TriggerPressed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::TriggerReleased(Windows::Foundation::EventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::TriggerReleased(Windows::Foundation::EventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->add_TriggerReleased(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1198,13 +1198,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, TriggerReleased_revoker>(this, TriggerReleased(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::TriggerReleased(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::TriggerReleased(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->remove_TriggerReleased(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ReleaseDeviceRequested(Windows::Foundation::EventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ReleaseDeviceRequested(Windows::Foundation::EventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->add_ReleaseDeviceRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1212,13 +1212,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ReleaseDeviceRequested_revoker>(this, ReleaseDeviceRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->remove_ReleaseDeviceRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ImagePreviewReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner, Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ImagePreviewReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner, Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->add_ImagePreviewReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1226,13 +1226,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ImagePreviewReceived_revoker>(this, ImagePreviewReceived(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ImagePreviewReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ImagePreviewReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->remove_ImagePreviewReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ErrorOccurred(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner, Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ErrorOccurred(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner, Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->add_ErrorOccurred(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1240,57 +1240,57 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ErrorOccurred_revoker>(this, ErrorOccurred(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ErrorOccurred(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner<D>::ErrorOccurred(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner)->remove_ErrorOccurred(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner1<D>::StartSoftwareTriggerAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner1<D>::StartSoftwareTriggerAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner1)->StartSoftwareTriggerAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner1<D>::StopSoftwareTriggerAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner1<D>::StopSoftwareTriggerAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner1)->StopSoftwareTriggerAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner2<D>::GetSymbologyAttributesAsync(uint32_t barcodeSymbology) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::BarcodeSymbologyAttributes>) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner2<D>::GetSymbologyAttributesAsync(uint32_t barcodeSymbology) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner2)->GetSymbologyAttributesAsync(barcodeSymbology, &result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::BarcodeSymbologyAttributes>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner2<D>::SetSymbologyAttributesAsync(uint32_t barcodeSymbology, Windows::Devices::PointOfService::BarcodeSymbologyAttributes const& attributes) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner2<D>::SetSymbologyAttributesAsync(uint32_t barcodeSymbology, Windows::Devices::PointOfService::BarcodeSymbologyAttributes const& attributes) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner2)->SetSymbologyAttributesAsync(barcodeSymbology, *(void**)(&attributes), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner3<D>::ShowVideoPreviewAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner3<D>::ShowVideoPreviewAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner3)->ShowVideoPreviewAsync(&operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner3<D>::HideVideoPreview() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner3<D>::HideVideoPreview() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner3)->HideVideoPreview());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner3<D>::IsVideoPreviewShownOnEnable(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner3<D>::IsVideoPreviewShownOnEnable(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner3)->put_IsVideoPreviewShownOnEnable(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner3<D>::IsVideoPreviewShownOnEnable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner3<D>::IsVideoPreviewShownOnEnable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner3)->get_IsVideoPreviewShownOnEnable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner4<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner, Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner4<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedBarcodeScanner, Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner4)->add_Closed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1298,73 +1298,73 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Closed_revoker>(this, Closed(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner4<D>::Closed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedBarcodeScanner4<D>::Closed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedBarcodeScanner4)->remove_Closed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::IsDrawerOpen() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::IsDrawerOpen() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->get_IsDrawerOpen(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::CloseAlarm() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::CashDrawerCloseAlarm) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::CloseAlarm() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->get_CloseAlarm(&value));
         return Windows::Devices::PointOfService::CashDrawerCloseAlarm{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::OpenDrawerAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::OpenDrawerAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->OpenDrawerAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::EnableAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::EnableAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->EnableAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::DisableAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::DisableAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->DisableAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::RetainDeviceAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::RetainDeviceAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->RetainDeviceAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::ResetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::ResetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->ResetStatisticsAsync(*(void**)(&statisticsCategories), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::UpdateStatisticsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& statistics) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::UpdateStatisticsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& statistics) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->UpdateStatisticsAsync(*(void**)(&statistics), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::ReleaseDeviceRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedCashDrawer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::ReleaseDeviceRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedCashDrawer, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->add_ReleaseDeviceRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1372,13 +1372,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ReleaseDeviceRequested_revoker>(this, ReleaseDeviceRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedCashDrawer<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer)->remove_ReleaseDeviceRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer2<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedCashDrawer, Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedCashDrawer2<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedCashDrawer, Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer2)->add_Closed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1386,71 +1386,71 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Closed_revoker>(this, Closed(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedCashDrawer2<D>::Closed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedCashDrawer2<D>::Closed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedCashDrawer2)->remove_Closed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedJournalPrinter<D>::CreateJob() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::JournalPrintJob) consume_Windows_Devices_PointOfService_IClaimedJournalPrinter<D>::CreateJob() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedJournalPrinter)->CreateJob(&value));
         return Windows::Devices::PointOfService::JournalPrintJob{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::Capabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayCapabilities) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::Capabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->get_Capabilities(&value));
         return Windows::Devices::PointOfService::LineDisplayCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::PhysicalDeviceName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::PhysicalDeviceName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->get_PhysicalDeviceName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::PhysicalDeviceDescription() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::PhysicalDeviceDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->get_PhysicalDeviceDescription(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DeviceControlDescription() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DeviceControlDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->get_DeviceControlDescription(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DeviceControlVersion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DeviceControlVersion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->get_DeviceControlVersion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DeviceServiceVersion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DeviceServiceVersion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->get_DeviceServiceVersion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DefaultWindow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayWindow) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::DefaultWindow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->get_DefaultWindow(&value));
         return Windows::Devices::PointOfService::LineDisplayWindow{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::RetainDevice() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::RetainDevice() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->RetainDevice());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::ReleaseDeviceRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedLineDisplay, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::ReleaseDeviceRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedLineDisplay, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->add_ReleaseDeviceRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1458,31 +1458,31 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ReleaseDeviceRequested_revoker>(this, ReleaseDeviceRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedLineDisplay<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay)->remove_ReleaseDeviceRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::GetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::GetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->GetStatisticsAsync(*(void**)(&statisticsCategories), &result));
         return Windows::Foundation::IAsyncOperation<hstring>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->CheckHealthAsync(static_cast<int32_t>(level), &result));
         return Windows::Foundation::IAsyncOperation<hstring>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::CheckPowerStatusAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayPowerStatus>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::CheckPowerStatusAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->CheckPowerStatusAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayPowerStatus>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedLineDisplay, Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedLineDisplay, Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->add_StatusUpdated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1490,85 +1490,85 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StatusUpdated_revoker>(this, StatusUpdated(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::StatusUpdated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::StatusUpdated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->remove_StatusUpdated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::SupportedScreenSizesInCharacters() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Foundation::Size>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::SupportedScreenSizesInCharacters() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->get_SupportedScreenSizesInCharacters(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Foundation::Size>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::MaxBitmapSizeInPixels() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::MaxBitmapSizeInPixels() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->get_MaxBitmapSizeInPixels(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::SupportedCharacterSets() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<int32_t>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::SupportedCharacterSets() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->get_SupportedCharacterSets(&value));
         return Windows::Foundation::Collections::IVectorView<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::CustomGlyphs() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayCustomGlyphs) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::CustomGlyphs() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->get_CustomGlyphs(&value));
         return Windows::Devices::PointOfService::LineDisplayCustomGlyphs{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::GetAttributes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayAttributes) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::GetAttributes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->GetAttributes(&value));
         return Windows::Devices::PointOfService::LineDisplayAttributes{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryUpdateAttributesAsync(Windows::Devices::PointOfService::LineDisplayAttributes const& attributes) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryUpdateAttributesAsync(Windows::Devices::PointOfService::LineDisplayAttributes const& attributes) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->TryUpdateAttributesAsync(*(void**)(&attributes), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TrySetDescriptorAsync(uint32_t descriptor, Windows::Devices::PointOfService::LineDisplayDescriptorState const& descriptorState) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TrySetDescriptorAsync(uint32_t descriptor, Windows::Devices::PointOfService::LineDisplayDescriptorState const& descriptorState) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->TrySetDescriptorAsync(descriptor, static_cast<int32_t>(descriptorState), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryClearDescriptorsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryClearDescriptorsAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->TryClearDescriptorsAsync(&operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryCreateWindowAsync(Windows::Foundation::Rect const& viewport, Windows::Foundation::Size const& windowSize) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayWindow>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryCreateWindowAsync(Windows::Foundation::Rect const& viewport, Windows::Foundation::Size const& windowSize) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->TryCreateWindowAsync(impl::bind_in(viewport), impl::bind_in(windowSize), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayWindow>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryStoreStorageFileBitmapAsync(Windows::Storage::StorageFile const& bitmap) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayStoredBitmap>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryStoreStorageFileBitmapAsync(Windows::Storage::StorageFile const& bitmap) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->TryStoreStorageFileBitmapAsync(*(void**)(&bitmap), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayStoredBitmap>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryStoreStorageFileBitmapAsync(Windows::Storage::StorageFile const& bitmap, Windows::Devices::PointOfService::LineDisplayHorizontalAlignment const& horizontalAlignment, Windows::Devices::PointOfService::LineDisplayVerticalAlignment const& verticalAlignment) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayStoredBitmap>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryStoreStorageFileBitmapAsync(Windows::Storage::StorageFile const& bitmap, Windows::Devices::PointOfService::LineDisplayHorizontalAlignment const& horizontalAlignment, Windows::Devices::PointOfService::LineDisplayVerticalAlignment const& verticalAlignment) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->TryStoreStorageFileBitmapWithAlignmentAsync(*(void**)(&bitmap), static_cast<int32_t>(horizontalAlignment), static_cast<int32_t>(verticalAlignment), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayStoredBitmap>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryStoreStorageFileBitmapAsync(Windows::Storage::StorageFile const& bitmap, Windows::Devices::PointOfService::LineDisplayHorizontalAlignment const& horizontalAlignment, Windows::Devices::PointOfService::LineDisplayVerticalAlignment const& verticalAlignment, int32_t widthInPixels) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayStoredBitmap>) consume_Windows_Devices_PointOfService_IClaimedLineDisplay2<D>::TryStoreStorageFileBitmapAsync(Windows::Storage::StorageFile const& bitmap, Windows::Devices::PointOfService::LineDisplayHorizontalAlignment const& horizontalAlignment, Windows::Devices::PointOfService::LineDisplayVerticalAlignment const& verticalAlignment, int32_t widthInPixels) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay2)->TryStoreStorageFileBitmapWithAlignmentAndWidthAsync(*(void**)(&bitmap), static_cast<int32_t>(horizontalAlignment), static_cast<int32_t>(verticalAlignment), widthInPixels, &result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayStoredBitmap>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay3<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedLineDisplay, Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedLineDisplay3<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedLineDisplay, Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay3)->add_Closed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1576,155 +1576,155 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Closed_revoker>(this, Closed(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplay3<D>::Closed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedLineDisplay3<D>::Closed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplay3)->remove_Closed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplayStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedLineDisplay>) consume_Windows_Devices_PointOfService_IClaimedLineDisplayStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplayStatics)->FromIdAsync(*(void**)(&deviceId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedLineDisplay>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplayStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedLineDisplayStatics<D>::GetDeviceSelector() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplayStatics)->GetDeviceSelector(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedLineDisplayStatics<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedLineDisplayStatics<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedLineDisplayStatics)->GetDeviceSelectorWithConnectionTypes(static_cast<uint32_t>(connectionTypes), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDisabledOnDataReceived(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDisabledOnDataReceived(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->put_IsDisabledOnDataReceived(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDisabledOnDataReceived() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDisabledOnDataReceived() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->get_IsDisabledOnDataReceived(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDecodeDataEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDecodeDataEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->put_IsDecodeDataEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDecodeDataEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDecodeDataEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->get_IsDecodeDataEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDeviceAuthenticated() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsDeviceAuthenticated() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->get_IsDeviceAuthenticated(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DataEncryptionAlgorithm(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DataEncryptionAlgorithm(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->put_DataEncryptionAlgorithm(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DataEncryptionAlgorithm() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DataEncryptionAlgorithm() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->get_DataEncryptionAlgorithm(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::TracksToRead(Windows::Devices::PointOfService::MagneticStripeReaderTrackIds const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::TracksToRead(Windows::Devices::PointOfService::MagneticStripeReaderTrackIds const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->put_TracksToRead(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::TracksToRead() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderTrackIds) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::TracksToRead() const
     {
-        Windows::Devices::PointOfService::MagneticStripeReaderTrackIds value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->get_TracksToRead(put_abi(value)));
+        Windows::Devices::PointOfService::MagneticStripeReaderTrackIds value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->get_TracksToRead(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsTransmitSentinelsEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsTransmitSentinelsEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->put_IsTransmitSentinelsEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsTransmitSentinelsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::IsTransmitSentinelsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->get_IsTransmitSentinelsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::EnableAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::EnableAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->EnableAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DisableAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DisableAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->DisableAsync(&result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::RetainDevice() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::RetainDevice() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->RetainDevice());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::SetErrorReportingType(Windows::Devices::PointOfService::MagneticStripeReaderErrorReportingType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::SetErrorReportingType(Windows::Devices::PointOfService::MagneticStripeReaderErrorReportingType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->SetErrorReportingType(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::RetrieveDeviceAuthenticationDataAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::RetrieveDeviceAuthenticationDataAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->RetrieveDeviceAuthenticationDataAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::AuthenticateDeviceAsync(array_view<uint8_t const> responseToken) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::AuthenticateDeviceAsync(array_view<uint8_t const> responseToken) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->AuthenticateDeviceAsync(responseToken.size(), get_abi(responseToken), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DeAuthenticateDeviceAsync(array_view<uint8_t const> responseToken) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::DeAuthenticateDeviceAsync(array_view<uint8_t const> responseToken) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->DeAuthenticateDeviceAsync(responseToken.size(), get_abi(responseToken), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::UpdateKeyAsync(param::hstring const& key, param::hstring const& keyName) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::UpdateKeyAsync(param::hstring const& key, param::hstring const& keyName) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->UpdateKeyAsync(*(void**)(&key), *(void**)(&keyName), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ResetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ResetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->ResetStatisticsAsync(*(void**)(&statisticsCategories), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::UpdateStatisticsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& statistics) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::UpdateStatisticsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& statistics) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->UpdateStatisticsAsync(*(void**)(&statistics), &result));
         return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::BankCardDataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::BankCardDataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->add_BankCardDataReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1732,13 +1732,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, BankCardDataReceived_revoker>(this, BankCardDataReceived(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::BankCardDataReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::BankCardDataReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->remove_BankCardDataReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::AamvaCardDataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::AamvaCardDataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->add_AamvaCardDataReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1746,13 +1746,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AamvaCardDataReceived_revoker>(this, AamvaCardDataReceived(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::AamvaCardDataReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::AamvaCardDataReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->remove_AamvaCardDataReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::VendorSpecificDataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::VendorSpecificDataReceived(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->add_VendorSpecificDataReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1760,13 +1760,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, VendorSpecificDataReceived_revoker>(this, VendorSpecificDataReceived(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::VendorSpecificDataReceived(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::VendorSpecificDataReceived(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->remove_VendorSpecificDataReceived(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ReleaseDeviceRequested(Windows::Foundation::EventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ReleaseDeviceRequested(Windows::Foundation::EventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->add_ReleaseDeviceRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1774,13 +1774,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ReleaseDeviceRequested_revoker>(this, ReleaseDeviceRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->remove_ReleaseDeviceRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ErrorOccurred(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ErrorOccurred(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->add_ErrorOccurred(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1788,13 +1788,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ErrorOccurred_revoker>(this, ErrorOccurred(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ErrorOccurred(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader<D>::ErrorOccurred(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader)->remove_ErrorOccurred(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader2<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader2<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedMagneticStripeReader, Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader2)->add_Closed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1802,109 +1802,109 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Closed_revoker>(this, Closed(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader2<D>::Closed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedMagneticStripeReader2<D>::Closed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedMagneticStripeReader2)->remove_Closed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::IsEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::IsEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_IsEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::CharacterSet(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::CharacterSet(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->put_CharacterSet(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::CharacterSet() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::CharacterSet() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_CharacterSet(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::IsCoverOpen() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::IsCoverOpen() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_IsCoverOpen(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::IsCharacterSetMappingEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::IsCharacterSetMappingEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->put_IsCharacterSetMappingEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::IsCharacterSetMappingEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::IsCharacterSetMappingEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_IsCharacterSetMappingEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::MapMode(Windows::Devices::PointOfService::PosPrinterMapMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::MapMode(Windows::Devices::PointOfService::PosPrinterMapMode const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->put_MapMode(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::MapMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterMapMode) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::MapMode() const
     {
-        Windows::Devices::PointOfService::PosPrinterMapMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_MapMode(put_abi(value)));
+        Windows::Devices::PointOfService::PosPrinterMapMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_MapMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::Receipt() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::ClaimedReceiptPrinter) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::Receipt() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_Receipt(&value));
         return Windows::Devices::PointOfService::ClaimedReceiptPrinter{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::Slip() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::ClaimedSlipPrinter) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::Slip() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_Slip(&value));
         return Windows::Devices::PointOfService::ClaimedSlipPrinter{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::Journal() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::ClaimedJournalPrinter) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::Journal() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->get_Journal(&value));
         return Windows::Devices::PointOfService::ClaimedJournalPrinter{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::EnableAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::EnableAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->EnableAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::DisableAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::DisableAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->DisableAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::RetainDeviceAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::RetainDeviceAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->RetainDeviceAsync(&result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::ResetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::ResetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->ResetStatisticsAsync(*(void**)(&statisticsCategories), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::UpdateStatisticsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& statistics) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::UpdateStatisticsAsync(param::async_iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& statistics) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->UpdateStatisticsAsync(*(void**)(&statistics), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::ReleaseDeviceRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedPosPrinter, Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::ReleaseDeviceRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedPosPrinter, Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->add_ReleaseDeviceRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1912,13 +1912,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ReleaseDeviceRequested_revoker>(this, ReleaseDeviceRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedPosPrinter<D>::ReleaseDeviceRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter)->remove_ReleaseDeviceRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter2<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedPosPrinter, Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IClaimedPosPrinter2<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::ClaimedPosPrinter, Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter2)->add_Closed(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1926,1012 +1926,1012 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, Closed_revoker>(this, Closed(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedPosPrinter2<D>::Closed(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedPosPrinter2<D>::Closed(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedPosPrinter2)->remove_Closed(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::SidewaysMaxLines() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::SidewaysMaxLines() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedReceiptPrinter)->get_SidewaysMaxLines(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::SidewaysMaxChars() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::SidewaysMaxChars() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedReceiptPrinter)->get_SidewaysMaxChars(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::LinesToPaperCut() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::LinesToPaperCut() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedReceiptPrinter)->get_LinesToPaperCut(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::PageSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::PageSize() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedReceiptPrinter)->get_PageSize(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::PrintArea() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::PrintArea() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedReceiptPrinter)->get_PrintArea(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::CreateJob() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::ReceiptPrintJob) consume_Windows_Devices_PointOfService_IClaimedReceiptPrinter<D>::CreateJob() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedReceiptPrinter)->CreateJob(&value));
         return Windows::Devices::PointOfService::ReceiptPrintJob{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::SidewaysMaxLines() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::SidewaysMaxLines() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->get_SidewaysMaxLines(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::SidewaysMaxChars() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::SidewaysMaxChars() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->get_SidewaysMaxChars(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::MaxLines() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::MaxLines() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->get_MaxLines(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::LinesNearEndToEnd() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::LinesNearEndToEnd() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->get_LinesNearEndToEnd(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::PrintSide() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterPrintSide) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::PrintSide() const
     {
-        Windows::Devices::PointOfService::PosPrinterPrintSide value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->get_PrintSide(put_abi(value)));
+        Windows::Devices::PointOfService::PosPrinterPrintSide value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->get_PrintSide(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::PageSize() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::PageSize() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->get_PageSize(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::PrintArea() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Rect) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::PrintArea() const
     {
-        Windows::Foundation::Rect value;
+        Windows::Foundation::Rect value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->get_PrintArea(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::OpenJaws() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::OpenJaws() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->OpenJaws());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::CloseJaws() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::CloseJaws() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->CloseJaws());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::InsertSlipAsync(Windows::Foundation::TimeSpan const& timeout) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::InsertSlipAsync(Windows::Foundation::TimeSpan const& timeout) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->InsertSlipAsync(impl::bind_in(timeout), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::RemoveSlipAsync(Windows::Foundation::TimeSpan const& timeout) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::RemoveSlipAsync(Windows::Foundation::TimeSpan const& timeout) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->RemoveSlipAsync(impl::bind_in(timeout), &result));
         return Windows::Foundation::IAsyncOperation<bool>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::ChangePrintSide(Windows::Devices::PointOfService::PosPrinterPrintSide const& printSide) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::ChangePrintSide(Windows::Devices::PointOfService::PosPrinterPrintSide const& printSide) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->ChangePrintSide(static_cast<int32_t>(printSide)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::CreateJob() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::SlipPrintJob) consume_Windows_Devices_PointOfService_IClaimedSlipPrinter<D>::CreateJob() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IClaimedSlipPrinter)->CreateJob(&value));
         return Windows::Devices::PointOfService::SlipPrintJob{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::CharactersPerLine(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::CharactersPerLine(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->put_CharactersPerLine(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::CharactersPerLine() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::CharactersPerLine() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_CharactersPerLine(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineHeight(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineHeight(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->put_LineHeight(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_LineHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineSpacing(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineSpacing(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->put_LineSpacing(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineSpacing() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineSpacing() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_LineSpacing(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineWidth() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::LineWidth() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_LineWidth(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsLetterQuality(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsLetterQuality(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->put_IsLetterQuality(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsLetterQuality() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsLetterQuality() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_IsLetterQuality(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsPaperNearEnd() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsPaperNearEnd() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_IsPaperNearEnd(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::ColorCartridge(Windows::Devices::PointOfService::PosPrinterColorCartridge const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::ColorCartridge(Windows::Devices::PointOfService::PosPrinterColorCartridge const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->put_ColorCartridge(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::ColorCartridge() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterColorCartridge) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::ColorCartridge() const
     {
-        Windows::Devices::PointOfService::PosPrinterColorCartridge value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_ColorCartridge(put_abi(value)));
+        Windows::Devices::PointOfService::PosPrinterColorCartridge value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_ColorCartridge(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsCoverOpen() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsCoverOpen() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_IsCoverOpen(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsCartridgeRemoved() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsCartridgeRemoved() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_IsCartridgeRemoved(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsCartridgeEmpty() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsCartridgeEmpty() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_IsCartridgeEmpty(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsHeadCleaning() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsHeadCleaning() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_IsHeadCleaning(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsPaperEmpty() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsPaperEmpty() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_IsPaperEmpty(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsReadyToPrint() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::IsReadyToPrint() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->get_IsReadyToPrint(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::ValidateData(param::hstring const& data) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonClaimedPosPrinterStation<D>::ValidateData(param::hstring const& data) const
     {
-        bool result;
+        bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation)->ValidateData(*(void**)(&data), &result));
         return result;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsPrinterPresent() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsPrinterPresent() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsPrinterPresent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsDualColorSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsDualColorSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsDualColorSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::ColorCartridgeCapabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterColorCapabilities) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::ColorCartridgeCapabilities() const
     {
-        Windows::Devices::PointOfService::PosPrinterColorCapabilities value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_ColorCartridgeCapabilities(put_abi(value)));
+        Windows::Devices::PointOfService::PosPrinterColorCapabilities value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_ColorCartridgeCapabilities(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::CartridgeSensors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterCartridgeSensors) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::CartridgeSensors() const
     {
-        Windows::Devices::PointOfService::PosPrinterCartridgeSensors value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_CartridgeSensors(put_abi(value)));
+        Windows::Devices::PointOfService::PosPrinterCartridgeSensors value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_CartridgeSensors(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsBoldSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsBoldSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsBoldSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsItalicSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsItalicSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsItalicSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsUnderlineSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsUnderlineSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsUnderlineSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsDoubleHighPrintSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsDoubleHighPrintSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsDoubleHighPrintSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsDoubleWidePrintSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsDoubleWidePrintSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsDoubleWidePrintSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsDoubleHighDoubleWidePrintSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsDoubleHighDoubleWidePrintSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsDoubleHighDoubleWidePrintSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsPaperEmptySensorSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsPaperEmptySensorSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsPaperEmptySensorSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsPaperNearEndSensorSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::IsPaperNearEndSensorSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_IsPaperNearEndSensorSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::SupportedCharactersPerLine() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<uint32_t>) consume_Windows_Devices_PointOfService_ICommonPosPrintStationCapabilities<D>::SupportedCharactersPerLine() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities)->get_SupportedCharactersPerLine(&value));
         return Windows::Foundation::Collections::IVectorView<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsBarcodeSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsBarcodeSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_IsBarcodeSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsBitmapSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsBitmapSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_IsBitmapSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsLeft90RotationSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsLeft90RotationSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_IsLeft90RotationSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsRight90RotationSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsRight90RotationSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_IsRight90RotationSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::Is180RotationSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::Is180RotationSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_Is180RotationSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsPrintAreaSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::IsPrintAreaSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_IsPrintAreaSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::RuledLineCapabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterRuledLineCapabilities) consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::RuledLineCapabilities() const
     {
-        Windows::Devices::PointOfService::PosPrinterRuledLineCapabilities value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_RuledLineCapabilities(put_abi(value)));
+        Windows::Devices::PointOfService::PosPrinterRuledLineCapabilities value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_RuledLineCapabilities(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::SupportedBarcodeRotations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::PosPrinterRotation>) consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::SupportedBarcodeRotations() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_SupportedBarcodeRotations(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::PosPrinterRotation>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::SupportedBitmapRotations() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::PosPrinterRotation>) consume_Windows_Devices_PointOfService_ICommonReceiptSlipCapabilities<D>::SupportedBitmapRotations() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities)->get_SupportedBitmapRotations(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::PosPrinterRotation>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IJournalPrintJob<D>::Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IJournalPrintJob<D>::Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IJournalPrintJob)->Print(*(void**)(&data), *(void**)(&printOptions)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IJournalPrintJob<D>::FeedPaperByLine(int32_t lineCount) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IJournalPrintJob<D>::FeedPaperByLine(int32_t lineCount) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IJournalPrintJob)->FeedPaperByLine(lineCount));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IJournalPrintJob<D>::FeedPaperByMapModeUnit(int32_t distance) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IJournalPrintJob<D>::FeedPaperByMapModeUnit(int32_t distance) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IJournalPrintJob)->FeedPaperByMapModeUnit(distance));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsReverseVideoSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsReverseVideoSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsReverseVideoSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsStrikethroughSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsStrikethroughSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsStrikethroughSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsSuperscriptSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsSuperscriptSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsSuperscriptSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsSubscriptSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsSubscriptSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsSubscriptSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsReversePaperFeedByLineSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsReversePaperFeedByLineSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsReversePaperFeedByLineSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsReversePaperFeedByMapModeUnitSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IJournalPrinterCapabilities2<D>::IsReversePaperFeedByMapModeUnitSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IJournalPrinterCapabilities2)->get_IsReversePaperFeedByMapModeUnitSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplay<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplay<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplay)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplay<D>::Capabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayCapabilities) consume_Windows_Devices_PointOfService_ILineDisplay<D>::Capabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplay)->get_Capabilities(&value));
         return Windows::Devices::PointOfService::LineDisplayCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplay<D>::PhysicalDeviceName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplay<D>::PhysicalDeviceName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplay)->get_PhysicalDeviceName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplay<D>::PhysicalDeviceDescription() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplay<D>::PhysicalDeviceDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplay)->get_PhysicalDeviceDescription(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplay<D>::DeviceControlDescription() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplay<D>::DeviceControlDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplay)->get_DeviceControlDescription(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplay<D>::DeviceControlVersion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplay<D>::DeviceControlVersion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplay)->get_DeviceControlVersion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplay<D>::DeviceServiceVersion() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplay<D>::DeviceServiceVersion() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplay)->get_DeviceServiceVersion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplay<D>::ClaimAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedLineDisplay>) consume_Windows_Devices_PointOfService_ILineDisplay<D>::ClaimAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplay)->ClaimAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedLineDisplay>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplay2<D>::CheckPowerStatusAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayPowerStatus>) consume_Windows_Devices_PointOfService_ILineDisplay2<D>::CheckPowerStatusAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplay2)->CheckPowerStatusAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplayPowerStatus>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::IsPowerNotifyEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::IsPowerNotifyEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->get_IsPowerNotifyEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::IsPowerNotifyEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::IsPowerNotifyEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->put_IsPowerNotifyEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::Brightness() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::Brightness() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->get_Brightness(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::Brightness(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::Brightness(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->put_Brightness(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::BlinkRate() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::BlinkRate() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->get_BlinkRate(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::BlinkRate(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::BlinkRate(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->put_BlinkRate(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::ScreenSizeInCharacters() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::ScreenSizeInCharacters() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->get_ScreenSizeInCharacters(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::ScreenSizeInCharacters(Windows::Foundation::Size const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::ScreenSizeInCharacters(Windows::Foundation::Size const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->put_ScreenSizeInCharacters(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::CharacterSet() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::CharacterSet() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->get_CharacterSet(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::CharacterSet(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::CharacterSet(int32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->put_CharacterSet(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::IsCharacterSetMappingEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::IsCharacterSetMappingEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->get_IsCharacterSetMappingEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::IsCharacterSetMappingEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::IsCharacterSetMappingEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->put_IsCharacterSetMappingEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::CurrentWindow() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayWindow) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::CurrentWindow() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->get_CurrentWindow(&value));
         return Windows::Devices::PointOfService::LineDisplayWindow{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::CurrentWindow(Windows::Devices::PointOfService::LineDisplayWindow const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayAttributes<D>::CurrentWindow(Windows::Devices::PointOfService::LineDisplayWindow const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayAttributes)->put_CurrentWindow(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsStatisticsReportingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsStatisticsReportingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_IsStatisticsReportingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsStatisticsUpdatingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsStatisticsUpdatingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_IsStatisticsUpdatingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::PowerReportingType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosPowerReportingType) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::PowerReportingType() const
     {
-        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_PowerReportingType(put_abi(value)));
+        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_PowerReportingType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanChangeScreenSize() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanChangeScreenSize() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanChangeScreenSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanDisplayBitmaps() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanDisplayBitmaps() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanDisplayBitmaps(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanReadCharacterAtCursor() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanReadCharacterAtCursor() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanReadCharacterAtCursor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanMapCharacterSets() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanMapCharacterSets() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanMapCharacterSets(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanDisplayCustomGlyphs() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanDisplayCustomGlyphs() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanDisplayCustomGlyphs(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanReverse() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayTextAttributeGranularity) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanReverse() const
     {
-        Windows::Devices::PointOfService::LineDisplayTextAttributeGranularity value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanReverse(put_abi(value)));
+        Windows::Devices::PointOfService::LineDisplayTextAttributeGranularity value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanReverse(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanBlink() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayTextAttributeGranularity) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanBlink() const
     {
-        Windows::Devices::PointOfService::LineDisplayTextAttributeGranularity value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanBlink(put_abi(value)));
+        Windows::Devices::PointOfService::LineDisplayTextAttributeGranularity value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanBlink(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanChangeBlinkRate() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::CanChangeBlinkRate() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_CanChangeBlinkRate(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsBrightnessSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsBrightnessSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_IsBrightnessSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsCursorSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsCursorSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_IsCursorSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsHorizontalMarqueeSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsHorizontalMarqueeSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_IsHorizontalMarqueeSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsVerticalMarqueeSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsVerticalMarqueeSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_IsVerticalMarqueeSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsInterCharacterWaitSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::IsInterCharacterWaitSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_IsInterCharacterWaitSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::SupportedDescriptors() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::SupportedDescriptors() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_SupportedDescriptors(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::SupportedWindows() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_ILineDisplayCapabilities<D>::SupportedWindows() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCapabilities)->get_SupportedWindows(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::CanCustomize() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::CanCustomize() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursor)->get_CanCustomize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsBlinkSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsBlinkSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursor)->get_IsBlinkSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsBlockSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsBlockSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursor)->get_IsBlockSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsHalfBlockSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsHalfBlockSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursor)->get_IsHalfBlockSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsUnderlineSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsUnderlineSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursor)->get_IsUnderlineSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsReverseSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsReverseSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursor)->get_IsReverseSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsOtherSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::IsOtherSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursor)->get_IsOtherSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::GetAttributes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayCursorAttributes) consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::GetAttributes() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursor)->GetAttributes(&result));
         return Windows::Devices::PointOfService::LineDisplayCursorAttributes{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::TryUpdateAttributesAsync(Windows::Devices::PointOfService::LineDisplayCursorAttributes const& attributes) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayCursor<D>::TryUpdateAttributesAsync(Windows::Devices::PointOfService::LineDisplayCursorAttributes const& attributes) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursor)->TryUpdateAttributesAsync(*(void**)(&attributes), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::IsBlinkEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::IsBlinkEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursorAttributes)->get_IsBlinkEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::IsBlinkEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::IsBlinkEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursorAttributes)->put_IsBlinkEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::CursorType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayCursorType) consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::CursorType() const
     {
-        Windows::Devices::PointOfService::LineDisplayCursorType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursorAttributes)->get_CursorType(put_abi(value)));
+        Windows::Devices::PointOfService::LineDisplayCursorType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursorAttributes)->get_CursorType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::CursorType(Windows::Devices::PointOfService::LineDisplayCursorType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::CursorType(Windows::Devices::PointOfService::LineDisplayCursorType const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursorAttributes)->put_CursorType(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::IsAutoAdvanceEnabled() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::IsAutoAdvanceEnabled() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursorAttributes)->get_IsAutoAdvanceEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::IsAutoAdvanceEnabled(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::IsAutoAdvanceEnabled(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursorAttributes)->put_IsAutoAdvanceEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::Position() const
     {
-        Windows::Foundation::Point value;
+        Windows::Foundation::Point value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursorAttributes)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::Position(Windows::Foundation::Point const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayCursorAttributes<D>::Position(Windows::Foundation::Point const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCursorAttributes)->put_Position(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCustomGlyphs<D>::SizeInPixels() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_PointOfService_ILineDisplayCustomGlyphs<D>::SizeInPixels() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCustomGlyphs)->get_SizeInPixels(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCustomGlyphs<D>::SupportedGlyphCodes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<uint32_t>) consume_Windows_Devices_PointOfService_ILineDisplayCustomGlyphs<D>::SupportedGlyphCodes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCustomGlyphs)->get_SupportedGlyphCodes(&value));
         return Windows::Foundation::Collections::IVectorView<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayCustomGlyphs<D>::TryRedefineAsync(uint32_t glyphCode, Windows::Storage::Streams::IBuffer const& glyphData) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayCustomGlyphs<D>::TryRedefineAsync(uint32_t glyphCode, Windows::Storage::Streams::IBuffer const& glyphData) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayCustomGlyphs)->TryRedefineAsync(glyphCode, *(void**)(&glyphData), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::Format() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayMarqueeFormat) consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::Format() const
     {
-        Windows::Devices::PointOfService::LineDisplayMarqueeFormat value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayMarquee)->get_Format(put_abi(value)));
+        Windows::Devices::PointOfService::LineDisplayMarqueeFormat value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayMarquee)->get_Format(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::Format(Windows::Devices::PointOfService::LineDisplayMarqueeFormat const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::Format(Windows::Devices::PointOfService::LineDisplayMarqueeFormat const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayMarquee)->put_Format(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::RepeatWaitInterval() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::RepeatWaitInterval() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayMarquee)->get_RepeatWaitInterval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::RepeatWaitInterval(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::RepeatWaitInterval(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayMarquee)->put_RepeatWaitInterval(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::ScrollWaitInterval() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::ScrollWaitInterval() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayMarquee)->get_ScrollWaitInterval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::ScrollWaitInterval(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::ScrollWaitInterval(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayMarquee)->put_ScrollWaitInterval(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::TryStartScrollingAsync(Windows::Devices::PointOfService::LineDisplayScrollDirection const& direction) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::TryStartScrollingAsync(Windows::Devices::PointOfService::LineDisplayScrollDirection const& direction) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayMarquee)->TryStartScrollingAsync(static_cast<int32_t>(direction), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::TryStopScrollingAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayMarquee<D>::TryStopScrollingAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayMarquee)->TryStopScrollingAsync(&operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplay>) consume_Windows_Devices_PointOfService_ILineDisplayStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatics)->FromIdAsync(*(void**)(&deviceId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplay>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStatics<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplay>) consume_Windows_Devices_PointOfService_ILineDisplayStatics<D>::GetDefaultAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatics)->GetDefaultAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplay>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplayStatics<D>::GetDeviceSelector() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatics)->GetDeviceSelector(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStatics<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplayStatics<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatics)->GetDeviceSelectorWithConnectionTypes(static_cast<uint32_t>(connectionTypes), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStatics2<D>::StatisticsCategorySelector() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector) consume_Windows_Devices_PointOfService_ILineDisplayStatics2<D>::StatisticsCategorySelector() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatics2)->get_StatisticsCategorySelector(&value));
         return Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStatisticsCategorySelector<D>::AllStatistics() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplayStatisticsCategorySelector<D>::AllStatistics() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector)->get_AllStatistics(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStatisticsCategorySelector<D>::UnifiedPosStatistics() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplayStatisticsCategorySelector<D>::UnifiedPosStatistics() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector)->get_UnifiedPosStatistics(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStatisticsCategorySelector<D>::ManufacturerStatistics() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplayStatisticsCategorySelector<D>::ManufacturerStatistics() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector)->get_ManufacturerStatistics(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStatusUpdatedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayPowerStatus) consume_Windows_Devices_PointOfService_ILineDisplayStatusUpdatedEventArgs<D>::Status() const
     {
-        Windows::Devices::PointOfService::LineDisplayPowerStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs)->get_Status(put_abi(value)));
+        Windows::Devices::PointOfService::LineDisplayPowerStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStoredBitmap<D>::EscapeSequence() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_ILineDisplayStoredBitmap<D>::EscapeSequence() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStoredBitmap)->get_EscapeSequence(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayStoredBitmap<D>::TryDeleteAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayStoredBitmap<D>::TryDeleteAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayStoredBitmap)->TryDeleteAsync(&operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::SizeInCharacters() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Size) consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::SizeInCharacters() const
     {
-        Windows::Foundation::Size value;
+        Windows::Foundation::Size value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow)->get_SizeInCharacters(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::InterCharacterWaitInterval() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::InterCharacterWaitInterval() const
     {
-        Windows::Foundation::TimeSpan value;
+        Windows::Foundation::TimeSpan value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow)->get_InterCharacterWaitInterval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::InterCharacterWaitInterval(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::InterCharacterWaitInterval(Windows::Foundation::TimeSpan const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow)->put_InterCharacterWaitInterval(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryRefreshAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryRefreshAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow)->TryRefreshAsync(&operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryDisplayTextAsync(param::hstring const& text, Windows::Devices::PointOfService::LineDisplayTextAttribute const& displayAttribute) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryDisplayTextAsync(param::hstring const& text, Windows::Devices::PointOfService::LineDisplayTextAttribute const& displayAttribute) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow)->TryDisplayTextAsync(*(void**)(&text), static_cast<int32_t>(displayAttribute), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryDisplayTextAsync(param::hstring const& text, Windows::Devices::PointOfService::LineDisplayTextAttribute const& displayAttribute, Windows::Foundation::Point const& startPosition) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryDisplayTextAsync(param::hstring const& text, Windows::Devices::PointOfService::LineDisplayTextAttribute const& displayAttribute, Windows::Foundation::Point const& startPosition) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow)->TryDisplayTextAtPositionAsync(*(void**)(&text), static_cast<int32_t>(displayAttribute), impl::bind_in(startPosition), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryDisplayTextAsync(param::hstring const& text) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryDisplayTextAsync(param::hstring const& text) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow)->TryDisplayTextNormalAsync(*(void**)(&text), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryScrollTextAsync(Windows::Devices::PointOfService::LineDisplayScrollDirection const& direction, uint32_t numberOfColumnsOrRows) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryScrollTextAsync(Windows::Devices::PointOfService::LineDisplayScrollDirection const& direction, uint32_t numberOfColumnsOrRows) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow)->TryScrollTextAsync(static_cast<int32_t>(direction), numberOfColumnsOrRows, &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryClearTextAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow<D>::TryClearTextAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow)->TryClearTextAsync(&operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::Cursor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayCursor) consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::Cursor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow2)->get_Cursor(&value));
         return Windows::Devices::PointOfService::LineDisplayCursor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::Marquee() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::LineDisplayMarquee) consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::Marquee() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow2)->get_Marquee(&value));
         return Windows::Devices::PointOfService::LineDisplayMarquee{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::ReadCharacterAtCursorAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<uint32_t>) consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::ReadCharacterAtCursorAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow2)->ReadCharacterAtCursorAsync(&result));
         return Windows::Foundation::IAsyncOperation<uint32_t>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStoredBitmapAtCursorAsync(Windows::Devices::PointOfService::LineDisplayStoredBitmap const& bitmap) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStoredBitmapAtCursorAsync(Windows::Devices::PointOfService::LineDisplayStoredBitmap const& bitmap) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow2)->TryDisplayStoredBitmapAtCursorAsync(*(void**)(&bitmap), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtCursorAsync(Windows::Storage::StorageFile const& bitmap) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtCursorAsync(Windows::Storage::StorageFile const& bitmap) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow2)->TryDisplayStorageFileBitmapAtCursorAsync(*(void**)(&bitmap), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtCursorAsync(Windows::Storage::StorageFile const& bitmap, Windows::Devices::PointOfService::LineDisplayHorizontalAlignment const& horizontalAlignment, Windows::Devices::PointOfService::LineDisplayVerticalAlignment const& verticalAlignment) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtCursorAsync(Windows::Storage::StorageFile const& bitmap, Windows::Devices::PointOfService::LineDisplayHorizontalAlignment const& horizontalAlignment, Windows::Devices::PointOfService::LineDisplayVerticalAlignment const& verticalAlignment) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow2)->TryDisplayStorageFileBitmapAtCursorWithAlignmentAsync(*(void**)(&bitmap), static_cast<int32_t>(horizontalAlignment), static_cast<int32_t>(verticalAlignment), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtCursorAsync(Windows::Storage::StorageFile const& bitmap, Windows::Devices::PointOfService::LineDisplayHorizontalAlignment const& horizontalAlignment, Windows::Devices::PointOfService::LineDisplayVerticalAlignment const& verticalAlignment, int32_t widthInPixels) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtCursorAsync(Windows::Storage::StorageFile const& bitmap, Windows::Devices::PointOfService::LineDisplayHorizontalAlignment const& horizontalAlignment, Windows::Devices::PointOfService::LineDisplayVerticalAlignment const& verticalAlignment, int32_t widthInPixels) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow2)->TryDisplayStorageFileBitmapAtCursorWithAlignmentAndWidthAsync(*(void**)(&bitmap), static_cast<int32_t>(horizontalAlignment), static_cast<int32_t>(verticalAlignment), widthInPixels, &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtPointAsync(Windows::Storage::StorageFile const& bitmap, Windows::Foundation::Point const& offsetInPixels) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtPointAsync(Windows::Storage::StorageFile const& bitmap, Windows::Foundation::Point const& offsetInPixels) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow2)->TryDisplayStorageFileBitmapAtPointAsync(*(void**)(&bitmap), impl::bind_in(offsetInPixels), &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtPointAsync(Windows::Storage::StorageFile const& bitmap, Windows::Foundation::Point const& offsetInPixels, int32_t widthInPixels) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_ILineDisplayWindow2<D>::TryDisplayStorageFileBitmapAtPointAsync(Windows::Storage::StorageFile const& bitmap, Windows::Foundation::Point const& offsetInPixels, int32_t widthInPixels) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ILineDisplayWindow2)->TryDisplayStorageFileBitmapAtPointWithWidthAsync(*(void**)(&bitmap), impl::bind_in(offsetInPixels), widthInPixels, &operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::Capabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderCapabilities) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::Capabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->get_Capabilities(&value));
         return Windows::Devices::PointOfService::MagneticStripeReaderCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::SupportedCardTypes() const
+    template <typename D> WINRT_IMPL_AUTO(com_array<uint32_t>) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::SupportedCardTypes() const
     {
         uint32_t value_impl_size{};
         uint32_t* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->get_SupportedCardTypes(&value_impl_size, &value));
         return com_array<uint32_t>{ value, value_impl_size, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::DeviceAuthenticationProtocol() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderAuthenticationProtocol) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::DeviceAuthenticationProtocol() const
     {
-        Windows::Devices::PointOfService::MagneticStripeReaderAuthenticationProtocol value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->get_DeviceAuthenticationProtocol(put_abi(value)));
+        Windows::Devices::PointOfService::MagneticStripeReaderAuthenticationProtocol value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->get_DeviceAuthenticationProtocol(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->CheckHealthAsync(static_cast<int32_t>(level), &operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::ClaimReaderAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedMagneticStripeReader>) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::ClaimReaderAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->ClaimReaderAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedMagneticStripeReader>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::RetrieveStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::RetrieveStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->RetrieveStatisticsAsync(*(void**)(&statisticsCategories), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::GetErrorReportingType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderErrorReportingType) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::GetErrorReportingType() const
     {
-        Windows::Devices::PointOfService::MagneticStripeReaderErrorReportingType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->GetErrorReportingType(put_abi(value)));
+        Windows::Devices::PointOfService::MagneticStripeReaderErrorReportingType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->GetErrorReportingType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::MagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::MagneticStripeReader, Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->add_StatusUpdated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2939,487 +2939,487 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StatusUpdated_revoker>(this, StatusUpdated(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::StatusUpdated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IMagneticStripeReader<D>::StatusUpdated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReader)->remove_StatusUpdated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Report() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderReport) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Report() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Report(&value));
         return Windows::Devices::PointOfService::MagneticStripeReaderReport{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::LicenseNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::LicenseNumber() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_LicenseNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::ExpirationDate() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::ExpirationDate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_ExpirationDate(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Restrictions() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Restrictions() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Restrictions(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Class() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Class() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Class(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Endorsements() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Endorsements() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Endorsements(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::BirthDate() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::BirthDate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_BirthDate(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::FirstName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::FirstName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_FirstName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Surname() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Surname() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Surname(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Suffix() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Suffix() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Suffix(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Gender() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Gender() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Gender(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::HairColor() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::HairColor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_HairColor(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::EyeColor() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::EyeColor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_EyeColor(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Height() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Height() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Height(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Weight() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Weight() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Weight(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Address() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::Address() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_Address(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::City() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::City() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_City(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::State() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_State(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::PostalCode() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderAamvaCardDataReceivedEventArgs<D>::PostalCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs)->get_PostalCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::Report() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderReport) consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::Report() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs)->get_Report(&value));
         return Windows::Devices::PointOfService::MagneticStripeReaderReport{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::AccountNumber() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::AccountNumber() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs)->get_AccountNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::ExpirationDate() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::ExpirationDate() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs)->get_ExpirationDate(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::ServiceCode() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::ServiceCode() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs)->get_ServiceCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::Title() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::Title() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::FirstName() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::FirstName() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs)->get_FirstName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::MiddleInitial() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::MiddleInitial() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs)->get_MiddleInitial(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::Surname() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::Surname() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs)->get_Surname(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::Suffix() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderBankCardDataReceivedEventArgs<D>::Suffix() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs)->get_Suffix(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::CardAuthentication() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::CardAuthentication() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_CardAuthentication(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::SupportedEncryptionAlgorithms() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::SupportedEncryptionAlgorithms() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_SupportedEncryptionAlgorithms(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::AuthenticationLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderAuthenticationLevel) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::AuthenticationLevel() const
     {
-        Windows::Devices::PointOfService::MagneticStripeReaderAuthenticationLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_AuthenticationLevel(put_abi(value)));
+        Windows::Devices::PointOfService::MagneticStripeReaderAuthenticationLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_AuthenticationLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsIsoSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsIsoSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_IsIsoSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsJisOneSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsJisOneSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_IsJisOneSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsJisTwoSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsJisTwoSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_IsJisTwoSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::PowerReportingType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosPowerReportingType) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::PowerReportingType() const
     {
-        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_PowerReportingType(put_abi(value)));
+        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_PowerReportingType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsStatisticsReportingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsStatisticsReportingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_IsStatisticsReportingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsStatisticsUpdatingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsStatisticsUpdatingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_IsStatisticsUpdatingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsTrackDataMaskingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsTrackDataMaskingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_IsTrackDataMaskingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsTransmitSentinelsSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCapabilities<D>::IsTransmitSentinelsSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities)->get_IsTransmitSentinelsSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCardTypesStatics<D>::Unknown() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCardTypesStatics<D>::Unknown() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics)->get_Unknown(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCardTypesStatics<D>::Bank() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCardTypesStatics<D>::Bank() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics)->get_Bank(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCardTypesStatics<D>::Aamva() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCardTypesStatics<D>::Aamva() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics)->get_Aamva(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderCardTypesStatics<D>::ExtendedBase() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderCardTypesStatics<D>::ExtendedBase() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics)->get_ExtendedBase(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderEncryptionAlgorithmsStatics<D>::None() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderEncryptionAlgorithmsStatics<D>::None() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics)->get_None(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderEncryptionAlgorithmsStatics<D>::TripleDesDukpt() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderEncryptionAlgorithmsStatics<D>::TripleDesDukpt() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics)->get_TripleDesDukpt(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderEncryptionAlgorithmsStatics<D>::ExtendedBase() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderEncryptionAlgorithmsStatics<D>::ExtendedBase() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics)->get_ExtendedBase(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::Track1Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType) consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::Track1Status() const
     {
-        Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_Track1Status(put_abi(value)));
+        Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_Track1Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::Track2Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType) consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::Track2Status() const
     {
-        Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_Track2Status(put_abi(value)));
+        Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_Track2Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::Track3Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType) consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::Track3Status() const
     {
-        Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_Track3Status(put_abi(value)));
+        Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_Track3Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::Track4Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType) consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::Track4Status() const
     {
-        Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_Track4Status(put_abi(value)));
+        Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_Track4Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::ErrorData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosErrorData) consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::ErrorData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_ErrorData(&value));
         return Windows::Devices::PointOfService::UnifiedPosErrorData{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::PartialInputData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderReport) consume_Windows_Devices_PointOfService_IMagneticStripeReaderErrorOccurredEventArgs<D>::PartialInputData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs)->get_PartialInputData(&value));
         return Windows::Devices::PointOfService::MagneticStripeReaderReport{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::CardType() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::CardType() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderReport)->get_CardType(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Track1() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderTrackData) consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Track1() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderReport)->get_Track1(&value));
         return Windows::Devices::PointOfService::MagneticStripeReaderTrackData{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Track2() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderTrackData) consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Track2() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderReport)->get_Track2(&value));
         return Windows::Devices::PointOfService::MagneticStripeReaderTrackData{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Track3() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderTrackData) consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Track3() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderReport)->get_Track3(&value));
         return Windows::Devices::PointOfService::MagneticStripeReaderTrackData{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Track4() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderTrackData) consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Track4() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderReport)->get_Track4(&value));
         return Windows::Devices::PointOfService::MagneticStripeReaderTrackData{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, hstring>) consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::Properties() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderReport)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<hstring, hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::CardAuthenticationData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::CardAuthenticationData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderReport)->get_CardAuthenticationData(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::CardAuthenticationDataLength() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::CardAuthenticationDataLength() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderReport)->get_CardAuthenticationDataLength(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::AdditionalSecurityInformation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_PointOfService_IMagneticStripeReaderReport<D>::AdditionalSecurityInformation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderReport)->get_AdditionalSecurityInformation(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatics<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::MagneticStripeReader>) consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatics<D>::GetDefaultAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderStatics)->GetDefaultAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::MagneticStripeReader>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::MagneticStripeReader>) consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderStatics)->FromIdAsync(*(void**)(&deviceId), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::MagneticStripeReader>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatics<D>::GetDeviceSelector() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderStatics)->GetDeviceSelector(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatics2<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatics2<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderStatics2)->GetDeviceSelectorWithConnectionTypes(static_cast<uint32_t>(connectionTypes), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatusUpdatedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderStatus) consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatusUpdatedEventArgs<D>::Status() const
     {
-        Windows::Devices::PointOfService::MagneticStripeReaderStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs)->get_Status(put_abi(value)));
+        Windows::Devices::PointOfService::MagneticStripeReaderStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatusUpdatedEventArgs<D>::ExtendedStatus() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IMagneticStripeReaderStatusUpdatedEventArgs<D>::ExtendedStatus() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs)->get_ExtendedStatus(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderTrackData<D>::Data() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_PointOfService_IMagneticStripeReaderTrackData<D>::Data() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderTrackData)->get_Data(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderTrackData<D>::DiscretionaryData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_PointOfService_IMagneticStripeReaderTrackData<D>::DiscretionaryData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderTrackData)->get_DiscretionaryData(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderTrackData<D>::EncryptedData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_PointOfService_IMagneticStripeReaderTrackData<D>::EncryptedData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderTrackData)->get_EncryptedData(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs<D>::Report() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::MagneticStripeReaderReport) consume_Windows_Devices_PointOfService_IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs<D>::Report() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs)->get_Report(&value));
         return Windows::Devices::PointOfService::MagneticStripeReaderReport{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IPosPrinter<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::Capabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterCapabilities) consume_Windows_Devices_PointOfService_IPosPrinter<D>::Capabilities() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->get_Capabilities(&value));
         return Windows::Devices::PointOfService::PosPrinterCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::SupportedCharacterSets() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<uint32_t>) consume_Windows_Devices_PointOfService_IPosPrinter<D>::SupportedCharacterSets() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->get_SupportedCharacterSets(&value));
         return Windows::Foundation::Collections::IVectorView<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::SupportedTypeFaces() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Devices_PointOfService_IPosPrinter<D>::SupportedTypeFaces() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->get_SupportedTypeFaces(&value));
         return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterStatus) consume_Windows_Devices_PointOfService_IPosPrinter<D>::Status() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->get_Status(&value));
         return Windows::Devices::PointOfService::PosPrinterStatus{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::ClaimPrinterAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedPosPrinter>) consume_Windows_Devices_PointOfService_IPosPrinter<D>::ClaimPrinterAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->ClaimPrinterAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedPosPrinter>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_Devices_PointOfService_IPosPrinter<D>::CheckHealthAsync(Windows::Devices::PointOfService::UnifiedPosHealthCheckLevel const& level) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->CheckHealthAsync(static_cast<int32_t>(level), &operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::GetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_Devices_PointOfService_IPosPrinter<D>::GetStatisticsAsync(param::async_iterable<hstring> const& statisticsCategories) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->GetStatisticsAsync(*(void**)(&statisticsCategories), &operation));
         return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::PosPrinter, Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_PointOfService_IPosPrinter<D>::StatusUpdated(Windows::Foundation::TypedEventHandler<Windows::Devices::PointOfService::PosPrinter, Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->add_StatusUpdated(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -3427,540 +3427,541 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StatusUpdated_revoker>(this, StatusUpdated(handler));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter<D>::StatusUpdated(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinter<D>::StatusUpdated(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter)->remove_StatusUpdated(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter2<D>::SupportedBarcodeSymbologies() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<uint32_t>) consume_Windows_Devices_PointOfService_IPosPrinter2<D>::SupportedBarcodeSymbologies() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter2)->get_SupportedBarcodeSymbologies(&value));
         return Windows::Foundation::Collections::IVectorView<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinter2<D>::GetFontProperty(param::hstring const& typeface) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterFontProperty) consume_Windows_Devices_PointOfService_IPosPrinter2<D>::GetFontProperty(param::hstring const& typeface) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinter2)->GetFontProperty(*(void**)(&typeface), &result));
         return Windows::Devices::PointOfService::PosPrinterFontProperty{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::PowerReportingType() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosPowerReportingType) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::PowerReportingType() const
     {
-        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_PowerReportingType(put_abi(value)));
+        Windows::Devices::PointOfService::UnifiedPosPowerReportingType value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_PowerReportingType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::IsStatisticsReportingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::IsStatisticsReportingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_IsStatisticsReportingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::IsStatisticsUpdatingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::IsStatisticsUpdatingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_IsStatisticsUpdatingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::DefaultCharacterSet() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::DefaultCharacterSet() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_DefaultCharacterSet(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::HasCoverSensor() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::HasCoverSensor() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_HasCoverSensor(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::CanMapCharacterSet() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::CanMapCharacterSet() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_CanMapCharacterSet(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::IsTransactionSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::IsTransactionSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_IsTransactionSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::Receipt() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::ReceiptPrinterCapabilities) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::Receipt() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_Receipt(&value));
         return Windows::Devices::PointOfService::ReceiptPrinterCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::Slip() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::SlipPrinterCapabilities) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::Slip() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_Slip(&value));
         return Windows::Devices::PointOfService::SlipPrinterCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::Journal() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::JournalPrinterCapabilities) consume_Windows_Devices_PointOfService_IPosPrinterCapabilities<D>::Journal() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCapabilities)->get_Journal(&value));
         return Windows::Devices::PointOfService::JournalPrinterCapabilities{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCharacterSetIdsStatics<D>::Utf16LE() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IPosPrinterCharacterSetIdsStatics<D>::Utf16LE() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics)->get_Utf16LE(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCharacterSetIdsStatics<D>::Ascii() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IPosPrinterCharacterSetIdsStatics<D>::Ascii() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics)->get_Ascii(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterCharacterSetIdsStatics<D>::Ansi() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IPosPrinterCharacterSetIdsStatics<D>::Ansi() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics)->get_Ansi(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>::TypeFace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>::TypeFace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterFontProperty)->get_TypeFace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>::IsScalableToAnySize() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>::IsScalableToAnySize() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterFontProperty)->get_IsScalableToAnySize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>::CharacterSizes() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::SizeUInt32>) consume_Windows_Devices_PointOfService_IPosPrinterFontProperty<D>::CharacterSizes() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterFontProperty)->get_CharacterSizes(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::PointOfService::SizeUInt32>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterJob<D>::Print(param::hstring const& data) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterJob<D>::Print(param::hstring const& data) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterJob)->Print(*(void**)(&data)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterJob<D>::PrintLine(param::hstring const& data) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterJob<D>::PrintLine(param::hstring const& data) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterJob)->PrintLine(*(void**)(&data)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterJob<D>::PrintLine() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterJob<D>::PrintLine() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterJob)->PrintNewline());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterJob<D>::ExecuteAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Devices_PointOfService_IPosPrinterJob<D>::ExecuteAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterJob)->ExecuteAsync(&operation));
         return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::TypeFace() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::TypeFace() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_TypeFace(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::TypeFace(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::TypeFace(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_TypeFace(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterHeight() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterHeight() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_CharacterHeight(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterHeight(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterHeight(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_CharacterHeight(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Bold() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Bold() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Bold(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Bold(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Bold(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Bold(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Italic() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Italic() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Italic(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Italic(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Italic(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Italic(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Underline() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Underline() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Underline(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Underline(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Underline(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Underline(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::ReverseVideo() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::ReverseVideo() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_ReverseVideo(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::ReverseVideo(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::ReverseVideo(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_ReverseVideo(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Strikethrough() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Strikethrough() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Strikethrough(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Strikethrough(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Strikethrough(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Strikethrough(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Superscript() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Superscript() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Superscript(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Superscript(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Superscript(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Superscript(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Subscript() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Subscript() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Subscript(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Subscript(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Subscript(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Subscript(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleWide() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleWide() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_DoubleWide(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleWide(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleWide(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_DoubleWide(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleHigh() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleHigh() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_DoubleHigh(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleHigh(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::DoubleHigh(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_DoubleHigh(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Alignment() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterAlignment) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Alignment() const
     {
-        Windows::Devices::PointOfService::PosPrinterAlignment value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Alignment(put_abi(value)));
+        Windows::Devices::PointOfService::PosPrinterAlignment value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_Alignment(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Alignment(Windows::Devices::PointOfService::PosPrinterAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::Alignment(Windows::Devices::PointOfService::PosPrinterAlignment const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_Alignment(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterSet() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterSet() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->get_CharacterSet(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterSet(uint32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IPosPrinterPrintOptions<D>::CharacterSet(uint32_t value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterPrintOptions)->put_CharacterSet(value));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterStatics<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::PosPrinter>) consume_Windows_Devices_PointOfService_IPosPrinterStatics<D>::GetDefaultAsync() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterStatics)->GetDefaultAsync(&result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::PosPrinter>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::PosPrinter>) consume_Windows_Devices_PointOfService_IPosPrinterStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterStatics)->FromIdAsync(*(void**)(&deviceId), &result));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::PosPrinter>{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterStatics<D>::GetDeviceSelector() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IPosPrinterStatics<D>::GetDeviceSelector() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterStatics)->GetDeviceSelector(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterStatics2<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IPosPrinterStatics2<D>::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterStatics2)->GetDeviceSelectorWithConnectionTypes(static_cast<uint32_t>(connectionTypes), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterStatus<D>::StatusKind() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterStatusKind) consume_Windows_Devices_PointOfService_IPosPrinterStatus<D>::StatusKind() const
     {
-        Windows::Devices::PointOfService::PosPrinterStatusKind value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterStatus)->get_StatusKind(put_abi(value)));
+        Windows::Devices::PointOfService::PosPrinterStatusKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterStatus)->get_StatusKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterStatus<D>::ExtendedStatus() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IPosPrinterStatus<D>::ExtendedStatus() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterStatus)->get_ExtendedStatus(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IPosPrinterStatusUpdatedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterStatus) consume_Windows_Devices_PointOfService_IPosPrinterStatusUpdatedEventArgs<D>::Status() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs)->get_Status(&value));
         return Windows::Devices::PointOfService::PosPrinterStatus{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetBarcodeRotation(Windows::Devices::PointOfService::PosPrinterRotation const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetBarcodeRotation(Windows::Devices::PointOfService::PosPrinterRotation const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->SetBarcodeRotation(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetPrintRotation(Windows::Devices::PointOfService::PosPrinterRotation const& value, bool includeBitmaps) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetPrintRotation(Windows::Devices::PointOfService::PosPrinterRotation const& value, bool includeBitmaps) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->SetPrintRotation(static_cast<int32_t>(value), includeBitmaps));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetPrintArea(Windows::Foundation::Rect const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetPrintArea(Windows::Foundation::Rect const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->SetPrintArea(impl::bind_in(value)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetBitmap(uint32_t bitmapNumber, Windows::Graphics::Imaging::BitmapFrame const& bitmap, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetBitmap(uint32_t bitmapNumber, Windows::Graphics::Imaging::BitmapFrame const& bitmap, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->SetBitmap(bitmapNumber, *(void**)(&bitmap), static_cast<int32_t>(alignment)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetBitmap(uint32_t bitmapNumber, Windows::Graphics::Imaging::BitmapFrame const& bitmap, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment, uint32_t width) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetBitmap(uint32_t bitmapNumber, Windows::Graphics::Imaging::BitmapFrame const& bitmap, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment, uint32_t width) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->SetBitmapCustomWidthStandardAlign(bitmapNumber, *(void**)(&bitmap), static_cast<int32_t>(alignment), width));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetCustomAlignedBitmap(uint32_t bitmapNumber, Windows::Graphics::Imaging::BitmapFrame const& bitmap, uint32_t alignmentDistance) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetCustomAlignedBitmap(uint32_t bitmapNumber, Windows::Graphics::Imaging::BitmapFrame const& bitmap, uint32_t alignmentDistance) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->SetCustomAlignedBitmap(bitmapNumber, *(void**)(&bitmap), alignmentDistance));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetCustomAlignedBitmap(uint32_t bitmapNumber, Windows::Graphics::Imaging::BitmapFrame const& bitmap, uint32_t alignmentDistance, uint32_t width) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::SetCustomAlignedBitmap(uint32_t bitmapNumber, Windows::Graphics::Imaging::BitmapFrame const& bitmap, uint32_t alignmentDistance, uint32_t width) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->SetBitmapCustomWidthCustomAlign(bitmapNumber, *(void**)(&bitmap), alignmentDistance, width));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintSavedBitmap(uint32_t bitmapNumber) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintSavedBitmap(uint32_t bitmapNumber) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->PrintSavedBitmap(bitmapNumber));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::DrawRuledLine(param::hstring const& positionList, Windows::Devices::PointOfService::PosPrinterLineDirection const& lineDirection, uint32_t lineWidth, Windows::Devices::PointOfService::PosPrinterLineStyle const& lineStyle, uint32_t lineColor) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::DrawRuledLine(param::hstring const& positionList, Windows::Devices::PointOfService::PosPrinterLineDirection const& lineDirection, uint32_t lineWidth, Windows::Devices::PointOfService::PosPrinterLineStyle const& lineStyle, uint32_t lineColor) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->DrawRuledLine(*(void**)(&positionList), static_cast<int32_t>(lineDirection), lineWidth, static_cast<int32_t>(lineStyle), lineColor));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintBarcode(param::hstring const& data, uint32_t symbology, uint32_t height, uint32_t width, Windows::Devices::PointOfService::PosPrinterBarcodeTextPosition const& textPosition, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintBarcode(param::hstring const& data, uint32_t symbology, uint32_t height, uint32_t width, Windows::Devices::PointOfService::PosPrinterBarcodeTextPosition const& textPosition, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->PrintBarcode(*(void**)(&data), symbology, height, width, static_cast<int32_t>(textPosition), static_cast<int32_t>(alignment)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintBarcodeCustomAlign(param::hstring const& data, uint32_t symbology, uint32_t height, uint32_t width, Windows::Devices::PointOfService::PosPrinterBarcodeTextPosition const& textPosition, uint32_t alignmentDistance) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintBarcodeCustomAlign(param::hstring const& data, uint32_t symbology, uint32_t height, uint32_t width, Windows::Devices::PointOfService::PosPrinterBarcodeTextPosition const& textPosition, uint32_t alignmentDistance) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->PrintBarcodeCustomAlign(*(void**)(&data), symbology, height, width, static_cast<int32_t>(textPosition), alignmentDistance));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintBitmap(Windows::Graphics::Imaging::BitmapFrame const& bitmap, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintBitmap(Windows::Graphics::Imaging::BitmapFrame const& bitmap, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->PrintBitmap(*(void**)(&bitmap), static_cast<int32_t>(alignment)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintBitmap(Windows::Graphics::Imaging::BitmapFrame const& bitmap, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment, uint32_t width) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintBitmap(Windows::Graphics::Imaging::BitmapFrame const& bitmap, Windows::Devices::PointOfService::PosPrinterAlignment const& alignment, uint32_t width) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->PrintBitmapCustomWidthStandardAlign(*(void**)(&bitmap), static_cast<int32_t>(alignment), width));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintCustomAlignedBitmap(Windows::Graphics::Imaging::BitmapFrame const& bitmap, uint32_t alignmentDistance) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintCustomAlignedBitmap(Windows::Graphics::Imaging::BitmapFrame const& bitmap, uint32_t alignmentDistance) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->PrintCustomAlignedBitmap(*(void**)(&bitmap), alignmentDistance));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintCustomAlignedBitmap(Windows::Graphics::Imaging::BitmapFrame const& bitmap, uint32_t alignmentDistance, uint32_t width) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptOrSlipJob<D>::PrintCustomAlignedBitmap(Windows::Graphics::Imaging::BitmapFrame const& bitmap, uint32_t alignmentDistance, uint32_t width) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptOrSlipJob)->PrintBitmapCustomWidthCustomAlign(*(void**)(&bitmap), alignmentDistance, width));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrintJob<D>::MarkFeed(Windows::Devices::PointOfService::PosPrinterMarkFeedKind const& kind) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptPrintJob<D>::MarkFeed(Windows::Devices::PointOfService::PosPrinterMarkFeedKind const& kind) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob)->MarkFeed(static_cast<int32_t>(kind)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrintJob<D>::CutPaper(double percentage) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptPrintJob<D>::CutPaper(double percentage) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob)->CutPaper(percentage));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrintJob<D>::CutPaper() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptPrintJob<D>::CutPaper() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob)->CutPaperDefault());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::StampPaper() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::StampPaper() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob2)->StampPaper());
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob2)->Print(*(void**)(&data), *(void**)(&printOptions)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::FeedPaperByLine(int32_t lineCount) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::FeedPaperByLine(int32_t lineCount) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob2)->FeedPaperByLine(lineCount));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::FeedPaperByMapModeUnit(int32_t distance) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_IReceiptPrintJob2<D>::FeedPaperByMapModeUnit(int32_t distance) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrintJob2)->FeedPaperByMapModeUnit(distance));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities<D>::CanCutPaper() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities<D>::CanCutPaper() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities)->get_CanCutPaper(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities<D>::IsStampSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities<D>::IsStampSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities)->get_IsStampSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities<D>::MarkFeedCapabilities() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::PosPrinterMarkFeedCapabilities) consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities<D>::MarkFeedCapabilities() const
     {
-        Windows::Devices::PointOfService::PosPrinterMarkFeedCapabilities value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities)->get_MarkFeedCapabilities(put_abi(value)));
+        Windows::Devices::PointOfService::PosPrinterMarkFeedCapabilities value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities)->get_MarkFeedCapabilities(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsReverseVideoSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsReverseVideoSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsReverseVideoSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsStrikethroughSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsStrikethroughSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsStrikethroughSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsSuperscriptSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsSuperscriptSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsSuperscriptSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsSubscriptSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsSubscriptSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsSubscriptSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsReversePaperFeedByLineSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsReversePaperFeedByLineSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsReversePaperFeedByLineSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsReversePaperFeedByMapModeUnitSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_IReceiptPrinterCapabilities2<D>::IsReversePaperFeedByMapModeUnitSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IReceiptPrinterCapabilities2)->get_IsReversePaperFeedByMapModeUnitSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrintJob<D>::Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ISlipPrintJob<D>::Print(param::hstring const& data, Windows::Devices::PointOfService::PosPrinterPrintOptions const& printOptions) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrintJob)->Print(*(void**)(&data), *(void**)(&printOptions)));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrintJob<D>::FeedPaperByLine(int32_t lineCount) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ISlipPrintJob<D>::FeedPaperByLine(int32_t lineCount) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrintJob)->FeedPaperByLine(lineCount));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrintJob<D>::FeedPaperByMapModeUnit(int32_t distance) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_PointOfService_ISlipPrintJob<D>::FeedPaperByMapModeUnit(int32_t distance) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrintJob)->FeedPaperByMapModeUnit(distance));
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities<D>::IsFullLengthSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities<D>::IsFullLengthSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities)->get_IsFullLengthSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities<D>::IsBothSidesPrintingSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities<D>::IsBothSidesPrintingSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities)->get_IsBothSidesPrintingSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsReverseVideoSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsReverseVideoSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsReverseVideoSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsStrikethroughSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsStrikethroughSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsStrikethroughSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsSuperscriptSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsSuperscriptSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsSuperscriptSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsSubscriptSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsSubscriptSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsSubscriptSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsReversePaperFeedByLineSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsReversePaperFeedByLineSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsReversePaperFeedByLineSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsReversePaperFeedByMapModeUnitSupported() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_PointOfService_ISlipPrinterCapabilities2<D>::IsReversePaperFeedByMapModeUnitSupported() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::ISlipPrinterCapabilities2)->get_IsReversePaperFeedByMapModeUnitSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IUnifiedPosErrorData<D>::Message() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_PointOfService_IUnifiedPosErrorData<D>::Message() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IUnifiedPosErrorData)->get_Message(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IUnifiedPosErrorData<D>::Severity() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosErrorSeverity) consume_Windows_Devices_PointOfService_IUnifiedPosErrorData<D>::Severity() const
     {
-        Windows::Devices::PointOfService::UnifiedPosErrorSeverity value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IUnifiedPosErrorData)->get_Severity(put_abi(value)));
+        Windows::Devices::PointOfService::UnifiedPosErrorSeverity value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IUnifiedPosErrorData)->get_Severity(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IUnifiedPosErrorData<D>::Reason() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosErrorReason) consume_Windows_Devices_PointOfService_IUnifiedPosErrorData<D>::Reason() const
     {
-        Windows::Devices::PointOfService::UnifiedPosErrorReason value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IUnifiedPosErrorData)->get_Reason(put_abi(value)));
+        Windows::Devices::PointOfService::UnifiedPosErrorReason value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IUnifiedPosErrorData)->get_Reason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IUnifiedPosErrorData<D>::ExtendedReason() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_PointOfService_IUnifiedPosErrorData<D>::ExtendedReason() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IUnifiedPosErrorData)->get_ExtendedReason(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_PointOfService_IUnifiedPosErrorDataFactory<D>::CreateInstance(param::hstring const& message, Windows::Devices::PointOfService::UnifiedPosErrorSeverity const& severity, Windows::Devices::PointOfService::UnifiedPosErrorReason const& reason, uint32_t extendedReason) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::PointOfService::UnifiedPosErrorData) consume_Windows_Devices_PointOfService_IUnifiedPosErrorDataFactory<D>::CreateInstance(param::hstring const& message, Windows::Devices::PointOfService::UnifiedPosErrorSeverity const& severity, Windows::Devices::PointOfService::UnifiedPosErrorReason const& reason, uint32_t extendedReason) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory)->CreateInstance(*(void**)(&message), static_cast<int32_t>(severity), static_cast<int32_t>(reason), extendedReason, &result));
         return Windows::Devices::PointOfService::UnifiedPosErrorData{ result, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScanner> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScanner>
     {
@@ -4050,6 +4051,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScanner2> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScanner2>
     {
@@ -4062,6 +4065,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerCapabilities> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerCapabilities>
     {
@@ -4094,6 +4099,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerCapabilities1> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerCapabilities1>
     {
@@ -4105,6 +4112,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerCapabilities2> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerCapabilities2>
     {
@@ -4116,6 +4125,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs>
     {
@@ -4128,6 +4139,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs>
     {
@@ -4155,6 +4168,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs>
     {
@@ -4167,6 +4182,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerReport> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerReport>
     {
@@ -4194,6 +4211,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerReportFactory> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerReportFactory>
     {
@@ -4206,6 +4225,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerStatics> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerStatics>
     {
@@ -4234,6 +4255,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerStatics2> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerStatics2>
     {
@@ -4246,6 +4269,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs>
     {
@@ -4264,6 +4289,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics> : produce_base<D, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>
     {
@@ -4927,6 +4954,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics2> : produce_base<D, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics2>
     {
@@ -4938,6 +4967,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IBarcodeSymbologyAttributes> : produce_base<D, Windows::Devices::PointOfService::IBarcodeSymbologyAttributes>
     {
@@ -5033,6 +5064,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICashDrawer> : produce_base<D, Windows::Devices::PointOfService::ICashDrawer>
     {
@@ -5114,6 +5147,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICashDrawerCapabilities> : produce_base<D, Windows::Devices::PointOfService::ICashDrawerCapabilities>
     {
@@ -5160,6 +5195,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICashDrawerCloseAlarm> : produce_base<D, Windows::Devices::PointOfService::ICashDrawerCloseAlarm>
     {
@@ -5245,6 +5282,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICashDrawerEventSource> : produce_base<D, Windows::Devices::PointOfService::ICashDrawerEventSource>
     {
@@ -5277,6 +5316,7 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs> : produce_base<D, Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>
     {
@@ -5289,6 +5329,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICashDrawerStatics> : produce_base<D, Windows::Devices::PointOfService::ICashDrawerStatics>
     {
@@ -5317,6 +5358,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICashDrawerStatics2> : produce_base<D, Windows::Devices::PointOfService::ICashDrawerStatics2>
     {
@@ -5329,6 +5372,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICashDrawerStatus> : produce_base<D, Windows::Devices::PointOfService::ICashDrawerStatus>
     {
@@ -5347,6 +5392,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs> : produce_base<D, Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs>
     {
@@ -5359,6 +5406,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner> : produce_base<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner>
     {
@@ -5545,6 +5594,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner1> : produce_base<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner1>
     {
@@ -5565,6 +5616,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner2> : produce_base<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner2>
     {
@@ -5585,6 +5638,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner3> : produce_base<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner3>
     {
@@ -5618,6 +5673,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner4> : produce_base<D, Windows::Devices::PointOfService::IClaimedBarcodeScanner4>
     {
@@ -5636,10 +5693,14 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedCashDrawer> : produce_base<D, Windows::Devices::PointOfService::IClaimedCashDrawer>
     {
@@ -5736,6 +5797,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedCashDrawer2> : produce_base<D, Windows::Devices::PointOfService::IClaimedCashDrawer2>
     {
@@ -5754,10 +5817,14 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedJournalPrinter> : produce_base<D, Windows::Devices::PointOfService::IClaimedJournalPrinter>
     {
@@ -5770,6 +5837,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedLineDisplay> : produce_base<D, Windows::Devices::PointOfService::IClaimedLineDisplay>
     {
@@ -5859,6 +5928,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedLineDisplay2> : produce_base<D, Windows::Devices::PointOfService::IClaimedLineDisplay2>
     {
@@ -5997,6 +6068,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedLineDisplay3> : produce_base<D, Windows::Devices::PointOfService::IClaimedLineDisplay3>
     {
@@ -6015,10 +6088,14 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedLineDisplayStatics> : produce_base<D, Windows::Devices::PointOfService::IClaimedLineDisplayStatics>
     {
@@ -6047,6 +6124,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedMagneticStripeReader> : produce_base<D, Windows::Devices::PointOfService::IClaimedMagneticStripeReader>
     {
@@ -6291,6 +6370,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedMagneticStripeReader2> : produce_base<D, Windows::Devices::PointOfService::IClaimedMagneticStripeReader2>
     {
@@ -6309,10 +6390,14 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedPosPrinter> : produce_base<D, Windows::Devices::PointOfService::IClaimedPosPrinter>
     {
@@ -6459,6 +6544,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedPosPrinter2> : produce_base<D, Windows::Devices::PointOfService::IClaimedPosPrinter2>
     {
@@ -6477,10 +6564,14 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedReceiptPrinter> : produce_base<D, Windows::Devices::PointOfService::IClaimedReceiptPrinter>
     {
@@ -6530,6 +6621,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IClaimedSlipPrinter> : produce_base<D, Windows::Devices::PointOfService::IClaimedSlipPrinter>
     {
@@ -6630,6 +6723,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation> : produce_base<D, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
     {
@@ -6932,6 +7026,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IJournalPrintJob> : produce_base<D, Windows::Devices::PointOfService::IJournalPrintJob>
     {
@@ -6957,10 +7052,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IJournalPrinterCapabilities> : produce_base<D, Windows::Devices::PointOfService::IJournalPrinterCapabilities>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IJournalPrinterCapabilities2> : produce_base<D, Windows::Devices::PointOfService::IJournalPrinterCapabilities2>
     {
@@ -7007,6 +7106,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplay> : produce_base<D, Windows::Devices::PointOfService::ILineDisplay>
     {
@@ -7075,6 +7176,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplay2> : produce_base<D, Windows::Devices::PointOfService::ILineDisplay2>
     {
@@ -7087,6 +7190,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayAttributes> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayAttributes>
     {
@@ -7192,6 +7297,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayCapabilities> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayCapabilities>
     {
@@ -7322,6 +7429,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayCursor> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayCursor>
     {
@@ -7391,6 +7500,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayCursorAttributes> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayCursorAttributes>
     {
@@ -7452,6 +7563,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayCustomGlyphs> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayCustomGlyphs>
     {
@@ -7480,6 +7593,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayMarquee> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayMarquee>
     {
@@ -7544,6 +7659,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayStatics> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayStatics>
     {
@@ -7580,6 +7697,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayStatics2> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayStatics2>
     {
@@ -7592,6 +7711,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector>
     {
@@ -7620,6 +7741,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs>
     {
@@ -7631,6 +7754,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayStoredBitmap> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayStoredBitmap>
     {
@@ -7651,6 +7776,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayWindow> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayWindow>
     {
@@ -7726,6 +7853,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ILineDisplayWindow2> : produce_base<D, Windows::Devices::PointOfService::ILineDisplayWindow2>
     {
@@ -7802,6 +7931,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReader> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReader>
     {
@@ -7882,6 +8013,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs>
     {
@@ -8038,6 +8171,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs>
     {
@@ -8114,6 +8249,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities>
     {
@@ -8196,6 +8333,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics>
     {
@@ -8228,6 +8367,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics>
     {
@@ -8253,6 +8394,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs>
     {
@@ -8301,6 +8444,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderReport> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderReport>
     {
@@ -8375,6 +8520,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderStatics> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderStatics>
     {
@@ -8403,6 +8550,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderStatics2> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderStatics2>
     {
@@ -8415,6 +8564,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs>
     {
@@ -8433,6 +8584,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderTrackData> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderTrackData>
     {
@@ -8461,6 +8614,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>
     {
@@ -8473,6 +8628,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinter> : produce_base<D, Windows::Devices::PointOfService::IPosPrinter>
     {
@@ -8555,6 +8712,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinter2> : produce_base<D, Windows::Devices::PointOfService::IPosPrinter2>
     {
@@ -8575,6 +8734,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterCapabilities> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterCapabilities>
     {
@@ -8652,6 +8813,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics>
     {
@@ -8677,6 +8840,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterFontProperty> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterFontProperty>
     {
@@ -8704,6 +8869,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterJob> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterJob>
     {
@@ -8737,6 +8903,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterPrintOptions> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterPrintOptions>
     {
@@ -8924,10 +9091,14 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs>
     {
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterStatics> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterStatics>
     {
@@ -8956,6 +9127,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterStatics2> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterStatics2>
     {
@@ -8968,6 +9141,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterStatus> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterStatus>
     {
@@ -8986,6 +9161,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs> : produce_base<D, Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs>
     {
@@ -8998,6 +9175,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IReceiptOrSlipJob> : produce_base<D, Windows::Devices::PointOfService::IReceiptOrSlipJob>
     {
@@ -9107,6 +9285,7 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IReceiptPrintJob> : produce_base<D, Windows::Devices::PointOfService::IReceiptPrintJob>
     {
@@ -9132,6 +9311,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IReceiptPrintJob2> : produce_base<D, Windows::Devices::PointOfService::IReceiptPrintJob2>
     {
@@ -9164,6 +9345,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IReceiptPrinterCapabilities> : produce_base<D, Windows::Devices::PointOfService::IReceiptPrinterCapabilities>
     {
@@ -9189,6 +9372,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IReceiptPrinterCapabilities2> : produce_base<D, Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>
     {
@@ -9235,6 +9420,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ISlipPrintJob> : produce_base<D, Windows::Devices::PointOfService::ISlipPrintJob>
     {
@@ -9260,6 +9447,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ISlipPrinterCapabilities> : produce_base<D, Windows::Devices::PointOfService::ISlipPrinterCapabilities>
     {
@@ -9278,6 +9467,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::ISlipPrinterCapabilities2> : produce_base<D, Windows::Devices::PointOfService::ISlipPrinterCapabilities2>
     {
@@ -9324,6 +9515,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IUnifiedPosErrorData> : produce_base<D, Windows::Devices::PointOfService::IUnifiedPosErrorData>
     {
@@ -9357,6 +9550,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory> : produce_base<D, Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory>
     {
@@ -9369,8 +9564,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::PointOfService
+WINRT_EXPORT namespace winrt::Windows::Devices::PointOfService
 {
     constexpr auto operator|(PosConnectionTypes const left, PosConnectionTypes const right) noexcept
     {
@@ -9529,705 +9725,707 @@ namespace winrt::Windows::Devices::PointOfService
     }
     inline auto BarcodeScanner::GetDefaultAsync()
     {
-        return impl::call_factory<BarcodeScanner, Windows::Devices::PointOfService::IBarcodeScannerStatics>([&](auto&& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::BarcodeScanner>(*)(IBarcodeScannerStatics const&), BarcodeScanner, IBarcodeScannerStatics>([](IBarcodeScannerStatics const& f) { return f.GetDefaultAsync(); });
     }
     inline auto BarcodeScanner::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<BarcodeScanner, Windows::Devices::PointOfService::IBarcodeScannerStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<BarcodeScanner, IBarcodeScannerStatics>([&](IBarcodeScannerStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto BarcodeScanner::GetDeviceSelector()
     {
-        return impl::call_factory<BarcodeScanner, Windows::Devices::PointOfService::IBarcodeScannerStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(IBarcodeScannerStatics const&), BarcodeScanner, IBarcodeScannerStatics>([](IBarcodeScannerStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto BarcodeScanner::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes)
     {
-        return impl::call_factory<BarcodeScanner, Windows::Devices::PointOfService::IBarcodeScannerStatics2>([&](auto&& f) { return f.GetDeviceSelector(connectionTypes); });
+        return impl::call_factory<BarcodeScanner, IBarcodeScannerStatics2>([&](IBarcodeScannerStatics2 const& f) { return f.GetDeviceSelector(connectionTypes); });
     }
     inline BarcodeScannerReport::BarcodeScannerReport(uint32_t scanDataType, Windows::Storage::Streams::IBuffer const& scanData, Windows::Storage::Streams::IBuffer const& scanDataLabel) :
-        BarcodeScannerReport(impl::call_factory<BarcodeScannerReport, Windows::Devices::PointOfService::IBarcodeScannerReportFactory>([&](auto&& f) { return f.CreateInstance(scanDataType, scanData, scanDataLabel); }))
+        BarcodeScannerReport(impl::call_factory<BarcodeScannerReport, IBarcodeScannerReportFactory>([&](IBarcodeScannerReportFactory const& f) { return f.CreateInstance(scanDataType, scanData, scanDataLabel); }))
     {
     }
     inline auto BarcodeSymbologies::Unknown()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Unknown(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Unknown(); });
     }
     inline auto BarcodeSymbologies::Ean8()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ean8(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ean8(); });
     }
     inline auto BarcodeSymbologies::Ean8Add2()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ean8Add2(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ean8Add2(); });
     }
     inline auto BarcodeSymbologies::Ean8Add5()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ean8Add5(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ean8Add5(); });
     }
     inline auto BarcodeSymbologies::Eanv()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Eanv(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Eanv(); });
     }
     inline auto BarcodeSymbologies::EanvAdd2()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.EanvAdd2(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.EanvAdd2(); });
     }
     inline auto BarcodeSymbologies::EanvAdd5()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.EanvAdd5(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.EanvAdd5(); });
     }
     inline auto BarcodeSymbologies::Ean13()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ean13(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ean13(); });
     }
     inline auto BarcodeSymbologies::Ean13Add2()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ean13Add2(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ean13Add2(); });
     }
     inline auto BarcodeSymbologies::Ean13Add5()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ean13Add5(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ean13Add5(); });
     }
     inline auto BarcodeSymbologies::Isbn()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Isbn(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Isbn(); });
     }
     inline auto BarcodeSymbologies::IsbnAdd5()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.IsbnAdd5(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.IsbnAdd5(); });
     }
     inline auto BarcodeSymbologies::Ismn()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ismn(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ismn(); });
     }
     inline auto BarcodeSymbologies::IsmnAdd2()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.IsmnAdd2(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.IsmnAdd2(); });
     }
     inline auto BarcodeSymbologies::IsmnAdd5()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.IsmnAdd5(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.IsmnAdd5(); });
     }
     inline auto BarcodeSymbologies::Issn()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Issn(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Issn(); });
     }
     inline auto BarcodeSymbologies::IssnAdd2()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.IssnAdd2(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.IssnAdd2(); });
     }
     inline auto BarcodeSymbologies::IssnAdd5()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.IssnAdd5(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.IssnAdd5(); });
     }
     inline auto BarcodeSymbologies::Ean99()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ean99(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ean99(); });
     }
     inline auto BarcodeSymbologies::Ean99Add2()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ean99Add2(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ean99Add2(); });
     }
     inline auto BarcodeSymbologies::Ean99Add5()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ean99Add5(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ean99Add5(); });
     }
     inline auto BarcodeSymbologies::Upca()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Upca(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Upca(); });
     }
     inline auto BarcodeSymbologies::UpcaAdd2()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UpcaAdd2(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UpcaAdd2(); });
     }
     inline auto BarcodeSymbologies::UpcaAdd5()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UpcaAdd5(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UpcaAdd5(); });
     }
     inline auto BarcodeSymbologies::Upce()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Upce(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Upce(); });
     }
     inline auto BarcodeSymbologies::UpceAdd2()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UpceAdd2(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UpceAdd2(); });
     }
     inline auto BarcodeSymbologies::UpceAdd5()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UpceAdd5(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UpceAdd5(); });
     }
     inline auto BarcodeSymbologies::UpcCoupon()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UpcCoupon(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UpcCoupon(); });
     }
     inline auto BarcodeSymbologies::TfStd()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.TfStd(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.TfStd(); });
     }
     inline auto BarcodeSymbologies::TfDis()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.TfDis(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.TfDis(); });
     }
     inline auto BarcodeSymbologies::TfInt()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.TfInt(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.TfInt(); });
     }
     inline auto BarcodeSymbologies::TfInd()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.TfInd(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.TfInd(); });
     }
     inline auto BarcodeSymbologies::TfMat()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.TfMat(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.TfMat(); });
     }
     inline auto BarcodeSymbologies::TfIata()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.TfIata(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.TfIata(); });
     }
     inline auto BarcodeSymbologies::Gs1DatabarType1()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Gs1DatabarType1(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Gs1DatabarType1(); });
     }
     inline auto BarcodeSymbologies::Gs1DatabarType2()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Gs1DatabarType2(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Gs1DatabarType2(); });
     }
     inline auto BarcodeSymbologies::Gs1DatabarType3()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Gs1DatabarType3(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Gs1DatabarType3(); });
     }
     inline auto BarcodeSymbologies::Code39()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Code39(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Code39(); });
     }
     inline auto BarcodeSymbologies::Code39Ex()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Code39Ex(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Code39Ex(); });
     }
     inline auto BarcodeSymbologies::Trioptic39()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Trioptic39(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Trioptic39(); });
     }
     inline auto BarcodeSymbologies::Code32()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Code32(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Code32(); });
     }
     inline auto BarcodeSymbologies::Pzn()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Pzn(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Pzn(); });
     }
     inline auto BarcodeSymbologies::Code93()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Code93(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Code93(); });
     }
     inline auto BarcodeSymbologies::Code93Ex()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Code93Ex(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Code93Ex(); });
     }
     inline auto BarcodeSymbologies::Code128()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Code128(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Code128(); });
     }
     inline auto BarcodeSymbologies::Gs1128()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Gs1128(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Gs1128(); });
     }
     inline auto BarcodeSymbologies::Gs1128Coupon()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Gs1128Coupon(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Gs1128Coupon(); });
     }
     inline auto BarcodeSymbologies::UccEan128()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UccEan128(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UccEan128(); });
     }
     inline auto BarcodeSymbologies::Sisac()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Sisac(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Sisac(); });
     }
     inline auto BarcodeSymbologies::Isbt()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Isbt(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Isbt(); });
     }
     inline auto BarcodeSymbologies::Codabar()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Codabar(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Codabar(); });
     }
     inline auto BarcodeSymbologies::Code11()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Code11(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Code11(); });
     }
     inline auto BarcodeSymbologies::Msi()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Msi(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Msi(); });
     }
     inline auto BarcodeSymbologies::Plessey()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Plessey(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Plessey(); });
     }
     inline auto BarcodeSymbologies::Telepen()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Telepen(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Telepen(); });
     }
     inline auto BarcodeSymbologies::Code16k()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Code16k(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Code16k(); });
     }
     inline auto BarcodeSymbologies::CodablockA()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.CodablockA(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.CodablockA(); });
     }
     inline auto BarcodeSymbologies::CodablockF()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.CodablockF(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.CodablockF(); });
     }
     inline auto BarcodeSymbologies::Codablock128()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Codablock128(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Codablock128(); });
     }
     inline auto BarcodeSymbologies::Code49()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Code49(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Code49(); });
     }
     inline auto BarcodeSymbologies::Aztec()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Aztec(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Aztec(); });
     }
     inline auto BarcodeSymbologies::DataCode()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.DataCode(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.DataCode(); });
     }
     inline auto BarcodeSymbologies::DataMatrix()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.DataMatrix(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.DataMatrix(); });
     }
     inline auto BarcodeSymbologies::HanXin()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.HanXin(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.HanXin(); });
     }
     inline auto BarcodeSymbologies::Maxicode()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Maxicode(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Maxicode(); });
     }
     inline auto BarcodeSymbologies::MicroPdf417()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.MicroPdf417(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.MicroPdf417(); });
     }
     inline auto BarcodeSymbologies::MicroQr()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.MicroQr(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.MicroQr(); });
     }
     inline auto BarcodeSymbologies::Pdf417()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Pdf417(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Pdf417(); });
     }
     inline auto BarcodeSymbologies::Qr()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Qr(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Qr(); });
     }
     inline auto BarcodeSymbologies::MsTag()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.MsTag(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.MsTag(); });
     }
     inline auto BarcodeSymbologies::Ccab()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ccab(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ccab(); });
     }
     inline auto BarcodeSymbologies::Ccc()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Ccc(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Ccc(); });
     }
     inline auto BarcodeSymbologies::Tlc39()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Tlc39(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Tlc39(); });
     }
     inline auto BarcodeSymbologies::AusPost()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.AusPost(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.AusPost(); });
     }
     inline auto BarcodeSymbologies::CanPost()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.CanPost(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.CanPost(); });
     }
     inline auto BarcodeSymbologies::ChinaPost()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.ChinaPost(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.ChinaPost(); });
     }
     inline auto BarcodeSymbologies::DutchKix()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.DutchKix(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.DutchKix(); });
     }
     inline auto BarcodeSymbologies::InfoMail()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.InfoMail(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.InfoMail(); });
     }
     inline auto BarcodeSymbologies::ItalianPost25()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.ItalianPost25(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.ItalianPost25(); });
     }
     inline auto BarcodeSymbologies::ItalianPost39()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.ItalianPost39(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.ItalianPost39(); });
     }
     inline auto BarcodeSymbologies::JapanPost()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.JapanPost(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.JapanPost(); });
     }
     inline auto BarcodeSymbologies::KoreanPost()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.KoreanPost(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.KoreanPost(); });
     }
     inline auto BarcodeSymbologies::SwedenPost()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.SwedenPost(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.SwedenPost(); });
     }
     inline auto BarcodeSymbologies::UkPost()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UkPost(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UkPost(); });
     }
     inline auto BarcodeSymbologies::UsIntelligent()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UsIntelligent(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UsIntelligent(); });
     }
     inline auto BarcodeSymbologies::UsIntelligentPkg()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UsIntelligentPkg(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UsIntelligentPkg(); });
     }
     inline auto BarcodeSymbologies::UsPlanet()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UsPlanet(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UsPlanet(); });
     }
     inline auto BarcodeSymbologies::UsPostNet()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.UsPostNet(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.UsPostNet(); });
     }
     inline auto BarcodeSymbologies::Us4StateFics()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Us4StateFics(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Us4StateFics(); });
     }
     inline auto BarcodeSymbologies::OcrA()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.OcrA(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.OcrA(); });
     }
     inline auto BarcodeSymbologies::OcrB()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.OcrB(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.OcrB(); });
     }
     inline auto BarcodeSymbologies::Micr()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.Micr(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.Micr(); });
     }
     inline auto BarcodeSymbologies::ExtendedBase()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.ExtendedBase(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics const&), BarcodeSymbologies, IBarcodeSymbologiesStatics>([](IBarcodeSymbologiesStatics const& f) { return f.ExtendedBase(); });
     }
     inline auto BarcodeSymbologies::GetName(uint32_t scanDataType)
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics>([&](auto&& f) { return f.GetName(scanDataType); });
+        return impl::call_factory<BarcodeSymbologies, IBarcodeSymbologiesStatics>([&](IBarcodeSymbologiesStatics const& f) { return f.GetName(scanDataType); });
     }
     inline auto BarcodeSymbologies::Gs1DWCode()
     {
-        return impl::call_factory<BarcodeSymbologies, Windows::Devices::PointOfService::IBarcodeSymbologiesStatics2>([&](auto&& f) { return f.Gs1DWCode(); });
+        return impl::call_factory_cast<uint32_t(*)(IBarcodeSymbologiesStatics2 const&), BarcodeSymbologies, IBarcodeSymbologiesStatics2>([](IBarcodeSymbologiesStatics2 const& f) { return f.Gs1DWCode(); });
     }
     inline auto CashDrawer::GetDefaultAsync()
     {
-        return impl::call_factory<CashDrawer, Windows::Devices::PointOfService::ICashDrawerStatics>([&](auto&& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::CashDrawer>(*)(ICashDrawerStatics const&), CashDrawer, ICashDrawerStatics>([](ICashDrawerStatics const& f) { return f.GetDefaultAsync(); });
     }
     inline auto CashDrawer::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<CashDrawer, Windows::Devices::PointOfService::ICashDrawerStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<CashDrawer, ICashDrawerStatics>([&](ICashDrawerStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto CashDrawer::GetDeviceSelector()
     {
-        return impl::call_factory<CashDrawer, Windows::Devices::PointOfService::ICashDrawerStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(ICashDrawerStatics const&), CashDrawer, ICashDrawerStatics>([](ICashDrawerStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto CashDrawer::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes)
     {
-        return impl::call_factory<CashDrawer, Windows::Devices::PointOfService::ICashDrawerStatics2>([&](auto&& f) { return f.GetDeviceSelector(connectionTypes); });
+        return impl::call_factory<CashDrawer, ICashDrawerStatics2>([&](ICashDrawerStatics2 const& f) { return f.GetDeviceSelector(connectionTypes); });
     }
     inline auto ClaimedLineDisplay::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<ClaimedLineDisplay, Windows::Devices::PointOfService::IClaimedLineDisplayStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<ClaimedLineDisplay, IClaimedLineDisplayStatics>([&](IClaimedLineDisplayStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto ClaimedLineDisplay::GetDeviceSelector()
     {
-        return impl::call_factory<ClaimedLineDisplay, Windows::Devices::PointOfService::IClaimedLineDisplayStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(IClaimedLineDisplayStatics const&), ClaimedLineDisplay, IClaimedLineDisplayStatics>([](IClaimedLineDisplayStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto ClaimedLineDisplay::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes)
     {
-        return impl::call_factory<ClaimedLineDisplay, Windows::Devices::PointOfService::IClaimedLineDisplayStatics>([&](auto&& f) { return f.GetDeviceSelector(connectionTypes); });
+        return impl::call_factory<ClaimedLineDisplay, IClaimedLineDisplayStatics>([&](IClaimedLineDisplayStatics const& f) { return f.GetDeviceSelector(connectionTypes); });
     }
     inline auto LineDisplay::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<LineDisplay, Windows::Devices::PointOfService::ILineDisplayStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<LineDisplay, ILineDisplayStatics>([&](ILineDisplayStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto LineDisplay::GetDefaultAsync()
     {
-        return impl::call_factory<LineDisplay, Windows::Devices::PointOfService::ILineDisplayStatics>([&](auto&& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplay>(*)(ILineDisplayStatics const&), LineDisplay, ILineDisplayStatics>([](ILineDisplayStatics const& f) { return f.GetDefaultAsync(); });
     }
     inline auto LineDisplay::GetDeviceSelector()
     {
-        return impl::call_factory<LineDisplay, Windows::Devices::PointOfService::ILineDisplayStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(ILineDisplayStatics const&), LineDisplay, ILineDisplayStatics>([](ILineDisplayStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto LineDisplay::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes)
     {
-        return impl::call_factory<LineDisplay, Windows::Devices::PointOfService::ILineDisplayStatics>([&](auto&& f) { return f.GetDeviceSelector(connectionTypes); });
+        return impl::call_factory<LineDisplay, ILineDisplayStatics>([&](ILineDisplayStatics const& f) { return f.GetDeviceSelector(connectionTypes); });
     }
     inline auto LineDisplay::StatisticsCategorySelector()
     {
-        return impl::call_factory<LineDisplay, Windows::Devices::PointOfService::ILineDisplayStatics2>([&](auto&& f) { return f.StatisticsCategorySelector(); });
+        return impl::call_factory_cast<Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector(*)(ILineDisplayStatics2 const&), LineDisplay, ILineDisplayStatics2>([](ILineDisplayStatics2 const& f) { return f.StatisticsCategorySelector(); });
     }
     inline auto MagneticStripeReader::GetDefaultAsync()
     {
-        return impl::call_factory<MagneticStripeReader, Windows::Devices::PointOfService::IMagneticStripeReaderStatics>([&](auto&& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::MagneticStripeReader>(*)(IMagneticStripeReaderStatics const&), MagneticStripeReader, IMagneticStripeReaderStatics>([](IMagneticStripeReaderStatics const& f) { return f.GetDefaultAsync(); });
     }
     inline auto MagneticStripeReader::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<MagneticStripeReader, Windows::Devices::PointOfService::IMagneticStripeReaderStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<MagneticStripeReader, IMagneticStripeReaderStatics>([&](IMagneticStripeReaderStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto MagneticStripeReader::GetDeviceSelector()
     {
-        return impl::call_factory<MagneticStripeReader, Windows::Devices::PointOfService::IMagneticStripeReaderStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(IMagneticStripeReaderStatics const&), MagneticStripeReader, IMagneticStripeReaderStatics>([](IMagneticStripeReaderStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto MagneticStripeReader::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes)
     {
-        return impl::call_factory<MagneticStripeReader, Windows::Devices::PointOfService::IMagneticStripeReaderStatics2>([&](auto&& f) { return f.GetDeviceSelector(connectionTypes); });
+        return impl::call_factory<MagneticStripeReader, IMagneticStripeReaderStatics2>([&](IMagneticStripeReaderStatics2 const& f) { return f.GetDeviceSelector(connectionTypes); });
     }
     inline auto MagneticStripeReaderCardTypes::Unknown()
     {
-        return impl::call_factory<MagneticStripeReaderCardTypes, Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics>([&](auto&& f) { return f.Unknown(); });
+        return impl::call_factory_cast<uint32_t(*)(IMagneticStripeReaderCardTypesStatics const&), MagneticStripeReaderCardTypes, IMagneticStripeReaderCardTypesStatics>([](IMagneticStripeReaderCardTypesStatics const& f) { return f.Unknown(); });
     }
     inline auto MagneticStripeReaderCardTypes::Bank()
     {
-        return impl::call_factory<MagneticStripeReaderCardTypes, Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics>([&](auto&& f) { return f.Bank(); });
+        return impl::call_factory_cast<uint32_t(*)(IMagneticStripeReaderCardTypesStatics const&), MagneticStripeReaderCardTypes, IMagneticStripeReaderCardTypesStatics>([](IMagneticStripeReaderCardTypesStatics const& f) { return f.Bank(); });
     }
     inline auto MagneticStripeReaderCardTypes::Aamva()
     {
-        return impl::call_factory<MagneticStripeReaderCardTypes, Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics>([&](auto&& f) { return f.Aamva(); });
+        return impl::call_factory_cast<uint32_t(*)(IMagneticStripeReaderCardTypesStatics const&), MagneticStripeReaderCardTypes, IMagneticStripeReaderCardTypesStatics>([](IMagneticStripeReaderCardTypesStatics const& f) { return f.Aamva(); });
     }
     inline auto MagneticStripeReaderCardTypes::ExtendedBase()
     {
-        return impl::call_factory<MagneticStripeReaderCardTypes, Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics>([&](auto&& f) { return f.ExtendedBase(); });
+        return impl::call_factory_cast<uint32_t(*)(IMagneticStripeReaderCardTypesStatics const&), MagneticStripeReaderCardTypes, IMagneticStripeReaderCardTypesStatics>([](IMagneticStripeReaderCardTypesStatics const& f) { return f.ExtendedBase(); });
     }
     inline auto MagneticStripeReaderEncryptionAlgorithms::None()
     {
-        return impl::call_factory<MagneticStripeReaderEncryptionAlgorithms, Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics>([&](auto&& f) { return f.None(); });
+        return impl::call_factory_cast<uint32_t(*)(IMagneticStripeReaderEncryptionAlgorithmsStatics const&), MagneticStripeReaderEncryptionAlgorithms, IMagneticStripeReaderEncryptionAlgorithmsStatics>([](IMagneticStripeReaderEncryptionAlgorithmsStatics const& f) { return f.None(); });
     }
     inline auto MagneticStripeReaderEncryptionAlgorithms::TripleDesDukpt()
     {
-        return impl::call_factory<MagneticStripeReaderEncryptionAlgorithms, Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics>([&](auto&& f) { return f.TripleDesDukpt(); });
+        return impl::call_factory_cast<uint32_t(*)(IMagneticStripeReaderEncryptionAlgorithmsStatics const&), MagneticStripeReaderEncryptionAlgorithms, IMagneticStripeReaderEncryptionAlgorithmsStatics>([](IMagneticStripeReaderEncryptionAlgorithmsStatics const& f) { return f.TripleDesDukpt(); });
     }
     inline auto MagneticStripeReaderEncryptionAlgorithms::ExtendedBase()
     {
-        return impl::call_factory<MagneticStripeReaderEncryptionAlgorithms, Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics>([&](auto&& f) { return f.ExtendedBase(); });
+        return impl::call_factory_cast<uint32_t(*)(IMagneticStripeReaderEncryptionAlgorithmsStatics const&), MagneticStripeReaderEncryptionAlgorithms, IMagneticStripeReaderEncryptionAlgorithmsStatics>([](IMagneticStripeReaderEncryptionAlgorithmsStatics const& f) { return f.ExtendedBase(); });
     }
     inline auto PosPrinter::GetDefaultAsync()
     {
-        return impl::call_factory<PosPrinter, Windows::Devices::PointOfService::IPosPrinterStatics>([&](auto&& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::PosPrinter>(*)(IPosPrinterStatics const&), PosPrinter, IPosPrinterStatics>([](IPosPrinterStatics const& f) { return f.GetDefaultAsync(); });
     }
     inline auto PosPrinter::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<PosPrinter, Windows::Devices::PointOfService::IPosPrinterStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<PosPrinter, IPosPrinterStatics>([&](IPosPrinterStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto PosPrinter::GetDeviceSelector()
     {
-        return impl::call_factory<PosPrinter, Windows::Devices::PointOfService::IPosPrinterStatics>([&](auto&& f) { return f.GetDeviceSelector(); });
+        return impl::call_factory_cast<hstring(*)(IPosPrinterStatics const&), PosPrinter, IPosPrinterStatics>([](IPosPrinterStatics const& f) { return f.GetDeviceSelector(); });
     }
     inline auto PosPrinter::GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes)
     {
-        return impl::call_factory<PosPrinter, Windows::Devices::PointOfService::IPosPrinterStatics2>([&](auto&& f) { return f.GetDeviceSelector(connectionTypes); });
+        return impl::call_factory<PosPrinter, IPosPrinterStatics2>([&](IPosPrinterStatics2 const& f) { return f.GetDeviceSelector(connectionTypes); });
     }
     inline auto PosPrinterCharacterSetIds::Utf16LE()
     {
-        return impl::call_factory<PosPrinterCharacterSetIds, Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics>([&](auto&& f) { return f.Utf16LE(); });
+        return impl::call_factory_cast<uint32_t(*)(IPosPrinterCharacterSetIdsStatics const&), PosPrinterCharacterSetIds, IPosPrinterCharacterSetIdsStatics>([](IPosPrinterCharacterSetIdsStatics const& f) { return f.Utf16LE(); });
     }
     inline auto PosPrinterCharacterSetIds::Ascii()
     {
-        return impl::call_factory<PosPrinterCharacterSetIds, Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics>([&](auto&& f) { return f.Ascii(); });
+        return impl::call_factory_cast<uint32_t(*)(IPosPrinterCharacterSetIdsStatics const&), PosPrinterCharacterSetIds, IPosPrinterCharacterSetIdsStatics>([](IPosPrinterCharacterSetIdsStatics const& f) { return f.Ascii(); });
     }
     inline auto PosPrinterCharacterSetIds::Ansi()
     {
-        return impl::call_factory<PosPrinterCharacterSetIds, Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics>([&](auto&& f) { return f.Ansi(); });
+        return impl::call_factory_cast<uint32_t(*)(IPosPrinterCharacterSetIdsStatics const&), PosPrinterCharacterSetIds, IPosPrinterCharacterSetIdsStatics>([](IPosPrinterCharacterSetIdsStatics const& f) { return f.Ansi(); });
     }
     inline PosPrinterPrintOptions::PosPrinterPrintOptions() :
-        PosPrinterPrintOptions(impl::call_factory<PosPrinterPrintOptions>([](auto&& f) { return f.template ActivateInstance<PosPrinterPrintOptions>(); }))
+        PosPrinterPrintOptions(impl::call_factory_cast<PosPrinterPrintOptions(*)(Windows::Foundation::IActivationFactory const&), PosPrinterPrintOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PosPrinterPrintOptions>(); }))
     {
     }
     inline UnifiedPosErrorData::UnifiedPosErrorData(param::hstring const& message, Windows::Devices::PointOfService::UnifiedPosErrorSeverity const& severity, Windows::Devices::PointOfService::UnifiedPosErrorReason const& reason, uint32_t extendedReason) :
-        UnifiedPosErrorData(impl::call_factory<UnifiedPosErrorData, Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory>([&](auto&& f) { return f.CreateInstance(message, severity, reason, extendedReason); }))
+        UnifiedPosErrorData(impl::call_factory<UnifiedPosErrorData, IUnifiedPosErrorDataFactory>([&](IUnifiedPosErrorDataFactory const& f) { return f.CreateInstance(message, severity, reason, extendedReason); }))
     {
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScanner> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScanner> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScanner2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScanner2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities1> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities1> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerReport> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerReport> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerReportFactory> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerReportFactory> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeSymbologiesStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeSymbologiesStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeSymbologiesStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeSymbologiesStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeSymbologyAttributes> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IBarcodeSymbologyAttributes> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawer> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICashDrawer> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICashDrawerCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerCloseAlarm> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICashDrawerCloseAlarm> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerEventSource> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICashDrawerEventSource> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICashDrawerStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICashDrawerStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerStatus> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICashDrawerStatus> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner1> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner1> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner3> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner3> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner4> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner4> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedCashDrawer> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedCashDrawer> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedCashDrawer2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedCashDrawer2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedJournalPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedJournalPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay3> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay3> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplayStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedLineDisplayStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReader> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReader> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReader2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReader2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedPosPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedPosPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedPosPrinter2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedPosPrinter2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedReceiptPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedReceiptPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedSlipPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IClaimedSlipPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IJournalPrintJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IJournalPrintJob> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplay> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplay> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplay2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplay2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayAttributes> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayAttributes> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayCursor> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayCursor> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayCursorAttributes> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayCursorAttributes> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayCustomGlyphs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayCustomGlyphs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayMarquee> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayMarquee> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStoredBitmap> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayStoredBitmap> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayWindow> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayWindow> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReader> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReader> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderReport> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderReport> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderTrackData> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderTrackData> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinter2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinter2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterFontProperty> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterFontProperty> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterJob> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterPrintOptions> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterPrintOptions> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatics> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterStatics> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatus> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterStatus> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrintJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptPrintJob> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrintJob2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptPrintJob2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ISlipPrintJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ISlipPrintJob> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorData> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorData> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScanner> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeScanner> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerReport> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeScannerReport> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeSymbologies> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeSymbologies> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawer> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::CashDrawer> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerEventSource> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::CashDrawerEventSource> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerStatus> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::CashDrawerStatus> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::JournalPrintJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::JournalPrintJob> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplay> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplay> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayAttributes> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayAttributes> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayCursor> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayCursor> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayMarquee> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayMarquee> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayWindow> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::LineDisplayWindow> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReader> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReader> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinter> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinter> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterStatus> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterStatus> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ReceiptPrintJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ReceiptPrintJob> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::SlipPrintJob> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::SlipPrintJob> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities> {};
-    template<> struct hash<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData> : winrt::impl::hash_base<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScanner> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScanner2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities1> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerCapabilities2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerReport> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerReportFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeSymbologiesStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeSymbologiesStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IBarcodeSymbologyAttributes> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerCloseAlarm> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerEventSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerStatus> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner1> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScanner4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedCashDrawer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedCashDrawer2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedJournalPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplay3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedLineDisplayStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReader2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedPosPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedPosPrinter2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedReceiptPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IClaimedSlipPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IJournalPrintJob> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IJournalPrinterCapabilities2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplay> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplay2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayAttributes> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayCursor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayCursorAttributes> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayCustomGlyphs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayMarquee> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayStoredBitmap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayWindow> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ILineDisplayWindow2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderReport> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderTrackData> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinter2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterFontProperty> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterJob> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterPrintOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatus> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrintJob> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrintJob2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IReceiptPrinterCapabilities2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ISlipPrintJob> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ISlipPrinterCapabilities2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorData> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::IUnifiedPosErrorDataFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScanner> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerReport> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeSymbologies> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerEventSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerStatus> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::JournalPrintJob> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplay> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayAttributes> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayCursor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayMarquee> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::LineDisplayWindow> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReader> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterStatus> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ReceiptPrintJob> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::SlipPrintJob> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData> : winrt::impl::hash_base {};
+#endif
 }
 #endif

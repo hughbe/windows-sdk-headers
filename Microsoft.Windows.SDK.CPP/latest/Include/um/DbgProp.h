@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -327,35 +335,42 @@ EXTERN_C const IID IID_IDebugProperty;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDebugProperty * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDebugProperty * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDebugProperty * This);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, GetPropertyInfo)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyInfo )( 
             IDebugProperty * This,
             /* [in] */ DWORD dwFieldSpec,
             /* [in] */ UINT nRadix,
             /* [out] */ DebugPropertyInfo *pPropertyInfo);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, GetExtendedInfo)
         HRESULT ( STDMETHODCALLTYPE *GetExtendedInfo )( 
             __RPC__in IDebugProperty * This,
             /* [in] */ ULONG cInfos,
             /* [size_is][in] */ __RPC__in_ecount_full(cInfos) GUID *rgguidExtendedInfo,
             /* [size_is][out] */ __RPC__out_ecount_full(cInfos) VARIANT *rgvar);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, SetValueAsString)
         HRESULT ( STDMETHODCALLTYPE *SetValueAsString )( 
             __RPC__in IDebugProperty * This,
             /* [in] */ __RPC__in LPCOLESTR pszValue,
             /* [in] */ UINT nRadix);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, EnumMembers)
         HRESULT ( STDMETHODCALLTYPE *EnumMembers )( 
             __RPC__in IDebugProperty * This,
             /* [in] */ DWORD dwFieldSpec,
@@ -363,6 +378,7 @@ EXTERN_C const IID IID_IDebugProperty;
             /* [in] */ __RPC__in REFIID refiid,
             /* [out] */ __RPC__deref_out_opt IEnumDebugPropertyInfo **ppepi);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, GetParent)
         HRESULT ( STDMETHODCALLTYPE *GetParent )( 
             __RPC__in IDebugProperty * This,
             /* [out] */ __RPC__deref_out_opt IDebugProperty **ppDebugProp);
@@ -476,35 +492,43 @@ EXTERN_C const IID IID_IEnumDebugPropertyInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumDebugPropertyInfo * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumDebugPropertyInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumDebugPropertyInfo * This);
         
+        DECLSPEC_XFGVIRT(IEnumDebugPropertyInfo, Next)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Next )( 
             IEnumDebugPropertyInfo * This,
             /* [in] */ ULONG celt,
             /* [out] */ DebugPropertyInfo *pi,
             /* [out] */ ULONG *pcEltsfetched);
         
+        DECLSPEC_XFGVIRT(IEnumDebugPropertyInfo, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumDebugPropertyInfo * This,
             /* [in] */ ULONG celt);
         
+        DECLSPEC_XFGVIRT(IEnumDebugPropertyInfo, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumDebugPropertyInfo * This);
         
+        DECLSPEC_XFGVIRT(IEnumDebugPropertyInfo, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumDebugPropertyInfo * This,
             /* [out] */ __RPC__deref_out_opt IEnumDebugPropertyInfo **ppepi);
         
+        DECLSPEC_XFGVIRT(IEnumDebugPropertyInfo, GetCount)
         HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             __RPC__in IEnumDebugPropertyInfo * This,
             /* [out] */ __RPC__out ULONG *pcelt);
@@ -606,35 +630,42 @@ EXTERN_C const IID IID_IDebugExtendedProperty;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDebugExtendedProperty * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDebugExtendedProperty * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDebugExtendedProperty * This);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, GetPropertyInfo)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyInfo )( 
             IDebugExtendedProperty * This,
             /* [in] */ DWORD dwFieldSpec,
             /* [in] */ UINT nRadix,
             /* [out] */ DebugPropertyInfo *pPropertyInfo);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, GetExtendedInfo)
         HRESULT ( STDMETHODCALLTYPE *GetExtendedInfo )( 
             __RPC__in IDebugExtendedProperty * This,
             /* [in] */ ULONG cInfos,
             /* [size_is][in] */ __RPC__in_ecount_full(cInfos) GUID *rgguidExtendedInfo,
             /* [size_is][out] */ __RPC__out_ecount_full(cInfos) VARIANT *rgvar);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, SetValueAsString)
         HRESULT ( STDMETHODCALLTYPE *SetValueAsString )( 
             __RPC__in IDebugExtendedProperty * This,
             /* [in] */ __RPC__in LPCOLESTR pszValue,
             /* [in] */ UINT nRadix);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, EnumMembers)
         HRESULT ( STDMETHODCALLTYPE *EnumMembers )( 
             __RPC__in IDebugExtendedProperty * This,
             /* [in] */ DWORD dwFieldSpec,
@@ -642,16 +673,19 @@ EXTERN_C const IID IID_IDebugExtendedProperty;
             /* [in] */ __RPC__in REFIID refiid,
             /* [out] */ __RPC__deref_out_opt IEnumDebugPropertyInfo **ppepi);
         
+        DECLSPEC_XFGVIRT(IDebugProperty, GetParent)
         HRESULT ( STDMETHODCALLTYPE *GetParent )( 
             __RPC__in IDebugExtendedProperty * This,
             /* [out] */ __RPC__deref_out_opt IDebugProperty **ppDebugProp);
         
+        DECLSPEC_XFGVIRT(IDebugExtendedProperty, GetExtendedPropertyInfo)
         HRESULT ( STDMETHODCALLTYPE *GetExtendedPropertyInfo )( 
             __RPC__in IDebugExtendedProperty * This,
             /* [in] */ DWORD dwFieldSpec,
             /* [in] */ UINT nRadix,
             /* [out] */ __RPC__out ExtendedDebugPropertyInfo *pExtendedPropertyInfo);
         
+        DECLSPEC_XFGVIRT(IDebugExtendedProperty, EnumExtendedMembers)
         HRESULT ( STDMETHODCALLTYPE *EnumExtendedMembers )( 
             __RPC__in IDebugExtendedProperty * This,
             /* [in] */ DWORD dwFieldSpec,
@@ -754,35 +788,43 @@ EXTERN_C const IID IID_IEnumDebugExtendedPropertyInfo;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IEnumDebugExtendedPropertyInfo * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IEnumDebugExtendedPropertyInfo * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IEnumDebugExtendedPropertyInfo * This);
         
+        DECLSPEC_XFGVIRT(IEnumDebugExtendedPropertyInfo, Next)
         HRESULT ( STDMETHODCALLTYPE *Next )( 
             __RPC__in IEnumDebugExtendedPropertyInfo * This,
             /* [in] */ ULONG celt,
             /* [length_is][size_is][out] */ __RPC__out_ecount_part(celt, *pceltFetched) ExtendedDebugPropertyInfo *rgExtendedPropertyInfo,
             /* [out] */ __RPC__out ULONG *pceltFetched);
         
+        DECLSPEC_XFGVIRT(IEnumDebugExtendedPropertyInfo, Skip)
         HRESULT ( STDMETHODCALLTYPE *Skip )( 
             __RPC__in IEnumDebugExtendedPropertyInfo * This,
             /* [in] */ ULONG celt);
         
+        DECLSPEC_XFGVIRT(IEnumDebugExtendedPropertyInfo, Reset)
         HRESULT ( STDMETHODCALLTYPE *Reset )( 
             __RPC__in IEnumDebugExtendedPropertyInfo * This);
         
+        DECLSPEC_XFGVIRT(IEnumDebugExtendedPropertyInfo, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IEnumDebugExtendedPropertyInfo * This,
             /* [out] */ __RPC__deref_out_opt IEnumDebugExtendedPropertyInfo **pedpe);
         
+        DECLSPEC_XFGVIRT(IEnumDebugExtendedPropertyInfo, GetCount)
         HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             __RPC__in IEnumDebugExtendedPropertyInfo * This,
             /* [out] */ __RPC__out ULONG *pcelt);
@@ -877,34 +919,41 @@ EXTERN_C const IID IID_IPerPropertyBrowsing2;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IPerPropertyBrowsing2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IPerPropertyBrowsing2 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPerPropertyBrowsing2 * This);
         
+        DECLSPEC_XFGVIRT(IPerPropertyBrowsing2, GetDisplayString)
         HRESULT ( STDMETHODCALLTYPE *GetDisplayString )( 
             __RPC__in IPerPropertyBrowsing2 * This,
             /* [in] */ DISPID dispid,
             /* [out] */ __RPC__deref_out_opt BSTR *pBstr);
         
+        DECLSPEC_XFGVIRT(IPerPropertyBrowsing2, MapPropertyToPage)
         HRESULT ( STDMETHODCALLTYPE *MapPropertyToPage )( 
             __RPC__in IPerPropertyBrowsing2 * This,
             /* [in] */ DISPID dispid,
             /* [out] */ __RPC__out CLSID *pClsidPropPage);
         
+        DECLSPEC_XFGVIRT(IPerPropertyBrowsing2, GetPredefinedStrings)
         HRESULT ( STDMETHODCALLTYPE *GetPredefinedStrings )( 
             __RPC__in IPerPropertyBrowsing2 * This,
             /* [in] */ DISPID dispid,
             /* [out] */ __RPC__out CALPOLESTR *pCaStrings,
             /* [out] */ __RPC__out CADWORD *pCaCookies);
         
+        DECLSPEC_XFGVIRT(IPerPropertyBrowsing2, SetPredefinedValue)
         HRESULT ( STDMETHODCALLTYPE *SetPredefinedValue )( 
             __RPC__in IPerPropertyBrowsing2 * This,
             /* [in] */ DISPID dispid,
@@ -983,18 +1032,22 @@ EXTERN_C const IID IID_IDebugPropertyEnumType_All;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDebugPropertyEnumType_All * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDebugPropertyEnumType_All * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDebugPropertyEnumType_All * This);
         
+        DECLSPEC_XFGVIRT(IDebugPropertyEnumType_All, GetName)
         HRESULT ( STDMETHODCALLTYPE *GetName )( 
             __RPC__in IDebugPropertyEnumType_All * This,
             /* [out] */ __RPC__deref_out_opt BSTR *__MIDL__IDebugPropertyEnumType_All0000);
@@ -1060,18 +1113,22 @@ EXTERN_C const IID IID_IDebugPropertyEnumType_Locals;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDebugPropertyEnumType_Locals * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDebugPropertyEnumType_Locals * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDebugPropertyEnumType_Locals * This);
         
+        DECLSPEC_XFGVIRT(IDebugPropertyEnumType_All, GetName)
         HRESULT ( STDMETHODCALLTYPE *GetName )( 
             __RPC__in IDebugPropertyEnumType_Locals * This,
             /* [out] */ __RPC__deref_out_opt BSTR *__MIDL__IDebugPropertyEnumType_All0000);
@@ -1138,18 +1195,22 @@ EXTERN_C const IID IID_IDebugPropertyEnumType_Arguments;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDebugPropertyEnumType_Arguments * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDebugPropertyEnumType_Arguments * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDebugPropertyEnumType_Arguments * This);
         
+        DECLSPEC_XFGVIRT(IDebugPropertyEnumType_All, GetName)
         HRESULT ( STDMETHODCALLTYPE *GetName )( 
             __RPC__in IDebugPropertyEnumType_Arguments * This,
             /* [out] */ __RPC__deref_out_opt BSTR *__MIDL__IDebugPropertyEnumType_All0000);
@@ -1216,18 +1277,22 @@ EXTERN_C const IID IID_IDebugPropertyEnumType_LocalsPlusArgs;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDebugPropertyEnumType_LocalsPlusArgs * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDebugPropertyEnumType_LocalsPlusArgs * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDebugPropertyEnumType_LocalsPlusArgs * This);
         
+        DECLSPEC_XFGVIRT(IDebugPropertyEnumType_All, GetName)
         HRESULT ( STDMETHODCALLTYPE *GetName )( 
             __RPC__in IDebugPropertyEnumType_LocalsPlusArgs * This,
             /* [out] */ __RPC__deref_out_opt BSTR *__MIDL__IDebugPropertyEnumType_All0000);
@@ -1294,18 +1359,22 @@ EXTERN_C const IID IID_IDebugPropertyEnumType_Registers;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IDebugPropertyEnumType_Registers * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IDebugPropertyEnumType_Registers * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IDebugPropertyEnumType_Registers * This);
         
+        DECLSPEC_XFGVIRT(IDebugPropertyEnumType_All, GetName)
         HRESULT ( STDMETHODCALLTYPE *GetName )( 
             __RPC__in IDebugPropertyEnumType_Registers * This,
             /* [out] */ __RPC__deref_out_opt BSTR *__MIDL__IDebugPropertyEnumType_All0000);

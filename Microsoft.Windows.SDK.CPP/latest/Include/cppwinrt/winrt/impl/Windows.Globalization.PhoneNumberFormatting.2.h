@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,7 +7,7 @@
 #define WINRT_Windows_Globalization_PhoneNumberFormatting_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Globalization.PhoneNumberFormatting.1.h"
-namespace winrt::Windows::Globalization::PhoneNumberFormatting
+WINRT_EXPORT namespace winrt::Windows::Globalization::PhoneNumberFormatting
 {
     struct __declspec(empty_bases) PhoneNumberFormatter : Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter
     {
@@ -24,7 +24,7 @@ namespace winrt::Windows::Globalization::PhoneNumberFormatting
     {
         PhoneNumberInfo(std::nullptr_t) noexcept {}
         PhoneNumberInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo(ptr, take_ownership_from_abi) {}
-        PhoneNumberInfo(param::hstring const& number);
+        explicit PhoneNumberInfo(param::hstring const& number);
         static auto TryParse(param::hstring const& input, Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo& phoneNumber);
         static auto TryParse(param::hstring const& input, param::hstring const& regionCode, Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo& phoneNumber);
     };

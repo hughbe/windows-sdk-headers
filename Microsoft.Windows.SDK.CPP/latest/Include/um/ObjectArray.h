@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -105,22 +113,27 @@ EXTERN_C const IID IID_IObjectArray;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IObjectArray * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IObjectArray * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IObjectArray * This);
         
+        DECLSPEC_XFGVIRT(IObjectArray, GetCount)
         HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             __RPC__in IObjectArray * This,
             /* [out] */ __RPC__out UINT *pcObjects);
         
+        DECLSPEC_XFGVIRT(IObjectArray, GetAt)
         HRESULT ( STDMETHODCALLTYPE *GetAt )( 
             __RPC__in IObjectArray * This,
             /* [in] */ UINT uiIndex,
@@ -202,40 +215,49 @@ EXTERN_C const IID IID_IObjectCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IObjectCollection * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IObjectCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IObjectCollection * This);
         
+        DECLSPEC_XFGVIRT(IObjectArray, GetCount)
         HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             __RPC__in IObjectCollection * This,
             /* [out] */ __RPC__out UINT *pcObjects);
         
+        DECLSPEC_XFGVIRT(IObjectArray, GetAt)
         HRESULT ( STDMETHODCALLTYPE *GetAt )( 
             __RPC__in IObjectCollection * This,
             /* [in] */ UINT uiIndex,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][out] */ __RPC__deref_out_opt void **ppv);
         
+        DECLSPEC_XFGVIRT(IObjectCollection, AddObject)
         HRESULT ( STDMETHODCALLTYPE *AddObject )( 
             __RPC__in IObjectCollection * This,
             /* [in] */ __RPC__in_opt IUnknown *punk);
         
+        DECLSPEC_XFGVIRT(IObjectCollection, AddFromArray)
         HRESULT ( STDMETHODCALLTYPE *AddFromArray )( 
             __RPC__in IObjectCollection * This,
             /* [in] */ __RPC__in_opt IObjectArray *poaSource);
         
+        DECLSPEC_XFGVIRT(IObjectCollection, RemoveObjectAt)
         HRESULT ( STDMETHODCALLTYPE *RemoveObjectAt )( 
             __RPC__in IObjectCollection * This,
             /* [in] */ UINT uiIndex);
         
+        DECLSPEC_XFGVIRT(IObjectCollection, Clear)
         HRESULT ( STDMETHODCALLTYPE *Clear )( 
             __RPC__in IObjectCollection * This);
         

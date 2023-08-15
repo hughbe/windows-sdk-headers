@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,7 +9,7 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Media.Protection.1.h"
 #include "winrt/impl/Windows.Media.Protection.PlayReady.1.h"
-namespace winrt::Windows::Media::Protection::PlayReady
+WINRT_EXPORT namespace winrt::Windows::Media::Protection::PlayReady
 {
     struct __declspec(empty_bases) NDClient : Windows::Media::Protection::PlayReady::INDClient
     {
@@ -60,7 +60,7 @@ namespace winrt::Windows::Media::Protection::PlayReady
         PlayReadyContentHeader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Protection::PlayReady::IPlayReadyContentHeader(ptr, take_ownership_from_abi) {}
         PlayReadyContentHeader(array_view<uint8_t const> headerBytes, Windows::Foundation::Uri const& licenseAcquisitionUrl, Windows::Foundation::Uri const& licenseAcquisitionUserInterfaceUrl, param::hstring const& customAttributes, winrt::guid const& domainServiceId);
         PlayReadyContentHeader(winrt::guid const& contentKeyId, param::hstring const& contentKeyIdString, Windows::Media::Protection::PlayReady::PlayReadyEncryptionAlgorithm const& contentEncryptionAlgorithm, Windows::Foundation::Uri const& licenseAcquisitionUrl, Windows::Foundation::Uri const& licenseAcquisitionUserInterfaceUrl, param::hstring const& customAttributes, winrt::guid const& domainServiceId);
-        PlayReadyContentHeader(array_view<uint8_t const> headerBytes);
+        explicit PlayReadyContentHeader(array_view<uint8_t const> headerBytes);
         PlayReadyContentHeader(uint32_t dwFlags, array_view<winrt::guid const> contentKeyIds, array_view<hstring const> contentKeyIdStrings, Windows::Media::Protection::PlayReady::PlayReadyEncryptionAlgorithm const& contentEncryptionAlgorithm, Windows::Foundation::Uri const& licenseAcquisitionUrl, Windows::Foundation::Uri const& licenseAcquisitionUserInterfaceUrl, param::hstring const& customAttributes, winrt::guid const& domainServiceId);
     };
     struct PlayReadyContentResolver
@@ -77,7 +77,7 @@ namespace winrt::Windows::Media::Protection::PlayReady
     {
         PlayReadyDomainIterable(std::nullptr_t) noexcept {}
         PlayReadyDomainIterable(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::Collections::IIterable<Windows::Media::Protection::PlayReady::IPlayReadyDomain>(ptr, take_ownership_from_abi) {}
-        PlayReadyDomainIterable(winrt::guid const& domainAccountId);
+        explicit PlayReadyDomainIterable(winrt::guid const& domainAccountId);
     };
     struct __declspec(empty_bases) PlayReadyDomainIterator : Windows::Foundation::Collections::IIterator<Windows::Media::Protection::PlayReady::IPlayReadyDomain>
     {
@@ -143,7 +143,7 @@ namespace winrt::Windows::Media::Protection::PlayReady
     {
         PlayReadyLicenseSession(std::nullptr_t) noexcept {}
         PlayReadyLicenseSession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession(ptr, take_ownership_from_abi) {}
-        PlayReadyLicenseSession(Windows::Foundation::Collections::IPropertySet const& configuration);
+        explicit PlayReadyLicenseSession(Windows::Foundation::Collections::IPropertySet const& configuration);
     };
     struct __declspec(empty_bases) PlayReadyMeteringReportServiceRequest : Windows::Media::Protection::PlayReady::IPlayReadyMeteringReportServiceRequest
     {
@@ -161,7 +161,7 @@ namespace winrt::Windows::Media::Protection::PlayReady
     {
         PlayReadySecureStopIterable(std::nullptr_t) noexcept {}
         PlayReadySecureStopIterable(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::Collections::IIterable<Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>(ptr, take_ownership_from_abi) {}
-        PlayReadySecureStopIterable(array_view<uint8_t const> publisherCertBytes);
+        explicit PlayReadySecureStopIterable(array_view<uint8_t const> publisherCertBytes);
     };
     struct __declspec(empty_bases) PlayReadySecureStopIterator : Windows::Foundation::Collections::IIterator<Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>
     {
@@ -172,7 +172,7 @@ namespace winrt::Windows::Media::Protection::PlayReady
     {
         PlayReadySecureStopServiceRequest(std::nullptr_t) noexcept {}
         PlayReadySecureStopServiceRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest(ptr, take_ownership_from_abi) {}
-        PlayReadySecureStopServiceRequest(array_view<uint8_t const> publisherCertBytes);
+        explicit PlayReadySecureStopServiceRequest(array_view<uint8_t const> publisherCertBytes);
         PlayReadySecureStopServiceRequest(winrt::guid const& sessionID, array_view<uint8_t const> publisherCertBytes);
     };
     struct __declspec(empty_bases) PlayReadySoapMessage : Windows::Media::Protection::PlayReady::IPlayReadySoapMessage

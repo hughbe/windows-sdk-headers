@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_System_Diagnostics_1_H
 #define WINRT_Windows_System_Diagnostics_1_H
 #include "winrt/impl/Windows.System.Diagnostics.0.h"
-namespace winrt::Windows::System::Diagnostics
+WINRT_EXPORT namespace winrt::Windows::System::Diagnostics
 {
     struct __declspec(empty_bases) IDiagnosticActionResult :
         Windows::Foundation::IInspectable,
@@ -133,6 +133,13 @@ namespace winrt::Windows::System::Diagnostics
     {
         ISystemDiagnosticInfoStatics(std::nullptr_t = nullptr) noexcept {}
         ISystemDiagnosticInfoStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ISystemDiagnosticInfoStatics2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ISystemDiagnosticInfoStatics2>
+    {
+        ISystemDiagnosticInfoStatics2(std::nullptr_t = nullptr) noexcept {}
+        ISystemDiagnosticInfoStatics2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ISystemMemoryUsage :
         Windows::Foundation::IInspectable,

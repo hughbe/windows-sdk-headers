@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_ApplicationModel_Payments_Provider_2_H
 #define WINRT_Windows_ApplicationModel_Payments_Provider_2_H
 #include "winrt/impl/Windows.ApplicationModel.Payments.Provider.1.h"
-namespace winrt::Windows::ApplicationModel::Payments::Provider
+WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Payments::Provider
 {
     struct __declspec(empty_bases) PaymentAppCanMakePaymentTriggerDetails : Windows::ApplicationModel::Payments::Provider::IPaymentAppCanMakePaymentTriggerDetails
     {

@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -282,18 +290,22 @@ EXTERN_C const IID IID_IMMNotificationClient;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IMMNotificationClient * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMMNotificationClient * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IMMNotificationClient * This);
         
+        DECLSPEC_XFGVIRT(IMMNotificationClient, OnDeviceStateChanged)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *OnDeviceStateChanged )( 
             IMMNotificationClient * This,
             /* [annotation][in] */ 
@@ -301,16 +313,19 @@ EXTERN_C const IID IID_IMMNotificationClient;
             /* [annotation][in] */ 
             _In_  DWORD dwNewState);
         
+        DECLSPEC_XFGVIRT(IMMNotificationClient, OnDeviceAdded)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *OnDeviceAdded )( 
             IMMNotificationClient * This,
             /* [annotation][in] */ 
             _In_  LPCWSTR pwstrDeviceId);
         
+        DECLSPEC_XFGVIRT(IMMNotificationClient, OnDeviceRemoved)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *OnDeviceRemoved )( 
             IMMNotificationClient * This,
             /* [annotation][in] */ 
             _In_  LPCWSTR pwstrDeviceId);
         
+        DECLSPEC_XFGVIRT(IMMNotificationClient, OnDefaultDeviceChanged)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *OnDefaultDeviceChanged )( 
             IMMNotificationClient * This,
             /* [annotation][in] */ 
@@ -320,6 +335,7 @@ EXTERN_C const IID IID_IMMNotificationClient;
             /* [annotation][in] */ 
             _In_  LPCWSTR pwstrDefaultDeviceId);
         
+        DECLSPEC_XFGVIRT(IMMNotificationClient, OnPropertyValueChanged)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *OnPropertyValueChanged )( 
             IMMNotificationClient * This,
             /* [annotation][in] */ 
@@ -424,18 +440,22 @@ EXTERN_C const IID IID_IMMDevice;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IMMDevice * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMMDevice * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IMMDevice * This);
         
+        DECLSPEC_XFGVIRT(IMMDevice, Activate)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
             IMMDevice * This,
             /* [annotation][in] */ 
@@ -447,6 +467,7 @@ EXTERN_C const IID IID_IMMDevice;
             /* [annotation][iid_is][out] */ 
             _Out_  void **ppInterface);
         
+        DECLSPEC_XFGVIRT(IMMDevice, OpenPropertyStore)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *OpenPropertyStore )( 
             IMMDevice * This,
             /* [annotation][in] */ 
@@ -454,11 +475,13 @@ EXTERN_C const IID IID_IMMDevice;
             /* [annotation][out] */ 
             _Out_  IPropertyStore **ppProperties);
         
+        DECLSPEC_XFGVIRT(IMMDevice, GetId)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetId )( 
             IMMDevice * This,
             /* [annotation][out] */ 
             _Outptr_  LPWSTR *ppstrId);
         
+        DECLSPEC_XFGVIRT(IMMDevice, GetState)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetState )( 
             IMMDevice * This,
             /* [annotation][out] */ 
@@ -544,23 +567,28 @@ EXTERN_C const IID IID_IMMDeviceCollection;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IMMDeviceCollection * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMMDeviceCollection * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IMMDeviceCollection * This);
         
+        DECLSPEC_XFGVIRT(IMMDeviceCollection, GetCount)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetCount )( 
             IMMDeviceCollection * This,
             /* [annotation][out] */ 
             _Out_  UINT *pcDevices);
         
+        DECLSPEC_XFGVIRT(IMMDeviceCollection, Item)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Item )( 
             IMMDeviceCollection * This,
             /* [annotation][in] */ 
@@ -636,18 +664,22 @@ EXTERN_C const IID IID_IMMEndpoint;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IMMEndpoint * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMMEndpoint * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IMMEndpoint * This);
         
+        DECLSPEC_XFGVIRT(IMMEndpoint, GetDataFlow)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetDataFlow )( 
             IMMEndpoint * This,
             /* [annotation][out] */ 
@@ -744,18 +776,22 @@ EXTERN_C const IID IID_IMMDeviceEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IMMDeviceEnumerator * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMMDeviceEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IMMDeviceEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IMMDeviceEnumerator, EnumAudioEndpoints)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *EnumAudioEndpoints )( 
             IMMDeviceEnumerator * This,
             /* [annotation][in] */ 
@@ -765,6 +801,7 @@ EXTERN_C const IID IID_IMMDeviceEnumerator;
             /* [annotation][out] */ 
             _Out_  IMMDeviceCollection **ppDevices);
         
+        DECLSPEC_XFGVIRT(IMMDeviceEnumerator, GetDefaultAudioEndpoint)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetDefaultAudioEndpoint )( 
             IMMDeviceEnumerator * This,
             /* [annotation][in] */ 
@@ -774,6 +811,7 @@ EXTERN_C const IID IID_IMMDeviceEnumerator;
             /* [annotation][out] */ 
             _Out_  IMMDevice **ppEndpoint);
         
+        DECLSPEC_XFGVIRT(IMMDeviceEnumerator, GetDevice)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetDevice )( 
             IMMDeviceEnumerator * This,
             /* [annotation][in] */ 
@@ -781,11 +819,13 @@ EXTERN_C const IID IID_IMMDeviceEnumerator;
             /* [annotation][out] */ 
             _Out_  IMMDevice **ppDevice);
         
+        DECLSPEC_XFGVIRT(IMMDeviceEnumerator, RegisterEndpointNotificationCallback)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RegisterEndpointNotificationCallback )( 
             IMMDeviceEnumerator * This,
             /* [annotation][in] */ 
             _In_  IMMNotificationClient *pClient);
         
+        DECLSPEC_XFGVIRT(IMMDeviceEnumerator, UnregisterEndpointNotificationCallback)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *UnregisterEndpointNotificationCallback )( 
             IMMDeviceEnumerator * This,
             /* [annotation][in] */ 
@@ -887,18 +927,22 @@ EXTERN_C const IID IID_IMMDeviceActivator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IMMDeviceActivator * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IMMDeviceActivator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IMMDeviceActivator * This);
         
+        DECLSPEC_XFGVIRT(IMMDeviceActivator, Activate)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Activate )( 
             IMMDeviceActivator * This,
             /* [annotation][in] */ 
@@ -953,8 +997,8 @@ EXTERN_C const IID IID_IMMDeviceActivator;
 /* IMMDeviceActivator is reserved for system use */
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 
 
@@ -989,18 +1033,22 @@ EXTERN_C const IID IID_IActivateAudioInterfaceCompletionHandler;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IActivateAudioInterfaceCompletionHandler * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IActivateAudioInterfaceCompletionHandler * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IActivateAudioInterfaceCompletionHandler * This);
         
+        DECLSPEC_XFGVIRT(IActivateAudioInterfaceCompletionHandler, ActivateCompleted)
         HRESULT ( STDMETHODCALLTYPE *ActivateCompleted )( 
             IActivateAudioInterfaceCompletionHandler * This,
             /* [annotation][in] */ 
@@ -1073,18 +1121,22 @@ EXTERN_C const IID IID_IActivateAudioInterfaceAsyncOperation;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IActivateAudioInterfaceAsyncOperation * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IActivateAudioInterfaceAsyncOperation * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IActivateAudioInterfaceAsyncOperation * This);
         
+        DECLSPEC_XFGVIRT(IActivateAudioInterfaceAsyncOperation, GetActivateResult)
         HRESULT ( STDMETHODCALLTYPE *GetActivateResult )( 
             IActivateAudioInterfaceAsyncOperation * This,
             /* [annotation][out] */ 
@@ -1149,7 +1201,9 @@ STDAPI ActivateAudioInterfaceAsync(
     _In_ IActivateAudioInterfaceCompletionHandler *completionHandler,
     _COM_Outptr_ IActivateAudioInterfaceAsyncOperation **activationOperation
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+// The AUDIOCLIENT_ACTIVATION_PARAMS structure can be used when creating an IAudioClient.
+// It is defined in AudioClientActivationParams.h
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)

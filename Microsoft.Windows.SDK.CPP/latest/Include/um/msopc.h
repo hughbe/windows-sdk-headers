@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
@@ -35,6 +35,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -359,135 +367,166 @@ EXTERN_C const IID IID_IOpcUri;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcUri * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcUri * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcUri * This);
         
+        DECLSPEC_XFGVIRT(IUri, GetPropertyBSTR)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyBSTR )( 
             __RPC__in IOpcUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrProperty,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, GetPropertyLength)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyLength )( 
             __RPC__in IOpcUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__out DWORD *pcchProperty,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, GetPropertyDWORD)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyDWORD )( 
             __RPC__in IOpcUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__out DWORD *pdwProperty,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, HasProperty)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *HasProperty )( 
             __RPC__in IOpcUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__out BOOL *pfHasProperty);
         
+        DECLSPEC_XFGVIRT(IUri, GetAbsoluteUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetAbsoluteUri )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrAbsoluteUri);
         
+        DECLSPEC_XFGVIRT(IUri, GetAuthority)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetAuthority )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrAuthority);
         
+        DECLSPEC_XFGVIRT(IUri, GetDisplayUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetDisplayUri )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrDisplayString);
         
+        DECLSPEC_XFGVIRT(IUri, GetDomain)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetDomain )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrDomain);
         
+        DECLSPEC_XFGVIRT(IUri, GetExtension)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetExtension )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrExtension);
         
+        DECLSPEC_XFGVIRT(IUri, GetFragment)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetFragment )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrFragment);
         
+        DECLSPEC_XFGVIRT(IUri, GetHost)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetHost )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrHost);
         
+        DECLSPEC_XFGVIRT(IUri, GetPassword)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPassword )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrPassword);
         
+        DECLSPEC_XFGVIRT(IUri, GetPath)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPath )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrPath);
         
+        DECLSPEC_XFGVIRT(IUri, GetPathAndQuery)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPathAndQuery )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrPathAndQuery);
         
+        DECLSPEC_XFGVIRT(IUri, GetQuery)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetQuery )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrQuery);
         
+        DECLSPEC_XFGVIRT(IUri, GetRawUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetRawUri )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrRawUri);
         
+        DECLSPEC_XFGVIRT(IUri, GetSchemeName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetSchemeName )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrSchemeName);
         
+        DECLSPEC_XFGVIRT(IUri, GetUserInfo)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetUserInfo )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrUserInfo);
         
+        DECLSPEC_XFGVIRT(IUri, GetUserName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetUserName )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrUserName);
         
+        DECLSPEC_XFGVIRT(IUri, GetHostType)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetHostType )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__out DWORD *pdwHostType);
         
+        DECLSPEC_XFGVIRT(IUri, GetPort)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPort )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__out DWORD *pdwPort);
         
+        DECLSPEC_XFGVIRT(IUri, GetScheme)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetScheme )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__out DWORD *pdwScheme);
         
+        DECLSPEC_XFGVIRT(IUri, GetZone)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetZone )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__out DWORD *pdwZone);
         
+        DECLSPEC_XFGVIRT(IUri, GetProperties)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetProperties )( 
             __RPC__in IOpcUri * This,
             /* [out] */ __RPC__out LPDWORD pdwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, IsEqual)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *IsEqual )( 
             __RPC__in IOpcUri * This,
             /* [in] */ __RPC__in_opt IUri *pUri,
             /* [out] */ __RPC__out BOOL *pfEqual);
         
+        DECLSPEC_XFGVIRT(IOpcUri, GetRelationshipsPartUri)
         HRESULT ( STDMETHODCALLTYPE *GetRelationshipsPartUri )( 
             __RPC__in IOpcUri * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartUri **relationshipPartUri);
         
+        DECLSPEC_XFGVIRT(IOpcUri, GetRelativeUri)
         HRESULT ( STDMETHODCALLTYPE *GetRelativeUri )( 
             __RPC__in IOpcUri * This,
             /* [in] */ __RPC__in_opt IOpcPartUri *targetPartUri,
             /* [retval][out] */ __RPC__deref_out_opt IUri **relativeUri);
         
+        DECLSPEC_XFGVIRT(IOpcUri, CombinePartUri)
         HRESULT ( STDMETHODCALLTYPE *CombinePartUri )( 
             __RPC__in IOpcUri * This,
             /* [in] */ __RPC__in_opt IUri *relativeUri,
@@ -646,149 +685,183 @@ EXTERN_C const IID IID_IOpcPartUri;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcPartUri * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcPartUri * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcPartUri * This);
         
+        DECLSPEC_XFGVIRT(IUri, GetPropertyBSTR)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyBSTR )( 
             __RPC__in IOpcPartUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrProperty,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, GetPropertyLength)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyLength )( 
             __RPC__in IOpcPartUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__out DWORD *pcchProperty,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, GetPropertyDWORD)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPropertyDWORD )( 
             __RPC__in IOpcPartUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__out DWORD *pdwProperty,
             /* [in] */ DWORD dwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, HasProperty)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *HasProperty )( 
             __RPC__in IOpcPartUri * This,
             /* [range][in] */ Uri_PROPERTY uriProp,
             /* [out] */ __RPC__out BOOL *pfHasProperty);
         
+        DECLSPEC_XFGVIRT(IUri, GetAbsoluteUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetAbsoluteUri )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrAbsoluteUri);
         
+        DECLSPEC_XFGVIRT(IUri, GetAuthority)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetAuthority )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrAuthority);
         
+        DECLSPEC_XFGVIRT(IUri, GetDisplayUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetDisplayUri )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrDisplayString);
         
+        DECLSPEC_XFGVIRT(IUri, GetDomain)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetDomain )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrDomain);
         
+        DECLSPEC_XFGVIRT(IUri, GetExtension)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetExtension )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrExtension);
         
+        DECLSPEC_XFGVIRT(IUri, GetFragment)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetFragment )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrFragment);
         
+        DECLSPEC_XFGVIRT(IUri, GetHost)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetHost )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrHost);
         
+        DECLSPEC_XFGVIRT(IUri, GetPassword)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPassword )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrPassword);
         
+        DECLSPEC_XFGVIRT(IUri, GetPath)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPath )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrPath);
         
+        DECLSPEC_XFGVIRT(IUri, GetPathAndQuery)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPathAndQuery )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrPathAndQuery);
         
+        DECLSPEC_XFGVIRT(IUri, GetQuery)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetQuery )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrQuery);
         
+        DECLSPEC_XFGVIRT(IUri, GetRawUri)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetRawUri )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrRawUri);
         
+        DECLSPEC_XFGVIRT(IUri, GetSchemeName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetSchemeName )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrSchemeName);
         
+        DECLSPEC_XFGVIRT(IUri, GetUserInfo)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetUserInfo )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrUserInfo);
         
+        DECLSPEC_XFGVIRT(IUri, GetUserName)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetUserName )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__deref_out_opt BSTR *pbstrUserName);
         
+        DECLSPEC_XFGVIRT(IUri, GetHostType)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetHostType )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__out DWORD *pdwHostType);
         
+        DECLSPEC_XFGVIRT(IUri, GetPort)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPort )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__out DWORD *pdwPort);
         
+        DECLSPEC_XFGVIRT(IUri, GetScheme)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetScheme )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__out DWORD *pdwScheme);
         
+        DECLSPEC_XFGVIRT(IUri, GetZone)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetZone )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__out DWORD *pdwZone);
         
+        DECLSPEC_XFGVIRT(IUri, GetProperties)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetProperties )( 
             __RPC__in IOpcPartUri * This,
             /* [out] */ __RPC__out LPDWORD pdwFlags);
         
+        DECLSPEC_XFGVIRT(IUri, IsEqual)
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *IsEqual )( 
             __RPC__in IOpcPartUri * This,
             /* [in] */ __RPC__in_opt IUri *pUri,
             /* [out] */ __RPC__out BOOL *pfEqual);
         
+        DECLSPEC_XFGVIRT(IOpcUri, GetRelationshipsPartUri)
         HRESULT ( STDMETHODCALLTYPE *GetRelationshipsPartUri )( 
             __RPC__in IOpcPartUri * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartUri **relationshipPartUri);
         
+        DECLSPEC_XFGVIRT(IOpcUri, GetRelativeUri)
         HRESULT ( STDMETHODCALLTYPE *GetRelativeUri )( 
             __RPC__in IOpcPartUri * This,
             /* [in] */ __RPC__in_opt IOpcPartUri *targetPartUri,
             /* [retval][out] */ __RPC__deref_out_opt IUri **relativeUri);
         
+        DECLSPEC_XFGVIRT(IOpcUri, CombinePartUri)
         HRESULT ( STDMETHODCALLTYPE *CombinePartUri )( 
             __RPC__in IOpcPartUri * This,
             /* [in] */ __RPC__in_opt IUri *relativeUri,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartUri **combinedUri);
         
+        DECLSPEC_XFGVIRT(IOpcPartUri, ComparePartUri)
         HRESULT ( STDMETHODCALLTYPE *ComparePartUri )( 
             __RPC__in IOpcPartUri * This,
             /* [in] */ __RPC__in_opt IOpcPartUri *partUri,
             /* [retval][out] */ __RPC__out INT32 *comparisonResult);
         
+        DECLSPEC_XFGVIRT(IOpcPartUri, GetSourceUri)
         HRESULT ( STDMETHODCALLTYPE *GetSourceUri )( 
             __RPC__in IOpcPartUri * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcUri **sourceUri);
         
+        DECLSPEC_XFGVIRT(IOpcPartUri, IsRelationshipsPartUri)
         HRESULT ( STDMETHODCALLTYPE *IsRelationshipsPartUri )( 
             __RPC__in IOpcPartUri * This,
             /* [retval][out] */ __RPC__out BOOL *isRelationshipUri);
@@ -1245,22 +1318,27 @@ EXTERN_C const IID IID_IOpcPackage;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcPackage * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcPackage * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcPackage * This);
         
+        DECLSPEC_XFGVIRT(IOpcPackage, GetPartSet)
         HRESULT ( STDMETHODCALLTYPE *GetPartSet )( 
             __RPC__in IOpcPackage * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartSet **partSet);
         
+        DECLSPEC_XFGVIRT(IOpcPackage, GetRelationshipSet)
         HRESULT ( STDMETHODCALLTYPE *GetRelationshipSet )( 
             __RPC__in IOpcPackage * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipSet **relationshipSet);
@@ -1344,34 +1422,42 @@ EXTERN_C const IID IID_IOpcPart;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcPart * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcPart * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcPart * This);
         
+        DECLSPEC_XFGVIRT(IOpcPart, GetRelationshipSet)
         HRESULT ( STDMETHODCALLTYPE *GetRelationshipSet )( 
             __RPC__in IOpcPart * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipSet **relationshipSet);
         
+        DECLSPEC_XFGVIRT(IOpcPart, GetContentStream)
         HRESULT ( STDMETHODCALLTYPE *GetContentStream )( 
             __RPC__in IOpcPart * This,
             /* [retval][out] */ __RPC__deref_out_opt IStream **stream);
         
+        DECLSPEC_XFGVIRT(IOpcPart, GetName)
         HRESULT ( STDMETHODCALLTYPE *GetName )( 
             __RPC__in IOpcPart * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartUri **name);
         
+        DECLSPEC_XFGVIRT(IOpcPart, GetContentType)
         HRESULT ( STDMETHODCALLTYPE *GetContentType )( 
             __RPC__in IOpcPart * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *contentType);
         
+        DECLSPEC_XFGVIRT(IOpcPart, GetCompressionOptions)
         HRESULT ( STDMETHODCALLTYPE *GetCompressionOptions )( 
             __RPC__in IOpcPart * This,
             /* [retval][out] */ __RPC__out OPC_COMPRESSION_OPTIONS *compressionOptions);
@@ -1464,34 +1550,42 @@ EXTERN_C const IID IID_IOpcRelationship;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcRelationship * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcRelationship * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcRelationship * This);
         
+        DECLSPEC_XFGVIRT(IOpcRelationship, GetId)
         HRESULT ( STDMETHODCALLTYPE *GetId )( 
             __RPC__in IOpcRelationship * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *relationshipIdentifier);
         
+        DECLSPEC_XFGVIRT(IOpcRelationship, GetRelationshipType)
         HRESULT ( STDMETHODCALLTYPE *GetRelationshipType )( 
             __RPC__in IOpcRelationship * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *relationshipType);
         
+        DECLSPEC_XFGVIRT(IOpcRelationship, GetSourceUri)
         HRESULT ( STDMETHODCALLTYPE *GetSourceUri )( 
             __RPC__in IOpcRelationship * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcUri **sourceUri);
         
+        DECLSPEC_XFGVIRT(IOpcRelationship, GetTargetUri)
         HRESULT ( STDMETHODCALLTYPE *GetTargetUri )( 
             __RPC__in IOpcRelationship * This,
             /* [retval][out] */ __RPC__deref_out_opt IUri **targetUri);
         
+        DECLSPEC_XFGVIRT(IOpcRelationship, GetTargetMode)
         HRESULT ( STDMETHODCALLTYPE *GetTargetMode )( 
             __RPC__in IOpcRelationship * This,
             /* [retval][out] */ __RPC__out OPC_URI_TARGET_MODE *targetMode);
@@ -1589,23 +1683,28 @@ EXTERN_C const IID IID_IOpcPartSet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcPartSet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcPartSet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcPartSet * This);
         
+        DECLSPEC_XFGVIRT(IOpcPartSet, GetPart)
         HRESULT ( STDMETHODCALLTYPE *GetPart )( 
             __RPC__in IOpcPartSet * This,
             /* [in] */ __RPC__in_opt IOpcPartUri *name,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPart **part);
         
+        DECLSPEC_XFGVIRT(IOpcPartSet, CreatePart)
         HRESULT ( STDMETHODCALLTYPE *CreatePart )( 
             __RPC__in IOpcPartSet * This,
             /* [in] */ __RPC__in_opt IOpcPartUri *name,
@@ -1613,15 +1712,18 @@ EXTERN_C const IID IID_IOpcPartSet;
             /* [in] */ OPC_COMPRESSION_OPTIONS compressionOptions,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPart **part);
         
+        DECLSPEC_XFGVIRT(IOpcPartSet, DeletePart)
         HRESULT ( STDMETHODCALLTYPE *DeletePart )( 
             __RPC__in IOpcPartSet * This,
             /* [in] */ __RPC__in_opt IOpcPartUri *name);
         
+        DECLSPEC_XFGVIRT(IOpcPartSet, PartExists)
         HRESULT ( STDMETHODCALLTYPE *PartExists )( 
             __RPC__in IOpcPartSet * This,
             /* [in] */ __RPC__in_opt IOpcPartUri *name,
             /* [retval][out] */ __RPC__out BOOL *partExists);
         
+        DECLSPEC_XFGVIRT(IOpcPartSet, GetEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetEnumerator )( 
             __RPC__in IOpcPartSet * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartEnumerator **partEnumerator);
@@ -1727,23 +1829,28 @@ EXTERN_C const IID IID_IOpcRelationshipSet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcRelationshipSet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcRelationshipSet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcRelationshipSet * This);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSet, GetRelationship)
         HRESULT ( STDMETHODCALLTYPE *GetRelationship )( 
             __RPC__in IOpcRelationshipSet * This,
             /* [string][in] */ __RPC__in_string LPCWSTR relationshipIdentifier,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationship **relationship);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSet, CreateRelationship)
         HRESULT ( STDMETHODCALLTYPE *CreateRelationship )( 
             __RPC__in IOpcRelationshipSet * This,
             /* [unique][string][in] */ __RPC__in_opt_string LPCWSTR relationshipIdentifier,
@@ -1752,24 +1859,29 @@ EXTERN_C const IID IID_IOpcRelationshipSet;
             /* [in] */ OPC_URI_TARGET_MODE targetMode,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationship **relationship);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSet, DeleteRelationship)
         HRESULT ( STDMETHODCALLTYPE *DeleteRelationship )( 
             __RPC__in IOpcRelationshipSet * This,
             /* [string][in] */ __RPC__in_string LPCWSTR relationshipIdentifier);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSet, RelationshipExists)
         HRESULT ( STDMETHODCALLTYPE *RelationshipExists )( 
             __RPC__in IOpcRelationshipSet * This,
             /* [string][in] */ __RPC__in_string LPCWSTR relationshipIdentifier,
             /* [retval][out] */ __RPC__out BOOL *relationshipExists);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSet, GetEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetEnumerator )( 
             __RPC__in IOpcRelationshipSet * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipEnumerator **relationshipEnumerator);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSet, GetEnumeratorForType)
         HRESULT ( STDMETHODCALLTYPE *GetEnumeratorForType )( 
             __RPC__in IOpcRelationshipSet * This,
             /* [string][in] */ __RPC__in_string LPCWSTR relationshipType,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipEnumerator **relationshipEnumerator);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSet, GetRelationshipsContentStream)
         HRESULT ( STDMETHODCALLTYPE *GetRelationshipsContentStream )( 
             __RPC__in IOpcRelationshipSet * This,
             /* [retval][out] */ __RPC__deref_out_opt IStream **contents);
@@ -1865,30 +1977,37 @@ EXTERN_C const IID IID_IOpcPartEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcPartEnumerator * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcPartEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcPartEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IOpcPartEnumerator, MoveNext)
         HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
             __RPC__in IOpcPartEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasNext);
         
+        DECLSPEC_XFGVIRT(IOpcPartEnumerator, MovePrevious)
         HRESULT ( STDMETHODCALLTYPE *MovePrevious )( 
             __RPC__in IOpcPartEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasPrevious);
         
+        DECLSPEC_XFGVIRT(IOpcPartEnumerator, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             __RPC__in IOpcPartEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPart **part);
         
+        DECLSPEC_XFGVIRT(IOpcPartEnumerator, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IOpcPartEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartEnumerator **copy);
@@ -1975,30 +2094,37 @@ EXTERN_C const IID IID_IOpcRelationshipEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcRelationshipEnumerator * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcRelationshipEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcRelationshipEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipEnumerator, MoveNext)
         HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
             __RPC__in IOpcRelationshipEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasNext);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipEnumerator, MovePrevious)
         HRESULT ( STDMETHODCALLTYPE *MovePrevious )( 
             __RPC__in IOpcRelationshipEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasPrevious);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipEnumerator, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             __RPC__in IOpcRelationshipEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationship **relationship);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipEnumerator, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IOpcRelationshipEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipEnumerator **copy);
@@ -2089,35 +2215,43 @@ EXTERN_C const IID IID_IOpcSignaturePartReference;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignaturePartReference * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignaturePartReference * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignaturePartReference * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReference, GetPartName)
         HRESULT ( STDMETHODCALLTYPE *GetPartName )( 
             __RPC__in IOpcSignaturePartReference * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartUri **partName);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReference, GetContentType)
         HRESULT ( STDMETHODCALLTYPE *GetContentType )( 
             __RPC__in IOpcSignaturePartReference * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *contentType);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReference, GetDigestMethod)
         HRESULT ( STDMETHODCALLTYPE *GetDigestMethod )( 
             __RPC__in IOpcSignaturePartReference * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *digestMethod);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReference, GetDigestValue)
         HRESULT ( STDMETHODCALLTYPE *GetDigestValue )( 
             __RPC__in IOpcSignaturePartReference * This,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*count) UINT8 **digestValue,
             /* [out] */ __RPC__out UINT32 *count);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReference, GetTransformMethod)
         HRESULT ( STDMETHODCALLTYPE *GetTransformMethod )( 
             __RPC__in IOpcSignaturePartReference * This,
             /* [retval][out] */ __RPC__out OPC_CANONICALIZATION_METHOD *transformMethod);
@@ -2214,39 +2348,48 @@ EXTERN_C const IID IID_IOpcSignatureRelationshipReference;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignatureRelationshipReference * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignatureRelationshipReference * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignatureRelationshipReference * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReference, GetSourceUri)
         HRESULT ( STDMETHODCALLTYPE *GetSourceUri )( 
             __RPC__in IOpcSignatureRelationshipReference * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcUri **sourceUri);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReference, GetDigestMethod)
         HRESULT ( STDMETHODCALLTYPE *GetDigestMethod )( 
             __RPC__in IOpcSignatureRelationshipReference * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *digestMethod);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReference, GetDigestValue)
         HRESULT ( STDMETHODCALLTYPE *GetDigestValue )( 
             __RPC__in IOpcSignatureRelationshipReference * This,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*count) UINT8 **digestValue,
             /* [out] */ __RPC__out UINT32 *count);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReference, GetTransformMethod)
         HRESULT ( STDMETHODCALLTYPE *GetTransformMethod )( 
             __RPC__in IOpcSignatureRelationshipReference * This,
             /* [retval][out] */ __RPC__out OPC_CANONICALIZATION_METHOD *transformMethod);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReference, GetRelationshipSigningOption)
         HRESULT ( STDMETHODCALLTYPE *GetRelationshipSigningOption )( 
             __RPC__in IOpcSignatureRelationshipReference * This,
             /* [retval][out] */ __RPC__out OPC_RELATIONSHIPS_SIGNING_OPTION *relationshipSigningOption);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReference, GetRelationshipSelectorEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetRelationshipSelectorEnumerator )( 
             __RPC__in IOpcSignatureRelationshipReference * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipSelectorEnumerator **selectorEnumerator);
@@ -2333,22 +2476,27 @@ EXTERN_C const IID IID_IOpcRelationshipSelector;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcRelationshipSelector * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcRelationshipSelector * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcRelationshipSelector * This);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSelector, GetSelectorType)
         HRESULT ( STDMETHODCALLTYPE *GetSelectorType )( 
             __RPC__in IOpcRelationshipSelector * This,
             /* [retval][out] */ __RPC__out OPC_RELATIONSHIP_SELECTOR *selector);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSelector, GetSelectionCriterion)
         HRESULT ( STDMETHODCALLTYPE *GetSelectionCriterion )( 
             __RPC__in IOpcRelationshipSelector * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *selectionCriterion);
@@ -2436,38 +2584,47 @@ EXTERN_C const IID IID_IOpcSignatureReference;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignatureReference * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignatureReference * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignatureReference * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReference, GetId)
         HRESULT ( STDMETHODCALLTYPE *GetId )( 
             __RPC__in IOpcSignatureReference * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *referenceId);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReference, GetUri)
         HRESULT ( STDMETHODCALLTYPE *GetUri )( 
             __RPC__in IOpcSignatureReference * This,
             /* [retval][out] */ __RPC__deref_out_opt IUri **referenceUri);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReference, GetType)
         HRESULT ( STDMETHODCALLTYPE *GetType )( 
             __RPC__in IOpcSignatureReference * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *type);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReference, GetTransformMethod)
         HRESULT ( STDMETHODCALLTYPE *GetTransformMethod )( 
             __RPC__in IOpcSignatureReference * This,
             /* [retval][out] */ __RPC__out OPC_CANONICALIZATION_METHOD *transformMethod);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReference, GetDigestMethod)
         HRESULT ( STDMETHODCALLTYPE *GetDigestMethod )( 
             __RPC__in IOpcSignatureReference * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *digestMethod);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReference, GetDigestValue)
         HRESULT ( STDMETHODCALLTYPE *GetDigestValue )( 
             __RPC__in IOpcSignatureReference * This,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*count) UINT8 **digestValue,
@@ -2553,18 +2710,22 @@ EXTERN_C const IID IID_IOpcSignatureCustomObject;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignatureCustomObject * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignatureCustomObject * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignatureCustomObject * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureCustomObject, GetXml)
         HRESULT ( STDMETHODCALLTYPE *GetXml )( 
             __RPC__in IOpcSignatureCustomObject * This,
             /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*count) UINT8 **xmlMarkup,
@@ -2686,18 +2847,22 @@ EXTERN_C const IID IID_IOpcDigitalSignature;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IOpcDigitalSignature * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOpcDigitalSignature * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IOpcDigitalSignature * This);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetNamespaces)
         HRESULT ( STDMETHODCALLTYPE *GetNamespaces )( 
             IOpcDigitalSignature * This,
             /* [annotation][size_is][size_is][out] */ 
@@ -2706,63 +2871,77 @@ EXTERN_C const IID IID_IOpcDigitalSignature;
             __RPC__deref_out_ecount_full_opt(*count)  LPWSTR **namespaces,
             /* [out] */ UINT32 *count);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetSignatureId)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureId )( 
             IOpcDigitalSignature * This,
             /* [annotation][retval][string][out] */ 
             __RPC__deref_out_opt_string  LPWSTR *signatureId);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetSignaturePartName)
         HRESULT ( STDMETHODCALLTYPE *GetSignaturePartName )( 
             IOpcDigitalSignature * This,
             /* [retval][out] */ IOpcPartUri **signaturePartName);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetSignatureMethod)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureMethod )( 
             IOpcDigitalSignature * This,
             /* [annotation][retval][string][out] */ 
             __RPC__deref_out_opt_string  LPWSTR *signatureMethod);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetCanonicalizationMethod)
         HRESULT ( STDMETHODCALLTYPE *GetCanonicalizationMethod )( 
             IOpcDigitalSignature * This,
             /* [retval][out] */ OPC_CANONICALIZATION_METHOD *canonicalizationMethod);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetSignatureValue)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureValue )( 
             IOpcDigitalSignature * This,
             /* [annotation][size_is][size_is][out] */ 
             __RPC__deref_out_ecount_full_opt(*count)  UINT8 **signatureValue,
             /* [out] */ UINT32 *count);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetSignaturePartReferenceEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetSignaturePartReferenceEnumerator )( 
             IOpcDigitalSignature * This,
             /* [retval][out] */ IOpcSignaturePartReferenceEnumerator **partReferenceEnumerator);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetSignatureRelationshipReferenceEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureRelationshipReferenceEnumerator )( 
             IOpcDigitalSignature * This,
             /* [retval][out] */ IOpcSignatureRelationshipReferenceEnumerator **relationshipReferenceEnumerator);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetSigningTime)
         HRESULT ( STDMETHODCALLTYPE *GetSigningTime )( 
             IOpcDigitalSignature * This,
             /* [annotation][retval][string][out] */ 
             __RPC__deref_out_opt_string  LPWSTR *signingTime);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetTimeFormat)
         HRESULT ( STDMETHODCALLTYPE *GetTimeFormat )( 
             IOpcDigitalSignature * This,
             /* [retval][out] */ OPC_SIGNATURE_TIME_FORMAT *timeFormat);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetPackageObjectReference)
         HRESULT ( STDMETHODCALLTYPE *GetPackageObjectReference )( 
             IOpcDigitalSignature * This,
             /* [retval][out] */ IOpcSignatureReference **packageObjectReference);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetCertificateEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetCertificateEnumerator )( 
             IOpcDigitalSignature * This,
             /* [retval][out] */ IOpcCertificateEnumerator **certificateEnumerator);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetCustomReferenceEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetCustomReferenceEnumerator )( 
             IOpcDigitalSignature * This,
             /* [retval][out] */ IOpcSignatureReferenceEnumerator **customReferenceEnumerator);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetCustomObjectEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetCustomObjectEnumerator )( 
             IOpcDigitalSignature * This,
             /* [retval][out] */ IOpcSignatureCustomObjectEnumerator **customObjectEnumerator);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignature, GetSignatureXml)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureXml )( 
             IOpcDigitalSignature * This,
             /* [size_is][size_is][out] */ UINT8 **signatureXml,
@@ -2922,82 +3101,102 @@ EXTERN_C const IID IID_IOpcSigningOptions;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSigningOptions * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSigningOptions * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSigningOptions * This);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetSignatureId)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureId )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *signatureId);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, SetSignatureId)
         HRESULT ( STDMETHODCALLTYPE *SetSignatureId )( 
             __RPC__in IOpcSigningOptions * This,
             /* [in] */ __RPC__in LPCWSTR signatureId);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetSignatureMethod)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureMethod )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *signatureMethod);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, SetSignatureMethod)
         HRESULT ( STDMETHODCALLTYPE *SetSignatureMethod )( 
             __RPC__in IOpcSigningOptions * This,
             /* [in] */ __RPC__in LPCWSTR signatureMethod);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetDefaultDigestMethod)
         HRESULT ( STDMETHODCALLTYPE *GetDefaultDigestMethod )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *digestMethod);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, SetDefaultDigestMethod)
         HRESULT ( STDMETHODCALLTYPE *SetDefaultDigestMethod )( 
             __RPC__in IOpcSigningOptions * This,
             /* [in] */ __RPC__in LPCWSTR digestMethod);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetCertificateEmbeddingOption)
         HRESULT ( STDMETHODCALLTYPE *GetCertificateEmbeddingOption )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][out] */ __RPC__out OPC_CERTIFICATE_EMBEDDING_OPTION *embeddingOption);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, SetCertificateEmbeddingOption)
         HRESULT ( STDMETHODCALLTYPE *SetCertificateEmbeddingOption )( 
             __RPC__in IOpcSigningOptions * This,
             /* [in] */ OPC_CERTIFICATE_EMBEDDING_OPTION embeddingOption);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetTimeFormat)
         HRESULT ( STDMETHODCALLTYPE *GetTimeFormat )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][out] */ __RPC__out OPC_SIGNATURE_TIME_FORMAT *timeFormat);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, SetTimeFormat)
         HRESULT ( STDMETHODCALLTYPE *SetTimeFormat )( 
             __RPC__in IOpcSigningOptions * This,
             /* [in] */ OPC_SIGNATURE_TIME_FORMAT timeFormat);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetSignaturePartReferenceSet)
         HRESULT ( STDMETHODCALLTYPE *GetSignaturePartReferenceSet )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignaturePartReferenceSet **partReferenceSet);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetSignatureRelationshipReferenceSet)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureRelationshipReferenceSet )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureRelationshipReferenceSet **relationshipReferenceSet);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetCustomObjectSet)
         HRESULT ( STDMETHODCALLTYPE *GetCustomObjectSet )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureCustomObjectSet **customObjectSet);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetCustomReferenceSet)
         HRESULT ( STDMETHODCALLTYPE *GetCustomReferenceSet )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureReferenceSet **customReferenceSet);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetCertificateSet)
         HRESULT ( STDMETHODCALLTYPE *GetCertificateSet )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcCertificateSet **certificateSet);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, GetSignaturePartName)
         HRESULT ( STDMETHODCALLTYPE *GetSignaturePartName )( 
             __RPC__in IOpcSigningOptions * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartUri **signaturePartName);
         
+        DECLSPEC_XFGVIRT(IOpcSigningOptions, SetSignaturePartName)
         HRESULT ( STDMETHODCALLTYPE *SetSignaturePartName )( 
             __RPC__in IOpcSigningOptions * This,
             /* [unique][in] */ __RPC__in_opt IOpcPartUri *signaturePartName);
@@ -3142,50 +3341,61 @@ EXTERN_C const IID IID_IOpcDigitalSignatureManager;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IOpcDigitalSignatureManager * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOpcDigitalSignatureManager * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IOpcDigitalSignatureManager * This);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureManager, GetSignatureOriginPartName)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureOriginPartName )( 
             IOpcDigitalSignatureManager * This,
             /* [retval][out] */ IOpcPartUri **signatureOriginPartName);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureManager, SetSignatureOriginPartName)
         HRESULT ( STDMETHODCALLTYPE *SetSignatureOriginPartName )( 
             IOpcDigitalSignatureManager * This,
             /* [unique][in] */ IOpcPartUri *signatureOriginPartName);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureManager, GetSignatureEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetSignatureEnumerator )( 
             IOpcDigitalSignatureManager * This,
             /* [retval][out] */ IOpcDigitalSignatureEnumerator **signatureEnumerator);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureManager, RemoveSignature)
         HRESULT ( STDMETHODCALLTYPE *RemoveSignature )( 
             IOpcDigitalSignatureManager * This,
             /* [in] */ IOpcPartUri *signaturePartName);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureManager, CreateSigningOptions)
         HRESULT ( STDMETHODCALLTYPE *CreateSigningOptions )( 
             IOpcDigitalSignatureManager * This,
             /* [retval][out] */ IOpcSigningOptions **signingOptions);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureManager, Validate)
         HRESULT ( STDMETHODCALLTYPE *Validate )( 
             IOpcDigitalSignatureManager * This,
             /* [in] */ IOpcDigitalSignature *signature,
             /* [in] */ const CERT_CONTEXT *certificate,
             /* [retval][out] */ OPC_SIGNATURE_VALIDATION_RESULT *validationResult);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureManager, Sign)
         HRESULT ( STDMETHODCALLTYPE *Sign )( 
             IOpcDigitalSignatureManager * This,
             /* [in] */ const CERT_CONTEXT *certificate,
             /* [in] */ IOpcSigningOptions *signingOptions,
             /* [retval][out] */ IOpcDigitalSignature **digitalSignature);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureManager, ReplaceSignatureXml)
         HRESULT ( STDMETHODCALLTYPE *ReplaceSignatureXml )( 
             IOpcDigitalSignatureManager * This,
             /* [in] */ IOpcPartUri *signaturePartName,
@@ -3287,30 +3497,37 @@ EXTERN_C const IID IID_IOpcSignaturePartReferenceEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignaturePartReferenceEnumerator * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignaturePartReferenceEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignaturePartReferenceEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReferenceEnumerator, MoveNext)
         HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
             __RPC__in IOpcSignaturePartReferenceEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasNext);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReferenceEnumerator, MovePrevious)
         HRESULT ( STDMETHODCALLTYPE *MovePrevious )( 
             __RPC__in IOpcSignaturePartReferenceEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasPrevious);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReferenceEnumerator, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             __RPC__in IOpcSignaturePartReferenceEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignaturePartReference **partReference);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReferenceEnumerator, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IOpcSignaturePartReferenceEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignaturePartReferenceEnumerator **copy);
@@ -3397,30 +3614,37 @@ EXTERN_C const IID IID_IOpcSignatureRelationshipReferenceEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignatureRelationshipReferenceEnumerator * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignatureRelationshipReferenceEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignatureRelationshipReferenceEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReferenceEnumerator, MoveNext)
         HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
             __RPC__in IOpcSignatureRelationshipReferenceEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasNext);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReferenceEnumerator, MovePrevious)
         HRESULT ( STDMETHODCALLTYPE *MovePrevious )( 
             __RPC__in IOpcSignatureRelationshipReferenceEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasPrevious);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReferenceEnumerator, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             __RPC__in IOpcSignatureRelationshipReferenceEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureRelationshipReference **relationshipReference);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReferenceEnumerator, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IOpcSignatureRelationshipReferenceEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureRelationshipReferenceEnumerator **copy);
@@ -3507,30 +3731,37 @@ EXTERN_C const IID IID_IOpcRelationshipSelectorEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcRelationshipSelectorEnumerator * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcRelationshipSelectorEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcRelationshipSelectorEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSelectorEnumerator, MoveNext)
         HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
             __RPC__in IOpcRelationshipSelectorEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasNext);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSelectorEnumerator, MovePrevious)
         HRESULT ( STDMETHODCALLTYPE *MovePrevious )( 
             __RPC__in IOpcRelationshipSelectorEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasPrevious);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSelectorEnumerator, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             __RPC__in IOpcRelationshipSelectorEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipSelector **relationshipSelector);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSelectorEnumerator, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IOpcRelationshipSelectorEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipSelectorEnumerator **copy);
@@ -3617,30 +3848,37 @@ EXTERN_C const IID IID_IOpcSignatureReferenceEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignatureReferenceEnumerator * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignatureReferenceEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignatureReferenceEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReferenceEnumerator, MoveNext)
         HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
             __RPC__in IOpcSignatureReferenceEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasNext);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReferenceEnumerator, MovePrevious)
         HRESULT ( STDMETHODCALLTYPE *MovePrevious )( 
             __RPC__in IOpcSignatureReferenceEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasPrevious);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReferenceEnumerator, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             __RPC__in IOpcSignatureReferenceEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureReference **reference);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReferenceEnumerator, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IOpcSignatureReferenceEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureReferenceEnumerator **copy);
@@ -3727,30 +3965,37 @@ EXTERN_C const IID IID_IOpcSignatureCustomObjectEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignatureCustomObjectEnumerator * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignatureCustomObjectEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignatureCustomObjectEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureCustomObjectEnumerator, MoveNext)
         HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
             __RPC__in IOpcSignatureCustomObjectEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasNext);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureCustomObjectEnumerator, MovePrevious)
         HRESULT ( STDMETHODCALLTYPE *MovePrevious )( 
             __RPC__in IOpcSignatureCustomObjectEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasPrevious);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureCustomObjectEnumerator, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             __RPC__in IOpcSignatureCustomObjectEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureCustomObject **customObject);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureCustomObjectEnumerator, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IOpcSignatureCustomObjectEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureCustomObjectEnumerator **copy);
@@ -3837,30 +4082,37 @@ EXTERN_C const IID IID_IOpcCertificateEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IOpcCertificateEnumerator * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOpcCertificateEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IOpcCertificateEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IOpcCertificateEnumerator, MoveNext)
         HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
             IOpcCertificateEnumerator * This,
             /* [retval][out] */ BOOL *hasNext);
         
+        DECLSPEC_XFGVIRT(IOpcCertificateEnumerator, MovePrevious)
         HRESULT ( STDMETHODCALLTYPE *MovePrevious )( 
             IOpcCertificateEnumerator * This,
             /* [retval][out] */ BOOL *hasPrevious);
         
+        DECLSPEC_XFGVIRT(IOpcCertificateEnumerator, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             IOpcCertificateEnumerator * This,
             /* [retval][out] */ const CERT_CONTEXT **certificate);
         
+        DECLSPEC_XFGVIRT(IOpcCertificateEnumerator, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             IOpcCertificateEnumerator * This,
             /* [retval][out] */ IOpcCertificateEnumerator **copy);
@@ -3947,30 +4199,37 @@ EXTERN_C const IID IID_IOpcDigitalSignatureEnumerator;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcDigitalSignatureEnumerator * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcDigitalSignatureEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcDigitalSignatureEnumerator * This);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureEnumerator, MoveNext)
         HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
             __RPC__in IOpcDigitalSignatureEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasNext);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureEnumerator, MovePrevious)
         HRESULT ( STDMETHODCALLTYPE *MovePrevious )( 
             __RPC__in IOpcDigitalSignatureEnumerator * This,
             /* [retval][out] */ __RPC__out BOOL *hasPrevious);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureEnumerator, GetCurrent)
         HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
             __RPC__in IOpcDigitalSignatureEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcDigitalSignature **digitalSignature);
         
+        DECLSPEC_XFGVIRT(IOpcDigitalSignatureEnumerator, Clone)
         HRESULT ( STDMETHODCALLTYPE *Clone )( 
             __RPC__in IOpcDigitalSignatureEnumerator * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcDigitalSignatureEnumerator **copy);
@@ -4057,18 +4316,22 @@ EXTERN_C const IID IID_IOpcSignaturePartReferenceSet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignaturePartReferenceSet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignaturePartReferenceSet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignaturePartReferenceSet * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReferenceSet, Create)
         HRESULT ( STDMETHODCALLTYPE *Create )( 
             __RPC__in IOpcSignaturePartReferenceSet * This,
             /* [in] */ __RPC__in_opt IOpcPartUri *partUri,
@@ -4076,10 +4339,12 @@ EXTERN_C const IID IID_IOpcSignaturePartReferenceSet;
             /* [in] */ OPC_CANONICALIZATION_METHOD transformMethod,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignaturePartReference **partReference);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReferenceSet, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IOpcSignaturePartReferenceSet * This,
             /* [in] */ __RPC__in_opt IOpcSignaturePartReference *partReference);
         
+        DECLSPEC_XFGVIRT(IOpcSignaturePartReferenceSet, GetEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetEnumerator )( 
             __RPC__in IOpcSignaturePartReferenceSet * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignaturePartReferenceEnumerator **partReferenceEnumerator);
@@ -4168,18 +4433,22 @@ EXTERN_C const IID IID_IOpcSignatureRelationshipReferenceSet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignatureRelationshipReferenceSet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignatureRelationshipReferenceSet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignatureRelationshipReferenceSet * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReferenceSet, Create)
         HRESULT ( STDMETHODCALLTYPE *Create )( 
             __RPC__in IOpcSignatureRelationshipReferenceSet * This,
             /* [in] */ __RPC__in_opt IOpcUri *sourceUri,
@@ -4189,14 +4458,17 @@ EXTERN_C const IID IID_IOpcSignatureRelationshipReferenceSet;
             /* [in] */ OPC_CANONICALIZATION_METHOD transformMethod,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureRelationshipReference **relationshipReference);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReferenceSet, CreateRelationshipSelectorSet)
         HRESULT ( STDMETHODCALLTYPE *CreateRelationshipSelectorSet )( 
             __RPC__in IOpcSignatureRelationshipReferenceSet * This,
             /* [out] */ __RPC__deref_out_opt IOpcRelationshipSelectorSet **selectorSet);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReferenceSet, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IOpcSignatureRelationshipReferenceSet * This,
             /* [in] */ __RPC__in_opt IOpcSignatureRelationshipReference *relationshipReference);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureRelationshipReferenceSet, GetEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetEnumerator )( 
             __RPC__in IOpcSignatureRelationshipReferenceSet * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureRelationshipReferenceEnumerator **relationshipReferenceEnumerator);
@@ -4282,28 +4554,34 @@ EXTERN_C const IID IID_IOpcRelationshipSelectorSet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcRelationshipSelectorSet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcRelationshipSelectorSet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcRelationshipSelectorSet * This);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSelectorSet, Create)
         HRESULT ( STDMETHODCALLTYPE *Create )( 
             __RPC__in IOpcRelationshipSelectorSet * This,
             /* [in] */ OPC_RELATIONSHIP_SELECTOR selector,
             /* [in] */ __RPC__in LPCWSTR selectionCriterion,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipSelector **relationshipSelector);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSelectorSet, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IOpcRelationshipSelectorSet * This,
             /* [in] */ __RPC__in_opt IOpcRelationshipSelector *relationshipSelector);
         
+        DECLSPEC_XFGVIRT(IOpcRelationshipSelectorSet, GetEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetEnumerator )( 
             __RPC__in IOpcRelationshipSelectorSet * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcRelationshipSelectorEnumerator **relationshipSelectorEnumerator);
@@ -4389,18 +4667,22 @@ EXTERN_C const IID IID_IOpcSignatureReferenceSet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignatureReferenceSet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignatureReferenceSet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignatureReferenceSet * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReferenceSet, Create)
         HRESULT ( STDMETHODCALLTYPE *Create )( 
             __RPC__in IOpcSignatureReferenceSet * This,
             /* [in] */ __RPC__in_opt IUri *referenceUri,
@@ -4410,10 +4692,12 @@ EXTERN_C const IID IID_IOpcSignatureReferenceSet;
             /* [in] */ OPC_CANONICALIZATION_METHOD transformMethod,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureReference **reference);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReferenceSet, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IOpcSignatureReferenceSet * This,
             /* [in] */ __RPC__in_opt IOpcSignatureReference *reference);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureReferenceSet, GetEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetEnumerator )( 
             __RPC__in IOpcSignatureReferenceSet * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureReferenceEnumerator **referenceEnumerator);
@@ -4496,28 +4780,34 @@ EXTERN_C const IID IID_IOpcSignatureCustomObjectSet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcSignatureCustomObjectSet * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcSignatureCustomObjectSet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcSignatureCustomObjectSet * This);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureCustomObjectSet, Create)
         HRESULT ( STDMETHODCALLTYPE *Create )( 
             __RPC__in IOpcSignatureCustomObjectSet * This,
             /* [size_is][in] */ __RPC__in_ecount_full(count) const UINT8 *xmlMarkup,
             /* [in] */ UINT32 count,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureCustomObject **customObject);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureCustomObjectSet, Delete)
         HRESULT ( STDMETHODCALLTYPE *Delete )( 
             __RPC__in IOpcSignatureCustomObjectSet * This,
             /* [in] */ __RPC__in_opt IOpcSignatureCustomObject *customObject);
         
+        DECLSPEC_XFGVIRT(IOpcSignatureCustomObjectSet, GetEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetEnumerator )( 
             __RPC__in IOpcSignatureCustomObjectSet * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcSignatureCustomObjectEnumerator **customObjectEnumerator);
@@ -4598,26 +4888,32 @@ EXTERN_C const IID IID_IOpcCertificateSet;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             IOpcCertificateSet * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOpcCertificateSet * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             IOpcCertificateSet * This);
         
+        DECLSPEC_XFGVIRT(IOpcCertificateSet, Add)
         HRESULT ( STDMETHODCALLTYPE *Add )( 
             IOpcCertificateSet * This,
             /* [in] */ const CERT_CONTEXT *certificate);
         
+        DECLSPEC_XFGVIRT(IOpcCertificateSet, Remove)
         HRESULT ( STDMETHODCALLTYPE *Remove )( 
             IOpcCertificateSet * This,
             /* [in] */ const CERT_CONTEXT *certificate);
         
+        DECLSPEC_XFGVIRT(IOpcCertificateSet, GetEnumerator)
         HRESULT ( STDMETHODCALLTYPE *GetEnumerator )( 
             IOpcCertificateSet * This,
             /* [retval][out] */ IOpcCertificateEnumerator **certificateEnumerator);
@@ -4720,27 +5016,33 @@ EXTERN_C const IID IID_IOpcFactory;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             __RPC__in IOpcFactory * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             __RPC__in IOpcFactory * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IOpcFactory * This);
         
+        DECLSPEC_XFGVIRT(IOpcFactory, CreatePackageRootUri)
         HRESULT ( STDMETHODCALLTYPE *CreatePackageRootUri )( 
             __RPC__in IOpcFactory * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcUri **rootUri);
         
+        DECLSPEC_XFGVIRT(IOpcFactory, CreatePartUri)
         HRESULT ( STDMETHODCALLTYPE *CreatePartUri )( 
             __RPC__in IOpcFactory * This,
             /* [string][in] */ __RPC__in_string LPCWSTR pwzUri,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPartUri **partUri);
         
+        DECLSPEC_XFGVIRT(IOpcFactory, CreateStreamOnFile)
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *CreateStreamOnFile )( 
             IOpcFactory * This,
             /* [string][in] */ LPCWSTR filename,
@@ -4749,22 +5051,26 @@ EXTERN_C const IID IID_IOpcFactory;
             /* [in] */ DWORD dwFlagsAndAttributes,
             /* [retval][out] */ IStream **stream);
         
+        DECLSPEC_XFGVIRT(IOpcFactory, CreatePackage)
         HRESULT ( STDMETHODCALLTYPE *CreatePackage )( 
             __RPC__in IOpcFactory * This,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPackage **package);
         
+        DECLSPEC_XFGVIRT(IOpcFactory, ReadPackageFromStream)
         HRESULT ( STDMETHODCALLTYPE *ReadPackageFromStream )( 
             __RPC__in IOpcFactory * This,
             /* [in] */ __RPC__in_opt IStream *stream,
             /* [in] */ OPC_READ_FLAGS flags,
             /* [retval][out] */ __RPC__deref_out_opt IOpcPackage **package);
         
+        DECLSPEC_XFGVIRT(IOpcFactory, WritePackageToStream)
         HRESULT ( STDMETHODCALLTYPE *WritePackageToStream )( 
             __RPC__in IOpcFactory * This,
             /* [in] */ __RPC__in_opt IOpcPackage *package,
             /* [in] */ OPC_WRITE_FLAGS flags,
             /* [in] */ __RPC__in_opt IStream *stream);
         
+        DECLSPEC_XFGVIRT(IOpcFactory, CreateDigitalSignatureManager)
         HRESULT ( STDMETHODCALLTYPE *CreateDigitalSignatureManager )( 
             __RPC__in IOpcFactory * This,
             /* [in] */ __RPC__in_opt IOpcPackage *package,

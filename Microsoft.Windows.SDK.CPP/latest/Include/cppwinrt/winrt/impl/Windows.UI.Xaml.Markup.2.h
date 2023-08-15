@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,7 +11,7 @@
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Interop.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Markup.1.h"
-namespace winrt::Windows::UI::Xaml::Markup
+WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Markup
 {
     struct XamlBinaryWriterErrorInformation
     {
@@ -101,7 +101,7 @@ namespace winrt::Windows::UI::Xaml::Markup
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IMarkupExtensionOverrides = winrt::Windows::UI::Xaml::Markup::IMarkupExtensionOverrides;
-        auto ProvideValue() const;
+        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) ProvideValue() const;
     };
 }
 #endif

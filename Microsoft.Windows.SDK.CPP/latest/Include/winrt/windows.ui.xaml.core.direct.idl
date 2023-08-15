@@ -135,7 +135,7 @@ namespace Windows
             {
                 namespace Direct
                 {
-                    [contractversion(2.0)]
+                    [contractversion(3.0)]
                     apicontract XamlDirectContract
                     {
                     }
@@ -1911,7 +1911,11 @@ namespace Windows
                         [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
                         CommandBarTemplateSettings_OverflowContentHiddenYTranslation          = 2385,
                         [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 2.0)]
-                        CommandBarTemplateSettings_OverflowContentMinimalYTranslation         = 2386
+                        CommandBarTemplateSettings_OverflowContentMinimalYTranslation         = 2386,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 3.0)]
+                        HandwritingView_IsCommandBarOpen                                      = 2395,
+                        [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 3.0)]
+                        HandwritingView_IsSwitchToKeyboardEnabled                             = 2396
                     };
 
                     [contract(Windows.UI.Xaml.Core.Direct.XamlDirectContract, 1.0)]

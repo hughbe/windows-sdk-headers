@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.190620.2
+// C++/WinRT v2.0.200609.3
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,7 @@
 #ifndef WINRT_Windows_Devices_Bluetooth_GenericAttributeProfile_H
 #define WINRT_Windows_Devices_Bluetooth_GenericAttributeProfile_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Devices.Bluetooth.h"
 #include "winrt/impl/Windows.Devices.Bluetooth.2.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
@@ -16,91 +16,91 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatche
 #include "winrt/impl/Windows.Devices.Bluetooth.GenericAttributeProfile.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::GetDescriptors(winrt::guid const& descriptorUuid) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::GetDescriptors(winrt::guid const& descriptorUuid) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->GetDescriptors(impl::bind_in(descriptorUuid), &value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::CharacteristicProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::CharacteristicProperties() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->get_CharacteristicProperties(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->get_CharacteristicProperties(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->get_ProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->get_ProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->put_ProtectionLevel(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::UserDescription() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::UserDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->get_UserDescription(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::Uuid() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::Uuid() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->get_Uuid(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::AttributeHandle() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::AttributeHandle() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->get_AttributeHandle(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::PresentationFormats() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::PresentationFormats() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->get_PresentationFormats(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ReadValueAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ReadValueAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->ReadValueAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ReadValueAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ReadValueAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->ReadValueWithCacheModeAsync(static_cast<int32_t>(cacheMode), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::WriteValueAsync(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::WriteValueAsync(Windows::Storage::Streams::IBuffer const& value) const
     {
         void* asyncOp{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->WriteValueAsync(*(void**)(&value), &asyncOp));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>{ asyncOp, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::WriteValueAsync(Windows::Storage::Streams::IBuffer const& value, Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption const& writeOption) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::WriteValueAsync(Windows::Storage::Streams::IBuffer const& value, Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption const& writeOption) const
     {
         void* asyncOp{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->WriteValueWithOptionAsync(*(void**)(&value), static_cast<int32_t>(writeOption), &asyncOp));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>{ asyncOp, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ReadClientCharacteristicConfigurationDescriptorAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ReadClientCharacteristicConfigurationDescriptorAsync() const
     {
         void* asyncOp{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->ReadClientCharacteristicConfigurationDescriptorAsync(&asyncOp));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult>{ asyncOp, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::WriteClientCharacteristicConfigurationDescriptorAsync(Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue const& clientCharacteristicConfigurationDescriptorValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::WriteClientCharacteristicConfigurationDescriptorAsync(Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue const& clientCharacteristicConfigurationDescriptorValue) const
     {
         void* asyncOp{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->WriteClientCharacteristicConfigurationDescriptorAsync(static_cast<int32_t>(clientCharacteristicConfigurationDescriptorValue), &asyncOp));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>{ asyncOp, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ValueChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic, Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs> const& valueChangedHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ValueChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic, Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs> const& valueChangedHandler) const
     {
-        winrt::event_token valueChangedEventCookie;
+        winrt::event_token valueChangedEventCookie{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->add_ValueChanged(*(void**)(&valueChangedHandler), put_abi(valueChangedEventCookie)));
         return valueChangedEventCookie;
     }
@@ -108,971 +108,971 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ValueChanged_revoker>(this, ValueChanged(valueChangedHandler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ValueChanged(winrt::event_token const& valueChangedEventCookie) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic<D>::ValueChanged(winrt::event_token const& valueChangedEventCookie) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic)->remove_ValueChanged(impl::bind_in(valueChangedEventCookie)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic2<D>::Service() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic2<D>::Service() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic2)->get_Service(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic2<D>::GetAllDescriptors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic2<D>::GetAllDescriptors() const
     {
         void* descriptors{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic2)->GetAllDescriptors(&descriptors));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>{ descriptors, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::GetDescriptorsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::GetDescriptorsAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3)->GetDescriptorsAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::GetDescriptorsAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::GetDescriptorsAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3)->GetDescriptorsWithCacheModeAsync(static_cast<int32_t>(cacheMode), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::GetDescriptorsForUuidAsync(winrt::guid const& descriptorUuid) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::GetDescriptorsForUuidAsync(winrt::guid const& descriptorUuid) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3)->GetDescriptorsForUuidAsync(impl::bind_in(descriptorUuid), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::GetDescriptorsForUuidAsync(winrt::guid const& descriptorUuid, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::GetDescriptorsForUuidAsync(winrt::guid const& descriptorUuid, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3)->GetDescriptorsForUuidWithCacheModeAsync(impl::bind_in(descriptorUuid), static_cast<int32_t>(cacheMode), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::WriteValueWithResultAsync(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::WriteValueWithResultAsync(Windows::Storage::Streams::IBuffer const& value) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3)->WriteValueWithResultAsync(*(void**)(&value), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::WriteValueWithResultAsync(Windows::Storage::Streams::IBuffer const& value, Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption const& writeOption) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::WriteValueWithResultAsync(Windows::Storage::Streams::IBuffer const& value, Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption const& writeOption) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3)->WriteValueWithResultAndOptionAsync(*(void**)(&value), static_cast<int32_t>(writeOption), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::WriteClientCharacteristicConfigurationDescriptorWithResultAsync(Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue const& clientCharacteristicConfigurationDescriptorValue) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristic3<D>::WriteClientCharacteristicConfigurationDescriptorWithResultAsync(Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue const& clientCharacteristicConfigurationDescriptorValue) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3)->WriteClientCharacteristicConfigurationDescriptorWithResultAsync(static_cast<int32_t>(clientCharacteristicConfigurationDescriptorValue), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicStatics<D>::ConvertShortIdToUuid(uint16_t shortId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicStatics<D>::ConvertShortIdToUuid(uint16_t shortId) const
     {
-        winrt::guid characteristicUuid;
+        winrt::guid characteristicUuid{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicStatics)->ConvertShortIdToUuid(shortId, put_abi(characteristicUuid)));
         return characteristicUuid;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::BatteryLevel() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::BatteryLevel() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_BatteryLevel(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::BloodPressureFeature() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::BloodPressureFeature() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_BloodPressureFeature(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::BloodPressureMeasurement() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::BloodPressureMeasurement() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_BloodPressureMeasurement(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::BodySensorLocation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::BodySensorLocation() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_BodySensorLocation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::CscFeature() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::CscFeature() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_CscFeature(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::CscMeasurement() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::CscMeasurement() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_CscMeasurement(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::GlucoseFeature() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::GlucoseFeature() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_GlucoseFeature(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::GlucoseMeasurement() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::GlucoseMeasurement() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_GlucoseMeasurement(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::GlucoseMeasurementContext() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::GlucoseMeasurementContext() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_GlucoseMeasurementContext(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::HeartRateControlPoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::HeartRateControlPoint() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_HeartRateControlPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::HeartRateMeasurement() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::HeartRateMeasurement() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_HeartRateMeasurement(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::IntermediateCuffPressure() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::IntermediateCuffPressure() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_IntermediateCuffPressure(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::IntermediateTemperature() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::IntermediateTemperature() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_IntermediateTemperature(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::MeasurementInterval() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::MeasurementInterval() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_MeasurementInterval(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::RecordAccessControlPoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::RecordAccessControlPoint() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_RecordAccessControlPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::RscFeature() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::RscFeature() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_RscFeature(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::RscMeasurement() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::RscMeasurement() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_RscMeasurement(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::SCControlPoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::SCControlPoint() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_SCControlPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::SensorLocation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::SensorLocation() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_SensorLocation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::TemperatureMeasurement() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::TemperatureMeasurement() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_TemperatureMeasurement(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::TemperatureType() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics<D>::TemperatureType() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics)->get_TemperatureType(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertCategoryId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertCategoryId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_AlertCategoryId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertCategoryIdBitMask() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertCategoryIdBitMask() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_AlertCategoryIdBitMask(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertLevel() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertLevel() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_AlertLevel(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertNotificationControlPoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertNotificationControlPoint() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_AlertNotificationControlPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertStatus() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::AlertStatus() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_AlertStatus(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapAppearance() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapAppearance() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_GapAppearance(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::BootKeyboardInputReport() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::BootKeyboardInputReport() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_BootKeyboardInputReport(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::BootKeyboardOutputReport() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::BootKeyboardOutputReport() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_BootKeyboardOutputReport(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::BootMouseInputReport() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::BootMouseInputReport() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_BootMouseInputReport(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CurrentTime() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CurrentTime() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_CurrentTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CyclingPowerControlPoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CyclingPowerControlPoint() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_CyclingPowerControlPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CyclingPowerFeature() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CyclingPowerFeature() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_CyclingPowerFeature(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CyclingPowerMeasurement() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CyclingPowerMeasurement() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_CyclingPowerMeasurement(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CyclingPowerVector() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::CyclingPowerVector() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_CyclingPowerVector(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::DateTime() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::DateTime() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_DateTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::DayDateTime() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::DayDateTime() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_DayDateTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::DayOfWeek() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::DayOfWeek() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_DayOfWeek(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapDeviceName() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapDeviceName() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_GapDeviceName(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::DstOffset() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::DstOffset() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_DstOffset(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ExactTime256() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ExactTime256() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_ExactTime256(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::FirmwareRevisionString() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::FirmwareRevisionString() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_FirmwareRevisionString(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::HardwareRevisionString() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::HardwareRevisionString() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_HardwareRevisionString(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::HidControlPoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::HidControlPoint() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_HidControlPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::HidInformation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::HidInformation() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_HidInformation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::Ieee1107320601RegulatoryCertificationDataList() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::Ieee1107320601RegulatoryCertificationDataList() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_Ieee1107320601RegulatoryCertificationDataList(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::LnControlPoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::LnControlPoint() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_LnControlPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::LnFeature() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::LnFeature() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_LnFeature(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::LocalTimeInformation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::LocalTimeInformation() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_LocalTimeInformation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::LocationAndSpeed() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::LocationAndSpeed() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_LocationAndSpeed(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ManufacturerNameString() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ManufacturerNameString() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_ManufacturerNameString(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ModelNumberString() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ModelNumberString() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_ModelNumberString(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::Navigation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::Navigation() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_Navigation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::NewAlert() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::NewAlert() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_NewAlert(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapPeripheralPreferredConnectionParameters() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapPeripheralPreferredConnectionParameters() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_GapPeripheralPreferredConnectionParameters(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapPeripheralPrivacyFlag() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapPeripheralPrivacyFlag() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_GapPeripheralPrivacyFlag(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::PnpId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::PnpId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_PnpId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::PositionQuality() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::PositionQuality() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_PositionQuality(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ProtocolMode() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ProtocolMode() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_ProtocolMode(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapReconnectionAddress() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GapReconnectionAddress() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_GapReconnectionAddress(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ReferenceTimeInformation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ReferenceTimeInformation() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_ReferenceTimeInformation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::Report() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::Report() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_Report(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ReportMap() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ReportMap() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_ReportMap(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::RingerControlPoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::RingerControlPoint() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_RingerControlPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::RingerSetting() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::RingerSetting() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_RingerSetting(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ScanIntervalWindow() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ScanIntervalWindow() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_ScanIntervalWindow(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ScanRefresh() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::ScanRefresh() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_ScanRefresh(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SerialNumberString() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SerialNumberString() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_SerialNumberString(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GattServiceChanged() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::GattServiceChanged() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_GattServiceChanged(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SoftwareRevisionString() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SoftwareRevisionString() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_SoftwareRevisionString(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SupportedNewAlertCategory() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SupportedNewAlertCategory() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_SupportedNewAlertCategory(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SupportUnreadAlertCategory() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SupportUnreadAlertCategory() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_SupportUnreadAlertCategory(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SystemId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::SystemId() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_SystemId(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeAccuracy() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeAccuracy() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_TimeAccuracy(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeSource() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeSource() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_TimeSource(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeUpdateControlPoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeUpdateControlPoint() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_TimeUpdateControlPoint(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeUpdateState() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeUpdateState() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_TimeUpdateState(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeWithDst() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeWithDst() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_TimeWithDst(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeZone() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TimeZone() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_TimeZone(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TxPowerLevel() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::TxPowerLevel() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_TxPowerLevel(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::UnreadAlertStatus() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicUuidsStatics2<D>::UnreadAlertStatus() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2)->get_UnreadAlertStatus(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicsResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicsResult<D>::Status() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicsResult)->get_Status(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicsResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicsResult<D>::ProtocolError() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint8_t>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicsResult<D>::ProtocolError() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicsResult)->get_ProtocolError(&value));
         return Windows::Foundation::IReference<uint8_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicsResult<D>::Characteristics() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattCharacteristicsResult<D>::Characteristics() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicsResult)->get_Characteristics(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattClientNotificationResult<D>::SubscribedClient() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattClientNotificationResult<D>::SubscribedClient() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult)->get_SubscribedClient(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattClientNotificationResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattClientNotificationResult<D>::Status() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult)->get_Status(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattClientNotificationResult<D>::ProtocolError() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint8_t>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattClientNotificationResult<D>::ProtocolError() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult)->get_ProtocolError(&value));
         return Windows::Foundation::IReference<uint8_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattClientNotificationResult2<D>::BytesSent() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattClientNotificationResult2<D>::BytesSent() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult2)->get_BytesSent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::ProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::ProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor)->get_ProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor)->get_ProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::ProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::ProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor)->put_ProtectionLevel(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::Uuid() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::Uuid() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor)->get_Uuid(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::AttributeHandle() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::AttributeHandle() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor)->get_AttributeHandle(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::ReadValueAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::ReadValueAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor)->ReadValueAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::ReadValueAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::ReadValueAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor)->ReadValueWithCacheModeAsync(static_cast<int32_t>(cacheMode), &value));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::WriteValueAsync(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor<D>::WriteValueAsync(Windows::Storage::Streams::IBuffer const& value) const
     {
         void* action{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor)->WriteValueAsync(*(void**)(&value), &action));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>{ action, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor2<D>::WriteValueWithResultAsync(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptor2<D>::WriteValueWithResultAsync(Windows::Storage::Streams::IBuffer const& value) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor2)->WriteValueWithResultAsync(*(void**)(&value), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorStatics<D>::ConvertShortIdToUuid(uint16_t shortId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorStatics<D>::ConvertShortIdToUuid(uint16_t shortId) const
     {
-        winrt::guid descriptorUuid;
+        winrt::guid descriptorUuid{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorStatics)->ConvertShortIdToUuid(shortId, put_abi(descriptorUuid)));
         return descriptorUuid;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::CharacteristicAggregateFormat() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::CharacteristicAggregateFormat() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics)->get_CharacteristicAggregateFormat(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::CharacteristicExtendedProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::CharacteristicExtendedProperties() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics)->get_CharacteristicExtendedProperties(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::CharacteristicPresentationFormat() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::CharacteristicPresentationFormat() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics)->get_CharacteristicPresentationFormat(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::CharacteristicUserDescription() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::CharacteristicUserDescription() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics)->get_CharacteristicUserDescription(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::ClientCharacteristicConfiguration() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::ClientCharacteristicConfiguration() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics)->get_ClientCharacteristicConfiguration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::ServerCharacteristicConfiguration() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorUuidsStatics<D>::ServerCharacteristicConfiguration() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics)->get_ServerCharacteristicConfiguration(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorsResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorsResult<D>::Status() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorsResult)->get_Status(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorsResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorsResult<D>::ProtocolError() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint8_t>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorsResult<D>::ProtocolError() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorsResult)->get_ProtocolError(&value));
         return Windows::Foundation::IReference<uint8_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorsResult<D>::Descriptors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDescriptorsResult<D>::Descriptors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorsResult)->get_Descriptors(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::GetCharacteristics(winrt::guid const& characteristicUuid) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::GetCharacteristics(winrt::guid const& characteristicUuid) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService)->GetCharacteristics(impl::bind_in(characteristicUuid), &value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::GetIncludedServices(winrt::guid const& serviceUuid) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::GetIncludedServices(winrt::guid const& serviceUuid) const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService)->GetIncludedServices(impl::bind_in(serviceUuid), &value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::Uuid() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::Uuid() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService)->get_Uuid(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::AttributeHandle() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService<D>::AttributeHandle() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService)->get_AttributeHandle(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService2<D>::Device() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEDevice) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService2<D>::Device() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2)->get_Device(&value));
         return Windows::Devices::Bluetooth::BluetoothLEDevice{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService2<D>::ParentServices() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService2<D>::ParentServices() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2)->get_ParentServices(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService2<D>::GetAllCharacteristics() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService2<D>::GetAllCharacteristics() const
     {
         void* characteristics{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2)->GetAllCharacteristics(&characteristics));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>{ characteristics, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService2<D>::GetAllIncludedServices() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService2<D>::GetAllIncludedServices() const
     {
         void* includedServices{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2)->GetAllIncludedServices(&includedServices));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>{ includedServices, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::DeviceAccessInformation() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DeviceAccessInformation) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::DeviceAccessInformation() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->get_DeviceAccessInformation(&value));
         return Windows::Devices::Enumeration::DeviceAccessInformation{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::Session() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::Session() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->get_Session(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::SharingMode() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::SharingMode() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->get_SharingMode(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->get_SharingMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::RequestAccessAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Enumeration::DeviceAccessStatus>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::RequestAccessAsync() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->RequestAccessAsync(&value));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Enumeration::DeviceAccessStatus>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::OpenAsync(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode const& sharingMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattOpenStatus>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::OpenAsync(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode const& sharingMode) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->OpenAsync(static_cast<int32_t>(sharingMode), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattOpenStatus>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetCharacteristicsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetCharacteristicsAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->GetCharacteristicsAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetCharacteristicsAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetCharacteristicsAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->GetCharacteristicsWithCacheModeAsync(static_cast<int32_t>(cacheMode), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetCharacteristicsForUuidAsync(winrt::guid const& characteristicUuid) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetCharacteristicsForUuidAsync(winrt::guid const& characteristicUuid) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->GetCharacteristicsForUuidAsync(impl::bind_in(characteristicUuid), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetCharacteristicsForUuidAsync(winrt::guid const& characteristicUuid, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetCharacteristicsForUuidAsync(winrt::guid const& characteristicUuid, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->GetCharacteristicsForUuidWithCacheModeAsync(impl::bind_in(characteristicUuid), static_cast<int32_t>(cacheMode), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetIncludedServicesAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetIncludedServicesAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->GetIncludedServicesAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetIncludedServicesAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetIncludedServicesAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->GetIncludedServicesWithCacheModeAsync(static_cast<int32_t>(cacheMode), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetIncludedServicesForUuidAsync(winrt::guid const& serviceUuid) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetIncludedServicesForUuidAsync(winrt::guid const& serviceUuid) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->GetIncludedServicesForUuidAsync(impl::bind_in(serviceUuid), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetIncludedServicesForUuidAsync(winrt::guid const& serviceUuid, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceService3<D>::GetIncludedServicesForUuidAsync(winrt::guid const& serviceUuid, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3)->GetIncludedServicesForUuidWithCacheModeAsync(impl::bind_in(serviceUuid), static_cast<int32_t>(cacheMode), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* asyncOp{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics)->FromIdAsync(*(void**)(&deviceId), &asyncOp));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>{ asyncOp, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics<D>::GetDeviceSelectorFromUuid(winrt::guid const& serviceUuid) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics<D>::GetDeviceSelectorFromUuid(winrt::guid const& serviceUuid) const
     {
         void* selector{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics)->GetDeviceSelectorFromUuid(impl::bind_in(serviceUuid), &selector));
         return hstring{ selector, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics<D>::GetDeviceSelectorFromShortId(uint16_t serviceShortId) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics<D>::GetDeviceSelectorFromShortId(uint16_t serviceShortId) const
     {
         void* selector{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics)->GetDeviceSelectorFromShortId(serviceShortId, &selector));
         return hstring{ selector, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics<D>::ConvertShortIdToUuid(uint16_t shortId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics<D>::ConvertShortIdToUuid(uint16_t shortId) const
     {
-        winrt::guid serviceUuid;
+        winrt::guid serviceUuid{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics)->ConvertShortIdToUuid(shortId, put_abi(serviceUuid)));
         return serviceUuid;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::FromIdAsync(param::hstring const& deviceId, Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode const& sharingMode) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::FromIdAsync(param::hstring const& deviceId, Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode const& sharingMode) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2)->FromIdWithSharingModeAsync(*(void**)(&deviceId), static_cast<int32_t>(sharingMode), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::GetDeviceSelectorForBluetoothDeviceId(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::GetDeviceSelectorForBluetoothDeviceId(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2)->GetDeviceSelectorForBluetoothDeviceId(*(void**)(&bluetoothDeviceId), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::GetDeviceSelectorForBluetoothDeviceId(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::GetDeviceSelectorForBluetoothDeviceId(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2)->GetDeviceSelectorForBluetoothDeviceIdWithCacheMode(*(void**)(&bluetoothDeviceId), static_cast<int32_t>(cacheMode), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::GetDeviceSelectorForBluetoothDeviceIdAndUuid(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId, winrt::guid const& serviceUuid) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::GetDeviceSelectorForBluetoothDeviceIdAndUuid(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId, winrt::guid const& serviceUuid) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2)->GetDeviceSelectorForBluetoothDeviceIdAndUuid(*(void**)(&bluetoothDeviceId), impl::bind_in(serviceUuid), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::GetDeviceSelectorForBluetoothDeviceIdAndUuid(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId, winrt::guid const& serviceUuid, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServiceStatics2<D>::GetDeviceSelectorForBluetoothDeviceIdAndUuid(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId, winrt::guid const& serviceUuid, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2)->GetDeviceSelectorForBluetoothDeviceIdAndUuidWithCacheMode(*(void**)(&bluetoothDeviceId), impl::bind_in(serviceUuid), static_cast<int32_t>(cacheMode), &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServicesResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServicesResult<D>::Status() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServicesResult)->get_Status(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServicesResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServicesResult<D>::ProtocolError() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint8_t>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServicesResult<D>::ProtocolError() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServicesResult)->get_ProtocolError(&value));
         return Windows::Foundation::IReference<uint8_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServicesResult<D>::Services() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattDeviceServicesResult<D>::Services() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServicesResult)->get_Services(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::Uuid() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::Uuid() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_Uuid(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::StaticValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::StaticValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_StaticValue(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::CharacteristicProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::CharacteristicProperties() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_CharacteristicProperties(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_CharacteristicProperties(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::ReadProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::ReadProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_ReadProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_ReadProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::WriteProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::WriteProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_WriteProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_WriteProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::CreateDescriptorAsync(winrt::guid const& descriptorUuid, Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters const& parameters) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::CreateDescriptorAsync(winrt::guid const& descriptorUuid, Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters const& parameters) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->CreateDescriptorAsync(impl::bind_in(descriptorUuid), *(void**)(&parameters), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::Descriptors() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::Descriptors() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_Descriptors(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::UserDescription() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::UserDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_UserDescription(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::PresentationFormats() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::PresentationFormats() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_PresentationFormats(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::SubscribedClients() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::SubscribedClients() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->get_SubscribedClients(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::SubscribedClientsChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::SubscribedClientsChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->add_SubscribedClientsChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1080,13 +1080,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SubscribedClientsChanged_revoker>(this, SubscribedClientsChanged(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::SubscribedClientsChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::SubscribedClientsChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->remove_SubscribedClientsChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::ReadRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::ReadRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->add_ReadRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1094,13 +1094,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ReadRequested_revoker>(this, ReadRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::ReadRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::ReadRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->remove_ReadRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::WriteRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::WriteRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic, Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->add_WriteRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1108,117 +1108,117 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, WriteRequested_revoker>(this, WriteRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::WriteRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::WriteRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->remove_WriteRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::NotifyValueAsync(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult>>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::NotifyValueAsync(Windows::Storage::Streams::IBuffer const& value) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->NotifyValueAsync(*(void**)(&value), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::NotifyValueAsync(Windows::Storage::Streams::IBuffer const& value, Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient const& subscribedClient) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristic<D>::NotifyValueAsync(Windows::Storage::Streams::IBuffer const& value, Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient const& subscribedClient) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic)->NotifyValueForSubscribedClientAsync(*(void**)(&value), *(void**)(&subscribedClient), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::StaticValue(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::StaticValue(Windows::Storage::Streams::IBuffer const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->put_StaticValue(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::StaticValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::StaticValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->get_StaticValue(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::CharacteristicProperties(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::CharacteristicProperties(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->put_CharacteristicProperties(static_cast<uint32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::CharacteristicProperties() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::CharacteristicProperties() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->get_CharacteristicProperties(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->get_CharacteristicProperties(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::ReadProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::ReadProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->put_ReadProtectionLevel(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::ReadProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::ReadProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->get_ReadProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->get_ReadProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::WriteProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::WriteProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->put_WriteProtectionLevel(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::WriteProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::WriteProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->get_WriteProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->get_WriteProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::UserDescription(param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::UserDescription(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->put_UserDescription(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::UserDescription() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::UserDescription() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->get_UserDescription(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::PresentationFormats() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicParameters<D>::PresentationFormats() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters)->get_PresentationFormats(&value));
         return Windows::Foundation::Collections::IVector<Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicResult<D>::Characteristic() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicResult<D>::Characteristic() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicResult)->get_Characteristic(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicResult<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothError) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalCharacteristicResult<D>::Error() const
     {
-        Windows::Devices::Bluetooth::BluetoothError value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicResult)->get_Error(put_abi(value)));
+        Windows::Devices::Bluetooth::BluetoothError value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicResult)->get_Error(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::Uuid() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::Uuid() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->get_Uuid(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::StaticValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::StaticValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->get_StaticValue(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::ReadProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::ReadProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->get_ReadProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->get_ReadProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::WriteProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::WriteProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->get_WriteProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->get_WriteProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::ReadRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor, Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::ReadRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor, Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->add_ReadRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1226,13 +1226,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, ReadRequested_revoker>(this, ReadRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::ReadRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::ReadRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->remove_ReadRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::WriteRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor, Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::WriteRequested(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor, Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->add_WriteRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1240,415 +1240,415 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, WriteRequested_revoker>(this, WriteRequested(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::WriteRequested(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptor<D>::WriteRequested(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor)->remove_WriteRequested(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::StaticValue(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::StaticValue(Windows::Storage::Streams::IBuffer const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters)->put_StaticValue(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::StaticValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::StaticValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters)->get_StaticValue(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::ReadProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::ReadProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters)->put_ReadProtectionLevel(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::ReadProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::ReadProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters)->get_ReadProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters)->get_ReadProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::WriteProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::WriteProtectionLevel(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters)->put_WriteProtectionLevel(static_cast<int32_t>(value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::WriteProtectionLevel() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorParameters<D>::WriteProtectionLevel() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters)->get_WriteProtectionLevel(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtectionLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters)->get_WriteProtectionLevel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorResult<D>::Descriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorResult<D>::Descriptor() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorResult)->get_Descriptor(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorResult<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothError) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalDescriptorResult<D>::Error() const
     {
-        Windows::Devices::Bluetooth::BluetoothError value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorResult)->get_Error(put_abi(value)));
+        Windows::Devices::Bluetooth::BluetoothError value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorResult)->get_Error(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalService<D>::Uuid() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalService<D>::Uuid() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalService)->get_Uuid(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalService<D>::CreateCharacteristicAsync(winrt::guid const& characteristicUuid, Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters const& parameters) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalService<D>::CreateCharacteristicAsync(winrt::guid const& characteristicUuid, Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters const& parameters) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalService)->CreateCharacteristicAsync(impl::bind_in(characteristicUuid), *(void**)(&parameters), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalService<D>::Characteristics() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattLocalService<D>::Characteristics() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalService)->get_Characteristics(&value));
         return Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::FormatType() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::FormatType() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat)->get_FormatType(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::Exponent() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::Exponent() const
     {
-        int32_t value;
+        int32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat)->get_Exponent(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::Unit() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::Unit() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat)->get_Unit(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::Namespace() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::Namespace() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat)->get_Namespace(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormat<D>::Description() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat)->get_Description(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatStatics<D>::BluetoothSigAssignedNumbers() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatStatics<D>::BluetoothSigAssignedNumbers() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics)->get_BluetoothSigAssignedNumbers(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatStatics2<D>::FromParts(uint8_t formatType, int32_t exponent, uint16_t unit, uint8_t namespaceId, uint16_t description) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatStatics2<D>::FromParts(uint8_t formatType, int32_t exponent, uint16_t unit, uint8_t namespaceId, uint16_t description) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics2)->FromParts(formatType, exponent, unit, namespaceId, description, &result));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Boolean() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Boolean() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_Boolean(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Bit2() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Bit2() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_Bit2(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Nibble() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Nibble() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_Nibble(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt8() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt8() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_UInt8(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt12() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt12() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_UInt12(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt16() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt16() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_UInt16(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt24() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt24() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_UInt24(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt32() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt32() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_UInt32(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt48() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt48() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_UInt48(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt64() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt64() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_UInt64(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt128() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::UInt128() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_UInt128(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt8() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt8() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_SInt8(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt12() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt12() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_SInt12(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt16() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt16() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_SInt16(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt24() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt24() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_SInt24(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt32() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt32() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_SInt32(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt48() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt48() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_SInt48(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt64() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt64() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_SInt64(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt128() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SInt128() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_SInt128(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Float32() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Float32() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_Float32(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Float64() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Float64() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_Float64(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SFloat() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::SFloat() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_SFloat(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Float() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Float() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_Float(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::DUInt16() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::DUInt16() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_DUInt16(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Utf8() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Utf8() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_Utf8(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Utf16() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Utf16() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_Utf16(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Struct() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattPresentationFormatTypesStatics<D>::Struct() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics)->get_Struct(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InvalidHandle() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InvalidHandle() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_InvalidHandle(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::ReadNotPermitted() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::ReadNotPermitted() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_ReadNotPermitted(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::WriteNotPermitted() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::WriteNotPermitted() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_WriteNotPermitted(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InvalidPdu() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InvalidPdu() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_InvalidPdu(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientAuthentication() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientAuthentication() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_InsufficientAuthentication(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::RequestNotSupported() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::RequestNotSupported() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_RequestNotSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InvalidOffset() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InvalidOffset() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_InvalidOffset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientAuthorization() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientAuthorization() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_InsufficientAuthorization(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::PrepareQueueFull() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::PrepareQueueFull() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_PrepareQueueFull(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::AttributeNotFound() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::AttributeNotFound() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_AttributeNotFound(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::AttributeNotLong() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::AttributeNotLong() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_AttributeNotLong(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientEncryptionKeySize() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientEncryptionKeySize() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_InsufficientEncryptionKeySize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InvalidAttributeValueLength() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InvalidAttributeValueLength() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_InvalidAttributeValueLength(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::UnlikelyError() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::UnlikelyError() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_UnlikelyError(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientEncryption() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientEncryption() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_InsufficientEncryption(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::UnsupportedGroupType() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::UnsupportedGroupType() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_UnsupportedGroupType(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientResources() const
+    template <typename D> WINRT_IMPL_AUTO(uint8_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattProtocolErrorStatics<D>::InsufficientResources() const
     {
-        uint8_t value;
+        uint8_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics)->get_InsufficientResources(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadClientCharacteristicConfigurationDescriptorResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadClientCharacteristicConfigurationDescriptorResult<D>::Status() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult)->get_Status(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadClientCharacteristicConfigurationDescriptorResult<D>::ClientCharacteristicConfigurationDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadClientCharacteristicConfigurationDescriptorResult<D>::ClientCharacteristicConfigurationDescriptor() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult)->get_ClientCharacteristicConfigurationDescriptor(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientCharacteristicConfigurationDescriptorValue value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult)->get_ClientCharacteristicConfigurationDescriptor(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadClientCharacteristicConfigurationDescriptorResult2<D>::ProtocolError() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint8_t>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadClientCharacteristicConfigurationDescriptorResult2<D>::ProtocolError() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult2)->get_ProtocolError(&value));
         return Windows::Foundation::IReference<uint8_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::Offset() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::Offset() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest)->get_Offset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::Length() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::Length() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest)->get_Length(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::State() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest)->get_State(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest, Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest, Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest)->add_StateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1656,97 +1656,97 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::StateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest)->remove_StateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::RespondWithValue(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::RespondWithValue(Windows::Storage::Streams::IBuffer const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest)->RespondWithValue(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::RespondWithProtocolError(uint8_t protocolError) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequest<D>::RespondWithProtocolError(uint8_t protocolError) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest)->RespondWithProtocolError(protocolError));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequestedEventArgs<D>::Session() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequestedEventArgs<D>::Session() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequestedEventArgs)->get_Session(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequestedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequestedEventArgs<D>::GetDeferral() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequestedEventArgs)->GetDeferral(&value));
         return Windows::Foundation::Deferral{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequestedEventArgs<D>::GetRequestAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadRequestedEventArgs<D>::GetRequestAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequestedEventArgs)->GetRequestAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadResult<D>::Status() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult)->get_Status(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadResult<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadResult<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult)->get_Value(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadResult2<D>::ProtocolError() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint8_t>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReadResult2<D>::ProtocolError() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult2)->get_ProtocolError(&value));
         return Windows::Foundation::IReference<uint8_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReliableWriteTransaction<D>::WriteValue(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic const& characteristic, Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReliableWriteTransaction<D>::WriteValue(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic const& characteristic, Windows::Storage::Streams::IBuffer const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction)->WriteValue(*(void**)(&characteristic), *(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReliableWriteTransaction<D>::CommitAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReliableWriteTransaction<D>::CommitAsync() const
     {
         void* asyncOp{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction)->CommitAsync(&asyncOp));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus>{ asyncOp, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReliableWriteTransaction2<D>::CommitWithResultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattReliableWriteTransaction2<D>::CommitWithResultAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction2)->CommitWithResultAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattRequestStateChangedEventArgs<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattRequestStateChangedEventArgs<D>::State() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattRequestStateChangedEventArgs)->get_State(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattRequestStateChangedEventArgs)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattRequestStateChangedEventArgs<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothError) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattRequestStateChangedEventArgs<D>::Error() const
     {
-        Windows::Devices::Bluetooth::BluetoothError value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattRequestStateChangedEventArgs)->get_Error(put_abi(value)));
+        Windows::Devices::Bluetooth::BluetoothError value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattRequestStateChangedEventArgs)->get_Error(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::Service() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::Service() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider)->get_Service(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::AdvertisementStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::AdvertisementStatus() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider)->get_AdvertisementStatus(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider)->get_AdvertisementStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::AdvertisementStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider, Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::AdvertisementStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider, Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider)->add_AdvertisementStatusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -1754,251 +1754,251 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, AdvertisementStatusChanged_revoker>(this, AdvertisementStatusChanged(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::AdvertisementStatusChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::AdvertisementStatusChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider)->remove_AdvertisementStatusChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::StartAdvertising() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::StartAdvertising() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider)->StartAdvertising());
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::StartAdvertising(Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters const& parameters) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::StartAdvertising(Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters const& parameters) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider)->StartAdvertisingWithParameters(*(void**)(&parameters)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::StopAdvertising() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProvider<D>::StopAdvertising() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider)->StopAdvertising());
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisementStatusChangedEventArgs<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothError) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisementStatusChangedEventArgs<D>::Error() const
     {
-        Windows::Devices::Bluetooth::BluetoothError value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs)->get_Error(put_abi(value)));
+        Windows::Devices::Bluetooth::BluetoothError value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs)->get_Error(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisementStatusChangedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisementStatusChangedEventArgs<D>::Status() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs)->get_Status(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters<D>::IsConnectable(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters<D>::IsConnectable(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters)->put_IsConnectable(value));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters<D>::IsConnectable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters<D>::IsConnectable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters)->get_IsConnectable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters<D>::IsDiscoverable(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters<D>::IsDiscoverable(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters)->put_IsDiscoverable(value));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters<D>::IsDiscoverable() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters<D>::IsDiscoverable() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters)->get_IsDiscoverable(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters2<D>::ServiceData(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters2<D>::ServiceData(Windows::Storage::Streams::IBuffer const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2)->put_ServiceData(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters2<D>::ServiceData() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderAdvertisingParameters2<D>::ServiceData() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2)->get_ServiceData(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderResult<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothError) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderResult<D>::Error() const
     {
-        Windows::Devices::Bluetooth::BluetoothError value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult)->get_Error(put_abi(value)));
+        Windows::Devices::Bluetooth::BluetoothError value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult)->get_Error(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderResult<D>::ServiceProvider() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderResult<D>::ServiceProvider() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult)->get_ServiceProvider(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderStatics<D>::CreateAsync(winrt::guid const& serviceUuid) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceProviderStatics<D>::CreateAsync(winrt::guid const& serviceUuid) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderStatics)->CreateAsync(impl::bind_in(serviceUuid), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::Battery() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::Battery() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics)->get_Battery(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::BloodPressure() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::BloodPressure() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics)->get_BloodPressure(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::CyclingSpeedAndCadence() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::CyclingSpeedAndCadence() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics)->get_CyclingSpeedAndCadence(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::GenericAccess() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::GenericAccess() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics)->get_GenericAccess(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::GenericAttribute() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::GenericAttribute() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics)->get_GenericAttribute(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::Glucose() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::Glucose() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics)->get_Glucose(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::HealthThermometer() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::HealthThermometer() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics)->get_HealthThermometer(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::HeartRate() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::HeartRate() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics)->get_HeartRate(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::RunningSpeedAndCadence() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics<D>::RunningSpeedAndCadence() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics)->get_RunningSpeedAndCadence(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::AlertNotification() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::AlertNotification() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_AlertNotification(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::CurrentTime() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::CurrentTime() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_CurrentTime(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::CyclingPower() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::CyclingPower() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_CyclingPower(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::DeviceInformation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::DeviceInformation() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_DeviceInformation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::HumanInterfaceDevice() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::HumanInterfaceDevice() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_HumanInterfaceDevice(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::ImmediateAlert() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::ImmediateAlert() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_ImmediateAlert(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::LinkLoss() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::LinkLoss() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_LinkLoss(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::LocationAndNavigation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::LocationAndNavigation() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_LocationAndNavigation(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::NextDstChange() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::NextDstChange() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_NextDstChange(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::PhoneAlertStatus() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::PhoneAlertStatus() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_PhoneAlertStatus(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::ReferenceTimeUpdate() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::ReferenceTimeUpdate() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_ReferenceTimeUpdate(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::ScanParameters() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::ScanParameters() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_ScanParameters(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::TxPower() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattServiceUuidsStatics2<D>::TxPower() const
     {
-        winrt::guid value;
+        winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2)->get_TxPower(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::DeviceId() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothDeviceId) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::DeviceId() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->get_DeviceId(&value));
         return Windows::Devices::Bluetooth::BluetoothDeviceId{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::CanMaintainConnection() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::CanMaintainConnection() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->get_CanMaintainConnection(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaintainConnection(bool value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaintainConnection(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->put_MaintainConnection(value));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaintainConnection() const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaintainConnection() const
     {
-        bool value;
+        bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->get_MaintainConnection(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaxPduSize() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaxPduSize() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->get_MaxPduSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::SessionStatus() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::SessionStatus() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->get_SessionStatus(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->get_SessionStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaxPduSizeChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaxPduSizeChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->add_MaxPduSizeChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2006,13 +2006,13 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MaxPduSizeChanged_revoker>(this, MaxPduSizeChanged(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaxPduSizeChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::MaxPduSizeChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->remove_MaxPduSizeChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::SessionStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession, Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::SessionStatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession, Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->add_SessionStatusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2020,43 +2020,43 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, SessionStatusChanged_revoker>(this, SessionStatusChanged(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::SessionStatusChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSession<D>::SessionStatusChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession)->remove_SessionStatusChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSessionStatics<D>::FromDeviceIdAsync(Windows::Devices::Bluetooth::BluetoothDeviceId const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSessionStatics<D>::FromDeviceIdAsync(Windows::Devices::Bluetooth::BluetoothDeviceId const& deviceId) const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatics)->FromDeviceIdAsync(*(void**)(&deviceId), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSessionStatusChangedEventArgs<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothError) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSessionStatusChangedEventArgs<D>::Error() const
     {
-        Windows::Devices::Bluetooth::BluetoothError value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatusChangedEventArgs)->get_Error(put_abi(value)));
+        Windows::Devices::Bluetooth::BluetoothError value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatusChangedEventArgs)->get_Error(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSessionStatusChangedEventArgs<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSessionStatusChangedEventArgs<D>::Status() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatusChangedEventArgs)->get_Status(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatusChangedEventArgs)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSubscribedClient<D>::Session() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSubscribedClient<D>::Session() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSubscribedClient)->get_Session(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSubscribedClient<D>::MaxNotificationSize() const
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSubscribedClient<D>::MaxNotificationSize() const
     {
-        uint16_t value;
+        uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSubscribedClient)->get_MaxNotificationSize(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSubscribedClient<D>::MaxNotificationSizeChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSubscribedClient<D>::MaxNotificationSizeChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient, Windows::Foundation::IInspectable> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSubscribedClient)->add_MaxNotificationSizeChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2064,49 +2064,49 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, MaxNotificationSizeChanged_revoker>(this, MaxNotificationSizeChanged(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSubscribedClient<D>::MaxNotificationSizeChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattSubscribedClient<D>::MaxNotificationSizeChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSubscribedClient)->remove_MaxNotificationSizeChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattValueChangedEventArgs<D>::CharacteristicValue() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattValueChangedEventArgs<D>::CharacteristicValue() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattValueChangedEventArgs)->get_CharacteristicValue(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattValueChangedEventArgs<D>::Timestamp() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattValueChangedEventArgs<D>::Timestamp() const
     {
-        Windows::Foundation::DateTime timestamp;
+        Windows::Foundation::DateTime timestamp{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattValueChangedEventArgs)->get_Timestamp(put_abi(timestamp)));
         return timestamp;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::Value() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->get_Value(&value));
         return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::Offset() const
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::Offset() const
     {
-        uint32_t value;
+        uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->get_Offset(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::Option() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::Option() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->get_Option(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->get_Option(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::State() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->get_State(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestState value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest, Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest, Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs> const& handler) const
     {
-        winrt::event_token token;
+        winrt::event_token token{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->add_StateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
@@ -2114,48 +2114,49 @@ namespace winrt::impl
     {
         return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(handler));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::StateChanged(winrt::event_token const& token) const noexcept
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->remove_StateChanged(impl::bind_in(token)));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::Respond() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::Respond() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->Respond());
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::RespondWithProtocolError(uint8_t protocolError) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequest<D>::RespondWithProtocolError(uint8_t protocolError) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest)->RespondWithProtocolError(protocolError));
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequestedEventArgs<D>::Session() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequestedEventArgs<D>::Session() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequestedEventArgs)->get_Session(&value));
         return Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequestedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequestedEventArgs<D>::GetDeferral() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequestedEventArgs)->GetDeferral(&value));
         return Windows::Foundation::Deferral{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequestedEventArgs<D>::GetRequestAsync() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteRequestedEventArgs<D>::GetRequestAsync() const
     {
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequestedEventArgs)->GetRequestAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest>{ operation, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteResult<D>::Status() const
     {
-        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value;
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteResult)->get_Status(put_abi(value)));
+        Windows::Devices::Bluetooth::GenericAttributeProfile::GattCommunicationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteResult<D>::ProtocolError() const
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint8_t>) consume_Windows_Devices_Bluetooth_GenericAttributeProfile_IGattWriteResult<D>::ProtocolError() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteResult)->get_ProtocolError(&value));
         return Windows::Foundation::IReference<uint8_t>{ value, take_ownership_from_abi };
     }
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic>
     {
@@ -2281,6 +2282,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic2>
     {
@@ -2301,6 +2304,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3>
     {
@@ -2361,6 +2366,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicStatics>
     {
@@ -2372,6 +2379,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>
     {
@@ -2523,6 +2532,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>
     {
@@ -2947,6 +2958,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicsResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicsResult>
     {
@@ -2974,6 +2987,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult>
     {
@@ -3001,6 +3016,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult2>
     {
@@ -3012,6 +3029,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor>
     {
@@ -3068,6 +3087,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor2>
     {
@@ -3080,6 +3101,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorStatics>
     {
@@ -3091,6 +3114,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics>
     {
@@ -3137,6 +3162,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorsResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorsResult>
     {
@@ -3164,6 +3191,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService>
     {
@@ -3206,6 +3235,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2>
     {
@@ -3242,6 +3273,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3>
     {
@@ -3349,6 +3382,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics>
     {
@@ -3384,6 +3419,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2>
     {
@@ -3428,6 +3465,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServicesResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServicesResult>
     {
@@ -3455,6 +3494,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic>
     {
@@ -3593,6 +3634,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters>
     {
@@ -3677,6 +3720,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicResult>
     {
@@ -3696,6 +3741,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor>
     {
@@ -3757,6 +3804,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters>
     {
@@ -3804,6 +3853,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorResult>
     {
@@ -3823,6 +3874,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalService> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalService>
     {
@@ -3850,6 +3903,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat>
     {
@@ -3889,6 +3944,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics>
     {
@@ -3900,6 +3957,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics2>
     {
@@ -3912,6 +3971,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>
     {
@@ -4105,6 +4166,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>
     {
@@ -4228,6 +4291,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult>
     {
@@ -4246,6 +4311,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult2>
     {
@@ -4258,6 +4325,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest>
     {
@@ -4311,6 +4380,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequestedEventArgs> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequestedEventArgs>
     {
@@ -4339,6 +4410,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult>
     {
@@ -4358,6 +4431,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult2>
     {
@@ -4370,6 +4445,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction>
     {
@@ -4389,6 +4466,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction2>
     {
@@ -4401,6 +4480,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattRequestStateChangedEventArgs> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattRequestStateChangedEventArgs>
     {
@@ -4419,6 +4500,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider>
     {
@@ -4473,6 +4556,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs>
     {
@@ -4491,6 +4576,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters>
     {
@@ -4523,6 +4610,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2>
     {
@@ -4542,6 +4631,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult>
     {
@@ -4561,6 +4652,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderStatics>
     {
@@ -4573,6 +4666,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>
     {
@@ -4640,6 +4735,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>
     {
@@ -4735,6 +4832,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession>
     {
@@ -4810,6 +4909,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatics> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatics>
     {
@@ -4822,6 +4923,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatusChangedEventArgs> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatusChangedEventArgs>
     {
@@ -4840,6 +4943,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSubscribedClient> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSubscribedClient>
     {
@@ -4873,6 +4978,8 @@ namespace winrt::impl
             return 0;
         }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattValueChangedEventArgs> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattValueChangedEventArgs>
     {
@@ -4893,6 +5000,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest>
     {
@@ -4954,6 +5063,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequestedEventArgs> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequestedEventArgs>
     {
@@ -4982,6 +5093,8 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteResult> : produce_base<D, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteResult>
     {
@@ -5001,8 +5114,9 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#endif
 }
-namespace winrt::Windows::Devices::Bluetooth::GenericAttributeProfile
+WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth::GenericAttributeProfile
 {
     constexpr auto operator|(GattCharacteristicProperties const left, GattCharacteristicProperties const right) noexcept
     {
@@ -5037,788 +5151,790 @@ namespace winrt::Windows::Devices::Bluetooth::GenericAttributeProfile
     }
     inline auto GattCharacteristic::ConvertShortIdToUuid(uint16_t shortId)
     {
-        return impl::call_factory<GattCharacteristic, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicStatics>([&](auto&& f) { return f.ConvertShortIdToUuid(shortId); });
+        return impl::call_factory<GattCharacteristic, IGattCharacteristicStatics>([&](IGattCharacteristicStatics const& f) { return f.ConvertShortIdToUuid(shortId); });
     }
     inline auto GattCharacteristicUuids::BatteryLevel()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.BatteryLevel(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.BatteryLevel(); });
     }
     inline auto GattCharacteristicUuids::BloodPressureFeature()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.BloodPressureFeature(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.BloodPressureFeature(); });
     }
     inline auto GattCharacteristicUuids::BloodPressureMeasurement()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.BloodPressureMeasurement(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.BloodPressureMeasurement(); });
     }
     inline auto GattCharacteristicUuids::BodySensorLocation()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.BodySensorLocation(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.BodySensorLocation(); });
     }
     inline auto GattCharacteristicUuids::CscFeature()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.CscFeature(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.CscFeature(); });
     }
     inline auto GattCharacteristicUuids::CscMeasurement()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.CscMeasurement(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.CscMeasurement(); });
     }
     inline auto GattCharacteristicUuids::GlucoseFeature()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.GlucoseFeature(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.GlucoseFeature(); });
     }
     inline auto GattCharacteristicUuids::GlucoseMeasurement()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.GlucoseMeasurement(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.GlucoseMeasurement(); });
     }
     inline auto GattCharacteristicUuids::GlucoseMeasurementContext()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.GlucoseMeasurementContext(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.GlucoseMeasurementContext(); });
     }
     inline auto GattCharacteristicUuids::HeartRateControlPoint()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.HeartRateControlPoint(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.HeartRateControlPoint(); });
     }
     inline auto GattCharacteristicUuids::HeartRateMeasurement()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.HeartRateMeasurement(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.HeartRateMeasurement(); });
     }
     inline auto GattCharacteristicUuids::IntermediateCuffPressure()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.IntermediateCuffPressure(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.IntermediateCuffPressure(); });
     }
     inline auto GattCharacteristicUuids::IntermediateTemperature()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.IntermediateTemperature(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.IntermediateTemperature(); });
     }
     inline auto GattCharacteristicUuids::MeasurementInterval()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.MeasurementInterval(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.MeasurementInterval(); });
     }
     inline auto GattCharacteristicUuids::RecordAccessControlPoint()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.RecordAccessControlPoint(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.RecordAccessControlPoint(); });
     }
     inline auto GattCharacteristicUuids::RscFeature()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.RscFeature(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.RscFeature(); });
     }
     inline auto GattCharacteristicUuids::RscMeasurement()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.RscMeasurement(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.RscMeasurement(); });
     }
     inline auto GattCharacteristicUuids::SCControlPoint()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.SCControlPoint(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.SCControlPoint(); });
     }
     inline auto GattCharacteristicUuids::SensorLocation()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.SensorLocation(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.SensorLocation(); });
     }
     inline auto GattCharacteristicUuids::TemperatureMeasurement()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.TemperatureMeasurement(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.TemperatureMeasurement(); });
     }
     inline auto GattCharacteristicUuids::TemperatureType()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics>([&](auto&& f) { return f.TemperatureType(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics>([](IGattCharacteristicUuidsStatics const& f) { return f.TemperatureType(); });
     }
     inline auto GattCharacteristicUuids::AlertCategoryId()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.AlertCategoryId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.AlertCategoryId(); });
     }
     inline auto GattCharacteristicUuids::AlertCategoryIdBitMask()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.AlertCategoryIdBitMask(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.AlertCategoryIdBitMask(); });
     }
     inline auto GattCharacteristicUuids::AlertLevel()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.AlertLevel(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.AlertLevel(); });
     }
     inline auto GattCharacteristicUuids::AlertNotificationControlPoint()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.AlertNotificationControlPoint(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.AlertNotificationControlPoint(); });
     }
     inline auto GattCharacteristicUuids::AlertStatus()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.AlertStatus(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.AlertStatus(); });
     }
     inline auto GattCharacteristicUuids::GapAppearance()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.GapAppearance(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.GapAppearance(); });
     }
     inline auto GattCharacteristicUuids::BootKeyboardInputReport()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.BootKeyboardInputReport(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.BootKeyboardInputReport(); });
     }
     inline auto GattCharacteristicUuids::BootKeyboardOutputReport()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.BootKeyboardOutputReport(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.BootKeyboardOutputReport(); });
     }
     inline auto GattCharacteristicUuids::BootMouseInputReport()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.BootMouseInputReport(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.BootMouseInputReport(); });
     }
     inline auto GattCharacteristicUuids::CurrentTime()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.CurrentTime(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.CurrentTime(); });
     }
     inline auto GattCharacteristicUuids::CyclingPowerControlPoint()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.CyclingPowerControlPoint(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.CyclingPowerControlPoint(); });
     }
     inline auto GattCharacteristicUuids::CyclingPowerFeature()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.CyclingPowerFeature(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.CyclingPowerFeature(); });
     }
     inline auto GattCharacteristicUuids::CyclingPowerMeasurement()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.CyclingPowerMeasurement(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.CyclingPowerMeasurement(); });
     }
     inline auto GattCharacteristicUuids::CyclingPowerVector()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.CyclingPowerVector(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.CyclingPowerVector(); });
     }
     inline auto GattCharacteristicUuids::DateTime()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.DateTime(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.DateTime(); });
     }
     inline auto GattCharacteristicUuids::DayDateTime()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.DayDateTime(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.DayDateTime(); });
     }
     inline auto GattCharacteristicUuids::DayOfWeek()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.DayOfWeek(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.DayOfWeek(); });
     }
     inline auto GattCharacteristicUuids::GapDeviceName()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.GapDeviceName(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.GapDeviceName(); });
     }
     inline auto GattCharacteristicUuids::DstOffset()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.DstOffset(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.DstOffset(); });
     }
     inline auto GattCharacteristicUuids::ExactTime256()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.ExactTime256(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.ExactTime256(); });
     }
     inline auto GattCharacteristicUuids::FirmwareRevisionString()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.FirmwareRevisionString(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.FirmwareRevisionString(); });
     }
     inline auto GattCharacteristicUuids::HardwareRevisionString()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.HardwareRevisionString(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.HardwareRevisionString(); });
     }
     inline auto GattCharacteristicUuids::HidControlPoint()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.HidControlPoint(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.HidControlPoint(); });
     }
     inline auto GattCharacteristicUuids::HidInformation()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.HidInformation(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.HidInformation(); });
     }
     inline auto GattCharacteristicUuids::Ieee1107320601RegulatoryCertificationDataList()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.Ieee1107320601RegulatoryCertificationDataList(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.Ieee1107320601RegulatoryCertificationDataList(); });
     }
     inline auto GattCharacteristicUuids::LnControlPoint()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.LnControlPoint(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.LnControlPoint(); });
     }
     inline auto GattCharacteristicUuids::LnFeature()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.LnFeature(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.LnFeature(); });
     }
     inline auto GattCharacteristicUuids::LocalTimeInformation()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.LocalTimeInformation(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.LocalTimeInformation(); });
     }
     inline auto GattCharacteristicUuids::LocationAndSpeed()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.LocationAndSpeed(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.LocationAndSpeed(); });
     }
     inline auto GattCharacteristicUuids::ManufacturerNameString()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.ManufacturerNameString(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.ManufacturerNameString(); });
     }
     inline auto GattCharacteristicUuids::ModelNumberString()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.ModelNumberString(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.ModelNumberString(); });
     }
     inline auto GattCharacteristicUuids::Navigation()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.Navigation(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.Navigation(); });
     }
     inline auto GattCharacteristicUuids::NewAlert()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.NewAlert(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.NewAlert(); });
     }
     inline auto GattCharacteristicUuids::GapPeripheralPreferredConnectionParameters()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.GapPeripheralPreferredConnectionParameters(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.GapPeripheralPreferredConnectionParameters(); });
     }
     inline auto GattCharacteristicUuids::GapPeripheralPrivacyFlag()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.GapPeripheralPrivacyFlag(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.GapPeripheralPrivacyFlag(); });
     }
     inline auto GattCharacteristicUuids::PnpId()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.PnpId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.PnpId(); });
     }
     inline auto GattCharacteristicUuids::PositionQuality()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.PositionQuality(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.PositionQuality(); });
     }
     inline auto GattCharacteristicUuids::ProtocolMode()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.ProtocolMode(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.ProtocolMode(); });
     }
     inline auto GattCharacteristicUuids::GapReconnectionAddress()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.GapReconnectionAddress(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.GapReconnectionAddress(); });
     }
     inline auto GattCharacteristicUuids::ReferenceTimeInformation()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.ReferenceTimeInformation(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.ReferenceTimeInformation(); });
     }
     inline auto GattCharacteristicUuids::Report()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.Report(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.Report(); });
     }
     inline auto GattCharacteristicUuids::ReportMap()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.ReportMap(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.ReportMap(); });
     }
     inline auto GattCharacteristicUuids::RingerControlPoint()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.RingerControlPoint(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.RingerControlPoint(); });
     }
     inline auto GattCharacteristicUuids::RingerSetting()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.RingerSetting(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.RingerSetting(); });
     }
     inline auto GattCharacteristicUuids::ScanIntervalWindow()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.ScanIntervalWindow(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.ScanIntervalWindow(); });
     }
     inline auto GattCharacteristicUuids::ScanRefresh()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.ScanRefresh(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.ScanRefresh(); });
     }
     inline auto GattCharacteristicUuids::SerialNumberString()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.SerialNumberString(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.SerialNumberString(); });
     }
     inline auto GattCharacteristicUuids::GattServiceChanged()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.GattServiceChanged(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.GattServiceChanged(); });
     }
     inline auto GattCharacteristicUuids::SoftwareRevisionString()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.SoftwareRevisionString(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.SoftwareRevisionString(); });
     }
     inline auto GattCharacteristicUuids::SupportedNewAlertCategory()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.SupportedNewAlertCategory(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.SupportedNewAlertCategory(); });
     }
     inline auto GattCharacteristicUuids::SupportUnreadAlertCategory()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.SupportUnreadAlertCategory(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.SupportUnreadAlertCategory(); });
     }
     inline auto GattCharacteristicUuids::SystemId()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.SystemId(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.SystemId(); });
     }
     inline auto GattCharacteristicUuids::TimeAccuracy()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.TimeAccuracy(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.TimeAccuracy(); });
     }
     inline auto GattCharacteristicUuids::TimeSource()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.TimeSource(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.TimeSource(); });
     }
     inline auto GattCharacteristicUuids::TimeUpdateControlPoint()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.TimeUpdateControlPoint(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.TimeUpdateControlPoint(); });
     }
     inline auto GattCharacteristicUuids::TimeUpdateState()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.TimeUpdateState(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.TimeUpdateState(); });
     }
     inline auto GattCharacteristicUuids::TimeWithDst()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.TimeWithDst(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.TimeWithDst(); });
     }
     inline auto GattCharacteristicUuids::TimeZone()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.TimeZone(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.TimeZone(); });
     }
     inline auto GattCharacteristicUuids::TxPowerLevel()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.TxPowerLevel(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.TxPowerLevel(); });
     }
     inline auto GattCharacteristicUuids::UnreadAlertStatus()
     {
-        return impl::call_factory<GattCharacteristicUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2>([&](auto&& f) { return f.UnreadAlertStatus(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattCharacteristicUuidsStatics2 const&), GattCharacteristicUuids, IGattCharacteristicUuidsStatics2>([](IGattCharacteristicUuidsStatics2 const& f) { return f.UnreadAlertStatus(); });
     }
     inline auto GattDescriptor::ConvertShortIdToUuid(uint16_t shortId)
     {
-        return impl::call_factory<GattDescriptor, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorStatics>([&](auto&& f) { return f.ConvertShortIdToUuid(shortId); });
+        return impl::call_factory<GattDescriptor, IGattDescriptorStatics>([&](IGattDescriptorStatics const& f) { return f.ConvertShortIdToUuid(shortId); });
     }
     inline auto GattDescriptorUuids::CharacteristicAggregateFormat()
     {
-        return impl::call_factory<GattDescriptorUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics>([&](auto&& f) { return f.CharacteristicAggregateFormat(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattDescriptorUuidsStatics const&), GattDescriptorUuids, IGattDescriptorUuidsStatics>([](IGattDescriptorUuidsStatics const& f) { return f.CharacteristicAggregateFormat(); });
     }
     inline auto GattDescriptorUuids::CharacteristicExtendedProperties()
     {
-        return impl::call_factory<GattDescriptorUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics>([&](auto&& f) { return f.CharacteristicExtendedProperties(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattDescriptorUuidsStatics const&), GattDescriptorUuids, IGattDescriptorUuidsStatics>([](IGattDescriptorUuidsStatics const& f) { return f.CharacteristicExtendedProperties(); });
     }
     inline auto GattDescriptorUuids::CharacteristicPresentationFormat()
     {
-        return impl::call_factory<GattDescriptorUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics>([&](auto&& f) { return f.CharacteristicPresentationFormat(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattDescriptorUuidsStatics const&), GattDescriptorUuids, IGattDescriptorUuidsStatics>([](IGattDescriptorUuidsStatics const& f) { return f.CharacteristicPresentationFormat(); });
     }
     inline auto GattDescriptorUuids::CharacteristicUserDescription()
     {
-        return impl::call_factory<GattDescriptorUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics>([&](auto&& f) { return f.CharacteristicUserDescription(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattDescriptorUuidsStatics const&), GattDescriptorUuids, IGattDescriptorUuidsStatics>([](IGattDescriptorUuidsStatics const& f) { return f.CharacteristicUserDescription(); });
     }
     inline auto GattDescriptorUuids::ClientCharacteristicConfiguration()
     {
-        return impl::call_factory<GattDescriptorUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics>([&](auto&& f) { return f.ClientCharacteristicConfiguration(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattDescriptorUuidsStatics const&), GattDescriptorUuids, IGattDescriptorUuidsStatics>([](IGattDescriptorUuidsStatics const& f) { return f.ClientCharacteristicConfiguration(); });
     }
     inline auto GattDescriptorUuids::ServerCharacteristicConfiguration()
     {
-        return impl::call_factory<GattDescriptorUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics>([&](auto&& f) { return f.ServerCharacteristicConfiguration(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattDescriptorUuidsStatics const&), GattDescriptorUuids, IGattDescriptorUuidsStatics>([](IGattDescriptorUuidsStatics const& f) { return f.ServerCharacteristicConfiguration(); });
     }
     inline auto GattDeviceService::FromIdAsync(param::hstring const& deviceId)
     {
-        return impl::call_factory<GattDeviceService, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics>([&](auto&& f) { return f.FromIdAsync(deviceId); });
+        return impl::call_factory<GattDeviceService, IGattDeviceServiceStatics>([&](IGattDeviceServiceStatics const& f) { return f.FromIdAsync(deviceId); });
     }
     inline auto GattDeviceService::GetDeviceSelectorFromUuid(winrt::guid const& serviceUuid)
     {
-        return impl::call_factory<GattDeviceService, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics>([&](auto&& f) { return f.GetDeviceSelectorFromUuid(serviceUuid); });
+        return impl::call_factory<GattDeviceService, IGattDeviceServiceStatics>([&](IGattDeviceServiceStatics const& f) { return f.GetDeviceSelectorFromUuid(serviceUuid); });
     }
     inline auto GattDeviceService::GetDeviceSelectorFromShortId(uint16_t serviceShortId)
     {
-        return impl::call_factory<GattDeviceService, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics>([&](auto&& f) { return f.GetDeviceSelectorFromShortId(serviceShortId); });
+        return impl::call_factory<GattDeviceService, IGattDeviceServiceStatics>([&](IGattDeviceServiceStatics const& f) { return f.GetDeviceSelectorFromShortId(serviceShortId); });
     }
     inline auto GattDeviceService::ConvertShortIdToUuid(uint16_t shortId)
     {
-        return impl::call_factory<GattDeviceService, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics>([&](auto&& f) { return f.ConvertShortIdToUuid(shortId); });
+        return impl::call_factory<GattDeviceService, IGattDeviceServiceStatics>([&](IGattDeviceServiceStatics const& f) { return f.ConvertShortIdToUuid(shortId); });
     }
     inline auto GattDeviceService::FromIdAsync(param::hstring const& deviceId, Windows::Devices::Bluetooth::GenericAttributeProfile::GattSharingMode const& sharingMode)
     {
-        return impl::call_factory<GattDeviceService, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2>([&](auto&& f) { return f.FromIdAsync(deviceId, sharingMode); });
+        return impl::call_factory<GattDeviceService, IGattDeviceServiceStatics2>([&](IGattDeviceServiceStatics2 const& f) { return f.FromIdAsync(deviceId, sharingMode); });
     }
     inline auto GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId)
     {
-        return impl::call_factory<GattDeviceService, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2>([&](auto&& f) { return f.GetDeviceSelectorForBluetoothDeviceId(bluetoothDeviceId); });
+        return impl::call_factory<GattDeviceService, IGattDeviceServiceStatics2>([&](IGattDeviceServiceStatics2 const& f) { return f.GetDeviceSelectorForBluetoothDeviceId(bluetoothDeviceId); });
     }
     inline auto GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode)
     {
-        return impl::call_factory<GattDeviceService, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2>([&](auto&& f) { return f.GetDeviceSelectorForBluetoothDeviceId(bluetoothDeviceId, cacheMode); });
+        return impl::call_factory<GattDeviceService, IGattDeviceServiceStatics2>([&](IGattDeviceServiceStatics2 const& f) { return f.GetDeviceSelectorForBluetoothDeviceId(bluetoothDeviceId, cacheMode); });
     }
     inline auto GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId, winrt::guid const& serviceUuid)
     {
-        return impl::call_factory<GattDeviceService, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2>([&](auto&& f) { return f.GetDeviceSelectorForBluetoothDeviceIdAndUuid(bluetoothDeviceId, serviceUuid); });
+        return impl::call_factory<GattDeviceService, IGattDeviceServiceStatics2>([&](IGattDeviceServiceStatics2 const& f) { return f.GetDeviceSelectorForBluetoothDeviceIdAndUuid(bluetoothDeviceId, serviceUuid); });
     }
     inline auto GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(Windows::Devices::Bluetooth::BluetoothDeviceId const& bluetoothDeviceId, winrt::guid const& serviceUuid, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode)
     {
-        return impl::call_factory<GattDeviceService, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2>([&](auto&& f) { return f.GetDeviceSelectorForBluetoothDeviceIdAndUuid(bluetoothDeviceId, serviceUuid, cacheMode); });
+        return impl::call_factory<GattDeviceService, IGattDeviceServiceStatics2>([&](IGattDeviceServiceStatics2 const& f) { return f.GetDeviceSelectorForBluetoothDeviceIdAndUuid(bluetoothDeviceId, serviceUuid, cacheMode); });
     }
     inline GattLocalCharacteristicParameters::GattLocalCharacteristicParameters() :
-        GattLocalCharacteristicParameters(impl::call_factory<GattLocalCharacteristicParameters>([](auto&& f) { return f.template ActivateInstance<GattLocalCharacteristicParameters>(); }))
+        GattLocalCharacteristicParameters(impl::call_factory_cast<GattLocalCharacteristicParameters(*)(Windows::Foundation::IActivationFactory const&), GattLocalCharacteristicParameters>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GattLocalCharacteristicParameters>(); }))
     {
     }
     inline GattLocalDescriptorParameters::GattLocalDescriptorParameters() :
-        GattLocalDescriptorParameters(impl::call_factory<GattLocalDescriptorParameters>([](auto&& f) { return f.template ActivateInstance<GattLocalDescriptorParameters>(); }))
+        GattLocalDescriptorParameters(impl::call_factory_cast<GattLocalDescriptorParameters(*)(Windows::Foundation::IActivationFactory const&), GattLocalDescriptorParameters>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GattLocalDescriptorParameters>(); }))
     {
     }
     inline auto GattPresentationFormat::BluetoothSigAssignedNumbers()
     {
-        return impl::call_factory<GattPresentationFormat, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics>([&](auto&& f) { return f.BluetoothSigAssignedNumbers(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatStatics const&), GattPresentationFormat, IGattPresentationFormatStatics>([](IGattPresentationFormatStatics const& f) { return f.BluetoothSigAssignedNumbers(); });
     }
     inline auto GattPresentationFormat::FromParts(uint8_t formatType, int32_t exponent, uint16_t unit, uint8_t namespaceId, uint16_t description)
     {
-        return impl::call_factory<GattPresentationFormat, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics2>([&](auto&& f) { return f.FromParts(formatType, exponent, unit, namespaceId, description); });
+        return impl::call_factory<GattPresentationFormat, IGattPresentationFormatStatics2>([&](IGattPresentationFormatStatics2 const& f) { return f.FromParts(formatType, exponent, unit, namespaceId, description); });
     }
     inline auto GattPresentationFormatTypes::Boolean()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.Boolean(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.Boolean(); });
     }
     inline auto GattPresentationFormatTypes::Bit2()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.Bit2(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.Bit2(); });
     }
     inline auto GattPresentationFormatTypes::Nibble()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.Nibble(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.Nibble(); });
     }
     inline auto GattPresentationFormatTypes::UInt8()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.UInt8(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.UInt8(); });
     }
     inline auto GattPresentationFormatTypes::UInt12()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.UInt12(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.UInt12(); });
     }
     inline auto GattPresentationFormatTypes::UInt16()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.UInt16(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.UInt16(); });
     }
     inline auto GattPresentationFormatTypes::UInt24()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.UInt24(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.UInt24(); });
     }
     inline auto GattPresentationFormatTypes::UInt32()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.UInt32(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.UInt32(); });
     }
     inline auto GattPresentationFormatTypes::UInt48()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.UInt48(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.UInt48(); });
     }
     inline auto GattPresentationFormatTypes::UInt64()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.UInt64(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.UInt64(); });
     }
     inline auto GattPresentationFormatTypes::UInt128()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.UInt128(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.UInt128(); });
     }
     inline auto GattPresentationFormatTypes::SInt8()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.SInt8(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.SInt8(); });
     }
     inline auto GattPresentationFormatTypes::SInt12()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.SInt12(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.SInt12(); });
     }
     inline auto GattPresentationFormatTypes::SInt16()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.SInt16(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.SInt16(); });
     }
     inline auto GattPresentationFormatTypes::SInt24()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.SInt24(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.SInt24(); });
     }
     inline auto GattPresentationFormatTypes::SInt32()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.SInt32(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.SInt32(); });
     }
     inline auto GattPresentationFormatTypes::SInt48()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.SInt48(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.SInt48(); });
     }
     inline auto GattPresentationFormatTypes::SInt64()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.SInt64(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.SInt64(); });
     }
     inline auto GattPresentationFormatTypes::SInt128()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.SInt128(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.SInt128(); });
     }
     inline auto GattPresentationFormatTypes::Float32()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.Float32(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.Float32(); });
     }
     inline auto GattPresentationFormatTypes::Float64()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.Float64(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.Float64(); });
     }
     inline auto GattPresentationFormatTypes::SFloat()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.SFloat(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.SFloat(); });
     }
     inline auto GattPresentationFormatTypes::Float()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.Float(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.Float(); });
     }
     inline auto GattPresentationFormatTypes::DUInt16()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.DUInt16(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.DUInt16(); });
     }
     inline auto GattPresentationFormatTypes::Utf8()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.Utf8(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.Utf8(); });
     }
     inline auto GattPresentationFormatTypes::Utf16()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.Utf16(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.Utf16(); });
     }
     inline auto GattPresentationFormatTypes::Struct()
     {
-        return impl::call_factory<GattPresentationFormatTypes, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics>([&](auto&& f) { return f.Struct(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattPresentationFormatTypesStatics const&), GattPresentationFormatTypes, IGattPresentationFormatTypesStatics>([](IGattPresentationFormatTypesStatics const& f) { return f.Struct(); });
     }
     inline auto GattProtocolError::InvalidHandle()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.InvalidHandle(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.InvalidHandle(); });
     }
     inline auto GattProtocolError::ReadNotPermitted()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.ReadNotPermitted(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.ReadNotPermitted(); });
     }
     inline auto GattProtocolError::WriteNotPermitted()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.WriteNotPermitted(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.WriteNotPermitted(); });
     }
     inline auto GattProtocolError::InvalidPdu()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.InvalidPdu(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.InvalidPdu(); });
     }
     inline auto GattProtocolError::InsufficientAuthentication()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.InsufficientAuthentication(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.InsufficientAuthentication(); });
     }
     inline auto GattProtocolError::RequestNotSupported()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.RequestNotSupported(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.RequestNotSupported(); });
     }
     inline auto GattProtocolError::InvalidOffset()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.InvalidOffset(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.InvalidOffset(); });
     }
     inline auto GattProtocolError::InsufficientAuthorization()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.InsufficientAuthorization(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.InsufficientAuthorization(); });
     }
     inline auto GattProtocolError::PrepareQueueFull()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.PrepareQueueFull(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.PrepareQueueFull(); });
     }
     inline auto GattProtocolError::AttributeNotFound()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.AttributeNotFound(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.AttributeNotFound(); });
     }
     inline auto GattProtocolError::AttributeNotLong()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.AttributeNotLong(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.AttributeNotLong(); });
     }
     inline auto GattProtocolError::InsufficientEncryptionKeySize()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.InsufficientEncryptionKeySize(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.InsufficientEncryptionKeySize(); });
     }
     inline auto GattProtocolError::InvalidAttributeValueLength()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.InvalidAttributeValueLength(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.InvalidAttributeValueLength(); });
     }
     inline auto GattProtocolError::UnlikelyError()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.UnlikelyError(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.UnlikelyError(); });
     }
     inline auto GattProtocolError::InsufficientEncryption()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.InsufficientEncryption(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.InsufficientEncryption(); });
     }
     inline auto GattProtocolError::UnsupportedGroupType()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.UnsupportedGroupType(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.UnsupportedGroupType(); });
     }
     inline auto GattProtocolError::InsufficientResources()
     {
-        return impl::call_factory<GattProtocolError, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics>([&](auto&& f) { return f.InsufficientResources(); });
+        return impl::call_factory_cast<uint8_t(*)(IGattProtocolErrorStatics const&), GattProtocolError, IGattProtocolErrorStatics>([](IGattProtocolErrorStatics const& f) { return f.InsufficientResources(); });
     }
     inline GattReliableWriteTransaction::GattReliableWriteTransaction() :
-        GattReliableWriteTransaction(impl::call_factory<GattReliableWriteTransaction>([](auto&& f) { return f.template ActivateInstance<GattReliableWriteTransaction>(); }))
+        GattReliableWriteTransaction(impl::call_factory_cast<GattReliableWriteTransaction(*)(Windows::Foundation::IActivationFactory const&), GattReliableWriteTransaction>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GattReliableWriteTransaction>(); }))
     {
     }
     inline auto GattServiceProvider::CreateAsync(winrt::guid const& serviceUuid)
     {
-        return impl::call_factory<GattServiceProvider, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderStatics>([&](auto&& f) { return f.CreateAsync(serviceUuid); });
+        return impl::call_factory<GattServiceProvider, IGattServiceProviderStatics>([&](IGattServiceProviderStatics const& f) { return f.CreateAsync(serviceUuid); });
     }
     inline GattServiceProviderAdvertisingParameters::GattServiceProviderAdvertisingParameters() :
-        GattServiceProviderAdvertisingParameters(impl::call_factory<GattServiceProviderAdvertisingParameters>([](auto&& f) { return f.template ActivateInstance<GattServiceProviderAdvertisingParameters>(); }))
+        GattServiceProviderAdvertisingParameters(impl::call_factory_cast<GattServiceProviderAdvertisingParameters(*)(Windows::Foundation::IActivationFactory const&), GattServiceProviderAdvertisingParameters>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GattServiceProviderAdvertisingParameters>(); }))
     {
     }
     inline auto GattServiceUuids::Battery()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>([&](auto&& f) { return f.Battery(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics const&), GattServiceUuids, IGattServiceUuidsStatics>([](IGattServiceUuidsStatics const& f) { return f.Battery(); });
     }
     inline auto GattServiceUuids::BloodPressure()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>([&](auto&& f) { return f.BloodPressure(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics const&), GattServiceUuids, IGattServiceUuidsStatics>([](IGattServiceUuidsStatics const& f) { return f.BloodPressure(); });
     }
     inline auto GattServiceUuids::CyclingSpeedAndCadence()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>([&](auto&& f) { return f.CyclingSpeedAndCadence(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics const&), GattServiceUuids, IGattServiceUuidsStatics>([](IGattServiceUuidsStatics const& f) { return f.CyclingSpeedAndCadence(); });
     }
     inline auto GattServiceUuids::GenericAccess()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>([&](auto&& f) { return f.GenericAccess(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics const&), GattServiceUuids, IGattServiceUuidsStatics>([](IGattServiceUuidsStatics const& f) { return f.GenericAccess(); });
     }
     inline auto GattServiceUuids::GenericAttribute()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>([&](auto&& f) { return f.GenericAttribute(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics const&), GattServiceUuids, IGattServiceUuidsStatics>([](IGattServiceUuidsStatics const& f) { return f.GenericAttribute(); });
     }
     inline auto GattServiceUuids::Glucose()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>([&](auto&& f) { return f.Glucose(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics const&), GattServiceUuids, IGattServiceUuidsStatics>([](IGattServiceUuidsStatics const& f) { return f.Glucose(); });
     }
     inline auto GattServiceUuids::HealthThermometer()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>([&](auto&& f) { return f.HealthThermometer(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics const&), GattServiceUuids, IGattServiceUuidsStatics>([](IGattServiceUuidsStatics const& f) { return f.HealthThermometer(); });
     }
     inline auto GattServiceUuids::HeartRate()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>([&](auto&& f) { return f.HeartRate(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics const&), GattServiceUuids, IGattServiceUuidsStatics>([](IGattServiceUuidsStatics const& f) { return f.HeartRate(); });
     }
     inline auto GattServiceUuids::RunningSpeedAndCadence()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics>([&](auto&& f) { return f.RunningSpeedAndCadence(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics const&), GattServiceUuids, IGattServiceUuidsStatics>([](IGattServiceUuidsStatics const& f) { return f.RunningSpeedAndCadence(); });
     }
     inline auto GattServiceUuids::AlertNotification()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.AlertNotification(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.AlertNotification(); });
     }
     inline auto GattServiceUuids::CurrentTime()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.CurrentTime(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.CurrentTime(); });
     }
     inline auto GattServiceUuids::CyclingPower()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.CyclingPower(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.CyclingPower(); });
     }
     inline auto GattServiceUuids::DeviceInformation()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.DeviceInformation(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.DeviceInformation(); });
     }
     inline auto GattServiceUuids::HumanInterfaceDevice()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.HumanInterfaceDevice(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.HumanInterfaceDevice(); });
     }
     inline auto GattServiceUuids::ImmediateAlert()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.ImmediateAlert(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.ImmediateAlert(); });
     }
     inline auto GattServiceUuids::LinkLoss()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.LinkLoss(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.LinkLoss(); });
     }
     inline auto GattServiceUuids::LocationAndNavigation()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.LocationAndNavigation(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.LocationAndNavigation(); });
     }
     inline auto GattServiceUuids::NextDstChange()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.NextDstChange(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.NextDstChange(); });
     }
     inline auto GattServiceUuids::PhoneAlertStatus()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.PhoneAlertStatus(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.PhoneAlertStatus(); });
     }
     inline auto GattServiceUuids::ReferenceTimeUpdate()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.ReferenceTimeUpdate(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.ReferenceTimeUpdate(); });
     }
     inline auto GattServiceUuids::ScanParameters()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.ScanParameters(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.ScanParameters(); });
     }
     inline auto GattServiceUuids::TxPower()
     {
-        return impl::call_factory<GattServiceUuids, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2>([&](auto&& f) { return f.TxPower(); });
+        return impl::call_factory_cast<winrt::guid(*)(IGattServiceUuidsStatics2 const&), GattServiceUuids, IGattServiceUuidsStatics2>([](IGattServiceUuidsStatics2 const& f) { return f.TxPower(); });
     }
     inline auto GattSession::FromDeviceIdAsync(Windows::Devices::Bluetooth::BluetoothDeviceId const& deviceId)
     {
-        return impl::call_factory<GattSession, Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatics>([&](auto&& f) { return f.FromDeviceIdAsync(deviceId); });
+        return impl::call_factory<GattSession, IGattSessionStatics>([&](IGattSessionStatics const& f) { return f.FromDeviceIdAsync(deviceId); });
     }
 }
 namespace std
 {
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicsResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicsResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorsResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorsResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServicesResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServicesResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalService> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalService> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattRequestStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattRequestStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatics> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatics> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatusChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatusChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSubscribedClient> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSubscribedClient> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattValueChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattValueChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs> {};
-    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult> : winrt::impl::hash_base<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult> {};
+#ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristic3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicUuidsStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicsResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorsResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceService3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServiceStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDeviceServicesResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristic> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicParameters> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalCharacteristicResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorParameters> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptorResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormat> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattProtocolErrorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadClientCharacteristicConfigurationDescriptorResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReadResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattRequestStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisementStatusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderAdvertisingParameters2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceProviderStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattServiceUuidsStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSubscribedClient> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattValueChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult> : winrt::impl::hash_base {};
+#endif
 }
 #endif
